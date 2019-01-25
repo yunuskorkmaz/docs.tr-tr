@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728966"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC Numaralandırması
-Özel tanımlayıcılarını belirtmek sabit değerleri içerir.  
+Özel tanımlayıcılardır belirten sabit değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,17 +41,17 @@ typedef enum {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`PROFILER_PARENT_UNKNOWN`|Tarafından kullanılan varsayılan tanımlayıcısı [Icorprofilerınfo::getmoduleınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) henüz bir derlemeye bağlı olmayan bir modül için.|  
-|`PROFILER_GLOBAL_CLASS`|Bir sınıfa ait değil global sabitler için varsayılan sınıf tanımlayıcısı.|  
-|`PROFILER_GLOBAL_MODULE`|Bir modüle ait değil genel nesneler için varsayılan modülü tanımlayıcı.|  
+|`PROFILER_GLOBAL_CLASS`|Bir sınıfa ait olmayan global sabitler için varsayılan sınıf tanımlayıcısı.|  
+|`PROFILER_GLOBAL_MODULE`|Bir modüle ait olmayan, genel nesneler için varsayılan modülü tanımlayıcı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

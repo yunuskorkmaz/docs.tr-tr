@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4a43b33c1faf123ce05be70db102bc9b2ac541f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023c85591ba484e0b8f97a8ef71a4f65a2f05ffb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691794"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -97,7 +97,7 @@ ms.locfileid: "47200847"
 |UI Otomasyon başvurular ekleyin.|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Burada listelenen UI Otomasyon istemcileri için dll gerekli.<br /><br /> -UIAutomationClient.dll erişim sağlar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemci tarafı API.<br />-UIAutomationClientSideProvider.dll otomatikleştirme olanağı sağlar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrol eder. Bkz: [standart denetimler için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes.dll içinde tanımlanmış özel türlere erişim sağlar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |Ekleme <xref:System.Windows.Automation> ad alanı.|Bu ad alanı özelliklerini kullanmak için UI Otomasyon istemcileri ihtiyacınız olan her şeyi içeren [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin işleme dışında.|  
 |Ekleme <xref:System.Windows.Automation.Text> ad alanı.|Bu ad alanı özelliklerini kullanmak için UI Otomasyonu istemcileri gerek her şeyi içerir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin işleme.|  
-|İlgilendiğiniz denetimleri Bul|Otomatik test betikleri denetimlerini ilgilendiren Otomasyon ağacı içinde UI Otomasyonu öğeleri bulun.<br /><br /> UI Otomasyonu öğeleri kodla almak için birden çok yolu vardır.<br /><br /> -Sorgu [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] kullanarak bir <xref:System.Windows.Automation.Condition> deyimi. Bu genellikle, burada dilden <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> kullanılır. **Not:** bir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> belirtmek bulabildiği Inspect.exe gibi bir araç kullanarak elde edilebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetimin özelliklerini. <br /><br /> -Kullanma <xref:System.Windows.Automation.TreeWalker> tüm geçirmek için sınıf [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç veya onun bir alt.<br />-Odak izleyin.<br />-HWnd denetimi kullanın.<br />-Ekran konumu gibi fare imlecini konumunu kullanın.<br /><br /> Bkz: [UI Otomasyon öğelerini alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
+|İlgilendiğiniz denetimleri Bul|Otomatik test betikleri denetimlerini ilgilendiren Otomasyon ağacı içinde UI Otomasyonu öğeleri bulun.<br /><br /> UI Otomasyonu öğeleri kodla almak için birden çok yolu vardır.<br /><br /> -Sorgu [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] kullanarak bir <xref:System.Windows.Automation.Condition> deyimi. Bu genellikle, burada dilden <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> kullanılır. **Not:**  Bir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> belirtmek bulabildiği Inspect.exe gibi bir araç kullanarak elde edilebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetimin özelliklerini. <br /><br /> -Kullanma <xref:System.Windows.Automation.TreeWalker> tüm geçirmek için sınıf [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç veya onun bir alt.<br />-Odak izleyin.<br />-HWnd denetimi kullanın.<br />-Ekran konumu gibi fare imlecini konumunu kullanın.<br /><br /> Bkz: [UI Otomasyon öğelerini alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
 |Denetim düzenleri elde|Denetim desenlerini işlevsel olarak benzer denetimleri için ortak davranışları ortaya çıkarır.<br /><br /> Otomatik test betikleri test edilmesini gerektirir denetimleri bulunduktan sonra bu UI Otomasyonu öğeleri ilgi denetim düzenleri edinin. Örneğin, <xref:System.Windows.Automation.InvokePattern> tipik düğme işlevleri için Denetim düzeni veya <xref:System.Windows.Automation.WindowPattern> pencere işlevleri için Denetim düzeni.<br /><br /> Bkz: [UI Otomasyonu denetim desenleri genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).|  
 |Kullanıcı arabirimini otomatik hale getirin|Otomatik test betikleri artık denetim herhangi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ilgilendiğiniz bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçevesi tarafından kullanıma sunulan işlevsellikten ve bilgi kullanılarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim desenleri.|  
   
@@ -113,5 +113,5 @@ ms.locfileid: "47200847"
 ## <a name="security"></a>Güvenlik  
  Güvenlik bilgileri için bkz: [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)

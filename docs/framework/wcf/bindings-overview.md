@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657421"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını bağlamak için gerekli olan iletişim ayrıntılarını belirtmek için kullanılan nesneleridir. Her bir WCF Hizmeti uç noktası bağlama iyi belirtilen olmasını gerektirir. Bu konuda bağlarını tanımlamak, iletişim ayrıntılarını bağlama, hangi bağlamaları WCF'de dahil edilir ve bir bağlama için bir uç nokta nasıl belirtilebilir öğelerin türleri açıklanmaktadır.  
@@ -20,7 +20,7 @@ Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını 
  Protokolleri  
  Kullanılan güvenlik mekanizması belirler: güvenilir Mesajlaşma özelliği ya da işlem bağlamını akış ayarları.  
   
- Kodlama  
+ Encoding  
  İleti (örneğin, metin veya ikili) kodlamasını belirler.  
   
  Taşıma  
@@ -32,13 +32,13 @@ Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını 
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  Bağlama bilgileri karmaşık olabilir ve bazı ayarları başkalarıyla uyumlu olmayabilir. Bu nedenle, WCF, sistem tarafından sağlanan bağlamaları kümesini içerir. Bu bağlamalar, çoğu uygulama gereksinimlerini karşılamak üzere tasarlanmıştır. Aşağıdaki sınıflar, sistem tarafından sağlanan bağlamalar bazı örnekler temsil eder:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: WS uyan Web hizmetlerine bağlanmak için uygun bağlama bir HTTP protokolü-ı temel profil belirtimi (örneğin, ASP.NET Web hizmeti tabanlı Hizmetleri).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: WS uyan bir HTTP protokolü Web hizmetlerine bağlanmak için uygun bağlama-ı temel profil belirtimi (örneğin, ASP.NET Web hizmeti tabanlı Hizmetleri).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: WS - için uygun Uç noktalara bağlanmak için uygun bir birlikte çalışabilen bağlama * protokoller.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Kullanır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları aynı makineye bağlanmak için.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları aynı makineye bağlanmak için.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Kullanır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Bu bağlama HTTP bağlamaları daha yüksek performans sunar ve yerel ağ kullanım için idealdir.
   
@@ -57,5 +57,5 @@ Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını 
 ## <a name="code-and-configuration"></a>Kod ve yapılandırma  
  Bağlama iki yolla tanımlayabilirsiniz: yapılandırma veya kod aracılığıyla. Bu iki yaklaşımı, sistem tarafından sağlanan bir bağlamayı veya özel bir bağlama kullanarak üzerinde güvenmeyin. Genel olarak, kod kullanarak bir bağlama tasarım zamanında tanımı üzerinde tam denetim verir. Yapılandırmayı kullanarak diğer taraftan, Sistem Yöneticisi veya bir WCF hizmeti veya hizmeti uygulamayı yeniden derlemenize gerek kalmadan bir bağlama parametreleri değiştirmek için istemci kullanıcı sağlar. WCF uygulaması, dağıtılacak olduğu belirli makine gereksinimlerini tahmin etmenin yolu olduğundan bu esnekliğin genellikle tercih edilir. Bağlama (ve adresleme) tutma bilgi kodunun dışında yeniden derleme veya yeniden dağıtma işlemi uygulamanın gerek kalmadan değiştirmek sağlar. Kod içinde tanımlanan bağlamaları sonra yapılandırma dosyasında belirtilen bağlamaları yapılandırma tanımlı bağlamalar üzerine yazmak kod tanımlı bağlamalar izin vererek oluşturulduğunu unutmayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

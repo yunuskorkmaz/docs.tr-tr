@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d8e104b5d32c07c4730154ff3fc69b452a024b7
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: a7435d68635e2a1066b143c28b5662364326ac8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607244"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama başlatma süresini önemli ölçüde artırır. Bu geliştirme, taşınabilir, düşük güç tüketimli cihazlar ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konu, bu başlangıç geliştirme ölçmek için gereken temel araçları ile çalışmaya başlamanıza yardımcı olur.  
@@ -47,7 +47,7 @@ ms.locfileid: "49347909"
   
 -   Uygulamanızı yeni hikayeleri eşitleniyor ne zaman sona ermiştir.  
   
- Uygulama izleme basit: yalnızca türetilmiş sınıf üzerinde uygun yöntemi çağırın. Kullanarak `AppEventSource` önceki örnekte, bir uygulama gibi işaretleyebilir:  
+ Uygulama izleme basittir: Yalnızca türetilmiş sınıf üzerinde uygun yöntemi çağırın. Kullanarak `AppEventSource` önceki örnekte, bir uygulama gibi işaretleyebilir:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -97,5 +97,5 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Yordam hem özgün uygulamanızı hem de sürümü için yinelenen, kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar genellikle başlangıç olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Daha ayrıntılı araştırmaya ilgileniyorsanız, PerfView ayrıca en çok zaman alan, kodunuzun parçalarını belirleyebilir. Daha fazla bilgi için izleme [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girişine](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Diagnostics.Tracing.EventSource>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Diagnostics.Tracing.EventSource>

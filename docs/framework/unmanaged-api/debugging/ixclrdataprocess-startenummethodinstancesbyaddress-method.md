@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 88ce9dd928871d71058fe28c243a9fb51b729778
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662627"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress yöntemi
 
@@ -57,7 +57,7 @@ Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tab
 **Kitaplığı:** Hiçbiri  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLRDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

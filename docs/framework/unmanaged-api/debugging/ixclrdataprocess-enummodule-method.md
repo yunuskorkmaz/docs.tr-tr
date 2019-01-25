@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: fa1e41985444324627c6b66a109b4619d85fc57f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738137"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule yöntemi
 
@@ -54,7 +54,7 @@ Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve 25 sanal yöntem 
 **Kitaplığı:** Hiçbiri  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLRDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

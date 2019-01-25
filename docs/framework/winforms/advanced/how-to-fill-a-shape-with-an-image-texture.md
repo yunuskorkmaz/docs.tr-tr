@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Şekli Görüntü Dokusuyla Doldurma'
+title: 'Nasıl yapılır: Bir şekli görüntü dokusuyla doldurma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: c1eb090bebcced125193c1db16087b6165d27ff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf1e09548ff9bc4eb650048eb21a9c300f3f6405
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601785"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Nasıl yapılır: Bir Şekli Görüntü Dokusuyla Doldurma
-Kullanarak bir dokuyla kapalı bir şekil doldurabilirsiniz <xref:System.Drawing.Image> sınıfı ve <xref:System.Drawing.TextureBrush> sınıfı.  
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Nasıl yapılır: Bir şekli görüntü dokusuyla doldurma
+Kullanarak kapalı şekil bir doku ile doldurabilirsiniz <xref:System.Drawing.Image> sınıfı ve <xref:System.Drawing.TextureBrush> sınıfı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek elips bir görüntü ile doldurur. Kod oluşturur bir <xref:System.Drawing.Image> nesne ve daha sonra adresini geçirir <xref:System.Drawing.Image> nesne bağımsız değişkeni olarak bir <xref:System.Drawing.TextureBrush.%23ctor%2A> Oluşturucusu. Üçüncü ifade görüntüyü ölçeklendirir ve dördüncü ifade Ölçeklendirilen görüntünün yinelenen kopyalarla elips doldurur.  
+ Aşağıdaki örnek, bir elips görüntü ile doldurur. Kod oluşturur bir <xref:System.Drawing.Image> nesnesi ve ardından, söz konusu adreslerinde <xref:System.Drawing.Image> nesne bağımsız değişkeni olarak bir <xref:System.Drawing.TextureBrush.%23ctor%2A> Oluşturucusu. Üçüncü deyim görüntüyü ölçeklendirir ve dördüncü deyimi yinelenen kopyaları Ölçeklendirilen görüntünün bir elips doldurur.  
   
- Aşağıdaki kodda, <xref:System.Drawing.TextureBrush.Transform%2A> özelliği çizildiğinde önce görüntüye uygulanan dönüştürme içerir. Özgün görüntüsüne 640 piksel genişliği ve yüksekliği 480 piksel sahip olduğunu varsayın. Dönüştürme resmi yatay ve dikey ölçekleme değerlerini ayarlayarak 75 × 75 küçültür.  
+ Aşağıdaki kodda, <xref:System.Drawing.TextureBrush.Transform%2A> çizildiğinde önce görüntüye uygulanan dönüşüm özelliği içerir. Özgün resmin 640 piksel genişliği ve yüksekliği 480 piksel sahip olduğunu varsayın. Dönüştürme, görüntü yatay ve dikey ölçekleme değerleri ayarlayarak 75 × 75 küçültür.  
   
 > [!NOTE]
->  Aşağıdaki örnekte, görüntü boyutu 75 × 75'tir ve üç nokta boyutu 150 × 250'dir. Görüntü, doldurma elips küçük olduğu için üç nokta görüntüyle döşenir. Döşeme görüntü yatay ve dikey olarak şekli sınır kadar yinelenir, anlamına gelir erişilmiştir. Döşeme hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir şekli bir görüntüyle döşeme](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md).  
+>  Aşağıdaki örnekte, 75 x 75 görüntü boyutu olduğundan ve 150 × 250 elips boyutudur. Görüntü doldurma elipsin daha küçük olduğu için üç nokta ile görüntü döşenir. Görüntüyü yatay ve dikey olarak şekli sınırına kadar yinelenir, anlamına gelir döşeme ulaşıldı. Döşeme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir şekli bir görüntüyle döşeme](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md).  
   
  [!code-csharp[System.Drawing.UsingABrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingABrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

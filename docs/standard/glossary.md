@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 3c478083a2bfde1742b114a8254bf07dff01f869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664674"
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
@@ -115,9 +115,9 @@ Benzer şekilde [AOT](#aot), bu derleyici çevirir [IL](#il) işlemci anlayan bi
 
 .NET uygulaması şunları içerir:
 
-- Bir veya daha fazla çalışma zamanları. Örnekler: CLR, CoreCLR CoreRT.
+- Bir veya daha fazla çalışma zamanları. Örnekler: CLR, CoreCLR, CoreRT.
 - .NET Standard'ın bir sürümünü uygular ve ek API'ler dahil edebilirsiniz bir sınıf kitaplığı. Örnekler: .NET Framework temel sınıf kitaplığı, .NET Core temel sınıf kitaplığı.
-- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçeveleri. Örnekler: ASP.NET, Windows Forms ve WPF .NET Framework dahil edilir.
+- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçeveleri. Örnekler: ASP.NET, Windows Forms ve WPF, .NET Framework'teki dahil edilir.
 - İsteğe bağlı olarak, geliştirme araçları. Bazı geliştirme araçları, birden çok uygulama arasında paylaşılır.
 
 .NET uygulamaları örnekleri:
@@ -190,7 +190,7 @@ UWP .NET Native tarafından desteklenen ilk uygulama çerçevesi oluştu. Şimdi
 
 Bkz: [.NET Native ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 Bir resmi belirtimi .NET API'leri, her bir .NET uygulamasında kullanılabilir.
 
@@ -272,8 +272,8 @@ Windows uygulamaları ve yazılım modern ve Dokunmatik kullanıma nesnelerin in
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Kılavuzu](index.md)  
-- [.NET Framework Kılavuzu](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET genel bakış](/aspnet/index#pivot=aspnet)  
-- [ASP.NET Core genel bakış](/aspnet/index#pivot=core)  
+- [.NET Kılavuzu](index.md)
+- [.NET Framework Kılavuzu](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET genel bakış](/aspnet/index#pivot=aspnet)
+- [ASP.NET Core genel bakış](/aspnet/index#pivot=core)

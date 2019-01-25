@@ -2,12 +2,12 @@
 title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699785"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
 Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösterir:  
@@ -47,7 +47,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
   
 3.  Aşağıdaki komutu gönderdikten tarafından Web.config klasöründe appSettings yapılandırma ayarlarını şifrele: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- ASP.NET yapılandırması dpapı'ye bir nasıl yapılır okuyarak yapılandırma dosyalarını bölümlerini şifreleme hakkında daha fazla bilgi bulunabilir ([Güvenli ASP.NET uygulamaları: kimlik doğrulaması, yetkilendirme ve güvenli iletişimi](https://go.microsoft.com/fwlink/?LinkId=95137)) ve ASP.NET yapılandırma RSA üzerinde bir nasıl yapılır ([nasıl yapılır: ASP.NET 2.0 kullanarak RSA şifreleme yapılandırma bölümlerde](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ ASP.NET yapılandırması dpapı'ye bir nasıl yapılır okuyarak yapılandırma dosyalarını bölümlerini şifreleme hakkında daha fazla bilgi bulunabilir ([Güvenli ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişimi](https://go.microsoft.com/fwlink/?LinkId=95137)) ve ASP.NET yapılandırma RSA üzerinde bir nasıl yapılır ([nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Kilitleme yapılandırma dosyası öğeleri  
  Web barındırılan senaryolarda Hizmetleri Hizmetleri dizinlerde olması mümkündür. Bu gibi durumlarda, hizmet alt dizinindeki yapılandırma değerlerini Machine.Config'deki değerlerini inceleme ve sırayla tüm üst dizinlerin dizin ağacında taşıma ve son birleştirme Web.config dosyalarında ile birleştiriliyor hesaplanır Web.config dosyasında hizmet içeren dizin. Çoğu yapılandırma öğeleri için varsayılan davranış, alt üst dizinlerin ayarlanan değerleri geçersiz kılmak için yapılandırma dosyalarında izin vermektir. Belirli durumlarda alt dizinleri yapılandırma dosyalarında üst dizini yapılandırma değerleri geçersiz kılmasını önlemek için istenebilir.  
@@ -142,5 +142,5 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
   
 1.  Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `false`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

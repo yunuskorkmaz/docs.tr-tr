@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma'
+title: 'Nasıl yapılır: Belirli bir tarihten haftanın gününü çıkarma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537978"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir tarihten haftanın gününü çıkarma
 .NET Framework sıralı için belirli bir tarihten haftanın gününü belirlemek için ve belirli bir tarih için yerelleştirilmiş gün adını görüntülemek için kolaylaştırır. Belirli bir tarihe kadar karşılık gelen haftanın gününü gösteren numaralandırılmış değer kullanılabilir <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özelliği. Buna karşılık, haftanın günü adı alınırken tarih ve saat değerinin gibi bir biçimlendirme yöntemi çağırarak gerçekleştirilebilen bir biçimlendirme işlemdir `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi. Bu konu, bunlar biçimlendirme işlemleri gerçekleştirmeyi gösterir.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Belirli bir tarihten haftanın gününü gösteren bir sayı ayıklamak için  
@@ -102,6 +102,6 @@ ms.locfileid: "43872354"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aca83a66520531074f376a47a7f2994cda237f9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eab43bce4dbd4ea8f88a9137ce5574252dae8a61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743861"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters Metodu
-Her kasa değerini alır (üzerinde kod şu anda Yürütülüyor platformu için) tarafından verilen bir bit maskesi belirtildi.  
+Her kaydın değerini alır (üzerinde kod şu anda Yürütülüyor platform için) belirli bir bit maskesi kullanılarak belirtilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,35 +40,35 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Parametreler  
  `maskCount`  
- [in] Bayt olarak boyutu, `mask` dizi.  
+ [in] Bayt cinsinden boyutu, `mask` dizisi.  
   
  `mask`  
- [in] Bir bayt dizisi, bir kasaya her biti karşılık gelir. Bit 1 ise, karşılık gelen kasanın değer alınır.  
+ [in] Bir bayt dizisi, bir kasaya her bitini karşılık gelir. 1 bit ise karşılık gelen kasanın değer alınır.  
   
  `regCount`  
- [in] Alınacak kayıt değerlerinin sayısı.  
+ [in] YAZMAÇ değerlerini alınacak sayısı.  
   
  `regBuffer`  
  [out] Bir dizi `CORDB_REGISTER` nesneleri, her biri bir kayıt değeri alır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetRegisters` Yöntemi maskesi tarafından belirtilen kayıtlardaki değerler dizisi döndürür. Dizi maskesi biti ayarlanmamış yazmaçların değerleri içermiyor. Bu nedenle, boyutu `regBuffer` dizi maskesinde 1 sayısına eşit olmalıdır. Varsa değerini `regCount` maskesiyle, değerleri daha yüksek numaralı yazmaçların belirtilen kayıtları sayısını kümesinden kesilecek için çok küçük. Varsa `regCount` çok büyük kullanılmayan `regBuffer` öğeleri değiştirilmemiş olacaktır.  
+ `GetRegisters` Yöntemi maskesi tarafından belirtilen kayıtlardaki değerler dizisi döndürür. Dizi maskesi biti ayarlanmamış yazmaçların değerleri içermiyor. Bu nedenle, boyutu `regBuffer` dizi maskesi 1 sayıya eşit olmalıdır. Varsa değerini `regCount` sayı değerleri daha yüksek numaralı yazmaçların maskesi tarafından belirtilen yazmaçların kümesinden kesilecek için yeterli büyüklükte değil. Varsa `regCount` çok büyük kullanılmayan `regBuffer` öğeleri değiştirilmemiş olacaktır.  
   
- Kullanılamayan bir kaydı maskesiyle belirtilirse, bu kayıt için belirsiz bir değeri döndürülür.  
+ Kullanılamayan bir kaydı maskesiyle belirtilirse, bu kasa için belirsiz bir değer döndürülür.  
   
- `ICorDebugRegisterSet2::GetRegisters` Yöntemi 64 taneden fazla yazmaçlar platformlar için gereklidir. Örneğin, en fazla 64-bit bit maskesi gerekir böylece IA64 128 genel amaçlı kaydeder ve 128 kayan nokta kayıtları vardır.  
+ `ICorDebugRegisterSet2::GetRegisters` Yöntemi 64'den fazla kayda sahip platformları için gereklidir. Örneğin, en fazla 64-bit bit maskesi erişebilmeleri IA64 128 genel amaçlı kaydeder ve 128 kayan nokta kayıtlarını vardır.  
   
- X86 gibi platformlardaki olduğu gibi 64 taneden fazla kayıtları yoksa `GetRegisters` yöntemi gerçekte yalnızca bayt cinsinden çevirir `mask` Bayt dizisine bir `ULONG64` ve çağırır [Icordebugregisterset:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) geçen yöntemi `ULONG64` maske.  
+ X86 gibi platformlarda olduğu gibi 64'den fazla kayda sahip değilseniz `GetRegisters` yöntemi, bayt cinsinden aslında çevirir `mask` Bayt dizisine bir `ULONG64` ve [Icordebugregisterset:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) gereken yöntemini `ULONG64` maskesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugRegisterSet2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [ICorDebugRegisterSet Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugRegisterSet2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

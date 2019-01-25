@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba4259ad9cdf4f56fd4c00b5c7e9ebfa8b7fe1ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5869bf22c74a232f20fc49fe81a6a35c9738f1db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735035"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache İşlevi
-Bir işaretçi yeni bir alır [Iassemblycache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) Genel Derleme Önbelleği temsil eden örneği.  
+Yeni bir işaretçi alır [Iassemblycache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) genel derleme önbelleğini temsil eden örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +42,18 @@ HRESULT CreateAssemblyCache (
  [out] Döndürülen `IAssemblyCache` işaretçi.  
   
  `dwReserved`  
- [in] Gelecekteki genişletilebilirliği için ayrılmış. `dwReserved` 0 (sıfır) olması gerekir.  
+ [in] Sonra genişletilebilmek için ayrılmış. `dwReserved` 0 (sıfır) olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)

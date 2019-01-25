@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 062d6276ab91705a4554da2afa8459a26453906f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703620"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Bir veya daha fazla bildirilen programlama öğeleri hiçbir erişim kısıtlaması olduğunu belirtir.  
+Bir veya daha fazla bildirilmiş programlama öğesine hiçbir erişim kısıtlamasına sahip olmadığını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir bileşeni ya da bir sınıf kitaplığı gibi bir bileşen kümesi yayımlıyorsanız programlama öğeleri ile derlemenizi çalıştığı herhangi bir kod tarafından erişilebilir olması için genellikle istiyor. Bu tür bir öğe üzerinde sınırsız erişimi confer için ile bildirebilir `Public`.  
+ Bir bileşen ya da bir sınıf kitaplığı gibi bir bileşenler kümesi yayımlıyorsanız genellikle programlama öğeleri, derleme ile birlikte çalışır herhangi bir kod tarafından erişilebilir olmasını istersiniz. Bir öğe üzerinde sınırsız erişimi confer için onunla bildirebilirsiniz `Public`.  
   
- Genel erişim bir programlama öğesi için normal düzeyi olduğunda erişimi sınırlamak gerekmez. Erişim düzeyi, bir öğenin bir arabirim, modülü, sınıf veya yapı içinde bildirilen Not Varsayılan olarak `Public` , aksi takdirde değil bildirirseniz.  
+ Erişimi sınırlamak gerekmediğinde genel erişim bir programlama öğesi için normal düzeydir. Bir öğenin erişim düzeyi bir arabirimi, modül, sınıf veya yapı içinde bildirilen Not Varsayılan olarak `Public` , aksi takdirde değil bildirirseniz.  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Public` yalnızca düzeyinde modül, arabirim veya ad alanı. Bu bildirimi bağlamının anlamına gelir bir `Public` öğesi bir kaynak dosya, ad alanı, arabirimi, modülü, sınıf veya yapı olmalıdır ve bir yordam olamaz.  
+-   **Bildirim bağlamı.** Kullanabileceğiniz `Public` yalnızca düzeyinde modülü, arabirim veya ad alanı. Bildirim bağlamı başka bir deyişle bir `Public` öğesi bir kaynak dosyası, ad alanı, arabirim, modül, sınıf veya yapı olmalıdır ve bir yordam olamaz.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Erişim düzeyi.** Bir modül, sınıf veya yapı erişebilen tüm kod erişmek için kendi `Public` öğeleri.  
+-   **Erişim düzeyi.** Bir modül, sınıf veya yapı erişebilen tüm kod erişip kendi `Public` öğeleri.  
   
--   **Varsayılan erişim.** Yerel değişkenler bir yordam varsayılan genel erişim ve içindeki tüm erişim değiştiricileri üzerlerinde kullanamazsınız.  
+-   **Varsayılan erişim.** Yerel değişkenleri ve ortak erişimi için bir yordam varsayılan içinde herhangi bir erişim değiştiricileri üzerlerinde kullanamazsınız.  
   
--   **Erişim değiştiricileri.** Erişim düzeyi belirtin anahtar sözcükleri adlı *erişim değiştiricileri*. Erişim değiştiricileri karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Erişim değiştiricileri.** Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Erişim değiştiricileri bir karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- `Public` Değiştiricisi bu bağlamlarında kullanılabilir:  
+ `Public` Bu bağlamda değiştirici kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -65,13 +65,13 @@ Bir veya daha fazla bildirilen programlama öğeleri hiçbir erişim kısıtlama
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Özel korumalı](private-protected.md)   
- [Korumalı Friend](protected-friend.md)   
- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

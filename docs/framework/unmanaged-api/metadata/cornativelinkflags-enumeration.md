@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf0fdb1e46bfbd17505e255d539547a00eb4764c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694561"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags Numaralandırması
-Yerel kod bağlarken bağlayıcı tarafından kullanılan bayrak değerleri sağlar.  
+Bağlayıcı tarafından yerel kod bağlanırken kullanılan bayrak değerleri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,19 +42,19 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`nlfNone`|Hiçbir bayrakları gösterir.|  
-|`nlfLastError`|Gösteren bir `setLastError` anahtar sözcüğü.|  
-|`nlfNoMangle`|Gösteren bir `nomangle` anahtar sözcüğü.|  
+|`nlfNone`|Hiçbir bayrakları belirtir.|  
+|`nlfLastError`|Belirten bir `setLastError` anahtar sözcüğü.|  
+|`nlfNoMangle`|Belirten bir `nomangle` anahtar sözcüğü.|  
 |`nlfMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

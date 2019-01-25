@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 830a65a4490b1d084e3bb301e89293ccb9424b32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe1d783017369a78074e5abf278ac2facf6ee32b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734071"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
-`pInvokeLog` Yönetilen hata ayıklama Yardımcısı (MDA) her benzersiz platform çağırma için yürütme sırasında kullanılan imzayı etkinleştirilir.  
+`pInvokeLog` Her benzersiz platform çağırma için yürütme sırasında kullanılan imza yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
- Bu MDA CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
+ Bu mda'nın CLR üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Platform belirten bir ileti yürütme sırasında kullanılan imzayı çağırır.  
+ Platform belirten bir ileti, yürütme sırasında kullanılan imza çağırın.  
   
 ## <a name="configuration"></a>Yapılandırma  
- Çağrıları .dll dosyaları için hangi platform çağırma her eşleme öğesi filtreleri yapılır.  
+ Hangi platformu .dll dosyaları çağrılarını çağırmak her eşleşme öğesi filtreleri yapılır.  
   
 ```xml  
 <mdaConfig>  
@@ -43,6 +43,6 @@ ms.locfileid: "33387009"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

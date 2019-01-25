@@ -2,12 +2,12 @@
 title: SQL-CLR tür eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617349"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR tür eşlemesi
 LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programlama dilinde ifade nesne modeli eşlenir. Uygulama çalışırken, LINQ to SQL nesne modeli dil ile tümleşik sorgu SQL'e çevirir ve bunları yürütme için veritabanı gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -38,7 +38,7 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
 ## <a name="default-type-mapping"></a>Varsayılan tür eşlemesi  
  Nesne modeli veya dış eşleme dosyası otomatik olarak Object Relational Designer (O/R Tasarımcısı) veya SQLMetal komut satırı aracı ile oluşturabilirsiniz. Bu araçlar için varsayılan tür eşlemeleri hangi CLR türleri, SQL Server veritabanı içindeki sütunlara eşlemek için seçilir tanımlayın. Bu araçları kullanma hakkında daha fazla bilgi için bkz. [nesne modeli oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- Ayrıca <xref:System.Data.Linq.DataContext.CreateDatabase%2A> nesne modeli veya dış eşleme dosyası eşleme bilgileri temel SQL Server veritabanı oluşturmak için yöntemi. İçin varsayılan türü eşlemelerini <xref:System.Data.Linq.DataContext.CreateDatabase%2A> yöntemi tanımlayan nesne modelinde sütunları CLR ile eşlemek için oluşturulan SQL Server'ın hangi tür türleri. Daha fazla bilgi için [nasıl yapılır: dinamik olarak veritabanı oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Ayrıca <xref:System.Data.Linq.DataContext.CreateDatabase%2A> nesne modeli veya dış eşleme dosyası eşleme bilgileri temel SQL Server veritabanı oluşturmak için yöntemi. İçin varsayılan türü eşlemelerini <xref:System.Data.Linq.DataContext.CreateDatabase%2A> yöntemi tanımlayan nesne modelinde sütunları CLR ile eşlemek için oluşturulan SQL Server'ın hangi tür türleri. Daha fazla bilgi için [nasıl yapılır: Dinamik olarak veritabanı oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Çalışma zamanı davranışını matris eşleme türü  
@@ -256,8 +256,8 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
   
  LINQ to SQL herhangi bir türü eşlemeleri için bu çeşitli türleri desteklemez.  Daha fazla bilgi için [türü eşleme çalıştırma zamanı davranışını matris](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

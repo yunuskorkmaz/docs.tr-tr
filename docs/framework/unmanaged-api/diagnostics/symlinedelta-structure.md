@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d534ae381e0dc105731cf0a537f81afe80d87e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732745"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA Yapısı
-Sembol işleyicisine sonucunda düzenlemeleri taşındı yöntemleri hakkında bilgi sağlar.  
+Sembol işleyici sonucunda düzenlemeleri taşınan yöntemleri hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,11 +40,11 @@ typedef struct _SYMLINEDELTA
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`mdMethod`|Yöntemin meta veri simgesi.|  
-|`delta`|Yöntem taşınmış satır sayısı.|  
+|`mdMethod`|Yöntemin meta veri belirteci.|  
+|`delta`|Yöntem taşındı satırların sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl  
+ **Üst bilgi:** CorSym.idl  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

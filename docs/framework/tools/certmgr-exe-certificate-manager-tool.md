@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e0274b1f1f0bc0ec6de7490c4602e5813e4d46f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 2284baf7057ec8c0c947325b1efeced7fdd4acbd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745928"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  
@@ -56,7 +56,7 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
 |**/ add**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
 |**/ all**|İle kullanıldığında tüm girdileri ekler **/ add**. İle kullanıldığında tüm girdileri siler **/del**. Olmadan kullanıldığında tüm girdileri görüntüler **/ add** veya **/del** seçenekleri. **/All** seçeneği ile kullanılamaz **/put**.|  
 |**/c**|İle kullanıldığında sertifikaları ekler **/ add**. İle kullanıldığında sertifikaları siler **/del**. İle kullanıldığında sertifikaları kaydeder **/put**. Görüntüler olmadan kullanıldığında sertifikaları **/ add**, **/del**, veya **/put** seçeneği.|  
-|**/ CRL**|İle kullanıldığında CRL'leri ekler **/ add**. İle kullanıldığında CRL'leri siler **/del**. İle kullanıldığında CRL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CRL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
+|**/CRL**|İle kullanıldığında CRL'leri ekler **/ add**. İle kullanıldığında CRL'leri siler **/del**. İle kullanıldığında CRL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CRL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
 |**/ CTL**|İle kullanıldığında CTL'leri ekler **/ add**. İle kullanıldığında CTL'leri siler **/del**. İle kullanıldığında CTL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CTL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
 |**/ DEL**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
 |**/e** *encodingType*|Sertifika kodlama türünü belirtir. Varsayılan, `X509_ASN_ENCODING` değeridir.|  
@@ -137,7 +137,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [MakeCert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [MakeCert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

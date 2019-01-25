@@ -2,12 +2,12 @@
 title: Çakışma (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: f0c5d79b437ff06603ea10404357aa0b3270bc53
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679337"
 ---
 # <a name="overlaps-entity-sql"></a>Çakışma (varlık SQL)
 İki koleksiyon ortak öğeler sahip olup olmadığını belirler.  
@@ -41,5 +41,5 @@ expression OVERLAPS expression
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

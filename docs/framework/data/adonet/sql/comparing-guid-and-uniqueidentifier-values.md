@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674069"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Karşılaştırma GUID ve uniqueidentifier değerlerini
 SQL Server genel benzersiz tanıtıcısı (GUID) veri türü tarafından temsil edilen `uniqueidentifier` veri türü, 16 baytlık bir ikili değeri depolar. Bir ikili sayı bir GUID'dir ve onun ana birçok sitelerde çok sayıda bilgisayar olan bir ağa benzersiz bir tanımlayıcı olarak kullanılır. GUID'ler Transact-SQL NEWID işlevi çağrılarak oluşturulan ve dünya genelinde benzersiz olması garanti edilmez. Daha fazla bilgi için [benzersiz tanımlayıcı (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
@@ -45,7 +45,7 @@ Sorted SqlGuids:
 1aaaaaaa-bbbb-cccc-dddd-3eeeeeeeeeee  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-[SQL Server Veri Türleri ve ADO.NET](sql-server-data-types.md)  
-[ADO.NET’e Genel Bakış](../ado-net-overview.md)  
+- [SQL Server Veri Türleri ve ADO.NET](sql-server-data-types.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

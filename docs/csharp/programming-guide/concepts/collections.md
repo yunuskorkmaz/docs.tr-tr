@@ -2,12 +2,12 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4163a87c04e280ed19f53d1f715df49b65d02f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620610"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  
@@ -575,15 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Programlama Kavramları (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects'in (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)  
-- [Koleksiyon oluşturma ve düzenleme](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)  
-- [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Programlama Kavramları (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects'in (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)
+- [Koleksiyon oluşturma ve düzenleme](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)
+- [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)

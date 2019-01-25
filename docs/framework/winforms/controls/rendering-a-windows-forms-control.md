@@ -10,30 +10,30 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d2cb5041fbceb2e5c2d35d37a2001deffab40d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659377"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms Denetimini İşleme
-İşleme görsel bir kullanıcının ekranda oluşturma işleminin ifade eder. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığına) işleme için. Erişim sağlayan yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve onun alt ad boşlukları.  
+İşleme görsel bir temsili bir kullanıcının ekranda oluşturma işlemini gösterir. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığının) işleme için. Erişim sağlayan bir yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve bunun alt ad boşlukları.  
   
- Aşağıdaki öğeler Denetim işlemede oynayan:  
+ Aşağıdaki öğeler denetimi işlemede ilgilidir:  
   
--   Temel sınıfı tarafından sağlanan çizim işlevleri <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+-   Taban sınıfı tarafından sağlanan çizim işlevselliği <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
 -   Temel öğelerini [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] grafik kitaplığı.  
   
--   Çizim bölge geometri.  
+-   Çizim bölge geometrisi.  
   
 -   Grafik kaynakları serbest bırakma yordamı.  
   
-## <a name="drawing-functionality-provided-by-control"></a>Denetim tarafından sağlanan işlevselliği çizme  
- Taban sınıfı <xref:System.Windows.Forms.Control> aracılığıyla çizim işlevselliği sağlar, <xref:System.Windows.Forms.Control.Paint> olay. Bir denetim başlatır <xref:System.Windows.Forms.Control.Paint> görünümünü güncelleştirmek gereken her olay. .NET Framework'teki olaylar hakkında daha fazla bilgi için bkz: [işleme ve olayları oluşturma](../../../../docs/standard/events/index.md).  
+## <a name="drawing-functionality-provided-by-control"></a>Denetimi tarafından sağlanan işlevselliği çizme  
+ Temel sınıf <xref:System.Windows.Forms.Control> aracılığıyla çizim işlevselliği sağlar, <xref:System.Windows.Forms.Control.Paint> olay. Bir denetim oluşturur <xref:System.Windows.Forms.Control.Paint> görünümünü güncelleştirmek gerektiğinde olay. .NET Framework içindeki olaylar hakkında daha fazla bilgi için bkz. [Handling and Raising Events](../../../../docs/standard/events/index.md).  
   
- Olay verileri sınıfı için <xref:System.Windows.Forms.Control.Paint> olay <xref:System.Windows.Forms.PaintEventArgs>, bir denetim çizim için gereken verileri tutan — bir grafik nesnesi ve çizim bölgeyi temsil eden bir dikdörtgen nesnesi için bir tanıtıcı. Bu nesneler gösterilir kalın aşağıdaki kod parçası olarak.  
+ Olay veri sınıfı için <xref:System.Windows.Forms.Control.Paint> olay <xref:System.Windows.Forms.PaintEventArgs>, bir denetim çizmek için gerekli olan verileri tutar — bir grafik nesnesinin ve çizim bölgeyi temsil eden bir dikdörtgen nesnesi için bir tanıtıcı. Bu nesneler gösterilir aşağıdaki kod parçası kalın.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -61,9 +61,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> Çizim işlevselliğini kapsülleyen bir yönetilen tartışması içinde açıklandığı gibi sınıftır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bu konuda daha sonra. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneği <xref:System.Drawing.Rectangle> yapısı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim Geliştirici hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özelliği.  
+ <xref:System.Drawing.Graphics> Çizim işlevi kapsülleyen bir yönetilen sınıf tartışmalarına açıklandığı olan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bu konuda. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneğidir <xref:System.Drawing.Rectangle> yapı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim geliştiricisi hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrisinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özellik.  
   
- Bir denetim işleme mantığı kılarak sağlamalısınız <xref:System.Windows.Forms.Control.OnPaint%2A> öğesinden devralınan yöntemi <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> bir grafik nesnesi ve aracılığıyla çizmek için dikdörtgen erişim alır <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliklerini <xref:System.Windows.Forms.PaintEventArgs> örneği kendisine geçirilen.  
+ Bir denetim işleme mantığı geçersiz kılarak sağlamalısınız <xref:System.Windows.Forms.Control.OnPaint%2A> devraldığı yöntemi <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> bir grafik nesnesinin ve bir dikdörtgen çizin aracılığıyla erişimi alır <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliklerini <xref:System.Windows.Forms.PaintEventArgs> kendisine geçirilen örneği.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -73,12 +73,12 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Yöntemi taban <xref:System.Windows.Forms.Control> sınıfı ile kayıtlı olay temsilcileri yalnızca çağırır ancak herhangi bir çizim işlevsellik uygulamaz <xref:System.Windows.Forms.Control.Paint> olay. Kıldığınızda <xref:System.Windows.Forms.Control.OnPaint%2A>, genellikle çağıracağı <xref:System.Windows.Forms.Control.OnPaint%2A> temsilciler kayıtlı için temel sınıf yöntemi alma <xref:System.Windows.Forms.Control.Paint> olay. Ancak, tüm kullanıcıların yüzeyini boyamak denetimleri temel sınıfın çağırma kullanılamaz <xref:System.Windows.Forms.Control.OnPaint%2A>gibi bu Titreşimi tanıtır. Geçersiz kılma bir örnek için <xref:System.Windows.Forms.Control.OnPaint%2A> olayı bkz [nasıl yapılır: Windows Forms denetimi olduğunu gösteren ilerlemesi oluşturmak](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Windows.Forms.Control.OnPaint%2A> Yöntemi temel <xref:System.Windows.Forms.Control> sınıf herhangi bir çizim işlevselliğini gerçekleştirmemesi ancak yalnızca kayıtlı olay temsilcilerini çağırır <xref:System.Windows.Forms.Control.Paint> olay. Ne zaman geçersiz kılmanız <xref:System.Windows.Forms.Control.OnPaint%2A>, genellikle çağırması gereken <xref:System.Windows.Forms.Control.OnPaint%2A> temsilciler kayıtlı için temel sınıf yönteminde <xref:System.Windows.Forms.Control.Paint> olay. Tüm bunların surface boyama denetimleri temel sınıfın ancak, çağırmalıdır değil <xref:System.Windows.Forms.Control.OnPaint%2A>gibi bu titreşimini tanıtır. Geçersiz kılma örneği için <xref:System.Windows.Forms.Control.OnPaint%2A> olay bkz [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 > [!NOTE]
->  Çağrılamadı <xref:System.Windows.Forms.Control.OnPaint%2A> , denetiminden; bunun yerine, doğrudan çağırma <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemi (devralınan <xref:System.Windows.Forms.Control>) veya çağırır diğer bir yöntem <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Sırayla yöntemini çağıran <xref:System.Windows.Forms.Control.OnPaint%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Yöntemi aşırı yüklenmiş ve bağımsız değişkenler üzerinde bağlı olarak sağlanan <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, bir denetim bazı veya tüm kendi ekran alanının yeniden çizer.  
+>  Değil çağırma <xref:System.Windows.Forms.Control.OnPaint%2A> , denetiminden; bunun yerine, doğrudan çağırma <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemi (devralınan <xref:System.Windows.Forms.Control>) veya çağıran başka bir yöntem <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Sırayla yöntemini çağıran <xref:System.Windows.Forms.Control.OnPaint%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Yöntemi aşırı yüklüdür ve bağımsız değişkenler üzerinde bağlı olarak sağlanan için <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, bazı veya tüm ekran alanı, bir denetimi yeniden çizer.  
   
- Temel <xref:System.Windows.Forms.Control> sınıfı tanımlayan çizim için yararlı olan başka bir yöntem — <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi.  
+ Temel <xref:System.Windows.Forms.Control> sınıfı çizim için yararlı olan başka bir yöntem tanımlar — <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi.  
   
 ```vb  
 Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)  
@@ -88,25 +88,25 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A> arka plan boyar (ve dolayısıyla şekli) penceresinin ve sırasında hızlı olması garanti <xref:System.Windows.Forms.Control.OnPaint%2A> ayrıntıları boyar ve tek tek boyama istekleri birine birleştirilir olduğundan daha yavaş olabilir <xref:System.Windows.Forms.Control.Paint> olmak zorunda tüm alanları kapsamaktadır olay yeniden çizilir. Çağrılacak isteyebilirsiniz <xref:System.Windows.Forms.Control.OnPaintBackground%2A> örneği için denetim için bir gradyan renkli arka plan çizmek istiyorsanız.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> arka plan boyar (ve dolayısıyla şekli) penceresinin ve sırasında daha hızlı olmasını garanti <xref:System.Windows.Forms.Control.OnPaint%2A> ayrıntılarını boyar ve tek tek Boya istekleri birine birleştirilir daha yavaş olabilir çünkü <xref:System.Windows.Forms.Control.Paint> olması için tüm alanları kapsar olay yeniden çizilir. Çağrılacak isteyebileceğiniz <xref:System.Windows.Forms.Control.OnPaintBackground%2A> örneği için bir gradyan renkli arka plan denetiminizin çizmek istiyorsanız.  
   
- Sırada <xref:System.Windows.Forms.Control.OnPaintBackground%2A> bir olay benzeri terminolojisi varsa ve aynı bağımsız değişken olarak `OnPaint` yöntemi, <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true olay yöntemi değildir. Var olan hiçbir `PaintBackground` olay ve <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olay temsilcileri çağrılmaz. Geçersiz kılarken <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi, türetilmiş bir sınıf çağırmak için gerekli değildir <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olduğu temel sınıfın yöntemi.  
+ Sırada <xref:System.Windows.Forms.Control.OnPaintBackground%2A> aynı bağımsız değişken olarak alır ve bir olay benzeri terminolojisi sahip `OnPaint` yöntemi <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true olay yöntemi değildir. Var olan hiçbir `PaintBackground` olay ve <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olay temsilci çağrılmaz. Geçersiz kılarken <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntem, türetilmiş bir sınıf değil çağırmak için gerekli <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi kendi taban sınıfının.  
   
-## <a name="gdi-basics"></a>GDI + temelleri  
- <xref:System.Drawing.Graphics> Sınıfı, metin görüntüleme yöntemleri yanı sıra daire, üçgenler, yaylar ve üç nokta gibi çeşitli şekiller çizmek için yöntemleri sağlar. <xref:System.Drawing?displayProperty=nameWithType> Ad alanı ve onun alt ad boşlukları şekiller (daireler, dikdörtgenler, yaylar ve diğerleri), renkleri, yazı tipi, Fırçalar vb. gibi grafik öğeleri kapsülleyen sınıfları içerir. Hakkında daha fazla bilgi için [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], bkz: [yönetilen grafik sınıflarını kullanarak](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md). Temel bilgiler [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] da açıklanan [nasıl yapılır: Windows Forms denetimi olduğunu gösteren ilerlemesi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+## <a name="gdi-basics"></a>GDI +'da temel bilgileri  
+ <xref:System.Drawing.Graphics> Sınıfı yöntemleri metin görüntüleme için yanı sıra, daire, üçgen, yaylar ve elipsler gibi çeşitli şekiller çizmek için yöntemler sağlar. <xref:System.Drawing?displayProperty=nameWithType> Ad alanı ve bunun alt ad boşlukları grafik öğeleri şekilleri (daire, dikdörtgenler, yaylara ve diğerleri), renkleri, yazı tipleri, fırçaları ve benzeri gibi kapsayan sınıflar içerir. Hakkında daha fazla bilgi için [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], bkz: [yönetilen grafik sınıflarını kullanarak](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md). Temel bilgiler [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] da açıklanan [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
-## <a name="geometry-of-the-drawing-region"></a>Çizim alanının geometri  
- <xref:System.Windows.Forms.Control.ClientRectangle%2A> Denetimi özelliği, kullanıcının ekranda denetlemek için kullanılabilen dikdörtgen bölgesini belirtir sırada <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs> gerçekten boyanır alanı belirtir. (Boyama Bitti olduğunu unutmayın <xref:System.Windows.Forms.Control.Paint> geçen olay yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> örneği bağımsız değişkeni olarak). Küçük bir bölümü, denetimin görüntüleme değişiklikleri olduğu gibi bir denetim, kullanılabilir alanı yalnızca bir kısmını boyamak gerekebilir. Bu durumlarda, bir denetim Geliştirici çizim ve olarak geçirmek için gerçek dikdörtgeni işlem gerekir <xref:System.Windows.Forms.Control.Invalidate%2A>. Aşırı yüklenmiş sürümlerini <xref:System.Windows.Forms.Control.Invalidate%2A> süren bir <xref:System.Drawing.Rectangle> veya <xref:System.Drawing.Region> bağımsız değişken olarak oluşturmak için bu değişkeni kullanın <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>.  
+## <a name="geometry-of-the-drawing-region"></a>Geometri çizim bölgesi  
+ <xref:System.Windows.Forms.Control.ClientRectangle%2A> Bir denetimin özellik dikdörtgen bölge yok kullanıcının ekranında, denetime belirtir ancak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs> gerçekten boyanır alanı belirtir. (Boyama tamamlandı olduğunu unutmayın <xref:System.Windows.Forms.Control.Paint> alan olay yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> örnek bağımsız olarak). Küçük bir bölümü, denetimin görüntü değişiklikleri olduğu gibi bir denetimin kendi kullanılabilir alanı yalnızca bir kısmını boyamak gerekebilir. Bu durumlarda, denetim geliştiricisi gerçek bir dikdörtgen çizin ve geçirebilirsiniz hesaplamanız gerekir <xref:System.Windows.Forms.Control.Invalidate%2A>. Aşırı yüklenmiş sürümlerini <xref:System.Windows.Forms.Control.Invalidate%2A> süren bir <xref:System.Drawing.Rectangle> veya <xref:System.Drawing.Region> oluşturmak için bu bağımsız değişken bağımsız değişken olarak kullanmak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>.  
   
- Aşağıdaki kodda gösterildiği parçalara nasıl `FlashTrackBar` özel denetim çizim dikdörtgen hesaplar. `client` Değişkeni gösterir <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği. Tam bir örnek için bkz: [nasıl yapılır: Windows Forms denetimi olduğunu gösteren ilerlemesi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Aşağıdaki kod parçası gösterir nasıl `FlashTrackBar` özel denetimi çizin dikdörtgen hesaplar. `client` Değişkeni gösterir <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği. Eksiksiz bir örnek için bkz. [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
 ## <a name="freeing-graphics-resources"></a>Grafik kaynakları serbest bırakma  
- Grafik nesneleri, sistem kaynaklarını kullandığından maliyetlidir. Bu tür nesneleri örneklerini dahil <xref:System.Drawing.Graphics?displayProperty=nameWithType> sınıf örneklerini yanı sıra <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>ve diğer grafik sınıfları. Yalnızca ihtiyaç ve bunu serbest bıraktığınızda bir grafik kaynak oluşturmak önemlidir kullanmayı bitirdikten yakında. Uygulayan bir tür oluşturursanız <xref:System.IDisposable> arabirim, çağrı kendi <xref:System.IDisposable.Dispose%2A> kaynakları boşaltmak için ile bitirdiğinizde yöntemi.  
+ Sistem kaynakları kullandıkları için grafik nesneleri pahalıdır. Örnekleri gibi nesnelerin dahil <xref:System.Drawing.Graphics?displayProperty=nameWithType> sınıf örneklerinin yanı sıra <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>ve diğer grafik sınıfları. Sadece gereksinim ve serbest bir grafik kaynak oluşturmak önemlidir kullanmayı bitirdikten hemen. Uygulayan türü oluşturursanız <xref:System.IDisposable> arabirim, çağrı kendi <xref:System.IDisposable.Dispose%2A> ücretsiz kaynaklar için ile işiniz bittiğinde yöntemi.  
   
- Aşağıdaki kodda gösterildiği parçalara nasıl `FlashTrackBar` özel denetim oluşturur ve serbest bir <xref:System.Drawing.Brush> kaynak. Tam kaynak kodunu bkz [nasıl yapılır: Windows Forms denetimi olduğunu gösteren ilerlemesi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Aşağıdaki kod parçası gösterir nasıl `FlashTrackBar` özel denetimi oluşturur ve serbest bir <xref:System.Drawing.Brush> kaynak. Tam kaynak kodunu görmek [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
@@ -117,5 +117,5 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  [!code-csharp[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)

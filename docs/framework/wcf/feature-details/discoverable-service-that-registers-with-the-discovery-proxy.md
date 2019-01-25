@@ -1,20 +1,20 @@
 ---
-title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
+title: "Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme"
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623696"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
-Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Önceki konusunda [nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanmadı. Bu konuda, duyuru iletileri gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) Keşif proxy'si için kaydolun ve kendisini keşif proxy'sine kaydı için neden olur.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme
+Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir. Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır. Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.  
   
-### <a name="to-define-the-service-contract"></a>Hizmet sözleşmesi tanımlamak için  
+### <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlama  
   
-1.  Yeni bir konsol uygulama projesi eklemek `DiscoveryProxyExample` adlı çözüm `Service`.  
+1.  Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Service`.  
   
 2.  Aşağıdaki derlemelere başvurular ekleyin:  
   
@@ -31,7 +31,7 @@ Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Öncek
     using System.ServiceModel;  
     ```  
   
-5.  CalculatorService.cs içinde hizmet sözleşmesi tanımlayın.  
+5.  CalculatorService.cs içinde hizmet sözleşmesini tanımlamaktır.  
   
     ```csharp  
     // Define a service contract.  
@@ -91,7 +91,7 @@ Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Öncek
   
 ### <a name="to-host-the-service"></a>Ana bilgisayar hizmeti  
   
-1.  Proje oluşturduğunuzda, oluşturulan Program.cs dosyasını açın.  
+1.  Projeyi oluşturduğunuzda oluşturulan Program.cs dosyasını açın.  
   
 2.  Aşağıdaki using deyimlerini.  
   
@@ -102,7 +102,7 @@ Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Öncek
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  İçinde `Main()` yöntemi, aşağıdaki kodu ekleyin:  
+3.  İçinde `Main()` yöntemine aşağıdaki kodu ekleyin:  
   
     ```csharp  
     // Define the base address of the service  
@@ -154,10 +154,10 @@ Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Öncek
     }  
     ```  
   
- Bir bulunabilir hizmet uygulama tamamladınız. Oturum devam [nasıl yapılır: hizmet bulmak için keşif proxy'si kullanan bir istemci uygulaması kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Kayıtlı bir bulunabilir hizmet uygulama tamamladınız. Geçin [nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Örnek  
- Bu, bu konuda kullanılan kodu tam listesi bulunmaktadır.  
+ Bu konu başlığında kullanılan kod tam listesi budur.  
   
 ```csharp  
 // CalculatorService.cs  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

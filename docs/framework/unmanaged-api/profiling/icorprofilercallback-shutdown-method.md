@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb2bfe927eddaf6812b0185a586135e76f649c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728128"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown Yöntemi
-Profil Oluşturucu uygulamanın kapanacağını bildirir.  
+Profil Oluşturucu, uygulamanın kapanacağını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,21 +34,21 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kodu güvenle yöntemleri çağrılamaz [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) sonra arabirim `Shutdown` yöntemi çağrılır. Yapılan her çağrı `ICorProfilerInfo` yöntemleri neden sonra tanımsız davranış `Shutdown` yöntemi döndürür. Değişmez belirli olaylar kapatıldıktan sonra hala oluşabilir; Profil Oluşturucu hemen bu oluştuğunda döndürülecek ilgilenebilmek.  
+ Profil Oluşturucu kodu güvenli bir şekilde yöntemlerine çağrılamıyor [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) sonra arabirim `Shutdown` yöntemi çağrılır. Çağrıları `ICorProfilerInfo` yöntemleri sonra tanımsız davranışa neden `Shutdown` yöntemi döndürür. Sabit belirli olaylar kapatıldıktan sonra yine de oluşabilir. Profil Oluşturucu hemen bu oluştuğunda döndürülecek ilgileniriz.  
   
- `Shutdown` Yöntemi çağrılır, yalnızca profili oluşturuluyor yönetilen uygulama yönetilen kod başladıysanız (diğer bir deyişle, ilk çerçeve işlem yığında yönetilen). Uygulama yönetilmeyen kodu olarak başladı, ancak daha sonra yönetilen koda Atlanan, böylece örneği ortak dil çalışma zamanı (CLR), ardından oluşturmayı `Shutdown` çağrılmaz. Bu durumlarda, kendi Kitaplığı'nda profil oluşturucu içermelidir bir `DllMain` DLL_PROCESS_DETACH kullanan yordamı değer tüm kaynakları serbest ve vb. diske izlemeleri temizleme gibi verilerini temizleme işlenmesini gerçekleştirme.  
+ `Shutdown` Yöntemin çağrılacağı, profili oluşturulan yönetilen uygulama yönetilen kod başladıysanız (diğer bir deyişle, ilk çerçeve işlem yığın üzerinde yönetilen). Uygulamanın yönetilmeyen kod olarak başlatıldı, ancak daha sonra yönetilen koda Atlanan, dolayısıyla örneği ortak dil çalışma zamanı (CLR), ardından oluşturma `Shutdown` çağrılmaz. Bu durumlarda, kitaplıkta profil oluşturucu içermelidir bir `DllMain` DLL_PROCESS_DETACH kullanan yordamı değeri tüm kaynakları serbest bırakın ve izlemeleri ve disk temizleme gibi verileri temizleme işlemini gerçekleştirin.  
   
- Genel olarak, Profil Oluşturucu ile beklenmeyen kapatmalar başa gerekir. Örneğin, bir işlem Win32 tarafından 's durdurulamaz `TerminateProcess` yöntemi (Winbase.h içinde bildirilen). Diğer durumlarda, CLR düzenli yok etme iletileri kendileri için sunmakla olmadan belirli yönetilen iş parçacığı (arka plan iş parçacıkları) durdurulur.  
+ Genel olarak, Profil Oluşturucu ile beklenmeyen kapatma başa gerekir. Örneğin, bir işlem Win32's durdu `TerminateProcess` yöntemi (Winbase.h içinde bildirilen). Diğer durumlarda, belirli yönetilen iş parçacıkları (arka plan iş parçacıkları) sıralı yok etme iletileri için bunları sunmakla olmadan CLR durdurulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Initialize Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Initialize Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

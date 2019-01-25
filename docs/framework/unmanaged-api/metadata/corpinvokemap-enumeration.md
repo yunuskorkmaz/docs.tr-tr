@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745991"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap Numaralandırması
-PInvoke çağrısı seçeneklerini belirtir.  
+PInvoke arama seçeneklerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -67,35 +67,35 @@ typedef enum  CorPinvokeMap {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pmNoMangle`|Her üye adı belirtildiği şekilde kullanın.|  
+|`pmNoMangle`|Belirtilen üye adları kullanın.|  
 |`pmCharSetMask`|Ayrılmış.|  
 |`pmCharSetNotSpec`|Ayrılmış.|  
 |`pmCharSetAnsi`|Birden çok baytlı karakter dizeleri olarak dizelerini sıralama.|  
-|`pmCharSetUnicode`|Unicode 2-bayt karakter olarak dizelerini sıralama.|  
-|`pmCharSetAuto`|Otomatik olarak hedef işletim sistemi için uygun şekilde dizeleri sıralama. Windows NT, Windows 2000, Windows XP ve Windows Server 2003 ailesinde Unicode varsayılandır; Windows 98 ve Windows Me ANSI varsayılandır|  
+|`pmCharSetUnicode`|2 baytlık karakterler Unicode dizelerini sıralama.|  
+|`pmCharSetAuto`|Otomatik olarak hedef işletim sistemi için uygun şekilde dizeleri sıralaması. Varsayılan Windows NT, Windows 2000, Windows XP ve Windows Server 2003 ailesinin Unicode bulunur. Windows 98 ve Windows Me ANSI varsayılandır|  
 |`pmBestFitUseAssem`|Ayrılmış.|  
-|`pmBestFitEnabled`|ANSI karakter kümesini içinde bir tam eşleşme olmaması Unicode karakterler, en uygun eşlemeyi gerçekleştirmek.|  
-|`pmBestFitDisabled`|Unicode karakterler, en uygun eşlemeyi gerçekleştirmek değil. Bu durumda, tüm eşlenemez karakterleri tarafından değiştirilecek olan bir '?'.|  
+|`pmBestFitEnabled`|En iyi uyan eşlemeyi ANSI karakter kümesi içinde bir tam eşleşme eksik Unicode karakter gerçekleştirin.|  
+|`pmBestFitDisabled`|Unicode karakter en iyi uyan eşlemeyi gerçekleştirmeyin. Bu durumda, tüm eşlenemez karakterleri ile değiştirilecek bir '?'.|  
 |`pmBestFitMask`|Ayrılmış.|  
 |`pmThrowOnUnmappableCharUseAssem`|Ayrılmış.|  
-|`pmThrowOnUnmappableCharEnabled`|Birlikte çalışma Sıralayıcı eşlenemez karakter karşılaştığında bir özel durum.|  
-|`pmThrowOnUnmappableCharDisabled`|Birlikte çalışma Sıralayıcı eşlenemez karakter karşılaştığında bir özel durum değil.|  
+|`pmThrowOnUnmappableCharEnabled`|Birlikte çalışma sıralayıcısı eşlenemez bir karakterle karşılaştığında bir özel durum.|  
+|`pmThrowOnUnmappableCharDisabled`|Birlikte çalışma sıralayıcısı eşlenemez bir karakterle karşılaştığında bir özel durum oluşturması beklenmiyor.|  
 |`pmThrowOnUnmappableCharMask`|Ayrılmış|  
-|`pmSupportsLastError`|Win32 çağırmak Aranan izin `SetLastError` öznitelikli yönteminden dönmeden önce işlevi.|  
+|`pmSupportsLastError`|Win32 çağırmak Aranan izin `SetLastError` öznitelikli yöntemini döndürmeden önce işlevi.|  
 |`pmCallConvMask`|Ayrılmış|  
-|`pmCallConvWinapi`|Çağırma kuralı varsayılan platform kullanın. Örneğin, Windows varsayılandır `StdCall` ve Windows CE olduğu .NET `Cdecl`.|  
-|`pmCallConvCdecl`|Kullanım `Cdecl` çağırma. Bu durumda, çağıranın yığını temizler. Bu arama işlevleri sağlar `varargs` (diğer bir deyişle, değişken bir dizi parametre kabul eden işlevler).|  
-|`pmCallConvStdcall`|Kullanım `StdCall` çağırma. Bu durumda, aranan yığını temizler. Bu, yönetilmeyen işlevleri çağırma platformuyla çağırmak için varsayılan kuraldır.|  
-|`pmCallConvThiscall`|Kullanım `ThisCall` çağırma. Bu durumda, ilk parametre olan `this` işaretçi ve ECX kayıttaki depolanır. Diğer parametreler yığına. `ThisCall` Çağırma yöntemleri yönetilmeyen DLL dosyasından dışarı sınıfları çağırmak için kullanılır.|  
+|`pmCallConvWinapi`|Varsayılan platform çağırma kuralını kullanın. Örneğin, Windows üzerinde varsayılandır `StdCall` ve Windows CE olduğu .NET `Cdecl`.|  
+|`pmCallConvCdecl`|Kullanım `Cdecl` çağırma kuralı. Bu durumda, çağıranın yığını temizler. Bu, arama işlevlerinde sağlar `varargs` (diğer bir deyişle, değişik sayıda parametreyi kabul eden işlevler).|  
+|`pmCallConvStdcall`|Kullanım `StdCall` çağırma kuralı. Bu durumda, çağrılan yığını temizler. Bu, yönetilmeyen işlevleri çağırma platformuyla çağırmak için varsayılan kuralıdır.|  
+|`pmCallConvThiscall`|Kullanım `ThisCall` çağırma kuralı. Bu durumda ilk parametresinin olup `this` işaretçisi ve kayıtta ECX depolanır. Diğer parametreler, yığın üzerine itilir. `ThisCall` Çağırma yöntemleri yönetilmeyen DLL dosyasından dışarı aktarılan sınıflar çağırmak için kullanılır.|  
 |`pmCallConvFastcall`|Ayrılmış.|  
 |`pmMaxValue`|Ayrılmış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

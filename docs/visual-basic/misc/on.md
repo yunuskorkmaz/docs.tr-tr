@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684820"
 ---
 # <a name="on-visual-basic"></a>Açık (Visual Basic)
-Bir çalışma zamanı hatası yanıt sunar veya derleyici seçeneği açar.  
+Bir çalışma zamanı hatası yanıt sunar veya bir derleyici seçeneğini açar.  
   
- Sorgularda, birleştirilen koleksiyonları tuşları tanımlar.  
+ Sorgularda birleştirilen koleksiyonlar için anahtarları tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `On` Anahtar sözcüğü bu bağlamlarında kullanılır:  
+ `On` Anahtar sözcüğü bu bağlamda kullanılır:  
   
  [Group Join Yan Tümcesi](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,5 +34,5 @@ Bir çalışma zamanı hatası yanıt sunar veya derleyici seçeneği açar.
   
  [Option Strict Deyimi](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)

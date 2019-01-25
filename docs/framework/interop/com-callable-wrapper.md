@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655341"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 Bir COM istemcisi bir .NET nesnesini çağırdığında, ortak dil çalışma zamanı yönetilen nesneyi ve nesne için bir COM çağrılabilir sarmalayıcı (CCW) oluşturur. Başvuru bir .NET nesnesini doğrudan COM istemcileri CCW bir proxy olarak yönetilen bir nesne için kullanın.  
@@ -189,9 +189,9 @@ Uygulamanıza erken bağlanan çağrılar COM olay arabirim yöntemleri için ge
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM Sarmalayıcıları](com-wrappers.md)  
- [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)  
- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)  
- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [COM Sarmalayıcıları](com-wrappers.md)
+- [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
+- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)
+- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)

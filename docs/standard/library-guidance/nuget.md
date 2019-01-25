@@ -4,12 +4,12 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724313"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ Alternatif bir sembol paketi oluşturma seçeneği, ana NuGet paketinin sembol d
 </Project>
 ```
 
-**✔️ DÜŞÜNÜN** sembol dosyaları ana NuGet paketini ekleme.
+Sembol dosyaları ekleme dezavantajı, bunlar yaklaşık %30 SDK stili projeleri kullanılarak derlenmiş .NET kitaplıkları için paket boyutunu artırın ' dir. Paket boyutu önemliyse, sembolleri bir sembol paketi bunun yerine yayımlamalısınız.
 
-> Sembol dosyaları ana NuGet paketini ekleme geliştiriciler varsayılan olarak daha iyi hata ayıklama deneyimi sunar. Bulup sembol dosyaları almak için kendi IDE'de NuGet sembol sunucusu yapılandırmanız gerekmez.
+**✔️ DÜŞÜNÜN** sembolleri bir sembol paketi olarak yayımlama (`*.snupkg`) nuget.org'da
+
+> Sembol paketleri (`*.snupkg`) ana paket boyutu fazla büyümesini olmadan geliştiricilere iyi bir isteğe bağlı hata ayıklama deneyimi sağlar ve geri yükleme için NuGet paketini hata ayıklamak için düşünmüyorsanız bu performansı etkileyen.
 >
-> Katıştırılmış sembol dosyalarını dezavantajı, paket boyutu yaklaşık %30 SDK stili projeleri kullanılarak derlenmiş .NET kitaplıkları için daha fazla olur. Paket boyutu önemliyse, sembolleri bir sembol paketi bunun yerine yayımlamalısınız.
+> Uyarı, bunlar bulun ve sembol dosyaları almak için NuGet sembol sunucusu, IDE'de (bir kerelik kurulum) yapılandırmak gerekir ' dir. NuGet.org sembol sunucusu hazır seçeneklerden biri olarak sağlamak Visual Studio 2019 planlamaktadır. 
+
 
 >[!div class="step-by-step"]
 >[Önceki](strong-naming.md)

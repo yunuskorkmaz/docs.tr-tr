@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8017f816632cffc42676761a367e980d1cafe088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 203c31129218be585960e771b1d7e669defd8cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743302"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps Yöntemi
 Belirtilen değiştirir `File` meta veri yapısı.  
@@ -40,28 +40,28 @@ HRESULT SetFileProps (
   
 #### <a name="parameters"></a>Parametreler  
  `file`  
- [in] Belirtir meta veri simgesi `File` değiştirilecek meta veri yapısı.  
+ [in] Belirten bir meta veri belirteci `File` değiştirilecek meta veri yapısı.  
   
  `pbHashValue`  
- [in] Dosyayla ilişkili karma verileri bir işaretçi.  
+ [in] Bir dosyayla ilişkili veri karması işaretçisi.  
   
  `cbHashValue`  
  [in] Bayt cinsinden boyutu `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bit düzeyinde bileşimini [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) çeşitli dosyanın özniteliklerini belirten değerleri.  
+ [in] Bitsel bir birleşimi [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) dosyanın çeşitli özniteliklerini belirten değerleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Oluşturmak için bir `File` meta veri yapısı, kullanım [Imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

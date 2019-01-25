@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52e3498b54f90e7d9d1d1d79ae0817cca511af4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737263"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
-Belirtilen profil oluşturucu için belirtilen işlem ekler.  
+Belirtilen işleme belirtilen profil oluşturucuyu ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,57 +41,57 @@ HRESULT AttachProfiler(
   
 #### <a name="parameters"></a>Parametreler  
  `dwProfileeProcessID`  
- [in] Profil Oluşturucu eklenmesi işlemin işlem kimliği. Bir 64-bit makine profili işlemin verileri aradığı tetikleyici işlem verileri eşleşmelidir `AttachProfiler`. Altında kullanıcı hesabı `AttachProfiler` çağrılır yönetimsel ayrıcalıklara sahip, hedef işlem sistem üzerindeki herhangi bir işlem olabilir. Aksi takdirde, hedef işlem aynı kullanıcı hesabı tarafından ait olmalıdır.  
+ [in] Profil Oluşturucu eklenmesi işlemin işlem kimliği. Bir 64-bit makinede profilli işlemin bit genişliği bit genişliğinde çağıran bir tetikleyici işlem eşleşmelidir `AttachProfiler`. Altında kullanıcı hesabı `AttachProfiler` çağrılır yönetici ayrıcalıklarına sahip, hedef işlem sistem üzerindeki herhangi bir işlem olabilir. Aksi takdirde, hedef işlem, aynı kullanıcı hesabı tarafından sahiplenilmelidir.  
   
  `dwMillisecondsMax`  
- [in] Milisaniye cinsinden süre için `AttachProfiler` tamamlamak için. Tetikleyici işlemi belirli profiler kendi başlatma işlemini tamamlamak yeterli olduğu bilinen bir zaman aşımı geçirmelisiniz.  
+ [in] Milisaniye cinsinden süre için `AttachProfiler` tamamlanması. Tetikleyici işlem, belirli bir profil, başlatma işlemini tamamlamak yeterli olduğu bilinen bir zaman aşımı geçmelidir.  
   
  `pClsidProfiler`  
- [in] Yüklenecek profil oluşturucu CLSID gösteren bir işaretçi. Tetikleyici işlemi bu bellek sonra yeniden `AttachProfiler` döndürür.  
+ [in] Yüklenecek profil oluşturucu CLSID değeri için bir işaretçi. Tetikleyici işlem, bu bellek sonra yeniden kullanabilirsiniz `AttachProfiler` döndürür.  
   
  `wszProfilerPath`  
- [in] Yüklenecek Profil Oluşturucu'nın DLL dosyasının tam yolu. Bu dize null Sonlandırıcı dahil olmak üzere en fazla 260 karakter içermelidir. Varsa `wszProfilerPath` null veya boş bir dize ortak dil çalışma zamanı (CLR) CLSID kayıt defterinde bakarak Profil Oluşturucu'nın DLL dosyasının konumunu bulmayı dener, `pClsidProfiler` işaret eder.  
+ [in] Yüklenecek profil oluşturucunun DLL dosyasının tam yolu. Bu dize null Sonlandırıcı dahil olmak üzere, en fazla 260 karakter içermelidir. Varsa `wszProfilerPath` null veya boş bir dize ortak dil çalışma zamanı (CLR) profil oluşturucunun DLL dosyasının konumunu CLSID kayıt defterinde bakarak bulmayı dener, `pClsidProfiler` işaret eder.  
   
  `pvClientData`  
- [in] Profil Oluşturucu tarafından geçirilecek veriler için bir işaretçi [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi. Tetikleyici işlemi bu bellek sonra yeniden `AttachProfiler` döndürür. Varsa `pvClientData` null, `cbClientData` 0 (sıfır) olması gerekir.  
+ [in] Profil Oluşturucu tarafından geçirilecek veriler için bir işaretçi [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi. Tetikleyici işlem, bu bellek sonra yeniden kullanabilirsiniz `AttachProfiler` döndürür. Varsa `pvClientData` boş `cbClientData` 0 (sıfır) olmalıdır.  
   
  `cbClientData`  
  [in] Bayt cinsinden veri boyutu, `pvClientData` işaret eder.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki HRESULTs döndürür.  
+ Bu yöntem, aşağıdaki HRESULT'ları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Belirtilen profil oluşturucu hedef işlem başarıyla eklenmiş.|  
-|CORPROF_E_PROFILER_ALREADY_ACTIVE|Aynı zamanda active veya düğmelere hedef işlem için zaten bir profil oluşturucu yoktur.|  
-|CORPROF_E_PROFILER_NOT_ATTACHABLE|Belirtilen profil oluşturucu desteklemez. Tetikleyici işlemi farklı bir profil oluşturucu ekleme girişiminde bulunabilir.|  
-|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Hedef işlemin sürümü çağırma geçerli işlem ile uyumlu olmadığı için bir profil oluşturucu ek istek kurulamıyor `AttachProfiler`.|  
-|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|Tetikleyici işleminin kullanıcının hedef işlem erişimi yok.|  
-|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|Tetikleyici işleminin kullanıcı için belirtilen hedef işlem bir profil oluşturucu ekleme için gerekli ayrıcalıklara sahip değil. Uygulama olay günlüğü daha fazla bilgi içerebilir.|  
-|CORPROF_E_IPC_FAILED|Hedef işlemiyle iletişim kurarken bir hata oluştu. Hedef işlem kapatılıyor varsa bu yaygın olarak gerçekleşir.|  
-|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|Hedef işlem yok veya ek destekleyen bir CLR çalışmıyor. Bu durum, CLR çalışma zamanı numaralandırma yöntemi çağrısından itibaren kaldırıldı olduğunu gösteriyor olabilir.|  
-|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Profil Oluşturucu yüklemek için başlangıç olmadan süresi doldu. Ekleme işlemi yeniden deneyin. Zaman aşımları sonlandırıcıyı hedef işleminde zaman aşımı değeri daha uzun süre çalışırsa oluşur.|  
-|E_INVALIDARG|Bir veya daha fazla parametre geçersiz değerlere sahip.|  
+|S_OK|Belirtilen profil oluşturucuyu hedef işleme başarıyla eklenmiş.|  
+|CORPROF_E_PROFILER_ALREADY_ACTIVE|Aynı zamanda etkin veya düğmelere hedef işlem için zaten bir profil oluşturucu yok.|  
+|CORPROF_E_PROFILER_NOT_ATTACHABLE|Belirtilen profil oluşturucu bağlantısını desteklemez. Tetikleyici işlem, farklı bir profil oluşturucu ekleme girişiminde bulunabilir.|  
+|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Hedef işlemin sürümü çağıran geçerli işlem ile uyumsuz olduğundan bir profil oluşturucu ek istek kurulamıyor `AttachProfiler`.|  
+|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|Tetikleyici işlem, kullanıcı hedef işlem erişiminiz yok.|  
+|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|Tetikleyici işlem, kullanıcı için belirtilen hedef işlemin bir profil oluşturucuyu eklemek gerekli ayrıcalıklara sahip değil. Uygulama olay günlüğü daha fazla bilgi içeriyor olabilir.|  
+|CORPROF_E_IPC_FAILED|Hedef işlemle iletişim kurulurken bir hata oluştu. Hedef işlem kapatılıyor, bu yaygın olarak gerçekleşir.|  
+|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|Hedef işlem yok veya ek destekleyen bir CLR çalışmıyor. Bu durum, CLR çalışma zamanı numaralandırma yöntem çağrısından sonra kaldırılmış olduğunu gösteriyor olabilir.|  
+|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Profiler'ı yüklemek için başlangıç olmadan süresi doldu. İliştirme işlemini yeniden deneyebilirsiniz. Hedef işlem içindeki bir sonlandırıcı zaman aşımı değerinden daha uzun bir süre çalıştığında zaman aşımı oluşur.|  
+|E_INVALIDARG|Bir veya daha fazla parametreler geçersiz değerlere sahip.|  
 |E_FAIL|Bazı diğer, belirtilmeyen bir hata oluştu.|  
-|Diğer hata kodları|Varsa profil oluşturucu 's [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi döndürür hatası gösteren bir HRESULT `AttachProfiler` , aynı döndürür HRESULT. Bu durumda, E_NOTIMPL CORPROF_E_PROFILER_NOT_ATTACHABLE için dönüştürülür.|  
+|Diğer hata kodları|Profil oluşturucunun [Icorprofilercallback3::ınitializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi hatası gösteren HRESULT döndürür `AttachProfiler` döndürür, aynı HRESULT. Bu durumda, E_NOTIMPL CORPROF_E_PROFILER_NOT_ATTACHABLE için dönüştürülür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="memory-management"></a>Bellek Yönetimi  
- Çağıranın COM kuralları ile güvenliğini koruma açısından `AttachProfiler` (örneğin, tetikleyici kod profil oluşturucu geliştirici tarafından yazılan) ayırma ve veriler için bellek ayırmasını sorumlu, `pvClientData` parametresi işaret eder. Ne zaman CLR yürütür `AttachProfiler` çağrısı kolaylaştırır bellek bir kopyasını, `pvClientData` işaret ve hedef işlem iletir. Ne zaman CLR'nin hedef işlem içinde kendine ait kopyasını alır `pvClientData` bloğu, profil oluşturucu blok geçirir `InitializeForAttach` yöntemi ve kendi kopyasını kaldırır `pvClientData` hedef işlem bloğundan.  
+ COM kuralları ile çağıran tutma içinde `AttachProfiler` (örneğin, tetikleyici kod profil oluşturucu geliştirici tarafından yazılan) ayırma ve veriler için bellek ayırmasını sorumludur, `pvClientData` parametre işaret eder. Ne zaman CLR yürütür `AttachProfiler` , bu çağrıda bir kopyasını bellek, `pvClientData` işaret ve hedef işlem için iletir. CLR'nin hedef işlemin içinde kendine ait kopyasını aldığında `pvClientData` bloğu, bloğun profil oluşturucu geçirir `InitializeForAttach` yöntemi ve kopyasını ayırmayı iptal eder `pvClientData` hedef işlem bloğundan.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

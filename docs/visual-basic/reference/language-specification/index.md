@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: afba7e742c665712ec41d62e8248e81d3b0d74cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3810dd4d956c5cd8ef74cfd4da695f660e539820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744693"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic Dil Belirtimi
 Visual Basic dil belirtimi, Visual Basic dilbilgisi ve dizilim hakkındaki tüm soruların yanıtları için yetkili kaynaktır. Visual Basic başvuru belgelerinde kapsanmayan pek çok nokta dahil dil hakkında ayrıntılı bilgiler içerir.  
@@ -22,8 +22,8 @@ Bu sitedeki [VB 11 belirtimi](../../../../_vblang/spec/introduction.md). Bulunan
 
 Belirtimi sorunları oluşturulmalıdır [dotnet/vblang](https://github.com/dotnet/vblang/issues) depo. Veya, bulduğunuz hataları düzeltiyor ilginizi çeken varsa, gönderdiğiniz bir [çekme isteği](https://github.com/dotnet/vblang/pulls) aynı depo.
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
 >[Next](../../../../_vblang/spec/introduction.md)

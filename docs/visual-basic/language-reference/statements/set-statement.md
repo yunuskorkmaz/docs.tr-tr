@@ -10,15 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d77c7d3f2e70edcc1028c207150944c5394afbe0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685379"
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
-Bildiren bir `Set` bir özellik için bir değer atamak için kullanılan özellik yordamı.  
+Bildiren bir `Set` bir özelliğe değer atamak için kullanılan özellik yordamı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,7 +33,7 @@ End Set
  İsteğe bağlı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- İsteğe bağlı en `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:  
+ İsteğe bağlı biri `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:  
   
 -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,49 +46,49 @@ End Set
  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Gerekli. Özelliği için yeni değer içeren bir parametre.  
+ Gerekli. Özelliğin yeni değeri içeren bir parametre.  
   
  `datatype`  
- Gerekli olursa `Option Strict` olan `On`. Veri türü `value` parametresi. Belirtilen veri türü özelliğin veri türü ile aynı olması gerekir, bu `Set` deyimi bildirildi.  
+ Gerekli if `Option Strict` olduğu `On`. Veri türü `value` parametresi. Belirtilen veri türü özelliğinin veri türü ile aynı olmalıdır nerede bu `Set` deyimi bildirilir.  
   
  `statements`  
- İsteğe bağlı. Çalıştırılan bir veya daha fazla deyimleri `Set` özellik yordamı çağrılır.  
+ İsteğe bağlı. Çalıştırılan bir veya daha fazla deyim `Set` özelliği yordamı çağrılır.  
   
  `End Set`  
  Gerekli. Tanımını sonlandırır `Set` özellik yordamı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her özellik olmalıdır bir `Set` özellik yordamı özelliği işaretlenmemişse `ReadOnly`. `Set` Yordamı özelliğinin değeri ayarlamak için kullanılır.  
+ Her özelliği bir `Set` özellik yordamı özelliği işaretlenmediği sürece `ReadOnly`. `Set` Yordamı, özelliğin değerini ayarlamak için kullanılır.  
   
- Visual Basic otomatik olarak çağıran bir özelliğin `Set` atama deyiminin özelliğinde depolanması için bir değer sağladığında yordamı.  
+ Visual Basic otomatik olarak çağıran bir özelliğin `Set` atama deyiminin özelliğinde depolanacak bir değer sağladığında yordamı.  
   
- Visual Basic geçirir parametresi `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanır `value`. Parametre özelliğine atanan değer tutar. Genellikle bu değer bir özel yerel değişkende depolayın ve döndürün her `Get` yordamı çağrılır.  
+ Visual Basic için bir parametre geçirir `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanan `value`. Özelliğe atanacak değer parametresi içerir. Genellikle bu değer özel bir yerel değişkene depolayın ve döndürün. her `Get` yordamı çağrılır.  
   
- Özellik bildirimi gövdesi yalnızca özelliğin içerebilir `Get` ve `Set` yordamları arasında [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` deyimi. Bu yordamlar dışında her şey depolanamıyor. Özellikle, bu özelliğin geçerli değeri depolanamıyor. Özellik yordamları birini içinde depolamak, bir özellik yordamı, erişemediği için bu değeri özellik dışında depolamanız gerekir. Değeri depolamak için normal yaklaşımdır bir [özel](../../../visual-basic/language-reference/modifiers/private.md) değişkeni bildirilen özelliği ile aynı düzeyde. Tanımlamanız gerekir bir `Set` yordamı uygulandığı özelliği içinde.  
+ Özellik bildirimi gövdesi yalnızca özelliğin içerebilir `Get` ve `Set` yordamları arasında [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` deyimi. Bu yordamlar dışında her şey depolanamıyor. Özellikle, bu özelliğin geçerli değerini depolanamıyor. Özellik yordamları birini içinde depolamak, bir özellik yordamı, erişemediği için bu değer özelliği dışında depolamanız gerekir. Değeri depolamak için her zamanki yaklaşımdır bir [özel](../../../visual-basic/language-reference/modifiers/private.md) bildirilen değişkenin özelliği ile aynı düzeyde. Tanımlamanız gerekir bir `Set` yordam içinde geçerli olduğu özellik.  
   
- `Set` Yordamı kullanmadığınız sürece, içeren özelliğinin erişim düzeyini varsayılan olarak `accessmodifier` içinde `Set` deyimi.  
+ `Set` Yordamı kullanmadığınız sürece, kapsayan özelliği erişim düzeyi için varsayılan olarak `accessmodifier` içinde `Set` deyimi.  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Karışık erişim düzeyleri.** Bir okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için ya da belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisini birden değil. Bunu yaparsanız, yordam erişim düzeyi özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordam `Private`, ama `Public`.  
+-   **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.  
   
-     Tanımlıyorsanız, bir `WriteOnly` özelliği, `Set` yordamı tüm özelliğini temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Set`, özellik için iki erişim düzeyleri ayarlamanız gerekir.  
+     Tanımlıyorsanız, bir `WriteOnly` özelliği `Set` yordamı tüm özelliği temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Set`, iki erişim düzeyi özelliği ayarlamanız gerekir.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bir özellik yordamından döndürülüyor.** Zaman `Set` yordamı çağıran kodu döndürür, değerin depolanması için sağlanan deyimi yürütme devam eder.  
+-   **Bir özellik yordamı döndürüyor.** Zaman `Set` yordamı çağıran koda döndürür, sağlanan depolanacak değer deyimi yürütme devam eder.  
   
-     `Set` özellik yordamları kullanarak dönebilirsiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış deyimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` özellik yordamları kullanarak döndürebilir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış bildirimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordam. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
+     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Set` bir özelliğin değerini ayarlamak için ifade.  
+ Aşağıdaki örnekte `Set` bir özelliğin değerini ayarlamak için ifade.  
   
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)

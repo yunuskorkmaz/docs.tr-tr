@@ -2,12 +2,12 @@
 title: ODBC şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 072a9cd365031cd5660d1824bc229d459abc5af8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525839"
 ---
 # <a name="odbc-schema-collections"></a>ODBC şema koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri için şema koleksiyonu desteği açıklanmaktadır.  
@@ -31,7 +31,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="tables-and-views"></a>Tabloları ve görünümleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|Dize|  
 |TABLE_SCHEM|Dize|  
@@ -41,7 +41,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="indexes"></a>Dizinleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|Dize|  
 |TABLE_SCHEM|Dize|  
@@ -61,7 +61,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|Dize|  
 |TABLE_SCHEM|Dize|  
@@ -87,7 +87,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|Dize|  
 |PROCEDURE_SCHEM|Dize|  
@@ -100,7 +100,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|Dize|  
 |PROCEDURE_SCHEM|Dize|  
@@ -127,7 +127,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|Dize|  
 |PROCEDURE_SCHEM|Dize|  
@@ -171,7 +171,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="tables-and-views"></a>Tabloları ve görünümleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|Dize|  
 |TABLE_OWNER|Dize|  
@@ -181,7 +181,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|Dize|  
 |TABLE_OWNER|Dize|  
@@ -192,14 +192,14 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|Dize|  
 |PROCEDURE_OWNER|Dize|  
@@ -212,7 +212,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|Dize|  
 |PROCEDURE_OWNER|Dize|  
@@ -224,7 +224,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |AŞIRI YÜKLEME|Int32|  
@@ -249,7 +249,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="tables-and-views"></a>Tabloları ve görünümleri  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|Dize|  
 |TABLE_OWNER|Dize|  
@@ -259,7 +259,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="columns"></a>Sütunlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|Dize|  
 |TABLE_OWNER|Dize|  
@@ -270,14 +270,14 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|Dize|  
 |PROCEDURE_OWNER|Dize|  
@@ -290,7 +290,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|Dize|  
 |PROCEDURE_OWNER|Dize|  
@@ -302,7 +302,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |AŞIRI YÜKLEME|Int32|  
@@ -310,7 +310,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|ColumnName|Veri türü|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|Dize|  
 |PROCEDURE_SCHEM|Dize|  
@@ -332,5 +332,5 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |ORDINAL_POSITION|Int32|  
 |IS_NULLABLE|Dize|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

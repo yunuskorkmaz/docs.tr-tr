@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721168"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
-Kod Haritası belirtilen Microsoft Ara dili (MSIL) harita girişleri kullanarak belirtilen işlev için ayarlar.  
+Belirtilen Microsoft Ara dil (MSIL) map girişleri kullanarak belirtilen işlev için kod Haritası ayarlar.  
   
 > [!NOTE]
->  Çağırma .NET Framework sürüm 2.0, `SetILInstrumentedCodeMap` üzerinde bir `FunctionID` genel bir belirli uygulama etki alanı işlev temsil eder Bu işlev uygulama etki alanındaki tüm örneklerini etkiler.  
+>  Çağırma .NET Framework sürüm 2.0 `SetILInstrumentedCodeMap` üzerinde bir `FunctionID` genel işlev belirli uygulama etki alanında temsil eder, bu işlevin uygulama etki alanındaki tüm örnekleri etkiler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,27 +42,27 @@ HRESULT SetILInstrumentedCodeMap(
   
 #### <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Kod Haritası ayarlanacak işlevi kimliği.  
+ [in] Kod Haritası ayarlanacağı işlevi kimliği.  
   
  `fStartJit`  
- [in] Gösteren bir Boole değeri olup olmadığını çağrısı `SetILInstrumentedCodeMap` yöntemdir belirli bir ilk `FunctionID`. Ayarlama `fStartJit` için `true` yapılan ilk çağrıda `SetILInstrumentedCodeMap` için bir verilen `FunctionID`ve `false` bundan sonra.  
+ [in] Belirten Boolean bir değer olup olmadığını çağrısı `SetILInstrumentedCodeMap` yöntemidir, belirli bir ilk `FunctionID`. Ayarlama `fStartJit` için `true` yapılan ilk çağrıda `SetILInstrumentedCodeMap` için bir verilen `FunctionID`ve `false` tutarında ücret alınır.  
   
  `cILMapEntries`  
- [in] Öğe sayısı `cILMapEntries` dizi.  
+ [in] İçindeki öğelerin sayısını `cILMapEntries` dizisi.  
   
  `rgILMapEntries`  
- [in] Her biri bir MSIL uzaklığını belirtir dizisi cor_ıl_map yapıların.  
+ [in] Bir dizi cor_ıl_map yapılarının her biri bir MSIL uzaklığını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir profil oluşturucu kaynak kodundaki deyimleri yönteminin bu yöntem (örneğin, belirtilen kaynak satırı ulaşıldığında bildirmek için) izlemek için genellikle ekler. `SetILInstrumentedCodeMap` Yeni konumlarını özgün MSIL yönergeleri eşlemek bir profil oluşturucu sağlar. Bir profil oluşturucu kullanabilirsiniz [Icorprofilerınfo::getıltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) özgün MSIL uzaklığı için belirli bir yerel uzaklığı almak için yöntemi.  
+ Bir profil oluşturucu, kaynak kodundaki deyimleri bir yöntemin genellikle bu yöntem (örneğin, belirtilen kaynak satırı ulaşıldığında bildirmek için) izleme için ekler. `SetILInstrumentedCodeMap` özgün MSIL yönergeleri yeni konumlarına eşlemek bir profil oluşturucunun sağlar. Bir profil oluşturucu kullanabilirsiniz [Icorprofilerınfo::getıltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) özgün MSIL uzaklığı için belirli bir yerel uzaklık almak için yöntemi.  
   
- Hata ayıklayıcı her eski uzaklığı içindeki özgün, değiştirilmemiş MSIL kod uzaklığı MSIL başvurduğu ve her yeni uzaklığı yeni, Araçlı kodundaki MSIL uzaklığı başvurduğu varsayar. Harita artan düzende sıralanmış. Atlama için düzgün çalışması için aşağıdaki yönergeleri izleyin:  
+ Hata ayıklayıcı, her eski uzaklığı bir MSIL içindeki özgün, değiştirilmemiş MSIL kod uzaklığı için ifade eder ve her yeni uzaklık yeni, izleme eklenmiş kod içinde MSIL uzaklığı başvurduğu varsayar. Harita, artan düzende sıralanmalıdır. Düzgün çalışması için atlamak için aşağıdaki yönergeleri izleyin:  
   
 -   İzleme eklenmiş MSIL kodu yeniden değil.  
   
 -   Özgün MSIL kodunu kaldırmayın.  
   
--   Program veritabanı (PDB) dosyasından tüm sıralama noktaları girişlerinde eşlemesinde içerir. Harita eksik girdiler kesinti değil. Bu nedenle, aşağıdaki harita verilen:  
+-   Program veritabanı (PDB) dosyasındaki dizi noktalarını girişlerinde haritada içerir. Harita eksik girdiler enterpolasyon değil. Bu nedenle, aşağıdaki harita verilen:  
   
      (0 eski, 0 yeni)  
   
@@ -70,26 +70,26 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 eski, 20 yeni)  
   
-    -   0, 1, 2, 3 veya 4 eski uzaklığı yeni uzaklığı 0 eşleşecektir.  
+    -   Yeni Uzaklık 0, 0, 1, 2, 3 veya 4 eski bir uzaklık eşleştirilir.  
   
-    -   5, 6, 7 veya 8 eski uzaklığı yeni uzaklık 10 eşleşecektir.  
+    -   Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.  
   
-    -   9 veya üzeri eski uzaklığı yeni uzaklık 20 eşleşecektir.  
+    -   9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.  
   
-    -   Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleşecektir.  
+    -   Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.  
   
-    -   Yeni uzaklığını 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklık 5 eşleşecektir.  
+    -   Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.  
   
-    -   Yeni bir uzaklık 20 veya daha yüksek eski uzaklık 9 eşleşecektir.  
+    -   20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715822"
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) içerik görsel efektler uygulamak için geliştirici çizilir. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> veya Bulanıklaştırma efektini görüntü ya da bir düğme.  
@@ -60,12 +60,12 @@ Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) i�
 ## <a name="creating-custom-effects"></a>Özel efekt oluşturma  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kullanılabilir özel efekt oluşturma yönetilmeyen arabirimler de sağlar yönetilen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. Özel bit eşlem efektleri oluşturmak için referans materyalleri için bkz: [Yönetilmeyen WPF Bit eşlem etkisi](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) belgeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
- <xref:System.Windows.Media.Effects.BitmapEffectInput>  
- <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
- [WPF yönetilmeyen bit eşlem etkisi](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
- [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Güvenlik](../../../../docs/framework/wpf/security-wpf.md)  
- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Effects.BitmapEffectGroup>
+- <xref:System.Windows.Media.Effects.BitmapEffectInput>
+- <xref:System.Windows.Media.Effects.BitmapEffectCollection>
+- [WPF yönetilmeyen bit eşlem etkisi](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
+- [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Güvenlik](../../../../docs/framework/wpf/security-wpf.md)
+- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

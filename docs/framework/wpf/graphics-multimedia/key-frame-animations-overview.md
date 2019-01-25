@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661600"
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonlara ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -283,13 +283,13 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
   
 8.  Anahtar çerçeveler sırayla çözülen süre (birincil anahtar) ve sırasının bildirim (ikincil anahtarı), yani sıralama, çözümlenmiş anahtar çerçevesi tabanlı kullanma tutarlı bir sıralama <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Animation.KeyTime>  
- <xref:System.Windows.Media.Animation.KeySpline>  
- <xref:System.Windows.Media.Animation.Timeline>  
- [Anahtar eğrisi animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160011)  
- [Ana kare animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160012)  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Animation.KeyTime>
+- <xref:System.Windows.Media.Animation.KeySpline>
+- <xref:System.Windows.Media.Animation.Timeline>
+- [Anahtar eğrisi animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Ana kare animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

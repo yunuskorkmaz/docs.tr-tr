@@ -2,12 +2,12 @@
 title: '&lt;serviceThrottling&gt;'
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 000124c8d0dda81f99668cd330f7cc97c2520464
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ebef29360f661c77f51557ae4c9ca0bdf8177b99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689487"
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını belirtir.  
@@ -68,7 +68,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını be
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
+- [WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

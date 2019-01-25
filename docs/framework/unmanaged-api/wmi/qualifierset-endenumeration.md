@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a9d3f8966f6333487631a0e155c7be49075a6992
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734681"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration işlevi
 Bir çağrı ile başlamış numaralandırma sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.  
@@ -61,11 +61,11 @@ Bu çağrı önerilir, ancak gerekli değildir. Numaralandırma ile ilişkili ka
 
 ## <a name="requirements"></a>Gereksinimler  
 
-**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
-**Başlık:** WMINet_Utils.idl  
+**Üst bilgi:** WMINet_Utils.idl  
   
 **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
-[WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

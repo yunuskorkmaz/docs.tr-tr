@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582388"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags Numaralandırması
-Bir bütünleştirilmiş kod derlemesi uygulanan meta verileri tanımlayan değerler içeriyor.  
+Bir derleme derlemeye uygulanan meta verileri tanımlayan değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,31 +59,31 @@ typedef enum CorAssemblyFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`afPublicKey`|Derleme başvurusu tam, bütün ortak anahtarı saklar gösterir.|  
+|`afPublicKey`|Bütünleştirilmiş kod başvurusu tam, bütün ortak anahtarı saklar gösterir.|  
 |`afPA_None`|İşlemci mimarisi belirtilmeyen olduğunu gösterir.|  
-|`afPA_MSIL`|İşlemci mimarisi nötr gösterir (PE32).|  
+|`afPA_MSIL`|İşlemci mimarisi nötr olduğunu gösterir (PE32).|  
 |`afPA_x86`|İşlemci mimarisi x86 (PE32) olduğunu gösterir.|  
 |`afPA_IA64`|İşlemci mimarisi Itanium (PE32 +) olduğunu gösterir.|  
 |`afPA_AMD64`|İşlemci mimarisi AMD X64 (PE32 +) olduğunu gösterir.|  
 |`afPA_ARM`|İşlemci mimarisi ARM (PE32) olduğunu gösterir.|  
-|`afPA_NoPlatform`|Derleme başvurusu derleme olduğunu gösterir; diğer bir deyişle, herhangi bir mimarideki uygulanır ancak tüm mimarisine çalıştıramazsınız. Bu nedenle, bayrağı aynıdır `afPA_Mask`.|  
-|`afPA_Specified`|İşlemci mimarisi bayrakları olarak yayıldığı gösteren `AssemblyRef` kaydı.|  
+|`afPA_NoPlatform`|Derlemeye bir başvuru bütünleştirilmiş kodu olduğunu gösterir; diğer bir deyişle, tüm mimarisi için geçerlidir ancak herhangi bir mimari üzerinde çalıştırılamaz. Bu nedenle, bayrağı aynıdır `afPA_Mask`.|  
+|`afPA_Specified`|İşlemci mimarisi bayrakları için dağıtılmasını belirten `AssemblyRef` kaydı.|  
 |`afPA_Mask`|İşlemci mimarisini açıklar maskesi.|  
-|`afPA_FullMask`|İşlemci mimarisi açıklama dahil olduğunu belirtir.|  
-|`afPA_Shift`|İşlemci mimarisi bayrakları için ve dizinden shift sayıma gösterir.|  
-|`afEnableJITcompileTracking`|Karşılık gelen değeri belirten <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> , <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Karşılık gelen değeri belirten <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> , <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Derleme zamanında bir derlemeye farklı bir yayımcıdan yönlendirilebilir olduğunu gösterir.|  
+|`afPA_FullMask`|İşlemci mimarisi açıklaması dahil olduğunu belirtir.|  
+|`afPA_Shift`|Bir kaydırma sayısı İşlemci mimarisi bayrakları dizini gelen ve giden olarak gösterir.|  
+|`afEnableJITcompileTracking`|Karşılık gelen değeri gösteren <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> , <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Karşılık gelen değeri gösteren <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> , <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Derleme çalışma zamanında bir derlemeye farklı bir yayımcı tarafından hedeflenmesi olduğunu gösterir.|  
 |`afContentType_Mask`|İçerik türünü açıklayan maskesi.|  
 |`afContentType_Default`|Varsayılan içerik türünü belirtir.|  
 |`afContentType_WindowsRuntime`|Gösterir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] içerik türü.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

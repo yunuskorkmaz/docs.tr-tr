@@ -30,63 +30,63 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 932b38d97b36292e66bfad91a9a3799459d3b73c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1541ac1793c9f3c082b688fecd4eb82fb5b59590
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726734"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Kod'da Özel Karakterler (Visual Basic)
-Bazen alfabetik veya sayısal olmayan karakterler kodunuzda, diğer bir deyişle, özel karakterler kullanmak zorunda. Noktalama işaretleri ve özel karakterler Visual Basic karakter kümesinde derleyici ya derlenmiş program gerçekleştirdiği görevleri tanımlamak için program metin düzenleme gelen çeşitli kullanımlar vardır. Bir işlemin gerçekleştirilmesi için belirtmeyin.  
+Bazen özel karakterler kodunuzda, diğer bir deyişle, alfabetik veya sayısal olmayan karakterler kullanmak gerekir. Noktalama işaretleri ve özel karakterler Visual temel karakter kümesinde derleyici veya derlenmiş programın gerçekleştirdiği görevler tanımlama program metni düzenleme gelen çeşitli kullanımlar sahip. Gerçekleştirilecek bir işlemi belirtmeyin.  
   
 ## <a name="parentheses"></a>Parantez  
- Bir yordam gibi tanımlarken parantez kullanmak bir `Sub` veya `Function`. Tüm yordam bağımsız değişken listeleri parantez içine almanız gerekir. Ayrıca parantez mantıksal gruplar halinde koyarak değişkenleri veya bağımsız değişkenler için özellikle karmaşık bir ifadede İşleç önceliği varsayılan sırasını geçersiz kılmak için kullanın. Aşağıdaki örnek bunu göstermektedir.  
+ Bir yordam gibi tanımlarken parantez kullanan bir `Sub` veya `Function`. Tüm yordam bağımsız değişken listeleri parantez içine almalısınız. De parantez değişkenleri ya da bağımsız değişkenler mantıksal gruplar halinde koymak için özellikle karmaşık bir ifadede İşleç önceliği varsayılan düzenini geçersiz kılmak için kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
   
- Değerini önceki kod yürütmeyi izleyen `d` 8.225 ve değerini `e` 3'tür. Hesaplama için `d` varsayılan önceliği kullanan `/` üzerinden `+` ve eşdeğerdir `d = b + (c / a)`. Hesaplama için parantezlerde `e` varsayılan önceliği geçersiz kılar.  
+ Değerini önceki kodu yürütülmesinin `d` 8.225 ve değerini `e` 3'tür. Hesaplama için `d` varsayılan önceliği kullanan `/` üzerinden `+` ve eşdeğerdir `d = b + (c / a)`. Hesaplama için parantezler `e` varsayılan önceliği geçersiz kılar.  
   
 ## <a name="separators"></a>Ayırıcı  
- Ayırıcılar yapmak ne adlarının önerir: kodun bölümlerini ayırın. Visual Basic'te iki nokta üst üste ayırıcı karakteridir (`:`). Birden çok deyime ayrı satırlara yerine tek bir satırda dahil etmek istediğiniz zaman ayırıcı kullanın. Bu alanı kaydeder ve kodunuzun okunabilirliğini artırır. Aşağıdaki örnekte, üç değerlerini virgüllerle ayrılmış gösterir.  
+ Ayırıcılar yapmak ne kendi adından da anlaşılacağı: Bunlar kod bölümlerini ayırın. Visual Basic'te iki nokta üst üste ayırıcı karakteridir (`:`). Birden çok deyime ayrı satırlara yerine tek bir satırda dahil etmek istediğiniz zaman ayırıcı kullanın. Bu alan tasarrufu yapılmasını sağlar ve kodunuzun okunabilirliği geliştirir. Aşağıdaki örnek, üç deyimi virgülle ayırarak gösterir.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
- Daha fazla bilgi için bkz: [nasıl yapılır: Break ve kodda deyimleri birleştirmek](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+ Daha fazla bilgi için [nasıl yapılır: Kodda deyimleri bölme ve birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- İki nokta üst üste (`:`) karakter deyimi etiket tanımlamak için de kullanılır. Daha fazla bilgi için bkz: [nasıl yapılır: Etiket deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ İki nokta üst üste (`:`) karakter deyimi etiketi belirlemek için de kullanılır. Daha fazla bilgi için [nasıl yapılır: Etiket deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>Bitiştirme  
- Kullanım `&` işleci için *birleştirme*, veya dizeleri birbirine bağlama. İle karıştırmayın `+` sayısal değerleri toplar işleci. Kullanırsanız `+` sayısal değerler üzerinde çalışır, birleştirmek için işleci hatalı sonuçlar elde edebilirsiniz. Aşağıdaki örnekte bu gösterir.  
+ Kullanım `&` işleci için *birleştirme*, veya dizeleri birbirine bağlayarak. İle karıştırmayın `+` işleci, sayısal değerleri toplar. Kullanırsanız `+` işleci sayısal değerler üzerinde çalışır, birleştirmek için hatalı sonuçlar elde edebilirsiniz. Aşağıdaki örnekte bu gösterir.  
   
  [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
   
- Değerini önceki kod yürütmeyi izleyen `resultA` 21.01 ve değeri `resultB` "10.0111" değil.  
+ Değerini önceki kodu yürütülmesinin `resultA` 21.01 ve değerini `resultB` "10.0111" olduğu.  
   
-## <a name="member-access-operators"></a>Üye erişimi işleçleri  
- Bir tür üyesi erişmek için nokta kullanın (`.`) veya ünlem işareti (`!`) arasında tür ve üye adı işleci.  
+## <a name="member-access-operators"></a>Üye erişim işleçleri  
+ Türünün bir üyesine erişmek için nokta kullanın (`.`) ya da ünlem işareti (`!`) arasında tür adı ve üye adı işleci.  
   
 ### <a name="dot--operator"></a>Nokta (.) İşleç  
- Kullanım `.` sınıfı, yapısı, arabirim veya numaralandırma operatör olarak bir üye erişimi işleci. Üye alan, özellik, olay veya yöntem olabilir. Aşağıdaki örnek bunu göstermektedir.  
+ Kullanım `.` sınıfı, yapı, arabirim ya da numaralandırma işlecinin bir üye erişim işleci olarak. Üye bir alan, özelliği, olay veya yöntemi olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
   
 ### <a name="exclamation-point--operator"></a>Ünlem işareti (!) İşleç  
- Kullanım `!` işlecinin yalnızca bir sınıfta veya arabirimde bir sözlük erişim işleci olarak. Sınıf veya arabirim tek bir kabul eder ve varsayılan bir özellik olmalıdır `String` bağımsız değişkeni. Hemen ardından tanımlayıcı `!` işleci bir dize olarak varsayılan özelliği için geçirilen bağımsız değişken değeri olur. Aşağıdaki örnekte bu gösterir.  
+ Kullanım `!` sözlük erişim işleci olarak yalnızca bir sınıf veya arabirim üzerinde işleci. Sınıf veya arabirim kabul eden tek bir varsayılan özellik olmalıdır `String` bağımsız değişken. Hemen tanımlayıcısı `!` işleci bir dize olarak varsayılan özelliği için geçirilen bağımsız değişken değeri olur. Aşağıdaki örnekte bu gösterir.  
   
  [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
   
- Üç satırlık çıktı `MsgBox` tüm değerini görüntülemek `32856`. Geleneksel erişim özelliğine ilk satırını kullanır `index`, ikinci kullanır olgu, `index` varsayılan sınıfın özelliğidir `hasDefault`, ve üçüncü sözlük erişim sınıfına kullanır.  
+ Üç satır çıkış `MsgBox` tüm görüntüleme `32856`. Geleneksel erişim özelliği ilk satırını kullanır `index`, ikinci kullanır olgu, `index` sınıfın varsayılan özelliğidir `hasDefault`, ve üçüncü sözlük erişimi sınıfı kullanır.  
   
- Unutmayın, ikinci işlenen `!` işleci, çift tırnak işaretleri içine alınmamış geçerli bir Visual Basic tanımlayıcı olmalıdır (`" "`). Diğer bir deyişle, bir değişmez dize veya dize değişkeni kullanamazsınız. Şu son satırının değiştirin `MsgBox` çağrısı bir hata nedeniyle oluşturur `"X"` kapalı bir dize değişmez değer olduğunu.  
+ Unutmayın, ikinci işlenenin `!` işleci, çift tırnak işaretleri arasına değil, geçerli bir Visual Basic tanımlayıcı olmalıdır (`" "`). Diğer bir deyişle, bir dize sabit değeri veya dize değişkeni kullanamazsınız. Şu son satırını değiştirin `MsgBox` çağrı olduğundan hata oluşturur `"X"` kapalı bir dize sabitidir.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
->  Varsayılan koleksiyon başvurularını açık olması gerekir. Özellikle, kullanamazsınız `!` geç bağlama değişken işleci.  
+>  Varsayılan koleksiyon başvuruları açık olması gerekir. Özellikle, kullanamazsınız `!` geç bağlanan bir değişken üzerinde işleci.  
   
- `!` Karakter olarak da kullanılır `Single` karakteri yazın.  
+ `!` Karakter olarak kullanılan ayrıca `Single` karakter yazın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Tür Karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Tür Karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

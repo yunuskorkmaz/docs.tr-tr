@@ -2,31 +2,31 @@
 title: Giriş karakter kümesi (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 5e7886215cac2d9363a9ed68cd03a0fce4374055
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641206"
 ---
 # <a name="input-character-set-entity-sql"></a>Giriş karakter kümesi (varlık SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] UTF-16 kodlu UNICODE karakterler kabul eder.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] UTF-16 kodlamalı UNICODE karakterler kabul eder.  
   
- Dize değişmez değerleri tek tırnak içine alınmış herhangi bir UTF-16 karakter içerebilir. Örneğin, N '文字列リテラル'. Dize değişmez değerleri karşılaştırıldığında, özgün UTF-16 değerler kullanılır. Örneğin, N'ABC' Japonca ve Latin kod sayfaları farklıdır.  
+ Dize sabit değerlerinin tek tırnak içinde herhangi bir UTF-16 karakter içerebilir. Örneğin, N '文字列リテラル'. Dize değişmez değerleri karşılaştırıldığında, özgün UTF-16 değerlerin kullanılır. Örneğin, N'ABC' Japonca ve Latin kod sayfaları farklıdır.  
   
- Yorumlar herhangi bir UTF-16 karakter içerebilir.  
+ Açıklamalar, herhangi bir UTF-16 karakter içerebilir.  
   
- Kaçış karakterli tanımlayıcılar köşeli ayraçlar içinde herhangi bir UTF-16 karakter içerebilir. Örneğin, [エスケープされた識別子]. UTF-16 kaçışlı tanımlayıcıları karşılaştırma büyük küçük harfe duyarlı. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aynı görünür, ancak farklı karakter olarak farklı kod sayfalarından olan harf sürümlerini değerlendirir. Örneğin, aynı kod sayfasından karşılık gelen karakter ise [ABC] [abc] eşdeğerdir. Aynı iki farklı kod sayfaları tanımlayıcılardır, ancak eşdeğer değiller.  
+ Atlatmalı tanımlayıcılar, köşeli ayraçlar içinde herhangi bir UTF-16 karakter içerebilir. Örneğin, [エスケープされた識別子]. UTF-16 Atlanan tanımlayıcı karşılaştırması büyük/küçük harf ve büyük harflere duyarlı değildir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aynı görünür, ancak farklı bir karakter olarak farklı kod sayfalarından olan harf sürümleri değerlendirir. Örneğin, aynı kod sayfasından karşılık gelen karakterler yer alıyorsa [ABC] [abc] için eşdeğerdir. Aynı iki farklı kod sayfalarını tanımlayıcılardır, ancak eşdeğer değiller.  
   
- Beyaz alan tüm UTF-16 boşluk karakterdir.  
+ Boşluk herhangi UTF-16 boşluk karakteridir.  
   
- Bir satır başı karakteri herhangi normalleştirilmiş UTF-16 yeni satır karakteri ' dir. Örneğin, '\n' ve '\r\n' satırbaşı karakterlerini olarak kabul edilir, ancak '\r' yeni satır karakteri değil.  
+ Yeni bir satır normalleştirilmiş UTF-16 yeni satır karakterleri ' dir. Örneğin, yeni satır karakteri, '\n' ve '\r\n' olarak kabul edilir, ancak '\r' bir yeni satır karakteri değil.  
   
- Anahtar sözcükler, ifadeler ve noktalama için Latin normalleştirir herhangi bir UTF-16 karakter olabilir. Örneğin, Japonca codepage seçin, geçerli bir anahtar sözcüktür.  
+ Anahtar sözcükler, ifadeler ve noktalama işaretleri için Latin normalleştirir herhangi bir UTF-16 karakter olabilir. Örneğin, Japonca bir kod seçin, geçerli bir anahtar sözcüktür.  
   
- Anahtar sözcükler, ifadeler ve noktalama yalnızca Latin karakterler olabilir. `SELECT` Japonca kod sayfasında bir anahtar değil. +,-, *, /, =, (,), ', [,] ve burada tırnak içine alınmış değil başka bir dil yapısı yalnızca Latin karakterler olabilir.  
+ Anahtar sözcükler, ifadeler ve noktalama işaretleri, yalnızca Latin karakterler olabilir. `SELECT` Japonca bir kod sayfasına bir anahtar değil. +,-, *, /, =, (,), ', [,] ve burada tırnak işareti olmayan diğer dil yapısı yalnızca Latin karakterler olabilir.  
   
- Basit tanımlayıcıları yalnızca Latin karakterler olabilir. Özgün değerler karşılaştırıldığından bu karşılaştırma sırasında belirsizlik önler. Örneğin, ABC Japonca ve Latin kod sayfaları farklı olacaktır.  
+ Basit tanımlayıcı yalnızca Latin karakterler olabilir. Özgün değer karşılaştırıldığı bu karşılaştırma sırasında belirsizliği ortadan kaldırır. Örneğin, ABC Japonca ve Latin kod sayfaları farklı olacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

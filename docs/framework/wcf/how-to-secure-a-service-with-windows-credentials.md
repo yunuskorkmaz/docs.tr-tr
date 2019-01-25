@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme'
+title: 'Nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657564"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme
 Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemcileri tarafından çağrılan bir Windows Communication Foundation (WCF) hizmeti aktarım güvenliği etkinleştirme gösterilmektedir. Bu senaryo hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulama ile Aktarım güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
   
  Bu konu, mevcut bir sözleşme arabirimi varsa ve uygulama zaten tanımlanmış ve açın ekleyen varsayar. Bir mevcut hizmet ve istemci de değiştirebilirsiniz.  
@@ -74,7 +74,7 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Bir istemci koduna sahip bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kodunu üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri bir WCF Hizmeti ile iletişim kurmak için sahip olmasını sağlar sınıfını. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfını `ICalculator` arabirimi, hizmet kod uyumluluğunu etkinleştirme.  
+1.  Hizmet meta verilerinden proxy kodunu üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri bir WCF Hizmeti ile iletişim kurmak için sahip olmasını sağlar sınıfını. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfını `ICalculator` arabirimi, hizmet kod uyumluluğunu etkinleştirme.  
   
 2.  Bu yordamın kod başında eklenen `Main` istemci programı yöntemi.  
   
@@ -127,7 +127,7 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Bir istemci yapılandırma ile bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kod ve yapılandırma dosyası üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Hizmet meta verilerinden proxy kod ve yapılandırma dosyası üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Değiştirin [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) ise önceki bölümden yapılandırma kod ile oluşturulan yapılandırma dosyasının.  
   
@@ -147,9 +147,9 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WSHttpBinding>  
- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WSHttpBinding>
+- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
+- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)

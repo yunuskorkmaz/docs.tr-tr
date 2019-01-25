@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713999"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; öğesi için &lt;çalışma zamanı&gt;
 Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.  
@@ -39,7 +39,7 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**xmlns**|Gerekli öznitelik.<br /><br /> Derleme bağlama için gerekli XML ad alanı belirtir. Aşağıdaki dizeyi kullanın "urn: schemas-microsoft-com:asm.v1" değeri.|  
+|**xmlns**|Gerekli öznitelik.<br /><br /> Derleme bağlama için gerekli XML ad alanı belirtir. Use the string "urn:schemas-microsoft-com:asm.v1" as the value.|  
 |**AppliesTo**|.NET Framework derleme yeniden yönlendirme uygulandığı çalışma zamanı sürümünü belirtir. İsteğe bağlı bu öznitelik, bir .NET Framework sürüm numarası geçerli hangi sürüm olduğunu belirlemek için kullanır. Hayır ise **appliesTo** özniteliği belirtilirse,  **\<assemblyBinding >** öğe tüm .NET Framework sürümleri için geçerlidir. **AppliesTo** özniteliği, .NET Framework sürüm 1.1 sunulmuştur; .NET Framework sürüm 1.0 tarafından göz ardı edilir. Bunun anlamı tüm  **\<assemblyBinding >** öğeleri kullanırken bile, .NET Framework sürüm 1.0 uygulanır bir **appliesTo** özniteliği belirtildi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -92,7 +92,7 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

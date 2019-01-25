@@ -8,12 +8,12 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 1d421009e8b2e0d4074679939092180c6037a0c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e2a37f6829341b33475f91796e8671d867ac151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699798"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; öğesi (ağ ayarları)
 Ağ konaklarından bilgi istemek için modüller belirtir.  
@@ -73,7 +73,7 @@ Ağ konaklarından bilgi istemek için modüller belirtir.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.IWebRequestCreate>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.IWebRequestCreate>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629235"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Kodlama ve Windows Forms Genelleştirme
 Windows Forms uygulamaları tamamen Unicode-her karakter, hangi platformu, program veya dili ne olursa olsun, benzersiz bir numara tarafından temsil edilen anlamı etkindir. Unicode hakkında daha fazla bilgi için bkz. [Unicode consortium Web sitesi](https://www.unicode.org).  
@@ -38,4 +38,4 @@ Windows Forms uygulamaları tamamen Unicode-her karakter, hangi platformu, progr
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)
+- [Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)

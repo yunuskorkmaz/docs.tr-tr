@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648711"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktır. Bir sorgu çalıştırmak mümkün olduğunca hızlı ancak yine de doğru sonuçlar gerekir. Bazı durumlarda, korunması için kaynak dizisinin sırasını doğruluk gerektirir; Ancak, sıralama hesaplama açısından pahalı olabilir. Bu nedenle, varsayılan olarak, PLINQ kaynak dizi sıralamasını korumaz. Bu bağlamda, PLINQ benzer [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ancak sıralamasını korumak, nesnelere LINQ,.  
@@ -69,14 +69,14 @@ PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktı
 |İşleç|Kaynak dizisi sıralandığında sonucu|Kaynak sırası sırasız olduğunda sonucu|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
 |<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|  
-|<xref:System.Linq.ParallelEnumerable.All%2A>|Uygulanamaz|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.Any%2A>|Uygulanamaz|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Uygulanamaz|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.All%2A>|Geçerli değil|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.Any%2A>|Geçerli değil|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.Average%2A>|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
-|<xref:System.Linq.ParallelEnumerable.Count%2A>|Uygulanamaz|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Uygulanamaz|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.Count%2A>|Geçerli değil|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.Distinct%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|Belirtilen öğeyi döndürür|Rastgele bir öğe|  
 |<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|Belirtilen öğeyi döndürür|Rastgele bir öğe|  
@@ -90,20 +90,20 @@ PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktı
 |<xref:System.Linq.ParallelEnumerable.Join%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Last%2A>|Belirtilen öğeyi döndürür|Rastgele bir öğe|  
 |<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|Belirtilen öğeyi döndürür|Rastgele bir öğe|  
-|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|Uygulanamaz|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.Min%2A>|Uygulanamaz|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|Geçerli değil|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.Min%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|Sıra yeniden sıralar.|Yeni bölüm sıralı başlatır|  
 |<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|Sıra yeniden sıralar.|Yeni bölüm sıralı başlatır|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|Geçerli değil (aynı varsayılan olarak <xref:System.Linq.ParallelEnumerable.AsParallel%2A> )|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Geçerli değil (aynı varsayılan olarak <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|Geçerli değil (aynı varsayılan olarak <xref:System.Linq.ParallelEnumerable.AsParallel%2A> )|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Geçerli değil (aynı varsayılan olarak <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Tersine çevirir|Hiçbir şey yapılmaz|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A> (dizinlenmiş)|Sıralanmış sonuçları|Sırasız sonuçları.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Sıralanmış sonuçları.|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (dizinlenmiş)|Sıralanmış sonuçları.|Sırasız sonuçları.|  
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Sıralı karşılaştırma|Sırasız karşılaştırma|  
-|<xref:System.Linq.ParallelEnumerable.Single%2A>|Uygulanamaz|Uygulanamaz|  
-|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Uygulanamaz|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.Single%2A>|Geçerli değil|Geçerli değil|  
+|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|İlk atlar *n* öğeleri|Tüm atlar *n* öğeleri|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Sıralanmış sonuçları.|Belirleyici olmayan. SkipWhile geçerli rastgele siparişin gerçekleştirir.|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|Belirleyici olmayan bir çıkış nonassociative veya noncommutative işlemler için|  
@@ -112,7 +112,7 @@ PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktı
 |<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Eklerin `OrderBy`|Eklerin `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Eklerin `OrderBy`|Eklerin `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
-|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|Uygulanamaz|Uygulanamaz|  
+|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.ToList%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Union%2A>|Sıralanmış sonuçları|Sırasız sonuçları|  
@@ -124,5 +124,5 @@ PLINQ'da hedef doğruluk sürdürürken performans en üst düzeye çıkarmaktı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)

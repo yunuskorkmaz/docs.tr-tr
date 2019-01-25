@@ -3,18 +3,18 @@ title: '&lt;etwTracking&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684339"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
-ETW İzleme kullanılarak kullanmak bir hizmet sağlayan bir hizmet davranışı bir <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+ETW İzleme kullanılarak kullanmak bir hizmet sağlayan bir hizmet davranışını bir <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
 \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
 \<etwTracking >  
@@ -38,7 +38,7 @@ ETW İzleme kullanılarak kullanmak bir hizmet sağlayan bir hizmet davranışı
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ProfilAdı|Bu davranışı ile ilişkili izleme profilin adını belirten dize.|  
+|ProfilAdı|Bu davranışı ile ilişkili izleme profilinin adını belirten dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,14 +50,14 @@ ETW İzleme kullanılarak kullanmak bir hizmet sağlayan bir hizmet davranışı
 |[\<davranış >, \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hizmetin davranışı yapılandırmasına eklendiğinde, bu yapılandırma öğesi üzerinde bir iş akışı hizmeti izleme katılımcı yapılandırır.  
+ Hizmetin davranışı yapılandırmasına eklendiğinde, bu yapılandırma öğesi, bir iş akışı hizmeti izleme katılımcı yapılandırır.  
   
- İzleme katılımcıları iş akışını yayılan izleme verilerini almak için kullanılan ve farklı ortamları depolar. Benzer şekilde, tüm kayıtları içinde izleme katılımcı de yapılabilir izleme üzerinde işlem sonrası.  
+ İzleme katılımcıları akışından yayılan izleme verilerini almak için kullanılır ve farklı ortamları depolar. Benzer şekilde, herhangi işleme kayıtları da içinde izleme katılımcı yapılabilir izleme gönderin.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki yapılandırma örnek Web.config dosyasında yapılandırılan standart ETW İzleme katılımcı gösterir.  
   
- ETW İzleme katılımcı için ETW İzleme kayıtları yazmak için kullandığı sağlayıcı kimliği tanımlanan  **\<Tanılama >** bölümü. İzleme katılımcı için abone oldu izleme kayıtları belirtmek için ilişkili bir profil var. Bu tarafından tanımlanan **profileName** özniteliği  **\<Ekle >** öğesi. Bunlar tanımlandıktan sonra izleme katılımcı eklenen  **\<etwTracking >** hizmet davranışı. Böylece izleme kayıtlarını alır başlamadan bu iş akışı örneğinin uzantıları için seçilen izleme katılımcıları ekler.  
+ ETW İzleme katılımcı için ETW İzleme kayıtları yazmak için kullandığı sağlayıcı kimliği tanımlanan  **\<Tanılama >** bölümü. İzleme katılımcı abone izleme kayıtları belirtmek için ile ilişkili bir profil var. Bu tarafından tanımlanan **profileName** özniteliği  **\<Ekle >** öğesi. Bunlar tanımlandıktan izleme katılımcı eklenir  **\<etwTracking >** hizmet davranışı. Böylece bunlar izleme kayıtları almak başlayabilirsiniz bu iş akışı örneğinin uzantıları için seçilen izleme katılımcıları ekleyecektir.  
   
 ```xml  
 <configuration>   
@@ -84,8 +84,8 @@ ETW İzleme kullanılarak kullanmak bir hizmet sağlayan bir hizmet davranışı
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [İzleme Katılımcıları](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Katılımcıları](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

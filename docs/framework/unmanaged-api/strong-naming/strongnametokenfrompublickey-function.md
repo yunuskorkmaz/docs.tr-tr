@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a5c9336d571fb392fbed9fed2196fca813bc7d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674670"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey İşlevi
-Bir ortak anahtar temsil eden bir belirteci alır. Güçlü ad simgesi bir ortak anahtar kısaltılmış şeklidir.  
+Bir ortak anahtar temsil eden bir belirteç alır. Genel anahtar kısaltılmış bir tanımlayıcı ad belirtecidir.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md) yöntemi yerine.  
   
@@ -45,35 +45,35 @@ BOOLEANStrongNameTokenFromPublicKey (
   
 #### <a name="parameters"></a>Parametreler  
  `pbPublicKeyBlob`  
- [in] Türü yapısını [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) sağlam ad imzası oluşturmak için kullanılan anahtar çifti ortak kısmını içerir.  
+ [in] Türünden bir yapıyı [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) tanımlayıcı ad imzası oluşturmak için kullanılan anahtar çiftinden ortak kısmını içerir.  
   
  `cbPublicKeyBlob`  
- [in] Bayt olarak boyutu, `pbPublicKeyBlob`.  
+ [in] Bayt cinsinden boyutu, `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Güçlü ad belirtecin anahtarına karşılık gelen geçirilen `pbPublicKeyBlob`. Ortak dil çalışma zamanı, belirteç döndürmek bellek ayırır. Çağıranın bu bellek kullanarak serbest gerekir [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) işlevi.  
+ [out] Anahtarına karşılık gelen tanımlayıcı ad belirteç geçirilen `pbPublicKeyBlob`. Ortak dil çalışma zamanı, bir belirteç döndürecek şekilde bellek ayırır. Çağıranın bu bellek kullanarak ücretsiz gerekir [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) işlevi.  
   
  `pcbStrongNameToken`  
- [out] Döndürülen güçlü ad belirtecin bayt cinsinden boyutu.  
+ [out] Döndürülen tanımlayıcı ad belirtecinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güçlü ad simgesi anahtar bilgileri meta verilerde depolarken alanı kaydetmek için kullanılan bir ortak anahtar kısaltılmış şeklidir. Özellikle, güçlü ad simgeleri derleme başvurularını bağımlı derlemenin başvurmak için kullanılır.  
+ Tanımlayıcı ad anahtar bilgilerini meta verileri depolarken alanından tasarruf etmek için kullanılan genel anahtar kısaltılmış belirtecidir. Özellikle, tanımlayıcı ad belirteçleri, derleme başvurularını bağımlı derlemeye başvurmak için kullanılır.  
   
- Varsa `StrongNameTokenFromPublicKey` işlevi yok başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) son oluşturulan hata alınacak işlev.  
+ Varsa `StrongNameTokenFromPublicKey` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak mscoree.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak mscoree.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [StrongNameTokenFromPublicKey Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
- [StrongNameGetPublicKey Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [StrongNameTokenFromPublicKey Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [StrongNameGetPublicKey Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

@@ -5,12 +5,12 @@ description: Windows 8.1 üzerinde .NET Framework'ü yükleme hakkında bilgi ed
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: 302215f71e00ef7de03f6d7a27def71087822012
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737812"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>.NET Framework, Windows 8.1 ve Windows Server 2012 R2 üzerinde yükleme
 
@@ -20,7 +20,7 @@ ms.locfileid: "53125528"
 
 Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) en son sürüm. Windows 8.1 ve Windows Server 2012 R2 üzerinde desteklenir ve içerdiği [Windows 10 Ekim 2018 güncelleştirmesi](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) ve [Windows 10 Nisan 2018 güncelleştirmesi](https://www.microsoft.com/software-download/windows10).
 
-## <a name="net-framework-472"></a>.NET framework 4.7.2
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 > [.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
@@ -39,6 +39,6 @@ Yapabilecekleriniz [Yardım için Microsoft ile iletişime geçin](mailto:dotnet
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework'ü indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)
+- [.NET Framework'ü indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)

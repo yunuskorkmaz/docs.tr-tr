@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: dize içeriklerini - C# Kılavuzu değiştirme'
+title: 'Nasıl yapılır: -Dize içeriklerini değiştirme C# Kılavuzu'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664035"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Nasıl yapılır: c dize içeriklerini değiştirme\#
+# <a name="how-to-modify-string-contents-in-c"></a>Nasıl yapılır: C'de dize içeriklerini değiştirme\#
 
 Bu makalede üretmek için çeşitli teknikler gösterir bir `string` değiştirerek varolan `string`. Tüm teknikler gösterilen sonucu olarak yeni bir değişiklik iade `string` nesne. Bunu açıkça göstermek için tüm örnekler sonuç yeni bir değişkende depolayın. Ardından hem özgün inceleyebilirsiniz `string` ve `string` her örneği çalıştırdığınızda değişikliklere karşı kaynaklanan.
 
@@ -73,5 +73,5 @@ Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET framework normal ifadeleri](../../standard/base-types/regular-expressions.md)  
-- [Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET framework normal ifadeleri](../../standard/base-types/regular-expressions.md)
+- [Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)

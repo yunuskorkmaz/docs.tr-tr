@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma'
+title: 'İzlenecek yol: Visual Basic ile bileşik denetim yazma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e961826f4c33edf59934597734aec36ce301194e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694392"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile bileşik denetim yazma
 Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir yöntemdir. Bileşik Denetim aslında bir görsel bir temsili ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirerek veya yazar tarafından gereken diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimlerle aynı şekilde Windows formlarında yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci kısmında, işlevlerini genişletmek `ctlClock` devralma yoluyla.  
   
 > [!NOTE]
@@ -147,7 +147,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
 4.  Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet** projeyi kaydetmek için.  
   
 ## <a name="testing-the-control"></a>Denetimini test etme  
- Denetimler, tek başına projeleri değildir; Bunlar, bir kapsayıcıda barındırılan gerekir. Denetimin çalışma zamanı davranışını sınama ve özellikleriyle birlikte çalışma **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Denetimler, tek başına projeleri değildir; Bunlar, bir kapsayıcıda barındırılan gerekir. Denetimin çalışma zamanı davranışını sınama ve özellikleriyle birlikte çalışma **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Denetiminiz test etmek için  
   
@@ -326,7 +326,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
 4.  Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet** projeyi kaydetmek için.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Devralınan Form denetimi kullanma  
- Devralınan denetim temel sınıf denetim test aynı şekilde test edebilirsiniz `ctlClock`: F5 tuşuna basarak projeyi oluşturun ve denetim Çalıştır **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Devralınan denetim temel sınıf denetim test aynı şekilde test edebilirsiniz `ctlClock`: Projeyi oluşturmak ve denetim çalıştırmak için F5 tuşuna basın **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Denetiminizi kullanmak için koymak için bir form üzerinde barındırmak gerekir. Devralınan bir bileşik denetim standart bileşik denetim gibi tek başına duramaz ve bir form veya diğer kapsayıcı içinde barındırılması gerekir. Bu yana `ctlAlarmClock` daha derinlemesine sahip, işlevselliğini test etmek için ek kod gereklidir. Bu yordamda işlevselliğini test etmek için basit bir program yazacak `ctlAlarmClock`. Ayarlayın ve görüntülemek için kod yazacaksınız `AlarmTime` özelliği `ctlAlarmClock`ve iç işlevleri test eder.  
   
@@ -395,8 +395,8 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
   
      Bu izlenecek yol, bir dizi temel kavramları kapsamında. Bileşik Denetim kapsayıcıya denetimleri ve Bileşenleri'ni birleştirerek bileşik denetim oluşturulacağını öğrendiniz. Özellikleri denetiminize eklemek ve özel işlevselliği uygulamak üzere kod yazmak için öğrendiniz. Son bölümde, devralma yoluyla belirli bir bileşik denetim işlevlerini genişletmek ve bu yöntemi geçersiz kılarak konak yöntemleri işlevlerini değiştirmek için öğrendiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Nasıl yapılır: Bileşik Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Bileşen yazma izlenecek yolları](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Nasıl yapılır: Bileşik denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Bileşen yazma izlenecek yolları](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

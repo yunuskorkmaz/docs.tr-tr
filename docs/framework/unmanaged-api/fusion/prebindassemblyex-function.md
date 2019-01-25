@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570885"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx İşlevi
-Derleme sonrası İlkesi görünen adını alır.  
+Derleme sonrası ilke görünen adını alır.  
   
  Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
@@ -49,28 +49,28 @@ HRESULT PreBindAssemblyEx (
  [in] Derleme adını tanımlar.  
   
  `pAsmParent`  
- [in] Ana derleme tanımlar. Bu parametre yoksayıldı.  
+ [in] Üst derlemeyi tanımlar. Bu parametre yoksayıldı.  
   
  `pwzRuntimeVersion`  
- [in] Çalışma zamanı sürümü tanımlar.  
+ [in] Çalışma zamanı sürümünü tanımlar.  
   
  `ppNamePostPolicy`  
- [out] İlke sonrası görünen adı içerir.  
+ [out] İlke sonrası görünen adını içerir.  
   
  `pvReserved`  
- [in] Gelecekteki genişletilebilirliği için ayrılmış. `pvReserved` bir null başvuru olması gerekir.  
+ [in] Sonra genişletilebilmek için ayrılmış. `pvReserved` null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppNamePostPolicy` Çıktı parametresi yalnızca işlevi HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi takdirde null şeklindedir.  
+ `ppNamePostPolicy` Çıkış parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi takdirde null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

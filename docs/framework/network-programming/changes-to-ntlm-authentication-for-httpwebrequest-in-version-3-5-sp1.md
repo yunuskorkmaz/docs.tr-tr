@@ -2,12 +2,12 @@
 title: İçin sürüm 3.5 SP1'de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589564"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>İçin sürüm 3.5 SP1'de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleşik Windows kimlik doğrulaması tarafından işlenir, etkileyen daha sonra <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, ve System.Net ad alanındaki ilgili sınıflar. Bu değişiklikler, NTLM tabanlı Tümleşik Windows kimlik doğrulaması kullanıldığı web isteklerinde bulunmak ve yanıt almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  
@@ -50,7 +50,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve tümleş
   
  Daha az güvenli bir iş yaklaşık döngü geri denetimi devre dışı bırakmak için açıklandığı olan <https://support.microsoft.com/kb/896861>. Bu yansıma saldırılara karşı koruma devre dışı bırakır. Bu nedenle yalnızca gerçekten kullandığınız makinenin beklediğiniz için alternatif adlar kümesini sınırlandırmak iyidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
+- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

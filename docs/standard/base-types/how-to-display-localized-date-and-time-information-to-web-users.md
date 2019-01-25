@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme'
+title: 'Nasıl yapılır: Web kullanıcılarına yerelleştirilmiş tarih ve saat bilgilerini görüntüleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.openlocfilehash: 0918e1320e04930ae8d9f30246936ef125f9ce82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686588"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web kullanıcılarına yerelleştirilmiş tarih ve saat bilgilerini görüntüleme
 Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrıştırma ve biçimlendirme tarih ve saat değerlerini işlemleri (genellikle Web sunucusunun yerel kültür biçiminde) bir varsayılan biçimi üzerinde doğrulamamalısınız kullanıcıyla etkileşim kurulurken. Bunun yerine, işlemek tarih ve saat dizeleri giriş kullanıcı tarafından Web forms, tercih edilen kullanıcının kültürü kullanarak dizeleri çözümlenmelidir. Benzer şekilde, tarih ve saat verileri kullanıcıya kullanıcının kültürü için uygun bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
   
 ### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Tarih ve saat ayrıştırılacak giriş kullanıcı tarafından dizeleri  
@@ -110,7 +110,7 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Tarih ve Saat Dizelerini Ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)

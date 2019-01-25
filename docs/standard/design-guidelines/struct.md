@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646613"
 ---
 # <a name="struct-design"></a>Yapı tasarımı
 Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölümde, genel yapı tasarımı için yönergeler sağlar.  
@@ -48,6 +48,6 @@ Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir ya
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
 - [Sınıf ile Yapı Arasında Seçim Yapma](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

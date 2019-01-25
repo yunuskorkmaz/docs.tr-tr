@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: afcd21dc-2ffa-48c9-9332-51269f44b7e9
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f2f7c140211e558677ce90fcc3ef138a2022881f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 41839402e94466d690cb565e7e01e0c2c538bc11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714834"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a>TreeWalker ile UI Otomasyon Öğeleri Arasında Gezinme
 > [!NOTE]
@@ -37,5 +37,5 @@ ms.locfileid: "47397507"
  [!code-csharp[UIAClient_snip#174](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#174)]
  [!code-vb[UIAClient_snip#174](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#174)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)

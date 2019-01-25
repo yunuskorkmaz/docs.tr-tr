@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a350fadfa77fdad545ca7ccf2f63d28607c2ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662614"
 ---
 # <a name="addfile-method1"></a>AddFile Method1
-Dosyaları derlemeye ekler. Ayrıca ilişkisiz modülleri oluşturmak için kullanılabilir.  
+Dosyaları derlemesine ekler. Ayrıca ilişkisiz modüller oluşturmak için kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT AddFile(
   
 #### <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme engagement'ta benzersiz kimliği.  
+ Derleme genişletilmesi için benzersiz kimliği.  
   
  `pszFilename`  
- Eklenecek dosyanın tam adı.  
+ Eklenecek dosyasının tam adı.  
   
  `dwFlags`  
- COM + FileDef bayrakları gibi `ffContainsNoMetaData` ve `ffWriteable`. `dwFlags` geçirilir [DefineFile yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + FileDef bayrakları gibi `ffContainsNoMetaData` ve `ffWriteable`. `dwFlags` geçirilen [DefineFile yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [Imetadataemit arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) meta verileri, yayma gerekiyorsa, kullanılacak arabirimi.  
+ [Imetadataemit arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) meta veriler yaymak için gerekiyorsa, kullanılacak arabirimi.  
   
  `pFileToken`  
- Eklenen dosyanın benzersiz Kimliğini depolanacağı için işaretçi.  
+ Eklenen dosyanın benzersiz kimliği depolanacağı için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -61,7 +61,7 @@ HRESULT AddFile(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

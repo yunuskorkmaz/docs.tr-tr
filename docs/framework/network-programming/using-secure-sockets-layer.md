@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 41baeb9724d142bb860e51fa3ee84fb6c3f6261e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694929"
 ---
 # <a name="using-secure-sockets-layer"></a>Güvenli Yuva Katmanı kullanma
 <xref:System.Net> Sınıfları, çeşitli ağ protokolleri için bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanın.  
@@ -62,7 +62,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 -   Başvurular **System.Net** ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
- [Sertifika Seçimi ve Doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
+- [Sertifika Seçimi ve Doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

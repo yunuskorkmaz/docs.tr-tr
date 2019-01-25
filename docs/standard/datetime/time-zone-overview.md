@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697056"
 ---
 # <a name="time-zone-overview"></a>Saat dilimine genel bakış
 
@@ -59,7 +59,7 @@ Aşağıdaki tabloda, saat dilimlerini ve saat dilimiyle uyumlu uygulamalar geli
 
 Bağımlılık, <xref:System.TimeZoneInfo> kayıt defterindeki sınıfı, saat dilimiyle uyumlu bir uygulama belirli bir saat dilimini kayıt defterinde tanımlanır belirli olamayacağını anlamına gelir. Sonuç olarak, belirli bir saat dilimi (veya yerel saat dilimi UTC temsil eden saat dilimi dışında) örneği girişimi, özel durum işleme kullanmanız gerekir. Uygulamayı gerekli bir devam etmesine izin vererek bazı yöntemi sağlamalıdır <xref:System.TimeZoneInfo> nesnesi kayıt defterinden örneği olamaz.
 
-Gerekli bir saat dilimi olmaması işlemek için <xref:System.TimeZoneInfo> sınıfı içeren bir <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> kayıt defterinde bulunamadı özel saat dilimleri oluşturma için kullanabileceğiniz yöntemi. Özel bir saat dilimi oluşturma hakkında daha fazla bilgi edinmek için bkz. [nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Ayrıca, kullanabileceğiniz <xref:System.TimeZoneInfo.ToSerializedString%2A> yeni oluşturulan bir saat dilimi bir dizeye Dönüştür ve bir veri deposuna (örneğin, bir veritabanı, bir metin dosyası, kayıt defteri veya uygulama kaynağı) kaydetmek için yöntemi. Ardından <xref:System.TimeZoneInfo.FromSerializedString%2A> Bu dize dönüştürmek için yöntemi yeniden bir <xref:System.TimeZoneInfo> nesne. Ayrıntılar için bkz [nasıl yapılır: saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Gerekli bir saat dilimi olmaması işlemek için <xref:System.TimeZoneInfo> sınıfı içeren bir <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> kayıt defterinde bulunamadı özel saat dilimleri oluşturma için kullanabileceğiniz yöntemi. Özel bir saat dilimi oluşturma hakkında daha fazla bilgi edinmek için bkz. [nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Ayrıca, kullanabileceğiniz <xref:System.TimeZoneInfo.ToSerializedString%2A> yeni oluşturulan bir saat dilimi bir dizeye Dönüştür ve bir veri deposuna (örneğin, bir veritabanı, bir metin dosyası, kayıt defteri veya uygulama kaynağı) kaydetmek için yöntemi. Ardından <xref:System.TimeZoneInfo.FromSerializedString%2A> Bu dize dönüştürmek için yöntemi yeniden bir <xref:System.TimeZoneInfo> nesne. Ayrıntılar için bkz [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Her saat dilimi UTC temel bir uzaklık yanı sıra mevcut ayarlama kurallar yansıtan utc'den uzaklık tarafından belirlenir çünkü saati bir saat dilimi, başka bir saat dilimindeki saati kolaylıkla dönüştürülebilir. Bu amaçla <xref:System.TimeZoneInfo> nesne dahil olmak üzere birkaç dönüştürme yöntemleri içerir:
 
@@ -75,4 +75,4 @@ Saatleri saat dilimleri arasında dönüştürme hakkında daha fazla bilgi içi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)

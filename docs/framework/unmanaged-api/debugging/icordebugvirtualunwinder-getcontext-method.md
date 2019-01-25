@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96410466f17bf6b4e8fff235d434f470cabd9249
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec68e36e2e5a06836d0f5d5758a230591626b03e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744108"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext yöntemi
-Bu unwinder geçerli bağlamını alır.  
+Bu unwinder geçerli bağlamı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,7 +27,7 @@ HRESULT GetContext(
   
 #### <a name="parameters"></a>Parametreler  
  `contextFlags`  
- [in] Hangi kısımlarının (WinNT.h içinde tanımlanan) dönmek için bağlamı belirtmek bayraklar.  
+ [in] Hangi parçalarının (WinNT.h içinde tanımlanan) dönmek bağlamının belirten bayraklar.  
   
  `cbContextBuf`  
  [in] Bayt sayısı `contextBuf`.  
@@ -36,28 +36,28 @@ HRESULT GetContext(
  [out] Gerçekte yazılan bayt sayısı için bir işaretçi `contextBuf`.  
   
  `contextBuf`  
- [out] Bu unwinder geçerli içeriği içeren bir bayt dizisi.  
+ [out] Bu unwinder geçerli bağlamını içeren bir bayt dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Tüm mscordbi tarafından alınan HRESULT değer başarısız önemli kabul edilir ve Icordebug dönmek API neden olacak `CORDBG_E_DATA_TARGET_ERROR`.  
+ Tüm önemli kabul edilir ve Icordebug döndürülecek API'leri neden olacak mscordbi tarafından alınan HRESULT değerini başarısız `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Başlangıç değerini ayarlamak `contextBuf` bağımsız değişkeni çağrılarak döndürülen bağlamı arabelleğinde [Icordebugstackwalk::getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) yöntemi.  
+ Başlangıç değeri ayarlamak `contextBuf` bağımsız değişkeni çağrılarak döndürülen bağlamı arabelleğine [Icordebugstackwalk::getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) yöntemi.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
- Unwinding may yalnızca geri yükleme bir alt yazmaçların geçici olmayan gibi yalnızca kaydeder olduğundan, bağlam tam kayıt durumu gerçek yöntem çağrısının aynı anda aynı olmayabilir.  
+ Yalnızca geriye doğru Mayıs yalnızca geri yükleme bulmasına geçici olmayan gibi yazmaçların kaydeder olduğundan, bağlamı tam olarak zaman gerçek bir yöntem çağrısının kayıt durumu eşleşmeyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugMemoryBuffer Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugMemoryBuffer Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

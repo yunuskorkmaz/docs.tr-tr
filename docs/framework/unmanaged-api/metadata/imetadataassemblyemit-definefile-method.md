@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46fa6ab3ea4a63583b01ffe25d22840301613100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ede66a39de292cd259cb12742e7c6df4ab5814f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720502"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile Yöntemi
-Oluşturur bir `File` derleme bu derlemesi tarafından başvurulan ve ilişkili meta veri simgesi döndürür için meta verileri içeren meta veri yapısı.  
+Oluşturur bir `File` derleme bu derlemesi tarafından başvurulan ve ilişkili meta veri belirteci döndürür meta verilerini içeren meta veri yapısı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,28 +44,28 @@ HRESULT DefineFile (
  [in] Kullanılacak dosya adı.  
   
  `pbHashValue`  
- [in] Derleme ile ilişkili karma verileri bir işaretçi.  
+ [in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.  
   
  `cbHashValue`  
  [in] Bayt cinsinden boyutu `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bit düzeyinde bileşimini `FileFlags` özellik ayarlarını belirten değerleri.  
+ [in] Bitsel bir birleşimi `FileFlags` özellik ayarlarını belirten değerleri.  
   
  `pmdf`  
- [out] Bir işaretçi döndürülen `File` belirteci.  
+ [out] Döndürülen işaretçi `File` belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `File` meta veri yapısı, bu derleme meta verilerini içeren dosyanın hariç olmak üzere bu derlemesi oluşturuldu zaman parçası olan her bir dosya için tanımlanmalıdır.  
+ Bir `File` meta veri yapısı, meta veriler içeren dosya hariç olmak üzere bu bütünleştirilmiş kod oluşturulmuş zaman bu derlemenin parçası olan her bir dosya için tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

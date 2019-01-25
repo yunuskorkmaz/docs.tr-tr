@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Korumayı Kullanma'
+title: 'Nasıl yapılır: Veri korumayı kullanma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698406"
 ---
-# <a name="how-to-use-data-protection"></a>Nasıl yapılır: Veri Korumayı Kullanma
+# <a name="how-to-use-data-protection"></a>Nasıl yapılır: Veri korumayı kullanma
 .NET Framework veri koruma API'si (geçerli kullanıcı hesabı veya bilgisayar bilgileri kullanarak verileri şifreleme olanak tanıyan DPAPI), erişim sağlar.  DPAPI kullandığınızda, açıkça oluşturma ve bir şifreleme anahtarı depolamak zor bir sorun çıkmıştır.  
   
  Kullanım <xref:System.Security.Cryptography.ProtectedMemory> bellek içi bir bayt dizisi şifrelemek için sınıf.  Bu işlev, Microsoft Windows XP ve üstü işletim sistemlerinde kullanılabilir.  Geçerli tarafından şifrelenmiş belleğin belirtebilirsiniz işlem şifresi yalnızca, tüm işlemler tarafından ya da aynı kullanıcı bağlamından geçerli işlem.  Bkz: <xref:System.Security.Cryptography.MemoryProtectionScope> numaralandırma ayrıntılı bir açıklaması için <xref:System.Security.Cryptography.ProtectedMemory> seçenekleri.  
@@ -68,5 +68,5 @@ ms.locfileid: "49086628"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

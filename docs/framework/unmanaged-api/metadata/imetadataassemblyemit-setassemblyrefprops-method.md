@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a4f0fd100397fc52ca917c54f0276598d714640
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642850"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps Yöntemi
 Belirtilen değiştirir `AssemblyRef` meta veri yapısı.  
@@ -44,40 +44,40 @@ HRESULT SetAssemblyRefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `ar`  
- [in] Belirtir meta veri simgesi `AssemblyRef` değiştirilecek meta veri yapısı.  
+ [in] Belirten bir meta veri belirteci `AssemblyRef` değiştirilecek meta veri yapısı.  
   
  `pbPublicKeyOrToken`  
- [in] Başvurulan derlemeyi yayımcısı ortak anahtarı.  
+ [in] Başvurulan derlemenin yayımcı ortak anahtarı.  
   
  `cbPublicKeyOrToken`  
  [in] Bayt cinsinden boyutu `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Derleme okunabilir metni adı.  
+ [in] Derleme kullanıcı tarafından okunabilen metin adı.  
   
  `pMetaData`  
- [in] Bir işaretçi ASSEMBLYMETADATA örneğine derleme için sürüm, platform ve yerel ayar bilgilerini içerir.  
+ [in] Derleme sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA örneğine bir işaretçi.  
   
  `pbHashValue`  
- [in] Derleme ile ilişkili karma verileri bir işaretçi.  
+ [in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.  
   
  `cbHashValue`  
  [in] Bayt cinsinden boyutu `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bit düzeyinde bileşimini [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) başvurulan derlemeyi özniteliklerini belirten değerleri.  
+ [in] Bitsel bir birleşimi [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) başvurulan derleme özniteliklerini belirten değerleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Oluşturmak için bir `AssemblyRef` meta veri yapısı, kullanım [Imetadataassemblyemit::defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

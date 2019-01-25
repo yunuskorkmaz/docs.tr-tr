@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698897"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adımlar için biri *bölüm* birden çok iş parçacığı tarafından erişilebilen eşzamanlı olarak birden çok bölümlere kaynak. PLINQ ve görev paralel kitaplığı (TPL), paralel sorgu yazdığınızda şeffaf bir şekilde çalışması varsayılan bölümleyicilerin sağlayın veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü. Daha Gelişmiş senaryolar için kendi bölümleyici takabilirsiniz.  
@@ -23,7 +23,7 @@ Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adı
 ## <a name="kinds-of-partitioning"></a>Bölümleme türleri  
  Bir veri kaynağı bölümlemek için birçok yolu vardır. Kaynak birden fazla demetlerin fiziksel olarak ayrılması yerine işlem özgün kaynak dizisi en verimli yaklaşımları birden çok iş parçacığı işbirliği yapar. Diziler ve diğer dizin kaynaklarını gibi <xref:System.Collections.IList> nerede uzunluğu bilinen önceden koleksiyonları *aralık bölümleme* bölümlemenin en basit türü. Her iş parçacığı, benzersiz dizin, tarihleri arasında üzerine yazmaya veya diğer iş parçacığı tarafından üzerine yazılmasını olmadan kaynak çeşitli işleyebilmesi alır. Yalnızca ek yükü de aralık bölümleme ilgili aralıkları oluşturmanın ilk çalışmadır; Ek eşitleme, daha sonra gereklidir. Bu nedenle, iş yükü şekilde eşit bölünür sürece iyi bir performans sağlayabilir. Aralık bölümleme bir dezavantajı, bir iş parçacığı erken tamamlanırsa işlerini son diğer iş parçacıklarını yardımcı olamaz, ' dir.  
   
- Bağlantılı liste veya uzunluğunu tanınmıyor diğer derlemeler için kullanabileceğiniz *öbek bölümleme*. Öbek bölümleme, her iş parçacığı veya bir paralel döngüde veya bir sorgu görevde bazı bir öbek kaynak öğe sayısı tüketir, işler ve ek öğeleri almak için geri gelir. Tüm öğeleri dağıtılır ve hiçbir Tekrarların bölümleyici sağlar. Bir öbek herhangi bir boyutta olabilir. Örneğin, örnekte gösterildiği bölümleyici [nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) yalnızca bir öğe içermelidir öbekleri oluşturur. Parçalar çok büyük olmayan sürece, iş parçacıkları öğelerin atama önceden belirlenemedi bölümleme bu tür Yük Dengeleme kendiliğinden olmasıdır. Ancak, bölümleyici eşitleme yükünü artırmak ve bu da iş parçacığı başka bir öbek almak için her durumda. Bu gibi durumlarda tahakkuk eşitleme miktarını öbek boyutunu inversely orantılıdır.  
+ Bağlantılı liste veya uzunluğunu tanınmıyor diğer derlemeler için kullanabileceğiniz *öbek bölümleme*. Öbek bölümleme, her iş parçacığı veya bir paralel döngüde veya bir sorgu görevde bazı bir öbek kaynak öğe sayısı tüketir, işler ve ek öğeleri almak için geri gelir. Tüm öğeleri dağıtılır ve hiçbir Tekrarların bölümleyici sağlar. Bir öbek herhangi bir boyutta olabilir. Örneğin, örnekte gösterildiği bölümleyici [nasıl yapılır: Dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) yalnızca bir öğe içermelidir öbekleri oluşturur. Parçalar çok büyük olmayan sürece, iş parçacıkları öğelerin atama önceden belirlenemedi bölümleme bu tür Yük Dengeleme kendiliğinden olmasıdır. Ancak, bölümleyici eşitleme yükünü artırmak ve bu da iş parçacığı başka bir öbek almak için her durumda. Bu gibi durumlarda tahakkuk eşitleme miktarını öbek boyutunu inversely orantılıdır.  
   
  Genel olarak, aralık bölümleme yalnızca temsilci yürütme süresini Orta için küçük olduğunda ve öğeleri çok sayıda kaynak vardır ve her bölüm toplam iş kabaca eşdeğerdir daha hızlıdır. Öbek bölümleme bu nedenle çoğu durumda genellikle daha hızlıdır. Az sayıda öğeleri veya temsilci için artık yürütme süresi ile kaynaklarında performansını öbek ve aralık bölümleme hakkında eşit ise.  
   
@@ -95,7 +95,7 @@ Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adı
 ### <a name="dynamic-partitions"></a>Dinamik bölümleri  
  Kullanılacak bölümleyici düşünüyorsanız bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi, sağlayabilmelidir bölümler dinamik bir sayısını döndürür. Başka bir deyişle döngü yürütme sırasında herhangi bir zamanda bölümleyici bir yeni bölümü isteğe bağlı bir numaralandırıcı sağlayabilirsiniz. Temel olarak, yeni paralel görev döngüyü ekler her görev için yeni bir bölüm ister. Veriler orderable gerekiyorsa, ardından öğesinden türetilen <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> böylece her bölümdeki her öğe benzersiz bir dizin atanır.  
   
- Daha fazla bilgi ve örnek için bkz [nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Daha fazla bilgi ve örnek için bkz [nasıl yapılır: Dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
   
 ### <a name="contract-for-partitioners"></a>Sözleşme Bölümleyiciler  
  Özel bir bölümleyici uygulama PLINQ doğru etkileşimi sağlamak için aşağıdaki yönergeleri izleyin ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> tpl'de:  
@@ -122,6 +122,6 @@ Bir işlem bir veri kaynağı üzerinde paralel hale getirmek için gerekli adı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
-- [Nasıl yapılır: Dinamik Bölümleri Uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
-- [Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
+- [Nasıl yapılır: Dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Nasıl yapılır: Statik bölümleme için bir Bölümleyici uygulama](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

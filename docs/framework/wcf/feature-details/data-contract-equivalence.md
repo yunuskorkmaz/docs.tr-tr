@@ -7,62 +7,62 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b6461ffe6525b377e7f836a686a401033d344a4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708941"
 ---
 # <a name="data-contract-equivalence"></a>Veri Sözleşmesi Eşitliği
-Bir hizmeti veya başarılı bir şekilde bir istemciye veri göndermek için bir hizmeti belirli bir türde veri başarıyla göndermek bir istemci için gönderilen türü mutlaka alan tarafta mevcut gerekmez. Veri sözleşmeleri her iki türdeki eşdeğer tek gereksinimdir. (Bazı durumlarda, katı eşdeğer anlatıldığı gibi gerekli değil [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
+Bir istemci başarıyla bir hizmet ya da verileri başarıyla bir istemciye gönderilecek bir hizmeti belirli bir türde veri göndermek gönderilen türü mutlaka alan tarafta mevcut gerekmez. Her iki türdeki veri sözleşmeleri eşdeğer olduğunu tek gereksinim olmasıdır. (Bazı durumlarda, katı denklik bölümünde açıklandığı gibi gerekli değildir [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
   
- Veri sözleşmeleri eşdeğer olarak aynı ad alanına ve ada sahip oldukları gerekir. Ayrıca, her veri üyesi bir tarafında diğer tarafta bir eşdeğer veri üyesi olması gerekir.  
+ Veri sözleşmeleri denk olarak bunlar aynı ad alanı ve ad olmalıdır. Ayrıca, her veri üyesi bir tarafta diğer tarafta eşdeğeri veri üyesi olmalıdır.  
   
- Veri üyeleri eşdeğer olarak aynı ada sahip oldukları gerekir. Ayrıca, aynı veri türünü temsil etmelidir; diğer bir deyişle, kendi veri sözleşmeleri eşdeğer olmalıdır.  
+ Veri üyeleri denk olarak aynı ada sahip olmalıdır. Ayrıca, aynı veri türünü temsil etmelidir; diğer bir deyişle, kendi veri sözleşmeleri eşdeğer olması gerekir.  
   
 > [!NOTE]
->  Verileri veri üye adları, yanı sıra adları ve ad alanları sözleşme Not büyük küçük harfe duyarlıdır.  
+>  Veri adları ve ad alanları yanı sıra veri üye adları, sözleşme Not büyük küçük harfe duyarlıdır.  
   
- Veri üye adlarının yanı sıra veri sözleşmesi adları ve ad alanları hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Veri üye adlarının yanı sıra veri sözleşmesi adları ve ad alanları hakkında daha fazla bilgi için bkz. [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
- İki tür mevcutsa aynı tarafında (gönderen veya alıcı) ve kendi veri sözleşmeleri eşdeğer değildir (örneğin, farklı veri üyelerinin sahip oldukları), siz bunları aynı ad ve ad vermemelisiniz. Bunun yapılması, özel durum oluşturulmasına neden olabilir.  
+ İki tür mevcutsa aynı tarafında (gönderen veya alıcı) ve kendi veri anlaşmalar eşdeğer olmadığından (örneğin, farklı veri üyelerinin sahip oldukları), siz bunları aynı ad ve ad vermemelisiniz. Bunun yapılması, özel durum oluşturulmasına neden olabilir.  
   
- Veri sözleşmeleri aşağıdaki türleri için eşdeğerdir:  
+ Aşağıdaki türler için veri sözleşmeleri eşdeğerdir:  
   
  [!code-csharp[C_DataContractNames#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#5)]
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
-## <a name="data-member-order-and-data-contract-equivalence"></a>Veri üye sırası ve veri sözleşmesi eşdeğer  
- Kullanarak <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> sınıfı, veri sözleşmesi eşitliği etkileyebilir. Veri sözleşmeleri eşdeğer olarak aynı sırada görünür üyeleri olmalıdır. Varsayılan olarak alfabetik sırasıdır. Daha fazla bilgi için bkz: [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="data-member-order-and-data-contract-equivalence"></a>Veri üye sırası ve veri anlaşması eşitliği  
+ Kullanarak <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> sınıfı, veri anlaşması eşitliği etkileyebilir. Veri sözleşmeleri denk olarak aynı sırada görünür üyeleri olmalıdır. Varsayılan olarak alfabetik sıralama kullanılır. Daha fazla bilgi için [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- Örneğin, aşağıdaki kodu eşdeğeri veri sözleşmelerinde sonuçlanır.  
+ Örneğin, aşağıdaki kod eşdeğeri veri anlaşmalarında sonuçlanır.  
   
  [!code-csharp[C_DataContractNames#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#6)]
  [!code-vb[C_DataContractNames#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#6)]  
   
- Ancak, aşağıdakiler bir eşdeğer veri sözleşmesi oluşmaz.  
+ Ancak, aşağıdaki bir eşdeğeri veri sözleşmede sonuçlanmaz.  
   
  [!code-csharp[C_DataContractNames#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#7)]
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
-## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Devralma, arabirimler ve veri sözleşmesi eşitliği  
- Tüm temel türü veri üyelerini içeren tek bir veri sözleşmesi ise gibi eşdeğer belirlerken, başka bir veri sözleşmesi devralan bir veri sözleşmesi kabul edilir. Veri üyeleri sırasını eşleşmelidir göz önünde bulundurun ve türetilen tür üyeleri sırada temel tür üyeleri koyun. Aşağıdaki kod örneğinde olduğu gibi iki veri üyeleri aynı sıra değeri, ayrıca, bu veri üyeleri için sıralama alfabetik varsa. Daha fazla bilgi için bkz: [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Devralma, arabirimler ve veri anlaşması eşitliği  
+ Tüm veri üyelerinin temel türünden içeren tek bir veri anlaşması grubundaymış gibi denklik belirlerken, başka bir veri anlaşması devralan bir veri anlaşması kabul edilir. Veri üyelerinin sırasını eşleşmelidir ve temel tür üyeleri koyun, tür üyeleri sırayla türetilmiş aklınızda bulundurun. Aşağıdaki kod örneğinde olduğu gibi iki veri üyeleri aynı sıra değeri varsa, ayrıca, bu veri üyeleri için sıralama alfabetik kullanılır. Daha fazla bilgi için [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- Aşağıdaki örnekte, veri türü için sözleşme `Employee` türü için veri sözleşmesi eşdeğerdir `Worker`.  
+ Aşağıdaki örnekte, veri anlaşması türü için `Employee` veri anlaşması türü için eşdeğerdir `Worker`.  
   
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- Türetilmiş bir sınıf bir veri sözleşmesi alıcı uç nokta bekler, parametreler ve dönüş değerleri bir istemci ve hizmet arasında geçirirken, bir veri sözleşmesi temel sınıfından gönderilemiyor. Nesne odaklı programlama tenets uygun olarak budur. Önceki örnekte, bir nesne türü `Person` ne zaman gönderilemez bir `Employee` beklenir.  
+ Alan uç noktası bir veri anlaşması türetilmiş bir sınıftan beklerken parametrelerini ve dönüş değerlerini bir istemci ve hizmet arasında geçirirken, bir veri anlaşması bir temel sınıftan gönderilemez. Nesne yönelimli programlama sacayakları uygun olarak budur. Önceki örnekte, bir nesne türü `Person` ne zaman gönderilemez bir `Employee` beklenir.  
   
- Beklenen, ancak alıcı endpoint "türetilmiş bir tür kullanarak biliyorsa" tek bir veri sözleşmesi temel sınıfından türetilmiş bir sınıf bir veri sözleşmesi gönderilebilir <xref:System.Runtime.Serialization.KnownTypeAttribute>. Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Önceki örnekte, bir nesne türü `Employee` ne zaman gönderilebilecek bir `Person` bekleniyor ancak alıcı kodu içeriyorsa yalnızca <xref:System.Runtime.Serialization.KnownTypeAttribute> bilinen türleri listesinde dahil etmek için.  
+ Bir temel sınıftan bir veri sözleşmesi bekleniyor ancak yalnızca alan uç noktası "türetilmiş bir tür kullanarak biliyorsa" olduğunda bir veri anlaşması türetilmiş bir sınıftan gönderilebilir <xref:System.Runtime.Serialization.KnownTypeAttribute>. Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Önceki örnekte, bir nesne türü `Employee` ne zaman gönderilebilecek bir `Person` beklenen, ancak alıcı kodu içeriyorsa yalnızca <xref:System.Runtime.Serialization.KnownTypeAttribute> bilinen türler listesine eklemek için.  
   
- Parametreler ve dönüş değerleri beklenen tür bir arabirim ise uygulamalar arasında geçirirken, beklenen tür olan türü eşdeğer <xref:System.Object>. Türeyen sonuçta her tür için <xref:System.Object>, her veri sözleşmesi için veri sözleşmesi sonuçta türeyen <xref:System.Object>. Bu nedenle, bir arabirim beklendiğinde herhangi bir veri sözleşmesi türü geçirilebilir. Başarıyla arabirimleri ile çalışmak için ek adımlar gereklidir; Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Parametreler ve dönüş değerleri beklenen tür bir arabirimse uygulamalar arasında geçirirken, beklenen tür türünde olan eşdeğer <xref:System.Object>. Her tür sonuçta öğesinden türetildiği için <xref:System.Object>, her veri anlaşması için veri anlaşması sonuç olarak türetilen <xref:System.Object>. Bu nedenle, herhangi bir veri anlaşması türü bir arabirim beklendiğinde geçirilebilir. Başarıyla arabirimleri ile çalışmak için ek adımlar gereklidir; Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Veri Üye Sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Veri Üye Sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

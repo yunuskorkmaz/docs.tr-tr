@@ -1,30 +1,30 @@
 ---
-title: Saf işlevsel dönüşümleri XML (Visual Basic)
+title: Saf işlevsel dönüşümlere XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 25719fc53235424b6a1e2b779ab4e6bdfbe6b4d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584746"
 ---
-# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Saf işlevsel dönüşümleri XML (Visual Basic)
-Bu bölümde bir işlev dönüştürme öğretici için XML sağlar. Bu kavramlarla açıklamalarını içerir ve dil yapıları işlevsel dönüşümler ve bir XML belgesi işlemek için işlevsel dönüştürmeleri kullanma örnekleri kullanmak için anlamanız gerekir. Bu öğretici LINQ için XML kod örnekleri sağlasa da, tüm temel kavramlarını diğer LINQ teknolojileri için de geçerlidir.  
+# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Saf işlevsel dönüşümlere XML (Visual Basic)
+Bu bölüm için XML işlevsel dönüşümü öğretici sağlar. Bu kavramlarla açıklamalarını içerir ve işlevsel dönüşümlere ve bir XML belgesi işlemek için işlevsel dönüşümlere kullanma örnekleri kullanmak için anlamanız gereken dil oluşturur. Bu öğreticide LINQ için XML kod örnekleri sağlasa da, tüm temel kavramları diğer LINQ teknolojileri için de geçerlidir.  
   
- [Öğreticisi: düzenleme içerik WordprocessingML belgedeki (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Eğitmeni her önceki bir derleme örnekler, bir dizi sağlar. Bu örnekler, XML düzenleme saf işlevsel transformational yaklaşım gösterir.  
+ [Öğreticisi: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğretici, her eskisinin oluşturmayı örnekler, bir dizi sağlar. Bu örnekler, XML düzenleme saf işlevsel dönüşümsel yaklaşımı gösterir.  
   
- Bu öğreticide Visual Basic bilgili varsayar. Bu öğreticide dil yapıları ayrıntılı semantiği sağlanmayan, ancak uygun dil belgelere bağlantılar verilmiştir.  
+ Bu öğreticide, Visual Basic bilgisine varsayılır. Dil yapıları ayrıntılı semantikleri, bu öğreticide sağlanmaz, ancak uygun dil belgelerine bağlantılar sağlanır.  
   
- Temel bilgisayar bilimi kavramları ve XML ad alanları dahil olmak üzere XML bilgili olduğu da varsayılır.  
+ Temel bilgisayar bilimi kavramları ve XML XML ad alanları da dahil olmak üzere, bilgisine da varsayılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|İşlev dönüşümleri açıklar ve ilgili terimleri tanımlar.|  
-|[Öğretici: Ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Geç değerlendirme ve ayrıntılı ertelenmiş yürütme açıklar.|  
-|[Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|İşlev dönüştürme gösteren bir öğretici.|  
+|[Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|İşlevsel dönüşümlere açıklanmakta ve ilgili terimleri tanımlar.|  
+|[Öğretici: Ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Geç değerlendirme ve ertelenmiş yürütme ayrıntılı açıklar.|  
+|[Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|İşlevsel dönüşüm gösteren öğretici.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgulama XML ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [(Visual Basic) XML ağaçlarını sorgulama](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

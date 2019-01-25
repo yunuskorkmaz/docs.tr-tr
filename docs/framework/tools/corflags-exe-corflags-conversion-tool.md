@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690754"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags Dönüştürme Aracı)
 CorFlags Dönüştürme aracı, taşınabilir çalıştırılabilir bir görüntünün üstbilgisinin CorFlags bölümünü yapılandırmanıza olanak verir.  
@@ -36,8 +36,8 @@ CorFlags.exe assembly [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ 32 BIT [İSTEK] +**|32BITREQUIRED bayrağını ayarlar.|  
-|**/ 32 BIT [İSTEK]-**|32BITREQUIRED bayrağını kaldırır.|  
+|**/32BIT[REQ]+**|32BITREQUIRED bayrağını ayarlar.|  
+|**/32BIT[REQ]-**|32BITREQUIRED bayrağını kaldırır.|  
 |**/32BITPREF+**|32BITPREFERRED bayrağını ayarlar. Uygulama 64-bit platformlarda dahi 32-bit işlem olarak çalışır. Bu bayrağı yalnızca EXE dosyalarında ayarlayın. Bayrak bir DLL olarak ayarlanırsa, DLL 64-bit işlemde yüklenemiyordur ve <xref:System.BadImageFormatException> özel durumu oluşturulur. Bu bayrağı içeren bir EXE dosyası bir 64-bit işleme yüklenebilir.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/32BITPREF-**|32BITPREFERRED bayrağını kaldırır.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
@@ -52,7 +52,7 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>Açıklamalar  
  Hiçbir seçenek belirtilmezse, CorFlags Dönüştürme aracı belirtilen derleme için bayrakları görüntüler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [64 bit Uygulamalar](../../../docs/framework/64-bit-apps.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [64 bit Uygulamalar](../../../docs/framework/64-bit-apps.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

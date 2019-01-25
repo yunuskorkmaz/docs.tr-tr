@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Panoya Veri Ekleme'
+title: 'Nasıl yapılır: Panoya veri ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 6002acfadfd0e688ef432baacbdabffb83890cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37e46c48be41d0b527e73b15bfff1f069924fa20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682816"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya Veri Ekleme
-<xref:System.Windows.Forms.Clipboard> Sınıfı Windows işletim sistemi Pano özelliği ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici depo olarak kullanın. Örneğin, sözcük işlemci kesme ve yapıştırma işlemleri sırasında Panosu'nu kullanın. Pano, bir uygulamadan başka bir veri aktarmak için yararlıdır.  
+# <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya veri ekleme
+<xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, başka bir uygulamadan veri aktarmak için kullanışlıdır.  
   
- Panoya veri eklediğinizde, bu biçimi kullanıyorsanız diğer uygulamaların veri tanıyabilmesi veri biçimi belirtebilirsiniz. Veri kullanabilmeniz için diğer uygulamaları sayısını artırmak için panoya birden çok farklı biçimlerde verileri de ekleyebilirsiniz.  
+ Panoya veri ekleme, bu biçimi kullanıyorsanız, diğer uygulamalar verileri tanıyabilmesi veri biçimi belirtebilirsiniz. Ayrıca, potansiyel olarak veri kullanan diğer uygulamalar sayısını artırmak için birden çok farklı biçimlerde panosu için veri ekleyebilirsiniz.  
   
- Böylece bu biçimi kullanan bir uygulamayı ilişkili veri biçimini tanımlayan bir dize bir Pano biçimidir. <xref:System.Windows.Forms.DataFormats> Sınıfı kullanmanız için önceden tanımlanmış biçim adlarının sağlar. Ayrıca, kendi biçim adları kullanın veya bir nesne türünü, biçimi kullanabilirsiniz.  
+ Pano biçimi alabilmesi bu biçimi kullanan bir uygulamayı ilişkili veri biçimini tanımlayan bir dizedir. <xref:System.Windows.Forms.DataFormats> Sınıfı kullanmanız için önceden tanımlanmış biçim adları sağlar. Ayrıca, kendi biçim adları kullanın veya bir nesne türünü, biçimi kullanabilirsiniz.  
   
- Bir veya birden çok biçimlerde Pano veri eklemek için kullanın <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemi. Bu yöntem herhangi bir nesne geçirebilirsiniz ancak çoklu biçimlerde veri eklemek için önce verileri birden çok biçim ile çalışmak üzere tasarlanmış ayrı bir nesne eklemeniz gerekir. Genellikle, verilerinizi ekleyecek bir <xref:System.Windows.Forms.DataObject>, ancak uygulayan herhangi bir türü kullanabilirsiniz <xref:System.Windows.Forms.IDataObject> arabirimi.  
+ Bir veya birden çok biçimde panoya veri eklemek için <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemi. Bu yöntem için herhangi bir nesne geçirebilirsiniz, ancak birden çok biçimde veri eklemek için önce veriler ile birden çok biçimde çalışmak üzere tasarlanmış ayrı bir nesne eklemeniz gerekir. Genellikle, verilerinize ekleyeceksiniz bir <xref:System.Windows.Forms.DataObject>, ancak uygulayan herhangi bir türü kullanabilirsiniz <xref:System.Windows.Forms.IDataObject> arabirimi.  
   
- İçinde [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], temel Pano görevleri kolaylaştırmak için tasarlanmış yeni yöntemlerle doğrudan panoya verileri ekleyebilirsiniz. Metin gibi tek, ortak biçiminde verilerle çalışırken bu yöntemleri kullanın.  
+ İçinde [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], temel Pano görevleri daha kolay hale getirmek için tasarlanan yeni yöntemleri kullanarak verileri doğrudan panoya ekleyebilirsiniz. Metin gibi tek, ortak bir biçimde verilerle çalışırken bu yöntemleri kullanın.  
   
 > [!NOTE]
->  Tüm Windows tabanlı uygulamalar Pano paylaşır. Bu nedenle, başka bir uygulamaya geçiş yaptığınızda içeriği değiştirilebilir ' dir.  
+>  Tüm Windows tabanlı uygulamalar, Pano paylaşabilirsiniz. Bu nedenle, başka bir uygulamaya geçtiğinde içeriği değişikliğe tabi olduğu.  
 >   
->  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca kullanılabilir iş parçacıklarında tek iş parçacığı Grup (STA) modu olarak ayarlanmış. Bu sınıf kullanmak için emin olun, `Main` yöntemi ile işaretlenmiş <xref:System.STAThreadAttribute> özniteliği.  
+>  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca kullanılabilir iş parçacıklarında tek iş parçacığı Grup (STA) moduna ayarlayın. Bu sınıf kullanmak için emin olun, `Main` yöntemi ile işaretlenmiş <xref:System.STAThreadAttribute> özniteliği.  
 >   
->  Bir nesne Pano'ya yerleştir kendisine için Serileştirilebilir olmalıdır. Türü seri hale getirilebilir yapmak için kendisiyle işaretlemek <xref:System.SerializableAttribute> özniteliği. Bir Pano yönteme serileştirilebilir olmayan bir nesne geçirirseniz, yöntem bir özel durum atma olmadan başarısız olur. Seri hale getirme hakkında daha fazla bilgi için bkz: <xref:System.Runtime.Serialization>.  
+>  Bir nesne, Panodaki koymak için Serileştirilebilir olmalıdır. Bir tür serileştirilebilir yapmak için kendisiyle işaretlemek <xref:System.SerializableAttribute> özniteliği. Seri hale getirilemeyen bir nesne bir Pano yöntemine geçirirseniz, yöntem bir özel durum olmadan başarısız olur. Seri hale getirme hakkında daha fazla bilgi için bkz: <xref:System.Runtime.Serialization>.  
   
-### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Tek, ortak bir biçimde Pano veri eklemek için  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Pano tek, ortak bir biçimde veri eklemek için  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.SetText%2A> yöntemi. Bu yöntem yalnızca kullanılabilir [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.SetText%2A> yöntemi. Bu yöntem yalnızca [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Özel bir biçim panoya veri eklemek için  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi bir özel biçim adına sahip. Bu yöntem yalnızca kullanılabilir [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi ile bir özel biçim adı. Bu yöntem yalnızca kullanılabilir [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     Önceden tanımlanmış biçim adıyla de kullanabilirsiniz <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
+     Önceden tanımlanmış biçim adıyla kullanabilirsiniz <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Birden çok biçim panoya veri eklemek için  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Birden çok biçimde panoya veri ekleme  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemi ve geçişinde bir <xref:System.Windows.Forms.DataObject> verilerinizi içeren. Sürümleri panoya veri eklemek için bu yöntemi kullanın öncesi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Kullanım <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemi ve geçişinde bir <xref:System.Windows.Forms.DataObject> verilerinizi içeren. Veri sürümleri panoya eklemek için bu yöntemi kullanın öncesi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sürükle ve Bırak İşlemleri ve Pano Desteği](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
- [Nasıl yapılır: Panodan Veri Alma](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sürükle ve Bırak İşlemleri ve Pano Desteği](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [Nasıl yapılır: Panodan veri alma](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742113"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;Enforcefıpspolicy&gt; öğesi
 Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uyması gereken bir bilgisayar yapılandırma gereksinimini zorlanıp zorlanmayacağını belirtir.  
@@ -71,7 +71,7 @@ ms.locfileid: "53612016"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Şifreleme Modeli](../../../../../docs/standard/security/cryptography-model.md)

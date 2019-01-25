@@ -1,29 +1,29 @@
 ---
-title: Eşzamanlılık DependentTransaction ile yönetme
+title: DependentTransaction ile eşzamanlılığı yönetme
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664466"
 ---
-# <a name="managing-concurrency-with-dependenttransaction"></a>Eşzamanlılık DependentTransaction ile yönetme
-<xref:System.Transactions.Transaction> Nesnesi kullanılarak oluşturulan <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi. Tek amacı, bazı bir kod (örneğin, bir çalışan iş parçacığı) parçalarını hala iş üzerinde işlem gerçekleştirirken işlem tamamlanamaz garanti olmaktır. Kopyalanan işlem içinde çalışmanın tam ve kabul edilebilmesi için hazır olduğunda, hareket kullanarak Oluşturucusu bildirebilir <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi. Bu nedenle, tutarlılık ve veri doğruluğunu saklayabilir.  
+# <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction ile eşzamanlılığı yönetme
+<xref:System.Transactions.Transaction> Nesnesi kullanılarak oluşturulan <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi. Tek amacı, bazı bir kod (örneğin, bir iş parçacığı) parçalarını hala iş üzerinde işlem gerçekleştirirken işlem tamamlanamaz garanti sağlamaktır. Kopyalanan işlemin içinde çalışmanın tam ve yürütülemediğinden hazır olduğunda hareket kullanarak Oluşturucusu bildirebilir <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi. Bu nedenle, tutarlılık ve veri doğruluğunu saklayabilir.  
   
  <xref:System.Transactions.DependentTransaction> Sınıf ayrıca zaman uyumsuz görevler arasında eşzamanlılık yönetmek için kullanılabilir. Bu senaryoda, kendi görevlere bağımlı kopya çalışırken herhangi bir kod yürütmek üst devam edebilirsiniz. Diğer bir deyişle, üst öğenin yürütme bağımlı tamamlanıncaya kadar engellenmemiş.  
   
 ## <a name="creating-a-dependent-clone"></a>Bağımlı bir kopya oluşturma  
- Bağımlı bir işlem oluşturmak için arama <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi ve geçişi <xref:System.Transactions.DependentCloneOption> bir parametre olarak numaralandırması. Bu parametre işlem davranışını tanımlar `Commit` bağımlı kopya işlemi yürütmek hazır olduğunu belirten önce üst işlem çağrılır (çağırarak <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi). Bu parameTRe için şu değerler geçerlidir:  
+ Bağımlı bir işlem oluşturmak için arama <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi ve pass <xref:System.Transactions.DependentCloneOption> parametre olarak numaralandırması. Bu parametre işlem davranışını tanımlar `Commit` üst işlem yürütme işlemi için hazır olduğunu bağımlı kopya gösterir önce çağrılır (çağırarak <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi). Bu parameTRe için şu değerler geçerlidir:  
   
--   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> üst işlem süreleri kadar üst işlemin kaydetme işlemi out veya kadar engeller bağımlı bir işlem oluşturur <xref:System.Transactions.DependentTransaction.Complete%2A> kendi tamamlama gösteren tüm bağımlıları üzerinde olarak adlandırılır. Bu, istemci bağımlı işlemleri tamamlanana kadar tamamlamaya üst işlemin istemediği durumunda faydalı olur. Üst çalışmasını çağrıları ve bağımlı işlem'den önceki bittikten varsa <xref:System.Transactions.CommittableTransaction.Commit%2A> işleme, burada ek iş üzerinde işlem yapılabilir ve yeni kayıtlar oluşturulabilir, tüm kadar bir durumda kaydetme işlemi engellendi Bağımlılıklar çağrı <xref:System.Transactions.DependentTransaction.Complete%2A>. Bunların tümünün iş ve çağrı tamamladıktan hemen sonra <xref:System.Transactions.DependentTransaction.Complete%2A>, işlem yürütme işlemi başlar.  
+-   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> üst işlem süreleri kadar üst hareketin kaydetme işlemi aşımına veya kadar engeller bağımlı bir işlem oluşturur <xref:System.Transactions.DependentTransaction.Complete%2A> kendi tamamlama belirten tüm bağımlılıklar üzerinde çağrılır. İstemci bağımlı işlemleri tamamlanana kadar tamamlamaya üst işlem istemediği gerektiğinde kullanışlıdır. Üst çalışmasını bağımlı işlem ve çağrıları'den önceki bitirildikten <xref:System.Transactions.CommittableTransaction.Commit%2A> hareket üzerindeki kaydetme işlemi burada ek iş üzerinde işlem yapılabilir ve yeni liste oluşturulabilir, tüm kadar bir durumda engellendi Bağımlılıklar arama <xref:System.Transactions.DependentTransaction.Complete%2A>. Bunların tümünü çalışma ve araması bitirdikten hemen sonra <xref:System.Transactions.DependentTransaction.Complete%2A>, hareketin kaydetme işlemi başlar.  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, diğer yandan, otomatik olarak durdurur bağımlı bir işlem oluşturur <xref:System.Transactions.CommittableTransaction.Commit%2A> önce üst işlem olarak adlandırılan <xref:System.Transactions.DependentTransaction.Complete%2A> olarak adlandırılır. Bu durumda, bağımlı işlem içinde tüm çalışmanın bir işlem ömrü içinde olduğu gibi olup hiç kimse yalnızca bir kısmını uygulamak için bir fırsat içerir.  
+-   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, diğer yandan, yoksa otomatik olarak durdurur bağımlı bir işlem oluşturur <xref:System.Transactions.CommittableTransaction.Commit%2A> önce üst işlem çağrılır <xref:System.Transactions.DependentTransaction.Complete%2A> çağrılır. Bu durumda, bağımlı işlemde tüm çalışmanın bir işlem yaşam süresi içinde olduğu ve hiç kimse yalnızca bir bölümü yürütme şansına sahip olamaz.  
   
- <xref:System.Transactions.DependentTransaction.Complete%2A> Yalnızca uygulamanızı bağımlı işlem; işini tamamlandığında sonra yöntemi çağrılmalıdır Aksi halde, bir <xref:System.InvalidOperationException> oluşturulur. Bu çağrı çağrıldıktan sonra işlem üzerinde herhangi bir ek çalışmayı çalışmamalısınız ya da bir özel durum.  
+ <xref:System.Transactions.DependentTransaction.Complete%2A> Yöntemi yalnızca uygulamanızın bağımlı hareketi; çalışmasını bittiğinde sonra çağrılmalıdır Aksi halde, bir <xref:System.InvalidOperationException> oluşturulur. Bu çağrı çağrıldıktan sonra işlem üzerinde herhangi bir ek çalışmayı kullanmamanız gerekir veya bir özel durum oluşturulur.  
   
- Aşağıdaki kod örneğinde, bağımlı işlem kopyalama ve onu bir çalışan iş parçacığı tarafından iki eş zamanlı görevleri yönetmek için bağımlı bir işlem oluşturulacağını gösterir.  
+ Aşağıdaki kod örneğinde bağımlı bir işlem kopyalamayı ve bir iş parçacığı geçirerek tarafından iki eşzamanlı görevlerini yönetmek için bağımlı bir işlem nasıl oluşturulacağını gösterir.  
   
 ```csharp  
 public class WorkerThread  
@@ -66,20 +66,20 @@ using(TransactionScope scope = new TransactionScope())
 }  
 ```  
   
- İstemci kodu ayrıca ortam işlem ayarlar işlemsel bir kapsam oluşturur. Ortam işlem iş parçacığı başarılı. Çağırarak geçerli (ortam) işlem bunun yerine, kopyalamalıdır <xref:System.Transactions.Transaction.DependentClone%2A> geçerli işlem ve çalışan iş parçacığı bağımlı geçişine yöntemi.  
+ Ayrıca ortam işlem ayarlar bir işlem kapsamı istemci kodu oluşturur. Ortam işlem için iş parçacığı geçirmeniz değil. Bunun yerine, çağırarak geçerli (ortam) işlem klonlayın <xref:System.Transactions.Transaction.DependentClone%2A> geçerli işlem ve iş parçacığı bağımlı geçişine yöntemi.  
   
- `ThreadMethod` Yeni iş parçacığı üzerinde yöntemini yürütür. Bir istemci, bağımlı işlem olarak geçirme yeni bir iş parçacığı çalışmaya başladığı `ThreadMethod` parametresi.  
+ `ThreadMethod` Yeni iş parçacığı üzerinde yöntemini yürütür. Bağımlı işlem olarak geçirerek yeni bir iş parçacığı istemci başlatır `ThreadMethod` parametresi.  
   
- Bağımlı işlem ile oluşturulduğundan <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, işlem tüm kadar yürütülemiyor olduğunu garanti iş parçacığı ikinci gerçekleştirilen işlem çalışma tamamlandı ve <xref:System.Transactions.DependentTransaction.Complete%2A> bağımlı işlem adı verilir. İstemcinin kapsam ererse anlamına gelir (Bu işlem nesnesini sonunda elden çalıştığında **kullanarak** deyimi) yeni iş parçacığı çağrıları önce <xref:System.Transactions.DependentTransaction.Complete%2A> bağımlı işleme istemci kodu engeller kadar<xref:System.Transactions.DependentTransaction.Complete%2A> bağlı olarak adlandırılır. Ardından işlem yapılıyor veya durduruluyor bitirebilirsiniz.  
+ Bağımlı işlem ile oluşturulduğundan <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, işlem kadar tüm yürütülemiyor olmasını garanti iş parçacığı tamamlandıktan ikinci işlem çalışmanın ve <xref:System.Transactions.DependentTransaction.Complete%2A> bağımlı işlem çağrılır. Bunun anlamı istemcinin kapsam sona ererse (olduğunda çalışır sonunda işlem nesnenin silmek **kullanarak** bildirimi) yeni dizi çağrıları önce <xref:System.Transactions.DependentTransaction.Complete%2A> bağımlı işlem, istemci kodu kadarengeller<xref:System.Transactions.DependentTransaction.Complete%2A> bağlıdır çağrılır. Ardından işlem Sistemi'ne veya iptal ediliyor tamamlayabilir.  
   
 ## <a name="concurrency-issues"></a>Eşzamanlılık sorunları  
  İlgili sorunlar var. kullanırken farkında olması gereken birkaç ek eşzamanlılık <xref:System.Transactions.DependentTransaction> sınıfı:  
   
--   Çalışan iş parçacığı geri işlem yapar, ancak bunu gerçekleştirmeyi üst çalışır bir <xref:System.Transactions.TransactionAbortedException> oluşturulur.  
+-   Çalışan iş parçacığı geri işlem yapar, ancak üst, tamamlamaya çalışır bir <xref:System.Transactions.TransactionAbortedException> oluşturulur.  
   
--   Her iş parçacığı için yeni bir bağımlı kopya işlemde oluşturmanız gerekir. Yalnızca biri çağırabilirsiniz çünkü aynı bağımlı kopya birden çok iş parçacığı için geçmeyin <xref:System.Transactions.DependentTransaction.Complete%2A> üzerindeki.  
+-   İşlem sırasında her iş parçacığı için yeni bir bağımlı kopya oluşturmanız gerekir. Yalnızca biri çağırabilirsiniz çünkü aynı bağımlı kopya birden çok iş parçacığı için geçmeyin <xref:System.Transactions.DependentTransaction.Complete%2A> üzerindeki.  
   
 -   Yeni bir iş parçacığı çalışan iş parçacığı olarak çoğaltılır, bağımlı bir kopya bağımlı oluşturmak ve yeni bir dizi için iletmektir emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Transactions.DependentTransaction>

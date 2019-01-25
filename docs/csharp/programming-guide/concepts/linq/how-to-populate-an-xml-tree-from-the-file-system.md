@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: dosya sisteminden (C#) bir XML ağacı doldurma'
+title: 'Nasıl yapılır: Dosya sisteminden bir XML ağacı doldurma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705816"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Nasıl yapılır: dosya sisteminden (C#) bir XML ağacı doldurma
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Nasıl yapılır: Dosya sisteminden bir XML ağacı doldurma (C#)
 Bir ortak ve kullanışlı XML ağaçlarını hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Hiyerarşik veriler ile XML ağacı doldurma ve ardından, sorgulama yapabilir, dönüştürmek ve gerekirse, seri hale. Bu kullanım senaryosunda, ad alanları ve boşluk davranışını gibi XML belirli semantikler birçok önemli değildir. Bunun yerine, bellek, hiyerarşik veritabanı tek kullanıcı küçük bir olarak XML ağacı kullanıyor.  
   
 ## <a name="example"></a>Örnek  
@@ -116,6 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

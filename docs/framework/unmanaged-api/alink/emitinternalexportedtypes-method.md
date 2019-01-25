@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55b9d185804f25c7431f2696d67753cc3ba02d1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710553"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes Yöntemi
-Derlemeye eklenen türleri yayar. İç türleri eklenmiştir bilinen sonra bu yöntemi çağırın.  
+Derlemeye eklenen tür yayar. Dahili türler eklenmiş olan bilinen sonra bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,7 +45,7 @@ HRESULT EmitInternalExportedTypes(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

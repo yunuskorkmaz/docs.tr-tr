@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4d187d171aa90ae1067078f7540a18f39c3508a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685665"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info Nesnesi
 Bilgisayarın bellek, yüklenen derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikleri sağlar.  
@@ -22,7 +22,7 @@ Bilgisayarın bellek, yüklenen derlemeler, ad ve işletim sistemi hakkında bil
   
  **Sınıf:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

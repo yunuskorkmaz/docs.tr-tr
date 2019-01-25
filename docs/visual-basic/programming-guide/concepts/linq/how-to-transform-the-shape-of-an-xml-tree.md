@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: bir XML ağacının (Visual Basic) şekil Dönüştür'
+title: 'Nasıl yapılır: (Visual Basic) XML ağacının şeklini dönüştürme'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: c1221fb3ad4017d7367493a3c6abef23b8c6b55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3fb1cd0995597be6c5108832750b6695d196b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624192"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Nasıl yapılır: bir XML ağacının (Visual Basic) şekil Dönüştür
-*Şekli* bir XML belgesi öğe adları, öznitelik adları ve özellikleri, hiyerarşinin başvuruyor.  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Nasıl yapılır: (Visual Basic) XML ağacının şeklini dönüştürme
+*Şekli* alt öğe adları, öznitelik adları ve özellikleri, hiyerarşinin bir XML'sini belge başvuruyor.  
   
- Bazen, bir XML belgesi şeklini değiştirmek gerekir. Örneğin, var olan bir XML belgesi farklı öğe ve öznitelik adları gerektiren başka bir sisteme gönderme gerekebilir. Belgenin silmeyi ve daha okunabilir ve sürdürülebilir kodu gerekli, ancak kullanarak işlev yapım sonuç olarak öğeleri yeniden adlandırma gidebilir. İşlev oluşturma hakkında daha fazla bilgi için bkz: [işlevsel yapımı (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Bazen, bir XML belgesi şeklini değiştirmek gerekir. Örneğin, var olan bir XML belgesi farklı öğe ve öznitelik adları gerektiren başka bir sisteme gönderme gerekebilir. Belgede, silme ve gerekli, ancak kullanarak işlevsel oluşturma sonuçları daha okunabilir ve sürdürülebilir kod öğeleri yeniden adlandırma gidilemedi. İşlevsel oluşturma hakkında daha fazla bilgi için bkz: [işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- İlk örnek XML belgesi organizasyonu değiştirir. Bu karmaşık öğeleri ağacında bir konumdan diğerine taşır.  
+ İlk örnek, XML belgesi kuruluş değiştirir. Bu karmaşık öğe ağacında bir konumdan diğerine taşır.  
   
- Bu konudaki ikinci örnek kaynak belgedeki daha farklı bir şekli bir XML belgesi oluşturur. Öğe adları büyük küçük harf değiştirir, bazı öğelerin yeniden adlandırır ve bazı öğeler kaynak ağaç dönüştürülmüş ağaç dışında bırakır.  
+ Bu konudaki ikinci örnek, kaynak belgedeki daha farklı bir şekilde bir XML belgesi oluşturur. Öğe adları büyük küçük harfleri değiştirir, bazı öğelerin yeniden adlandırır ve bazı öğeleri kaynak ağaç dönüştürülmüş ağaç dışında bırakır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod katıştırılmış sorgu ifadeleri kullanarak XML dosyasını şeklini değiştirir.  
+ Aşağıdaki kod, katıştırılmış sorgu ifadeleri kullanarak bir XML dosyası şeklini değiştirir.  
   
- Bu örnekte kaynak XML belgesi içeriyor bir `Customers` öğesinin altında `Root` tüm müşteriler içeren öğe. Ayrıca içeren bir `Orders` öğesinin altında `Root` tüm siparişleri içeren öğe. Bu örnekte, her bir müşteri için siparişleri içerdiği yeni bir XML ağacı oluşturur bir `Orders` öğesi içinde `Customer` öğesi. Özgün belgeyi de içeren bir `CustomerID` öğesinde `Order` öğesi; yeniden şekilli belgeden kaldırılması bu öğe olacaktır.  
+ Bu örnekte kaynak XML belgesinde içeren bir `Customers` öğesi altında `Root` tüm müşteriler içeren öğe. Ayrıca içerdiği bir `Orders` öğesi altında `Root` tüm siparişleri içeren öğe. Bu örnekte, her bir müşterinin siparişlerini içerdiği yeni bir XML ağacı oluşturur bir `Orders` öğesiyle `Customer` öğesi. Özgün belgeyi de içeren bir `CustomerID` öğesinde `Order` öğesi; yeniden şekillendirilmiş belgeden kaldırılması bu öğe olacaktır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -90,11 +90,11 @@ Console.WriteLine(newCustOrd)
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, bazı öğelerin yeniden adlandırır ve bazı öznitelikler öğelerine dönüştürür.  
+ Bu örnek, bazı öğelerin yeniden adlandırır ve bazı öznitelikler öğesine dönüştürür.  
   
- Kod çağrıları `ConvertAddress`, listesini döndürür <xref:System.Xml.Linq.XElement> nesneleri. Yöntemin bağımsız değişkeni belirleyen bir sorgudur `Address` karmaşık bir öğe burada `Type` özniteliği değerine sahip `"Shipping"`.  
+ Kod çağrıları `ConvertAddress`, listesini döndürür <xref:System.Xml.Linq.XElement> nesneleri. Yöntem bağımsız değişkeninin belirleyen bir sorgudur `Address` karmaşık bir öğe olduğu `Type` öznitelik değerine sahip `"Shipping"`.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: tipik satın alma siparişi (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -142,5 +142,5 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeksiyonlar ve dönüştürmeler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

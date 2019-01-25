@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range1toFF1
 ms.assetid: a447f9a6-1c90-4c71-abff-81170331e4c5
-ms.openlocfilehash: a8fc712e6b29badef4873096e006a1a034f372bf
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 68325588473c62e1092cf9fe7cfd14c44d7f2f6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53780302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733239"
 ---
 # <a name="argument-ltargumentnamegt-must-be-within-the-range-1-to-255"></a>Bağımsız değişken '&lt;argumentname&gt;' 1 ila 255 aralığında olmalıdır
 Bağımsız değişken, 0 ile 255 arasında aralığın dışında olduğundan geçerli değil.  
@@ -20,5 +20,5 @@ Bağımsız değişken, 0 ile 255 arasında aralığın dışında olduğundan g
   
 2.  Önceki değişkenleri ifadede, özellikle yordama bağımsız değişkenler olarak diğer yordamlardan geçirilen işlemleri denetleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

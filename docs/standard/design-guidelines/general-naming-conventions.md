@@ -15,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
-ms.openlocfilehash: 9febc7eed7d6dedad6655b51a96694b72b78711b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667693"
 ---
 # <a name="general-naming-conventions"></a>Genel adlandırma kuralları
 Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler hakkında dile özgü adlarını kullanmaktan kaçınmak kullanma hakkında yönergeler açıklanmaktadır.  
@@ -100,5 +100,5 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
 - [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

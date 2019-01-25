@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78be13bcc02d2df16c4dc6b0b7fb8479d62afbe5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 72903d75e950b1cb51acf78091bb25f6bb17f4c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726669"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Daha Fazla Bilgi İçin (Paralel Programlama)
 
 Aşağıdaki kaynaklar, .NET içinde paralel programlama hakkında ek bilgiler içermektedir:
 
-- [Paralel programlama için desenler: anlama ve .NET Framework 4 ile paralel düzenleri uygulama](https://www.microsoft.com/download/details.aspx?id=19222) belge ortak paralel desenler ve bunları kullanan paralel bileşenleri geliştirmek için en iyi uygulamalar açıklanmaktadır desenler.
+- [Desenleri paralel programlama için: Anlama ve .NET Framework 4 ile paralel düzenleri uygulama](https://www.microsoft.com/download/details.aspx?id=19222) belge ortak paralel desenler ve bu modelleri kullanarak paralel bileşenleri geliştirmek için en iyi uygulamaları açıklar.
 
 - [Ayrıştırma ve çok çekirdekli mimarilerde koordinasyon için Tasarım desenleri](https://msdn.microsoft.com/library/ff963553.aspx) kitap paralel programlama için .NET Framework 4'te tanıtılan Paralel Programlama Desteği desenleri açıklar.
 
@@ -28,5 +28,5 @@ Aşağıdaki kaynaklar, .NET içinde paralel programlama hakkında ek bilgiler i
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel bilgi işlem Geliştirici Merkezi](https://msdn.microsoft.com/vstudio/bb964701)  
-- [Visual C++'ta Paralel Programlama](/cpp/parallel/parallel-programming-in-visual-cpp)  
+- [Paralel bilgi işlem Geliştirici Merkezi](https://msdn.microsoft.com/vstudio/bb964701)
+- [Visual C++'ta Paralel Programlama](/cpp/parallel/parallel-programming-in-visual-cpp)

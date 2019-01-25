@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: üst bilgilere (C#) erişimle XML parçalarının Stream'
+title: 'Nasıl yapılır: Stream üst bilgilere erişimle XML parçalarının (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655575"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: üst bilgilere (C#) erişimle XML parçalarının Stream
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: Stream üst bilgilere erişimle XML parçalarının (C#)
 Bazen büyük XML dosyaları okur ve bellek Ayak izi uygulamanın öngörülebilir böylece uygulamanız yazma gerekir. İle büyük bir XML dosyasını bir XML ağacı doldurma çalışırsanız, bellek kullanım için dosya boyutu orantılı — diğer bir deyişle, aşırı. Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
   
- Bir seçenektir kullanarak uygulamanızı yazmak için <xref:System.Xml.XmlReader>. Ancak, kullanmak isteyebilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML ağacı sorgulanamıyor. Bu durumda, kendi özel eksen yöntemi yazabilirsiniz. Daha fazla bilgi için [nasıl yapılır: LINQ to XML eksen yöntemi (C#) yazma](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Bir seçenektir kullanarak uygulamanızı yazmak için <xref:System.Xml.XmlReader>. Ancak, kullanmak isteyebilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML ağacı sorgulanamıyor. Bu durumda, kendi özel eksen yöntemi yazabilirsiniz. Daha fazla bilgi için [nasıl yapılır: LINQ to XML eksen yöntemi yazma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Kendi eksen yöntemi yazma için kullanan küçük bir yöntem yazmaktır. <xref:System.Xml.XmlReader> , olduğu ilgilenen düğümlerinden biri ulaşana dek düğümleri okumak için. Daha sonra yöntemi çağırır <xref:System.Xml.Linq.XNode.ReadFrom%2A>, hangi okur <xref:System.Xml.XmlReader> ve bir XML parçası başlatır. Ardından her parçayı aracılığıyla ortaya çıkarır `yield return` özel eksen yönteminizi numaralandırma yöntemi. Ardından, özel eksen yöntemi LINQ sorguları da yazabilirsiniz.  
   
@@ -166,6 +166,6 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -15,30 +15,30 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 5dabd90d29bc41d017436876af24a67fa87e8e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627336"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Bir özellik veya yordam bu sınıfta uygulanmadı ve kullanılabilmesi için türetilen bir sınıfta geçersiz kılınmalıdır belirtir.  
+Bir özelliğin ya da yordamın bu sınıfta uygulanmadığını ve kullanmadan önce türetilmiş bir sınıfta geçersiz kılınması belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `MustOverride` yalnızca bir özellik veya yordam bildirimi deyimi içinde. Özellik veya belirtir yordamı `MustOverride` bir sınıf üyesi olması gerekir ve sınıf işaretlenmelidir [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ Kullanabileceğiniz `MustOverride` yalnızca bir özellik veya yordamı bildirim deyiminde. Özellik veya yordamı belirten `MustOverride` bir sınıf üyesi olması gerekir ve sınıf işaretlenmelidir [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Tamamlanmamış bildirimi.** Belirttiğinizde `MustOverride`, özellik veya yordam, kodun ek satırları değil sağlamazsanız bile `End Function`, `End Property`, veya `End Sub` deyimi.  
+-   **Tamamlanmamış bildirimi.** Belirttiğinizde `MustOverride`, özellik veya yordam, kodun ek satırları değil vermezsiniz bile `End Function`, `End Property`, veya `End Sub` deyimi.  
   
--   **Birleşik değiştirici.** Belirtemeyeceğiniz `MustOverride` ile birlikte `NotOverridable`, `Overridable`, veya `Shared` aynı bildirimi.  
+-   **Birleşik değiştiriciler.** Belirtemezsiniz `MustOverride` ile birlikte `NotOverridable`, `Overridable`, veya `Shared` aynı bildirimde.  
   
--   **Gölgeleme ve geçersiz kılma.** Hem gölgeleme ve geçersiz kılma devralınan bir öğeyi yeniden tanımlamanız, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için bkz: [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+-   **Gölgeleme ve geçersiz kılma.** Devralınan bir öğe hem gölgeleme ve geçersiz kılma bulunabileceğini, ancak iki yaklaşım arasında önemli farklar vardır. Daha fazla bilgi için [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Diğer koşulları.** Geçersiz kılma dışında kullanılamaz bir öğe adlandırılan bir *saf sanal* öğesi.  
+-   **Diğer koşullar.** Dışında bir geçersiz kılma kullanılamaz bir öğe adlandırılan bir *saf sanal* öğesi.  
   
- `MustOverride` Değiştiricisi bu bağlamlarında kullanılabilir:  
+ `MustOverride` Bu bağlamda değiştirici kullanılabilir:  
   
  [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -46,10 +46,10 @@ Bir özellik veya yordam bu sınıfta uygulanmadı ve kullanılabilmesi için t�
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

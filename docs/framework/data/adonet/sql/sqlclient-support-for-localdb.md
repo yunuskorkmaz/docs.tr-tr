@@ -2,12 +2,12 @@
 title: Yerel veritabanı için SqlClient desteği
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527620"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel veritabanı için SqlClient desteği
 SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir sürümü kullanıma sunulacaktır. Bu konuda, bir LocalDB veritabanına bağlanmak nasıl ele alınmaktadır.  
@@ -19,7 +19,7 @@ SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir s
   
 -   Oluşturup LocalDB örnekleri sqllocaldb.exe veya app.config dosyanız ile başlatın.  
   
--   SqlCmd.exe eklemek ve bir LocalDB örneğini veritabanlarında değiştirmek için kullanın. Örneğin, `sqlcmd -S (localdb)\myinst`.  
+-   SqlCmd.exe eklemek ve bir LocalDB örneğini veritabanlarında değiştirmek için kullanın. Örneğin: `sqlcmd -S (localdb)\myinst`  
   
 -   Kullanım `AttachDBFilename` LocalDB Örneğiniz için bir veritabanı eklemek için bağlantı dizesi anahtar sözcüğü. Kullanırken `AttachDBFilename`, veritabanı adı belirtmezseniz, `Database` bağlantı dizesi anahtar sözcüğü, bir veritabanı uygulama kapandığında LocalDB örneğinden kaldırılacak.  
   
@@ -58,6 +58,6 @@ SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir s
   
 -   Kullanım `AttachDBFilename` belirtmek için bağlantı dizesi anahtar sözcüğü. MDF dosyası.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

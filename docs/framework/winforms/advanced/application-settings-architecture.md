@@ -7,52 +7,52 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 769077ddbe42d4d774d359de75417bdca6bcaeb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687251"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
-Uygulama ayarları mimarisi nasıl çalıştığını, bu konuda açıklar ve mimarisinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikler araştırır.  
+Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
   
- Uygulama ayarları mimarisi ya da uygulama veya kullanıcı kapsamı ve uygulama oturumları arasında ayarları kalıcı tanımlama kesin türü belirtilmiş ayarlarla destekler. Mimari ayarları kaydetme ve yerel dosya sisteminden yükleme için varsayılan Kalıcılık altyapısı sağlar. Mimari, ayrıca özel Kalıcılık altyapısı sağladığını arabirimleri tanımlar.  
+ Uygulama ayarları mimarisi ya da uygulama veya kullanıcı kapsamı ve ayarları uygulama oturumları arasında kalıcı tanımlama türü kesin belirlenmiş ayarlarla destekler. Mimari ayarları için kaydetme ve bunları yerel dosya sisteminden yükleme için varsayılan Kalıcılık altyapısı sağlar. Mimari ayrıca özel bir Kalıcılık altyapısı sağladığı için arabirimleri tanımlar.  
   
- Bir uygulamada barındırıldığında kendi ayarlarını sürdürmek özel bileşenler etkinleştirmek arabirimleri sağlanır. Ayarları tuşlarını kullanarak bileşenleri bileşen birden çok örneğini ayarlarını ayrı kullanmaya devam edebilir.  
+ Bir uygulamada barındırıldığında kendi ayarlarını kalıcı hale getirmek özel bileşenler sağlayan arabirimler sağlanır. Ayarları anahtarları kullanarak bileşenleri bileşenin birden çok örnek için ayarları ayrı kalmasını sağlayabilirsiniz.  
   
 ## <a name="defining-settings"></a>Ayarları tanımlama  
- Uygulama ayarları mimarisi içinde hem de kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve Windows Forms ve onu içeren iki ortamlar genelinde paylaşılan temel sınıfların sayısı. En önemlisi <xref:System.Configuration.SettingsBase>, bir koleksiyonu aracılığıyla ayarlarına erişim sağlar ve yükleme ve ayarları kaydetme için alt düzey yöntemleri sağlar. Her ortam türetilmiş kendi sınıfı uygulayan <xref:System.Configuration.SettingsBase> bu ortam için ek ayarlar işlevselliği sağlamak için. Windows Forms tabanlı bir uygulama, tüm uygulama ayarlarını türetilmiş bir sınıf tanımlanmalıdır <xref:System.Configuration.ApplicationSettingsBase> aşağıdaki işlevselliği için temel sınıf ekler sınıfı:  
+ Uygulama ayarları mimarisi içinde her ikisi de kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve Windows Forms ve her iki ortamlar genelinde paylaşılan, temel sınıfların bir sayı içerir. En önemlisi <xref:System.Configuration.SettingsBase>, koleksiyonu aracılığıyla ayarlarına erişim sağlar ve yükleme ve kaydetme ayarları için alt düzey yöntemler sağlar. Her ortamın kendi sınıfından türetilen uygulayan <xref:System.Configuration.SettingsBase> bu ortam için ek ayarlar işlevselliği sağlamak için. Windows Forms tabanlı bir uygulama, tüm uygulama ayarları türetilen bir sınıfta tanımlanmalıdır <xref:System.Configuration.ApplicationSettingsBase> temel sınıf için aşağıdaki işlevsellik ekleyen sınıfı:  
   
--   Üst düzey yükleme ve işlemleri kaydetme  
+-   Üst düzey yükleme ve kaydetme işlemleri  
   
--   Kullanıcı kapsamlı ayarları desteği  
+-   Kullanıcı kapsamlı ayarları için destek  
   
--   Bir kullanıcının ayarlarını önceden tanımlanmış varsayılanlarına geri alma  
+-   Kullanıcı ayarları için önceden tanımlanmış varsayılan döndürülüyor  
   
--   Önceki bir uygulama sürümünden yükseltme ayarları  
+-   Uygulamanın önceki sürümden yükseltme ayarları  
   
--   Ayarlar doğrulanıyor, değiştirilmiş olmaları önce ya da önce kaydedilmeden  
+-   Ayarlar doğrulanıyor, bunlar değiştirilmeden önce ya da önce kaydedilmeden  
   
- Ayarları içinde tanımlanan öznitelik sayısı kullanılarak tanımlanabilir <xref:System.Configuration> ad alanı; bunlar [uygulama ayarları öznitelikleri](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Bir ayar tanımladığınızda, onu biriyle uygulamalısınız <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>, ayarı tüm uygulama veya yalnızca geçerli kullanıcı için geçerli olup olmadığını açıklar.  
+ Bir dizi içinde tanımlanan öznitelikleri kullanarak ayarları açıklanabilir <xref:System.Configuration> ad alanı; bunlar [uygulama ayarları öznitelikleri](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Bir ayar tanımlarken ile uygulamanız gerekir <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>, ayarı uygulamanın tamamı veya yalnızca geçerli kullanıcı için geçerli olup olmadığını açıklar.  
   
- Aşağıdaki kod örneğinde tek bir ayar ile özel ayarları sınıfı tanımlar `BackgroundColor`.  
+ Aşağıdaki kod örneği özel ayarlar ile tek bir ayarı tanımlar `BackgroundColor`.  
   
  [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
  [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-## <a name="settings-persistence"></a>Ayarları kalıcılığı  
- <xref:System.Configuration.ApplicationSettingsBase> Sınıfı değil kendisini kalıcı ayarlarını yükleyin; veya bu işin ayarları sağlayıcısı, türeyen bir sınıf düşer <xref:System.Configuration.SettingsProvider>. Türetilen bir sınıftan varsa <xref:System.Configuration.ApplicationSettingsBase> ayarları sağlayıcısı üzerinden belirtmiyor <xref:System.Configuration.SettingsProviderAttribute>, ardından varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır.  
+## <a name="settings-persistence"></a>Kalıcılık ayarları  
+ <xref:System.Configuration.ApplicationSettingsBase> Sınıfı değil kendisine kalıcı veya yük ayarları; bu iş öğesinden türetilen bir sınıf ayar sağlayıcısı düşer <xref:System.Configuration.SettingsProvider>. Türetilen bir sınıfı varsa <xref:System.Configuration.ApplicationSettingsBase> aracılığıyla bir ayar sağlayıcısı belirtmiyor <xref:System.Configuration.SettingsProviderAttribute>, ardından varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır.  
   
- İle yayımlanan yapılandırma sistemi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] statik uygulama yapılandırma verileri yerel bilgisayarın machine.config dosyasının veya içinde sağlayan destekleyen bir `app.`ile dağıttığınız exe.config dosyası Uygulamanızı. <xref:System.Configuration.LocalFileSettingsProvider> Sınıfı aşağıdaki yollarla bu yerel destek genişletir:  
+ İle yayımlanan yapılandırma sistemi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] statik uygulama yapılandırma verileri yerel bilgisayarın machine.config dosyasının veya içinde sağlama destekleyen bir `app.`ile dağıttığınız exe.config dosyası Uygulamanızı. <xref:System.Configuration.LocalFileSettingsProvider> Sınıfı bu yerel destek aşağıdaki yollarla genişletir:  
   
--   Uygulama kapsamlı ayarları ya da machine.config içinde depolanabilir veya `app.`exe.config dosyaları. Machine.config her zaman salt okunur sırasında `app`. exe.config çoğu uygulamalar için güvenlik konuları salt okunur tarafından kısıtlanan.  
+-   Uygulama kapsamlı ayarlar ya da bir machine.config dosyasına depolanabilir veya `app.`exe.config dosyaları. Machine.config her zaman salt okunur, çalışırken `app`. exe.config uygulamalarının çoğu için güvenlik konuları salt okunur tarafından kısıtlanan.  
   
--   Kullanıcı kapsamlı ayarları depolanabilir `app`. exe.config dosyaları, bu durumda statik varsayılan olarak değerlendirilir.  
+-   Kullanıcı kapsamlı ayarları depolanabilir `app`. exe.config dosyaları, bu durumda bunlar statik varsayılan olarak kabul edilir.  
   
--   Varsayılan dışı kullanıcı kapsamlı ayarları, yeni bir dosyada depolanır *kullanıcı*.config, burada *kullanıcı* uygulama şu anda yürütülmekte olan kişi kullanıcı adıdır. Bir kullanıcı kapsamlı ayarı için varsayılan belirtebilirsiniz <xref:System.Configuration.DefaultSettingValueAttribute>. Kullanıcı kapsamlı ayarları genellikle uygulama yürütmesi sırasında değiştiğinden `user`.config olduğundan her zaman okuma/yazma.  
+-   Varsayılan olmayan kullanıcı kapsamlı ayarları yeni bir dosyada depolanan *kullanıcı*.config, burada *kullanıcı* uygulama şu anda yürüten kişinin kullanıcı adıdır. Bir kullanıcı kapsamlı ayarı için varsayılan belirtebilirsiniz <xref:System.Configuration.DefaultSettingValueAttribute>. Kullanıcı kapsamlı ayarları uygulama yürütme sırasında sıklıkla değiştiğinden `user`.config olduğundan her zaman okuma/yazma.  
   
- Tüm üç yapılandırma dosyalarını, XML biçiminde ayarları depolar. Uygulama kapsamlı ayarları için en üst düzey XML öğesi `<appSettings>`, sırada `<userSettings>` kullanıcı kapsamlı ayarları için kullanılır. Bir `app`. kullanıcı kapsamlı ayarları şuna benzer için uygulama kapsamlı ayarları ve Varsayılanları içeren exe.config dosyası:  
+ Tüm üç yapılandırma dosyaları XML biçiminde ayarları depolar. Uygulama kapsamlı ayarlar için üst düzey XML öğesi `<appSettings>`, ancak `<userSettings>` kullanıcı kapsamlı ayarları için kullanılır. Bir `app`. exe.config dosyasını kullanıcı kapsamlı ayarları şuna benzer için hem uygulama kapsamlı ayarlar ve varsayılanlar içerir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -88,69 +88,69 @@ Uygulama ayarları mimarisi nasıl çalıştığını, bu konuda açıklar ve mi
 </configuration>  
 ```  
   
- Bir yapılandırma dosyası uygulama ayarları bölümünde içindeki öğelerin tanımı için bkz: [uygulama ayarları şeması](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
+ Bir yapılandırma dosyası uygulama ayarları bölümüne içindeki öğelerin tanımı için bkz: [uygulama ayarları şeması](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
   
 ### <a name="settings-bindings"></a>Ayarları bağlamaları  
- Uygulama ayarları, ayarları güncelleştirme ayarları nesnesi ve bileşenler arasında iki yönlü iletişim sağlamak için Windows Forms veri bağlama mimarisi kullanır. Uygulama ayarları oluşturmak ve bunları bileşeni özellikleri atamak için Visual Studio kullanıyorsanız bu bağlamaların otomatik olarak oluşturulur.  
+ Uygulama ayarları, ayarları güncelleştirme ayarları nesnesi ve bileşenler arasında iki yönlü iletişim sağlamak için Windows Forms veri bağlama mimarisi kullanır. Uygulama ayarları oluşturma ve bunları bileşen özellikleri atamak için Visual Studio kullanıyorsanız, bu bağlamaları otomatik olarak oluşturulur.  
   
- Yalnızca bir uygulama ayarı destekleyen bir bileşeni bağlayabilirsiniz <xref:System.Windows.Forms.IBindableComponent> arabirimi. Ayrıca, bileşen gerekir belirli bir özellik ilişkin bir değişikliği olay uygulamak veya özelliği aracılığıyla değişti uygulama ayarları bildir <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Bileşen uygulamazsa <xref:System.Windows.Forms.IBindableComponent> ve Visual Studio üzerinden bağlama, ilişkili özellikler ilk kez ayarlanır ancak değil güncelleştirir. Bileşen uyguluyorsa <xref:System.Windows.Forms.IBindableComponent> ancak desteği özelliğini bildirimleri değişmez, özelliği değiştirildiğinde bağlama ayarları dosyasında güncelleştirmez.  
+ Destekleyen bir bileşeni için yalnızca bir uygulama ayarı bağlayabilirsiniz <xref:System.Windows.Forms.IBindableComponent> arabirimi. Ayrıca, bileşen gerekir değişiklik olayı için belirli bir özelliğe uygulamak veya bildirim aracılığıyla özelliğin değiştirildiğini uygulama ayarları <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Bileşen uygulamazsa <xref:System.Windows.Forms.IBindableComponent> ve Visual Studio ile bağlıyorsanız, ilişkili özellikleri ilk kez ayarlanır, ancak değil güncelleştirir. Bileşen uyguluyorsa <xref:System.Windows.Forms.IBindableComponent> ancak desteği özelliğini bildirimleri değişiyor mu, özelliği değiştirildiğinde bağlama ayarları dosyasında güncelleştirmez.  
   
  Bazı Windows Forms bileşenleri gibi <xref:System.Windows.Forms.ToolStripItem>, ayarları bağlamaları desteklemiyor.  
   
 ### <a name="settings-serialization"></a>Ayarları seri hale getirme  
  Zaman <xref:System.Configuration.LocalFileSettingsProvider> ayarları diske kaydetmelisiniz aşağıdaki eylemleri gerçekleştirir:  
   
-1.  Üzerinde tanımlanan tüm özellikler incelemek için yansıma kullanır, <xref:System.Configuration.ApplicationSettingsBase> türetilmiş sınıf ile ya da uygulanan bu bulma, <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>.  
+1.  Tanımlanan tüm özellikler incelemek için yansıtma kullanır, <xref:System.Configuration.ApplicationSettingsBase> türetilmiş sınıf ile uygulanan bu bulma, <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Disk özelliğine serileştirir. Önce çağrılacak dener <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> veya <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> üzerinde türü ilişkili <xref:System.ComponentModel.TypeConverter>. Bu başarılı olmazsa, bunun yerine XML serileştirme kullanır.  
+2.  Disk özelliğine serileştirir. Çağırmak ilk deneme <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> veya <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> üzerinde türü ilişkili <xref:System.ComponentModel.TypeConverter>. Bu başarısız olursa, bunun yerine XML serileştirme kullanır.  
   
-3.  Hangi ayarların hangi dosyalarında Git belirler ayarın özniteliğine dayanarak.  
+3.  Hangi dosyaların ayarlarınız belirler ayarın özniteliğine dayanarak.  
   
- Kendi ayarları sınıfı uygularsanız, kullanabileceğiniz <xref:System.Configuration.SettingsSerializeAsAttribute> ikili veya özel serileştirme kullanmak için bir ayar işaretlemek için <xref:System.Configuration.SettingsSerializeAs> numaralandırması. Kodda, kendi ayarları sınıfı oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Kendi ayarları sınıfı uygularsanız, kullanabileceğiniz <xref:System.Configuration.SettingsSerializeAsAttribute> ikili veya özel serileştirme kullanmak için bir ayar işaretlemek için <xref:System.Configuration.SettingsSerializeAs> sabit listesi. Kodda kendi ayarları sınıfı oluşturma ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
-### <a name="settings-file-locations"></a>Ayarları dosya konumları  
- Konumunu `app`. exe.config ve *kullanıcı*.config dosyaları farklı dayalı olarak uygulama nasıl yüklenir. Yerel bilgisayara kopyalanır ve Windows Forms tabanlı bir uygulama için `app`. exe.config, uygulamanın ana yürütülebilir dosyası, temel dizini ile aynı dizinde bulunacağı ve *kullanıcı*.config bulunacağı Belirtilen konum <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> özelliği. Yoluyla yüklü bir uygulama için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], bu dosyaların her ikisini de içinde yer alacağını [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] %InstallRoot%\Documents ve ayarları altında veri dizini\\*kullanıcıadı*\Local ayarlar.  
+### <a name="settings-file-locations"></a>Ayarlar dosyası konumları  
+ Konumunu `app`. exe.config ve *kullanıcı*.config dosyalar farklı bağlı olarak uygulama nasıl yüklenir. Yerel bilgisayara kopyalanır ve Windows Forms tabanlı bir uygulama için `app`. exe.config olarak, uygulamanın ana yürütülebilir dosyasını temel dizini ile aynı dizinde bulunacağı ve *kullanıcı*.config bulunacağı tarafından belirtilen konuma <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> özelliği. Yoluyla yüklü bir uygulama için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], bu dosyaların her ikisini de yer alacağı [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini %InstallRoot%\Documents ve ayarlar altındaki\\*kullanıcıadı*\Local ayarları.  
   
- Bu dosyalar depolama konumunu bir kullanıcının gezici profiller etkinleştirilmişse ve çözemiyorsa diğer bilgisayarlar bir etki alanı içinde kullanırken farklı Windows ve uygulama ayarlarını tanımlamak bir kullanıcı sağlayan biraz farklıdır. Bu durumda, her ikisi de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamaları ve olmayan-[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamaları olacaktır kendi `app`. exe.config ve *kullanıcı*%InstallRoot%\Documents ve ayarları altında depolanan .config dosyaları\\ *kullanıcıadı*\Application veri.  
+ Bu dosyalar depolama konumu, bir kullanıcının gezici profiller etkinleştirilmişse ve isterse diğer bilgisayarlar bir etki alanı içinde kullanıldığında farklı Windows ve uygulama ayarlarını tanımlamak bir kullanıcı sağlayan biraz farklıdır. Bu durumda, her ikisi de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamaları ve olmayan-[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] sahip olacak uygulamaları kendi `app`. exe.config ve *kullanıcı*%InstallRoot%\Documents ve ayarları altında depolanan .config dosyaları\\ *kullanıcıadı*\Application veri.  
   
- Uygulama ayarları özelliğinin yeni dağıtım teknolojisi ile nasıl çalıştığı hakkında daha fazla bilgi için bkz: [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings). Hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini bkz [erişme yerel ve uzak veri ClickOnce uygulamalarında](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
+ Yeni dağıtım teknolojisi ile uygulama ayarlarını özelliğinin işleyişi hakkında daha fazla bilgi için bkz. [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings). Hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini bkz [erişen yerel ve uzak veri ClickOnce uygulamalarında](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
 ## <a name="application-settings-and-security"></a>Uygulama ayarları ve güvenlik  
- Uygulama ayarları, kısmi güven, Internet veya intranet üzerinden barındırılan Windows Forms uygulamaları için varsayılan değer kısıtlı bir ortam çalışmak üzere tasarlanmıştır. Kısmi güven ötesinde özel izinler, uygulama ayarları varsayılan ayarları sağlayıcısı ile kullanmak için gereklidir.  
+ Uygulama ayarları, kısmi güven, Internet veya intranet üzerinden barındırılan Windows Forms uygulamaları için varsayılan değer kısıtlı bir ortam içinde çalışacak şekilde tasarlanmıştır. Kısmi güven ötesinde özel izin uygulama ayarlarını varsayılan ayar sağlayıcısı ile kullanmak için gereklidir.  
   
- Ne zaman uygulama ayarları kullanıldığı bir [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulama `user`.config dosyası depolanır [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini. Uygulamanın boyutunu `user`.config dosyası tarafından belirlenen veri dizini kotasını aşamaz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Daha fazla bilgi için bkz: [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings).  
+ Ne zaman uygulama ayarları kullanılır bir [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulama `user`.config dosyasında depolanan [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini. Uygulamanın boyutunu `user`.config dosyasını belirlediği veri dizini kotasını aşamaz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Daha fazla bilgi için [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings).  
   
-## <a name="custom-settings-providers"></a>Özel ayarlar sağlayıcıları  
- Uygulama ayarları mimarisinde türetilmiş sarmalayıcı sınıfı uygulamaları ayarları arasında gevşek bağlantı yoktur <xref:System.Configuration.ApplicationSettingsBase>, ve ilgili ayarları sağlayıcı veya sağlayıcıları, türetilen <xref:System.Configuration.SettingsProvider>. Bu ilişkilendirme yalnızca tanımlı <xref:System.Configuration.SettingsProviderAttribute> sarmalayıcı sınıfı veya tek tek özellikleri uygulanır. Sağlayıcısı değil açıkça ayarları belirtilirse, varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır. Sonuç olarak, bu mimarisi oluşturma ve özel ayarları sağlayıcılar kullanarak destekler.  
+## <a name="custom-settings-providers"></a>Özel ayarları sağlayıcıları  
+ Uygulama ayarları mimaride sarmalayıcı sınıfından türetilen uygulamaları ayarları arasında gevşek bir bağlantı yoktur <xref:System.Configuration.ApplicationSettingsBase>, ve ilgili ayarları sağlayıcı veya sağlayıcıları, türetilen <xref:System.Configuration.SettingsProvider>. Bu ilişkilendirmeyi yalnızca tanımlanan <xref:System.Configuration.SettingsProviderAttribute> sarmalayıcı sınıfı veya özelliklerini tek tek uygulanır. Bir ayar sağlayıcısı değil açıkça belirtilmişse varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır. Sonuç olarak, bu mimari, oluşturma ve özel ayarları sağlayıcılarını kullanarak destekler.  
   
- Örneğin, geliştirme ve kullanmak istediğinizi varsayalım `SqlSettingsProvider`, tüm ayarları verilerini bir Microsoft SQL Server veritabanında depolayacak bir sağlayıcı. <xref:System.Configuration.SettingsProvider>-Türetilmiş sınıf bu bilgileri almak kendi `Initialize` yöntemi türünde bir parametre olarak <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. Ardından uygulamak <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> ayarlarınızı veri deposundan almak için yöntemini ve <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> bunları kaydetmek için. Sağlayıcınız kullanabilirsiniz <xref:System.Configuration.SettingsPropertyCollection> için sağlanan <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> yanı diğer ayarları öznitelikleri özelliğin adını, türünü ve kapsamını belirlemek için bu özellik için tanımlanmış.  
+ Örneğin, geliştirme ve kullanmak istediğinizi varsayalım `SqlSettingsProvider`, tüm ayarlarını verilerini bir Microsoft SQL Server veritabanında depolayacak bir sağlayıcı. <xref:System.Configuration.SettingsProvider>-Türetilmiş sınıf bu bilgileri almak kendi `Initialize` yöntemi türünde bir parametre olarak <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. Ardından uygulamak <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> ayarlarınızı veri deposundan alınacak yöntemi ve <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> bunları kaydetmek için. Sağlayıcınız kullanabilirsiniz <xref:System.Configuration.SettingsPropertyCollection> sağlanan <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> yanı sıra tüm diğer ayarları öznitelikleri özelliğin adını, türünü ve kapsam belirlemek için bu özellik için tanımlanmış.  
   
- Sağlayıcınız uygulanacağı bir özellik ve uygulamaları belirgin olmayabilir bir yöntem gerekir. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Özelliği olan bir Özet özelliği <xref:System.Configuration.SettingsProvider>; aşağıdaki dönmek için program:  
+ Sağlayıcınız bir özellik ve yöntem uygulamaları belirgin olmayabilir uygulamanız gerekir. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Özelliktir bir soyut özelliğini <xref:System.Configuration.SettingsProvider>; aşağıdaki döndürmek için program:  
   
  [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
  [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
- Türetilmiş sınıf ayrıca uygulamalıdır bir `Initialize` yöntemi bağımsız değişken almayan gösterir ve herhangi bir değer döndürür. Bu yöntem tarafından tanımlı değil <xref:System.Configuration.SettingsProvider>.  
+ Türetilmiş sınıfınızın de uygulamalıdır bir `Initialize` yönteminin hiçbir bağımsız değişkeni alır ve herhangi bir değer döndürür. Bu yöntem tarafından tanımlı değil <xref:System.Configuration.SettingsProvider>.  
   
- Son olarak, uygulamanız <xref:System.Configuration.IApplicationSettingsProvider> ayarları yenilemek için desteği sağlamak için sağlayıcınız üzerinde varsayılan ayarlarına geri döndürmeyi ve ayarları bir uygulama sürümünden yükseltme.  
+ Son olarak, uygulamanız <xref:System.Configuration.IApplicationSettingsProvider> ayarlarının yenilenmesi için destek sağlamak için sağlayıcı üzerinde varsayılan ayarlarına geri alma ve ayarlarını bir uygulama sürümünden yükseltme.  
   
- Uygulanan ve sağlayıcınız derlenmiş sonra bu sağlayıcı yerine varsayılan kullanmak üzere ayarları sınıfınız istemeniz gerekir. Bunu aracılığıyla <xref:System.Configuration.SettingsProviderAttribute>. Ayarları sınıfının tümüne uyguladıysanız, sağlayıcı sınıfı tanımlayan her ayar için kullanılır; tek tek ayarlar uygulandığında, uygulama ayarları mimarisi için bu ayarları yalnızca bu sağlayıcıyı kullanır ve kullanan <xref:System.Configuration.LocalFileSettingsProvider> kalan için. Aşağıdaki kod örneğinde, özel sağlayıcınızın kullanılacak ayarları sınıfı istemek üzere gösterilmiştir.  
+ Uygulanan ve sağlayıcınız derlenmiş sonra bu sağlayıcıyı kullanmak yerine varsayılan ayarları sınıfınıza istemek gerekir. Bunun aracılığıyla <xref:System.Configuration.SettingsProviderAttribute>. Bir tüm ayarları sınıfa uygulandığında, sağlayıcı sınıfı tanımlayan her ayar için kullanılır; tek tek ayarlar uygulandığında, uygulama ayarları mimarisi bu sağlayıcı için bu ayarları yalnızca kullanır ve kullandığı <xref:System.Configuration.LocalFileSettingsProvider> geri kalanı için. Aşağıdaki kod örneği, özel sağlayıcınızın kullanılacak ayarları sınıfı isteyin gösterilmektedir.  
   
  [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
  [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
- Bir sağlayıcı birden çok iş parçacığı tarafından eşzamanlı olarak adlandırılmış olabilir, ancak her zaman aynı depolama konumuna yazacak; Bu nedenle, uygulama ayarları mimarisi her zaman sadece bir tek sağlayıcı sınıfının örneği.  
+ Bir sağlayıcı birden çok iş parçacıklarından aynı anda çağrılabilir, ancak her zaman aynı depolama konumuna Yazar; Bu nedenle, uygulama ayarları mimarisi her zaman sadece tek bir örnek sağlayıcısı sınıfınızın örneği oluşturulmaz.  
   
 > [!IMPORTANT]
->  Sağlayıcınız iş parçacığı güvenlidir ve yalnızca yapılandırma dosyalarını yazmak için bir anda bir iş parçacığı verir olmanız gerekir.  
+>  Sağlayıcınız iş parçacığı açısından güvenlidir ve yalnızca tek bir iş parçacığı için yapılandırma dosyalarını yazmak için bir zaman izin verir emin olmalısınız.  
   
- Sağlayıcınız öznitelikleri tanımlanan tüm ayarlar destek gerekmez <xref:System.Configuration?displayProperty=nameWithType> ad alanı, en az bir destek gerekir ancak <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute>ve ayrıca desteklemelidir <xref:System.Configuration.DefaultSettingValueAttribute>. Özniteliklerle her zaman desteklemediği sağlayıcınız yalnızca bildirim başarısız olması; bir özel durum oluşturmamalıdır. Ayarları sınıfı öznitelikleri için geçersiz bir birleşim ancak kullanıp kullanmadığını — uygulama gibi <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute> aynı ayarı — sağlayıcınızı ve bir özel durum işlemi sona.  
+ Tüm öznitelikler tanımlanan ayarları desteklemek sağlayıcınıza gerekmez <xref:System.Configuration?displayProperty=nameWithType> ad alanı, en az bir destek gerekir ancak <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute>ve ayrıca desteklemelidir <xref:System.Configuration.DefaultSettingValueAttribute>. Özniteliklerle her zaman desteklemediği sağlayıcınız yalnızca bildirimi başarısız olması; bir özel durum oluşturmamalıdır. Ayarları sınıfı öznitelikleri için geçersiz bir birleşim ancak kullanıp kullanmadığını — uygulama gibi <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute> aynı ayarı — sağlayıcınız bir özel durum ve işlemin sona ermesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Özel Denetimler için Uygulama Ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
- [ClickOnce ve Uygulama Ayarları](/visualstudio/deployment/clickonce-and-application-settings)  
- [Uygulama Ayarları Şeması](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Özel Denetimler için Uygulama Ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [ClickOnce ve Uygulama Ayarları](/visualstudio/deployment/clickonce-and-application-settings)
+- [Uygulama Ayarları Şeması](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9fc63f860bad96d7dd304de31dd6e9b6626c90b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721090"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.  
@@ -42,7 +42,7 @@ ms.locfileid: "43862023"
 > [!NOTE]
 >  <xref:System.Runtime.Caching.MemoryCache> Sınıf üzerinde tanımlanan ASP.NET önbellek nesnesini modellenmiş <xref:System.Web.Caching> ad alanı. Bu nedenle, iç önbelleğe alma mantığını ASP.NET'in önceki sürümlerinde sağlanan mantıksal benzer.  
   
- Bir WPF uygulamasında önbelleğe alma için kullanılacak ilişkin bir örnek için bkz. [izlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+ Bir WPF uygulamasında önbelleğe alma için kullanılacak ilişkin bir örnek için bkz. [izlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET uygulamalarında önbelleğe alma  
  Önbelleğe almayı yer alan sınıfları <xref:System.Runtime.Caching> ad alanı, ASP.NET'te verileri önbelleğe alma için işlevselliği sağlar.  
@@ -51,7 +51,7 @@ ms.locfileid: "43862023"
 >  Uygulama hedeflerinizi [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ya da daha önce tanımlanan önbelleğe alma sınıfları kullanmalısınız <xref:System.Web.Caching> ad alanı. Daha fazla bilgi için [ASP.NET önbelleğe alma genel bakış](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
   
 > [!NOTE]
->  Yeni uygulamalar geliştirirken kullanmanızı öneririz <xref:System.Runtime.Caching.MemoryCache> sınıfı. Sağlanan API <xref:System.Runtime.Caching> ad alanı gibi sağlanan API <xref:System.Web.Caching.Cache> ad alanı. Bu nedenle, API, ASP.NET'in önceki sürümlerinde önbelleğe alma kullandıysanız tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe almayı kullanmak üzere nasıl bir örnek için bkz [izlenecek yol: ASP.NET uygulama verilerini önbelleğe alma](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
+>  Yeni uygulamalar geliştirirken kullanmanızı öneririz <xref:System.Runtime.Caching.MemoryCache> sınıfı. Sağlanan API <xref:System.Runtime.Caching> ad alanı gibi sağlanan API <xref:System.Web.Caching.Cache> ad alanı. Bu nedenle, API, ASP.NET'in önceki sürümlerinde önbelleğe alma kullandıysanız tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe almayı kullanmak üzere nasıl bir örnek için bkz [izlenecek yol: ASP.NET'te uygulama verilerini önbelleğe alma](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Çıktı önbelleği  
  Önbellek uygulama verileri için el ile kullandığınız <xref:System.Runtime.Caching.MemoryCache> ASP.NET'te sınıfı. ASP.NET ayrıca çıkış önbelleğe alma, bellekte oluşturulan çıktı sayfalar, denetimleri ve HTTP yanıtlarını depoladığı destekler. Bir ASP.NET Web sayfası veya Web.config dosyasındaki ayarları kullanarak bildirimli olarak çıktı önbelleği yapılandırabilirsiniz. Daha fazla bilgi için [(ASP.NET Settings Schema) önbelleğe alma için öğe outputCache](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
@@ -76,8 +76,8 @@ ms.locfileid: "43862023"
   
  Daha fazla bilgi için bkz: Giriş [ASP.NET 4 (VS 2010 ve .NET 4.0 serisi) ile Genişletilebilir çıktı önbelleği](https://go.microsoft.com/fwlink/?LinkId=185772) Scott Guthrie'nin blogundan.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Caching.ObjectCache>  
- <xref:System.Runtime.Caching.MemoryCache>  
- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [İzlenecek yol: ASP.NET uygulama verilerini önbelleğe alma](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Caching.ObjectCache>
+- <xref:System.Runtime.Caching.MemoryCache>
+- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: ASP.NET'te uygulama verilerini önbelleğe alma](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

@@ -3,12 +3,12 @@ title: '&lt;nameClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737435"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Talep türünü belirleyen ayarlar <xref:System.Security.Principal.IIdentity.Name%2A> özelliği. Aramak için kullanılan talep türünü bir <xref:System.Security.Claims.Claim> koleksiyonunun <xref:System.Security.Claims.ClaimsIdentity> tarafından döndürülen nesne <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Bu belirteci işleyicisi yöntemi. Eşleşen talep değerinin sonra adı olarak ayarlanması <xref:System.Security.Principal.IIdentity> Bu belirteci işleyicisi oluşturulur.  
@@ -47,7 +47,7 @@ Talep türünü belirleyen ayarlar <xref:System.Security.Principal.IIdentity.Nam
 |value|Talep için talep türünü temsil eden URI belirten bir dize <xref:System.Security.Principal.IIdentity.Name%2A> özelliği. Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -68,5 +68,5 @@ Talep türünü belirleyen ayarlar <xref:System.Security.Principal.IIdentity.Nam
 </add>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

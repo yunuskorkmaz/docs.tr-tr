@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b905d3b5de39057cba384ea7bca917bc3476623f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700656"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID Yapısı
-Tür tanımlayıcısı içeriyor.  
+Tür tanımlayıcısını içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ typedef struct COR_TYPEID{
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`token1`|İlk belirteci.|  
-|`token2`|İkinci belirteci.|  
+|`token1`|İlk belirteç.|  
+|`token2`|İkinci belirteç.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_TYPEID` Yapısı çeşitli atık olarak toplanmış olacak nesneleri hakkında bilgi sağlayan hata ayıklama yöntemler tarafından döndürülür. Bunun ardından bağımsız değişken olarak bu öğe hakkında ek bilgiler sağlayan diğer hata ayıklama yöntemlerine geçirilebilir. Örneğin, numaralandırma tarafından bir [Icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) nesnesi, tek tek alabilir [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığında ayrı ayrı nesneleri temsil eden nesne. Ardından geçirebilirsiniz `COR_TYPEID` değeri `COR_HEAPOBJECT.type` alanı [Icordebugprocess5::gettypefortypeıd](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) nesne türü bilgilerini sağlayan bir Icordebugtype nesne alma yöntemi.  
+ `COR_TYPEID` Yapısı, bir dizi atık olarak toplanmış olacak nesneleri hakkında bilgi sağlayan hata ayıklama yöntemi tarafından döndürülür. Bunu ardından bağımsız değişken olarak bu öğe hakkında ek bilgiler sağlayan diğer hata ayıklama yöntemleri geçirilebilir. Örneğin, numaralandırma tarafından bir [Icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) nesnesi, tek tek alabilirsiniz [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki ayrı nesneleri temsil eden nesneleri. Ardından geçirebilirsiniz `COR_TYPEID` değerini `COR_HEAPOBJECT.type` alanı [Icordebugprocess5::gettypefortypeıd](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) nesne türü bilgilerini sağlayan Icordebugtype nesne almak için yöntemi.  
   
- A `COR_TYPEID` nesne donuk olacak şekilde tasarlanmıştır. Tek tek alanların erişilen veya değil. Bunun tek olarak sağlanan bir tanımlayıcı olarak kullanılır bir `out` yöntem çağrısı ve o can parametresinde sırayla, ek bilgi sağlamak için diğer yöntemleri için geçirilen.  
+ A `COR_TYPEID` nesne katı olacak şekilde tasarlanmıştır. Tek tek alanları erişilen veya değil. Bunun tek olarak sağlanan bir tanımlayıcı olarak kullanılır bir `out` parametresinde bir yöntem çağrısının ve bu can sırayla geçirilecek ek bilgi sağlamak için diğer yöntemler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

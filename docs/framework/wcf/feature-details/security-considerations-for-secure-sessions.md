@@ -2,12 +2,12 @@
 title: Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: d07d1a2d9b727f662e678fc32beb935affca7f81
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 85b0f95606e1ca3d52d8c79dbe0042c51ce3f36e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735801"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
 Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdakileri dikkate almanız gerekir. Güvenlik konuları hakkında daha fazla bilgi için bkz. [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) ve [en iyi güvenlik uygulamaları](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -20,7 +20,7 @@ Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdakileri dikkate a
   
  Bu türetilmiş için özel bir belirteç isterseniz yan tümcesi türüne kaydıracağını anlamına gelir. bir `SecurityTokenReference` öğesi. Türetme devre dışı bırakma seçeneği yoktur, ancak anahtarları türetmek için varsayılandır. Bir anahtarı sarmalama başarısız olursa, türetilmiş anahtar belirtecinde seri hale getirme başarılı, ancak bu seri durumdan çalışılırken bir özel durum oluşturur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Güvenlik için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Güvenlik için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

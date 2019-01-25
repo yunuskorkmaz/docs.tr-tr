@@ -2,12 +2,12 @@
 title: WFC &lt;activityStateQueries&gt;
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701943"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>WFC &lt;activityStateQueries&gt;
 
@@ -60,7 +60,7 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<activityStateQuery >](activitystatequery-of-wcf.md)|Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorgu.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur.|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorgu.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -70,7 +70,7 @@ Yok.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

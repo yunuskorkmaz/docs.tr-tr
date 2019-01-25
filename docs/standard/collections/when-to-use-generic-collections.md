@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674043"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
 Bir koleksiyon temel türünden türetilmesi ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliği avantaj elde edin çünkü genel koleksiyonları kullanarak genellikle önerilir. Genel koleksiyon türleri aynı zamanda genellikle gerçekleştirmek jenerik olmayan koleksiyon türleri ve karşılık gelen daha iyi (ve daha iyi türleri, türetilen temel jenerik olmayan koleksiyon türleri) koleksiyon öğelerine olduğunda değer türleri, genel türler ile olduğundan öğeler kutu gerek yoktur.  
@@ -55,6 +55,6 @@ Bir koleksiyon temel türünden türetilmesi ve türe özgü üyeleri uygulamak 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)  
-- [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)
+- [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Genel Türler](../../../docs/standard/generics/index.md)

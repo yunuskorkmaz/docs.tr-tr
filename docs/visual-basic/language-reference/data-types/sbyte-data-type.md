@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719579"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -74,11 +74,11 @@ Tamsayı sabit değeri aralığının dışında ise `SByte` (diğer bir deyişl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

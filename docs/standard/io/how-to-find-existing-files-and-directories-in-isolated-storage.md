@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
+title: 'Nasıl yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646717"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış depolamada mevcut dosya ve dizinleri bulma
 
 Yalıtılmış Depolama bir dizinde aramak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> yöntemi. Bu yöntem bir arama deseni temsil eden bir dize alır. Hem tek karakterli (?) hem de birden çok karakter kullanabilirsiniz (\*) joker karakterleri arama deseninde, ancak joker karakterler adının son bölümünde yer almalıdır. Örneğin, `directory1/*ect*` bir geçerli bir arama dizesi ancak `*ect*/directory2` değil.  
   
@@ -43,5 +43,5 @@ Yalıtılmış Depolama bir dizinde aramak için kullanın <xref:System.IO.Isola
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)

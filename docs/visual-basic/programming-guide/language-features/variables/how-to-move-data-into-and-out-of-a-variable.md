@@ -1,55 +1,55 @@
 ---
-title: 'Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma (Visual Basic)'
+title: 'Nasıl yapılır: Veri taşıma içine ve dışına bir değişken (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: bfda451cefff699561253910715d8450414b00ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717954"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma (Visual Basic)
-Atama ifadesinin sol tarafta değişken adını koyarak bir değer bir değişkende saklayın.  
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Nasıl yapılır: Veri taşıma içine ve dışına bir değişken (Visual Basic)
+Bir değer atama deyiminin sol tarafında değişken adını koyarak bir değişkende depolayın.  
   
-## <a name="putting-data-in-a-variable"></a>Bir değişkende veri koyma  
+## <a name="putting-data-in-a-variable"></a>Bir değişkende veri yerleştirme  
   
-#### <a name="to-store-a-value-in-a-variable"></a>Bir değişkene bir değer depolamak için  
+#### <a name="to-store-a-value-in-a-variable"></a>Değer bir değişkende depolamak için  
   
--   Değişken adı atama ifadesinin sol taraftaki kullanın.  
+-   Değişken adı, atama deyiminin sol tarafında kullanın.  
   
-     Aşağıdaki örnekte değişken değerini ayarlar `alpha`.  
+     Aşağıdaki örnek, değişkenin değerini ayarlar `alpha`.  
   
     ```  
     alpha = (beta * 6.27) / (gamma + 2.1)  
     ```  
   
-     Atama ifadesinin sağ tarafında oluşturulan değeri değişkende depolanır.  
+     Atama ifadesi sağ tarafında oluşturulan değeri değişkeninde depolanır.  
   
-## <a name="getting-data-from-a-variable"></a>Bir değişkeninden veri alma  
- Bir deyimde değişken adı dahil olmak üzere bir değişkenin değerini alır.  
+## <a name="getting-data-from-a-variable"></a>Bir değişkenden gelen veri alma  
+ Bir değişkenin değeri, değişken adı bir ifade dahil ederek alın.  
   
-#### <a name="to-retrieve-a-value-from-a-variable"></a>Bir değişkeninden bir değer almak için  
+#### <a name="to-retrieve-a-value-from-a-variable"></a>Bir değişkenden gelen bir değer almak için  
   
--   Değişken adı bir ifade kullanın. Bir değişken kullanabilirsiniz herhangi bir yerde bir sabit ya da bir hazır değer dışında bir sabit değer tanımlayan bir ifade kullanabilirsiniz.  
+-   Değişken adı bir ifade kullanın. Bir değişkeni kullanabilirsiniz herhangi bir sabit bir değer veya bir sabit değer dışında bir ifadede bir sabitin değeri tanımlar kullanabilirsiniz.  
   
      -veya-  
   
--   Eşittir aşağıdaki değişken adını kullanın (`=`) bir atama deyiminde oturum açın.  
+-   Eşit aşağıdaki değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
-     Aşağıdaki örnek değişkenin değeri olarak okur `startValue` ve değişkenin değerini kullanır `counter` deyimde.  
+     Aşağıdaki örnek, değişkenin değerini okur `startValue` ve değişkeninin değeri kullanır `counter` bir ifadede.  
   
     ```  
     counter = startValue  
     cellValue = (counter + 5) ^ 2  
     ```  
   
-     Değişkenin değeri olarak yalnızca bir sabit gerekir ve ardından değişkeni veya özellikte Atama ifadesinin sol tarafında depolanır ifade katılır.  
+     Değişkeninin değeri ifade yalnızca bir sabit olur ve ardından değişken veya özellik atama ifadesi sol tarafındaki depolanır katılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

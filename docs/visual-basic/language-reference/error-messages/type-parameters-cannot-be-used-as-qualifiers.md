@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 563010efc4f3049d330ee2b38b7f59e23292e630
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659723"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Tür parametreleri niteleyici olarak kullanılamaz
-Bir programlama öğesi bir tür parametresi içeren bir niteliği dizeyle tam.  
+Bir programlama öğesi bir tür parametresi içeren bir nitelik dizesiyle nitelenmiş.  
   
- Tür parametresi genel türü oluşturulduğunda sağlanacak olan bir türü gereksinimini temsil eder. Belirli tanımlanmış bir türü göstermiyor. Niteliğe dize derleme zamanında tanımlanan öğeleri eklemeniz gerekir.  
+ Bir tür parametresi, genel tür oluşturulduğunda sağlanacak olan bir türü için bir gereksinimi temsil eder. Tanımlanmış bir türü göstermiyor. Bir nitelik dize, derleme zamanında tanımlanan öğeler içermesi gerekir.  
   
- Aşağıdaki deyimleri bu hata oluşmasına neden olabilir.  
+ Aşağıdaki deyimleri, bu hata oluşturabilirsiniz.  
   
 ```  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
@@ -34,11 +34,11 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Tür parametresi niteliğe dizeden kaldırın veya tanımlanmış bir türü ile değiştirin.  
+1.  Tür parametresi nitelik dizeden kaldırın veya tanımlanan bir tür ile değiştirin.  
   
-2.  Tamamlandıktan programlama öğesi bulmak için yapılandırılmış bir tür kullanmanız gerekiyorsa, ek program mantığı kullanmanız gerekir.  
+2.  Oluşturulan tür nitelendirme programlama öğesine bulmak için kullanmanız gerekiyorsa, ek bir programın mantığı kullanmanız gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)

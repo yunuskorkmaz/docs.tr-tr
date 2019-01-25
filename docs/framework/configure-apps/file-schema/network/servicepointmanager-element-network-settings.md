@@ -8,12 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: fed2b39d92557f25c4f7427bccf28af616d1c0a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e30d38e3b925283b6048730aef2acc865be755b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651623"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; öğesi (ağ ayarları)
 Ağ kaynaklarına bağlantılarını yapılandırır.  
@@ -66,7 +66,7 @@ Ağ kaynaklarına bağlantılarını yapılandırır.
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.ServicePointManager>  
-- <xref:System.Net.Security.EncryptionPolicy>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.ServicePointManager>
+- <xref:System.Net.Security.EncryptionPolicy>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

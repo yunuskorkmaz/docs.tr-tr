@@ -10,31 +10,31 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5ad74b862c09734f3490210cb6898945a3c787fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d6360358b08dc0602cbdfe352bb69caee25c7bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591996"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider Bileşenine Genel Bakış (Windows Forms)
-Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) bileşen bir HTML Yardımı 1.x Yardım dosyası (HTML Yardım Atölyesi ile üretilen bir .chm dosyasını veya bir .htm dosyasının), Windows uygulama ile ilişkilendirmek için kullanılır. Çeşitli şekillerde Yardım sağlayabilirsiniz:  
+Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) bileşeni, bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının), Windows uygulama ile ilişkilendirmek için kullanılır. Çeşitli şekillerde Yardım sağlayabilirsiniz:  
   
--   Windows Forms denetimleri için bağlama duyarlı Yardım sağlar.  
+-   Windows Forms'da denetimleri için bağlama duyarlı Yardım sağlar.  
   
--   Belirli iletişim kutusu veya belirli bir iletişim kutusu denetimlere bağlama duyarlı Yardım sağlar.  
+-   Bağlama duyarlı Yardım belirli iletişim kutusu ya da belirli bir iletişim kutusu denetimleri sağlar.  
   
--   Ana sayfanın içindekiler tablosu, dizin veya arama işlevi gibi belirli alanlar için bir Yardım dosyasını açın.  
+-   Ana sayfasında içindekiler tablosu, dizin veya bir arama işlevi gibi belirli alanları için bir Yardım dosyasını açın.  
   
 ## <a name="using-the-help-provider"></a>Yardım sağlayıcısını kullanma  
- Ekleme bir <xref:System.Windows.Forms.HelpProvider> Windows formunuza bileşeni Yardım özelliklerini göstermek için formdaki diğer denetimleri sağlar <xref:System.Windows.Forms.HelpProvider> bileşeni. Bu, Windows formundaki denetimler için Yardım vermenizi sağlar. Yardım dosyası ile ilişkilendirebilirsiniz <xref:System.Windows.Forms.HelpProvider> bileşenini kullanarak <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği. Çağıran sağlanan Yardım türünü belirtin <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> arasında bir değer sağlayarak ve <xref:System.Windows.Forms.HelpNavigator> belirtilen denetim numaralandırması. Anahtar sözcük ya da konu yardımını çağırarak sağladığınız <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> yöntemi.  
+ Ekleme bir <xref:System.Windows.Forms.HelpProvider> Windows formunuza bileşen Yardım özelliklerini göstermek için form üzerindeki diğer denetimler sağlar <xref:System.Windows.Forms.HelpProvider> bileşeni. Bu, Windows formundaki denetimler için Yardım vermenizi sağlar. Yardım dosyası ile ilişkilendirebilirsiniz <xref:System.Windows.Forms.HelpProvider> bileşenini kullanarak <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği. Yardım çağırarak sağlanan türünü belirtin <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> ve değeri elde <xref:System.Windows.Forms.HelpNavigator> belirtilen denetimi için sabit listesi. Anahtar sözcük veya konuda Yardım almak için çağırarak sağladığınız <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> yöntemi.  
   
- İsteğe bağlı olarak, belirli bir Yardım dizeyi başka bir denetimi ile ilişkilendirmek için kullanın <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> yöntemi. Kullanıcı denetimi odağa sahipken F1 tuşuna bastığında bu yöntemi kullanarak bir denetimle ilişkilendirme dize açılır pencerede görüntülenir.  
+ İsteğe bağlı olarak belirli bir Yardım dizeyi başka bir denetimle ilişkilendirilecek kullanın <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> yöntemi. Kullanıcı F1 tuşuna bastığında denetim odağa sahip ancak bu yöntemi kullanarak bir denetimle ilişkilendirme dize açılan bir pencerede görüntülenir.  
   
- Varsa <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> , kullanmalısınız ayarlanmadı değil <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> Yardım metni sağlamak için. Her ikisi de ayarladıysanız <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> ve Yardım dayalı Yardım dizesi <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> öncelikli olur.  
+ Varsa <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> , kullanmanız gerekir, ayarlanmış durumda <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> Yardım metnini sağlamak için. Her ikisi de ayarladıysanız <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> ve Yardım temel Yardım dizesi <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> öncelikli olur.  
   
 > [!NOTE]
->  Göreli yolu kullanarak sorunlarla karşılaşabilirsiniz zaman belirtmeyi Yardım dosyasının yolu içinde <xref:System.Windows.Forms.Help.ShowHelp%2A> yöntemi veya <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği <xref:System.Windows.Forms.HelpProvider> denetim. Bu nedenle, Yardım dosyasını belirtmek için mutlak dosya yolunu kullandığınızdan emin olun.  
+>  Göreli yolu kullanarak sorunlarla karşılaşabilirsiniz olduğunda Yardım dosyasının yolunu belirtmeyi de <xref:System.Windows.Forms.Help.ShowHelp%2A> yöntemi veya <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği <xref:System.Windows.Forms.HelpProvider> denetimi. Bu nedenle, Yardım dosyasını belirtmek için mutlak dosya yolunu kullandığınızdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Uygulamalarındaki Yardım Sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Uygulamalarındaki Yardım Sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

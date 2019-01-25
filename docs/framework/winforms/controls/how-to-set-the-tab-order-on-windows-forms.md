@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarında Sekme Sırasını Ayarlama'
+title: 'Nasıl yapılır: Windows formlarında sekme sırasını ayarlama'
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675269"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Sekme Sırasını Ayarlama
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows formlarında sekme sırasını ayarlama
 Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırasını sahiptir. Varsayılan olarak, sekme sırasını denetimleri oluşturduğunuz sırada ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
     > [!NOTE]
     >  Bir radyo düğmesi grubunda, çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmeyi kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlayın `true`, diğer düğmeleri açıkken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimlerini, [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
+- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

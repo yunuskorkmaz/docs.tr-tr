@@ -2,12 +2,12 @@
 title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732004"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
@@ -99,16 +99,16 @@ Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı s�
 ## <a name="events-triggered-by-message-logging"></a>Günlüğe ileti kaydetme tarafından tetiklenen olayları  
  Günlüğe ileti kaydetme tarafından yayılan tüm olayları listeler.  
   
--   Oturum açma'iletisi: Bu olay günlüğe ileti kaydetme yapılandırmasında veya WMI üzerinden etkinleştirildiğinde yayılır. "İleti günlüğü açıldı. olayın içeriktir Şifrelenmeden kablo, örneğin, İleti gövdeleri bile hassas bilgileri düz metin olarak kaydedilebilir."  
+-   Oturum açma ileti: Bu olay, yapılandırma veya WMI üzerinden ileti günlüğe kaydetme etkinleştirildiğinde yayınlanır. "İleti günlüğü açıldı. olayın içeriktir Şifrelenmeden kablo, örneğin, İleti gövdeleri bile hassas bilgileri düz metin olarak kaydedilebilir."  
   
--   İleti günlüğü devre dışı: Bu olay günlüğe ileti kaydetme WMI aracılığıyla devre dışı bırakıldığında yayılır. Olay içeriği "ileti günlüğe kaydetme devre dışı." olur.  
+-   Oturum kapatma iletisi: Bu olay günlüğe ileti kaydetme WMI aracılığıyla devre dışı bırakıldığında yayılır. Olay içeriği "ileti günlüğe kaydetme devre dışı." olur.  
   
--   Günlük PII üzerinde bilinen: Bu olay günlüğe kaydedilmesini bilinen PII etkinleştirildiğinde yayılır. Böyle olduğunda `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesinin ayarlanmış `true`ve `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında öğe içinayarlanmış`true`.  
+-   Bilinen PII oturum açın: Bu olay günlüğe kaydedilmesini bilinen PII etkinleştirildiğinde yayılır. Böyle olduğunda `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesinin ayarlanmış `true`ve `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında öğe içinayarlanmış`true`.  
   
--   Bilinen oturum PII izin verilmiyor: Bu olay günlüğe kaydedilmesini bilinen PII izin verilmediğinde yayılır. Böyle olduğunda `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında ayarlanır `true`, ancak `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesi içinayarlanmış`false`. Hiçbir özel durum oluşturulur.  
+-   Bilinen PII izin günlük: Bu olay günlüğe kaydedilmesini bilinen PII izin verilmediğinde yayılır. Böyle olduğunda `logKnownPii` özniteliği `source` App.config veya Web.config dosyasında ayarlanır `true`, ancak `enableLoggingKnownPii` özniteliğini `machineSettings` Machine.config dosyasının öğesi içinayarlanmış`false`. Hiçbir özel durum oluşturulur.  
   
  Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi'ni Aracı'nda görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
