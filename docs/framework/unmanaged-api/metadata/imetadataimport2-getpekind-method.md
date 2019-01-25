@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c938ef8783a122dec2a5f5bd3775661d68fba62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad18aaca1caef242832bbdae9a1094b2ef2d7be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572467"
 ---
-# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="34c62-102">IMetaDataImport2::GetPEKind Metodu</span><span class="sxs-lookup"><span data-stu-id="34c62-102">IMetaDataImport2::GetPEKind Method</span></span>
-<span data-ttu-id="34c62-103">Alır taşınabilir yürütülebilir (PE) kodda yapısını tanımlayan bir değer, geçerli meta veri kapsamda tanımlanan genellikle bir DLL veya EXE dosyası dosyasında.</span><span class="sxs-lookup"><span data-stu-id="34c62-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
+# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="bb90b-102">IMetaDataImport2::GetPEKind Metodu</span><span class="sxs-lookup"><span data-stu-id="bb90b-102">IMetaDataImport2::GetPEKind Method</span></span>
+<span data-ttu-id="bb90b-103">Alır dosya taşınabilir çalıştırılabilir (PE) kod yapısını tanımlayan bir değeri, geçerli meta veri kapsamda tanımlanan genellikle bir DLL veya EXE dosyasının.</span><span class="sxs-lookup"><span data-stu-id="bb90b-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34c62-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="34c62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb90b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bb90b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPEKind (  
@@ -36,32 +36,32 @@ HRESULT GetPEKind (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="34c62-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="34c62-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bb90b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bb90b-105">Parameters</span></span>  
  `pdwPEKind`  
- <span data-ttu-id="34c62-106">[out] Değerini gösteren bir işaretçi [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE dosya tanımlar numaralandırması.</span><span class="sxs-lookup"><span data-stu-id="34c62-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
+ <span data-ttu-id="bb90b-106">[out] Bir işaretçi değerini [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE dosyası açıklayan sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="bb90b-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
   
  `pdwMachine`  
- <span data-ttu-id="34c62-107">[out] Makine mimarisi tanımlayan bir değer için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="34c62-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="34c62-108">Olası değerler için sonraki bölüme bakın.</span><span class="sxs-lookup"><span data-stu-id="34c62-108">See the next section for possible values.</span></span>  
+ <span data-ttu-id="bb90b-107">[out] Makine mimarisini tanımlayan bir değer için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bb90b-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="bb90b-108">Olası değerler için sonraki bölüme bakın.</span><span class="sxs-lookup"><span data-stu-id="bb90b-108">See the next section for possible values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34c62-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="34c62-109">Remarks</span></span>  
- <span data-ttu-id="34c62-110">Tarafından başvurulan değer `pdwMachine` parametresi şunlardan biri olabilir.</span><span class="sxs-lookup"><span data-stu-id="34c62-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb90b-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bb90b-109">Remarks</span></span>  
+ <span data-ttu-id="bb90b-110">Tarafından başvurulan değer `pdwMachine` parametresi aşağıdakilerden biri olabilir.</span><span class="sxs-lookup"><span data-stu-id="bb90b-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
   
-|<span data-ttu-id="34c62-111">Değer</span><span class="sxs-lookup"><span data-stu-id="34c62-111">Value</span></span>|<span data-ttu-id="34c62-112">Makine mimarisi</span><span class="sxs-lookup"><span data-stu-id="34c62-112">Machine architecture</span></span>|  
+|<span data-ttu-id="bb90b-111">Değer</span><span class="sxs-lookup"><span data-stu-id="bb90b-111">Value</span></span>|<span data-ttu-id="bb90b-112">Makine mimarisi</span><span class="sxs-lookup"><span data-stu-id="bb90b-112">Machine architecture</span></span>|  
 |-----------|--------------------------|  
-|<span data-ttu-id="34c62-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="34c62-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="34c62-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="34c62-114">0x014C</span></span>|<span data-ttu-id="34c62-115">x86</span><span class="sxs-lookup"><span data-stu-id="34c62-115">x86</span></span>|  
-|<span data-ttu-id="34c62-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="34c62-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="34c62-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="34c62-117">0x0200</span></span>|<span data-ttu-id="34c62-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="34c62-118">Intel IPF</span></span>|  
-|<span data-ttu-id="34c62-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="34c62-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="34c62-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="34c62-120">0x8664</span></span>|<span data-ttu-id="34c62-121">X64</span><span class="sxs-lookup"><span data-stu-id="34c62-121">x64</span></span>|  
+|<span data-ttu-id="bb90b-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="bb90b-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="bb90b-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="bb90b-114">0x014C</span></span>|<span data-ttu-id="bb90b-115">x86</span><span class="sxs-lookup"><span data-stu-id="bb90b-115">x86</span></span>|  
+|<span data-ttu-id="bb90b-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="bb90b-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="bb90b-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="bb90b-117">0x0200</span></span>|<span data-ttu-id="bb90b-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="bb90b-118">Intel IPF</span></span>|  
+|<span data-ttu-id="bb90b-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="bb90b-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="bb90b-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="bb90b-120">0x8664</span></span>|<span data-ttu-id="bb90b-121">X64</span><span class="sxs-lookup"><span data-stu-id="bb90b-121">x64</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34c62-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="34c62-122">Requirements</span></span>  
- <span data-ttu-id="34c62-123">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34c62-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb90b-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bb90b-122">Requirements</span></span>  
+ <span data-ttu-id="bb90b-123">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb90b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34c62-124">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="34c62-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bb90b-124">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="bb90b-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="34c62-125">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="34c62-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bb90b-125">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="bb90b-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="34c62-126">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34c62-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bb90b-126">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb90b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34c62-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="34c62-127">See Also</span></span>  
- [<span data-ttu-id="34c62-128">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="34c62-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [<span data-ttu-id="34c62-129">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="34c62-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="34c62-130">CorPEKind Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="34c62-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="bb90b-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bb90b-127">See also</span></span>
+- [<span data-ttu-id="bb90b-128">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bb90b-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="bb90b-129">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bb90b-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="bb90b-130">CorPEKind Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="bb90b-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

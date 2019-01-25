@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Girintileri, Asılı Girintileri ve Madde İşaretli Paragrafları Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,23 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1349e86ecd04c0d4e394e7939996c3e717e841e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492433"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="07bd3-102">Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Girintileri, Asılı Girintileri ve Madde İşaretli Paragrafları Ayarlama</span><span class="sxs-lookup"><span data-stu-id="07bd3-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="07bd3-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi görüntülediği metni biçimlendirme için birçok seçenek vardır.</span><span class="sxs-lookup"><span data-stu-id="07bd3-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="07bd3-104">Ayarlayarak seçili paragrafları madde işaretli listeler olarak biçimlendirebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="07bd3-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="07bd3-105">Aynı zamanda <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, ve <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> paragrafları sol ve sağ kenarlarının denetimi ve diğer satırlar metnin sol kenarı göre girinti ayarlamak için özellikleri.</span><span class="sxs-lookup"><span data-stu-id="07bd3-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="fdc7c-102">Nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlama</span><span class="sxs-lookup"><span data-stu-id="fdc7c-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="fdc7c-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediği metni biçimlendirmek için çok sayıda seçeneği vardır.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="fdc7c-104">Madde işaretli listeler olarak ayarlayarak seçili paragrafların biçimlendirebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="fdc7c-105">Ayrıca <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, ve <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> girinti paragraf sol ve sağ kenarları denetimi ve diğer satırlık bir metin ile sol kenarı göre ayarlamak için özellikler.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="07bd3-106">Madde işaretli bir liste olarak bir paragraf biçimlendirme</span><span class="sxs-lookup"><span data-stu-id="07bd3-106">To format a paragraph as a bulleted list</span></span>  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="fdc7c-106">Paragraf madde işaretli liste olarak biçimlendirmek için</span><span class="sxs-lookup"><span data-stu-id="fdc7c-106">To format a paragraph as a bulleted list</span></span>  
   
-1.  <span data-ttu-id="07bd3-107">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğine `true`.</span><span class="sxs-lookup"><span data-stu-id="07bd3-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="fdc7c-107">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğini `true`.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -50,13 +39,13 @@ ms.lasthandoff: 12/22/2017
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a><span data-ttu-id="07bd3-108">Paragrafın girinti</span><span class="sxs-lookup"><span data-stu-id="07bd3-108">To indent a paragraph</span></span>  
+### <a name="to-indent-a-paragraph"></a><span data-ttu-id="fdc7c-108">Paragrafın girinti</span><span class="sxs-lookup"><span data-stu-id="fdc7c-108">To indent a paragraph</span></span>  
   
-1.  <span data-ttu-id="07bd3-109">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> denetimi sol kenarı ve metnin sol köşesinde arasındaki piksel cinsinden uzaklık temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="07bd3-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
+1.  <span data-ttu-id="fdc7c-109">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> metnin sol kenarı ile denetimin sol kenarı arasındaki piksel cinsinden uzaklık temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
   
-2.  <span data-ttu-id="07bd3-110">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> paragraf içindeki metnin ilk satırın sol kenarı ve sonraki satırların aynı paragrafta sol kenarı arasındaki piksel cinsinden uzaklığı temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="07bd3-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="07bd3-111">Değeri <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> özelliği yalnızca uygulanır altına ilk satır Sarmalanan bir paragraf satırlarında.</span><span class="sxs-lookup"><span data-stu-id="07bd3-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
+2.  <span data-ttu-id="fdc7c-110">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> paragraf metni ilk satırının sol kenarı ve sonraki satırları aynı öğenin sol kenarı arasındaki piksel cinsinden uzaklık temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="fdc7c-111">Değerini <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> özelliği ilk satırı sarmalanmış bir paragraf satırlarında için yalnızca uygulanır.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
   
-3.  <span data-ttu-id="07bd3-112">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> denetimin sağ kenarı ve metnin sağ köşesine arasındaki piksel cinsinden uzaklığı temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="07bd3-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
+3.  <span data-ttu-id="fdc7c-112">Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> metnin sağ kenarı ile denetimin sağ kenarı arasındaki piksel cinsinden uzaklığı temsil eden bir tamsayı özelliği.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -77,9 +66,9 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="07bd3-113">Bu özellikleri seçili metin ve sonra geçerli ekleme noktasını yazılan metni içeren tüm paragrafları etkiler.</span><span class="sxs-lookup"><span data-stu-id="07bd3-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="07bd3-114">Örneğin, bir kullanıcı bir paragraf içinde bir sözcük seçer ve girinti ayarlar, yeni ayarları bu sözcüğünü içeren tüm paragrafı ve ayrıca daha sonra seçili paragrafın girilen paragrafları uygulanır.</span><span class="sxs-lookup"><span data-stu-id="07bd3-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="07bd3-115">Program aracılığıyla metni seçme hakkında daha fazla bilgi için bkz: <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="07bd3-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
+    >  <span data-ttu-id="fdc7c-113">Tüm bu özellikler, seçilen metin ve sonra geçerli ekleme noktasına yazdığınız metni içeren tüm paragrafları etkiler.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="fdc7c-114">Örneğin, bir kullanıcı bir paragraf içinde bir sözcük seçer ve ardından girintisini ayarlar yeni ayarları bu sözcüğü içeren tüm paragrafa ve daha sonra seçili paragrafın girilen paragraflara uygulanır.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="fdc7c-115">Program aracılığıyla metni seçme hakkında daha fazla bilgi için bkz: <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07bd3-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="07bd3-116">See Also</span></span>  
- <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="07bd3-117">RichTextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="07bd3-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="07bd3-118">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="07bd3-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fdc7c-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fdc7c-116">See also</span></span>
+- <xref:System.Windows.Forms.RichTextBox>
+- [<span data-ttu-id="fdc7c-117">RichTextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="fdc7c-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="fdc7c-118">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="fdc7c-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
