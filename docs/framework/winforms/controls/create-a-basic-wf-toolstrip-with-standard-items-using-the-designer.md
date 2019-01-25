@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir Windows Formları ToolStrip Oluşturma'
+title: 'Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f36df117ee7bb7bcdb79ccb134c914288ec6903d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602682"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir Windows Formları ToolStrip Oluşturma
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma
 Aşağıdaki yordam nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Forms.ToolStrip> ve yedi ekleyin <xref:System.Windows.Forms.ToolStripButton> tipik görevleri temsil eden denetimleri.  
   
 > [!NOTE]
@@ -28,9 +28,9 @@ Aşağıdaki yordam nasıl oluşturulacağını gösterir. bir <xref:System.Wind
   
 3.  İçinde **ToolStrip görevleri** bölmesinde seçin **standart öğeleri Ekle**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ToolStrip>  
- [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ToolStrip>
+- [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

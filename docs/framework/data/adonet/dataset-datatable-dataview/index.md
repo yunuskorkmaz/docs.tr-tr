@@ -2,12 +2,12 @@
 title: DataSets, DataTables ve DataViews
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d712f82b0d776b671a8d8219276c32761d245047
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521289"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables ve DataViews
 ADO.NET <xref:System.Data.DataSet> içerdiği veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. A <xref:System.Data.DataSet> sipariş ve tablolar arasındaki ilişkileri yanı sıra, verileri sınırlamak içeren tablolar da dahil olmak üzere veri eksiksiz bir kümesini temsil eder.  
@@ -78,6 +78,6 @@ ADO.NET <xref:System.Data.DataSet> içerdiği veri kaynağını bağımsız olar
  [DataSet’e Var Olan Kısıtlamaları Ekleme](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Nasıl doldurulacağını açıklar bir **veri kümesi** birincil anahtar bilgilerini bir veri kaynağından.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

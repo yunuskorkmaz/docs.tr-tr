@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617258"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO Yapısı
-Yerel kod bellekte bir bitişik bloğunu temsil eder.  
+Yerel kod bellekte bitişik bir bloğunu temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,13 +43,13 @@ typedef struct _COR_PRF_CODE_INFO {
 |`size`|Blok boyutu.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

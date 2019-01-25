@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79ea8c7df88a6253fb3fb44d072fbe366bcc720b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510162"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunma ana verileri görüntüler ana pencere sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubuklarını ve durum çubukları ister. Önemsiz olmayan bir uygulama, ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
@@ -344,7 +344,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [İletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)  
- [ColorPicker özel denetim örneği](https://go.microsoft.com/fwlink/?LinkID=159977)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [İletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [ColorPicker özel denetim örneği](https://go.microsoft.com/fwlink/?LinkID=159977)

@@ -1,16 +1,16 @@
 ---
-title: Sipariş (varlığıyla, SQL)
+title: Sipariş (varlık tarafından SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 5cffd7a696496f92ae83822faff2f08e325eea93
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac888a26f906d8439b51c9c56d966440d7a25b7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670205"
 ---
-# <a name="order-by-entity-sql"></a>Sipariş (varlığıyla, SQL)
-SELECT deyimi içinde döndürülen nesne üzerinde kullanılan sıralama düzeni belirtir.  
+# <a name="order-by-entity-sql"></a>Sipariş (varlık tarafından SQL)
+Bir SELECT deyiminde döndürülen nesneler üzerinde kullanılan sıralama düzenini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,31 +27,31 @@ SELECT deyimi içinde döndürülen nesne üzerinde kullanılan sıralama düzen
   
 ## <a name="arguments"></a>Arguments  
  `order_by_expression`  
- Herhangi bir geçerli sorgu ifade bir özelliği üzerinde sıralama yapılacak belirtme. Birden çok sıralama ifadeleri belirtilebilir. ORDER BY yan tümcesinde sıralama ifadesi dizisini sıralanmış sonuç kümesi organizasyonu tanımlar.  
+ Herhangi bir geçerli sorgu ifade üzerinde sıralama yapılacak bir özelliğini belirterek. Birden çok sıralama ifadeleri belirtilebilir. ORDER BY yan tümcesinde sıralama ifadesi dizisini sıralanmış sonuç kümesinin kuruluş tanımlar.  
   
  COLLATE {collation_name}  
- Belirtilen harmanlama göre sıralama işlemi gerçekleştirilmelidir belirtir `collation_name`. COLLATE yalnızca dize ifadeler için geçerlidir.  
+ ORDER BY işlemi belirtilen harmanlama göre yapılacağını belirtir `collation_name`. COLLATE yalnızca dize ifadeler için geçerlidir.  
   
  ASC  
  Belirtilen özellik değerleri, en yüksek değeri için en düşük değerden artan sırada sıralanması gerektiğini belirtir. Bu varsayılandır.  
   
  DESC  
- Belirtilen özellik değerleri, en yüksek değerden düşük değere azalan sırada sıralanması gerektiğini belirtir.  
+ Belirtilen özellik değerleri, en yüksek değerinden düşük bir değere azalan sırada sıralanması gerektiğini belirtir.  
   
  SINIRI `n`  
- Yalnızca ilk `n` öğeleri seçilir.  
+ Yalnızca ilk `n` öğe seçilir.  
   
  ATLA `n`  
  İlk atlar `n` öğeleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- ORDER BY yan tümcesi, SELECT yan tümcesi sonucuna mantıksal olarak uygulanır. ORDER BY yan tümcesi, select listesindeki öğeleri benzersizse kullanarak başvurabilirsiniz. ORDER BY yan tümcesi de şu anda kapsam diğer değişkenleri başvuruda bulunabilir. SELECT yan tümcesi ile ayrı bir değiştirici belirtildi, ancak, ORDER BY yan tümcesi yalnızca diğer adlar from SELECT yan tümcesi başvuruda bulunabilir.  
+ ORDER BY yan tümcesi, SELECT yan tümcesi sonucuna mantıksal olarak uygulanır. ORDER BY yan tümcesi select listesindeki öğeleri diğer adlarını kullanarak başvurabilirsiniz. ORDER BY yan tümcesi şu anda kapsamındaki diğer değişkenleri de başvurabilirsiniz. FARKLI bir değiştiriciyle SELECT yan tümcesi belirtilmiş, ancak ORDER BY yan tümcesi yalnızca diğer adlar SELECT yan tümcesi başvurabilir.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
   
- ORDER BY yan tümcesinde her ifade sıralı eşitsizlik (küçük veya büyük, vb.) için karşılaştırılması gereken bazı türü değerlendirilmelidir. Bu sayı, dizeleri ve tarihleri gibi genellikle skaler temelleri türleridir. RowTypes karşılaştırılabilir türleri sıralı karşılaştırılabilir ayrıca değildir.  
+ ORDER BY yan tümcesindeki her ifade sıralı eşitsizlik (küçüktür veya büyüktür, vb.) için karşılaştırılabilir tür değerlendirilmelidir. Bu genelde skalar temelleri sayılar, dizeler ve tarihler gibi türleridir. RowTypes karşılaştırılabilir türlerde, ayrıca karşılaştırılabilir sırası değildir.  
   
- Kodunuzu bir sıralanmış küme üzerinde tekrarlanıyorsa dışında en üst düzey bir yansıtma için çıktı korunur, sipariş olması için kesin değildir.  
+ Kodunuzu sıralı bir küme üzerinde yinelenir, dışında en üst düzey bir projeksiyon için çıkış korunur sırası olması garanti edilmez.  
   
 ```  
 -- In the following sample, order is guaranteed to be preserved:  
@@ -76,7 +76,7 @@ FROM ( UNION/EXCEPT/INTERSECT operation )
 ORDER BY ...  
 ```  
   
-## <a name="restricted-keywords"></a>Sınırlı anahtar sözcükler  
+## <a name="restricted-keywords"></a>Sınırlı anahtar sözcükleri  
  Aşağıdaki anahtar sözcükler kullanıldığında tırnak içine alınmalıdır bir `ORDER BY` yan tümcesi:  
   
 -   ÇAPRAZ  
@@ -98,7 +98,7 @@ ORDER BY ...
 -   DEĞER  
   
 ## <a name="ordering-nested-queries"></a>İç içe geçmiş sorgular sıralama  
- Entity Framework iç içe geçmiş bir ifade herhangi bir yere sorguda yerleştirilebilir; iç içe bir sorgu sırası korunmaz.  
+ Varlık Çerçevesi'nde, iç içe geçmiş bir ifade herhangi bir sorguda yerleştirilebilir; iç içe bir sorgu sırasını korunmaz.  
   
 ```  
 -- The following query will order the results by the last name.  
@@ -116,17 +116,17 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ORDER BY işleci bir SELECT deyiminde döndürülen nesne üzerinde kullanılan sıralama düzenini belirlemek için kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu ORDER BY işleci bir SELECT deyiminde döndürülen nesneler üzerinde kullanılan sıralama düzeni belirlemek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
+- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
+- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

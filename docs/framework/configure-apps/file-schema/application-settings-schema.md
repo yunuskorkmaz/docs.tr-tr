@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701917"
 ---
 # <a name="application-settings-schema"></a>Uygulama Ayarları Şeması
 
@@ -92,5 +92,5 @@ Aşağıdaki örnek iki uygulama kapsamlı ayarlar ve iki kullanıcı kapsamlı 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Uygulama ayarlarına genel bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)

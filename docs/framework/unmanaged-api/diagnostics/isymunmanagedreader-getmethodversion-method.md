@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555849"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion Metodu
-Yöntem sürümünü alır. Yöntemi sürüm 1'den başlar ve yöntemi derlenmiştir her zaman artırılır. Derleme değişiklik yapılmadan yönteme gerçekleşebilir.  
+Yöntem sürümünü alır. Yöntemi sürüm 1 ile başlayan ve yöntem yeniden derlenen her zaman artırılır. Yeniden derleme değişikliğe gerek kalmadan yönteme oluşabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetMethodVersion (
   
 #### <a name="parameters"></a>Parametreler  
  `pMethod`  
- [in] Yöntemi, bir sürüm edinmek.  
+ [in] Hangi sürümü almak yöntem.  
   
  `version`  
  [out] Bir işaretçi bir değişkene yöntemi sürümünü alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

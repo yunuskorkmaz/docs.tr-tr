@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576440"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen Sınıfı
-Bir yerel taşınabilir yürütülebilir (PE) dosyasını oluşturmak için işlevsellik sağlar. Arabirim genellikle derleyicileri tarafından yürütülebilir derlenmiş çıktılarını oluşturmak için kullanılır.  
+Bir yerel taşınabilir yürütülebilir (PE) dosyası oluşturmak için işlevsellik sağlar. Arabirimi, genellikle yürütülebilir derlenmiş çıktılarını oluşturmak için derleyiciler tarafından kullanılır.  
   
 > [!NOTE]
 >  `ICeeFileGen` .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
- Bu arabirim kullanım dışı bırakıldı ve bir sonraki sürümde kaldırılacak.  
+ Bu arabirimi kullanım dışıdır ve gelecek sürümde kaldırılacak.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ICeeFileGen.h  
+ **Üst bilgi:** ICeeFileGen.h  
   
  **.NET framework sürümü:** 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

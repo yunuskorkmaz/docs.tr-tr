@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623995"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik Gözden Geçirmesi
 Yerelleştirilebilirlik gözden geçirmesi dünya çapında kullanılmaya hazır uygulama geliştirmeyi Ara bir adımdır. Genelleştirilmiş bir uygulamayı yerelleştirme için hazırdır ve herhangi bir kod veya özel işlem gerektiren kullanıcı arabirimi yönleri tanımlar doğrular. Bu adım ayrıca yerelleştirme işlemi herhangi bir işlev hatasıyla uygulamanıza neden olmaz emin olun yardımcı olur. Yerelleştirilebilirlik gözden geçirmesi tarafından oluşturulan tüm sorunları ele, uygulamanızın yerelleştirme için hazırdır. Yerelleştirilebilirlik gözden geçirmesi kapsamlı ise, yerelleştirme işlemi sırasında herhangi bir kaynak kodu değiştirmek olmamalıdır.  
@@ -75,7 +75,7 @@ Yerelleştirilebilirlik gözden geçirmesi dünya çapında kullanılmaya hazır
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
-- [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
-- [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
+- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+- [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)
+- [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)
 - [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

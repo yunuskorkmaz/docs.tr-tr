@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683826"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Dönüşümlerdeki sonuç ağacı parçası
 
@@ -35,7 +35,7 @@ ms.locfileid: "45625951"
 
 İçin `variable` öğesi değeri de atandığı çeşitli yollarla. XPath ifadesinden içerik döndürerek atayabilirsiniz `select` özniteliği veya şablon gövdesi içeriğini göre atama.
 
-Her ikisi için de `parameter` ve `variable` öğeleri XPath ifadesi tarafından atanmış bir değer ise ardından dört temel XPath türlerinden biri döndürülür: Boolean, dize, sayı veya düğüm kümesi. Boş şablon gövdesi kullanarak değeri belirtildiğinde, ardından döndürülen bir XPath olmayan veri türü ve bir sonuç ağacı parçası olacak.
+Her ikisi için de `parameter` ve `variable` öğeleri XPath ifadesi tarafından atanmış bir değer ise ardından dört temel XPath türlerinden biri döndürülür: Boole, dize, sayı veya düğüm ayarlayın. Boş şablon gövdesi kullanarak değeri belirtildiğinde, ardından döndürülen bir XPath olmayan veri türü ve bir sonuç ağacı parçası olacak.
 
 Bir değişken dört temel XPath veri türlerinden biri yerine bir sonuç ağacı parçası bağlandığında, bu yalnızca bir kez olan bir XPath sorgusu dört XPath nesne türlerinden biri değil bir tür döndürür. Sonucu ağacı parçalarını ve davranışları açıklanmıştır [World Wide Web Consortium (W3C) belirtimi](https://www.w3.org/TR/xslt-10/), [11.1 sonucu ağacı parçalarını bölümünde](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) aracılığıyla [11.6 geçirme bölümü Şablon parametreleri](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Ayrıca, [1 giriş bölümünde](https://www.w3.org/TR/xslt-10/#section-Introduction) nasıl şablonları döndürür ya da sonuç ağacı parçalarını oluşturan XSLT ad alanından öğeler içerebilir açıklanır.
 
@@ -194,7 +194,7 @@ Bu stil sayfası ile XML dönüştürme sonucunu verilmiştir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [XslTransform Sınıfı ile XSLT Dönüşümleri](xslt-transformations-with-the-xsltransform-class.md)  
-- [XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [XslTransform Sınıfı ile XSLT Dönüşümleri](xslt-transformations-with-the-xsltransform-class.md)
+- [XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)

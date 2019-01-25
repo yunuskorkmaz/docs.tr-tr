@@ -1,40 +1,40 @@
 ---
-title: 'Nasıl yapılır: Veritabanı değişiklikleri gönderme'
+title: 'Nasıl yapılır: Veritabanına değişiklikleri gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: fef41cd1bcb9d1c4b98f96975c56bfa19c675608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562823"
 ---
-# <a name="how-to-submit-changes-to-the-database"></a>Nasıl yapılır: Veritabanı değişiklikleri gönderme
-Nesnelerinizi kaç değişiklikler bağımsız olarak, değişiklikler yalnızca bellek içi çoğaltmalar için yapılır. Veritabanındaki gerçek veriler için herhangi bir değişiklik yaptınız. Açıkça çağrısı tamamlanana kadar değişiklikleriniz sunucusuna iletilmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext>.  
+# <a name="how-to-submit-changes-to-the-database"></a>Nasıl yapılır: Veritabanına değişiklikleri gönderme
+Nesnelerinizi yaptığınız kaç tane değişiklik bağımsız olarak yalnızca bellek içi çoğaltmalar için değişiklik yapılmaz. Veritabanındaki gerçek veriler için hiçbir değişiklik yaptınız. Açıkça çağırmak kadar değişikliklerinizi sunucusuna iletilmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext>.  
   
- Bu arama yaparken <xref:System.Data.Linq.DataContext> değişikliklerinizi eşdeğer SQL komutlarını içine çevirmek çalışır. Bu eylemler geçersiz kılmak için kendi özel mantık kullanabilirsiniz, ancak gönderme sırası bir hizmet tarafından düzenlenmiş <xref:System.Data.Linq.DataContext> olarak bilinen *işlemci değiştirmek*. Olayların sırası aşağıdaki gibidir:  
+ Bu çağrı yaptığınızda <xref:System.Data.Linq.DataContext> eşdeğer SQL komutları ile değişikliklerinizi çevirmek çalışır. Bu eylemler geçersiz kılmak için kendi özel mantığı kullanabilirsiniz, ancak gönderme sırası, bir hizmet tarafından düzenlenen <xref:System.Data.Linq.DataContext> olarak bilinen *işlemci değiştirme*. Olayların sırası aşağıdaki gibidir:  
   
-1.  Çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni örnekleri kendisine eklenmiş olan olup olmadığını belirlemek için bilinen nesne kümesini inceler. Varsa, bu yeni örnekler izlenen nesneler kümesine eklenir.  
+1.  Çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bilinen nesne yeni örnekleri kendisine eklenmiş olan olup olmadığını belirlemek için inceler. Aksi halde, bu yeni örnekler izlenen nesneler kümesine eklenir.  
   
-2.  Bekleyen değişiklikleri bulunan tüm nesneleri aralarındaki bağımlılıkları temel nesneleri dizisini içine sıralanır. Değişiklikleri bağımlı nesneler üzerinde nesneleri bağımlılıklarını sonra sıralanamadı.  
+2.  Bekleyen değişiklikleri olan tüm nesnelerin dizisini nesneleri aralarındaki bağımlılıkları göre sıralanır. Değişiklikleri diğer nesnelerine bağımlı nesneler bağımlılıklarını sonra sıralanamadı.  
   
-3.  Gerçek değişiklikleri hemen iletilmeden önce [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tekil komutlar dizi kapsülleyen bir işlem başlatır.  
+3.  Gerçek değişiklikleri hemen iletilmeden önce [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tek tek komut dizisi kapsülleyen bir hareket başlatır.  
   
-4.  Nesnelere değişiklikler çevrilmiş tek tek SQL komutları ve sunucuya gönderilen.  
+4.  Nesnelere değişiklikleri çevrilmiş birer birer SQL komutları ve sunucuya gönderilen.  
   
- Bu noktada, veritabanı tarafından algılanan tüm hataları gönderme işleminin vermemesine neden ve özel durum oluşturuldu. Veritabanında yapılan tüm değişiklikler geri hiçbir gönderimlerini sürekli olarak oluştuysa alınır. <xref:System.Data.Linq.DataContext> Tüm değişiklikleri tam kaydını sürdürüyor. Bu nedenle çağrısı ve sorunu düzeltmek deneyebilirsiniz <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yeniden, aşağıdaki kod örneğinde olduğu gibi.  
+ Bu noktada durdurmak gönderme işlemi veritabanı tarafından algılanan hataları neden ve bir özel durum oluşturulur. Veritabanında yapılan tüm değişiklikler geri hiçbir gönderimler hiç olmamış gibi alınır. <xref:System.Data.Linq.DataContext> Hala yapılan tüm değişikliklerin tam kayıt içeriyor. Bu nedenle sorun ve arama düzeltileceği deneyebilirsiniz <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yeniden, aşağıdaki kod örneğinde olduğu gibi.  
   
 ## <a name="example"></a>Örnek  
- Gönderme işlemi başarıyla tamamlandığında, <xref:System.Data.Linq.DataContext> değişiklik izleme bilgilerini yoksayarak tarafından yapılan değişiklikleri nesneleri kabul eder.  
+ Gönderme işlemi başarıyla tamamlandığında <xref:System.Data.Linq.DataContext> değişiklik izleme bilgileri yoksayarak nesnelere değişiklikleri kabul eder.  
   
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Çakışan Gönderimleri Algılama ve Çözümleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
- [Nasıl yapılır: Değişiklik Çakışmalarını Yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Algılamak ve çözmek çakışan gönderimleri](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

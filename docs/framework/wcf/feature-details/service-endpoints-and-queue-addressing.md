@@ -2,12 +2,12 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613928"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabileceği ve hizmet uç noktaları sıralara nasıl eşleştiği anlatılmaktadır. Aşağıdaki çizimde, bir anımsatıcı Klasik Windows Communication Foundation (WCF) uygulama dağıtımı kuyruğa gösterir.  
@@ -38,11 +38,11 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
   
 -   [özel] isteğe bağlıdır. Özel bir kuyruk bir hedef kuyruk işleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmemelidir. MSMQ yolları, "$" hiçbir WCF URI biçiminde dikkat edin.  
   
--   \<*Kuyruk adı*> Kuyruğun adı. Kuyruk adı için bir alt kuyruk de başvurabilir. Bu nedenle, \< *kuyruk adı*> = \< *kuyruk adı*> [; *Alt ad queue*].  
+-   \<*Kuyruk adı*> Kuyruğun adı. Kuyruk adı için bir alt kuyruk de başvurabilir. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
- Örnek1: özel bir sıra bilgisayar abc atadatum.com üzerinde barındırılan PurchaseOrders adreslemek için URI net.msmq://abc.adatum.com/private/PurchaseOrders olacaktır.  
+ Örnek1: Özel bir sıra bilgisayar abc atadatum.com üzerinde barındırılan PurchaseOrders adreslemek için URI net.msmq://abc.adatum.com/private/PurchaseOrders şeklinde olacaktır.  
   
- Örnek2: bir genel sıra bilgisayar def atadatum.com üzerinde barındırılan AccountsPayable ele almak için URI net.msmq://def.adatum.com/AccountsPayable olacaktır.  
+ Örnek2: Bir genel sıra bilgisayar def atadatum.com üzerinde barındırılan AccountsPayable ele almak için URI net.msmq://def.adatum.com/AccountsPayable şeklinde olacaktır.  
   
  Kuyruk adresi dinleme URI olarak gelen iletileri okumak için dinleyici tarafından kullanılır. Diğer bir deyişle, kuyruk adresi için dinleme bağlantı noktası TCP yuvası eşdeğerdir.  
   
@@ -72,14 +72,14 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
   
 |WCF URI tabanlı sıra adresi|Active Directory özelliğini kullanın|Kuyruk Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|NET.MSMQ://\<makine-adı >/private/abc|False (varsayılan)|Yerel (varsayılan)|DOĞRUDAN OS:machine =-name\private$ \abc|  
-|NET.MSMQ://\<makine-adı >/private/abc|False|SRMP|DOĞRUDAN =http://machine/msmq/private$/ abc|  
-|NET.MSMQ://\<makine-adı >/private/abc|Doğru|Yerel|Genel GUID bazı (kuyruk GUID) =|  
+|Net.msmq://\<machine-name>/private/abc|False (varsayılan)|Yerel (varsayılan)|DOĞRUDAN OS:machine =-name\private$ \abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DOĞRUDAN =http://machine/msmq/private$/ abc|  
+|Net.msmq://\<machine-name>/private/abc|Doğru|Yerel|Genel GUID bazı (kuyruk GUID) =|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Eski ileti sırası veya Poison ileti kuyruktan iletileri okuma  
  Hedef sıra sırasına olan poison ileti kuyruktan iletileri okumak için açık `ServiceHost` subqueue adresi.  
   
- Örnek: yerel makineden PurchaseOrders özel sıranın poison ileti kuyruktan okuyan bir hizmet net.msmq://localhost/private/PurchaseOrders;poison adresi.  
+ Örnek: Yerel makineden PurchaseOrders özel sıranın poison ileti kuyruktan okuyan bir hizmet net.msmq://localhost/private/PurchaseOrders;poison adresi.  
   
  Bir sistem işlem eski ileti sırası iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
   
@@ -100,9 +100,9 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
   
  Yalnızca ortak ve özel biçim adlarının yanı sıra doğrudan biçim adlarından kullanabileceğinizi unutmayın (Active Directory ile tümleştirme gerektirir) kullanarak bir kuyruk iletileri alırken `MsmqIntegrationBinding`. Ancak, doğrudan biçim adlarından kullanmanız önerilir. Örneğin, [!INCLUDE[wv](../../../../includes/wv-md.md)], herhangi bir biçim adını kullanarak bir hataya neden olur çünkü sistem ile doğrudan biçim adlarından yalnızca açılabilir bir alt kuyruk açmayı dener.  
   
- SRMP kullanarak belirtirken `MsmqIntegrationBinding`, Internet Information Services (IIS) gönderme ile yardımcı olmak için doğrudan biçim adını /msmq/ eklemek için bir gereksinimi yoktur. Örneğin: abc SRMP kullanarak protokolü, yerine doğrudan bir kuyruk işleme olduğunda =http://adatum.com/msmq/private$/ abc kullanmanız gerektiğini doğrudan =http://adatum.com/private$/ abc.  
+ SRMP kullanarak belirtirken `MsmqIntegrationBinding`, Internet Information Services (IIS) gönderme ile yardımcı olmak için doğrudan biçim adını /msmq/ eklemek için bir gereksinimi yoktur. Örneğin: Abc SRMP kullanarak protokolü, yerine doğrudan bir kuyruk işleme olduğunda =http://adatum.com/msmq/private$/ abc kullanmanız gerektiğini doğrudan =http://adatum.com/private$/ abc.  
   
  Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekleyen MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan bir WCF hizmeti kullanabilirsiniz. Bir özel durum belirten `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunun nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

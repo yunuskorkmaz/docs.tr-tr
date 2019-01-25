@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600459"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP Metodu
-Yerel kod alır yönerge işaretçisi şu anda ayarlanmış konumu uzaklığı.  
+Alır yerel kod, yönerge işaretçisini şu anda ayarlanmış konumu uzaklığı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetIP (
   
 #### <a name="parameters"></a>Parametreler  
  `pnOffset`  
- [out] Uzaklık konumu yerel kodda bir işaretçi.  
+ [out] Yerel kod uzaklık konumunda bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu "Icordebugnativeframe" tarafından temsil edilen yığın çerçevesi etkin değilse, uzaklık yürütülecek sonraki yönerge adresidir. Bu yığın çerçevesi etkin değilse, uzaklık yığın çerçevesi etkinleştirildiğinde yürütülecek sonraki yönerge adresidir.  
+ Bu "Icordebugnativeframe" tarafından temsil edilen yığın çerçevesini etkin olursa, uzaklık yürütülmesi gereken sonraki yönergeyi adresidir. Bu yığın çerçevesi etkin değilse, uzaklık yığın çerçevesinin yeniden etkinleştirildiğinde yürütülecek sonraki yönergeyi adresidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

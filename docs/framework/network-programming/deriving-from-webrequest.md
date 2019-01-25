@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717460"
 ---
 # <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
 <xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  
@@ -27,7 +27,7 @@ ms.locfileid: "53147554"
 ## <a name="iwebrequest-create-method"></a>IWebRequest oluşturma yöntemi  
  <xref:System.Net.IWebRequestCreate.Create%2A> Yöntemi, protokole özgü sınıfının yeni bir örneğini başlatmak için sorumludur. Yeni bir **WebRequest** oluşturulan <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi kayıtlı URI ön ekine sahip istenen URI'yi eşleşen **RegisterPrefix** yöntemi. **Oluştur** uygun protokole özgü alt yöntemi döndürmelidir alt başlatılmış bir örneğini özellikli herhangi gerek kalmadan protokol için bir standart istek/yanıt işlem gerçekleştirme protokole özgü alanlar değiştirdi.  
   
-## <a name="connectiongroupname-property"></a>ConnectionGroupName özelliği  
+## <a name="connectiongroupname-property"></a>ConnectionGroupName Property  
  <xref:System.Net.WebRequest.ConnectionGroupName%2A> Özelliği, birden çok isteği tek bir bağlantı üzerinden yapılabilir, böylece bağlantı için bir kaynak grubunun adı için kullanılır. Bağlantı Paylaşımı uygulamak için havuzu ve bağlantıları atayarak protokole özgü yöntemi kullanmanız gerekir. Örneğin, sağlanan <xref:System.Net.ServicePointManager> sınıfın uyguladığı için paylaşım bağlantısı <xref:System.Net.HttpWebRequest> sınıfı. **ServicePointManager** sınıfı oluşturur bir <xref:System.Net.ServicePoint> , her bağlantı grubu için belirli bir sunucu için bir bağlantı sağlar.  
   
 ## <a name="contentlength-property"></a>ContentLength özelliğinin  
@@ -88,9 +88,9 @@ ms.locfileid: "53147554"
   
  **GetResponse yanıtına** yöntemdir uygun bir oluşturmaktan sorumlu **WebResponse** gelen yanıtı içeren alt.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [WebResponse’tan Türetme](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [WebResponse’tan Türetme](../../../docs/framework/network-programming/deriving-from-webresponse.md)

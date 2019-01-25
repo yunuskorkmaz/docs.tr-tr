@@ -10,43 +10,43 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 6e1eda09784814d139ef94b6720b538aef30e5e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724820"
 ---
 # <a name="value-comparisons-visual-basic"></a>Değer Karşılaştırmaları (Visual Basic)
-Karşılaştırma işleçleri sayısal değişkenlerin değerleri karşılaştırma ifadeleri oluşturmak için kullanılabilir. Bu deyimler dönüş bir `Boolean` değeri temel karşılaştırma doğru olup ya da yanlış. Bu tür bir ifade örnekleri aşağıdaki gibidir.  
+Karşılaştırma işleçleri, sayısal değişkenlerin değerleri karşılaştırma ifadeleri oluşturmak için kullanılabilir. Bu ifadeler dönüş bir `Boolean` değerine göre karşılaştırma doğru olmasına göre ya da yanlış. Böyle bir ifade örnekleri aşağıdaki gibidir.  
   
  `45 > 26`  
   
  `26 > 45`  
   
- İlk ifade değerlendiren `True`, 45 26 büyük olduğu için. İkinci örnek değerlendiren `False`26 45 büyük olmadığından.  
+ İlk ifadenin değerlendirdiği `True`45 26 büyük olduğu için. İkinci örnek değerlendiren `False`, 26 45 büyük değil.  
   
- Bu şekilde sayısal ifadeler de karşılaştırabilirsiniz. Karşılaştırma ifadeleri kendilerini aşağıdaki örnekteki gibi karmaşık ifadeler olabilir.  
+ Sayısal ifadeler bu şekilde de karşılaştırabilirsiniz. Aşağıdaki örnekte olduğu gibi karmaşık ifadeler, karşılaştırma ifadeleri kendilerini olabilir.  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- Önceki karmaşık ifade değişmez değerleri, değişkenler ve işlev çağrılarını içerir. Her iki tarafında ifadeleri karşılaştırma işlecinin değerlendirilir ve kullanılarak elde edilen değerleri karşılaştırılır `>=` karşılaştırma işleci. Sol tarafındaki ifade değerini değerinden daha büyük ya da için sağ taraftaki ifadenin değerine eşit, tüm ifadeyi hesaplar `True`; Aksi takdirde için değerlendirir `False`.  
+ Önceki karmaşık ifadesi, değişmez değerleri ve değişkenleri işlev çağrılarını içerir. Karşılaştırma işlecinin her iki tarafında ifadeler değerlendirilir ve elde edilen değerleri, ardından kullanılarak karşılaştırılır `>=` karşılaştırma işleci. Sol tarafta bir ifadenin değerine büyüktür veya sağdaki ifadesinin değerine eşit tüm ifadenin değerlendirdiği `True`; Aksi takdirde olarak değerlendirilen `False`.  
   
- Değerleri karşılaştırma ifadeleri en sık kullanıldığı `If...Then` aşağıdaki örnekteki gibi kurulumlarını.  
+ Değerleri karşılaştırma ifadeleri en yaygın olarak kullanılır `If...Then` yapılarını aşağıdaki örnekte olduğu gibi.  
   
  [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
- `=` İşaretidir atama işleci yanı sıra bir karşılaştırma işleci. Aşağıdaki örnekte gösterildiği gibi soldaki değerin sağdaki değerine eşit olup olmadığını bir karşılaştırma işleci kullanıldığında, değerlendirir.  
+ `=` İşaretidir bir atama işleci yanı sıra bir karşılaştırma işleci. Aşağıdaki örnekte gösterildiği gibi soldaki değerin sağdaki değerine eşit olup olmadığını bir karşılaştırma işleci kullanıldığında, değerlendirir.  
   
  [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
- Bir karşılaştırma ifadesi yerde kullanabilir bir `Boolean` değerdir gerekli, gibi bir `If`, `While`, `Loop`, veya `ElseIf` deyimi, ya da atama veya bir değere geçirme bir `Boolean` değişkeni. Aşağıdaki örnekte, karşılaştırma ifadesi tarafından döndürülen değer atanmış bir `Boolean` değişkeni.  
+ Karşılaştırma ifadesindeki her yerde kullanabilirsiniz bir `Boolean` değerdir gerekli, olduğu gibi bir `If`, `While`, `Loop`, veya `ElseIf` deyimi, atama veya bir değere geçirerek bir `Boolean` değişkeni. Aşağıdaki örnekte, karşılaştırma ifadesi tarafından döndürülen değer atanmış bir `Boolean` değişkeni.  
   
  [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Nasıl yapılır: Sayısal Değerleri Hesaplama](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
- [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Nasıl yapılır: Sayısal değerleri hesaplama](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)

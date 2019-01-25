@@ -5,52 +5,52 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: b706ec6236b7e3e10865eee9fd32c2eb5a5e7db2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545231"
 ---
 # <a name="calendar"></a>Takvim
-Bir takvim visual Takvim görüntü kullanarak bir tarih seçmek bir kullanıcı sağlar.  
+Bir takvim görsel bir takvim görünümünü kullanarak bir tarih seçmek üzere bir kullanıcı etkinleştirir.  
   
- A <xref:System.Windows.Controls.Calendar> denetimi kendi başına ya da aşağı açılan bir parçası olarak kullanılabilir bir <xref:System.Windows.Controls.DatePicker> denetim. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.DatePicker>.  
+ A <xref:System.Windows.Controls.Calendar> denetimi kendi ya da açılan bir parçası olarak kullanılabilir bir <xref:System.Windows.Controls.DatePicker> denetimi. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.DatePicker>.  
   
- Aşağıdaki çizimde iki gösterir <xref:System.Windows.Controls.Calendar> denetimleri, biri seçimleri ve Kararma tarihleri diğeri olmadan.  
+ Aşağıdaki iki resimde <xref:System.Windows.Controls.Calendar> seçimleri ve Kararma tarihleri biriyle ve görüntü olmadan denetler.  
   
  ![Takvim denetimlerinde](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Takvim denetimleri  
   
- Aşağıdaki tabloda genellikle ilişkili olan görevler hakkında bilgi sağlayan <xref:System.Windows.Controls.Calendar>.  
+ Aşağıdaki tabloda, genellikle ilişkilendirilmiş olan görevler hakkında bilgi sağlar <xref:System.Windows.Controls.Calendar>.  
   
 |Görev|Uygulama|  
 |----------|--------------------|  
 |Tarihleri belirtin, seçilemez.|Kullanım <xref:System.Windows.Controls.Calendar.BlackoutDates%2A> özelliği.|  
-|Sahip <xref:System.Windows.Controls.Calendar> bir ay, bir yılın tamamı veya bir on görüntüleme.|Ayarlama <xref:System.Windows.Controls.Calendar.DisplayMode%2A> ay, yıl veya on özelliğine.|  
-|Kullanıcı bir tarih olup seçebilir, bir tarih aralığı veya birden çok aralık tarihleri belirtin.|Kullanım <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
+|Sahip <xref:System.Windows.Controls.Calendar> görünen bir ay, tüm bir yıl veya on yıl.|Ayarlama <xref:System.Windows.Controls.Calendar.DisplayMode%2A> ay, yıl veya on özelliği.|  
+|Kullanıcının bir tarih seçip olup, bir tarih aralığı veya birden çok aralık tarihleri belirtin.|Kullanım <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
 |Tarih aralığını belirtin, <xref:System.Windows.Controls.Calendar> görüntüler.|Kullanım <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> ve <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> özellikleri.|  
-|Geçerli tarih vurgulanmış olup olmadığını belirtin.|Kullanım <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> özelliği. Varsayılan olarak, <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> olan `true`.|  
-|Boyutu değiştirme <xref:System.Windows.Controls.Calendar>.|Kullanım bir <xref:System.Windows.Controls.Viewbox> veya <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliğine bir <xref:System.Windows.Media.ScaleTransform>. Ayarlarsanız unutmayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerini bir <xref:System.Windows.Controls.Calendar>, gerçek Takvim boyutunu değiştirmez.|  
+|Geçerli tarihi vurgulanır olup olmadığını belirtin.|Kullanım <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> özelliği. Varsayılan olarak, <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> olduğu `true`.|  
+|Boyutunu değiştirme <xref:System.Windows.Controls.Calendar>.|Kullanım bir <xref:System.Windows.Controls.Viewbox> veya <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliğini bir <xref:System.Windows.Media.ScaleTransform>. Ayarlarsanız unutmayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerini bir <xref:System.Windows.Controls.Calendar>, gerçek Takvim boyutunu değiştirmez.|  
   
- <xref:System.Windows.Controls.Calendar> Denetim klavye veya fare kullanarak temel gezinme sağlar. Aşağıdaki tabloda, klavye gezinti özetler.  
+ <xref:System.Windows.Controls.Calendar> Denetim, klavye veya fare kullanarak temel gezinme sağlar. Klavye ile gezinme aşağıdaki tabloda özetlenmiştir.  
   
-|Tuş bileşimini|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Eylem|  
+|Tuş bileşimi|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Eylem|  
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
-|OK|<xref:System.Windows.Controls.CalendarMode.Month>|Değişiklikleri <xref:System.Windows.Controls.Calendar.SelectedDate%2A> özelliği, <xref:System.Windows.Controls.Calendar.SelectionMode%2A> özelliği ayarlı değil <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
-|OK|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> özelliği. Unutmayın <xref:System.Windows.Controls.Calendar.SelectedDate%2A> değişmez.|  
-|OK|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A>. Unutmayın <xref:System.Windows.Controls.Calendar.SelectedDate%2A> değişmez.|  
-|SHIFT + OK|<xref:System.Windows.Controls.CalendarMode.Month>|Varsa <xref:System.Windows.Controls.Calendar.SelectionMode%2A> ayarlanmazsa <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> veya <xref:System.Windows.Controls.CalendarSelectionMode.None>, seçili tarih aralığını genişletir.|  
-|GİRİŞ|<xref:System.Windows.Controls.CalendarMode.Month>|Değişiklikleri <xref:System.Windows.Controls.Calendar.SelectedDate%2A> geçerli ayın ilk günü için.|  
-|GİRİŞ|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> yılın ilk ayı için. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
-|GİRİŞ|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> on ilk yılda. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
+|OKU|<xref:System.Windows.Controls.CalendarMode.Month>|Değişiklikleri <xref:System.Windows.Controls.Calendar.SelectedDate%2A> özelliği varsa <xref:System.Windows.Controls.Calendar.SelectionMode%2A> özelliği ayarlanmamış <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
+|OKU|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değişiklikleri <xref:System.Windows.Controls.Calendar.DisplayDate%2A> özelliği. Unutmayın <xref:System.Windows.Controls.Calendar.SelectedDate%2A> değişmez.|  
+|OKU|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A>. Unutmayın <xref:System.Windows.Controls.Calendar.SelectedDate%2A> değişmez.|  
+|SHIFT + OK|<xref:System.Windows.Controls.CalendarMode.Month>|Varsa <xref:System.Windows.Controls.Calendar.SelectionMode%2A> ayarlı değil <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> veya <xref:System.Windows.Controls.CalendarSelectionMode.None>, seçili tarih aralığı genişletir.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Month>|Değişiklikleri <xref:System.Windows.Controls.Calendar.SelectedDate%2A> geçerli ayın ilk gününe kadar günleri.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değişiklikleri <xref:System.Windows.Controls.Calendar.DisplayDate%2A> yılın ilk ay için. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> ilk on yıllık için. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
 |END|<xref:System.Windows.Controls.CalendarMode.Month>|Değişiklikleri <xref:System.Windows.Controls.Calendar.SelectedDate%2A> geçerli ayın son günü.|  
-|END|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> yılın son ayı. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
-|END|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> on son yılda. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
-|CTRL + YUKARI OK|tüm|Geçiş için sonraki büyük <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Varsa <xref:System.Windows.Controls.Calendar.DisplayMode%2A> zaten <xref:System.Windows.Controls.CalendarMode.Decade>, eylem yok.|  
-|CTRL + AŞAĞI OK|tüm|Anahtarları sonraki küçük <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Varsa <xref:System.Windows.Controls.Calendar.DisplayMode%2A> zaten <xref:System.Windows.Controls.CalendarMode.Month>, eylem yok.|  
-|Ara çubuğu veya ENTER|<xref:System.Windows.Controls.CalendarMode.Year> Veya <xref:System.Windows.Controls.CalendarMode.Decade>|Anahtarlar <xref:System.Windows.Controls.Calendar.DisplayMode%2A> için <xref:System.Windows.Controls.CalendarMode.Month> veya <xref:System.Windows.Controls.CalendarMode.Year> odaklanmış öğesi tarafından temsil edilen.|  
+|END|<xref:System.Windows.Controls.CalendarMode.Year>|Ayın değişiklikleri <xref:System.Windows.Controls.Calendar.DisplayDate%2A> yılın son ayını için. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
+|END|<xref:System.Windows.Controls.CalendarMode.Decade>|Yıl değerini değiştirir <xref:System.Windows.Controls.Calendar.DisplayDate%2A> son on yılın için. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Değişmez.|  
+|CTRL + YUKARI OK|Tüm|Anahtarları sonraki daha büyük <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Varsa <xref:System.Windows.Controls.Calendar.DisplayMode%2A> zaten <xref:System.Windows.Controls.CalendarMode.Decade>, eylem yok.|  
+|CTRL + AŞAĞI OK|Tüm|Anahtarları sonraki küçük <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Varsa <xref:System.Windows.Controls.Calendar.DisplayMode%2A> zaten <xref:System.Windows.Controls.CalendarMode.Month>, eylem yok.|  
+|BOŞLUK veya ENTER|<xref:System.Windows.Controls.CalendarMode.Year> veya <xref:System.Windows.Controls.CalendarMode.Decade>|Anahtarları <xref:System.Windows.Controls.Calendar.DisplayMode%2A> için <xref:System.Windows.Controls.CalendarMode.Month> veya <xref:System.Windows.Controls.CalendarMode.Year> odaklanmış öğesi tarafından temsil edilir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetimler](../../../../docs/framework/wpf/controls/index.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)

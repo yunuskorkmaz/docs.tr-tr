@@ -2,12 +2,12 @@
 title: Dizini Oluşturulan Özellikler
 description: Dizinli Özellikler hakkında bilgi edinin F#, sıralı verilerine dizi benzeri erişim verin.
 ms.date: 10/17/2018
-ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a092da753acacf80807d145051a719df2d3e1520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550974"
 ---
 # <a name="indexed-properties"></a>Dizini Oluşturulan Özellikler
 
@@ -58,13 +58,29 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>Birden çok dizin değişkenleriyle dizini oluşturulan özellikler
+## <a name="indexed-properties-with-multiple-index-values"></a>Birden çok dizin değerlerle dizini oluşturulan özellikler
 
-Dizinli Özellikler birden fazla dizin değişkeni olabilir. Özelliği kullanıldığında, bu durumda, değişkenlerin virgülle ayrılır. Böyle bir özellik kümesi yöntemi ilki anahtarları içeren bir tanımlama grubu, ve ikinci ayarlanan değer iki curried bağımsız olması gerekir.
+Dizinli Özellikler birden fazla dizin değeri olabilir. Özelliği kullanıldığında, bu durumda, değerler virgülle ayrılır. Böyle bir özellik kümesi yöntemi bilgisayarının ilki anahtarları içeren bir tanımlama grubu ve ikinci değer ayarlamak için iki curried bağımsız olması gerekir.
 
-Aşağıdaki kod, birden çok dizin değişkenleri içeren bir dizini oluşturulmuş özelliğe kullanımını gösterir.
+Aşağıdaki kod, birden çok dizin değerlerini içeren bir dizini oluşturulmuş özelliğe kullanımını gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
+```fsharp
+open System.Collections.Generic
+
+/// Basic implementation of a sparse matrix basedon a dictionary
+type SparseMatrix() =
+    let table = new Dictionary<(int * int), float>()
+    member __.Item
+        // Because the key is comprised of two values, 'get' has two index values
+        with get(key1, key2) = table.[(key1, key2)]
+
+        // 'set' has two index values and a new value to place in the key's position
+        and set (key1, key2) value = table.[(key1, key2)] <- value
+
+let sm = new SparseMatrix()
+for i in 1..1000 do
+    sm.[i, i] <- float i * float i
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

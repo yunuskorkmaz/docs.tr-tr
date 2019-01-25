@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2098d5d9ce1c01f232cf2904c1fd3e990dfbe2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d809bbfa17ed9e9ae16505852740e874ca11248c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621792"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum İşlevi
-Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) Belirtilen derlemedeki nesneleri listeleme örneği [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
+Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) nesneleri ile belirtilen derlemedeki numaralandırabilirsiniz örneği [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,33 +42,33 @@ HRESULT CreateAssemblyEnum (
   
 #### <a name="parameters"></a>Parametreler  
  `pEnum`  
- [out] İstenen içeren bir bellek konumunu işaretçi `IAssemblyEnum` işaretçi.  
+ [out] İstenen içeren bir bellek konumuna işaretçi `IAssemblyEnum` işaretçi.  
   
  `pUnkReserved`  
- [in] Gelecekteki genişletilebilirliği için ayrılmış. `pUnkReserved` bir null başvuru olması gerekir.  
+ [in] Sonra genişletilebilmek için ayrılmış. `pUnkReserved` null bir başvuru olmalıdır.  
   
  `pName`  
- [in] `IAssemblyName` İstenen derlemenin. Bu ad numaralandırma filtrelemek için kullanılır. Tüm derlemeleri genel derleme önbelleğinde Numaralandırılacak null olabilir.  
+ [in] `IAssemblyName` İstenen derleme. Bu ad, numaralandırma filtrelemek için kullanılır. Genel derleme önbelleğini tüm derlemeleri numaralandırmak için null olabilir.  
   
  `dwFlags`  
- [in] Numaralandırıcının davranışını değiştirmek için işaretler. Bu parametre tam olarak bir bit içerir [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) numaralandırması.  
+ [in] Numaralandırıcının davranışını değiştirmek için kullanılan bayraklar. Bu parametre içeren tam bir bit [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) sabit listesi.  
   
  `pvReserved`  
- [in] Gelecekteki genişletilebilirliği için ayrılmış. `pvReserved` bir null başvuru olması gerekir.  
+ [in] Sonra genişletilebilmek için ayrılmış. `pvReserved` null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `dwFlags` Parametre içeren tam olarak bir bit `ASM_CACHE_FLAGS` numaralandırması.  
+ `dwFlags` Parametre içeren tam bir bit `ASM_CACHE_FLAGS` sabit listesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

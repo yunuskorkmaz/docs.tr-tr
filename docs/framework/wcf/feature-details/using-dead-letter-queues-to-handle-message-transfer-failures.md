@@ -5,75 +5,75 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b70b7a7849ba0927c8ee4a4903aefc27bfa9d0c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497099"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
-Sıraya alınan iletileri teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen sırada kaydedilir. Başarısız teslim nedenlerden ötürü ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında teslim etmek için bir hata neden olabilir.  
+Kuyruğa alınmış iletiler teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen kuyrukta kaydedilir. Ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında sunmak için bir hata gibi nedenlerle başarısız teslim neden olabilir.  
   
- Alma işlemini yapan uygulamanın bunları zamanında sırasından okumaz, sıraya alınan iletileri uzun süredir kuyrukta kalabileceği. Bu davranış, zamana duyarlı iletileri için uygun olmayabilir. Zamana duyarlı iletileri gerekir süresi dolmadan önce ne kadar süreyle iletiler kuyrukta uygulanıp uygulanamayacağını gösterir sıraya alınan bağlamasında ayarlanan yaşam süresi (TTL) özelliği için bir zaman sahip. Süresi dolan iletileri sahipsiz sıra adı verilen bir özel sıra için gönderilir. İleti ayrıca bir sahipsiz sıraya diğer nedeniyle, bir sıra kotasını gibi veya kimlik doğrulama hatası nedeniyle beklemeye getirilebilir.  
+ Alıcı uygulama bunları zamanında kuyruktan okumaz, kuyruğa alınmış iletiler uzun süredir kuyrukta kalabilir. Bu davranış, zamana duyarlı iletileri için uygun olmayabilir. Zamana duyarlı iletilerin süreleri dolmadan önce ne kadar süreyle iletiler kuyrukta uygulanıp uygulanamayacağını gösterir sıraya alınan bağlamasında yaşam süresi (TTL) özelliği için bir zaman sahip. Süresi dolan iletileri eski ileti sırası adı verilen özel bir kuyruğa gönderilir. İleti kimlik doğrulama hatası nedeniyle veya bir kuyruk kotasını gibi başka nedenlerle de edilemeyen kuyrukta konulabilir.  
   
- Genellikle, uygulamaları eski ileti sırası ve hata nedeniyle iletileri okumak için maaş mantığı yazma. Maaş mantığı başarısızlığın nedenini bağlıdır. Örneğin, kimlik doğrulama hatası olması durumunda, iletiyle iliştirilmiş sertifika düzeltin ve iletiyi yeniden gönderin. Hedef sıra kotası üst sınırına ulaşıldığı için teslim başarısız olduysa, kota sorunun çözümlendiğini soluk teslimi yeniden çalıştırmayı deneyin.  
+ Genel olarak, telafi mantığının hatası nedenleri ve eski ileti sırası iletileri okumak için uygulamalar yazın. Hatanın nedenini üzerinde ve telafi mantığının bağlıdır. Örneğin, kimlik doğrulama hatası olması durumunda, iletinin iliştirilmiş sertifika düzeltin ve iletisini yeniden gönder. Hedef kuyruğu kotası üst sınırına ulaşıldığından teslim başarısız olursa, kota sorun çözülmüş umuduyla teslimat yeniden çalıştırmayı deneyin.  
   
- Bu sistemden alınan tüm başarısız iletileri depolandığı bir sistem genelinde sahipsiz sırayı en kuyruk sistemleri var. Message Queuing (MSMQ) iki sistem genelinde sıralarındaki sağlar: işlem sırası ve depolar işlemsel olmayan bir sistem genelinde sahipsiz sıraya teslim edilemedi iletileri depolayan bir işlem sistem genelinde atılacak İşlemsel olmayan bir sıraya teslim edilemedi iletileri. Sonra iki farklı hizmet için iki istemci ileti gönderme ve WCF farklı kuyruklarda göndermek için aynı MSMQ hizmeti paylaşan bu nedenle, sistem sahipsiz sıraya iletileri bir karışımını olması mümkündür. Bu her zaman en uygun değildir. Bazı durumlarda (örneğin, güvenlik), başka bir istemcinin iletileri teslim edilemeyen kuyruktan okumak için bir istemci istemeyebilirsiniz. Paylaşılan bir sahipsiz sırayı Ayrıca, hangi şekilde basımı karşılamayacak kadar pahalı olabilir sahipsiz sıradaki iletilerin sayısına dayalı olarak gönderilen bir ileti bulmak için sırada göz atmak istemcileri gerektirir. Bu nedenle, WCF'de`NetMsmqBinding`, `MsmqIntegrationBinding,` ve üzerinde MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] (bazen bir uygulamaya özgü sahipsiz sırayı adlandırılır) özel bir sahipsiz sırayı sağlayın.  
+ Tüm başarısız iletileri bu sistemden depolandığı bir sistem genelinde eski ileti sırası en kuyruk sistemleri var. Message Queuing (MSMQ) iki sistem genelinde edilemeyen sağlar: işlem sırası ve depolayan bir işlem olmayan sistem genelinde geçerliliğini yitirmiş kuyruk teslim başarısız iletileri depolayan bir işlem sistem genelinde eski ileti sırası işlem olmayan sıraya teslim edilemedi iletileri. Ardından iki istemciler için iki farklı hizmet iletileri gönderen ve bu nedenle farklı kuyruklara wcf'de göndermek için aynı MSMQ hizmeti paylaşan, sistem edilemeyen kuyrukta iletileri bir karışımını olması mümkündür. Bu her zaman en uygun değildir. Bazı durumlarda (örneğin, güvenlik), başka bir istemcinin iletileri teslim edilemeyen kuyruktan okumak için bir istemci istemeyebilir. Paylaşılan bir eski ileti sırası, ayrıca, hangi fazla vakit pahalı olabilir eski ileti sırası iletilerin sayısına dayalı olarak gönderilen bir ileti bulmak için sırada göz atmak istemcileri gerektirir. Bu nedenle, wcf'de`NetMsmqBinding`, `MsmqIntegrationBinding,` ve üzerindeki [!INCLUDE[wv](../../../../includes/wv-md.md)] (bazen bir uygulamaya özgü eski ileti sırası adlandırılır) özel bir eski ileti sırası sağlayın.  
   
- Özel sahipsiz sırayı iletileri göndermek için aynı MSMQ hizmeti paylaşan istemcileri arasında yalıtım sağlar.  
+ Özel teslim edilemeyen kuyruğa ileti göndermek için aynı MSMQ hizmeti paylaşan istemciler arasında yalıtım sağlar.  
   
- Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) tüm kuyruğa alınan istemci uygulamalarının bir sistem genelinde sahipsiz sırayı sağlar. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], WCF her sıraya alınan istemci uygulaması için eski ileti sırası sağlar.  
+ Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) tüm kuyruğa alınan istemci uygulamaları için bir sistem genelinde eski ileti sırası sağlar. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], WCF, eski ileti sırası için her sıraya alınan istemci uygulaması sağlar.  
   
-## <a name="specifying-use-of-the-dead-letter-queue"></a>Sahipsiz Sıra kullanımını belirtme  
- Sahipsiz Sıra gönderen uygulama sıra Yöneticisi'nde ' dir. Süresi dolan veya aktarımı veya teslim başarısız olmuş iletileri depolar.  
+## <a name="specifying-use-of-the-dead-letter-queue"></a>Eski ileti sırası kullanımını belirtme  
+ Gönderen uygulama sıra yöneticisinde bir teslim edilemeyen kuyruğudur. Bu aktarımı veya teslim başarısız olan veya süresi dolmuş olan iletileri depolar.  
   
- Bağlama sahipsiz sırayı özellikleri şunlardır:  
+ Bağlama aşağıdaki eski ileti sırası özelliklere sahiptir:  
   
 -   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
-## <a name="reading-messages-from-the-dead-letter-queue"></a>İletileri teslim edilemeyen sırasından okuma  
- Sahipsiz sıra dışında iletilerini okuyan bir uygulama, aşağıdaki küçük farklılıklar dışında bir uygulama sırasından okuyan bir WCF Hizmeti benzerdir:  
+## <a name="reading-messages-from-the-dead-letter-queue"></a>Teslim edilemeyen kuyruktan iletileri okuma  
+ Geçerliliğini yitirmiş kuyruk iletileri okuyan bir uygulaması aşağıdaki küçük farklılıklar dışında bir uygulama kuyruktan okuyan bir WCF Hizmeti benzer:  
   
--   Sistem işlem teslim edilemeyen kuyruktan iletileri okumak için Tekdüzen Kaynak Tanımlayıcısı (URI) biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
+-   Bir sistem işlem eski ileti sırası iletileri okumak için Tekdüzen Kaynak Tanımlayıcısı (URI) biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
   
--   Sistem işlem olmayan sahipsiz kuyruktan iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; geçersiz.  
+-   Bir sistem işlem olmayan eski ileti sırası iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; teslim edilemeyen iletiler.  
   
--   Özel sahipsiz kuyruktan iletileri okumak için URI form: net.msmq://localhost/private/ olmalıdır\<*özel dlq ad*> Burada *özel dlq ad* özel adıdır sahipsiz sıra.  
+-   Özel teslim edilemeyen kuyruktan iletileri okumak için URI form: net.msmq://localhost/private/ olmalıdır\<*özel dlq adı*> Burada *özel dlq adı* özel adı eski ileti sırası.  
   
- Adresi sıralara hakkında daha fazla bilgi için bkz: [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Adresi kuyruklara hakkında daha fazla bilgi için bkz. [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
- Alıcı WCF yığında üzerinde dinleyen bir hizmet ileti adresinde adresleriyle eşleşir. Adresleri eşleşirse, ileti gönderilir; Aksi durumda, ileti değil gönderilir. Teslim edilemeyen sıradaki iletiler genellikle hizmeti ve eski ileti sırası hizmeti yönlendirildiği bu sorunları sahipsiz sıradan okunurken neden olabilir. Bu nedenle, sahipsiz sırasından okuma hizmetini bir adresi filtresi yüklemelisiniz `ServiceBehavior` alıcıyı bağımsız olarak sıradaki tüm iletileri eşleştirmek için yığın bildirir. Özellikle, eklemelisiniz bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> iletileri teslim edilemeyen sırasından okuma hizmetine parametresi.  
+ WCF yığında alıcı adresi iletideki hizmet dinlediği adresleriyle eşleşir. Adreslerden biri eşleşirse ileti gönderilir; Aksi durumda, ileti değil gönderilir. Geçerliliğini yitirmiş kuyruk iletileri, genellikle hizmet ve eski ileti sırası hizmeti yönlendirildiği edilemeyen kuyruktan okunurken sorun olabilir. Bu nedenle, eski ileti kuyruktan okuma hizmet adresi filtresi yüklemeniz gerekir `ServiceBehavior` alıcıyı bağımsız olarak kuyruğundaki tüm iletileri eşleşmesi için yığın bildirir. Özellikle, eklemelisiniz bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> edilemeyen kuyruktan iletileri okuyan hizmet parametresi.  
   
-## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Zehirli ileti teslim edilemeyen sıradan işleme  
- Zehirli ileti işleme sıralarındaki, bazı koşullar ile kullanılabilir. Alt sıralar sistem sahipsiz sıradan okunurken sistem sıralarından oluşturulamıyor çünkü `ReceiveErrorHandling` ayarlanamıyor `Move`. Not özel sahipsiz kuyruktan okuyorsanız Alt sıralar olabilir ve bu nedenle, `Move` zehir iletisi için geçerli bir eğilimi.  
+## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Zehirli ileti işleme eski ileti sırası  
+ Zehirli ileti işleme edilemeyen, bazı koşullar ile kullanılabilir. Alt kuyruk sistem edilemeyen kuyruktan okurken sistem sıralarından oluşturulamıyor çünkü `ReceiveErrorHandling` ayarlanamıyor `Move`. Not özel teslim edilemeyen kuyruktan okuyorsanız, alt sıralar olabilir ve bu nedenle, `Move` zehirli ileti için geçerli bir eğilimi.  
   
- Zaman `ReceiveErrorHandling` ayarlanır `Reject`, özel sahipsiz sıra zehir iletisi okunurken sistem sahipsiz sıraya konur. Sistem sahipsiz sıradan okuma ise, iletiyi (silinen) bırakılır. MSMQ düşme bir sistem sahipsiz kuyruktan Reddet (ileti temizler).  
+ Zaman `ReceiveErrorHandling` ayarlanır `Reject`, zehirli ileti özel sahipsiz sıra okunurken sistem sahipsiz sıraya koyduğunuzda. İleti, sistem edilemeyen kuyruktan okuma, (Temizlenen) bırakılır. MSMQ düşme bir sistem edilemeyen kuyruktan bir reddetme (ileti temizler).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sahipsiz sıra oluşturma ve onu süresi dolan iletileri işlemek için nasıl kullanılacağını gösterir. Örnek örnekte dayalı [nasıl yapılır: WCF uç noktaları Exchange sıraya alınan iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). Aşağıdaki örnek, sipariş işleme her uygulama için bir sahipsiz sırayı kullanan hizmet için istemci kodu yazma gösterilmektedir. Bu örnek ayrıca sahipsiz sıraya alınan iletileri işlemek nasıl gösterir.  
+ Aşağıdaki örnek, geçerliliğini yitirmiş kuyruk oluşturma ve bunu süresi dolan iletileri işlemek için nasıl kullanılacağını gösterir. Örneğin, örnekte dayalı [nasıl yapılır: Exchange ileti WCF uç noktaları ile kuyruğa alınan](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). Aşağıdaki örnek, sipariş işleme her uygulama için eski ileti sırası kullanan hizmet için istemci kodu yazma işlemi gösterilmektedir. Örnek ayrıca eski ileti sırası iletileri işlemek nasıl gösterir.  
   
- Her uygulama için sahipsiz sırayı belirten bir istemci için kod aşağıda verilmiştir.  
+ Her uygulama için bir sahipsiz sırayı belirten bir istemci için kod aşağıda verilmiştir.  
   
  [!code-csharp[S_DeadLetter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/client.cs#1)]
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
- İstemci yapılandırma dosyası için kod aşağıda verilmiştir.  
+ İstemci yapılandırma dosyası için kodu verilmiştir.  
   
   
   
- Sahipsiz sıraya alınan iletileri işleme bir hizmet için kod aşağıda verilmiştir.  
+ Teslim edilemeyen bir kuyruktan ileti işleme bir hizmet için kod aşağıda verilmiştir.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
- Sahipsiz Sıra hizmet yapılandırma dosyası için kod aşağıda verilmiştir.  
+ Eski ileti sırası hizmeti yapılandırma dosyası için kodu verilmiştir.  
   
   
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

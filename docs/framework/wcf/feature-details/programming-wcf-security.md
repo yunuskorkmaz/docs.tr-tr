@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699473"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevlerini açıklar. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, toplu olarak bilinen içermektedir *aktarım güvenliği*. Bu konuda, yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); içermez Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -35,7 +35,7 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
   
     1.  `Transport`  
   
-         Aktarım güvenliği seçtiğiniz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizma) kaldırılır. Genel olarak bakıldığında, aktarım güvenliği ana avantajı, hangi aktarım ne olursa olsun, kullandığınız iyi aktarım hızı sunan olmanızdır. Ancak, iki sınırlamalara sahiptir: aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ilk sunucudur. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetleriyle gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. Hangi aktarım kullanılacak hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aktarım güvenliği kullanma hakkında daha fazla bilgi için bkz. [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Aktarım güvenliği seçtiğiniz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizma) kaldırılır. Genel olarak bakıldığında, aktarım güvenliği ana avantajı, hangi aktarım ne olursa olsun, kullandığınız iyi aktarım hızı sunan olmanızdır. Ancak, iki sınırlamalara sahiptir: İlk aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ' dir. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetleriyle gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. Hangi aktarım kullanılacak hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aktarım güvenliği kullanma hakkında daha fazla bilgi için bkz. [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
@@ -101,6 +101,6 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

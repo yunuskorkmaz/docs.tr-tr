@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9e15aefd4a66eac98b679e60c628f90149fe908a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520860"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Bu örnek, bir özel Protokolü kanalı HTTP tanımlama bilgileri oturum yönetimi için kullanılacak yapı gösterilmiştir. Bu kanal, Windows Communication Foundation (WCF) Hizmetleri ile ASMX istemciler veya WCF istemcileri ve ASMX hizmetleri arasında iletişimi sağlar.  
@@ -170,4 +170,4 @@ Press <ENTER> to terminate client.
   
 4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

@@ -10,17 +10,17 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad74eeb4deeae73be40b3a0bc0f6a18ec2299780
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 062229245e3ae209de0eda65d4be59e286f4da7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517753"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted yöntemi
 [.NET Framework 4.7 ve sonraki sürümlerinde desteklenen]  
   
-Profil Oluşturucu JIT derleme dinamik yönteminin başlatıldı her bildirir.  
+Dinamik bir yöntem JIT derlemesi başladı zaman profil oluşturucu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,35 +35,35 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 #### <a name="parameters"></a>Parametreler  
 [in] `functionId`  
-Bellek içi işlevi için hangi JIT derleme başladı tanımlayıcısı.   
+Bellek içi işlev için hangi JIT derleme başlatıldığında tanımlayıcısı.   
 
 [in] `fIsSafeToBlock`   
-`true` engelleme ten bu geri dönmek çağıran iş parçacığı beklemek çalışma zamanı yaratabilir belirtmek için; `false` engelleme işlemi çalışma zamanının etkilemez belirtmek için.  
+`true` Bu geri çağrısından döndürmek çağıran iş parçacığını beklemek çalışma zamanı engelleme neden olabileceğini göstermek için; `false` engelleme zamanının işlemi etkilemez belirtmek için.  
 
 [in] `pILHeader`    
-Bir işaretçi yöntemin IL üstbilgisinin ilk bayta.   
+Yöntemin IL üstbilgi ilk baytına bir işaretçi.   
 
 [in] `cbILHeader`    
-IL üstbilgisinde bayt sayısı. 
+IL üst bilgisindeki bayt sayısı. 
 
 ## <a name="remarks"></a>Açıklamalar  
 
-Dinamik bir yöntem JIT derlenmiş olduğunda bu geri çağırma tetiklenir. Bu, çeşitli IL saplamalar ve LCG yöntemleri içerir. Profil Oluşturucu yazıcılarının kullanıcılara derlenmiş yöntemini belirlemek için yeterli bilgi sağlamak için kendi hedeftir.
+Bu geri çağırma JIT olarak derlenmiş bir dinamik yöntem olduğunda tetiklenir. Bu, çeşitli IL saptamalar ve LCG yöntemleri içerir. Profil Oluşturucu yazarları kullanıcılara derlenmiş yöntemi tanımlamak için yeterli bilgi sağlamak için hedefi sağlamaktır.
 
 > [!NOTE]
-> `functionId` dinamik yöntemler meta verisi yok olduğundan değerleri kendi meta veri simgesi çözümlemek için kullanılamaz.
+> `functionId` dinamik yöntemler meta veri olduğundan değerleri kendi meta veri belirteçleri için çözümlemek için kullanılamaz.
 
-`pILHeader` İşaretçidir yalnızca geçerli sırasında geri çağırma.
+`pILHeader` İşaretçisi, yalnızca geçerli sırasında geri çağırma.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DynamicMethodJITCompilationFinished yöntemi](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)  
- [ICorProfilerCallback8 arabirimi](icorprofilercallback8-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DynamicMethodJITCompilationFinished Metodu](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8 Arabirimi](icorprofilercallback8-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722652"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources Yöntemi
-Bir işaretçi geçerli derleme bildiriminde başvurulan kaynaklar için bir numaralandırıcı alır.  
+Bir işaretçi geçerli derleme bildiriminde atıf yapılan kaynakları için bir numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT EnumManifestResources (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu bir null olmalıdır değeri `EnumManifestResources` yöntemi ilk kez çağrılır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu boş olmalıdır ne zaman değer `EnumManifestResources` yöntemi ilk kez çağrılır.  
   
  `rManifestResources`  
- [out] Depolamak için kullanılan dizi `mdManifestResource` meta veri belirteçleri.  
+ [out] Depolamak için kullanılan bir dizi `mdManifestResource` meta veri belirteçleri.  
   
  `cMax`  
- [in] En fazla sayısını `mdManifestResource` yerleştirilebilir belirteçleri `rManifestResources`.  
+ [in] En fazla `mdManifestResource` yerleştirilebilir belirteçleri `rManifestResources`.  
   
  `pcTokens`  
- [out] Sayısı `mdManifestResource` belirteçleri gerçekten yerleştirilen `rManifestResources`.  
+ [out] Sayısını `mdManifestResource` belirteçleri gerçekten yerleştirilen `rManifestResources`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -59,13 +59,13 @@ HRESULT EnumManifestResources (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

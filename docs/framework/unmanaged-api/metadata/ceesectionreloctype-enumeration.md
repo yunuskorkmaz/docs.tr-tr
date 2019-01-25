@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: babd7d87f1bb6f238c347d68814a3ecdaef64b40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1541c6fa2b1d307fc8e854a67b7cc3068b7bb4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580726"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType Numaralandırması
-Türü etkilemek için değerler sağlar `reloc` çağrıda yayılan yönerge [Iceegen::addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Türünü etkilemek için değerler sağlayan `reloc` çağrıda yayılan yönerge [Iceegen::addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,31 +55,31 @@ typedef enum  {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`srRelocAbsolute`|Yalnızca bir bölüm göreli oluşturur `reloc`, gönderen bir .reloc bölüme hiçbir şey yok.|  
-|`srRelocHighLow`|Oluşturan bir `reloc` işaretçi ölçekli konumu. Platforma bağlı olarak bu BASED_HIGHLOW veya BASED_DIR64 uygulamasına dönüştürülür.|  
-|`srRelocHighAdj`|Oluşturan bir `reloc` en üst burada 16 bit alt dahil edilmiştir .reloc tablosundaki Sonraki sözcüğü 32-bit sayının 16 bit.|  
-|`srRelocMapToken`|Hiçbir şey .reloc bölüme gönderme bir belirteç harita yeniden konumlandırma oluşturur.|  
-|`srRelocRelative`|Değer göreli adresi düzeltmesi olduğunu gösterir.|  
-|`srRelocFilePos`|Yalnızca bir bölüm göreli oluşturur `reloc`, gönderen bir .reloc bölüme hiçbir şey yok. Bu `reloc` bölümünde, bölümün sanal adres dosya konumuna göre değil.|  
-|`srRelocCodeRelative`|Kod göreli adresi düzeltmesi belirtir.|  
-|`srRelocIA64Imm64`|Oluşturan bir `reloc` bir IA64 bir 64 bit adresi için `movl` yönergesi.|  
-|`srRelocDir64`|Oluşturan bir `reloc` bir 64-bit adresi için.|  
-|`srRelocIA64PcRel25`|Oluştur bir `reloc` bir IA64 bir 25 bit PC göreli adresi için `br.call` yönergesi.|  
-|`srRelocIA64PcRel64`|Oluşturan bir `reloc` bir IA64 bir 64-bit PC göreli adresi için `brl.call` yönergesi.|  
-|`srRelocAbsoluteTagged`|30 bit'lik bir bölüm-göreli oluşturur `reloc`, etiketli işaretçi değerleri için kullanılır.|  
-|`srRelocSentinel`|Bu numaralandırma herhangi eklemeler sağlamaya yardımcı olmak için bir sentinel değer iç ağa yansıtılır `reloc` adı dizi.|  
-|`srNoBaseReloc`|Bir taban yayma değil belirtir `reloc`.|  
-|`srRelocPtr`|Bellek öncesi düzeltmesi içeriğinin bir bölümü yerine bir işaretçi olduğunu belirten bir değer uzaklığı.|  
+|`srRelocHighLow`|Oluşturur bir `reloc` işaretçi boyutlu konumu. Platforma bağlı olarak bu BASED_HIGHLOW ya da BASED_DIR64 dönüştürülür.|  
+|`srRelocHighAdj`|Oluşturur bir `reloc` üst burada alt 16 bit dahil edilecek .reloc tabloda sonraki sözcüğe 32 bit sayı, 16 bit için.|  
+|`srRelocMapToken`|Hiçbir şey .reloc bölüme gönderirken bir belirteç Haritası yeniden konumlandırma oluşturur.|  
+|`srRelocRelative`|Göreli adres düzeltme değeri olduğunu gösterir.|  
+|`srRelocFilePos`|Yalnızca bir bölüm göreli oluşturur `reloc`, gönderen bir .reloc bölüme hiçbir şey yok. Bu `reloc` bölümünde, sanal adres bölümün göreli dosya konumu.|  
+|`srRelocCodeRelative`|Bir kod göreli adres düzeltmesi belirtir.|  
+|`srRelocIA64Imm64`|Oluşturur bir `reloc` bir IA64 bir 64 bit adresi `movl` yönergesi.|  
+|`srRelocDir64`|Oluşturur bir `reloc` 64-bit adresi.|  
+|`srRelocIA64PcRel25`|Oluşturmak bir `reloc` bir IA64 25-bit bir PC göreli adresi `br.call` yönergesi.|  
+|`srRelocIA64PcRel64`|Oluşturur bir `reloc` bir IA64 bir 64 bit bilgisayar göreli adresi `brl.call` yönergesi.|  
+|`srRelocAbsoluteTagged`|30 bit'lik bir bölümü-göreli oluşturur `reloc`etiketli işaretçi değerleri için kullanılır.|  
+|`srRelocSentinel`|Bu sabit listesi üzerindeki herhangi bir ek sağlamaya yardımcı olmak için bir sentinel değer iç ağa yansıtılır `reloc` ad dizisi.|  
+|`srNoBaseReloc`|Temel yayma değil belirtir `reloc`.|  
+|`srRelocPtr`|Bellek öncesi düzeltme içeriğinin bir bölüm yerine bir işaretçi olduğunu belirten bir değer uzaklığı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
- [AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: a601fd6779a4d912166366652435aff9ae37613f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d30e414dd83e596da6415cc455c599820a22f3e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689961"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme
 Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Controls.Control.BorderThickness%2A> özelliği bir <xref:System.Windows.Controls.Border>.  
@@ -29,10 +29,10 @@ Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Contr
   
  Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  
- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [BorderThickness Değerine Animasyon Ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [BorderThickness Değerine Animasyon Ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)

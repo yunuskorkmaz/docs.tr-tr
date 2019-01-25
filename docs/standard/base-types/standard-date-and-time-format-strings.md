@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532204"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -41,19 +41,19 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
 |Biçim belirteci|Açıklama|Örnekler|  
 |----------------------|-----------------|--------------|  
-|"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 15/06/2009 (fr-FR) -><br /><br /> 2009-06-15T13:45:30 2009/06/15 (ja-JP) ->|  
-|"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30 15 Haziran 2009, Pazartesi (en-US) -><br /><br /> 2009-06-15T13:45:30 15 июня 2009 г ->. (ru-RU)<br /><br /> 2009-06-15T13:45:30 Montag, 15 ->. Juni 2009 (de-DE)|  
+|"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
+|"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30 15 Haziran 2009, Pazartesi (en-US) -><br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
 |"f"|Tam tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Tam tarih kısa saat ("f") biçim tanımlayıcısı](#FullDateShortTime).|2009-06-15T13:45:30 ->, 15 Haziran 2009, Pazartesi 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 bey 15 juni 2009 -> 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
 |"F"|Tam tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Tam tarih uzun saat ("F") biçim tanımlayıcısı](#FullDateLongTime).|2009-06-15T13:45:30 ->, 15 Haziran 2009, Pazartesi 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 bey 15 juni 2009 -> 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
-|"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 06/15/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 2009/6/15 13:45 (zh-CN) ->|  
-|"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 06/15/2009-> 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 2009/6/15 13:45:30 (zh-CN) ->|  
-|"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [Ay ("M", "m") biçim tanımlayıcısı](#MonthDay).|2009-06-15T13:45:30 -> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30 15 -&GT;. juni (v-k.)<br /><br /> 2009-06-15T13:45:30 15 Juni (ID) ->|  
-|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [Gidiş dönüş ("O", "o") biçim belirteci](#Roundtrip).|<xref:System.DateTime> Değerler:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (değeri DateTimeKind.Utc)--> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> Değerler:<br /><br /> 2009-06-15T13:45:30-07:00, 2009 '--&GT;-06-15T13:45:30.0000000-07:00|  
+|"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 2009/6/15 13:45 (zh-CN) ->|  
+|"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
+|"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [Ay ("M", "m") biçim tanımlayıcısı](#MonthDay).|2009-06-15T13:45:30 -> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (v-k.)<br /><br /> 2009-06-15T13:45:30 15 Juni (ID) ->|  
+|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [Gidiş dönüş ("O", "o") biçim belirteci](#Roundtrip).|<xref:System.DateTime> Değerler:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> Değerler:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
 |"R", "r"|Desen: RFC1123<br /><br /> Daha fazla bilgi: [RFC1123 ("R", "r") Biçim belirleyicisi](#RFC1123).|2009-06-15T13:45:30 -> Pzt, 15 Haz 2009 20:45:30 GMT|  
-|"s"|Sıralanabilir tarih veya saat deseni.<br /><br /> Daha fazla bilgi: [Sıralanabilir ("s") biçim belirteci](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (değeri DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
+|"s"|Sıralanabilir tarih veya saat deseni.<br /><br /> Daha fazla bilgi: [Sıralanabilir ("s") biçim belirteci](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Kısa bir süre deseni.<br /><br /> Daha fazla bilgi: [Kısa saat ("t") Biçim belirleyicisi](#ShortTime).|2009-06-15T13:45:30 1:45 PM (en-US) -><br /><br /> 2009-06-15T13:45:30 13:45 (hr-HR) -><br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-ÖR)|  
 |"T"|Uzun süre deseni.<br /><br /> Daha fazla bilgi: [Uzun saat ("T") biçim tanımlayıcısı](#LongTime).|2009-06-15T13:45:30 1:45:30 PM (en-US) -><br /><br /> 2009-06-15T13:45:30 13:45:30 (hr-HR) -><br /><br /> 2009-06-15T13:45:30 01:45:30 -> م (ar-ÖR)|  
-|"u"|Evrensel sıralanabilir tarih/saat deseni.<br /><br /> Daha fazla bilgi: [Evrensel sıralanabilir ("u") biçim belirteci](#UniversalSortable).|İle bir <xref:System.DateTime> değeri: 2009-06-15T13:45:30 2009-06-15-&GT; 13:45:30Z<br /><br /> İle bir <xref:System.DateTimeOffset> değeri: 2009-06-15T13:45:30 2009-06-15-&GT; 20:45:30Z|  
+|"u"|Evrensel sıralanabilir tarih/saat deseni.<br /><br /> Daha fazla bilgi: [Evrensel sıralanabilir ("u") biçim belirteci](#UniversalSortable).|İle bir <xref:System.DateTime> değeri: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> İle bir <xref:System.DateTimeOffset> değeri: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
 |"U"|Evrensel tam tarih/saat deseni.<br /><br /> Daha fazla bilgi: [Evrensel tam ("U") Biçim belirleyicisi](#UniversalFull).|2009-06-15T13:45:30 15 Haziran 2009, Pazartesi -> 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> bey 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
 |"Y", "y"|Yıl ay deseni.<br /><br /> Daha fazla bilgi: [Yıl ay ("Y") biçim tanımlayıcısı](#YearMonth).|2009-06-15T13:45:30 -> Haziran, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 juni 2009 (DK da) -><br /><br /> 2009-06-15T13:45:30 Juni 2009 (ID) ->|  
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı.|Çalışma zamanı oluşturur <xref:System.FormatException>.|  
@@ -415,8 +415,8 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
-- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
+- [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Örnek: .NET Framework 4 biçimlendirme yardımcı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

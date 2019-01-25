@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11cf0fadc9142ee291115cf9f0d84e6429834fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596026"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc Arabirimi
-Bellek için yeni bir Microsoft Ara dili (MSIL) işlev gövdesi ayırmak için bir yöntem sağlar.  
+Yeni bir Microsoft Ara dili (MSIL) işlev gövdesi için bellek ayırmak için bir yöntem sağlar.  
   
 > [!NOTE]
->  `IMethodMalloc` Basit bellek ayırıcısı bir arabirimdir. Bellek ayıramadı, ancak boş olmayan sağlar.  
+>  `IMethodMalloc` Basit bellek ayırıcı arabirimidir. Bellek ayıramadı, ancak boş değil sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Yeni bir MSIL işlev gövdesi için belirtilen bir bellek miktarı ayırmaya çalışır.|  
+|[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Yeni bir MSIL işlev gövdesi için belirtilen miktarda bellek ayırmaya çalışır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her ayırıcısı modülü özeldir ve işlev gövdesi modülü tabanı pozitif uzaklığı en olmasını sağlar. Ayırıcı yalnızca bir işlev gövdesi için bellek tahsis için kullanılması gereken şekilde bir modül tabanı yukarıda bellek değerli, olabilir.  
+ Her ayırıcı modülü özgü olan ve işlev gövdesi modülünün temel pozitif bir sapma olmasını sağlar. Yalnızca bir işlev gövdesi için bellek ayırmak için ayırıcı kullanılması gereken şekilde bellek temel bir modülün yukarıda değerli, olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

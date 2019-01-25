@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sağlayıcıyı Uygulama'
+title: 'Nasıl yapılır: Sağlayıcıyı uygulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543795"
 ---
-# <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı Uygulama
-Gözlemci tasarım deseni veri izler ve bildirimleri gönderen bir sağlayıcı bildirimi (geri aramalar) sağlayıcıdan almak, bir veya daha fazla gözlemciler arasındaki bölme işleminin gerektirir. Bu konuda, bir sağlayıcı oluşturmak nasıl ele alınmaktadır. İlgili konu başlığında, [nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md), bir gözlemci oluşturma anlatılmaktadır.  
+# <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı uygulama
+Gözlemci tasarım deseni veri izler ve bildirimleri gönderen bir sağlayıcı bildirimi (geri aramalar) sağlayıcıdan almak, bir veya daha fazla gözlemciler arasındaki bölme işleminin gerektirir. Bu konuda, bir sağlayıcı oluşturmak nasıl ele alınmaktadır. İlgili konu başlığında, [nasıl yapılır: Gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md), bir gözlemci oluşturma anlatılmaktadır.  
   
 ### <a name="to-create-a-provider"></a>Bir sağlayıcı oluşturmak için  
   
@@ -62,7 +62,7 @@ Gözlemci tasarım deseni veri izler ve bildirimleri gönderen bir sağlayıcı 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IObservable%601>  
-- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
-- [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)
+- [Nasıl yapılır: Gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)

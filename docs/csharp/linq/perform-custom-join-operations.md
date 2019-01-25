@@ -3,12 +3,12 @@ title: Özel birleştirme işlemleri (C# üzerinde LINQ)
 description: C# dilinde özel LINQ birleştirme işlemleri gerçekleştirmeyi öğreneceksiniz.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: b04533cb6db8c00f68ef64c034ad57522f8fd3f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616033"
 ---
 # <a name="perform-custom-join-operations"></a>Özel birleştirme işlemleri gerçekleştirme
 
@@ -43,6 +43,6 @@ Aşağıdaki örnekte sorgu iç (sağ taraf) dizisi söz konusu olduğunda join 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil ile Tümleşik Sorgu (LINQ)](index.md)  
-- [join yan tümcesi](../language-reference/keywords/join-clause.md)  
-- [Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)  
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)
+- [join yan tümcesi](../language-reference/keywords/join-clause.md)
+- [Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)

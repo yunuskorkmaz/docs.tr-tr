@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529823"
 ---
 # <a name="assembly-names"></a>Derleme Adları
 Bir derlemenin adı meta verilerinde depolanır ve önemli bir derlemenin kapsamına etkileyebilir ve bir uygulama tarafından kullanılıyor sahiptir. Tanımlayıcı adlı bir derleme, derlemenin adı, kültür, ortak anahtarı ve sürüm numarasını içeren tam bir adı vardır. Görünen ad ve yüklenen derlemeler için kullanılarak elde edilebilir gibi bu sık adlandırılır <xref:System.Reflection.Assembly.FullName%2A> özelliği.  
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Bir katı adlı derlemeyi genel derleme önbelleğine yerleştirirseniz, derlemenin dosya adı (örneğin .exe veya .dll dosya adı uzantısı dahil değil) derleme adı eşleşmelidir. Örneğin, bir derlemenin dosya adı da myAssembly.dll ise, myAssembly derleme adı olmalıdır. Özel derlemeler yalnızca kök uygulama dizininde dağıtılan dosya adından farklı bir derleme adı olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Nasıl yapılır: Bir Bütünleştirilmiş Kodun Tam Adını Belirleme](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
-- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Bir derlemenin tam olarak nitelenmiş adını belirleme](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

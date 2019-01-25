@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: -.NET Framework yönergeleriyle uyumlu olayları yayımlama C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -.NET Framework yönergeleriyle uyumlu olayları yayımlama C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563203"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Nasıl Yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama (C# Programlama Kılavuzu)
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama (C# Programlama Kılavuzu)
 Aşağıdaki yordam standarda olayları ekleme göstermektedir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıflar ve yapılar için desen. Tüm olaylar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıf kitaplığı temel <xref:System.EventHandler> temsilci, olduğu gibi tanımlanır:  
   
 ```csharp  
@@ -74,9 +74,9 @@ public delegate void EventHandler(object sender, EventArgs e);
   
  [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Delegate>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Olaylar](../../../csharp/programming-guide/events/index.md)  
+- <xref:System.Delegate>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Olaylar](../../../csharp/programming-guide/events/index.md)
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)

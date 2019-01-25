@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: WebRequest sınıfını kullanarak veri gönderme'
+title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562910"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl Yapılır: WebRequest sınıfını kullanarak veri gönderme
+# <a name="how-to-send-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme
 Aşağıdaki yordam bir sunucuya veri göndermek için kullanılan adımları açıklar. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır.  
   
 ### <a name="to-send-data-to-a-host-server"></a>Bir konak sunucusuna veri göndermek için  
@@ -255,9 +255,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)  
- [Nasıl Yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620233"
 ---
 # <a name="shapes-how-to-topics"></a>Şekiller ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Shapes.Shape> nesnelerinin ekrana temel şekiller çizmek için.  
+Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Shapes.Shape> ekrana temel şekiller çizmek için nesneleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çokgen Öğe Kullanarak Kapalı Şekil Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
@@ -27,6 +27,6 @@ Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Window
  [Dikdörtgen Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [Satır veya Segment Sonunda Uç Değiştirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Shapes.Shape>  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Shapes.Shape>
+- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

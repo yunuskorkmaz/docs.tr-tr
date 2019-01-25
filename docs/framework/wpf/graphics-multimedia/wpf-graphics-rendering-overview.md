@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603852"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
@@ -25,15 +25,15 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  <xref:System.Windows.Media.Visual> Nesnedir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olan birincil rolü, işleme desteği sağlamak için nesne. Kullanıcı arabirimi denetimleri, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve bunların işleme verileri kalıcı hale getirmeniz için kullanın. <xref:System.Windows.Media.Visual> Nesnesi için destek sağlar:  
   
--   Çıkış görüntü: görselin çizim içeriğini serileştirilmiş kalıcı, işleme.  
+-   Çıkış ekranı: Görselin çizim içeriğini kalıcı olarak işleme seri hale getirilmiş.  
   
--   Dönüştürme seçenekleri: bir görselde dönüşümleri gerçekleştirme.  
+-   Dönüştürme seçenekleri: Bir görselde dönüşümleri gerçekleştirme.  
   
--   Kırpma: bir görsel için kırpma bölgesel destek sağlama.  
+-   Kırpma: Kırpma bölgesini desteği için bir görsel sağlama.  
   
--   İsabet sınaması: bir koordinat veya geometri görsel sınırları içinde yer alan olup olmadığını belirleme.  
+-   Tıklama testi: Bir görsel sınırları içinde bir koordinat veya geometri bulunup bulunmadığını belirleyin.  
   
--   Sınırlayıcı kutusunu hesaplamaları: görsel sınırlayıcı dikdörtgenini belirleme.  
+-   Sınırlama kutusu hesaplama: Bir görsel sınırlayıcı dikdörtgenini belirleme.  
   
  Ancak, <xref:System.Windows.Media.Visual> nesne olmayan işleme özellikleri için destek gibi içermez:  
   
@@ -159,7 +159,7 @@ Görsel ağacı hiyerarşi diyagramı
 Görsel ağaç işleme düzeni diyagramı  
   
 ### <a name="root-visual"></a>Kök Visual  
- **Kök visual** bir görsel ağacı hiyerarşideki en üst öğedir. Kök visual temel sınıfını çoğu uygulamada geçerli <xref:System.Windows.Window> veya <xref:System.Windows.Navigation.NavigationWindow>. Win32 uygulamasında görsel nesneler barındırma, ancak visual kök Win32 penceresinde barındırma en üstteki görsel olacaktır. Daha fazla bilgi için [eğitmen: Win32 uygulamasında görsel nesneler barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ **Kök visual** bir görsel ağacı hiyerarşideki en üst öğedir. Kök visual temel sınıfını çoğu uygulamada geçerli <xref:System.Windows.Window> veya <xref:System.Windows.Navigation.NavigationWindow>. Win32 uygulamasında görsel nesneler barındırma, ancak visual kök Win32 penceresinde barındırma en üstteki görsel olacaktır. Daha fazla bilgi için [Öğreticisi: Win32 uygulamasında görsel nesneler barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Mantıksal ağacı ilişki  
  Mantıksal ağaçta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamanın çalışma zamanında öğelerini temsil eder. Bu ağaç doğrudan değiştiremez ancak uygulama bu görünümü özelliği devralma ve olay yönlendirme anlamak için kullanışlıdır. Görsel ağacı mantıksal ağaç görsel olmayan veri nesneleri gibi temsil edebilen <xref:System.Windows.Documents.ListItem>. Çoğu durumda, mantıksal ağacı çok yakın bir uygulamanın biçimlendirme tanımları eşler. Aşağıdaki kodda gösterildiği bir <xref:System.Windows.Controls.DockPanel> biçimlendirme içinde tanımlanan öğe.  
@@ -257,12 +257,12 @@ Grafikler ve farklı DPI ayarlarıyla metin
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [DrawingVisual Nesnelerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Eğitmen: Win32 Uygulamasında Görsel Nesneler Barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [DrawingVisual Nesnelerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Öğretici: Win32 uygulamasında görsel nesneler barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

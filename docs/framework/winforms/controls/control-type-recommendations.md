@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e3337dddcc39517558cf85af76223306d20d2bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599705"
 ---
 # <a name="control-type-recommendations"></a>Denetim Türü Önerileri
 Geliştirin ve yeni denetimler uygulamak için güç .NET Framework sağlar. Alışık olduğunuz kullanıcı denetimine ek olarak, artık kendi boyama gerçekleştirmek ve devralma yoluyla mevcut denetimleri genişletmek bile mümkün olmayan özel denetimler yazabiliyor de bulabilirsiniz. Denetimi oluşturmak için hangi tür zorlanabilirsiniz. Bu bölümde içinden denetimlerin çeşitli türler arasında devralma işlemi yapabileceğini ve projeniz için seçmek için türü ile ilgili dikkat edilmesi gerekenler verir farklar vurgulanmaktadır.  
@@ -45,40 +45,40 @@ Geliştirin ve yeni denetimler uygulamak için güç .NET Framework sağlar. Al�
   
 -   Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
   
--   [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [İzlenecek yol: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
--   [Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [Nasıl yapılır: Bir denetim için araç kutusu bit eşlemi sağlama](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [Nasıl yapılır: Mevcut Windows Formları denetimlerinden devralma](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [İzlenecek yol: Hata ayıklama özel Windows Forms denetimleri tasarım zamanında](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [Nasıl yapılır: Denetim Sınıfından Devralma](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [Nasıl yapılır: Denetim sınıfından devralma](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Nasıl yapılır: Tasarım Zamanında Denetimi Formların Kenarlarına Hizalama](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [Nasıl yapılır: Tasarım zamanında denetimi formların kenarlarına hizalama](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [Nasıl yapılır: UserControl Sınıfından Devralma](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [Nasıl yapılır: UserControl sınıfından devralma](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [Nasıl yapılır: Windows Forms için Denetimler Yazma](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [Nasıl yapılır: Windows Forms için yazar denetimleri](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
--   [Nasıl yapılır: Bileşik Denetimler Yazma](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [Nasıl yapılır: Bileşik denetimler yazma](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [İzlenecek yol: Visual Basic ile bileşik denetim yazma](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [İzlenecek yol: Visual C# ile bileşik denetim yazma](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
--   [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [Nasıl yapılır: tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Nasıl yapılır: tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

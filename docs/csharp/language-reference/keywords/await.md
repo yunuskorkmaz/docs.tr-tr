@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618980"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
 `await` İşleci awaited görevi tamamlanıncaya kadar yöntemin yürütülmesine askıya alma noktası eklemek için bir zaman uyumsuz yöntemdeki bir göreve uygulanır. Görev, devam eden çalışmayı temsil eder.  
@@ -68,7 +68,7 @@ Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişkenleri ge
 
 Önceki örnekte C# destekleyen 7.1 [ `async` `Main` yöntemi](../../programming-guide/main-and-command-args/index.md). Çünkü daha önceki C# sürümleri döndüren uygulama giriş noktaları desteklemez <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>, uygulayamazsınız `async` değiştiriciyi `Main` yöntemi ve await `GetPageLengthsAsync` yöntem çağrısı. Bu durumda, işaretlenmesini sağlayabilir `Main` yöntemi zaman uyumsuz işlemin değerini alarak bekler <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliği. Bir değeri döndürmeyen görev çağırabilirsiniz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi. Dil sürümü seçme hakkında daha fazla bilgi için bkz: [seçin C# dil sürümü](../configure-language-version.md).
 
-## <a name="see-also"></a>Ayrıca bkz.  
-- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)   
-- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+## <a name="see-also"></a>Ayrıca bkz.
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

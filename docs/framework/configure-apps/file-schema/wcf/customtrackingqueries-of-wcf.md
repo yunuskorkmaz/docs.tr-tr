@@ -2,12 +2,12 @@
 title: WCF &lt;customTrackingQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: f75c6bf50d30da5a136137c858a5cd96ce0783ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f4f6186aa51ef1656f31fb0035f58a07e5c2447b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700799"
 ---
 # <a name="ltcustomtrackingqueriesgt-of-wcf"></a>WCF &lt;customTrackingQueries&gt;
 
@@ -61,7 +61,7 @@ Yok.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>       
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

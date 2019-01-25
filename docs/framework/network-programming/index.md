@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716264"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework'te Ağ Programlaması
 Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tümleştirilebilen katmanlı, genişletilebilir ve yönetilen Internet hizmetleri sağlar. Ağ uygulamalarınız, yeni Internet protokollerinden otomatik olarak yararlanabilmek için takılabilir protokolleri temel alabilir veya ağ ile yuva düzeyinde çalışmak için Windows yuva arabiriminin yönetilen uygulamasını kullanabilir.  
@@ -134,10 +134,10 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Uygulamalar için genişletilmiş koruma kullanarak kimlik doğrulama yapılandırmasına yönelik destek sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar](../../../docs/framework/network-programming/tls.md)  
- [Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [HttpClient örneği](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar](../../../docs/framework/network-programming/tls.md)
+- [Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [HttpClient örneği](https://go.microsoft.com/fwlink/?LinkId=242550)

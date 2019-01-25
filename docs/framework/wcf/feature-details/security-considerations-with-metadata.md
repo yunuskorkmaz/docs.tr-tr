@@ -2,21 +2,21 @@
 title: Meta Veriler Hakkında Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585571"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, yayımlama, alma ve hizmet meta verileri kullanarak güvenlikle ilgili etkileri göz önünde bulundurun.  
   
 ## <a name="when-to-publish-metadata"></a>Ne zaman meta verileri yayımlama  
- WCF hizmetleri varsayılan meta veri yayımlamayın. Bir WCF hizmeti için meta verilerinin açıkça meta veri yayımlama hizmetinize meta veri uç noktalarını ekleyerek etkinleştirmeniz gerekir (bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Meta veri yayımlamayı devre dışı bırakarak, hizmetiniz için saldırı yüzeyini azaltan ve istenmeyen bilgi ifşaatı riskini azaltır. Tüm hizmetler meta verilerini yayımlamanız gerekir. Meta veri yayımlamayı yoksa, devre dışı bırakarak göz önünde bulundurun. Doğrudan kullanarak, hizmet derlemelerden meta verileri ve istemci kodu hala oluşturabilirsiniz Not [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Meta verileri dışarı aktarmak için Svcutil.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlenmiş hizmet kodundan dışarı meta verilerine kullanın Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ WCF hizmetleri varsayılan meta veri yayımlamayın. Bir WCF hizmeti için meta verilerinin açıkça meta veri yayımlama hizmetinize meta veri uç noktalarını ekleyerek etkinleştirmeniz gerekir (bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Meta veri yayımlamayı devre dışı bırakarak, hizmetiniz için saldırı yüzeyini azaltan ve istenmeyen bilgi ifşaatı riskini azaltır. Tüm hizmetler meta verilerini yayımlamanız gerekir. Meta veri yayımlamayı yoksa, devre dışı bırakarak göz önünde bulundurun. Doğrudan kullanarak, hizmet derlemelerden meta verileri ve istemci kodu hala oluşturabilirsiniz Not [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Meta verileri dışarı aktarmak için Svcutil.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Güvenli bir bağlama kullanarak meta verileri yayımlama  
- Güvenli olmayan WCF sağlayan varsayılan meta veri bağlantılarını ve bunların meta verileri anonim erişime izin verin. Bir WCF Hizmeti yayımlayan hizmet meta verileri, hizmet hakkında ayrıntılı bir açıklama içerir ve kasıtlı veya kasıtsız olarak hassas bilgiler içerebilir. Örneğin, hizmet meta verileri herkese açık şekilde yayınlamak için hedeflememektedir altyapı işlemleri hakkında bilgi içeriyor olabilir. Hizmet meta verileri yetkisiz erişimden korumak için güvenli bir bağlama meta veri uç noktanız için kullanabilirsiniz. Meta veri uç noktalarını Güvenli Yuva Katmanı (SSL) meta verileri güvenli hale getirmek için kullanabileceğiniz HTTP/GET isteklerine yanıt. Daha fazla bilgi için [nasıl yapılır: meta veri uç noktalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Güvenli olmayan WCF sağlayan varsayılan meta veri bağlantılarını ve bunların meta verileri anonim erişime izin verin. Bir WCF Hizmeti yayımlayan hizmet meta verileri, hizmet hakkında ayrıntılı bir açıklama içerir ve kasıtlı veya kasıtsız olarak hassas bilgiler içerebilir. Örneğin, hizmet meta verileri herkese açık şekilde yayınlamak için hedeflememektedir altyapı işlemleri hakkında bilgi içeriyor olabilir. Hizmet meta verileri yetkisiz erişimden korumak için güvenli bir bağlama meta veri uç noktanız için kullanabilirsiniz. Meta veri uç noktalarını Güvenli Yuva Katmanı (SSL) meta verileri güvenli hale getirmek için kullanabileceğiniz HTTP/GET isteklerine yanıt. Daha fazla bilgi için [nasıl yapılır: Meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Meta veri uç noktalarını güvenli hale getirme isteyenlere hizmet meta verilerinin değiştirilmesine veya yanıltma riski olmadan güvenli bir şekilde almak bir yol sağlar.  
   
@@ -38,6 +38,6 @@ Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, ya
 ## <a name="protecting-application-configuration-files"></a>Uygulama yapılandırma dosyaları koruma  
  Bir hizmetin uygulama yapılandırma dosyasını denetleyebilirsiniz nasıl ve meta verileri yayımlanır. Uygun erişim denetim listeleriyle (ACL) bir saldırganın bu ayarları değiştiremezsiniz emin olmak için uygulama yapılandırma dosyasına korumak için iyi bir fikirdir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Meta veri uç noktalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Etki Alanını Yapılandırma'
+title: 'Nasıl yapılır: Bir uygulama etki alanını yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534572"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Yapılandırma
+# <a name="how-to-configure-an-application-domain"></a>Nasıl yapılır: Bir uygulama etki alanını yapılandırma
 Ortak dil çalışma zamanı kullanarak yeni bir uygulama etki alanı için yapılandırma bilgilerini sağlayabilir <xref:System.AppDomainSetup> sınıfı. Kendi uygulama etki alanları oluştururken, en önemli özelliği <xref:System.AppDomainSetup.ApplicationBase%2A>. Diğer **AppDomainSetup** özellikleri, belirli bir uygulama etki alanını yapılandırmak için temel olarak çalışma zamanı ana bilgisayarları tarafından kullanılır.  
   
  **ApplicationBase** uygulamanın kök dizin özelliği tanımlar. Çalışma zamanı türü isteği karşılamak gerektiğinde türü tarafından belirtilen dizindeki içeren derleme yoklamaları **ApplicationBase** özelliği.  
@@ -33,6 +33,6 @@ Ortak dil çalışma zamanı kullanarak yeni bir uygulama etki alanı için yap�
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
 - [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

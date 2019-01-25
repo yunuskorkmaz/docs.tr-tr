@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676828"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
@@ -74,10 +74,10 @@ Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik o
 
 Daha fazla bilgi için [özellikleri](~/_csharplang/spec/classes.md#properties) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
-- [get anahtar sözcüğü](../../../csharp/language-reference/keywords/get.md)    
-- [Set anahtar sözcüğü](../../../csharp/language-reference/keywords/set.md)    
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
+- [get anahtar sözcüğü](../../../csharp/language-reference/keywords/get.md)
+- [Set anahtar sözcüğü](../../../csharp/language-reference/keywords/set.md)

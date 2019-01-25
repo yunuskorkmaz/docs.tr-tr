@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544711"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# Derleyici Seçenekleri)
 **-Win32res** seçeneği, çıkış dosyasında bir Win32 kaynağı ekler.  
@@ -51,7 +51,7 @@ ms.locfileid: "43507516"
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

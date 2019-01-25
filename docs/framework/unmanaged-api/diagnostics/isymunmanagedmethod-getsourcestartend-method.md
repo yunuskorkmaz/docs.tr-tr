@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561874"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd Metodu
-Bu yöntem kaynak için başlangıç ve bitiş belge konumlarına alır. İlk dizi konum başlangıç ve bitiş ikinci dizi konumdur.  
+Bu yöntemin kaynağı için başlangıç ve bitiş belge konumları alır. İlk dizi konumunda başlangıç ve bitiş ikinci dizi konumdur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ HRESULT GetSourceStartEnd(
   
 #### <a name="parameters"></a>Parametreler  
  `docs`  
- [in] Başlangıç ve bitiş kaynak belgeleri.  
+ [in] Başlangıç ve bitiş kaynak belge.  
   
  `lines`  
  [in] Başlangıç ve ilgili satırları bitiş belgeleri kaynağı.  
@@ -48,13 +48,13 @@ HRESULT GetSourceStartEnd(
  [in] Başlangıç ve ilgili sütunları bitiş belgeleri kaynağı.  
   
  `pRetVal`  
- [out] `true` konumları, tanımlanmış Aksi takdirde `false`.  
+ [out] `true` konumları, tanımlanan; Aksi takdirde `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

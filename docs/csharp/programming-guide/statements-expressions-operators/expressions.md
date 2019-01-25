@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600498"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri oluşan bir dizidir. İfadeler, değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri, oluşabilir veya *basit adı*. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir.  
@@ -73,11 +73,11 @@ C# destekler *ifade gövdeli üyeler*, yöntemleri, Oluşturucular, bir Sonland�
 ## <a name="remarks"></a>Açıklamalar  
  Bir ifade tarafından tanımlanan bir değişken, nesne özellik veya nesne dizinleyici erişimi olduğunda, o öğenin değerini ifade değeri olarak kullanılır. Bir ifade bir değer veya nesne gerekli olduğu #c dilinde herhangi bir ifade, sonuçta gereken türe değerlendirir sürece yerleştirilebilir.  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
-- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Türler](../../../csharp/programming-guide/types/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
+- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Türler](../../../csharp/programming-guide/types/index.md)
 - [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617332"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
-Depolama alanı için bir dizi değişkeni yeniden ayırır.  
+Bir dizi değişkeni için depolama alanını yeniden ayırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,64 +46,64 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Terim|Tanım|  
 |----------|----------------|  
-|`Preserve`|İsteğe bağlı. Yalnızca son boyut boyutunu değiştirdiğinizde, var olan dizideki verileri korumak için kullanılan değiştiricisi.|  
+|`Preserve`|İsteğe bağlı. Değiştiricisi boyutu sadece son boyutu değiştirdiğinizde varolan dizedeki verileri korumak için kullanılır.|  
 |`name`|Gerekli. Dizi değişkeni adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Gerekli. Yeniden tanımlanan dizinin her boyut sınırları listesi.|  
+|`boundlist`|Gerekli. Yeniden tanımlanan dizinin her boyutunun sınırlarının listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `ReDim` dizi önceden tanımlanmış bir veya daha fazla boyutları boyutunu değiştirmek için deyimi. Uzun bir diziye sahip ve bazı öğeleri, artık ihtiyacınız varsa `ReDim` dizi boyutu azaltarak belleği boşaltmak. Daha fazla öğe dizinizi gerekirse diğer yandan, `ReDim` bunları ekleyebilirsiniz.  
+ Kullanabileceğiniz `ReDim` bir veya daha fazla boyut zaten bildirilmiş bir dizinin boyutunu değiştirmek için deyimi. Uzun bir diziye sahip ve bazı alt öğeleri artık ihtiyacınız varsa `ReDim` dizi boyutu azaltarak belleği boşaltabilir. Daha fazla öğe diziniz gerekiyorsa diğer yandan, `ReDim` bunları ekleyebilirsiniz.  
   
- `ReDim` Deyimi yalnızca diziler için tasarlanmıştır. Skalerler (yalnızca tek bir değer içermesi değişkenler), koleksiyon veya yapıları geçerli değil. Türünde olması için bir değişken bildirirseniz unutmayın `Array`, `ReDim` deyimi, yeni bir dizi oluşturmak için yeterli türü bilgileri yok.  
+ `ReDim` Deyimi yalnızca diziler için tasarlanmıştır. Skalerler (yalnızca tek bir değer içeren değişkenlerini), koleksiyonlar veya yapılar üzerinde geçerli değil. Bir değişken türünde bildirmeniz gerçekleştiriyorsanız `Array`, `ReDim` deyimi, yeni bir dizi oluşturmak için yeterli tür bilgisi yok.  
   
- Kullanabileceğiniz `ReDim` yalnızca yordamı düzeyinde. Bu nedenle, değişken bildirimi bağlamının bir yordam olmalıdır; bir kaynak dosyası, bir ad alanı, bir arabirim, bir sınıf, bir yapı, bir modül veya bir blok olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Kullanabileceğiniz `ReDim` yalnızca yordamı düzeyinde. Bu nedenle, bildirimi bağlam değişkeni için bir yordam olmalıdır; bir kaynak dosyası, bir ad alanı, bir arabirim, bir sınıf, yapı, modül veya bir blok olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Birden çok değişkenleri.** Aynı bildirimi deyiminde birden fazla dizi değişkenleri yeniden boyutlandırma ve belirtin `name` ve `boundlist` bölümleri her değişken için. Birden çok değişkenleri virgülle ayrılır.  
+-   **Birden fazla değişken.** Aynı bildirim deyiminde birden fazla dizi değişkenlerini yeniden boyutlandırma ve belirtin `name` ve `boundlist` bölümleri her değişken için. Birden fazla değişken virgülle ayrılır.  
   
--   **Dizi sınırları.** Her giriş `boundlist` alt ve üst sınırlarını bu boyutun belirtebilirsiniz. Alt sınır olan her zaman 0 (sıfır). Bu boyut yok (olan üst sınır artı bir taneyi) boyutun uzunluğu için en yüksek olası dizin değeri üst sınırdır. Her boyut dizini 0'dan üst sınır değeri farklılık gösterebilir.  
+-   **Dizi sınırları.** Her giriş `boundlist` alt ve söz konusu boyut üst sınırları belirtebilirsiniz. Her zaman alt sınır olan 0 (sıfır). Değil (Bu üst sınırı yanı sıra bir durumdur) boyutun uzunluğu o boyut için en yüksek olası dizin değeri üst sınırıdır. Her boyutun dizini 0 ile üst sınır değeri arasında değişebilir.  
   
-     Boyutlar sayısı `boundlist` dizi boyutları (derece) özgün sayısı aynı olmalıdır.  
+     İçindeki boyutların sayısına `boundlist` dizi boyutları (derece) özgün sayısı ile eşleşmelidir.  
   
--   **Veri türleri.** `ReDim` Deyimi, bir dizi değişkeni veya öğelerini veri türünü değiştiremiyor.  
+-   **Veri türleri.** `ReDim` Deyimi bir diziye veya öğelerine veri türünü değiştirin.  
   
--   **başlatma.** `ReDim` Deyimi dizi öğeleri için yeni başlatma değerleri sağlayamazsınız.  
+-   **Başlatma.** `ReDim` Deyimi, dizi öğeleri için yeni başlangıç değerleri sağlayamazsınız.  
   
--   **RANK.** `ReDim` Deyimi dizi (dimensions sayısı) derecesini değiştiremiyor.  
+-   **Boyut.** `ReDim` Deyimi (boyut sayısı) dizi boyut sayısını değiştirin.  
   
--   **Koru ile yeniden boyutlandırma.** Kullanırsanız `Preserve`, yalnızca son boyut dizinin yeniden boyutlandırabilirsiniz. Diğer her bir boyut için mevcut dizisini bağlı belirtmeniz gerekir.  
+-   **Koruma ile yeniden boyutlandırma.** Kullanırsanız `Preserve`, sadece son boyutu dizinin yeniden boyutlandırabilirsiniz. Diğer her bir boyut için var olan bir dizi sınırı belirtmeniz gerekir.  
   
-     Örneğin, yalnızca bir boyut diziniz varsa, bu boyut yeniden boyutlandırabilir ve yalnızca boyut ve son değiştirme olduğundan hala dizi tüm içeriğini korumak. İki veya daha fazla boyutları diziniz varsa, kullanırsanız, ancak, yalnızca son boyut boyutunu değiştirebilirsiniz `Preserve`.  
+     Örneğin, yalnızca bir boyut diziniz varsa, boyut yeniden boyutlandırma ve yalnızca boyut ve son değiştirme çünkü hala dizinin tüm içerikleri korumak. İki veya daha fazla boyuta diziniz varsa kullanırsanız ancak sadece son boyutu boyutunu değiştirebileceğiniz `Preserve`.  
   
--   **Özellikler.** Kullanabileceğiniz `ReDim` değerleri dizisi tutan bir özelliğe.  
+-   **özellikleri.** Kullanabileceğiniz `ReDim` değerler dizisi tutan bir özellikte.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Dizi değiştirme.** `ReDim` Mevcut dizisini serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi dizi değişkeni yayımlanan dizisinde değiştirir.  
+-   **Dizi değiştirme.** `ReDim` Varolan bir diziye serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi yayımlanan dizide dizi değişkenini değiştirir.  
   
--   **Koruma olmadan başlatma.** Belirtmezseniz, `Preserve`, `ReDim` kendi veri türü için varsayılan değer kullanarak yeni bir dizi öğelerini başlatır.  
+-   **Başlatma olmadan korur.** Siz belirtmezseniz `Preserve`, `ReDim` kendi veri türü için varsayılan değer kullanarak yeni bir dizi öğelerini başlatır.  
   
--   **Koru ile başlatma.** Belirtirseniz `Preserve`, Visual Basic varolan diziden öğeleri yeni diziye kopyalar.  
+-   **Koruma ile başlatma.** Belirtirseniz `Preserve`, Visual Basic mevcut bir diziden öğeleri için yeni bir diziye kopyalar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, mevcut verilerin herhangi biri dizisindeki kaybetmeden dinamik dizinin son boyutu boyutu artar ve kısmi veri kaybı boyutuyla azaltır. Son olarak, boyutu özgün değeri azaltır ve tüm dizi öğeleri yeniden başlatır.  
+ Aşağıdaki örnek dizinin var olan veri kaybı olmadan son boyutu dinamik bir dizinin boyutunu artırır ve ardından kısmi veri kaybıyla sonuçlanan boyuta azaltır. Son olarak, özgün değerine geri boyutunu azaltır ve tüm dizi öğeleri yeniden başlatır.  
   
  [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
- `Dim` Deyim üç boyutlarla yeni bir dizi oluşturur. Dizi dizini her boyut için 0 ile 10 arası değişebilir şekilde her boyut sınır 10 değeri ile bildirildi. Aşağıdaki tartışmada boyutların için katman, satır ve sütun adlandırılır.  
+ `Dim` Deyimi üç boyut ile yeni bir dizi oluşturur. Her boyut için dizi dizini 0-10 aralığında, böylece her boyutun bağımlı 10 ile bildirilir. Aşağıdaki tartışmada boyutların için katman, satır ve sütun adlandırılır.  
   
- İlk `ReDim` değişkeninde varolan dizi yerini alacak yeni bir dizi oluşturur `intArray`. `ReDim` tüm öğeleri varolan diziden yeni diziye kopyalar. Ayrıca her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlar 0 öğelerinde başlatır (varsayılan değeri `Integer`, dizi öğesi türü olduğu).  
+ İlk `ReDim` değişkeni varolan dizide yerini alan yeni bir dizi oluşturur `intArray`. `ReDim` tüm öğeleri mevcut bir diziden yeni bir diziye kopyalar. Ayrıca her katman içindeki her bir satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunların 0 öğeleri başlatır (varsayılan değeri `Integer`, dizinin öğe türü).  
   
- İkinci `ReDim` başka bir yeni bir dizi oluşturur ve uyan tüm öğeler kopyalar. Ancak, beş sütun her katmandaki her satır sonundan kaybolur. Bu sütunları kullanarak tamamladığınızda bu bir sorun değildir. Uzun bir diziye boyutunun azaltılması, artık gereken belleği boşaltmak.  
+ İkinci `ReDim` başka bir yeni bir dizi oluşturur ve uygun tüm öğeleri kopyalar. Bununla birlikte beş sütun her katmanında her satır sonundan kaybolur. Bu sütunları kullanarak tamamlandıysa, bir sorun değildir. Uzun bir diziye boyutunu küçültmeyi artık gereksinim duymadığınız belleği boşaltmak.  
   
- Üçüncü `ReDim` başka bir yeni bir dizi oluşturur ve her katmandaki her satır sonu başka bir beş sütun kaldırır. Bu süre, var olan öğeleri kopyalamaz. Bu bildirimi özgün boyutuna diziye döner. Deyim içermediği için `Preserve` değiştiricisi, bu ayarlar tüm dizi öğeleri özgün varsayılan değerlerine.  
+ Üçüncü `ReDim` başka bir yeni bir dizi oluşturur ve her katman içindeki her bir satırın son beş başka bir sütun kaldırır. Bu süre, var olan öğeleri kopyalamaz. Bu ifade, dizinin özgün boyutuna döner. Deyimi içermediği için `Preserve` özgün varsayılan değerlerine tüm dizi öğeleri ayarlar değiştiricisi.  
   
- Ek örnekler için bkz: [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Diğer örnekler için [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IndexOutOfRangeException>  
- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase Deyimi](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IndexOutOfRangeException>
+- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase Deyimi](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)

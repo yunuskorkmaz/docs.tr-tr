@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bul Descendants belirli öğe adına (Visual Basic)'
+title: 'Nasıl yapılır: Belirli bir öğe adına (Visual Basic) sahip alt öğeleri bulma'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c6f702c121f6a8b9aa5750b4c5ff70c00e681b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557166"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: Bul Descendants belirli öğe adına (Visual Basic)
-Bazen belirli bir ada sahip tüm bağımlı öğelerini bulmak istediğiniz. Tüm alt öğeleri yinelemek için kod yazma, ancak kullanmayı daha kolay <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: Belirli bir öğe adına (Visual Basic) sahip alt öğeleri bulma
+Bazen belirli bir ada sahip tüm alt öğeleri bulmak istediğiniz. Tüm alt öğeleri arasında yineleme yapmak için kod yazabilirsiniz, ancak kullanmak daha kolaydır <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, alt öğeleri öğenin adına göre bulmak gösterilmiştir.  
+ Aşağıdaki örnek, öğeyi adına göre alt öğeleri bulmak gösterilmektedir.  
   
 ```vb  
 Dim root As XElement = _  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -100,6 +100,6 @@ End Module
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

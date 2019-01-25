@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4fe3eec4940b57001b7734c581076388f8ba0c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bded97c23013e60bf2d3c32c4eb25285870977e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554198"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 Metodu
-Yönetilen kod yönerge işaretçisi bir işlev JIT yeniden derlenmesi sürümüne eşler.  
+Yönetilen kod yönerge işaretçisi bir işlevin JIT yeniden derlenen sürümüne eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +38,28 @@ HRESULT GetFunctionFromIP2(
   
 #### <a name="parameters"></a>Parametreler  
  `ip`  
- [in] Yönetilen kod yönerge işaretçisi.  
+ [in] Yönetilen kodda yönerge işaretçisi.  
   
  `pFunctionId`  
  [out] İşlev kimliği.  
   
  `pReJitId`  
- [out] İşlevin JIT yeniden derlenmesi sürüm kimliği.  
+ [out] İşlev JIT yeniden derlenen sürümü kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFunctionFromIP2` benzer `GetFunctionFromIP`dışında belirtilen IP adresi içeren işlevinin işlev kimliği yerine JIT yeniden derlenmesi Kimliğini alır.  
+ `GetFunctionFromIP2` benzer `GetFunctionFromIP`dışında belirtilen IP adresi içeren işlev işlevi kimliği yerine JIT yeniden derlenen Kimliğini alır.  
   
 > [!NOTE]
->  `GetFunctionFromIP2` Çöp toplama, ancak tetikleyebilir `GetFunctionFromIP` almayacak.  Daha fazla bilgi için bkz: [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+>  `GetFunctionFromIP2` bir çöp toplama ise tetikleyebilirsiniz `GetFunctionFromIP` erişemez.  Daha fazla bilgi için [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

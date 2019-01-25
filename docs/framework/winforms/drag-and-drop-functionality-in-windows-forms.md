@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527035"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms'ta Sürükle ve Bırak İşlevi
 Windows Forms, bir dizi yöntem, olayları ve sürükle-bırak davranışı uygulayan sınıflar içerir. Bu konu, Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz: [sürükle ve bırak işlemleri ve Pano desteği](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
@@ -43,5 +43,5 @@ Windows Forms, bir dizi yöntem, olayları ve sürükle-bırak davranışı uygu
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> Sınıfı, düğmeler ve klavye, ESC tuşuna basılan tuşun olup olmadığını belirten bir değer değiştirici tuşları fare geçerli durumunu sağlar ve bir <xref:System.Windows.Forms.DragAction> sürükle ve bırak işlemi devam olup olmadığını belirlemek için ayarlanan değer.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

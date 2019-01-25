@@ -5,18 +5,18 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570729"
 ---
 # <a name="net-architectural-components"></a>.NET Mimari Bileşenleri
 
 Bir .NET uygulaması için geliştirilmiştir ve bir veya daha fazla çalışan *.NET uygulamalarını*.  .NET uygulamaları, .NET Framework, .NET Core ve Mono içerir. Tüm .NET Standard çağırdı .NET uygulamaları için ortak bir API belirtim yoktur. Bu makalede, her biri bu kavramlar kısa bir giriş sağlar.
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard bir .NET uygulaması temel sınıf kitaplığı tarafından uygulanan bir API kümesidir. Daha eski adıyla, kodunuzu derlemek sözleşmeleri Tekdüzen bir kümesini oluşturan bir .NET API'lerini belirtimini olduğu. Bu sözleşmeler, her bir .NET uygulamasında uygulanır. Bu, etkili bir şekilde kodunuzu her yerde çalışmasına izin vererek farklı .NET uygulamaları arasında taşınabilirlik sağlar.
 
@@ -86,10 +86,10 @@ Kapsamlı bir dizi araç ve her .NET uygulaması ile çalışma altyapı bileşe
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [.NET Core Kılavuzu](../core/index.md)  
-- [.NET Framework Kılavuzu](../framework/index.md)  
-- [C# Kılavuzu](../csharp/index.md)  
-- [F# Kılavuzu](../fsharp/index.md)  
-- [VB.NET Kılavuzu](../visual-basic/index.md)  
+- [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core Kılavuzu](../core/index.md)
+- [.NET Framework Kılavuzu](../framework/index.md)
+- [C# Kılavuzu](../csharp/index.md)
+- [F# Kılavuzu](../fsharp/index.md)
+- [VB.NET Kılavuzu](../visual-basic/index.md)

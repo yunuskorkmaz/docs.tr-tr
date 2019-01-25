@@ -1,54 +1,54 @@
 ---
-title: Kurallı işlevleri
+title: Kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513886"
 ---
-# <a name="canonical-functions"></a>Kurallı işlevleri
-Bu bölümde, tüm veri sağlayıcıları tarafından desteklenir ve tüm sorgulanırken teknolojiler tarafından kullanılan kurallı işlevleri açıklanmaktadır. Kurallı işlevleri bir sağlayıcı tarafından genişletilemez.  
+# <a name="canonical-functions"></a>Kurallı İşlevler
+Bu bölümde, tüm veri sağlayıcıları tarafından desteklenir ve tüm sorgulanırken teknolojiler tarafından kullanılan kurallı işlevler açıklanmaktadır. Kurallı işlevler bir sağlayıcı tarafından genişletilemez.  
   
- Kurallı bu işlevler sağlayıcı için karşılık gelen bir veri kaynağı işlevi çevrilir. Bu veri kaynakları arasında bir ortak biçiminde ifade işlev çağrılarını sağlar.  
+ Bu kurallı işlevler sağlayıcı için karşılık gelen bir veri kaynağı işlevi çevrilir. Bu işlev çağrılarını veri kaynaklarında yaygın biçiminde ifade sağlar.  
   
- Kurallı bu işlevler veri kaynaklarından bağımsız olduğundan, kurallı işlevleri bağımsız değişkeni ve dönüş türleri kavramsal modelde türleri açısından tanımlanır. Ancak, bazı veri kaynakları, kavramsal modelde tüm türleri desteklemeyebilir.  
+ Bu kurallı İşlevler, veri kaynaklarından bağımsız olduğundan, kurallı işlevler bağımsız değişkeni ve dönüş türleri kavramsal model türleri açısından tanımlanır. Ancak, bazı veri kaynakları, kavramsal modelde tüm türleri desteklemeyebilir.  
   
- Ne zaman kurallı işlevleri kullanıldığı bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, uygun işlevi veri kaynağında çağrılır.  
+ Ne zaman kurallı işlevler kullanıldığı bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu uygun işlevi veri kaynağında çağrılır.  
   
- Null giriş davranış ve hata koşullarını açıkça belirtilen tüm kurallı işlevleri vardır. Depo sağlayıcıları uyumlu bu davranışı olması gerekir, ancak [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] Bu davranış zorlamaz.  
+ Tüm kurallı İşlevler, hem null giriş davranışı hem de açıkça belirtilen hata koşulları vardır. Store sağlayıcıları bu davranışı ile uyumlu olması gerekir ancak [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] bu davranışı zorlamaz.  
   
- Karşı LINQ senaryoları için sorgular [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] temel alınan veri kaynağında yöntemlerine eşleme CLR yöntemlerini içerir. Kurallı İşlevler, CLR yöntemleri eşlemeye belirli bir yöntemlerini oluşturmak doğru harita, bağımsız olarak veri kaynağı.  
+ LINQ senaryoları için karşı sorgular [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] temel alınan veri kaynağına yöntemlere eşleme CLR yöntemlerini içerir. Kurallı İşlevler, CLR yöntemleri eşlemeye yöntemlerini belirli bir oluşturmak doğru harita, veri kaynağı ne olursa olsun.  
   
-## <a name="canonical-functions-namespace"></a>Kurallı işlevleri Namespace  
- Kurallı işlevi için ad alanı <xref:System.Data.Metadata.Edm>. <xref:System.Data.Metadata.Edm> Ad alanındaki tüm sorgular otomatik olarak eklenir. Ancak, başka bir ad alanı içe aktarılırsa kurallı işlevi olarak aynı ada sahip bir işlevi içeren (içinde <xref:System.Data.Metadata.Edm> ad alanı), ad alanı belirtilmelidir.  
+## <a name="canonical-functions-namespace"></a>Namespace kurallı İşlevler  
+ Ad alanı'kurallı işlevinin <xref:System.Data.Metadata.Edm>. <xref:System.Data.Metadata.Edm> Ad alanı, tüm sorguları otomatik olarak eklenir. Ancak, başka bir ad alanı içe aktarılırsa kurallı işlev ile aynı ada sahip bir işlev içeren (içinde <xref:System.Data.Metadata.Edm> ad alanı), ad alanı belirtilmelidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Toplu Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
- Toplama anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Toplama anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Kurallı Matematik İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
- Matematik anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Matematik anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Kurallı Dize İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
- Dize anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Dize anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Kurallı Tarih ve Saat İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
- Tarih ve saat anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Tarih ve saat anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Bit Düzeyinde Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
- Bit düzeyinde ele [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Bit düzeyinde anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Uzamsal İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
- Spatial ele [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
+ Uzamsal anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
   
  [Diğer Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
- Bit düzeyinde, tarih, dize, matematik veya toplu olarak sınıflandırılan değil işlevleri açıklanır.  
+ Bit düzeyinde, tarih, dize, matematik veya toplama sınıflandırılan değil işlevleri açıklanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

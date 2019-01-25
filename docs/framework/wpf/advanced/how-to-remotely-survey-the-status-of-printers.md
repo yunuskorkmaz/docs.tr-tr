@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: eca1720aea1620683ebc9ed08b47a0f5625da9d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 330edd1119824d82558cf76d32d0d6641d26c80d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588373"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
-Orta ve büyük şirketlerin belirli bir zamanda adresindeki kağıt sıkışması veya kağıt veya bazı sorunlu durumlar dışında olan birden çok yazıcı olabilir. Yazıcı özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] yazıcıların durumlarının hızlı araştırmasını gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
+Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Zengin, kullanıma sunulan yazıcı Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı yazıcıların durumunu araştırma gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  
@@ -28,62 +28,62 @@ Orta ve büyük şirketlerin belirli bir zamanda adresindeki kağıt sıkışmas
   
 2.  Kendi yazdırma sorgulamak için sunucular üzerinden döngü.  
   
-3.  Sunucu döngüsünün her geçişinde sunucunun tüm kuyruklar üzerinden döngü ve sıranın şu an çalışmadığını gösterebilir her bir özellik okuyun.  
+3.  Sunucu döngüsünün her geçişinde sunucunun tüm kuyruklar üzerinden döngü ve kuyruk şu anda çalışmadığını gösterebilir her bir özellik okuyun.  
   
- Aşağıdaki kod parçacıkları dizisidir. Kolaylık sağlamak için bu örnek, yazdırma sunucularını CRLF ayrılmış bir listesi olduğunu varsayar. Değişkeni `fileOfPrintServers` olan bir <xref:System.IO.StreamReader> bu dosya için nesne. Her sunucu adı kendi satırında olduğundan herhangi çağrısı <xref:System.IO.StreamReader.ReadLine%2A> sonraki sunucunun adını alır ve taşır <xref:System.IO.StreamReader>'s sonraki satırın başlangıcına imleç.  
+ Aşağıdaki kod parçacıkları dizisidir. Kolaylık olması için bu örnek, yazdırma sunucularını CRLF ayrılmış bir listesi olduğunu varsayar. Değişken `fileOfPrintServers` olduğu bir <xref:System.IO.StreamReader> bu dosya için nesne. Her bir sunucu adı, kendi satırında olduğundan, tüm çağrısı <xref:System.IO.StreamReader.ReadLine%2A> sonraki sunucunun adını alır ve taşır <xref:System.IO.StreamReader>'s imleci sonraki satırın başlangıcına.  
   
- Dış döngü içinde kod oluşturur bir <xref:System.Printing.PrintServer> nesne için en son yazdırma sunucusu ve uygulama sunucusu için yönetici haklarına sahip olduğunu belirtir.  
+ Dış döngü içinde kod oluşturur bir <xref:System.Printing.PrintServer> nesne en yeni yazdırma sunucusunu ve uygulama sunucusuna yönetici haklarına sahip olduğunu belirtir.  
   
 > [!NOTE]
->  Çok sunucu varsa, kullanarak performansı artırabilirsiniz <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> yalnızca bulacağınızı gerek özellikleri başlatma oluşturucular.  
+>  Çok sunucu varsa, kullanarak performansı artırabilirsiniz <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> oluşturucular yalnızca gerek seçeceğiz özelliklerini başlatır.  
   
- Bu örnek daha sonra kullanır <xref:System.Printing.PrintServer.GetPrintQueues%2A> tüm sunucuların bir koleksiyonunu oluşturmak üzere sıraya koyar ve bunlar üzerinde döngü başlar kullanıcının. İçteki döngü bir yazıcının durumunu denetleme iki yolla karşılık gelen bir dallanma yapısını içerir:  
+ Ardından örnekte <xref:System.Printing.PrintServer.GetPrintQueues%2A> tüm sunucuların bir koleksiyonunu oluşturmak üzere kuyruğa alır ve bu bloblarda döngü başlatır günceller. Bu iç döngü, iki yolla yazıcının durumu denetleme, karşılık gelen bir dallandırma yapısını içerir:  
   
--   Bayraklarını okuyabilirsiniz <xref:System.Printing.PrintQueue.QueueStatus%2A> türü olan özelliği <xref:System.Printing.PrintQueueStatus>.  
+-   Bayraklarını edinebilirsiniz <xref:System.Printing.PrintQueue.QueueStatus%2A> tür özelliği <xref:System.Printing.PrintQueueStatus>.  
   
--   İlgili her özelliği gibi okuyabilirsiniz <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, ve <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+-   Her bir ilgili özellik gibi edinebilirsiniz <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, ve <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
- Bu örnekte, her iki yöntem gösterir, böylece kullanıcının daha önce hangi metodu istenir ve çözemiyorsa bayraklarını kullanmak isterse "y" yanıt <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği. Aşağıda iki yöntem Ayrıntılar için bkz.  
+ Bu örnekte, her iki yöntem gösterir, böylece kullanıcı daha önce hangi metodu kullanmak için istenir ve bayraklarını kullanmak istiyordu, "y" ile yanıt verdi <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği. İki yöntemden biriyle ayrıntıları için aşağıya bakın.  
   
- Son olarak, sonuçların kullanıcıya sunulur.  
+ Son olarak, sonuçları kullanıcıya gösterilir.  
   
  [!code-cpp[PrinterStatusSurvey#SurveyQueues](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#surveyqueues)]
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Bayraklarını kullanarak yazıcı durumunu denetlemek için <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği ayarlanmış olup olmadığını görmek için ilgili her bayrağı denetleyin. Bir bit bit bayrakları kümesinde ayarlanmış olup olmadığını görmek için standart bir mantıksal ve işlem bayrakları kümesiyle olarak bir işlenen ve diğer bayrağı kendisini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucu yalnızca bir bit varsa ve bu yana o aynı bit ayarlanır. Bunu veya olup olmadığını öğrenmek için yalnızca mantıksal ve bayrağı sonucu karşılaştırın. Daha fazla bilgi için bkz: <xref:System.Printing.PrintQueueStatus>, [& işleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md), ve <xref:System.FlagsAttribute>.  
+ Bayraklarını kullanarak yazıcı durumunu denetlemek için <xref:System.Printing.PrintQueue.QueueStatus%2A> özelliği, ilgili her bayrağı ayarlanmış olup olmadığını görmek için denetleyin. Bir bit bit bayrakları kümesi içinde ayarlanmış olup olmadığını görmek için standart bayrakları kümesini tek bir işlenen ve diğer bayrağını kendisini olarak bir mantıksal AND işlemini gerçekleştirmek için yoludur. En fazla bayrağı ayarlayın, mantıksal sonucunu bir bit varsa ve bu yana aynı söz konusu bit ayarlanır. Bunu veya olduğunu bulmak için yalnızca sonuç mantıksal AND bayrağı ile karşılaştırın. Daha fazla bilgi için <xref:System.Printing.PrintQueueStatus>, [& işleci (C# başvuru)](~/docs/csharp/language-reference/operators/and-operator.md), ve <xref:System.FlagsAttribute>.  
   
- Biti ayarlanmış olan her özniteliği için kod kullanıcıya sunulan son rapora bir bildirim ekler. ( **ReportAvailabilityAtThisTime** kodu sonunda çağrılan yöntem aşağıda ele alınmıştır.)  
+ Kod biti ayarlanmış her öznitelik için bir bildirim kullanıcıya sunulan raporun son hali ekler. ( **ReportAvailabilityAtThisTime** kod sonunda çağrılan yöntem aşağıda ele alınmıştır.)  
   
  [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueattributes)]
  [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueattributes)]
  [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueattributes)]  
   
- Her bir özellik kullanarak yazıcı durumunu denetlemek için yalnızca her özelliği okuyun ve Not özelliği olan ise, kullanıcıya sunulan son rapora eklemek `true`. ( **ReportAvailabilityAtThisTime** kodu sonunda çağrılan yöntem aşağıda ele alınmıştır.)  
+ Her bir özellik kullanarak yazıcı durumunu denetlemek için yalnızca her bir özellik okuma ve özellik ise, kullanıcıya sunulan son rapora Not ekleme `true`. ( **ReportAvailabilityAtThisTime** kod sonunda çağrılan yöntem aşağıda ele alınmıştır.)  
   
  [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
  [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
  [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
   
- **ReportAvailabilityAtThisTime** yöntemi oluşturuldu durumunda günün geçerli saatinde sıranın kullanılabilir olup olmadığını belirlemeniz gerekir.  
+ **ReportAvailabilityAtThisTime** durumda kuyruğun geçerli günün saatini kullanılabilir olup olmadığını belirlemek gereken yöntemini oluşturuldu.  
   
- Yöntemi, hiçbir şey yapmaz varsa <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özelliklerdir eşit; bu durumda yazıcı her zaman kullanılabilir olduğundan. Bunlar farklıysa, çünkü toplam dakika son gece dönüştürülecek olan geçerli saati yöntemi alır <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özellikleri <xref:System.Int32>dakika sonra-dönüştürmemiz, temsil eden değil s <xref:System.DateTime> nesneleri. Son olarak, geçerli saati "kadar" kez başlangıç arasında olup olmadığını görmek için yöntem denetler.  
+ Yöntemi, hiçbir şey yapmaz, <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özellikleri eşit; çünkü bu durumda yazıcıyı her zaman kullanılabilir. Farklı olmaları durumunda yöntemi olduğundan toplam dakika son gece yarısı dönüştürülmesi gereken geçerli saati alır <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özellikleri <xref:System.Int32>dakika-sonra-gece yarısı temsil eden değil s <xref:System.DateTime> nesneleri. Son olarak, yöntem geçerli saati "kadar" kez başlangıç arasında olup olmadığını denetler.  
   
  [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
  [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>  
- <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>  
- <xref:System.DateTime>  
- <xref:System.Printing.PrintQueueStatus>  
- <xref:System.FlagsAttribute>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md)  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
+- <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
+- <xref:System.DateTime>
+- <xref:System.Printing.PrintQueueStatus>
+- <xref:System.FlagsAttribute>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

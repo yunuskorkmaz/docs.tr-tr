@@ -2,12 +2,12 @@
 title: DotNet yükleme betikleri
 description: .NET Core CLI araçları ve paylaşılan çalışma zamanı'nı yüklemek için dotnet-yükleme betikleri hakkında bilgi edinin.
 ms.date: 01/16/2019
-ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608803"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet yükleme komut başvurusu
 
@@ -200,5 +200,5 @@ Belirli bir sürümünü kullanarak bir yükleyebilirsiniz `--version` bağıms�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET core sürümleri](https://github.com/dotnet/core/releases)
-* [Arşiv .NET core çalışma zamanı ve SDK'sını indirin](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET core sürümleri](https://github.com/dotnet/core/releases)
+- [Arşiv .NET core çalışma zamanı ve SDK'sını indirin](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

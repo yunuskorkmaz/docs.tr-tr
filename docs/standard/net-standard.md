@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bf8b73d5785ad39180b47963130105b905f955c1
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: d759ab8fe436ad68ca67943b7a4330cea093ae52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535924"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -67,7 +67,7 @@ Ancak, daha düşük bir .NET Standard sürümlerini hedefleme desteği bağıml
 
 Resmi belirtimi, standart bir parçası olan API'leri tanımlayan .cs dosyalar kümesidir. [Ref directory](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) içinde [dotnet/standart havuz](https://github.com/dotnet/standard) .NET standart API'lerini tanımlar.
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([kaynak](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) (kısmen) bir veya daha fazla .NET Standard sürümleri tanımlayan kitaplıkları açıklar.
+[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([kaynak](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) (kısmen) bir veya daha fazla .NET Standard sürümleri tanımlayan kitaplıkları açıklar.
 
 Bir bileşen göz önünde bulundurulduğunda, ister `System.Runtime`, açıklar:
 

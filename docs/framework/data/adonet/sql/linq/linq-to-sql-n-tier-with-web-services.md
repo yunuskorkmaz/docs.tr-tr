@@ -2,18 +2,18 @@
 title: LINQ to SQL N katmanı Web Hizmetleri
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623618"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL N katmanı Web Hizmetleri
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle orta katman Web hizmeti gibi bir zamanı gevşek bağlanmış veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanına bir ASP.NET Web sayfası olduğu sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web sunucu denetimi, kullanıcı arabirimi arasında veri aktarımını yönetme ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] orta katman. Sunu katmanına bir ASP.NET sayfasına değil, serileştirme ve seri durumundan çıkarma veri yönetmek için bazı ek işleri hem Orta katmanda hem de sunu katmanı yapmalısınız.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>LINQ to SQL orta katman ayarlama  
- Bir Web hizmeti veya n-katmanlı uygulamaya orta katman veri bağlamı ve varlık sınıfları içerir. El ile veya her iki SQLMetal.exe kullanarak bu sınıflar oluşturabilir veya [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] belgelerinde açıklanan başka bir yerde. Tasarım zamanında, varlık sınıfları seri hale getirilebilir yapma seçeneğiniz vardır. Daha fazla bilgi için [nasıl yapılır: varlıkları serileştirilebilir hale](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Verileri iade ettiğinizde bu seri hale getirilebilir bir tür olarak ayrı bir dizi verileri seri hale kapsayan sınıflar ve proje oluşturmak için başka bir seçenektir, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular.  
+ Bir Web hizmeti veya n-katmanlı uygulamaya orta katman veri bağlamı ve varlık sınıfları içerir. El ile veya her iki SQLMetal.exe kullanarak bu sınıflar oluşturabilir veya [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] belgelerinde açıklanan başka bir yerde. Tasarım zamanında, varlık sınıfları seri hale getirilebilir yapma seçeneğiniz vardır. Daha fazla bilgi için [nasıl yapılır: Varlıkları serileştirilebilir yapmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Verileri iade ettiğinizde bu seri hale getirilebilir bir tür olarak ayrı bir dizi verileri seri hale kapsayan sınıflar ve proje oluşturmak için başka bir seçenektir, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular.  
   
  Ardından almak, eklemek ve verileri güncelleştirmek için istemcilere çağıran yöntemleri ile arabirimini tanımlar. Arabirim yöntemleri kaydırma, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular. Uzak yöntem çağrıları ve veri seri hale getirme işlemek için serileştirme mekanizması herhangi bir türden kullanabilirsiniz. Döngüsel veya çift yönlü ilişkiler gibi müşteriler ve siparişler standart Northwind nesne modelinde arasında nesne modeliniz varsa ardından onu destekleyen bir seri hale getirici kullanmalısınız olduğunu tek gereksinim olmasıdır. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> yönlü ilişkiler destekler ancak WCF Web Hizmetleri ile kullanılan XmlSerializer desteklemez. Ardından XmlSerializer kullanmayı seçerseniz, nesne modeliniz hiçbir döngüsel bir ilişki olduğundan emin olmalısınız.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "43862244"
   
  Daha fazla bilgi için [veri alma ve CUD işlemleri (LINQ to SQL) N katmanlı uygulamalarda](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: LinqDataSource Web sunucusu denetimine genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [NIB: Pokud Web sunucusu denetimine genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

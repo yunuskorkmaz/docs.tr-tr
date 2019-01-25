@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607481"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData Metodu
-Belirtilen modül eşleyen bir meta veri arabirimi örneğini alır.  
+Belirtilen modül için eşleşen bir meta veri arabirimi örneği alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,30 +39,30 @@ HRESULT GetModuleMetaData(
   
 #### <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] Arabirim örneğinin eşlenecek modül kimliği.  
+ [in] Arabirim örneğinin eşleştirilecek modül kimliği.  
   
  `dwOpenFlags`  
- [in] Değerini [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) bildirim dosyalarını açmak için modu belirtir numaralandırması. Yalnızca `ofRead`, `ofWrite` ve `ofNoTransform` BITS geçerlidir.  
+ [in] Değerini [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) bildirim dosyalarını açmak için modu belirten sabit listesi. Yalnızca `ofRead`, `ofWrite` ve `ofNoTransform` BITS geçerlidir.  
   
  `riid`  
- [in] Başvuru Kimliği (GUID) meta veri arabiriminin örneği alınır. Bkz: [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) arabirimler listesi.  
+ [in] Başvuru Kimliği (GUID), örnek alınan meta verileri arabirimi. Bkz: [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) arabirimlerin listesi.  
   
  `ppOut`  
- [out] Meta veri arabirim örneğinin adresini gösteren bir işaretçi.  
+ [out] Meta veri arabirimi örneği adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Okuma/yazma modunda açılması meta veriler için isteyebilir, ancak bu programın daha yavaş meta veri yürütme neden olacak, derleyiciden oldukları gibi yapılan değişiklikler için meta veriler iyileştirilemiyor.  
+ Meta veriler okuma/yazma modunda açılması için sorun, ancak bu programın daha yavaş meta verileri yürütülmesine neden olur, yapılan değişiklikler için derleyicinin oldukları gibi meta veriler iyileştirilemiyor.  
   
- Bazı modüller (örneğin, kaynak modüller) hiçbir meta verileri içerir. Bu durumlarda, `GetModuleMetaData` S_FALSE ve null olarak HRESULT değerini döndürür *`ppOut`.  
+ Bazı modüller (gibi kaynak Modülü) hiçbir meta veriler bulunur. Bu durumlarda `GetModuleMetaData` S_FALSE yanı sıra, bir null HRESULT değerini döndürecektir *`ppOut`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553199"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex yöntemi
-Yönetilen yuvası dizin yerel değişken alır.  
+Yerel değişken yönetilen yuvası dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,27 +37,27 @@ HRESULT GetSlotIndex(
   
 #### <a name="parameters"></a>Parametreler  
  `pSlotIndex`  
- [out] Yerel değişken yuvası dizin için bir işaretçi.  
+ [out] Bir yerel değişken dizini yuva için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki değerleri döndürür.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Yöntem çağrısının yuvası dizin değeri döndürülen `pSlotIndex`.|  
-|`E_FAIL`|Geçerli [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği bir işlev bağımsız değişkeni temsil eder.|  
+|`S_OK`|Bir yuva dizin değeri yöntem çağrısından döndürülen `pSlotIndex`.|  
+|`E_FAIL`|Geçerli [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği, işlev bağımsız değişkeni temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yuva dizini, bu yerel değişken meta verilerini almak için kullanılabilir.  
+ Yuva dizin, bu yerel değişken için meta verileri almak için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

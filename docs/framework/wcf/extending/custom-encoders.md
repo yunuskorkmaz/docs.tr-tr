@@ -2,17 +2,17 @@
 title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509372"
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 Bu konu, özel kodlayıcılar oluşturulacağını açıklar.  
   
- Windows Communication Foundation (WCF) kullandığınız bir *bağlama* uç noktaları arasında bir ağ üzerinden veri aktarımı nasıl belirlemek için. Bağlama bir dizi yapılır *bağlama öğelerinin*. Bir bağlama güvenlik, gerekli bir'gibi isteğe bağlı Protokolü bağlama öğeleri içeren *ileti Kodlayıcı* bağlama öğesi ve gerekli aktarım bağlama öğesi. İleti Kodlayıcı, bir ileti kodlama bağlama öğesi tarafından temsil edilir. WCF'de ileti kodlayıcılar üç dahil edilecek: ikili ileti aktarım en iyi duruma getirme mekanizması (MTOM) ve metin.  
+ Windows Communication Foundation (WCF) kullandığınız bir *bağlama* uç noktaları arasında bir ağ üzerinden veri aktarımı nasıl belirlemek için. Bağlama bir dizi yapılır *bağlama öğelerinin*. Bir bağlama güvenlik, gerekli bir'gibi isteğe bağlı Protokolü bağlama öğeleri içeren *ileti Kodlayıcı* bağlama öğesi ve gerekli aktarım bağlama öğesi. İleti Kodlayıcı, bir ileti kodlama bağlama öğesi tarafından temsil edilir. WCF'de ileti kodlayıcılar üç dahildir: İkili, ileti aktarım en iyi duruma getirme mekanizması (MTOM) ve metin.  
   
  Kodlama bağlama öğesi serileştiren bir giden ileti <xref:System.ServiceModel.Channels.Message> ve aktarım için geçirir veya aktarımdan serileştirilmiş biçiminde bir ileti alır ve protokol katmanında varsa veya uygulamaya geçirir, mevcut değilse.  
   
@@ -30,7 +30,7 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
   
  WCF sağlayan aşağıdaki bağlama öğeleri türetilen türde <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama sağlayabilen sınıf:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir ancak XML iletileri için en az verimli Kodlayıcı. Genellikle bir Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme verimli değildir.  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir, ancak XML iletileri için en az verimli Kodlayıcı. Genellikle bir Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme verimli değildir.  
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir. bağlama öğesi ve ileti sürüm oluşturmayı ikili tabanlı XML iletileri için kullanılan temsil eder. Bu kodlama seçenekleri, ancak en az çalışabilen en etkili yöntemdir çünkü yalnızca WCF uç noktaları tarafından desteklenir.  
   
@@ -89,12 +89,12 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
   
  Ardından özel bağlanma <xref:System.ServiceModel.Channels.MessageEncoderFactory> geçersiz kılarak, hizmet veya istemcinin yapılandırmak için kullanılan bağlama öğesi yığınına <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> yöntemi bu üretecin bir örneğini döndürür.  
   
- Örnek kod ile bu işlemi canlandırmak adına WCF ile sağlanan iki örnekleri vardır: [özel ileti Kodlayıcı: özel metin Kodlayıcı](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) ve [özel ileti Kodlayıcı: sıkıştırma Kodlayıcısı](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Örnek kod ile bu işlemi canlandırmak adına WCF ile sağlanan iki örnekleri vardır: [Özel ileti Kodlayıcı: Özel metin Kodlayıcı](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) ve [özel ileti Kodlayıcı: Sıkıştırma Kodlayıcısı](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Veri Aktarımı Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [İleti Kodlayıcı Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Taşıma Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Veri Aktarımı Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [İleti Kodlayıcı Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Taşıma Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

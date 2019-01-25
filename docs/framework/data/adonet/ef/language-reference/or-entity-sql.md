@@ -2,12 +2,12 @@
 title: '|| (VEYA) (Varlık SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 09ae742f648f95819a8c6fc64d402c4f11c7748a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d0bed2fb000e96e9fd0ceac6ea90e19b8fa7514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554861"
 ---
 # <a name="-or-entity-sql"></a>|| (VEYA) (Varlık SQL)
 İki birleştirir `Boolean` ifadeler.  
@@ -22,15 +22,15 @@ boolean_expression || boolean_expression
   
 ## <a name="arguments"></a>Arguments  
  `boolean_expression`  
- Döndüren herhangi bir geçerli ifadeler bir `Boolean`.  
+ Döndüren herhangi bir geçerli ifade bir `Boolean`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` koşullardan biri olduğunda `true`; Aksi halde, `false`.  
+ `true` koşullardan biri olduğunda `true`; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- VEYA bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] mantıksal işleç. İki koşul birleştirmek için kullanılır. Birden fazla mantıksal işleç bir deyimde kullanıldığında veya işleçler ve işleçler sonra değerlendirilir. Ancak, parantez kullanarak Değerlendirme sırasını değiştirebilirsiniz.  
+ VEYA bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] mantıksal işleç. İki koşul birleştirmek için kullanılır. Bir deyimde birden fazla mantıksal işleç kullanıldığında, OR işleçlerini sonra ve işleçler değerlendirilir. Ancak, parantezler kullanarak Değerlendirme sırasını değiştirebilirsiniz.  
   
- Çift dikey çubuk (&#124;&#124;) veya işlecini aynı işlevselliğe sahiptir.  
+ Çift dikey çubuk (&#124;&#124;) OR işleci aynı işlevselliğe sahiptir.  
   
  Aşağıdaki tabloda olası giriş değerleri gösterir ve dönüş türleri.  
   
@@ -41,13 +41,13 @@ boolean_expression || boolean_expression
 |`NULL`|TRUE|NULL|NULL|  
   
 ## <a name="example"></a>Örnek  
- İki birleştirmek için aşağıdaki varlık SQL sorgusunu veya işlecini kullanan `Boolean` ifadeler. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusu OR işleci iki birleştirmek için kullanır. `Boolean` ifadeler. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

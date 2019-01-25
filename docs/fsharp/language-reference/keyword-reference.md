@@ -2,12 +2,12 @@
 title: Klavye Başvurusu
 description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579851"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857911"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -73,7 +73,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`return!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Hesaplama ifadesi göstermek için kullanılan, değerlendirildiğinde, içeren hesaplama ifadesi sonucu sağlar.|
 |`select`|[Sorgu İfadeleri](query-expressions.md)|Sorgu ifadelerinde hangi alanları veya ayıklamak için sütunları belirtmek için kullanılır. Bu gerçekten ayrılmış bir sözcük değildir ve yalnızca uygun bağlamda bir anahtar sözcük gibi davranan bir bağlamsal anahtar sözcüğü, olduğunu unutmayın.|
 |`static`|[Üyeler](members/index.md)|Bir yöntem veya bir tür örneği olmadan çağrılabilir özelliği veya bir türün tüm örnekleri arasında paylaşılan bir değer üyesi göstermek için kullanılır.|
-|`struct`|[Yapılar](structures.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Bir yapı türü bildirmek için kullanılır.<br /><br />Ayrıca genel parametre kısıtlama kullanılan.<br /><br />Modül tanımları OCaml uyumluluk için kullanılır.|
+|`struct`|[Yapılar](structures.md)<br /><br /> [Demetler](tuples.md)<br/><br/>[Kısıtlamalar](generics/constraints.md)|Bir yapı türü bildirmek için kullanılır.<br /><br/>Yapı tanımlama grubu belirtmek için kullanılır.<br/><br />Ayrıca genel parametre kısıtlama kullanılan.<br /><br />Modül tanımları OCaml uyumluluk için kullanılır.|
 |`then`|[Koşullu ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Oluşturucular](members/constructors.md)|Koşullu ifadelerle birlikte kullanılır.<br /><br />Yan etkileri nesne oluşturmayı sonra gerçekleştirmek için de kullanılır.|
 |`to`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)|Kullanılan `for` döngüler aralık belirtmek için.|
 |`true`|[İlkel Türler](primitive-types.md)|Bir Boolean değişmez değer olarak kullanılır.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507375"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -109,6 +109,6 @@ Windows Forms uygulamalarındaki yüksek DPI desteği alma Avantajı hakkında d
 Bunlar artırıldıkça tek veya çoklu geçiş ölçeklendirme kullanıcı arabiriminin yanıt verebilirliği ve kullanıcı arabirimi öğeleri görünümünü etkiler. .NET Framework 4.7 ile başlayarak, Windows Forms tek parola ölçeklendirme kullanır. Önceki .NET Framework sürümlerinde, ölçeklendirme, gerekli birden ölçeklendirilmesi bazı denetimler neden birden çok geçer gerçekleştirildi. Uygulamanız eski davranışa bağlıysa tek geçişli ölçeklendirme yalnızca devre dışı gerekir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
- 
-[Windows Forms yapılandırma bölümü](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Windows Forms'ta yüksek DPI desteği](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Windows Forms Yapılandırma Bölümü](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Windows Forms'ta yüksek DPI desteği](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

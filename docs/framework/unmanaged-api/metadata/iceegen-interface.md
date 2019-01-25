@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3e70749a768377ea470bc44a66b9fdabbb1f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555069"
 ---
 # <a name="iceegen-interface"></a>ICeeGen Arabirimi
-Dinamik kod derleme için yöntemleri sağlar.  
+Dinamik kod derleme için yöntemler sağlar.  
   
  Bu arabirim artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -32,30 +32,30 @@ Dinamik kod derleme için yöntemleri sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Kullanımdan kalktı. .Reloc yönerge kodu Bankası'na ekler.|  
-|[AllocateMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Kullanımdan kalktı. Bir yöntem için belirtilen boyutta bir arabellek oluşturur ve göreli sanal adres yönteminin alır.|  
-|[ComputePointer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Kullanımdan kalktı. Belirtilen kod bölümü için arabellek belirler.|  
-|[EmitString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Kullanımdan kalktı. Belirtilen dize kod temeli yayar.|  
-|[GenerateCeeFile Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Kullanımdan kalktı. Şu anda bu yüklenmiş kod tabanını içeren bir kod temeli dosyası oluşturur `ICeeGen`.|  
-|[GenerateCeeMemoryImage Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Kullanımdan kalktı. Kod temeliniz için bellekte bir görüntü oluşturur.|  
-|[GetIlSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan bölüm Ara dil kodu temel alır.|  
+|[AddSectionReloc Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Kullanımdan kalktı. Kod tabanına .reloc yönergesi ekler.|  
+|[AllocateMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Kullanımdan kalktı. Bir yöntem için belirtilen boyutta bir arabellek oluşturur ve yöntemin göreli sanal adres alır.|  
+|[ComputePointer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Kullanımdan kalktı. Belirtilen kod bölümüne yönelik arabellek belirler.|  
+|[EmitString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Kullanımdan kalktı. Belirtilen dize kod tabanında yayar.|  
+|[GenerateCeeFile Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Kullanımdan kalktı. Şu anda bu yüklenen kod tabanı içeren bir kod tabanı dosyası oluşturur `ICeeGen`.|  
+|[GenerateCeeMemoryImage Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Kullanımdan kalktı. Kod tabanı için bellekte bir görüntü oluşturur.|  
+|[GetIlSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan temel Ara dil kodu bölümünü alır.|  
 |[GetIMapTokenIface Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Kullanımdan kalktı. Belirtilen belirteç tarafından başvurulan arabirimi alır.|  
-|[GetMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Kullanımdan kalktı. Uygun boyutta bir arabellek yöntemi belirtilen göreli sanal adresinde alır.|  
-|[GetSectionBlock Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Kullanımdan kalktı. Kod temeliniz bölüm bloğunu alır.|  
-|[GetSectionCreate Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Kullanımdan kalktı. Oluşturur ve belirtilen ad ve bayrak değerleri kullanarak bir kod bölümü alır.|  
+|[GetMethodBuffer Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Kullanımdan kalktı. Uygun boyutta bir arabellek yöntemi için belirtilen göreli sanal adresindeki alır.|  
+|[GetSectionBlock Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Kullanımdan kalktı. Kod tabanının bir bölüm bloğunu alır.|  
+|[GetSectionCreate Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Kullanımdan kalktı. Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.|  
 |[GetSectionDataLen Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Kullanımdan kalktı. Belirtilen bölüm uzunluğunu alır.|  
-|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Kullanımdan kalktı. Belirtilen göreli sanal adresinde depolanan dizesini alır.|  
-|[GetStringSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan kod bölümünde bir dize gösterimini alır.|  
+|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Kullanımdan kalktı. Belirtilen göreli sanal adresindeki depolanan dizesini alır.|  
+|[GetStringSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Kullanımdan kalktı. Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimini alır.|  
 |[TruncateSection Yöntemi](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Kullanımdan kalktı. Belirtilen kod bölümünde belirtilen uzunluğa göre keser.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

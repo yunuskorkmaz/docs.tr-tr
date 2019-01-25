@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme'
+title: 'İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600680"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme
 
 Bu izlenecek yol, sürükle ve bırak veri aktarımı katılabilen özel bir kullanıcı denetimi oluşturmak gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
@@ -38,9 +38,9 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 ## <a name="create-the-application-project"></a>Uygulama projesini oluşturun
  Bu bölümde, bir ana sayfa ile iki panel içerir uygulama altyapısı oluşturacak ve bir <xref:System.Windows.Controls.TextBox>.
 
-1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma `DragDropExample`. Daha fazla bilgi için [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma `DragDropExample`. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF uygulaması projesi oluşturma](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
-2.  MainWindow.xaml açın.
+2.  Open MainWindow.xaml.
 
 3.  Açılış ve kapanış arasında aşağıdaki işaretlemeyi ekleyin <xref:System.Windows.Controls.Grid> etiketler.
 
@@ -76,7 +76,7 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
 ## <a name="add-the-user-control-to-the-main-window"></a>Kullanıcı denetiminin ana penceresine ekleme
 
-1.  MainWindow.xaml açın.
+1.  Open MainWindow.xaml.
 
 2.  Aşağıdaki XAML açılış ekleme <xref:System.Windows.Window> bir XML ad alanı başvurusu geçerli uygulamaya etiket.
 
@@ -281,7 +281,7 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
 Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranmak üzere daire kullanıcı denetimleri barındıran paneller etkinleştirin. Bir daire bir panelden diğerine taşımak için ya da basılı tutarak bir daire denetimin bir kopyasını yapmak sağlayan kodu gerçekleştireceksiniz **Ctrl** tuşunu sürükleyip bırakarak bir daire.
 
-1.  MainWindow.xaml açın.
+1.  Open MainWindow.xaml.
 
 2.  Her birinde aşağıdaki XAML gösterildiği <xref:System.Windows.Controls.StackPanel> denetimler eklemek için işleyiciler <xref:System.Windows.UIElement.DragOver> ve <xref:System.Windows.UIElement.Drop> olayları. Adı <xref:System.Windows.UIElement.DragOver> olay işleyicisi `panel_DragOver`ve ad <xref:System.Windows.UIElement.Drop> olay işleyicisi `panel_Drop`.
 
@@ -331,6 +331,6 @@ Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranm
 
      ![Bir daire CTRL tuşunu basılı tutarak sürükleyerek](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sürükleme ve Bırakmaya Genel Bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
