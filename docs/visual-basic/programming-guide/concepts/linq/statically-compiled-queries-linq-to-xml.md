@@ -1,19 +1,19 @@
 ---
-title: Sorgu (LINQ-XML)'statik olarak derlenmiş (Visual Basic)
+title: Sorgular (LINQ to XML)'statik olarak derlenmiş (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: f6230864eb125d493d38f85adf5806c80a31c910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64f3d59df57b59743824160d0bfe9f4b30e54ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733902"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Sorgu (LINQ-XML)'statik olarak derlenmiş (Visual Basic)
-En önemli performans birini avantaj LINQ XML'e tersine <xref:System.Xml.XmlDocument>, çalışma zamanında XPath sorguları yorumlanacağını ancak LINQ-XML sorgularında statik olduğundan, derlenir. Bu özellik LINQ-XML, onu yararlanmak için ek adımlar gerçekleştirmeniz gerekmez, ancak iki teknolojiyi arasında seçerken aralarındaki farkı anlamak faydalıdır şekilde de yerleşiktir. Bu konuda fark açıklanmaktadır.  
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Sorgular (LINQ to XML)'statik olarak derlenmiş (Visual Basic)
+En önemli performans birini avantajlar LINQ, XML olarak <xref:System.Xml.XmlDocument>, XPath sorguları çalışma zamanında yorumlanacağını ancak LINQ to XML sorgularında statik olduğunu, derlenir. Bu özellik için LINQ to XML, yararlanmak için ek adımlar gerçekleştirmeniz gerekmez, ancak iki teknolojiyi arasında seçim yaparken, aradaki farkı kavramak yararlıdır yerleşik olarak bulunur. Bu konu, farkı açıklar.  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>Statik olarak derlenmiş sorguları vs. XPath  
- Aşağıdaki örnek belirtilen ada sahip ve belirtilen değerli özniteliği içeren alt öğelerini alma gösterilmektedir.  
+## <a name="statically-compiled-queries-vs-xpath"></a>Statik olarak derlenmiş sorgular vs. XPath  
+ Aşağıdaki örnek belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.  
   
  Eşdeğer XPath ifadesi verilmiştir:  
   
@@ -32,7 +32,7 @@ For Each el In list1
 Next  
 ```  
   
- Bu örnek sorgu ifadesinde yöntem temelli sorgu söz dizimi derleyicisi tarafından yeniden yazılır. Yöntem temelli sorgu söz dizimi yazılır, aşağıdaki örnek öncekiyle aynı sonuçları üretir:  
+ Bu örnekte sorgu ifadesi metot tabanlı sorgu söz dizimi için derleyici tarafından yeniden yazılır. Metot tabanlı sorgu söz dizimi içinde yazılır, aşağıdaki örnekte, önceki'dekiyle aynı sonucu üretir:  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -44,7 +44,7 @@ For Each el In list1
 Next   
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> Bir genişletme yöntemi bir yöntemdir. Daha fazla bilgi için bkz: [genişletme yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Çünkü <xref:System.Linq.Enumerable.Where%2A> bir uzantı yöntemidir yazılmış gibi sorgulamanıza gibi yukarıdaki sorgu derlenir:  
+ <xref:System.Linq.Enumerable.Where%2A> Bir genişletme yöntemi bir yöntemdir. Daha fazla bilgi için [genişletme yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Çünkü <xref:System.Linq.Enumerable.Where%2A> bir uzantı yöntemi, yukarıdaki sorgunun yazılmış gibi sorgulamanıza şu şekilde derlenir:  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -56,13 +56,13 @@ For Each el In list1
 Next  
 ```  
   
- Bu örnek, önceki iki örnek ile tam olarak aynı sonuçları üretir. Bu sorguları statik olarak bağlantılı yöntemi çağrılarını etkili bir şekilde derlenen olgu gösterilmektedir. Bu, birleştirilmiş yineleyiciler, ertelenmiş yürütme semantiği ile performansı artırır. Yineleyiciler ertelenmiş yürütme semantiğini hakkında daha fazla bilgi için bkz: [ertelenmiş yürütme ve LINQ-XML (Visual Basic) geç değerlendirme](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Bu örnek, önceki iki örnekle tam olarak aynı sonuçları üretir. Bu sorgular, statik olarak bağlı yöntemi çağrılarını etkili bir şekilde derlenir olgu gösterilmektedir. Bu, yineleyiciler, ertelenmiş yürütme semantikleri ile birleştirilmiş performansını artırır. Yineleyiciler ertelenmiş yürütme semantikleri hakkında daha fazla bilgi için bkz. [ertelenmiş yürütme ve geç değerlendirme LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 > [!NOTE]
->  Bu örnekler derleyici yazabilir kod temsilcisi. Gerçek uygulamayı bu örneklerinden biraz farklı olabilir, ancak performans aynı olacaktır ya da bu örneklerde benzer.  
+>  Bu örnekler derleyici yazabilirsiniz kodun temsilcisi. Gerçek uygulamalar bu örneklerden biraz farklı olabilir, ancak performans aynı olacaktır ya da bu örneklerde benzer.  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>XPath ifadeleri XmlDocument ile çalıştırma  
- Aşağıdaki örnek kullanır <xref:System.Xml.XmlDocument> önceki örneklerle aynı sonuçları gerçekleştirmek için:  
+ Aşağıdaki örnekte <xref:System.Xml.XmlDocument> önceki örnekler aynı sonuçlara ulaşmak için:  
   
 ```vb  
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")  
@@ -75,19 +75,19 @@ Next
 reader.Close()  
 ```  
   
- Bu sorgu LINQ-XML kullanma örnekleri aynı çıktıyı döndürür; yalnızca LINQ-XML yazdırılan XML girintileri ancak farktır <xref:System.Xml.XmlDocument> desteklemez.  
+ Bu sorgu, LINQ to XML kullanan örnekler aynı çıkışı döndürür; tek fark LINQ to XML yazdırılan XML girintiler takvimidir <xref:System.Xml.XmlDocument> desteklemez.  
   
- Ancak, <xref:System.Xml.XmlDocument> yaklaşım genellikle gerçekleştirmez LINQ-XML, yanı sıra çünkü <xref:System.Xml.XmlNode.SelectNodes%2A> yöntemi aşağıdakileri yapmalıdır dahili olarak her çağrıldığında:  
+ Ancak, <xref:System.Xml.XmlDocument> yaklaşımı genellikle gerçekleştirmez LINQ to XML, yanı sıra çünkü <xref:System.Xml.XmlNode.SelectNodes%2A> yöntemi aşağıdakileri yapmalıdır dahili olarak her çağrıldığında:  
   
--   Dizeyi belirteçlere çiğnemekten XPath ifadesi içeren dizeyi ayrıştırır.  
+-   Bu dizeyi belirteçlere bozucu bir XPath ifadesi içeriyor dizeyi ayrıştırır.  
   
--   XPath ifadesi geçerli olduğundan emin olmak için belirteçlerini doğrular.  
+-   Bu XPath ifadesi geçerli olduğundan emin olmak için belirteçlerini doğrular.  
   
--   Bir iç ifade ağacına ifadesine çevirir.  
+-   Bu iç ifade ağacı ifadeye çevrilir.  
   
--   Uygun şekilde ifade değerlendirmeye dayanarak sonuç kümesi için düğüm seçildikten düğümleri dolaşır.  
+-   Uygun şekilde ifade değerlendirmeye göre sonuç kümesi için düğümleri seçme düğümleri aracılığıyla yinelenir.  
   
- Önemli ölçüde daha fazla XML sorgusu için karşılık gelen LINQ tarafından çalışmanın budur. Sorgu farklı türleri için belirli bir performans farkı değişir, ancak genel LINQ-XML sorguları daha az çalışma yapın ve bu nedenle, daha iyi kullanarak XPath ifadeleri değerlendirme görevlerini <xref:System.Xml.XmlDocument>.  
+ Önemli ölçüde daha fazla ilgili LINQ to XML sorgusu ile çalışmanın budur. Sorgu farklı türleri için belirli bir performans farkı değişir, ancak genel bir LINQ to XML sorguları daha az çalışma yapın ve bu nedenle, daha iyi kullanarak XPath ifadelerini değerlendirme gerçekleştirmek <xref:System.Xml.XmlDocument>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Performans (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Performans (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

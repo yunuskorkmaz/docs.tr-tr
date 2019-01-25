@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0ed92cbf5a859b9d5b7b8eddefda3ad34a98f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f87107be14554d8d826c58108446ecd245549b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603705"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Yöntemi
-Tarafından çağrılır [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) hata ayıklayıcısı için belirtilen bir bölge bellek numaralandırılamıyor girişiminde sonucunu bildirmek için.  
+Çağıran [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) hata ayıklayıcıya, belirtilen bellek bölgesini numaralandırma girişiminin sonucunu raporlamak için.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +38,24 @@ HRESULT EnumMemoryRegion (
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Numaralandırılacak olan bellek bölge başlangıç adresi.  
+ [in] Numaralandırılacak olan bellek bölgesini başlangıç adresi.  
   
  `size`  
- [in] Bellek alanının bayt cinsinden boyutu.  
+ [in] Bellek bölümünün bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICLRDataEnumMemoryRegions::EnumMemoryRegions` Yöntemi, bir bellek bölge Numaralandırılacak her girişiminden sonra bu geri çağırma yöntemi çağıracaktır. Bu yöntem HRESULT hata olduğunu gösteren döndürürse bile numaralandırma devam eder.  
+ `ICLRDataEnumMemoryRegions::EnumMemoryRegions` Yöntemi bir bellek bölgesini numaralandırma her girişimden sonra bu geri çağırma yöntemi çağırır. Bu yöntem, hata olduğunu gösteren bir HRESULT döndürür bile numaralandırması devam eder.  
   
- Bu geri çağırma tarafından bildirilen bölgeleri yinelenen veya örtüşen bölgeler olabilir.  
+ Bu geri çağırma tarafından bildirilen bölgeler, yinelenen veya örtüşen bölgelerde olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRDataEnumMemoryRegionsCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRDataEnumMemoryRegionsCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)

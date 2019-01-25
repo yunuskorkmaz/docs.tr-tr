@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
+title: "Nasıl yapılır: AJAX etkinleştirilmiş ASP.NET Web hizmetlerini WCF'ye taşıma"
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638294"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX etkinleştirilmiş ASP.NET Web hizmetlerini WCF'ye taşıma
 Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetler. Bu, bir ASP.NET AJAX Hizmeti işlevsel olarak eşdeğer bir WCF sürümü oluşturma işlemini gösterir. İki hizmeti daha sonra bir yan yana kullanılabilir veya WCF hizmetini ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.
 
  Mevcut bir ASP.NET AJAX geçiş hizmetine bir WCF AJAX hizmeti aşağıdaki faydaları sağlar:
@@ -22,7 +22,7 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
 
  Bu konu başlığında açıklanan yordamları oluşur kodu prosedürleri izliyorsanız örnekte sağlanır.
 
- WCF hizmet AJAX etkinleştirilmiş bir uç nokta aracılığıyla kullanıma sunma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.
+ WCF hizmet AJAX etkinleştirilmiş bir uç nokta aracılığıyla kullanıma sunma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Oluşturma ve ASP.NET Web hizmeti uygulamasını test etmek için
 
@@ -212,5 +212,5 @@ d.Add("two", 2);
 |Sözlükler temsili|Bir dizi KeyValuePair\<K, V >, dize olmayan anahtar türünü işler.|Gerçek JSON nesneleri - ancak dizelerdir yalnızca tanıtıcıları anahtar türleri.|
 |Kaçan karakter|Her zaman bir kaçış ile eğik çizgi (/); ilet hiçbir zaman "\n" gibi kaçılmamış geçersiz JSON karaktere izin verilir.|Eğik çizgi (/) DateTime değerleri için bir kaçış ile iletin.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

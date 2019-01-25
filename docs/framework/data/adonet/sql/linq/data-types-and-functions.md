@@ -2,12 +2,12 @@
 title: Veri türleri ve işlevleri
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711901"
 ---
 # <a name="data-types-and-functions"></a>Veri türleri ve işlevleri
 Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve ortak dil çalışma zamanı (CLR) yayınları için LINQ açıklar. Desteklenen üyeleri ve yapıları, LINQ to SQL sorgularında kullanılabilir.  
@@ -31,7 +31,7 @@ Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve or
 |[System.TimeSpan Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|SQL desteği üyeleri için LINQ açıklar <xref:System.TimeSpan?displayProperty=nameWithType> yapısı.|  
 |[Desteklenmeyen İşlev](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Desteklenmeyen işlevleri açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Visual Studio'da .NET framework sınıf kitaplığı](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Visual Studio'da .NET framework sınıf kitaplığı](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

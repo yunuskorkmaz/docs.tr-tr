@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 54991234d4eaa9edab218d3b0d221a6e477d2be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587784"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument eşitlemesi
 ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki verilerini sunumu ayrı olarak kullanılmış. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik temsillerini gerçek zamanlı, zaman uyumlu erişiminizi sağlar **veri kümesi** nesne ve <xref:System.Xml.XmlDataDocument> nesne, sırasıyla.  
@@ -112,5 +112,5 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
  <xref:System.Xml.XmlDataDocument>  
  Hakkında başvuru bilgileri içerir **XmlDataDocument** sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

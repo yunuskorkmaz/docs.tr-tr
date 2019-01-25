@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578396"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# Derleyici Seçenekleri)
 **-Kullanıma** seçeneği veri türü ve aralığı dışında bir değer sonuçlanır bir tamsayı aritmetik deyiminin kapsamı içinde olup olmadığını belirten bir [kullanıma](../../../csharp/language-reference/keywords/checked.md) veya [ denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md) anahtar sözcüğü, bir çalışma zamanı özel durumuna neden olur.  
@@ -52,7 +52,7 @@ ms.locfileid: "44084861"
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
-- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

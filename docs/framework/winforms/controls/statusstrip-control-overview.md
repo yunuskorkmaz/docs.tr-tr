@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: e40373dd05e59325cdb6c2272d5749f3828b0755
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9356ca85003987eabf4f62a25acad45d73e144fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627245"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip Denetimine Genel Bakış
 A <xref:System.Windows.Forms.StatusStrip> denetimi, görüntülenmekte olan bir nesneyle ilgili bilgileri görüntüler bir <xref:System.Windows.Forms.Form>, nesnenin bileşenlerini veya nesnenin işlemi uygulamanız içinde ilgili bağlamsal bilgi. Genellikle, bir <xref:System.Windows.Forms.StatusStrip> denetim oluşur <xref:System.Windows.Forms.ToolStripStatusLabel> nesneleri, metin, simge ya da her ikisini de her biri görüntüler. <xref:System.Windows.Forms.StatusStrip> De içerebilir <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, ve <xref:System.Windows.Forms.ToolStripProgressBar> kontrol eder.  
@@ -41,7 +41,7 @@ A <xref:System.Windows.Forms.StatusStrip> denetimi, görüntülenmekte olan bir 
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Standart bir düğme ve bir açılan menü iki parçalı bir denetimi temsil eder.|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Bir işlemi tamamlama durumunu görüntüler.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.StatusStrip>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.StatusStrip>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

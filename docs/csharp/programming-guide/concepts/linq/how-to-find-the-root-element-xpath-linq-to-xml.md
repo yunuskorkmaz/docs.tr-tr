@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bulma (XPath-LINQ to XML) kök öğe (C#)'
+title: 'Nasıl yapılır: Bulma (XPath-LINQ to XML) kök öğe (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a74556e4b05bc3ae02998eeb6dd3190a3bade36a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697172"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: bulma (XPath-LINQ to XML) kök öğe (C#)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bulma (XPath-LINQ to XML) kök öğe (C#)
 Bu konu XPath kök öğesiyle almak nasıl gösterir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  XPath ifadesidir:  
@@ -19,7 +19,7 @@ Bu konu XPath kök öğesiyle almak nasıl gösterir ve [!INCLUDE[sqltecxlinq](~
 ## <a name="example"></a>Örnek  
  Bu örnekte, kök öğesi bulur.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -44,6 +44,6 @@ Results are identical
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: ade08deca909b32090b7d2d7cf8c6ba9ce9e7679
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661223"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri sıralama ve filtreleme
 <xref:System.Data.DataView> İçindeki verileri sıralama ve filtreleme çeşitli yollarını sağlar bir <xref:System.Data.DataTable>:  
@@ -34,7 +34,7 @@ ms.locfileid: "44083136"
     |**silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
     |**ModifiedCurrent**|**Geçerli** satır sürümü tüm **değiştirilen** satır.|  
     |**ModifiedOriginal**|**Özgün** satır sürümü tüm **değiştirilen** satır.|  
-    |**Yok**|Satır yok.|  
+    |**Yok.**|Satır yok.|  
     |**OriginalRows**|**Özgün** satır sürümü tüm **Unchanged**, **değiştirilen**, ve **silinmiş** satır.|  
     |**değişmedi**|**Geçerli** satır sürümü tüm **Unchanged** satır.|  
   
@@ -56,10 +56,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
    DataViewRowState.CurrentRows);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Data.DataViewRowState>  
- <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataView>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Data.DataViewRowState>
+- <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataView>
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

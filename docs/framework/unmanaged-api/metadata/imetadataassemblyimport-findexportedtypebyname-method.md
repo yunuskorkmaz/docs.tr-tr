@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576193"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName Yöntemi
 Bir işaretçi verilen bir tür için adı ve türü kapsayan verilen alır.  
@@ -39,26 +39,26 @@ HRESULT FindExportedTypeByName (
   
 #### <a name="parameters"></a>Parametreler  
  `szName`  
- [in] Dışarı aktarılan türünün adı.  
+ [in] Dışarı aktarılan tür adı.  
   
  `mdtExportedType`  
- [in] Dışarı aktarılan tür kapsayan sınıfı için meta veri simgesi. Bu değer `mdExportedTypeNil` istenen veriliyorsa türü bir iç içe geçmiş tür değil.  
+ [in] Dışarı aktarılan tür kapsayan sınıfı için meta veri belirteci. Bu değer `mdExportedTypeNil` istenen dışarı aktardıysanız türü iç içe geçmiş bir tür değil.  
   
  `ptkExportedType`  
- [out] Bir işaretçi `mdExportedType` dışarı aktarılan tür temsil eden belirteci.  
+ [out] Bir işaretçi `mdExportedType` dışarı aktarılan türünü temsil eden belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `FindExportedTypeByName` Yöntemi başvurularını çözümlemek için ortak dil çalışma zamanı tarafından kullanılan standart kurallar kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

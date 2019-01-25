@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653755"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -44,7 +44,7 @@ Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel
 |-artan|[Eski] Artımlı derlemeyi etkinleştirir.|
 |[-keycontainer](keycontainer-compiler-option.md)|Tanımlayıcı ad anahtar kapsayıcısı belirtir.|
 |[-keyfile](keyfile-compiler-option.md)|Tanımlayıcı ad anahtar dosyası belirtir.|
-|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 veya en son |
+|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 veya en son |
 |[-lib](lib-compiler-option.md)|Başvurular için aranacağı ek dizinleri belirtir.|
 |[-link](link-compiler-option.md)|COM tür bilgilerini belirtilen derlemeleri projeye kullanılabilir hale getirir.|
 |[-linkresource](linkresource-compiler-option.md)|Belirtilen kaynağı bu derlemeye bağlar.|
@@ -80,9 +80,9 @@ Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel
 |[-win32manifest](win32manifest-compiler-option.md)|Özel bir win32 bildirim dosyasını belirtir.|
 |[-win32res](win32res-compiler-option.md)|Win32 kaynak dosyası (.res) belirtir.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](index.md)  
-- [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](listed-by-category.md)  
-- [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [C# Derleyici Seçenekleri](index.md)
+- [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](listed-by-category.md)
+- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<Derleyici > öğesi](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

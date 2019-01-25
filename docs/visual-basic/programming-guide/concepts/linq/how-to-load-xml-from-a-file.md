@@ -2,20 +2,20 @@
 title: 'Nasıl yapılır: XML dosyasından (Visual Basic) yükleme'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494671"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Nasıl yapılır: XML dosyasından (Visual Basic) yükleme
-Bu konuda kullanarak bir URİ'den XML yük gösterilmektedir <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi.  
+Bu konuda, XML, kullanarak bir URI'den yüklemek gösterilmektedir <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dosyadan bir XML belgesi yüklemek gösterilmektedir. Aşağıdaki örnek books.xml yükler ve konsol XML ağacına çıkarır.  
+ Aşağıdaki örnek, bir XML belgesi bir dosyadan yüklemek gösterilmektedir. Aşağıdaki örnek, books.xml yükler ve konsola XML ağacı çıkarır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: Books (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -48,5 +48,5 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

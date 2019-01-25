@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir dosya veya klasör - oluşturma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Bir dosya veya klasör - oluşturma C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731887"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Nasıl Yapılır: Bir dosya veya klasör oluşturma (C# Programlama Kılavuzu)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Nasıl yapılır: Bir dosya veya klasör oluşturma (C# Programlama Kılavuzu)
 Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve dosyaya veri yazmak.  
   
 ## <a name="example"></a>Örnek  
@@ -68,8 +68,8 @@ Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör olu
   
  Klasör oluşturma izniniz yoksa, örnek bir örneğini atar <xref:System.UnauthorizedAccessException> sınıfı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

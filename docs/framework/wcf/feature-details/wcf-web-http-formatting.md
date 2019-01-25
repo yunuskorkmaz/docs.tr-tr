@@ -2,12 +2,12 @@
 title: WCF Web HTTP biçimlendirme
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 3a5164cb6271c8fd1d67b3c59fd35705d997f9fe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698745"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
 WCF Web HTTP programlama modeli yanıtına döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
@@ -163,10 +163,10 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca bkz.  
- <xref:System.UriTemplate>  
- <xref:System.UriTemplateMatch>  
- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.UriTemplate>
+- <xref:System.UriTemplateMatch>
+- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

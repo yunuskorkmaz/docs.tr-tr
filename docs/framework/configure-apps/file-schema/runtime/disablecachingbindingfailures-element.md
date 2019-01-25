@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543873"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; öğesi
 Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.  
@@ -80,7 +80,7 @@ Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağ
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

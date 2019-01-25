@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 247a353a3f68289a85e581fd9b9c308e442a9412
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 675d9c02503cd69c425a95cffabde053dd5cca59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47455494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568822"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme
 > [!NOTE]
@@ -30,6 +30,6 @@ ms.locfileid: "47455494"
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

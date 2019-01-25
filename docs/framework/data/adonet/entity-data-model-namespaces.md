@@ -1,22 +1,22 @@
 ---
-title: 'Varlık veri modeli: ad alanları'
+title: 'Varlık veri modeli: Ad Alanları'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
-ms.openlocfilehash: 0fdb007e70b7dd2e4a812d711cb6348e3f563bad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa11902ece5197905c20e7e572562643c57f51c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590113"
 ---
-# <a name="entity-data-model-namespaces"></a>Varlık veri modeli: ad alanları
-Varlık veri modeli (EDM) ad alanı için bir Özet kapsayıcıdır [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md), [karmaşık türler](../../../../docs/framework/data/adonet/complex-type.md), ve [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md). EDM ad alanları, ad alanları bir programlama dili benzerdir: içerirler nesneler için bağlamı ve aynı ada sahip (ancak farklı ad alanlarında bulunan) nesneleri belirsizliğini ortadan kaldırmak için bir yol sağlar.  
+# <a name="entity-data-model-namespaces"></a>Varlık veri modeli: Ad Alanları
+Ad alanı varlık veri modeli (EDM) soyut bir kapsayıcıdır [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md), [karmaşık türler](../../../../docs/framework/data/adonet/complex-type.md), ve [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md). EDM ad alanları, ad alanları bir programlama dilinde benzerdir: içerdikleri nesneleri bağlam sağlarlar ve aynı ada sahip (ancak farklı ad alanlarına yer) nesneleri ayırt etmek için bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili adlı bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL kodu farklı bir kavramsal modelde tanımlanan bir türü tanımlamak için bir ad alanı kullanır. Örnek, bir varlık türünü tanımlar (`Publisher`), bir karmaşık tür özelliğe sahiptir (`Address`) öğesinden alınan `ExtendedBooksModel` ad alanı. Unutmayın `Using` öğesi gösteren bir ad alanı içeri aktarıldı. Ayrıca türünü `Address` özelliği, tam olarak nitelenmiş adını kullanarak tanımlanır (`ExtendedBooksModel.Address`), bu tür tanımlanan belirten `ExtendedBooksModel` ad alanı.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL kod, farklı bir kavramsal modelde tanımlı bir tür tanımlamak için bir ad alanı kullanır. Örnek, bir varlık türü tanımlar. (`Publisher`) olan bir karmaşık tür özelliği (`Address`) öğesinden alınan `ExtendedBooksModel` ad alanı. Unutmayın `Using` öğeyi gösteren bir ad alanı içeri aktarıldı. Ayrıca türünü `Address` özelliği, tam adı kullanılarak tanımlanır (`ExtendedBooksModel.Address`), bu tür tanımlanan belirten `ExtendedBooksModel` ad alanı.  
   
  [!code-xml[EDM_Example_Model#ImportedNamespace](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books6.edmx#importednamespace)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

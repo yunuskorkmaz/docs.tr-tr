@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yuva oluşturma'
+title: 'Nasıl yapılır: Yuva oluşturun'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 2c3bfb6435901ac8154bc801ae2a420b252d5849
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589707"
 ---
-# <a name="how-to-create-a-socket"></a>Nasıl yapılır: Yuva oluşturma
+# <a name="how-to-create-a-socket"></a>Nasıl yapılır: Yuva oluşturun
 Yuvanın uzak cihazlarla iletişim kurmak için bir yuva kullanmadan önce protokolü ve ağ adresi bilgilerini başlatılması gerekir. Oluşturucusu <xref:System.Net.Sockets.Socket> sınıfı Adres ailesi, yuva türünü ve yuva bağlantı kurmak için kullandığı protokol türü parametresi vardır.  
   
 ## <a name="example"></a>Örnek  
@@ -60,6 +60,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  Sonra bir **yuva** olan oluşturulmuş, uzak uç noktası için bir bağlantı başlatmak veya uzak bağlantıları alabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci Yuvaları Kullanma](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İstemci Yuvaları Kullanma](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)

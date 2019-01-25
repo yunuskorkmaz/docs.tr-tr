@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693142"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 `My.Applicaton.Log` Ve `My.Log` nesnelerini günlüğe kaydetme ve izleme bilgileri günlüklere yazılır kolaylaştırır.  
@@ -42,7 +42,7 @@ ms.locfileid: "47397692"
   
  Değerlerini `CompanyName`, `ProductName`, ve `ProductVersion` uygulamanın derleme bilgilerden gelir. Günlük dosyası adı biçimindedir *AssemblyName*.log, burada *AssemblyName* uzantısı olmadan bir derlemenin dosya adı. Orijinal günlüğü kullanılamadığında uygulama günlüğüne yazmak çalıştığında gibi birden fazla günlük dosyası gerekli olursa, günlük dosyası adı için formdur *AssemblyName*-*yineleme* .log, burada `iteration` bir pozitif `Integer`.  
   
- Ekleyerek veya değiştirerek bilgisayarın ve uygulama yapılandırma dosyaları varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için [izlenecek yol: değiştirme burada My.Application.Log Yazar bilgileri](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ Ekleyerek veya değiştirerek bilgisayarın ve uygulama yapılandırma dosyaları varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için [izlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Günlük ayarlarını yapılandırma  
  `Log` Nenesindeki çalışır ve varsayılan bir uygulama bir uygulama yapılandırma dosyası app.config. Varsayılan değerleri değiştirmek için yeni ayarlar ile bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için [izlenecek yol: My.Application.Log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
@@ -100,6 +100,6 @@ ms.locfileid: "47397692"
   
 -   **Hizmet reddi kaçının.** Uygulamanızı günlüğe çok bilgi yazar, bunu günlük dolgu yüklenemedi veya zor önemli bilgileri bulmanızı kolaylaştırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-ms.openlocfilehash: e5ad4416703e20a8e00299d496d360e1e84005a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 282f7fe8117b2c1b0fc23cb97bad7a34f6d106be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619480"
 ---
 # <a name="label-control-overview-windows-forms"></a>Etiket Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez görüntüler görüntülemek için kullanılır. Bir form üzerinde nesneleri tanımlamak için kullanılan — hangi belirli bir denetimin açıklamasını yeterlidir tıkladıysanız, örneğin sağlayın ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Örneğin, etiketleri metin kutuları, liste kutuları, birleşik giriş kutuları ve benzeri tanımlayıcı resim yazıları eklemek için kullanabilirsiniz. Ayrıca olaylarına yanıt olarak bir etiket tarafından çalışma zamanında görüntülenen metni değiştirir kod yazabilirsiniz. Örneğin, uygulamanızın bir değişiklik işlemek için birkaç dakika sürer, bir etiket işleme durum iletisi görüntüleyebilirsiniz.  
+Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez resimleri görüntülemek için kullanılır. Form üzerindeki nesneleri tanımlamak için kullanılan — hangi belirli denetim açıklamasını yeterlidir seçeneğine tıkladıysanız, örneğin sağlamak ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Örneğin, metin kutuları, liste kutuları, birleşik giriş kutuları ve benzeri için açıklayıcı bir açıklamalı alt yazı eklemek için etiketleri kullanabilirsiniz. Olaylara yanıt olarak bir etiket tarafından çalışma zamanında görüntülenen metni değişiklikleri kod da yazabilirsiniz. Örneğin, uygulamanızın bir değişiklik işlemek için birkaç dakika sürer, bir işleme durum iletisi bir etikette görüntüleyebilirsiniz.  
   
 ## <a name="working-with-the-label-control"></a>Etiket denetimi ile çalışma  
- Çünkü <xref:System.Windows.Forms.Label> denetimi odağı alamıyor, diğer denetimler için erişim anahtarları oluşturmak için de kullanılabilir. Erişim tuşu kullanıcının erişim anahtarı ile ALT tuşuna basarak diğer denetim seçmesini sağlar. Daha fazla bilgi için bkz: [oluşturma erişim anahtarları için Windows Forms denetimleri](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) ve [nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
+ Çünkü <xref:System.Windows.Forms.Label> denetim odağı alamaz, diğer denetimler için erişim anahtarları oluşturmak için de kullanılabilir. Bir erişim anahtarı diğer Denetim erişim anahtarı ile ALT tuşuna basarak seçmesini sağlar. Daha fazla bilgi için [oluşturma erişim anahtarları için Windows Forms denetimleri](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) ve [nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
   
- Etiketinde gösterilen resim yazısı yer <xref:System.Windows.Forms.Label.Text%2A> özelliği. <xref:System.Windows.Forms.Label.TextAlign%2A> Özelliği etiketi içinde metin hizalamasını ayarlamanıza olanak sağlar. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms denetimi tarafından görüntülenen metni ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Etikette gösterilen açıklamalı alt yazı bulunan <xref:System.Windows.Forms.Label.Text%2A> özelliği. <xref:System.Windows.Forms.Label.TextAlign%2A> Özelliği etiketteki metin hizalamasını ayarlama olanak tanır. Daha fazla bilgi için [nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Label>  
- [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Label>
+- [Nasıl yapılır: Bir Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

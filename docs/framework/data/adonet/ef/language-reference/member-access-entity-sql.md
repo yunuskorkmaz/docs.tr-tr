@@ -2,15 +2,15 @@
 title: biçimindeki telefon numarasıdır. (Üye erişimi) (Varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: fdcd026d245b3f6d6ecaccc0f828f3d77fd6ce1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2874e5bff8d8c34f700a81bf52c6729df49aca5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626680"
 ---
 # <a name="-member-access-entity-sql"></a>biçimindeki telefon numarasıdır. (Üye erişimi) (Varlık SQL)
-Nokta işleci (.) [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üye erişimi işleci. Üye erişimi işleci bir özelliği veya alanı yapısal kavramsal model türünün bir örneği, değeri elde etmek üzere kullanın.  
+Nokta işleci (.), [!INCLUDE[esql](../../../../../../includes/esql-md.md)] üye erişimi işleci. Üye erişim işleci, bir özellik veya alan yapısal kavramsal model türünün bir örneğinin değerini elde etmek üzere kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,15 +20,15 @@ expression.identifier
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Bir yapısal kavramsal model türünün bir örneği.  
+ Yapısal kavramsal model türünün bir örneği.  
   
  `identifier`  
- Bir özellik veya bir nesne örneğine ait alan.  
+ Bir özellik veya alan bir nesne örneğine ait.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nokta (.) işleci, karmaşık veya varlık türünün özelliklerini ayıklanması için benzer bir kaydın alanlarını ayıklamak için kullanılabilir. Örneğin, n türü adı türü kişi bir üyesidir ve p kişi türünde bir örnek ise, ardından p.n adı türünde bir değer döndüren bir yasal üye erişimi ifadesidir.  
+ Nokta (.) işleci, karmaşık veya varlık türünün özelliklerini ayıklanması için benzer bir kaydın alanlarını ayıklamak için kullanılabilir. Örneğin, tür adı n kişi türündeki bir üyesi olduğundan ve p kişi türünün bir örneği p.n adı türünde bir değer döndüren bir yasal üye erişim ifadesi olan.  
   
  `select p.Name.FirstName from LOB.Person as p`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

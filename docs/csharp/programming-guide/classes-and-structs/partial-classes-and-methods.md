@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713324"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 Tanımı bölmek mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapı](../../../csharp/language-reference/keywords/struct.md)e [arabirimi](../../../csharp/language-reference/keywords/interface.md) ya da iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosyası türü veya yönteminde tanımının bir bölümünü içerir ve uygulama derlendiğinde tüm parçaları bir araya getirilir.  
@@ -162,10 +162,10 @@ partial void onNameChanged()
 
 Daha fazla bilgi için [kısmi türlerinden](~/_csharplang/spec/classes.md#partial-types) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (Tür)](../../../csharp/language-reference/keywords/partial-type.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31492711ea9927c07f611ff9ec9bbe49d4857d46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57b814f01d7da8d5b3f9e5bda7d0cf517bb870ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592321"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed Yöntemi
-Kod profil oluşturucu bir atık toplama tanıtıcı yok bildirir.  
+Kod profil oluşturucu, çöp toplama tanıtıcısı yok edildi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,17 +36,17 @@ HRESULT HandleDestroyed(
   
 #### <a name="parameters"></a>Parametreler  
  `handleId`  
- [in] Çöp toplama için tanıtıcı kimliği.  
+ [in] Çöp toplama işlemi için tanıtıcı kimliği.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

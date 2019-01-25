@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605482"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef Yöntemi
-Ortak dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
+Ortak dil çalışma zamanı tür için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,33 +44,33 @@ HRESULT DefineTypeDef (
  [in] Unicode türünün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` öznitelikleri. Bu, bir bit maskesi olan `CoreTypeAttr` değerleri.  
+ [in] `TypeDef` öznitelikleri. Bu, bir bit maskesi, `CoreTypeAttr` değerleri.  
   
  `tkExtends`  
- [in] Belirtecin temel sınıf. Aşağıdakilerden biri olması gereken bir `mdTypeDef` veya bir `mdTypeRef` belirteci.  
+ [in] Belirteç temel sınıf. Aşağıdakilerden biri olması gereken bir `mdTypeDef` veya `mdTypeRef` belirteci.  
   
  `rtkImplements`  
- [in] Bu sınıf veya arabirimi uygulayan arabirimlerini belirtme belirteçleri dizisi.  
+ [in] Bu sınıf veya arabirim uyguladığı arabirimlerin belirtme belirteçleri dizisi.  
   
  `ptd`  
  [out] `mdTypeDef` Atanan simgesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir bayrak `dwTypeDefFlags` oluşturulan türü bir ortak sistem başvuru türü (sınıf veya arabirim) veya ortak bir sistem değer türü olup olmadığını belirtir.  
+ Eklenen bir bayrak `dwTypeDefFlags` oluşturulan türü bir ortak tür sistemi başvuru türü (sınıfı veya arabirimi) ya da bir ortak tür sistemi değer türü olup olmadığını belirtir.  
   
- Belirtilen parametreler bağlı olarak, bu yöntem bir yan etkisi da oluşturabilir bir `mdInterfaceImpl` devralınan veya bu türü tarafından uygulanan her bir arabirim için kayıt. Ancak, bu yöntem herhangi birini döndürmez `mdInterfaceImpl` belirteçleri. Daha sonra eklemek veya değiştirmek bir istemci istiyorsa, bir `mdInterfaceImpl` belirteç, bunu kullanmalı `IMetaDataImport` bunları numaralandırmak için arabirim. COM semantiği kullanmak istiyorsanız, `[default]` arabirimi, sağladığınız varsayılan arabirimi ilk öğe olarak `rtkImplements`; set sınıfı üzerinde özel bir öznitelik sınıfı varsayılan arabirimi olduğunu gösterir (hangi olduğu her zaman varsayılır İlk `mdInterfaceImpl` belirteci bildirilen sınıfı için).  
+ Belirtilen parametreler bağlı olarak, bu yöntem bir yan etkisi da oluşturabilir bir `mdInterfaceImpl` devralınan veya bu tür tarafından uygulanan her arabirim için kayıt. Ancak, bu yöntem bunlardan birine döndürmeyen `mdInterfaceImpl` belirteçleri. Daha sonra eklemek veya değiştirmek bir istemci istiyorsa, bir `mdInterfaceImpl` belirteci, bunu kullanmalı `IMetaDataImport` bunları numaralandırmak için arabirim. COM semantikleri kullanmak istiyorsanız `[default]` arabirimi, sağladığınız varsayılan arabirimi ilk öğesi olarak `rtkImplements`; sınıfın varsayılan bir arabirim vardır sınıfına özel bir öznitelik belirtir (hangi olduğu her zaman varsayılır İlk `mdInterfaceImpl` belirteci bildirilen sınıf için).  
   
- Her öğeye `rtkImplements` dizi ayrı tutma bir `mdTypeDef` veya `mdTypeRef` belirteci. Dizi son öğesi olmalı `mdTokenNil`.  
+ Her öğeyi `rtkImplements` dizi içeren bir `mdTypeDef` veya `mdTypeRef` belirteci. Dizi içerisindeki son öğe olmalıdır `mdTokenNil`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

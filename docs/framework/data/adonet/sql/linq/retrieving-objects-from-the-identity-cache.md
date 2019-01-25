@@ -1,34 +1,34 @@
 ---
-title: Kimlik önbellekten nesneleri
+title: Kimlik önbelleğinden nesne alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569160"
 ---
-# <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik önbellekten nesneleri
-LINQ türleri tarafından yönetilen bir nesne kimliği önbellekten döndüren SQL sorguları için bu konuda açıklanmaktadır <xref:System.Data.Linq.DataContext>.  
+# <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik önbelleğinden nesne alma
+Bu konu LINQ türleri tarafından yönetilen kimlik önbelleğinden nesne döndüren SQL sorgularını açıklar <xref:System.Data.Linq.DataContext>.  
   
- LINQ-SQL, hangi yollarla birini <xref:System.Data.Linq.DataContext> nesneleri yönetir sorguları gerçekleştirilirken nesne kimliklerinin bir kimlik önbelleğinde günlüğe kaydetme tarafından. Bazı durumlarda, LINQ to SQL nesne kimliği veritabanında bir sorgu çalıştırmadan önce önbellekten dener.  
+ LINQ to SQL'de, yöntemler birini <xref:System.Data.Linq.DataContext> nesnelerini yönetir sorgular yürütülürken, nesne kimliklerini bir kimlik önbellekte oturum açarak olduğu. Bazı durumlarda, LINQ to SQL veritabanında bir sorgu çalıştırmadan önce kimlik önbelleğinden nesne alma dener.  
   
- Genel olarak, bir nesne kimliği önbellekten döndürmek bir LINQ to SQL sorgusunda sorgu nesnenin birincil anahtarı temel gerekir ve tek bir nesne döndürmesi gerekir. Özellikle, sorgu, aşağıda gösterilen genel formlar birinde olmalıdır.  
+ Genel olarak, kimlik önbelleğinden nesne döndürmek bir LINQ to SQL sorgusunda sorgu birincil anahtara bir nesnenin temel alması gerekir ve tek bir nesne döndürmelidir. Özellikle, sorgu, aşağıda gösterilen genel formlar birinde olmalıdır.  
   
 > [!NOTE]
->  Önceden derlenmiş sorgular nesneleri kimlik önbellekten döndürmez. Önceden derlenmiş sorguları hakkında daha fazla bilgi için bkz: <xref:System.Data.Linq.CompiledQuery> ve [nasıl yapılır: depola ve yeniden sorgular](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+>  Önceden derlenmiş sorgular kimlik önbelleğinden nesne döndürmez. Önceden derlenmiş sorgular hakkında daha fazla bilgi için bkz. <xref:System.Data.Linq.CompiledQuery> ve [nasıl yapılır: Store ve sorguları yeniden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
   
- Bir sorgu, bir nesne kimliği önbelleğinden almak için aşağıdaki genel formlar birinde olmalıdır:  
+ Bir sorgu kimlik önbelleğinden nesne almak için aşağıdaki genel biçimlerden birinde olmalıdır:  
   
 -   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
 -   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
- Bu genel formlardaki `Function1`, `Function2`, ve `predicate` şu şekilde tanımlanır.  
+ Bu genel Forms'ta `Function1`, `Function2`, ve `predicate` şu şekilde tanımlanır.  
   
  `Function1` aşağıdakilerden biri olabilir:  
   
@@ -52,20 +52,20 @@ LINQ türleri tarafından yönetilen bir nesne kimliği önbellekten döndüren 
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` nesnenin birincil anahtar özelliği bir sabit değer için ayarlanmış bir ifade olmalıdır. Bir nesnenin birden fazla özelliği tarafından tanımlanan bir birincil anahtar varsa, her birincil anahtar özelliği bir sabit değere ayarlamanız gerekir. Form örnekleri aşağıda verilmiştir `predicate` gerçekleştirmeniz gerekir:  
+ `predicate` nesnenin birincil anahtar özelliği bir sabit değer için ayarlanmış bir ifade olmalıdır. Bir nesnenin birden fazla özelliği tarafından tanımlanan bir birincil anahtar varsa, her bir birincil anahtar özelliği bir sabit değere ayarlamanız gerekir. Form örnekleri verilmiştir `predicate` gerçekleştirmeniz gerekir:  
   
 -   `c => c.PK == constant_value`  
   
 -   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir nesne kimliği önbellekten SQL sorgularını LINQ türlerinin örnekleri sağlar.  
+ Aşağıdaki kod, kimlik önbelleğinden nesne alma SQL sorgularını LINQ türlerinin örnekleri sağlar.  
   
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

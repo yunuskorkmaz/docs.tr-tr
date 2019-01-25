@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: DateTimePicker Denetimiyle Zamanı Görüntüleme'
+title: 'Nasıl yapılır: DateTimePicker denetimiyle zamanı görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: c65a1102ccb8b05602d813831745dbcefed8c17d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 727d045e30eddf43dbb18159aafb40827c83fc7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550857"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Nasıl Yapılır: DateTimePicker Denetimiyle Zamanı Görüntüleme
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Nasıl yapılır: DateTimePicker denetimiyle zamanı görüntüleme
 Bir tarih ve saat seçin ve bu tarih ve saati belirtilen biçimde görüntülemek için kullanıcıların sağlamak için uygulamanızı isterseniz <xref:System.Windows.Forms.DateTimePicker> denetimi. Aşağıdaki yordam nasıl kullanılacağını gösterir <xref:System.Windows.Forms.DateTimePicker> denetimi bir saati görüntüleme.  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>DateTimePicker denetimi ile bir saati görüntüleme  
@@ -42,7 +42,7 @@ Bir tarih ve saat seçin ve bu tarih ve saati belirtilen biçimde görüntüleme
   
 -   Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DateTimePicker Denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DateTimePicker Denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)

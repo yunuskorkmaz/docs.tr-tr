@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: ara değerleri (Visual Basic) hesaplama'
+title: 'Nasıl yapılır: (Visual Basic) Ara değerleri hesaplama'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: e3aa54c365e90a11ac8c31e0bf7d901c5a4a6b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2908abae5f4c4738752fba62c36da340fb3b2ba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628831"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Nasıl yapılır: ara değerleri (Visual Basic) hesaplama
-Bu örnek, sıralama, filtreleme ve seçerek kullanılan ara değerleri hesaplamak gösterilmiştir.  
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Nasıl yapılır: (Visual Basic) Ara değerleri hesaplama
+Bu örnek, sıralama, filtreleme ve seçme içinde kullanılan ara değerleri hesaplama gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Let` yan tümcesi.  
+ Aşağıdaki örnekte `Let` yan tümcesi.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: sayısal verileri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -41,9 +41,9 @@ Next
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir. Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: bir Namespace sayısal verileri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace alanında sayısal veriler](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -74,5 +74,5 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel sorgu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

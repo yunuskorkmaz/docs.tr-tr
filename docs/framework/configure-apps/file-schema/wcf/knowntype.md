@@ -2,12 +2,12 @@
 title: '&lt;knownType&gt;'
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cb36a0d1d1ceb13a6db902904783ee15b14e673b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541072"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 Tarafından kullanılacak bir tür belirttiğinden <xref:System.Runtime.Serialization.DataContractSerializer> seri durumundan çıkarma sırasında. "Bilinen türü" olan öğeyi belirten bir alan veya özellik "bildirilen türü." tarafından döndürülen Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
@@ -69,8 +69,8 @@ Tarafından kullanılacak bir tür belirttiğinden <xref:System.Runtime.Serializ
 </add>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

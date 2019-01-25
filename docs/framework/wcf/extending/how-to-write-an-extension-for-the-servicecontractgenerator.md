@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: ServiceContractGenerator için UzantıYazma'
+title: 'Nasıl yapılır: ServiceContractGenerator için uzantı yazma'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 43105553739e104ab862b3be3cf2082fbf6d499f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd0566f358b313ea96f1c9b2d5fd7fc447f4d2ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629715"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Nasıl yapılır: ServiceContractGenerator için UzantıYazma
-Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.ServiceContractGenerator>. Bu uygulama tarafından yapılabilir <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> arabirim üzerinde bir işlemi davranışı veya uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sözleşme davranışına arabirimi. Bu konuda nasıl uygulandığını gösterir <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sözleşme davranışına arabirimi.  
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Nasıl yapılır: ServiceContractGenerator için uzantı yazma
+Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.ServiceContractGenerator>. Bu uygulama tarafından yapılabilir <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> bir işlem davranışı arabirimi veya uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> arabirimdeki bir sözleşme davranışı. Bu konu nasıl uygulayacağınızı gösteren <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> arabirimdeki bir sözleşme davranışı.  
   
- <xref:System.ServiceModel.Description.ServiceContractGenerator> Hizmet sözleşmelerini, istemci türlerini ve istemci yapılandırmalardan üretir <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, ve <xref:System.ServiceModel.Channels.Binding> örnekleri. Genellikle, içeri aktardığınız <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, ve <xref:System.ServiceModel.Channels.Binding> örnekleri hizmeti meta verileri ve bu örnekleri hizmeti çağırmak için kodu oluşturmak için kullanın. Bu örnekte, bir <xref:System.ServiceModel.Description.IWsdlImportExtension> uygulaması WSDL ek açıklamaları işlemek ve oluşturulan kodu açıklamalarını oluşturmak için içe aktarılan sözleşmeleri kod oluşturma uzantıları eklemek için kullanılır.  
+ <xref:System.ServiceModel.Description.ServiceContractGenerator> Hizmet sözleşmeleri, istemci türlerini ve istemci yapılandırmaları <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, ve <xref:System.ServiceModel.Channels.Binding> örnekleri. Genellikle, içeri aktardığınız <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, ve <xref:System.ServiceModel.Channels.Binding> örnekleri hizmet meta verileri ve hizmeti çağırmak için kod oluşturmak için bu örnekleri kullanın. Bu örnekte, bir <xref:System.ServiceModel.Description.IWsdlImportExtension> uygulama WSDL ek açıklamaları işlemek ve kod oluşturma uzantıları oluşturulan kod açıklamaları oluşturmak için içeri aktarılan anlaşmalar eklemek için kullanılır.  
   
-### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator için uzantıyazma için  
+### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator için uzantı yazma  
   
 1.  Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Oluşturulan hizmet sözleşmesi değiştirmek için <xref:System.ServiceModel.Description.ServiceContractGenerationContext> örnek geçirildi <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> yöntemi.  
   
@@ -26,7 +26,7 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
     }  
     ```  
   
-2.  Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension> aynı sınıfta. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> Yöntemi, belirli bir WSDL uzantısı (Bu durumda ek açıklamalar WSDL) bir kod oluşturma uzantısı alınan ekleyerek işlenebilecek <xref:System.ServiceModel.Description.ContractDescription> örneği.  
+2.  Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension> aynı sınıfta. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> Yöntemi, bir kod oluşturma uzantısı için içeri aktarılan ekleyerek belirli bir WSDL uzantısı (Bu durumda açıklamalarda WSDL) işleyebilir <xref:System.ServiceModel.Description.ContractDescription> örneği.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
             }  
     ```  
   
-3.  WSDL alma istemci yapılandırmanıza ekleyebilirsiniz.  
+3.  WSDL içeri Aktarıcı istemci yapılandırmanıza ekleyin.  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
     </metadata>  
     ```  
   
-4.  İstemci kodu oluşturmak bir `MetadataExchangeClient` ve arama `GetMetadata`.  
+4.  İstemci kod içinde oluşturma bir `MetadataExchangeClient` ve çağrı `GetMetadata`.  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  Oluşturma bir `WsdlImporter` ve arama `ImportAllContracts`.  
+5.  Oluşturma bir `WsdlImporter` ve çağrı `ImportAllContracts`.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  Oluşturma bir `ServiceContractGenerator` ve arama `GenerateServiceContractType` her sözleşme için.  
+6.  Oluşturma bir `ServiceContractGenerator` ve çağrı `GenerateServiceContractType` her sözleşme için.  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,8 +96,8 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> Her sözleşme davranışı uygulayan belirli bir sözleşme için otomatik olarak adlandırılan <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Bu yöntem daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Description.ServiceContractGenerationContext> geçirildi. Bu örnekte açıklamaları eklenir.  
+7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> Her sözleşme davranışı uygulayan verilen bir sözleşme için otomatik olarak çağrılır <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Bu yöntem daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Description.ServiceContractGenerationContext> geçirildi. Bu örnekte açıklama eklenir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Nasıl yapılır: Özel WSDL İçe Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Nasıl yapılır: Özel WSDL içeri aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

@@ -2,12 +2,12 @@
 title: 'Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 232be52bb75c6e07773c79a65f4e8e8f346a65d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747797"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, çeşitli satın alma siparişleri içerir.  
@@ -109,6 +109,6 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Örnek XML Belgeleri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

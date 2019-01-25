@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 053c94bc540b130510f155506b6fad32f032a475
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: eb5f0514cad852367365b9c8b24ef006e275f749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33449552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696457"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit Yöntemi
 Geçerli meta veri kapsamda modül türünü belirtir ve doğrulama hataları için belirtilen geri çağırma yöntemi kaydeder bir bayrak ayarlar.  
@@ -44,13 +44,13 @@ HRESULT ValidatorInit (
  [in] Bir işaretçi bir [IUnknown](/cpp/atl/iunknown) doğrulama hataları için bir işlev geri çağırma işlevi görür örneği.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılan  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataValidate Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataValidate Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

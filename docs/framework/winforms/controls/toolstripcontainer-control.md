@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588307"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer Denetimi
 <xref:System.Windows.Forms.ToolStrip> özellik denetimleri yerleşik radye (Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını) kullanarak <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -22,10 +22,10 @@ ms.locfileid: "44087183"
  [ToolStripContainer Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  Amacı ve Windows Forms ana kavramları açıklayan konuları sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
- [Nasıl yapılır: Forma ToolStripContainer Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Nasıl yapılır: Bir forma ToolStripContainer ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
  Ekleme gösteren bir <xref:System.Windows.Forms.ToolStripContainer> uygulama ve denetim belirli bir panoya eklemek için <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Nasıl yapılır: ToolStripContentPanel'e Denetim Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Nasıl yapılır: Toolstripcontentpanel'e denetim ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Bir denetime ekleme gösterir <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Başvuru  
@@ -41,5 +41,5 @@ ms.locfileid: "44087183"
  <xref:System.Windows.Forms.ToolStripPanel>  
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripPanel> denetimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

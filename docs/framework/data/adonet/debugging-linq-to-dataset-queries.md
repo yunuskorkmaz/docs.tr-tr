@@ -2,12 +2,12 @@
 title: LINQ to DataSet sorgularında hata ayıklama
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680513"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet sorgularında hata ayıklama
 
@@ -27,6 +27,6 @@ Visual Studio destekler, hata ayıklama [!INCLUDE[linq_dataset](../../../../incl
   
  Visual Studio'da Visual Basic'te, Düzenle ve devam et non - üzerinde kullanabileceğiniz[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodda bile içeren bir yöntem bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Önce kod ekleyip [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ifadesi, satır numarası değişiklikleri etkiler olsa bile [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Visual Basic hata ayıklama deneyimi için olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu kalır, aynı, önce olduğu gibi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanıma sunulmuştur. Size, Ekle, Kaldır veya değiştiremediğiniz bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] değişiklikleri uygulamak için hata ayıklama durdurmadığınız sürece, ancak sorgu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen Kodda Hata Ayıklama](/visualstudio/debugger/debugging-managed-code)  
- [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetilen Kodda Hata Ayıklama](/visualstudio/debugger/debugging-managed-code)
+- [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarı)'
+title: '&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarısı)'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40008
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 4dc2d0b8eace9bc411a344b4f2c4c79f7e09ac22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeeca3354592bfc6d657b435c42ad5644fd2b97d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552404"
 ---
-# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarı)
-Bir deyim ile işaretlenmiş bir programlama öğesi erişmeye <xref:System.ObsoleteAttribute> özniteliğini ve bir uyarı olarak işlemek için yönergesi.  
+# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarısı)
+Bir ifade ile işaretlenmiş bir programlama öğesi erişmeye <xref:System.ObsoleteAttribute> özniteliğini ve bir uyarı olarak değerlendirilecek yönergesi.  
   
- Herhangi bir programlama öğesi artık uygulama tarafından kullanılmakta olarak işaretleyebilirsiniz <xref:System.ObsoleteAttribute> ona. Bunu yaparsanız özniteliğin ayarlayabilirsiniz <xref:System.ObsoleteAttribute.IsError%2A> ya da özellik `True` veya `False`. Ayarlarsanız `True`, hata olarak öğe kullanma girişimi derleyici değerlendirir. Ayarlarsanız `False`, veya bu izin için varsayılan `False`, öğe kullanma girişimi ise derleyici bir uyarı verir.  
+ Herhangi bir programlama öğesi artık uygulayarak kullanımda olarak işaretleyebilirsiniz <xref:System.ObsoleteAttribute> ona. Bunu yaparsanız özniteliğin ayarlayabilirsiniz <xref:System.ObsoleteAttribute.IsError%2A> ya da özellik `True` veya `False`. Ayarlarsanız `True`, derleyici bir hata öğe kullanma girişimi değerlendirir. Ayarlarsanız `False`, veya bu izin varsayılan `False`, öğe kullanma girişimi varsa, derleyici bir uyarı verir.  
   
- Varsayılan olarak, bu ileti bir uyarı çünkü <xref:System.ObsoleteAttribute.IsError%2A> özelliği <xref:System.ObsoleteAttribute> olan `False`. Uyarıları gizleme veya uyarıları hata olarak davranma hakkında daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu ileti bir uyarı çünkü <xref:System.ObsoleteAttribute.IsError%2A> özelliği <xref:System.ObsoleteAttribute> olduğu `False`. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC40008  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Kaynak kodu başvurusu öğe adı doğru yazım olduğundan emin olun.  
+-   Kaynak kodu başvuru öğe adı doğru yazım olduğundan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)

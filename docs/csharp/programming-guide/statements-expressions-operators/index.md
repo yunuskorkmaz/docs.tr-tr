@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cf82481c02fec152b7b4d4b8ce89bf0f707ef8d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655159"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
 Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler oluşan deyimlerden oluşur. Bu bölümde, C# programının temel bu öğeleri ile ilgili bilgiler içerir.  
@@ -45,7 +45,7 @@ Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler o
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

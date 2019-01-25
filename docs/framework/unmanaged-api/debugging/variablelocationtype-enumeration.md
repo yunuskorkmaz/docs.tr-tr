@@ -1,5 +1,5 @@
 ---
-title: VariableLocationType numaralandırması
+title: VariableLocationType sabit listesi
 ms.date: 03/30/2017
 api_name:
 - VariableLocationType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653222"
 ---
-# <a name="variablelocationtype-enumeration"></a>VariableLocationType numaralandırması
+# <a name="variablelocationtype-enumeration"></a>VariableLocationType sabit listesi
 Bir değişken yerel konum türünü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,21 +41,21 @@ typedef enum VariableLocationType
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VLT_REGISTER`|Bir kayıttaki değişkenidir.|  
-|`VLT_REGISTER_RELATIVE`|Bir kayıt göreli bellek konumda değişkenidir.|  
-|`VLT_INVALID`|Değişken, bir kayıt veya bir kayıt göreli bellek konumundan depolanmaz.|  
+|`VLT_REGISTER`|Bir kayıttaki değişkendir.|  
+|`VLT_REGISTER_RELATIVE`|Register-göreli bellek konumunda değişkendir.|  
+|`VLT_INVALID`|Değişken, bir kayıt veya bir kayıt göreli bellek konumuna depolanmaz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Üye `VariableLocationType` numaralandırması tarafından döndürülen [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

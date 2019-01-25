@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700305"
 ---
 # <a name="mid-statement"></a>Mid Deyimi
 Belirtilen sayıda karakter yerini alan bir `String` başka bir dizeden karakterlerle değişken.  
@@ -69,7 +69,7 @@ Mid( _
   
  **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Visual Basic'de dizelere giriş](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Visual Basic'de dizelere giriş](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

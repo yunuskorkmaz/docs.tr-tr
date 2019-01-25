@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
+title: 'Nasıl yapılır: Yalıtılmış depolamada dosya ve dizinler oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709019"
 ---
-# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma
+# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış depolamada dosya ve dizinler oluşturma
 Bir yalıtılmış depolama aldıktan sonra dizin ve dosya verilerini depolamak için oluşturabilirsiniz. Bir depo dosya ve dizin adları sanal dosya sisteminin kökünü göre belirtilir.  
   
  Bir dizin oluşturmak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> örnek yöntemi. Mevcut bir dizininin bir alt belirtirseniz, her iki dizini de oluşturulur. Zaten bir dizin belirtirseniz, bir dizin oluşturmadan yöntemi döndürür ve hiçbir özel durum. Ancak, bir dizin adı belirtirseniz, geçersiz karakterler içeren bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşturulur.  
@@ -40,6 +40,6 @@ Bir yalıtılmış depolama aldıktan sonra dizin ve dosya verilerini depolamak 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
 - [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)

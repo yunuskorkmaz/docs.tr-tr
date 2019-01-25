@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acb4d67f41b1434fe8052a74e976907f24fecd31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb686be625d0d38bcf0de496c192276ebaa3410d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629588"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext Metodu
-Şu anda belirtilen iş parçacığı ile ilişkili bağlam kimliğini alır.  
+Şu anda belirtilen iş parçacığıyla ilişkilendirilmiş bağlam kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT GetThreadContext(
  [in] İş parçacığı kimliği.  
   
  `pContextId`  
- [out] Şu anda belirtilen iş parçacığı ile ilişkili içerik kimliği için bir işaretçi. İş parçacığı şu anda ilişkili bağlam varsa, bu işlev CORPROF_E_DATAINCOMPLETE döndürür.  
+ [out] Şu anda belirtilen iş parçacığıyla ilişkilendirilmiş bağlam Kimliğini bir işaretçi. İş parçacığı kendisiyle ilişkili bir bağlam yok varsa, bu işlev CORPROF_E_DATAINCOMPLETE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

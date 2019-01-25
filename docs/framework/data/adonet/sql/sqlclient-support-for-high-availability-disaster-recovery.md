@@ -2,12 +2,12 @@
 title: Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609128"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
@@ -96,6 +96,6 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  Salt okunur yönlendirme yalnızca Yönlendirme okuma önce birincil siteye bağlanır ve ardından en iyi kullanılabilir okunabilir ikincil için görünür olduğundan, birincil siteye bağlanan daha uzun sürebilir. Bu nedenle, oturum açma zaman aşımı artırmalısınız.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

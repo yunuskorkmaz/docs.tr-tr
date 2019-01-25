@@ -2,12 +2,12 @@
 title: İşlem temelleri
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620519"
 ---
 # <a name="transaction-fundamentals"></a>İşlem temelleri
 İşlemler birden çok görevleri birbirine bağlayın. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir veritabanında yeni bir tablo oluşturur. Ardından, Topla, biçimlendirme ve yeni tabloya veri eklemek için özel bir nesne çağırır. Yeni bir tablo ile veri doldurun sürece oluşturmamaya özen gösterin istediğiniz şekilde bu iki görevleri ilgili ve hatta bağımlı. Her iki görevlerini tek bir işlem kapsamında yürütüyor onların arasındaki bağlantıyı zorlar. İkinci görev başarısız olursa, yeni bir tablo oluşturulmadan önce ilk görev bir noktaya geri alınır.  
@@ -24,5 +24,5 @@ ms.locfileid: "44177210"
   
  ADO.NET, kullanarak işlemleri oluşturabilirsiniz <xref:System.EnterpriseServices>, ya da tarafından sağlanan işlem programlama modeli <xref:System.Transactions> ad alanı. [System.Transactions tarafından sağlanan özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) konu anlatır kullanarak bir işlem uygulama yazmak için kullanabileceğiniz özellikler <xref:System.Transactions> ad alanı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [System.Transactions Tarafından Sağlanan Özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [System.Transactions Tarafından Sağlanan Özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

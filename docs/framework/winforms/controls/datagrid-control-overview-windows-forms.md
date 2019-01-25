@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 05cc71ffb5d55c926dca50876a2329feeed8aedf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648475"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -42,7 +42,7 @@ Bir DataGrid birden fazla tablo ile verilere bağlı
   
  <xref:System.Windows.Forms.DataGrid> Bir kullanıcı arabirimi için bir veri kümesi, ilgili tabloları ve zengin biçimlendirme ve düzenleme özellikleri arasında gezinmeyi sağlayabilir.  
   
- Veri işleme ve görüntü ayrı işlevlerdir: Windows Forms veri bağlama mimarisi ve bunun veri güncelleştirmelerinin işlenme ise kullanıcı arabirimi denetim işleme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları. Bu nedenle, aynı veri kaynağına bağlı birden çok denetimin eşitlenmiş durumda kalır.  
+ Veri işleme ve görüntü ayrı işlevler şunlardır: Veri güncelleştirmelerini, Windows Forms veri bağlama mimarisi ve göre işlenir ancak kullanıcı arabirimi denetim işleme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları. Bu nedenle, aynı veri kaynağına bağlı birden çok denetimin eşitlenmiş durumda kalır.  
   
 > [!NOTE]
 >  Visual Basic 6.0 DataGrid denetiminde biliyorsanız, bazı önemli farklılıklar Windows Forms bulabilirsiniz <xref:System.Windows.Forms.DataGrid> denetimi.  
@@ -104,7 +104,7 @@ Bir DataGrid birden fazla tablo ile verilere bağlı
  ![DataGrid denetiminde bulunan nesneleri](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 Aşağıdaki çizim DataGrid denetiminde bulunan nesneleri gösterir.  
   
- Tablo stillerini ve sütun stillerini ile eşitlenir <xref:System.Data.DataTable> nesneleri ve <xref:System.Data.DataColumn> ayarlayarak nesneleri kendi `MappingName` uygun özellikler <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataColumn.ColumnName%2A> özellikleri. Olduğunda bir <xref:System.Windows.Forms.DataGridTableStyle> hiçbir sütun olan stilleri eklenir bir <xref:System.Windows.Forms.DataGrid> geçerli bir veri kaynağına bağlı denetim ve <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Bu tablo stili özelliğine geçerli bir ayarlanmış <xref:System.Data.DataTable.TableName%2A> özelliği, bir koleksiyonunu <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için oluşturulur Tablo stili. Her <xref:System.Data.DataColumn> bulunan <xref:System.Data.DataTable.Columns%2A> koleksiyonunu <xref:System.Data.DataTable>, karşılık gelen <xref:System.Windows.Forms.DataGridColumnStyle> eklenir <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> üzerinden erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Sütunları eklenebilir veya kılavuz kullanarak silinmiş <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> veya <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metodunda <xref:System.Windows.Forms.GridColumnStylesCollection>. Daha fazla bilgi için [nasıl yapılır: ekleme tabloları ve sütunları Windows Forms DataGrid denetimi için](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) ve [nasıl yapılır: Windows Forms DataGrid denetiminde sütunları gizleme silme veya](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Tablo stillerini ve sütun stillerini ile eşitlenir <xref:System.Data.DataTable> nesneleri ve <xref:System.Data.DataColumn> ayarlayarak nesneleri kendi `MappingName` uygun özellikler <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataColumn.ColumnName%2A> özellikleri. Olduğunda bir <xref:System.Windows.Forms.DataGridTableStyle> hiçbir sütun olan stilleri eklenir bir <xref:System.Windows.Forms.DataGrid> geçerli bir veri kaynağına bağlı denetim ve <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Bu tablo stili özelliğine geçerli bir ayarlanmış <xref:System.Data.DataTable.TableName%2A> özelliği, bir koleksiyonunu <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için oluşturulur Tablo stili. Her <xref:System.Data.DataColumn> bulunan <xref:System.Data.DataTable.Columns%2A> koleksiyonunu <xref:System.Data.DataTable>, karşılık gelen <xref:System.Windows.Forms.DataGridColumnStyle> eklenir <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> üzerinden erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Sütunları eklenebilir veya kılavuz kullanarak silinmiş <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> veya <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metodunda <xref:System.Windows.Forms.GridColumnStylesCollection>. Daha fazla bilgi için [nasıl yapılır: Tablolar ekleyebilir ve sütunları Windows Forms DataGrid denetiminde](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) ve [nasıl yapılır: Sütunları silme veya gizleme içinde Windows Forms DataGrid denetiminde](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Sütun türleri koleksiyonunu genişletir <xref:System.Windows.Forms.DataGridColumnStyle> zengin biçimlendirme ve düzenleme özellikleri içeren sınıf. Devralınan tüm sütun türleri <xref:System.Windows.Forms.DataGridColumnStyle> temel sınıfı. Oluşturulan sınıf bağımlı <xref:System.Data.DataColumn.DataType%2A> özelliği <xref:System.Data.DataColumn> içinden <xref:System.Web.UI.WebControls.DataGridColumn> temel alır. Örneğin, bir <xref:System.Data.DataColumn> olan kendi <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Boolean> ilişkilendirileceği <xref:System.Windows.Forms.DataGridBoolColumn>. Aşağıdaki tabloda bu sütun türlerinden her biri açıklanmaktadır.  
   
@@ -139,9 +139,9 @@ Aşağıdaki çizim DataGrid denetiminde bulunan nesneleri gösterir.
 ## <a name="events"></a>Olaylar  
  Ortak yanı sıra gibi olayları kontrol <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, ve <xref:System.Windows.Forms.DataGrid.Scroll>, <xref:System.Windows.Forms.DataGrid> denetimi, düzenleme ve gezinti kılavuzda ile ilişkili olayları destekler. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Özellik, hangi hücresi seçili belirler. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Olayı kullanıcı yeni bir hücre geçtiğinde oluşturulur. Kullanıcı yeni bir tablo üst/alt ilişkilerini gittiğinde <xref:System.Windows.Forms.DataGrid.Navigate> olayı oluşturulur. <xref:System.Windows.Forms.DataGrid.BackButtonClick> Olayı, kullanıcı bir alt tabloda görüntülerken kullanıcı geri düğmesine tıkladığında oluşturulur ve <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> olayı Göster/Gizle üst satırları simgesine tıklandığında oluşturulur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetimini Biçimlendirme](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini biçimlendirme](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)

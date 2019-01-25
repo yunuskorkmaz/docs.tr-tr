@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 321afe8904ff683ce9807ba9912bf3a38ecd73bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650515"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT derleyicisi (xsltc.exe)
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş bir stil sayfası sonra doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
@@ -34,7 +34,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |`/c[lass]:``name`|Aşağıdaki stil sayfası için sınıfın adını belirtir. Sınıf adı, tam olabilir.<br /><br /> Sınıf adı, stil sayfası adını varsayılan olarak. Örneğin, stil sayfası customers.xsl derlenirse, varsayılan sınıf adını Müşteriler ' dir.|  
-|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerini oluşturulup oluşturulmayacağını belirtir.<br /><br /> Belirtme `+` veya `/debug`, derleyicinin hata ayıklama bilgileri üret ve program veritabanı (PDB) dosyası içinde yerleştirin. Oluşturulan PDB dosyası adıdır `assemblyName`.pdb.<br /><br /> Belirtme `-`, hangi belirtmezseniz, geçerli olduğu `/debug`, oluşturulacak hata ayıklama bilgisi yok neden olur. Bir perakende derleme oluşturulur. **Not:** hata ayıklama modunda derleme etkileyebilir XSLT performansı önemli ölçüde.|  
+|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerini oluşturulup oluşturulmayacağını belirtir.<br /><br /> Belirtme `+` veya `/debug`, derleyicinin hata ayıklama bilgileri üret ve program veritabanı (PDB) dosyası içinde yerleştirin. Oluşturulan PDB dosyası adıdır `assemblyName`.pdb.<br /><br /> Belirtme `-`, hangi belirtmezseniz, geçerli olduğu `/debug`, oluşturulacak hata ayıklama bilgisi yok neden olur. Bir perakende derleme oluşturulur. **Not:**  Hata ayıklama modunda derleme XSLT performansını önemli ölçüde etkileyebilir.|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/nologo`|Derleyici telif hakkı iletisini görüntülenmesini bastırır.|  
 |`/platform:``string`|Derleme çalıştırılabileceği platformları belirtir. Geçerli platform değerleri açıklar:<br /><br /> `x86` derlemenizi 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılmak üzere<br /><br /> `x64` derlemenizi 64 bit ortak dil çalışma zamanı tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] derlemenizi 64 bit ortak dil çalışma zamanı tarafından olan bir bilgisayarda çalıştırılması için bir [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] işlemci.<br /><br /> `anycpu` Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Bu varsayılandır.|  
@@ -84,6 +84,6 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Nasıl yapılır: Derleme kullanarak XSLT dönüşümü gerçekleştirme](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

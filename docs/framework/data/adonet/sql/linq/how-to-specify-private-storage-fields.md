@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: özel depolama alanları belirtin'
+title: 'Nasıl yapılır: Özel depolama alanları belirtme'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: d8a9bacd88b08384e7619dc64ab86cb0651ac44d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d127de889fdaa2eb2d03a96dae5aa3d856efe32a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549606"
 ---
-# <a name="how-to-specify-private-storage-fields"></a>Nasıl yapılır: özel depolama alanları belirtin
-Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özellikte <xref:System.Data.Linq.Mapping.DataAttribute> bir temel alınan depolama alanı adını belirlemek için öznitelik.  
+# <a name="how-to-specify-private-storage-fields"></a>Nasıl yapılır: Özel depolama alanları belirtme
+Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliği <xref:System.Data.Linq.Mapping.DataAttribute> bir temel alınan depolama alanı adını belirtmek için özniteliği.  
   
  Kod örnekleri için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
 ### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>Bir temel alınan depolama alanı adını belirtmek için  
   
-1.  Ekleme <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliğine <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
+1.  Ekleme <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
   
-2.  Alanın adını değeri olarak atamak <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliği.  
+2.  Alanın adı değeri olarak atama <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

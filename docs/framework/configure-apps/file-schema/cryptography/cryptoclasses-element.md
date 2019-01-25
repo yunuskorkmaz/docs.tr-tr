@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8363351efd0b6cbcfee5b137cf9f222e16dcc425
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3bc8fbb103d59b825e07cc52b155f1ea8061f31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649382"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt; öğesi
 Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
@@ -78,10 +78,10 @@ Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Security.Cryptography>  
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Security.Cryptography>
+- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

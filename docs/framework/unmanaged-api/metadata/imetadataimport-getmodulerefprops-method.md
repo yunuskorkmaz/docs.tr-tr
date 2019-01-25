@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8d6549395c6c61f5f94a4b34ad0e3739737ed1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583631"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps Metodu
-Belirtilen meta veri simgesi tarafından başvurulan modül adını alır.  
+Belirtilen meta veri belirteci tarafından başvurulan modül adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT GetModuleRefProps (
   
 #### <a name="parameters"></a>Parametreler  
  `mur`  
- [in] Meta veri bilgilerini almak için modülüne başvuruyor ModuleRef meta veri simgesi.  
+ [in] Meta veri bilgilerini almak için modülüne başvuruyor ModuleRef meta veri belirteci.  
   
  `szName`  
- [out] Modül adı tutacak bir arabellek.  
+ [out] Modül adı tutan bir arabellek.  
   
  `cchName`  
  [in] İstenen boyutu `szName` geniş karakter.  
   
  `pchName`  
- [out] Döndürülen boyutu `szName` geniş karakter.  
+ [out] Döndürülen boyutunu `szName` geniş karakter.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,12 +2,12 @@
 title: Komutlar ve parametreler
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: 8e476d68b60272d944eecfe585fd77d8a7a8f08c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f90e45a9679e76a38621f6e3ae19de0e7591098
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612803"
 ---
 # <a name="commands-and-parameters"></a>Komutlar ve parametreler
 Bir veri kaynağı ile bağlantı kurulduktan sonra komutları yürütmek ve sonuçları döndürür kullanarak veri kaynağına bir <xref:System.Data.Common.DbCommand> nesne. Bir komut oluşturucular çalışıyorsanız ve .NET Framework veri sağlayıcısı kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağında yürütmek için bir SQL deyimi gibi isteğe bağlı bağımsız değişkenlere gerçekleştirebileceğiniz bir <xref:System.Data.Common.DbConnection> nesnesi veya bir <xref:System.Data.Common.DbTransaction> nesne. Bu gibi durumlarda, bu nesneleri ayrıca komut özellikleri olarak yapılandırabilirsiniz. Ayrıca belirli bir bağlantı kullanarak bir komut oluşturun <xref:System.Data.Common.DbConnection.CreateCommand%2A> yöntemi bir `DbConnection` nesne. Komutu tarafından yürütülen SQL deyimini kullanarak yapılandırılabilir <xref:System.Data.Common.DbCommand.CommandText%2A> özelliği.  
@@ -30,8 +30,8 @@ Bir veri kaynağı ile bağlantı kurulduktan sonra komutları yürütmek ve son
  [Verileri Değiştirmek için Komutları Kullanma](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  Saklı yordamları ya da veri tanımlama dili (DDL) deyimleri yürütmek için veri sağlayıcısı kullanmayı açıklar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

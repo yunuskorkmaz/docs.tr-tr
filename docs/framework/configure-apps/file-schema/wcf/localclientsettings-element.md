@@ -2,12 +2,12 @@
 title: '&lt;localClientSettings&gt; öğesi'
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 67e872ea44a502c5b0fcdc5c1d326aad91eaa8fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600368"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt; öğesi
 Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.  
@@ -63,20 +63,20 @@ Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Ayarlar yerel ayarları hizmeti güvenlik ilkesinden türetilmiş olmadıklarını anlamında gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

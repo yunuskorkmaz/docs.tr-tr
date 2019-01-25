@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma (Visual Basic)'
+title: 'Nasıl yapılır: Bir Web hizmetini zaman uyumsuz çağırma (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9127b0edce029f8b2944ddf692e85166ee8c89b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616153"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl yapılır: Bir Web hizmetini zaman uyumsuz çağırma (Visual Basic)
 Bu örnek, zaman uyumsuz yöntem çağrısı sonucu alabilmeleri Web hizmetinin zaman uyumsuz işleyicisi olaya bir işleyici ekler. Bu örnekte kullanılan DemoTemperatureService Web hizmeti `http://www.xmethods.net`.  
   
  Bir Web hizmeti projenizde, Visual Studio tümleşik geliştirme ortamı (IDE) başvuruda bulunduğunuzda eklendiği `My.WebServices` nesne ve IDE, belirtilen bir Web hizmetine erişmek için bir istemci proxy sınıfı oluşturur  
@@ -65,6 +65,6 @@ Bu örnek, zaman uyumsuz yöntem çağrısı sonucu alabilmeleri Web hizmetinin 
   
      Çağrılacak `getTemp` yöntemi zaman uyumsuz olarak Web, çağrı `CallGetTempAsync` yöntemi. Web yöntemi sona erdiğinde, dönüş değerinin geçirilen `getTempCompletedHandler` olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)

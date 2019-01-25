@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma'
+title: 'Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681176"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS
 Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluşturmanıza olanak sağlar. Bu konu, bir dağıtım akışı hem Atom 1.0 hem de RSS 2.0 kullanarak kullanıma sunan bir dağıtım hizmetinin nasıl oluşturulduğunu açıklar. Bu hizmet ya da dağıtım biçimi döndüren bir uç noktasını kullanıma sunar. Kolaylık olması için bu örnekte kullanılan kendi kendine barındırılan hizmetidir. Bir üretim ortamında bu türde bir hizmet IIS ya da WAS altında barındırılması. Barındırma seçenekleri farklı WCF hakkında daha fazla bilgi için bkz. [barındırma](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel Sendikasyon hizmeti oluşturmak için  
@@ -95,6 +95,6 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki kod derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

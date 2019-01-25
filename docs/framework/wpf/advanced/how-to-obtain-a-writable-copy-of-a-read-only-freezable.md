@@ -8,28 +8,28 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-ms.openlocfilehash: 894a2e42ca3f5cbb159c3129227f4b03e71fc4ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2853b1e02e1223cbb2b6dff4acbddb0a41d882cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629962"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Nasıl yapılır: Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Freezable.Clone%2A> salt okunur yazılabilir bir kopyasını oluşturmak için yöntemi <xref:System.Windows.Freezable>.  
+Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Freezable.Clone%2A> salt okunur'ın yazılabilir kopyasını oluşturmak için gereken yöntemini <xref:System.Windows.Freezable>.  
   
- Sonra bir <xref:System.Windows.Freezable> nesne işaretlenmiş salt okunur ("dondurulmuş"), onu değiştiremezsiniz. Ancak, kullanabileceğiniz <xref:System.Windows.Freezable.Clone%2A> dondurulmuş nesne değiştirilebilir bir kopyasını oluşturmak için yöntemi.  
+ Sonra bir <xref:System.Windows.Freezable> nesne işaretlenmiş salt okunur ("dondurulmuş"), onu değiştiremezsiniz. Ancak, kullanabileceğiniz <xref:System.Windows.Freezable.Clone%2A> donmuş nesnesi değiştirilebilir bir kopyasını oluşturmak için yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dondurulmuş değiştirilebilir kopyasını oluşturur <xref:System.Windows.Media.SolidColorBrush> nesnesi.  
+ Aşağıdaki örnek, dondurulmuş değiştirilebilir kopyasını oluşturur. <xref:System.Windows.Media.SolidColorBrush> nesne.  
   
  [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Freezable>  
- <xref:System.Windows.Freezable.CloneCurrentValue%2A>  
- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Freezable>
+- <xref:System.Windows.Freezable.CloneCurrentValue%2A>
+- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

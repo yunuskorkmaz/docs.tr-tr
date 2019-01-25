@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616856"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem Yöntemi
-Bir işlev yürütme için sıraya koyar ve bu işlev tarafından kullanılacak verilerini içeren bir nesne belirtir. Bir iş parçacığı kullanılabilir hale geldiğinde işlevi yürütür.  
+Bir işlev yürütme için sıraya alır ve bu işlev tarafından kullanılan verileri içeren bir nesne belirtir. Bir iş parçacığı kullanılabilir hale geldiğinde işlevi yürütür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ HRESULT QueueUserWorkItem (
   
 #### <a name="parameters"></a>Parametreler  
  `Function`  
- [in] Yürütülecek işlevi temsil eden bir işlev işaretçisi.  
+ [in] Yürütülecek bir işlevi temsil eden bir işlev işaretçisi.  
   
  `Context`  
- [in] Tarafından kullanılacak veri içeren bir nesne `Function`.  
+ [in] Tarafından kullanılan veri içeren bir nesne `Function`.  
   
  `Flags`  
  [in] Bayrakları değerlerden birini, Win32 için tanımlanan `QueueUserWorkItem` yürütme denetleyen yöntemi.  
@@ -52,25 +52,25 @@ HRESULT QueueUserWorkItem (
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`QueueUserWorkItem` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
-|HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
-|E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
+|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
+|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `QueueUserWorkItem` iş parçacığı havuzu bir çalışan iş parçacığı için iş öğesi sıralar. İmza ve parametre türlerinden olanlar aynı ada sahip karşılık gelen Win32 işlevi için aynıdır. Daha fazla bilgi için Windows platformu belgelerine bakın.  
+ `QueueUserWorkItem` iş parçacığı havuzundaki çalışan iş parçacığı için bir iş öğesini kuyruğa yerleştirir. İmza ve parametre türlerinden aynı ada sahip karşılık gelen Win32 işlevini gereksinimlerine aynıdır. Daha fazla bilgi için Windows Platform belgelerine bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
- <xref:System.Threading.ThreadPool>  
- [IHostThreadPoolManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
+- <xref:System.Threading.ThreadPool>
+- [IHostThreadPoolManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

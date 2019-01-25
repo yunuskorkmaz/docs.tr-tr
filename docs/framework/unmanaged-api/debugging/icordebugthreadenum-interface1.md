@@ -1,5 +1,5 @@
 ---
-title: Icordebugthreadenum Interface1
+title: Icordebugthreadenum arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThreadEnum
@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca683e5925325fae2470aca3cd67be39c12a055d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100dc6c83c7c1d45ddb2ea0396c5115c4d79a7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560366"
 ---
-# <a name="icordebugthreadenum-interface1"></a>Icordebugthreadenum Interface1
-Icordebugenum yöntemlerini uygular ve Icordebugthread diziler numaralandırır.  
+# <a name="icordebugthreadenum-interface1"></a>Icordebugthreadenum arabirimi1
+Icordebugenum yöntemlerini uygular ve Icordebugthread dizilerini numaralandırır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Belirtilen sayıda alır `ICorDebugThread` geçerli konumdan başlayarak numaralandırması örneklerden.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Belirtilen sayıda alır `ICorDebugThread` örneklerden geçerli konumunda başlayan bir numaralandırma.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

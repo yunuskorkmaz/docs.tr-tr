@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f34fee19c796f65d315fcbd26d55e1d5322303a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599675"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
-Belirtilen sınıf bir dizi sınıf olup olmadığını belirler.  
+Array sınıfı belirtilen sınıf olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT IsArrayClass(
   
 #### <a name="parameters"></a>Parametreler  
  `classId`  
- [in] İncelenmesi için sınıf kimliği.  
+ [in] İncelenecek sınıfın Kimliğidir.  
   
  `pBaseElemType`  
- [out] Dizi öğeleri türünü gösterir CorElementType numaralandırması değerini gösteren bir işaretçi.  
+ [out] Dizi öğelerin türünü belirten CorElementType sabit değeri için bir işaretçi.  
   
  `pBaseClassId`  
- [out] Dizi öğeleri, kullanılabilir olduğunda sınıf kimliği için bir işaretçi.  
+ [out] Kullanılabilir olduğunda, dizi öğelerinin sınıf kimliği için bir işaretçi.  
   
  `pcRank`  
- [out] Dizi derecesini (diğer bir deyişle, Boyutlar sayısı) belirten bir tamsayı gösteren bir işaretçi.  
+ [out] (Diğer bir deyişle, boyut sayısı) dizi boyut sayısını belirten bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtilen sınıf bir dizi sınıf ise `IsArrayClass` yöntemi S_OK HRESULT ve null olmayan çıktı parametreleri için değerleri döndürür. Aksi takdirde, S_FALSE döndürür.  
+ Bir dizi sınıfı belirtilen sınıf ise `IsArrayClass` yöntemi bir S_OK HRESULT ve null olmayan çıkış parametreleri için değerleri döndürür. Aksi takdirde S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

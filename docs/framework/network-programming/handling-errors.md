@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599792"
 ---
 # <a name="handling-errors"></a>Hataları işleme
 <xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıflar her iki sistem özel durumlarını throw (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  
@@ -167,6 +167,6 @@ End Try
   
  Olduğunda bir **SocketException** oluşturulur, **SocketException** sınıf kümelerini <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliğini gerçekleşen son işletim sistemi Yuva hatası. Yuva hata kodları hakkında daha fazla bilgi için MSDN'de Winsock 2.0 API'sine hata kodu belgelerine bakın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel durum işleme temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özel durum işleme temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

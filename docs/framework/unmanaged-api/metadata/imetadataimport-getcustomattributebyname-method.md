@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c25304bef4d240eedea749bb2829595056f9b74d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68cac76a83164e24c0810c9d19fa845c8580b1d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637256"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName Metodu
-Özel öznitelik adı ve sahibi verilen alır.  
+Özel öznitelik adını ve sahibini verilen alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,29 +40,29 @@ HRESULT GetCustomAttributeByName (
   
 #### <a name="parameters"></a>Parametreler  
  `tkObj`  
- [in] Özel öznitelik sahibi nesnesini temsil eden bir meta veri simgesi.  
+ [in] Özel öznitelik sahip nesnesini temsil eden bir meta veri belirteci.  
   
  `szName`  
  [in] Özel öznitelik adı.  
   
  `ppData`  
- [out] Bir özel öznitelik değeri veri dizisi için bir işaretçi.  
+ [out] Özel öznitelik değeri olan verilerin bir dizisine bir işaretçi.  
   
  `pcbData`  
- [out] Döndürülen verileri bayt cinsinden boyutu *`ppData`.  
+ [out] Döndürülen verileri baytlık boyutu *`ppData`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden çok özel öznitelikleri için aynı sahibi tanımlamak için uygundur; bile aynı ada sahip. Ancak, `GetCustomAttributeByName` yalnızca bir örneğini döndürür. (`GetCustomAttributeByName` bulduğu ilk örneğini döndürür.) Özel bir öznitelik tüm örneklerini bulmak için arama [Imetadataımport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) yöntemi.  
+ Birden çok özel öznitelikler için aynı sahibi tanımlamak için geçerlidir; hatta aynı ada sahip olabilir. Ancak, `GetCustomAttributeByName` yalnızca bir örneğini döndürür. (`GetCustomAttributeByName` bulduğu ilk örneği döndürür.) Tüm özel öznitelik örneklerini bulmak için arama [Imetadataımport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

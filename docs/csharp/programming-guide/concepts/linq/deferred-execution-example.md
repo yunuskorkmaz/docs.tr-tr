@@ -2,12 +2,12 @@
 title: Ertelenmiş yürütme örneği (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 0ad1ed2998cfbd612f7f2b60a0d15c7ffcef0daf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598886"
 ---
 # <a name="deferred-execution-example-c"></a>Ertelenmiş yürütme örneği (C#)
 Bu konu nasıl ertelenmiş yürütme gösterir ve geç değerlendirme, LINQ to XML sorgularında yürütme etkiler.  
@@ -63,6 +63,6 @@ Main: str GHI
   
 -   [Zincirleme örneği sorgular (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları birbirine (C#) zincirleme](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Öğretici: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

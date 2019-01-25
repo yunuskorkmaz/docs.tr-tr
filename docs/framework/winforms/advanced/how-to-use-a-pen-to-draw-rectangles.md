@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dikdörtgen Çizmek için Kalem Kullanma'
+title: 'Nasıl yapılır: Dikdörtgen çizmek için kalem kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: ad5b436f7162c282198c7a9d3cce4d3ce3fd3c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd009a66cb106f98727191037d8eef5bafe4d0c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590058"
 ---
-# <a name="how-to-use-a-pen-to-draw-rectangles"></a>Nasıl yapılır: Dikdörtgen Çizmek için Kalem Kullanma
-Dikdörtgen çizmek için size gereken bir <xref:System.Drawing.Graphics> nesne ve <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlar <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi ve <xref:System.Drawing.Pen> nesnesi satırının renk ve genişlik gibi özellikleri saklar.  
+# <a name="how-to-use-a-pen-to-draw-rectangles"></a>Nasıl yapılır: Dikdörtgen çizmek için kalem kullanma
+Dikdörtgen çizmek için ihtiyacınız bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlar <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi ve <xref:System.Drawing.Pen> nesne satır, renk ve genişlik gibi özellikleri depolar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sol üst köşede bir dikdörtgen çizer (10, 10). Dikdörtgen 100 genişliği ve yüksekliği 50 sahiptir. İkinci bağımsız değişkeni geçirilen <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu kalem genişliği 5 pikselden olduğunu gösterir.  
+ Aşağıdaki örnek, sol üst köşesinde bir dikdörtgen çizer (10, 10). Dikdörtgenin genişliği 100 ve 50 yüksekliğini sahiptir. Geçirilen ikinci bağımsız değişken <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu kalem genişliği 5 pikselden olduğunu gösterir.  
   
- Dikdörtgen çizildiğinde kalem dikdörtgenin sınırında ortalanır. Kalem genişliği 5'tir dikdörtgen yanlarından çizilmiş 5 piksel olduklarından, o 1 piksel genişliğinde, bu tür çizilir sınırın üzerinde kendi iç 2 piksel çizilir ve 2 piksel dışarıda çizilir. Kalem hizalama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Kalem genişliği ve hizalamasını](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md).  
+ Dikdörtgen çizildiğinde kalem dikdörtgenin sınırında ortalanır. Kalem genişliği 5 olduğundan, dikdörtgen tarafının çizilen 5 piksel olan geniş, bu tür, 1 piksel artımlı çizilir sınırında kendisi, 2 piksel iç çizilir. ve 2 piksel dışarıda çizilmiştir. Kalem hizalamayı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Kalem genişliği ve hizalamasını ayarlama](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md).  
   
- Aşağıdaki çizimde, sonuçta elde edilen dikdörtgen gösterir. Kalem genişliği bir piksel olsaydı burada dikdörtgen Çekildi noktalı çizgiler gösterir. Kalın siyah çizgiler bu noktalı satırlarında ortalanır dikdörtgenin sol üst köşesindeki genişletilmiş görünümünü gösterir.  
+ Aşağıdaki çizimde, sonuçta elde edilen dikdörtgen gösterir. Kalem genişliği bir piksel olsaydı burada dikdörtgen Çekildi noktalı satırları gösterir. Kalın siyah satırları bu noktalı satırlarda ortalanır dikdörtgenin sol üst köşesinin genişletilmiş görünümünü gösterir.  
   
  ![Kalemler](../../../../docs/framework/winforms/advanced/media/pens1.gif "pens1")  
   
@@ -31,7 +31,7 @@ Dikdörtgen çizmek için size gereken bir <xref:System.Drawing.Graphics> nesne 
  [!code-vb[System.Drawing.UsingAPen#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

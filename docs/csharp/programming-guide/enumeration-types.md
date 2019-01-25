@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 7c40e16e9c495c5e69dcdd74c3698d51b0d49785
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601710"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Numaralandırma türleri (C# programlama Kılavuzu)
 
@@ -88,8 +88,8 @@ Daha fazla bilgi için bkz. <xref:System.Enum?displayProperty=nameWithType>.
 
 Bir genişletme yöntemi kullanarak, bir numaralandırma için yeni bir yöntem de oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Numaralandırma için yeni bir yöntem oluşturma](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Enum?displayProperty=nameWithType>  
-- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)  
+- <xref:System.Enum?displayProperty=nameWithType>
+- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
 - [enum](../../csharp/language-reference/keywords/enum.md)

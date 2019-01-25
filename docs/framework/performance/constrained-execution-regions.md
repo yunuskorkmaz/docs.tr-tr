@@ -7,104 +7,104 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566950"
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
-Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir mekanizma bir parçasıdır. Bir CER kodu alanının tamamının yürütülmesini önleyen bant dışı özel durumları atma ortak dil çalışma zamanı (CLR) kısıtlı bir alanı tanımlar. Bu bölge içinde kullanıcı kodu atma bant dışı özel durumları neden olan kod yürütülmesini sınırlı değildir. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Yöntemi hemen gelmelidir bir `try` bloğu ve işaretleri `catch`, `finally`, ve `fault` kısıtlı yürütme bölgeleri olarak engeller. Kısıtlanmış bir bölge işaretlenmiş sonra kod güçlü güvenilirlik sözleşmeleri ile başka bir kod yalnızca çağırmanız gerekir ve kod ayırmak veya gerekir kod hataları işlemek için hazırlanan sürece hazırlıksız ya da güvenilir olmayan yöntemleri sanal çağrı yapmak. Bir CER yürütülen kod için CLR gecikmeler iş parçacığı durdurur.  
+Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazmak için bir mekanizma bir parçasıdır. Bir CER alanında kod tamamen yürütülmesini engelleyen bant dışı özel durumları atma gelen ortak dil çalışma zamanı (CLR) kısıtlı bir alan tanımlar. Bu bölge içinde kullanıcı kodu bant dışı özel durumları atma neden olan kod yürütülmesini sınırlıdır. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Yöntemi hemen gelmelidir bir `try` blok ve işaretleri `catch`, `finally`, ve `fault` kısıtlı yürütme bölgeleri olarak engeller. Kısıtlı bölge işaretlenmiş bir kez kod yalnızca diğer güçlü bir güvenilirlik sözleşmeleri koduyla çağırmanız gerekir ve kod ayırmak veya gerekir kod hatalarını işlemek için hazırlanan sürece hazırlıksız ya da güvenilir olmayan yöntemleri sanal çağrı yapmak. İçinde bir CER yürütülmekte olan kod için CLR gecikmeler iş parçacığını durdurur.  
   
- Kısıtlı yürütme bölgeleri yanı sıra ek açıklama CLR farklı formlarında kullanılan `try` bloğunu özellikle türetilmiş sınıflardaki yürütme kritik sonlandırıcılar <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> sınıfı ve kullanılarak yürütülen kod <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> yöntemi.  
+ Kısıtlı yürütme bölgeleri ek açıklamalı bir CLR farklı formlarında kullanılan `try` özellikle türetilen sınıflarda yürütme kritik sonlandırıcılar bloğunda <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> sınıfı ve kod kullanılarak yürütülen <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> yöntemi.  
   
 ## <a name="cer-advance-preparation"></a>CER ön hazırlık  
- CLR CERs önceden bellek yetersiz durumlardan kaçınmak için hazırlar. CLR yetersiz bellek durumu yalnızca zaman derleme veya tür yüklemesi sırasında neden olmaz ve böylece ön hazırlık gereklidir.  
+ CLR CERs önceden bellek yetersiz koşullar önlemek için hazırlar. Ön hazırlık gerekli olduğundan CLR tam zamanında derleme veya tür yükleme sırasında bir bellek yetersizliği koşulu neden olmaz.  
   
- Geliştirici kod bölgesini bir CER olduğunu belirtmek için gereklidir:  
+ Geliştirici kodu bölge bir CER olduğunu belirtmek için gereklidir:  
   
--   Üst düzey CER bölge ve sahip yöntemleri tam çağrı grafikte <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> uygulanan öznitelik hazırlanmış önceden. <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Garanti yalnızca durum <xref:System.Runtime.ConstrainedExecution.Cer.Success> veya <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.  
+-   Tam çağrı grafı sahip yöntemleri ve üst düzey CER bölge <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> uygulanan öznitelik hazır önceden. <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Garanti etmez. yalnızca durum <xref:System.Runtime.ConstrainedExecution.Cer.Success> veya <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.  
   
--   Statik olarak, sanal gönderme gibi belirlenemiyor çağrıları için ön hazırlık gerçekleştirilemiyor. Kullanım <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> bu gibi durumlarda yöntemi. Kullanırken <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> yöntemi, <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> özniteliği kod Temizleme için uygulanması.  
+-   Statik olarak, sanal gönderme gibi belirlenemiyor çağrıları için ön hazırlık gerçekleştirilemiyor. Kullanım <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> bu gibi durumlarda yöntemi. Kullanırken <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> yöntemi <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> özniteliği için kod temizleme uygulanması.  
   
 ## <a name="constraints"></a>Kısıtlamalar  
- Kullanıcılar bir CER yazabilirsiniz kod türünü kısıtlanmıştır. Kod bir bant dışı özel sebep olamaz, aşağıdaki işlemlerden gibi neden olabilir:  
+ Kullanıcılar, içinde bir CER yazmak kodun türünü kısıtlanmıştır. Kod, bir bant dışı özel neden olamaz, aşağıdaki işlemlerinden gibi neden olabilir:  
   
 -   Açık ayırma.  
   
 -   Kutulama.  
   
--   Kilit alınıyor.  
+-   Bir kilit alınırken.  
   
--   Neredeyse hazırlıksız yöntemleri çağırma.  
+-   Neredeyse hazır değil yöntemleri çağırma.  
   
--   Zayıf veya var olmayan güvenilirliğini sözleşme ile yöntemleri çağırma.  
+-   Zayıf ya da yok güvenilirlik sözleşme ile arama yöntemleri.  
   
- .NET Framework sürüm 2. 0'da, bu kısıtlamaların yönergelerdir. Tanılama kod çözümleme araçları sağlanır.  
+ .NET Framework sürüm 2. 0'da, bu kısıtlamaları yönergelerdir. Tanılama kod çözümleme araçları sağlanır.  
   
 ## <a name="reliability-contracts"></a>Güvenilirlik sözleşmeleri  
- <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Belgeleri güvenilirlik garanti ve belirli bir yöntemin Bozulması durumunu özel bir özniteliktir.  
+ <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Güvenilirlik garantisi ve belirli bir yöntemin Bozulması durumunu belgeler özel bir özniteliktir.  
   
-### <a name="reliability-guarantees"></a>Güvenilirlik garanti  
- Tarafından temsil edilen güvenilirlik garanti <xref:System.Runtime.ConstrainedExecution.Cer> numaralandırma değerleri, belirli bir yöntemin güvenilirliğini derecesini gösterir:  
+### <a name="reliability-guarantees"></a>Güvenilirlik garantisi  
+ Güvenilirlik garantisi, tarafından temsil edilen <xref:System.Runtime.ConstrainedExecution.Cer> sabit listesi değerleri, belirli bir yöntemin güvenilirliğini derecesini gösterir:  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. Olağanüstü koşullarda yöntemi başarısız olabilir. Bu durumda, yöntem başarılı veya başarısız olup olmadığını çağıran yönteme bildirir. Yöntemin dönüş değeri raporlayabilirsiniz emin olmak için bir CER bulunması gerekir.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. Olağanüstü durumlarda, yöntem başarısız olabilir. Bu durumda, yöntem başarılı veya başarısız olmadığını çağıran Metoda bildirir. Yöntemin dönüş değeri bildirebilirsiniz emin olmak için bir CER yer almalıdır.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>. Yöntemi, tür veya derleme bir CER kavramına sahiptir ve büyük olasılıkla değil durumu bozulmaya önemli azaltma olmadan CER içinde çağırmak güvenli. CER garanti avantajlarından almaz. Bu aşağıdaki anlamına gelir:  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.None>. Yöntemi, türün veya derlemenin bir CER kavramı vardır ve en büyük olasılıkla önemli bir risk azaltma durumu Bozulması olmadan bir CER içinde çağırmak güvenli. CER garanti avantajlarından almaz. Bu, aşağıdaki gelir:  
   
-    1.  Olağanüstü koşullarda yöntemi başarısız olabilir.  
+    1.  Olağanüstü durumlarda, yöntem başarısız olabilir.  
   
     2.  Yöntem olabilir veya başarısız olduğunu rapor edemeyebilir.  
   
-    3.  Yöntem CER, en olası senaryo kullanılacak yazılmaz.  
+    3.  Yöntem bir CER en olası senaryo kullanılacak yazılmaz.  
   
-    4.  Yöntemi, tür veya derleme açıkça başarılı olması için özelikle tanımlanamıyorsa, onu örtük olarak tanımlanan <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
+    4.  Yöntemi, tür veya derleme açıkça başarılı olması için tanımlanmamışsa, örtük olarak tanımlandığını <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. Olağanüstü koşullarda yöntemi başarılı olması için sağlanır. Bu düzeyde elde etmek için her zaman bir CER geçici olarak adlandırılan, hatta zaman onu CER olmayan bölge içinde çağrılır yöntemi oluşturmalısınız. Bir yöntem başarı subjectively görüntülenebilir ancak ne yöneliktir gerçekleştirir başarılı olur. Örneğin, Count ile işaretleme `ReliabilityContractAttribute(Cer.Success)` CER altında çalışırken, bu her zaman öğelerin sayısını döndürdüğünü gelir <xref:System.Collections.ArrayList> ve hiçbir zaman belirlenmemiş bir durum içinde iç alanlarını bırakabilirsiniz.  Ancak, <xref:System.Threading.Interlocked.CompareExchange%2A> yöntemi başarı değeri değiştirilmemişse bir yarış durumu nedeniyle yeni bir değerle olduğu anlamına gelebilir anlama ile de başarılı işaretlenir.  Anahtar yöntemi davranmasına belirtildiği şekilde davranır ve CER kodu hangi doğru ancak güvenilmeyen kod aşağıdaki gibidir ötesinde herhangi olağan dışı davranış beklenir yazılması gerekmez noktasıdır.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. Olağanüstü durumlarda, yöntem başarılı olması garanti edilir. Bu düzeyde güvenilirlik elde etmek için her zaman, hatta zaman bunu CER olmayan bölge içinde çağrılır çağrılan yöntem etrafında bir CER oluşturmak. Bir yöntem başarı subjectively görüntülenebilir ancak amaçlanan, gerçekleştirir başarılı olur. Örneğin, sayısı ile işaretlemeyi `ReliabilityContractAttribute(Cer.Success)` bir CER altında çalışırken, her zaman öğelerin sayısını döndürür, gelir <xref:System.Collections.ArrayList> ve hiçbir zaman iç alanların belirsiz bir durumda bırakılabilir.  Ancak, <xref:System.Threading.Interlocked.CompareExchange%2A> yöntemi başarı değeri değil yerine bir yarış durumu nedeniyle yeni bir değerle gelebilir anlama ile de başarılı işaretlenir.  Anahtar yöntemi davranmaya belirtildiği şekilde davranan ve CER kodu, doğru ancak güvenilir olmayan kod gibi görünür ötesinde herhangi bir olağan dışı davranış beklenir yazılması gerekmez. noktasıdır.  
   
-### <a name="corruption-levels"></a>Bozulması düzeyleri  
- Bozulması düzeyleri temsil ettiği <xref:System.Runtime.ConstrainedExecution.Consistency> numaralandırma değerlerini göstermek ne kadar durum verilen ortamda bozulmuş olabilir:  
+### <a name="corruption-levels"></a>Bozulma düzeyleri  
+ Bozulma düzeyi temsil ettiği <xref:System.Runtime.ConstrainedExecution.Consistency> numaralandırma değerlerini göstermek verilen ortamda ne kadar durumu bozulmuş olabilir:  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. Olağanüstü koşullar altında geçerli uygulama etki alanında garanti durumu tutarlılık ilgili ortak dil çalışma zamanı (CLR) sağlar.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. Olağanüstü durumlarda, ortak dil çalışma zamanı (CLR) geçerli uygulama etki alanında ilgili durum tutarlılık garantisi sağlar.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Olağanüstü koşullar altında geçerli örnek durum bozulmasına sınırlamak için yöntemi sağlanır.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Olağanüstü durumlarda yöntem geçerli örneğe durumu Bozulması sınırlamak için sağlanır.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Olağanüstü koşullar altında CLR garanti durumu tutarlılık; ilgili hale getirir. diğer bir deyişle, koşul işlemi bozulmasına neden olabilir.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Özel koşullar altında CLR durumu tutarlılık; ilgili garanti sağlar. diğer bir deyişle, koşul, işlemin bozulmasına neden olabilir.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Olağanüstü koşullarda yöntemi garanti durumu bozuk değil.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Olağanüstü durumlarda, yöntem durumunun bozulmasına neden olmayan garanti edilir.  
   
 ## <a name="reliability-trycatchfinally"></a>Güvenilirlik try/catch/finally  
- Güvenilirlik `try/catch/finally` işleme mekanizması yönetilmeyen sürümü aynı düzeyde öngörülebilirlik garanti ile bir durum. `catch/finally` CER taşıdır. Blok yöntemlerinde ön hazırlık gerektirir ve noninterruptible olması gerekir.  
+ Güvenilirlik `try/catch/finally` olan bir özel durum işleme mekanizmasını ile yönetilmeyen sürümü aynı düzeyde öngörülebilirlik garanti eder. `catch/finally` CER bloğudur. Yöntem bloğunda ön hazırlık gerektirir ve noninterruptible olmalıdır.  
   
- .NET Framework sürüm 2. 0'da, kodu çalışma zamanı çağırarak, bir try güvenilir olduğunu bildirir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> hemen try bloğunun önceki. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> üye <xref:System.Runtime.CompilerServices.RuntimeHelpers>, derleyici desteği sınıfı. Çağrı <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> doğrudan derleyicileri aracılığıyla, kullanılabilirlik bekliyor.  
+ .NET Framework 2.0 sürümünde, kodu çalışma zamanı çağırarak bir try güvenilir olduğunu bildirir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> try bloğunun hemen öncesindeki. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> bir üyesidir <xref:System.Runtime.CompilerServices.RuntimeHelpers>, derleyici desteği sınıfı. Çağrı <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> kullanılabilirliğini derleyiciler aracılığıyla doğrudan bekliyor.  
   
 ## <a name="noninterruptible-regions"></a>Noninterruptible bölgeleri  
- Noninterruptible bölge bir CER içine yönergeler kümesini gruplandırır.  
+ Noninterruptible bölge yönergeleri bir CER içine kümesini gruplar.  
   
- .NET Framework sürüm 2.0, derleyici desteği aracılığıyla kullanılabilirlik bekleyen kullanıcı kodu kesilebilir olmayan bölgeleri ile bir güvenilir try/catch/öncesinde boş bir try/catch bloğu içeren finally oluşturur bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntem çağrısı.  
+ .NET Framework sürüm 2.0, derleyici desteği aracılığıyla kullanılabilirlik bekleyen bir güvenilir try/catch/öncesinde boş bir try/catch bloğu içeren finally ile kesilebilir olmayan bölgeleri kullanıcı kod oluşturur bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntem çağrısı.  
   
-## <a name="critical-finalizer-object"></a>Kritik sonlandırıcıyı nesnesi  
- A <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> çöp toplama sonlandırıcıyı yürütecek garantiler. Ayırma sırasında sonlandırıcıyı ve kendi arama grafiği önceden hazırlanır. Sonlandırıcı yöntemi bir CER yürütür ve CERs ve sonlandırıcılar tüm kısıtlamalar uyma gerekir.  
+## <a name="critical-finalizer-object"></a>Kritik bir sonlandırıcı nesnesi  
+ A <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> çöp toplama Sonlandırıcı yürütecek garanti eder. Ayırma sırasında Sonlandırıcı ve kendi çağrı grafı önceden hazırlanır. Sonlandırıcı yöntemi içinde bir CER yürütür ve CERs ve sonlandırıcılar tüm kısıtlamalar uyma gerekir.  
   
- İçinden devralma türleri <xref:System.Runtime.InteropServices.SafeHandle> ve <xref:System.Runtime.InteropServices.CriticalHandle> CER içinde yürütme kendi sonlandırıcıyı olması garanti. Uygulama <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> içinde <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfları tanıtıcı boşaltmak için gerekli herhangi bir kod yürütün.  
+ Öğesinden devralan tüm türleri <xref:System.Runtime.InteropServices.SafeHandle> ve <xref:System.Runtime.InteropServices.CriticalHandle> içinde bir CER yürütme kendi Sonlandırıcı sahip olacağı garanti edilir. Uygulama <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> içinde <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfları, tanıtıcı boşaltmak için gerekli herhangi bir kod yürütmek için.  
   
-## <a name="code-not-permitted-in-cers"></a>Kod CERs içinde izin verilmiyor  
- Aşağıdaki işlemleri CERs içinde izin verilmiyor:  
+## <a name="code-not-permitted-in-cers"></a>Kod içinde CERs izin verilmez  
+ Aşağıdaki işlemleri CERs içinde izin verilmez:  
   
--   Açık ayırma.  
+-   Açık ayırmalar.  
   
--   Kilit alınıyor.  
+-   Bir kilit alınırken.  
   
 -   Kutulama.  
   
--   Çok boyutlu dizi erişimi.  
+-   Çok boyutlu bir dizi erişim.  
   
 -   Yansıma yoluyla yöntemini çağırır.  
   
 -   <xref:System.Threading.Monitor.Enter%2A> veya <xref:System.IO.FileStream.Lock%2A>.  
   
--   Güvenlik denetimleri. Taleplerin gerçekleştirmek değil, yalnızca taleplerini bağlayın.  
+-   Güvenlik denetimleri. Talepleri gerçekleştirmek değil, yalnızca taleplerini bağlantı.  
   
 -   <xref:System.Reflection.Emit.OpCodes.Isinst> ve <xref:System.Reflection.Emit.OpCodes.Castclass> COM nesneleri ve proxy'ler  
   
@@ -114,5 +114,5 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir meka
   
 -   İşlev işaretçileri ve temsilciler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenilirlik En İyi Yöntemleri](../../../docs/framework/performance/reliability-best-practices.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenilirlik En İyi Yöntemleri](../../../docs/framework/performance/reliability-best-practices.md)

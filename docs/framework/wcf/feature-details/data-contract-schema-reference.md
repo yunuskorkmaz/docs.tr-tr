@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662588"
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> açıklayan ortak dil çalışma zamanı (CLR) için XML serileştirme türleri.  
@@ -50,7 +50,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`targetNamespace`|Desteklenen ve veri anlaşması ad alanıyla eşlendi. Bu öznitelik belirtilmezse boş ad alanı kullanılır. Ayrılmış ad alanı olamaz `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Yoksayıldı.|  
   
-### <a name="xsschema-contents"></a>\<xs: Schema >: içeriği  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -218,7 +218,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`id`|Yoksayıldı.|  
 |`name`|Desteklenen veri eşlenir adı sözleşme.|  
   
-### <a name="xssimpletype-contents"></a>\<xs:simpleType >: içeriği  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -226,7 +226,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`list`|Desteklenen. Bayrak sabit listesi veri sözleşmeleri eşlenir. Bkz: `xs:simpleType` bölümünde listelenir.|  
 |`union`|Yasak.|  
   
-### <a name="xsrestriction"></a>\<xs:restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   Karmaşık tür kısıtlamalar için temel desteklenen = "`xs:anyType`".  
   
@@ -328,7 +328,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` Haritalar Numaralandırma türleri ile işaretlenen `System.FlagsAttribute` için `xs:list` türetilen `xs:string`. Başka hiçbir `xs:list` çeşitlemeleri desteklenir.  
   
 ### <a name="xslist-attributes"></a>\<xs:list >: öznitelikler  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

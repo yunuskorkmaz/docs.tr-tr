@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f000b6e944be7bd2e38f97e40176952cb19605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f76a3cb232042ba6b91046d1f7b6e1d46ad6faef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634863"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished Yöntemi
-Profil Oluşturucu bütünleştirilmiş yüklenmesini tamamladı bildirir.  
+Profil Oluşturucu bir bütünleştirilmiş kod yükleme işleminin tamamlandığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +37,24 @@ HRESULT AssemblyLoadFinished(
   
 #### <a name="parameters"></a>Parametreler  
  `assemblyId`  
- [in] Yüklenen derlemeyi tanımlar.  
+ [in] Yüklenen derleme tanımlar.  
   
  `hrStatus`  
- [in] Derleme yüklemesi başarıyla tamamlandı olup olmadığını belirten bir HRESULT.  
+ [in] Derleme yükleme başarıyla tamamlandı olup olmadığını gösteren bir HRESULT.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değeri `assemblyId` kadar bilgi isteği için geçerli değil `AssemblyLoadFinished` yöntemi çağrılır.  
+ Değerini `assemblyId` kadar bir bilgi isteği için geçerli değil `AssemblyLoadFinished` yöntemi çağrılır.  
   
- Derleme yükleme bazı bölümleri sonra devam edebilir `AssemblyLoadFinished` geri çağırma. HRESULT hata içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk derlemesi yüklenirken parçası başarılı olduğunu gösterir.  
+ Derleme yükleme bazı bölümleri sonra devam edebilir `AssemblyLoadFinished` geri çağırma. Bir hata HRESULT içinde `hrStatus` hata gösterir. Ancak, bir başarı HRESULT içinde `hrStatus` yalnızca ilk bölümü bütünleştirilmiş kod yükleme işleminin başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

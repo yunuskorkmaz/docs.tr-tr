@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587719"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack İşlevi
-Yönetilen özel durum nesnesi adresi içinde yer alan yığın izleme dize sürümünü döndürür.  
+Yönetilen özel durum nesnesi adresi belirli bir yığın izlemesi içinde yer alan bir dize sürümünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ HRESULT _EFN_GetManagedExcepStack(
   
 #### <a name="parameters"></a>Parametreler  
  `Client`  
- [in] Ayıklanacak istemci.  
+ [in] Hatası ayıklanmakta olan istemci.  
   
  `StackObjAddr`  
  [in] Bir yönetilen nesne işaretçisi türetilen <xref:System.Exception>.  
@@ -48,17 +48,17 @@ HRESULT _EFN_GetManagedExcepStack(
  [out] Döndürülen dize.  
   
  `cbString`  
- [out] Karakter dizesi arabellekte kullanılabilir sayısı.  
+ [out] Dize arabellek kullanılabilir karakter sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlevi HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değeri ve 0x1000 hata kodunu döndürür.  
+ Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değerini ve 0x1000 hata kodu ile döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace.h  
   
- **.NET framework sürüm:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

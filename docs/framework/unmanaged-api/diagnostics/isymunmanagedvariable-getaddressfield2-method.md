@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe360a50038f49fdea1528c8c520dc893b258057
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a283915f8326a19c7d2c9b45851b9879fe0ec17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634993"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 Metodu
-İkinci adres alanı için bu değişkeni alır. Bunun anlamı adres türüne bağlıdır.  
+Bu değişken için ikinci bir adres alanı alır. Anlamını adresi türüne bağlıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,16 +36,16 @@ HRESULT GetAddressField2(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `ULONG32` ikinci adres alanı alır.  
+ [out] Bir işaretçi bir `ULONG32` , ikinci bir adres alanı alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [GetAddressField1 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)  
- [GetAddressField3 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)  
- [GetAddressKind Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [GetAddressField1 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
+- [GetAddressField3 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)
+- [GetAddressKind Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)

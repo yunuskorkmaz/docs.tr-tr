@@ -5,40 +5,40 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: c8e763686b30ca9c8e1dc5a7f6234d77201e4cba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632120"
 ---
 # <a name="planning-for-application-performance"></a>Uygulama Performansını Planlama
-Performans hedefleriniz elde başarısı ne kadar iyi performans stratejinizi geliştirin bağlıdır. Planlama herhangi bir ürün geliştirme ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  
+Ne kadar iyi performans stratejinizi geliştirmek başarım hedeflerinizi başarısını bağlıdır. Planlama herhangi bir ürün geliştirmeye ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  
   
-## <a name="think-in-terms-of-scenarios"></a>Senaryolar açısından düşünün  
- Senaryoları yardımcı olabilir, uygulamanızın önemli bileşenlerinden odaklanmak. Senaryoları genellikle, müşteriler yanı sıra rekabet ürünleri türetilir. Her zaman müşterilerinize araştırmak ve ne gerçekten bunları ürününüzü ve rakiplerinizin ürünleri hakkında heyecan kolaylaştırdığını öğrenin. Müşterilerinizin geri bildirimi uygulamanızın birincil senaryosunu belirlemenize yardımcı olabilir. Başlatmada kullanılan bir bileşen tanımlıyorsanız, örneğin, uygulama başlatıldığında, bileşeni'nin yalnızca bir kez çağrılır olasıdır. Başlangıç zamanı anahtar senaryonuz olur. Diğer örnekleri senaryoları, animasyon sıraları için istenen kare hızı olması ya da çalışma kümesi uygulama için izin verilen en fazla olabilir.  
+## <a name="think-in-terms-of-scenarios"></a>Senaryoları açısından düşünün  
+ Senaryolarında size yardımcı olabilir, uygulamanızın kritik bileşenleri üzerinde odaklanın. Senaryoları, genellikle, müşteriler ek olarak rekabetçi ürünleri türetilir. Her zaman müşterilerinize incelemek ve hangi gerçekten bunları ürün ve rakiplerinizin ürünler hakkında heyecan hale getirdiğini öğrenin. Müşterilerinizin geri bildirim, uygulamanızın Birincil senaryo belirlemenize yardımcı olabilir. Başlatma sırasında kullanılacak bir bileşeni tasarlıyorsanız, örneğin, uygulama başlatıldığında, bileşeni'nin yalnızca bir kez çağırılır olasıdır. Başlangıç zamanı, anahtar senaryonuz haline gelir. Önemli senaryolar diğer örnekleri animasyon dizileri için istenen kare hızı olması ya da çalışma kümesi uygulama için izin verilen en yüksek olabilir.  
   
 ## <a name="define-goals"></a>Hedeflerinizi  
- Hedefler, uygulamanın daha hızlı veya daha yavaş çalışıp çalışmadığını belirlemek için yardımcı. Hedefleri tüm senaryolarınız için tanımlamanız gerekir. Tanımladığınız tüm performans hedeflerini müşterilerinizin beklentilerini bağlı olmalıdır. Hala birçok çözülmemiş bir sorun olduğunda amaçlarını erkenden uygulama geliştirme döngüsü kümesi performans zor olabilir. Ancak, bir başlangıç amacı ayarlamanız ve daha sonraki bir hedefe hiç olmamasından düzeltmek daha iyi olur.  
+ Hedefleri, uygulama daha hızlı veya daha yavaş çalışıp çalışmadığını belirlemenize yardımcı olur. Hedefleri tüm senaryolarınız için tanımlamanız gerekir. Tanımladığınız tüm performans hedeflerini takımınızın müşterilerinizin beklentilerini üzerinde bağlı olmalıdır. Kümesi performans amaçlarını erkenden uygulama geliştirme döngüsü varken çözülmemiş bir çok zor olabilir. Ancak, bir ilk hedef ayarlayın ve daha sonraki bir hedefe hiç olmaması için gözden geçirme daha iyidir.  
   
-## <a name="understand-your-platform"></a>Platformunuzu anlayın  
- Her zaman ölçme, araştırma, uygulama geliştirme döngüsü sırasında daraltmayı/düzeltme süreçlerini sürdürün. Başlangıçtan itibaren geliştirme döngüsü sonuna, güvenilir ve kararlı bir ortamda, uygulamanızın performansını ölçmek gerekir. Dış faktörler tarafından neden değişkenlik kaçınmalısınız. Örneğin, performansı test edilirken virüsten koruma veya SMS gibi herhangi bir otomatik güncelleştirmeyi devre dışı bırakma, test sonuçları sırada değil etkisi performans. Uygulamanızın performansını ölçülen sonra büyük yenilikleri neden olacak değişiklikleri tanımlamanız gerekir. Uygulamanızı değiştirdiğinizde döngüyü yeniden başlatın.  
+## <a name="understand-your-platform"></a>Platformunuza anlama  
+ Her zaman, ölçme, araştırma, uygulama geliştirme döngüsü sırasında daraltma/düzeltme süreçlerini sürdürün. Geliştirme döngüsü sonuna başından beri güvenilir ve kararlı bir ortamda, uygulamanızın performansını ölçmek gerekir. Dış faktörlerden kaynaklanan değişkenlik kaçınmanız gerekir. Örneğin, performans testi, virüsten koruma veya SMS gibi herhangi bir otomatik güncelleştirme devre dışı bırakmak, test sonuçları sırada değil performansı etkileyebilir. Uygulamanızın performansını cinsinden ölçülen sonra büyük geliştirmeler neden olabilecek değişiklikleri tanımlayın gerekir. Uygulamanızı oluşturduktan sonra döngüyü yeniden başlatın.  
   
-## <a name="make-performance-tuning-an-iterative-process"></a>Performans yinelemeli süreç ayarlama yapmak  
- Kullanacağınız her bir özelliğin göreli maliyetini bilmeniz gerekir. Örneğin, Microsoft .NET Framework'te yansıma kullanımı, genellikle dikkatli kullanmak istersiniz bilgi işlem kaynakları açısından yoğun performans bağlıdır. Yalnızca uygulamanızı performans gereksinimlerine, kullandığınız özellikleri performans taleplerini dengelemek için dikkatli olmalıdır, bu yansıma, kullanımını önlemek anlamına gelmez.  
+## <a name="make-performance-tuning-an-iterative-process"></a>Performans ayarlama bir süreçtir olun  
+ Kullanacağınız her bir özellik göreli maliyetini bilmeniz gerekir. Örneğin, Microsoft .NET Framework'te yansıma kullanımı, genellikle dikkatli kullanmak istediğiniz şekilde bilgi işlem kaynaklarını bakımından yoğun performans bağlıdır. Yalnızca kullandığınız özellikler, performans talepleri, uygulamanızın performans gereksinimlerine dengelemek dikkatli olmanız gerekir, bu yansıma, kullanımını önlemek anlamına gelmez.  
   
-## <a name="build-towards-graphical-richness"></a>Grafik zenginliğini derleme  
- Doğrultusunda ölçeklendirilebilir bir yaklaşım oluşturmak için bir anahtar teknik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama performansını grafik zenginliğini ve karmaşıklık doğrultusunda yapı etmektir. Her zaman senaryonun hedeflerinize ulaşmak için en az başarım yoğunluğu olan kaynakları kullanarak başlayın. Bu amaca sonra doğru grafik zenginliğini her zaman senaryonun hedeflerinize göz önünde bulundurarak daha fazla performans yoğun özelliklerini kullanarak oluşturun. Unutmayın, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çok zengin bir platformun ve çok zengin grafik özellikleri sağlar. Performans Düşünmeden yoğun özellikleri kullanarak, genel uygulama performansını olumsuz yönde etkileyebilir.  
+## <a name="build-towards-graphical-richness"></a>Grafik zenginliği doğrultusunda derleyin  
+ Doğrultusunda ölçeklenebilir bir yaklaşım oluşturmak için önemli bir tekniktir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama performansı, grafik zenginlik ve karmaşıklık doğrultusunda oluşturulacak. Her zaman senaryonun hedeflerinize ulaşmak için en az performans yoğunluğu olan kaynakları kullanarak başlayın. Bu hedefleri gerçekleştirmeye sonra grafik zenginliği doğrultusunda her zaman senaryonun hedeflerinize göz önünde bulundurarak daha fazla performans yoğun özelliklerini kullanarak oluşturun. Unutmayın, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çok zengin bir platform ve çok zengin grafik özellikleri sağlar. Yoğun performans özelliklerini düşünmeden kullanarak genel uygulama performansınızı olumsuz yönde etkileyebilir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri wide yayılan özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Stiller, veri şablonları ve denetim şablonlarından yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri geniş yayılım özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Denetim şablonları stiller ve veri şablonları yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

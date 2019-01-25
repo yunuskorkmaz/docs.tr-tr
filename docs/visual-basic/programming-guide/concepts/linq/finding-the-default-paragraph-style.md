@@ -1,25 +1,25 @@
 ---
-title: Varsayılan paragraf stili (Visual Basic) bulma
+title: (Visual Basic) varsayılan paragraf stilini bulma
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: 77e6e6db321b5f8ef338706e5f938daa02d115eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0485e22778f9b5d4e2be9c22e44a22c1601411c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621662"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>Varsayılan paragraf stili (Visual Basic) bulma
-İlk WordprocessingML belge öğretici düzenleme bilgileri belgede paragrafları varsayılan stilini bulmak için bir görevdir.  
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>(Visual Basic) varsayılan paragraf stilini bulma
+WordprocessingML belgesinin öğreticide düzenleme bilgileri ilk görevi, belgede varsayılan paragraf stilini bulmaktır.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir Office Açık XML WordprocessingML belgesini açar, paket belge ve stil bölümlerini bulur ve varsayılan stil adı bulan bir sorgu yürütür. Office Açık XML belge paketleri ve bunların oluşur bölümleri hakkında daha fazla bilgi için bkz: [ayrıntıları, Office Açık XML WordprocessingML belgeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paket belge ve stil bölümlerini bulur ve ardından varsayılan stil adı bulan bir sorgu yürütür. Office Open XML belge paketler ve oluşmalıdır ve parçaları hakkında daha fazla bilgi için bkz. [ayrıntıları, Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
- Sorgu adlı bir düğüm bulana `w:style` adlı bir özniteliği olan `w:type` "paragraf" değerini ve ayrıca sahip bir öznitelik adlı `w:default` "1" değerine sahip. Bu öznitelikler ile yalnızca bir XML düğümü olacağından sorgusu kullanan <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> için tek bir koleksiyon dönüştürmek için işleci. Ardından adı olan özniteliğin değerini alır `w:styleId`.  
+ Sorgunun bulacağı adlı bir düğüm `w:style` adlı bir öznitelik olan `w:type` "paragraf" değerini ve ayrıca sahip bir öznitelik adlandırılmış `w:default` değerini "1" ile. Sorgu kullanır, bu öznitelikleri yalnızca bir XML düğümüyle olacaktır çünkü <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> için tek bir koleksiyon dönüştürme işleci. Ardından bir ada sahip bir öznitelik değerini alır `w:styleId`.  
   
- Bu örnek WindowsBase derlemeden sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek WindowsBase derlemesinden sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ### <a name="code"></a>Kod  
   
@@ -80,16 +80,16 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 The default style is: Normal  
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnekte, bir belge ve bunların stiller tüm paragrafları bulur benzer bir sorgu oluşturursunuz:  
+ Sonraki örnekte, bir belge ve stillerini paragraflar bulur benzer bir sorgu oluşturacaksınız:  
   
--   [Paragrafları ve bunların stilleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [Paragrafları ve stillerini (Visual Basic) alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597547"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
 Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`). Bu simge, metni yok saymak için Visual Basic derleyiciye veya *yorum*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
@@ -59,9 +59,9 @@ Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`
 > [!NOTE]
 >  Metinle koyarak kodunuza açıklama ekleyebilirsiniz `REM` anahtar sözcüğü. Ancak, `'` sembol ve **yorum**/**açıklamayı Kaldır** düğmeleri daha kolay ve daha az alan ve bellek gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML açıklamalarıyla kodunuzu belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [REM Deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XML açıklamalarıyla kodunuzu belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [REM Deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)

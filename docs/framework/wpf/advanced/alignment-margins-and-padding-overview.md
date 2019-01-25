@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569961"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış
 <xref:System.Windows.FrameworkElement> Sınıfı, tam olarak alt öğeleri konumlandırmak için kullanılan çeşitli özellikler sunar. Bu konuda dört en önemli özellikleri anlatılmaktadır: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Temel öğeler konumunu kontrol etmek için sağladıkları için bu özellikleri etkilerini anlamak önemli olan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -139,13 +139,13 @@ ms.locfileid: "43800894"
 ## <a name="whats-next"></a>Yenilikler  
  Konumlandırma özelliklerini tarafından tanımlanan <xref:System.Windows.FrameworkElement> sınıfı içinde öğe yerleşiminin ince denetimini etkinleştirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Artık daha iyi kullanarak öğeleri konumlandırmak için kullanabileceğiniz çeşitli teknikler vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha ayrıntılı düzen. [Panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md) konu çeşitli hakkında daha fazla ayrıntı içeren <xref:System.Windows.Controls.Panel> öğeleri. Konu [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) düzeni öğelerinin bileşenleri getirin ve eylemlerini veri kaynaklarına bağlamak için kullandığınız gelişmiş teknikleri sunar.  
+ Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha ayrıntılı düzen. [Panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md) konu çeşitli hakkında daha fazla ayrıntı içeren <xref:System.Windows.Controls.Panel> öğeleri. Konu [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) düzeni öğelerinin bileşenleri getirin ve eylemlerini veri kaynaklarına bağlamak için kullandığınız gelişmiş teknikleri sunar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)

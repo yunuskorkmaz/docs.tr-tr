@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691482"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Bazı yöntemleri çağırmak rastgele güvenilmeyen kod izin vermek uygun olmayabilir. Bu tür yöntemler birkaç riskler konusunda sizi uyarmayı: yöntemi; kısıtlı bazı bilgiler sağlayabilir. Bu, geçirilen herhangi bir bilgi düşünüyorsanız; üzerinde parametre denetlemede hata yapmanız; veya yanlış parametrelerle sitelerinin arıza yapmasına veya zararlı bir şey. Bu gibi durumlarda unutmayın ve yöntem korumaya yardımcı olmak amacıyla eyleme geçmek gerekir.  
+ Bazı yöntemleri çağırmak rastgele güvenilmeyen kod izin vermek uygun olmayabilir. Bu tür yöntemler birkaç riskler konusunda sizi uyarmayı: Yöntemi, kısıtlı bazı bilgiler sağlayabilir; Bu, geçirilen herhangi bir bilgi düşünüyorsanız; üzerinde parametre denetlemede hata yapmanız; veya yanlış parametrelerle sitelerinin arıza yapmasına veya zararlı bir şey. Bu gibi durumlarda unutmayın ve yöntem korumaya yardımcı olmak amacıyla eyleme geçmek gerekir.  
   
  Bazı durumlarda, genel kullanım için değildir ancak yine de ortak olmalıdır yöntemleri kısıtlama gerekebilir. Örneğin, kendi DLL'leri çağrılması gereken bir arabirim olabilir ve bu nedenle ortak olmalıdır, ancak genel olarak müşterilerin kullanmasını önlemek için ya da kötü amaçlı kod bileşeniniz girdi noktası yararlanmasını önlemek için kullanıma sunmak istiyorsanız değil. Bir yöntemini kısıtlamak için başka bir yaygın nedeni genel kullanıma yönelik değildir (ancak getirilmesi gereken ortak) belgesi ve hangi çok iç arabirimi olabilir desteklemek üzere yapmamaya sağlamaktır.  
   
@@ -240,5 +240,5 @@ class Implemented : ICanCastToMe
   
  Bir dil derleyicisi bir derleme hatası ile bu geçersiz kılmaları engelliyor olsa bile, bunu geçersiz kılmak için diğer derleyicilerle yazılan kod mümkün olduğuna dikkat edin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

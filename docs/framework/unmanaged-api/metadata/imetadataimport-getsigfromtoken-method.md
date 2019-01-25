@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40fb2e94eac13211cf8ccf179904071a23f59ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b25eb71d78797b5f764cfe4de7abd45f0143fde4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717642"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken Metodu
-Belirtilen belirteçle ilişkili ikili meta verileri imza alır.  
+Belirtilen belirteçle ilişkili ikili meta veri imzası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT GetSigFromToken (
   
 #### <a name="parameters"></a>Parametreler  
  `mdSig`  
- [in] İkili meta veri imzası döndürülecek belirteci.  
+ [in] İkili meta veri imzası döndürmek için belirteç.  
   
  `ppvSig`  
- [out] Döndürülen meta veri imza için bir işaretçi.  
+ [out] Döndürülen meta veri imzası bir işaretçi.  
   
  `pcbSig`  
  [out] İkili meta verileri imza bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

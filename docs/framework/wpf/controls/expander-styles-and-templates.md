@@ -9,54 +9,54 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: f2c06918752de55941671c860055295d55cac5cb
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 99d11b599d79c9f0d998f49cc0f12fee9c83c39a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551975"
 ---
 # <a name="expander-styles-and-templates"></a>Genişletici Stilleri ve Şablonları
-Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.Expander> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Expander> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="expander-parts"></a>Genişletici bölümleri  
- <xref:System.Windows.Controls.Expander> Denetim adlandırılmış tüm bölümler sahip değil.  
+ <xref:System.Windows.Controls.Expander> Denetim herhangi bir adlandırılmış bölümü yok.  
   
 ## <a name="expander-states"></a>Genişletici durumları  
- Aşağıdaki tablo için görsel durumlarını listeler <xref:System.Windows.Controls.Expander> denetim.  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Expander> denetimi.  
   
-|VisualState adı|VisualStateGroup adı|Açıklama|  
+|VisualState adı|Visualstategroup'u adı|Açıklama|  
 |-|-|-|  
 |Normal|CommonStates|Varsayılan durumu.|  
-|Fare üzerinde|CommonStates|Fare işaretçisini üzerinde denetim konumlandırıldı.|  
-|Devre dışı|CommonStates|Denetim devre dışı bırakıldı.|  
-|Odaklanmış|FocusStates|Denetimi odağa sahip.|  
-|Odaksız|FocusStates|Denetim odağı yok.|  
+|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Devre dışı|CommonStates|Denetim devre dışıdır.|  
+|Odaklanmış|FocusStates|Denetim odağa sahip.|  
+|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
 |Genişletilmiş|ExpansionStates|Denetim genişletilir.|  
-|Daraltılmış|ExpansionStates|Denetim genişletilmiş değil.|  
+|Daraltılmış|ExpansionStates|Denetim genişletilmemiştir.|  
 |ExpandDown|ExpandDirectionStates|Aşağı denetimi genişletir.|  
-|ExpandUp|ExpandDirectionStates|Yukarı denetimi genişletir.|  
-|ExpandLeft|ExpandDirectionStates|Denetim sol genişletir.|  
-|ExpandRight|ExpandDirectionStates|Denetimin sağ genişletir.|  
-|Geçerli|ValidationStates|Denetim kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özellik `true` sahip denetimi odağa sahip değil.|  
+|ExpandUp|ExpandDirectionStates|Denetimi yukarı genişletir.|  
+|ExpandLeft|ExpandDirectionStates|Denetimi sol genişletir.|  
+|ExpandRight|ExpandDirectionStates|Denetimi sağ genişletir.|  
+|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
 ## <a name="expander-controltemplate-example"></a>Genişletici ControlTemplate Örneği  
- Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Expander> denetim.  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Expander> denetimi.  
   
  [!code-xaml[ControlTemplateExamples#Expander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
- Önceki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

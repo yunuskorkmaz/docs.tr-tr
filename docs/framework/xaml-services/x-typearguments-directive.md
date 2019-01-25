@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520184"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
 Sınırlama geçişleri bir genel oluşturucuya genel tür bağımsız değişkenlerini yazın.  
@@ -64,7 +64,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Yalnızca bir XAML dosyasının kök öğesini bir genel türe başvuran genel bir XAML kullanımını destekler.  
   
--   Kök öğe en az bir tür bağımsız değişkeni ile genel tür eşlenmelidir. Bir örnek <xref:System.Windows.Navigation.PageFunction%601>. WPF XAML genel kullanım desteği için birincil senaryosu sayfasında işlevlerdir.  
+-   Kök öğe en az bir tür bağımsız değişkeni ile genel tür eşlenmelidir. <xref:System.Windows.Navigation.PageFunction%601> bunun bir örneğidir. WPF XAML genel kullanım desteği için birincil senaryosu sayfasında işlevlerdir.  
   
 -   Genel için kök öğesi XAML nesne öğesi de kullanarak bir parçalı sınıf bildirmeniz gerekir `x:Class`. Bir WPF tanımlama derleme eylemi bile bu geçerlidir.  
   
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  WPF ve hedeflenirken [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML 2009 özelliklerini ile birlikte kullanabileceğiniz `x:TypeArguments` ancak yalnızca gevşek XAML (biçimlendirme yapılmayan XAML). WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri. XAML biçimlendirme için derlerseniz, "XAML 2006 ve WPF genel XAML kullanım" bölümünde belirtildiği kısıtlamaları'nın altında çalışması gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type İşaretleme Uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [XAML Dili Ortak Temelleri İçin Yerleşik Türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [XAML'deki Genel Türler](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type İşaretleme Uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [XAML Dili Ortak Temelleri İçin Yerleşik Türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [XAML'deki Genel Türler](../../../docs/framework/xaml-services/generics-in-xaml.md)

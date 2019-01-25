@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 419884cfd4cbcbcdaa999c221b56ee9873a90241
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45da047d384e56440ca5f883a4cfd755a7d0299
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719722"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority İşlevi
-Bir işaretçi alır bir [Iappıdauthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) uygulama kimlikleri ve başvurular tuşları yönetir örneği.  
+Bir işaretçi alır bir [Iappıdauthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) uygulama kimlikleri ve başvurular için anahtarları yöneten bir örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,12 +40,12 @@ HRESULT GetAppIdAuthority (
  [out] Döndürülen `IAppIdAuthority` işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAppIdAuthority Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAppIdAuthority Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
+- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

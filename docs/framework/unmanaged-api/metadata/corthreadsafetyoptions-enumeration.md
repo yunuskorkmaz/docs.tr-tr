@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594648"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions Numaralandırması
 İş parçacığı güvenliği seçeneklerini seçmek için bayrakları belirtir.  
@@ -41,15 +41,15 @@ typedef enum CorThreadSafetyOptions {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`MDThreadSatetyDefault`|Varsayılan değer. Aynı `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Okuyucu/Yazıcı kilit ayarlanamaz gösterir.|  
-|`MDThreadSatetyOn`|Okuyucu/Yazıcı kilit ayarlanabilir gösterir.|  
+|`MDThreadSatetyOff`|Bir Okuyucu/Yazıcı kilidi ayarlanamaz gösterir.|  
+|`MDThreadSatetyOn`|Bir Okuyucu/Yazıcı kilidi ayarlanabilir gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

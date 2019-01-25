@@ -2,12 +2,12 @@
 title: Akış Biçimlendirici (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: bc73ae11f66d2c325fab274f8deec11355ce8b99
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8f11df3c6bf0a1d81b85e64a5747bbedf9bb2752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722588"
 ---
 # <a name="feed-formatter-json"></a>Akış Biçimlendirici (JSON)
 Bu örnek, örneğini serileştirmek nasıl gösterir. bir <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfı özel kullanarak JavaScript nesne gösterimi (JSON) biçiminde <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
@@ -61,4 +61,4 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\JsonFeeds`  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

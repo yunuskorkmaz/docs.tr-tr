@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604281"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges Metodu
-Bir konumda bir belge, bu yöntem içinde konumu kapsayan Microsoft Ara dili (MSIL) aralıklarına karşılık gelir başlangıç ve bitiş uzaklığında çiftleri dizisi döndürür. Dizi dizisi ve [Başlangıç, son, Başlat, son] biçimi vardır. 2 ile bölünmüş dizi uzunluğu, aralığı çiftleri sayısıdır.  
+Belgede bir konuma konumu bu yöntem içinde kapsayan Microsoft Ara dilini (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş uzaklığında Çiftler dizisini döndürür. Dizi tamsayı dizisi ve [Başlangıç, bitiş, başlangıç, bitiş] biçimi vardır. 2 tarafından ayrılmış dizi uzunluğu aralığın çiftleri sayısıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,28 +42,28 @@ HRESULT GetRanges(
   
 #### <a name="parameters"></a>Parametreler  
  `document`  
- [in] Uzaklık istenen belge.  
+ [in] Uzaklık istendiği belge.  
   
  `line`  
- [in] Aralıklarına karşılık gelen belge satırı.  
+ [in] Aralıkları için karşılık gelen belge satır.  
   
  `column`  
- [in] Aralıklarına karşılık gelen belge sütun.  
+ [in] Aralıkları için karşılık gelen belge sütun.  
   
  `cRanges`  
- [in] Boyutunu `ranges` dizi.  
+ [in] Boyutu `ranges` dizisi.  
   
  `pcRanges`  
- [out] Bir işaretçi bir `ULONG32` aralıkları içermesi gerekir arabellek boyutunu alır.  
+ [out] Bir işaretçi bir `ULONG32` içeriyor aralıkları için gerekli arabellek boyutunu alır.  
   
  `ranges`  
- [out] Aralıkları alır arabellek için bir işaretçi.  
+ [out] Aralık alan arabellek için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

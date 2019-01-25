@@ -2,12 +2,12 @@
 title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729885"
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
 Bu yapılandırma öğesi, bir sabit duyuru sözleşmesiyle standart uç nokta tanımlar. Bir hizmet isteğe bağlı olarak, açık veya kapalı sırasıyla bir çevrimiçi ve çevrimdışı duyuru iletisi göndererek duyurmaktan. Bir Windows Communication Foundation (WCF) hizmeti duyurusunu uç noktaların belirtir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi ve duyuruları gerçekleştirmek için AnnouncementClient kullanır. Diğer hizmetinden duyuru için dinleme isteyen bir istemci aslında bir WCF hizmeti olarak hareket; Bu istemci için Duyurunun uç noktaları yapılandırmak zorunda böylece [ \<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) bölümü.  
@@ -78,5 +78,5 @@ Bu yapılandırma öğesi, bir sabit duyuru sözleşmesiyle standart uç nokta t
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

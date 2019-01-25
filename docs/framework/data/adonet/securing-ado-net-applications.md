@@ -2,12 +2,12 @@
 title: ADO.NET uygulamalarının güvenliğini sağlama
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585373"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET uygulamalarının güvenliğini sağlama
 Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulama değil gibi kodlama yaygın görülen tehlikeleri önleme içerir. Verilere erişen bir uygulamanın birçok olası bir saldırganın almak, işlemek veya hassas verileri yok yararlanabilir hata noktaları vardır. Bu nedenle, güvenlik, tehdit modelleme tasarım aşamasında uygulamanızın son dağıtım ve sürekli bakım işlemi tüm yönleri anlamak önemlidir.  
@@ -51,6 +51,6 @@ Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulam
  [Güvenlik Kaynakçası](/visualstudio/ide/security-bibliography)  
  Çevrimiçi ve yazdırma mevcut dış kaynaklara bağlantılar sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

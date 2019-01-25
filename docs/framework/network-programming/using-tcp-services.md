@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602916"
 ---
 # <a name="using-tcp-services"></a>TCP Hizmetleri kullanma
 <xref:System.Net.Sockets.TcpClient> Sınıfı veri TCP kullanarak bir Internet kaynaktan ister. Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> istemek ve TCP kullanarak veri alma. Uzak cihazla bağlantı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.  
@@ -194,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

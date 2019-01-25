@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0918e1320e04930ae8d9f30246936ef125f9ce82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686588"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857664"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web kullanıcılarına yerelleştirilmiş tarih ve saat bilgilerini görüntüleme
 Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrıştırma ve biçimlendirme tarih ve saat değerlerini işlemleri (genellikle Web sunucusunun yerel kültür biçiminde) bir varsayılan biçimi üzerinde doğrulamamalısınız kullanıcıyla etkileşim kurulurken. Bunun yerine, işlemek tarih ve saat dizeleri giriş kullanıcı tarafından Web forms, tercih edilen kullanıcının kültürü kullanarak dizeleri çözümlenmelidir. Benzer şekilde, tarih ve saat verileri kullanıcıya kullanıcının kültürü için uygun bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Tarih ve saat ayrıştırılacak giriş kullanıcı tarafından dizeleri  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Tarih ve saat ayrıştırılacak giriş kullanıcı tarafından dizeleri  
   
 1.  Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
   
@@ -40,7 +43,7 @@ Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrı�
   
 6.  Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Yerel tarih ve saat kullanıcının isteği ayrıştırılamıyor  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Yerel tarih ve saat kullanıcının isteği ayrıştırılamıyor  
   
 1.  Ekleme bir <xref:System.Web.UI.WebControls.HiddenField> Web formu denetimi.  
   

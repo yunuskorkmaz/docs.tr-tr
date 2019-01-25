@@ -1,39 +1,39 @@
 ---
-title: İlişkiler arasında sorgulama
+title: İlişkilerde sorgulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: f5b2775b2f0c8e35d398d5d0666d47bf0009a9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666442"
 ---
-# <a name="querying-across-relationships"></a>İlişkiler arasında sorgulama
-Diğer nesne veya koleksiyonlar, sınıf tanımları diğer nesnelerin başvurular doğrudan veritabanında yabancı anahtar ilişkileri karşılık gelir. İlişki özelliklerine erişmek ve başka bir nesneden gezinmek için noktalı gösterim kullanarak sorguladığınızda, bu ilişkileri kullanabilirsiniz. Daha karmaşık birleştirmeler ya da eşdeğer SQL bağlantılı sorgularda erişim işlemlerini çevir.  
+# <a name="querying-across-relationships"></a>İlişkilerde sorgulama
+Diğer nesne veya koleksiyonlar, sınıf tanımlarındaki diğer nesnelerin başvuruları doğrudan veritabanında yabancı anahtar ilişkileri karşılık gelir. İlişki özelliklerine erişmek ve bir nesneden diğerine gitmek için nokta gösterimi kullanılarak sorguladığınızda, bu ilişkileri kullanabilirsiniz. Bu erişim işlemleri daha karmaşık birleştirmelerden veya eşdeğer SQL bağıntılı alt sorgularda çevir.  
   
- Örneğin, aşağıdaki sorgu sonuçları yalnızca Londra'da bulunan müşteriler için siparişleri sınırlamak için bir yol olarak müşterilere siparişleri gider.  
+ Örneğin, aşağıdaki sorguyu yalnızca Londra'da bulunan müşteriler için siparişleri için sonuçları kısıtlamak için bir yol olarak müşterilere siparişleri gider.  
   
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- İlişki özellikleri mevcut değilse bunları yazmanız gerekir el ile olarak *birleştirmeler*, aşağıdaki kod olduğu gibi SQL sorguda yaptığınız gibi:  
+ İlişki özellikleri mevcut değilse bunları yazmanız gerekir el ile olarak *birleştirmeler*, aşağıdaki kodda gösterildiği gibi bir SQL sorgusunda yaptığınız gibi:  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
   
- Kullanabileceğiniz *ilişki* bir kez bu belirli ilişki tanımlamak için özellik. Ardından, daha kullanışlı nokta sözdizimini kullanabilirsiniz. Ancak etki alanına özgü nesne modelleri genellikle hiyerarşileri veya grafikleri tanımlandığından ilişki özellikleri daha da önemlisi yok. Karşı program nesneleri diğer nesnelerin referansları sahiptir. Nesne nesnesi ilişkileri veritabanları yabancı anahtar stilde ilişkilerde karşılık gelen bir mutluluk rastlantı olur. Özellik erişim sonra birleştirmeler yazmak için kolay bir yol sağlar.  
+ Kullanabileceğiniz *ilişki* özelliği bir kez bu belirli bir ilişki tanımlamak için. Ardından, daha kolay nokta sözdizimini kullanabilirsiniz. Ancak, etki alanına özgü nesne modellerini genellikle hiyerarşileri veya grafikleri tanımlandığından ilişki özelliklerini daha da önemlisi mevcut. Karşı program nesneleri diğer nesnelere başvurular var. Bu nesne için nesne ilişkilerini yabancı anahtar biçimlendirilmiş ilişkileri veritabanlarındaki karşılık gelen bir mutlu rastlantı olur. Özellik erişimini ardından birleştirmeler yazmak için kullanışlı bir yol sağlar.  
   
- Bu açısından ilişki sorgu sorgu parçası olarak sonuçları tarafındaki daha önemli özelliklerdir. Sorgu belirli bir müşteri hakkında veri aldığı sonra müşterilerin siparişleri sahip sınıf tanımını gösterir. Diğer bir deyişle, beklediğiniz `Orders` bu müşteriden emirleriyle doldurulmuş bir koleksiyonu olması için belirli bir müşteri özelliği. Bu şekilde sınıfları tanımlama tarafından bildirilen sözleşme aslında olmasıdır. Sorgu siparişleri istememiş olsa bile siparişleri var. görmeyi bekleyebilirsiniz. Veritabanı ile ilgili nesneleri hemen kullanılabilir bellek içi uzantısı olan bir görünümü korumak için nesne modeli bekler.  
+ Bu onaylamaz, ilişki sorgunun bir parçası olarak sorgunun sonuçları tarafında daha önemli özelliklerdir. Sorgu, belirli bir müşteri hakkında veri aldığını sonra müşterilerin siparişler sahip sınıf tanımını gösterir. Diğer bir deyişle, beklediğiniz `Orders` söz konusu müşterinin tüm siparişleri doldurulur bir koleksiyon için belirli bir müşterinin özelliği. Aslında bu şekilde sınıflar tanımlayarak bildirilen sözleşme olmasıdır. Sorgu siparişler istemedi bile siparişleri var görmeyi beklediğiniz. Veritabanı ile ilgili nesneleri hemen kullanılabilir bellek içi uzantısı olan bir görünümü korumak için nesne modeli beklediğiniz.  
   
- İlişkileri sahip olduğunuza göre sorguları, sınıflarda tanımlanan ilişki özelliklerini başvurarak yazabilirsiniz. Bu ilişki başvuruları veritabanında yabancı anahtar ilişkileri karşılık gelir. Bu ilişkileri kullanan işlemler eşdeğer SQL daha karmaşık birleşimlerde çevir. Tanımlanmış bir ilişkisi sürece (kullanarak <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği), açık bir birleştirme kod gerekmez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ İlişkiler olduğuna göre sınıflarınızdaki tanımlanmış ilişki özelliklerini başvurarak sorgularınızı yazabilirsiniz. Bu ilişki başvuruları, veritabanında yabancı anahtar ilişkileri karşılık gelir. Bu ilişkiler kullanan işlemleri için daha karmaşık birleştirmeler eşdeğer SQL çevir. Bir ilişki tanımladığınız sürece (kullanarak <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliği), açık bir birleştirme işleminde kod gerekmez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Bu görünümü sağlanmasına yardımcı olmak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] adında bir teknik uygulayan *yüklenirken ertelenmiş*. Daha fazla bilgi için bkz: [hemen yüklenirken karşı ertelenmiş](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+ Bu izlenimi sağlanmasına yardımcı olmak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] olarak adlandırılan tekniği uygulayan *Ertelenen yükleme*. Daha fazla bilgi için [Ertelenen hemen yükleme](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
- Proje listesi için aşağıdaki SQL sorgusunu göz önünde bulundurun `CustomerID` - `OrderID` çiftleri:  
+ Proje bir listesi için aşağıdaki SQL sorgusunu göz önünde bulundurun `CustomerID` - `OrderID` çiftleri:  
   
 ```  
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,15 +42,15 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Kullanarak aynı sonuçları elde etmek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], kullandığınız `Orders` özelliği başvuru zaten mevcut `Customer` sınıfı. `Orders` Başvuru sağlar sorgu ve proje yürütmek için gerekli bilgileri `CustomerID` - `OrderID` aşağıdaki kodu olduğu gibi çiftleri:  
+ Kullanarak aynı sonucu elde etmek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], kullandığınız `Orders` Özellik Başvurusu zaten mevcut `Customer` sınıfı. `Orders` Başvuru proje ve sorgu yürütmek için gereken bilgileri sağlayan `CustomerID` - `OrderID` çiftleri, aşağıdaki kod gibi:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- Bu durumun tersi de yapabilirsiniz. Diğer bir deyişle, sorgu `Orders` ve kendi `Customer` ilişki başvuru ilişkili ilgili bilgilere erişmek üzere `Customer` nesnesi. Aşağıdaki kodu aynı projeleri `CustomerID` - `OrderID` önceki gibi ancak bu kez sorgulayarak çiftleri `Orders` yerine `Customers`.  
+ Bu durumun tersi de yapabilirsiniz. Diğer bir deyişle, sorgu `Orders` ve kendi `Customer` ilişkili hakkında bilgilere erişmek için ilişki başvuru `Customer` nesne. Aşağıdaki kod aynı projeleri `CustomerID` - `OrderID` sorgulayarak önce olduğu gibi ancak bu kez çiftlerini `Orders` yerine `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

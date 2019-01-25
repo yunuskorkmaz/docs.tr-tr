@@ -2,12 +2,12 @@
 title: SQL Server'da kimliğe bürünme izinleri özelleştirme
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 182eadecbd5330f06fc1cd45d2c768b570f12bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596975"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server'da kimliğe bürünme izinleri özelleştirme
 Çoğu uygulama, temel tablolar için erişimi kısıtlamak için sahiplik zinciri bağlı olan verilere erişmek için saklı yordamlar kullanır. Saklı yordamları ÇALIŞTIRMA izinlerini iptal etme veya temel tablolardan izinleri reddetme verebilirsiniz. SQL Server tabloları ve saklı yordam sahibi aynıysa çağıranın izinlerini kontrol yapmaz. Ancak, sahiplik zinciri nesneleri farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda çalışmaz.  
@@ -65,12 +65,12 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   KENDİ KENDİNE. Kendi KENDİNE yürütme, saklı yordamı oluşturan güvenlik bağlamında yürütür. Bu belirtilen bir kullanıcı olarak yürütülen eşdeğerdir belirtilen kullanıcı oluşturulması veya değiştirilmesi yordamı kişi burada.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [Saklı Yordamlarla Verileri Değiştirme](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [Saklı Yordamlarla Verileri Değiştirme](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

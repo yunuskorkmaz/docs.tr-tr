@@ -5,12 +5,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f50490195344c488d264735f89e0107caba888c2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8aebe0492728f3ef87256f5d8c4859220d9106cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660014"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 `out` Anahtar sözcüğü, başvuruya göre geçirilecek bağımsız değişkenleri neden olur. Nasıl olduğunu [ref](ref.md) hariç anahtar sözcüğü `ref` kendisine geçirilen önce değişkenin başlatılması gerekir. Aynı zamanda gibi olan [içinde](in-parameter-modifier.md) hariç anahtar sözcüğü `in` çağrılan yöntem bağımsız değişken değerini değiştirmek izin vermez. Kullanılacak bir `out` parametresi, yöntem tanımının hem yöntemi çağrılırken açıkça kullanmalıdır `out` anahtar sözcüğü. Örneğin:  
@@ -73,9 +73,9 @@ C# 7.0 ile başlayarak, bildirebilirsiniz `out` değişkeni yöntem çağrısın
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)

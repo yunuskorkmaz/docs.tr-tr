@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71e5ae19b1e0123dc28713befef070a9cc23bdc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bb8754c4e572464f139a6b072ccd542b1a302652
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595610"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Nasıl yapılır: XslTransform kodunuzu geçirme
 Yeni XSLT sınıfları varolan sınıflara çok benzer şekilde tasarlanmıştır. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı değiştirir <xref:System.Xml.Xsl.XslTransform> sınıfı. Stil sayfaları kullanarak derlenen <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Dönüşümler kullanılarak çalıştırılır <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi. Aşağıdaki yordamlar, ortak XSLT görevleri göstermek ve kodla karşılaştırın <xref:System.Xml.Xsl.XslTransform> karşı sınıf <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
@@ -95,5 +95,5 @@ Yeni XSLT sınıfları varolan sınıflara çok benzer şekilde tasarlanmıştı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XslTransform Sınıfından Geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
+- [XslTransform Sınıfından Geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [XslCompiledTransform Sınıfını Kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

@@ -2,12 +2,12 @@
 title: Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 7473262ec52adfd917b8ec5cd7ec1f4935a3646d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698371"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 Özel bağlama ile kullanırken <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, tanımlamanız gerekir bir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> oluşturan <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örnekleri.  
@@ -45,7 +45,7 @@ customBinding.Elements.Insert(0, discoveryBindingElement);
   
  Keşif istemcisi kanalını kullanma hakkında daha fazla bilgi için bkz. [keşif istemcisi kanalını kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). 
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
-- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

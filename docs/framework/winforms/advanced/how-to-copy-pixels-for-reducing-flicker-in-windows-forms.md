@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarında Titreşimi Azaltmak için Piksel Kopyalama'
+title: "Nasıl yapılır: Windows Forms'da titreşimi azaltmak için piksel kopyalama"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559456"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Titreşimi Azaltmak için Piksel Kopyalama
-Basit bir grafik animasyon yapıldığında, kullanıcılar bazen titreşimi veya istenmeyen diğer görsel efektler karşılaşırsınız. Bu sorunu sınırlamak için bir yolu, grafiğin üzerinde bir "bitblt" işlem kullanmaktır. BitBlt "bit bloğu aktarımı" renk verilerin kaynak dikdörtgen piksel hedef dikdörtgene piksel ' dir.  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da titreşimi azaltmak için piksel kopyalama
+Basit bir grafik animasyon eklediğinizde, kullanıcılar bazen titreşimini veya istenmeyen diğer görsel efektler karşılaşırsınız. Bu sorunu sınırlamanın yöntemlerinden biri, grafiğin üzerinde "bitblt" işlem kullanmaktır. BitBlt "bit bloğu aktarımı" renk verileri piksel bir kaynak dikdörtgenden hedef dikdörtgene piksel ' dir.  
   
- Windows Forms ile bitblt kullanılarak gerçekleştirilir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Yöntem parametreleri kaynak ve hedef (olarak noktaları), kopyalanacak alanının boyutunu ve yeni Şekli çizmek için kullanılan grafik nesnesi belirtin.  
+ Windows Forms ile bitblt kullanılarak gerçekleştirilir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Yöntem parametrelerinde, kaynak ve hedef (nokta) olarak kopyalanacak alanının boyutunu ve yeni şekil çizmek için kullanılan grafik nesnesi belirtin.  
   
- Aşağıdaki örnekte, bir şekli formunda çizilir kendi <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Ardından, <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi şekli çoğaltmak için kullanılır.  
+ Aşağıdaki örnekte, bir şekil biçiminde çizilir kendi <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Ardından, <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi şekli çoğaltmak için kullanılır.  
   
 > [!NOTE]
->  Formun ayarlama <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğine `true` grafik tabanlı kodda yapar <xref:System.Windows.Forms.Control.Paint> olay çift arabelleğe alındı. Bu herhangi anlaşılabilir performans artışı aşağıdaki kodu kullanırken olmaz olsa da, daha karmaşık grafik işleme kodu ile çalışırken göz önünde bulundurmanız bir şey durumdur.  
+>  Formun ayarlama <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğini `true` grafik tabanlı kodda hale getirecek <xref:System.Windows.Forms.Control.Paint> olayı iki kez arabelleğe alınan. Bu tüm anlaşılabilir performans artışı aşağıdaki kodu kullanırken olmaz sırada, daha karmaşık grafik işleme kodu ile çalışırken göz önünde bulundurmanız bir şeydir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -60,11 +60,11 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki kod formun Çalıştır <xref:System.Windows.Forms.Control.Paint> olay işleyicisi böylece form yeniden başlatıldığında grafik devam. Bu nedenle, grafik ilgili yöntemleri çağırmayın <xref:System.Windows.Forms.Form.Load> olay işleyicisi, formu yeniden boyutlandırılmış veya başka bir form tarafından getirilmemeli çizilmiş içeriği yeniden değil çünkü.  
+ Yukarıdaki kod formun çalıştırılan <xref:System.Windows.Forms.Control.Paint> olay işleyicisi, böylece form yeniden çizildiğinde grafik kalıcı. Bu nedenle, grafik ile ilgili yöntemleri çağırmayın <xref:System.Windows.Forms.Form.Load> olay işleyicisi, formu yeniden boyutlandırılabilir veya başka bir form tarafından engellediği çizilen içeriği yeniden değil çünkü.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.CopyPixelOperation>  
- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.CopyPixelOperation>
+- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
+- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

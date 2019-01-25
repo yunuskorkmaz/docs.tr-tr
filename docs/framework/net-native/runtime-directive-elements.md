@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638372"
 ---
 # <a name="runtime-directive-elements"></a>Çalışma Zamanı Yönerge Öğeleri
 Çalışma zamanı yönergeleri (rd.xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğeleri destekler. Bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hiyerarşik bir sunumunu için.  
@@ -68,5 +68,5 @@ ms.locfileid: "54084816"
  [\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Tarafından temsil edilen bir türün çalışma zamanı ilkenin uygulanacağı bir <xref:System.Type> bir yönteme geçirilen bağımsız değişken.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [RD.XML yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [RD.XML yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

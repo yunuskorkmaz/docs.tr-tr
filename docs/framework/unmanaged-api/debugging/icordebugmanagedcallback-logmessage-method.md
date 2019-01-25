@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4c8494b1ffc80fc49acce01c5de0b3fd18c0f5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574696"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage Yöntemi
-Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.EventLog> sınıfı bir olayı günlüğe kaydedin.  
+Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.EventLog> günlüğe bir olay için sınıf.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +41,28 @@ HRESULT LogMessage (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Bir işaretçi Icordebugappdomain nesneye olayı günlüğe kaydeden yönetilen iş parçacığı içeren uygulama etki alanını temsil eder.  
+ [in] Olayın günlüğe yönetilen iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
  `pThread`  
- [in] Yönetilen iş parçacığı temsil eden bir Icordebugthread nesnesi için bir işaretçi.  
+ [in] Yönetilen iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
   
  `lLevel`  
- [in] Değerini [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) olay günlüğüne yazılan açıklayıcı ileti önem derecesi gösterir numaralandırması.  
+ [in] Değerini [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) olay günlüğüne yazılmış açıklayıcı bir ileti önem derecesi belirten sabit listesi.  
   
  `pLogSwitchName`  
  [in] İzleme anahtarı adı için bir işaretçi.  
   
  `pMessage`  
- [in] Olay günlüğüne yazılan iletisi için bir işaretçi.  
+ [in] Olay günlüğüne yazılmış iletisi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

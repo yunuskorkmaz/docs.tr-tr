@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653872"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType Numaralandırması
-Bir yığın taşması olayın temel nedenini gösteren değerlerini içerir.  
+Bir yığın taşması olayı temel nedenini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Yığın taşması yürütme altyapısı tarafından neden oldu.|  
-|`SO_Managed`|Yığın taşması tarafından yönetilen kod neden oldu.|  
-|`SO_Other`|Yığın taşması tarafından yönetilmeyen kod neden oldu.|  
+|`SO_ClrEngine`|Yürütme altyapısı tarafından yığın taşmasına neden oldu.|  
+|`SO_Managed`|Yönetilen kod tarafından yığın taşmasına neden oldu.|  
+|`SO_Other`|Tarafından yönetilmeyen kod yığın taşmasına neden oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bilgiler bir çağrı konağa geçirilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi.  
+ Bu bilgiler, ana bilgisayara yapılan bir çağrıyla geçirilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -2,18 +2,18 @@
 title: '&lt;yönlendirme&gt; &lt;filtreleri&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 4a6a079264c54ac481c3a8996b74ac924c33bdc7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 468c10bc06b60f80ce93cf413c02582fe3861f70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704439"
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;yönlendirme&gt; &lt;filtreleri&gt;
 
 Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri değerlendirmek kullanılacak.
 
-[**\<system.serviceModel >**](system-servicemodel.md)   
+[**\<system.serviceModel>**](system-servicemodel.md)   
 &nbsp;&nbsp;[**\<Yönlendirme >**](routing.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;**\<filtreleri >**
   
@@ -54,4 +54,4 @@ Hiçbiri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

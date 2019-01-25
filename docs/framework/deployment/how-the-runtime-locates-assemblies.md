@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661873"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
@@ -61,7 +61,7 @@ ms.locfileid: "49453456"
         >  Güçlü adı olmayan derlemeler için denetimi sürümü yoktur ve güçlü adı olmayan derlemeler için çalışma zamanı genel derleme önbelleğinde kontrol etmez.  
   
 <a name="step1"></a>   
-## <a name="step-1-examining-the-configuration-files"></a>Adım 1: Yapılandırma Dosyalarını İnceleme  
+## <a name="step-1-examining-the-configuration-files"></a>1. Adım: Yapılandırma dosyalarını İnceleme  
  Derleme bağlama davranışı üç XML dosyalarını temel alan farklı düzeylerde yapılandırılabilir:  
   
 -   Uygulama yapılandırma dosyası.  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Üçüncü olarak, çalışma zamanı, makine yapılandırma dosyasını inceler. Machine.config, adlı bu dosya, yerel bilgisayarda yapılandırma alt çalışma zamanının yüklendiği kök dizininde bulunur. Bu dosya, o bilgisayarın yerel bütünleştirilmiş kod bağlama kısıtlamaları belirtmek için yöneticiler tarafından kullanılabilir. Makine yapılandırma dosyasındaki ayarları diğer tüm yapılandırma ayarlarını öncelik kazanır; Ancak, bu tüm yapılandırma ayarlarını bu dosyada yerleştirileceği anlamına gelmez. Yönetici ilke dosyası tarafından belirlenen sürüm kalıcıdır ve geçersiz kılınamaz. Geçersiz kılmalar Machine.config dosyasında belirtilen tüm uygulamaları etkiler. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md).  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Adım 2: Önceden Başvurulan Derlemeleri Denetleme  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>2. Adım: İçin önceden başvurulan derlemeleri denetleme  
  İstenen derlemeyi, önceki çağrılarında istendi, ortak dil çalışma zamanı zaten yüklü olan derleme kullanır. Bir uygulamayı oluşturan derlemeleri adlandırırken bu sonuçları olabilir. Adlandırma derlemeler hakkında daha fazla bilgi için bkz. [derleme adları](../../../docs/framework/app-domains/assembly-names.md).  
   
  Önceki bir istek, başarısız derleme için sonraki istekleri için derleme derleme yükleme girişimi olmadan hemen getirilir. .NET Framework sürüm 2.0 ile başlayarak, derleme bağlama hataları önbelleğe alınır ve önbelleğe alınan bilgileri derlemenin yüklemeye belirlemek için kullanılır.  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  .NET Framework sürümleri 1.0 ve 1.1, bağlama hataları önbelleğe, davranıştır geri eklenecek [ \<disableCachingBindingFailures > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) yapılandırma dosyanızdaki.  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>Adım 3: Genel Derleme Önbelleğini Denetleme  
+## <a name="step-3-checking-the-global-assembly-cache"></a>3. Adım: Genel derleme önbelleğini denetleme  
  Tanımlayıcı adlı derlemeler için genel derleme önbelleğinde bakarak bağlama işlemi devam ediyor. Bir bilgisayarda çeşitli uygulamalar tarafından kullanılan derlemeler genel derleme önbelleği depolar. Genel derleme önbelleğindeki derlemelerin tanımlayıcı adlara sahip olmalıdır.  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Adım 4: Kod Temelleri veya Algılama Aracılığıyla Derlemenin Konumunu Bulma  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>4. Adım: Aracılığıyla derlemenin kod tabanlarında bulma veya algılama  
  Çağıran derleme başvurusu ve yapılandırma dosyalarındaki bilgileri kullanarak doğru derleme sürümünü belirlendikten sonra ve (yalnızca katı adlı derlemeler için), genel derleme önbelleğinde denetledi sonra ortak dil çalışma zamanı, derlemeyi bulmayı dener. Bütünleştirilmiş bulma işlemi aşağıdaki adımları içerir:  
   
 1.  Varsa bir [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğesi, çalışma zamanı denetimleri belirtilen konuma uygulama yapılandırma dosyasında bulunur. Bir eşleşme bulunursa, o derleme kullanılır ve hiçbir yoklama gerçekleşir. Derleme var. bulunmazsa, bağlama isteği başarısız olur.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Assembly1 Assembly2 ve Assembly1 başvuruyorsa, indirildiğini `http://www.code.microsoft.com/utils`, konum Assembly2.dll nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Çalışma zamanı sonra derlemede için araştırmaları `http://www.code.microsoft.com/utils/Assembly2.dll` ve `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Çalışma zamanı, Assembly2 konumların birini bulunmazsa, Windows Installer sorgular.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Dağıtım](../../../docs/framework/deployment/index.md)

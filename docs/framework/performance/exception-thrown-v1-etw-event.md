@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610857"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
 Bu olay attığı özel durumları hakkında bilgileri yakalar.  
@@ -33,12 +33,12 @@ Bu olay attığı özel durumları hakkında bilgileri yakalar.
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Özel durum türü|Kazanma: UnicodeString|Özel durumun türünü; Örneğin, `System.NullReferenceException`.|  
+|Özel Durum Türü|Kazanma: UnicodeString|Özel durumun türünü; Örneğin, `System.NullReferenceException`.|  
 |Özel durum iletisi|Kazanma: UnicodeString|Gerçek özel durum iletisi.|  
 |EIPCodeThrow|Kazanma: işaretçi|Özel durum oluştuğu yönerge işaretçisi.|  
 |ExceptionHR|Kazanma: UInt32|Özel durum [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
 |ExceptionFlags|Kazanma: UInt16|0x01: HasInnerException (bkz [CLR ETW olaylarını](../../../docs/framework/performance/clr-etw-events.md) Visual Basic belgelerinde).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (işlem durumu bozuk olduğunu belirtir; bkz [işleme bozuk durum özel durumları](https://go.microsoft.com/fwlink/?LinkId=179681) MSDN'de).<br /><br /> 0x10: IsCLSCompliant (türeyen bir özel durum <xref:System.Exception> CLS uyumlu; Aksi takdirde, CLS uyumlu değil).|  
 |ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

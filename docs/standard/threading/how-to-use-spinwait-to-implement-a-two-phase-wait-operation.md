@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İki Aşamalı bir Bekleme İşlemini Uygulamak için SpinWait Kullanma'
+title: 'Nasıl yapılır: Aşamalı bir bekleme işlemini uygulamak için SpinWait kullanma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576518"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Nasıl yapılır: İki Aşamalı bir Bekleme İşlemini Uygulamak için SpinWait Kullanma
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Nasıl yapılır: Aşamalı bir bekleme işlemini uygulamak için SpinWait kullanma
 Aşağıdaki örnek nasıl kullanılacağını gösteren bir <xref:System.Threading.SpinWait?displayProperty=nameWithType> aşamalı bir bekleme işlemini uygulamak için nesne. İlk aşamada, eşitleme nesnesi bir `Latch`, kilit kullanılabilir hale olup olmadığını denetlerken birkaç döngü için döner. İkinci kısımda kilit kullanılabilir durumdaysa, ardından `Wait` yöntemi döndürür kullanmadan <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> beklemesi; gerçekleştirmek için Aksi takdirde, `Wait` bekleme gerçekleştirir.  
   
 ## <a name="example"></a>Örnek  
@@ -32,5 +32,5 @@ Aşağıdaki örnek nasıl kullanılacağını gösteren bir <xref:System.Thread
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -2,12 +2,12 @@
 title: Alma ve ADO.NET veri değiştirme
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556437"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Alma ve ADO.NET veri değiştirme
 Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanmak ve içerdiği veriler alınıyor. ADO.NET, .NET Framework veri sağlayıcıları kullanarak veri almak için de komutları yürütmek olanak tanıyan bir uygulama ve bir veri kaynağı arasında bir köprü olarak hizmet verecek bir **DataReader** veya **DataAdapter** . Herhangi bir veritabanı uygulama anahtar işlevi veritabanında depolanan verileri güncelleştirmek için olanağıdır. ADO.NET ile veri güncelleştirme kullanılmasına **DataAdapter** ve <xref:System.Data.DataSet>, ve **komut** nesneler; ve bu da gerektirebilir işlemleri kullanma.  
@@ -58,9 +58,9 @@ Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanm
  [SqlClient Akış Desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  SQL Server'dan veri akışı, tam olarak belleğe zorunda kalmadan uygulamaları yazmak nasıl ele alınmaktadır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

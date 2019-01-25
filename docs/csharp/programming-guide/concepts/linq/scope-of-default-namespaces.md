@@ -2,12 +2,12 @@
 title: C# 1 varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: bb0e111bfded0769c498b116f828711003036e33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613863"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C# dilinde varsayılan ad alanlarının kapsamı
 XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir. Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.  
@@ -88,6 +88,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

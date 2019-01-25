@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir nesneyi serileştirmek'
+title: 'Nasıl yapılır: Bir nesneyi serileştirmek'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600654"
 ---
-# <a name="how-to-serialize-an-object"></a>Nasıl yapılır: bir nesneyi serileştirmek
+# <a name="how-to-serialize-an-object"></a>Nasıl yapılır: Bir nesneyi serileştirmek
 Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun. Bunu yapmak için XML akışı, bir akış olarak veya bir dosya olarak depolanır taşıma biçimi belirlemeniz gerekir. XML Akışı kalıcı bir biçimde kaydedilmesi gerekir, örneğin, oluşturun bir <xref:System.IO.FileStream> nesne.  
   
 > [!NOTE]
@@ -52,5 +52,5 @@ Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

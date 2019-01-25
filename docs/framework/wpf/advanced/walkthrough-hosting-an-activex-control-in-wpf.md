@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: WPF'te ActiveX Denetimi Barındırma"
+title: "İzlenecek yol: WPF'te ActiveX denetimi barındırma"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: b091832ada574ad5c9534f8f12190c3a2f8fa7ec
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25019444e107af2ad681e9f51adebbf01c444438
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668326"
 ---
-# <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'te ActiveX Denetimi Barındırma
+# <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'te ActiveX denetimi barındırma
 Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimlerini, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama. Bu izlenecek yol, nasıl barındırabilirsiniz gösterir [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] denetim olarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.
 
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
@@ -105,9 +105,9 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
   
 10. Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

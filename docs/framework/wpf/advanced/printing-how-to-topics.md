@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726448"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
@@ -31,7 +31,7 @@ Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma si
  [Yazdırma Kuyruklarının Alt Kümesini Numaralandırma](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.  
   
- [NOTINBUILD: Nasıl yapılır: yazdırma şemasını ve yeni yazdırma sistemi sınıfları oluşturma](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Nasıl yapılır: Yazdırma şemasını ve yeni yazdırma sistemi sınıfları oluşturma](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Yönetilen kod programcılar genişletilmiş bir tartışma özel yazdırma cihazları veya yeni veya genel olmayan özellikler yazıcılarla yazdırma şemasını genişletebilirsiniz.  
   
  [Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma si
  [PrintTickets'i Doğrulama ve Birleştirme](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Bir yazdırma bileti geçerli olduğunu ve bunu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetimi yönelik yönergeler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

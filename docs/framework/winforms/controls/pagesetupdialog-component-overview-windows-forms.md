@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 4e7b4548f5a178ed7b819dbc2edc37bb95e3e0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f864bb986401a5d1498f2c5c8dbb8484dfaad39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674064"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog Bileşenine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Windows tabanlı uygulamalarda yazdırma için sayfa ayrıntılarını ayarlamak için kullanılan önceden yapılandırılmış iletişim kutusunu bir bileşendir. Windows tabanlı uygulamanız içinde basit bir çözüm olarak kullanıcılar yerine kendi iletişim kutusu yapılandırma sayfası tercihleri ayarlamak için kullanın. Kenarlık ve kenar boşluğu ayarlamalar, üstbilgiler ve altbilgiler ve dikey veya yatay yönlendirme ayarlamak kullanıcıların sağlayabilirsiniz. Standart Windows iletişim kutularında bağlı olarak, temel işlevleri kullanıcılara hemen alışkın olduğu uygulamalar oluşturun.  
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> sayfa ayrıntıları yazdırma için Windows tabanlı uygulamalar ayarlamak için kullanılan bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Windows tabanlı uygulamanızda basit bir çözüm olarak kullanıcılar yerine kendi iletişim kutusu yapılandırma sayfası tercihleri ayarlamak için kullanın. Kenarlık ve kenar boşluğu ayarlamaları, üstbilgiler, altbilgiler ve dikey veya yatay hizalama ayarlamak kullanıcıların etkinleştirebilirsiniz. Standart Windows iletişim kutularında bağlı olarak, temel işlevleri kullanıcılarına hemen tanıdık uygulamalar oluşturun.  
   
 ## <a name="key-properties-and-methods"></a>Anahtar özellikleri ve yöntemleri  
- Kullanım <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> çalışma zamanında iletişim kutusunu görüntülemek için yöntem. Bu bileşen ya da tek bir sayfayla ilişkili ayarlayabileceğiniz özellikleri vardır (<xref:System.Drawing.Printing.PrintDocument> sınıfı) veya herhangi bir belgeye (<xref:System.Drawing.Printing.PageSettings> sınıfı). Ayrıca, <xref:System.Windows.Forms.PageSetupDialog> bileşeni, depolanmış belirli yazıcı ayarlarını belirlemek için kullanılabilir <xref:System.Drawing.Printing.PrinterSettings> sınıfı.  
+ Kullanım <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> çalışma zamanında iletişim kutusunu görüntülemek için yöntemi. Bu bileşen için ya da tek bir sayfayla ilişkili ayarlayabileceğiniz özelliklerine sahip (<xref:System.Drawing.Printing.PrintDocument> sınıfı) veya herhangi bir belge (<xref:System.Drawing.Printing.PageSettings> sınıfı). Ayrıca, <xref:System.Windows.Forms.PageSetupDialog> bileşeni, depolanmış belirli bir yazıcı ayarlarını belirlemek için kullanılabilir <xref:System.Drawing.Printing.PrinterSettings> sınıfı.  
   
- Bir form için eklendiğinde <xref:System.Windows.Forms.PageSetupDialog> Tepsisi Windows Forms Tasarımcısı'nın altındaki Bileşen görünür.  
+ Bir forma eklendiğinde <xref:System.Windows.Forms.PageSetupDialog> bileşeni Tepsi Windows Form Tasarımcısı'nın altındaki görünür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.PageSetupDialog>  
- [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.PageSetupDialog>
+- [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

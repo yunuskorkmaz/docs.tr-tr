@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a784dc57331ed4cbaeb8524dbb3b6ea9a06eca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605597"
 ---
 # <a name="-delaysign"></a>-delaysıgn
 Derlemenin tamamen veya kısmen imzalanacağını belirtir.  
@@ -43,8 +43,8 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
 3.  Değer kümesindeki **gecikme yalnızca oturum** kutusu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

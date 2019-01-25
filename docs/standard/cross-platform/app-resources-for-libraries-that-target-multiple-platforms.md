@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641154"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türü sınıf kitaplıklarınızdaki kaynakların birden çok platformdan erişilebildiğinden emin olmak için. Bu proje türü ve .NET Framework sınıf kitaplığının taşınabilir alt küme hedefleyen Visual Studio 2012'de kullanılabilir. Kullanarak bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] kitaplığınızı erişilip erişilemediğini Masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları sağlar ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.
@@ -81,7 +81,7 @@ ms.locfileid: "48580095"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Örnek: yerelleştirilmiş [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Örnek: Yerelleştirilmiş [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Aşağıdaki yerelleştirilmiş [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Fransızca (Fransa) ve İngilizce (ABD) kültürleri için örnek kaynakları içerir. İngilizce (ABD) kültürü uygulamanın varsayılan kültürüdür; kaynaklarını tablosunda gösterilen [önceki bölümde](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Fransızca (Fransa) kültürü için kaynaklar dosyası LibResources.fr-FR.resx olarak adlandırılmıştır ve aşağıdaki tabloda listelenen dize kaynaklarından oluşur. Kaynak kodu `UILibrary` sınıfı, önceki bölümde gösterilenle aynı.
 
 |Kaynak adı|Kaynak değeri|
@@ -106,6 +106,6 @@ ms.locfileid: "48580095"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Resources.ResourceManager>  
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
 - [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

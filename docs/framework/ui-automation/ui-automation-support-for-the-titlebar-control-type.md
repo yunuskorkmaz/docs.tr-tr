@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f200f2f2a739ac49b96b9294a50c06732000028a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 29cb2df149c484caca45bb63e173e375b5d97515
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607153"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a>TitleBar Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "48261330"
   
 |Denetim Görünüm|İçerik görünümü|  
 |------------------|------------------|  
-|Başlık çubuğu<br /><br /> -Menü (0 veya 1)<br />-Düğmesine (0 veya daha fazla)|Yok. (başlık çubuğu denetimi içerik yok.)|  
+|Başlık çubuğu<br /><br /> -Menü (0 veya 1)<br />-Düğmesine (0 veya daha fazla)|Uygulanamaz. (başlık çubuğu denetimi içerik yok.)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon özellikleri  
@@ -63,13 +63,13 @@ ms.locfileid: "48261330"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı.|hiçbir zaman|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|hiçbir zaman|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı.|hiçbir zaman|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|hiçbir zaman|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Hiçbiri|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Automation.ControlType.TitleBar>  
- [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Automation.ControlType.TitleBar>
+- [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)

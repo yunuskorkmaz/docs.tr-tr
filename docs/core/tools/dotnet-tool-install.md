@@ -2,12 +2,12 @@
 title: DotNet aracı yükleme komutu
 description: Dotnet araç belirtilen .NET Core genel aracı komut yükler makinenize yükleyin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 251e7b04be96ac2340727fa03dbaa2d548110fa9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1348eb1165c77376a885fdcbf094bd17b2aa3514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563710"
 ---
 # <a name="dotnet-tool-install"></a>DotNet aracı yükleme
 
@@ -17,7 +17,7 @@ ms.locfileid: "53168721"
 
 `dotnet tool install` -Belirtilen yükler [.NET Core genel aracı](global-tools.md) makinenizde.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 ```console
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
@@ -96,4 +96,4 @@ Yükler [dotnetsay](https://www.nuget.org/packages/dotnetsay/) belirli bir Linux
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET core Araçları Genel](global-tools.md)
+- [.NET core Araçları Genel](global-tools.md)

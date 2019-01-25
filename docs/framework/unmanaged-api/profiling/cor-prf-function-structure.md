@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bc8d588641163ccf98054fdf1930a72a04c770c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 098aaca8ec318b08c87e30c2a9558b7e64494a4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582012"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION Yapısı
-Derlenmiş sürüm kimliği Kimliğini birleştiren bir işlev benzersiz bir gösterimini sağlar.  
+Znovu sürümü kimliği Kimliğini birleştirerek bir işlev benzersiz bir gösterimini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`functionId`|İşlev kimliği.|  
-|`reJitId`|Derlenmiş işlevi kimliği. 0 (sıfır) değerini işlevi orijinal sürümünü temsil eder.|  
+|`reJitId`|Znovu işlevi kimliği. 0 (sıfır) değerini işlevi orijinal sürümünü temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

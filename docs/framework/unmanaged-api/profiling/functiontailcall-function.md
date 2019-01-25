@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11cf96f5957d41e0647c309a7b0bb08fc9b31c91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38d4858d248ef4eefbcb9d97c13e68d9507fb12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665038"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall İşlevi
-Profil Oluşturucu şu anda yürütülen işlevi başka bir işlevine bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir.  
+Profil Oluşturucu, yürütülmekte olan işlevin başka bir işleve bir kuyruk çağrısı gerçekleştirmek üzere olduğunu bildirir.  
   
 > [!NOTE]
->  `FunctionTailcall` İşlevi, .NET Framework sürüm 2.0 kullanım dışıdır. Çalışmaya devam edecek, ancak performans cezasına sebep olabilir. Kullanım [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) yerine işlev.  
+>  `FunctionTailcall` İşlevi, .NET Framework 2.0 sürümünde kullanım dışı. Çalışmaya devam eder ancak performans cezasına sebep olabilir. Kullanım [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) işlevini.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,34 +39,34 @@ void __stdcall FunctionTailcall (
   
 #### <a name="parameters"></a>Parametreler  
  `funcID`  
- [in] Bir kuyruk çağrısı yapmak için şu anda yürütülen işlevi tanımlayıcısı.  
+ [in] Bir kuyruk çağrısı yapmak üzere olan yürütülmekte olan işlevin tanımlayıcısıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kuyruk çağrısı hedef işlevinin geçerli yığın çerçevesini kullanır ve doğrudan yapılan çağrı tail işlevi çağırana döndürür. Bunun anlamı bir [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) geri çağırma bir kuyruk çağrısı hedefi için bir işlev değil verilir.  
+ Tail çağrısı hedef işlevi, geçerli yığın çerçevesi kullanır ve doğrudan çağrı kuyruğunu yapılan işlev çağırana döner. Diğer bir deyişle bir [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) geri çağırma hedefi olan kuyruk çağrısı için bir işlev değil gönderilmez.  
   
- `FunctionTailcall` İşlevi bir geri çağırma; uygulamanız gerekir. Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı öznitelik.  
+ `FunctionTailcall` Bir geri çağırma işlevidir; uygulamanız gerekir. Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı özniteliği.  
   
- Yürütme altyapısı, bu işlevi çağrılmadan önce tüm kayıtları kaydetmez.  
+ Yürütme altyapısı, bu işlevi çağırmadan önce tüm kayıtları kaydetmez.  
   
--   Girişte kayan nokta birim (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları kaydetmeniz gerekir.  
+-   Kayan nokta birimi (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları girişte kaydetmeniz gerekir.  
   
--   Çıkış yapıldığında, çağıran tarafından gönderilen tüm parametreleri kapalı pencerelerinin tarafından yığın geri yüklemeniz gerekir.  
+-   Çıkışta, yığın, arayan tarafından gönderildi tüm parametreleri kapalı pencerelerinin tarafından geri yüklemelisiniz.  
   
- Uygulaması `FunctionTailcall` çöp toplama geciktirir çünkü engelleyebilir miyim değil. Yığın bir atık toplama kolay durumda olmayabileceğinden uygulama çöp toplama çalışmamalıdır. Çöp toplama bulamazsa, çalışma zamanı kadar engeller `FunctionTailcall` döndürür.  
+ Uygulamasını `FunctionTailcall` çöp toplamanın gecikeceğini çünkü engellemelisiniz değil. Uygulama, yığını bir çöp toplama kullanımı kolay durumda olmayabilir çünkü bir çöp toplama çalışmamalıdır. Bir çöp toplama girişiminde bulunulursa, çalışma zamanı kadar engeller `FunctionTailcall` döndürür.  
   
  Ayrıca, `FunctionTailcall` işlevi değil çağırmalıdır yönetilen koda veya herhangi bir şekilde neden yönetilen bellek ayırma.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl  
+ **Üst bilgi:** CorProf.idl  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 1.1, 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [FunctionEnter2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [FunctionLeave2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- [SetEnterLeaveFunctionHooks2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  
- [Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [FunctionEnter2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [FunctionLeave2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

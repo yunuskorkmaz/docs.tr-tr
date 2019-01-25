@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568588"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM İşlevi
-Ortak dil çalışma zamanı (CLR) çalışma zamanı aranabilir sarmalayıcıları (RCW) içinde tutan tüm arabirim işaretçileri yayımlamayı zorlar. Bu, tüm RCW önbellekleri yayınlama etkisi yoktur. Bu genel işlevi de kullanım dışı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Bunun yerine, giriş noktası için belirli bir çalışma zamanı kullanın.  
+Ortak dil çalışma zamanı (CLR) çalışma zamanı aranabilir sarmalayıcılarını (RCW) içinde tutan tüm arabirim işaretçilerini yayımlamayı zorlar. Bu, tüm RCW önbellekleri bırakılıyor etkisi vardır. Bu genel bir işlev içinde kullanım dışı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Bunun yerine, belirli bir çalışma zamanı için giriş noktasını kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,21 +36,21 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CoEEShutDownCOM` İşlevi önce tüm RCWs tüm bağlamları ve tüm önbellekleri serbest bırakır ve kurulumunda varolan herhangi bir kapatmayı aşağı bildirim kaldırır. Hiçbir DLL'i kaldırma oluşur.  
+ `CoEEShutDownCOM` İşlevi ilk tüm RCW tüm bağlamlarda ve tüm önbellekleri serbest bırakır ve sonra kurulumunda varolan herhangi bir kapatmayı bildirim kaldırır. Hiçbir DLL'i kaldırma gerçekleşir.  
   
 > [!CAUTION]
->  Bu işlev işlemi içinde yüklenen tüm çalışma zamanları etkiler.  
+>  Bu işlev, işlem içine yüklenmiş tüm çalışma zamanları etkiler.  
   
- İle başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], giriş noktası üzerindeki etkiler istediğiniz belirli çalışma zamanı bu işlev çağrısı. Giriş noktası almak için arama [Iclrruntimeınfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) yöntemi ve "CoEEShutDownCOM" belirtin.  
+ İle başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], değiştirmek istediğiniz belirli çalışma zamanı üzerinde bu işlev için giriş noktası çağırın. Giriş noktası almak için arama [Iclrruntimeınfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) yöntemi ve "CoEEShutDownCOM" belirtin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

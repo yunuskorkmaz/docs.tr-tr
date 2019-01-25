@@ -1,30 +1,30 @@
 ---
-title: 'Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama (Visual Basic)'
+title: 'Nasıl yapılır: Tarihleri veya saatleri temsil eden dizeleri doğrulama (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: 411c8517783421b2472c3e4aa77287f8252f179b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a838d9d156ad9c05a70a4d4d72db1a288731c9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685405"
 ---
-# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama (Visual Basic)
-Aşağıdaki örnek kod bir `Boolean` bir dizenin geçerli bir tarih veya saat temsil edip etmediğini gösteren değer.  
+# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Nasıl yapılır: Tarihleri veya saatleri temsil eden dizeleri doğrulama (Visual Basic)
+Aşağıdaki örnek kod bir `Boolean` bir dizenin geçerli bir tarih veya saat temsil edip etmediğini belirten değer.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Değiştir `("01/01/03")` ve `"9:30 PM"` doğrulamak istediğiniz saat ve tarihi ile. İle başka bir sabit kodlanmış dize dizesiyle değiştirin bir `String` değişkenine veya farklı bir yöntemle bir dize gibi döndüren `InputBox`.  
+ Değiştirin `("01/01/03")` ve `"9:30 PM"` istediğiniz doğrulamak için saat ve tarihi ile. İle başka bir sabit kodlanmış dize dizesiyle değiştirin bir `String` değişkenine veya bir yöntemle bir dize gibi döndürür `InputBox`.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Dönüştürülecek denemeden önce bir dizeyi doğrulamak için bu yöntemi kullanın `String` için bir `DateTime` değişkeni. Tarih veya saat önce denetleyerek, çalışma zamanında bir özel durum oluşturmak önleyebilirsiniz.  
+ Dönüştürülecek denemeden önce bir dizeyi doğrulamak için bu yöntemi kullanın `String` için bir `DateTime` değişkeni. Tarih veya saat önce denetleyerek, çalışma zamanında bir özel durum oluşturma önleyebilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Information.IsDate%2A>  
- <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>  
- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Information.IsDate%2A>
+- <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>
+- [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

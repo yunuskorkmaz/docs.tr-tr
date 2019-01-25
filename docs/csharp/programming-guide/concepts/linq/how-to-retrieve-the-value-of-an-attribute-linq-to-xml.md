@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: bir öznitelik (LINQ to XML) değerini alma (C#)'
+title: 'Nasıl yapılır: Bir öznitelik (LINQ to XML) değerini alma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: a78cda390cc7b3d489cfda212cf8fb8111e4dde2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0babc51dc4992741991be876d0a5ecae8302bd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721971"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Nasıl yapılır: bir öznitelik (LINQ to XML) değerini alma (C#)
-Bu konuda, öznitelik değerini elde etme gösterilmektedir. Başlıca iki yolu vardır: edebilirsiniz bir <xref:System.Xml.Linq.XAttribute> istenen türe; açık dönüştürme operatörü sonra içeriği öğe veya öznitelik belirtilen türe dönüştürür. Alternatif olarak, <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği. Ancak, atama, genellikle daha iyi bir yaklaşım değildir. Öznitelik boş değer atanabilir bir tür için tür dönüştürme, kod var olmayabilir veya bir özniteliğin değeri alınırken yazmak kolaydır. Bu tekniğe ilişkin örnekler için bkz [nasıl yapılır: bir öğe (LINQ to XML) değerini alma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Nasıl yapılır: Bir öznitelik (LINQ to XML) değerini alma (C#)
+Bu konuda, öznitelik değerini elde etme gösterilmektedir. Başlıca iki yolu vardır: Edebilirsiniz bir <xref:System.Xml.Linq.XAttribute> istenen türe; açık dönüştürme operatörü sonra içeriği öğe veya öznitelik belirtilen türe dönüştürür. Alternatif olarak, <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği. Ancak, atama, genellikle daha iyi bir yaklaşım değildir. Öznitelik boş değer atanabilir bir tür için tür dönüştürme, kod var olmayabilir veya bir özniteliğin değeri alınırken yazmak kolaydır. Bu tekniğe ilişkin örnekler için bkz [nasıl yapılır: Bir öğe (LINQ to XML) değerini alma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
  Bir özniteliğin değerini almak için yalnızca cast <xref:System.Xml.Linq.XAttribute> istenen türünüz için nesne.  
@@ -49,6 +49,6 @@ Console.WriteLine(str);
 abcde  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

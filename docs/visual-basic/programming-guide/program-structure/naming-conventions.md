@@ -10,39 +10,39 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: cb7e9f2a577e95e09fde885df1a78aea4e7fa466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672142"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic Adlandırma Kuralları
-Visual Basic uygulamanızda öğenin adlandırdığınızda, bu adının ilk karakteri alfabetik bir karakter veya alt çizgi olmalıdır. Ancak, alt çizgi ile başlayan adları ile uyumlu olmadığını unutmayın [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+Visual Basic uygulamanızda bir öğe adı, adının ilk karakteri alfabetik bir karakter veya alt çizgi olmalıdır. Ancak, alt çizgi ile başlayan adları ile uyumlu olmayan unutmayın [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
- Adlandırma için aşağıdaki önerileri uygulayın.  
+ Aşağıdaki öneriler, adlandırma için geçerlidir.  
   
--   Her ayrı bir sözcük bir büyük harf olan bir ad olarak başlamak `FindLastRecord` ve `RedrawMyForm`.  
+-   Her ayrı bir sözcüğün bir ada sahip bir büyük harf olarak başlayan `FindLastRecord` ve `RedrawMyForm`.  
   
--   Bir fiil işlevi ve yöntem adları olarak başlamak `InitNameArray` veya `CloseDialog`.  
+-   Bir fiil, işlevi ve yöntem adları olarak başlayan `InitNameArray` veya `CloseDialog`.  
   
--   Sınıfı, yapısı, modül ve özellik adlarıyla bir isim olarak başlamak `EmployeeName` veya `CarAccessory`.  
+-   Sınıfı, yapı, modül ve özellik adlarını içeren bir isim olarak başlayan `EmployeeName` veya `CarAccessory`.  
   
--   Arabirim adları önek ile başlayan "T", bir isim veya bir isim deyimi gibi izlemelidir `IComponent`, veya arabiriminin davranışı gibi açıklayan gelen ile `IPersistable`. Alt çizgi kullanma ve kısaltmalar karışıklığa neden olabileceğinden kısaltmalar tutumlu, kullanın.  
+-   Arabirimi adları önek ile başlayan "I", ardından bir isim veya bir isim tümceciği gibi `IComponent`, veya arabiriminin davranışı gibi açıklayan bir sıfat `IPersistable`. Değil çizgi kullanın ve kısaltmalar kullanıcılarda kafa karışıklığına neden olabileceği için kısaltmalar gerektiğinde, kullanın.  
   
--   Olay işleyici adları ve ardından olay türünü tanımlayan bir isim başlayın "`EventHandler`", ın soneki"`MouseEventHandler`".  
+-   Olay işleyici adlarının ardından olayın türünü tanımlayan bir isim başlayın "`EventHandler`", olarak soneki"`MouseEventHandler`".  
   
--   Olay bağımsız değişkeni sınıfların, adlarında "`EventArgs`" soneki.  
+-   Olay bağımsız değişkeni sınıflarının adları dahil "`EventArgs`" soneki.  
   
--   Bir olay "önce" veya "sonra" kavramı, varsa, bir sonek yoksa veya geçmiş zamanın olarak kullanın "`ControlAdd`"veya"`ControlAdded`".  
+-   Bir olayı "önce" veya "sonra" kavramı, varsa, bir son eki var veya geçmiş şimdiki olarak kullanın "`ControlAdd`"veya"`ControlAdded`".  
   
--   Uzun veya sık kullanılan terimler için ad uzunlukları makul, tutmak için örneğin, "HTML", "Köprü Metni Biçimlendirme Dili" yerine kısaltmalar kullanın. Genel olarak, değişken adları 32 karakterden daha düşük bir çözüm ayarlamak monitörde okumak zordur. Ayrıca, kısaltmalar tüm uygulama genelinde tutarlı olduğundan emin olun. Rastgele bir projede "HTML" ve "Köprü Metni Biçimlendirme Dili" arasında geçiş yapma karışıklığa neden olabilir.  
+-   Uzun veya sık kullanılan terimler için ad uzunlukları makul, tutmak için örneğin, "HTML", "Köprü Metni İşaretleme Dili" yerine kısaltmalar kullanın. Genel olarak, 32 karakterden değişken adları ayarlamak için düşük çözünürlüklü bir monitörde okunması zordur. Ayrıca, tüm uygulamanın tamamında tutarlı bir kısaltmalar emin olun. Rastgele bir projede "HTML" ve "Köprü Metni İşaretleme Dili" arasında geçiş yapma karışıklığa neden olabilir.  
   
--   Bir dış kapsamdaki adları ile aynı olan bir iç kapsamda adlarında kullanmaktan kaçının. Yanlış değişken erişiliyorsa hatalar neden olabilir. Anahtar sözcüğü aynı ada sahip bir değişken arasında bir çakışma meydana gelirse, uygun bir tür kitaplığı ile koyarak anahtar sözcüğü tanımlamanız gerekir. Adlı bir değişken varsa, örneğin, `Date`, iç kullanabilirsiniz `Date` çağırarak yalnızca işlevi <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+-   Bir iç kapsamındaki bir dış kapsamdaki adları aynı adları kullanmaktan kaçının. Yanlış değişken erişildiği durumda hatalar oluşabilir. Bir değişken ile aynı ada sahip bir anahtar sözcüğü arasında bir çakışma ortaya çıkarsa, uygun bir tür kitaplığı ile koyarak anahtar sözcüğü belirlemeniz gerekir. Örneğin, adında bir değişkene varsa `Date`, iç kullanabilirsiniz `Date` işlevini çağırarak yalnızca <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Code’da Öğe Adları Olarak Anahtar Sözcükler](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Code’da Öğe Adları Olarak Anahtar Sözcükler](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
+- [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)

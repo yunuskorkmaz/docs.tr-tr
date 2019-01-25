@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4735103f277d710dd23adfa19c475c425feaa36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078820649543479e65ec35daa6e1cc2876581ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693210"
 ---
 # <a name="addfile2-method"></a>AddFile2 Yöntemi
-Dosyaları derlemeye ekler. Ayrıca ilişkisiz modülleri oluşturmak için kullanılabilir.  
+Dosyaları derlemesine ekler. Ayrıca ilişkisiz modüller oluşturmak için kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT AddFile2(
   
 #### <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Dosya ekleneceği derleme kimliği.  
+ Dosyanın ekleneceği derleme kimliği.  
   
  `pszFilename`  
  Eklenecek dosyanın adı.  
   
  `dwFlags`  
- COM + `FileDef` gibi bayrakları `ffContainsNoMetaData` ve `ffWriteable`. `dwFlags` geçirilir [DefineFile yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + `FileDef` gibi bayrakları `ffContainsNoMetaData` ve `ffWriteable`. `dwFlags` geçirilen [DefineFile yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
  Arabirimini [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) arabirimi.  
   
  `pFileToken`  
- Eklenen dosyanın kimliği alır.  
+ Eklenen dosya için kimliği alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
@@ -61,7 +61,7 @@ HRESULT AddFile2(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

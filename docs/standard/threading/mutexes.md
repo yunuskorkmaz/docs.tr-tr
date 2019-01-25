@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567925"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim sağlamak için nesne. <xref:System.Threading.Mutex> Sınıfın kullandığı değerinden daha fazla sistem kaynakları <xref:System.Threading.Monitor> sınıfı, ancak uygulama etki alanı sınırları ötesinde sıralanır, birden çok bekler ile kullanılabilir ve farklı işlemlerdeki iş parçacığı eşitleme için kullanılabilir. Yönetilen eşitleme mekanizmaları bir karşılaştırması için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -51,11 +51,11 @@ Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Threading.Mutex?displayProperty=nameWithType>  
-- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>  
-- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>  
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>
+- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>
 - <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
-- <xref:System.Threading.Monitor?displayProperty=nameWithType>  
-- [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)  
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)
 - [İş parçacıkları ve iş parçacığı oluşturma](threads-and-threading.md)
-- [İş parçacığı oluşturma](index.md)  
+- [İş parçacığı oluşturma](index.md)

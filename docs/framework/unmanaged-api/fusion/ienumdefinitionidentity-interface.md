@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668459"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity Arabirimi
-Koleksiyonu için Numaralandırıcı görevi gören `IDefinitionIdentity` nesneleri.  
+Bir koleksiyonu için bir numaralandırıcı görevi gören `IDefinitionIdentity` nesneleri.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,18 +55,18 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Arabirim işaretçisi yeni bir alır `IEnumDefinitionIdentity` bu aynı üyeleri içeren nesne `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Belirtilen sayıda alır `IDefinitionIdentity` geçerli konumdan başlayarak nesneleri.|  
-|`IEnumDefinitionIdentity::Reset`|Yönerge işaretçisi başlangıcına bu taşır `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Skip`|Öğeler, geçerli konumdan başlayarak belirtilen sayıda tarafından yönerge işaretçisi İleri taşınır.|  
+|`IEnumDefinitionIdentity::Clone`|Yeni bir arabirim işaretçisi alır `IEnumDefinitionIdentity` bu aynı üyeleri içeren nesne `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Next`|Belirtilen sayıda alır `IDefinitionIdentity` nesneleri, geçerli konumdan başlayarak.|  
+|`IEnumDefinitionIdentity::Reset`|Yönerge işaretçisini bu başlangıcına taşır `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Skip`|Öğe, geçerli konumdan başlayarak belirtilen sayıda yönerge işaretçisini ileriye taşır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Isolation.h  
+ **Üst bilgi:** Isolation.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IDefinitionIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IDefinitionIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

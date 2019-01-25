@@ -2,12 +2,12 @@
 title: XElement ve XDocument Objects3 geçerli içerik
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 064cd4a6a112a12e0af60732df376e72b294fabc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524046"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement ve XDocument nesnelerinin geçerli içeriği
 Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek için kullandığınız yöntemlere geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  
@@ -88,6 +88,6 @@ Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek içi
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Alt düğüm, yeni içerikle değiştirir.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Bir düğüm, yeni içerikle değiştirir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML ağaçları oluşturma (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

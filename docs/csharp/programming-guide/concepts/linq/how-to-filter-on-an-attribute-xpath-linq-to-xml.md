@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)'
+title: 'Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603800"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: bir öznitelik (XPath-LINQ to XML) üzerinde filtreleme (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)
 Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.  
   
  XPath ifadesidir:  
@@ -19,7 +19,7 @@ Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt
 ## <a name="example"></a>Örnek  
  Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -72,6 +72,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

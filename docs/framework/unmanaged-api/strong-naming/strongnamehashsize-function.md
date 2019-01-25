@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ed8b6f047f26235e984fb514381a9b1d85543ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675138"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize İşlevi
-Belirtilen karma algoritması kullanan bir karma için gerekli arabellek boyutunu alır.  
+Belirtilen karma algoritması kullanarak bir karma için gerekli arabellek boyutunu alır.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamehashsize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md) yöntemi yerine.  
   
@@ -39,26 +39,26 @@ BOOLEAN StrongNameHashSize (
   
 #### <a name="parameters"></a>Parametreler  
  `ulHashAlg`  
- [in] Arabellek boyutu hesaplamak için kullanılan karma algoritması.  
+ [in] Arabellek boyutunu hesaplamak için kullanılan karma algoritması.  
   
  `pcbSize`  
- [out] Bayt cinsinden döndürülen arabellek boyutu.  
+ [out] Döndürülen arabellek bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `StrongNameHashSize` işlevi yok başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) son oluşturulan hata alınacak işlev.  
+ Varsa `StrongNameHashSize` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [StrongNameHashSize Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [StrongNameHashSize Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

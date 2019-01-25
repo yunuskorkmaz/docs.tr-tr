@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565026"
 ---
 # <a name="end-of-statement-expected"></a>Deyim sonu bekleniyor
 Deyim sözdizimi kurallarına göre tamamlandı, ancak ek bir programlama öğesi deyimi tamamlar öğesi izler. Bir satır Sonlandırıcı her deyim sonunda gereklidir.
@@ -27,6 +27,6 @@ Deyim sözdizimi kurallarına göre tamamlandı, ancak ek bir programlama öğes
   
 2.  Bir satır Sonlandırıcı bildirimi tamamlayan öğeden sonra ekleyin.
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

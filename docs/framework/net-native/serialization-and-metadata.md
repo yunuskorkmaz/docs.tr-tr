@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4db59da7a17e47b8e3df939ec64f5124e04454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622877"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
-Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, çalışma zamanı yönergeleri girişleri eklemeniz gerekebilir (. rd.xml) dosyası gerekli meta veri çalışma zamanında mevcut olduğundan emin olun. Serileştiricileri iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  
+Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, girişler için çalışma zamanı yönergeleri eklemeniz gerekebilir (. rd.xml) dosyasını gerekli meta verileri çalışma zamanında mevcut olduğundan emin olun. Seri hale getiricileri genişletme iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  
   
--   Yansıma tabanlı üçüncü taraf serileştiricileri. Bu çalışma zamanı yönergeleri dosyanıza değişiklikler gerektirir ve sonraki bölümde açıklanmıştır.  
+-   Üçüncü taraf seri hale getiricileri genişletme yansıma tabanlı. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirir ve sonraki bölümde ele alınmıştır.  
   
--   .NET Framework Sınıf Kitaplığı'nda bulunan serileştiricileri olmayan yansıma tabanlı. Bu, çalışma zamanı yönergeleri dosyanızı değişiklikler gerektirebilir ve ele alınmıştır [Microsoft serileştiricileri](#Microsoft) bölümü.  
+-   Yansıma olmayan .NET Framework sınıf kitaplığında bulunan seri hale getiricileri genişletme temel. Bu değişiklikler, çalışma zamanı yönergeleri dosyanıza gerektirebilir ve ele alınmıştır [Microsoft seri hale getiricileri genişletme](#Microsoft) bölümü.  
   
 <a name="ThirdParty"></a>   
-## <a name="third-party-serializers"></a>Üçüncü taraf serileştiricileri  
- Yansıma tabanlı üçüncü bölümü serileştiricileri Newtonsoft.JSON, dahil olmak üzere, genellikle. Serileştirilmiş veriler ikili büyük nesne (BLOB) göz önüne alındığında, veri alanları hedef türünün alanları ada göre arayarak somut bir türde atanır. Bu kitaplıklar kullanarak en az neden [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) her biri için özel durumlar <xref:System.Type> serileştirmek veya seri durumdan içinde çalıştığınızda nesne bir `List<Type>` koleksiyonu.  
+## <a name="third-party-serializers"></a>Üçüncü taraf seri hale getiricileri genişletme  
+ Yansıma tabanlı üçüncü bölümü seri hale getiricileri genişletme Newtonsoft.JSON, dahil, normal uygulanır. Serileştirilmiş veriler ikili büyük nesne (BLOB) göz önünde bulundurulduğunda, veri alanları hedef türünün alanları ada göre arayarak somut bir türde atanır. En azından bu kitaplıkları kullanarak neden [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) her biri için özel durumlar <xref:System.Type> serileştirmek veya de seri durumdan çalıştığınızda nesne bir `List<Type>` koleksiyonu.  
   
- Eksik meta verileri ile bu serileştiricileri için neden olduğu sorunları gidermek için en kolay yolu, tek bir ad altında serileştirmede kullanılacak türleri toplamaktır (gibi `App.Models`) ve geçerli bir `Serialize` meta verileri yönergeye:  
+ Bu seri hale getiricileri genişletme meta veriler eksik neden sorunlarını gidermek için en kolay yolu, tek bir ad altında serileştirme sırasında kullanılan türleri toplamaktır (gibi `App.Models`) ve geçerli bir `Serialize` meta verileri yönergesine:  
   
 ```xml  
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz: [ \<Namespace > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Örnekte kullanılan söz dizimi hakkında daha fazla bilgi için bkz: [ \<Namespace > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>   
-## <a name="microsoft-serializers"></a>Microsoft serileştiricileri  
- Ancak <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıfları yansıma bağlı değil, oluşturulacak kod serileştirilecek veya seri için seçtiğiniz nesneye bağlı duyarlar. Her seri hale getirici için aşırı yüklü oluşturucular içeren bir <xref:System.Type> serileştirilecek veya seri durumdan türünü belirten parametre. Bu tür kodunuzu nasıl belirttiğiniz gerçekleştirmesi gereken eylemi sonraki iki bölümde açıklandığı gibi tanımlar.  
+## <a name="microsoft-serializers"></a>Microsoft seri hale getiricileri genişletme  
+ Ancak <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıfları yansıma kullanan değil, bunlar serileştirilecek veya seri durumdan için nesneye bağlı kod oluşturulmasını gerektirir. Her seri hale getirici için aşırı yüklü oluşturucular dahil bir <xref:System.Type> parametresi serileştirilecek veya seri durumdan türünü belirtir. Bu tür kodunuzda nasıl belirttiğiniz gerçekleştirmeniz gereken eylemi sonraki iki bölümde açıklandığı gibi tanımlar.  
   
 ### <a name="typeof-used-in-the-constructor"></a>typeof oluşturucuda kullanılır  
- Bu seri hale getirme sınıfların Oluşturucusu çağırın ve C# dahil [typeof](~/docs/csharp/language-reference/keywords/typeof.md) yöntem çağrısı bir anahtar sözcük **başka çalışma yapmak zorunda**. Örneğin, her bir seri hale getirme sınıf oluşturucu aşağıdaki çağrıları içinde `typeof` anahtar sözcüğü oluşturucuya geçirilen ifade parçası olarak kullanılır.  
+ Bu seri hale getirme sınıfların bir oluşturucuyu çağırmak ve dahil C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) anahtar sözcüğü, yöntem çağrısında **herhangi bir ek çalışma yapmak gerekmez**. Örneğin, her bir seri hale getirme sınıfı oluşturucusunu aşağıdaki çağrıları içinde `typeof` anahtar sözcüğü, oluşturucuya geçirilen ifade parçası olarak kullanılır.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici otomatik olarak bu kodu işler.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici Bu kod otomatik olarak ele alacak.  
   
-### <a name="typeof-used-outside-the-constructor"></a>typeof Oluşturucusu dışında kullanılan  
- Bu seri hale getirme sınıfların Oluşturucusu çağırın ve C# kullanan [typeof](~/docs/csharp/language-reference/keywords/typeof.md) anahtar sözcüğü oluşturucuya 's sağlanan ifade dışında <xref:System.Type> parametresi, aşağıdaki kod, olduğu gibi [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici olamaz türü çözümlenemedi:  
+### <a name="typeof-used-outside-the-constructor"></a>typeof Oluşturucu dışında kullanılan  
+ Bu seri hale getirme sınıfların bir oluşturucuyu çağırmak ve kullanmak C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) anahtar sözcüğü oluşturucunun sağlanan ifade dışında <xref:System.Type> parametresi, aşağıdaki kod, olduğu gibi [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici tür çözümlenemiyor:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
- Bu durumda, türü çalışma zamanı yönergeleri dosyasında şöyle bir giriş ekleyerek belirtmeniz gerekir:  
+ Bu durumda, türü çalışma zamanı yönergeleri dosyasında şunun gibi bir giriş ekleyerek belirtmeniz gerekir:  
   
 ```xml  
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Benzer şekilde, bir oluşturucu gibi çağırırsanız <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> ve bir dizi ek sağlamak <xref:System.Type> olduğu gibi aşağıdaki kod, serileştirilecek nesneleri [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici, bu tür çözmek olamaz.  
+ Benzer şekilde, bir oluşturucu gibi çağırırsanız <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> ve bir dizi ek <xref:System.Type> , aşağıdaki kod olduğu gibi seri hale getirmek için nesneleri [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici bu tür çözümleyemiyor.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -62,10 +62,10 @@ Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, çalışma z
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz: [ \<türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md).  
+ Örnekte kullanılan söz dizimi hakkında daha fazla bilgi için bkz: [ \<türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [\<Tür > öğesi](../../../docs/framework/net-native/type-element-net-native.md)  
- [\<Namespace > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<Namespace > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md)

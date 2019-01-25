@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: 39955d86085b49ef503ea9ed531df9feafa648ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617518"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# Derleyici Seçenekleri)
 Bu seçenek geçerli derleme için target: module anahtarı ile oluşturulmuş bir modül ekler.  
@@ -44,9 +44,9 @@ Bu seçenek geçerli derleme için target: module anahtarı ile oluşturulmuş b
 csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
-- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
-- [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../framework/app-domains/multifile-assemblies.md)  
-- [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+- [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../framework/app-domains/multifile-assemblies.md)
+- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

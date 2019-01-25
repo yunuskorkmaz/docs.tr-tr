@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721116"
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamalıdır. Bir istemciyi, bu nedenle, güvenli hale getirme işlem basittir: (yayımlanıyorsa) hizmetinden alınan meta verileri kullanın ve bir istemci oluşturun. Meta veriler istemci yapılandırma belirler. Hizmet istemci kimlik bilgileri sağlamanız gerekiyorsa, gereksinime uyan bir kimlik bilgisini edinmeniz gerekir. Bu konu başlığı altında daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
 > [!NOTE]
 >  İstemci kimlik bilgileri değerlerini bazıları, uygulama yapılandırma dosyaları, örneğin kullanılarak küme, kullanıcı adı ve parola veya Windows kullanıcı ve parola değerlerini olamaz. Bu kimlik bilgileri değerlerini yalnızca kodda belirtilebilir.  
   
- İstemci kimlik bilgilerini ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ İstemci kimlik bilgilerini ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  `ClientCredentialType` ne zaman göz ardı edilir `SecurityMode` ayarlanır `"TransportWithMessageCredential",` aşağıdaki örnek yapılandırmada gösterildiği gibi.  
@@ -152,16 +152,16 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
+- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Nasıl yapılır: İstemci kimlik bilgileri türünü belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

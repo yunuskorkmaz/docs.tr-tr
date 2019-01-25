@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650125"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
-Üzerinde bir öznitelik uygulamak için geçerli olan uygulama öğeleri belirtir.  
+Üzerinde bir öznitelik uygulamak için geçerli olduğundan uygulama öğesi belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -64,34 +64,34 @@ typedef enum CorAttributeTargets
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`catAssembly`|Öznitelik bir derlemeye uygulanabilir.|  
-|`catModule`|Öznitelik bir taşınabilir yürütülebilir (.dll veya .exe) modülü için uygulanabilir.|  
+|`catAssembly`|Öznitelik bir bütünleştirilmiş koda uygulanabilir.|  
+|`catModule`|Öznitelik, bir taşınabilir yürütülebilir (.dll veya .exe) modülü için uygulanabilir.|  
 |`catClass`|Öznitelik bir sınıfa uygulanabilir.|  
-|`catStruct`|Öznitelik bir yapıya uygulanabilir; diğer bir deyişle, bir değer yazın.|  
-|`catEnum`|Özniteliği için bir numaralandırma uygulanabilir.|  
-|`catConstructor`|Öznitelik bir oluşturucuya uygulanabilir.|  
-|`catMethod`|Öznitelik bir yönteme uygulanabilir.|  
-|`catProperty`|Öznitelik bir özelliğe uygulanabilir.|  
-|`catField`|Öznitelik bir alana uygulanabilir.|  
-|`catEvent`|Öznitelik, bir olaya uygulanabilir.|  
-|`catInterface`|Öznitelik, bir arabirim uygulanabilir.|  
+|`catStruct`|Öznitelik, bir yapıya uygulanabilir; diğer bir deyişle, bir değer yazın.|  
+|`catEnum`|Öznitelik, bir numaralandırma için uygulanabilir.|  
+|`catConstructor`|Öznitelik, bir oluşturucu için uygulanabilir.|  
+|`catMethod`|Öznitelik, bir yönteme uygulanabilir.|  
+|`catProperty`|Öznitelik, bir özellik için uygulanabilir.|  
+|`catField`|Öznitelik, bir alan için uygulanabilir.|  
+|`catEvent`|Öznitelik, bir olay için uygulanabilir.|  
+|`catInterface`|Öznitelik, bir arabirim için uygulanabilir.|  
 |`catParameter`|Öznitelik, bir parametre için uygulanabilir.|  
 |`catDelegate`|Öznitelik, bir temsilci için uygulanabilir.|  
-|`catGenericParameter`|Özniteliği için genel bir parametreye uygulanabilir.|  
+|`catGenericParameter`|Genel parametre özniteliği uygulanabilir.|  
 |`catAll`|Öznitelik, herhangi bir uygulama öğeye uygulanabilir.|  
-|`catClassMembers`|Özniteliği bir sınıf üyesi için uygulanabilir.|  
+|`catClassMembers`|Öznitelik, bir sınıf üyesine uygulanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorAttributeTargets` Numaralandırma değerlerinin tercih edilen birleşimi almak için bir bit düzeyinde OR işlemi ile birleştirilebilir.  
+ `CorAttributeTargets` Numaralandırma değerlerinin tercih edilen birleşimi almak için bit düzeyinde bir veya işlem ile birleştirilebilir.  
   
- `CorAttributeTargets` Yönetilen parallels <xref:System.AttributeTargets?displayProperty=nameWithType> numaralandırması.  
+ `CorAttributeTargets` Yönetilen parallels <xref:System.AttributeTargets?displayProperty=nameWithType> sabit listesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

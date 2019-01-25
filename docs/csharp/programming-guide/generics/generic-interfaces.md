@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 8b09d6cb6ffb36570bacb568547afa57a2e7d9ba
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d0b9d35a7e814d8790ee57f1169f2b35f7c42536
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564217"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
 Genellikle, genel amaçlı koleksiyon sınıfları, veya bir koleksiyondaki öğeleri temsil eden genel sınıfları arabirimler tanımlamak yararlıdır. Genel sınıflar için tercih genel arabirimler gibi kullanmaktır <xref:System.IComparable%601> yerine <xref:System.IComparable>, değer türleri kutulama ve kutudan çıkarma işlemleri önlemek için. .NET Framework sınıf kitaplığı ile koleksiyon sınıflarını kullanmak için çeşitli genel arabirimlerin tanımlar <xref:System.Collections.Generic> ad alanı.  
@@ -44,9 +44,9 @@ Genellikle, genel amaçlı koleksiyon sınıfları, veya bir koleksiyondaki öğ
   
  Yöntem aşırı yükü denetleyen kuralları Genel sınıflar, yapılar genel veya genel arabirimler içinde yöntemleri için aynıdır. Daha fazla bilgi için [genel yöntemler](../../../csharp/programming-guide/generics/generic-methods.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [interface](../../../csharp/language-reference/keywords/interface.md)
 - [Genel Türler](~/docs/standard/generics/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744979"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind Numaralandırması
 Bellek adresi türünü belirtir.  
@@ -48,19 +48,19 @@ typedef enum CorSymAddrKind
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Bir Microsoft Ara dili (MSIL) yerel değişken veya parametre dizinini gösterir.|  
-|`ADDR_NATIVE_RVA`|Göreli sanal adres bir modüle gösterir.|  
-|`ADDR_NATIVE_REGISTER`|Bir CPU kayıt gösterir.|  
-|`ADDR_NATIVE_REGREL`|Bir kayıt ilk adresi olduğunu ve bir uzaklık ikinci adresidir gösterir.|  
-|`ADDR_NATIVE_OFFSET`|Temel adres uzaklık gösterir.|  
-|`ADDR_NATIVE_REGREG`|İlk adres düşük bir kayıt bölümüdür ve yüksek bölümü ikinci adresidir gösterir.|  
-|`ADDR_NATIVE_REGSTK`|İlk adres düşük bir kayıt bölümüdür, ikinci yüksek bölümüdür ve üçüncü bir uzaklığı belirtir.|  
-|`ADDR_NATIVE_STKREG`|Bir kayıt ilk adresidir, ikinci bir uzaklığı ve üçüncü kayıt yüksek bölümüdür gösterir.|  
-|`ADDR_BITFIELD`|İlk adres alanının başlangıç ve ikinci adresi alan uzunluğu olduğunu gösterir.|  
+|`ADDR_IL_OFFSET`|Bir Microsoft Ara dili (MSIL) yerel değişken veya parametre dizini belirtir.|  
+|`ADDR_NATIVE_RVA`|Bir göreli sanal adres, bir modül olarak gösterir.|  
+|`ADDR_NATIVE_REGISTER`|Bir CPU kaydı gösterir.|  
+|`ADDR_NATIVE_REGREL`|Bir kayıt ilk adresidir ve bir uzaklık ikinci adresidir gösterir.|  
+|`ADDR_NATIVE_OFFSET`|Temel adres bir uzaklığı belirtir.|  
+|`ADDR_NATIVE_REGREG`|İlk adres bir kayıt düşük bölümüdür ve yüksek bölümü ikinci adresidir gösterir.|  
+|`ADDR_NATIVE_REGSTK`|İlk adres bir kayıt düşük bölümüdür, ikinci yüksek bölümüdür ve üçüncü bir uzaklık olduğunu gösterir.|  
+|`ADDR_NATIVE_STKREG`|Bir kayıt ilk adresidir, ikincisi ise bir uzaklık ve üçüncü kayıt yüksek bölümüdür gösterir.|  
+|`ADDR_BITFIELD`|İlk adres alanının başlangıç ve ikinci adresini alan uzunluğu olduğunu gösterir.|  
 |`ADDR_NATIVE_ISECTOFFSET`|İlk adres bölümdür ve bir uzaklık ikinci adresidir gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

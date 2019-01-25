@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610051"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping Yapısı
-MAPS bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] karşılık gelen Icordebugtype nesne için GUID.  
+Eşlemeleri bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] karşılık gelen Icordebugtype nesne için GUID.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,18 +41,18 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`iid`|Önbelleğe alınan GUID'i [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türü.|  
-|`pType`|Bir işaretçi Icordebugtype nesneye önbelleğe alınmış türü hakkında bilgi sağlar.|  
+|`iid`|Önbelleğe alınan GUID [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türü.|  
+|`pType`|Önbelleğe alınan türü hakkında bilgi sağlayan Icordebugtype nesne işaretçisi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650112"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement Numaralandırması
-Belirteç eşleme gerçekleştiğinde, meta veri API istemciye gönderilen bildirimleri belirtir.  
+Belirteç remap gerçekleştiğinde, meta veri API'si istemciye gönderilecek bildirimler belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -65,39 +65,39 @@ typedef enum CorNotificationForTokenMovement {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Bildir `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, veya `mdFieldDef` belirteçleri taşıma.|  
-|`MDNotifyAll`|Herhangi bir belirteci taşındığında bildirin.|  
+|`MDNotifyDefault`|Bildirim zamanı `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, veya `mdFieldDef` belirteçleri taşıma.|  
+|`MDNotifyAll`|Herhangi bir belirteci hareket ettiğinde bildirin.|  
 |`MDNotifyNone`|Belirteçleri taşıdığınızda bildirme.|  
-|`MDNotifyMethodDef`|Bildir bir `mdMethodDef` belirteci taşır.|  
-|`MDNotifyMemberRef`|Bildir bir `mdMemberRef` belirteci taşır.|  
-|`MDNotifyFieldDef`|Bildir bir `mdFieldDef` belirteci taşır.|  
-|`MDNotifyTypeRef`|Bildir bir `mdTypeRef` belirteci taşır.|  
-|`MDNotifyTypeDef`|Bildir bir `mdTypeDef` belirteci taşır.|  
-|`MDNotifyParamDef`|Bildir bir `mdParamDef` belirteci taşır.|  
-|`MDNotifyInterfaceImpl`|Bildir bir `mdInterfaceImpl` belirteci taşır.|  
-|`MDNotifyProperty`|Bildir bir `mdProperty` belirteci taşır.|  
-|`MDNotifyEvent`|Bildir bir `mdEvent` belirteci taşır.|  
-|`MDNotifySignature`|Bildir bir `mdSignature` belirteci taşır.|  
-|`MDNotifyTypeSpec`|Bildir bir `mdTypeSpec` belirteci taşır.|  
-|`MDNotifyCustomAttribute`|Bildir bir `mdCustomAttribute` belirteci taşır.|  
-|`MDNotifySecurityValue`|Bildir bir `mdSecurityValue` belirteci taşır.|  
-|`MDNotifyPermission`|Bildir bir `mdPermission` belirteci taşır.|  
-|`MDNotifyModuleRef`|Bildir bir `mdModuleRef` belirteci taşır.|  
-|`MDNotifyNameSpace`|Bildir bir `mdNameSpace` belirteci taşır.|  
-|`MDNotifyAssemblyRef`|Bildir bir `mdAssemblyRef` belirteci taşır.|  
-|`MDNotifyFile`|Bildir bir `mdFile` belirteci taşır.|  
-|`MDNotifyExportedType`|Bildir bir `mdExportedType` belirteci taşır.|  
-|`MDNotifyResource`|Bildir bir `mdManifestResource` belirteci taşır.|  
+|`MDNotifyMethodDef`|Bildirim zamanı bir `mdMethodDef` belirteç taşır.|  
+|`MDNotifyMemberRef`|Bildirim zamanı bir `mdMemberRef` belirteç taşır.|  
+|`MDNotifyFieldDef`|Bildirim zamanı bir `mdFieldDef` belirteç taşır.|  
+|`MDNotifyTypeRef`|Bildirim zamanı bir `mdTypeRef` belirteç taşır.|  
+|`MDNotifyTypeDef`|Bildirim zamanı bir `mdTypeDef` belirteç taşır.|  
+|`MDNotifyParamDef`|Bildirim zamanı bir `mdParamDef` belirteç taşır.|  
+|`MDNotifyInterfaceImpl`|Bildirim zamanı bir `mdInterfaceImpl` belirteç taşır.|  
+|`MDNotifyProperty`|Bildirim zamanı bir `mdProperty` belirteç taşır.|  
+|`MDNotifyEvent`|Bildirim zamanı bir `mdEvent` belirteç taşır.|  
+|`MDNotifySignature`|Bildirim zamanı bir `mdSignature` belirteç taşır.|  
+|`MDNotifyTypeSpec`|Bildirim zamanı bir `mdTypeSpec` belirteç taşır.|  
+|`MDNotifyCustomAttribute`|Bildirim zamanı bir `mdCustomAttribute` belirteç taşır.|  
+|`MDNotifySecurityValue`|Bildirim zamanı bir `mdSecurityValue` belirteç taşır.|  
+|`MDNotifyPermission`|Bildirim zamanı bir `mdPermission` belirteç taşır.|  
+|`MDNotifyModuleRef`|Bildirim zamanı bir `mdModuleRef` belirteç taşır.|  
+|`MDNotifyNameSpace`|Bildirim zamanı bir `mdNameSpace` belirteç taşır.|  
+|`MDNotifyAssemblyRef`|Bildirim zamanı bir `mdAssemblyRef` belirteç taşır.|  
+|`MDNotifyFile`|Bildirim zamanı bir `mdFile` belirteç taşır.|  
+|`MDNotifyExportedType`|Bildirim zamanı bir `mdExportedType` belirteç taşır.|  
+|`MDNotifyResource`|Bildirim zamanı bir `mdManifestResource` belirteç taşır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir belirteç (yani taşındığı) yeniden eşlenebilir meta veri birleştirme sırasında.  
+ Bir belirteç (yani taşındı) yeniden eşlenebilir meta veri birleştirme sırasında.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

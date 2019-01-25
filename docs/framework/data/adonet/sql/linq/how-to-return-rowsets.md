@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl yapılır: dönüş satır kümeleri'
+title: 'Nasıl yapılır: Dönüş satır kümeleri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: a2666b752d936e10d377113d5bf18111393df3ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9fcbd8aa74740a66fa6caca18067ac473891f4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587222"
 ---
-# <a name="how-to-return-rowsets"></a>Nasıl yapılır: dönüş satır kümeleri
-Bu örnek veritabanından bir satır kümesi döndürür ve sonucu filtrelemek için bir giriş parametresi içerir.  
+# <a name="how-to-return-rowsets"></a>Nasıl yapılır: Dönüş satır kümeleri
+Bu örnek veritabanından satır döndürür ve sonucu filtrelemek için bir giriş parametresi içerir.  
   
- Bir satır kümesi döndüren bir saklı yordamı çalıştırdığınızda, kullandığınız bir *sonuç* saklı yordamdan döndürür depolayan sınıf. Daha fazla bilgi için bkz: [çözümleme LINQ-SQL kaynak kodu](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ Bir satır kümesi döndüren bir saklı yordamı çalıştırdığınızda, kullandığınız bir *sonucu* saklı yordamdan döndürür depolayan sınıf. Daha fazla bilgi için [çözümleme LINQ to SQL kaynak kodunu](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, müşterilere satırlarını döndürür ve bu liste müşteri Şehir olarak "Londra" yalnızca bu satırları döndürmek için bir giriş parametresi kullanan bir saklı yordam temsil eder. Örnek bir numaralandırılabilir varsayar `CustomersByCityResult` sınıfı.  
+ Aşağıdaki örnek, müşteriler satırlarını döndürür ve bu listeyi "London" müşterinin Şehir olarak yalnızca o satırlar döndürülecek giriş parametresi kullanan bir saklı yordam temsil eder. Örnek bir numaralandırılabilir varsayar `CustomersByCityResult` sınıfı.  
   
 ```  
 CREATE PROCEDURE [dbo].[Customers By City]  
@@ -36,6 +36,6 @@ END
  [!code-csharp[DLinqSprox#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#1)]
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

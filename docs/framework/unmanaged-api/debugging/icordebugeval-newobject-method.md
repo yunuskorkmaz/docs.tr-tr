@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589962"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject Yöntemi
-Yeni bir nesne örneği ayırır ve belirtilen Oluşturucusu yöntemini çağırır.  
+Yeni bir nesne örneğini tahsis eder ve belirtilen yapıcı yöntemini çağırır.  
   
- Bu yöntem .NET Framework 2.0 sürümünde kullanımdan kalkmıştır. Kullanım [Icordebugeval2::newparameterizedobject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) yerine.  
+ Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanım [Icordebugeval2::newparameterizedobject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) yerine.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,19 +44,19 @@ HRESULT NewObject (
  [in] Çağrılacak Oluşturucusu.  
   
  `nArgs`  
- [in] Boyutunu `ppArgs` dizi.  
+ [in] Boyutu `ppArgs` dizisi.  
   
  `ppArgs`  
- [in] Her biri bir bağımsız değişken oluşturucuya geçirilen temsil eden bir Icordebugvalue nesneler dizisi.  
+ [in] Oluşturucuya geçirilecek bağımsız değişken her biri temsil eden Icordebugvalue nesnelerin dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** 1.1, 1.0  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [NewParameterizedObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [NewParameterizedObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

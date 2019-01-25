@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514692"
 ---
 # <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
 İki koleksiyonu tek bir koleksiyon halinde birleştirir. Birleştirme işlemi anahtarların eşleşmesi temeline göre ve kullandığı `Equals` işleci.  
@@ -87,10 +87,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
+- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

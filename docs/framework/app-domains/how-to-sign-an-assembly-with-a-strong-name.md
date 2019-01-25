@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599224"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
@@ -97,10 +97,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
-- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)  
-- [Derleme ve Bildirim İmzalamayı Yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Derleme ve Bildirim İmzalamayı Yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [İmzalama Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)

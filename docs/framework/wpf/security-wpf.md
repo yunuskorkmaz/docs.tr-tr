@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592691"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a> Güvenlik modeli, Windows Presentation Foundation (WPF) tek başına ve tarayıcıda tutulan uygulamalar geliştirirken dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar Kısıtlanmamış izinlere sahip yürütün ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy kullanarak dağıtılmış olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, ClickOnce ile tek başına WPF uygulamalarını dağıtmak desteklenmez. Ancak, tam güven uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> .NET Framework eklenti modeli kullanarak. Daha fazla bilgi için [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -57,12 +57,12 @@ ms.locfileid: "44202238"
 ### <a name="application-navigation-security"></a>Uygulama gezinti güvenliği  
  Uygulama gezinti paketi ile tanımlanabilir güvenli olarak değerlendirilir [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], dört içerik türlerini destekler:  
   
-|İçerik türü|Açıklama|URI örneği|  
+|İçerik Türü|Açıklama|URI örneği|  
 |------------------|-----------------|-----------------|  
 |Kaynak|Bir yapı türüne sahip bir projeye eklenen dosyaları **kaynak**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |İçerik|Bir yapı türüne sahip bir projeye eklenen dosyaları **içerik**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Kaynak site|Bir yapı türüne sahip bir projeye eklenen dosyaları **hiçbiri**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Uygulama kodu|Derlenmiş kod arka plan olan XAML kaynakları.<br /><br /> veya<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Uygulama kodu|Derlenmiş kod arka plan olan XAML kaynakları.<br /><br /> -veya-<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile``.xaml`|  
   
 > [!NOTE]
 >  Uygulama verileri dosyaları ve paketi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
@@ -103,7 +103,7 @@ ms.locfileid: "44202238"
   
  Bu şekilde güvenli hale getirilebilir işlevler koleksiyonu için bölge başına temelinde yapılandırılmış **Internet**, **Intranet**, **Güvenilen siteler**, ve  **Yasak siteler** bölgeleri. Aşağıdaki adımlar, güvenlik ayarlarının nasıl yapılandırılacağı açıklanmaktadır:  
   
-1.  Açık **Denetim Masası**.  
+1.  **Denetim Masası**'nı açın.  
   
 2.  Tıklayın **ağ ve Internet** ve ardından **Internet Seçenekleri**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "44202238"
  Özellik denetimleri WebBrowser ActiveX nesnesini örnekleme işlemi tarafından uygulanır. Güvenilmeyen içerik gidebilirsiniz tek başına bir uygulama oluşturuyorsanız, bu nedenle, ciddi ek özellik denetimleri etkinleştirmek isteyebilirsiniz.  
   
 > [!NOTE]
->  Bu öneri MSHTML ve SHDOCVW konak güvenlik için genel öneriler temel alır. Daha fazla bilgi için [MSHTML konak güvenlik SSS: bölüm ı, II](https://go.microsoft.com/fwlink/?LinkId=179396) ve [MSHTML konak güvenlik SSS:, Kısım II II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+>  Bu öneri MSHTML ve SHDOCVW konak güvenlik için genel öneriler temel alır. Daha fazla bilgi için [MSHTML konak güvenlik SSS: Bölüm ı II](https://go.microsoft.com/fwlink/?LinkId=179396) ve [MSHTML konak güvenlik SSS: Bölüm II, II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Yürütülebilir dosya için aşağıdaki özellik denetimleri kayıt defteri değerini 1 olarak ayarlayarak etkinleştirmeyi düşünün.  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202238"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [Desenler ve uygulamalar için uygulamalar güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)  
- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Desenler ve uygulamalar için uygulamalar güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
+- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

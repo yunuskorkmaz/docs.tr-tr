@@ -2,12 +2,12 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704962"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 Windows Communication Foundation (WCF) hizmet türlerinizi eşleştiren sanal hizmet aktivasyon ayarlarını tanımlayan ayarları eklemenizi sağlayan bir yapılandırma öğesi. Bu WAS içinde barındırılan hizmetleri etkinleştirmeniz mümkün kılar / IIS .svc dosyası olmadan.  
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) hizmet türlerinizi eşleştiren sanal hi
   
  Yapılandırma temelli etkinleştirme, etkinleştirme hem http hem de olmayan http protokolü üzerinden destekler. Yani .svc, .xoml veya .xamlx relatativeAddress uzantılarında gerektiriyor. Sonra hizmeti uzantıyı etkinleştirmek üzere olanak sağlayacak bilinen buildProviders kendi uzantılarınızı eşleyebilirsiniz. Çakışma, bağlı `<serviceActivations>` bölüm .svc kayıtları geçersiz kılar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

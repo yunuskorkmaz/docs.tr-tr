@@ -2,193 +2,193 @@
 title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588119"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
-Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörüne eşlenmiş servicemodelsamples adlı ortak bir sanal dizini paylaşmak üzere tasarlanmıştır.  
+Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörle eşlendi servicemodelsamples adlı ortak bir sanal dizin paylaşmak için tasarlanmıştır.  
   
 > [!NOTE]
 >  % SYSTEMDRIVE % genellikle C: veya D:, Internet Information Services (IIS) yüklü olduğu sürücü bağlı olarak konumudur.  
   
- Setupvroot.bat ve Cleanupvroot.bat dosyalarından çalıştırabilirsiniz [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) sanal dizin oluşturulamıyor. Sanal dizin el ile oluşturmayı tercih ederseniz, aşağıdaki yordamları kullanın.  
+ Setupvroot.bat ve Cleanupvroot.bat dosyalarından çalıştırabileceğiniz [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) sanal dizin oluşturmak için. Sanal dizin el ile oluşturmak isterseniz, aşağıdaki yordamları kullanın.  
   
 ## <a name="procedures"></a>Yordamlar  
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>IIS 7.0 veya 7.5 bir sanal dizin oluşturmak için  
   
-1.  Gelen **Başlat** menüsünde tıklatın **çalıştırmak**, yazın **inetmgr** Internet Information Services (IIS) MMC ek bileşenini açmak için.  
+1.  Gelen **Başlat** menüsünde, tıklayın **çalıştırın**, yazın **inetmgr** Internet Information Services (IIS) MMC ek bileşenini açın.  
   
-2.  Sol bölmede, bilgisayarın adıyla düğümünü genişletin ve ardından **siteleri** düğümü.  
+2.  Sol bölmede, bilgisayarın adını içeren düğüme genişletin ve ardından **siteleri** düğümü.  
   
 3.  Sağ **varsayılan Web sitesi**ve ardından **uygulama Ekle** açmak için **uygulama Ekle penceresi**.  
   
-4.  Penceresinde yazın `servicemodelsamples` oluşturmakta olduğunuz sanal dizin için diğer ad olarak.  
+4.  Penceresinde `servicemodelsamples` oluşturmakta olduğunuz sanal dizin için diğer ad olarak.  
   
-5.  Şu dizin oluşturulamıyor: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
+5.  Şu dizin oluşturma: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
-6.  Fiziksel yolu % SystemDrive%\inetpub\wwwroot\servicemodelsamples ayarlayın.  WCF örnekleri çoğu hizmeti yürütülebilir dosyaları yapılandırıldığında bu konuma kopyalayın.  
+6.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples fiziksel yolunu ayarlayın.  WCF örnekleri çoğu hizmet yürütülebilir dosya oluşturulduğunda bu konuma kopyalayın.  
   
-7.  **Tamam**'ı tıklatın. Web uygulaması şimdi WCF örnekleri oluşturulur.  
-  
-    > [!NOTE]
-    >  Tüm WCF örnekleri aynı servicemodelsamples Web uygulaması kullandığından bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
+7.  **Tamam**'ı tıklatın. Web uygulaması WCF örnekleri için oluşturuldu.  
   
     > [!NOTE]
-    >  Bu belge, amacıyla terimi `virtual directory` ile çalışır `Web application`.  
+    >  Tüm WCF örnekleri aynı servicemodelsamples Web uygulamasını kullanmak için bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
   
-     Sanal dizin oluşturmaya ek olarak, WCF hizmetlerini çalışacak şekilde etkinleştirmek için özellikleri de ayarlamanız gerekir. Ayrıntılar için aşağıya bakın.  
+    > [!NOTE]
+    >  Bu belge, amacıyla terimi `virtual directory` ile eşanlamlıdır `Web application`.  
   
-#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>IIS 5.1 veya 6.0 bir sanal dizin oluşturmak için  
+     Sanal dizin oluşturmaya ek olarak, WCF hizmetlerini çalıştırmak için etkinleştirmek için özelliklerini de ayarlamanız gerekir. Ayrıntılar için aşağıya bakın.  
+  
+#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>IIS 5.1 veya 6.0 sanal bir dizin oluşturmak için  
   
 1.  Bir komut istemi penceresi açıp `start inetmgr` Internet Information Services (IIS) MMC ek bileşenini açın.  
   
-2.  Sol bölmede, bilgisayarın adıyla düğümünü genişletin ve ardından **Web siteleri** düğümü.  
+2.  Sol bölmede, bilgisayarın adını içeren düğüme genişletin ve ardından **Web siteleri** düğümü.  
   
-3.  Sağ **varsayılan Web sitesi** seçip **yeni, sanal dizin** sanal dizin oluşturma Sihirbazı'nı açın.  
+3.  Sağ **varsayılan Web sitesi** seçip **yeni sanal dizin** sanal dizin oluşturma Sihirbazı'nı açın.  
   
 4.  Sihirbazı'nda yazın `servicemodelsamples` oluşturmakta olduğunuz sanal dizin için diğer ad olarak.  
   
-5.  Yolun % SystemDrive%\inetpub\wwwroot\servicemodelsamples ayarlayın. WCF örnekleri çoğu hizmeti yürütülebilir dosyaları yapılandırıldığında bu konuma kopyalayın.  
+5.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples yolunu ayarlayın. WCF örnekleri çoğu hizmet yürütülebilir dosya oluşturulduğunda bu konuma kopyalayın.  
   
 6.  **İleri**'ye tıklayın.  
   
 7.  Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Okuma**  
+    -   **Read**  
   
-    -   **(Örneğin, ASP) komut dosyalarını çalıştır**  
+    -   **Komut dosyalarını (örn. ASP) Çalıştır**  
   
-8.  Tıklatın **sonraki**ve ardından **son** Sihirbazı tamamlayın.  
+8.  Tıklayın **sonraki**ve ardından **son** Sihirbazı tamamlayın.  
   
     > [!NOTE]
-    >  Tüm WCF örnekleri aynı servicemodelsamples sanal dizin kullandığından bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
+    >  Tüm WCF örnekleri aynı servicemodelsamples sanal dizinin kullandığı için bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Ek sanal dizin özellikleri IIS 7.0 veya 7.5 ayarlamak için  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Ek sanal dizin özelliklerini IIS 7.0 veya 7.5 ayarlamak için  
   
 1.  Servicemodelsamples düğümünü tıklatın. Pencerenin altındaki iki görünüm listelenir. Seçin **özellikler görünümü** zaten seçili değilse.  
   
-2.  İçin girişi çift **Dizin tarama**.  
+2.  Girişini çift **Dizin tarama**.  
   
-3.  Eylemler bölmesinde seçin **etkinleştirmek** seçeneği. Bu, bir hizmet hata ayıklama sırasında yardımcı olan Internet Explorer kullanarak dizininin dizin erişmenize olanak tanır.  
+3.  Eylemler bölmesinde seçin **etkinleştirme** seçeneği. Bu, dizini dizinin bir hizmetinde hata ayıklarken yardımcı olan Internet Explorer'ı kullanarak erişmenize olanak sağlar.  
   
- Son olarak, başkaları tarafından erişilebilmesi izin vermek için servicemodelsamples klasörün güvenlik özelliklerini ayarlamanız gerekir. Ayrıntılar için aşağıya bakın.  
+ Son olarak, güvenlik özellikleri servicemodelsamples klasörün başkaları tarafından erişilmesine izin verecek şekilde ayarlamanız gerekir. Ayrıntılar için aşağıya bakın.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>IIS 5.1 ek sanal dizin özelliklerinde veya 6.0 ayarlamak için  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Ek sanal dizini IIS 5.1 özelliklerinde veya 6. 0'ı ayarlamak için  
   
-1.  Servicemodelsamples düğümünü sağ tıklatın ve ardından **özellikleri**.  
+1.  Servicemodelsamples düğümüne sağ tıklayın ve ardından **özellikleri**.  
   
 2.  Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Okuma**  
+    -   **Read**  
   
-    -   **Ziyaretleri günlüğe yaz**  
+    -   **Günlük ziyaret eder.**  
   
-    -   **Bu kaynak dizini**  
+    -   **Bu kaynağı dizine Ekle**  
   
-3.  Seçin **Dizin tarama** onay kutusu. Bu, bir hizmet hata ayıklama sırasında yardımcı olan Internet Explorer kullanarak dizininin dizin erişmenize olanak tanır.  
+3.  Seçin **Dizin tarama** onay kutusu. Bu, dizini dizinin bir hizmetinde hata ayıklarken yardımcı olan Internet Explorer'ı kullanarak erişmenize olanak sağlar.  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>IIS 7.0 veya 7.5 klasörü güvenlik özelliklerini ayarlamak için  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>IIS 7.0 veya 7.5 klasör güvenlik özelliklerini ayarlamak için  
   
-1.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples gidin.  
+1.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples için gidin.  
   
-2.  Servicemodelsamples klasörü sağ tıklatın ve **paylaşımı** veya **paylaşımı ile**.  
+2.  Servicemodelsamples klasörü sağ tıklatıp **paylaşımı** veya **paylaşımı ile**.  
   
-3.  Sol tarafındaki aşağı oka tıklayın **Ekle** düğmesi.  
+3.  Solundaki aşağı oka tıklayın **Ekle** düğmesi.  
   
 4.  Seçin **Bul** girişi. **Kullanıcıları veya Grupları Seç** penceresi açılır.  
   
 5.  **Gelişmiş**'e tıklayın.  
   
-6.  Tıklatın **konumları**. **Konumları** penceredir artık açık.  
+6.  Tıklayın **konumları**. **Konumları** penceresi açıksa artık.  
   
-7.  Kullanılan bilgisayar girişini seçin. Yerel bilgisayar ve bir giriş değil tüm etki alanları veya listelenen ağları seçmek önemlidir. Bilgisayar seçildikten sonra tıklayın **Tamam**.  
+7.  Kullanılan bilgisayar girişini seçin. Yerel bilgisayar ve bir giriş değil herhangi bir etki alanı veya listelenen ağları seçmek önemlidir. Bilgisayar seçildikten sonra tıklayın **Tamam**.  
   
-8.  Tıklatın **Şimdi Bul**. Bu, arama sonuçlarını yerel bilgisayarla ilişkili nesneleri ile doldurur.  
+8.  Tıklayın **Şimdi Bul**. Bu, arama sonuçlarını yerel bilgisayarla ilişkili nesneleri ile doldurur.  
   
-9. Bul **IIS_IUSRS** girişi **adı (göreli ayırt edici adı)** sütun. Bu girişi seçin ve tıklatın **Tamam** sonuçlarını pencere arama'yı kapatmak için.  
+9. Bulma **IIS_IUSRS** girişi **adı (göreli ayırt edici adı)** sütun. Bu girdiyi seçin ve tıklayın **Tamam** sonuçları penceresini aramayı kapatın.  
   
-10. Tıklatın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** penceresi.  
+10. Tıklayın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** penceresi.  
   
-11. Tıklatın **paylaşımı** değişiklikleri kalıcı hale getirmek için.  
+11. Tıklayın **paylaşımı** değişiklikleri kalıcı hale getirmek için.  
   
-12. Paylaşıma değişiklik tamamlandıktan sonra tıklatın **Bitti** kapatmak için **dosya paylaşımı** penceresi.  
+12. Paylaşmayı etkinleştirmek için değişiklik tamamlandıktan sonra tıklayın **Bitti** kapatmak için **dosya paylaşımı** penceresi.  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>IIS 5.1 veya 6.0 klasörü güvenlik özelliklerini ayarlamak için  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>IIS 5.1 veya 6.0 klasör güvenlik özelliklerini ayarlamak için  
   
-1.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples gidin.  
+1.  % SystemDrive%\inetpub\wwwroot\servicemodelsamples için gidin.  
   
 2.  Sağ **servicemodelsamples** klasörünü ve ardından **paylaşım ve güvenlik.**  
   
-3.  Tıklatın **güvenlik** sekmesi.  
+3.  Tıklayın **güvenlik** sekmesi.  
   
 4.  IIS 6. 0'da, içinde kullanıyorsanız **grup veya kullanıcı adları** onay kutusuna olup olmadığını **Internet Konuk hesabı** listelenir.  
   
-     Listelenmemişse:  
+     Bu listede yoksa:  
   
-    1.  Tıklatın **Başlat** ve ardından **Denetim Masası**.  
+    1.  Tıklayın **Başlat** ve ardından **Denetim Masası**.  
   
-    2.  Görmüyorsanız, **kullanıcı hesapları** simgesini tıklatın **kategori görünümüne geçiş**.  
+    2.  Görmüyorsanız, **kullanıcı hesaplarını** simgesini tıklayın **kategori görünümüne geçiş**.  
   
-    3.  Tıklatın **kullanıcı hesapları** simgesi.  
+    3.  Tıklayın **kullanıcı hesaplarını** simgesi.  
   
-    4.  Altında "veya Denetim Masası simgesi seçin" tıklatın **kullanıcı hesaplarını**.  
+    4.  Altında "veya bir Denetim Masası simgesi seçin" tıklayın **kullanıcı hesaplarını**.  
   
-    5.  İçinde **kullanıcı hesapları** iletişim kutusu, tıklatın **Gelişmiş** sekmesi.  
+    5.  İçinde **kullanıcı hesaplarını** iletişim kutusu, tıklayın **Gelişmiş** sekmesi.  
   
     6.  **Gelişmiş**'e tıklayın.  
   
     7.  İçinde **yerel kullanıcılar ve gruplar** iletişim kutusu, genişletmek için tıklatın **kullanıcılar** klasör.  
   
-    8.  Sağ bölmede, çift **Internet Konuk hesabı**.  
+    8.  Sağ bölmede **Internet Konuk hesabı**.  
   
-    9. İçinde **özellikleri** iletişim kutusu, kopyalama Internet Konuk hesabı olarak kullanılan adı. Varsayılan olarak, adı "bilgisayar adından USR_" ile başlar.  
+    9. İçinde **özellikleri** iletişim kutusu, kopyalama Internet Konuk hesabı olarak kullanılan adı. Varsayılan olarak, adı "USR_ bilgisayar adından" ile başlar.  
   
     10. **Özellikler** iletişim kutusunu kapatın.  
   
     11. Kapat **yerel kullanıcılar ve gruplar** iletişim kutusu.  
   
-    12. Kapat **kullanıcı hesapları** iletişim kutusu.  
+    12. Kapat **kullanıcı hesaplarını** iletişim kutusu.  
   
-    13. Diğer kapatmak **kullanıcı hesapları** iletişim kutusu.  
+    13. Diğer kapatmak **kullanıcı hesaplarını** iletişim kutusu.  
   
-    14. İçinde **servicemodelsamples özellikleri** iletişim kutusundaki **güvenlik** sekmesini tıklatın, **Ekle**.  
+    14. İçinde **servicemodelsamples özellikleri** iletişim kutusundaki **güvenlik** sekmesinde **Ekle**.  
   
-    15. Ardından bir eğik bilgisayarın adını yazın, sonra Internet kullanıcı hesabının, örneğin, myMachineName adını yapıştırın\\InternetGuestAccountName %  
+    15. Ardından bir eğik bilgisayarın adını yazın ve ardından Internet kullanıcı hesabı, örneğin, myMachineName adını yapıştırın\\InternetGuestAccountName %  
   
-    16. Tıklatın **Adları Denetle** eklenmesini doğrulamak için. Geçerli ise, ad büyük harflerle olduğu ve altı çizilir.  
+    16. Tıklayın **Adları Denetle** eklemeyi doğrulamak için. Geçerliyse, adı tamamı büyük harf olduğundan çizilir.  
   
-5.  Ağ hizmeti listelenen IIS 6.0 için ayrıca kontrol **grup veya kullanıcı adları** kutusu.  
+5.  IIS 6.0 için Ayrıca ağ hizmeti listelendiğini kontrol **grup veya kullanıcı adları** kutusu.  
   
-     Ağ hizmeti listelenmemişse:  
+     Ağ hizmeti listede yoksa:  
   
     1.  **Ekle**'yi tıklatın.  
   
-    2.  İçinde **kullanıcıları veya Grupları Seç** iletişim kutusuna bilgisayarın adını ve ardından bir eğik.  
+    2.  İçinde **kullanıcıları veya Grupları Seç** iletişim kutusuna bir ters eğik çizgi ardından bilgisayar adı.  
   
-    3.  Tür **hizmet** ters eğik çizgi (boşluksuz) sonra.  
+    3.  Tür **hizmet** sonra ters eğik çizgi (boşluksuz).  
   
-    4.  Tıklatın **Adları Denetle**.  
+    4.  Tıklayın **Adları Denetle**.  
   
-    5.  Birden çok ad bulunursa seçip **ağ hizmeti** tıklatıp **Tamam**.  
+    5.  Birden fazla adı bulunursa seçip **ağ hizmeti** tıklatıp **Tamam**.  
   
-    6.  Tıklatın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** iletişim kutusu.  
+    6.  Tıklayın **Tamam** kapatmak için **kullanıcıları veya Grupları Seç** iletişim kutusu.  
   
-6.  IIS 5.1 ile Windows XP SP2 kullanıyorsanız, Internet Konuk hesabı ve ASPNET listelendiğini kontrol **grup veya kullanıcı adları** kutusu.  
+6.  IIS 5.1 ile Windows XP SP2 kullanıyorsanız, hem Internet Konuk hesabı hem de ASP.NET listelendiğini kontrol **grup veya kullanıcı adları** kutusu.  
   
-     ASPNET kullanıcı yerleşik üyesi olabileceğine dikkat edin **kullanıcılar** güvenlik grubu. Bu durumda, ardından IF **kullanıcılar** Grup iletişim kutusunda listelenen, ayrı bir öğe olarak izin verilen kullanıcıları listesine eklemek gerekmez.  
+     ASP.NET kullanıcı yerleşik üyesi olabileceğini unutmayın **kullanıcılar** güvenlik grubu. Bu durumda, sonra eğer **kullanıcılar** Grup iletişim kutusunda listelenen, izin verilen kullanıcıların listesi için ayrı bir öğe olarak eklemeniz gerekmez.  
   
-     ASPNET parçası olup olmadığını denetlemek için **kullanıcılar** güvenlik grubu:  
+     ASP.NET parçası olup olmadığını denetlemek için **kullanıcılar** güvenlik grubu:  
   
     1.  Üzerinde **Başlat** menüsünde tıklatın **Denetim Masası**.  
   
-    2.  Tıklatın **kullanıcı hesapları** simgesi.  
+    2.  Tıklayın **kullanıcı hesaplarını** simgesi.  
   
-    3.  İçinde **grup** sütun denetleyin değeri **ASPNET** "kullanıcıları."  
+    3.  İçinde **grubu** sütun kontrol değeri **ASPNET** "kullanıcıları."  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

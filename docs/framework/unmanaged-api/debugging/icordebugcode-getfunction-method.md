@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd544619f9e5fb85a0b08b91ead8231ea25743cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651240"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction Metodu
 "Bu"Icordebugcode"ile ilişkili ICorDebugFunction" alır.  
@@ -37,19 +37,19 @@ HRESULT GetFunction (
   
 #### <a name="parameters"></a>Parametreler  
  `ppFunction`  
- [out] İşlevin adresini gösteren bir işaretçi.  
+ [out] İşlevin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugCode` ve `ICorDebugFunction` bire bir ilişki korumak.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

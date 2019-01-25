@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 41dc37751e2dcf26eea887e84423179512c53614
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653521"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost Arabirimi
 Ortak dil çalışma zamanı (CLR) oluşturma ve uygulama etki alanları, varsayılan etki alanına ve işlemde çalışan tüm etki alanları listelemek için yapılandırma açıkça durdurmak ve başlatmak konak olanak tanıyan yöntemler sağlar.  
@@ -53,18 +53,18 @@ Ortak dil çalışma zamanı (CLR) oluşturma ve uygulama etki alanları, varsay
 |[UnloadDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Belirtilen uygulama etki alanından geçerli işlem kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** 1.0, 1.1  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.AppDomain>  
- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Çalışma zamanı ana bilgisayarları](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.AppDomain>
+- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [Çalışma zamanı ana bilgisayarları](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Windows API'larını Çağırma (Visual Basic)"
+title: "İzlenecek yol: Windows API'ları çağırma (Visual Basic)"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657980"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'larını Çağırma (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'ları çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'lerdir. Bunları kendi eşdeğer yordamları yazmak zor olduğunda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu arasında açık ve koyu gri alternatif olun.  
   
  Windows API'leri, kodunuzda kullanmanın avantajı, onlarca zaten yazılır kullanışlı işlevi ve kullanılacak bekleme içerdiklerinden, geliştirme süresini kaydedebilirsiniz ' dir. Olumsuz yönüyse, Windows API ile ve unforgiving işler kötüye gittiğinde çalışmaya zor olabilir ' dir.  
@@ -39,7 +39,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
     > [!NOTE]
     >  Windows API'leri hakkında tam bilgi için Platform SDK'sı Windows API Win32 SDK belgelerine bakın. Windows API'leri kullanan sabitleri hakkında daha fazla bilgi için başlık dosyaları gibi Platform SDK'sı ile dahil Windows.h inceleyin.  
   
-2.  Tıklayarak yeni bir Windows uygulaması projesi açın **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
+2.  Tıklayarak yeni bir Windows uygulaması projesi açın **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür.  
   
 3.  Seçin **Windows uygulama** Visual Basic proje şablonları listesinden. Yeni Proje görüntülenir.  
   
@@ -113,7 +113,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport özniteliği kullanarak bir Windows API çağırmak için  
   
-1.  Tıklayarak yeni bir Windows uygulaması projesi açın **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
+1.  Tıklayarak yeni bir Windows uygulaması projesi açın **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür.  
   
 2.  Seçin **Windows uygulama** Visual Basic proje şablonları listesinden. Yeni Proje görüntülenir.  
   
@@ -147,12 +147,12 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 12. Tıklayın **Button2**. Dosya taşınabilir "dosya başarıyla taşındı" iletisi görüntülenir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Diğer ad](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Yönetilen Kodda Prototipler Oluşturma](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Diğer ad](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Yönetilen Kodda Prototipler Oluşturma](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

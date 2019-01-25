@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 6e5bb35d0d1d9128ddbc5f7ab4dd81c3bc0f8fbf
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3bcb0291b3ee91d7a5fd402c8f0e2cc4bce3695a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606104"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  
@@ -237,4 +237,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   Güvenlik nedenleriyle, sanal dizin tanımını ve örneklerle tamamladığınızda Kurulumu adımları verilen izinler kaldırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

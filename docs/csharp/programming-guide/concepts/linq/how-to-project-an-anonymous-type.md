@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Proje anonim bir tür (C#)'
+title: 'Nasıl yapılır: Anonim tip yansıtma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: f3a72fb860a1cbb79533f19bc7d6547c4342311c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d19fd40b213280523d0d731e5e3e8ba5213bcd49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637027"
 ---
-# <a name="how-to-project-an-anonymous-type-c"></a>Nasıl yapılır: Proje anonim bir tür (C#)
+# <a name="how-to-project-an-anonymous-type-c"></a>Nasıl yapılır: Anonim tip yansıtma (C#)
 Bazı durumlarda bu tür yalnızca kısa bir süre için kullanacağı bilseniz bile bir sorgu yeni bir tür için proje isteyebilirsiniz. Bu, birçok yalnızca projeksiyonda kullanmak için yeni bir tür oluşturmak için fazladan iş olur. Daha verimli bir yaklaşım için bu durumda, anonim bir tür için proje. Anonim türler bir sınıf tanımlama sonra bildirir ve sınıfı bir ad vererek olmadan söz konusu sınıfın bir nesnesi başlatılmaya olanak sağlar.  
   
- Anonim türler matematik kavramı, C# uygulaması bir *demet*. Matematik terimi demet tek dizisinden çift kaynaklanan üç, dört, beş kez, n-tanımlama grubu. Bu sınırlı dizisi ile nesneleri belirli bir türdeki her ifade eder. Bazen bu ad/değer çiftlerinin listesini denir. Örneğin, bir adres içeriğini [örnek XML dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi ifade edilemez gibi:  
+ Anonim türler matematik kavramı, C# uygulaması bir *demet*. Matematik terimi demet tek dizisinden çift kaynaklanan üç, dört, beş kez, n-tanımlama grubu. Bu sınırlı dizisi ile nesneleri belirli bir türdeki her ifade eder. Bazen bu ad/değer çiftlerinin listesini denir. Örneğin, bir adres içeriğini [örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi ifade edilemez gibi:  
   
 ```  
 Name: Ellen Adams  
@@ -28,7 +28,7 @@ Country: USA
 ## <a name="example"></a>Örnek  
  Bu örnekte, `select` yan tümcesi projeleri anonim bir tür. Ardından örnekte `var` oluşturmak için `IEnumerable` nesne. İçinde `foreach` döngüsünün yineleme değişkeni sorgu ifadesi içinde oluşturulan anonim türün bir örneğini haline gelir.  
   
- Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -52,6 +52,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

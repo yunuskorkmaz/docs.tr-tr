@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573289"
 ---
 # <a name="row-error-information"></a>Satır hatası bilgileri
 Değerleri düzenleme sırasında satır hatalar için yanıt zorunda kalmamak için bir <xref:System.Data.DataTable>, hata bilgilerini daha sonra kullanmak için bir satır ekleyebilirsiniz. <xref:System.Data.DataRow> Nesnesi sağlayan bir <xref:System.Data.DataRow.RowError%2A> bu amaçla her satırında özelliği. Veri ekleme **RowError** özelliği bir **DataRow** ayarlar <xref:System.Data.DataRow.HasErrors%2A> özelliği **DataRow** için **true**. Varsa **DataRow** parçası olan bir **DataTable**, ve **DataRow.HasErrors** olduğu **true**, **DataTable.HasErrors** özelliği de **true**. Bunun için de geçerlidir **veri kümesi** hangi **DataTable** ait. Hataları için test yapma, denetleyebilirsiniz **HasErrors** hata bilgisi için herhangi bir satır eklenip eklenmediğini belirlemek için özellik. Varsa **HasErrors** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataTable.GetErrors%2A> yöntemi **DataTable** dönün ve aşağıdaki örnekte gösterildiği gibi yalnızca hataları olan satırlar inceleyin.  
@@ -77,9 +77,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

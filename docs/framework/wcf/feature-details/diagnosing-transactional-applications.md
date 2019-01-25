@@ -2,101 +2,102 @@
 title: İşlemsel Uygulamaları Tanılama
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550285"
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
-Bu konu Windows Communication Foundation (WCF) yönetim ve Tanılama özelliğini işlem uygulamada sorun gidermek için nasıl kullanılacağını açıklar.  
+Bu konuda, bir işlem uygulama sorunlarını gidermek için Windows Communication Foundation (WCF) yönetim ve Tanılama özelliğini kullanmayı açıklar.  
   
 ## <a name="performance-counters"></a>Performans Sayaçları  
- WCF performans sayaçları, işlem uygulamanızın performansını ölçmek standart bir dizi sağlar. Daha fazla bilgi için bkz: [performans sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF performans sayaçları, işlem, uygulamanızın performansını ölçmek standart sunmaktadır. Daha fazla bilgi için [performans sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
- Performans sayaçları üç farklı düzeylere kapsamlı: Hizmet, uç nokta ve işlem, aşağıdaki tabloda açıklandığı gibi.  
+ Performans sayaçları için üç farklı düzeyde kapsamlı: Hizmet, uç nokta ve işlem aşağıdaki tabloda açıklandığı gibi.  
   
 ### <a name="service-performance-counters"></a>Hizmet Performansı Sayaçları  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|Akışı Yapılan İşlemler|Bu hizmet işlemlerinde aktarılan işlem sayısı. Bu sayaç, bir işlemin hizmete gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
-|Saniyede Akışı Yapılan İşlem|Bu hizmet işlemleri için her saniye içinde aktarılan işlem sayısı. Bu sayaç, bir işlemin hizmete gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
-|Uygulaması Yapılan İşlemler|Uygulaması yapılan işlem sayısı, işlem sonucu bu hizmetinde kaydedilmiş tamamlandı gerçekleştirilir. Bu tür işlemler altında yapılan çalışmalar tam olarak kaydedilir. Kaynaklar işlemde çalışmanın uygun olarak güncelleştirilir.|  
-|Uygulaması Yapılan İşlem/Saniye|Uygulaması yapılan işlem sayısı, işlem sonucu her saniye içinde bu hizmetinde kaydedilmiş tamamlandı gerçekleştirilir. Bu tür işlemler altında yapılan çalışmalar tam olarak kaydedilir. Kaynaklar işlemde çalışmanın uygun olarak güncelleştirilir.|  
-|İptal Edilen İşlem Yapılmış Operasyonlar|Uygulaması yapılan işlem sayısı, işlem bu hizmette iptal sonucu tamamlandı gerçekleştirilir. Bu tür işlemler altında yapılan çalışmalar geri alınır. Kaynaklar önceki durumlarına geri alınır.|  
-|Uygulanıp Durdurulan İşlem/Saniye|Uygulaması yapılan işlem sayısı, işlem bu hizmette her saniye içinde iptal sonucu tamamlandı gerçekleştirilir. Bu tür işlemler altında yapılan çalışmalar geri alınır. Kaynaklar önceki durumlarına geri alınır.|  
-|Şüpheli Uygulanan İşlemler|Uygulaması yapılan işlem sayısı, işlem bu hizmet şüpheli sonucu tamamlandı gerçekleştirilir. Sonucu şüpheli ile yapılan iş belirsiz bir durumda. Kaynakları sonucu tutulur.|  
-|Şüpheli Uygulanan İşlem/Saniye|Uygulaması yapılan işlem sayısı, işlem bu hizmet şüpheli sonucu her saniye içinde tamamlandı gerçekleştirilir. Sonucu şüpheli ile yapılan iş belirsiz bir durumda. Kaynakları sonucu tutulur.|  
+|Akışı Yapılan İşlemler|Bu hizmet işlemleri için aktarılan işlem sayısı. Hizmete gönderilen iletinin bir işlem varsa dilediğiniz zaman bu sayaç artırılır.|  
+|Saniyede Akışı Yapılan İşlem|Bu hizmet işlemleri için içinde saniyede akışı yapılan işlemler işlem sayısı. Hizmete gönderilen iletinin bir işlem varsa dilediğiniz zaman bu sayaç artırılır.|  
+|Uygulaması Yapılan İşlemler|Operasyonlar sayısını, işlem sonucu bu hizmeti kaydedilmiş tamamlandı gerçekleştirdi. Bu işlemler altında çalışmanın tam olarak taahhüt eder. Kaynakları, işlemde çalışmanın uygun olarak güncelleştirilir.|  
+|Uygulaması Yapılan İşlem/Saniye|Operasyonlar sayısını, işlem sonucu bu hizmet her saniye içinde kaydedilmiş tamamlandı gerçekleştirdi. Bu işlemler altında çalışmanın tam olarak taahhüt eder. Kaynakları, işlemde çalışmanın uygun olarak güncelleştirilir.|  
+|İptal Edilen İşlem Yapılmış Operasyonlar|Uygulaması yapılan işlem sayısı, işlem bu hizmette iptal edildi sonucu tamamlandı gerçekleştirdi. Bu işlemler altında yapılan çalışma geri alınır. Kaynakları, önceki durumlarına geri alınır.|  
+|Uygulanıp Durdurulan İşlem/Saniye|Uygulaması yapılan işlem sayısı, işlem bu hizmette her saniye içinde iptal sonucu tamamlandı gerçekleştirdi. Bu işlemler altında yapılan çalışma geri alınır. Kaynakları, önceki durumlarına geri alınır.|  
+|Şüpheli Uygulanan İşlemler|Uygulaması yapılan işlem sayısı, işlem bu hizmette şüpheli sonucu tamamlandı gerçekleştirdi. Sonucu şüpheli ile çalışmanın belirsiz bir durumda. Kaynakları sonucunu tutulur.|  
+|Şüpheli Uygulanan İşlem/Saniye|Uygulaması yapılan işlem sayısı, işlem bu hizmette şüpheli sonucu her saniye içinde tamamlandı gerçekleştirdi. Sonucu şüpheli ile çalışmanın belirsiz bir durumda. Kaynakları sonucunu tutulur.|  
   
 ### <a name="endpoint-performance-counters"></a>Uç Noktası Performans Sayaçları  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|Akışı Yapılan İşlemler|Bu uç noktadaki işlemlere aktarılan işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
-|Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlem işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
+|Akışı Yapılan İşlemler|Bu uç noktada işlemlerine aktarılan işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti varsa dilediğiniz zaman artırılır.|  
+|Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlemler işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti varsa dilediğiniz zaman artırılır.|  
   
 ### <a name="operation-performance-counters"></a>İşlem Performansı Sayaçları  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|Akışı Yapılan İşlemler|Bu uç noktadaki işlemlere aktarılan işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
-|Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlem işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
+|Akışı Yapılan İşlemler|Bu uç noktada işlemlerine aktarılan işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti varsa dilediğiniz zaman artırılır.|  
+|Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlemler işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti varsa dilediğiniz zaman artırılır.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Yönetim Araçları  
- WCF WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden çalışma zamanında bir hizmetin denetleme veri kullanıma sunar. WMI veri erişimi hakkında daha fazla bilgi için bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF hizmet denetimi veri WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden çalışma zamanında kullanıma sunar. WMI veri erişimi hakkında daha fazla bilgi için bkz. [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
- Salt okunur WMI özellikleri sayısı bir hizmeti için uygulanan işlem ayarlarını belirtin. Aşağıdaki tablolarda tüm bu ayarlar listelenmektedir.  
+ WMI özellikleri salt okunur bir dizi hizmet için uygulanan işlem ayarlarını belirtin. Aşağıdaki tablolarda tüm bu ayarlar listelenmektedir.  
   
- Bir hizmete `ServiceBehaviorAttribute` aşağıdaki özelliklere sahiptir.  
-  
-|Ad|Tür|Açıklama|  
-|----------|----------|-----------------|  
-|ReleaseServiceInstanceOnTransactionComplete|Boole değeri|Geçerli işlem tamamlandıktan sonra hizmeti nesnesi geri dönüştürüldüğünde olup olmadığını belirtir.|  
-|TransactionAutoCompleteOnSessionClose|Boole değeri|Geçerli oturumu kapattığında bekleyen işlem tamamlandı olup olmadığını belirtir.|  
-|TransactionIsolationLevel|Geçerli bir değeri içeren bir dize <xref:System.Transactions.IsolationLevel> numaralandırması.|Bu hizmet destekleyen işlem yalıtım düzeyini belirtir.|  
-|TransactionTimeout|<xref:System.DateTime>|İçinde bir işlemin tamamlanması gereken süreyi belirtir.|  
-  
- `ServiceTimeoutsBehavior` Aşağıdaki özelliğine sahiptir.  
+ Bir hizmet üzerinde `ServiceBehaviorAttribute` aşağıdaki özelliklere sahiptir.  
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|TransactionTimeout|<xref:System.DateTime>|İçinde bir işlemin tamamlanması gereken süreyi belirtir.|  
+|ReleaseServiceInstanceOnTransactionComplete|Boole değeri|Geçerli işlem tamamlandıktan sonra hizmet nesnesi geri olup olmadığını belirtir.|  
+|TransactionAutoCompleteOnSessionClose|Boole değeri|Geçerli oturumu kapattığında bekleyen işlem tamamlanıp tamamlanmadığını belirtir.|  
+|TransactionIsolationLevel|Geçerli değerini içeren bir dize <xref:System.Transactions.IsolationLevel> sabit listesi.|Bu hizmet destekleyen işlem yalıtım düzeyi belirtir.|  
+|TransactionTimeout|<xref:System.DateTime>|İçinde bir işlemin tamamlanması gereken süresi belirtir.|  
+  
+ `ServiceTimeoutsBehavior` Şu özelliğe sahip.  
+  
+|Ad|Tür|Açıklama|  
+|----------|----------|-----------------|  
+|TransactionTimeout|<xref:System.DateTime>|İçinde bir işlemin tamamlanması gereken süresi belirtir.|  
   
  Bir bağlama üzerinde `TransactionFlowBindingElement` aşağıdaki özelliklere sahiptir.  
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|transactionProtocol|Geçerli bir değeri içeren bir dize <xref:System.ServiceModel.TransactionProtocol> türü.|İşlem akışında kullanmak için işlem protokolü belirtir.|  
-|TransactionFlow|Boole değeri|Gelen işlem akışını etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|transactionProtocol|Geçerli değerini içeren bir dize <xref:System.ServiceModel.TransactionProtocol> türü.|Bir işlem akışında kullanılacak işlem protokolünü belirler.|  
+|transactionFlow|Boole değeri|Gelen işlem akışı etkin olup olmadığını belirtir.|  
   
  Bir işlem üzerinde `OperationBehaviorAttribute` aşağıdaki özelliklere sahiptir:  
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|TransactionAutoComplete|Boole değeri|İşlenmeyen özel durumlar oluşursa geçerli işlem otomatik olarak gerçekleştirmeyi belirtir.|  
+|TransactionAutoComplete|Boole değeri|İşlenmeyen özel durumlar oluşursa otomatik olarak geçerli hareketi tamamlamak belirtir.|  
 |TransactionScopeRequired|Boole değeri|İşlemi bir işlem gerekli olup olmadığını belirtir.|  
   
  Bir işlem üzerinde `TransactionFlowAttribute` aşağıdaki özelliklere sahiptir.  
   
 |Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
-|TransactionFlowOption|Geçerli bir değeri içeren bir dize <xref:System.ServiceModel.TransactionFlowOption> numaralandırması.|Hangi işlemin akış gereklidir ölçüde belirtir.|  
+|TransactionFlowOption|Geçerli değerini içeren bir dize <xref:System.ServiceModel.TransactionFlowOption> sabit listesi.|Akış için hareket gereklidir kapsamı belirtir.|  
   
 ## <a name="tracing"></a>İzleme  
- İzlemeler izlemek ve işlem uygulamalarınızda hatalarını çözümlemek etkinleştirin. Aşağıdaki yöntemlerle kullanarak izlemeyi etkinleştirebilirsiniz:  
+ İzlemeleri izlemek ve işlem tabanlı uygulamalarınızı hataları analiz etmek etkinleştirin. Aşağıdaki yöntemleri kullanarak izlemeyi etkinleştirebilirsiniz:  
   
 -   Standart WCF izleme  
   
-     Bu izleme türünü herhangi bir WCF uygulaması izleme ile aynı değil. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Bu tür bir izleme herhangi bir WCF uygulama izleme aynıdır. Daha fazla bilgi için [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   WS-AtomicTransaction izleme  
   
-     WS-AtomicTransaction izleme kullanılarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu tür izleme işlemleri ve katılımcıları sistemi içindeki durumu hakkında bilgi sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli bir değere <xref:System.Diagnostics.SourceLevels> numaralandırması. İleti günlüğe kaydetme diğer WCF uygulamaları aynı şekilde etkinleştirebilirsiniz.  
+     WS-AtomicTransaction izlemeyi kullanarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu izleme, işlemler ve katılımcıları içinde bir sistem durumu hakkında Öngörüler sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli değerini <xref:System.Diagnostics.SourceLevels> sabit listesi. İleti günlüğe kaydetme diğer WCF uygulamaları aynı şekilde etkinleştirebilirsiniz.  
   
 -   `System.Transactions` İzleme  
   
-     OleTransactions Protokolü kullanılırken protokol iletilerini izlenemez. İzleme desteği <xref:System.Transactions> altyapı sağlar (OleTransactions kullanan) kullanıcıların hareketleri oluşan olaylarla görüntülemesine izin verir. İzlemeyi etkinleştirmek için bir <xref:System.Transactions> uygulama, aşağıdaki kodda dahil `App.config` yapılandırma dosyası.  
+     OleTransactions protokolünü kullanırken, protokol iletileri izlenemez. İzleme desteği <xref:System.Transactions> altyapı sağlar (OleTransactions kullanır) kullanıcılar hareketlerle gerçekleşen olayları görüntülemek izin verir. İzlemeyi etkinleştirmek için bir <xref:System.Transactions> uygulama, aşağıdaki kodda dahil `App.config` yapılandırma dosyası.  
   
     ```xml  
     <configuration>  
@@ -117,9 +118,9 @@ Bu konu Windows Communication Foundation (WCF) yönetim ve Tanılama özelliğin
     </configuration>  
     ```  
   
-     WCF de kullanır gibi bu aynı zamanda WCF izlemeyi etkinleştirir <xref:System.Transactions> altyapı.  
+     WCF de yararlanır gibi bu WCF izleme sağlar <xref:System.Transactions> altyapı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)  
- [İzlemeyi Yapılandırma](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzlemeyi Yapılandırma](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
