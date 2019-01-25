@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550506"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit türlerin çıkarımını yapma kuralları
 Açıklayan nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü çıkarsar.  
@@ -37,8 +37,8 @@ Açıklayan nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznite
 |unsignedLong|0 için 18446744073709551615 aralığındaki tam sayılar.|  
 |tamsayı|Sınırlı sayıda basamak büyük olasılıkla ön eki "-".|  
 |decimal|0 ile 28 kesinliği basamak içeren sayısal değerler.|  
-|float|"E" veya "e" üs temsil eden bir tamsayı değeri tarafından izlenen isteğe bağlı olarak arkasından bir ondalık sayı. Ondalık değerler için 16777216-16777216 aralığında olabilir. Üstel değerleri için 104 –149 aralığında olabilir.<br /><br /> Kayan noktalı sayı sonsuza göstermek özel değerler ve sayısal olmayan değerleri olanak sağlar. Kayan nokta için özel değerler: 0, - 0, INF, -INF, NaN.|  
-|çift|Kayan noktalı sayı ondalık değerler dışında aynı-9007199254740992 9007199254740992 için aralığında olabilir ve üstel değerleri için 970 –1075 aralığında olabilir.<br /><br /> Sonsuza göstermek özel değerler ve sayısal olmayan değerleri çift olanak sağlar. Kayan nokta için özel değerler: 0, - 0, INF, -INF, NaN.|  
+|float|"E" veya "e" üs temsil eden bir tamsayı değeri tarafından izlenen isteğe bağlı olarak arkasından bir ondalık sayı. Ondalık değerler için 16777216-16777216 aralığında olabilir. Üstel değerleri için 104 –149 aralığında olabilir.<br /><br /> Kayan noktalı sayı sonsuza göstermek özel değerler ve sayısal olmayan değerleri olanak sağlar. Kayan nokta için özel değerler şunlardır: 0, - 0, INF, -INF, NaN.|  
+|çift|Kayan noktalı sayı ondalık değerler dışında aynı-9007199254740992 9007199254740992 için aralığında olabilir ve üstel değerleri için 970 –1075 aralığında olabilir.<br /><br /> Sonsuza göstermek özel değerler ve sayısal olmayan değerleri çift olanak sağlar. Kayan nokta için özel değerler şunlardır: 0, - 0, INF, -INF, NaN.|  
 |süre|W3C süre biçimi.|  
 |tarih saat|W3C tarih/saat biçimi.|  
 |zaman|W3C saat biçimi.|  
@@ -78,6 +78,6 @@ Aşağıdaki şema tanımlama öznitelikleri şema çıkarımı sırasında yok 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

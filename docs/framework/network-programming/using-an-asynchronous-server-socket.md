@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 24bbbc304111b3735bc6e8f3965ef37e9374bda6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5bc4e6e43d346c1543cf43d9782fd22718b4fef4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701904"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Zaman uyumsuz sunucu yuvası kullanma
 Zaman uyumsuz sunucu yuvası ağ hizmeti isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanımı. <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki standart .NET Framework zaman uyumsuz adlandırma deseni; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemleri.  
@@ -268,8 +268,8 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)
+- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)

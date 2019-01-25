@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
+title: 'İzlenecek yol: Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 8134a7c7c1f2c4e6432dd19889faf796a9284553
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691768"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma
 
 Dinamik nesneler özellikler ve yöntemler gibi üyeleri çalışma zamanında yerine, derleme zamanında ortaya çıkarır. Bu, bir statik türü veya biçimi eşleşmeyen yapılar ile çalışmak için nesneleri oluşturmanızı sağlar. Örneğin, bir dinamik Nesne geçerli HTML biçimlendirmeyi öğeler ve öznitelikler herhangi bir birleşimini içerebilir HTML belge nesne modeli (DOM) başvurmak için kullanabilirsiniz. Her HTML belgesi benzersiz olduğundan, belirli bir HTML belge üyelerini çalışma zamanında belirlenir. Bir HTML öğesi özniteliklerini başvurmak için kullanılan genel bir yöntem için öznitelik adı geçirmektir `GetProperty` öğenin yöntemi. Başvuru `id` HTML öğesi özniteliklerini `<div id="Div1">`, başvuru edinip `<div>` öğesini ve ardından `divElement.GetProperty("id")`. Dinamik Nesne kullanırsanız, başvurabileceğiniz `id` olarak özniteliği `divElement.id`.  
   
@@ -43,7 +43,7 @@ Bu anlatımda oluşturduğunuz ilk proje, bir metin dosyasının içeriğini ara
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Dinamik özel bir sınıf oluşturmak için  
   
-1.  Visual Studio'yu başlatın.  
+1.  Visual Studio’yu çalıştırın.  
   
 2.  Üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.  
   
@@ -134,7 +134,7 @@ Bu anlatımda oluşturduğunuz projenin sonraki IronPython dinamik dilinde yazı
   
 2.  İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicIronPythonSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
   
-3.  Visual Basic kullanıyorsanız, DynamicIronPythonSample projeye sağ tıklayın ve ardından **özellikleri**. Tıklayın **başvuruları** sekmesi. Tıklayın **Ekle** düğmesi. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
+3.  Visual Basic kullanıyorsanız, DynamicIronPythonSample projeye sağ tıklayın ve ardından **özellikleri**. Tıklayın **başvuruları** sekmesi. **Ekle** düğmesine tıklayın. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
   
 4.  Üzerinde **Gözat** sekmesinde, IronPython kitaplıkları yüklü olduğu klasöre göz atın. C:\Program Files\IronPython 2.6 .NET 4.0 gibi. Seçin **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, ve **Microsoft.Dynamic.dll** kitaplıkları . **Tamam**'ı tıklatın.  
   
@@ -157,11 +157,11 @@ Bu anlatımda oluşturduğunuz projenin sonraki IronPython dinamik dilinde yazı
   
 9. Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Dynamic?displayProperty=nameWithType>  
-- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- <xref:System.Dynamic?displayProperty=nameWithType>
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
+- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [Dinamik arabirimleri (Microsoft TechNet indirilebilir PDF) uygulama](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

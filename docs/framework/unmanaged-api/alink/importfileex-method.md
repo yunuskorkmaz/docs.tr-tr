@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fe73bef50a32c3ff03f2a2754f665cc95018a4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0381ee61a0128a8ae303d44198f8d391b4531a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660625"
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
-İçeri aktarmalar derleme veya ilişkisiz modülü gösterilir.  
+İçeri aktarmalar, derleme veya modül ilişkisiz gösterilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,13 +42,13 @@ HRESULT ImportFileEx(
   
 #### <a name="parameters"></a>Parametreler  
  `pszFilename`  
- İçeri aktarılacak dosyasının tam adı.  
+ Alınacağı dosyasının tam adı.  
   
  `pszTargetName`  
- Hedef dosya adı isteğe bağlıdır.  
+ Hedef dosya isteğe bağlı adı.  
   
  `fSmartImport`  
- TRUE ise, Importtypes kullanılan, aksi takdirde içeri aktarma el ile yapılmalıdır.  
+ TRUE ise Importtypes kullanılır, aksi takdirde içe aktarma el ile uygulanması gerekir.  
   
  `dwOpenFlags`  
  Boyunca geçirilecek bayrakları [OpenScope yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
@@ -57,7 +57,7 @@ HRESULT ImportFileEx(
  İçeri aktarılan dosya Kimliğini alır.  
   
  `ppAssemblyScope`  
- Derleme alma kapsamı alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi. Dosya bir derleme değilse NULL olarak ayarlanır.  
+ Derleme içeri aktarma kapsamı alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi. Dosya bir derleme değilse NULL olarak ayarlanır.  
   
  `pdwCountOfScopes`  
  İçeri aktarılan dosyaları ve/veya kapsamları sayısını alır.  
@@ -68,7 +68,7 @@ HRESULT ImportFileEx(
 ## <a name="requirements"></a>Gereksinimler  
  ALink.h gerektirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664609"
 ---
 # <a name="auto-visual-basic"></a>Otomatik (Visual Basic)
-Visual Basic dizeleri bildirilen dış yordamı dış adını temel alarak .NET Framework kurallarına göre sıralama belirtir.  
+Visual Basic dizeleri dış bildirilen dış yordam adına göre .NET Framework kurallarına göre sıralaması olduğunu belirtir.  
   
- Projenizin dışında tanımlı bir yordam çağrısı, Visual Basic derleyici doğru yordam çağrısı için gereken bilgilere erişimi yok. Bu bilgiler yordamı bulunduğu, nasıl tanımlanır, kendi arama sırası ve dönüş türü içerir ve dize karakter kullanır ayarlayın. [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md) dış bir yordam için bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
+ Projenizin dışında tanımlı bir yordamı çağırdığınızda, Visual Basic Derleyicisi yordamı doğru şekilde çağrılacak olmalıdır bilgilere erişimi yok. Bu bilgileri yordamı bulunduğu, nasıl tanımlandığını, çağrı sırası ve dönüş türü içeren ve isteğe bağlı olarak dize karakteri kullanır ayarlayın. [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) bir dış yordam bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
   
- `charsetmodifier` Bölümün `Declare` deyimi dış yordamı yapılan bir çağrı sırasında dizeleri sıralama için karakter kümesi bilgileri sağlar. Visual Basic dış yordamı adı için dış dosyasını nasıl arayacağını etkiler. `Auto` Değiştiricisi belirtir Visual Basic .NET Framework kurallarına göre dizeleri sıralama ve gerekir temel karakter çalışma zamanı platform ve muhtemelen kümesini belirlemelisiniz ilk arıyorsanız dış yordam adı değiştirin, başarısız olur. Daha fazla bilgi için bkz: "Karakter kümesi" [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ `charsetmodifier` Kısmını `Declare` deyimi bir dış yordam çağrısı sırasında dizelerini hazırlama için karakter kümesi bilgileri sağlar. Ayrıca, Visual Basic dış dosya için dış yordam adının nasıl arama etkiler. `Auto` Değiştiricisi, Visual Basic dizeleri .NET Framework kurallarına göre sıralaması ve ilk arama yaparsanız ve büyük olasılıkla çalışma zamanı platformunun temel karakter belirlemelisiniz, dış yordam adının değiştirilmesi gerektiğini belirtir başarısız olur. Daha fazla bilgi için bkz: "Karakter kümesi" [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Herhangi bir karakter kümesi değiştiricisi belirtilirse, `Ansi` varsayılandır.  
+ Herhangi bir karakter kümesi değiştiricisi belirtilmişse `Ansi` varsayılandır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `Auto` Bu bağlamda değiştirici kullanılabilir:  
@@ -33,7 +33,7 @@ Visual Basic dizeleri bildirilen dış yordamı dış adını temel alarak .NET 
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
  Bu anahtar sözcük desteklenmiyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

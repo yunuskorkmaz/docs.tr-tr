@@ -2,12 +2,12 @@
 title: '&lt;uç noktası&gt; öğesi'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509707"
 ---
 # <a name="ltendpointgt-element"></a>&lt;uç noktası&gt; öğesi
 Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet uç noktası için adres özelliklerini belirtir.  
@@ -52,7 +52,7 @@ Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet 
 |isSystemEndpoint|Bir uç nokta altyapı uç noktası olup olmadığını belirten bir Boole değeri.|  
 |tür|Uygulanan standart bitiş noktası türünü belirten bir dize. Türü kayıtlı olmalıdır `<extensions>` bölüm veya machine.config. Hiçbir şey belirtilmezse, ortak bir hizmet uç noktası oluşturulur.|  
 |listenUriMode|Taşıma nasıl işler belirtir `ListenUri` hizmetin dinlemesi sağlanan. Geçerli değerler:<br /><br /> -Açık<br />-Benzersiz<br /><br /> Explicit varsayılan değerdir.|  
-|ListenUri|Hizmet uç noktasını dinleyen URI belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|listenUri|Hizmet uç noktasını dinleyen URI belirten bir dize. Varsayılan değer boş bir dizedir.|  
 |name|İsteğe bağlı öznitelik. Hizmet uç noktası adını belirten dize. Bağlama adı ve sözleşme tanımı adı birleşimi varsayılan değerdir. Hizmetleri olabilir birden fazla uç nokta, bu nedenle uç noktanın `name` özniteliktir hizmet adından farklı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -84,9 +84,9 @@ Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet 
 </endpoint>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Nasıl yapılır: Yapılandırma içinde hizmet uç noktası oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Nasıl yapılır: Yapılandırma içinde hizmet uç noktası oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -2,12 +2,12 @@
 title: SQL Server Express Security
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664076"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Security
 Microsoft SQL Server Express Edition (SQL Server Express), Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerinin birçoğunu destekler. Önemsiz özellik ve ağ bağlantısı varsayılan olarak kapalı olan şekilde tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  
@@ -37,7 +37,7 @@ Microsoft SQL Server Express Edition (SQL Server Express), Microsoft SQL Sunucus
 |[Yönetici olmayanlar için kullanıcı örnekleri](https://msdn.microsoft.com/library/ms143684.aspx) SQL Server Çevrimiçi Kitapları'nda|Kullanıcı örnekleri oluşturup dağıtmayı açıklar.|  
 |[SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Bir ADO.NET uygulamasında kullanıcı örneği yeteneklerini açıklar. Bir kullanıcı örneği etkinleştirmek için bir kullanıcı örneği kullanarak bağlanma hakkında bilgi sağlayan bir <xref:System.Data.SqlClient.SqlConnection>, kullanıcı örneği ömrünü ve kullanıcı örneği senaryoları.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

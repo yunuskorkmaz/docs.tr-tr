@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568107"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda ifadesi bu olay işleyiciden kaldırılmayacak
-Lambda ifadesi bu olay işleyiciden kaldırılmayacak. Lambda ifadesi bir değişkene atayın ve değişkeni ekleyin ve olayı kaldırmak için kullanın.  
+Lambda ifadesi bu olay işleyiciden kaldırılmayacak. Lambda ifadesi bir değişkene atayın ve ekleme ve kaldırma olay için değişkeni kullanın.  
   
- Lambda ifadeleri olay işleyicileri ile kullanıldığında, beklediğiniz davranışı göremeyebilirsiniz. Aynı olsa derleyici her lambda ifadesi tanımı için yeni bir yöntem oluşturur. Aşağıdaki görüntüler bu nedenle, kod `False`.  
+ Lambda ifadelerini olay işleyicileri ile kullanıldığında, beklediğiniz davranışı göremeyebilirsiniz. Aynı olsa, derleyici her bir lambda ifadesi tanımı için yeni bir yöntem oluşturur. Aşağıdaki görüntüler bu nedenle, kod `False`.  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- Lambda ifadeleri olay işleyicileri ile kullanıldığında bu beklenmeyen sonuçlara neden olabilir. Aşağıdaki örnekte, lambda ifadesi eklenen tarafından `AddHandler` tarafından kaldırılmaz `RemoveHandler` deyimi.  
+ Lambda ifadelerini olay işleyicileri ile kullanıldığında, bu durum beklenmeyen sonuçlara neden olabilir. Aşağıdaki örnekte, lambda ifadesi tarafından eklenen `AddHandler` tarafından kaldırılmaz `RemoveHandler` deyimi.  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata ele hakkında daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları Gizle veya uyarıları hata olarak değerlendir hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC42326  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Uyarıyı önlemek ve lambda ifadesi kaldırmak için lambda ifadesi bir değişkene atayın ve değişkenin hem de `AddHandler` ve `RemoveHandler` aşağıdaki örnekte gösterildiği gibi deyimleri.  
+-   Uyarıyı önlemek ve lambda ifadesindeki kaldırmak için lambda ifadesi bir değişkene atayın ve değişkenin hem de `AddHandler` ve `RemoveHandler` ifadeleri, aşağıdaki örnekte gösterildiği gibi.  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

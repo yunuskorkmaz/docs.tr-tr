@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme'
+title: 'Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 4b1acef216e4f8eca078d47a8cde87fb8f95ee0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713544"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) kullanıcı bir belge için bileşen sunar düzeni, sayfa boyutu ve diğer sayfa düzeni seçenekleri.  
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme
+[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) kullanıcıya bir belge için bileşen sunar düzen, sayfa boyutunu ve diğer sayfa düzeni seçenekleri.  
   
- Örneği belirtmek zorunda <xref:System.Drawing.Printing.PrintDocument> sınıfı — yazdırılması belgeye budur. Ayrıca, bu kısmen olduğu gibi kullanıcıların bilgisayarlarında, yerel olarak veya bir ağ üzerinden yüklü bir yazıcı olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşeni kullanıcıya sunulan seçimleri biçimlendirme sayfa belirler.  
+ Örneği belirtmeniz gereken <xref:System.Drawing.Printing.PrintDocument> sınıfı — belgenin yazdırılması budur. Ayrıca, bu kısmen olduğundan kullanıcıların kendi bilgisayarlarında yerel olarak veya bir ağ üzerinden yüklü bir yazıcının olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşen sayfasının kullanıcıya sunulan seçenekler biçimlendirme belirler.  
   
- İle çalışma önemli bir yönü <xref:System.Windows.Forms.PageSetupDialog> bileşenidir, ile nasıl etkileşim kurduğu <xref:System.Drawing.Printing.PageSettings> sınıfı. <xref:System.Drawing.Printing.PageSettings> Sınıfı, bir sayfa yazdırılabilir, sayfayı ve kenar boşluklarını boyutunu Kağıt yönlendirmesi gibi şekilde değiştiren ayarları belirtmek için kullanılır. Bu ayarların her biri bir özelliği olarak temsil edilir <xref:System.Drawing.Printing.PageSettings> sınıfı. <xref:System.Windows.Forms.PageSetupDialog> Sınıfı, belirli bir örneği için bu özellik değerlerini değiştirir <xref:System.Drawing.Printing.PageSettings> belge ile ilişkili sınıfı (ve olarak temsil edilen bir <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> özelliği).  
+ İle çalışmanın önemli bir yönüdür <xref:System.Windows.Forms.PageSetupDialog> bileşendir nasıl etkileşimde <xref:System.Drawing.Printing.PageSettings> sınıfı. <xref:System.Drawing.Printing.PageSettings> Sınıfı, bir sayfa yazdırılır, sayfa ve kenar boşlukları boyutunu Kağıt yönlendirmesi gibi şekilde ayarlarını belirtmek için kullanılır. Bu ayarların her biri bir özelliği olarak temsil edilen <xref:System.Drawing.Printing.PageSettings> sınıfı. <xref:System.Windows.Forms.PageSetupDialog> Sınıfı belirli bir örneği için bu özellik değerlerini değiştirir <xref:System.Drawing.Printing.PageSettings> belgeyle ilişkili sınıf (ve olarak temsil edilen bir <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> özelliği).  
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>PageSetupDialog bileşenini kullanarak sayfa özelliklerini ayarlamak için  
   
-1.  Kullanmak <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanmak için.  
+1.  Kullanma <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanılacak.  
   
-     Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır örneği <xref:System.Windows.Forms.PageSetupDialog> bileşeni. Var olan bir belgeyi belirtilen <xref:System.Windows.Forms.PageSetupDialog.Document%2A> özelliği ve kendi <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> özelliği ayarlanmış `false`.  
+     Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi örneği açılır <xref:System.Windows.Forms.PageSetupDialog> bileşeni. Var olan bir belgeyi belirtilen <xref:System.Windows.Forms.PageSetupDialog.Document%2A> özelliği ve kendi <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> özelliği `false`.  
   
-     Formunuz sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> adlı bileşeni `myDocument`ve bir <xref:System.Windows.Forms.PageSetupDialog> bileşeni.  
+     Formunuza sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> bileşeninizin `myDocument`ve <xref:System.Windows.Forms.PageSetupDialog> bileşeni.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -87,7 +87,7 @@ ms.locfileid: "33532733"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.PageSetupDialog>  
- [Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
- [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.PageSetupDialog>
+- [Nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

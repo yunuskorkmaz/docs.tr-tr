@@ -1,52 +1,52 @@
 ---
-title: Sorgu planı (varlık SQL) önbelleğe alma
+title: Sorgu planını önbelleğe alma (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671141"
 ---
-# <a name="query-plan-caching-entity-sql"></a>Sorgu planı (varlık SQL) önbelleğe alma
-Sorgu yürütme denemesi yapıldığında, sorgu ardışık düzen tam sorgu önceden derlenmiş ve kullanılabilir olup olmadığını görmek için sorgu planı önbelleğini arar. Bu durumda, yeni bir tane oluşturmak yerine önbelleğe alınmış planı yeniden kullanır. Eşleşen bir sorgu planı önbelleğinde bulunmazsa, sorgu derlenmiş ve önbelleğe alınmış. Bir sorgu tarafından tanımlanan kendi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] metin ve parametre koleksiyonu (adları ve türlerini). Tüm metin karşılaştırmaları büyük/küçük harfe duyarlıdır.  
+# <a name="query-plan-caching-entity-sql"></a>Sorgu planını önbelleğe alma (varlık SQL)
+Her bir sorgu yürütme girişimi yapıldığında, sorgu işlem hattındaki tam sorgu zaten derlenmiş ve kullanılabilir olup olmadığını görmek için sorgu planı önbelleği arar. Bu durumda, yeni bir tane oluşturmak yerine önbellekteki plan kullanır. Sorgu planı önbellekte bir eşleşme bulunmazsa, sorgu derlenmiş ve önbelleğe alınır. Bir sorgu tarafından tanımlanan kendi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] metin ve parametre koleksiyonu (adlarını ve türlerini). Tüm metin karşılaştırmalar büyük/küçük harfe duyarlıdır.  
   
 ## <a name="configuration"></a>Yapılandırma  
- Sorgu planı önbelleğe alma aracılığıyla yapılandırılabilir <xref:System.Data.EntityClient.EntityCommand>.  
+ Sorgu planını önbelleğe alma aracılığıyla yapılandırılabilir <xref:System.Data.EntityClient.EntityCommand>.  
   
- Etkinleştirmek veya sorgu planı aracılığıyla önbelleğe almayı devre dışı bırakmak için <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, bu özelliği ayarlamak `true` veya `false`. Plan olası tek tek dinamik sorgular için önbelleğe almayı devre dışı bırakılması daha sonra bir kez kullanılacak performansı artırır.  
+ Etkinleştirme veya devre dışı aracılığıyla sorgu planını önbelleğe alma <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, bu özelliği ayarlayın `true` veya `false`. Plan düşüktür bireysel dinamik sorgular için önbelleğe alma devre dışı bırakılması daha sonra bir kez kullanılacak performansını artırır.  
   
- Sorgu planı aracılığıyla önbelleğe almayı etkinleştir <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
+ Aracılığıyla sorgu planını önbelleğe alma etkinleştirebilirsiniz <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
   
 ## <a name="recommended-practice"></a>Önerilen uygulama  
- Dinamik sorgular, genel kaçınılmalıdır. Aşağıdaki dinamik sorgu örnek SQL ekleme saldırılarına karşı savunmasız çünkü tüm doğrulama olmadan doğrudan kullanıcı girişini alır.  
+ Dinamik sorgular, genellikle kaçınılmalıdır. Herhangi bir doğrulama olmadan doğrudan kullanıcı girişi aldığından aşağıdaki dinamik sorgu örnek SQL enjeksiyon saldırılarına karşı savunmasızdır.  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
- Dinamik olarak üretilen sorguları kullanırsanız, gereksiz bellek tüketimi yeniden başlatmasının önbellek girişlerini önlemek için sorgu planı önbelleğe almayı devre dışı bırakın.  
+ Dinamik olarak üretilen sorguları kullanırsanız, gereksiz bellek tüketimi için kullanılabilmeleri düşüktür önbellek girişlerinin önlemek için sorgu planını önbelleğe alma devre dışı bırakmayı düşünün.  
   
- Statik sorgulamaları önbelleğe alma ve sorguları Parametreli sorgu planı performans fayda sağlayabilir. Statik bir sorgunun bir örnek verilmiştir:  
+ Statik sorguları önbelleğe alma ve sorgu parametreli bir sorgu planı performans avantajları sağlayabilir. Statik bir sorgu örneği verilmiştir:  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
- Sorgu planı önbelleğinin düzgün eşleştirilmesini sorgular için bunlar aşağıdaki gereksinimlerle uyumlu olması gerekir:  
+ Sorguların sorgu planı önbelleği tarafından düzgün şekilde eşlenmesi için aşağıdaki gereksinimlere uyması:  
   
--   Sorgu metni sabit bir desen, tercihen bir sabit dize veya bir kaynağı olmalıdır.  
+-   Sorgu metni, sabit bir desen, tercihen bir sabit dize veya bir kaynak olmalıdır.  
   
--   <xref:System.Data.EntityClient.EntityParameter> veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilmelidir her yerde kullanılmalıdır.  
+-   <xref:System.Data.EntityClient.EntityParameter> veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilen her yerde kullanılmalıdır.  
   
- Gereksiz yere sorgu planı önbellek yuvalarında tüketen aşağıdaki sorgu desenlerine kaçınmanız gerekir:  
+ Sorgu planını önbelleğe yuvalarda gereksiz yere kullanmak aşağıdaki sorgu desenleri kaçınmanız gerekir:  
   
 -   Metindeki büyük küçük harf yapılan değişiklikler.  
   
--   Beyaz alan yapılan değişiklikler.  
+-   Boşluk yapılan değişiklikler.  
   
 -   Değişmez değerler geçer.  
   
--   Metin açıklamaları içinde yapılan değişiklikler.  
+-   Metin açıklama içinde yapılan değişiklikler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

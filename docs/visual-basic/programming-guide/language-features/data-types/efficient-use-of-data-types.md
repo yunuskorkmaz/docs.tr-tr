@@ -13,32 +13,32 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 6e71c4e2225bbcde3bb2bd20ae098f5600990051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736175"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
-Bildirilmemiş değişkenleri ve veri türü bildirilen değişkenlerin atanır `Object` veri türü. Bu, hızlı bir şekilde programları yazmak kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  
+Bildirilmemiş değişkenler ve bir veri türü bildirilen değişkenler atanmış `Object` veri türü. Bu hızlı yazma kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  
   
-## <a name="strong-typing"></a>Yazarak tanımlayıcı  
- Veri türleri için tüm değişkenleri belirtme olarak bilinir *güçlü yazarak*. Güçlü yazarak kullanarak çeşitli avantajları vardır:  
+## <a name="strong-typing"></a>Yazarak güçlü  
+ Tüm değişkenlerin veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Güçlü yazım, yazım kullanarak çeşitli avantajları vardır:  
   
--   Değişkenlerinizi IntelliSense desteği sağlar. Bu kodu yazarken özelliklerini ve diğer üyeleri görmenize olanak sağlar.  
+-   Bu değişkenleri için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
--   Tür derleyici denetlemeyi avantajlarından yararlanır. Taşma gibi hatalar nedeniyle çalışma zamanında yük devredebilir deyimleri yakalar. Ayrıca bunları desteklemeyen nesnelerde yöntem çağrıları yakalar.  
+-   Bu derleyici tür denetimi yararlanır. Bu, çalışma zamanında taşma gibi hatalar nedeniyle başarısız olabilir deyimleri yakalar. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
   
--   Kodunuzu daha hızlı yürütülmesini sonuçlanır.  
+-   Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır.  
   
 ## <a name="most-efficient-data-types"></a>En verimli veri türleri  
- Hiçbir zaman kesirler içeren değişkenler için tam sayı veri türleri nonintegral türleri daha büyük/küçük harf verimlidir. Visual Basic'te `Integer` ve `UInteger` en verimli sayısal türler.  
+ Kesir hiçbir zaman içeren değişkenlerini tam sayı veri türleri nonintegral türleri daha büyük/küçük harf etkilidir. Visual Basic'te `Integer` ve `UInteger` en verimli sayısal türleri.  
   
- Kesirli sayılar için `Double` en verimli veri türü geçerli platformlarda işlemci çift duyarlıklı kayan nokta işlemleri olmasıdır. Ancak, işlemleriyle `Double` gibi tam sayı türleri gibi ile kadar hızlı değildir `Integer`.  
+ Kesirli sayılar için `Double` en verimli veri türü, geçerli platformda işlemci çift duyarlıklı kayan nokta işlemleri olmasıdır. Ancak, işlemleriyle `Double` gibi tam sayı türleri gibi ile kısa sürede olmayan `Integer`.  
   
 ## <a name="specifying-data-type"></a>Veri türünü belirtme  
- Kullanım [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) belirli bir türde bir değişken bildirmek için. Erişim düzeyi kullanarak aynı anda belirtebilirsiniz [ortak](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) içinde as anahtar sözcüğü Aşağıdaki örnek.  
+ Kullanım [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) belirli bir türdeki bir değişken bildirmek için. Kullanarak aynı anda erişim düzeyini belirtebilirsiniz [genel](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) görüldüğü anahtar sözcüğü Aşağıdaki örnek.  
   
 ```  
 Private x As Double  
@@ -46,14 +46,14 @@ Protected s As String
 ```  
   
 ## <a name="character-conversion"></a>Karakter dönüştürme  
- `AscW` Ve `ChrW` işlevleri Unicode olarak çalışır. Bunları preference için kullanması gereken `Asc` ve `Chr`, hangi gerekir Çevir içine ve dışına Unicode.  
+ `AscW` Ve `ChrW` işlevler Unicode olarak çalışır. Bunları preference için kullanması gereken `Asc` ve `Chr`, hangi gerekir Çevir içine ve dışına Unicode.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [IntelliSense Kullanma](/visualstudio/ide/using-intellisense)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [IntelliSense Kullanma](/visualstudio/ide/using-intellisense)

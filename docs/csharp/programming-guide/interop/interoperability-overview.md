@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502072"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -58,11 +58,11 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
   
  Daha fazla bilgi için [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) ve [örnek COM sınıfı](../../../csharp/programming-guide/interop/example-com-class.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birlikte çalışma performansı iyileştirme](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
-- [COM ve .NET arasında birlikte çalışabilirlik giriş](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
-- [Visual Basic'teki COM birlikte çalışma'ya giriş](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
-- [Yönetilen ve yönetilmeyen kod sıralama](../../../../docs/framework/interop/interop-marshaling.md)  
-- [Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)  
+- [Birlikte çalışma performansı iyileştirme](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [COM ve .NET arasında birlikte çalışabilirlik giriş](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Visual Basic'teki COM birlikte çalışma'ya giriş](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Yönetilen ve yönetilmeyen kod sıralama](../../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

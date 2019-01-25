@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717174"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame Yapısı
-Bir özel durum nesnesi çerçeve bilgilerini temsil yığın.  
+Temsil, çerçeve bilgileri bir özel durum nesnesinden yığın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,21 +43,21 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |------------|-----------------|  
 |`pModule`|Geçerli çerçevenin Icordebugmodule nesnesine bir işaretçi.|  
 |`ip`|Geçerli çerçevenin yönerge işaretçisi (EIP/RIP) değeri.|  
-|`methodDef`|Geçerli çerçevenin yöntemi belirteci.|  
-|`isLastForeignExceptionFrame`|Çerçeve bir yabancı özel son çerçevede olup olmadığını belirten bir değer.|  
+|`methodDef`|Geçerli çerçevenin yöntemi belirteç.|  
+|`isLastForeignExceptionFrame`|Çerçeve son kare yabancı bir özel durum olup olmadığını belirten bir değer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Artık kullanımda olduğunda arayan Icordebugmodule nesnesine işaretçi serbest bırakmanız gerekir.  
+ Artık kullanımda olduğunda çağıran Icordebugmodule nesne işaretçisi serbest bırakmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

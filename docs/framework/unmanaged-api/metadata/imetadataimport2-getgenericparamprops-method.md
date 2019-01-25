@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714275"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps Metodu
-Belirtilen belirteç tarafından temsil edilen genel parametresi ile ilişkili meta verileri alır.  
+Belirtilen belirteç tarafından temsil edilen genel parametre ile ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,38 +44,38 @@ HRESULT GetGenericParamProps (
   
 #### <a name="parameters"></a>Parametreler  
  `gp`  
- [in] Meta verileri döndürmek üzere genel parametresini temsil eden belirteci.  
+ [in] Genel parametre meta verileri döndürülecek temsil eden belirteç.  
   
  `pulParamSeq`  
- [out] Sıralı konumunu `Type` üst Oluşturucusu veya yöntem parametresinde.  
+ [out] Sıralı konumunu `Type` üst Oluşturucusu veya yöntem parametresi.  
   
  `pdwParamFlags`  
- [out] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) açıklar numaralandırma `Type` genel parametresi için.  
+ [out] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) açıklayan sabit listesi `Type` genel parametresi için.  
   
  `ptOwner`  
- [out] Parametre sahibi temsil eden bir TypeDef veya MethodDef belirteci.  
+ [out] Parametre sahibi temsil eden bir tür tanımı veya MethodDef belirteci.  
   
  `reserved`  
- [out] Gelecekteki genişletilebilirliği için ayrılmış.  
+ [out] Sonra genişletilebilmek için ayrılmış.  
   
  `wzName`  
  [out] Genel parametre adı.  
   
  `cchName`  
- [in] Boyutunu `wzName` arabellek.  
+ [in] Boyutu `wzName` arabellek.  
   
  `pchName`  
- [out] Geniş karakterler adı döndürülen boyutu.  
+ [out] Geniş karakterler, adı döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

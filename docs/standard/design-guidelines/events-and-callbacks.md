@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525488"
 ---
 # <a name="events-and-callbacks"></a>Etkinlikler ve geri aramalar
 Geri çağırmalar, geri bir temsilci yoluyla kullanıcı kodu çağırmak bir çerçeve izin genişletilebilirlik noktalarıdır. Bu Temsilciler, genellikle bir yöntemin bir parametresi aracılığıyla framework geçirilir.  
@@ -45,5 +45,5 @@ Geri çağırmalar, geri bir temsilci yoluyla kullanıcı kodu çağırmak bir �
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

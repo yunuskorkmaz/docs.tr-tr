@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Pencereyi Yatay Bölme'
+title: 'Nasıl yapılır: Pencereyi yatay bölme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701462"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>Nasıl yapılır: Pencereyi Yatay Bölme
-Aşağıdaki kod örneğinde böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetim yatay.  
+# <a name="how-to-split-a-window-horizontally"></a>Nasıl yapılır: Pencereyi yatay bölme
+Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği <xref:System.Windows.Forms.SplitContainer> denetimi Bölümlendirici, Denetim, değil yönünü belirler.  
+>  <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği <xref:System.Windows.Forms.SplitContainer> denetimi Bölümlendiricinin, Denetim'ın yönü belirler.  
   
-### <a name="to-split-a-window-horizontally"></a>Bir pencereyi yatay bölme  
+### <a name="to-split-a-window-horizontally"></a>Pencereyi yatay bölme için  
   
 1.  Bir yordam içinde ayarlamak <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
@@ -55,6 +55,6 @@ Aşağıdaki kod örneğinde böler Bölümlendirici yapar <xref:System.Windows.
     }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

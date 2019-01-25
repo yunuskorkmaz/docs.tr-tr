@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 53e2d14cf331cf41b20300afbe8966538bf621ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748083"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı bir özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değeri olarak kullanılabilmesi için bir sınıfın örneklerini istiyorsanız uygulamak ihtiyacınız olabilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı veya her ikisini de.  
@@ -24,7 +24,7 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
  XAML işlemci bir öznitelik değeri işlemek için iki parça bilgi gerekir. Bilgi ilk parçasını ayarlanan özelliğin bir değer türüdür. XAML içinde işlenir ve bir öznitelik değeri tanımlayan herhangi bir dize olmalıdır sonuçta dönüştürülecek veya o türün değerine çözümlendi. Değer (örneğin, sayısal bir değer) XAML ayrıştırıcı tarafından anlaşılan basit bir tür ise, dize doğrudan dönüştürme denenir. Bir sabit listesi değeri ise, dize, numaralandırma, adlandırılmış bir sabit bir adı eşleşme olup olmadığını denetlemek için kullanılır. Değer ne ayrıştırıcı anlaşılan bir temel ya da bir numaralandırma sonra söz konusu türü ise sağlayabilir veya bir dönüştürülmüş dizesine dayalı bir değer türü örneği olmalıdır. Bu, bir tür dönüştürücüsü sınıfı belirterek gerçekleştirilir. Tür dönüştürücüsünü etkili bir şekilde kod içinde .NET kodda çağırır XAML senaryosu için hem de başka bir sınıf değerlerini sağlamak için bir yardımcı sınıftır.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>XAML içinde mevcut türü dönüştürme davranışını kullanarak  
- Temel XAML kavramları, aşinalık bağlı olarak, zaten türü dönüştürme davranışını temel uygulama XAML fark etmeden kullanıyor olabilir. Örneğin, WPF türünde bir değer alan özellikleri yüzlerce tanımlar <xref:System.Windows.Point>. A <xref:System.Windows.Point> iki boyutlu bir koordinat alanında bir koordinat açıklayan bir değerdir ve aslında iki önemli özellikleri vardır: <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A>. XAML içinde bir noktaya belirttiğinizde, (genellikle bir virgül) sınırlayıcı bir dize olarak arasında belirtmeden <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A> sağladığınız değerler. Örneğin: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ Temel XAML kavramları, aşinalık bağlı olarak, zaten türü dönüştürme davranışını temel uygulama XAML fark etmeden kullanıyor olabilir. Örneğin, WPF türünde bir değer alan özellikleri yüzlerce tanımlar <xref:System.Windows.Point>. A <xref:System.Windows.Point> iki boyutlu bir koordinat alanında bir koordinat açıklayan bir değerdir ve aslında iki önemli özellikleri vardır: <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A>. XAML içinde bir noktaya belirttiğinizde, (genellikle bir virgül) sınırlayıcı bir dize olarak arasında belirtmeden <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A> sağladığınız değerler. Örneğin: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`  
   
  Bu basit tür bile <xref:System.Windows.Point> ve basit kullanımını XAML içinde bir tür dönüştürücüsü içerir. Bu durumda, sınıf, <xref:System.Windows.PointConverter>.  
   
@@ -114,8 +114,8 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
   
  Özellik başına temelinde bir tür dönüştürücüsü de sağlayabilirsiniz. Uygulama yerine bir [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> isteğe bağlı olarak sınıf tanımının bir özellik tanımı için geçerlidir (ana tanım değil `get` / `set` içindeki uygulamaları). Özelliğin türü, özel bir tür dönüştürücüsü tarafından işlenen türüyle eşleşmelidir. Bu özniteliği uygulandı, ile bir XAMLprocessor bu özellik değerlerini işlediğinde, bu işlem giriş dizesi ve nesne örneği döndürür. Özellik başına türü dönüştürücü özellik türü Microsoft .NET Framework veya sınıf tanımı kontrol ve uygulanamıyor burada bazı diğer kitaplığı kullanmayı tercih ederseniz özellikle kullanışlı bir tekniktir bir <xref:System.ComponentModel.TypeConverterAttribute> vardır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ComponentModel.TypeConverter>  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ComponentModel.TypeConverter>
+- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

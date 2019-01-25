@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28f6bdbc3e382f82b7fdd632b9fc8c4d422629c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e17f88cf7f0d8572e65d00d8500a1fd83aa44eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663920"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy Numaralandırması
-Program veritabanı (PDB) dosyaları okumak için ilke ayarlama değerlerini içerir.  
+Program veritabanı (PDB) dosyaları okumak için ilkeyi değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eSymbolReadingAlways`|Hata ayıklayıcı PDB dosyaları her zaman okumalısınız belirtir.|  
-|`eSymbolReadingFullTrustOnly`|Hata ayıklayıcı tam güven derlemeler ile ilişkilendirilmiş PDB dosyalarını okumalısınız belirtir.|  
-|`eSymbolReadingNever`|Hata ayıklayıcı PDB dosyalarını hiçbir zaman okumalısınız belirtir.|  
+|`eSymbolReadingAlways`|Hata ayıklayıcı her zaman PDB dosyaları okuyup belirtir.|  
+|`eSymbolReadingFullTrustOnly`|Hata ayıklayıcı tam güven derlemeleri ile ilişkili olan PDB dosyaları okuyup belirtir.|  
+|`eSymbolReadingNever`|Hata ayıklayıcı, PDB dosyaları hiçbir zaman okuyup belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ESymbolReadingPolicy` Numaralandırması ile kullanılır [Iclrdebugmanager::setsymbolreadingpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) yöntemi.  
+ `ESymbolReadingPolicy` Numaralandırması ile kullanılan [Iclrdebugmanager::setsymbolreadingpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

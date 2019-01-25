@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b36f4007f286938169cc5d583908493916b9e6f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705277"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName Metodu
-Sembol deposu disk üzerinde dosya adı sağlar.  
+Sembol deposundaki disk dosya adı sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +39,19 @@ HRESULT GetSymbolStoreFileName (
   
 #### <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutunu `szName` arabellek.  
+ [in] Boyutu `szName` arabellek.  
   
  `pcchName`  
- [out] Bir işaretçi döndürdü adının uzunluğu alır değişken `szName`, null sonlandırma dahil olmak üzere.  
+ [out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.  
   
  `szName`  
- [out] Bir işaretçi simge deposunun dosya adını alır değişken.  
+ [out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

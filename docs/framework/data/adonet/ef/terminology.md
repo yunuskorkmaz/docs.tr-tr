@@ -2,12 +2,12 @@
 title: Entity Framework terimleri
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b46a695f5984ec23f4a5ef28bd871d6d651c6ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684573"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terimleri
 Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgileri kullanılabildiği ilgili konulara bağlantılar sağlanmaktadır.  
@@ -50,7 +50,7 @@ Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../..
 |eşleme belirtimi dili (MSL)|Depolama modelindeki öğeleri kavramsal modelde tanımlı öğeleri eşlemek için kullanılan bir XML tabanlı dil.<br /><br /> Daha fazla bilgi için [MSL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |değişikliği|Saklı yordamları, ekleme, güncelleştirme ve veri kaynağındaki verileri silmek için kullanılır. Bu işlevlerin yerine kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] komutları oluşturulur. Değişiklik işlevleri tarafından tanımlanan `Function` depolama modelinde öğesi. [ModificationFunctionMapping](https://msdn.microsoft.com/library/b44b5b13-9937-448b-ba36-7a0cfefea782) öğesi ekleme, güncelleştirme ve silme işlemlerine karşı kavramsal modelde tanımlı, varlıkları için bu değişikliği işlevleri eşler.|  
 |Çokluk|Bir ilişkilendirme tarafından tanımlandığı şekilde bir ilişkinin her bir tarafta bulunabilir varlıkların sayısı. Kardinalite olarak da bilinir.<br /><br /> Daha fazla bilgi için [son öğe (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c) ve [ilişkilendirme end](../../../../../docs/framework/data/adonet/association-end.md).|  
-|tür başına birden çok varlık kümeleri|Birden fazla varlıkta tanımlanacak bir varlık türünün özelliğini ayarlayın.<br /><br /> Daha fazla bilgi için [Entityset'in öğe (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) ve [nasıl yapılır: tür başına birden çok varlık kümesi ile bir modeli tanımlamak](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
+|tür başına birden çok varlık kümeleri|Birden fazla varlıkta tanımlanacak bir varlık türünün özelliğini ayarlayın.<br /><br /> Daha fazla bilgi için [Entityset'in öğe (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) ve [nasıl yapılır: Tür başına birden çok varlık kümesi ile bir modeli tanımlamak](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |Gezinme özelliği|Bir ilişkilendirme tarafından tanımlandığı gibi başka bir varlık türü için bir ilişki temsil eden bir varlık türü özelliği. Gezinti özellikleri ilgili nesneler olarak döndürmek için kullanılan bir <xref:System.Data.Objects.DataClasses.EntityCollection%601> veya <xref:System.Data.Objects.DataClasses.EntityReference%601>ilişkinin diğer ucundaki çokluğu bağlı olarak.<br /><br /> Daha fazla bilgi için [NavigationProperty öğesi (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) ve [gezinti özelliği](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |Sorgu yolu|Bir dize temsili bir yolu olan bir nesne sorgu yürütüldüğünde döndürülecek nesnenin ilgili belirtir. Sorgu yolu çağırarak tanımlanan <xref:System.Data.Objects.ObjectQuery%601.Include%2A> metodunda bir <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Daha fazla bilgi için [ilgili nesneler Yükleniyor](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
 |nesne bağlamı|Kavramsal modelde tanımlı varlık kapsayıcıyı temsil eder. Bu, temel alınan veri kaynağı için bir bağlantı içerir ve değişiklik izleme ve kimlik çözümlemesi gibi hizmetleri sağlar. Bir nesne devamı ext örneği tarafından temsil edilen <xref:System.Data.Objects.ObjectContext> veya `DbContext` sınıfı.<br /><br /> `DbContext` parçasıdır [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0, .NET Framework'ün bir parçası değildir, ancak .NET Framework 4.5 üzerinde oluşturulmuştur. Entity Framework 5.0 olarak kullanılabilir ['Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) paket. Daha fazla bilgi için [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).|  
@@ -67,16 +67,16 @@ Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../..
 |rol|Her birine verilen ad `End` ilişki semantiği açıklamak için bir ilişki.<br /><br /> Daha fazla bilgi için [son öğe (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c) ve [ilişkilendirme end](../../../../../docs/framework/data/adonet/association-end.md).|  
 |skaler özelliği|Depolama modelinin tek bir alan eşleyen bir varlığın bir özelliği.|  
 |Kendi kendine varlık izleme|Bir metin şablonu dönüştürme karmaşık, skaler için değişiklikleri kaydetmek ve gezinti özellikleri yeteneği olan Araç Seti (T4) oluşturulan bir varlık.|  
-|Basit tür|Kavramsal modelde özellikleri tanımlamak için kullanılan bir basit türü.<br /><br /> Daha fazla bilgi için [kavramsal Model türleri (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4) ve [varlık veri modeli: Basit veri türleri](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).|  
-|Varlık Böl|Depolama modelinde iki ayrı türü için eşleşen bir varlık türü.<br /><br /> Daha fazla bilgi için [nasıl yapılır: iki tabloya tek bir varlığa eşlenmiş bir modeli tanımlamak](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed).|  
+|Basit tür|Kavramsal modelde özellikleri tanımlamak için kullanılan bir basit türü.<br /><br /> Daha fazla bilgi için [kavramsal Model türleri (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4) ve [varlık veri modeli: Temel veri türlerinin](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).|  
+|Varlık Böl|Depolama modelinde iki ayrı türü için eşleşen bir varlık türü.<br /><br /> Daha fazla bilgi için [nasıl yapılır: İki tablo eşlenen tek bir varlık ile bir modeli tanımlamak](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed).|  
 |Depolama modeli|İlişkisel bir veritabanı gibi desteklenen bir veri kaynağını veri mantıksal model için bir tanımı. Depolama modelinin SSDL .ssdl dosyasında tanımlanır.<br /><br /> Daha fazla bilgi için [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md) ve [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
-|.SSDL dosyası|SSDL ifade edilen depolama modeli içeren bir XML dosyası.|  
+|.ssdl file|SSDL ifade edilen depolama modeli içeren bir XML dosyası.|  
 |depo şeması tanım dili (SSDL)|Genellikle veritabanı şemasına karşılık gelen bir depolama modelinin varlık türleri, ilişkilendirmeleri, varlık kapsayıcılarını, varlık setleri ve ilişki tanımlamak için kullanılan XML tabanlı dil. ayarlar.<br /><br /> Daha fazla bilgi için [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |Tablo başına hiyerarşi|Bir tablodaki hiyerarşideki tüm türlerin özniteliklerini içeren bir veritabanında tür hiyerarşisi modelleme yöntemi.|  
 |Tablo başına tür|Çeşitli türleri modellemek için bire bir ilişkilerle birden çok tablo kullanan veritabanında tür hiyerarşisi modelleme yöntemi.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Entity Framework’e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Entity Framework Kaynakları](../../../../../docs/framework/data/adonet/ef/resources.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Entity Framework’e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Entity Framework Kaynakları](../../../../../docs/framework/data/adonet/ef/resources.md)

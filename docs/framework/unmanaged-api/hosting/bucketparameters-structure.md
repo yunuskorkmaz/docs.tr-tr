@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b5e4db8e385baefe3067755bbdc4555c5887ab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508307"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters Yapısı
-Olay ve parametreleri tür adını olayla ilişkili geçerli özel durumu için depolar.  
+Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ typedef struct _BucketParameters {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`fInited`|`true`, bu yapıyı kalan geçerliyse; Aksi takdirde `false`.|  
+|`fInited`|`true`, bu yapının rest geçerliyse; Aksi takdirde, `false`.|  
 |`pszEventTypeName`|Olay türü adı.|  
-|`pszParams`|Her biri olay ile ilişkilendirilmiş geçerli özel durumu için bir parametre belirtir dizisi dizeleri.|  
+|`pszParams`|Her biri için geçerli özel olayla ilişkili bir parametre belirtir bir dizi dizeleri.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE.idl  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

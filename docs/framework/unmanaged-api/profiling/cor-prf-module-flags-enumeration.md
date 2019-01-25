@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696444"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS Numaralandırması
 Bir modül özelliklerini belirtir.  
@@ -45,25 +45,25 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|COR_PRF_MODULE_DISK|Modül diskten yüklendi.|  
-|COR_PRF_MODULE_NGEN|Modülün yerel Görüntü Oluşturucu (Ngen.exe) tarafından oluşturulmuştur.|  
-|COR_PRF_MODULE_DYNAMIC|Modül yöntemleri tarafından oluşturulan <xref:System.Reflection.Emit?displayProperty=nameWithType> ad alanı.|  
+|COR_PRF_MODULE_DISK|Diskten modülü yüklendi.|  
+|COR_PRF_MODULE_NGEN|Modül Native Image Generator (Ngen.exe) tarafından oluşturuldu.|  
+|COR_PRF_MODULE_DYNAMIC|Modül içindeki yöntemlerde oluşturulduğu <xref:System.Reflection.Emit?displayProperty=nameWithType> ad alanı.|  
 |COR_PRF_MODULE_COLLECTIBLE|Modülün ömrü atık toplayıcısı tarafından yönetilir.|  
-|COR_PRF_MODULE_RESOURCE|Modül meta veri içeriyor ve kesinlikle bir kaynak olarak kullanılır. Bu bit yönetilen eşdeğerdir <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> yöntemi.|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Modülün düzeni bellekte düz, eşlenmedi. Bir modül, bu biti ayarlanmış, doğrudan başlığından bilgileri taşınabilir yürütülebilir (PE) dosyası olmasını göreli sanal adresleri (RVAs) üstbilgisindeki yorumlama dikkatli olun okuma profil oluşturucular.|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|Windows çalışma zamanı içerik türü bayrağı meta verilerde Bu modülün derleme için ayarlanır. Bu durum Windows Meta veriler (.winmd) olan tüm modülleri için geçerlidir.|  
+|COR_PRF_MODULE_RESOURCE|Modül meta veri içeriyor ve yalnızca bir kaynak olarak kullanılır. Bu bit yönetilen eşdeğerdir <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> yöntemi.|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Modülün Düzen bellekte düz, eşlenmedi. Bir modül olan bu bit verilirse, taşınabilir yürütülebilir (PE) dosya üst bilgilerinden doğrudan göreli sanal adreslerine (RVA) üst bilgisindeki yorumlarken dikkatli olması gerekir okuma profil oluşturucular.|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Windows çalışma zamanı içerik türü bayrağı meta verilerde, bu modülün derleme için ayarlanır. Tüm Windows meta veri (.winmd) modülleri için durum budur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COR_PRF_MODULE_FLAGS bitten Profil Oluşturucusu'nda dönersiniz `pdwModuleFlags` parametresinin çıktısı [Icorprofilerınfo3::getmoduleınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) yöntemi. İki veya daha fazla bayrakları bazı birleşimleri mümkündür, ancak tüm olası birleşimleridir.  
+ COR_PRF_MODULE_FLAGS bitten Profil Oluşturucusu'nda dönersiniz `pdwModuleFlags` parametresinin çıktısı [Icorprofilerınfo3::getmoduleınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) yöntemi. İki veya daha fazla bayrakları bazı birleşimleri kullanılabilir, ancak tüm olası birleşimleridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

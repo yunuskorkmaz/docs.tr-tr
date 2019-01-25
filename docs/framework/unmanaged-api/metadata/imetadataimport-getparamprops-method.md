@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685535"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps Metodu
-Meta veri değerleri belirtilen ParamDef tarafından başvurulan parametresi için belirteç alır.  
+Meta veri değerleri tarafından belirtilen ParamDef başvurulan parametresi için belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,19 +49,19 @@ HRESULT GetParamProps (
  [in] Meta verileri döndürmek için parametre temsil eden bir ParamDef belirteci.  
   
  `pmd`  
- [out] Parametresi alan yöntemi temsil eden bir MethodDef belirteci için bir işaretçi.  
+ [out] Yönteminin parametresi alan temsil eden bir MethodDef belirteç için bir işaretçi.  
   
  `pulSequence`  
  [out] Sıralı konumu parametresi yöntemi bağımsız değişken listesi.  
   
  `szName`  
- [out] Parametrenin adını tutmak için arabellek.  
+ [out] Parametrenin adını tutan bir arabellek.  
   
  `cchName`  
- [in] Geniş karakterler istenen boyutta `szName`.  
+ [in] Geniş karakter cinsinden istenen boyuta `szName`.  
   
  `pchName`  
- [out] Geniş karakterler döndürülen boyutu `szName`.  
+ [out] Geniş karakter cinsinden döndürülen boyutu `szName`.  
   
  `pdwAttr`  
  [out] Parametresi ile ilişkili herhangi bir öznitelik bayrağı için bir işaretçi.  
@@ -70,20 +70,20 @@ HRESULT GetParamProps (
  [out] Parametre belirten bir bayrak için bir işaretçi bir <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Parametresi tarafından döndürülen bir sabit dize için bir işaretçi.  
+ [out] Parametresi tarafından döndürülen bir sabit dize işaretçisi.  
   
  `pcchValue`  
- [out] Boyutunu `ppValue` geniş karakterler ya da sıfır `ppValue` bir dize tutmaz.  
+ [out] Boyutu `ppValue` geniş karakterler ya da sıfır `ppValue` bir dize tutmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

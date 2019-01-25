@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660781"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags Yöntemi
-Sırada, görüntü geçerli işlemine yüklemek çalışma zamanı için önceden derlenmiş görüntüsündeki gömülü gerekir bayrakları ayarlar.  
+Geçerli işleme bu görüntüyü yüklemek çalışma zamanı için sırayla önceden derlenmiş bir görüntüde gömülü gerekir bayraklarını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +37,24 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 #### <a name="parameters"></a>Parametreler  
  `pdwFlags`  
- [in] Değerini [Cordebugjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) derleyici bayrakları belirtir numaralandırması önceden derlenmiş doğru görüntüyü seçmek için kullanılır.  
+ [in] Değerini [Cordebugjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) derleyici bayraklarına belirten sabit listesi önceden derlenmiş doğru görüntüyü seçmek için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetDesiredNGENCompilerFlags` Yöntemi önceden derlenmiş bir görüntüde gömülü gerekir ve böylece çalışma zamanı bu işlemine bu görüntüyü yükler bayrakları belirtir. Bu yöntem tarafından ayarlanan bayraklar yalnızca doğru önceden derlenmiş görüntüyü seçmek için kullanılır. Çalışma zamanı Microsoft Ara dili (MSIL) görüntüsü ve tam zamanında (JIT) derleyici böyle bir görüntü varsa, bunun yerine yükler. Bu durumda, hata ayıklayıcı hala kullanmalısınız [Icordebugmodule2::setjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) yöntemi JIT derleme için istediğiniz gibi bayraklarını ayarlayın.  
+ `SetDesiredNGENCompilerFlags` Yöntemi önceden derlenmiş bir görüntüde gömülü olması gerekir ve böylece çalışma zamanı bu işlemine o yansıma yükleyecek bayrakları belirtir. Bu yöntem tarafından ayarlanan bayraklar yalnızca önceden derlenmiş doğru görüntüyü seçmek için kullanılır. Çalışma zamanı Microsoft Ara dili (MSIL) görüntüsü ve just-ın-time (JIT) derleyici bu tür bir görüntü varsa, bunun yerine yükler. Bu durumda, hata ayıklayıcı hala kullanmalısınız [Icordebugmodule2::setjıtcompilerflags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) istenen JIT derlemesi için bayrakları ayarlamanızı yöntemi.  
   
- Bir görüntü yüklenir, ancak bazı JIT derleme (görüntü genel türler içeriyorsa olacağı durum) bu görüntü için gerçekleşmesi gerekir tarafından belirtilen derleyici bayrakları `SetDesiredNGENCompilerFlags` yöntemi ek JIT derleme uygulanacaktır.  
+ Görüntü yüklendi, ancak bazı JIT derleme bu görüntüyü (görüntü, genel türler içeriyorsa, olacaktır) yer almalıdır tarafından belirtilen derleyici bayraklarına `SetDesiredNGENCompilerFlags` yöntemi ek JIT derlemesi için uygulanır.  
   
- `SetDesiredNGENCompilerFlags` Yöntemi çağrılır, sırasında [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma. Arama girişiminde `SetDesiredNGENCompilerFlags` yöntemi daha sonra başarısız olur. Ya da olan bayrakları ayarlamaya çalışır Ayrıca, tanımlanan `CorDebugJITCompilerFlags` numaralandırma veya belirli bir işlemi için yasal değil misiniz başarısız olur.  
+ `SetDesiredNGENCompilerFlags` Sırasında metodu çağrılmalıdır [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma. Arama girişiminde `SetDesiredNGENCompilerFlags` yöntemi daha sonra başarısız olur. Olan bayrakları ayarlamaya çalışır ayrıca tanımlanan `CorDebugJITCompilerFlags` numaralandırma veya verilen işlem için yasal değil misiniz başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

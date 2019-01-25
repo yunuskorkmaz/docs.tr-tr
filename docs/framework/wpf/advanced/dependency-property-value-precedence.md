@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711281"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a> Bu konu açıklar nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistemi geçerli etkili bir özelliğinin değerini için öncelik açıklar.  
@@ -126,9 +126,9 @@ ms.locfileid: "46696811"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue ve değer önceliği  
  <xref:System.Windows.DependencyObject.ClearValue%2A> Yöntemi bir expedient anlamına gelir yerel olarak uygulanan herhangi bir öğede ayarlanan bir bağımlılık özelliği değerini temizlemek sağlar. Ancak, çağırma <xref:System.Windows.DependencyObject.ClearValue%2A> meta verilerinde özelliği kayıt sırasında belirlenen varsayılan yeni geçerli değerini olduğuna dair bir garanti değildir. Hala etkin olan tüm diğer katılımcıları değer önceliği. Yalnızca yerel olarak ayarlanan değer öncelik dizisinden kaldırıldı. Örneğin, eğer <xref:System.Windows.DependencyObject.ClearValue%2A> özellikte burada bu özellik ayrıca bir tema stili tarafından ayarlanır ve ardından değeri meta verileri alarak varsayılan yerine yeni bir değer olarak uygulanır. İşlemin dışında tüm özellik değeri katılımcıları alabilir ve kayıtlı meta verileri varsayılan değer ayarlamak istiyorsanız, bağımlılık özelliği meta verisi ve ardından sorgulama tarafından kesin bir şekilde varsayılan değeri varsayılan değere yerel olarak kullanabileceğiniz edinebilirsiniz özelliğini çağrısıyla <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

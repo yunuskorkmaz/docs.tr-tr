@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598873"
 ---
 # <a name="deriving-from-webresponse"></a>Webresponse'tan türetme
 <xref:System.Net.WebResponse> .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri bir sınıfa kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** alt öğeleri, soyut üyelerini uygulanmalı **WebResponse** sınıfı.  
@@ -38,9 +38,9 @@ ms.locfileid: "50088604"
   
  Tarafından döndürülen akış örneğini **GetResponseStream** yöntemi uygulama tarafından sahip olunan ve kapatmadan kapatılabilir **WebResponse**. Kural olarak, çağırma **WebResponse.Close** yöntemi tarafından döndürülen akış da kapatır **GetResponse yanıtına**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)

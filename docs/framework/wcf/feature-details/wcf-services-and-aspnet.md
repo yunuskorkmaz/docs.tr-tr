@@ -2,12 +2,12 @@
 title: WCF Hizmetleri ve ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712291"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET
 Bu konuda, barındırma Windows Communication Foundation (WCF) Hizmetleri yan yana ASP.NET ve ASP.NET uyumluluk modunda bunları barındırma anlatılmaktadır.  
@@ -33,9 +33,9 @@ Bu konuda, barındırma Windows Communication Foundation (WCF) Hizmetleri yan ya
   
     -   Yapılandırma temelli URL yetkilendirmesi: Benzer şekilde, WCF güvenlik modeli System.Web kullanıcının belirtilen tüm URL tabanlı yetkilendirme kuralları kalmıyor \<yetkilendirme > yapılandırma öğesi. Bir hizmet tarafından ASP güvenli bir URL alanında bulunuyorsa WCF istekleri için bu ayarları göz ardı edilir. NET URL yetkilendirme kuralları.  
   
-    -   HttpModule genişletilebilirlik: WCF barındırma altyapısını karşılar WCF ne zaman istekleri <xref:System.Web.HttpApplication.PostAuthenticateRequest> olay tetiklenir ve ASP.NET HTTP işlem hattına işleme döndürmez. İşlem hattının sonraki aşamalarda isteklerin kesilmesi için kodlanmış modülleri WCF istekleri kesmenize değil.  
+    -   HttpModule genişletilebilirlik: WCF barındırma altyapısını WCF karşılar ne zaman istekleri <xref:System.Web.HttpApplication.PostAuthenticateRequest> olay tetiklenir ve ASP.NET HTTP işlem hattına işleme döndürmez. İşlem hattının sonraki aşamalarda isteklerin kesilmesi için kodlanmış modülleri WCF istekleri kesmenize değil.  
   
-    -   ASP.NET kimliğe bürünme: kimlik, IIS'nin işlediği gibi ASP.NET kimliğe bürünme System.Web'ın kullanarak etkinleştirmek için ayarlanmış olsa bile varsayılan olarak, WCF çalışmaları her zaman ister. \<Kimliğe bürün = "true" / > yapılandırma seçeneği.  
+    -   ASP.NET kimliğe bürünme: Kimlik, IIS'nin işlediği gibi ASP.NET kimliğe bürünme System.Web'ın kullanarak etkinleştirmek için ayarlanmış olsa bile varsayılan olarak, WCF çalışmaları her zaman ister. \<Kimliğe bürün = "true" / > yapılandırma seçeneği.  
   
  Bu kısıtlama, uygulama IIS barındırılan WCF hizmetleri için uygulanır. ASP.NET içeriği davranışını varlığını WCF tarafından etkilenmez.  
   
@@ -58,11 +58,11 @@ Bu konuda, barındırma Windows Communication Foundation (WCF) Hizmetleri yan ya
   
 -   <xref:System.Web.HttpContext>: ASP.NET uyumluluk modunda çalışan WCF hizmetleri erişim <xref:System.Web.HttpContext.Current%2A> ve ilişkili durumu.  
   
--   Dosya tabanlı yetkilendirme: ASP.NET uyumluluk modunda çalışan WCF hizmetleri güvenli dosya sistemi erişim denetim listeleri (ACL) hizmetin .svc dosyasına ekleyerek.  
+-   Dosya tabanlı yetkilendirme: WCF hizmetleri ASP.NET uyumluluk modunda çalışan dosya sistemi erişim denetim listeleri (ACL) hizmetin .svc dosyasına ekleyerek güvenli olabilir.  
   
--   Yapılandırılabilir URL yetkilendirmesi: ASP. WCF hizmetini ASP.NET uyumluluk modunda çalışırken NET'in URL yetkilendirme kuralları için WCF istekleri uygulanır.  
+-   URL yetkilendirmesi yapılandırılabilir: ASP. WCF hizmetini ASP.NET uyumluluk modunda çalışırken NET'in URL yetkilendirme kuralları için WCF istekleri uygulanır.  
   
--   <xref:System.Web.HttpModuleCollection> Genişletilebilirlik: ASP.NET uyumluluk modunda çalışan için WCF hizmetleri HTTP ASP.NET isteği yaşam döngüsünde tam olarak katılmak, HTTP işlem hattı, yapılandırılmış herhangi bir HTTP modülü WCF isteklerinde önce ve sonra hizmet başlatma çalışabilir.  
+-   <xref:System.Web.HttpModuleCollection> Genişletilebilirlik: ASP.NET uyumluluk modunda çalışan WCF hizmetleri HTTP ASP.NET isteği yaşam döngüsünde tam olarak katılmak için HTTP işlem hattı, yapılandırılmış herhangi bir HTTP modülü WCF isteklerinde önce ve sonra hizmet başlatma çalışabilir.  
   
 -   ASP.NET kimliğe bürünme: WCF hizmetleri ASP.NET geçerli kimliğini kullanarak çalışan ASP.NET kimliğe bürünme uygulama için etkinleştirilmişse, IIS işlem kimliği farklı olabilecek iş parçacığı, hesabın kimliğine büründü. ASP.NET kimliğe bürünme ve WCF kimliğe bürünme hem de bir hizmet işlemi için etkinleştirilip etkinleştirilmediğini hizmet uygulaması WCF alınan kimlik kullanarak nihai olarak çalışır.  
   
@@ -100,6 +100,6 @@ Bu konuda, barındırma Windows Communication Foundation (WCF) Hizmetleri yan ya
   
  WCF hizmetleri için ASP.NET uyumluluk modunun etkinleştirme hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> ve [ASP.NET Uyumluluk](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) örnek.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

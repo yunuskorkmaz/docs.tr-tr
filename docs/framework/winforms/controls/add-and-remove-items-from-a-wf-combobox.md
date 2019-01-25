@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma'
+title: 'Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500226"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma
-Öğeleri bir Windows Forms birleşik giriş kutusu liste kutusu eklenebilir veya bu denetimleri çeşitli veri kaynakları için bağlı olabilir çünkü çeşitli yollarla, liste kutusunda seçili. Ancak, bu konuda en basit yöntemi gösterir ve hiçbir veri bağlama gerektirir. Görüntülenen öğelerin genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Nesne tarafından döndürülen değer denetiminde gösterilen metni, `ToString` yöntemi.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi
+Öğeleri bir Windows Forms birleşik giriş kutusu liste kutusu eklenebilir veya çeşitli yollarla, liste kutusunda iade, çünkü bu denetimleri bir çeşitli veri kaynaklarına bağlanabilir. Ancak, bu konuda en basit yöntem gösterir ve hiçbir veri bağlama gerektirir. Görüntülenen öğelerin genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Denetimde görüntülenen metnin nesne tarafından döndürülen değer olduğu `ToString` yöntemi.  
   
-### <a name="to-add-items"></a>Öğeler eklemek için  
+### <a name="to-add-items"></a>Öğe eklemek için  
   
-1.  Dizeyi veya nesneyi kullanarak listeye eklemek `Add` yöntemi `ObjectCollection` sınıfı. Koleksiyon kullanarak başvuruluyor `Items` özelliği:  
+1.  Dize veya nesne kullanılarak listeye eklemek `Add` yöntemi `ObjectCollection` sınıfı. Koleksiyon kullanılarak başvurulur `Items` özelliği:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ ms.locfileid: "33527193"
   
      - veya -  
   
-2.  Dize veya Nesne listesinde istediğiniz noktada Ekle `Insert` yöntemi:  
+2.  Dize veya nesne ile bir liste içinde istediğiniz noktaya eklemek `Insert` yöntemi:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -89,9 +89,9 @@ ms.locfileid: "33527193"
   
 ### <a name="to-remove-an-item"></a>Bir öğeyi kaldırmak için  
   
-1.  Çağrı `Remove` veya `RemoveAt` yöntemi öğeleri silin.  
+1.  Çağrı `Remove` veya `RemoveAt` öğelerini silmek için yöntemi.  
   
-     `Remove` kaldırılacak öğe belirten bir bağımsız değişkenini içeriyor.`RemoveAt` Belirtilen dizin numarasına sahip öğeyi kaldırır.  
+     `Remove` kaldırılacak öğe belirten bir bağımsız değişken var.`RemoveAt` Belirtilen dizin numaralı öğeyi kaldırır.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -136,10 +136,10 @@ ms.locfileid: "33527193"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

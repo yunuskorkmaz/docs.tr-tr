@@ -2,12 +2,12 @@
 title: SQL izleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 240e6ab750b4ef82d2afcf1c2ab26c08369926d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690611"
 ---
 # <a name="sql-tracking"></a>SQL izleme
 Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
@@ -21,11 +21,11 @@ Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bi
     > [!NOTE]
     >  Betik, SQL Express varsayılan örnekte veritabanı oluşturur. Farklı bir veritabanı örneği üzerinde yüklemek istiyorsanız, Trackingsetup.cmd betiği düzenleyin.  
   
-3.  SqlTrackingSample.sln Visual Studio 2010'da açın.  
+3.  Open SqlTrackingSample.sln in Visual Studio 2010.  
   
 4.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-5.  Uygulamayı çalıştırmak için F5 tuşuna basın.  
+5.  Uygulamayı çalıştırmak için F5'e basın.  
   
      Tarayıcı penceresi açılır ve dizin için uygulama listesi gösterilir.  
   
@@ -59,5 +59,5 @@ Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Ayrıca bkz.
+- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

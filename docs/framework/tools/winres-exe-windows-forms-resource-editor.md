@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663173"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows, kaynak, yerelleştirme, Düzenleyici)
 
@@ -110,7 +110,7 @@ Kullanmakta olduğunuz .NET Framework ile yayımlanan Winres.exe sürümünü ku
 
 2.  Yerelleştirilecek bir form için varsayılan kaynakları açmak için **açın** komutunu **dosya** menüsünü açmak için dosyaya gidin.
 
-     veya
+     -veya-
 
      Winres.exe'yi başlattığınızda komut satırında açılacak dosyayı belirtin.
 
@@ -137,7 +137,7 @@ Kullanmakta olduğunuz .NET Framework ile yayımlanan Winres.exe sürümünü ku
 
    Aracı'nı yerelleştirilmiş kaynak dosyaları için çalışma zamanındaki beklediği adlandırma kuralını kullanarak dosyayı kaydeder. Örneğin, yerelleştiriyorsanız `TestApp.resources` Almanya'da Almanca için araç dosyası olarak kaydeder. `TestApp.de-DE.resources`. Yerelleştiriyorsanız `TestApp.resx` Almanya'da Almanca için araç dosyası olarak kaydeder. `TestApp.de-DE.resx`. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz: [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının listesi için bkz. <xref:System.Globalization.CultureInfo> sınıfı.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

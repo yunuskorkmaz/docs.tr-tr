@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527854"
 ---
 # <a name="listening-with-sockets"></a>Yuvalarla dinleme
 Dinleyici veya server yuva ağ üzerindeki bir bağlantı noktasını açın ve bu bağlantı noktasına bağlanmak bir istemci için bekleyin. Diğer ağ adresi ailelerini ve protokolleri mevcut olmasına karşın, bu örnek bir TCP/IP ağı için uzak bir hizmetin nasıl oluşturulacağını gösterir.  
@@ -59,9 +59,9 @@ listener.Listen(100);
   
  **Dinleme** yöntemi kaç bekleyen bağlantılar belirten tek bir parametre alır **yuva** sunucu meşgul hatası bağlanan istemciye döndürülmeden önce izin verilir. Bu durumda, bir sunucu meşgul yanıtı istemci sayıya 101 döndürülmeden önce en fazla 100 istemci bağlantı kuyruğuna yerleştirilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [İstemci Yuvaları Kullanma](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Nasıl Yapılır: Yuva Oluşturma](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [İstemci Yuvaları Kullanma](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Nasıl yapılır: Yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Yuvalar](../../../docs/framework/network-programming/sockets.md)

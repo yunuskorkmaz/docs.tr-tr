@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2997bb90f2d9034de398b901fcbd6265dcb59998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4da0e064f507e2330aac27fc5c8bcd56b9d3c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716238"
 ---
 # <a name="createasmnameobjflags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS Numaralandırması
 Özniteliklerini belirtir bir [Iassemblyname arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesnesi tarafından oluşturulduğunda [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) işlevi.  
@@ -44,19 +44,19 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|Geçirilen parametre değerinin metinsel bir kimlik olduğunu gösterir.|  
+|`CANOF_PARSE_DISPLAY_NAME`|Geçirilen parametre değerinin metinsel bir kimliği olduğunu gösterir.|  
 |`CANOF_SET_DEFAULT_VALUES`|Birkaç varsayılan değerlerini ayarlar.|  
 |`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Arkadaş derleme kuralı (yalnızca ad ve ortak anahtar) doğrular. Bu üye, yalnızca dahili kullanım içindir.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Bir birleşimini `CANOF_PARSE_DISPLAY_NAME` ve `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` bayrakları. Bu üye, yalnızca dahili kullanım içindir.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Bir birleşimi `CANOF_PARSE_DISPLAY_NAME` ve `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` bayrakları. Bu üye, yalnızca dahili kullanım içindir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Fusion.h  
+ **Üst bilgi:** Fusion.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [CreateAssemblyNameObject İşlevi](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [CreateAssemblyNameObject İşlevi](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

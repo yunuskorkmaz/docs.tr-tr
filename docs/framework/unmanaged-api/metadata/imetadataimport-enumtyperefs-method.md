@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d096be8eb7f966d5a79e57a3a1b7ab7f63cd5ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659260"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs Yöntemi
-Geçerli meta veri kapsamda tanımlı TypeRef belirteçleri numaralandırır.  
+Geçerli meta veri kapsamda tanımlanan TypeRef belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT EnumTypeRefs (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi. Bu, bu yöntem ilk çağrısı için NULL olmalıdır.  
+ [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için NULL olmalıdır.  
   
  `rTypeRefs`  
- [out] TypeRef belirteçleri depolamak için kullanılan dizisi.  
+ [out] TypeRef simgeleri depolamak için kullanılan dizisi.  
   
  `cMax`  
- [in] En büyük boyutunu `rTypeRefs` dizi.  
+ [in] En büyük boyutunu `rTypeRefs` dizisi.  
   
  `pcTypeRefs`  
- [out] Döndürülen TypeRef belirteçleri sayısını gösteren bir işaretçi `rTypeRefs`.  
+ [out] Döndürülen TypeRef belirteçleri sayısı için bir işaretçi `rTypeRefs`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -59,17 +59,17 @@ HRESULT EnumTypeRefs (
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcTypeRefs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeRef belirteci türüne bir başvuru temsil eder.  
+ TypeRef belirteci bir türü bir başvuruyu temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

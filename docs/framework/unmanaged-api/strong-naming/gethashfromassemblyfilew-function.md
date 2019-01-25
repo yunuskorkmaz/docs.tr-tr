@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 832d66eee14680870e70f1e0e8d40987eff3257f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667017"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW İşlevi
-Belirtilen karma algoritması kullanılarak belirtilen derleme dosyası karmasını alır. Derleme dosyası yolu bir UNICODE dizesi belirtilmelidir.  
+Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır. Derleme dosyası yolu bir Unicode dize olarak belirtilmelidir.  
   
  Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) yöntemi yerine.  
   
@@ -42,10 +42,10 @@ HRESULT GetHashFromAssemblyFileW (
   
 #### <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- [in] Karma hale getirilmesi için dosya yolu. Bu parametre bir UNICODE dizesi olması gerekir.  
+ [in] Karma hale getirilecek dosyanın yolu. Bu parametre, bir Unicode dize olması gerekir.  
   
  `piHashAlg`  
- [içinde out] Karma algoritmasını belirtir sabiti. Varsayılan karma algoritma için sıfır değerini kullanın.  
+ [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan karma algoritması için kullanın.  
   
  `pbHash`  
  [out] Döndürülen karma arabellek.  
@@ -57,15 +57,15 @@ HRESULT GetHashFromAssemblyFileW (
  [out] Bayt cinsinden boyutu döndürülen `pbHash`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** StrongName.h  
+ **Üst bilgi:** StrongName.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [GetHashFromAssemblyFileW Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [GetHashFromAssemblyFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  
- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [GetHashFromAssemblyFileW Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [GetHashFromAssemblyFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

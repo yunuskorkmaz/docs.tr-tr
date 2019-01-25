@@ -2,12 +2,12 @@
 title: Tarih ve saat işlevleri
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 358d124da5fb60d38d5e906a821c0b4bc86baab2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690780"
 ---
 # <a name="date-and-time-functions"></a>Tarih ve saat işlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı üzerinde işlem yapabileceğiniz date ve time işlevleri sağlayan bir `System.DateTime` giriş değeri ve dönüş bir `string`, sayısal, veya `System.DateTime` değer sonucu. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient date ve time işlevleri gösterir.  
@@ -33,5 +33,5 @@ SQL Server (SqlClient) için .NET Framework veri sağlayıcısı üzerinde işle
 |---------------------|---------------------|---------------------|  
 |[Tarih ve saat işlevleri (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[Tarih ve saat işlevleri (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[Tarih ve saat işlevleri (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework için SqlClient İşlevleri](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity Framework için SqlClient İşlevleri](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

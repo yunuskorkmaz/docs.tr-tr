@@ -5,49 +5,49 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 43f3648a9c7d64fb4fb900c7df3f01bc18d729b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c512a296f618ab32781dd8718a47c4b20fd7f54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745915"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Seçim Modları
-İçindeki kullanıcı seçimleri temel eylemleri gerçekleştirmek için uygulamanızın bazen istediğiniz bir <xref:System.Windows.Forms.DataGridView> denetim. Eylemler bağlı olarak, olası seçimi türlerini sınırlamak isteyebilirsiniz. Örneğin, uygulamanız şu anda seçili kaydı için bir rapor yazdırabilirsiniz varsayalım. Bu durumda, yapılandırmak isteyebilirsiniz <xref:System.Windows.Forms.DataGridView> denetim satır içinde her zaman herhangi bir yere tıklayarak böylece tüm satırı seçer ve bu nedenle, aynı anda yalnızca bir satır seçilebilir.  
+Uygulamanızın içinde kullanıcı seçimlerine göre eylemleri gerçekleştirmek için bazen istediğiniz bir <xref:System.Windows.Forms.DataGridView> denetimi. Eylemler bağlı olarak, mümkün olan seçim türlerini sınırlamak isteyebilirsiniz. Örneğin, uygulamanızın seçili olan kaydı için bir rapor yazdırabilir varsayalım. Bu durumda, yapılandırma isteyebilirsiniz <xref:System.Windows.Forms.DataGridView> denetimi bir satır her zaman herhangi bir yere tıklayarak böylece tüm satırı seçer ve bu nedenle aynı anda yalnızca bir satır seçilebilir.  
   
- Ayarlayarak izin seçimleri belirtebilirsiniz <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> aşağıdakilerden birini özelliğine <xref:System.Windows.Forms.DataGridViewSelectionMode> numaralandırma değerleri.  
+ Ayarlayarak izin seçimleri belirtebilirsiniz <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> aşağıdakilerden birini özelliğini <xref:System.Windows.Forms.DataGridViewSelectionMode> sabit listesi değerleri.  
   
-|DataGridViewSelectionMode değeri|Açıklama|  
+|DataGridViewSelectionMode value|Açıklama|  
 |-------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Bir hücrenin tıklatılan. Satır ve sütun üstbilgilerini seçim için kullanılamaz.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Bir hücrenin tıklatılan. Bir sütun başlığını tıklatarak tüm sütunu seçer. Sütun üstbilgileri, sıralama için kullanılamaz.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Bir hücrenin veya bir sütun başlığını tıklatarak tüm sütunu seçer. Sütun üstbilgileri, sıralama için kullanılamaz.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Bir hücrenin veya satırda bir başlık tıklatmak tüm satırı seçer.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Varsayılan seçim modu. Bir hücrenin tıklatılan. Satırda bir başlık tıklatmak tüm satırı seçer.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Bir hücreye tıklayıp seçer. Satır ve sütun üst bilgilerinin seçimi için kullanılamaz.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Bir hücreye tıklayıp seçer. Bir sütun başlığına tıklayarak tüm sütunu seçer. Sütun başlıkları, sıralama için kullanılamaz.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Bir hücreyi veya bir sütun başlığına tıklayarak tüm sütunu seçer. Sütun başlıkları, sıralama için kullanılamaz.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Bir hücreyi veya bir satır üst bilgisi tıklayarak tüm satırı seçer.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Varsayılan seçim modu. Bir hücreye tıklayıp seçer. Bir satır başlığına tıklayarak tüm satırı seçer.|  
   
 > [!NOTE]
->  Seçim modu çalışma zamanında otomatik olarak değiştirme geçerli seçim temizler.  
+>  Seçim modu çalışma zamanında otomatik olarak değiştirme geçerli seçim temizlenir.  
   
- Varsayılan olarak, kullanıcıların birden çok satırları, sütunları veya hücreleri fareyle sürükleyerek genişletmek veya bir seçimi değiştirmek için seçerek ya da tüm hücreleri denetiminde seçmek için sol üst bilgi hücresini tıklatarak CTRL veya SHIFT tuşuna basarak seçebilirsiniz. Bu davranışı önlemek için ayarlanmış <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliğine `false`.  
+ Varsayılan olarak, kullanıcıların birden fazla satır, sütun veya hücre fare ile sürükleyerek genişletin veya bir seçimi değiştirmek için seçme veya tüm hücreleri denetimi seçmek için sol üst başlığı hücreye tıklayıp CTRL veya SHIFT tuşuna basarak seçebilirsiniz. Bu davranışı engellemek için ayarlanmış <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliğini `false`.  
   
- <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> Ve <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> modları bunları seçerek ve DELETE tuşuna basarak satırları silmek kullanıcıların olanak tanır. Kullanıcıları, satırları silebilir, yalnızca geçerli hücre düzenleme modunda olmadığında <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> özelliği ayarlanmış `true`, ve veri kaynağındaki kullanıcı tabanlı satır silmeyi destekler. Bu ayarları programlı satır silme engellemez unutmayın.  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> Ve <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> modları kullanıcıların bunları seçerek ve DELETE tuşuna basarak satırları silmek olanak tanır. Kullanıcıları, satır silebilir, yalnızca geçerli hücre düzenleme modunda olmadığında <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> özelliği `true`, temel alınan veri kaynağına kullanıcı temelli satır silmeyi destekler. Bu ayarları program Satır silme engellemez unutmayın.  
   
-## <a name="programmatic-selection"></a>Programsal seçimi  
- Geçerli seçim modu programlı seçimi yanı sıra kullanıcı seçimi davranışını kısıtlar. Geçerli seçimin programlı olarak ayarlayarak değiştirebileceğiniz `Selected` herhangi bir hücre, satır veya sütun mevcut özelliği <xref:System.Windows.Forms.DataGridView> denetim. Denetimindeki tüm hücreleri seçebilirsiniz <xref:System.Windows.Forms.DataGridView.SelectAll%2A> seçim modu bağlı olarak yöntemi. Seçimi temizlemek için kullanmak <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> yöntemi.  
+## <a name="programmatic-selection"></a>Programlı seçimi  
+ Geçerli seçim modunu programlı seçimi ve bunun yanı sıra kullanıcı seçimine davranışını kısıtlar. Ayarlayarak geçerli seçimi programlama yoluyla değiştirebilirsiniz `Selected` özelliği herhangi bir hücre, satır veya sütun mevcut <xref:System.Windows.Forms.DataGridView> denetimi. Tüm hücreleri denetiminde seçebilirsiniz <xref:System.Windows.Forms.DataGridView.SelectAll%2A> seçim moduna bağlı olarak bir yöntem. Seçimi temizlemek için kullanmak <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> yöntemi.  
   
- Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliği ayarlanmış `true`, ekleyebileceğiniz <xref:System.Windows.Forms.DataGridView> öğelerine veya değiştirerek seçimden kaldırın `Selected` öğesi özelliği. Aksi takdirde, ayarı `Selected` özelliğine `true` bir öğe diğer öğeleri seçimden otomatik olarak kaldırır. için.  
+ Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliği `true`, ekleyebileceğiniz <xref:System.Windows.Forms.DataGridView> öğelerine veya bunları değiştirerek seçimden Kaldır `Selected` öğesinin özelliği. Aksi takdirde, ayarı `Selected` özelliğini `true` için bir öğe diğer öğeleri seçimden otomatik olarak kaldırır.  
   
- Bu değerinin değiştirilmesi Not <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği, geçerli seçim değiştirmez.  
+ Değerinin değiştirilmesi Not <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği geçerli seçimi değiştirmez.  
   
- Seçili hücre, satır veya sütun aracılığıyla koleksiyonu alabilir <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> özelliklerini <xref:System.Windows.Forms.DataGridView> denetim. Her hücre denetimi seçildiğinde bu özellikleri erişim verimsiz olur. Bu durumda bir performans cezası önlemek için <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> yöntemi ilk. Ayrıca, seçilen hücre sayısını belirlemek için bu koleksiyonları erişme, satır veya sütun verimsiz olabilir. Bunun yerine, kullanmanız <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, veya <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> tümleştirilmesidir yöntemi <xref:System.Windows.Forms.DataGridViewElementStates.Selected> değeri.  
+ Şu anda seçili hücre, satır veya sütun aracılığıyla koleksiyonunu alabilirsiniz <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> özelliklerini <xref:System.Windows.Forms.DataGridView> denetimi. Her hücreye bir Denetim seçildiğinde, bu özelliklerine erişme yetersizdir. Bu durumda bir performans cezası önlemek için <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> yöntemi ilk. Ayrıca, seçilen hücre sayısını belirlemek için bu koleksiyonlara erişmek, satırlar veya sütunlar verimsiz olabilir. Bunun yerine, kullanmanız <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, veya <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> tümleştirilmesidir yöntemi <xref:System.Windows.Forms.DataGridViewElementStates.Selected> değeri.  
   
 > [!TIP]
 >  Seçili hücreleri programlı kullanımını gösteren kod örneği bulunabilir <xref:System.Windows.Forms.DataGridView> sınıfına genel bakış.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
- <xref:System.Windows.Forms.DataGridViewSelectionMode>  
- [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
+- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
+- <xref:System.Windows.Forms.DataGridViewSelectionMode>
+- [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminin seçim modunu ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

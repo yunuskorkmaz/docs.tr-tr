@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 039dab1b4ca86cb26de739e74b152f108f074c43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a874c1493e1f8aaa18354de26905fabd3a793129
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674550"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces Metodu
-Bu ad alanı alt öğelerini alır.  
+Bu ad alanı alt alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +39,19 @@ HRESULT GetNamespaces(
   
 #### <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] A `ULONG32` boyutunu gösterir `namespaces` dizi.  
+ [in] A `ULONG32` boyutunu gösteren `namespaces` dizisi.  
   
  `pcNameSpaces`  
- [out] Bir işaretçi bir `ULONG32` karakter ad alanları içerecek şekilde gerekli arabellek boyutunu alır.  
+ [out] Bir işaretçi bir `ULONG32` karakter ad alanlarını içerecek şekilde gerekli arabellek boyutunu alır.  
   
  `namespaces`  
- [out] Ad alanları içeren arabellek için bir işaretçi.  
+ [out] Ad alanlarını içeren arabellek için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

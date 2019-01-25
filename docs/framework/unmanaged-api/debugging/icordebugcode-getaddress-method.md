@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2de22729fd3d7a511c1105ebf810d0402bd73a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 229bf968d21516d48468610c8f47367324fb6b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695523"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress Metodu
-Bu "ICorDebugCode" arabirimi temsil eden kod kesimi göreli sanal adres (RAV) alır.  
+Göreli sanal adres (RVA) bu "ICorDebugCode" arabirimi temsil eden kod kesimini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Parametreler  
  `pStart`  
- [out] Kod kesimi RVA gösteren bir işaretçi.  
+ [out] Kod kesiminin RVA işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

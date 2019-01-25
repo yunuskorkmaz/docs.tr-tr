@@ -2,12 +2,12 @@
 title: '&lt;Hizmet&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535014"
 ---
 # <a name="ltservicegt"></a>&lt;Hizmet&gt;
 `service` Öğesi Windows Communication Foundation (WCF) hizmetinin ayarlarını içerir. Ayrıca, açığa çıkaran hizmet uç noktaları içerir.  
@@ -68,6 +68,6 @@ ms.locfileid: "54145516"
 </service>
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [Hizmetleri Yapılandırma](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [Hizmetleri Yapılandırma](../../../../../docs/framework/wcf/configuring-services.md)

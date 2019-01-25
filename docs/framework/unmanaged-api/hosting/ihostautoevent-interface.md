@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7f2b65f263256fe887c61c7b866beaa0038c37d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b8cccf395e77c7dfefb85302b522d7e9398ffca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730028"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent Arabirimi
-Otomatik sıfırlama olaya ana bilgisayarın uyarlamasını gösterimini sağlar.  
+Otomatik sıfırlama olayın ana bilgisayarın uygulama bir gösterimini sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Set Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Geçerli ayarlar `IHostAutoEvent` iş durumuna örneği.|  
-|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Geçerli neden `IHostAutoEvent` örnek olay ait kadar bekleyin veya belirli bir süre geçtikten miktarını.|  
+|[Set Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Geçerli ayarlar `IHostAutoEvent` sinyal verilmiş duruma örneği.|  
+|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Geçerli neden `IHostAutoEvent` olay ait kadar beklenecek örneği veya belirli bir zaman geçtikçe miktarını.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
- **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

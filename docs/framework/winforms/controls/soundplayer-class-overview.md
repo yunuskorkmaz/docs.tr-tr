@@ -6,34 +6,34 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 31ce87303b7b96cfd14d4daf07fd21c9de91a548
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690698"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer Sınıfına Genel Bakış
-<xref:System.Media.SoundPlayer> Sınıfı ses uygulamalarınızda kolayca eklemenizi sağlar.  
+<xref:System.Media.SoundPlayer> Sınıfı sesleri uygulamalarınıza kolayca dahil etmenize imkan sağlar.  
   
- <xref:System.Media.SoundPlayer> Sınıfı .wav biçiminde bir kaynaktan veya UNC veya HTTP konumlardan ses dosyalarını çalabilir. Ayrıca, <xref:System.Media.SoundPlayer> sınıfı, yükleme veya zaman uyumsuz olarak sesleri çal sağlar.  
+ <xref:System.Media.SoundPlayer> Sınıfı .wav biçimindeki bir kaynak ya da UNC veya HTTP konumlardan ses dosyaları çalabilir. Ayrıca, <xref:System.Media.SoundPlayer> sınıfı yüklenemiyor veya zaman uyumsuz olarak sesleri çalmak olanak sağlar.  
   
- Aynı zamanda <xref:System.Media.SystemSounds> bip sesi dahil olmak üzere, genel sistem sesleri yürütmek için sınıf.  
+ Ayrıca <xref:System.Media.SystemSounds> bip sesi dahil olmak üzere, genel sistem sesleri oynatmak için sınıf.  
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Yaygın olarak kullanılan özellikleri, yöntemleri ve olayları  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Media.SoundPlayer.SoundLocation%2A> Özelliği|Dosya yolu veya ses Web adresi. Kabul edilebilir değerler UNC veya HTTP olabilir.|  
-|<xref:System.Media.SoundPlayer.LoadTimeout%2A> Özelliği|Programınızı ses kendisinden önce yüklemek için bekleyeceği milisaniye sayısını bir özel durum oluşturur. Varsayılan değer 10 saniyedir.|  
-|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> Özelliği|Ses yüklenmesini tamamladı olup olmadığını gösteren bir Boole değeri.|  
+|<xref:System.Media.SoundPlayer.SoundLocation%2A> Özelliği|Dosya yolu veya ses Web adresi. Kabul edilebilir değerler, UNC veya HTTP olabilir.|  
+|<xref:System.Media.SoundPlayer.LoadTimeout%2A> Özelliği|Programınızı ses önceki yükleme için bekleyeceği milisaniye sayısını, özel durum oluşturur. Varsayılan değer 10 saniyedir.|  
+|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> Özelliği|Ses yüklenmesini tamamladı gösteren bir Boole değeri.|  
 |<xref:System.Media.SoundPlayer.Load%2A> Yöntemi|Ses zaman uyumlu olarak yükler.|  
-|<xref:System.Media.SoundPlayer.LoadAsync%2A> Yöntemi|Ses zaman uyumsuz olarak yüklemeye başlar. Yükleme tamamlandığında, başlatır <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> olay.|  
-|<xref:System.Media.SoundPlayer.Play%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> yeni bir iş parçacığı bir özellik.|  
-|<xref:System.Media.SoundPlayer.PlaySync%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> geçerli iş parçacığının özelliği.|  
+|<xref:System.Media.SoundPlayer.LoadAsync%2A> Yöntemi|Zaman uyumsuz ses yükleme başlar. Yükleme tamamlandığında, bilmemektedir <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> olay.|  
+|<xref:System.Media.SoundPlayer.Play%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> yeni bir dizi özelliği.|  
+|<xref:System.Media.SoundPlayer.PlaySync%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> geçerli iş parçacığındaki özelliği.|  
 |<xref:System.Media.SoundPlayer.Stop%2A> Yöntemi|Şu anda yürütülen herhangi bir sesi durdurur.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> Olay|Ses yük denendikten sonra oluşturulur.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> Olay|Ses yükünü denendikten sonra oluşturulur.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Media.SoundPlayer>  
- <xref:System.Media.SystemSounds>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Media.SoundPlayer>
+- <xref:System.Media.SystemSounds>

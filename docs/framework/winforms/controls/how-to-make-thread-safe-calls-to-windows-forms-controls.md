@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetimlerine İş Parçacığı Güvenli Aramalar Yapma'
+title: 'Nasıl yapılır: Windows Forms denetimlerine iş parçacığı güvenli aramalar yapın'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710475"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetimlerine İş Parçacığı Güvenli Aramalar Yapma
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Nasıl yapılır: Windows Forms denetimlerine iş parçacığı güvenli aramalar yapın
 
 Kullanırsanız, çoklu iş parçacığı kullanımı, Windows Forms uygulamalarının performansını artırmak için bir iş parçacığı açısından güvenli şekilde denetimlerinizi çağrı yapmak emin olmanız gerekir.
 
@@ -406,7 +406,7 @@ private:
  Aşağıdaki kod örneği bir formla üç düğme ve bir metin kutusu içeren tam bir Windows Forms uygulamasıdır. İlk düğmeyi güvenli olmayan iş parçacıkları arası erişimi gösterir, İkinci düğmeye güvenli erişim kullanarak gösterir <xref:System.Windows.Forms.Control.Invoke%2A>, alan üçüncü düğmeye güvenli erişim kullanarak gösterir <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Örneği çalıştırmak yönergeler için bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Bu örnek System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular gerektirir.
+> Örneği çalıştırmak yönergeler için bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Bu örnek System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular gerektirir.
 
 ```csharp
 using System;
@@ -1048,10 +1048,10 @@ Ne zaman uygulamayı çalıştırın ve tıklayın **güvenli olmayan çağrı**
 > [!CAUTION]
 > Kullandığınızda, çoklu iş parçacığı her tür için çok önemli ve karmaşık hataları kodunuzu sunulabilir. Daha fazla bilgi için [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../../docs/standard/threading/managed-threading-best-practices.md) kullanan herhangi bir çözümü uygulamadan önce çoklu iş parçacığı kullanımı.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

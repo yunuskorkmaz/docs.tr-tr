@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630963"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces Metodu
-Bu simge deposundaki genel kapsamda tanımlanan ad alanları alır.  
+Bu sembol deposundaki genel kapsamda tanımlanan ad alanları alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +40,19 @@ HRESULT GetNamespaces (
   
 #### <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] Ad alanları dizi büyüklüğü.  
+ [in] Ad alanları dizinin boyutu.  
   
  `pcNameSpaces`  
- [out] Bir işaretçi bir değişkene ad listesi uzunluğunu alır.  
+ [out] Ad alanı listenin uzunluğunu alır bir değişken için bir işaretçi.  
   
  `namespaces`  
- [out] Bir işaretçi bir değişkene ad listesini alır.  
+ [out] Ad alanı listesini alır bir değişken için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

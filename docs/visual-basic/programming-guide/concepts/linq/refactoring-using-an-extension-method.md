@@ -2,26 +2,26 @@
 title: Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 429f1fb106eca6b6a9ce0f64ea81c260c10a088a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671583"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
-Bu örnek önceki örnekte olduğu derlemeler [(Visual Basic) paragrafları metin alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), bir genişletme yöntemi uygulanan saf işlevi kullanarak dizeleri birleşimini yeniden düzenleme tarafından.  
+Bu örnek önceki örneğe, yapılar [(Visual Basic) paragrafların metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), yeniden düzenleme bir genişletme yöntemi uygulanan saf işlev kullanarak dizeleri birleşimi tarafından.  
   
- Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> bir dizeye birden çok dizeyi birleştirme için standart sorgu işleci. Ancak, elde edilen sorgu olduğundan daha küçük ve daha basit Bunu yapmak için uzantı metodu yazma daha uygundur.  
+ Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi bir dizede birleştirmek için standart sorgu işleci. Ancak, elde edilen sorgu daha küçük ve daha basit olduğundan, bunu yapmak için bir uzantı metodu yazma daha uygundur.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek alma paragraflar, her paragraf stili ve her paragraf metni WordprocessingML belgeye işler. Bu örnek önceki örnekler üzerinde Bu öğreticide oluşturur.  
+ Bu örnekte paragraflar, her paragraf stilini ve her bir paragraf metni alınırken WordprocessingML belgesinin işler. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.  
   
- Örnek, birden çok aşırı içerir `StringConcatenate` yöntemi.  
+ Örnek, birden çok aşırı yükleme içerir `StringConcatenate` yöntemi.  
   
- Bu örnekte, kaynak belge oluşturmak için yönergeler bulabilirsiniz [kaynak Office Açık XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnekte için kaynak belge oluşturma için yönergeler bulabilirsiniz [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Bu örnek WindowsBase derlemeden sınıfları kullanır. Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek WindowsBase derlemesinden sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -65,9 +65,9 @@ End Function
 ```  
   
 ## <a name="example"></a>Örnek  
- Dört aşırı `StringConcatenate` yöntemi. Aşırı yüklemesiyle yalnızca dizeleri koleksiyonu alır ve tek bir dize döndürür. Başka bir aşırı herhangi bir türü ve temsilci koleksiyonunu o koleksiyonun bir singleton projelerinden dizeye alabilir. Ayırıcı dize belirlemenizi sağlayan iki daha fazla aşırı vardır.  
+ Dört aşırı yükleme `StringConcatenate` yöntemi. Aşırı yüklemelerden birine yalnızca dizeleri koleksiyonunu alır ve tek bir dize döndürür. Başka bir aşırı herhangi bir tür ve temsilci koleksiyonu bu projelerden koleksiyonun tek bir dize alabilir. Bir ayırıcı dizesinde belirtmenize olanak veren iki daha fazla aşırı yüklemesi vardır.  
   
- Aşağıdaki kod tüm dört aşırı kullanır.  
+ Aşağıdaki kod, tüm dört aşırı yüklemeler kullanır.  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 onetwothree  
@@ -90,7 +90,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Örnek  
- Şimdi, örneğin, yeni uzantı metodu yararlanmak için değiştirilebilir:  
+ Şimdi, örneğin yeni bir genişletme yöntemi yararlanmak için değiştirilebilir:  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki açıklandığı belgeye uygulandığında çıktı üretir [kaynak Office Açık XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -236,13 +236,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Bu yeniden düzenleme saf bir işlevdeki yeniden düzenleme, bir değişken olduğuna dikkat edin. Sonraki konusunda daha ayrıntılı saf işlevler halinde Finansman fikir tanıtılacaktır.  
+ Bu yeniden düzenleme, yeniden düzenleme saf işlev bir değişken olduğuna dikkat edin. Bir sonraki konu başlığında, daha ayrıntılı saf işlevler halinde hesaba katacak şekilde fikri başlatacaktır.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnekte, bu kod, saf işlevlerini kullanarak başka bir yolla yeniden düzenlemeniz gösterilmektedir:  
+ Sonraki örnek, saf işlevler kullanarak başka bir yolla bu kodu yeniden düzenleyin gösterilmektedir:  
   
--   [Saf işlevi (Visual Basic) kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [(Visual Basic) saf işlev kullanarak yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Saf işlevleri (Visual Basic) yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

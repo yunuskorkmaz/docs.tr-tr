@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 0a108e9e625fed3801c283c84a58ea0b503101ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e20a468e71329609d459070382c05e04135e73f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539590"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 taslak dil belirtimi
 
@@ -27,7 +27,7 @@ Taslak belirtimi sorunları oluşturulmalıdır [dotnet/csharplang](https://gith
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)  
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 8753e977007e46ea4227c8c0072671a2e9298645
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: bd0562c2c2f22a549af8f21e40b46ac130f8bf75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673065"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
 
@@ -91,12 +91,12 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Türler](../../../csharp/programming-guide/types/index.md)  
-- [() İşleci](../../../csharp/language-reference/operators/invocation-operator.md)  
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
-- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
-- [Dönüştürme İşleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
-- [Genelleşmiş tür dönüştürme](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
-- [Dışarı aktarılan tür dönüştürme](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Türler](../../../csharp/programming-guide/types/index.md)
+- [() İşleci](../../../csharp/language-reference/operators/invocation-operator.md)
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)
+- [Dönüştürme İşleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [Genelleşmiş tür dönüştürme](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)
+- [Dışarı aktarılan tür dönüştürme](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)
 - [Nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

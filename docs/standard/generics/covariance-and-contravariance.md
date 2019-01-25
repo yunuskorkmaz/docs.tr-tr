@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692970"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans daha türetilmiş türde (ayrıntılı) veya orijinal olarak belirtilenden daha az türetilmiş bir tür (less yazımına özgü) kullanma olanağı için başvuran terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf varsayılmaktadır `Base` ve adlı bir türetilmiş sınıf `Derived`.  
@@ -190,6 +190,6 @@ ms.locfileid: "44038750"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kovaryans ve kontravaryans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [Kovaryans ve kontravaryans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Kovaryans ve kontravaryans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Kovaryans ve kontravaryans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Temsilcilerde Varyans](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

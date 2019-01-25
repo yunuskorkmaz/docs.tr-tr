@@ -1,22 +1,22 @@
 ---
-title: Dizisi işleçleri
+title: Dizi işleçleri
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666169"
 ---
-# <a name="sequence-operators"></a>Dizisi işleçleri
-Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veya daha fazla aşağıdaki nitelikleri dizisi işleçleri desteklemez:  
+# <a name="sequence-operators"></a>Dizi işleçleri
+Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veya daha fazla aşağıdaki kalitelerini dizisi işleçleri desteklemez:  
   
--   Lambda dizin parametreye sahip olur.  
+-   Bir lambda ile dizin parametresi alır.  
   
--   Sıralı satır özellikler gibi kullanan <xref:System.Linq.Queryable.TakeWhile%2A>.  
+-   Sıralı satır özellikleri gibi güvenin <xref:System.Linq.Queryable.TakeWhile%2A>.  
   
--   Rastgele bir CLR mantığınız gibi kullanan <xref:System.Collections.Generic.IComparer%601>.  
+-   Rastgele bir CLR mantığınız gibi güvenin <xref:System.Collections.Generic.IComparer%601>.  
   
 |Desteklenmeyen örnekleri|  
 |-----------------------------|  
@@ -43,7 +43,7 @@ Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>.NET arasındaki farklar  
- Tüm desteklenen dizisi işleçleri iş dışındaki (CLR) ortak dil çalışma zamanında beklendiği gibi `Average`. `Average` Oysa ortalaması türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişken açıkça ise çift / ondalık dönüştürme veya seçicisini çift / ondalık çevirir, sonuçta elde edilen SQL da böyle bir dönüştürme sahip olur ve sonuç beklendiği gibi olacaktır.  
+ Tüm desteklenen dizisi işleçleri iş dışındaki ortak dil çalışma zamanında (CLR) beklendiği gibi `Average`. `Average` Oysa ortalama türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür ya da her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişkenini açıkça ise dönüştürme çift / ondalık ya da Seçici bıraktığı çift / ondalık, sonuçta elde edilen SQL böyle bir dönüştürme de sahip olur ve sonucu beklendiği gibi olacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664557"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform sınıfından geçirme
 
@@ -27,7 +27,7 @@ XSLT mimarisi Visual Studio 2005 sürümünde yeniden tasarlandı. <xref:System.
  <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı da çok daha hızlı hale diğer iyileştirmeler içerir <xref:System.Xml.Xsl.XslTransform> sınıfı.
 
 > [!NOTE]
->  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez bir dönüştürme üzerinde çağrılır. XSLT dosyası, yüklenmeden önce derlenmesi gereken olmasıdır. Daha fazla bilgi için bkz şu blog gönderisi: [XslCompiledTransform XslTransform daha yavaş?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+>  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez bir dönüştürme üzerinde çağrılır. XSLT dosyası, yüklenmeden önce derlenmesi gereken olmasıdır. Daha fazla bilgi için için şu blog yayınına bakın: [XslCompiledTransform XslTransform yavaş?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
 
 ## <a name="security"></a>Güvenlik
  Varsayılan olarak, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı XSLT desteğini devre dışı bırakır `document()` işlevi ve katıştırılmış betik oluşturma. Bu özellikler oluşturarak etkin hale getirilebilir bir <xref:System.Xml.Xsl.XsltSettings> aktarması ve etkinleştirilen özellikleri nesnesi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Aşağıdaki örnek komut dosyası yazmayı etkinleştirin ve XSLT dönüşümü gerçekleştirmek nasıl gösterir.
@@ -112,13 +112,13 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   msxsl:node-ayarla: <xref:System.Xml.Xsl.XslTransform> bağımsız değişkeni gerekli [düğüm kümesi işlevi](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) bir sonuç ağacı parçası işlevi. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı bu gereksinime sahip değil.  
   
--   msxsl:Version: Bu işlev desteklenen <xref:System.Xml.Xsl.XslCompiledTransform>.  
+-   msxsl:Version: Bu işlevin desteklenen <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   XPath uzantı işlevleri: [ms:string-işlevi karşılaştırma](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc işlevi](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [MS: namespace-URI işlevi](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-işleviadı](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number işlevi](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-işlevi tarih](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5), ve [ms:format-işlevin zaman](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) işlevleri artık desteklenmektedir.  
+-   XPath uzantı işlevleri: [Ms:string-işlevi karşılaştırma](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc işlevi](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [MS: namespace-URI işlevi](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-işlevi adı](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number işlevi](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-işlevi tarih](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5), ve [ms:format-işlevin zaman](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) işlevleri artık desteklenmektedir.  
   
--   Şema ilgili XPath uzantı işlevleri: Bu işlevler tarafından yerel olarak desteklenmeyen <xref:System.Xml.Xsl.XslCompiledTransform>. Ancak, uzantı işlevleri uygulanabilir.  
+-   XPath uzantı işlevleri şema ile ilgili: Bu işlevler tarafından yerel olarak desteklenmeyen <xref:System.Xml.Xsl.XslCompiledTransform>. Ancak, uzantı işlevleri uygulanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XslCompiledTransform Sınıfını Kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

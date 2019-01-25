@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79730bb98a7e2d84517ed068a52614ad8650f541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662238"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose Numaralandırması
-Yönetilen kod neden verilen işlevi çağırır açıklar.  
+Neden yönetilen kod dışa aktarılan bir işlevin çağrıları açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ typedef enum CorDebugCodeInvokePurpose
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CODE_INVOKE_PURPOSE_NONE`|None veya bilinmiyor.|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Yönetilen kod ters p-invoke gibi herhangi bir yönetilen giriş noktasını çalışır. Daha ayrıntılı herhangi bir amaçla çalışma zamanı tarafından bilinmiyor.|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Yönetilen kod statik Oluşturucu çalışır.|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Yönetilen kod çağrıldı bazı arabirim yöntemi uygulamasını çalıştırın.|  
+|`CODE_INVOKE_PURPOSE_NONE`|Yok veya bilinmeyen.|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Yönetilen kod ters p-invoke gibi herhangi bir yönetilen giriş noktasını çalışır. Daha ayrıntılı herhangi bir amaç, çalışma zamanı tarafından bilinmiyor.|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Yönetilen kod, bir statik Oluşturucu çalışır.|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Yönetilen kod çağrıldı bazı arabirim yöntemi için uygulama çalışır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma tarafından kullanılan [Icordebugprocess6::getexportstepınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi doğruluk hakkında bilgi sağlamak için yönetilen kod.  
+ Bu sabit listesi tarafından kullanılan [Icordebugprocess6::getexportstepınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi üzerinden Adımlama hakkında bilgi sağlamak için yönetilen kod.  
   
 > [!NOTE]
->  Bu numaralandırma .NET senaryoları yalnızca hata ayıklama yerel olarak kullanıma yöneliktir.  
+>  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

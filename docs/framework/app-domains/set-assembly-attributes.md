@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712606"
 ---
 # <a name="setting-assembly-attributes"></a>Derleme Özniteliklerini Ayarlama
 Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Öznitelik bilgileri aşağıdaki kümelere ayrılmıştır:  
@@ -37,9 +37,9 @@ Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Ö
   
 |Derleme IDENTITY özniteliği|Açıklama|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültür belirten numaralandırılmış alan. Bir derleme, kaynaklar için varsayılan kültürü içerdiğini gösteren kültür bağımsızlığı de belirtebilirsiniz. **Not:** kümesine kültür özniteliğine sahip herhangi bir derleme çalışma zamanı değerlendirir bir uydu derleme olarak null. Bu tür derlemeler uydu derleme bağlama tabi kurallardır. Daha fazla bilgi için [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültür belirten numaralandırılmış alan. Bir derleme, kaynaklar için varsayılan kültürü içerdiğini gösteren kültür bağımsızlığı de belirtebilirsiniz. **Not:**  Culture özniteliği kümesine sahip olmayan herhangi bir derleme çalışma zamanı değerlendirir bir uydu derleme olarak null. Bu tür derlemeler uydu derleme bağlama tabi kurallardır. Daha fazla bilgi için [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Derleme olup yan yana çalıştırılabilir gibi derleme özniteliklerinin, ayarlar değeri.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Biçimindeki sayısal değeri *ana*. *küçük*. *derleme*. *Düzeltme* (örneğin, 2.4.0.0). Ortak dil çalışma zamanı, tanımlayıcı adlı derlemeler Bağlama işlemleri gerçekleştirmek için bu değeri kullanır. **Not:** varsa <xref:System.Reflection.AssemblyInformationalVersionAttribute> özniteliği bir derlemeye uygulanmaz tarafından belirtilen sürüm numarası <xref:System.Reflection.AssemblyVersionAttribute> özniteliği tarafından kullanılan <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>, ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Biçimindeki sayısal değeri *ana*. *küçük*. *derleme*. *Düzeltme* (örneğin, 2.4.0.0). Ortak dil çalışma zamanı, tanımlayıcı adlı derlemeler Bağlama işlemleri gerçekleştirmek için bu değeri kullanır. **Not:**  Varsa <xref:System.Reflection.AssemblyInformationalVersionAttribute> özniteliği bir derlemeye uygulanmaz tarafından belirtilen sürüm numarası <xref:System.Reflection.AssemblyVersionAttribute> özniteliği tarafından kullanılan <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>, ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri.|  
   
  Aşağıdaki kod örneği, sürüm ve kültür öznitelikleri bir derlemeye uygulanacak gösterilmektedir.  
   
@@ -55,7 +55,7 @@ Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Ö
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Şirket adını belirten dize değeri.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Telif hakkı bilgileri belirten değeri dize.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Win32 dosya sürüm numarasını belirten dize değeri. Bu normal olarak derleme sürümü için varsayılan olarak.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Dize değeri bir tam ürün sürüm numarası gibi ortak dil çalışma zamanı tarafından kullanılmaz sürüm bilgileri belirtme. **Not:** bu özniteliği bir derlemeye uygulanmışsa, belirtir dize çalışma zamanında kullanılarak elde edilebilir <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> özelliği. Dize tarafından sağlanan yolu ve kayıt defteri anahtarı, aynı zamanda kullanılır <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Dize değeri bir tam ürün sürüm numarası gibi ortak dil çalışma zamanı tarafından kullanılmaz sürüm bilgileri belirtme. **Not:**  Bu öznitelik, bir derlemeye uygulanmışsa, belirtir dize çalışma zamanında kullanılarak elde edilebilir <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> özelliği. Dize tarafından sağlanan yolu ve kayıt defteri anahtarı, aynı zamanda kullanılır <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Ürün bilgileri belirten değeri dize.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Ticari marka bilgileri belirten değeri dize.|  
   
@@ -86,6 +86,6 @@ Derleme özniteliklerinin bir derlemeyle ilgili bilgi sağlayan değerlerdir. Ö
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

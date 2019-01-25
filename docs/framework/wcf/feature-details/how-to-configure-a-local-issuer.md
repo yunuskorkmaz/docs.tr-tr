@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yerel Yayımlayan Yapılandırma'
+title: 'Nasıl yapılır: Yerel yayımlayan yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713262"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
+# <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel yayımlayan yapılandırma
 Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi nasıl yapılandıracağınız açıklanmaktadır.  
   
  Genellikle, bir istemci bir Federasyon Hizmeti ile iletişim kurduğunda, hizmet istemci belirteci vermek için beklenen belirteç hizmeti, federe hizmete kendi kimliğini doğrulamak için kullanacağı güvenlik adresini belirtir. Belirli durumlarda istemci kullanmak için yapılandırılabilir bir *yerel yayımlayan*.  
@@ -74,7 +74,7 @@ Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel sertifika verenin bu bağlamayı kullanan uç noktaları için kullanılmaz unutmayın. Böyle bir bağlamanın kullanmayın veya veren adresi böylece bunlar bağlama değiştirme her zaman yerel dağıtımcının kullanmayı düşündüğünüz istemcileri sağlamak `null`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

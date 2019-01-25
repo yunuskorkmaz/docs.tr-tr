@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta Çok Bölmeli Kullanıcı Arabirimi Oluşturma"
+title: 'Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4e243191b83149f17f4970150d784dcd7d014b22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f7ba0ab7f0701fe39c3cefb979b9226eeeddffe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531414"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çok Bölmeli Kullanıcı Arabirimi Oluşturma
-Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacak bir **klasörü** listesinde, bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenlemenin, formun denetimleriyle chiefly yerleştirme aracılığıyla elde edilir.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma
+Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacaksınız bir **klasör** listesinde bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenleme formu denetimleri yerleştirme temelde aracılığıyla sağlanır.  
   
- Bir denetim noktası olduğunda, bir denetim üst kapsayıcı hangi kenarı fastened belirler. Bu nedenle, ayarlarsanız <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğine <xref:System.Windows.Forms.DockStyle.Right>, denetimin sağ kenarı sağ, üst denetim kenarına yerleştirilir. Ayrıca, kapsayıcı denetiminin eşleşen denetim yerleşik kenarı boyutlandırılır. Ne hakkında daha fazla bilgi için <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği çalıştığını görmek [nasıl yapılır: Windows formlarında denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Bir denetim noktası, üst kapsayıcı hangi kenarı bir denetim için fastened belirleyin. Bu nedenle, eğer ayarlarsanız <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Right>, denetimin sağ kenarı sağ, üst denetim kenarına yerleştirilir. Buna ek olarak, yerleşik uç denetimin, kapsayıcı denetimdeki eşleşmesi için yeniden boyutlandırılır. Nasıl hakkında daha fazla bilgi için <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği çalıştığını görmek [nasıl yapılır: Windows Forms'da denetimleri](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
   
- Bu yordam, düzenleme üzerinde odaklanır <xref:System.Windows.Forms.SplitContainer> ve diğer denetimleri form üzerinde Microsoft Outlook taklit uygulama yapmayı işlevselliği ekleme değil.  
+ Bu yordam, düzenleme üzerinde odaklanır <xref:System.Windows.Forms.SplitContainer> ve diğer denetimleri form üzerinde Microsoft Outlook taklit uygulama işlevselliği ekleme değil.  
   
- Bu kullanıcı arabirimi oluşturmak için içindeki tüm denetimler yerleştirin bir <xref:System.Windows.Forms.SplitContainer> içeren denetim bir <xref:System.Windows.Forms.TreeView> sol panelinde denetim. Sağ taraftaki panelinin <xref:System.Windows.Forms.SplitContainer> denetimi içeren ikinci bir <xref:System.Windows.Forms.SplitContainer> ile denetleyen bir <xref:System.Windows.Forms.ListView> yukarıdaki denetimi bir <xref:System.Windows.Forms.RichTextBox> denetim. Bunlar <xref:System.Windows.Forms.SplitContainer> denetimlerini etkinleştir diğer denetimleri form üzerinde bağımsız yeniden boyutlandırma. Kendi craft özel kullanıcı arabirimleri için bu yordamdaki teknikleri uyarlayabilirsiniz.  
+ Bu kullanıcı arabirimi oluşturmak için içindeki tüm denetimleri yerleştirin. bir <xref:System.Windows.Forms.SplitContainer> içeren denetim bir <xref:System.Windows.Forms.TreeView> sol panelde bir denetim. ' In sağ bölmeyi <xref:System.Windows.Forms.SplitContainer> denetimi içeren ikinci bir <xref:System.Windows.Forms.SplitContainer> denetimini bir <xref:System.Windows.Forms.ListView> denetim yukarıdaki bir <xref:System.Windows.Forms.RichTextBox> denetimi. Bunlar <xref:System.Windows.Forms.SplitContainer> denetimleri, formdaki diğer denetimlerin bağımsız yeniden boyutlandırma sağlar. Kendi özel kullanıcı arabirimleri kolaylaştırıyor için bu yordamdaki teknikleri uyarlayabilirsiniz.  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Program aracılığıyla Outlook stilinde bir kullanıcı arabirimi oluşturmak için  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Program aracılığıyla Outlook-stilinde bir kullanıcı arabirimi oluşturmak için  
   
-1.  Bir form içinde Kullanıcı Arabiriminizin oluşur her denetimi bildirin. Bu örneğin <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, ve <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook kullanıcı arabirimi taklit etmek için kontrol eder.  
+1.  Bir form içinde kullanıcı arabirimi oluşturan her denetimi bildirin. Bu örneğin <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, ve <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook kullanıcı arabirimini taklit edecek şekilde kontrol eder.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Kullanıcı Arabiriminizin tanımlayan bir yordam oluşturun. Aşağıdaki kod özelliklerini ayarlar, böylece form Microsoft Outlook kullanıcı arabiriminde benzeyecektir. Ancak, diğer denetimleri kullanarak veya farklı yerleştirme eşit esnek diğer kullanıcı arabirimleri oluşturmak yalnızca kadar kolaydır.  
+2.  Kullanıcı arabiriminizi tanımlayan bir yordamı oluşturun. Aşağıdaki kod, böylece form Microsoft Outlook kullanıcı arabiriminde andıracaktır özelliklerini ayarlar. Ancak, diğer denetimleri kullanarak veya farklı yerleştirme, eşit oranda esnek diğer kullanıcı arabirimleri oluşturmak oldukça kolaydır.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
     }  
     ```  
   
-3.  Visual Basic'te, yeni oluşturduğunuz yordamı bir çağrı ekleyin `New()` yordamı. Visual C# ' ta form sınıfı oluşturucusu Bu kod satırını ekleyin.  
+3.  Visual Basic'te, yeni oluşturduğunuz yordam bir çağrı ekleyin `New()` yordamı. Görselde C#, form sınıfın oluşturucusunda Bu kod satırını ekleyin.  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,7 +176,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ile Çok Bölmeli bir Kullanıcı Arabirimi Oluşturma](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

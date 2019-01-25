@@ -3,12 +3,12 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e89afc5764dbdb86e87d2307425299dff57c686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525177"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç yeniden yürütme önbelleğe kaydeder.  
@@ -16,7 +16,7 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
  \<system.identityModel>  
 \<identityConfiguration >  
 \<önbelleğe alan >  
-\<tokenReplayCache >  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,7 +41,7 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
 |türü|Türetilen bir tür <xref:System.IdentityModel.Tokens.TokenReplayCache> sınıfı. Özel bir belirtme hakkında daha fazla bilgi için `type`, [özel tür başvurularını] bakın.
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -62,6 +62,6 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
 </caches>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

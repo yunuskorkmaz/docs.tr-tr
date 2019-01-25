@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 42fa6a44891e012300f61f1a11a47537c6739e2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b2f5194cc6a4c7c0329edb2a1718a642781f79b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563424"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Temizle&gt; authenticationModules (ağ ayarları) için
 Uygulamadaki tüm kimlik doğrulama modülleri temizler.  
@@ -65,7 +65,7 @@ Uygulamadaki tüm kimlik doğrulama modülleri temizler.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
