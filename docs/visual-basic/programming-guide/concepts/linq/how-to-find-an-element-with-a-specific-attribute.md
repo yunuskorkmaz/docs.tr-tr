@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: belirli bir özniteliği (Visual Basic) sahip bir öğe bulunamadı'
+title: 'Nasıl yapılır: (Visual Basic) belirli bir özniteliğe sahip öğeyi bulma'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: ea5221553e2bb4fd624ca6b10e615c5766bfcb0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f170daa58dc2ee8759beeb04df7670d9d43fb494
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536067"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a><span data-ttu-id="bb500-102">Nasıl yapılır: belirli bir özniteliği (Visual Basic) sahip bir öğe bulunamadı</span><span class="sxs-lookup"><span data-stu-id="bb500-102">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>
-<span data-ttu-id="bb500-103">Bu konuda, belirli bir değere sahip bir özniteliği olan bir öğeyi bulmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="bb500-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a><span data-ttu-id="fad9f-102">Nasıl yapılır: (Visual Basic) belirli bir özniteliğe sahip öğeyi bulma</span><span class="sxs-lookup"><span data-stu-id="fad9f-102">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>
+<span data-ttu-id="fad9f-103">Bu konuda, belirli bir değere sahip bir özniteliği olan bir öğeyi bulmak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="fad9f-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb500-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="bb500-104">Example</span></span>  
- <span data-ttu-id="bb500-105">Örneğinde bulunacak gösterilmiştir `Address` sahip öğe bir `Type` özniteliği "Billing" değerine sahip.</span><span class="sxs-lookup"><span data-stu-id="bb500-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
+## <a name="example"></a><span data-ttu-id="fad9f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="fad9f-104">Example</span></span>  
+ <span data-ttu-id="fad9f-105">Bu örnek nasıl bulunacağını gösterir `Address` sahip öğe bir `Type` "Billing" değerine sahip öznitelik.</span><span class="sxs-lookup"><span data-stu-id="fad9f-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- <span data-ttu-id="bb500-106">Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: tipik satın alma siparişi (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="bb500-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="fad9f-106">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fad9f-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -28,7 +28,7 @@ For Each el As XElement In address
 Next  
 ```  
   
- <span data-ttu-id="bb500-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bb500-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="fad9f-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fad9f-107">This code produces the following output:</span></span>  
   
 ```xml  
           <Address Type="Billing">  
@@ -41,12 +41,12 @@ Next
 </Address>  
 ```  
   
- <span data-ttu-id="bb500-108">Bu örnekte Not [XML alt axis özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [XML özniteliği axis özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)ve [XML değeri özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="bb500-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+ <span data-ttu-id="fad9f-108">Bu örnekte Not [XML alt axis özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [XML özniteliği axis özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)ve [XML değeri özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="fad9f-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb500-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="bb500-109">Example</span></span>  
- <span data-ttu-id="bb500-110">Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir.</span><span class="sxs-lookup"><span data-stu-id="bb500-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="bb500-111">Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="bb500-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="fad9f-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="fad9f-109">Example</span></span>  
+ <span data-ttu-id="fad9f-110">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="fad9f-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="fad9f-111">Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="fad9f-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="bb500-112">Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: bir Namespace tipik satınalma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="bb500-112">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="fad9f-112">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace, tipik satın alma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="fad9f-112">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -65,7 +65,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="bb500-113">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bb500-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="fad9f-113">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fad9f-113">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -78,9 +78,9 @@ End Module
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb500-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bb500-114">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [<span data-ttu-id="bb500-115">Temel sorgu (LINQ-XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb500-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [<span data-ttu-id="bb500-116">Standart sorgu işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb500-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [<span data-ttu-id="bb500-117">Projeksiyon işlemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb500-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a><span data-ttu-id="fad9f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fad9f-114">See also</span></span>
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [<span data-ttu-id="fad9f-115">Temel sorgular (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad9f-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="fad9f-116">Standart sorgu işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad9f-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="fad9f-117">Projeksiyon işlemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad9f-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

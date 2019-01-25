@@ -2,20 +2,20 @@
 title: System.ServiceModel.Diagnostics.ActivityBoundary
 ms.date: 03/30/2017
 ms.assetid: a24e3076-0c14-4271-9990-090c0dfed07f
-ms.openlocfilehash: 6bbfbe1b2cc3803204a2d0384530a42feb3fe749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dc1e92acdb2d50f83069cdcbc4d3f67008ca801
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33480083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668879"
 ---
-# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="75321-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="75321-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
-<span data-ttu-id="75321-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="75321-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
+# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="ce044-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="ce044-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
+<span data-ttu-id="ce044-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="ce044-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
   
-## <a name="description"></a><span data-ttu-id="75321-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="75321-104">Description</span></span>  
- <span data-ttu-id="75321-105">Etkinlik sınırı.</span><span class="sxs-lookup"><span data-stu-id="75321-105">Activity boundary.</span></span>  
+## <a name="description"></a><span data-ttu-id="ce044-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ce044-104">Description</span></span>  
+ <span data-ttu-id="ce044-105">Hranice aktivity</span><span class="sxs-lookup"><span data-stu-id="ce044-105">Activity boundary.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75321-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="75321-106">See Also</span></span>  
- [<span data-ttu-id="75321-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="75321-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="75321-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="75321-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="75321-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="75321-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ce044-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce044-106">See also</span></span>
+- [<span data-ttu-id="ce044-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="ce044-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="ce044-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="ce044-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ce044-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="ce044-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

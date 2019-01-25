@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 688e7a0fa32650aa0f626ddf40283f73ceb57156
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e4db2330c6d46610bbb3da8b732b1c098659c97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729086"
 ---
-# <a name="icorruntimehostenumdomains-method"></a><span data-ttu-id="65707-102">ICorRuntimeHost::EnumDomains Yöntemi</span><span class="sxs-lookup"><span data-stu-id="65707-102">ICorRuntimeHost::EnumDomains Method</span></span>
-<span data-ttu-id="65707-103">Bir Numaralandırıcı geçerli işlem için etki alanları alır.</span><span class="sxs-lookup"><span data-stu-id="65707-103">Gets an enumerator for the domains in the current process.</span></span>  
+# <a name="icorruntimehostenumdomains-method"></a><span data-ttu-id="419c0-102">ICorRuntimeHost::EnumDomains Yöntemi</span><span class="sxs-lookup"><span data-stu-id="419c0-102">ICorRuntimeHost::EnumDomains Method</span></span>
+<span data-ttu-id="419c0-103">Bir numaralandırıcı, geçerli işlem için etki alanlarını alır.</span><span class="sxs-lookup"><span data-stu-id="419c0-103">Gets an enumerator for the domains in the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65707-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="65707-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="419c0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="419c0-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumDomains (  
@@ -35,27 +35,27 @@ HRESULT EnumDomains (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="65707-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="65707-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="419c0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="419c0-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="65707-106">[out] Etki alanları için bir numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="65707-106">[out] An enumerator for the domains.</span></span>  
+ <span data-ttu-id="419c0-106">[out] Etki alanları için bir numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="419c0-106">[out] An enumerator for the domains.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="65707-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="65707-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="419c0-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="419c0-107">Return Value</span></span>  
   
-|<span data-ttu-id="65707-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="65707-108">HRESULT</span></span>|<span data-ttu-id="65707-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="65707-109">Description</span></span>|  
+|<span data-ttu-id="419c0-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="419c0-108">HRESULT</span></span>|<span data-ttu-id="419c0-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="419c0-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="65707-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="65707-110">S_OK</span></span>|<span data-ttu-id="65707-111">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="65707-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="65707-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="65707-112">S_FALSE</span></span>|<span data-ttu-id="65707-113">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="65707-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="65707-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="65707-114">E_FAIL</span></span>|<span data-ttu-id="65707-115">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="65707-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="65707-116">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="65707-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="65707-117">Barındırma hiçbir API'leri yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="65707-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="65707-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="65707-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="65707-119">CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.</span><span class="sxs-lookup"><span data-stu-id="65707-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="419c0-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="419c0-110">S_OK</span></span>|<span data-ttu-id="419c0-111">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="419c0-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="419c0-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="419c0-112">S_FALSE</span></span>|<span data-ttu-id="419c0-113">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="419c0-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="419c0-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="419c0-114">E_FAIL</span></span>|<span data-ttu-id="419c0-115">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="419c0-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="419c0-116">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="419c0-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="419c0-117">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="419c0-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="419c0-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="419c0-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="419c0-119">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="419c0-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="65707-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="65707-120">Requirements</span></span>  
- <span data-ttu-id="65707-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65707-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="419c0-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="419c0-120">Requirements</span></span>  
+ <span data-ttu-id="419c0-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="419c0-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65707-122">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="65707-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="419c0-122">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="419c0-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="65707-123">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="65707-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="419c0-123">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="419c0-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="65707-124">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="65707-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="419c0-124">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="419c0-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65707-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="65707-125">See Also</span></span>  
- [<span data-ttu-id="65707-126">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="65707-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="419c0-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="419c0-125">See also</span></span>
+- [<span data-ttu-id="419c0-126">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="419c0-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

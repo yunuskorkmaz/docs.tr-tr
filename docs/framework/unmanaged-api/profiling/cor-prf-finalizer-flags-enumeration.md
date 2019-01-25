@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9292e7c5908b2e4fd7e2c0ae9412375249f2fdfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7800567f51196154f49c93dbbbe819f77cefdfe8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499044"
 ---
-# <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="15a52-102">COR_PRF_FINALIZER_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="15a52-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
-<span data-ttu-id="15a52-103">Bir nesne için sonlandırıcıyı açıklar.</span><span class="sxs-lookup"><span data-stu-id="15a52-103">Describes the finalizer for an object.</span></span>  
+# <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="2783e-102">COR_PRF_FINALIZER_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="2783e-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
+<span data-ttu-id="2783e-103">Bir nesnenin Sonlandırıcısı açıklar.</span><span class="sxs-lookup"><span data-stu-id="2783e-103">Describes the finalizer for an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15a52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="15a52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2783e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2783e-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,23 +34,23 @@ typedef enum {
 } COR_PRF_FINALIZER_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="15a52-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="15a52-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2783e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="2783e-105">Members</span></span>  
   
-|<span data-ttu-id="15a52-106">Üye</span><span class="sxs-lookup"><span data-stu-id="15a52-106">Member</span></span>|<span data-ttu-id="15a52-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="15a52-107">Description</span></span>|  
+|<span data-ttu-id="2783e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="2783e-106">Member</span></span>|<span data-ttu-id="2783e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2783e-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="15a52-108">Sonlandırıcıyı önemlidir.</span><span class="sxs-lookup"><span data-stu-id="15a52-108">The finalizer is critical.</span></span>|  
+|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="2783e-108">Sonlandırıcı büyük/küçük harf önemlidir.</span><span class="sxs-lookup"><span data-stu-id="2783e-108">The finalizer is critical.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="15a52-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="15a52-109">Remarks</span></span>  
- <span data-ttu-id="15a52-110">`COR_PRF_FINALIZER_FLAGS` Numaralandırması tarafından kullanılan [Icorprofilercallback2::finalizeableobjectqueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) bir nesne için sonlandırıcıyı açıklamak için yöntem.</span><span class="sxs-lookup"><span data-stu-id="15a52-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2783e-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2783e-109">Remarks</span></span>  
+ <span data-ttu-id="2783e-110">`COR_PRF_FINALIZER_FLAGS` Numaralandırması tarafından kullanılan [Icorprofilercallback2::finalizeableobjectqueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) nesnenin Sonlandırıcısı açıklamak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2783e-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15a52-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="15a52-111">Requirements</span></span>  
- <span data-ttu-id="15a52-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15a52-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2783e-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2783e-111">Requirements</span></span>  
+ <span data-ttu-id="2783e-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2783e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15a52-113">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15a52-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2783e-113">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2783e-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="15a52-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15a52-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2783e-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2783e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15a52-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15a52-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2783e-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2783e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15a52-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="15a52-116">See Also</span></span>  
- [<span data-ttu-id="15a52-117">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="15a52-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="2783e-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2783e-116">See also</span></span>
+- [<span data-ttu-id="2783e-117">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="2783e-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

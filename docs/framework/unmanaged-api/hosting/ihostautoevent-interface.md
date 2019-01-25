@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7f2b65f263256fe887c61c7b866beaa0038c37d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b8cccf395e77c7dfefb85302b522d7e9398ffca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730028"
 ---
-# <a name="ihostautoevent-interface"></a><span data-ttu-id="ee5c4-102">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-102">IHostAutoEvent Interface</span></span>
-<span data-ttu-id="ee5c4-103">Otomatik sıfırlama olaya ana bilgisayarın uyarlamasını gösterimini sağlar.</span><span class="sxs-lookup"><span data-stu-id="ee5c4-103">Provides a representation of the host's implementation of an auto-reset event.</span></span>  
+# <a name="ihostautoevent-interface"></a><span data-ttu-id="49b14-102">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="49b14-102">IHostAutoEvent Interface</span></span>
+<span data-ttu-id="49b14-103">Otomatik sıfırlama olayın ana bilgisayarın uygulama bir gösterimini sağlar.</span><span class="sxs-lookup"><span data-stu-id="49b14-103">Provides a representation of the host's implementation of an auto-reset event.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ee5c4-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="ee5c4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="49b14-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="49b14-104">Methods</span></span>  
   
-|<span data-ttu-id="ee5c4-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="ee5c4-105">Method</span></span>|<span data-ttu-id="ee5c4-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ee5c4-106">Description</span></span>|  
+|<span data-ttu-id="49b14-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="49b14-105">Method</span></span>|<span data-ttu-id="49b14-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="49b14-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ee5c4-107">Set Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-107">Set Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|<span data-ttu-id="ee5c4-108">Geçerli ayarlar `IHostAutoEvent` iş durumuna örneği.</span><span class="sxs-lookup"><span data-stu-id="ee5c4-108">Sets the current `IHostAutoEvent` instance to a signaled state.</span></span>|  
-|[<span data-ttu-id="ee5c4-109">Wait Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-109">Wait Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|<span data-ttu-id="ee5c4-110">Geçerli neden `IHostAutoEvent` örnek olay ait kadar bekleyin veya belirli bir süre geçtikten miktarını.</span><span class="sxs-lookup"><span data-stu-id="ee5c4-110">Causes the current `IHostAutoEvent` instance to wait until the event is owned or a specified amount of time elapses.</span></span>|  
+|[<span data-ttu-id="49b14-107">Set Yöntemi</span><span class="sxs-lookup"><span data-stu-id="49b14-107">Set Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|<span data-ttu-id="49b14-108">Geçerli ayarlar `IHostAutoEvent` sinyal verilmiş duruma örneği.</span><span class="sxs-lookup"><span data-stu-id="49b14-108">Sets the current `IHostAutoEvent` instance to a signaled state.</span></span>|  
+|[<span data-ttu-id="49b14-109">Wait Yöntemi</span><span class="sxs-lookup"><span data-stu-id="49b14-109">Wait Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|<span data-ttu-id="49b14-110">Geçerli neden `IHostAutoEvent` olay ait kadar beklenecek örneği veya belirli bir zaman geçtikçe miktarını.</span><span class="sxs-lookup"><span data-stu-id="49b14-110">Causes the current `IHostAutoEvent` instance to wait until the event is owned or a specified amount of time elapses.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ee5c4-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ee5c4-111">Requirements</span></span>  
- <span data-ttu-id="ee5c4-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee5c4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49b14-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="49b14-111">Requirements</span></span>  
+ <span data-ttu-id="49b14-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49b14-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee5c4-113">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ee5c4-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="49b14-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="49b14-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ee5c4-114">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="ee5c4-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="49b14-114">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="49b14-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ee5c4-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee5c4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="49b14-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49b14-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee5c4-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ee5c4-116">See Also</span></span>  
- [<span data-ttu-id="ee5c4-117">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-117">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="ee5c4-118">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-118">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [<span data-ttu-id="ee5c4-119">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee5c4-119">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [<span data-ttu-id="ee5c4-120">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ee5c4-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="49b14-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="49b14-116">See also</span></span>
+- [<span data-ttu-id="49b14-117">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="49b14-117">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="49b14-118">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="49b14-118">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="49b14-119">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="49b14-119">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="49b14-120">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="49b14-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

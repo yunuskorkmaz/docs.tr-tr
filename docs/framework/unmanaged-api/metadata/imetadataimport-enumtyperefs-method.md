@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d096be8eb7f966d5a79e57a3a1b7ab7f63cd5ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659260"
 ---
-# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="46638-102">IMetaDataImport::EnumTypeRefs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="46638-102">IMetaDataImport::EnumTypeRefs Method</span></span>
-<span data-ttu-id="46638-103">Geçerli meta veri kapsamda tanımlı TypeRef belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="46638-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="9753c-102">IMetaDataImport::EnumTypeRefs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9753c-102">IMetaDataImport::EnumTypeRefs Method</span></span>
+<span data-ttu-id="9753c-103">Geçerli meta veri kapsamda tanımlanan TypeRef belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="9753c-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46638-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="46638-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9753c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9753c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumTypeRefs (  
@@ -38,38 +38,38 @@ HRESULT EnumTypeRefs (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="46638-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="46638-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9753c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9753c-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="46638-106">[içinde out] Numaralayıcı gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="46638-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="46638-107">Bu, bu yöntem ilk çağrısı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="46638-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="9753c-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9753c-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="9753c-107">Bu, bu yöntemin ilk çağrı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9753c-107">This must be NULL for the first call of this method.</span></span>  
   
  `rTypeRefs`  
- <span data-ttu-id="46638-108">[out] TypeRef belirteçleri depolamak için kullanılan dizisi.</span><span class="sxs-lookup"><span data-stu-id="46638-108">[out] The array used to store the TypeRef tokens.</span></span>  
+ <span data-ttu-id="9753c-108">[out] TypeRef simgeleri depolamak için kullanılan dizisi.</span><span class="sxs-lookup"><span data-stu-id="9753c-108">[out] The array used to store the TypeRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="46638-109">[in] En büyük boyutunu `rTypeRefs` dizi.</span><span class="sxs-lookup"><span data-stu-id="46638-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
+ <span data-ttu-id="9753c-109">[in] En büyük boyutunu `rTypeRefs` dizisi.</span><span class="sxs-lookup"><span data-stu-id="9753c-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
   
  `pcTypeRefs`  
- <span data-ttu-id="46638-110">[out] Döndürülen TypeRef belirteçleri sayısını gösteren bir işaretçi `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="46638-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
+ <span data-ttu-id="9753c-110">[out] Döndürülen TypeRef belirteçleri sayısı için bir işaretçi `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="9753c-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="46638-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="46638-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9753c-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9753c-111">Return Value</span></span>  
   
-|<span data-ttu-id="46638-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="46638-112">HRESULT</span></span>|<span data-ttu-id="46638-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46638-113">Description</span></span>|  
+|<span data-ttu-id="9753c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9753c-112">HRESULT</span></span>|<span data-ttu-id="9753c-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9753c-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="46638-114">`EnumTypeRefs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="46638-114">`EnumTypeRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="46638-115">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="46638-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="46638-116">Bu durumda, `pcTypeRefs` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="46638-116">In that case, `pcTypeRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="9753c-114">`EnumTypeRefs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="9753c-114">`EnumTypeRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="9753c-115">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="9753c-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="9753c-116">Bu durumda, `pcTypeRefs` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="9753c-116">In that case, `pcTypeRefs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="46638-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="46638-117">Remarks</span></span>  
- <span data-ttu-id="46638-118">TypeRef belirteci türüne bir başvuru temsil eder.</span><span class="sxs-lookup"><span data-stu-id="46638-118">A TypeRef token represents a reference to a type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9753c-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9753c-117">Remarks</span></span>  
+ <span data-ttu-id="9753c-118">TypeRef belirteci bir türü bir başvuruyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="9753c-118">A TypeRef token represents a reference to a type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46638-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46638-119">Requirements</span></span>  
- <span data-ttu-id="46638-120">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46638-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9753c-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9753c-119">Requirements</span></span>  
+ <span data-ttu-id="9753c-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9753c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46638-121">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="46638-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9753c-121">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="9753c-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="46638-122">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="46638-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9753c-122">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="9753c-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="46638-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46638-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9753c-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9753c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46638-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="46638-124">See Also</span></span>  
- [<span data-ttu-id="46638-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46638-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="46638-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46638-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9753c-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9753c-124">See also</span></span>
+- [<span data-ttu-id="9753c-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9753c-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9753c-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9753c-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

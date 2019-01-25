@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: dize koleksiyonlarını (LINQ) (Visual Basic) birleştirme ve karşılaştırma'
+title: 'Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 0e8df8e6e324b2a575fb6232c54a223cb35a4ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732667"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="d12bf-102">Nasıl yapılır: dize koleksiyonlarını (LINQ) (Visual Basic) birleştirme ve karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="d12bf-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="d12bf-103">Bu örnekte, sonuçları sıralamak ve satırlık metin içeren dosyaları birleştirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d12bf-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d12bf-104">Özellikle, basit bir birleştirme, bir birleşim ve kesişim metin satırlarını iki kümelerinde gerçekleştirme gösterir.</span><span class="sxs-lookup"><span data-stu-id="d12bf-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="4035a-102">Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları</span><span class="sxs-lookup"><span data-stu-id="4035a-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="4035a-103">Bu örnekte, satırlık metin içeren ve ardından sonuçları sıralamak dosyaları birleştirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4035a-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="4035a-104">Özellikle, basit bir birleştirme, bir birleşim ve kesişim metin satırlarını iki kümelerinde gerçekleştirme gösterir.</span><span class="sxs-lookup"><span data-stu-id="4035a-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="d12bf-105">Proje ve metin dosyaları ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d12bf-105">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="4035a-105">Proje ve metin dosyaları ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="4035a-105">To set up the project and the text files</span></span>  
   
-1.  <span data-ttu-id="d12bf-106">Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin:</span><span class="sxs-lookup"><span data-stu-id="d12bf-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="4035a-106">Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="4035a-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "33644452"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="d12bf-107">Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasöründe kaydedin.</span><span class="sxs-lookup"><span data-stu-id="d12bf-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="d12bf-108">İki dosya bazı adlar ortak gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="d12bf-108">Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="4035a-107">Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="4035a-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="4035a-108">İki dosyayı bazı adları ortak gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="4035a-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "33644452"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="d12bf-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="d12bf-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4035a-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="4035a-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -162,9 +162,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d12bf-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d12bf-110">Compiling the Code</span></span>  
- <span data-ttu-id="d12bf-111">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="d12bf-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4035a-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="4035a-110">Compiling the Code</span></span>  
+ <span data-ttu-id="4035a-111">.NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="4035a-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d12bf-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d12bf-112">See Also</span></span>  
- [<span data-ttu-id="d12bf-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d12bf-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="d12bf-114">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d12bf-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="4035a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4035a-112">See also</span></span>
+- [<span data-ttu-id="4035a-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4035a-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="4035a-114">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4035a-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

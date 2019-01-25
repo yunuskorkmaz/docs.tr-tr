@@ -9,27 +9,27 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687225"
 ---
-# <a name="images"></a><span data-ttu-id="9f19d-102">Görüntüler</span><span class="sxs-lookup"><span data-stu-id="9f19d-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="9f19d-103"> birden çok görüntü biçimlerini, yüksek doğruluk görüntü işleme ve codec genişletilebilirliği için yerleşik destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="9f19d-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="4ceb9-102">Görüntüler</span><span class="sxs-lookup"><span data-stu-id="4ceb9-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="4ceb9-103">birden çok görüntü biçimlerini, yüksek uygunluğa sahip görüntü işleme ve codec genişletilebilirliği için yerleşik destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="4ceb9-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9f19d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9f19d-104">In This Section</span></span>  
- [<span data-ttu-id="9f19d-105">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9f19d-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="9f19d-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9f19d-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4ceb9-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4ceb9-104">In This Section</span></span>  
+ [<span data-ttu-id="4ceb9-105">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="4ceb9-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="4ceb9-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4ceb9-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9f19d-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9f19d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4ceb9-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="4ceb9-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="9f19d-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9f19d-108">See Also</span></span>  
- [<span data-ttu-id="9f19d-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9f19d-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="9f19d-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="9f19d-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="4ceb9-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ceb9-108">See also</span></span>
+- [<span data-ttu-id="4ceb9-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="4ceb9-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="4ceb9-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="4ceb9-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

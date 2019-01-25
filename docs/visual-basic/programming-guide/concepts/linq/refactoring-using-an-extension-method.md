@@ -2,26 +2,26 @@
 title: Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 429f1fb106eca6b6a9ce0f64ea81c260c10a088a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671583"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="76bbb-102">Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="76bbb-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="76bbb-103">Bu örnek önceki örnekte olduğu derlemeler [(Visual Basic) paragrafları metin alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), bir genişletme yöntemi uygulanan saf işlevi kullanarak dizeleri birleşimini yeniden düzenleme tarafından.</span><span class="sxs-lookup"><span data-stu-id="76bbb-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="95697-102">Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="95697-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="95697-103">Bu örnek önceki örneğe, yapılar [(Visual Basic) paragrafların metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), yeniden düzenleme bir genişletme yöntemi uygulanan saf işlev kullanarak dizeleri birleşimi tarafından.</span><span class="sxs-lookup"><span data-stu-id="95697-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
   
- <span data-ttu-id="76bbb-104">Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> bir dizeye birden çok dizeyi birleştirme için standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="76bbb-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="76bbb-105">Ancak, elde edilen sorgu olduğundan daha küçük ve daha basit Bunu yapmak için uzantı metodu yazma daha uygundur.</span><span class="sxs-lookup"><span data-stu-id="76bbb-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
+ <span data-ttu-id="95697-104">Önceki örnekte kullanılan <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi bir dizede birleştirmek için standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="95697-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="95697-105">Ancak, elde edilen sorgu daha küçük ve daha basit olduğundan, bunu yapmak için bir uzantı metodu yazma daha uygundur.</span><span class="sxs-lookup"><span data-stu-id="95697-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="76bbb-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="76bbb-106">Example</span></span>  
- <span data-ttu-id="76bbb-107">Bu örnek alma paragraflar, her paragraf stili ve her paragraf metni WordprocessingML belgeye işler.</span><span class="sxs-lookup"><span data-stu-id="76bbb-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="76bbb-108">Bu örnek önceki örnekler üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="76bbb-108">This example builds on the previous examples in this tutorial.</span></span>  
+## <a name="example"></a><span data-ttu-id="95697-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="95697-106">Example</span></span>  
+ <span data-ttu-id="95697-107">Bu örnekte paragraflar, her paragraf stilini ve her bir paragraf metni alınırken WordprocessingML belgesinin işler.</span><span class="sxs-lookup"><span data-stu-id="95697-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="95697-108">Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur.</span><span class="sxs-lookup"><span data-stu-id="95697-108">This example builds on the previous examples in this tutorial.</span></span>  
   
- <span data-ttu-id="76bbb-109">Örnek, birden çok aşırı içerir `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="76bbb-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
+ <span data-ttu-id="95697-109">Örnek, birden çok aşırı yükleme içerir `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="95697-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
   
- <span data-ttu-id="76bbb-110">Bu örnekte, kaynak belge oluşturmak için yönergeler bulabilirsiniz [kaynak Office Açık XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="76bbb-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="95697-110">Bu örnekte için kaynak belge oluşturma için yönergeler bulabilirsiniz [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="95697-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="76bbb-111">Bu örnek WindowsBase derlemeden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="76bbb-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="76bbb-112">Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="76bbb-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="95697-111">Bu örnek WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="95697-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="95697-112">Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="95697-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -64,10 +64,10 @@ ByVal func As Func(Of T, String), ByVal separator As String) As String
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="76bbb-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="76bbb-113">Example</span></span>  
- <span data-ttu-id="76bbb-114">Dört aşırı `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="76bbb-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="76bbb-115">Aşırı yüklemesiyle yalnızca dizeleri koleksiyonu alır ve tek bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="76bbb-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="76bbb-116">Başka bir aşırı herhangi bir türü ve temsilci koleksiyonunu o koleksiyonun bir singleton projelerinden dizeye alabilir.</span><span class="sxs-lookup"><span data-stu-id="76bbb-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="76bbb-117">Ayırıcı dize belirlemenizi sağlayan iki daha fazla aşırı vardır.</span><span class="sxs-lookup"><span data-stu-id="76bbb-117">There are two more overloads that allow you to specify a separator string.</span></span>  
+## <a name="example"></a><span data-ttu-id="95697-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="95697-113">Example</span></span>  
+ <span data-ttu-id="95697-114">Dört aşırı yükleme `StringConcatenate` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="95697-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="95697-115">Aşırı yüklemelerden birine yalnızca dizeleri koleksiyonunu alır ve tek bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="95697-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="95697-116">Başka bir aşırı herhangi bir tür ve temsilci koleksiyonu bu projelerden koleksiyonun tek bir dize alabilir.</span><span class="sxs-lookup"><span data-stu-id="95697-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="95697-117">Bir ayırıcı dizesinde belirtmenize olanak veren iki daha fazla aşırı yüklemesi vardır.</span><span class="sxs-lookup"><span data-stu-id="95697-117">There are two more overloads that allow you to specify a separator string.</span></span>  
   
- <span data-ttu-id="76bbb-118">Aşağıdaki kod tüm dört aşırı kullanır.</span><span class="sxs-lookup"><span data-stu-id="76bbb-118">The following code uses all four overloads.</span></span>  
+ <span data-ttu-id="95697-118">Aşağıdaki kod, tüm dört aşırı yüklemeler kullanır.</span><span class="sxs-lookup"><span data-stu-id="95697-118">The following code uses all four overloads.</span></span>  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- <span data-ttu-id="76bbb-119">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="76bbb-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="95697-119">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="95697-119">This example produces the following output:</span></span>  
   
 ```  
 onetwothree  
@@ -89,8 +89,8 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a><span data-ttu-id="76bbb-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="76bbb-120">Example</span></span>  
- <span data-ttu-id="76bbb-121">Şimdi, örneğin, yeni uzantı metodu yararlanmak için değiştirilebilir:</span><span class="sxs-lookup"><span data-stu-id="76bbb-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
+## <a name="example"></a><span data-ttu-id="95697-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="95697-120">Example</span></span>  
+ <span data-ttu-id="95697-121">Şimdi, örneğin yeni bir genişletme yöntemi yararlanmak için değiştirilebilir:</span><span class="sxs-lookup"><span data-stu-id="95697-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="76bbb-122">Bu örnek aşağıdaki açıklandığı belgeye uygulandığında çıktı üretir [kaynak Office Açık XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="76bbb-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="95697-122">Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="95697-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -236,13 +236,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="76bbb-123">Bu yeniden düzenleme saf bir işlevdeki yeniden düzenleme, bir değişken olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="76bbb-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="76bbb-124">Sonraki konusunda daha ayrıntılı saf işlevler halinde Finansman fikir tanıtılacaktır.</span><span class="sxs-lookup"><span data-stu-id="76bbb-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
+ <span data-ttu-id="95697-123">Bu yeniden düzenleme, yeniden düzenleme saf işlev bir değişken olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="95697-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="95697-124">Bir sonraki konu başlığında, daha ayrıntılı saf işlevler halinde hesaba katacak şekilde fikri başlatacaktır.</span><span class="sxs-lookup"><span data-stu-id="95697-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="76bbb-125">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="76bbb-125">Next Steps</span></span>  
- <span data-ttu-id="76bbb-126">Sonraki örnekte, bu kod, saf işlevlerini kullanarak başka bir yolla yeniden düzenlemeniz gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="76bbb-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="95697-125">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="95697-125">Next Steps</span></span>  
+ <span data-ttu-id="95697-126">Sonraki örnek, saf işlevler kullanarak başka bir yolla bu kodu yeniden düzenleyin gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="95697-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
   
--   [<span data-ttu-id="76bbb-127">Saf işlevi (Visual Basic) kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="76bbb-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [<span data-ttu-id="95697-127">(Visual Basic) saf işlev kullanarak yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="95697-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a><span data-ttu-id="76bbb-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="76bbb-128">See Also</span></span>  
- [<span data-ttu-id="76bbb-129">Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="76bbb-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [<span data-ttu-id="76bbb-130">Saf işlevleri (Visual Basic) yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="76bbb-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="95697-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="95697-128">See also</span></span>
+- [<span data-ttu-id="95697-129">Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme</span><span class="sxs-lookup"><span data-stu-id="95697-129">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="95697-130">(Visual Basic) saf işlevler halinde yeniden düzenleme</span><span class="sxs-lookup"><span data-stu-id="95697-130">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
