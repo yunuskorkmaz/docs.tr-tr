@@ -6,18 +6,18 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546994"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
 Aşağıdaki derleyici seçeneklerinin kategoriye göre sıralanır. Alfabetik liste için bkz: [C# derleyici seçenekleri listelenen alfabetik](listed-alphabetically.md).
 
-## <a name="optimization"></a>En iyi duruma getirme
+## <a name="optimization"></a>İyileştirme
 
 |Seçenek|Amaç|
 |------------|-------------|
@@ -95,7 +95,7 @@ Aşağıdaki derleyici seçeneklerinin kategoriye göre sıralanır. Alfabetik l
 |[-codepage](codepage-compiler-option.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|
 |[-Yardım](help-compiler-option.md)|Stdout derleyici seçenekleri listeler.|
 |[-highentropyva](highentropyva-compiler-option.md)|Yürütülebilir dosyayı rastgele adres alanı düzenini (ASLR) desteklediğini belirtir.|
-|[-langversion](langversion-compiler-option.md)|Dil sürümünü belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 veya en son |
+|[-langversion](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 veya en son |
 |[-main](main-compiler-option.md)|Konumunu belirtir **ana** yöntemi.|
 |[-noconfig](noconfig-compiler-option.md)|Csc.rsp ile derleme değil derleyicinin sağlar.|
 |[-nologo](nologo-compiler-option.md)|Derleyici başlık bilgilerini engellemesidir.|
@@ -112,8 +112,8 @@ Aşağıdaki derleyici seçeneklerinin kategoriye göre sıralanır. Alfabetik l
 |---|---|
 |-artan|Artımlı derleme sağlar.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](index.md)  
-- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](listed-alphabetically.md)  
-- [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [C# Derleyici Seçenekleri](index.md)
+- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](listed-alphabetically.md)
+- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

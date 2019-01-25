@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522004"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -69,7 +69,7 @@ ms.locfileid: "53131111"
  [Dağıtım örnekleri ve izlenecek yollar](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Dağıtım senaryoları için adım adım örnekler sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../csharp/programming-guide/index.md)  
+- [C# Programlama Kılavuzu](../csharp/programming-guide/index.md)
 - [Visual Studio Örnekleri](/visualstudio/ide/visual-studio-samples)

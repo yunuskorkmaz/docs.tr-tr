@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: derleme kullanarak XSLT dönüşümü gerçekleştirme'
+title: 'Nasıl yapılır: Derleme kullanarak XSLT dönüşümü gerçekleştirme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625620"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: derleme kullanarak XSLT dönüşümü gerçekleştirme
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme kullanarak XSLT dönüşümü gerçekleştirme
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derleme doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ve XSLT dosyaları yerel bilgisayarınıza kopyalamak için  
@@ -183,7 +183,7 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
-- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [csc.exe Kullanarak Komut Satırı Derleme](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548801"
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:  
@@ -23,7 +23,7 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
 ## <a name="the-order-of-binding-elements"></a>Bağlama öğelerinin sırası  
  Her bağlama öğesi gönderirken veya iletileri almak için bir işleme adımını temsil eder. Çalışma zamanında, Kanallar ve dinleyiciler bağlama öğeleri giden ve gelen kanal yığınları oluşturmak gerekli oluşturun.  
   
- Bağlama öğelerinin üç ana türü vardır: Protokolü bağlama öğeleri, kodlama bağlama öğeleri ve aktarım bağlama öğeleriyle.  
+ Bağlama öğeleri üç ana türü vardır: Öğe, kodlama bağlama öğeleri ve bağlama öğeleri aktarım bağlama protokolü.  
   
  Protokol bağlama öğeleri – iletileri gibi davranan daha yüksek düzeyde işleme adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan ekleyin, kaldırın veya ileti içeriğini değiştirin. Verilen bağlama Protokolü bağlama öğelerinin her dan devralan, rastgele bir sayıdan olabilir <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) dahil olmak üzere, çeşitli protokol bağlama öğeleri içeren <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -39,7 +39,7 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
 |Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|Hayır|  
 |Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Hayır|  
 |Bileşik çift yönlü|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Hayır|  
-|Kodlama|İkili, MTOM, özel bir metin|Evet*|  
+|Encoding|İkili, MTOM, özel bir metin|Evet*|  
 |Taşıma|TCP ve adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Evet|  
   
  * Bir kodlama belirtilmemişse, kodlama her bağlama için gerekli olduğu için bir varsayılan sizin için kodlama WCF ekler. Metin/XML ve ikili HTTP ve HTTPS aktarımı için Aksi takdirde varsayılandır.  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Standart bir bağlama öğesinden türetme  
  Tamamen yeni bir bağlama sınıfı oluşturmak yerine var olan sistem tarafından sağlanan bağlamalar birini genişletmek için mümkün olabilir. Daha önceki bir durumda gibi geçersiz kılmanız gerekir <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.Binding>  
- [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.Binding>
+- [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)

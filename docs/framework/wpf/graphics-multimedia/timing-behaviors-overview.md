@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715588"
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış
 Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline> nesneleri.  
@@ -118,13 +118,13 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Zaman ilerledikçe için üst göre hızı belirtir bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; değerleri sıfır ve bir arasındaki yavaşlamasına bu. Belirten bir değeri, <xref:System.Windows.Media.Animation.Timeline> üst işlemleriyle aynı fiyat ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Kapsayıcı zaman çizelgesinin ayar tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz. [nasıl yapılır: bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz. [nasıl yapılır: bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Zamanlama Olaylarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Zamanlama Olaylarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)

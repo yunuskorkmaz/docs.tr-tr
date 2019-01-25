@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533148"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
   
 -   WCF istemci nesnesi iki tür bir sonlandırma işlemi (varsayılan olarak, hiçbir işlem sonlandırma; sözleşmeyi sonlandırma işlemi açıkça belirtmeniz gerekir). İlk işlem çağrıldığında, WCF istemci nesnesi, otomatik olarak kanal açar ve bir oturumu başlatır.  
   
- Örnekler için bkz [nasıl yapılır: bir hizmet, gerektirir oturumları oluşturmasına](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) yanı sıra [varsayılan hizmet davranışı](../../../docs/framework/wcf/samples/default-service-behavior.md) ve [Instancing](../../../docs/framework/wcf/samples/instancing.md) örnekleri.  
+ Örnekler için bkz [nasıl yapılır: Bir hizmet, gerektirir oturumları oluşturmasına](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) yanı sıra [varsayılan hizmet davranışı](../../../docs/framework/wcf/samples/default-service-behavior.md) ve [Instancing](../../../docs/framework/wcf/samples/instancing.md) örnekleri.  
   
  İstemcileri ve oturumları hakkında daha fazla bilgi için bkz: [WCF istemci kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
@@ -145,6 +145,6 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
 > [!NOTE]
 >  Kullanılabilir tek bir "oturum" olduğundan MaxConcurrentSessions bu durumda hiçbir etkisi yoktur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

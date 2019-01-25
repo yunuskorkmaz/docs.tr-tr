@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef5faff6682ed6c043e81212f2cb27d4cfbd813d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601863"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE İşlevi
-`CoUninitializeEE` kullanılmıyor ve hiçbir işlevsellik sağlar.  
+`CoUninitializeEE` artık kullanılmıyor ve hiçbir işlevsellik sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,8 +35,8 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı yürütme altyapısı bir işlemden kaldırılamıyor. Yürütme altyapısı çağrısı kapatmaya [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
+ Ortak dil çalışma zamanı yürütme altyapısının bir işlemden olamaz. Yürütme altyapısı çağrıyı kapatmaya [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [CoInitializeEE İşlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [CoInitializeEE İşlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

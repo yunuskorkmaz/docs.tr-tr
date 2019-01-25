@@ -1,23 +1,23 @@
 ---
-title: İç hata nedeniyle bellek bilgileri elde edilemedi
+title: İç hata nedeniyle bellek bilgileri alınamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_Memory
 ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
-ms.openlocfilehash: 6d6f9b65837a989b3dbdd47eea4f3c08a1f0b7b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f1c60ce017173f79665fb2b68e9c355f1c5d167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595883"
 ---
-# <a name="could-not-obtain-memory-information-due-to-internal-error"></a>İç hata nedeniyle bellek bilgileri elde edilemedi
-Bellek bilgileri özelliklerinden birini çağrısına `My.Computer.Info` nesnesi oluşturulamadı.  
+# <a name="could-not-obtain-memory-information-due-to-internal-error"></a>İç hata nedeniyle bellek bilgileri alınamadı
+Bellek bilgileri özelliklerinden birini çağrısı `My.Computer.Info` nesnesi oluşturulamadı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Ekleme bir `Try...Catch` bellek bilgileri özelliği çağrısı geçici blok `My.Computer.Info` nesnesi.  
+-   Ekleme bir `Try...Catch` bloğu içine çağrı bellek bilgileri özelliğine `My.Computer.Info` nesne.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer.Info](xref:Microsoft.VisualBasic.Devices.ComputerInfo)  
- [Try...Catch...Finally Deyimi](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [My.Computer.Info](xref:Microsoft.VisualBasic.Devices.ComputerInfo)
+- [Try...Catch...Finally Deyimi](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

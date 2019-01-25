@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573143"
 ---
 # <a name="c-preprocessor-directives"></a>C# önişlemci yönergeleri
 Bu bölüm, aşağıdaki C# önişlemci yönergeleri hakkında bilgi içerir:
@@ -40,5 +40,5 @@ Derleyicinin ayrı bir önişlemci olması gerekmese de, bu bölümde açıklana
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

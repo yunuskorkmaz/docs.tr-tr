@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92dd0a4ad8128f7ce300ca5da1e5022b944d91e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3782686f3caad6859aa81957f10e585265be340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585491"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder Yöntemi
-Geriye doğru izleme (hangi mutlaka bir iş parçacığı yaprak olmayan) bir ilk bağlamından başlayan yeni bir yığın unwinder oluşturur.  
+(Bu mutlaka bir iş parçacığının yaprak olmayan) bir ilk bağlamından geriye doğru izleme başlayan yeni bir yığın unwinder oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,37 +28,37 @@ HRESULT CreateVirtualUnwinder(
   
 #### <a name="parameters"></a>Parametreler  
  nativeThreadID  
- [in] Yığın olduğu olması için iş parçacığı yerel iş parçacığı kimliği unwound.  
+ [in] Yerel iş parçacığı kimliği olan yığınıdır olacak şekilde iş parçacığının geriye doğru.  
   
  contextFlags  
- [in] Bağlam hangi kısımlarının tanımlanan belirtin bayrakları `initialContext`.  
+ [in] Hangi parçalarının bağlam içinde tanımlanan belirten bayrakları `initialContext`.  
   
  cbContext  
- [in] Boyutunu `initialContext`.  
+ [in] Boyutu `initialContext`.  
   
  initialContext  
  [in] Bağlam verileri.  
   
  ppUnwinder  
- [out] Icordebugvirtualunwinder arabirimi nesnenin adresini gösteren bir işaretçi.  
+ [out] Icordebugvirtualunwinder arabirimi nesnenin adresi için bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` başarılı olursa. Diğer `HRESULT` başarısız olduğunu gösterir. Tüm başarısız `HRESULT` mscordbi tarafından alınan önemli kabul edilir ve neden [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) dönmek için yöntemleri `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK` başarılı olursa. Diğer `HRESULT` başarısız olduğunu gösterir. Tüm başarısız `HRESULT` mscordbi tarafından alınan önemli kabul edilir ve neden [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) döndürülecek yöntemleri `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET yerel ile kullanılabilir.  
+>  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugDataTarget2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorDebugDataTarget2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

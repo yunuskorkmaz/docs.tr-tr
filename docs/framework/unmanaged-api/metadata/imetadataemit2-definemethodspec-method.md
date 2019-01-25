@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492526"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec Yöntemi
 Bir yöntem genel bir örneğini oluşturur ve tanımı için bir belirteç alır.  
@@ -40,26 +40,26 @@ HRESULT DefineMethodSpec (
   
 #### <a name="parameters"></a>Parametreler  
  `tkParent`  
- [in] Genel örneği oluşturulacağı yöntemi için bir belirteç. Belirteç türü olmalıdır `mdMethodDef` veya `mdMemberRef`.  
+ [in] Genel örnek oluşturulacağı yöntemi için bir belirteç. Belirteç türü olmalıdır `mdMethodDef` veya `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] İkili COM + imzasını yöntemi için bir işaretçi.  
+ [in] İkili COM + metodun imzası bir işaretçi.  
   
  `cbSibBlob`  
- [in] Bayt olarak boyutu, `pvSigBlob`.  
+ [in] Bayt cinsinden boyutu, `pvSigBlob`.  
   
  `pmi`  
- [out] Meta veri imza tanımına yönteminin bir belirteç.  
+ [out] Yöntemin meta veri imzası tanımı için bir belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

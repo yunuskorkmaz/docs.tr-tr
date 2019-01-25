@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 9f2f5b157d8999cd254d6b389cdf7a2ca8ca1f8f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743848"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -58,7 +58,7 @@ ms.locfileid: "48840538"
   
 -   Automationıd yalnızca eş değerleri arasında benzersiz olması garanti olduğundan bazı durumlarda, UI Otomasyonu ağacında birden çok öğe aynı Automationıd özelliği değerlerine sahip olabilir. Bu durumlarda öğeleri benzersiz bir üst öğede göre tanımlanabilir ve gerekirse bir doya. Örneğin, bir geliştirici menü öğeleri ile sıralı Automationıd 's "Item1", "Item2" vb. gibi alt burada tanımlanan birden çok menü öğeleri ile her ile birden çok alt menü çubuğu sağlayabilir. Her bir menü öğesi sonra benzersiz üst Automationıd yanı sıra kendi Automationıd tarafından tanımlanabilir ve gerekirse kendi dizinleriyle.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
+- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

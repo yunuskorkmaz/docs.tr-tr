@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ed8bbbd9699fe707d638bb8d07064e508b6f2fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58c6e6685cc5c268d9313457469369d9df25e13b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564152"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName Yöntemi
-Belirtilen ada sahip belirtilen türde fieldDef simgesi belirteçleri numaralandırır.  
+Belirtilen ada sahip belirtilen türün fieldDef simgesi belirteçleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,19 +42,19 @@ HRESULT EnumFieldsWithName (
   
 #### <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde out] Numaralayıcı gösteren bir işaretçi.  
+ [out içinde] Numaralandırıcı bir işaretçi.  
   
  `cl`  
- [in] Numaralandırılacak alanları olan tür belirteci.  
+ [in] Numaralandırılacak alanları olan türde bir belirteç.  
   
  `szName`  
- [in] Numaralandırma kapsamını sınırlar alanın adı.  
+ [in] Numaralandırma kapsamını sınırlayan alan adı.  
   
  `rFields`  
- [out] Dizi fieldDef simgesi belirteçleri depolamak için kullanılır.  
+ [out] Dizi fieldDef simgesi simgeleri depolamak için kullanılır.  
   
  `cMax`  
- [in] En büyük boyutunu `rFields` dizi.  
+ [in] En büyük boyutunu `rFields` dizisi.  
   
  `pcTokens`  
  [out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.  
@@ -70,14 +70,14 @@ HRESULT EnumFieldsWithName (
 |`S_FALSE`|Numaralandırılacak alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

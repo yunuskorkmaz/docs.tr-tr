@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir bilgisayarda mevcut saat dilimlerini numaralandırma'
+title: 'Nasıl yapılır: Bir bilgisayarda mevcut saat dilimlerini numaralandırma'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c012b10f43a45699605e2d87a5b4a814c7dae28
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518416"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Nasıl yapılır: bir bilgisayarda mevcut saat dilimlerini numaralandırma
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Nasıl yapılır: Bir bilgisayarda mevcut saat dilimlerini numaralandırma
 
 Başarıyla atanan bir saat dilimi ile çalışma, saat dilimi bilgilerini sistemi için kullanılabilir olmasını gerektirir. Windows XP ve Windows Vista işletim sistemleri, bu bilgileri kayıt defterinde depolar. Ancak, dünyanın her yerinde mevcut saat dilimlerini toplam sayısı büyük olsa da, kayıt defteri bunları yalnızca bir alt kümesi hakkında bilgi içerir. Ayrıca, kayıt defterini içerikleri hem kasıtlı hem de yanlışlıkla değişikliğe tabi olduğu bir dinamik yapısıdır. Sonuç olarak, bir uygulama her zaman belirli bir saat dilimini tanımlanan ve mevcut bir sistemde olduğunu varsayamazsınız. Saat dilimi bilgileri uygulamaları kullanan birçok uygulama için ilk adımı, gerekli saat dilimlerini yerel sistemde kullanılabilir olup olmadığını belirlemek için veya kullanıcı seçmek için saat dilimlerinin listesini vermek için ' dir. Bu, bir uygulamanın yerel sistemde tanımlanan saat dilimlerini numaralandırma gerektirir.
 
 > [!NOTE]
-> Bir uygulamanın yerel bir sistemde tanımlı değil belirli bir saat dilimi olup olmamasına dayanıyorsa, uygulama tarafından seri hale getirme ve saat dilimi bilgilerini seri durumdan çıkarılırken varlığını emin olabilirsiniz. Uygulama kullanıcısı seçebilmeniz için liste denetimi saat dilimini sonra eklenebilir. Ayrıntılar için bkz [nasıl yapılır: katıştırılmış bir kaynağı için saat dilimlerini kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Bir uygulamanın yerel bir sistemde tanımlı değil belirli bir saat dilimi olup olmamasına dayanıyorsa, uygulama tarafından seri hale getirme ve saat dilimi bilgilerini seri durumdan çıkarılırken varlığını emin olabilirsiniz. Uygulama kullanıcısı seçebilmeniz için liste denetimi saat dilimini sonra eklenebilir. Ayrıntılar için bkz [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Yerel sistemde mevcut saat dilimlerini numaralandırma
 
@@ -73,6 +73,6 @@ Bu örnek gerektirir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-* [Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
-* [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
+- [Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

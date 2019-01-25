@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
+title: 'Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731874"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
-Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme en iyi şekilde hem aktarım hem de ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti düzeyi güvenlik katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konu, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımları gösterir. <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri
+Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme en iyi şekilde hem aktarım hem de ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti düzeyi güvenlik katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konu, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımları gösterir. <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Güvenlik modunu ayarlama zaman `TransportWithMessageCredential`, aktarım düzeyi güvenlik sağlayan gerçek mekanizması taşıma belirler. HTTP için Güvenli Yuva Katmanı (SSL) HTTP (HTTPS) üzerinden mekanizmadır; TCP için SSL TCP veya Windows üzerinde değil.  
   
@@ -25,7 +25,7 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>WSHttpBinding, aktarım güvenliği (kodda) için bir sertifika ile kullanmak için  
   
-1.  Makine üzerindeki bir bağlantı noktası bir SSL sertifikası bağlamak için HttpCfg.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Makine üzerindeki bir bağlantı noktası bir SSL sertifikası bağlamak için HttpCfg.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> ayarlayın ve sınıf <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliğini <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
@@ -84,7 +84,7 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
   
 #### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding kullanmak için  
   
-1.  Bilgisayar bağlantı noktasına bağlı bir SSL sertifikasıyla yapılandırın. (Daha fazla bilgi için [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Ayarlanacak gerekmez bir <`transport`> Bu yapılandırmaya sahip öğe değeri.  
+1.  Bilgisayar bağlantı noktasına bağlı bir SSL sertifikasıyla yapılandırın. (Daha fazla bilgi için [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Ayarlanacak gerekmez bir <`transport`> Bu yapılandırmaya sahip öğe değeri.  
   
 2.  İleti düzeyi güvenliği için istemci kimlik bilgisi türü belirtin. Aşağıdaki örnek kümeleri `clientCredentialType` özniteliği <`message`> öğesine `UserName`.  
   
@@ -160,7 +160,7 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -2,23 +2,23 @@
 title: EDM Oluşturucu (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722129"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracı olan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve eşleme dosyaları. Aşağıdakileri yapmak için Edmgen.exe'yi Aracı'nı kullanabilirsiniz:  
   
--   Bir veri kaynağına özgü .NET Framework Veri Sağlayıcısı'nı kullanarak bir veri kaynağına bağlanmak ve kavramsal model (.csdl), depolama modelinin (.ssdl) ve tarafından kullanılan eşleme (.msl) dosyaları oluşturma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için [nasıl yapılır: kullanımı Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+-   Bir veri kaynağına özgü .NET Framework Veri Sağlayıcısı'nı kullanarak bir veri kaynağına bağlanmak ve kavramsal model (.csdl), depolama modelinin (.ssdl) ve tarafından kullanılan eşleme (.msl) dosyaları oluşturma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
--   Mevcut bir model doğrulayın. Daha fazla bilgi için [nasıl yapılır: doğrulama Model ve eşleme dosyaları için kullanım EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
+-   Mevcut bir model doğrulayın. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını doğrulama için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
   
--   Bir C# veya Visual Basic kod kavramsal model (.csdl) dosyasından oluşturulan nesne sınıfları içeren bir dosya oluşturun. Daha fazla bilgi için [nasıl yapılır: nesne katmanı kodu üretmek için Edmgen.exe'yi kullanım](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
+-   Bir C# veya Visual Basic kod kavramsal model (.csdl) dosyasından oluşturulan nesne sınıfları içeren bir dosya oluşturun. Daha fazla bilgi için [nasıl yapılır: Nesne Katmanı kodu üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
   
--   Mevcut bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: sorgu performansını artırmak için Pre-Generate görünümleri](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
+-   Mevcut bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: Sorgu performansını artırmak için önceden görünümlerin](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
   
  EdmGen.exe aracına [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dizin. Çoğu durumda bu C:\windows\Microsoft.NET\Framework\v4.0 içinde bulunur. 64-bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0 içinde bulunur. EdmGen.exe aracı Visual Studio Komut İstemi'nden de erişebilirsiniz (tıklayın **Başlat**, işaret **tüm programlar**, işaret **Microsoft Visual Studio 2010**, işaret **Visual Studio Araçları**ve ardından **Visual Studio 2010 Komut İstemi**).  
   
@@ -65,13 +65,13 @@ EdmGen /mode:choice [options]
 |`/targetversion:` \<dize >|Oluşturulan kodu derlemek için kullanılacak .NET Framework sürümü. Desteklenen 4 ve 4.5 sürümleridir. Varsayılan olarak 4.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
+ [Nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [Nasıl yapılır: EdmGen.exe kullanarak Nesne Katmanı Kodu Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [Nasıl yapılır: Nesne Katmanı kodu üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
- [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
+ [Nasıl yapılır: Model ve eşleme dosyalarını doğrulama için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET varlık veri modeli araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Varlık Veri Modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ADO.NET varlık veri modeli araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Varlık Veri Modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)
+- [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

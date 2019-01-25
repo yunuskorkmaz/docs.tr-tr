@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl Yapılır: Bildirme, oluşturma ve bir temsilci - kullanın C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Bildirme, oluşturma ve bir temsilci - kullanın C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: bc9fc81a74d438aca57779fa565fdbeba3968087
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ecbac4608cfd42aa099a0cd66d7d22241a93265
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557714"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl Yapılır: Bildirme, oluşturma ve bir temsilci kullanın (C# Programlama Kılavuzu)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl yapılır: Bildirme, oluşturma ve bir temsilci kullanın (C# Programlama Kılavuzu)
 C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildirilebilir.  
   
  [!code-csharp[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
@@ -72,8 +72,8 @@ C# 1.0 ve daha sonra aşağıdaki örnekte gösterildiği gibi temsilciler bildi
   
      Bir temsilci ya da zaman uyumlu olarak, bu örnekte olduğu gibi veya zaman uyumsuz olarak kullanarak çağrılabilir `BeginInvoke` ve `EndInvoke` yöntemleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Olaylar](../../../csharp/programming-guide/events/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Olaylar](../../../csharp/programming-guide/events/index.md)
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)

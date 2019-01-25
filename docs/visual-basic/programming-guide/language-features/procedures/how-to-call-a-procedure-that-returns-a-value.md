@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,47 +7,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 35f757609b6d0b36652db3b14e62ecd299a063ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525462"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma (Visual Basic)
-A `Function` yordamı çağıran kodu için bir değer döndürür. Bu adı ve bağımsız değişkenler dahil ederek Atama ifadesinin veya bir ifade sağ taraftaki ya da çağırın.  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam çağırma
+A `Function` yordamın çağrıldığı koda bir değer döndürür. Bu adı ve bağımsız değişkenler dahil ederek işlecin sağ tarafındaki Atama ifadesinin veya bir ifade ya da çağırırsınız.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>Bir ifade işlevi yordamda çağırmak için  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>İçinde bir ifade bir işlev yordam çağırmak için  
   
-1.  Kullanmak `Function` yordamı adı bir değişken kullandığınız aynı gibi. Kullanabileceğiniz bir `Function` yordam çağrısı her yerden kullanabileceğiniz bir değişken veya sabit bir ifade.  
+1.  Kullanma `Function` yordamı kullandığınız bir değişken gibi adlandırın. Kullanabileceğiniz bir `Function` kullanabileceğiniz bir değişken veya sabit bir ifadede herhangi bir yordam çağırma.  
   
-2.  Bağımsız değişken listesi kapsamak için parantez yordamı adıyla izleyin. Bağımsız değişkenler varsa, isteğe bağlı olarak parantez atlayabilirsiniz. Ancak, parantez kullanarak kodunuzu okumak kolaylaştırır.  
+2.  Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
   
-3.  Bağımsız değişkenler, virgülle ayrılmış parantez içinde bağımsız değişken listesinde yerleştirin. Bağımsız değişkenleri aynı sırada sağladığınız emin olun, `Function` yordamı ilgili parametreleri tanımlar.  
+3.  Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Function` yordamı karşılık gelen parametreleri tanımlar.  
   
-     Alternatif olarak, ada göre bir veya daha fazla bağımsız değişkenler geçirebilirsiniz. Daha fazla bilgi için bkz: [geçirme bağımsız değişkenleri konuma ve ada göre](./passing-arguments-by-position-and-by-name.md).  
+     Alternatif olarak, ada göre bir veya daha fazla bağımsız değişken geçirebilirsiniz. Daha fazla bilgi için [geçirmeden bağımsız değişkenleri konuma ve ada göre](./passing-arguments-by-position-and-by-name.md).  
   
-4.  Bir değişkenin değeri olarak yalnızca ifade yordamdan döndürülen değer katılan veya sabiti gerekir.  
+4.  Yordamdan döndürülen değer, bir değişken değeri olarak yalnızca ifade katıldığı veya sabiti gerekir.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Bir işlev yordamı bir atama deyiminde çağırmak için  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Bir atama ifadesinde bir işlev yordam çağırmak için  
   
-1.  Kullanım `Function` eşittir aşağıdaki yordam adı (`=`) atama deyiminde oturum açın.  
+1.  Kullanım `Function` eşit aşağıdaki yordam adı (`=`) atama ifadesi oturum açın.  
   
-2.  Bağımsız değişken listesi kapsamak için parantez yordamı adıyla izleyin. Bağımsız değişkenler varsa, isteğe bağlı olarak parantez atlayabilirsiniz. Ancak, parantez kullanarak kodunuzu okumak kolaylaştırır.  
+2.  Parantez içine bağımsız değişken listesi için yordamın adıyla izleyin. Hiçbir bağımsız değişken varsa, isteğe bağlı olarak ayraçları atlayabilirsiniz. Ancak, parantezler kullanarak kodunuzu okumayı kolaylaştırır.  
   
-3.  Bağımsız değişkenler, virgülle ayrılmış parantez içinde bağımsız değişken listesinde yerleştirin. Bağımsız değişkenleri aynı sırada sağladığınız emin olun, `Function` yordamı ada göre geçirme sürece ilgili parametreleri tanımlar.  
+3.  Bağımsız değişken listesi parantezlerinin virgülle ayırarak yerleştirin. Bağımsız değişkenler aynı sırada sağladığınız emin olun, `Function` yordamı ada göre geçirme sürece, karşılık gelen parametreleri tanımlar.  
   
-4.  Yordamdan döndürülen değer değişken veya özellik Atama ifadesinin sol tarafında depolanır.  
+4.  Yordamdan döndürülen değer değişken veya özellik atama ifadesi sol tarafında depolanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeni değeri alınamadı. İlk satırı çağrıları `Environ` satır bir ifade ve saniye içinde bir atama deyiminde çağırır. `Environ` tek bağımsız değişken olarak değişken adını alır. Bu, çağrıyı yapan kod değişkenin değeri döndürür.  
+ Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeninin değerini almak için. İlk satırı çağrıları `Environ` satır içinde bir ifade ve ikinci bir atama ifadesinde çağırır. `Environ` değişken adı, tek bir bağımsız değişken olarak alır. Çağrıldığı koda değişken değerini döndürür.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlev Yordamları](./function-procedures.md)  
- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
- [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)  
- [Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşlev Yordamları](./function-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
+- [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Nasıl yapılır: Bir değer döndüren bir yordam oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Nasıl yapılır: Bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)
+- [Nasıl yapılır: Bir değer döndürmeyen bir yordam çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
