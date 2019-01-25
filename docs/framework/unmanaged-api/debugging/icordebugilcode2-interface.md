@@ -12,35 +12,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1982226e90792d4bbda1cb023d80dec96fcb2060
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d511999cac312c785e528cda24c215555a62ae76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491174"
 ---
-# <a name="icordebugilcode2-interface"></a><span data-ttu-id="32a6d-102">ICorDebugILCode2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32a6d-102">ICorDebugILCode2 Interface</span></span>
-<span data-ttu-id="32a6d-103">[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="32a6d-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2-interface"></a><span data-ttu-id="17564-102">ICorDebugILCode2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="17564-102">ICorDebugILCode2 Interface</span></span>
+<span data-ttu-id="17564-103">[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="17564-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="32a6d-104">Mantıksal olarak genişletir [Icordebugılcode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) bir işlevin yerel değişken imza için belirteci dönün ve Profil Oluşturucu'nın Araçlı Ara dile (IL) eşleme yöntemlerini sağlamak üzere arabirimi kaydırır IL özgün yöntemi kaydırır.</span><span class="sxs-lookup"><span data-stu-id="32a6d-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
+ <span data-ttu-id="17564-104">Mantıksal olarak genişletir [Icordebugılcode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) yönelik bir işlevin yerel değişken imzası belirtecini döndürür ve bir profil oluşturucunun Araçlı Ara dil (IL) map yöntemleri sağlamak için arabirimi kaydırır IL özgün yöntemi kaydırır.</span><span class="sxs-lookup"><span data-stu-id="17564-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="32a6d-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="32a6d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="17564-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="17564-105">Methods</span></span>  
   
-|<span data-ttu-id="32a6d-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="32a6d-106">Method</span></span>|<span data-ttu-id="32a6d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="32a6d-107">Description</span></span>|  
+|<span data-ttu-id="17564-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="17564-106">Method</span></span>|<span data-ttu-id="17564-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="17564-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="32a6d-108">GetInstrumentedILMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="32a6d-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="32a6d-109">Bu örnek için özgün yöntemi IL uzaklık için IL uzaklıkları profil oluşturucu eşlemesinden izlenmiş döndürür.</span><span class="sxs-lookup"><span data-stu-id="32a6d-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
-|[<span data-ttu-id="32a6d-110">GetLocalVarSigToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="32a6d-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="32a6d-111">Meta veriler bu örneği tarafından temsil edilen işlevi için yerel değişken İmza belirteci alır.</span><span class="sxs-lookup"><span data-stu-id="32a6d-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
+|[<span data-ttu-id="17564-108">GetInstrumentedILMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="17564-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="17564-109">Bu örnek için özgün yöntemi IL uzaklık için IL uzaklık bir eşlemden profil oluşturucu izleme eklenmiş döndürür.</span><span class="sxs-lookup"><span data-stu-id="17564-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
+|[<span data-ttu-id="17564-110">GetLocalVarSigToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="17564-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="17564-111">Meta veriler için bu örneği tarafından temsil edilen işlev için yerel değişken imzası belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="17564-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="32a6d-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="32a6d-112">Requirements</span></span>  
- <span data-ttu-id="32a6d-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32a6d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17564-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="17564-112">Requirements</span></span>  
+ <span data-ttu-id="17564-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17564-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32a6d-114">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="32a6d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17564-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17564-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="32a6d-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32a6d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17564-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17564-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="32a6d-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32a6d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="17564-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17564-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32a6d-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="32a6d-117">See Also</span></span>  
- [<span data-ttu-id="32a6d-118">ICorDebugILCode Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32a6d-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)  
- [<span data-ttu-id="32a6d-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="32a6d-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="32a6d-120">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="32a6d-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="17564-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17564-117">See also</span></span>
+- [<span data-ttu-id="17564-118">ICorDebugILCode Arabirimi</span><span class="sxs-lookup"><span data-stu-id="17564-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="17564-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="17564-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="17564-120">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="17564-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

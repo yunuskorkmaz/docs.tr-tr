@@ -12,19 +12,19 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b8b6ba429a45c92dc6b6b5dcaa7c8a35b47385f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7209314f9cf3170ba0b577395a5134f9549475e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536574"
 ---
-# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="ef2f1-102">ICorProfilerInfo7::ApplyMetaData yöntemi</span><span class="sxs-lookup"><span data-stu-id="ef2f1-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
-<span data-ttu-id="ef2f1-103">[.NET Framework 4.6.1 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="ef2f1-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="f66f3-102">ICorProfilerInfo7::ApplyMetaData yöntemi</span><span class="sxs-lookup"><span data-stu-id="f66f3-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
+<span data-ttu-id="f66f3-103">[.NET Framework 4.6.1 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="f66f3-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="ef2f1-104">Yeni tarafından tanımlanan meta verilerine uygulanır `IMetadataEmit::Define*` Belirtilen modül yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
+ <span data-ttu-id="f66f3-104">Yeni tarafından tanımlanan meta veriler geçerli `IMetadataEmit::Define*` Belirtilen modül için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="f66f3-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef2f1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ef2f1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f66f3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f66f3-105">Syntax</span></span>  
   
 ```cpp
 HRESULT ApplyMetaData(  
@@ -32,35 +32,35 @@ HRESULT ApplyMetaData(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ef2f1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ef2f1-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f66f3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f66f3-106">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="ef2f1-107">[in] Meta verileri değiştirildi modülü tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-107">[in] The identifier of the module whose metadata was changed.</span></span>  
+ <span data-ttu-id="f66f3-107">[in] Modül, meta verileri değiştirildi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="f66f3-107">[in] The identifier of the module whose metadata was changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef2f1-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ef2f1-108">Remarks</span></span>  
- <span data-ttu-id="ef2f1-109">Meta veri değişiklikleri sonra yapılırsa [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri arama, yeni meta kullanmadan önce bu yöntem çağırmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f66f3-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f66f3-108">Remarks</span></span>  
+ <span data-ttu-id="f66f3-109">Sonra meta verileri değişiklikler yapılırsa [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri yeni meta veriler kullanmadan önce bu yöntemini çağırmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f66f3-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
   
- <span data-ttu-id="ef2f1-110">`ApplyMetaData` Yalnızca şu meta veri türleri ekleme destekler:</span><span class="sxs-lookup"><span data-stu-id="ef2f1-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
+ <span data-ttu-id="f66f3-110">`ApplyMetaData` Yalnızca şu meta veri türleri eklemeyi destekler:</span><span class="sxs-lookup"><span data-stu-id="f66f3-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
   
--   <span data-ttu-id="ef2f1-111">`AssemblyRef` çağırarak oluşturduğunuz kayıtları [Imetadataassemblyemit::defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span><span class="sxs-lookup"><span data-stu-id="ef2f1-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="ef2f1-112">yöntem.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-112">method.</span></span>  
+-   <span data-ttu-id="f66f3-111">`AssemblyRef` çağırarak denetlediği oluşturma records [Imetadataassemblyemit::defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span><span class="sxs-lookup"><span data-stu-id="f66f3-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="f66f3-112">yöntem.</span><span class="sxs-lookup"><span data-stu-id="f66f3-112">method.</span></span>  
   
--   <span data-ttu-id="ef2f1-113">`TypeRef` çağırarak oluşturduğunuz kayıtları [Imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
+-   <span data-ttu-id="f66f3-113">`TypeRef` çağırarak denetlediği oluşturma records [Imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f66f3-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
   
--   <span data-ttu-id="ef2f1-114">`TypeSpec` çağırarak oluşturduğunuz kayıtları [Imetadataemit::gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
+-   <span data-ttu-id="f66f3-114">`TypeSpec` çağırarak denetlediği oluşturma records [Imetadataemit::gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f66f3-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
   
--   <span data-ttu-id="ef2f1-115">`MemberRef` çağırarak oluşturduğunuz kayıtları [Imetadataemit::definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
+-   <span data-ttu-id="f66f3-115">`MemberRef` çağırarak denetlediği oluşturma records [Imetadataemit::definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f66f3-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
   
--   <span data-ttu-id="ef2f1-116">`MemberSpec` çağırarak oluşturduğunuz kayıtları [Imetadataemit2::definemethodspec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
+-   <span data-ttu-id="f66f3-116">`MemberSpec` çağırarak denetlediği oluşturma records [Imetadataemit2::definemethodspec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f66f3-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
   
--   <span data-ttu-id="ef2f1-117">`UserString` çağırarak oluşturduğunuz kayıtları [Imetadataemit::defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
+-   <span data-ttu-id="f66f3-117">`UserString` çağırarak denetlediği oluşturma records [Imetadataemit::defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f66f3-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef2f1-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ef2f1-118">Requirements</span></span>  
- <span data-ttu-id="ef2f1-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef2f1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f66f3-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f66f3-118">Requirements</span></span>  
+ <span data-ttu-id="f66f3-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f66f3-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef2f1-120">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ef2f1-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f66f3-120">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f66f3-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ef2f1-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef2f1-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f66f3-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f66f3-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ef2f1-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef2f1-122">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
+ <span data-ttu-id="f66f3-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f66f3-122">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef2f1-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ef2f1-123">See Also</span></span>  
- [<span data-ttu-id="ef2f1-124">ICorProfilerInfo7 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ef2f1-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f66f3-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f66f3-123">See also</span></span>
+- [<span data-ttu-id="f66f3-124">ICorProfilerInfo7 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f66f3-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

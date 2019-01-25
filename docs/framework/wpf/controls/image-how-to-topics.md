@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: 7d944eb2c09314be5b2e1c5c6ff69beec4888a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530794"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="eb8a2-102">Görüntü ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="eb8a2-102">Image How-to Topics</span></span>
-<span data-ttu-id="eb8a2-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Image> öğesi.</span><span class="sxs-lookup"><span data-stu-id="eb8a2-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="5cac0-102">Görüntü ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5cac0-102">Image How-to Topics</span></span>
+<span data-ttu-id="5cac0-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Image> öğesi.</span><span class="sxs-lookup"><span data-stu-id="5cac0-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="eb8a2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="eb8a2-104">In This Section</span></span>  
- [<span data-ttu-id="eb8a2-105">Görüntü Öğesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="eb8a2-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [<span data-ttu-id="eb8a2-106">Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="eb8a2-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="eb8a2-107">Görüntü Kırpma</span><span class="sxs-lookup"><span data-stu-id="eb8a2-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [<span data-ttu-id="eb8a2-108">Görüntü Döndürme</span><span class="sxs-lookup"><span data-stu-id="eb8a2-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5cac0-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5cac0-104">In This Section</span></span>  
+ [<span data-ttu-id="5cac0-105">Görüntü Öğesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="5cac0-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+  [<span data-ttu-id="5cac0-106">Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="5cac0-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="5cac0-107">Görüntü Kırpma</span><span class="sxs-lookup"><span data-stu-id="5cac0-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+  [<span data-ttu-id="5cac0-108">Görüntü Döndürme</span><span class="sxs-lookup"><span data-stu-id="5cac0-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="eb8a2-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="eb8a2-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5cac0-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="5cac0-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="eb8a2-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="eb8a2-110">See Also</span></span>  
- [<span data-ttu-id="eb8a2-111">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="eb8a2-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="eb8a2-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="eb8a2-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="5cac0-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5cac0-110">See also</span></span>
+- [<span data-ttu-id="5cac0-111">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5cac0-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="5cac0-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5cac0-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

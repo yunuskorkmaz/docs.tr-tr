@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4731a9503ab29a7d90ddd28c7ac0a5a761c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550727"
 ---
-# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="b4d42-102">INotifyConnection2::RegisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b4d42-102">INotifyConnection2::RegisterNotifySource Method</span></span>
-<span data-ttu-id="b4d42-103">Belirtilen bildirim kaynağı yükler.</span><span class="sxs-lookup"><span data-stu-id="b4d42-103">Installs a specified notification source.</span></span>  
+# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="e9f78-102">INotifyConnection2::RegisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e9f78-102">INotifyConnection2::RegisterNotifySource Method</span></span>
+<span data-ttu-id="e9f78-103">Belirtilen bildirim kaynak yükler.</span><span class="sxs-lookup"><span data-stu-id="e9f78-103">Installs a specified notification source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4d42-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b4d42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9f78-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e9f78-104">Syntax</span></span>  
   
 ```  
 HRESULT RegisterNotifySource  
@@ -37,21 +37,21 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b4d42-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b4d42-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e9f78-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e9f78-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="b4d42-106">[in] Bildirim kaynağı olarak kullanılacak nesnesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b4d42-106">[in] Specifies the object to be used as the notification source.</span></span>  
+ <span data-ttu-id="e9f78-106">[in] Bildirim kaynağı olarak kullanılacak nesneyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="e9f78-106">[in] Specifies the object to be used as the notification source.</span></span>  
   
  `out_ppNotifySink`  
- <span data-ttu-id="b4d42-107">[out] Bildirim havuzu olarak kullanılacak nesnesini alır.</span><span class="sxs-lookup"><span data-stu-id="b4d42-107">[out] Receives the object to be used as the notification sink.</span></span>  
+ <span data-ttu-id="e9f78-107">[out] Bildirim havuz olarak kullanılacak nesneyi alır.</span><span class="sxs-lookup"><span data-stu-id="e9f78-107">[out] Receives the object to be used as the notification sink.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b4d42-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b4d42-108">Return Value</span></span>  
- <span data-ttu-id="b4d42-109">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="b4d42-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e9f78-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e9f78-108">Return Value</span></span>  
+ <span data-ttu-id="e9f78-109">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="e9f78-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b4d42-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b4d42-110">Requirements</span></span>  
- <span data-ttu-id="b4d42-111">**Başlık:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="b4d42-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9f78-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e9f78-110">Requirements</span></span>  
+ <span data-ttu-id="e9f78-111">**Üst bilgi:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="e9f78-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4d42-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b4d42-112">See Also</span></span>  
- [<span data-ttu-id="b4d42-113">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b4d42-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [<span data-ttu-id="b4d42-114">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b4d42-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="b4d42-115">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b4d42-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="b4d42-116">UnregisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b4d42-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+## <a name="see-also"></a><span data-ttu-id="e9f78-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e9f78-112">See also</span></span>
+- [<span data-ttu-id="e9f78-113">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e9f78-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="e9f78-114">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e9f78-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="e9f78-115">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e9f78-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="e9f78-116">UnregisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e9f78-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
