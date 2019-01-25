@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5835da6ee20673c2662f1166d304a45ca3e9daeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 512122d264e0817b89e8a371f57f11d31f7c4380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639654"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags Numaralandırması
-Yönetilen tam zamanında (JIT) derleyici davranışını etkilemek değerlerini içerir.  
+Yönetilen just-ın-time (JIT) derleyici davranışını etkileyen değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,18 +42,18 @@ typedef enum CorDebugJITCompilerFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Derleyici derleme verileri izlemek ve iyileştirmeler sağlar belirtir.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Derleyici devre dışı bırakır iyileştirmeler ancak derleme verileri izlemek belirtir.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Derleme verileri, devre dışı bırakır iyileştirmeler derleyici izlemek ve etkinleştirir Düzenle ve devam teknolojileri belirtir.|  
+|`CORDEBUG_JIT_DEFAULT`|Derleyici derleme veri izlemelisiniz ve iyileştirmelerini sağlar belirtir.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Derleyici iyileştirmeleri devre dışı bırakır ancak derleme veri izleyeceğine belirtir.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Derleyici iyileştirmeleri devre dışı bırakır, derleme veri izlemelisiniz ve Düzenle ve devam teknolojileri sağlar belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

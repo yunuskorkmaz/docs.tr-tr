@@ -2,12 +2,12 @@
 title: Windows Communication Foundation'ı Benimseme
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643357"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation'ı Benimseme
 
@@ -21,6 +21,6 @@ WCF istemcileri, ASP.NET Web hizmetlerini kullanabilirsiniz. İle yapılandırı
 
 Gerekli olduğu bazı durumlarda bile, bir teknoloji geçirme koddan diğerine nadiren doğru bir yaklaşımdır. Yeni Teknoloji benimseme nedeni önceki teknolojisiyle karşılanamıyor yeni gereksinimlerini karşılamak için ve bu durumda, doğru bir şey yapmak için yeni Genişletilmiş gereksinimlerini karşılaması için yeni bir çözüm tasarlamak için. Bu sistem tasarlandığından beri yeni tasarım avantajları bilgilerini ve mevcut sistem deneyiminizi kavuştu. Yeni tasarım özelliklerinin tamamı yeni platformunda eski tasarım yeniden yerine yeni teknolojileri de kullanabilirsiniz. Prototip oluşturma anahtar yeni tasarım öğeleri sonra kod yeniden kullanımı için yeni bir tane var olan sistemden daha kolay olur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

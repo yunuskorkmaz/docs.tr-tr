@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527048"
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
-Yordam çağrıldığında bir yordam bağımsız değişkenini atlanabilir belirtir.  
+Yordam çağrıldığında bir yordam bağımsız değişkeninin atlanabileceğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İsteğe bağlı her parametre için bir sabit ifadesine bu parametrenin varsayılan değeri olarak belirtmeniz gerekir. İfade değerlendirilirse [hiçbir şey](../../../visual-basic/language-reference/nothing.md), değer veri türünün varsayılan değeri parametresinin varsayılan değeri kullanılır.  
+ İsteğe bağlı her parametre için bir sabit ifade bu parametrenin varsayılan değeri olarak belirtmeniz gerekir. İfade değerlendirme sonucu [hiçbir şey](../../../visual-basic/language-reference/nothing.md), değer veri türünün varsayılan değeri, parametrenin varsayılan değeri kullanılır.  
   
- Parametre listesi isteğe bağlı bir parametre içeriyorsa, kendisini izleyen her parametre ayrıca isteğe bağlı olmalıdır.  
+ Parametre listesi isteğe bağlı bir parametre içeriyorsa, onu takip eden her parametre de isteğe bağlı olmalıdır.  
   
- `Optional` Değiştiricisi bu bağlamlarında kullanılabilir:  
+ `Optional` Bu bağlamda değiştirici kullanılabilir:  
   
 -   [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -34,13 +34,13 @@ Yordam çağrıldığında bir yordam bağımsız değişkenini atlanabilir beli
 -   [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  İle veya isteğe bağlı parametreler olmadan bir yordamı çağrılırken, konuma göre veya ada göre bağımsız değişkenler geçirebilirsiniz. Daha fazla bilgi için bkz: [geçirme bağımsız değişkenleri konuma ve ada göre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
+>  İsteğe bağlı parametrelerle veya parametresiz bir yordamı çağrılırken, konuma veya ada göre bağımsız değişkenler geçirebilirsiniz. Daha fazla bilgi için [geçirmeden bağımsız değişkenleri konuma ve ada göre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
   
 > [!NOTE]
->  İsteğe bağlı parametreleri olan bir yordamı aşırı yükleme kullanarak da tanımlayabilirsiniz. İsteğe bağlı bir parametre varsa, iki aşırı yüklenmiş yordamı, bir parametre kabul eden ve sürümleri olmayan bir tanımlayabilirsiniz. Daha fazla bilgi için bkz: [yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+>  İsteğe bağlı parametreler içeren bir yordamı aşırı yükleme kullanarak da tanımlayabilirsiniz. İsteğe bağlı bir parametre varsa, iki aşırı yüklenmiş yordamı, bir parametreyi kabul eden ve sürümleri olmayan bir tanımlayabilirsiniz. Daha fazla bilgi için [yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, isteğe bağlı bir parametre olan bir yordam tanımlar.  
+ Aşağıdaki örnek, bir isteğe bağlı parametresi olan bir yordam tanımlar.  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -62,11 +62,11 @@ End Function
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, konuma göre geçirilen bağımsız değişkenlerle ve ada göre geçirilen bağımsız değişkenlerle bir yordam çağırma gösterilmiştir. Yordamın iki isteğe bağlı parametreye sahiptir.  
+ Aşağıdaki örnek, ada göre geçirilen bağımsız değişkenler ve konuma göre geçirilen bağımsız değişkenler ile bir yordam çağırma gösterilmektedir. Yordamı, iki isteğe bağlı parametreye sahiptir.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

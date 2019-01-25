@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a093b18f72cc99c53951b3dc588ce0cff3c7fefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648777"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer Metodu
-Uygun boyutta bir arabellek yöntemi belirtilen göreli sanal adresinde alır.  
+Uygun boyutta bir arabellek yöntemi için belirtilen göreli sanal adresindeki alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -40,19 +40,19 @@ HRESULT GetMethodBuffer (
   
 #### <a name="parameters"></a>Parametreler  
  `RVA`  
- [in] Arabellek döndürülecek yöntemi göreli sanal adresi.  
+ [in] Yöntemin bir arabellek döndürülecek göreli sanal adres.  
   
  `lpBuffer`  
- [out] Döndürülen arabellek için bir işaretçi.  
+ [out] Döndürülen arabellek için işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

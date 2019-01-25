@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616777"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder Numaralandırması
-Meta verileri bozuk yayılan zaman altında bir hata iletisi oluşturulan koşulları belirtmek bayrak değerleri içerir.  
+Meta veri sıralamaya yayıldığını zaman altında bir hata iletisi oluşturulan koşulları belirten bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,19 +49,19 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|Hata iletileri oluşturmaz varsayılan davranış gösterir.|  
 |`MDErrorOutOfOrderNone`|Derleyici hatası iletileri üretmemelidir gösterir.|  
-|`MDErrorOutOfOrderAll`|Derleyici bir hata iletisine yol bir alan, özellik, olay, yöntemi veya parametre bozuk yayılan gösterir.|  
-|`MDMethodOutOfOrder`|Bir yöntem bozuk yayılan olduğunda derleyici bir hata iletisi oluşturur gösterir.|  
-|`MDFieldOutOfOrder`|Bir alan bozuk yayılan olduğunda derleyici bir hata iletisi oluşturur gösterir.|  
-|`MDParamOutOfOrder`|Bir parametre bozuk yayılan olduğunda derleyici bir hata iletisi oluşturur gösterir.|  
-|`MDPropertyOutOfOrder`|Bir özellik bozuk yayılan olduğunda derleyici bir hata iletisi oluşturur gösterir.|  
-|`MDEventOutOfOrder`|Bir olay bozuk yayılan olduğunda derleyici bir hata iletisi oluşturur gösterir.|  
+|`MDErrorOutOfOrderAll`|Derleyici bir hata iletisi oluşturur, bir alan, özellik, olay, yöntemi veya parametre sıralamaya yayıldığını gösterir.|  
+|`MDMethodOutOfOrder`|Bir yöntem sıralamaya yayıldığını, derleyici bir hata iletisi oluşturmasını belirtir.|  
+|`MDFieldOutOfOrder`|Bir alan sıralamaya yayıldığını, derleyici bir hata iletisi oluşturmasını belirtir.|  
+|`MDParamOutOfOrder`|Bir parametre sıralamaya yayıldığını, derleyici bir hata iletisi oluşturmasını belirtir.|  
+|`MDPropertyOutOfOrder`|Bir özellik sıralamaya yayıldığını, derleyici bir hata iletisi oluşturmasını belirtir.|  
+|`MDEventOutOfOrder`|Bir olay sıralamaya yayıldığını, derleyici bir hata iletisi oluşturmasını belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorHdr.h  
+ **Üst bilgi:** CorHdr.h  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

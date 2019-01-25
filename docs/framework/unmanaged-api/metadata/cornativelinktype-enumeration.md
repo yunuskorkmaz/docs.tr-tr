@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641336"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType Numaralandırması
-Yerel kodda bağlı türünü gösteren değerleri sağlar.  
+Yerel kodda bağlı türü gösteren değerleri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,20 +45,20 @@ typedef enum
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`nltNone`|Anahtar sözcükler hiçbiri belirtilen gösterir.|  
-|`nltAnsi`|ANSI anahtar sözcüğü belirttiğiniz gösterir.|  
+|`nltAnsi`|Bir ANSI anahtar sözcüğü belirttiğiniz gösterir.|  
 |`nltUnicode`|Unicode anahtar sözcüğü belirttiğiniz gösterir|  
-|`nltAuto`|Auto anahtar sözcüğü belirttiğiniz gösterir.|  
-|`nltOle`|OLE anahtar sözcüğü belirttiğiniz gösterir.|  
+|`nltAuto`|Auto anahtar sözcüğü bir belirttiğiniz gösterir.|  
+|`nltOle`|Bir OLE anahtar sözcüğü belirttiğiniz gösterir.|  
 |`nltMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

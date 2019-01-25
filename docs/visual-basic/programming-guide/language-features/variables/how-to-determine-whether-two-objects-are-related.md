@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme (Visual Basic)'
+title: 'Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 2041f89ffd954e479046eb85c6dd82de1f8793ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544594"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme (Visual Basic)
-Varsa, oluşturuldukları sınıflar arasındaki ilişkiyi belirlemek için iki nesne karşılaştırabilirsiniz. <xref:System.Type.IsInstanceOfType%2A> Yöntemi <xref:System.Type?displayProperty=nameWithType> sınıf döndürür `True` belirtilen sınıf geçerli sınıfından devralan veya geçerli türü belirtilen sınıfı tarafından desteklenen bir arabirimdir.  
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme (Visual Basic)
+İki nesne varsa, oluşturuldukları sınıflar arasındaki ilişkileri belirlemek için karşılaştırabilirsiniz. <xref:System.Type.IsInstanceOfType%2A> Yöntemi <xref:System.Type?displayProperty=nameWithType> sınıfı döndürür `True` belirtilen sınıf geçerli sınıfından devralan veya geçerli türü belirtilen sınıfı tarafından desteklenen bir arabirimdir.  
   
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Bir nesne başka bir nesnenin sınıf veya arabirim devralır belirlemek için  
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Bir nesne başka bir nesnenin sınıfı veya arabirimi devralır belirlemek için  
   
-1.  Düşündüğünüz bir nesne üzerinde taban türü olamaz, çağırma <xref:System.Object.GetType%2A> yöntemi.  
+1.  Düşündüğünüz nesnesinde, temel türünde, çağırma <xref:System.Object.GetType%2A> yöntemi.  
   
 2.  Üzerinde <xref:System.Type?displayProperty=nameWithType> tarafından döndürülen nesne <xref:System.Object.GetType%2A>, çağırma <xref:System.Type.IsInstanceOfType%2A> yöntemi.  
   
-3.  İçin bağımsız değişken listesinde <xref:System.Type.IsInstanceOfType%2A>, düşündüğünüz nesnesi, türetilen tür olabilir belirtin.  
+3.  Bağımsız değişken listesinde <xref:System.Type.IsInstanceOfType%2A>, düşündüğünüz nesne, türetilmiş bir tür olabilir belirtin.  
   
-     <xref:System.Type.IsInstanceOfType%2A> döndürür `True` kendi bağımsız değişken türü devraldığı varsa <xref:System.Type?displayProperty=nameWithType> nesne türü.  
+     <xref:System.Type.IsInstanceOfType%2A> döndürür `True` bağımsız değişken türünü öğesinden devralıyorsa <xref:System.Type?displayProperty=nameWithType> nesne türü.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir nesne başka bir nesnenin sınıfından türetilen bir sınıfı temsil edip etmediğini belirler.  
+ Aşağıdaki örnek, bir nesne başka bir nesnenin sınıfından türetilen bir sınıf temsil edip etmediğini belirler.  
   
 ```  
 Public Class baseClass  
@@ -45,13 +45,13 @@ Public Class testTheseClasses
 End Class  
 ```  
   
- İki nesne değişkenleri çağrısında beklenmeyen yerleşimini Not <xref:System.Type.IsInstanceOfType%2A>. Beklenen temel türü oluşturmak için kullanılan <xref:System.Type?displayProperty=nameWithType> sınıfı ve beklenen türetilen tür bağımsız değişkeni olarak geçirilir <xref:System.Type.IsInstanceOfType%2A> yöntemi.  
+ İki nesne değişkenleri aramasında beklenmeyen yerleşimini unutmayın <xref:System.Type.IsInstanceOfType%2A>. Beklenen temel türünü oluşturmak için kullanılan <xref:System.Type?displayProperty=nameWithType> sınıfı ve beklenen türetilmiş bir tür bağımsız değişkeni olarak geçirilir <xref:System.Type.IsInstanceOfType%2A> yöntemi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Object.GetType%2A>  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Type.IsInstanceOfType%2A>  
- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Object.GetType%2A>
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Type.IsInstanceOfType%2A>
+- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Nasıl yapılır: İki nesnenin aynı olup olmadığını belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

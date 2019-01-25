@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653833"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
@@ -23,7 +23,7 @@ Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belge
   
 -   Kullanarak `FRAMESET` ve `FRAME` sabit windows oluşturma etiketler.  
   
- veya  
+ -veya-  
   
 -   Kullanarak `IFRAME` etiketini, çalışma zamanında konumlandırılabilir kayan bir pencere oluşturur.  
   
@@ -40,6 +40,6 @@ Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belge
   
  Siteler arası betik hakkında daha fazla bilgi için bkz. [hakkında çerçeveler betik oluşturma ve güvenlik](https://msdn.microsoft.com/library/ms533028.aspx).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ÇERÇEVE öğesi &#124; nesne çerçeve](https://msdn.microsoft.com/library/ms535250.aspx)  
- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ÇERÇEVE öğesi &#124; nesne çerçeve](https://msdn.microsoft.com/library/ms535250.aspx)
+- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

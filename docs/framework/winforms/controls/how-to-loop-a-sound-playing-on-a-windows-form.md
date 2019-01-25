@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma'
+title: 'Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 93793fae418b33c954c9d597f020c8daf8cfedfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493410"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda
 Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingButton_Click` olay işleyicisi çalıştığında, herhangi bir sesi durdurur yürütülmekte. Ses çalma, hiçbir şey olmaz.  
   
 ## <a name="example"></a>Örnek  
@@ -31,7 +31,7 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
   
 -   Dosya adı yerine `"c:\Windows\Media\chimes.wav"` ile geçerli bir dosya adı.  
   
- Visual Basic veya Visual C# için komut satırından Bu örnek oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için komut satırından Bu örnek oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Dosya işlemleri uygun özel durum işleme bloğu alınmalıdır.  
@@ -53,7 +53,7 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Media.SoundPlayer.PlayLooping%2A>
+- [Nasıl yapılır: Bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

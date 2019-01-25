@@ -17,80 +17,80 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712528"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
-*Aşırı yükleme* bir yordam, aynı adlı ancak farklı parametre listeleri kullanarak birden çok sürümlerde tanımlama anlamına gelir. Aşırı yükleme amacı, ada göre ayırt zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır. Parametre listesi değiştirerek bunu yapabilirsiniz.  
+*Aşırı yükleme* bir yordam, birden çok sürümü aynı ada ancak farklı parametre listeleri kullanarak tanımlama anlamına gelir. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır. Parametre listesini değiştirerek bunu yapabilirsiniz.  
   
-## <a name="overloading-rules"></a>Kuralları aşırı yüklemesi  
- Bir yordamı aşırı yükleme oluştuğunda aşağıdaki kurallar geçerli olur:  
+## <a name="overloading-rules"></a>Kuralları aşırı yükleme  
+ Bir yordamı aşırı yükleme, aşağıdaki kurallar geçerlidir:  
   
--   **Aynı ada**. Aşırı yüklenmiş her sürümü aynı yordam adı kullanmanız gerekir.  
+-   **Aynı ada**. Aşırı yüklenen her sürümü aynı yordam adı kullanmanız gerekir.  
   
--   **Farklı imza**. Aşırı yüklenmiş her sürümü diğer aşırı yüklenmiş sürümleri aşağıdaki bakımlardan en az birinde farklı gerekir:  
+-   **Farklı imza**. Her Aşırı yüklenen sürümü, diğer aşırı yüklenmiş sürümleri aşağıdaki bakımdan en az birinde farklı olmalıdır:  
   
     -   Parametre sayısı  
   
-    -   Parametreler sırası  
+    -   Parametre sırası  
   
-    -   Parametre veri türleri  
+    -   Parametrelerinin veri türleri  
   
     -   Tür parametreleri (için genel bir yordam) sayısı  
   
-    -   Dönüş türü (yalnızca için bir dönüşüm işleci)  
+    -   Dönüş türü (yalnızca bir dönüşüm işleci)  
   
-     Yordam adı ile birlikte önceki öğeler toplu olarak adlandırılır *imza* yordamın. Aşırı yüklenmiş bir yordamı çağırdığınızda derleyici imza çağrı düzgün tanımını eşleşip eşleşmediğini kontrol için kullanır.  
+     Yordam adı ile birlikte önceki öğeler toplu olarak adlandırılır *imza* yordamın. Aşırı yüklenmiş bir yordamı çağırdığınızda, derleyici imzayı tanımının çağrı doğru eşleşip eşleşmediğini kontrol için kullanır.  
   
--   **İmza parçası olmayan öğeler**. İmza değişen olmadan bir yordamı aşırı yükleme yapılamıyor. Özellikle, yalnızca bir veya daha fazla aşağıdaki öğelerden birini değiştirerek bir yordamı aşırı olamaz:  
+-   **Öğeleri imzasının parçası**. İmza değişen olmadan bir yordamı aşırı yükleyemez. Özellikle, bir veya daha fazla aşağıdaki öğelerin değişen tarafından yalnızca bir yordamı aşırı yüklenemez:  
   
     -   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
   
-    -   Parametresi veya parametre adlarını yazın  
+    -   Parametresi veya tür parametresi adları  
   
     -   Tür parametresi kısıtlamaları (için genel bir yordam)  
   
-    -   Parametresi değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
+    -   Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
   
-    -   Olup bir değer döndürür  
+    -   Bir değer olup olmadığını döndürür  
   
-    -   Dönüş değeri (dışında bir dönüşüm işleci) veri türü  
+    -   (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
   
-     Önceki listedeki öğeler imza parçası değildir. Aşırı yüklenmiş sürümler arasında ayırt etmek için kullanamazsınız rağmen düzgün şekilde kendi imzaları göre ayırt edilen aşırı yüklenmiş sürümleri arasında farklılık gösterebilir.  
+     Yukarıdaki listede öğeleri imzasının bir parçası değildir. Aşırı yüklü sürümler arasında ayırt etmek için kullanamazsınız olsa da, bunların imzalarını tarafından düzgün bir şekilde ayırt edilen aşırı yüklü sürümler arasında farklılık gösterebilir.  
   
--   **Geç bağlama bağımsız değişkenleri**. Geç bağlama nesne değişkeni aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun parametre olarak bildirilmelidir <xref:System.Object>.  
+-   **Geç bağlama bağımsız değişkenleri**. Geç bir bağımlı nesne değişkeni aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun bir parametre olarak bildirmeniz gerekir <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Bir yordamın birden fazla sürümünü  
- Yazmakta olduğunuz varsayalım bir `Sub` adıyla veya hesap numarası müşteriye başvurabileceğiniz istediğiniz bir müşterinin bakiyesini ve karşı bir işlem sonrası için yordamı. Bunu yapabilmek için iki farklı tanımlayabilirsiniz `Sub` aşağıdaki örnekteki gibi yordamlar:  
+ Yazdığınız varsayalım bir `Sub` müşteriye adı veya hesap numarası başvurabileceğiniz istediğiniz bir müşterinin bakiyesi ve karşı bir işlem göndermeniz için yordamı. Bunu yapabilmek için iki farklı tanımlayabilirsiniz `Sub` yordamlar, aşağıdaki örnekte olduğu gibi:  
   
  [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### <a name="overloaded-versions"></a>Aşırı yüklenmiş sürümleri  
- Tek bir yordam adı aşırı yüklemeyi alternatiftir. Kullanabileceğiniz [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar bir sürümünü yordamı her parametre listesi için aşağıdaki gibi tanımlayın:  
+ Aşırı yükleme tek yordam adı için bir alternatiftir. Kullanabileceğiniz [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğünü bir sürümüne ilişkin yordam her parametre listesi için aşağıdaki gibi tanımlayın:  
   
  [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### <a name="additional-overloads"></a>Ek aşırı yüklemeleri  
- Ayrıca bir işlem tutarı ya da kabul etmek istiyorsanız `Decimal` veya `Single`, daha fazla aşırı `post` bu değişim için izin vermek için. Bu olmanızın her bir önceki örnekte aşırı yüklemeleri için dört olurdu `Sub` yordamları, aynı ada sahip tüm ancak dört farklı imzalar.  
+ Ayrıca herhangi bir işlem tutarı kabul etmek istiyorsanız `Decimal` veya `Single`, daha fazla aşırı `post` Bu çeşitleme için izin vermek için. Siz yaptıysanız her aşırı yüklemeleri önceki örnekte, dört olurdu `Sub` yordamları, aynı ada sahip tüm ancak dört farklı imzalara sahip.  
   
 ## <a name="advantages-of-overloading"></a>Aşırı yükleme avantajları  
- Bir yordamı aşırı yükleme avantajı çağrının esneklik olmasıdır. Kullanmak için `post` yordamı çağıran kodu olarak ya da müşteri kimliği elde edebilirsiniz önceki örnekte bildirilen bir `String` veya bir `Integer`ve ardından her iki durumda da aynı yordamı çağırın. Aşağıdaki örnekte bu gösterilmektedir:  
+ Bir yordamı aşırı yükleme çağrısının esneklik avantajlarındandır. Kullanılacak `post` yordamı çağıran kod, müşteri kimliği olarak edinebilirsiniz önceki örnekte bildirilen bir `String` veya `Integer`ve ardından her iki durumda da aynı yordamı çağırın. Aşağıdaki örnek bunu göstermektedir:  
   
  [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamlar](./index.md)  
- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)  
- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)  
- [Aşırı Yükleme Çözümü](./overload-resolution.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Yordamlar](./index.md)
+- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
+- [Aşırı Yükleme Çözümü](./overload-resolution.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

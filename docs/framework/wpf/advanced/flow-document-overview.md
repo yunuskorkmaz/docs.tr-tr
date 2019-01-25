@@ -9,111 +9,111 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34bab81f10b52829558e9a44c6bd4e1ed6c0fdbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648514"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
-Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanan, yerine akan belgeler dinamik olarak ayarlayın ve çalışma zamanı değişkenleri pencere boyutu, aygıt çözünürlüğü ve isteğe bağlı kullanıcı tercihleri gibi temel içeriklerini yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
+Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
   
 
   
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Bir akış belge nedir  
- Akış belge pencere boyutu, aygıt çözünürlüğü ve diğer ortam değişkenlerine bağlı olarak "yeniden akış içeriği" için tasarlanmıştır. Ayrıca, akış belgeleri görüntüleme okunabilirlik ve boyutunu ve yazı tipleri görünümünü değiştirme yeteneğini en iyi duruma modları arama da dahil olmak üzere özellikleri yerleşik bir dizi sahip. Okuma Kolaylığı birincil belge tüketim senaryosu olduğunda akış belgeleri en iyi yararlanılmıştır. Buna karşılık, sabit belgeleri statik sunu sağlamak için tasarlanmıştır. Sabit belgeleri doğruluğu kaynak içerik, gerekli olduğunda faydalıdır. Bkz: [WPF belgelerde](../../../../docs/framework/wpf/advanced/documents-in-wpf.md) belgeleri farklı türleri hakkında daha fazla bilgi için.  
+ Akış belgesi, "yeniden akış içerik" pencere boyutu, cihaz çözüm ve diğer ortam değişkenlerine bağlı olarak tasarlanmıştır. Ayrıca, akış belge özelliklerini görüntüleme okunabilirlik ve boyutunu ve yazı tipleri görünümünü değiştirme özelliği en iyi duruma modları, arama da dahil olmak üzere yerleşik bir dizi mevcuttur. Kolay okunması birincil belge tüketimi senaryo olduğunda akış belgeleri en iyi şekilde kullanılır. Buna karşılık, sabit belgeleri, statik bir sunu sağlamak için tasarlanmıştır. Sabit belgeleri, kaynak içerik kalitesini gerekli olduğunda yararlıdır. Bkz: [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md) farklı belge türleri hakkında daha fazla bilgi için.  
   
- Aşağıda birkaç farklı boyutlarda Windows'da görüntülenen örnek akış belge gösterilmektedir. Görüntü alanını değiştikçe kullanılabilir alanı en iyi kullanılmasını sağlamak için içeriği yeniden akar.  
+ Örnek, farklı boyutlardaki birden fazla pencerelerinde bir akış belge aşağıda gösterilmiştir. Görüntü alanını değiştikçe kullanılabilir alanı en iyi kullanılmasını sağlamak için içeriği yeniden akar.  
   
- ![Belge içerik yeniden akışı akış](../../../../docs/framework/wpf/advanced/media/edocs-flowdocument.png "eDocs_FlowDocument")  
+ ![Belge içerik boyutlandırıldığında akış](../../../../docs/framework/wpf/advanced/media/edocs-flowdocument.png "eDocs_FlowDocument")  
   
- Yukarıdaki resimde görüldüğü gibi akış içeriğini paragraflar, listeler, görüntüler ve daha fazla dahil birçok bileşen içerebilir. Bu bileşenlerin biçimlendirme öğelerinde ve yordam kodu nesneleri karşılık gelir. Bu sınıfların ayrıntılı üzerinden daha sonra ele alacağız [akış ilgili sınıflar](#flow_related_classes) bu genel bakış bölümünde. Şimdilik, bazı kalın metin ve bir liste paragrafı oluşan bir akış belge oluşturan basit bir kod örneğidir aşağıdadır.
+ Yukarıdaki görüntüde görüldüğü gibi akış içeriği paragraflar, listeler, görüntüleri ve benzeri birçok bileşen dahil edebilirsiniz. Bu bileşenler işaretleme öğeleri ve nesneleri yordam kodu karşılık gelir. Bu sınıfların ayrıntılı üzerinden daha sonra ele alacağız [akış ilgili sınıflar](#flow_related_classes) bu genel bakış bölümünde. Şimdilik, kalın metin ve bir liste paragrafı oluşan bir akış belgesi oluşturur bir basit kod örneği aşağıda verilmiştir.
   
  [!code-xaml[FlowOvwSnippets_snip#SimpleFlowExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SimpleFlowExample.xaml#simpleflowexamplewholepage)]  
   
  [!code-csharp[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/SimpleFlowExample.cs#simpleflowcodeonlyexamplewholepage)]
  [!code-vb[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/SimpleFlowExample.vb#simpleflowcodeonlyexamplewholepage)]  
   
- Aşağıdaki çizimde, bu kod parçacığını nasıl göründüğünü gösterir.  
+ Aşağıdaki çizimde, bu kod parçacığı nasıl göründüğünü gösterir.  
   
- ![Ekran görüntüsü: İşlenmiş FlowDocument örneği](../../../../docs/framework/wpf/advanced/media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
+ ![Ekran: İşlenmiş FlowDocument örneği](../../../../docs/framework/wpf/advanced/media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
   
- Bu örnekte, <xref:System.Windows.Controls.FlowDocumentReader> denetimi akış içeriğini barındırmak için kullanılır. Bkz: [akış belge türlerinin](#flow_document_types) denetimleri barındırma akış içeriği hakkında daha fazla bilgi için. <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, ve <xref:System.Windows.Documents.Bold> öğeleri içerik biçimlendirme, denetlemek için kullanılan biçimlendirme içindeki sıralarına göre. Örneğin, <xref:System.Windows.Documents.Bold> öğe kapsar paragraf metni yalnızca bir kısmını boyunca; sonuç olarak, yalnızca o metni kalın bir parçasıdır. HTML kullandıysanız, bu size tanıdık gelecektir.  
+ Bu örnekte, <xref:System.Windows.Controls.FlowDocumentReader> denetim akış içeriğini barındırmak için kullanılır. Bkz: [akış belge türleri](#flow_document_types) denetimleri barındırma akış içeriği hakkında daha fazla bilgi için. <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, ve <xref:System.Windows.Documents.Bold> öğeleri içerik biçimlendirme, denetim için kullanılan biçimlendirme sıralarına göre. Örneğin, <xref:System.Windows.Documents.Bold> öğesi yayılan paragraf metni yalnızca bir kısmını arasında; sonuç olarak, yalnızca bu metin kalın bölümüdür. HTML kullandıysanız, bu size tanıdık gelecektir.  
   
- Vurgulanan Yukarıdaki çizimde, akış belgelere yerleşik birkaç özellik vardır:
+ Vurgulanmış olarak Yukarıdaki çizimde, Flow belgelerine yerleşik birkaç özellik vardır:
   
--   Arama: tüm belgenin tam metin araması olanak tanır.  
+-   Arama: Tüm belgeyi bir tam metin arama gerçekleştirmesine izin verir.  
   
--   Görüntüleme modu: Kullanıcı bir tek sayfalı (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-modu ve sürekli bir kayan (sınırsız) görüntüleme modu zamanda (defter okuma biçimi) dahil olmak üzere, tercih edilen görüntüleme modu seçebilirsiniz.  Bu görüntüleme modları hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+-   Görüntüleme modu: Kullanıcı, bir tek sayfa (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-mod ve sürekli bir kayan (sınırsız) görüntüleme modunda görüntüleme zamanda (kitap Okuma biçimi) dahil olmak üzere, tercih edilen görüntüleme modunda seçebilirsiniz.  Bu izleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Sayfa Gezinti denetimlerinin: belgenin görüntüleme modu sayfaları kullanıyorsa, sonraki sayfaya (aşağı ok) veya önceki sayfaya (yukarı ok), hem de geçerli sayfa numarası ve toplam sayfa sayısı için göstergeleri atlamak için bir düğmeye sayfa gezinti denetimlerinin içerir. Sayfalarıyla çevirme klavye ok tuşlarını kullanarak da gerçekleştirilebilir.  
+-   Sayfa Gezinti denetimlerinin: Sayfa Gezinti denetimlerinin, belge görüntüleme modunda sayfaları kullanıyorsa, sonraki sayfaya (aşağı ok) veya önceki sayfa (yukarı ok), hem de geçerli sayfa numarası ve toplam sayfa sayısı için göstergeleri atlamak için bir düğme bulunur. Sayfalar arasında çevirme klavye oklarını kullanarak da gerçekleştirilebilir.  
   
--   Yakınlaştırma: Yakınlaştırma denetimlerini artırmak veya artı tıklayarak veya eksi düğmelerini, yakınlaştırma düzeyini azaltmak kullanıcının sırasıyla etkinleştirir. Yakınlaştırma denetimlerini yakınlaştırma düzeyini ayarlamak için kaydırıcıyı de içerir. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+-   Yakınlaştırma: Yakınlaştırma denetimleri, sırasıyla artırmak ya da artı veya eksi düğmelerini, yakınlaştırma düzeyi azaltmak kullanıcı sağlar. Yakınlaştırma denetimlerini yakınlaştırma düzeyini ayarlamak için bir kaydırıcı de içerir. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
- Bu özellikler akış içeriğini barındırmak için kullanılan denetim göre değiştirilebilir. Sonraki bölümde farklı denetimleri açıklar.  
+ Bu özellikler, akış içeriğini barındırmak için kullanılan denetim göre değiştirilebilir. Farklı denetimler sonraki bölümde açıklanmıştır.  
   
 <a name="flow_document_types"></a>   
 ## <a name="flow-document-types"></a>Akış belge türleri  
- Belge içerik akışı ve görünme görüntüsünü hangi nesne akış içeriğini barındırmak için kullanılan üzerine bağlıdır. Akış içeriğinin görüntülenmesi destekleyen dört denetimleri vardır: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Bu denetimler, aşağıda kısaca açıklanmıştır.  
+ Hangi nesne akış içeriği barındırmak için kullanılan temel akış belge içeriği ve görünme görüntüsünü bağlıdır. Akış içeriği görüntülemeyi destekleyen dört denetimleri vardır: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Bu denetimler, aşağıda kısaca açıklanmıştır.  
   
- **Not:** <xref:System.Windows.Documents.FlowDocument> görüntüleme denetimleri bunların tümü tüketen doğrudan akış içeriği barındırmak için gerekli olduğundan, bir <xref:System.Windows.Documents.FlowDocument> akış içerik barındırma etkinleştirmek için.  
+ **Not:** <xref:System.Windows.Documents.FlowDocument> görüntüleme denetimleri bunların tümü kullanmak için doğrudan akış içeriği barındırmak için gerekli olan bir <xref:System.Windows.Documents.FlowDocument> akış içerik barındırma olanağı.  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> kullanıcının bir tek sayfalı (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-modu ve sürekli bir kayan (sınırsız) görüntüleme modu zamanda (defter okuma biçimi) dahil olmak üzere çeşitli görüntüleme modları arasında dinamik olarak seçmesini sağlayan özellikler içerir. Bu görüntüleme modları hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Farklı görüntüleme modları arasında dinamik geçiş özelliği gerekmiyorsa <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> hafifletilmiş akış belirli görüntüleme modunda sabit içerik görüntüleyicileri sağlar.  
+ <xref:System.Windows.Controls.FlowDocumentReader> dinamik olarak bir tek sayfa (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-mod ve sürekli bir kayan (sınırsız) görüntüleme modunda görüntüleme zamanda (kitap Okuma biçimi) dahil olmak üzere çeşitli görüntüleme modları arasında seçim yapması sağlayan özellikler içerir. Bu izleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Dinamik olarak farklı görüntüleme modları arasında geçiş yapma özelliğini gerekmiyorsa <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> hafifletilmiş akış belirli görüntüleme modunda sabit içerik görüntüleyicileri sağlar.  
   
-### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer ve FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer> Sayfa--bir zamanda içinde içerik gösterir modu, görüntülerken <xref:System.Windows.Controls.FlowDocumentScrollViewer> sürekli kaydırma modunda içerik gösterir. Her ikisi de <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> belirli görüntüleme moduna sabitlenmiştir. Karşılaştırılacak <xref:System.Windows.Controls.FlowDocumentReader>, kullanıcının çeşitli görüntüleme modları arasında dinamik olarak seçmesini sağlayan özellikler içerir (tarafından sağlanan gibi <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> numaralandırması), daha fazla kaynak yoğunluğu olan artırılabilir <xref:System.Windows.Controls.FlowDocumentPageViewer> veya <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer and FlowDocumentScrollViewer  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> içerik sayfası--bir zamanda içinde gösterir modu, görüntülerken <xref:System.Windows.Controls.FlowDocumentScrollViewer> sürekli kaydırma modunda içerik gösterir. Her ikisi de <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> belirli görüntüleme moduna düzeltildi. Karşılaştırılacak <xref:System.Windows.Controls.FlowDocumentReader>, dinamik olarak çeşitli görüntüleme modları arasında seçim yapması özellikleri içerir (tarafından sağlanan <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> numaralandırma), daha fazla kaynak yoğunluğu olan karşılığında <xref:System.Windows.Controls.FlowDocumentPageViewer> veya <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
- Varsayılan olarak, dikey kaydırma çubuğu her zaman gösterilir ve yatay kaydırma çubuğu gerektiğinde görünür duruma gelir. Varsayılan kullanıcı Arabirimi <xref:System.Windows.Controls.FlowDocumentScrollViewer> bir araç çubuğu içermez; ancak, <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> özelliği, yerleşik bir araç çubuğunu etkinleştirmek için kullanılabilir.  
+ Varsayılan olarak, dikey bir kaydırma çubuğuna her zaman gösterilir ve yatay bir ScrollBar'ın gerektiğinde görünür duruma gelir. Varsayılan kullanıcı Arabirimi için <xref:System.Windows.Controls.FlowDocumentScrollViewer> araç dahil değildir; ancak <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> özelliği, yerleşik bir araç çubuğu etkinleştirmek için kullanılabilir.  
   
 ### <a name="richtextbox"></a>RichTextBox  
- Kullandığınız bir <xref:System.Windows.Controls.RichTextBox> akış içeriği düzenlemek kullanıcı izin vermek istediğinizde. Örneğin, bir kullanıcının işlemek için izin verilen bir düzenleyici oluşturmak istediyseniz şeyler gibi tablolar, italik ve kalın biçimlendirme, vb., kullanacağınız bir <xref:System.Windows.Controls.RichTextBox>. Bkz: [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md) daha fazla bilgi için.  
+ Kullandığınız bir <xref:System.Windows.Controls.RichTextBox> akış içeriği düzenlemek kullanıcı izin vermek istediğinizde. Örneğin, işlemek bir kullanıcının verilen bir düzenleyici oluşturmak istediyseniz ister tablolar italik ve biçimlendirme vb. kalın, kullanacağınız bir <xref:System.Windows.Controls.RichTextBox>. Bkz: [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md) daha fazla bilgi için.  
   
- **Not:** içindeki akış içeriği bir <xref:System.Windows.Controls.RichTextBox> tam olarak diğer denetimlerde akış içeriği gibi davranırlar değil. Örneğin, hiç sütun yok bir <xref:System.Windows.Controls.RichTextBox> ve bu nedenle hiçbir otomatik yeniden boyutlandırma davranışı. Ayrıca, arama, mod, sayfa gezintisi ve yakınlaştırma görüntüleme gibi içerik akışı genellikle yerleşik özelliklerini içinde kullanılabilir olmayan bir <xref:System.Windows.Controls.RichTextBox>.  
+ **Not:** Akış içeriği içinde bir <xref:System.Windows.Controls.RichTextBox> tam olarak diğer denetimlerde akış içeriği gibi davranmaz. Örneğin, hiç sütun yok bir <xref:System.Windows.Controls.RichTextBox> ve bu nedenle otomatik boyutlandırma davranışı. Ayrıca, arama, yakınlaştırma modu ve sayfa gezintisi görüntüleme gibi akış içeriği genellikle yerleşik özellikleri içinde kullanılabilir olmayan bir <xref:System.Windows.Controls.RichTextBox>.  
   
 <a name="creating_flow_content"></a>   
-## <a name="creating-flow-content"></a>İçerik akışı oluşturma  
- Akış içeriği, karmaşık, metin, görüntüler, tablolar dahil olmak üzere çeşitli öğeden oluşan ve hatta olabilir <xref:System.Windows.UIElement> türetilmiş sınıfları denetimleri gibi. Karmaşık akış içeriğinin nasıl oluşturulacağını anlamak için aşağıdaki noktaları önemlidir:  
+## <a name="creating-flow-content"></a>Akış içeriği oluşturma  
+ Akış içeriği, karmaşık, metin, resimler, tablolar da dahil olmak üzere çeşitli öğelerinin ve hatta olabilir <xref:System.Windows.UIElement> türetilmiş sınıflar gibi denetimleri. Karmaşık akış içeriği oluşturma işlemini anlamak için aşağıdaki noktaları önemlidir:  
   
--   **Akış ile ilgili sınıflar**: akış içeriği kullanılan her sınıfın belirli bir amacı vardır. Ayrıca, akış sınıflar arasındaki hiyerarşik ilişkiyi, bunların nasıl kullanıldığı anlamanıza yardımcı olur. Örneğin, türetilmiş sınıflar <xref:System.Windows.Documents.Block> türetilmiş sınıflar sırada diğer nesneleri içeren için kullanılan sınıf <xref:System.Windows.Documents.Inline> görüntülenen nesneleri içerir.  
+-   **Flow ile ilgili sınıflar**: Akış içeriği içinde kullanılan her bir sınıfın belirli bir amacı vardır. Ayrıca, akış sınıfları arasındaki hiyerarşik ilişkiyi nasıl kullanıldığını anlamanıza yardımcı olur. Örneğin, türetilmiş sınıflar <xref:System.Windows.Documents.Block> türetilmiş sınıflar sırasında diğer nesneleri kapsamak üzere kullanılan sınıf <xref:System.Windows.Documents.Inline> görüntülenen nesneleri içerir.  
   
--   **İçerik şeması**: akış belge önemli bir iç içe öğelerin sayısı gerektirebilir. İçerik şeması olası üst/alt öğeleri arasında ilişkiler belirtir.  
+-   **İçerik şeması**: Akış belgesi, iç içe öğelerin önemli miktarda gerektirebilir. İçerik şeması öğeleri arasındaki olası üst/alt ilişkilerini belirler.  
   
- Aşağıdaki bölümlerde daha ayrıntılı bu alanlardan her birini üzerinden geçer.  
+ Aşağıdaki bölümlerde daha ayrıntılı bir şekilde bu alanların her biri üzerinden geçer.  
   
 <a name="flow_related_classes"></a>   
 ## <a name="flow-related-classes"></a>İlgili sınıflar akış  
- Aşağıdaki diyagramda, en yaygın akış içeriği ile kullanılan nesneleri gösterir:  
+ Akış içeriği en yaygın kullanılan nesneler Aşağıdaki diyagramda gösterilmektedir:  
   
- ![Diyagram: Akış içeriği öğesi sınıf hiyerarşisi](../../../../docs/framework/wpf/advanced/media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
+ ![Diyagram: Flow content element class hierarchy](../../../../docs/framework/wpf/advanced/media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
   
- Akış içeriği amaçları doğrultusunda, iki önemli kategorisi vardır:  
+ Akış içeriği amaçları için iki önemli kategorisi vardır:  
   
-1.  **Blok türetilmiş sınıfları**: "Blok içerik öğeleri" veya "Blok öğeleri" yalnızca olarak da bilinir. Devralınan öğeleri <xref:System.Windows.Documents.Block> öğeleri ortak bir üst altında gruplandırmak için veya bir gruba genel öznitelikler uygulamak için kullanılabilir.  
+1.  **Blok türetilmiş sınıflar**: "Blok içerik öğeleri" veya "Blok öğeleri" yalnızca olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Block> ortak bir üst öğe altında öğeleri gruplandırmak için veya bir gruba ortak öznitelikleri uygulamak için kullanılabilir.  
   
-2.  **Satır içi türetilmiş sınıfları**: "Satır içi içeriği öğeleri" veya "Satır içi öğeleri" yalnızca olarak da bilinir. Devralınan öğeleri <xref:System.Windows.Documents.Inline> ya da bir blok öğede veya başka bir satır içi öğe içinde yer alır. Satır içi öğeleri genelde ekrana işlenen içerik doğrudan kapsayıcı olarak kullanılır. Örneğin, bir <xref:System.Windows.Documents.Paragraph> (blok öğe) içerebilir bir <xref:System.Windows.Documents.Run> (satır içi öğenin) ancak <xref:System.Windows.Documents.Run> gerçekten ekranda işlenen metni içerir.  
+2.  **Satır içi türetilmiş sınıflar**: "Satır içi içeriği öğelerini" veya yeni "satır içi öğeleri" olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Inline> ya da bir blok öğede veya başka bir satır içi öğenin içinde yer alır. Satır içi öğeleri genellikle ekran için içeriği doğrudan kapsayıcı olarak kullanılır. Örneğin, bir <xref:System.Windows.Documents.Paragraph> (blok öğede) içerebilir bir <xref:System.Windows.Documents.Run> (satır içi öğesini) ancak <xref:System.Windows.Documents.Run> gerçekten ekranında işlenmeden metni içerir.  
   
- Bu iki kategoride her sınıf aşağıda kısaca açıklanmıştır.  
+ Bu iki kategori her sınıfta, aşağıda kısaca açıklanmıştır.  
   
-### <a name="block-derived-classes"></a>Blok türetilmiş sınıflar  
+### <a name="block-derived-classes"></a>Blok türetilmiş sınıfları  
  **Paragraf**  
   
- <xref:System.Windows.Documents.Paragraph> genellikle Grup içeriği paragrafa kullanılır. En basit ve en yaygın paragrafın bir paragraf metni oluşturmak için kullanılır.  
+ <xref:System.Windows.Documents.Paragraph> genellikle Grup içeriğini paragrafa kullanılır. Paragraf basit ve en yaygın kullanımı, bir metin paragrafı sağlandığında oluşturmaktır.  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
  [!code-csharp[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/ParagraphExample.cs#paragraphcodeonlyexamplewholepage)]
  [!code-vb[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/ParagraphExample.vb#paragraphcodeonlyexamplewholepage)]  
   
- Ancak, aşağıda göreceğiniz gibi satır içi türetilmiş diğer öğeleri de içerebilir. 
+ Ancak, aşağıda göreceğiniz gibi satır içi türetilen diğer öğeleri de içerebilir. 
   
  **Bölüm**  
   
- <xref:System.Windows.Documents.Section> yalnızca diğer kapsamak için kullanılmış <xref:System.Windows.Documents.Block>-öğeleri türetilmiş. İçerdiği öğeleri biçimlendirme herhangi bir varsayılan uygulanmaz. Ancak, üzerinde kümesi herhangi bir özellik değerleri bir <xref:System.Windows.Documents.Section> ve alt öğeleri için geçerlidir. Bir bölüm program aracılığıyla kendi alt toplulukta tekrarlama sağlar. <xref:System.Windows.Documents.Section> benzer şekilde kullanılan \<DIV > HTML etiketi.  
+ <xref:System.Windows.Documents.Section> yalnızca diğer kapsamak için kullanılmış <xref:System.Windows.Documents.Block>-türetilmiş öğeler. Herhangi bir varsayılan biçimlendirme içerdiği öğeler için geçerli değildir. Ancak, herhangi bir özellik üzerinde kümesi değerleri bir <xref:System.Windows.Documents.Section> alt öğeleri için geçerlidir. Bölüm ayrıca programlı olarak alt koleksiyonu yineleme yapmak sağlar. <xref:System.Windows.Documents.Section> benzer şekilde kullanılan \<DIV > HTML etiketinde.  
   
- Aşağıdaki örnekte, üç paragraf altında bir tane tanımlanan <xref:System.Windows.Documents.Section>. Bölümüne sahip bir <xref:System.Windows.Documents.TextElement.Background%2A> özellik değeri kırmızı, bu nedenle paragrafları arka plan rengi kırmızı de.  
+ Aşağıdaki örnekte, üç paragraf biri altında tanımlanan <xref:System.Windows.Documents.Section>. Bölümü bir <xref:System.Windows.Documents.TextElement.Background%2A> özelliğini kırmızı, bu nedenle arka plan rengi paragrafların değeri de kırmızı.  
   
  [!code-xaml[FlowOvwSnippets_snip#SectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SectionExample.xaml#sectionexamplewholepage)]  
   
@@ -122,19 +122,19 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer> etkinleştirir <xref:System.Windows.UIElement> öğeleri (yani bir <xref:System.Windows.Controls.Button>) bloktan türetilmiş akış içeriği katıştırılmış. <xref:System.Windows.Documents.InlineUIContainer> (aşağıya bakın) katıştırmak için kullanılan <xref:System.Windows.UIElement> türetilmiş satır içi akış içeriği öğelerinde. <xref:System.Windows.Documents.BlockUIContainer> ve <xref:System.Windows.Documents.InlineUIContainer> kullanmak üzere başka hiçbir yolu olmadığı için önemli olan bir <xref:System.Windows.UIElement> akıştaki iki bu öğelerden birini içinde bulunmadığı sürece içerik.  
+ <xref:System.Windows.Documents.BlockUIContainer> sağlar <xref:System.Windows.UIElement> öğeleri (yani bir <xref:System.Windows.Controls.Button>) içinde blok türetilmiş akış içeriği katıştırılmış. <xref:System.Windows.Documents.InlineUIContainer> (aşağıya bakın) katıştırmak için kullanılan <xref:System.Windows.UIElement> türetilmiş satır içi akış içeriği öğeleri. <xref:System.Windows.Documents.BlockUIContainer> ve <xref:System.Windows.Documents.InlineUIContainer> kullanmak için başka hiçbir yolu olmadığı için önemli olan bir <xref:System.Windows.UIElement> flow'da bir bu iki öğenin içinde bulunmadığı sürece içerik.  
   
- Aşağıdaki örnekte nasıl kullanılacağını gösterir <xref:System.Windows.Documents.BlockUIContainer> konak öğesine <xref:System.Windows.UIElement> akış içeriği içindeki nesneleri.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.BlockUIContainer> ana öğesine <xref:System.Windows.UIElement> akış içeriği içindeki nesneleri.  
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- Bu örneğin nasıl işlediğini aşağıdaki şekilde gösterilmiştir.  
+ Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: Akış içeriğine UIElement katıştırılmış](../../../../docs/framework/wpf/advanced/media/blockuicontainer.png "BlockUIContainer")  
+ ![Ekran: UIElement akış içeriğindeki gömülü](../../../../docs/framework/wpf/advanced/media/blockuicontainer.png "BlockUIContainer")  
   
  **Liste**  
   
- <xref:System.Windows.Documents.List> Madde işaretli veya sayısal listesini oluşturmak için kullanılır. Ayarlama <xref:System.Windows.Documents.List.MarkerStyle%2A> özelliğine bir <xref:System.Windows.TextMarkerStyle> listesi stilini belirlemek için numaralandırma değeri. Aşağıdaki örnekte basit bir liste oluşturulacağını gösterir.  
+ <xref:System.Windows.Documents.List> Madde işaretli veya sayısal bir liste oluşturmak için kullanılır. Ayarlama <xref:System.Windows.Documents.List.MarkerStyle%2A> özelliğini bir <xref:System.Windows.TextMarkerStyle> liste stilini belirlemek için sabit listesi değeri. Aşağıdaki örnek, basit bir listesi oluşturma işlemi gösterilmektedir.  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -145,87 +145,87 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
   
  **Tablo**  
   
- <xref:System.Windows.Documents.Table> bir tablo oluşturmak için kullanılır. <xref:System.Windows.Documents.Table> benzer <xref:System.Windows.Controls.Grid> öğesi, ancak daha fazla özellik içerir ve bu nedenle, daha yüksek kaynak yükü gerektirir. Çünkü <xref:System.Windows.Controls.Grid> olan bir <xref:System.Windows.UIElement>, içeren sürece bu akış içeriği kullanılamaz bir <xref:System.Windows.Documents.BlockUIContainer> veya <xref:System.Windows.Documents.InlineUIContainer>. Daha fazla bilgi için <xref:System.Windows.Documents.Table>, bkz: [tablo genel bakışı](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table> bir tablo oluşturmak için kullanılır. <xref:System.Windows.Documents.Table> benzer <xref:System.Windows.Controls.Grid> öğe ancak daha fazla özellik içerir ve bu nedenle büyük kaynağı ek yükü gerektirir. Çünkü <xref:System.Windows.Controls.Grid> olduğu bir <xref:System.Windows.UIElement>, içeren sürece akış içeriği kullanılamaz bir <xref:System.Windows.Documents.BlockUIContainer> veya <xref:System.Windows.Documents.InlineUIContainer>. Daha fazla bilgi için <xref:System.Windows.Documents.Table>, bkz: [tabloya genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
-### <a name="inline-derived-classes"></a>Satır içi türetilmiş sınıflar  
+### <a name="inline-derived-classes"></a>Satır içi türetilmiş sınıfları  
  **Çalıştır**  
   
- <xref:System.Windows.Documents.Run> biçimlendirilmemiş metin içermek üzere kullanılır. Beklediğiniz <xref:System.Windows.Documents.Run> yaygın olarak kullanılan nesneler akış içeriği. Ancak, biçimlendirmede <xref:System.Windows.Documents.Run> öğeleri açıkça kullanılacak gerekli değildir. <xref:System.Windows.Documents.Run> oluştururken veya kod kullanarak akış belgeleri düzenleme kullanılacak gereklidir. Örneğin, ilk aşağıdaki biçimlendirmede <xref:System.Windows.Documents.Paragraph> belirtir <xref:System.Windows.Documents.Run> açıkça ikinci sırasında öğesi yok. Her iki özdeş çıktı oluşturur.  
+ <xref:System.Windows.Documents.Run> biçimlendirilmemiş metinleri kapsamak için kullanılmış. Beklediğiniz <xref:System.Windows.Documents.Run> kapsamlı olarak kullanılmak üzere nesneleri akış içeriği. Ancak, biçimlendirmede <xref:System.Windows.Documents.Run> öğeleri açıkça kullanılacak gerekli değildir. <xref:System.Windows.Documents.Run> oluşturma veya kod kullanarak akış belgeleri işlemek amacıyla gereklidir. Örneğin, ilk aşağıdaki biçimlendirmede <xref:System.Windows.Documents.Paragraph> belirtir <xref:System.Windows.Documents.Run> açıkça sırasında ikinci öğe yok. Her iki benzer bir çıktı oluşturur.  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **Not:** başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> özelliği <xref:System.Windows.Documents.Run> bağımlılık özelliği nesnesidir. Bağlayabilirsiniz <xref:System.Windows.Documents.Run.Text%2A> gibi özelliği bir veri kaynağı bir <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Özelliği, tek yönlü bağlama tam olarak destekler. <xref:System.Windows.Documents.Run.Text%2A> Özelliğini de destekleyen iki yönlü bağlama dışında <xref:System.Windows.Controls.RichTextBox>. Örnek için bkz. <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>  
+ **Not:**  İtibariyle [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> özelliği <xref:System.Windows.Documents.Run> bağımlılık özelliği nesnedir. Bağlayabilirsiniz <xref:System.Windows.Documents.Run.Text%2A> gibi özellik bir veri kaynağı bir <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Özelliği, tek yönlü bağlamaya tam olarak destekler. <xref:System.Windows.Documents.Run.Text%2A> Özelliğini de destekleyen iki yönlü bağlama dışında <xref:System.Windows.Controls.RichTextBox>. Örnek için bkz. <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>  
   
- **Aralık**  
+ **yayılma**  
   
- <xref:System.Windows.Documents.Span> diğer satır içi içeriği öğelerini birlikte gruplar. Devralınan bir işleme içerik içinde uygulanan bir <xref:System.Windows.Documents.Span> öğesi. Öğeleri, ancak devral gelen <xref:System.Windows.Documents.Span> dahil olmak üzere <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> ve <xref:System.Windows.Documents.Underline> biçimlendirmeyi metne uygular.  
+ <xref:System.Windows.Documents.Span> Satır içi içeriği diğer öğelerini birlikte gruplar. İçerik içinde hiçbir devralınan işleme uygulanan bir <xref:System.Windows.Documents.Span> öğesi. Ancak, öğeler, devralmanız <xref:System.Windows.Documents.Span> dahil olmak üzere <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> ve <xref:System.Windows.Documents.Underline> için metin biçimlendirmesi uygular.  
   
- Bir örneği aşağıdadır bir <xref:System.Windows.Documents.Span> metin gibi satır içi içeriği için kullanılan bir <xref:System.Windows.Documents.Bold> öğesi ve bir <xref:System.Windows.Controls.Button>.  
+ Bir örnek aşağıdadır bir <xref:System.Windows.Documents.Span> metin dahil olmak üzere satır içi içeriği için kullanılan bir <xref:System.Windows.Documents.Bold> öğesi ve bir <xref:System.Windows.Controls.Button>.  
   
  [!code-xaml[FlowOvwSnippets_snip#SpanExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SpanExample.xaml#spanexamplewholepage)]  
   
- Aşağıdaki ekran görüntüsünde, bu örnek nasıl işlediğini gösterir.  
+ Aşağıdaki ekran görüntüsünde, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: İşlenmiş Span örneği](../../../../docs/framework/wpf/advanced/media/flow-spanexample.gif "Flow_SpanExample")  
+ ![Ekran: İşlenmiş span örneği](../../../../docs/framework/wpf/advanced/media/flow-spanexample.gif "Flow_SpanExample")  
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer> etkinleştirir <xref:System.Windows.UIElement> öğeleri (yani bir denetim ister <xref:System.Windows.Controls.Button>) katıştırılmış bir <xref:System.Windows.Documents.Inline> içerik öğesi. Bu öğe satır içi eşdeğer olan <xref:System.Windows.Documents.BlockUIContainer> yukarıda açıklanan. Kullanan bir örnek aşağıdadır <xref:System.Windows.Documents.InlineUIContainer> eklemek için bir <xref:System.Windows.Controls.Button> satır içinde bir <xref:System.Windows.Documents.Paragraph>.  
+ <xref:System.Windows.Documents.InlineUIContainer> sağlar <xref:System.Windows.UIElement> öğeleri (yani bir denetimi gibi <xref:System.Windows.Controls.Button>) katıştırılmış bir <xref:System.Windows.Documents.Inline> içerik öğesi. Bu öğe satır içi eşdeğeri olan <xref:System.Windows.Documents.BlockUIContainer> yukarıda açıklanan. Kullanan bir örnek aşağıdadır <xref:System.Windows.Documents.InlineUIContainer> eklemek için bir <xref:System.Windows.Controls.Button> satır içinde bir <xref:System.Windows.Documents.Paragraph>.  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
  [!code-csharp[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/InlineUIContainerExample.cs#inlineuicontainercodeonlyexamplewholepage)]
  [!code-vb[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/InlineUIContainerExample.vb#inlineuicontainercodeonlyexamplewholepage)]  
   
- **Not:** <xref:System.Windows.Documents.InlineUIContainer> açıkça biçimlendirmede kullanılan gerekmez. Bunu, atlarsanız bir <xref:System.Windows.Documents.InlineUIContainer> kodu derlendiğinde yine de oluşturulacak.  
+ **Not:** <xref:System.Windows.Documents.InlineUIContainer> açıkça işaretlemede kullanılabilmesi gerekmez. Bunu kullanmazsanız bir <xref:System.Windows.Documents.InlineUIContainer> kodu derlendiğinde yine de oluşturulur.  
   
  **Şekil ve Floater**  
   
- <xref:System.Windows.Documents.Figure> ve <xref:System.Windows.Documents.Floater> içeriği birincil içerik akışı bağımsız özelleştirilebilir yerleşim özellikleri ile akış belgelere katıştırma için kullanılır. <xref:System.Windows.Documents.Figure> veya <xref:System.Windows.Documents.Floater> geniş eklemesine reklamlar gibi içerik ilgili veya öğelerini vurgulayın veya görüntü veya diğer içerik ana içerik akışı içinde destekleyen bir konağa içerik bölümlerini vurgulamak için genellikle kullanılır.  
+ <xref:System.Windows.Documents.Figure> ve <xref:System.Windows.Documents.Floater> içeriği birincil içerik akışının bağımsız olarak özelleştirilebilir yerleştirme özellikleri ile akış belgelerde eklemek için kullanılır. <xref:System.Windows.Documents.Figure> veya <xref:System.Windows.Documents.Floater> tanıtımlar gibi içerik ilgili gevşek ekleme veya öğeleri vurgulama veya içeriği, görüntüleri veya diğer içerik ana içerik akışı içinde destekleyen konak kısımlarını vurgulamak için sık sık kullanılır.  
   
- Aşağıdaki örnek, katıştırmak gösterilmiştir bir <xref:System.Windows.Documents.Figure> bir paragraf metni içine.  
+ Aşağıdaki örnek nasıl ekleyeceğinizi gösterir. bir <xref:System.Windows.Documents.Figure> içine bir paragraf metni.  
   
  [!code-xaml[FlowOvwSnippets_snip#FigureExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/FigureExample.xaml#figureexamplewholepage)]  
   
  [!code-csharp[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/FigureExample.cs#figurecodeonlyexamplewholepage)]
  [!code-vb[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/FigureExample.vb#figurecodeonlyexamplewholepage)]  
   
- Aşağıdaki çizimde, bu örnek nasıl işlediğini gösterir.  
+ Aşağıdaki çizim, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: Şekil örnek](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
+ ![Ekran: Şekil örnek](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure> ve <xref:System.Windows.Documents.Floater> çeşitli yollarla farklıdır ve farklı senaryolar için kullanılır.  
+ <xref:System.Windows.Documents.Figure> ve <xref:System.Windows.Documents.Floater> çeşitli yollarla farklıdır ve farklı senaryolar için kullanılırlar.  
   
  **Şekil:**  
   
--   Konumlandırılmış olabilir: sayfa, içerik, sütun veya paragraf göre sabitlemek için kendi yatay ve dikey bağlayıcılarını ayarlayabilirsiniz. Aynı zamanda kendi <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> ve <xref:System.Windows.Documents.Figure.VerticalOffset%2A> özellikleri rasgele uzaklıkları belirtir.  
+-   Yerleştirilebilir: Sayfa, içerik, sütun veya paragraf göre sabitlemek için yatay ve dikey bağlayıcılarını ayarlayabilirsiniz. Ayrıca kendi <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> ve <xref:System.Windows.Documents.Figure.VerticalOffset%2A> özellikler rastgele uzaklıkları belirtir.  
   
--   Birden fazla sütuna boyutlandırılıp boyutlandırılmayacağını: ayarlayabileceğiniz <xref:System.Windows.Documents.Figure> sayfası, içeriğin veya sütun yüksekliği veya genişliği katları genişliği ve yüksekliği. Sayfa ve içerik söz konusu olduğunda, 1'den büyük katları izin verilmeyeceğini unutmayın. Örneğin, genişliğini ayarlayabilirsiniz bir <xref:System.Windows.Documents.Figure> "0,5 sayfa" veya "0,25 içeriğe" veya "sütununda 2" olmalıdır. Yüksekliğini ve genişliğini mutlak piksel değerlerini ayarlayabilirsiniz.  
+-   Birden fazla sütuna boyutlandırılıp boyutlandırılmayacağını: Ayarlayabileceğiniz <xref:System.Windows.Documents.Figure> yükseklik ve genişlik katlarıyla sayfası, içeriğin ya da sütun yükseklik veya genişlik. Sayfa ve içerik söz konusu olduğunda, çarpan 1'den büyük olmayan izin verildiğini unutmayın. Örneğin, genişliği ayarlayabilirsiniz bir <xref:System.Windows.Documents.Figure> "0,5 sayfası" veya "0,25 içerik" veya "2 sütun". Yükseklik ve genişlik piksel mutlak değerlerini ayarlayabilirsiniz.  
   
--   Değil sayfalara bölme: varsa içeriğini bir <xref:System.Windows.Documents.Figure> içine uymuyor <xref:System.Windows.Documents.Figure>, hangi içeriğin sığması işlemez ve kalan içeriği kaybolur  
+-   Sayfalandırma değil: İçerik içinde bir <xref:System.Windows.Documents.Figure> içine uymayan <xref:System.Windows.Documents.Figure>, hangi içeriği sığacak şekilde işlenir ve kalan içeriği kaybolur  
   
  **Floater:**  
   
--   Konumlandırılmış olabilir ve alanı için kullanılabilir hale getirilebilir her yerde oluşturmaz. Uzaklık ya da bağlantı ayarlanamıyor bir <xref:System.Windows.Documents.Floater>.  
+-   Konumlandırılmış olabilir ve boşluk için kullanılabilir hale getirilebilir her yerde işlenir. Uzaklık ya da bağlantı ayarlanamıyor bir <xref:System.Windows.Documents.Floater>.  
   
--   Birden fazla sütuna boyutta: varsayılan olarak, <xref:System.Windows.Documents.Floater> bir sütun boyutlarda. Bunun bir <xref:System.Windows.Documents.Floater.Width%2A> bir sütunu bu değer yok sayıldığını bir sütun genişliği floater'dan büyük olup olmadığını ancak bir mutlak piksel değerine ayarlayabilirsiniz özelliği boyuta sahip. Doğru piksel genişliği ayarlayarak, kısa bir sütuna boyutlandırabilirsiniz ancak boyutlandırma değil sütun göreli "0.5Column" geçerli bir ifade değildir <xref:System.Windows.Documents.Floater> genişliği. <xref:System.Windows.Documents.Floater> hiçbir height özelliği sahipse ve bu yüksekliği ayarlanamaz, buna ait yükseklik içerik bağlıdır  
+-   Birden fazla sütuna boyutta olması: Varsayılan olarak, <xref:System.Windows.Documents.Floater> boyutlarda bir sütun. Bunun bir <xref:System.Windows.Documents.Floater.Width%2A> bu değer bir sütun genişliği yok sayıldı ve floater büyük olup olmadığını ancak bir mutlak piksel değere ayarlanabilir özelliği bir sütununda boyutu. Doğru piksel genişliği ayarlayarak bu saatten daha az bir sütuna boyutlandırabilirsiniz ancak boyutlandırma değil sütun göreli "0.5Column" için geçerli bir ifade değil. Bu nedenle <xref:System.Windows.Documents.Floater> genişliği. <xref:System.Windows.Documents.Floater> hiçbir height özelliği sahipse ve bu yükseklik ayarlanamaz, onun yükseklik içerik bağlıdır  
   
--   <xref:System.Windows.Documents.Floater> paginates: içeriğini, belirtilen uzaklığında 1'den fazla sütun yüksekliğini geçerse, floater keser ve paginates sonraki sütun, sonraki sayfada, vs.  
+-   <xref:System.Windows.Documents.Floater> paginates: İçeriğini, belirtilen uzaklığında 1'den fazla sütun yüksekliği geçerse, floater keser ve paginates sonraki sütun, sonraki sayfaya, vs.  
   
- <xref:System.Windows.Documents.Figure> boyutunu denetlemek istediğiniz tek başına içerik yerleştirme için uygun bir yerdir konumlandırma ve içeriği belirtilen boyuta sığması emin. <xref:System.Windows.Documents.Floater> ana sayfa içeriği benzer akışlar, ancak ondan ayrılmış daha fazla ve serbest akışlı içerik yerleştirme için uygun bir yerdir.  
+ <xref:System.Windows.Documents.Figure> boyutunu denetlemek istediğiniz tek başına içerik yerleştirmek için iyi bir yerdir konumlandırma ve içerik belirtilen boyutu sığmasını eminiz. <xref:System.Windows.Documents.Floater> Akışlar için ana sayfa içeriği benzer, ancak ondan ayrılmış daha fazla ve ücretsiz akan içerik yerleştirmek için iyi bir yerdir.  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak> akış içeriği gerçekleşmesi bir satır sonu neden olur. Aşağıdaki örnek kullanımını gösteren <xref:System.Windows.Documents.LineBreak>.  
+ <xref:System.Windows.Documents.LineBreak> satır sonu akış içeriği oluşmasına neden olur. Aşağıdaki örnek, kullanımını gösterir <xref:System.Windows.Documents.LineBreak>.  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   
- Aşağıdaki ekran görüntüsünde, bu örnek nasıl işlediğini gösterir.  
+ Aşağıdaki ekran görüntüsünde, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: LineBreak örnek](../../../../docs/framework/wpf/advanced/media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
+ ![Ekran: LineBreak örnek](../../../../docs/framework/wpf/advanced/media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
   
-### <a name="flow-collection-elements"></a>Koleksiyon öğeleri akış  
- Yukarıdaki örneklerde birçok <xref:System.Windows.Documents.BlockCollection> ve <xref:System.Windows.Documents.InlineCollection> akış içeriği program aracılığıyla oluşturmak için kullanılır. Örneğin, öğelere eklemek için bir <xref:System.Windows.Documents.Paragraph>, sözdizimini kullanın:  
+### <a name="flow-collection-elements"></a>Akış koleksiyonu öğeleri  
+ Yukarıdaki örneklerde birçok <xref:System.Windows.Documents.BlockCollection> ve <xref:System.Windows.Documents.InlineCollection> akış içeriği programlı olarak oluşturmak için kullanılır. Örneğin, öğeleri eklemek için bir <xref:System.Windows.Documents.Paragraph>, sözdizimini kullanabilirsiniz:  
   
  `…`  
   
@@ -233,7 +233,7 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
   
  `…`  
   
- Bu ekler bir <xref:System.Windows.Documents.Run> için <xref:System.Windows.Documents.InlineCollection> , <xref:System.Windows.Documents.Paragraph>.  Bu örtülü aynıdır <xref:System.Windows.Documents.Run> içinde bulunan bir <xref:System.Windows.Documents.Paragraph> biçimlendirmede:  
+ Bu ekler bir <xref:System.Windows.Documents.Run> için <xref:System.Windows.Documents.InlineCollection> , <xref:System.Windows.Documents.Paragraph>.  Örtük olarak aynı budur <xref:System.Windows.Documents.Run> içinde bulunan bir <xref:System.Windows.Documents.Paragraph> biçimlendirme içinde:  
   
  `…`  
   
@@ -245,115 +245,115 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
   
  `…`  
   
- Kullanarak bir örnek olarak <xref:System.Windows.Documents.BlockCollection>, aşağıdaki örnek yeni bir oluşturur <xref:System.Windows.Documents.Section> ve ardından **Ekle** yeni bir ekleme yöntemi <xref:System.Windows.Documents.Paragraph> için <xref:System.Windows.Documents.Section> içeriği.  
+ Kullanarak bir örnek olarak <xref:System.Windows.Documents.BlockCollection>, aşağıdaki örnekte yeni bir oluşturur <xref:System.Windows.Documents.Section> ve ardından **Ekle** yeni bir yöntem <xref:System.Windows.Documents.Paragraph> için <xref:System.Windows.Documents.Section> içeriği.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
- Bir akış koleksiyona öğe ekleme ek olarak, öğeleri de kaldırabilirsiniz.  Aşağıdaki örnek, son siler <xref:System.Windows.Documents.Inline> öğesinde <xref:System.Windows.Documents.Span>.  
+ Bir akış koleksiyonu için öğe eklemenin yanı sıra, öğeleri de kaldırabilirsiniz.  Aşağıdaki örnekte, son silinir <xref:System.Windows.Documents.Inline> öğesinde <xref:System.Windows.Documents.Span>.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
  [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
- Aşağıdaki örnekte tüm içeriği siler (<xref:System.Windows.Documents.Inline> öğeleri) gelen <xref:System.Windows.Documents.Span>.  
+ Aşağıdaki örnek içeriğinin tamamını temizler (<xref:System.Windows.Documents.Inline> öğeleri) öğesinden <xref:System.Windows.Documents.Span>.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
- Akış içeriği ile programlı olarak çalışırken, büyük olasılıkla bu koleksiyonları kapsamlı kullanımını hale getirir.  
+ Akış içeriği ile programlı olarak çalışırken, büyük olasılıkla bu koleksiyonlara kapsamlı kullanımını hale getirir.  
   
- Akış öğesi kullanıp kullanmadığını bir <xref:System.Windows.Documents.InlineCollection> (Inlines) veya <xref:System.Windows.Documents.BlockCollection> (alt içerecek şekilde engeller) öğeleri alt öğe türüne bağlıdır (<xref:System.Windows.Documents.Block> veya <xref:System.Windows.Documents.Inline>) üst tarafından bulunabilir. Kapsama kuralları için içerik öğeleri sonraki bölümde içerik şemasında özetlenmiştir akışı.  
+ Bir akış öğesi kullanıp kullanmadığını bir <xref:System.Windows.Documents.InlineCollection> (satır içleri) veya <xref:System.Windows.Documents.BlockCollection> alt içerecek şekilde (bloklar) öğeleri alt öğeleri türüne bağlıdır (<xref:System.Windows.Documents.Block> veya <xref:System.Windows.Documents.Inline>) üst öğe tarafından bulunabilir. İçerme kuralları için içerik öğeleri sonraki bölümde içerik şemasında özetlenmiştir akış.  
   
- **Not:** akış içeriği ile kullanılan koleksiyon üçüncü bir tür <xref:System.Windows.Documents.ListItemCollection>, ancak bu koleksiyon yalnızca ile kullanılan bir <xref:System.Windows.Documents.List>. Ayrıca, kullanılan birkaç koleksiyon vardır <xref:System.Windows.Documents.Table>. Bkz: [tablo genel bakışı](../../../../docs/framework/wpf/advanced/table-overview.md) daha fazla bilgi için.  
+ **Not:** Üçüncü bir tür ile akış içeriği, kullanılan koleksiyon <xref:System.Windows.Documents.ListItemCollection>, ancak bu koleksiyon yalnızca ile kullanılan bir <xref:System.Windows.Documents.List>. Ayrıca, çeşitli koleksiyonları ile kullanılan vardır <xref:System.Windows.Documents.Table>. Bkz: [tabloya genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md) daha fazla bilgi için.  
   
 <a name="content_schema"></a>   
 ## <a name="content-schema"></a>İçerik şeması  
- Farklı akış içeriği öğeleri sayısı verildiğinde, ne tür bir öğe içerebilir alt öğelerini izlemek için zorlamayı olabilir. Aşağıdaki diyagram akış öğeleri için kapsama kuralları özetler. Oklar, olası üst/alt ilişkileri temsil eder.  
+ Farklı akış içeriği öğelerini sayısını göz önünde bulundurulduğunda, ne tür bir öğe içerebilir alt öğelerini izlemek için yorucu bir süreç olabilir. Aşağıdaki diyagramda, akış öğelerini kapsama kuralları özetlenmektedir. Oklar olası üst/alt ilişkilerini temsil eder.  
   
  ![Diyagram: Akış içeriği kapsama şeması](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
   
- Yukarıdaki diyagramda görüldüğü gibi bir öğe için izin verilen alt öğe mutlaka olup olmadığı tarafından belirlenir olmayan bir <xref:System.Windows.Documents.Block> öğesi veya bir <xref:System.Windows.Documents.Inline> öğesi. Örneğin, bir <xref:System.Windows.Documents.Span> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca olabilir <xref:System.Windows.Documents.Inline> sırasında alt öğelerini bir <xref:System.Windows.Documents.Figure> (aynı zamanda bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca olabilir <xref:System.Windows.Documents.Block> alt öğeleri. Bu nedenle, bir diyagram hangi öğe başka bir programda bulunabilir hızla belirlemede yararlıdır. Örnek olarak, diyagram oluşturma akış içeriğini belirlemek için kullanalım bir <xref:System.Windows.Controls.RichTextBox>.  
+ Yukarıdaki diyagramda görüldüğü gibi bir öğe için izin verilen alt öğe mutlaka olmasına göre belirlenir değil bir <xref:System.Windows.Documents.Block> öğesi veya bir <xref:System.Windows.Documents.Inline> öğesi. Örneğin, bir <xref:System.Windows.Documents.Span> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca <xref:System.Windows.Documents.Inline> sırasında alt öğeleri bir <xref:System.Windows.Documents.Figure> (Ayrıca bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca <xref:System.Windows.Documents.Block> alt öğeleri. Bu nedenle, bir diyagram hızla başka hangi öğe bulunabilir belirlemek için yararlıdır. Örnek olarak, akış içeriği oluşturmak nasıl belirlemek için diyagram şimdi kullanın. bir <xref:System.Windows.Controls.RichTextBox>.  
   
- **1.** A <xref:System.Windows.Controls.RichTextBox> içermesi gereken bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermesi gerekir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesne içermelidir. Yukarıdaki diyagramdan karşılık gelen kesim aşağıdadır.  
+ **1.** A <xref:System.Windows.Controls.RichTextBox> içermelidir bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermelidir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Yukarıdaki diyagramda karşılık gelen bir segmentten aşağıdadır.  
   
  ![Diyagram: RichTextBox kapsama kuralları](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
- Bugüne kadarki biçimlendirmeyi aşağıdaki gibi görünmelidir budur.  
+ Şimdiye kadar biçimlendirmeyi aşağıdaki gibi görünmelidir budur.  
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
- **2.** Aşağıdaki diyagramda göre birkaç yolu vardır <xref:System.Windows.Documents.Block> dahil olmak üzere seçmek için öğeleri <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (yukarıdaki bloktan türetilmiş sınıflara bakın). İstiyoruz diyelim bir <xref:System.Windows.Documents.Table>. Yukarıdaki diyagramda göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren öğeleri bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesne içermelidir. İçin karşılık gelen kesim aşağıdadır <xref:System.Windows.Documents.Table> yukarıdaki diyagramdan alınan.  
+ **2.** Diyagram göre vardır <xref:System.Windows.Documents.Block> öğeleri dahil olmak üzere seçmek için <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (yukarıdaki bloktan türetilmiş sınıflara bakın). İstediğimizi varsayalım bir <xref:System.Windows.Documents.Table>. Yukarıdaki diyagramda göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Karşılık gelen kesim için aşağıdadır <xref:System.Windows.Documents.Table> yukarıdaki diyagramdan alınan.  
   
- ![Diyagram: Üst&#47;alt tablo için şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+ ![Diyagram: Üst&#47;tablosu için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
- Karşılık gelen biçimlendirme aşağıdadır.  
+ Karşılık gelen biçimlendirme aşağıda verilmiştir.  
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
- **3.** Yeniden, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şirketinizdeki bazı metinleri hücresinin içine koyun. Bu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Gösteren diyagramdan karşılık gelen kesim aşağıdadır bir <xref:System.Windows.Documents.Paragraph> gerçekleştirebileceğiniz bir <xref:System.Windows.Documents.Inline> öğesi ve, bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
+ **3.** Yine, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şimdi metin hücre içine yerleştirin. Bunu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Aşağıda ilgili kesimlerinden gösteren diyagram bir <xref:System.Windows.Documents.Paragraph> sürebilir bir <xref:System.Windows.Documents.Inline> öğesi ve bu bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
   
  ![Diyagram: Üst&#47;paragraf için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
  ![Diyagram: Üst&#47;çalıştırma için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
- Tüm biçimlendirme örneği aşağıdadır.  
+ Tüm biçimlendirme örneği aşağıda verilmiştir.  
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
   
 <a name="customizing_text"></a>   
 ## <a name="customizing-text"></a>Metin özelleştirme  
- Genellikle metin içeriği akış belgesinde en yaygın türüdür. Yukarıdaki sunulan nesneleri çoğu yönlerini metin nasıl işleneceğini denetlemek için kullanılabilir olmasa da, bu bölümde yer alan metni özelleştirmek için diğer bazı yöntemler vardır.  
+ Genellikle bir akış belgede içerik en yaygın türü metindir. Yukarıda sunulan nesneleri metin nasıl oluşturulacağını çoğu yönleri denetlemek için kullanılabilir olsa da, bu bölümde yer alan metni özelleştirmek için diğer bazı yöntemler vardır.  
   
-### <a name="text-decorations"></a>Metin düzenlemelerinin  
- Metin düzenlemelerinin alt çizgi, üst çizgi, taban çizgisi ve üstü çizili etkileri metne izin ver (resimleri aşağıya bakın). Bu dekorasyonlar kullanılarak eklenen <xref:System.Windows.Documents.Inline.TextDecorations%2A> nesneler de dahil olmak üzere çeşitli tarafından kullanıma sunulan özelliği <xref:System.Windows.Documents.Inline>, <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>.  
+### <a name="text-decorations"></a>Metin süslemeleri  
+ Metin süslemeleri, alt çizgi, üst çizgi, temel ve üstü çizili etkileri metnine uygulanacak izin ver (Aşağıdaki resim bakın). Bu süslemeleri kullanılarak eklenen <xref:System.Windows.Documents.Inline.TextDecorations%2A> nesneler de dahil olmak üzere bir dizi tarafından kullanıma sunulan bir özellik <xref:System.Windows.Documents.Inline>, <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>.  
   
- Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.Documents.Paragraph.TextDecorations%2A> özelliği bir <xref:System.Windows.Documents.Paragraph>.  
+ Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Documents.Paragraph.TextDecorations%2A> özelliği bir <xref:System.Windows.Documents.Paragraph>.  
   
  [!code-xaml[InlineSnippets#_Paragraph_TextDecXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_paragraph_textdecxaml)]  
   
  [!code-csharp[InlineSnippets#_Paragraph_TextDec](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_paragraph_textdec)]
  [!code-vb[InlineSnippets#_Paragraph_TextDec](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_paragraph_textdec)]  
   
- Bu örneğin nasıl işlediğini aşağıdaki şekilde gösterilmiştir.  
+ Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: Varsayılan üstü çizili etkisi metinle](../../../../docs/framework/wpf/advanced/media/inline-textdec-strike.png "Inline_TextDec_Strike")  
+ ![Ekran: Varsayılan üstü çizili etkisi olan metin](../../../../docs/framework/wpf/advanced/media/inline-textdec-strike.png "Inline_TextDec_Strike")  
   
- Aşağıdakiler rakamları Göster nasıl **üst çizgi**, **temel**, ve **altı çizili** sırasıyla düzenlemelerini işleme.  
+ Aşağıdaki şekil show nasıl **dekorasyonu**, **temel**, ve **Underline** düzenlemelerini işleme, sırasıyla.  
   
- ![Ekran görüntüsü: Üst çizgi çizgi TextDecorator](../../../../docs/framework/wpf/advanced/media/inline-textdec-over.png "Inline_TextDec_Over")  
+ ![Ekran: TextDecorator üst çizgi](../../../../docs/framework/wpf/advanced/media/inline-textdec-over.png "Inline_TextDec_Over")  
   
- ![Ekran görüntüsü: Varsayılan metni taban çizgisi efekti](../../../../docs/framework/wpf/advanced/media/inline-textdec-base.png "Inline_TextDec_Base")  
+ ![Ekran: Varsayılan metin temel etkisi](../../../../docs/framework/wpf/advanced/media/inline-textdec-base.png "Inline_TextDec_Base")  
   
- ![Ekran görüntüsü: Varsayılan altı çizili efekti metinle](../../../../docs/framework/wpf/advanced/media/inline-textdec-under.png "Inline_TextDec_Under")  
+ ![Ekran: Varsayılan çizgi etkisi olan metin](../../../../docs/framework/wpf/advanced/media/inline-textdec-under.png "Inline_TextDec_Under")  
   
 ### <a name="typography"></a>Tipografi  
- <xref:System.Windows.Documents.TextElement.Typography%2A> Özelliği çoğu akışıyla ilgili içerik ekleyerek gösterilir <xref:System.Windows.Documents.TextElement>, <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu özellik, tipografik özellikleri/varyasyonları metin (yapmadan üst ve alt simgeler, vb. yani küçük veya büyük harfleri,) denetlemek için kullanılır.  
+ <xref:System.Windows.Documents.TextElement.Typography%2A> Özelliği kullanıma sunulan çoğu akışıyla ilgili içerik dahil ederek <xref:System.Windows.Documents.TextElement>, <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu özellik, metin (üst ve alt simgeler vb. yapmadan yani küçük veya büyük CAP,) tipografik özellikleri/Çeşitlemeleri denetlemek için kullanılır.  
   
- Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.Documents.TextElement.Typography%2A> özniteliğini kullanarak <xref:System.Windows.Documents.Paragraph> örnek öğesi olarak.  
+ Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Documents.TextElement.Typography%2A> özniteliği kullanarak <xref:System.Windows.Documents.Paragraph> örnek öğesi olarak.  
   
  [!code-xaml[TextElementSnippets#_TextElement_TypogXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_typogxaml)]  
   
- Bu örneğin nasıl işlediğini aşağıdaki şekilde gösterilmiştir.  
+ Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran görüntüsü: Değiştirilen tipografi metinle](../../../../docs/framework/wpf/advanced/media/textelement-typog.png "TextElement_Typog")  
+ ![Ekran: Değiştirilen tipografi metinle](../../../../docs/framework/wpf/advanced/media/textelement-typog.png "TextElement_Typog")  
   
- Buna karşılık, varsayılan tipografik özellikleri ile benzer bir örneğin nasıl işlediğini aşağıdaki şekilde gösterilmiştir.  
+ Buna karşılık, varsayılan tipografik özellikleri ile benzer bir örnek nasıl işlediğini aşağıdaki şekilde gösterilmektedir.  
   
- ![Ekran görüntüsü: Değiştirilen tipografi metinle](../../../../docs/framework/wpf/advanced/media/textelement-typog-default.png "TextElement_Typog_Default")  
+ ![Ekran: Değiştirilen tipografi metinle](../../../../docs/framework/wpf/advanced/media/textelement-typog-default.png "TextElement_Typog_Default")  
   
- Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.Controls.TextBox.Typography%2A> özelliği programlı olarak.  
+ Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Controls.TextBox.Typography%2A> özelliğini program aracılığıyla.  
   
  [!code-csharp[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_typog)]
  [!code-vb[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
  Bkz: [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md) tipografi hakkında daha fazla bilgi için.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [TextElement İçerik Modeline Genel Bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Ek Açıklamalara Genel Bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [TextElement İçerik Modeline Genel Bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)
+- [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [Ek Açıklamalara Genel Bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)

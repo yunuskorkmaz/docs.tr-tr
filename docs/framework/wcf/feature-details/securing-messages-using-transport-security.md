@@ -2,12 +2,12 @@
 title: Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747953"
 ---
 # <a name="securing-messages-using-transport-security"></a>Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 Bu bölümde, kuyruğa gönderilen iletileri güvenli hale getirmek için kullanabileceğiniz bir Message Queuing (MSMQ) aktarım güvenliği açıklanmaktadır.  
@@ -96,7 +96,7 @@ Bu bölümde, kuyruğa gönderilen iletileri güvenli hale getirmek için kullan
   
  Desteklenen algoritmalar `MD5`, `SHA1`, `SHA256`, ve `SHA512`. Varsayılan, `SHA1` değeridir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730041"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi
 Sağlama bilgilerini ayarlar.  
@@ -38,19 +38,19 @@ HRESULT SetCheckSum(
   
 #### <a name="parameters"></a>Parametreler  
  `algorithmId`  
- [in] Algoritma tanımlayıcısı temsil eden GUID.  
+ [in] The GUID that represents the algorithm identifier.  
   
  `checkSumSize`  
- [in] A `ULONG32` bayt cinsinden boyutu belirten `checkSum` arabellek.  
+ [in] A `ULONG32` bayt cinsinden boyutunu belirten `checkSum` arabellek.  
   
  `checkSum`  
- [in] Sağlama bilgilerini depolayan bir arabellek.  
+ [in] The buffer that stores the checksum information.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ISymUnmanagedDocumentWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ISymUnmanagedDocumentWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

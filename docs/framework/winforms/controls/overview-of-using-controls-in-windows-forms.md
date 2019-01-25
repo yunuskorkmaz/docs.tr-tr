@@ -9,22 +9,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533094"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms'ta Denetimlerin Kullanımına Genel Bakış
-Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve Windows Forms uygulamasında olayları işleyen basit bir örnek sağlar.  
+Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve bir Windows Forms uygulamasında olayları işleyen basit bir örnektir.  
   
 ## <a name="simple-windows-forms-applications"></a>Basit bir Windows Forms uygulamaları  
  En az bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:  
   
 -   Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   A `Main` çağırır yöntemi `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> kendisine örneği. <xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.  
+-   A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği. <xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.  
   
  Aşağıdaki kod örneği, bir Windows Forms uygulaması temel öğelerini gösterir.  
   
@@ -75,7 +75,7 @@ public class MyForm : Form {
 ```  
   
 ## <a name="using-controls-in-a-windows-forms-application"></a>Bir Windows Forms uygulamasında denetimlerini kullanma  
- Aşağıdaki kod örneğinde nasıl Windows Forms uygulamaları denetimleri kullanın ve olayları işlemek gösterilmektedir basit bir uygulama gösterir. Örnek bir form üzerinde üç düğme oluşur; Her düğme tıklatıldığında arka plan rengi değişir.  
+ Aşağıdaki kod örneği, Windows Forms uygulamaları nasıl denetimlerini kullanın ve olayları işlemek gösteren basit bir uygulamayı gösterir. Formdaki üç düğme örnek oluşur; Her düğme tıklandığında arka plan rengini değiştirir.  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Windows Forms Denetimi Geliştirmenin Esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows Forms Denetimi Geliştirmenin Esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

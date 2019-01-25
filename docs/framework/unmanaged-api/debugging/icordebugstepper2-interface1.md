@@ -1,5 +1,5 @@
 ---
-title: Icordebugstepper2 Interface1
+title: Icordebugstepper2 arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4652bcb00d3437350b5fd3e1071b3c538403cfe3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712882"
 ---
-# <a name="icordebugstepper2-interface1"></a>Icordebugstepper2 Interface1
-Yalnızca benim kod (JMC) hata ayıklama için destek sağlar.  
+# <a name="icordebugstepper2-interface1"></a>Icordebugstepper2 arabirimi1
+Yalnızca benim kodum (JMC) hata ayıklayıcı için destek sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetJMC Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Bu ICorDebugStepper yalnızca bir uygulamanın geliştirici tarafından yazılan kodu aracılığıyla adımları olup olmadığını belirten bir değer ayarlar.|  
+|[SetJMC Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Bir uygulamanın geliştiricisi tarafından yazılmış kod aracılığıyla bu ICorDebugStepper adımları olup olmadığını belirten bir değeri ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

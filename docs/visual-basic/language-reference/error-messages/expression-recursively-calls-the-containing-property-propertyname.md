@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553080"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>İfade yinelemeli olarak çağırıyor içeren özellik &#39; &lt;propertyname&gt;&#39;
-Bir deyimde `Set` yordamı özelliği tanımı bir değer özelliğinin adı depolar.  
+Bir deyimde `Set` yordamı bir özellik tanımı, özelliğin adını bir değer depolar.  
   
- Bir özelliğin değerini tutan önerilen yaklaşım tanımlamaktır bir `Private` özelliğin kapsayıcısında değişken ve ikisi de kullanmak `Get` ve `Set` yordamları. `Set` Yordamı sonra depolamak gelen değeri bu `Private` değişkeni.  
+ Bir özelliğin değerini tutmak için önerilen yaklaşım tanımlamaktır bir `Private` değişken özelliğin kapsayıcısındaki ve her ikisinde de kullanın `Get` ve `Set` yordamları. `Set` Yordamı ardından depolamak gelen değeri bu `Private` değişkeni.  
   
- `Get` Yordamı davranır gibi bir `Function` yordamı, özellik adı için bir değer atamak ve dönüş denetim karşılaşmadan tarafından `End Get` deyimi. Önerilen yaklaşım ancak eklemektir `Private` değişken değer olarak bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+ `Get` Yordamı davranacağını gibi bir `Function` yordam, özellik adı için bir değer atamak ve dönüş denetimi ile karşılaşıldığında `End Get` deyimi. Önerilen yaklaşım, ancak dahil etmektir `Private` değeri olarak değişken bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- `Set` Yordamı davranır gibi bir `Sub` bir değer döndürmüyor yordamı. Bu nedenle, içinde özel bir anlamı yordamı veya özellik adına sahip bir `Set` yordam ve depolayamaz bir değer içine.  
+ `Set` Yordamı davranacağını gibi bir `Sub` bir değer döndürmeyen bir yordam,. Bu nedenle, içinde özel bir anlamı yordam veya özellik adına sahip bir `Set` yordam ve depolayamaz değeri içine.  
   
- Aşağıdaki örnek tarafından önerilen yaklaşım ve ardından bu hataya neden olabilir bir yaklaşım gösterilmektedir.  
+ Aşağıdaki örnekte, ardından tarafından önerilen yaklaşım, bu hataya neden olabilecek bir yaklaşım gösterilmektedir.  
   
 ```  
 Public Class illustrateProperties  
@@ -55,15 +55,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak davranma hakkında daha fazla bilgi için lütfen bkz [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için lütfen bkz [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Hata Kimliği:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Önceki örnekte gösterildiği gibi önerilen yaklaşımı kullanmak için özellik tanımını yeniden yazın.  
+-   Yukarıdaki örnekte gösterildiği gibi önerilen yaklaşım kullanılacak özellik tanımını yeniden yazın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)

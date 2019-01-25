@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738936"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim İşlevi
-Belirtilen ada ve parametreleri belirtilen Kitaplığı'nda sahip işlevine bir çağrı yapar.  
+Belirtilen kitaplık içinde belirtilen ad ve parametreler içeren işleve bir çağrı yapar.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,31 +43,31 @@ HRESULT CallFunctionShim (
   
 #### <a name="parameters"></a>Parametreler  
  `szDllName`  
- [in] İşlevi içeren kitaplığı adı.  
+ [in] İşlevi içeren kitaplığın adı.  
   
  `szFunctionName`  
  [in] İşlevin adı.  
   
  `lpvArgument1`  
- [in] İşleve ilk bağımsız değişken.  
+ [in] İşleve geçirilecek ilk bağımsız değişken.  
   
  `lpvArgument2`  
- [in] İşleve ikinci bağımsız değişken.  
+ [in] İşleve ikinci bağımsız değişkeni.  
   
  `szVersion`  
- [in] İşlevi içeren kitaplığı sürümü.  
+ [in] İşlevi içeren kitaplık sürümü.  
   
  `pvReserved`  
- [in] Gelecekte kullanılmak üzere ayrılmış. Bu parametrede sıfır geçirin.  
+ [in] Gelecekte kullanılmak üzere ayrılmış. Bu parametre sıfır geçirin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

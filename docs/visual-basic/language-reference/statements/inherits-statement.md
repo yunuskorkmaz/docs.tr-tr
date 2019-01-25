@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502904"
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
 Geçerli sınıfın ya da arabirimin öznitelikleri, değişkenleri, özellikleri, yordamları ve olayları başka bir sınıf veya arabirim kümesini devralan neden olur.  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Terim|Tanım|  
 |---|---|  
-|`basetypenames`|Gerekli. Bu sınıfın türetildiği sınıfın adı.<br /><br /> veya<br /><br /> Bu arabirim türetildiği arayüzlerin adları. Birden çok adını ayırmak için virgül kullanın.|  
+|`basetypenames`|Gerekli. Bu sınıfın türetildiği sınıfın adı.<br /><br /> -veya-<br /><br /> Bu arabirim türetildiği arayüzlerin adları. Birden çok adını ayırmak için virgül kullanın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullandıysanız, `Inherits` deyimi, bir sınıf veya arabirim tanımı ilk boş olmayan, olmayan açıklama satırı olmalıdır. Hemen izlemelidir `Class` veya `Interface` deyimi.  
@@ -63,9 +63,9 @@ Inherits basetypenames
   
  Adlı arabirim `thisInterface` artık tüm tanımlar içeren <xref:System.IComparable>, <xref:System.IDisposable>, ve <xref:System.IFormattable> devralınan üyeleri sağlamak sırasıyla iki nesne, türe özgü karşılaştırma için serbest arabirimleri ayrılan kaynaklar ve bir nesne olarak değerini ifade bir `String`. Uygulayan bir sınıf `thisInterface` her üyesi temel her arabirimi uygulamalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

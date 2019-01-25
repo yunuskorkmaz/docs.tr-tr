@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725187"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile verileri değiştirme
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Yöntemi bir <xref:System.Data.Common.DbProviderFactory> nesne size bir <xref:System.Data.Common.DbDataAdapter> Fabrika oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcısı için kesin belirlenmiş bir nesne. Daha sonra kullanabileceğiniz bir <xref:System.Data.Common.DbCommandBuilder> komutları eklemek için oluşturmak için güncelleştirme ve verileri silme bir <xref:System.Data.DataSet> bir veri kaynağı.  
@@ -42,8 +42,8 @@ ms.locfileid: "43400552"
 > [!IMPORTANT]
 >  Sağlayıcıya özgü parametreler önleme tamamen doğrudan SQL deyimlerini oluşturmak için dize birleştirme kullanarak güvenlik nedenleriyle önerilmez. Dize birleştirme yerine parametreleri kullanarak uygulamanızı SQL ekleme saldırılarına karşı savunmasız bırakır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

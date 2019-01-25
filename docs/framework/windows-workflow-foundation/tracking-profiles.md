@@ -2,12 +2,12 @@
 title: İzleme profilleri
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 95f14cff9c60158f0ce188d031a94870c0b0ac5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559261"
 ---
 # <a name="tracking-profiles"></a>İzleme profilleri
 İzleme profilleri bir iş akışı örneğinin durumunu çalışma zamanında değiştiğinde yayılan iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir.  
@@ -380,7 +380,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </trackingProfile>  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL İzleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL İzleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

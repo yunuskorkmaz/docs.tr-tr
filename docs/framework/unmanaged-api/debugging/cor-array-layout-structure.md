@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731146"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT Yapısı
-Bellekte bir dizi nesnesi düzen hakkında bilgi sağlar.  
+Bir dizi nesnesinin bellek düzeni hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,28 +46,28 @@ typedef struct COR_ARRAY_LAYOUT {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`componentID`|Dizinin içerdiği nesnelerin türü tanımlayıcısı.|  
-|`componentType`|Bileşen bir atık toplama başvuru, bir değer sınıfı ya da basit bir tür olup olmadığını belirten bir CorElementType numaralandırması değer.|  
-|`firstElementOffset`|Dizinin ilk öğe uzaklık.|  
+|`componentType`|Bileşen bir çöp toplama başvuru, değer sınıfı veya basit bir tür olup olmadığını belirten bir CorElementType sabit listesi değeri.|  
+|`firstElementOffset`|Dizideki ilk öğe için olan uzaklık.|  
 |`elementSize`|Her öğe boyutu.|  
-|`countOffset`|Dizideki öğelerin sayısı uzaklık.|  
-|`rankSize`|Derecesini bayt cinsinden boyutu.|  
-|`numRanks`|Dizideki sıralar sayısı.|  
-|`rankOffset`|Hangi sıralar başlangıç uzaklığı.|  
+|`countOffset`|Dizideki öğelerin sayısını uzaklık.|  
+|`rankSize`|Boyut, bayt cinsinden boyutu.|  
+|`numRanks`|Dizideki sıralamalara sahip sayısı.|  
+|`rankOffset`|Başlangıçtan sıralamalara sahip başlangıç uzaklığı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rankSize` Alan çok boyutlu bir dizi sırası boyutunu belirtir. De tek boyutlu diziler doğru olur.  
+ `rankSize` Alanı, çok boyutlu bir dizi sırası boyutunu belirtir. Tek boyutlu diziler için de doğrudur.  
   
- Değeri `numRanks` tek boyutlu bir dizi için 1'dir ve `N` çok boyutlu bir dizi için `N` boyutları.  
+ Değerini `numRanks` tek boyutlu bir dizi için 1'dir ve `N` çok boyutlu bir dizi için `N` boyutları.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

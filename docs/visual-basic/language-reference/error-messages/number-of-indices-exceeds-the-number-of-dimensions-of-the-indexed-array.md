@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710657"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Dizin sayısı, sıralı dizinin boyut sayısını aşıyor
-Tam olarak bir dizi öğesine erişmek için kullanılan sayısından dizi, başka bir deyişle, bunun için bildirilen dimensions sayısı derecesini ile aynı olmalıdır.  
+Bir dizi öğesine erişmek için kullanılan dizinlerin sayısı tam olarak diğer bir deyişle, boyut için bildirilen sayısını dizinin boyut ile aynı olmalıdır.  
   
  **Hata Kimliği:** BC30106  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Toplam indisleri dizi derecesini sayısına eşittir kadar indisleri dizi başvurusundan kaldırın. Örneğin:  
+-   Dizi boyut sayısını toplam alt simgeler eşittir kadar alt simgeler dizi başvuruyu kaldırın. Örneğin:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,5 +35,5 @@ Tam olarak bir dizi öğesine erişmek için kullanılan sayısından dizi, baş
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)

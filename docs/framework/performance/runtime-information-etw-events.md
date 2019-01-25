@@ -7,42 +7,42 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735720"
 ---
 # <a name="runtime-information-etw-events"></a>Çalışma Zamanı Bilgileri ETW Olayları
-Bu ETW olayları SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde de dahil olmak üzere çalışma zamanı, GUID ile (varsa), başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri kaydeder. Bir işlemde birden çok çalışma zamanları çalıştırıldığında bu olayları (ClrInstanceID) tarafından sağlanan bilgileri çalışma zamanları belirsizliğini ortadan kaldırmak yardımcı olur.  
+Bu ETW olayları SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde dahil olmak üzere çalışma zamanı, GUID, (varsa), ile başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri kaydeder. Bir işlem içinde birden çok çalışma zamanları yürütülüyorsa, bu olaylar (ClrInstanceID) tarafından sağlanan bilgiler, çalışma zamanları belirsizliğinin ortadan kaldırılmasını yardımcı olur.  
   
- Aşağıdaki tabloda iki çalışma zamanı bilgileri olayları gösterir. Olaylar, herhangi bir anahtar sözcüğü veya maskesi altında yükseltilebilir. (Daha fazla bilgi için bkz: [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Aşağıdaki tabloda iki çalışma zamanı bilgileri olayları gösterir. Olaylar, herhangi bir anahtar sözcüğü veya maskesi altında yükseltilebilir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
 |Olay|Olay Kimliği|Sağlayıcı|Açıklama|  
 |-----------|--------------|--------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|Bir çalışma zamanı yüklendi tetiklenir.|  
+|`RuntimeInformationEvent`|187|CLRRuntime|Bir çalışma zamanı yüklendiğinde oluşturulur.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Yüklenen çalışma zamanları numaralandırır.|  
   
- Aşağıdaki tabloda olay verilerini gösterir.  
+ Aşağıdaki tabloda, olay verilerini gösterir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
-|SKU|Win: UInt16|1 – Masaüstü CLR.<br /><br /> 2 – CoreCLR.|  
-|BclVersion – ana sürümü|Win: UInt16|Mscorlib.dll ana sürümü.|  
-|BclVersion – alt sürümü|Win: UInt16|Mscorlib.dll ikincil sürüm numarası.|  
-|BclVersion – yapı numarası|Win: UInt16|Mscorlib.dll sayısı oluşturun.|  
-|BclVersion – QFE|Win: UInt16|Mscorlib.dll düzeltme sürüm numarası.|  
-|VMVersion – ana sürümü|Win: UInt16|Clr.dll veya SKU bağlı olarak coreclr.dll sürümü.|  
-|VMVersion – alt sürümü|Win: UInt16|Clr.dll veya coreclr.dll SKU bağlı olarak küçük sürümü.|  
-|VMVersion – yapı numarası|Win: UInt16|Yapı numarası clr.dll veya coreclr.dll.|  
-|VMVersion – QFE|Win: UInt16|Clr.dll veya coreclr.dll düzeltme sürüm numarası.|  
-|StartupFlags|Win: UInt32|Başlangıç bayraklar mscoree.h tanımlanmış.|  
-|StartupMode|Win: UInt8|0x01 - yönetilen çalıştırılabilir.<br /><br /> 0x02 - barındırılan CLR.<br /><br /> 0x04 - C++ birlikte çalışma yönetilen.<br /><br /> 0x08 - COM etkinleştirildi.<br /><br /> 0x10 - diğer.|  
-|komut satırı|Win: UnicodeString|Null olmayan eksikse StartupMode 0x01 =.|  
-|ComObjectGUID|Win: GUID|Null olmayan eksikse StartupMode 0x08 =.|  
-|RuntimeDLLPath|Win: UnicodeString|İşlemine yüklendi CLR .dll dosyasının yolu.|  
+|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|SKU|Kazanma: UInt16|1 – Masaüstü CLR.<br /><br /> 2 – CoreCLR.|  
+|BclVersion – ana sürümü|Kazanma: UInt16|Mscorlib.dll ana sürümü.|  
+|BclVersion – alt sürümü|Kazanma: UInt16|Mscorlib.dll alt sürüm sayısı.|  
+|BclVersion – derleme numarası|Kazanma: UInt16|Derleme numarası sağlar.|  
+|BclVersion – QFE|Kazanma: UInt16|Mscorlib.dll düzeltme sürüm numarası.|  
+|VMVersion – ana sürümü|Kazanma: UInt16|Clr.dll veya SKU bağlı olarak, coreclr.dll sürümü.|  
+|VMVersion – alt sürümü|Kazanma: UInt16|Clr.dll veya coreclr.dll, SKU bağlı olarak ikincil sürümü.|  
+|VMVersion – derleme numarası|Kazanma: UInt16|Derleme numarası clr.dll veya coreclr.dll.|  
+|VMVersion – QFE|Kazanma: UInt16|Clr.dll veya coreclr.dll düzeltme sürüm numarası.|  
+|StartupFlags|Kazanma: UInt32|Mscoree.h içinde tanımlanan başlangıç bayraklar.|  
+|StartupMode|Kazanma: UInt8|0x01 - yönetilen çalıştırılabilir.<br /><br /> 0x02 - barındırılan CLR.<br /><br /> 0x04 - C++ birlikte çalışması yönetilen.<br /><br /> 0x08 - COM etkinleştirildi.<br /><br /> 0x10 - diğer.|  
+|komut satırı|Kazanma: UnicodeString|Null olmayan yalnızca şu durumlarda StartupMode 0x01 =.|  
+|ComObjectGUID|Kazanma: GUID|Null olmayan yalnızca şu durumlarda StartupMode 0x08 =.|  
+|RuntimeDLLPath|Kazanma: UnicodeString|İşlem yüklenmiş CLR .dll dosyasının yolu.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: def1c04064cc9fc98c108dcdad5c017c0c8e465b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655536"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel Numaralandırması
-Bir hata etkisi belirli bellek ayırma istendi ancak memnun olamaz belirten değerleri içerir.  
+Belirli bir bellek ayırma istendi ancak memnun olamaz, bir hatanın etkisini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eAppDomainCritical`|Ayırma ayırma istedi etki alanında yönetilen kod yürütmek için önemli olduğunu gösterir. Bellek ayrılamıyor, CLR etki alanı hala kullanılabilir garanti edemez. Konak ayırma karşılanamayan olduğunda gerçekleştirilecek eylemi karar verir. İptal etmek için CLR söyleyebilirsiniz `AppDomain` otomatik olarak veya üzerinde yöntemler çağrılarak çalıştırmaya devam etmesine izin [Iclrpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
-|`eProcessCritical`|Ayırma işleminde yönetilen kod yürütülmesi için önemli olduğunu gösterir. Bu değer, başlatma sırasında ve sonlandırıcılar çalıştırılırken kullanılır. Bellek ayrılamıyor, CLR işleminde çalışamaz. Ayırma başarısız olursa, CLR etkili bir şekilde devre dışı bırakılır. CLR tüm sonraki çağrılar ile HOST_E_CLRNOTAVAILABLE başarısız.|  
-|`eTaskCritical`|Ayırma ayırma istedi görevi çalıştırmak için önemli olduğunu gösterir. Bellek ayrılamıyor, CLR görev yürütülen garanti edemez. CLR hatası durumunda başlatır bir <xref:System.Threading.ThreadAbortException> fiziksel işlemi sistem iş parçacığı üzerinde.|  
+|`eAppDomainCritical`|Ayırma ayırma istedi etki alanındaki yönetilen kodu yürütmek için kritik olduğunu gösterir. Bellek tahsis edilemiyor, CLR etki alanı hala kullanılabilir olduğunu garanti edemez. Konak ayırma getirdiğinizde hangi eylemin karar verir. CLR'nin iptal edilmemelerini sağlayabilirsiniz `AppDomain` otomatik olarak ya da üzerinde yöntemleri çağırarak çalıştırmaya devam etmesine izin [Iclrpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
+|`eProcessCritical`|Ayırma işleminde yönetilen kodun yürütülmesi için önemli olduğunu gösterir. Bu değer, başlatılırken ve sonlandırıcılar çalıştırırken kullanılır. Bellek tahsis edilemiyor, CLR'nin işlemdeki çalışamaz. Ayırma başarısız olursa, CLR etkili bir şekilde devre dışı bırakıldı. CLR hata HOST_E_CLRNOTAVAILABLE ile tüm sonraki çağırıyor.|  
+|`eTaskCritical`|Ayırma ayırma istediği görevi çalıştırmak için önemli olduğunu gösterir. Bellek tahsis edilemiyor, CLR görev yürütülebilecek garanti edemez. CLR hata durumunda başlatır bir <xref:System.Threading.ThreadAbortException> fiziksel işlemi sistemi iş parçacığı üzerinde.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımlanan bellek ayırma yöntemlerini [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) ve [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) arabirimler bu türde bir parametre yararlanabilir. Bir hata önem derecesi bağlı olarak, bir konak ayırma isteği hemen başarısız mı, yoksa, karşılanabilir kadar beklemeniz karar verebilirsiniz.  
+ Tanımlanan bellek ayırma yöntemleri [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) ve [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) arabirimler bu türde bir parametre yararlanabilir. Bir hata önem derecesi bağlı olarak, bir konak ayırma istek hemen başarısız mı, yoksa, karşılanamayacak kadar beklenecek karar verebilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRMemoryNotificationCallback Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRMemoryNotificationCallback Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

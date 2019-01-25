@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23c483daed0156dd29134b255e9da2f7922980ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492788"
 ---
 # <a name="xkey-directive"></a>x:Key Yönergesi
 Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz olarak tanımlar. Ekleme bir `x:Key` değerdir XAML nesnesi öğesine örneğin WPF içindeki bir kaynak sözlüğünde bir kaynağı tanımlamak için en yaygın yolu <xref:System.Windows.ResourceDictionary>.  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight kullanım notları  
  `x:Key` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML Kaynakları](../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Kaynaklar ve Kod](../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [StaticResource İşaretleme Uzantısı](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [XAML Kaynakları](../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Kaynaklar ve Kod](../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [StaticResource İşaretleme Uzantısı](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

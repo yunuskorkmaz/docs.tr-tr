@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725553"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşturulacağını açıklar.  
@@ -46,11 +46,11 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 3.  İçin Uıd'leri ekleyin, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları. Uıd'leri dosyalarda yapılan değişiklikler izlemek ve çevrilmelidir öğeleri tanımlamak için kullanılır. Uıd'leri dosyalarınıza eklemek için çalıştırın **updateuid** proje dosyanızda:  
   
-     **MSBuild - t: updateuid helloapp.csproj**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      Eksik veya Uıd'leri yinelenen doğrulamak için çalıştırın **checkuid**:  
   
-     **MSBuild - t: checkuid helloapp.csproj**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      Çalıştırdıktan sonra **updateuid**, dosyalarınızı Uıd'leri içermelidir. Örneğin, Pane1.xaml dosyasında, aşağıdaki bulduğunuz:  
   
@@ -91,21 +91,21 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 4.  LocBaml çalıştırdığınızda belirtebileceğiniz seçenekleri aşağıdaki gibidir:  
   
-    -   **Ayrıştırma** veya **-p:** Baml ayrıştırır, kaynaklar veya [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv ya da .txt dosyası oluşturmak için dosyaları.  
+    -   **Ayrıştırma** veya **-p:** BAML, kaynaklar ayrıştırır veya [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv ya da .txt dosyası oluşturmak için dosyaları.  
   
-    -   **oluşturma** veya **-g:** çevrilmiş dosyası kullanarak yerelleştirilmiş bir ikili dosya oluşturur.  
+    -   **oluşturma** veya **-g:** Yerelleştirilmiş bir ikili dosya çevrilmiş bir dosyayı kullanarak oluşturur.  
   
-    -   **Çıkış** veya **-o** {*filedirectory*] **:** çıkış dosyası adı.  
+    -   **Çıkış** veya **-o** {*filedirectory*] **:** Çıkış dosyası adı.  
   
-    -   **kültür** veya **- cul** {*kültür*] **:** çıkış derlemelerinin yerel ayarı.  
+    -   **kültür** veya **- cul** {*kültür*] **:** Çıkış bütünleştirilmiş kodları yerel ayarı.  
   
-    -   **Çeviri** veya **- trans** {*translation.csv*] **:** çevrilmiş ya da yerelleştirilmiş dosyası.  
+    -   **Çeviri** veya **- trans** {*translation.csv*] **:** Çevrilmiş veya yerelleştirilmiş dosyası.  
   
-    -   **asmpath** veya **- asmpath:** {*filedirectory*] **:** varsa, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu özel denetimler içeren, siz sağlamalısınız  **asmpath** özel denetim derleme.  
+    -   **asmpath** veya **- asmpath:** {*filedirectory*] **:** Varsa, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu özel denetimler içeren, siz sağlamalısınız **asmpath** özel denetim derleme.  
   
-    -   **nologo:** hiçbir logo veya telif hakkı bilgilerini görüntüler.  
+    -   **nologo:** Hiçbir logo veya telif hakkı bilgilerini görüntüler.  
   
-    -   **ayrıntılı:** ayrıntılı modu bilgileri görüntüler.  
+    -   **ayrıntılı:** Ayrıntılı modu bilgileri görüntüler.  
   
     > [!NOTE]
     >  Seçeneklerin bir listesi Aracı çalıştırırken gerekiyorsa, yazın **LocBaml.exe'yi** ve ENTER tuşuna basın.  
@@ -118,7 +118,7 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 2.  Uydu derleme dosyasını ayrıştırma ve bir .csv dosyası olarak çıktısını depolamak için aşağıdaki komutu kullanın:  
   
-     **LocBaml.exe'yi /parse HelloApp.resources.dll /out:Hello.csv**  
+     **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  HelloApp.resources.dll giriş dosyası içinde değilse LocBaml.exe'yi aynı dizine taşı dosyalarından birini her iki dosya aynı dizinde olmasını sağlamak.  
@@ -151,9 +151,9 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
    |BAML adı|Kaynak anahtarı|Kategori|Okunabilirlik|Modifiability'e göre|Açıklamalar|Değer|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Yoksay|FALSE|FALSE||#Text1; #Text2|
-   |HelloApp.g.en US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Yok.|TRUE|TRUE||Merhaba Dünya|
-   |HelloApp.g.en US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Yok.|TRUE|TRUE||Güle güle World|
+   |HelloApp.g.en US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Yoksayma|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Hiçbiri|TRUE|TRUE||Merhaba Dünya|
+   |HelloApp.g.en US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Hiçbiri|TRUE|TRUE||Güle güle World|
   
    Dikkat tüm değerler için **açıklamaları** alanın değer içermesi; bir alan bir değer yoksa boş. Ayrıca ilk satırda öğe okunabilir ve değiştirilebilir ve "Yoksay" sahip olarak dikkat edin, **kategori** değeri, her biri olmadığını değeri yerelleştirilebilir olduğunu belirtir.  
   
@@ -169,7 +169,7 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
 1.  Yeni bir HelloApp.resources.dll dosyası oluşturmak için aşağıdaki sözdizimini kullanın. Kültür en-US olarak işaretleyin (/ cul: en-US).  
   
-     **LocBaml.exe'yi / HelloApp.resources.dll /trans:Hello.csv /out:c oluştur: \ /cul:en-ABD**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  Giriş dosyası Hello.csv LocBaml.exe yürütülebilir dosya ile aynı dizinde değilse, her iki dosya aynı dizinde, böylece dosyalarından birini taşıyın.  
@@ -209,6 +209,6 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="whats-next"></a>Yenilikler  
  Artık LocBaml aracı kullanmak nasıl temel bir anlayışa sahipsiniz.  Uıd'leri içeren bir dosya olmak. LocBaml aracı kullanarak, yerelleştirilebilir içerik ayıklamak için dosyayı ayrıştırılacak erişebileceğinizi ve içerik çevrilebilir sonra üretmeden olmalıdır bir. resources.dll dosyasını çevrilen içeriğin birleştirir. Bu konu, her olası ayrıntı içermez, ancak artık uygulamalarınızı yerelleştirme için LocBaml kullanmak için gerekli bilgi vardır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 1dc28ac218eb0325095641840834b40594ad67ab
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 44ae8acd1278d8a6163ac1c5bc6e0a0e030c02fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676971"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 
@@ -124,8 +124,8 @@ Uygulayan bir nesne aşağıdaki örnekte <xref:System.Collections.IEnumerable> 
 
 [!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)  
-- [LINQ Sorgu ifadeleri](../linq-query-expressions/index.md)  
+- [C# Programlama Kılavuzu](../index.md)
+- [LINQ Sorgu ifadeleri](../linq-query-expressions/index.md)
 - [Anonim Tipler](anonymous-types.md)

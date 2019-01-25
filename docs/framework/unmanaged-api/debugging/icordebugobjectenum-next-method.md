@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745170"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next Yöntemi
-Geçerli konumdan başlayarak numaralandırması nesneleri belirtilen sayıdaki göreli sanal adresleri (RVAs) alır.  
+Geçerli konumunda başlayan sabit listesi, belirli sayıda nesneleri, göreli sanal adreslerine (RVA) alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] Alınacak nesne sayısı.  
   
  `objects`  
- [out] Her biri bir CORDB_ADDRESS nesnesine işaret eden bir dizi işaretçisi.  
+ [out] Bir dizi işaretçileri, her biri bir CORDB_ADDRESS nesneye işaret eder.  
   
  `pceltFetched`  
- [out] İşaretçi gerçekte döndürülen nesne sayısı. Bu değer null ise `celt` biridir.  
+ [out] Gerçekte döndürülen nesne sayısı için işaretçi. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
+## <a name="see-also"></a>Ayrıca bkz.
+

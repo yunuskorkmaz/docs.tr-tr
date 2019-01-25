@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 7ae99bec5797591e53c6c77f5d9f88589352104c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676347"
 ---
 # <a name="mywebservices-object"></a>My.WebServices Nesnesi
 Oluşturma ve erişme geçerli proje tarafından başvurulan her bir XML Web hizmeti tek bir örneği için özellikleri sağlar.  
@@ -62,7 +62,7 @@ Oluşturma ve erişme geçerli proje tarafından başvurulan her bir XML Web hiz
 |Windows Hizmeti|**Evet**|  
 |Web Sitesi|Hayır|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
- <xref:System.ArgumentException>  
- [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
+- <xref:System.ArgumentException>
+- [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

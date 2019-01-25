@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736024"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip Teknoloiji Özeti
 Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullanımını destekleyen sınıflar.  
@@ -89,14 +89,14 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
   
  Denetim barındırma örneği için bkz: [nasıl yapılır: ToolStripControlHost ile bir Windows Forms denetimini kaydırma](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
-## <a name="rendering"></a>işleme  
+## <a name="rendering"></a>İşleme  
  <xref:System.Windows.Forms.ToolStrip> sınıflar, diğer Windows Forms denetimlerini önemli ölçüde farklı bir işleme düzeni uygular. Bu düzen ile stilleri ve Temalar kolayca uygulayabilirsiniz.  
   
  Bir stil uygulamak için bir <xref:System.Windows.Forms.ToolStrip> ve tüm <xref:System.Windows.Forms.ToolStripItem> içerdiği nesneler yok işlemek <xref:System.Windows.Forms.ToolStripItem.Paint> her öğe için olay. Bunun yerine, ayarlayabileceğiniz <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> özelliğini birine <xref:System.Windows.Forms.ToolStripRenderMode> dışındaki değerler <xref:System.Windows.Forms.ToolStripRenderMode.Custom>. Alternatif olarak, ayarlayabileceğiniz <xref:System.Windows.Forms.ToolStrip.Renderer%2A> doğrudan öğesinden devralınan bir sınıf için <xref:System.Windows.Forms.ToolStripRenderer> sınıfı. Bu özellik otomatik olarak ayarlar ayarı <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>.  
   
  Birden çok aynı stil uygulayabilirsiniz <xref:System.Windows.Forms.ToolStrip> ayarlayarak aynı uygulamada nesneler <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> için <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> ve ayarı <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> veya <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> özelliğini <xref:System.Windows.Forms.ToolStripManagerRenderMode> istediğiniz veya <xref:System.Windows.Forms.ToolStripRenderer> değeri sırasıyla.  
   
- İşleme örnekleri için bkz: [nasıl yapılır: Windows Forms'ta ToolStrip denetimi için özel Oluşturucu Oluşturma ve](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
+ İşleme örnekleri için bkz: [nasıl yapılır: ToolStrip denetimi Windows Forms için özel Oluşturucu Oluşturma ve](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Stiller ve Temalar  
  <xref:System.Windows.Forms.ToolStrip> ve ilişkili sınıflarının görsel stilleri ve geçersiz kılma gerektirmeyen özel görünüşünü desteklemek için kolay bir yol sağlamak <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> her öğe için yöntemleri. Kullanım <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> ve <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> ve <xref:System.Windows.Forms.ToolStrip.Renderer%2A> özellikleri.  
@@ -112,12 +112,12 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
   
  Üzerinde yerleşik radye avantajı olan <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.StatusStrip> denetimleri, diğer denetimlerle yatay veya dikey boşluk paylaşabilir.  
   
- Çoğu <xref:System.Windows.Forms.ToolStrip> denetimleri yerleşik radye kullanmak yerine, diğer denetimler gibi form. Gerektiğini de belirtebilirsiniz bir <xref:System.Windows.Forms.ToolStrip> denetimi serbestçe konumlandırılmış formunda grubundan kaldırarak kendi <xref:System.Windows.Forms.ToolStripContainer> ve ayarı kendi `Dock` özelliğini `None`, ya da mutlak konumunu ilgili ayarlayarak belirtebilirsiniz <xref:System.Windows.Forms.Control.Location%2A> özellik. Bkz: [nasıl yapılır: bir ToolStrip forma ToolStripContainer taşıma](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ Çoğu <xref:System.Windows.Forms.ToolStrip> denetimleri yerleşik radye kullanmak yerine, diğer denetimler gibi form. Gerektiğini de belirtebilirsiniz bir <xref:System.Windows.Forms.ToolStrip> denetimi serbestçe konumlandırılmış formunda grubundan kaldırarak kendi <xref:System.Windows.Forms.ToolStripContainer> ve ayarı kendi `Dock` özelliğini `None`, ya da mutlak konumunu ilgili ayarlayarak belirtebilirsiniz <xref:System.Windows.Forms.Control.Location%2A> özellik. Bkz: [nasıl yapılır: Bir ToolStrip forma ToolStripContainer taşıma](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Bir veya daha fazla <xref:System.Windows.Forms.ToolStripPanel> özellikle birden çok Belgeli Arabirim (MDI) uygulamaları için daha fazla esneklik için denetimleri veya gereksinim duymadığınız bir <xref:System.Windows.Forms.ToolStripContainer>. A <xref:System.Windows.Forms.ToolStripPanel> yerleştirilebilir bir alanı bulmak ve radye sağlar <xref:System.Windows.Forms.ToolStrip> denetimleri ancak değil geleneksel denetimleri. Varsayılan olarak, <xref:System.Windows.Forms.ToolStripPanel> Tasarımcısı'nda görünmez **araç kutusu**, ancak bunu orada sağ tıklayarak koyun **araç kutusu**ve ardından **öğelerini Seç**. Ayrıca programlı bir şekilde erişebileceğiniz <xref:System.Windows.Forms.ToolStripPanel> ister başka bir sınıf.  
   
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, Ve <xref:System.Windows.Forms.StatusStrip> öğeleri taşma olanak tanır. Benzer şekilde, Microsoft Office araç çubuklarında bu öğelere davranış budur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

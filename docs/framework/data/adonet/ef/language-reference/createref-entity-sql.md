@@ -2,12 +2,12 @@
 title: CREATEREF (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: 44954dcc1f3407a768ba23fe87ac4b4abcf1bac5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdf1c34f8a050764e8f8766da25076a7c1c361ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505087"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (varlık SQL)
 Bir entityset varlık başvuruları fabricates.  
@@ -20,15 +20,15 @@ CreateRef(entityset_identifier, row_typed_expression)
   
 ## <a name="arguments"></a>Arguments  
  `entityset_identifier`  
- Entityset tanımlayıcısı, olmayan bir değişmez dize değeri.  
+ Entityset tanımlayıcısı olmayan bir dize sabit değeri olabilir.  
   
  `row_typed_expression`  
- Varlık türünün temel özelliklerine karşılık gelen bir satır yazılan bir ifade.  
+ Varlık türünün temel özelliklerine karşılık gelen bir satır yazılmış bir ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `row_typed_expression` varlık için anahtar türü yapısal olarak eşdeğer olmalıdır. Diğer bir deyişle, aynı sayısı ve türleri alanları varlık anahtarları aynı sırada olmalıdır.  
+ `row_typed_expression` varlık için anahtar türü yapısal olarak eşdeğer olması gerekir. Diğer bir deyişle, aynı sayısını ve türlerini alanların varlık anahtarları aynı sırada olmalıdır.  
   
- Aşağıdaki örnekte, siparişler ve BadOrders her iki entityset'i sipariş türünde olan ve kimliği sipariş tek anahtar özelliği olarak kabul edilir. Örnek nasıl biz BadOrders içinde bir varlığa bir başvuru üretebilir gösterir. Başvuru sarkan unutmayın.  Diğer bir deyişle, başvuru gerçekte belirli bir varlık tanımlayabilir değil. Bu durumlarda, bir `DEREF` bu başvuruyu işlemi null döndürür.  
+ Aşağıdaki örnekte, siparişler ve BadOrders sipariş türünde iki entityset'i olan ve kimliği siparişinin tek anahtar özellik olarak kabul edilir. Örnek bir varlıkta BadOrders başvuru hazırladığımız nasıl gösterir. Başvuru sarkan unutmayın.  Diğer bir deyişle, başvuru, belirli bir varlığa gerçekten tanımlayamayabilir. Bu durumlarda, bir `DEREF` bu başvuru üzerinde işlem, bir null döndürür.  
   
 ```  
 select CreateRef(LOB.BadOrders, row(o.Id))   
@@ -36,16 +36,16 @@ from LOB.Orders as o
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusunu CREATEREF işlecindeki bir varlık kümesinin varlık başvuruları imal için kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusu CREATEREF işlecindeki bir varlık kümesinin varlık başvuruları imal için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
+- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

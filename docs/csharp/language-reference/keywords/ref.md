@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726656"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -154,12 +154,12 @@ Bir yapı olarak bildirmek için değiştiriciler birleştirebilirsiniz `readonl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)  
+- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)
 - [Ref dönüşler ve ref yerel ayarlar](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Ref koşullu ifadesi](../operators/conditional-operator.md#conditional-ref-expression)
 - [başvuru atama işleci](../operators/assignment-operator.md#ref-assignment-operator)
-- [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [Yöntem Parametreleri](method-parameters.md)  
-- [C# başvurusu](../index.md)  
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Yöntem Parametreleri](method-parameters.md)
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)

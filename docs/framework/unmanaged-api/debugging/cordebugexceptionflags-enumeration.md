@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d963a478ee7ae42159a0eb8a4b41cf20ae663aa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbb2bf681ed05728a015456e0e4c37157a55f755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699759"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags Numaralandırması
 Bir özel durum hakkında ek bilgi sağlar.  
@@ -39,20 +39,20 @@ typedef enum CorDebugExceptionFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_NONE`|Hiçbir özel durum yoktur.|  
-|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|Özel durum interceptable kullanılır.<br /><br /> Hata ayıklayıcı müdahale edemez şekilde özel zamanlama hala olabilir. Örneğin, yönetilen kodu geçerli geri çağırma aşağıda yok veya tam zamanında (JIT) ekten özel durum olayı sonuçlandı, özel durum ele geçirilebilecek olamaz.|  
+|`DEBUG_EXCEPTION_NONE`|Hiçbir özel durum söz konusudur.|  
+|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|İnterceptable istisnadır.<br /><br /> Hata ayıklayıcı müdahale edemez, özel durumun zamanlamayı yine de olabilir. Örneğin, geçerli bir geri çağırma aşağıda Yönetilen kod yok ya da özel durum olayı just-ın-time (JIT) ekten sonuçlandı. özel durum müdahale edilebilir olamaz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yeni değerler eklenebilir sonraki sürümlerinde, bu numaralandırma için kullanan kodu hazırlamalısınız şekilde `CorDebugExceptionFlags` için beklenmeyen değer.  
+ Yeni değerler eklenebilir sonraki sürümlerinde bu sabit listesi için kullanan kodu hazırlamanız şekilde `CorDebugExceptionFlags` için beklenmeyen değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

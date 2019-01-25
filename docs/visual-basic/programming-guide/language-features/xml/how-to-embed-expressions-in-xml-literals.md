@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma (Visual Basic)'
+title: 'Nasıl yapılır: (Visual Basic) XML değişmez değerlerine ifade katıştırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681790"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma (Visual Basic)
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Nasıl yapılır: (Visual Basic) XML değişmez değerlerine ifade katıştırma
 XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında oluşturulan içeriği içeren bir öğe oluşturmak için katıştırılmış ifadeleri ile birleştirebilirsiniz. Aşağıdaki örnekler, katıştırılmış ifadeler öğe içeriği, öznitelikleri ve öğe adları çalışma zamanında doldurmak için nasıl kullanılacağını göstermektedir.  
   
  Katıştırılmış bir ifade sözdizimi `<%=` `exp` `%>`, aynı sözdizimini olduğu, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] kullanır. Daha fazla bilgi için [XML'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
@@ -65,8 +65,8 @@ XML değişmez değerleri, bir XML belge, parça veya çalışma zamanında olu�
     </contact>  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: XML Değişmez Değerleri Oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)  
- [XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: XML değişmez değerleri oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

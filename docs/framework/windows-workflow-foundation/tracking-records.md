@@ -2,12 +2,12 @@
 title: İzleme kayıtları
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676113"
 ---
 # <a name="tracking-records"></a>İzleme kayıtları
 İş akışı çalışma zamanı, bir iş akışı örneği yürütülmesini izlemek için izleme kayıtları yaymak üzere işaretlendi.  
@@ -60,6 +60,6 @@ ms.locfileid: "43527045"
   
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> İş akışı tamamlıyor gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

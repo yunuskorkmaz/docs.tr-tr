@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir derlemeyi sorgu&#39;s meta verilerini yansıma (LINQ) (C#)'
+title: 'Nasıl yapılır: Derleme sorgu&#39;s meta verilerini yansıma (LINQ) ile (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: dece3cd6dbac2d10a3467892ef8aed80443cb2ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696067"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Nasıl yapılır: bir derlemeyi sorgu&#39;s meta verilerini yansıma (LINQ) (C#)
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Nasıl yapılır: Derleme sorgu&#39;s meta verilerini yansıma (LINQ) ile (C#)
 Aşağıdaki örnek nasıl LINQ yansıma ile belirtilen arama ölçütüyle eşleşen yöntemleri ile ilgili özel meta verilerini almak için kullanılabileceğini gösterir. Bu durumda, sorgu, diziler gibi numaralandırılabilir türleri döndüren derlemedeki tüm yöntemlerin adlarını bulabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
@@ -54,6 +54,6 @@ namespace LINQReflection
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  .NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

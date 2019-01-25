@@ -2,18 +2,18 @@
 title: Matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652273"
 ---
 # <a name="mathematical-functions"></a>Matematik işlevleri
 
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı, bağımsız değişken olarak sağlanır ve bir sayısal değer sonuç giriş değerleri üzerinde hesaplamalar matematik işlevleri sağlar. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient matematik işlevleri açıklanmaktadır.  
   
-## <a name="absexpression"></a>Abs(Expression)
+## <a name="absexpression"></a>ABS(expression)
 
 Mutlak değeri işlevi görür.
 
@@ -61,7 +61,7 @@ A `Double`.
 
 `SqlServer.ASIN(.9)`
 
-## <a name="atanexpression"></a>ATAN(Expression)
+## <a name="atanexpression"></a>ATAN(expression)
 
 Belirtilen sayısal ifade arktanjantını değerini döndürür.
 
@@ -172,7 +172,7 @@ A `Double`.
 
 **Örnek** `SqlServer.EXP(1)`
 
-## <a name="floorexpression"></a>FLOOR(Expression)
+## <a name="floorexpression"></a>FLOOR(expression)
 
 Belirtilen ifadedeki en büyük tamsayı daha az veya eşit ona dönüştürür. 
 
@@ -233,7 +233,7 @@ A `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>GÜÇ (numeric_expression, power_expression)
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 Belirtilen bir ifadenin belirtilen bir kuvvete değerini hesaplar.
 
@@ -383,9 +383,9 @@ Belirtilen bir ifade tanjantını hesaplar.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 SqlClient destekleyen matematiksel işlevler hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:  
-  
-**SQL Server 2005'te:** [Matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+
+**SQL Server 2005:** [Matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008:** [Matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 ve sonraki sürümler:** [Matematik işlevleri (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [Entity Framework için SqlClient İşlevleri](sqlclient-for-ef-functions.md)
+- [Entity Framework için SqlClient İşlevleri](sqlclient-for-ef-functions.md)

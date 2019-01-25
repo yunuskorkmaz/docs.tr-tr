@@ -2,12 +2,12 @@
 title: Hata işleme
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695562"
 ---
 # <a name="error-handling"></a>Hata işleme
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation işleme hatası  
@@ -67,5 +67,5 @@ ms.locfileid: "49452855"
   
  Tür dönüştürme gönderme hatası olabilir birçok farklı türde gönderme hataları gibi aynı hata işleyicisini yükleyerek inceledi. Ierrorhandler genişletilebilirlik noktası, hizmet düzeyi özel durumları işlemek için çağrılır. Buradan çağırana geri – gönderilecek yanıt olarak da herhangi bir özel görevleri gerçekleştirmek ve raporlama – seçmiş olabilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel WCF Programlama](../basic-wcf-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel WCF Programlama](../basic-wcf-programming.md)

@@ -4,32 +4,32 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: b4b311e2eb504c485772091ed126b3beb71729cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37d9da67656ec4821903d8ba67a27ef10f1a437d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728876"
 ---
 # <a name="bad-record-length"></a>Hatalı kayıt uzunluğu
-Bu hatanın olası nedenleri arasında şunlardır:  
+Bu hatanın olası nedenleri arasında:  
   
--   Belirtilen bir kayıt değişkeni uzunluğu bir `FileGet`, `FileGetObject`, `FilePut` veya `FilePutObject` deyimi farklı ilgili belirtilen uzunluk olarak `FileOpen` deyimi.  
+-   Belirtilen bir kayıt değişken uzunluğu bir `FileGet`, `FileGetObject`, `FilePut` veya `FilePutObject` deyimi, ilgili belirtilen uzunluğu farklıdır `FileOpen` deyimi.  
   
--   Değişken bir `FilePut` veya `FilePutObject` deyimi olduğu veya değişken uzunlukta bir dize içerir.  
+-   Değişkeninde bir `FilePut` veya `FilePutObject` deyimi olduğundan veya değişken uzunluklu bir dize içerir.  
   
--   Değişken bir `FilePut` veya `FilePutObject` ya da içeren bir `Variant` türü.  
+-   Değişkeninde bir `FilePut` veya `FilePutObject` içerir ya da bir `Variant` türü.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Kayıt değişkenin türü tanımlama kullanıcı tanımlı türünde sabit uzunluklu değişkenlerin boyutlarının toplamıdır aynı değeri de belirtildiği gibi emin olun `FileOpen` deyiminin `Len` yan tümcesi.  
+1.  Kayıt değişkenin türünü tanımlayan kullanıcı tanımlı tür, sabit uzunluklu değişkenlerin boyutlarının toplamı olduğundan, aynı, değeri bölümünde belirtildiği emin `FileOpen` deyimin `Len` yan tümcesi.  
   
-2.  Varsa değişkenin bir `FilePut` veya `FilePutObject` deyimi olduğu veya değişken uzunlukta bir dize içeriyorsa, değişken uzunlukta bir dize en az 2 karakter belirtilen kayıt uzunluğundan daha kısa olduğundan emin olun `Len` yan tümcesi `FileOpen` deyimi.  
+2.  Varsa değişkeninde bir `FilePut` veya `FilePutObject` deyimi olduğunu veya bir değişken uzunluklu dize içeren, değişken uzunluklu dize en az 2 karakter belirtilen kayıt uzunluğu daha kısa olduğundan emin olun `Len` yan tümcesi `FileOpen` deyimi.  
   
-3.  Varsa değişken bir `FilePut` veya `FilePutObject` ya da içeren bir `Variant` değişken uzunlukta bir dize en az 4 bayt belirtilen kayıt uzunluğundan daha kısa olduğundan emin olun `Len` yan tümcesi `FileOpen` deyimi.  
+3.  Varsa değişkeninde bir `FilePut` veya `FilePutObject` içerir ya da bir `Variant` değişken uzunluklu dize en az 4 bayt belirtilen kayıt uzunluğu daha kısa olduğundan emin olun `Len` yan tümcesi `FileOpen` deyimi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>  
- <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>  
- <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>  
- <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>
+- <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>
+- <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>
+- <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>

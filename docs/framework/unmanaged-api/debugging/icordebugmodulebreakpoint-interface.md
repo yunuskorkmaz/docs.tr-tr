@@ -1,5 +1,5 @@
 ---
-title: Icordebugmodulebreakpoint Interface1
+title: Icordebugmodulebreakpoint arabirimi1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5ead45c6747cd69a76585c81b1ff6a4801cbb34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632003"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>Icordebugmodulebreakpoint Interface1
-Belirli modüller erişim sağlar. Bu arabirim Icordebugbreakpoint arabirimi sınıfıdır.  
+# <a name="icordebugmodulebreakpoint-interface1"></a>Icordebugmodulebreakpoint arabirimi1
+Belirli modüllere erişim sağlar. Icordebugbreakpoint arabirimi öğesinin arabirimidir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Arabirim işaretçisi bu kesme ayarlandığı modülü başvuruda bulunan bir Icordebugmodule alır.|  
+|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Bu Kesme noktasının ayarlandığı modülü başvuran bir Icordebugmodule bir arabirim işaretçisi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+>  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

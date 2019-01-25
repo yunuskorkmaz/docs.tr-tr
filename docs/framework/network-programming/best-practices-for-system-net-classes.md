@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: ce365d088c01ae4a89c77713b6970ae3389b3f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689084"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net sınıfları için en iyi uygulamalar
 Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı olacak <xref:System.Net> en iyi kendi lehlerine için:  
@@ -32,5 +32,5 @@ Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı ola
   
 -   Kimlik bilgileri gerektiren siteleri erişirken <xref:System.Net.CredentialCache> bunları her istekle sağlama yerine kimlik bilgileri önbellek oluşturmak için sınıf. **CredentialCache** sınıfı önbellek oluşturma ve sunma URL'sini temel alarak kimlik bilgileri sorumluluğu, yoğun bir istekle sunmak için uygun kimlik bilgilerini bulmak için arama yapar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)

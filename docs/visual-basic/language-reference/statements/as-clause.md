@@ -8,18 +8,18 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672273"
 ---
 # <a name="as-clause-visual-basic"></a>As Tümcesi (Visual Basic)
-Tanıtır bir `As` yan tümcesi bildirimi deyimi veya genel tür parametresi bir sınırlama listesindeki bir veri türü tanımlar.  
+Tanıtır bir `As` yan tümcesi bir bildirim deyiminin veya bir genel tür parametresi kısıtlaması listede bir veri türü tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `As` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
+ `As` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Tanıtır bir `As` yan tümcesi bildirimi deyimi veya genel tür parametresi bir
   
  [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [İçin... Next deyimleri](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [İçin... Next deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each... Next deyimleri](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Her biri için... Next deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,12 +57,12 @@ Tanıtır bir `As` yan tümcesi bildirimi deyimi veya genel tür parametresi bir
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try... Catch... Finally deyimleri](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Deneyin... Catch... Finally deyimleri](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Yeni Değişken Oluşturma](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl yapılır: Yeni değişken oluşturma](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

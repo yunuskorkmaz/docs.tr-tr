@@ -2,37 +2,37 @@
 title: Değişmez değerler (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643110"
 ---
 # <a name="literals-entity-sql"></a>Değişmez değerler (varlık SQL)
-Bu konuda açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemek için hazır.  
+Bu konu başlığı altında açıklanır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri için destek.  
   
 ## <a name="null"></a>Null  
- Null sabit değer herhangi bir tür için null değeri temsil etmek için kullanılır. Bir null hazır değeri herhangi bir türü ile uyumludur.  
+ Null değişmez değer, herhangi bir tür için null değeri temsil etmek için kullanılır. Bir null sabit değer herhangi bir türü ile uyumludur.  
   
- Tür null bir null hazır değeri bir cast tarafından oluşturulabilir. Daha fazla bilgi için bkz: [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Türü belirlenmiş null değerlere bir dönüştürme işlemi tarafından null bir sabit değer oluşturulabilir. Daha fazla bilgi için [ATAMA](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Kayan kuralları hakkında nereden serbest için null değişmez değerleri kullanılabilmesi için bkz: [Null değişmez değerler ve tür çıkarımı](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Null değişmez değerler kayan kuralları nereye hakkında ücretsiz için kullanılabilir, bkz: [Null değişmez değerler ve tür çıkarımı](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boole değeri  
- Anahtar sözcükleri Boolean değişmez değerleri temsil edilen `true` ve `false`.  
+ Anahtar sözcüklere göre Boole sabit değerleri temsil edilen `true` ve `false`.  
   
 ## <a name="integer"></a>Tamsayı  
- Tamsayı değişmez değerleri türü olabilir <xref:System.Int32> veya <xref:System.Int64>. Bir <xref:System.Int32> sayısal karakterler değişmez değer dizisidir. Bir <xref:System.Int64> sayısal karakterler bir Büyük Harf L. tarafından izlenen bir dizi değişmez değer  
+ Tamsayı sabit değerleri türü olabilir <xref:System.Int32> veya <xref:System.Int64>. Bir <xref:System.Int32> bir sayısal karakter dizisi sabitidir. Bir <xref:System.Int64> sayısal karakter tarafından bir büyük harf l ardından dizi değişmez değeri  
   
 ## <a name="decimal"></a>Ondalık  
- Bir sabit noktalı (ondalık) bir dizi sayısal karakterler, nokta (.) ve bir büyük harf "M tarafından" sayısal karakterlik başka bir dizi sayıdır.  
+ Sabit noktalı bir sayı (ondalık), bir dizi sayısal karakterler, nokta (.) ve başka bir dizi bir büyük harf "M" harfinin sayısal karakter olabilir.  
   
-## <a name="float-double"></a>Double float  
- Çift duyarlıklı kayan nokta sayısı, sayısal karakterler, nokta (.) ve sayısal karakter büyük olasılıkla bir üs tarafından ardından başka bir dizi dizisidir. Tek Precision bilgisayarlar bir sayı (veya float) olan bir çift duyarlıklı kayan nokta kayan nokta küçük f tarafından izlenen sayı sözdizimi.  
+## <a name="float-double"></a>Float, Double  
+ Çift duyarlıklı kayan nokta sayısı, sayısal karakterler, nokta (.) ve başka bir seri büyük olasılıkla bir üs sayısal karakter dizisidir. Tek Precision bilgisayarlar bir kayan nokta numarası (veya float) olan bir çift duyarlıklı kayan noktası küçük f tarafından takip numarası söz dizimi.  
   
 ## <a name="string"></a>Dize  
- Bir dizi tırnak işaretleri içine karakter dizesidir. Tırnak işareti ya da hem tek tırnak olabilir (`'`) veya her iki çift tırnak ("). Karakter dizelerini Unicode veya Unicode olmayan olabilir. Bir karakter dizesi Unicode olarak değişmez değer bildirmek için sabit bir büyük harf "N" ile önek. Unicode olmayan karakter dizelerini varsayılandır. N dize sabit değeri yükü arasındaki boşluk olamaz ve N büyük olması gerekir.  
+ Bir dizeyi tırnak işaretleri içine alınmış karakter dizisidir. Tırnak işareti ya da hem tek tırnak olabilir (`'`) veya her iki çift tırnak ("). Unicode veya Unicode olmayan karakter dize sabit değerleri olabilir. Unicode değişmez bir karakter dizesi bildirmek için değişmez değerin büyük "N" ile önek. Unicode olmayan karakter dize sabit değerleri varsayılandır. Dize hazır değer yükü ile N arasındaki boşluk olabilir ve N büyük olmalıdır.  
   
 ```  
 'hello' -- non-Unicode character string literal  
@@ -43,13 +43,13 @@ N"This is a string!"
 ```  
   
 ## <a name="datetime"></a>DateTime  
- Datetime hazır değerinde yerel bağımsızdır ve bir tarih bölümü ve bir saat bölümünü oluşur. Tarih ve saat bölümleri zorunludur ve varsayılan değer yok.  
+ Bir datetime hazır değerinde yerel bağımsızdır ve bir tarih bölümü ve bir saat bölümünü oluşur. Tarih ve saat bölümleri zorunludur ve varsayılan değerler yoktur.  
   
- Tarih bölümünü biçiminde olmalıdır: `YYYY` - `MM` - `DD`, burada `YYYY` 0001-9999 arasında bir dört basamaklı yıl değer olan `MM` 1 ile 12 arasında ay ve `DD` olduğu verilen ayı için geçerli olduğu gün değeri `MM`.  
+ Tarih bölümünü biçiminde olmalıdır: `YYYY` - `MM` - `DD`burada `YYYY` 0001 ve 9999 arasında dört basamaklı bir yıl değeri `MM` 1 ile 12 arasında bir ay ve `DD` olduğu belirli bir ay için geçerli olan gün değer `MM`.  
   
- Saat bölümünü biçiminde olmalıdır: `HH`:`MM`[:`SS`[.fffffff]] burada `HH` 0 ile 23 arasında saat değeridir `MM` minute değeri 0 ile 59 arasında `SS` ikinci değer 0 ile 59 arasında ve fffffff 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklar dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmedikçe saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Saniye veya kesirli saniye belirtilmezse, varsayılan değerin sıfır yerine kullanılır.  
+ Saat bölümünü biçiminde olmalıdır: `HH`:`MM`[:`SS`[.fffffff]] burada `HH` 0 ile 23 arasında saat değeri `MM` 0 ile 59 arasında dakika değeri `SS` ikinci değer 0 ile 59 arasında ve fffffff 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklarına dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmediği sürece saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Sıfır varsayılan değeri, saniyeler veya kesirli saniye belirtilmedi, bunun yerine kullanılır.  
   
- DATETIME simgesi ve hazır değer yükü, ancak hiç yeni satır arasında boşluk herhangi bir sayıda olabilir.  
+ Herhangi bir sayıda DATETIME sembol ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
   
 ```  
 DATETIME'2006-10-1 23:11'  
@@ -57,9 +57,9 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
 ```  
   
 ## <a name="time"></a>Zaman  
- Bir değişmez değer yerel bağımsızdır ve yalnızca zaman bölümünün oluşan zamandır. Saat bölümünü zorunludur ve varsayılan değer yoktur. Ss: dd biçiminde olmalıdır [: SS [.fffffff]], değer olan 0 ile 23 arasında saat değeri MM 0 ile 59 arasında dakika değeri, SS 0 ile 59 arasında ikinci değerdir ve fffffff ikinci kesir HH burada 0 ile 9999999 arasında. Tüm değer aralıklar dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmedikçe saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Saniye veya kesir belirtilmezse, varsayılan değerin sıfır yerine kullanılır.  
+ Bir değişmez değer yerel ayar bağımsızdır ve yalnızca saat bölümünü oluştuğu zamandır. Saat bölümünü zorunludur ve varsayılan değer yoktur. Ss: dd biçiminde olmalıdır [: SS [.fffffff]], değer olan 0 ile 23 arasında saat değeri MM 0 ile 59 arasında dakika değeri, SS ise ikinci değer 0 ile 59 arasında ve fffffff ikinci basamağını HH 0 ile 9999999 arasında burada. Tüm değer aralıklarına dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmediği sürece saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Varsayılan değer sıfır, saniye veya kesir belirtilmedi, bunun yerine kullanılır.  
   
- Herhangi bir sayıda saati sembolü ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
+ Herhangi bir sayıda zaman sembol ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
   
 ```  
 TIME‘23:11’  
@@ -67,9 +67,9 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Datetimeoffset sabit değeri yerel bağımsızdır ve oluşan bir tarih bölümü, bir saat bölümünü ve uzaklık bir parçası olur. Tüm tarih, saat ve uzaklık bölümleri zorunludur ve varsayılan değer yok. Bölümü YYYY-AA-YYYY 0001 ile 9999 arasında dört rakamlı yıl değeri olduğu, gg biçiminde olmalıdır tarih dd 1 ile 12 arasında ayı ve GG verilen ayı için geçerli olduğu gün değerdir. Saat bölümünü ss: dd biçiminde olmalıdır [: SS [.fffffff]] HH MM 0 ve 23 arasında saat değeri 0 ile 59, SS arasındaki dakika değerdir ikinci değer 0 ile 59 arasında olduğu ve fffffff olan 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklar dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmedikçe saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Saniye veya kesir belirtilmezse, varsayılan değerin sıfır yerine kullanılır. Uzaklık bölümü biçiminde olmalıdır {+&#124;-} ss: dd ss ve MM sahip olduğu saat bölümünü olduğu gibi aynı anlama. Uzaklık, ancak dizi-14 arasında olması gerekir: 00 ve + 14:00  
+ Yerel ayar bağımsızdır ve bir tarih bölümü, bir saat bölümünü ve uzaklık bir bölümü oluşan bir datetimeoffset hazır. Tüm tarih ve saat uzaklık bölümleri zorunludur ve varsayılan değerler yoktur. Tarih biçimi YYYY-AA-YYYY 0001 ve 9999 arasında dört basamaklı bir yıl değeri olduğu gg bölümü olmalıdır aa 1 ile 12 arasında bir ay ve DD belirli bir ay için geçerli olan gün değerdir. Saat bölümünü ss: dd biçiminde olmalıdır [: SS [.fffffff]], ss dd, 0 ve 23 arasında saat değeri 0 ile 59, SS arasında dakika değerdir olduğu ikinci değer 0 ile 59 arasında ve fffffff 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklarına dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmediği sürece saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Varsayılan değer sıfır, saniye veya kesir belirtilmedi, bunun yerine kullanılır. Uzaklık bölümü biçiminde olmalıdır {+&#124;-} ss: dd HH ve MM sahip olduğu saat bölümünü olduğu gibi aynı anlama. Uzaklık, ancak dizi-14 arasında olmalıdır: 00 ve + 14:00  
   
- DATETIMEOFFSET simgesi ve hazır değer yükü, ancak hiç yeni satır arasında boşluk herhangi bir sayıda olabilir.  
+ Herhangi bir sayıda DATETIMEOFFSET sembol ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
   
 ```  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
@@ -77,12 +77,12 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
 ```  
   
 > [!NOTE]
->  Geçerli bir varlık SQL değişmez değer CLR veya veri kaynağı için desteklenen aralık dışında dönebilir. Bu, bir özel durum neden  
+>  Geçerli bir varlık SQL değişmez değer dışında desteklenen aralıkları CLR veya veri kaynağı için gelebilir. Bu, bir özel durum neden olabilir  
   
 ## <a name="binary"></a>İkili  
- Bir ikili dize sabit değeri bir ikili anahtar sözcüğünü izleyen tek tırnak veya kısayol simgesini tarafından ayrılmış onaltılık rakam dizisini olan `X` veya `x`. Kısayol simgesi `X` büyük/küçük harfe duyarlıdır. Sıfır veya daha fazla alanları arasında anahtar sözcüğü izin `binary` ve ikili dize değeri.  
+ İkili anahtar sözcüğünü izleyen tek tırnak işareti veya kısayol sembol tarafından ayrılmış onaltılık basamak sırasının ve ikili dize değişmez değeri olan `X` veya `x`. Kısayol sembol `X` büyük/küçük harfe duyarlıdır. Sıfır veya daha fazla boşluk anahtar sözcüğü arasında izin `binary` ve ikili dize değeri.  
   
- Onaltılık karakterler ayrıca büyük küçük harfe duyarlı değildir. Değişmez değeri bir onaltılık basamak tek sayıda oluşuyorsa, sabit sonraki bile onaltılık basamak değişmez değeri bir onaltılık ile ekleyerek sıfır basamaklı hizalanır. İkili dosya dizesine boyutuna resmi bir sınır yoktur.  
+ Onaltılık karakter ayrıca büyük küçük harfe duyarlı değildir. Değişmez değer tek sayıda onaltılık basamak oluşuyorsa, değişmez değer için sonraki bile onaltılık basamak ile bir onaltılık değişmez değerin önüne sıfır basamak hizalanır. İkili dosya dizesine boyutuna biçimsel bir sınır yoktur.  
   
 ```  
 Binary'00ffaabb'  
@@ -92,14 +92,14 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- A `GUID` değişmez değeri bir genel benzersiz tanımlayıcısını temsil eder. Anahtar sözcüğe göre biçimlendirilmiş bir dizisi olduğundan `GUID` olarak bilinen formunda onaltılık basamak arkasından *kayıt defteri* biçimi: 8-4-4-4-tek tırnak içine alınmış 12. Onaltılık basamak büyük/küçük harfe duyarsızdır.  
+ A `GUID` değişmez değeri genel olarak benzersiz bir tanımlayıcı temsil eder. Anahtar sözcüğü tarafından oluşturulmuş bir dizisi olduğundan `GUID` onaltılık basamak olarak bilinen biçiminde ardından *kayıt defteri* biçimi: 8-4-4-4-tek tırnak içinde 12. Onaltılık basamak büyük/küçük harfe duyarsızdır.  
   
- Herhangi bir sayıda GUID simgesi ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
+ Herhangi bir sayıda GUID sembol ve hazır değer yükü, ancak hiç yeni satır arasında boşluk olabilir.  
   
 ```  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514809"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
-`Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturduğunu numaralandırmalar içerir. Bu kitaplık üyeleri yordamları, özellikleri ve kodunuzda kullanabilirsiniz sabit değerleri sağlayın. Her bir modül ve sınıf işlevselliğinin belirli bir kategoriye temsil eder.  
+`Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturur numaralandırmaları içerir. Bu kitaplık üyeleri, yordamlar, özellikleri ve kodunuzda kullanabileceğiniz sabit değerler sağlayın. Her bir modül ve sınıf işlevinin belirli bir kategoriye temsil eder.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection sınıfı  
   
@@ -191,8 +191,8 @@ ms.locfileid: "33604594"
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic sabitler ve numaralandırmalar  
- `Microsoft.VisualBasic` Ad alanı, Visual Basic çalışma zamanı kitaplığı bir parçası olarak sabitler ve numaralandırmalar sağlar. Bu sabit değerleri kodunuzda kullanabilirsiniz. Her numaralandırmanın işlevselliği belirli kategorisini temsil eder. Daha fazla bilgi için bkz: [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Ad alanı, Visual Basic çalışma zamanı kitaplığının bir parçası sabitler ve numaralandırmalar sağlar. Kodunuzda bu sabit değerleri kullanabilirsiniz. Her numaralandırmanın işlevinin belirli bir kategoriye temsil eder. Daha fazla bilgi için [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)

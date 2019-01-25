@@ -2,12 +2,12 @@
 title: Bağlantı dizesi söz dizimi
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524552"
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi söz dizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Belirli bir bağlantı dizesi söz dizimi tüm sağlayıcılar için belgelenen kendi `ConnectionString` özelliği. Aşağıdaki tablo, .NET Framework'e dahil edilen dört veri sağlayıcıları listeler.  
@@ -194,7 +194,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  ODBC bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

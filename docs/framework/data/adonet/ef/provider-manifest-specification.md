@@ -2,12 +2,12 @@
 title: Sağlayıcı bildirimi belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734058"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı bildirimi belirtimi
 Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri deposunda destekleyebileceğini açıklanmaktadır.  
@@ -261,7 +261,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Ad|Dize|Evet|yok|Tanımlayıcı/işlevin adı|  
 |ReturnType|Dize|Hayır|Geçersiz kılma|EDM işlevin dönüş türü|  
 |Toplama|Boole değeri|Hayır|False|İşlev bir toplama işlevi ise true|  
-|Yerleşik|Boole değeri|Hayır|Doğru|İşlevi veri deposuna oluşturulursa true|  
+|BuiltIn|Boole değeri|Hayır|Doğru|İşlevi veri deposuna oluşturulursa true|  
 |StoreFunctionName|Dize|Hayır|\<Adı >|Veri deposundaki işlev adı.  İşlev adları yeniden yönlendirilmesi için bir düzeyi sağlar.|  
 |NiladicFunction|Boole değeri|Hayır|False|İşlev parametreleri gerektirmez ve hiçbir parametre olmadan çağrılırsa true|  
 |ParameterType<br /><br /> Semantiği|ParameterSemantics|Hayır|AllowImplicit<br /><br /> Dönüştürme|Sorgu işlem hattı parametre türü değiştirme ile nasıl ele alması gerektiğini Seçimi:<br /><br /> -ExactMatchOnly<br />-Allowımplicitpromotion<br />-Allowımplicitconversion|  
@@ -279,5 +279,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ##### <a name="namespace-attribute"></a>Namespace özniteliği  
  Her bir veri deposu sağlayıcısı ad alanı veya ad alanı bildiriminde tanımlanan bilgi grubu tanımlamanız gerekir. Bu ad alanı Entity SQL sorguları, işlevi ve türü adlarını çözümlemek için kullanılabilir. Örneğin: SqlServer. Bu ad alanı Entity SQL sorguları tarafından desteklenen standart işlev için varlık Hizmetleri tarafından tanımlanan kurallı ad alanı, EDM, farklı olmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

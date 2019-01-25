@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0ffb85dc5f321e45432d6c2fa9448919957f0e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665207"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable Numaralandırması
-Bilgisayardaki boş fiziksel bellek miktarını belirtin değerlerini içerir. Bellek yüksek ve düşük döndürülen için bu değerleri mantıksal olarak olaylara eşleme `CreateMemoryResourceNotification` Win32 API işlev.  
+Bilgisayardaki boş fiziksel bellek miktarını gösteren değerleri içerir. Bellek döndürüldüğü yüksek ve düşük için bu değerler mantıksal olarak olaylara harita `CreateMemoryResourceNotification` Win32 API işlevi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Yeterli fiziksel bellek kullanılabilir.|  
+|`eMemoryAvailableHigh`|Yeterince fiziksel belleğin kullanılabilir.|  
 |`eMemoryAvailableLow`|Çok az fiziksel bellek yok.|  
 |`eMemoryAvailableNeutral`|Kullanılabilir fiziksel bellek neutral olur.|  
   
@@ -48,13 +48,13 @@ typedef enum {
  Bu değer tarafından ortak dil çalışma zamanı (CLR) için ana bilgisayar tarafından yapılan bir çağrı kullanılarak geçirilir [Iclrmemorynotificationcallback::onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE.h  
   
  **Kitaplığı:** MSCorEE.dll  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

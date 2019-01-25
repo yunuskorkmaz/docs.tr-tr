@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma'
+title: 'Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627232"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl Yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Korumalı alana alma kodu için kod erişim izinleri sınırlar bir kısıtlı güvenlik ortamı çalışan uygulamadır. Tamamen güvenmediğiniz bir kaynaktan bir yönetilen kitaplık varsa, örneğin, bu tam olarak güvenilir olarak çalıştırmamalısınız. Bunun yerine, gerek bekliyorsanız bu izinlerini sınırlayan bir korumalı alan içinde kod yerleştirmeniz gerekir (örneğin, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> izni).  
@@ -273,5 +273,5 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

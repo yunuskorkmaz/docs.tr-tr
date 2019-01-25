@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720216"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme
 
@@ -33,7 +33,7 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 |Microsoft .NET Framework ürününün kaldırılması bazı uygulamaların işlevini durdurmasına neden olabilir.|Genel olarak, kullandığınız bir uygulama .NET Framework'ün belirli bir sürümüne bağlı olabileceği için, bilgisayarınıza yüklü olan .NET Framework sürümlerinden hiçbirini kaldırmamalısınız. Daha fazla bilgi için [kullanıcılar için .NET Framework](../../../docs/framework/get-started/index.md#ForUsers) içinde *Başlarken* Kılavuzu.|  
 |.NET framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (trk) veya sonraki bir sürümü bu bilgisayarda zaten yüklü.|Herhangi bir işlem gerekli değil.<br /><br /> Bir sistemde hangi .NET Framework sürümlerinin yüklü olduğunu saptamak için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (*dil*) .NET Framework 4.5 gerektirir *.x*/4.6 *.x*/4.7 *.x*. Lütfen .NET Framework 4.5 yükleme *.x*/4.6 *.x*/4.7 *.x* İndirme Merkezi'nden ve kurulumu yeniden çalıştırın.|Dil paketini yüklemeden önce belirtilen .NET Framework sürüm İngilizce sürümünü yüklemeniz gerekir. Daha fazla bilgi için üzerinde bölümüne bakın. [dil paketlerini yüklemek için](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs) Yükleme Kılavuzu.|  
-|.NET Framework 4.5 yüklenemiyor *.x*/4.6 *.x*/4.7 *.x*. Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.<br /><br /> veya<br /><br /> Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.|Bu ileti büyük olasılıkla .NET Framework'ün önizleme veya RC sürümünün yüklenmiş olmasından kaynaklanmıştır. Önizlemeyi veya RC sürümünü kaldırın ve kurulumu yeniden çalıştırın.|  
+|.NET Framework 4.5 yüklenemiyor *.x*/4.6 *.x*/4.7 *.x*. Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.<br /><br /> -veya-<br /><br /> Bilgisayarınızdaki diğer uygulamalar bu programla uyumlu değil.|Bu ileti büyük olasılıkla .NET Framework'ün önizleme veya RC sürümünün yüklenmiş olmasından kaynaklanmıştır. Önizlemeyi veya RC sürümünü kaldırın ve kurulumu yeniden çalıştırın.|  
 |.NET framework 4.5 *.x*/4.6 *.x*/4.7 *.x* bu paket kullanılarak kaldırılamaz. .NET Framework 4.5 kaldırmak için *.x*/4.6 *.x*/4.7 *.x* bilgisayarınızdan Git **Denetim Masası**, seçin  **Programlar ve Özellikler**, seçin **yüklü güncelleştirmeleri görüntüle**, (KB2828152) Microsoft Windows Güncelleştirmesi'ni seçin ve ardından **kaldırma**.|Önizleme veya RC sürümlerini .NET Framework'ün kaldırın, yüklemekte olduğunuz paket değil.<br /><br /> Önizlemeyi veya RC kaldırın. Denetim Masası'ndan yayın.|  
 |.NET Framework 4.5 kaldıramazsınız *.x*/4.6 *.x*/4.7 *.x*. Bilgisayarınızdaki diğer uygulamalar bu programa bağımlıdır.|Genel olarak, bir uygulama .NET Framework'ün belirli bir sürüme bağlı olabileceği için .NET Framework sürümlerinden hiçbirini bilgisayarınızdan kaldırmanız gerekir. Daha fazla bilgi için [kullanıcılar için .NET Framework](../../../docs/framework/get-started/index.md#ForUsers) içinde *Başlarken* Kılavuzu.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* yeniden dağıtılabilir bu işletim sistemi için geçerli değildir. Lütfen .NET Framework 4.5 karşıdan *.x*/4.6 *.x*/4.7 *.x* işletim sisteminizden Microsoft Download Center için.|Yüklemeye çalıştığınız [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, veya desteklenmeyen bir platformda 4.7.2 veya tüm işletim sistemlerinde desteklenen bileşenlerin bulunmadığı yükleme paketini seçtiniz. Çevrimdışı yükleyiciyi kullanarak yüklemeyi yeniden çalıştırın ([4.5.1 için](https://go.microsoft.com/fwlink/p/?LinkId=309493), [4.5.2 için](https://go.microsoft.com/fwlink/p/?LinkId=397706), [4.6 için](https://go.microsoft.com/fwlink/p/?LinkId=528233), [4.6.1 için](https://go.microsoft.com/fwlink/p/?LinkId=671744), için [ 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), için [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)), için [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090), veya [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265). Daha fazla bilgi için [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md) ve [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) desteklenen işletim sistemleri için.|  
@@ -77,6 +77,6 @@ Bu tabloda, 4.5. *x* .NET Framework 4.5 ve onun nokta sürümleri için 4.5.1 ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)   
-[Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[Sürümler ve Bağımlılıklar](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)
+- [Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Sürümler ve Bağımlılıklar](../../../docs/framework/migration-guide/versions-and-dependencies.md)

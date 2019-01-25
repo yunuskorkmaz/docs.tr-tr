@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: iç içe geçmiş koleksiyonlar döndüren bir sorgu yürütme'
+title: 'Nasıl yapılır: İç içe geçmiş koleksiyonlar döndüren bir sorgu yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
-ms.openlocfilehash: 5e282bce5f2519592babad0afcf7f8a326cf936d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f429b8e8f546669fba64b9ee04222d399971936e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654522"
 ---
-# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Nasıl yapılır: iç içe geçmiş koleksiyonlar döndüren bir sorgu yürütme
+# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Nasıl yapılır: İç içe geçmiş koleksiyonlar döndüren bir sorgu yürütme
 Bu komut kavramsal modeline karşı kullanarak yürütme gösterilmektedir bir <xref:System.Data.EntityClient.EntityCommand> nesne ve kullanarak iç içe toplama sonuçları almak nasıl bir <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekte, kodu çalıştırmak için  
@@ -30,5 +30,5 @@ Bu komut kavramsal modeline karşı kullanarak yürütme gösterilmektedir bir <
  [!code-csharp[DP EntityServices Concepts#ReturnNestedCollectionWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#returnnestedcollectionwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#ReturnNestedCollectionWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#returnnestedcollectionwithentitycommand)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework için EntityClient Sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Entity Framework için EntityClient Sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

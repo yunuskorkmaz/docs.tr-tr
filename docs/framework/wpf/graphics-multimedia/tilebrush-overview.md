@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683027"
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
 <xref:System.Windows.Media.TileBrush> nesneleri sağlar, önemli bir görüntü ile bir alanı nasıl boyanacağını denetim <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> alanı boyar.  
@@ -102,13 +102,13 @@ TileBrush ile döşeme TileMode'u bileşenleri
   
 -   <xref:System.Windows.Media.TileMode.None>: Yalnızca temel döşeme çizilir.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Temel döşeme çizilir ve kalan alan bir kutucuğun sağ kenarı sol kenarına sonraki ve bitişik olacak şekilde taban döşemesi benzer şekilde alt ve üst için yinelenen tarafından doldurulur.  
+-   <xref:System.Windows.Media.TileMode.Tile>: Taban döşemesi çizilmiş ve kalan alan bir kutucuğun sağ kenarı sol kenarına sonraki ve bitişik olacak şekilde taban döşemesi benzer şekilde alt ve üst için yinelenen tarafından doldurulur.  
   
 -   <xref:System.Windows.Media.TileMode.FlipX>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer sütunların döşemeleri yatay olarak çevrilmiştir.  
   
 -   <xref:System.Windows.Media.TileMode.FlipY>: Aynı <xref:System.Windows.Media.TileMode.Tile>, ancak diğer satırları kutucuk dikey olarak çevrilmiştir.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Bir birleşimini <xref:System.Windows.Media.TileMode.FlipX> ve <xref:System.Windows.Media.TileMode.FlipY>.  
+-   <xref:System.Windows.Media.TileMode.FlipXY>: Bir birleşimi <xref:System.Windows.Media.TileMode.FlipX> ve <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Aşağıdaki görüntüde, farklı döşeme modlarını gösterir.  
   
@@ -121,13 +121,13 @@ TileBrush ile döşeme TileMode'u bileşenleri
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)

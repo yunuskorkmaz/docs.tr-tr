@@ -1,5 +1,5 @@
 ---
-title: Varsayılan özellik erişimi devralınan arabirimi üyeleri arasında belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
+title: Devralınan üyesi arasında varsayılan özellik erişimi belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518650"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Varsayılan özellik erişimi devralınan arabirimi üyeleri arasında belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
-İki arabirim, her biri aynı ada sahip varsayılan bir özellik bildiren bir arabirim devralır. Derleyici niteliğe olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Devralınan üyesi arasında varsayılan özellik erişimi belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
+Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır. Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
   
 ```  
 Public Interface Iface1  
@@ -35,13 +35,13 @@ Public Class testClass
 End Class  
 ```  
   
- Belirttiğinizde `testObj(1)`, derleyici varsayılan özelliğine çözümlemeyi dener. Ancak, iki olası varsayılan özellikleri devralınan arabirimi vardır nedeniyle, bu hatayı Derleyici sinyalleri şekilde.  
+ Belirttiğinizde `testObj(1)`, derleyici varsayılan özelliğine çözümlemeye çalışır. Ancak, iki olası varsayılan özellik devralınan arabirimi vardır nedeniyle, derleyicinin bu hatayı sinyalleri için.  
   
  **Hata Kimliği:** BC30686  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Aynı ada sahip tüm üyeleri devralma kaçının. Önceki örnekte varsa `testObj` üyelerini gerekmez, söyleyin, `Iface2`, aşağıdaki gibi bildirin:  
+-   Aynı ada sahip tüm üyeleri devralan kaçının. Yukarıdaki örnekte, `testObj` üyelerinin gerekmez, örneğin `Iface2`, şu şekilde bildirmek:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      -veya-  
   
--   Türetilen arabirimi bir sınıfta uygulayın. Daha sonra farklı adlara sahip devralınan özelliklerin her biri uygulayabilirsiniz. Ancak, yalnızca biri uygulayan sınıfa varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
+-   Bir sınıfta devralan arabirim uygular. Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz. Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

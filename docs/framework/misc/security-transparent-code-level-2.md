@@ -9,95 +9,95 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f15c3bc097bc034db41c95cd168104b8435aaf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567028"
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 <a name="top"></a>
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Düzey 2 saydamlık sunulmuştur [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Bu modelin üç tenets şunlardır: saydam kod, güvenlik açısından güvenli-kritik kod ve güvenlik açısından kritik kod.  
+ Düzey 2 saydamlık öğesinde tanıtılmıştır [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.  
   
--   Saydam kod, tam güven çalışan kodu da dahil olmak üzere diğer saydam kod veya yalnızca güvenlik açısından güvenli-kritik kod çağırabilir. Yalnızca, (varsa) etki alanının kısmi güven izni tarafından izin verilen eylemleri de gerçekleştirebilirsiniz. Saydam kod aşağıdakileri yapamazsınız:  
+-   Saydam kod tam güven çalışan kodu da dahil olmak üzere, diğer saydam kod veya yalnızca güvenlik-güvenli-kritik kodu çağırabilir. Yalnızca, (varsa) ayarlayın etki alanının kısmi güven izni tarafından izin verilen eylemleri de gerçekleştirebilir. Saydam kod aşağıdaki işlemleri yapamaz:  
   
     -   Gerçekleştirmek bir <xref:System.Security.CodeAccessPermission.Assert%2A> veya ayrıcalık yükseltme.  
   
-    -   Güvenli olmayan veya doğrulanamayan kodu içerir.  
+    -   Güvenli olmayan veya doğrulanamaz kod içerir.  
   
-    -   Doğrudan kritik kod çağırabilir.  
+    -   Doğrudan kritik kodu çağırın.  
   
-    -   Yerel kod çağrısı veya sahip code <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği.  
+    -   Yerel koda çağrı yapma veya kod <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği.  
   
-    -   Tarafından korunan bir üye çağırın bir <xref:System.Security.Permissions.SecurityAction.LinkDemand>.  
+    -   Tarafından korunan üyeyi çağırın bir <xref:System.Security.Permissions.SecurityAction.LinkDemand>.  
   
-    -   Kritik türlerinden devralır.  
+    -   Kritik türlerden devral  
   
-     Ayrıca, saydam yöntemler kritik sanal yöntemleri geçersiz kılmak veya kritik arabirim yöntemleri uygulayın.  
+     Ayrıca, saydam yöntemleri kritik sanal yöntemleri geçersiz kılmaz veya kritik arabirim yöntemlerini uygulamaz.  
   
--   Güvenli kritik kodu tam olarak güvenilmeyen ancak saydam kod tarafından çağrılabilir. Tam güven kodunun sınırlı bir yüzey alanını gösterir; doğruluk ve güvenlik Doğrulamalar güvenli kritik kodda gerçekleşir.  
+-   Güvenli kritik kod, tam olarak güvenilirdir ancak saydam kod tarafından çağrılabilir. Bu, tam güven kodu sınırlı yüzey alanı sunar; düzeltmeler ve güvenlik doğrulamaları güvenli kritik kodda olur.  
   
--   Güvenlik açısından kritik kod herhangi bir kod çağırabilir ve tam olarak güvenilmeyen ancak tarafından saydam kod çağrılamaz.  
+-   Güvenlik açısından kritik kod, herhangi bir kodu çağırabilir ve tam olarak güvenilirdir ancak saydam kod tarafından çağrılamaz.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Kullanım örnekleri ve davranışları](#examples)  
+-   [Kullanım örnekleri ve davranışlar](#examples)  
   
--   [Desenler geçersiz kıl](#override)  
+-   [Desenleri geçersiz kılma](#override)  
   
 -   [Devralma kuralları](#inheritance)  
   
--   [Ek bilgi ve kurallar](#additional)  
+-   [Ek bilgiler ve kurallar](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Kullanım Örnekleri ve Davranışlar  
- Belirtmek için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] kurallarını (Düzey 2 saydamlık), bir derleme için aşağıdaki ek açıklama kullanın:  
+ Belirtmek için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (Düzey 2 saydamlık) kuralları, bir derleme için aşağıdaki ek açıklama kullanın:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level2)]  
 ```  
   
- .NET Framework 2.0 kurallara (düzey 1 saydamlık) kilitlemek için aşağıdaki ek açıklama kullanın:  
+ .NET Framework 2.0 kuralları (düzey 1 saydamlık) kilitlemek için aşağıdaki ek açıklama kullanın:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- Bir derlemeyi açıklama değil eklerseniz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] kuralları, varsayılan olarak kullanılır. Ancak, önerilen en iyi uygulama olarak kullanmaktır <xref:System.Security.SecurityRulesAttribute> bağlı olarak varsayılan özniteliği yerine.  
+ Bir derlemeyi not ekleyemezsiniz, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] kuralları, varsayılan olarak kullanılır. Ancak, önerilen en iyi kullanmaktır <xref:System.Security.SecurityRulesAttribute> bağlı olarak varsayılan öznitelik yerine.  
   
 ### <a name="assembly-wide-annotation"></a>Derleme genelinde ek açıklaması  
- Derleme düzeyindeki öznitelikler kullanımına aşağıdaki kurallar geçerlidir:  
+ Öznitelikleri derleme düzeyinde kullanımı için aşağıdaki kurallar geçerlidir:  
   
--   Hiçbir öznitelik: öznitelik belirtmezseniz, çalışma zamanı tüm kod güvenlik kritik, güvenlik açısından kritik olan bir devralma kuralı burada ihlal dışında olarak yorumlar (örneğin, geçersiz kılma veya saydam bir uygulama, sanal veya arabirim yöntemi ). Bu gibi durumlarda yöntemler güvenli önemlidir. Hiçbir öznitelik belirtilmesi saydamlık kuralları sizin için belirlemek ortak dil çalışma zamanı neden olur.  
+-   Hiçbir öznitelik: Herhangi bir özniteliği belirtmezseniz, çalışma zamanı, tüm kod güvenlik kritik, burada güvenlik açısından kritik olan bir devralma kuralı ihlal dışında olarak yorumlar. (örneğin, geçersiz kılma veya saydam bir uygulama sanal ya da arabirim yöntemi). Bu gibi durumlarda, güvenli kritik yöntemlerdir. Hiçbir öznitelik belirtmemeye sizin için saydamlık kuralları belirlemek ortak dil çalışma zamanı neden olur.  
   
--   `SecurityTransparent`: Tüm kod saydamdır; Tüm derleme ayrıcalıklı veya güvenli olmayan yapmaz.  
+-   `SecurityTransparent`: Tüm kod saydamdır; Tüm derleme ayrıcalıklı veya güvenli olmayan hiçbir şey yapmaz.  
   
--   `SecurityCritical`: Bu derlemedeki türleri tarafından sunulan tüm kod önemlidir; diğer tüm kod saydamdır. Bu senaryoda, tüm öznitelikleri değil belirtme benzer; Ancak, ortak dil çalışma zamanı saydamlık kuralları otomatik olarak belirlemez. Örneğin, bir sanal veya soyut yöntemi geçersiz kılma veya arabirim yöntemi, varsayılan olarak uygulamak, bu yöntem saydamdır. Açıkça yöntemi olarak ek açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`; Aksi halde, bir <xref:System.TypeLoadException> yükleme zamanında oluşturulur. Bu kural, ayrıca hem temel sınıfını hem de türetilmiş bir sınıf aynı bütünleştirilmiş kodda olduğunda geçerlidir.  
+-   `SecurityCritical`: Bu derlemedeki türleri tarafından tanıtılan tüm kod büyük/küçük harf önemlidir; diğer tüm kod saydamdır. Bu senaryo, herhangi bir özniteliği değil belirtme benzer. Ancak, ortak dil çalışma zamanı, saydamlık kuralları otomatik olarak belirlemez. Örneğin, bu yöntem sanal veya soyut bir yöntemi geçersiz kılın veya varsayılan bir arabirim yöntemini uygulamak, saydamdır. Açıkça yöntemi olarak ek açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`; Aksi takdirde bir <xref:System.TypeLoadException> yükleme zamanında oluşturulur. Bu kural, ayrıca temel sınıfını hem türetilen sınıfın aynı bütünleştirilmiş kodda olduğunda geçerlidir.  
   
--   `AllowPartiallyTrustedCallers` (Düzey 2 yalnızca): tüm varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.  
+-   `AllowPartiallyTrustedCallers` (Düzey 2 yalnızca): Tüm Varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.  
   
- Aşağıdaki tabloda, Düzey 2 Düzey 1 için derleme düzeyi davranışı karşılaştırır.  
+ Aşağıdaki tabloda, düzey 1 Düzey 2 için derleme düzeyi davranışı karşılaştırır.  
   
-|Derleme özniteliği|Düzey 2|Düzey 1|  
+|Bütünleştirilmiş kod özniteliği|Düzey 2|Düzey 1|  
 |------------------------|-------------|-------------|  
-|Kısmen güvenilir bir derleme üzerinde özniteliği yok|Türleri ve üyeleri saydam varsayılan olarak, ancak güvenlik açısından kritik ya da güvenlik açısından güvenli-kritik olabilir.|Tüm türleri ve üyeleri saydamdır.|  
-|Bir öznitelik yok|Hiçbir öznitelik belirtilmesi saydamlık kuralları sizin için belirlemek ortak dil çalışma zamanı neden olur. Tüm türleri ve üyeleri güvenlik-burada güvenlik açısından kritik olan bir devralma kuralı ihlal dışında önemlidir.|Tam olarak güvenilir bir derleme üzerinde (genel derleme önbelleğinde veya tam güvende olarak tanımlanan `AppDomain`) tüm türleri saydam ve tüm güvenlik açısından güvenli-kritik üyeleridir.|  
-|`SecurityTransparent`|Tüm türleri ve üyeleri saydamdır.|Tüm türleri ve üyeleri saydamdır.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Yok.|Tüm türleri ve üyeleri güvenlik açısından kritik.|  
-|`SecurityCritical`|Bu derlemedeki türleri tarafından tanıtılan tüm kod önemlidir; diğer tüm kod saydamdır. Bir sanal veya soyut yöntemi geçersiz kılma veya bir arabirim yöntemini uygulayın, yöntemi olarak açıkça açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`.|Tüm Varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.|  
+|Kısmen güvenilen bir derleme üzerinde herhangi bir öznitelik yok|Türleri ve üyeleri varsayılan olarak saydam olan, ancak güvenlik açısından kritik veya güvenlik güvenli kritik olabilir.|Tüm türler ve üyeler görünmez.|  
+|Bir öznitelik yok|Hiçbir öznitelik belirtmemeye sizin için saydamlık kuralları belirlemek ortak dil çalışma zamanı neden olur. Tüm türleri ve üyeleri güvenlik-burada güvenlik açısından kritik olan bir devralma kuralı ihlal ediyor dışında önemlidir.|Tam olarak güvenilen bir derleme üzerinde (genel derleme önbelleğinde veya tam güven olarak tanımlanan `AppDomain`) tüm türleri şeffaftır ve tüm üyeleri güvenlik-güvenli-kritik.|  
+|`SecurityTransparent`|Tüm türler ve üyeler görünmez.|Tüm türler ve üyeler görünmez.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Uygulanamaz.|Tüm türleri ve üyeleri güvenlik kritik öneme sahiptir.|  
+|`SecurityCritical`|Bu derlemedeki türleri tarafından tanıtılan tüm kod büyük/küçük harf önemlidir; diğer tüm kod saydamdır. Sanal veya soyut bir yöntemi geçersiz kılmak veya bir arabirimin yöntemini uygulayan yöntemi olarak açıkça açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`.|Tüm Varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.|  
   
 ### <a name="type-and-member-annotation"></a>Tür ve Üye Ek Açıklaması  
- Bir türe uygulanan güvenlik özniteliklerini türü tarafından sunulan üyeleri için de geçerlidir. Ancak, bunlar için sanal uygulamayın veya soyut taban sınıf veya arabirim uygulamaları geçersiz kılar. Tür ve üye düzeyinde öznitelikleri kullanımına aşağıdaki kurallar geçerlidir:  
+ Bir türe uygulanan güvenlik öznitelikleri türü tarafından sunulan üyeler için de geçerlidir. Ancak, bunlar için sanal uygulanmaz veya soyut temel sınıf veya arabirim uygulamaları geçersiz kılar. Tür ve üye düzeyinde öznitelikler kullanımı için aşağıdaki kurallar geçerlidir:  
   
--   `SecurityCritical`: Tür veya üye kritik öneme sahiptir ve yalnızca tam güven kod tarafından çağrılabilir. Güvenlik açısından kritik tür tarafından sunulan yöntemleri önemlidir.  
+-   `SecurityCritical`: Türe veya üyeye kritik öneme sahiptir ve yalnızca tam güvenilir kod tarafından çağrılabilir. Güvenlik açısından kritik bir tür içinde sunulan yöntemleri kritik öneme sahiptir.  
   
     > [!IMPORTANT]
-    >  Temel sınıflar veya arabirimlerini sunulan ve geçersiz veya bir güvenlik açısından kritik sınıfta uygulanan sanal ve soyut yöntemleri, varsayılan olarak görünmez. Bunlar ya da tanımlanmalıdır `SecuritySafeCritical` veya `SecurityCritical`.  
+    >  Temel sınıflar ya da arabirimleri, dahil edilen ve geçersiz kılınmış veya uygulanan güvenlik açısından kritik bir sınıfta sanal ve Özet yöntemleri tarafından varsayılan olarak görünmez. Bunlar olarak tanımlanmalıdır `SecuritySafeCritical` veya `SecurityCritical`.  
   
--   `SecuritySafeCritical`: Tür veya üye güvenli kritik öneme sahiptir. Ancak, tür veya üye saydam (kısmen güvenilen) koddan çağrılan ve diğer kritik kod özelliğine sahip. Kod için güvenlik denetlenmesi gerekir.  
+-   `SecuritySafeCritical`: Türe veya üyeye güvenli kritik öneme sahiptir. Ancak, türe veya üyeye (kısmen güvenilen) saydam koddan çağrılabilir ve diğer kritik kod özelliğine sahip. Kod için güvenlik denetlenmesi gerekir.  
   
  [Başa dön](#top)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33394146"
 ## <a name="override-patterns"></a>Desenleri Geçersiz Kılma  
  Aşağıdaki tabloda, Düzey 2 saydamlık için izin verilen yöntemi geçersiz kılmaları gösterir.  
   
-|Temel sanal/arabirim üye|Geçersiz kılma/arabirimi|  
+|Temel sanal/arabirim üyesi|Geçersiz kılma/arabirimi|  
 |------------------------------------|-------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
@@ -121,13 +121,13 @@ ms.locfileid: "33394146"
   
  `Transparent` < `SafeCritical` < `Critical`  
   
--   Türler için kuralları: soldan sağa giderek, erişim daha kısıtlayıcı olur. Türetilmiş türler en az temel tür olarak olabildiğince kısıtlayıcı olması gerekir.  
+-   Kural türü için: Soldan sağa doğru giden, erişim daha kısıtlayıcı haline gelir. Türetilen türlerin, en az bir temel tür olarak olabildiğince kısıtlayıcı olmalıdır.  
   
--   Kuralları yöntemleri için: türetilmiş yöntemleri temel yöntemden erişilebilirlik değiştiremiyor. İçin varsayılan davranış, değil açıklama eklenen tüm türetilmiş yöntemlerdir `Transparent`. Kritik türleri türevleri geçersiz kılınan yöntemi açıkça olarak açıklama eklenmemiş erişilirse durum için bir özel duruma neden `SecurityCritical`.  
+-   Kuralları yöntemleri için: Türetilmiş yöntemleri erişilebilirlik taban yöntemden değiştiremezsiniz. Varsayılan davranışı için değil açıklamalı olan tüm türetilmiş yöntemlerdir `Transparent`. Kritik türler CIM'in neden bir özel geçersiz kılınan yöntemi açıkça olarak değil eklenmişse durum `SecurityCritical`.  
   
- Aşağıdaki tabloda izin verilen türü devralma desenleri gösterilir.  
+ Aşağıdaki tabloda, izin verilen tür devralma desenleri gösterir.  
   
-|Taban sınıfı|Türetilmiş sınıf olabilir|  
+|Temel sınıf|Türetilmiş sınıf olabilir|  
 |----------------|--------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
@@ -136,17 +136,17 @@ ms.locfileid: "33394146"
 |`SafeCritical`|`Critical`|  
 |`Critical`|`Critical`|  
   
- Aşağıdaki tabloda izin verilmeyen türü devralma desenleri gösterilir.  
+ Aşağıdaki tabloda, izin verilmeyen türü devralma desenleri gösterir.  
   
-|Taban sınıfı|Türetilmiş sınıf olamaz|  
+|Temel sınıf|Türetilmiş sınıf olamaz|  
 |----------------|-----------------------------|  
 |`SafeCritical`|`Transparent`|  
 |`Critical`|`Transparent`|  
 |`Critical`|`SafeCritical`|  
   
- Aşağıdaki tabloda izin verilen yöntemi devralma desenleri gösterilir.  
+ Aşağıdaki tabloda, izin verilen yöntemi devralma desenleri gösterir.  
   
-|Base yöntemi|Türetilen bir yöntem olabilir|  
+|Taban yöntemi|Türetilen bir yöntem olabilir|  
 |-----------------|---------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
@@ -154,9 +154,9 @@ ms.locfileid: "33394146"
 |`SafeCritical`|`SafeCritical`|  
 |`Critical`|`Critical`|  
   
- Aşağıdaki tabloda izin verilmeyen yöntemi devralma desenleri gösterilir.  
+ Aşağıdaki tabloda, izin verilmeyen yöntemi devralma desenleri gösterir.  
   
-|Base yöntemi|Türetilen yöntem olamaz|  
+|Taban yöntemi|Türetilmiş yöntemi olamaz|  
 |-----------------|------------------------------|  
 |`Transparent`|`Critical`|  
 |`SafeCritical`|`Critical`|  
@@ -164,7 +164,7 @@ ms.locfileid: "33394146"
 |`Critical`|`SafeCritical`|  
   
 > [!NOTE]
->  Bu devralma kurallar, Düzey 2 türleri ve üyeleri için geçerlidir. Düzey 1 derlemelerindeki Düzey 2 güvenlik kritik türleri ve üyeleri devralabilirsiniz. Bu nedenle, Düzey 2 türleri ve üyeleri düzey 1 notlar için ayrı devralma taleplerini olması gerekir.  
+>  Bu devralma kuralları, Düzey 2 türler ve üyeler için geçerlidir. Düzey 1 bütünleştirilmiş kodlar içindeki türleri, Düzey 2 güvenlik kritik türleri ve üyeleri devralabilir. Bu nedenle, Düzey 2 türler ve üyeler için düzey 1 devralanlar ayrı devralma taleplerini olması gerekir.  
   
  [Başa dön](#top)  
   
@@ -172,25 +172,25 @@ ms.locfileid: "33394146"
 ## <a name="additional-information-and-rules"></a>Ek Bilgiler ve Kurallar  
   
 ### <a name="linkdemand-support"></a>LinkDemand Desteği  
- Düzey 2 saydamlık modeli değiştirir <xref:System.Security.Permissions.SecurityAction.LinkDemand> ile <xref:System.Security.SecurityCriticalAttribute> özniteliği. Eski (düzey 1) kodda bir <xref:System.Security.Permissions.SecurityAction.LinkDemand> otomatik olarak işlem görür bir <xref:System.Security.Permissions.SecurityAction.Demand>.  
+ Düzey 2 saydamlık modelinin yerini <xref:System.Security.Permissions.SecurityAction.LinkDemand> ile <xref:System.Security.SecurityCriticalAttribute> özniteliği. Eski (düzey 1) kodda, bir <xref:System.Security.Permissions.SecurityAction.LinkDemand> otomatik olarak kabul edilir bir <xref:System.Security.Permissions.SecurityAction.Demand>.  
   
 ### <a name="reflection"></a>Yansıma  
- (Yalnızca bir özel yöntem veya alan başlattığınız sanki) kritik yönteminin çağrılması veya kritik bir alanın okunması tam güven için talep tetikler. Bu nedenle, kısmi güven kodunun edilemez ise tam güven kod kritik yöntemi çağırabilirsiniz.  
+ (Yalnızca özel metodu nebo pole başlattığınız yokmuş gibi) isteğe bağlı tam güven için kritik bir yöntem çağırma veya bir kritik alanının okunmasını tetikler. Bu nedenle, kısmi güven kodu olamaz ancak tam güven kodu kritik bir yöntem çağırabilirsiniz.  
   
- Aşağıdaki özellikler için eklenene <xref:System.Reflection> türü, yöntemi veya alanı olup olmadığını belirlemek için ad alanı `SecurityCritical`, `SecuritySafeCritical`, veya `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, ve <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Öznitelik varlığını denetimi yerine yansıma kullanarak saydamlık belirlemek için bu özellikleri kullanın. Saydamlık kuralları karmaşıktır ve özniteliğini denetimi yeterli olmayabilir.  
+ Aşağıdaki özellikler eklenmiştir <xref:System.Reflection> türü, yöntemi veya alan olup olmadığını belirlemek için ad alanı `SecurityCritical`, `SecuritySafeCritical`, veya `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, ve <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Öznitelik varlığını denetleme yerine yansıma kullanarak saydamlığı belirlemek için bu özellikleri kullanın. Saydamlık kuralları karmaşıktır ve denetimi özniteliği için yeterli olmayabilir.  
   
 > [!NOTE]
->  A `SafeCritical` yöntemi döndürür `true` her ikisi için de <xref:System.Type.IsSecurityCritical%2A> ve <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, çünkü `SafeCritical` (kritik kod aynı özelliklerine sahiptir, ancak saydam koddan çağrılabilir) gerçekten önemlidir.  
+>  A `SafeCritical` yöntemi döndürür `true` hem <xref:System.Type.IsSecurityCritical%2A> ve <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, çünkü `SafeCritical` (kritik kod ile aynı özellikleri vardır, ancak saydam koddan çağrılabilir) gerçekten de önemlidir.  
   
- Dinamik yöntemler bağlı olan modüller saydamlığını devralır; (bir türe bağlıysa) türü saydamlığını devralmaz.  
+ Dinamik yöntemler için eklenen modülleri saydamlığını devralır; (bir türe ekliyse) türü saydamlığını devralmaz.  
   
 ### <a name="skip-verification-in-full-trust"></a>Tam Güven İçinde Doğrulamayı Atlama  
- Ayarlayarak tam güvenilir saydam derlemeler için doğrulama atlayabilirsiniz <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> özelliğine `true` içinde <xref:System.Security.SecurityRulesAttribute> özniteliği:  
+ Doğrulama için saydam tamamen güvenilir derlemelerinin ayarlayarak atlayabilirsiniz <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> özelliğini `true` içinde <xref:System.Security.SecurityRulesAttribute> özniteliği:  
   
  `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
   
- <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> Özelliği `false` varsayılan olarak, bu nedenle özelliği ayarlanmalıdır `true` doğrulaması atlanacak. Bu, yalnızca en iyi duruma getirme amacıyla yapılmalıdır. Derlemedeki saydam kod kullanılarak doğrulanabilir olduğundan emin olmanız gerekir `transparent` seçeneğini [PEVerify aracı](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
+ <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> Özelliği `false` varsayılan olarak, bu nedenle özelliği ayarlanmalıdır `true` doğrulamayı atlamasına. Bu, yalnızca en iyi duruma getirme amacıyla yapılmalıdır. Saydam kod derleme içindeki kullanılarak doğrulanabilir olduğundan emin olmanız gerekir `transparent` seçeneğini [PEVerify aracı](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)

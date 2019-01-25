@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645476"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping Metodu
-Bellek bölge eşlenmiş dosyayı ve eşleme türü alır.  
+Eşleşen dosya ve tür eşlemesi bellek bölgesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,40 +39,40 @@ HRESULT GetFileMapping (
   
 #### <a name="parameters"></a>Parametreler  
  `ppvData`  
- [out] Bir işaretçi eşlenmiş dosyayı başlatma.  
+ [out] Eşleşen dosya başlangıcı için bir işaretçi.  
   
  `pcbData`  
- [out] Eşlenen bölge boyutu. Varsa `pdwMappingType` olan `fmFlat`, dosya boyutudur.  
+ [out] Eşleştirilmiş bölge boyutu. Varsa `pdwMappingType` olduğu `fmFlat`, dosyanın boyutu budur.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) eşleme türünü belirten değer. Her zaman geçerli uygulama ortak dil çalışma zamanı (CLR) döndürür `fmFlat`. Diğer değerler, gelecekte kullanılmak üzere ayrılmıştır. Ancak, diğer değerler gelecek sürümlerde etkinleştirilebilir ya da sürümlerden hizmet için döndürülen değer her zaman doğrulamanız gerekir.  
+ [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) eşleme türünü belirten değer. Ortak dil çalışma zamanı (CLR) her zaman geçerli uygulamasını döndürür `fmFlat`. Diğer değerleri, gelecekte kullanılmak üzere ayrılmıştır. Ancak, diğer değerleri gelecek sürümlerde etkinleştirilmemiş olabilir veya yayınlar hizmet için döndürülen değer her zaman doğrulamanız gerekir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|Tüm çıktıları doldurulur.|  
-|`E_INVALIDARG`|NULL bir bağımsız değişken değeri iletildi.|  
-|`COR_E_NOTSUPPORTED`|CLR uygulaması bellek bölge hakkında bilgi sağlayamıyor. Bu durum aşağıdaki nedenlerden ötürü oluşabilir:<br /><br /> -Meta veri kapsamı ile açılmış `ofWrite` veya `ofCopyMemory` bayrağı.<br />-Meta veri kapsamı olmadan açılmış `ofReadOnly` bayrağı.<br />- [Imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi, dosyanın yalnızca meta veri bölümü açmak için kullanıldı.<br />-Dosya taşınabilir yürütülebilir (PE) dosyası değil. **Not:** olması olası gelecekte CLR sürümlerini zayıflar olan ve bu koşullar CLR mantığınız bağlıdır.|  
+|`S_OK`|Tüm çıktıların doldurulur.|  
+|`E_INVALIDARG`|NULL bir bağımsız değişken değeri geçirildi.|  
+|`COR_E_NOTSUPPORTED`|CLR uygulamasındaki bellek bölge bilgileri sağlayamaz. Bu durum aşağıdaki nedenlerden dolayı oluşabilir:<br /><br /> -Meta veri kapsamı ile açılmış `ofWrite` veya `ofCopyMemory` bayrağı.<br />-Meta veri kapsamı olmadan açılmış `ofReadOnly` bayrağı.<br />- [Imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi yalnızca dosya meta veri bölümü açmak için kullanıldı.<br />-Dosya taşınabilir çalıştırılabilir (PE) dosyası değil. **Not:**  Bu koşullar CLR uygulamasının bağlıdır ve gelecek sürümleri CLR'nin zayıflar muhtemeldir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bellek, `ppvData` sadece temel alınan meta veri kapsam açık olduğu sürece noktaları için geçerlidir.  
+ Bellek, `ppvData` noktalarına, temel alınan meta veri kapsamı yalnızca açık olduğu sürece geçerlidir.  
   
- Bu yöntemin çağırarak bir disk dosya meta verileri belleğe eşlediğinizde çalışmak sırayla [Imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi, belirtmeniz gerekir `ofReadOnly` bayrağı ve değil belirtmelisiniz `ofWrite` veya `ofCopyMemory` bayrağı.  
+ Bu yöntemi çağırarak bir diskteki dosyanın meta verilerini belleğe eşlediğinizde, iş için sırayla [Imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi belirtmelisiniz `ofReadOnly` bayrağı ve değil belirtmelisiniz `ofWrite` veya `ofCopyMemory` bayrağı.  
   
- Her kapsam için dosya eşleme türünün CLR belirli bir uygulama belirli seçimdir. Kullanıcı tarafından ayarlanamaz. Her zaman geçerli uygulama CLR döndürür `fmFlat` içinde `pdwMappingType`, ancak CLR sürümleri veya gelecek hizmet sürümleri belirli bir sürümü gelecekte değiştirebilirsiniz. Döndürülen değer her zaman kontrol `pdwMappingType`, farklı türler farklı düzenler ve uzaklıkları bulunduğundan.  
+ Her kapsam için dosya eşleme türü seçimi, CLR'nin belirli bir uygulamaya özeldir. Kullanıcı tarafından ayarlanamaz. Her zaman geçerli uygulama CLR döndürür `fmFlat` içinde `pdwMappingType`, ancak gelecekte CLR'nin sürümünü veya gelecek hizmet sürümlerini belirli bir sürümü değiştirebilirsiniz. Döndürülen değer her zaman iade etmelisiniz `pdwMappingType`, farklı alan farklı düzenler ve ofsetleri olduğundan.  
   
- Üç parametrelerinden herhangi biri NULL geçirme desteklenmiyor. Yöntem `E_INVALIDARG`, ve çıkışları hiçbiri doldurulur. Eşleme türü veya bölge boyutunu yoksayılıyor anormal program sonlandırma neden olabilir.  
+ Herhangi bir üç parametre için NULL geçirme desteklenmiyor. Yöntem döndürür `E_INVALIDARG`, ve çıkışları hiçbiri doldurulur. Eşleme türü veya bölgenin boyutunu yoksayılıyor anormal program sonlandırmada neden olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataInfo Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [CorFileMapping Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataInfo Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [CorFileMapping Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

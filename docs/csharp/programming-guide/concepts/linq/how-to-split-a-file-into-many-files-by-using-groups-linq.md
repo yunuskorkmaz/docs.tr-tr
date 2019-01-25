@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: gruplar (LINQ) (C#) kullanarak bir dosyayı birden çok dosyaya bölme'
+title: 'Nasıl yapılır: Gruplar (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626068"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Nasıl yapılır: gruplar (LINQ) (C#) kullanarak bir dosyayı birden çok dosyaya bölme
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Nasıl yapılır: Gruplar (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)
 Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için  
@@ -29,7 +29,7 @@ Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde
     Garcia, Debra  
     ```  
   
-2.  Bu adlar names2.txt adlı bir metin dosyasına ve kaydedin, proje klasörünüze kopyalayın: ortak adları bazı sahip iki dosya gerektiğini unutmayın.  
+2.  Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin: İki dosyayı bazı adları ortak gerektiğini unutmayın.  
   
     ```  
     Liu, Jinghao  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
  .NET Framework sürüm 3.5 veya üzeri bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

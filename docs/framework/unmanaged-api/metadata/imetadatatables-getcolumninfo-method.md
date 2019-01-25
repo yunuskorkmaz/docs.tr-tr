@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79f08109f1ad267c4898cc0789859b55f534d1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245933b23028e2baf8a09ca07595f394b65c0ec3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698303"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Metodu
-Belirtilen tabloda belirtilen sütun hakkındaki verileri alır.  
+Belirtilen tabloda belirtilen sütuna ilişkin verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,32 +42,32 @@ HRESULT GetColumnInfo (
   
 #### <a name="parameters"></a>Parametreler  
  `ixTbl`  
- [in] İstenen Tablo dizini.  
+ [in] İstediğiniz tabloyu dizini.  
   
  `ixCol`  
  [in] İstenen sütun dizini.  
   
  `poCol`  
- [out] Satır sütununda uzaklığını gösteren bir işaretçi.  
+ [out] Satırdaki sütun uzaklığı için bir işaretçi.  
   
  `pcbCol`  
- [out] Bir işaretçi sütunun bayt cinsinden boyutu.  
+ [out] Sütunun bayt cinsinden boyutu için bir işaretçi.  
   
  `pType`  
- [out] Sütundaki değerlerin türü için bir işaretçi.  
+ [out] Sütundaki değerleri türü bir işaretçi.  
   
  `ppName`  
- [out] Sütun adı için bir işaretçi bir işaretçi.  
+ [out] Sütun adı için bir işaretçi işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

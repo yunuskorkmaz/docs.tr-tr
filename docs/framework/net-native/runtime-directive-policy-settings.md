@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642574"
 ---
 # <a name="runtime-directive-policy-settings"></a>Çalışma Zamanı Yönerge İlkesi Ayarları
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000994"
 |`Required PublicAndInternal`|Genel ve iç türleri veya üyeleri için ilke sağlar ve ortak hem de dahili türler ve üyeler için her zaman kullanılabilir bu meta veri sağlar. Bu ayar farklıdır `PublicAndInternal`, araç zincirinizi genel ve iç türleri ve üyeleri kullanılabilir yalnızca meta verileri getiren gerekli olduğunu belirler.|✓||  
 |`Required All`|Tüm türler ve üyeler olup olmadığını kullanılan ve etkinleştirir İlkesi kendileri için tutmak araç zinciri gerektirir.|✓||  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

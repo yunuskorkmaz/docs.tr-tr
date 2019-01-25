@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 81e506a8b2528b6e3fa783ecd90aa4aa8987bbe5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587274"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Çalışma Zamanındaki Genel Türler (C# Programlama Kılavuzu)
 Microsoft Ara diline (MSIL) bir genel tür veya yöntem derlendiğinde, Tür parametrelerine sahip olarak tanımlayan meta verileri içerir. MSIL için genel bir tür kullanılıyor farkı sağlanan tür parametresi bir değer olup temel türü veya başvuru türü.  
@@ -47,9 +47,9 @@ Microsoft Ara diline (MSIL) bir genel tür veya yöntem derlendiğinde, Tür par
   
  Ayrıca, bir değer türü veya başvuru türü parametresini kullanarak genel bir C# sınıf örneği oluşturulduğunda, yansıma çalışma zamanında sorgulayabilir ve gerçek türü hem kendi tür parametresi saptanabilen.  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Collections.Generic>  
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- <xref:System.Collections.Generic>
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Genel Türler](~/docs/standard/generics/index.md)

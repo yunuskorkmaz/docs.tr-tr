@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660430"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
 İçinde animasyon ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birkaç ipucu vardır ve animasyonlarınızın püf noktaları daha iyi performans ve yükünden kurtarın.  
@@ -105,7 +105,7 @@ ms.locfileid: "48842781"
   
  Bir animasyonu kaldırmak için farklı yolu vardır. Aşağıdaki teknikler ait animasyonları kaldırmak için kullanılan bir <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: görsel taslak Kaldır](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+-   Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: Film şeridini kaldırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
 -   Kaldırmak için kodu kullanmak için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemi.  
   
@@ -128,5 +128,5 @@ ms.locfileid: "48842781"
   
  Saat nesneleri hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl Yapılır: -XML belgeleri özelliklerini kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: -XML belgeleri özelliklerini kullanma C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: ce14de1f5aef4703a0c9b3868852104dc313e728
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491642"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl Yapılır: XML belgeleri özelliklerini kullanma
+# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgeleri özelliklerini kullanma
 
 Aşağıdaki örnek, belgelenmiş bir türü temel bir bakış sağlar.
 
@@ -132,8 +132,8 @@ XML belgeleri başlar: / / / ile. Yeni bir proje oluşturduğunuzda, sihirbaz si
     > [!NOTE]
     > XML dosyası, tür ve üyeler hakkında tam bilgi sağlamaz (örneğin, bunu herhangi bir tür bilgilerini içermiyor). Bir tür veya üyeyle ilgili eksiksiz bilgi almak için soubor dokumentace gerçek türe veya üyeye yansıma ile birlikte kullanılmalıdır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
+- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

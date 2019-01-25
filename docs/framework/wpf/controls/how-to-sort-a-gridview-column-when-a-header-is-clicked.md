@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694093"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Nasıl yapılır: Üstbilgi Tıklandığında GridView Sütununu Sıralama
-Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Controls.ListView> uygulayan denetim bir <xref:System.Windows.Controls.GridView> görüntüleme modu ve verileri, bir kullanıcı bir sütun başlığını tıkladığında içerik sıralar.  
+Bu örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.ListView> uygulayan denetimi bir <xref:System.Windows.Controls.GridView> görüntüleme modu ve verileri, bir kullanıcı bir sütun başlığına sağ tıkladığında içerik sıralar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tanımlayan bir <xref:System.Windows.Controls.GridView> bağlamak üç sütunlarla <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, ve <xref:System.DateTime.Day%2A>, özelliklerini <xref:System.DateTime> yapısı.  
+ Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.Controls.GridView> bağlamak üç sütun ile <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, ve <xref:System.DateTime.Day%2A>, özelliklerini <xref:System.DateTime> yapısı.  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
 </GridView>  
 ```  
   
- Aşağıdaki örnek olarak tanımlanan veri öğelerini gösterir bir <xref:System.Collections.ArrayList> , <xref:System.DateTime> nesneleri. <xref:System.Collections.ArrayList> Olarak tanımlanan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.ListView> denetim.  
+ Veri öğeleri olarak tanımlanır aşağıdaki örnekte bir <xref:System.Collections.ArrayList> , <xref:System.DateTime> nesneleri. <xref:System.Collections.ArrayList> Olarak tanımlanan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.ListView> denetimi.  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -58,7 +58,7 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
 </ListView.ItemsSource>  
 ```  
   
- `s` Ve `p` tanımlayıcılarının [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] etiketleri bakın meta verilerde tanımlanan ad alanı eşlemeleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası. Aşağıdaki örnek meta veri tanımı gösterilmektedir.  
+ `s` Ve `p` tanımlayıcıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] etiketleri bakın meta verilerde tanımlanan ad alanı eşlemeleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası. Aşağıdaki örnek, meta veri tanımı gösterilmektedir.  
   
 ```xaml  
 <Window        
@@ -69,7 +69,7 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Verileri bir sütunun içeriğine göre sıralamak için örnek işlemek için bir olay işleyicisi tanımlar <xref:System.Windows.Controls.Primitives.ButtonBase.Click> sütun üstbilgisi düğmesine bastığınızda oluşan olay. Aşağıdaki örnek, bir olay işleyicisi belirtmek gösterilmektedir <xref:System.Windows.Controls.GridViewColumnHeader> denetim.  
+ Örnek verileri bir sütunun içeriğine göre sıralamak için işlemek için bir olay işleyicisi tanımlar <xref:System.Windows.Controls.Primitives.ButtonBase.Click> sütun üstbilgisi düğmesine bastığınızda oluşan olay. Aşağıdaki örnek, bir olay işleyicisi belirtmek gösterilmektedir <xref:System.Windows.Controls.GridViewColumnHeader> denetimi.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -78,7 +78,7 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
  >  
 ```  
   
- Sıralama yönü artan ve her zaman sütun üstbilgisi düğmesine basın azalan arasında değişmesi örnek olay işleyicisini tanımlar. Aşağıdaki örnek olay işleyicisini gösterir.  
+ Örnek olay işleyicisi tanımlar artan ve azalan sırada sütun üstbilgisi düğmesine her bastığınızda arasındaki sıralama yönünü değiştirir. Aşağıdaki örnekte olay işleyicisi gösterir.  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -197,7 +197,7 @@ Partial Public Class Window1
 End Class
 ```  
   
- Aşağıdaki örnek verileri sıralamak için olay işleyicisi tarafından çağrılan Sıralama algoritması gösterir. Yeni bir oluşturarak sıralama gerçekleştirilen <xref:System.ComponentModel.SortDescription> yapısı.  
+ Aşağıdaki örnek, verileri sıralamak için olay işleyicisi tarafından çağrılan Sıralama algoritması gösterir. Yeni bir oluşturarak sıralama yapılır <xref:System.ComponentModel.SortDescription> yapısı.  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7619dbfcdb0a3a219c9245d30518ffec8b586360
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671427"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
-Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akışları ve aşağıdaki sınıflar kullanarak öğeleri oluşturun:  
+Bir Windows Communication Foundation (WCF) dağıtım hizmeti geliştirirken, akışları ve aşağıdaki sınıfları kullanarak öğeleri oluşturun:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -31,13 +31,13 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- A <xref:System.ServiceModel.Syndication.SyndicationFeed> bir biçimlendirici tanımlanır tüm dağıtım biçiminde seri hale getirilebilir. WCF ile iki biçimlendiricileri gelir: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ A <xref:System.ServiceModel.Syndication.SyndicationFeed> bir biçimlendirici tanımlanır dağıtım biçime seri hale getirilebilir. WCF iki biçimlendiricileri ile birlikte gelir: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Nesne modeli çevresinde <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 belirtimi daha Atom 1.0 belirtimiyle daha yakından hizalanır. Atom 1.0 belirsiz ya da RSS 2.0 belirtiminden belirtilmemişse öğeleri tanımlayan daha önemli bir belirtimi olmasıdır. Bu nedenle, WCF dağıtım nesnesi modeli birçok öğeler hiçbir doğrudan gösterimi RSS 2.0 belirtiminde içerir. Serileştirilirken <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri RSS 2.0 WCF Atom belirtimine uygun ad alanı tam genişletme öğeleri olarak Atom'a özgü veri öğeleri seri olanak tanır. Bunun için geçirilen parametre ile denetleyebilirsiniz <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> Oluşturucusu.  
+ Geçici nesne modeli <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> daha yakından RSS 2.0 belirtimini Atom 1.0 belirtimi ile hizalanır. Atom 1.0 belirsiz veya atlanamaz RSS 2.0 belirtiminden öğeleri tanımlayan daha önemli bir özelliğidir olmasıdır. Bu nedenle, WCF dağıtım nesnesi modeli birçok öğeler RSS 2.0 belirtimini hiçbir doğrudan gösterimini içerir. Serileştirilirken <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri RSS 2.0 WCF Atom belirtime uygun ad alanıyla nitelenen uzantı öğesi olarak Atom'a özgü veri öğelerini serileştirmek izin verir. Geçirilen bir parametre ile bu denetleyebilirsiniz <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> Oluşturucusu.  
   
- Bu konuda kullanılan iki yöntemden birini kod örnekleri, burada fiili serileştirme yapmak için tanımlanan.  
+ Bu konuda kullanılan iki yöntemden biri kod örnekleri, burada gerçek serileştirme yapmak için tanımlanan.  
   
- `SerializeFeed` Akış bir dağıtım serileştirir.  
+ `SerializeFeed` bir dağıtım akışı serileştirir.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
@@ -48,12 +48,12 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
 ## <a name="syndicationfeed"></a>SyndicationFeed  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
  [!code-vb[SyndicationMapping#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#0)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 için serileştirilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -102,7 +102,7 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 </feed>  
 ```  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationFeed> RSS 2.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationFeed> RSS 2.0 için serileştirilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -145,12 +145,12 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 ```  
   
 ## <a name="syndicationitem"></a>SyndicationItem  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
  [!code-vb[SyndicationMapping#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#1)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 için serileştirilir.  
   
 ```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
@@ -192,7 +192,7 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 </entry>  
 ```  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 için serileştirilir.  
   
 ```xml  
 <item>  
@@ -231,12 +231,12 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 ```  
   
 ## <a name="syndicationperson"></a>SyndicationPerson  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationPerson> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.SyndicationPerson> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
  [!code-vb[SyndicationMapping#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#2)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> Atom 1.0 için serileştirilir.  
   
 ```xml  
   <author>  
@@ -251,7 +251,7 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
   </contributor>  
 ```  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> sınıfı yalnızca bir RSS 2.0 serileştirilmiş <xref:System.ServiceModel.Syndication.SyndicationPerson> bulunmaktadır `Authors` veya `Contributors` koleksiyonlar, sırasıyla.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> yalnızca bir sınıf için RSS 2.0 serileştirildiği <xref:System.ServiceModel.Syndication.SyndicationPerson> var. `Authors` veya `Contributors` koleksiyonları, sırasıyla.  
   
 ```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
@@ -262,7 +262,7 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 </a10:contributor>  
 ```  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> sınıfı birden fazla RSS 2.0 serileştirilmiş <xref:System.ServiceModel.Syndication.SyndicationPerson> bulunmaktadır `Authors` veya `Contributors` koleksiyonlar, sırasıyla.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationPerson> sınıf, RSS 2.0 serileştirildiği, birden fazla ise <xref:System.ServiceModel.Syndication.SyndicationPerson> var. `Authors` veya `Contributors` koleksiyonları, sırasıyla.  
   
 ```xml  
 <a10:author>  
@@ -288,66 +288,66 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
 ```  
   
 ## <a name="syndicationlink"></a>SyndicationLink  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationLink> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.SyndicationLink> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
  [!code-vb[SyndicationMapping#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#3)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationLink> Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationLink> Atom 1.0 için serileştirilir.  
   
  `<link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationLink> RSS 2.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationLink> RSS 2.0 için serileştirilir.  
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
 ## <a name="syndicationcategory"></a>SyndicationCategory  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationCategory> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.SyndicationCategory> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
  [!code-vb[SyndicationMapping#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#4)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationCategory> Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationCategory> Atom 1.0 için serileştirilir.  
   
  `<category term="categoryName" label="categoryLabel" scheme="categoryScheme" />`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.SyndicationCategory> RSS 2.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.SyndicationCategory> RSS 2.0 için serileştirilir.  
   
  `<category domain="categoryScheme">categoryName</category>`  
   
 ## <a name="textsyndicationcontent"></a>TextSyndicationContent  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfına zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> HTML içeriği ile oluşturulur.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> HTML içerikle oluşturulur.  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
  [!code-vb[SyndicationMapping#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#5)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> HTML içeriğini sınıfıyla Atom 1.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 için HTML içeriğe sahip bir sınıf seri hale.  
   
  `<content type="html"><html> some html </html></content>`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> HTML içeriğini sınıfıyla RSS 2.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> RSS 2.0 için HTML içeriğe sahip bir sınıf seri hale.  
   
  `<description><html> some html </html></description>`  
   
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfına zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> düz metin içeriği ile oluşturulur.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> düz metin içerikle oluşturulur.  
   
  [!code-csharp[SyndicationMapping#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#6)]
  [!code-vb[SyndicationMapping#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#6)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> düz metin içeriği sınıfıyla Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 için düz metin içerikli sınıfın serileştirilmiş.  
   
  `<content type="text">Some Plain Text</content>`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> düz metin içeriği sınıfıyla RSS 2.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> RSS 2.0 için düz metin içerikli sınıfın serileştirilmiş.  
   
  `<description>Some Plain Text</description>`  
   
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfına zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> XHTML içerikle oluşturulur.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı zaman <xref:System.ServiceModel.Syndication.TextSyndicationContent> XHTML içerikle oluşturulur.  
   
  [!code-csharp[SyndicationMapping#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#7)]
  [!code-vb[SyndicationMapping#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#7)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> XHTML içerikle sınıfı Atom 1.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> Atom 1.0 XHTML içerikle sınıfın serileştirilmiş.  
   
  `<content type="xhtml">`  
   
@@ -355,33 +355,33 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
   
  `</content>`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> XHTML içerikle sınıfı RSS 2.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.TextSyndicationContent> RSS 2.0 XHTML içerikle sınıfın serileştirilmiş.  
   
  `<description><html> some xhtml </html></description>`  
   
 ## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.UrlSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.UrlSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
  [!code-vb[SyndicationMapping#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#8)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.UrlSyndicationContent> sınıfı Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.UrlSyndicationContent> Atom 1.0 sınıfın serileştirilmiş.  
   
  `<content type="audio" src="http://someurl/" />`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.UrlSyndicationContent> XHTML içerikle sınıfı RSS 2.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.UrlSyndicationContent> RSS 2.0 XHTML içerikle sınıfın serileştirilmiş.  
   
  `<description />`  
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
 ## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
- Aşağıdaki kod örneğinde, seri hale getirmek gösterilmiştir <xref:System.ServiceModel.Syndication.XmlSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı.  
+ Aşağıdaki kod örneği, seri hale getirmek gösterilmektedir <xref:System.ServiceModel.Syndication.XmlSyndicationContent> Atom 1.0 ve RSS 2.0 sınıfı.  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
  [!code-vb[SyndicationMapping#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#9)]  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.XmlSyndicationContent> sınıfı Atom 1.0 için serileştirilir.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.XmlSyndicationContent> Atom 1.0 sınıfın serileştirilmiş.  
   
  `<content type="mytype">`  
   
@@ -389,7 +389,7 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
   
  `</content>`  
   
- Aşağıdaki XML gösterilmektedir nasıl <xref:System.ServiceModel.Syndication.XmlSyndicationContent> XHTML içerikle sınıfı RSS 2.0 serileştirilmiş.  
+ Aşağıdaki XML gösterildiği nasıl <xref:System.ServiceModel.Syndication.XmlSyndicationContent> RSS 2.0 XHTML içerikle sınıfın serileştirilmiş.  
   
  `<content type="mytype" xmlns="http://www.w3.org/2005/Atom">`  
   
@@ -397,9 +397,9 @@ Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akı
   
  `</content>`  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Nasıl yapılır: Temel bir RSS akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Nasıl yapılır: Temel bir Atom akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

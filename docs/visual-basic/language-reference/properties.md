@@ -4,31 +4,31 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: 5fd1bdb665f4e72ad4c29efa3d1c5459975f0b05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 658aa2f1cdf150db686ba78a75b44a41d361833f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634343"
 ---
 # <a name="properties-visual-basic"></a>Özellikler (Visual Basic)
-Bu sayfa, Visual Basic modülleri üyeleri özellikleri listeler. Belirli Visual Basic nesneleri üyeleri olan diğer özellikleri listelenen [nesneleri](../../visual-basic/language-reference/objects/index.md).  
+Bu sayfa, Visual Basic modülleri üyeleri özellikleri listeler. Belirli Visual Basic nesneleri üyesi olan diğer özellikleri de listelenen [nesneleri](../../visual-basic/language-reference/objects/index.md).  
   
 ## <a name="visual-basic-properties"></a>Visual Basic özellikleri  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Döndürür veya ayarlar bir `String` sisteminize göre geçerli tarihi gösteren değer.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Döndürür veya ayarlar bir `String` sisteminize göre geçerli tarihi gösteren bir değer.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Döndürür bir `Date` geçerli tarih ve saat sisteminize göre içeren değeri.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Döndürür bir `String` şu anda kullanımda çalışma zamanı temsil eden.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Döndürür bir `Integer` şu anda kullanımda çalışma zamanının derleme sürüm numarası içeren.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Döndürür bir `Integer` şu anda kullanımda çalışma zamanının ana sürüm numarasını içeren.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Döndürür bir `Integer` şu anda kullanımda çalışma zamanının alt sürüm numarasını içeren.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Döndürür veya ayarlar bir `Date` sisteminize göre geçerli saati içeren değeri.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Döndürür bir `Double` gece yarısından beri geçen saniye sayısını temsil eden değer.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Döndürür bir `String` temsil eden bir çalışma zamanı şu anda kullanımda.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Döndürür bir `Integer` içeren derleme sürüm numarasının çalışma zamanı şu anda kullanımda.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Döndürür bir `Integer` içeren ana sürüm numarası çalışma zamanının şu anda kullanımda.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Döndürür bir `Integer` içeren ikincil sürüm numarası çalışma zamanının şu anda kullanımda.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Döndürür veya ayarlar bir `Date` sisteminize göre geçerli saati içeren bir değer.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Döndürür bir `Double` saniye sayısını temsil eden değer gece yarısından beri geçen.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Döndürür veya ayarlar bir `String` sisteminize göre geçerli saati temsil eden değer.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Döndürür veya ayarlar bir `Date` sisteminize göre geçerli tarihi içeren değeri.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic Dil Başvurusu](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)

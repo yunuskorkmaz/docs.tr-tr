@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664817"
 ---
 # <a name="creating-an-ink-input-control"></a>Mürekkep Giriş Denetimi Oluşturma
 Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabilir. Mürekkep "tablet kaleminden flow" ve sonra mürekkep görüntülemek için eklenir, denetime tablet kalem yoluyla panodan yapıştırılan veya bir dosyasından yüklenen görünmesine neden olan bir kullanıcı bir fırça çizer gibi diğer bir deyişle, mürekkebi işler. Mürekkep dinamik olarak işlemek için Denetim kullanmalısınız bir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Mürekkep statik olarak işlemek için ekran kalemi olay yöntemleri geçersiz kılmanız gerekir (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, ve <xref:System.Windows.UIElement.OnStylusUp%2A>) toplamak için <xref:System.Windows.Input.StylusPoint> veri vuruş oluşturmak ve bunları Ekle bir <xref:System.Windows.Controls.InkPresenter> (denetim üzerinde mürekkep işleyen).  
   
  Bu konu aşağıdaki alt bölümleri içerir:  
   
--   [Nasıl yapılır: ekran kalemi noktası verilerini toplayıp mürekkep vuruşları oluşturma](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Nasıl yapılır: Ekran kalemi noktası verileri toplayıp mürekkep vuruşları oluşturma](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Nasıl yapılır: denetiminizin fare girişi kabul etmek etkinleştirin](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Nasıl yapılır: Denetiminiz fare girişi kabul etmek etkinleştirin](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Hepsini birleştirme](#PuttingItTogether)  
   
@@ -37,7 +37,7 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
 -   [Sonuç](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Nasıl yapılır: ekran kalemi noktası verilerini toplayıp mürekkep vuruşları oluşturma  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Nasıl yapılır: Ekran kalemi noktası verileri toplayıp mürekkep vuruşları oluşturma  
  Strokes toplar ve mürekkep yöneten bir denetim oluşturmak için aşağıdakileri yapın:  
   
 1.  Öğesinden bir sınıf türetin <xref:System.Windows.Controls.Control> veya sınıflardan birini türetilen <xref:System.Windows.Controls.Control>, gibi <xref:System.Windows.Controls.Label>.  
@@ -68,7 +68,7 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Nasıl yapılır: denetiminizin fare girişi kabul etmek etkinleştirin  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Nasıl yapılır: Denetiminiz fare girişi kabul etmek etkinleştirin  
  Uygulamanıza önceki denetimi ekleyin, çalıştırın ve fare giriş aygıtı olarak kullanmak, vuruşları kalıcı olmadığını fark edeceksiniz. Kalıcı hale getirmek için vuruşları fare giriş cihazı olarak kullanıldığında, aşağıdakileri yapın:  
   
 1.  Geçersiz kılma <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> ve yeni bir <xref:System.Windows.Input.StylusPointCollection> olay gerçekleştiğinde farenin konumunun almak ve oluşturmak bir <xref:System.Windows.Input.StylusPoint> noktası verileri kullanarak ve ekleme <xref:System.Windows.Input.StylusPoint> için <xref:System.Windows.Input.StylusPointCollection>.  
@@ -98,6 +98,6 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
 ## <a name="conclusion"></a>Sonuç  
  Ekran kalemi olay yöntemleri geçersiz kılarak mürekkebi işler ve toplar bir denetim oluşturabilirsiniz. Kendi denetiminizi oluşturarak kendi türetme <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve bunları içine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, dijital mürekkep ile kodlamalardaki neredeyse herhangi bir davranış uygulayabilirsiniz. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak üretilir, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş ve ekranında uygulamanız için uygun şekilde işleyin. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> veri mürekkep koleksiyonu ve uygulamanız için en iyi performans ile işleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [Erişim ve kalem girişi düzenleme](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Erişim ve kalem girişi düzenleme](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

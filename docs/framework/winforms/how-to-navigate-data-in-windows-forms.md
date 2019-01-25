@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarında Verilerde Gezinme'
+title: "Nasıl yapılır: Windows Forms'ta verilerde gezinme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,47 +11,47 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 9572c1234c07c77d5df0c9cd58499faafe460e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3703019f081f07ecb29bf9229f0a2044764ae6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586910"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Verilerde Gezinme
-Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtlarını gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerine bileşen <xref:System.Windows.Forms.BindingSource>. Sonra yerleşik gezinti yöntemi kullanabileceğinizi <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulur ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  
+# <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta verilerde gezinme
+Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerini bileşen <xref:System.Windows.Forms.BindingSource>. Daha sonra üzerinde yerleşik gezinti yöntemi kullanabilirsiniz <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulmak ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Bir veri kaynağı konumu artırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği <xref:System.Windows.Forms.BindingSource> ilişkili verilerinizin kayıt konumuna gidin. Aşağıdaki örnek kullanarak gösterilmektedir <xref:System.Windows.Forms.BindingSource.MoveNext%2A> yöntemi <xref:System.Windows.Forms.BindingSource> artırmak <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği zaman `nextButton` tıklandığında. <xref:System.Windows.Forms.BindingSource> İle ilişkili `Customers` tablo bir veri kümesinin `Northwind`.  
+1.  Ayarlama <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği <xref:System.Windows.Forms.BindingSource> ilişkili verilerinizin kayıt konumuna gidin. Kullanarak aşağıdaki örnekte gösterildiği <xref:System.Windows.Forms.BindingSource.MoveNext%2A> yöntemi <xref:System.Windows.Forms.BindingSource> Artım yapılacağını <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği olduğunda `nextButton` tıklandığında. <xref:System.Windows.Forms.BindingSource> İlişkili olduğu `Customers` tablosunu bir veri kümesinin `Northwind`.  
   
     > [!NOTE]
-    >  Ayarı <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği ilk veya son kaydı dışında bir değere neden olmaz hata olarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] konumu liste sınırları dışında bir değere ayarlamak izin vermez. Uygulamanızda ilk veya son kaydı ilerlemiş olup olmadığını bilmek önemlidir, veri öğesi sayısı aşacak olup olmadığını sınamak için mantık ekleyin.  
+    >  Ayarı <xref:System.Windows.Forms.BindingSource.Position%2A> ilk veya son kaydını dışında bir değere neden bir hata olarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] konum listesi sınırları dışında bir değere ayarlamak izin vermez. Uygulamanızda ilk veya son kaydını ilerlemiş olup olmadığını bilmek önemlidir, veri öğesi sayısı aşarsanız olup olmadığını sınamak için mantığı içerir.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
-### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Başlangıç ve bitiş geçirilen olup olmadığını denetlemek için  
+### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Başlangıç ve bitiş geçip geçmediğini kontrol etmek için  
   
-1.  İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.BindingSource.PositionChanged> olay. İşleyicisinde önerilen konum değerini gerçek veri öğesi sayısı aştı olup olmadığını sınayabilirsiniz.  
+1.  İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.BindingSource.PositionChanged> olay. İşleyicisinde gerçek veri öğesi sayısı önerilen konum değerini aştı olup olmadığını test edebilirsiniz.  
   
-     Aşağıdaki örnek, son veri öğesini ulaştınız olup olmadığını nasıl sınayabilirsiniz gösterilmektedir. Son öğesi, varsa örnekte **sonraki** formundaki düğmesi devre dışıdır.  
+     Aşağıdaki örnek nasıl son veri öğesi ulaştınız olup olmadığını sınayabilirsiniz gösterir. Örnekte, son öğe varsa, **sonraki** formundaki düğmesi devre dışıdır.  
   
     > [!NOTE]
-    >  , Değişikliği kodda gezinme, liste, yeniden etkinleştirmeniz gerekir, unutmayın **sonraki** düğmesi, böylece kullanıcılar yeni liste tüm uzunluğu göz atabilirsiniz. Ayrıca, unutmayın, yukarıdaki <xref:System.Windows.Forms.BindingSource.PositionChanged> belirli olay <xref:System.Windows.Forms.BindingSource> kendi olay işleme yöntemi ile ilişkilendirilmesi gerekiyor çalıştığınız. Aşağıdaki işleme için bir yöntem örneğidir <xref:System.Windows.Forms.BindingSource.PositionChanged> olay:  
+    >  Değiştirdiğiniz kodda gezinme, liste, yeniden etkinleştirmeniz gerekir, dikkat **sonraki** düğmesi, böylece kullanıcılar yeni liste tüm uzunluğu göz atabilirsiniz. Ayrıca, dikkat, yukarıdaki <xref:System.Windows.Forms.BindingSource.PositionChanged> belirli olay <xref:System.Windows.Forms.BindingSource> kendi olay işleme yöntemi ile ilişkilendirilmesi gerekiyor çalıştığınız. İşleme için bir yöntemin bir örneği verilmiştir <xref:System.Windows.Forms.BindingSource.PositionChanged> olay:  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
-### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Bir öğeyi bulur ve geçerli öğesi olarak ayarlamak için  
+### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Öğeyi bulup geçerli öğesi olarak ayarla  
   
-1.  Geçerli öğesi olarak ayarlamak ister kaydı bulun. Kullanarak bunu yapabilirsiniz <xref:System.Windows.Forms.BindingSource.Find%2A> yöntemi <xref:System.Windows.Forms.BindingSource>uygular, veri kaynağı, <xref:System.ComponentModel.IBindingList>. Bazı örnekler veri kaynakları uygulayan <xref:System.ComponentModel.IBindingList> olan <xref:System.ComponentModel.BindingList%601> ve <xref:System.Data.DataView>.  
+1.  Geçerli öğe ayarlamak istediğiniz kaydı bulun. Bunu kullanarak yapabilirsiniz <xref:System.Windows.Forms.BindingSource.Find%2A> yöntemi <xref:System.Windows.Forms.BindingSource>uygular, veri kaynağı, <xref:System.ComponentModel.IBindingList>. Bazı örnekler veri kaynakları uygulayan <xref:System.ComponentModel.IBindingList> olan <xref:System.ComponentModel.BindingList%601> ve <xref:System.Data.DataView>.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Tarafından Desteklenen Veri Kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Windows Forms Tarafından Desteklenen Veri Kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)
+- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)

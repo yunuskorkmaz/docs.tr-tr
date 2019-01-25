@@ -2,12 +2,12 @@
 title: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521393"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve genişletilebilirlik noktaları uygulayan takdirine bağlı olarak sol içerir. Bu konuda, Web Hizmetleri protokolleri WCF uygulayan bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygu
   
 -   [Temel güvenlik profili 1.0 çalışma taslak](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Mesajlaşma Protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL ve İlke](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Güvenlik Protokolleri](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Güvenilir Mesajlaşma Protokolü sürüm 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Güvenilir Mesajlaşma Protokolü sürüm 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [İşlem Protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Bağlam Değişimi Protokolü](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Mesajlaşma Protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL ve İlke](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Güvenlik Protokolleri](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Güvenilir Mesajlaşma Protokolü sürüm 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Güvenilir Mesajlaşma Protokolü sürüm 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [İşlem Protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Bağlam Değişimi Protokolü](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

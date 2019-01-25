@@ -2,12 +2,12 @@
 title: Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: 76a1cc4cdca00df8e3338e9251ce1e715cb8ce29
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711778"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (C#)
 Standart sorgu işleci yöntemleri nesneleri uygulamalarına LINQ iki ana yoldan biriyle yürütün: hemen veya ertelenmiş. Ertelenmiş yürütme kullanan sorgu işleçler ek olarak iki kategoriye ayrılabilir: akış ve akış dışı. Nasıl farklı sorgu işleçlerinin yürütme biliyorsanız, belirli bir sorgudan Al sonuçları anlamanıza yardımcı olabilir. Bu veri kaynağı değiştiğinde veya başka bir sorgu üzerinde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konuda, standart sorgu işleçlerinin yürütme kendi şekilde göre sınıflandırır.  
@@ -87,9 +87,9 @@ Standart sorgu işleci yöntemleri nesneleri uygulamalarına LINQ iki ana yoldan
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Linq.Enumerable>  
-- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- <xref:System.Linq.Enumerable>
+- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

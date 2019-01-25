@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540669"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir. 
@@ -275,7 +275,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  Bir boyut sınırına sahip olduğundan bu basit bir önbelleğe alma stratejisi iyi önbellek tasarım uyar. Ancak, daha fazla bakım maliyetlerini diğer bir deyişle orijinal, artık daha fazla kod yoktur. Yalnızca bir performans sorunu buldunuz ve PerfView, gösterilen önbelleğe alma stratejisi benimseyin <xref:System.Text.StringBuilder> ayırmaları olan önemli bir katkıda bulunan. 
   
-### <a name="linq-and-lambdas"></a>LINQ ve lambda ifadeleri  
+### <a name="linq-and-lambdas"></a>LINQ and lambdas  
 Dil ile tümleşik sorgu (LINQ), lambda ifadeleri ile birlikte bir üretkenlik özellik örneğidir. Ancak, kullanımı zaman içerisinde performansı üzerinde önemli bir etkisi olabilir ve kodunuzu yeniden yazmak zorunda bulabilirsiniz.
   
  **Örnek 5: Lambda ifadeleri, liste\<T > ve IEnumerable\<T >**  
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sunu bu konunun videosu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [Performans](../../../docs/framework/performance/index.md)  
-- [.NET Performans İpuçları](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone Performans analiz aracı](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Visual Studio Profiler uygulama performans sorunlarını bulun](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Sunu bu konunun videosu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Performans](../../../docs/framework/performance/index.md)
+- [.NET Performans İpuçları](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone Performans analiz aracı](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Visual Studio Profiler uygulama performans sorunlarını bulun](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET derleyici Platformu SDK'sı](../../csharp/roslyn-sdk/index.md)
 - [github'da dotnet/roslyn depo](https://github.com/dotnet/roslyn)

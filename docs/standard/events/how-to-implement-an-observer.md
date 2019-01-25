@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gözlemci Uygulama'
+title: 'Nasıl yapılır: Gözlemci uygulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738059"
 ---
-# <a name="how-to-implement-an-observer"></a>Nasıl yapılır: Gözlemci Uygulama
-Gözlemci tasarım deseni için bildirimleri kaydeden bir gözlemci veri izler ve bir veya daha fazla gözlemciler için bildirim gönderen bir sağlayıcı arasındaki bölme işleminin gerektirir. Bu konu, bir gözlemci oluşturulacağını açıklar. İlgili konu başlığında, [nasıl yapılır: sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md), bir sağlayıcı oluşturma anlatılmaktadır.  
+# <a name="how-to-implement-an-observer"></a>Nasıl yapılır: Gözlemci uygulama
+Gözlemci tasarım deseni için bildirimleri kaydeden bir gözlemci veri izler ve bir veya daha fazla gözlemciler için bildirim gönderen bir sağlayıcı arasındaki bölme işleminin gerektirir. Bu konu, bir gözlemci oluşturulacağını açıklar. İlgili konu başlığında, [nasıl yapılır: Sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md), bir sağlayıcı oluşturma anlatılmaktadır.  
   
 ### <a name="to-create-an-observer"></a>Gözlemci oluşturmak için  
   
@@ -51,7 +51,7 @@ Gözlemci tasarım deseni için bildirimleri kaydeden bir gözlemci veri izler v
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IObserver%601>  
-- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
-- [Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- <xref:System.IObserver%601>
+- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)
+- [Nasıl yapılır: Sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)

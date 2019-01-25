@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a864d8285c311a9d5c41a425f81678b294f0d8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546325"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Metodu
-Üst sınıf, meta veri simgesi alır ve `ClassID` işlevinin varsa, her tür bağımsız değişkenin.  
+Üst sınıfın, meta veri belirteci alır ve `ClassID` işlevinin varsa, her tür bağımsız değişkeninin.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,55 +43,55 @@ HRESULT GetFunctionInfo2(
   
 #### <a name="parameters"></a>Parametreler  
  `funcId`  
- [in] Üst sınıf ve diğer bilgileri almak üzere işlevi kimliği.  
+ [in] Üst sınıf ve diğer bilgileri almak işlev kimliği.  
   
  `frameInfo`  
- [in] A `COR_PRF_FRAME_INFO` noktalarını yığın çerçevesi hakkında bilgi için değer.  
+ [in] A `COR_PRF_FRAME_INFO` yığın çerçevesi hakkında bilgi gösteren değer.  
   
  `pClassId`  
- [out] İşlev üst sınıfı için bir işaretçi.  
+ [out] İşlevin üst sınıfı için bir işaretçi.  
   
  `pModuleId`  
- [out] İşlevin üst sınıf tanımlandığı modül için bir işaretçi.  
+ [out] İşlevin üst sınıfı içinde tanımlandığı modül için bir işaretçi.  
   
  `pToken`  
- [out] İşlev için meta veri simgesi için bir işaretçi.  
+ [out] Meta veri belirteci işlevine yönelik bir işaretçi.  
   
  `cTypeArgs`  
- [in] Boyutunu `typeArgs` dizi.  
+ [in] Boyutu `typeArgs` dizisi.  
   
  `pcTypeArgs`  
- [out] Toplam sayısını gösteren bir işaretçi `ClassID` değerleri.  
+ [out] Toplam sayısı için bir işaretçi `ClassID` değerleri.  
   
  `typeArgs`  
- [out] Bir dizi `ClassID` değerleri, her biri kimliğidir işlevinin tür bağımsız değişkeni. Yöntem döndüğünde `typeArgs` bazılarını veya tümünü içerecek `ClassID` değerleri.  
+ [out] Bir dizi `ClassID` değerler, her biri, bir tür bağımsız değişkeni işlevin Kimliğidir. Yöntem döndürüldüğünde `typeArgs` bazılarını veya tümünü içerecektir `ClassID` değerleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kod çağırabilir [Icorprofilerınfo::getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) elde etmek için bir [meta veri](../../../../docs/framework/unmanaged-api/metadata/index.md) verilen modülü için arabirim. Tarafından başvurulan konuma döndürülen meta veri simgesi `pToken` işlevi için meta verilerine erişmek için kullanılabilir.  
+ Profil Oluşturucu kodu çağırabilir [Icorprofilerınfo::getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) almak için bir [meta verileri](../../../../docs/framework/unmanaged-api/metadata/index.md) belirli bir modül için arabirim. Tarafından başvurulan konuma döndürülen meta veri belirteci `pToken` işlevi için meta veriler erişmek için kullanılabilir.  
   
- Aracılığıyla döndürülen sınıfı kimliği ve tür bağımsız değişkenleri `pClassId` ve `typeArgs` geçirilen değer parametreleri bağlı `frameInfo` aşağıdaki tabloda gösterildiği gibi parametre.  
+ İle döndürülen sınıf kimliği ve tür bağımsız değişkenleri `pClassId` ve `typeArgs` geçirilen değere bağlıdır parametreleri `frameInfo` parametresi, aşağıdaki tabloda gösterildiği gibi.  
   
 |Değeri `frameInfo` parametresi|Sonuç|  
 |----------------------------------------|------------|  
-|A `COR_PRF_FRAME_INFO` uygulamasından edinilen değeri bir `FunctionEnter2` geri çağırma|`ClassID`, Döndürülen başvurduğu konumda `pClassId`, ve tüm tür bağımsız değişkenleri, döndürülen `typeArgs` dizisi, tam olacaktır.|  
-|A `COR_PRF_FRAME_INFO` , elde bir kaynaktan dışındaki bir `FunctionEnter2` geri çağırma|Tam `ClassID` ve tür bağımsız değişkenleri belirlenemiyor. Diğer bir deyişle, `ClassID` null olabilir ve bazı tür bağımsız değişkenleri gelebilir olarak geri <xref:System.Object>.|  
+|A `COR_PRF_FRAME_INFO` elde edildiği değeri bir `FunctionEnter2` geri çağırma|`ClassID`, Tarafından başvurulan konumda döndürülen `pClassId`, ve tüm tür bağımsız değişkenleri, döndürülen `typeArgs` dizi, tam olacaktır.|  
+|A `COR_PRF_FRAME_INFO` , alınan bir kaynaktan dışındaki bir `FunctionEnter2` geri çağırma|Tam `ClassID` ve tür bağımsız değişkenleri belirlenemiyor. Diğer bir deyişle, `ClassID` null olabilir ve bazı tür bağımsız değişkenleri gelebilir olarak geri <xref:System.Object>.|  
 |Sıfır|Tam `ClassID` ve tür bağımsız değişkenleri belirlenemiyor. Diğer bir deyişle, `ClassID` null olabilir ve bazı tür bağımsız değişkenleri gelebilir olarak geri <xref:System.Object>.|  
   
- Sonra `GetFunctionInfo2` döndürür, doğrulamalısınız `typeArgs` arabellek tüm içerecek şekilde büyük `ClassID` değerleri. Bunu yapmak için değeri karşılaştırın, `pcTypeArgs` değeriyle işaret `cTypeArgs` parametresi. Varsa `pcTypeArgs` işaret eden daha büyük bir değere `cTypeArgs` boyutu tarafından ayrılmış bir `ClassID` değeri, daha geniş bir ayırma `pcTypeArgs` arabellek, güncelleştirme `cTypeArgs` yeni, büyük boyutu ve çağrı `GetFunctionInfo2` yeniden.  
+ Sonra `GetFunctionInfo2` döndürür, doğrulamalısınız `typeArgs` arabellek tüm içerecek şekilde büyük `ClassID` değerleri. Bunu yapmak için değeri ile karşılaştırmak, `pcTypeArgs` değeriyle işaret `cTypeArgs` parametresi. Varsa `pcTypeArgs` işaret değerinden daha büyük bir değere `cTypeArgs` boyutu tarafından ayrılmış bir `ClassID` değeri, daha büyük bir ayırma `pcTypeArgs` arabellek, güncelleştirme `cTypeArgs` yeni, daha büyük bir boyut ve çağrı `GetFunctionInfo2` yeniden.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetFunctionInfo2` sıfır uzunluklu ile `pcTypeArgs` arabellek doğru arabellek boyutu elde edilir. Döndürülen değer için arabellek boyutu ayarlayabilirsiniz `pcTypeArgs` boyutu tarafından ayrılmış bir `ClassID` değeri ve çağrı `GetFunctionInfo2` yeniden.  
+ Alternatif olarak, ilk çağırabilirsiniz `GetFunctionInfo2` sıfır uzunluklu ile `pcTypeArgs` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcTypeArgs` boyutu tarafından ayrılmış bir `ClassID` değeri ve çağrı `GetFunctionInfo2` yeniden.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf.idl, CorProf.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

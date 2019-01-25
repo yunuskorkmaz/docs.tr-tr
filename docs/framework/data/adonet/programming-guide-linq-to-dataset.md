@@ -2,12 +2,12 @@
 title: Programlama Kılavuzu (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636488"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ to DataSet)
 Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -25,7 +25,7 @@ Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLU
  [Sorgudan DataTable Oluşturma](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Oluşturma hakkında bilgi sağlayan bir <xref:System.Data.DataTable> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanarak sorgu <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi.  
   
- [Nasıl yapılır: uygulama CopyToDataTable\<T > Burada T genel türünün DataRow olmadığı](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Nasıl yapılır: CopyToDataTable uygulamak\<T > Burada T genel türünün DataRow olmadığı](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Özel bir uygulamayı açıklar `CopyToDataTable<T>` yöntemi burada genel parametre T türünde değil <xref:System.Data.DataRow>.  
   
  [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -54,5 +54,5 @@ Bu bölüm ile programlama için kavramsal bilgiler ve örnekler sağlar [!INCLU
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve ADO.NET](linq-and-ado-net.md)  
+- [LINQ ve ADO.NET](linq-and-ado-net.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

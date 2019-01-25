@@ -2,12 +2,12 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 34220a3651819978f5f597fdc67d54630ec5e059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d84184febd6db3f233aae6fe558b8e0f50a9cb82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608842"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  
@@ -56,5 +56,5 @@ class OneWayBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>

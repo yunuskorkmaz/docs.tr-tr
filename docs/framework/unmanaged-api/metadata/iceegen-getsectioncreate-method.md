@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643370"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Metodu
-Oluşturur ve belirtilen ad ve bayrak değerleri kullanarak bir kod bölümü alır.  
+Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
   
@@ -41,25 +41,25 @@ HRESULT GetSectionCreate (
   
 #### <a name="parameters"></a>Parametreler  
  `name`  
- [in] Oluşturulacak bölümün adını belirten bir dize için bir işaretçi.  
+ [in] Oluşturulacak bölümün adını belirten bir dize işaretçisi.  
   
  `flags`  
- [in] Seçeneklerini belirtin bayraklar.  
+ [in] Seçeneklerini belirten bayraklar.  
   
  `section`  
- [out] Yeni oluşturulan kod bölümünde bir işaretçi.  
+ [out] Yeni oluşturulan kod bölümüne yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrı `GetSectionCreate` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleri varsa.  
+ Çağrı `GetSectionCreate` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** Cor.h  
+ **Üst bilgi:** COR.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

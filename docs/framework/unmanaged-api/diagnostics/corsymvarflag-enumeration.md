@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9c5ff91989fc1ad7da4e23df0e80d9d74ec7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670146"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag Numaralandırması
-Bir değişken derleyicinin ürettiği olup olmadığını gösterir.  
+Bir değişken, derleyicinin ürettiği olup olmadığını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ typedef enum CorSymVarFlag
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Belirtilen değişken derleyicinin ürettiği olduğunu gösterir.|  
+|`VAR_IS_COMP_GEN`|Belirtilen değişken, derleyicinin ürettiği olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

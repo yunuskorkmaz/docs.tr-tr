@@ -12,27 +12,27 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8aafd1586068dcd7aaf4a72ef5454e3a2698ccd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645242"
 ---
 # <a name="accessing-custom-attributes"></a>Özel Özniteliklere Erişim
-Öznitelikleri program öğelerle ilişkili eklendikten sonra yansıma mevcut olmaları ve değerleri sorgulamak için kullanılabilir. .NET Framework sürüm 1.0 ve 1.1'da, özel öznitelikler yürütme bağlamı incelenir. .NET Framework sürüm 2.0, yeni bir yük bağlamı için yürütme yüklenemiyor kodu incelemek için kullanılan salt yansıma bağlamı sağlar.  
+Öznitelikleri program öğelerle ilişkili eklendikten sonra yansıma olmaları ve uygulanmaları değerlerini sorgulamak için kullanılabilir. .NET Framework 1.0 ve 1.1 sürümlerinde, özel öznitelikler yürütme bağlamında incelenir. .NET Framework 2.0 sürümünde yeni bir yükleme bağlamı, yürütme için yüklenemiyor kodu incelemek için kullanılan salt yansıma bağlam sağlar.  
   
 ## <a name="the-reflection-only-context"></a>Yalnızca yansıma bağlamı  
- Yalnızca yansıma bağlamına yüklenen kod yürütülemez. Kendi oluşturucular yürütülmesi gerekir çünkü bu, özel öznitelikler örneklerini oluşturulamayacağını, anlamına gelir. Yük ve salt yansıma bağlamına özel öznitelikleri incelemek için kullanmak <xref:System.Reflection.CustomAttributeData> sınıfı. Statik uygun aşırı yüklemesine kullanarak bu sınıfın örnekleri, edinebilirsiniz <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> yöntemi. Bkz: [nasıl yapılır: salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+ Salt yansıma bağlamına yüklenen kodunu yürütülemez. Oluşturucuları yürütülmesi gerekir çünkü bu, özel öznitelikler örneklerini oluşturulamayacağını, anlamına gelir. Yük ve özel öznitelikleri salt yansıma bağlamında incelemek için kullandığınız <xref:System.Reflection.CustomAttributeData> sınıfı. Bu sınıfın örnekleri statik uygun aşırı yüklemesini kullanarak elde edebilirsiniz <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> yöntemi. Bkz: [nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>Yürütme bağlamı  
- Yürütme bağlamı sorgu öznitelikleri için ana yansıma yöntemleri <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> ve <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
+ Sorgu yürütme bağlamı özniteliklerle ana yansıma yöntemlerdir <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> ve <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
   
- Özel bir öznitelik erişilebilirliğini ekli olduğu derleme göre denetlenir. Bu, bir tür özel öznitelik bağlı olduğu derlemesindeki bir yöntem özel öznitelik Oluşturucusu çağırıp çağırmayacağınızı denetimini eşdeğerdir.  
+ Özel bir öznitelik erişilebilirliğini bağlı olduğu derleme göre denetlenir. Bu, özel öznitelik oluşturucusunun özel özniteliği ekli olduğu derlemedeki bir türe üzerinde bir yöntemi çağırıp çağırmayacağınızı denetimini eşdeğerdir.  
   
- Gibi yöntemler <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> görünürlük ve tür bağımsız değişkeni erişilebilirliğini denetleyin. Kullanıcı tanımlı türünü içeren bütünleştirilmiş kod türünü kullanarak özel bir öznitelik alabilir yalnızca **GetCustomAttributes**.  
+ Yöntemler gibi <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> görünürlük ve erişilebilirliği, tür bağımsız değişkeni kontrol edin. Kullanıcı tanımlı tür içeren derlemenin kod türünü kullanarak özel bir öznitelik alabilirsiniz yalnızca **GetCustomAttributes**.  
   
- Aşağıdaki C# tipik özel öznitelik tasarım deseni örnektir. Çalışma zamanı özel öznitelik yansıma modeli gösterilmektedir.  
+ Aşağıdaki C# tipik bir özel öznitelik tasarım deseni bir örnektir. Bu, çalışma zamanı özel öznitelik yansıma modelini gösterir.  
   
 ```  
 System.DLL  
@@ -54,26 +54,26 @@ public class LocalizationExtenderProvider
 }  
 ```  
   
- Genel özel öznitelik türü için bir özel öznitelikler almak çalışma zamanı girişiminde bulunursa <xref:System.ComponentModel.DescriptionAttribute> bağlı **GetLanguage** yöntemi, aşağıdaki eylemleri gerçekleştirir:  
+ Genel özel öznitelik türü için özel öznitelikleri almak çalışma zamanı girişiminde bulunursa <xref:System.ComponentModel.DescriptionAttribute> bağlı **GetLanguage** yöntemi, aşağıdaki eylemleri gerçekleştirir:  
   
-1.  Çalışma zamanı denetleyen tür bağımsız değişkeni **DescriptionAttribute** için **Type.GetCustomAttributes**(türü *türü*) ortaktır ve bu nedenle görünür ve erişilebilir olduğunu.  
+1.  Çalışma zamanı denetimleri tür bağımsız değişkeni **DescriptionAttribute** için **Type.GetCustomAttributes**(tür *türü*) herkese açıktır ve bu nedenle görünür ve erişilebilir.  
   
-2.  Çalışma zamanı denetleyen kullanıcı tanımlı tür **MyDescriptionAttribute** öğesinden türetilen **DescriptionAttribute** görünür ve içinde erişilebilir **System.Web.DLL**derleme, yönteme bağlı **GetLanguage**().  
+2.  Çalışma zamanı denetimleri kullanıcı tanımlı türe **MyDescriptionAttribute** sınıfından türetilen **DescriptionAttribute** görünür ve erişilebilir **System.Web.DLL**derleme, yönteme bağlı **GetLanguage**().  
   
-3.  Çalışma zamanı denetleyen oluşturucusunun **MyDescriptionAttribute** görünür ve içinde erişilebilir **System.Web.DLL** derleme.  
+3.  Çalışma zamanı denetimleri oluşturucusunun **MyDescriptionAttribute** görünür ve erişilebilir **System.Web.DLL** derleme.  
   
-4.  Çalışma zamanı oluşturucusunun çağırır **MyDescriptionAttribute** özel öznitelik parametrelerle ve çağıran için yeni bir nesne döndürür.  
+4.  Çalışma zamanı oluşturucusunu çağırır **MyDescriptionAttribute** özel öznitelik parametrelerle ve yeni nesne çağırana döner.  
   
- Özel öznitelik yansıma model türünün tanımlandığı derleme dışına kullanıcı tanımlı türler örneklerini sızıntısı. Bu, kullanıcı tanımlı türler örneklerini gibi dönüş üyelerinden çalışma zamanı sistem Kitaplığı'nda farklı değildir <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> bir dizi döndürme **RuntimeMethodInfo** nesneleri. Kullanıcı tanımlı özel öznitelik türü bulan bilgilerini istemciden önlemek için ortak olmayan olması için türün üyeleri tanımlar.  
+ Özel öznitelik yansıma model türünün tanımlandığı derleme dışından kullanıcı tanımlı türlerin örneklerini dışarıya sızmasına neden olabilecek. Bu gibi kullanıcı tanımlı türler örneklerini döndüren üyelerinden sistem Çalışma Zamanı Kitaplığı'nda farklı değildir <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> dizisi döndürme **RuntimeMethodInfo** nesneleri. Bir istemciden bir kullanıcı tanımlı özel öznitelik türü bulan bilgilerini önlemek için türün üyeleri özel olarak tanımlayın.  
   
- Aşağıdaki örnek, özel öznitelikler erişmek için yansıma kullanarak en temel yolu gösterir.  
+ Aşağıdaki örnek, özel özniteliklere erişim elde etmek için yansıma kullanarak en temel yolu gösterir.  
   
  [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)]
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
+- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)

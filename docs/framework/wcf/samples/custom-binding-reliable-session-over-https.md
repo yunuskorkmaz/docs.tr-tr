@@ -2,12 +2,12 @@
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d25a59b5921484c33a2b0c94febc97a04011f8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643435"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 Bu örnek, SSL Aktarım güvenliği ile güvenilir oturumlar kullanımını gösterir. Güvenilir oturumlar WS güvenilir Mesajlaşma Protokolü uygular. WS-Security güvenilir oturumları bir araya getirerek, güvenli ve güvenilir bir oturum olabilir. Ancak bazı durumlarda, HTTP aktarım güvenliği SSL ile kullanmayı tercih edebilirsiniz.  
@@ -136,4 +136,4 @@ Press <ENTER> to terminate client.
   
 5.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.

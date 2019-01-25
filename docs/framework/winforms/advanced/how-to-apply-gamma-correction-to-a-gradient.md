@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Gradyana Gama Düzeltmesi Uygulama'
+title: 'Nasıl yapılır: Bir Gradyana gama düzeltmesi uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: 9c3c9c5c63194b1dee8314a1ef96497a8b78b5ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3b45c312542a3f8410bd93fcbe4e4cb70aa8516
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527165"
 ---
-# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Nasıl yapılır: Bir Gradyana Gama Düzeltmesi Uygulama
-Gama düzeltme doğrusal gradyan fırçası için fırça ayarlayarak etkinleştirebilirsiniz <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> özelliğine `true`. Ayarlayarak gama düzeltmesi devre dışı bırakabilirsiniz <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> özelliğine `false`. Gama düzeltme varsayılan olarak devre dışıdır.  
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Nasıl yapılır: Bir Gradyana gama düzeltmesi uygulama
+Fırçanın ayarlayarak gama düzeltmesi için doğrusal gradyan fırçası etkinleştirebilirsiniz <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> özelliğini `true`. Ayarlayarak gama düzeltmesi devre dışı bırakabilirsiniz <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> özelliğini `false`. Gama düzeltmesi, varsayılan olarak devre dışıdır.  
   
 ## <a name="example"></a>Örnek  
- Örnek doğrusal gradyan fırçası oluşturur ve o fırça iki dikdörtgen doldurmak için kullanır. İlk dikdörtgen gama düzeltmesi girilir ve İkinci dikdörtgeni gama düzeltmesi ile doldurulur.  
+ Örneğin, doğrusal gradyan fırçası oluşturur ve iki dikdörtgenler doldurmak için bu fırça kullanır. İlk dikdörtgen gama düzeltmesi doldurulur ve İkinci dikdörtgeni gama düzeltmesi ile doldurulur.  
   
- Aşağıdaki çizimde iki doldurulmuş dikdörtgen gösterir. Gama düzeltme yok, üst dikdörtgen ortadaki koyu görüntülenir. Gama düzeltme varsa, alt kısımdaki dikdörtgeni daha fazla Tekdüzen yoğunluğu olan görünüyor.  
+ Aşağıdaki çizimde, iki Dolu Dikdörtgen gösterilir. Gama düzeltmesi yok, üst dikdörtgen, ortadaki koyu görünür. Daha fazla Tekdüzen yoğunluğu olan gama düzeltmesi varsa, alt dikdörtgen görünür.  
   
  ![Gradyan](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
   
@@ -29,8 +29,8 @@ Gama düzeltme doğrusal gradyan fırçası için fırça ayarlayarak etkinleşt
  [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush>  
- [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Drawing2D.LinearGradientBrush>
+- [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

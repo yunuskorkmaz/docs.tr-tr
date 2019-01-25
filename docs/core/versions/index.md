@@ -4,12 +4,12 @@ description: Bu makalede çalışma zamanı ve .NET Core SDK'sı sürümü (benz
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 86ef49aaf29efcc5988185910520694713e35599
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516765"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core nasıl tutulan genel bakış
 
@@ -106,8 +106,8 @@ Her sürümünde .NET Core, .NET Standard'ın bir sürümünü uygular. .NET Sta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Hedef çerçeveler](../../standard/frameworks.md)  
-* [.NET Core dağıtımı paketleme](../build/distribution-packaging.md)  
-* [.NET core destek yaşam döngüsü bilgi sayfası](https://www.microsoft.com/net/core/support)  
-* [.NET core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core için docker görüntüleri](https://hub.docker.com/r/microsoft/dotnet/)
+- [Hedef çerçeveler](../../standard/frameworks.md)
+- [.NET Core dağıtımı paketleme](../build/distribution-packaging.md)
+- [.NET core destek yaşam döngüsü bilgi sayfası](https://www.microsoft.com/net/core/support)
+- [.NET core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)
+- [.NET Core için docker görüntüleri](https://hub.docker.com/r/microsoft/dotnet/)

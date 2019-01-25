@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640439"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>İzlenecek Yol: Sınıfları Tanımlama (Visual Basic)
+# <a name="walkthrough-defining-classes-visual-basic"></a>İzlenecek yol: Sınıflar (Visual Basic) tanımlama
 
 Bu yönerge, ardından nesneleri oluşturmak için kullanabileceğiniz sınıflarını tanımlamak nasıl gösterir. Ayrıca yeni sınıfa özellikler ve yöntemler eklemek nasıl gösterir ve bir nesneyi başlatmaya gösterilmektedir.  
   
@@ -30,11 +30,11 @@ Bu yönerge, ardından nesneleri oluşturmak için kullanabileceğiniz sınıfla
   
 ## <a name="to-define-a-class"></a>Bir sınıf tanımlamak için
   
-1.  Tıklayarak bir proje oluşturun **yeni proje** üzerinde **dosya** menüsü. **Yeni proje** iletişim kutusu görüntülenir.  
+1.  Tıklayarak bir proje oluşturun **yeni proje** üzerinde **dosya** menüsü. **Yeni Proje** iletişim kutusu görünür.  
   
 2.  Windows uygulamasını yeni proje görüntülemek için Visual Basic proje şablonları listesinden seçin.  
   
-3.  Tıklayarak, projeye yeni bir sınıf ekleyin **sınıfı Ekle** üzerinde **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
+3.  Tıklayarak, projeye yeni bir sınıf ekleyin **sınıfı Ekle** üzerinde **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görünür.  
   
 4.  Seçin **sınıfı** şablonu.  
   
@@ -81,5 +81,5 @@ Bu yönerge, ardından nesneleri oluşturmak için kullanabileceğiniz sınıfla
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

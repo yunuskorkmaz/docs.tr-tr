@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 7ee6cddefd5955ee76510ffeb23335f05460657b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726474"
 ---
 # <a name="assembly-visual-basic"></a>Derleme (Visual Basic)
-Bir kaynak dosyasının başında bir öznitelik tüm derlemeye uygulanacağını belirtir.  
+Bir kaynak dosyasının başında bir öznitelik tüm derleme için geçerli olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çok sayıda özniteliği bir sınıf veya özellik gibi tek bir programlama öğe ilgilidir. Köşeli parantez içinde öznitelik blok ekleyerek bu tür bir öznitelik geçerli (`< >`), bildirim deyiminin için doğrudan.  
+ Tek programlama öğesine, bir sınıf ya da özellik gibi birçok öznitelikleri ilgilidir. Açılı ayraçlar içinde öznitelik bloğuna ekleyerek bu tür bir öznitelik uygulamak (`< >`), doğrudan bildirim deyiminin için.  
   
- Bir öznitelik değil yalnızca aşağıdaki öğesine, ancak tüm derleme ilgiliyse, öznitelik blok kaynak dosyasının başında yerleştirin ve öznitelik tanımlamak `Assembly` anahtar sözcüğü. Geçerli derleme modülü geçerliyse, kullandığınız [Modülü](../../../visual-basic/language-reference/modifiers/module-keyword.md) anahtar sözcüğü.  
+ Bir öznitelik yalnızca şu öğe ancak tüm derleme ilgiliyse, öznitelik bloğuna kaynak dosyasının başında yerleştirin ve özniteliğiyle tanımlamak `Assembly` anahtar sözcüğü. Geçerli derleme modülü için geçerliyse, kullandığınız [Modülü](../../../visual-basic/language-reference/modifiers/module-keyword.md) anahtar sözcüğü.  
   
- Bir öznitelik AssemblyInfo.vb dosyasındaki bir derlemenin, bu durumda, bir öznitelik blok ana kaynak kodu dosyanızda kullanmak zorunda değil de uygulayabilirsiniz.  
+ Öznitelik bir derlemeye AssemblyInfo.vb dosyasında, bu durumda öznitelik bloğuna ana kaynak kodu dosyanızda kullanın gerekmez de uygulayabilirsiniz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

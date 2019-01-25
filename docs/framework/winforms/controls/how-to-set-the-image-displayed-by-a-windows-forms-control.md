@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama'
+title: 'Nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms denetimi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644930"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama
-Çeşitli Windows Forms denetimleri görüntüleri görüntüleyebilirsiniz. Bu görüntüleri belirten düğmesi üzerinde bir disket simgesi gibi denetimi amacını açıklığa simgeler olabilir **kaydetmek** komutu. Alternatif olarak, simgeler denetim istediğiniz davranış ve görünümünü sağlamak için arka plan görüntüleri olabilir.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms denetimi
+Çeşitli Windows Forms denetimleri, görüntüleri görüntüleyebilirsiniz. Bu görüntüler gibi bir disket simgesini gösteren düğme üzerinde denetimin amacını açıklamak simgeler olabilir **Kaydet** komutu. Alternatif olarak, simgeler arka plan görüntüleri görünümünü ve davranışını istediğiniz hakkında denetim vermek olabilir.  
   
-### <a name="to-set-the-image-displayed-by-a-control"></a>Bir denetimi tarafından görüntülenen resmi ayarlamak için  
+### <a name="to-set-the-image-displayed-by-a-control"></a>Bir denetimi tarafından görüntülenen resmi ayarlama  
   
-1.  Denetimin ayarlamak `Image` veya `BackgroundImage` türünde bir nesne için özellik <xref:System.Drawing.Image>. Genellikle, bir dosyadan kullanarak yükleme resmi <xref:System.Drawing.Image.FromFile%2A> yöntemi.  
+1.  Denetimin ayarlamak `Image` veya `BackgroundImage` türünde bir nesne özelliğini <xref:System.Drawing.Image>. Genellikle, görüntüyü bir dosyadan kullanarak yüklüyor gibi <xref:System.Drawing.Image.FromFile%2A> yöntemi.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlama görüntüsünün konumu için **resimler** klasör. Windows işletim sistemi çalıştıran bilgisayarların çoğu bu dizine dahil edilir. Bu uygulama güvenli bir şekilde çalıştırmak minimum sistem erişim düzeyleri olan kullanıcılar da sağlar. Aşağıdaki kod örneğinde bir formla zaten sahip olmasını gerektiren bir <xref:System.Windows.Forms.PictureBox> eklenmiş denetimi.  
+     Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Resimlerim** klasör. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizine dahil edilir. Bu uygulamayı güvenli bir şekilde çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar. Aşağıdaki kod örneği bir formla zaten sahip olmasını gerektirir. bir <xref:System.Windows.Forms.PictureBox> denetimi eklendi.  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ ms.locfileid: "33533747"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

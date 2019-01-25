@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745486"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual Yöntemi
-Verileri belirtilen arabelleğinden belirtilen sanal bellek adresi yazar.  
+Verileri belirtilen arabellek belirtilen sanal bellek adresini yazar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,7 +44,7 @@ HRESULT WriteVirtual (
  [in] Sanal bellek adresi depolar CLRDATA_ADDRESS.  
   
  `buffer`  
- [in] Yazılacak verilerini depolayan bir arabellek için bir işaretçi.  
+ [in] Yazılacak veri depolayan arabellek için işaretçi.  
   
  `bytesRequested`  
  [in] Yazılacak bayt sayısı.  
@@ -53,13 +53,13 @@ HRESULT WriteVirtual (
  [out] Gerçek yazılan bayt sayısı için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

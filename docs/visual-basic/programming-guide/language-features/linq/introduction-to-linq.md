@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524059"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ), Visual Basic sorgu özellikleri ekler ve her tür veri ile çalışırken, basit ve güçlü özellikler sağlar. Bir sorguyu işlenmek üzere bir veritabanına göndermek veya her arama yaptığınız veri türü için farklı sorgu sözdizimiyle çalışmak yerine LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak birleştirilmiş sözdizimi kullanır.  
@@ -177,7 +177,7 @@ LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri üy
   
  Geçerli bir SQL Server veritabanı bağlantınız olduğunda ekleyebileceğiniz bir **LINQ to SQL sınıfları** projenize öğe şablonu. Bu, Object Relational Designer (O/R Tasarımcısı) görüntülenir. O/R Tasarımcısı kodunuzda erişmek istediğiniz öğeleri sürükleyin sağlar **Sunucu Gezgini**/**veritabanı Gezgini** Tasarımcı yüzeyine. LINQ to SQL dosyası ekler bir <xref:System.Data.Linq.DataContext> projenize nesne. Bu nesne için tablolar ve görünümler, erişim ve yöntemleri çağırmak istediğiniz saklı yordamları için istediğiniz özellikler ve Koleksiyonlar içerir. LINQ to SQL (.dbml) dosyası için yaptığınız değişiklikleri kaydettikten sonra bu nesneler, kodunuzda başvurarak erişebilirsiniz <xref:System.Data.Linq.DataContext> O/R tasarımcısı tarafından tanımlanan nesne. <xref:System.Data.Linq.DataContext> Nesne projeniz temel alınarak, LINQ to SQL dosyası adı. Örneğin, Northwind.dbml olarak adlandırılan SQL dosyası için bir LINQ oluşturacak bir <xref:System.Data.Linq.DataContext> adlı nesne `NorthwindDataContext`.  
   
- Adım adım yönergeleri içeren örnekler için bkz [nasıl yapılır: veritabanını sorgulama](how-to-query-a-database-by-using-linq.md) ve [nasıl yapılır: bir saklı yordam çağırma](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Adım adım yönergeleri içeren örnekler için bkz [nasıl yapılır: Bir veritabanını sorgulama](how-to-query-a-database-by-using-linq.md) ve [nasıl yapılır: Bir saklı yordamı çağırma](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>LINQ'i destekleyen Visual Basic özellikleri  
  Visual Basic LINQ kullanımını kolaylaştırır ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltmak başka önemli özellikler içerir. Bunlar aşağıdakileri içerir:  
@@ -224,21 +224,21 @@ LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri üy
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|LINQ to XML için genel bilgileri, programlama yönergelerini ve örnekleri içerir.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Nasıl yapılır ve izlenecek yol konuları
- [Nasıl yapılır: veritabanını sorgulama](how-to-query-a-database-by-using-linq.md)  
+ [Nasıl yapılır: Bir veritabanını sorgulama](how-to-query-a-database-by-using-linq.md)  
   
- [Nasıl yapılır: bir saklı yordamı çağırma](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Nasıl yapılır: Bir saklı yordamı çağırma](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Nasıl yapılır: bir veritabanındaki verileri değiştirme](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Nasıl yapılır: Bir veritabanındaki verileri değiştirme](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [Nasıl yapılır: birleştirmeleri kullanarak veri birleştirme](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Nasıl yapılır: Birleştirmeleri kullanarak veri birleştirme](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Nasıl yapılır: sorgu sonuçlarını sıralama](how-to-sort-query-results-by-using-linq.md)  
+ [Nasıl yapılır: Sorgu sonuçlarını sıralama](how-to-sort-query-results-by-using-linq.md)  
   
- [Nasıl yapılır: sorgu sonuçlarını filtreleme](how-to-filter-query-results-by-using-linq.md)  
+ [Nasıl yapılır: Sorgu sonuçlarını filtreleme](how-to-filter-query-results-by-using-linq.md)  
   
  [Nasıl yapılır: Count, Sum veya Average verisi](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Nasıl yapılır: bir sorgu sonucunda en düşük ve en fazla değeri bulma](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Nasıl yapılır: Bir sorgu sonucunda en düşük ve en fazla değeri bulma](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
@@ -247,9 +247,9 @@ LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri üy
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)  
-- [LINQ to XML Visual Basic'de genel bakış](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [LINQ to DataSet Genel Bakış](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)
+- [LINQ to XML Visual Basic'de genel bakış](../../language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ to DataSet Genel Bakış](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

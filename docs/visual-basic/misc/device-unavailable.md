@@ -1,24 +1,24 @@
 ---
-title: Aygıt kullanılamıyor
+title: Cihaz kullanılamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 7d8bf87150fa6e05021dd430217ae130a6baa208
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 033da165bfc0535f0091c79230b45c0d89dead31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33634852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736448"
 ---
-# <a name="device-unavailable"></a>Aygıt kullanılamıyor
+# <a name="device-unavailable"></a>Cihaz kullanılamıyor
 Ağ bağlantısı kesilmiş veya erişmeye çalıştığınız cihaz çevrimdışı veya yok.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Aygıt ve bilgisayarınız aygıta bağlanıyor kabloları güç denetleyin. Bir ağ üzerinden bir yazıcıya erişmeye çalıştığınız, bilgisayarınız ve yazıcı, örneğin, ağ yazıcı kimliğiyle LPT1 ilişkilendirme bağlantı arasındaki mantıksal bir bağlantı olduğundan emin olun  
+1.  Cihaz ve bilgisayarınızı cihaza bağlanma kabloları Power denetleyin. Bir ağ üzerinden bir yazıcı erişmeye çalışıyorsanız, bilgisayarınız ve yazıcı, örneğin, LPT1 ağ yazıcı kimliği ile ilişkili bir bağlantısı arasında mantıksal bir bağlantı olduğundan emin olun.  
   
-2.  Ağa bağlayın ve yeniden deneyin.  
+2.  Ağa yeniden bağlanıp tekrar deneyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587966"
 ---
 # <a name="internet-authentication"></a>Internet kimlik doğrulama
 <xref:System.Net> Sınıfları istemci kimlik doğrulama mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, negotiate, NTLM ve Kerberos kimlik doğrulaması, hem de oluşturabileceğiniz özel yöntemler.  
@@ -39,7 +39,7 @@ ms.locfileid: "50181049"
   
  Bazı kimlik doğrulama düzeni bir kaynak için bir istek yapmadan kullanıcı kimlik doğrulaması yapabilir. Bir uygulama, bu nedenle sunucu için en az bir gidiş dönüş ortadan kaynak kullanıcıyla preauthenticating tarafından zamandan tasarruf edebilirsiniz. Veya, daha sonra kullanıcıya daha duyarlı olmamız için program başlatma sırasında kimlik doğrulaması gerçekleştirebilirsiniz. Ön kimlik doğrulaması kullanabilir kimlik doğrulama düzenleri <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğini **true**.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [NTLM ve Kerberos Kimlik Doğrulaması](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [NTLM ve Kerberos Kimlik Doğrulaması](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

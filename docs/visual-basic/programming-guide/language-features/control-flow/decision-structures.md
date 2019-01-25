@@ -9,46 +9,46 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 1ede40d196b470a351aca4c60b33f074df14b86a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735253"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
-Visual Basic koşullarda test ve test sonuçlarını bağlı olarak farklı işlemler gerçekleştirmek olanak sağlar. True veya false ifade çeşitli değerleri için veya bir dizi deyimi yürüttüğünüzde oluşturulan çeşitli özel durumlar için olan bir koşul için test edebilirsiniz.  
+Visual Basic koşulları test etmeye ve test sonuçlarına bağlı olarak farklı işlemler gerçekleştirmek olanak sağlar. True veya false, bir ifadenin çeşitli değerleri için veya bir deyimler serisini çalıştırdığınızda oluşturulan çeşitli özel durumlar için olan bir koşul için test edebilirsiniz.  
   
- Aşağıdaki çizimde, true olan bir koşulu sınar ve doğru veya yanlış olmasına bağlı olarak farklı eylemleri gerçekleştirir karar yapısını gösterir.  
+ Aşağıdaki çizim true olan bir koşulu sınar ve doğru veya yanlış olmasına bağlı olarak farklı eylemler geçen bir karar yapısını gösterir.  
   
- ![Akış Çizelgesi bir if... Then... Else yapım](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
+ ![Akış Çizelgesi bir If... Daha sonra... Başka bir yapı](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
 Bir koşul true ve false olduğunda olduğunda farklı eylemler alma  
   
-## <a name="ifthenelse-construction"></a>If... Then... Else yapımı  
- `If...Then...Else` kurulumlarını için bir veya daha fazla koşullarda test ve her koşul bağlı olarak bir veya daha fazla deyimleri çalıştırmanıza olanak sağlar. Koşullarda test ve aşağıdaki yollarla eylemleri gerçekleştirin:  
+## <a name="ifthenelse-construction"></a>If... Daha sonra... Başka bir yapı  
+ `If...Then...Else` yapılarını için bir veya daha fazla koşulları test etmeye ve bir veya daha fazla deyim her koşula bağlı çalıştırmanıza olanak tanır. Koşulları test etmeye ve eylemleri aşağıdaki yollarla kullanabilirsiniz:  
   
--   Bir koşul ise, bir veya daha fazla deyimlerini çalıştırın `True`  
+-   Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `True`  
   
--   Bir koşul ise, bir veya daha fazla deyimlerini çalıştırın `False`  
+-   Bir koşul ise, bir veya daha fazla deyimleri çalıştırın `False`  
   
--   Bir koşul ise, bazı deyimleri çalıştırmak `True` ve diğerleri etkinleştirilmişse `False`  
+-   Bir koşul ise, bazı deyimleri çalıştırın `True` ve diğerleri ise `False`  
   
--   Önceki bir koşul ise, ek bir koşulu test `False`  
+-   Önceki koşul ise, ek bir koşul testi `False`  
   
- Bu olanakları sunar denetim yapısı [varsa... Then... Else deyimi](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Yalnızca bir test ve çalıştırmak için bir deyim varsa tek satırlı sürüm kullanabilirsiniz. Koşullar ve Eylemler daha karmaşık bir dizi varsa, birden çok satır sürümü kullanabilirsiniz.  
+ Tüm bu olanaklar sunan denetim yapısı [varsa... Daha sonra... Else deyimi](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sadece bir test ve çalıştırmak için bir ifade varsa, tek satır sürümü kullanabilirsiniz. Koşullar ve Eylemler daha karmaşık bir dizi varsa, birden çok satır sürümü kullanabilirsiniz.  
   
-## <a name="selectcase-construction"></a>Seçin... Örnek oluşturma  
- `Select...Case` Yapım bir ifadenin bir kez değerlendirmek ve çalışma farklı olası değerlerine göre deyimlerinin farklı ayarlar sağlar. Daha fazla bilgi için bkz: [seçin... Case deyimi](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Seçin... Servis talebi oluşturma  
+ `Select...Case` Yapım bir ifade bir kez ve farklı farklı olası değerlere dayalı ifadeler kümesi çalıştırmanıza olanak tanır. Daha fazla bilgi için [seçin... Case deyimi](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try... Catch... Son olarak oluşturma  
- `Try...Catch...Finally` kurulumlarını deyimleri altında bir özel durum, deyimleri herhangi biri neden olursa, Denetim korur bir ortam kümesi çalıştırmanıza izin. Farklı özel durumlar için farklı işlemler yapabilirsiniz. İsteğe bağlı olarak tüm çıkmadan önce çalışan bir kod bloğunu belirtebilirsiniz `Try...Catch...Finally` neler bağımsız olarak oluşturma. Daha fazla bilgi için bkz: [deneyin... Catch... Finally ifadesi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Deneyin... Catch... Son olarak oluşturma  
+ `Try...Catch...Finally` yapılarını deyimler, deyim herhangi bir özel durum neden olursa denetimi elinde bir ortamda altında kümesi çalıştırmanıza olanak tanır. Farklı özel durumlar için farklı eylemleri gerçekleştirebilirsiniz. İsteğe bağlı olarak tüm çıkmadan önce çalışan bir kod bloğunu belirtebilirsiniz `Try...Catch...Finally` ne olacağını bağımsız olarak oluşturma,. Daha fazla bilgi için [deneyin... Catch... Finally deyimini](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
->  Bir anahtar sözcüğü tıklattığınızda birçok denetim yapıları için tüm anahtar sözcükleri yapısında vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` yapım, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar sözcüğe taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
+>  Bir anahtar sözcük tıkladığınızda birçok denetim yapıları için anahtar sözcükleri yapısındaki tüm vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` oluşturma, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [İç İçe Geçmiş Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [If İşleci](../../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [İç İçe Geçmiş Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [If İşleci](../../../../visual-basic/language-reference/operators/if-operator.md)

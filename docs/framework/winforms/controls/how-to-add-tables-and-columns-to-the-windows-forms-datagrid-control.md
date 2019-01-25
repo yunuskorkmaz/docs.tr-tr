@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme'
+title: 'Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: fc8161ea29da92f5dcc2e76f956f3fecd6140acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be0bb6d3d7b8d8b362653257139e83900dbb2780
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717876"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.DataGrid> kontrol; ancak, <xref:System.Windows.Forms.DataGrid> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms'ta verileri görüntüleyebilir <xref:System.Windows.Forms.DataGrid> tablolar ve sütunlar oluşturarak denetiminde **DataGridTableStyle** nesneleri ve bunlara ekleme **GridTableStylesCollection** nesne üzerinden erişilen <xref:System.Windows.Forms.DataGrid> denetimin **TableStyles** özelliği. Hangi veri tablosu belirtilen İçindekiler her tablo stili görüntüler **DataGridTableStyle** nesnenin **MappingName** özelliği. Varsayılan olarak, bu veri tablosu içindeki tüm sütunlar belirtilmiş hiçbir sütun stilleri sahip bir tablo stili görüntüler. Ekleyerek tablodaki hangi sütunların görünür kısıtlayabilirsiniz **DataGridColumnStyle** nesneleri **GridColumnStylesCollection** üzerinden erişilen nesne  **GridColumnStyles** her özellik **DataGridTableStyle** nesnesi.  
+ Windows Forms'ta verileri görüntüleyebilirsiniz <xref:System.Windows.Forms.DataGrid> tablolar ve sütunlar oluşturarak denetiminde **DataGridTableStyle** nesneleri ve bunlara ekleme **GridTableStylesCollection** nesne üzerinden erişilen <xref:System.Windows.Forms.DataGrid> denetimin **TableStyles** özelliği. Hangi veri tablosu belirtilen İçindekiler her tablo stili görüntüler **DataGridTableStyle** nesnenin **MappingName** özelliği. Varsayılan olarak, veri tablosunun tüm sütunları belirtilen hiçbir sütun stillerini sahip bir tablo stili görüntüler. Tablodaki hangi sütunların ekleyerek görünür kısıtlayabilirsiniz **DataGridColumnStyle** nesneleri için **GridColumnStylesCollection** aracılığıyla erişilen nesne  **GridColumnStyles** her özellik **DataGridTableStyle** nesne.  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>DataGrid denetimine tablo ve sütun programlı olarak eklemek için  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>DataGrid denetimine tablo ve sütun programsal olarak eklemek için  
   
-1.  Tablodaki verileri görüntülemek için önce bağlamanız gerekir <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1.  Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
-    >  Sütun stilleri program aracılığıyla belirtirken, her zaman Oluştur **DataGridColumnStyle** nesneleri ve bunları Ekle **GridColumnStylesCollection** eklemeden önce nesne  **DataGridTableStyle** nesneleri **GridTableStylesCollection** nesnesi. Boş bir eklediğinizde **DataGridTableStyle** koleksiyonu nesnesine **DataGridColumnStyle** nesneleri otomatik olarak üretilen sizin için. Yeni eklemeyi denediğinizde sonuç olarak, bir özel durum oluşturulacak **DataGridColumnStyle** yinelenen nesneleriyle **MappingName** değerler **GridColumnStylesCollection**nesnesi.  
+    >  Sütun stillerini programlı olarak belirtme, her zaman Oluştur **DataGridColumnStyle** nesneleri ve bunları Ekle **GridColumnStylesCollection** eklemeden önce nesne  **DataGridTableStyle** nesneleri için **GridTableStylesCollection** nesne. Boş bir eklediğinizde **DataGridTableStyle** nesnesini koleksiyonuna **DataGridColumnStyle** nesneleri otomatik olarak üretilen sizin için. Yeni eklemeyi denerseniz, bu nedenle, bir özel durum oluşturulur **DataGridColumnStyle** yinelenen nesneleriyle **MappingName** değerler **GridColumnStylesCollection**nesne.  
   
-2.  Yeni Tablo Stili bildirme ve eşleme adını ayarlayın.  
+2.  Yeni bir tablo stili bildirme ve eşleme adını ayarlayın.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -67,7 +67,7 @@ ms.locfileid: "33527725"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Çağrı **Ekle** yöntemi **GridColumnStylesCollection** tablo stiline sütun eklemek için nesnesi  
+4.  Çağrı **Ekle** yöntemi **GridColumnStylesCollection** nesne için tablo stili sütun eklemek için  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "33527725"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Çağrı **Ekle** yöntemi **GridTableStylesCollection** veri kılavuza tablo stili eklenecek nesne.  
+5.  Çağrı **Ekle** yöntemi **GridTableStylesCollection** veri kılavuzu için tablo stili eklenecek nesne.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -95,6 +95,6 @@ ms.locfileid: "33527725"
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

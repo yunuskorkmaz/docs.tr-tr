@@ -9,42 +9,42 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708538"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
-A *boyut* içinde gösterebilir bir dizinin öğelerini belirtimi bir yönüdür. Satış her ay gün için toplam tutan bir dizi bir boyut (ayın günü) sahiptir. Satış toplam bölüm tarafından her ayın için tutan bir dizi (bölüm numarası ve ayın günü) iki boyutu vardır. Bir dizisi olduğundan dimensions sayısı adlı kendi *derece*.  
+A *boyut* içinde değişebilir bir dizinin öğelerin belirtimini yön olduğundan. Ayın her günü için toplam satış tutan bir dizi bir boyut (ayın gününü) sahiptir. Satış toplam departmana göre ayın her günü için tutan bir dizi iki boyutlu (bölüm numarası ve ayın günü) sahiptir. Sahip bir dizi boyut sayısını çağrılır, *derece*.  
   
 > [!NOTE]
->  Kullanabileceğiniz <xref:System.Array.Rank%2A> kaç boyutları bir dizisi olduğundan belirlemek için özellik.  
+>  Kullanabileceğiniz <xref:System.Array.Rank%2A> kaç boyutları bir dizi sahip olduğunu belirlemek için özellik.  
   
-## <a name="working-with-dimensions"></a>Boyutlarıyla çalışma  
- Sağlayarak bir dizi bir öğe belirtin bir *dizin* veya *alt simge* her boyutları. Her boyut bitişik o boyutu için en yüksek dizin aracılığıyla 0 dizinden öğelerdir.  
+## <a name="working-with-dimensions"></a>Boyutlarla çalışma  
+ Sağlayarak bir dizideki bir öğe belirttiğiniz bir *dizin* veya *alt simge* için her bir boyutundan. Bitişik her boyut için bu boyut en yüksek dizin 0 dizininden öğeleridir.  
   
- Aşağıdaki çizimler farklı sıralar dizilerle kavramsal yapısını göstermektedir. Her bir öğesinde çizimler erişim dizin değerleri gösterir. Örneğin, ikinci satırın iki boyutlu dizinin ilk öğesi dizinleri belirterek erişebileceğiniz `(1, 0)`.  
+ Aşağıdaki çizimler farklı sıralamalara sahip dizilerle kavramsal yapısını göstermektedir. Çizimler her öğenin erişim dizin değerlerini gösterir. Örneğin, ilk öğesi iki boyutlu bir dizinin ikinci satırın dizinleri belirterek erişebileceğiniz `(1, 0)`.  
   
  ![Bir grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Tek boyutlu dizi  
   
- ![İki grafik diyagramı&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-İki boyutlu dizi  
+ ![İki grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+iki boyutlu dizi  
   
- ![Üç grafik diyagramı&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-Üç boyutlu dizi  
+ ![Üç grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+üç boyutlu dizi  
   
 ### <a name="one-dimension"></a>Bir boyut  
- Birçok diziler her yaş kişiler sayısı gibi yalnızca bir boyuta sahip. Bu öğe sayısı tutan yaş yalnızca bir öğe belirtin gereksinimdir. Bu nedenle, bu tür bir dizi yalnızca bir dizin kullanır. Aşağıdaki örnek tutmak için bir değişken bildiren bir *tek boyutlu dizi* yaş 0 ile 120 için yaşını sayar.  
+ Birçok dizileri her yaşında kişilerin sayısını gibi yalnızca bir boyutu vardır. Bir öğe belirtmek için tek gereksinim, o öğe sayısı tutan yaş olmasıdır. Bu nedenle, böyle bir dizi yalnızca bir dizin kullanır. Aşağıdaki örnek, tutacak bir değişken bildirir. bir *tek boyutlu dizi* yaşlar 0 ila 120 için yaşını hesaplar.  
   
 ```  
 Dim ageCounts(120) As UInteger  
 ```  
   
-### <a name="two-dimensions"></a>İki boyutu  
- Bazı diziler iki boyutları, her bir yerleşkede oluşturmanın her aşamasında ofisleri sayısı gibi sahip. Bir öğenin belirtimi bina numarasını ve kat gerektirir ve her öğe sayısı bina ve kat birleşimi için tutar. Bu nedenle, bu tür bir dizi iki dizin kullanır. Aşağıdaki örnek tutmak için bir değişken bildiren bir *iki boyutlu dizi* office sayısının binalar 0 ile 40 ve Katlar 0 ile 5.  
+### <a name="two-dimensions"></a>İki boyutlu  
+ Bazı diziler ve sayıda ofis her aşamasında, her bir Kampüste oluşturma gibi iki boyutlu sahip. Hem bina numarasını hem de katı bir öğe belirtimi gerektirir ve her öğe bina ve kat birleşimi için tutar. Bu nedenle, böyle bir dizi iki dizin kullanır. Aşağıdaki örnek, tutacak bir değişken bildirir. bir *iki boyutlu dizi* office sayılarını, 0 ile 40 Binalar ve Katlar 0 ile 5.  
   
 ```  
 Dim officeCounts(40, 5) As Byte  
@@ -52,43 +52,43 @@ Dim officeCounts(40, 5) As Byte
   
  İki boyutlu bir dizi olarak da adlandırılan bir *dikdörtgen dizi*.  
   
-### <a name="three-dimensions"></a>Üç boyut  
- Birkaç diziler üç boyutlu alan değerleri gibi üç boyut sahip. Bu tür bir dizi bu durumda x, y ve fiziksel alan z koordinatları temsil üç dizin kullanır. Aşağıdaki örnek tutmak için bir değişken bildiren bir *üç boyutlu dizi* , üç boyutlu bir birim çeşitli yerlerinde hava etme.  
+### <a name="three-dimensions"></a>Üç boyutlu  
+ Birkaç diziler üç boyutlu alan değerleri gibi üç boyutlara sahip. Böyle bir dizi, bu durumda x, y ve z bu gruplar fiziksel alan koordinatlarını temsil eden üç dizin kullanır. Aşağıdaki örnek, tutacak bir değişken bildirir. bir *üç boyutlu dizi* hava Sıcaklıkların çeşitli noktalarında üç boyutlu bir birim.  
   
 ```  
 Dim airTemperatures(99, 99, 24) As Single  
 ```  
   
-### <a name="more-than-three-dimensions"></a>Birden fazla üç boyut  
- Bir dizi olarak en fazla 32 boyutları sahip olabilirsiniz, ancak en fazla üç sahip nadir.  
+### <a name="more-than-three-dimensions"></a>Üçten fazla boyutları  
+ Bir dizi 32 adede kadar boyutları olabilse de, en fazla üç sahip nadir olarak rastlanıyor.  
   
 > [!NOTE]
->  Bir dizi boyutları eklediğinizde, toplam depolama dizisi tarafından gereken önemli ölçüde, bunu kullanmak çok boyutlu diziler dikkatli artırır.  
+>  Bir diziye boyutları eklediğinizde, dizi tarafından gereken toplam depolama alanı önemli ölçüde, bunu kullanmak çok boyutlu diziler dikkatli artırır.  
   
 ## <a name="using-different-dimensions"></a>Farklı boyutları kullanma  
- Her ayın mevcut için satış tutarlarının izlemek istediğinizi varsayalım. Aşağıdaki örnek olarak ayın her günü için gösterir tek boyutlu dizi 31 öğelerle bildirme.  
+ Mevcut ayın her günü için satış tutarları izlemek istediğinizi varsayalım. Aşağıdaki örnek, ayın her günü için gösterir 31 öğeleri içeren tek boyutlu bir dizi bildirin.  
   
 ```  
 Dim salesAmounts(30) As Double  
 ```  
   
- Şimdi, aynı bilgileri, her gün için yalnızca bir ay aynı zamanda yılın her ay için izlemek istediğiniz varsayalım. Aşağıdaki örnekte gösterildiği gibi iki boyutlu bir dizi 12 satırlar (ay için) ve (gündür), 31 sütunlarla bildirme.  
+ Artık her gün için yalnızca aynı bilgileri ayın aynı zamanda her bir yılın ayı izlemek istediğinizi varsayalım. Aşağıdaki örnekte gösterildiği gibi iki boyutlu bir dizi (ay için) 12 satır ve (gün) boyunca 31 sütunlarını bildirin.  
   
 ```  
 Dim salesAmounts(11, 30) As Double  
 ```  
   
- Şimdi sahip karar varsayalım bilgi birden fazla bir yıl için dizinizi tutun. Satış tutarlarının 5 yıl boyunca izlemek isterseniz, aşağıdaki örnekte gösterildiği gibi üç boyutlu bir dizi 5 katmanlar, 12 satırları ve 31 sütunlarla bildirebilirsiniz.  
+ Şimdi, karar varsayalım bilgi birden fazla bir yıl boyunca diziniz tutun. Satış rakamlarını 5 yıl boyunca izlemek istiyorsanız, aşağıdaki örnekte gösterildiği gibi üç boyutlu bir dizi 5 katmanları, 12 satırlar ve sütunlar 31 bildirebilirsiniz.  
   
 ```  
 Dim salesAmounts(4, 11, 30) As Double  
 ```  
   
- Her dizin, en çok her boyutu 0'dan değiştiğinden, Not `salesAmounts` o boyut için bir gerekli uzunluğundan daha az olarak bildirilmedi. Ayrıca, dizi boyutu her yeni bir boyut ile artar unutmayın. Üç önceki örneklerde 31, 372 ve 1,860 öğeleri sırasıyla boyutlarıdır.  
+ Her dizin, en fazla her boyutunun 0'dan değiştiğinden, Not `salesAmounts` o boyut için gerekli uzunluğundan küçük olarak bildirilir. Ayrıca dizinin boyutu ile her yeni boyut arttığına dikkat edin. Önceki örneklerde üç boyut 31 372 ve 1,860 öğeleri sırasıyla.  
   
 > [!NOTE]
->  Bir dizi kullanmadan oluşturabileceğiniz `Dim` deyimi veya `New` yan tümcesi. Örneğin, çağırabilirsiniz <xref:System.Array.CreateInstance%2A> yöntemi ya da başka bir bileşen iletebilir kodunuzu bu şekilde oluşturulan bir dizi. Bu tür bir dizi alt sınırı 0'dan farklı olabilir. Kullanarak her zaman bir boyutun alt sınır için bir test edebilirsiniz <xref:System.Array.GetLowerBound%2A> yöntemi veya `LBound` işlevi.  
+>  Kullanmadan bir dizi oluşturabilirsiniz `Dim` deyimi veya `New` yan tümcesi. Örneğin, çağırabilirsiniz <xref:System.Array.CreateInstance%2A> yöntemi veya başka bir bileşen geçirebilirsiniz kodunuzu bu şekilde oluşturulan bir dizi. Böyle bir dizi alt sınırı 0'dan farklı olabilir. Bir boyut için alt sınırı kullanarak her zaman test edebilirsiniz <xref:System.Array.GetLowerBound%2A> yöntemi veya `LBound` işlevi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
