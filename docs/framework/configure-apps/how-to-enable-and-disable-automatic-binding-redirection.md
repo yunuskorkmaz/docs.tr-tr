@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980839"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083671"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme
 
 Uygulamaları Visual Studio'da hedefleyen derleme yaparken [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ve sonraki sürümlerinde, bağlama yönlendirmeleri, derleme birleştiriciyi geçersiz kılmak için uygulama yapılandırma dosyasına otomatik olarak da eklenebilir. Uygulamanız veya bileşenleri, aynı derlemenin birden çok sürümüne başvurursa, uygulamanızın yapılandırma dosyasında bağlama yeniden yönlendirmelerini el ile belirtseniz de, bağlama yeniden yönlendirmeleri eklenir. Otomatik bağlama yeniden yönlendirme özelliği hedefleyen Masaüstü uygulamaları ve web uygulamalarını etkiler [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] veya sonraki bir sürüm davranış web uygulaması için biraz farklı olmasına karşın. Bu önceki sürümlerini hedefleyen .NET Framework'ün var olan uygulamaların bulunduğu ya da bağlama yeniden yönlendirmelerini el ile oluşturmak istiyorsanız bu özelliği devre dışı bırakabilirsiniz, otomatik bağlama yeniden yönlendirmesini etkinleştirebilirsiniz.
 

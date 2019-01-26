@@ -8,14 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6bb0e832f1fdc845c4150442547b55400f0aea89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29aa97808f3595313b68072a910afb1354d45c6d
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645957"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084425"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;System.Web&gt; öğesi (Web Ayarları)
 ASP.NET barındırma katman işlem geneline yönelik davranışını nasıl yönettiği hakkında bilgi içerir.  

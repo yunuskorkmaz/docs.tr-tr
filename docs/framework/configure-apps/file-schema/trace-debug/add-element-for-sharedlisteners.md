@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 645b5beca2f65ad54b194d656309d850e1ff9fa7
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712476"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083554"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;ekleme&gt; öğesi için &lt;sharedListeners&gt;
 Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhangi bir koleksiyonudur [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) başvurabilirsiniz.  Varsayılan olarak, dinleyicileri `sharedListeners` koleksiyon yerleştirildiğinde değil bir `Listeners` koleksiyonu. Ada göre eklenmelidir [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Dinleyiciler almak mümkün değildir `sharedListeners` çalışma zamanında kod koleksiyonu.  

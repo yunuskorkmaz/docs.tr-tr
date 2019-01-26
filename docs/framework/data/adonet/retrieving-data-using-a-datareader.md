@@ -1,16 +1,16 @@
 ---
 title: DataReader kullanarak veri alma
-ms.date: 10/259/2018
+ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692762"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083853"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
 Kullanarak verileri almak için bir **DataReader**, bir örneğini oluşturmak **komut** nesne ve oluşturup bir **DataReader** çağırarak **Command.ExecuteReader**  satırları bir veri kaynağından almak için. **DataReader** arabellekten çıkarılan bir yordam mantığı verimli bir şekilde bir veri kaynağından sonuçları sıralı olarak işlediğinden sağlayan veri akışını sağlar. **DataReader** verileri bellek içinde önbelleğe alınmamış çünkü büyük miktarlarda veri alınırken iyi bir seçimdir.

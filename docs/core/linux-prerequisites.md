@@ -4,12 +4,12 @@ description: Desteklenen Linux sürümleri ve .NET Core bağımlılıklarının 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656056"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083892"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -23,7 +23,7 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için ihtiyaç
 
 ## <a name="supported-linux-versions"></a>Desteklenen Linux sürümleri
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET core 2.x tek bir işletim sistemi olarak Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
 
@@ -75,11 +75,11 @@ Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
 Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
 Linux Naneli                    | 18                    | X64
-openSUSE                      | 42.3 +                 | X64
-SUSE Enterprise Linux (SLES)  | 12 SP2 +               | X64
-Alpine Linux                  | 3.8 +                  | x64, ARM64
+openSUSE                      | 42.3+                 | X64
+SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
+Alpine Linux                  | 3.8+                  | x64, ARM64
 
 \* ARM32 ve ARM64 desteği 9 Debian ve Ubuntu 16.04 başlatır. Bu dağıtım paketlerini önceki sürümlerinde, ARM yongalarında desteklenmez.
 
@@ -100,9 +100,10 @@ Aşağıdaki örnekler olacak şekilde tasarlanmıştır. Adları ve tam sürüm
 Ubuntu dağıtımları, aşağıdaki kitaplıkların yüklü gerektirir:
 
 * liblttng ust0
-* libcurl3
+* libcurl3 (için 14.x ve 16.x)
+* libcurl4 (için 18.x)
 * libssl1.0.0
-* libkrb5 3
+* libkrb5-3
 * zlib1g
 * libicu52 (için 14.x)
 * libicu55 (için 16.x)
@@ -120,10 +121,10 @@ CentOS dağıtımları, aşağıdaki kitaplıkların yüklü gerektirir:
 
 * ust lttng
 * libcurl
-* openssl kitaplıkları
+* openssl-libs
 * krb5 kitaplıklar
 * libicu
-* Zlib
+* zlib
 
 Fedora kullanıcılar: Varsa, openssl'ın sürümü > = 1.1 compat openssl10'ı yüklemeniz gerekir.
 

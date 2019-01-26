@@ -2,12 +2,12 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 4163a87c04e280ed19f53d1f715df49b65d02f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620610"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084126"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  
@@ -49,7 +49,7 @@ Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek i
 ## <a name="using-a-simple-collection"></a>Basit bir koleksiyon kullanma  
  Bu bölümdeki örneklerde genel kullanın <xref:System.Collections.Generic.List%601> sınıfını, bir türü kesin belirlenmiş nesneler listesiyle çalışmanıza olanak sağlar.  
   
- Aşağıdaki örnek bir dize listesi oluşturur ve ardından kullanarak dizeler arasında yinelenir. bir ya da [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi.  
+ Aşağıdaki örnek bir dize listesi oluşturur ve ardından kullanarak dizeler arasında dolaşır bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi.  
   
 ```csharp  
 // Create a list of strings.  

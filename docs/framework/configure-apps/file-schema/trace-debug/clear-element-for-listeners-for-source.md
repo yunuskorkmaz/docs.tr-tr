@@ -7,14 +7,12 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362e1d7a4ac4c39309aa86561683df1d239f2ab1
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523161"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083879"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Temizle&gt; öğesi için &lt;dinleyicileri&gt; için &lt;kaynak&gt;
 Temizler `Listeners` koleksiyonu için bir izleme kaynağı.  
