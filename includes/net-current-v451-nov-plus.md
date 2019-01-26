@@ -1,0 +1,1 @@
+<span data-ttu-id="a040f-101">4.5.1 için Kasım 2013 güncelleştirmesi olduğundan kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="a040f-101">Available since November 2013 update to 4.5.1</span></span>
