@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321afe8904ff683ce9807ba9912bf3a38ecd73bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650515"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066006"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT derleyicisi (xsltc.exe)
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş bir stil sayfası sonra doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  Uygulamanızda bir başvuru olarak derlenmiş derlemenin de dahil etmelisiniz.  
   
- Xsltc.exe araç, sınıf doğrulamaz (`/class:``name`) veya derleme (`/out:``assemblyName`) adları. Adları geçerli değilse, hatalar ortak dil çalışma zamanı tarafından atılır.  
+ Xsltc.exe araç, sınıf doğrulamaz (`/class:`*adı*) veya derleme (`/out:`*assemblyName*) adları. Adları geçerli değilse, hatalar ortak dil çalışma zamanı tarafından atılır.  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, stil sayfası derler ve booksort.dll adlı bir derleme oluşturur.  

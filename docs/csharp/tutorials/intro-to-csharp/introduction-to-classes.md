@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler - giriş C# Öğreticisi
 description: İlk C# programınızı oluşturma ve nesne yönelimli kavramları keşfedin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205377"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066079"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Nesne yönelimli programlama ile ilgili sınıfları ve nesneleri keşfedin
 
@@ -106,7 +106,7 @@ Aşağıdaki üye bildirimi için ekleme `BankAccount` sınıfı:
 private static int accountNumberSeed = 1234567890;
 ```
 
-Bir veri üyesi budur. Sahip `private`, yani yalnızca içinde kod tarafından erişilebilir `BankAccount` sınıfı. (Bir hesap numarası sahip gibi) genel Sorumluluklar (nasıl hesap numaraları oluşturulur.) özel uygulamadan ayırma bir yoludur Ayrıca `static`, yani tüm tarafından paylaşılan ``BankAccount`` nesneleri. Statik olmayan bir değişkenin değerini her örneği için benzersiz olan ``BankAccount`` nesne. Aşağıdaki iki satırı hesabı atamak için oluşturucuyu ekleyin:
+Bir veri üyesi budur. Sahip `private`, yani yalnızca içinde kod tarafından erişilebilir `BankAccount` sınıfı. (Bir hesap numarası sahip gibi) genel Sorumluluklar (nasıl hesap numaraları oluşturulur.) özel uygulamadan ayırma bir yoludur Ayrıca `static`, yani tüm tarafından paylaşılan `BankAccount` nesneleri. Statik olmayan bir değişkenin değerini her örneği için benzersiz olan `BankAccount` nesne. Aşağıdaki iki satırı hesabı atamak için oluşturucuyu ekleyin:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

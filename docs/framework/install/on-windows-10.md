@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 08f2640613335b0ba54a4ff970b7d105d52b92c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743484"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066331"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 ve Windows Server 2016 üzerinde .NET Framework yükleme
 
-.NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeleri gereken .NET Framework sürümlerini yüklemenize yardımcı olması. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) kullanılabilir en son sürümü.
+.NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeleri gereken .NET Framework sürümlerini yüklemenize yardımcı olması. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) kullanılabilir en son sürümü.
 
 Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim kutusu görmesini sonra bu sayfada gelmedi:
 
@@ -29,11 +29,11 @@ Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim
 * [Windows 10 Nisan 2018 güncelleştirmesi](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework'ün 4.7.2 indirin](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 4.7.1 aracılığıyla .NET Framework 4.0 için oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 4.7.1 aracılığıyla .NET Framework 4.0 için oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 
-Yükleyebileceğiniz [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) üzerinde:
+Yükleyebileceğiniz [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) üzerinde:
 
 * Windows 10 Fall Creators Update (1709 sürümü)
 * Windows 10 Creators Update (sürüm 1703)

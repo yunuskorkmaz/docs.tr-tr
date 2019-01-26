@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 96f592799c42e96a5607489f18ee584264b167e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693684"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066358"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -96,23 +96,30 @@ Yüklendikten sonra aracı komut satırından aracı adı belirtilerek çalışt
 Bir uygulamanın derlendiği .NET Core sürümü çalışma zamanında mevcut değilse, .NET Core 2.0 ile başlayarak, uygulama otomatik olarak en son yüklenen karşı çalışır *podverze* .NET core'un. Diğer bir deyişle, .NET Core 2.0 ile bir uygulama oluşturulur ve .NET Core 2.1 .NET Core 2.0, ana sistemde mevcut değil. ancak, uygulama .NET Core 2.1 ile çalışır.
 
 > [!IMPORTANT]
-> Bu sarma davranışı Önizleme sürümleri için geçerli değildir. Ya da ana sürümler için geçerlidir. Örneğin, bir .NET Core 1.0 uygulamasını İleri .NET Core 2.0 veya .NET Core 2.1 döküm mıydı.
+> Bu sarma davranışı Önizleme sürümleri için geçerli değildir. Varsayılan olarak, ana sürümler için de geçerli değildir, ancak bu ayarlarla değiştirilebilir.
 
-Alt sürüm ileri sarma içinde üç yoldan herhangi birini devre dışı bırakabilirsiniz:
+Hiçbir aday paylaşılan Framework sarma ayarını değiştirerek bu davranışı değiştirebilirsiniz. Kullanılabilir ayarlar şunlardır:
+- `0` -ikincil sürüm sarma davranışı devre dışı bırakın. Bu ayar, .NET Core 2.0.0 için oluşturulmuş bir uygulamada İleri .NET Core 2.0.1, ancak .NET Core 2.2.0 veya .NET Core 3.0.0 dökümünü yapar.
+- `1` -ikincil sürüm sarma davranışı etkinleştirin. Bu ayar için varsayılan değerdir. Bu ayar, .NET Core 2.0.0 için oluşturulmuş bir uygulamada ileriye ya da .NET Core için 2.0.1 veya .NET Core hangisini seçtiğinize bağlı olarak yüklü, ancak bunu İleri 3.0.0 .NET Core için döküm değil 2.2.0 dökümünü yapar.
+- `2` -küçük ve büyük sürüm sarma davranışı etkinleştirin. .NET Core 2.0.0 için oluşturulmuş bir uygulama için .NET Core 3.0.0 İleri sarmanın şekilde ayarlanmışsa, hatta farklı ana sürümleri kabul edilir
 
-- Ayarlama `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` ortam değişkeni 0.
+Bu ayarı üç yoldan herhangi birini değiştirebilirsiniz:
 
-- Aşağıdaki satırı runtimeconfig.json dosyaya ekleyin:
+- Ayarlama `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` ortam değişkeni istenen değeri.
+
+- İstenen değeri içeren aşağıdaki satırı ekleyin `runtimeconfig.json` dosyası:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Kullanırken [.NET Core CLI Araçları](../tools/index.md), .NET Core komut aşağıdaki seçenek gibi dahil `run`:
+- Kullanırken [.NET Core CLI Araçları](../tools/index.md), istenen değeri aşağıdaki seçenek gibi .NET Core komut ekleme `run`:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+Düzeltme eki sürümü alma İleri bu ayarı bağımsızdır ve tüm olası ikincil sonra Bitti veya ana sürüm ileri sarma uygulanır.
 
 ## <a name="deployment"></a>Dağıtım
 

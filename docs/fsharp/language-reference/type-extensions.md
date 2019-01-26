@@ -1,13 +1,13 @@
 ---
 title: Tür Uzantıları
 description: Bilgi nasıl F# türü uzantılara izin ver bir önceden tanımlanmış nesne türü için yeni üye ekleyin.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614070"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066161"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
@@ -121,7 +121,7 @@ Bir isteğe bağlı tür uzantısı ile çalışmak için bu kodu erişmenin bir
 
 * Olduğu gibi `Sum` üye var. farklı bir kısıtlama `'T` (`static member get_Zero` ve `static member (+)`) daha ne tür uzantısı tanımlar.
 * Tür uzantısı olarak aynı kısıtlamasına sahip değiştirme `Sum` üzerinde tanımlanan kısıtlaması artık eşleşecektir `IEnumerable<'T>`.
-* Üye değiştirme yapmadan `member inline Sum` tür kısıtlamaları uyumsuz bir hata verir
+* Değiştirme `member this.Sum` için `member inline this.Sum` tür kısıtlamaları uyumsuz bir hata verir.
 
 İstenildiği gibi bir türü genişletmek gibi sunulan ve "alanında kayan" statik yöntem bulunmaktadır. Burada uzantı yöntemleri gerekli hale budur.
 

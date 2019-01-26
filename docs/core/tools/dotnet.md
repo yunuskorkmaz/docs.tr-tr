@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: Dotnet komut (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170865"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066447"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -17,7 +17,7 @@ ms.locfileid: "53170865"
 
 `dotnet` -.NET kaynak kodu ve ikili dosyaları yönetme bir araç.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 ```
@@ -78,9 +78,14 @@ Yüklü .NET Core çalışma zamanlarını görüntüler.
 
 Yüklü .NET Core SDK'ları görüntüler.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Devre dışı bırakır podverze Top iletme, eğer ayarlanmış `0`. Daha fazla bilgi için [İleri sarmanın](../whats-new/dotnet-core-2-1.md#roll-forward).
+Gerekli paylaşılan çerçeve olmadığında davranışını tanımlar. `N` aşağıdakilerden biri olabilir:
+ * `0` -Daha alt sürümü ileri sarma devre dışı bırakın.
+ * `1` -İkincil sürüm, ancak ana sürüm İleri sarmanın. Bu varsayılan davranıştır.
+ * `2` -Küçük ve büyük sürüme göre İleri sarmanın.
+
+ Daha fazla bilgi için [İleri sarmanın](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 

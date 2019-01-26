@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143623"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066278"
 ---
 # <a name="design-a-microservice-domain-model"></a>Bir mikro hizmet etki alanı modeli tasarlama
 
@@ -57,7 +57,7 @@ Bazı kişiler anemic etki alanı modeli önleyici bir düzeni olduğunu varsaya
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **DevIQ. Etki alanı varlığı** \
+- **DevIQ. Domain Entity** \
   [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
 - **Martin Fowler. Etki alanı modeli** \
@@ -82,16 +82,17 @@ EF Core 2.0 içerir [ait varlıklar](https://blogs.msdn.microsoft.com/dotnet/201
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Martin Fowler. Değer nesne düzeni**
+- **Martin Fowler. Değer nesne düzeni** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Değer nesnesi**
+- **Değer nesnesi** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Değer nesnelerini Test odaklı geliştirme**
+- **Değer nesnelerini Test odaklı geliştirme** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Etki alanı Odaklı Tasarım: Kuruluşlarda karmaşık yazılım kalbidir.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Etki alanı Odaklı Tasarım: Kuruluşlarda karmaşık yazılım kalbidir.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Toplama düzeni
 
@@ -134,19 +135,19 @@ Tanımlama ve toplamalar ile çalışma, araştırma ve deneyimi gerektirir. Dah
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Vaughn Vernon. Etkili toplama tasarımı - ı: bölümü Tek bir toplamada modelleme** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Etkili toplama tasarımı - ı: bölümü Tek bir toplamada modelleme** (gelen <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Etkili toplama tasarımı - Bölüm II: Birlikte toplamalar iş yapma** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Etkili toplama tasarımı - Bölüm II: Yapma toplayan iş birlikte** (gelen <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Etkili toplama tasarımı - bölüm III: Bulma aracılığıyla öngörü elde etme** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Etkili toplama tasarımı - bölüm III: Bulma aracılığıyla öngörü elde etme** (gelen <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Baş Grybniak. DDD Taktiksel tasarım desenleri** \
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
-- **Chris Uludağ. Toplamlar kullanarak işlem mikro Hizmetleri Geliştirme** \
+- **Chris Richardson. Toplamlar kullanarak işlem mikro Hizmetleri Geliştirme** \
   [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 - **DevIQ. Toplama düzeni** \

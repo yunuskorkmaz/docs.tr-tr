@@ -2,12 +2,12 @@
 title: F#Bileşen tasarım yönergeleri
 description: Yazmak için kılavuzları edinin F# diğer çağıranlar tarafından tüketim için hazırlanmış bileşenleri.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415643"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066031"
 ---
 # <a name="f-component-design-guidelines"></a>F#Bileşen tasarım yönergeleri
 
@@ -708,7 +708,7 @@ Bunun yerine, toplama verileri tutan veya birden çok değerleri döndürülecek
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Parametreleri currying kullanmaktan kaçının
 
-Bunun yerine, çağırma kuralları .NET kullanın ``Method(arg1,arg2,…,argN)``.
+Bunun yerine, çağırma kuralları .NET kullanın `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518169"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066304"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Değer Değiştirici Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518169"
 |------------------|------------------|  
 |Değer Değiştirici<br /><br /> -(0 veya 1) Düzenle<br />-Düğmesine (2)<br />-Liste öğesi (0 veya daha fazla)|Değer Değiştirici<br /><br /> -ListItem (0 veya daha fazla)|  
   
- İki düğme denetimi görünümü ağaçtaki otomatikleştirilmiş test araçları tarafından ayrıt edilebilen emin olmak için Ata `SmallIncrement` veya `SmallDecrement``AutomationId` uygun şekilde. Bazı uygulamalar için bir eş değer değiştirici denetim ilişkili düzenleme denetimi olabilir.  
+ İki düğme denetimi görünümü ağaçtaki otomatikleştirilmiş test araçları tarafından ayrıt edilebilen emin olmak için Ata `SmallIncrement` veya `SmallDecrement` `AutomationId` uygun şekilde. Bazı uygulamalar için bir eş değer değiştirici denetim ilişkili düzenleme denetimi olabilir.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon özellikleri  

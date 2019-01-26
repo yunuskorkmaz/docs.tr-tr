@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 597a7bef66ac3908345aa5c8b59c838a3e65b2f4
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527152"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065888"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML Alt Axis Özelliği (Visual Basic)
 Aşağıdakilerden birinin alt öğelere erişim sağlar: bir <xref:System.Xml.Linq.XElement> nesnesi bir <xref:System.Xml.Linq.XDocument> nesnesi, koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri ya da bir koleksiyonu <xref:System.Xml.Linq.XDocument> nesneleri.  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|Gerekli. Bir <xref:System.Xml.Linq.XElement> nesnesi bir <xref:System.Xml.Linq.XDocument> nesnesi, koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri ya da bir koleksiyonu <xref:System.Xml.Linq.XDocument> nesneleri.|  
 |.<|Gerekli. Child axis özelliği başlangıcını gösterir.|  
-|`child`|Gerekli. Adı biçiminin erişmeye alt düğümleri [`prefix``:`]`name`.<br /><br /> -   `Prefix` -İsteğe bağlı. Alt düğümü için XML ad alanı öneki. Genel XML ad alanı ile tanımlanmalıdır bir `Imports` deyimi.<br />-   `Name` -Gerekli. Yerel alt düğüm adı. Bkz: [bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Gerekli. Adı biçiminin erişmeye alt düğümleri [`prefix:]name`.<br /><br /> -   `Prefix` -İsteğe bağlı. Alt düğümü için XML ad alanı öneki. Genel XML ad alanı ile tanımlanmalıdır bir `Imports` deyimi.<br />-   `Name` -Gerekli. Yerel alt düğüm adı. Bkz: [bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Gerekli. Child axis özelliği sonunu gösterir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  

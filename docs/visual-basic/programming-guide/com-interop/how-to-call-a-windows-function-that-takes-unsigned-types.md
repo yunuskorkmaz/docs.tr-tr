@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669321"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065862"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma
 Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.  
@@ -32,7 +32,7 @@ Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yap�
   
 3.  Windows işlev adlarını ve değerlerini kullanır sabitlerin bulmak için arama için belgelerine bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.  
   
-4.  Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As``UInteger`.  
+4.  Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As UInteger`.  
   
 5.  İşlevi, normal bir şekilde çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, işaretsiz tamsayı bağımsız değişken alır.  
   

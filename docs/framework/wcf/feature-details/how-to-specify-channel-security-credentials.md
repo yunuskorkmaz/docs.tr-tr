@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495207"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066204"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin
 Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları, WCF hizmetlerini çağırmak sağlar. Çoğu WCF hizmetleri, istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Bir WCF hizmeti bir WCF istemciden çağrılırken, yönetilen kodda ya da bir uygulama yapılandırma dosyasında bu kimlik bilgileri belirtebilirsiniz. Bir WCF hizmeti bir COM uygulamasından çağrılırken kullanabileceğiniz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli yollar ortaya konacaktır <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
@@ -23,9 +23,9 @@ Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları,
   
 2.  İleti güvenliği projeyi açın.  
   
-3.  Ekleme `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` için `ICalculator` arabirim tanımı.  
+3.  Ekleme `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` için `ICalculator` arabirim tanımı.  
   
-4.  Ekleme `bindingNamespace=``http://Microsoft.ServiceModel.Samples` hizmeti için App.config dosyasındaki endpoint etikete.  
+4.  Ekleme `bindingNamespace="http://Microsoft.ServiceModel.Samples"` hizmeti için App.config dosyasındaki endpoint etikete.  
   
 5.  İleti güvenliği örneği oluşturun ve Service.exe çalıştırın. Internet Explorer'ı kullanın ve hizmetin URI için Gözat (http://localhost:8000/ServiceModelSamples/Service) hizmetinin çalıştığından emin olmak için.  
   

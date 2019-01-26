@@ -3,12 +3,12 @@ title: C# yapılar - C# dili turu
 description: Değer türleri, yapılar çağırılır, C# temellerini öğrenin
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142742"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065966"
 ---
 # <a name="structs"></a>Yapılar
 
@@ -30,7 +30,7 @@ Sınıfları ile bu iki değişken aynı nesneye başvurmak mümkün ve dolayıs
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-Varsa `Point` bir sınıf çıkış 20 çünkü bir ve b aynı nesneye başvuru. Bir yapının nokta ise çıktı 10 çünkü atamasını `a` için `b` değeri bir kopyasını oluşturur ve bu kopyayı sonraki atamaya tarafından etkilenmez `a.x`.
+Varsa `Point` bir sınıf çıkış 20 çünkü `a` ve `b` aynı nesneye başvuru. Varsa `Point` bir yapı çıktı 10 çünkü atamasını `a` için `b` değeri bir kopyasını oluşturur ve bu kopyayı sonraki atamaya tarafından etkilenmez `a.x`.
 
 Önceki örnekte iki yapılar sınırlamaları vurgular. İlk olarak, bir yapının tamamını kopyalama atama ve değerin parametre geçirme başvuru türleri ile yapılar ile daha pahalı olabilir. Bu nedenle, bir nesne başvurusu kopyalama daha genellikle daha az verimlidir. İkinci dışında `in`, `ref`, ve `out` parametreleri, bu durumlarda, çeşitli kullanımları kullanıma kuralları yapı birimleri için başvuru oluşturmak mümkün değildir.
 

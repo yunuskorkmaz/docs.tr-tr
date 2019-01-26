@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691482"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066018"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Sanal İç Geçersiz Kılmalar veya Geçersiz Kılınabilir Kolay Aşırı Yüklemeler  
   
 > [!NOTE]
->  Bu bölümde bir yöntem olarak bildirirken bir güvenlik sorunu hakkında uyarır `virtual` ve `internal` (`Overloads``Overridable``Friend` Visual Basic'te). Bu uyarı yalnızca .NET Framework sürümleri için 1.0 ve 1.1 geçerlidir, daha sonraki sürümlere uygulanmaz.  
+>  Bu bölümde bir yöntem olarak bildirirken bir güvenlik sorunu hakkında uyarır `virtual` ve `internal` (`Overloads` `Overridable` `Friend` Visual Basic'te). Bu uyarı yalnızca .NET Framework sürümleri için 1.0 ve 1.1 geçerlidir, daha sonraki sürümlere uygulanmaz.  
   
  .NET Framework sürüm 1.0 ve 1.1, kodunuzun diğer derlemeler için kullanılamaz olduğunu onaylama tür sistem erişilebilirliği'bir nuance farkında olmanız gerekir. Bildirilen bir yöntemi **sanal** ve **iç** (**aşırı geçersiz kılınabilir arkadaş** Visual Basic'te) üst sınıfın vtable girişi geçersiz kılabilir ve yalnızca kullanılabilir aynı bütünleştirilmiş kod içinde iç olduğundan. Ancak, geçersiz kılmak için erişilebilirlik tarafından belirlenen **sanal** anahtar sözcüğü ve kod sınıfı erişiminin olduğu sürece başka bir bütünleştirilmiş koddan kılınmasına oluşabilir. Bir geçersiz kılma olası bir sorunu sunarsa, düzeltin veya kaldırmak için bildirime dayalı güvenlik kullanın **sanal** kati şekilde gerekli değilse, anahtar sözcüğü.  
   

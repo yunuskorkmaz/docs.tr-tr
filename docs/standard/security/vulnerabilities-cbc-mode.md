@@ -4,12 +4,12 @@ description: Algılama ve doldurmayı kullanarak Şifre blok zincirleme (CBC) mo
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123650"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066187"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
 
@@ -29,7 +29,7 @@ Blok tabanlı şifrelemeleri ilişki verileri ikinci bloğundaki ilk blokla veri
 
 Oracle sunan koda biraz değiştirilmiş bir ileti gönderin ve bunları oracle söyler kadar veri göndermeye devam verilerinin doğru olduğundan, bir saldırganın doldurma oracle, CBC verileri nasıl yapılandırıldığını birlikte kullanabilirsiniz. Bu yanıtından, saldırgan iletinin bayt şifresini çözebilir.
 
-Modern bir bilgisayar gibi yüksek kaliteli bir saldırganın çok küçük (0,1 MS'den kısa) yürütme farklılıkları uzak sistemlere zaman algılayabilir ağlardır. Başarılı bir şifre çözme veri üzerinde oynama değildi, yalnızca oluşabilir varsayılarak uygulamaları araçlarından başarılı ve başarısız şifre çözme farklılıkları gözlemlemek için tasarlanmış saldırılara karşı savunmasız olabilir. Bu zamanlama fark diğerlerinden bazı diller ya da kitaplıkları daha önemli olabilir, ancak bunu şimdi uygulamanın yanıt hata olarak dikkate alındığında bu tüm dillerde ve kitaplıklarda için pratik bir tehdit olarak yorumlanmamalıdır.
+Modern bir bilgisayar gibi yüksek kaliteli bir saldırganın çok küçük (0,1 MS'den kısa) yürütme farklılıkları uzak sistemlere zaman algılayabilir ağlardır. Başarılı bir şifre çözme veri üzerinde oynama değildi, yalnızca oluşabilir varsayılarak uygulamaları araçlarından başarılı ve başarısız şifre çözme farklılıkları gözlemlemek için tasarlanmış saldırılara karşı savunmasız olabilir. Bu zamanlama fark diğerlerinden bazı diller ya da kitaplıkları daha önemli olabilir, ancak bunu şimdi uygulamanın yanıt hata olarak dikkate alındığında bu tüm dillerde ve kitaplıklarda için pratik bir tehdit olarak yorumlanmamalıdır.
 
 Bu saldırı şifrelenmiş verileri değiştirin ve test sonucu oracle ile olanağı kullanır. Tam olarak saldırının etkilerini hafifletmek için tek yolu, şifrelenmiş verilere değişiklikleri algılar ve herhangi bir eylem gerçekleştirmek Reddet sağlamaktır. Bunu yapmak için standart verileri için imza oluşturma ve tüm işlemler gerçekleştirilir önce bu imzayı doğrulamak için yoludur. İmza doğrulanabilir, saldırgan tarafından oluşturulamıyor, aksi takdirde bunlar şifrelenmiş veriler değiştirin, sonra değiştirilen verileri temel alan yeni bir imza işlem. Bir ortak tür uygun imzaya anahtarlı karma ileti kimlik doğrulama kodu (HMAC) bilinir. Gizli bir anahtar yalnızca HMAC oluşturan kişi ve doğrulamadan kişi bilinen alır, bir HMAC bir sağlama toplamı farklıdır. Elinde anahtarının doğru HMAC üretemiyor. Verilerinizi almak, şifrelenmiş verilerin, gizli bir anahtar kullanarak HMAC ve gönderen paylaşımı, daha sonra karşı bir gönderildiği HMAC hesaplanan karşılaştırma bağımsız olarak işlem. Bu karşılaştırma sabit zaman olmalıdır, farklı türde bir saldırı sağlayan başka bir algılanabilir oracle, aksi takdirde ekledik.
 
@@ -100,7 +100,7 @@ Kendi ileti biçimi değiştirebilirsiniz ancak kimlik doğrulamasız CBC şifre
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Güvenlik Açığı kodu - yerel uygulamaları bulma
 
-Windows şifreleme karşı yerleşik programları için: yeni nesil (CNG) kitaplığı:
+Windows şifreleme karşı yerleşik programları için: Sonraki nesil (CNG) kitaplığı:
 
 - Şifre çözme çağrıdır [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), belirten `BCRYPT_BLOCK_PADDING` bayrağı.
 - Anahtar tanıtıcısı çağırarak başlatılmış [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) ile [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) kümesine `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Windows şifreleme karşı yerleşik programları için: yeni nesil (CNG) kitapl
 Eski Windows şifreleme API üzerinde derlenmiş programlar için:
 
 - Şifre çözme çağrıdır [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) ile `Final=TRUE`.
-- Anahtar tanıtıcısı çağırarak başlatılmış [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) ile [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) kümesine `CRYPT_MODE_CBC`.
+- Anahtar tanıtıcısı çağırarak başlatılmış [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) ile [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) kümesine `CRYPT_MODE_CBC`.
   - Bu yana `CRYPT_MODE_CBC` etkilenen varsayılan kod değil atamış herhangi bir değer `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Güvenlik Açığı kodu bulma - yönetilen uygulamalar

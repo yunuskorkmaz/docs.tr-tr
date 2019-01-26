@@ -2,12 +2,12 @@
 title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624254"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066421"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Windows Communication Foundation (WCF) kullanarak büyük iletileri gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti akışı sağlamaktır. Ancak bazı protokoller, iletinin tamamı arabelleğe alma gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilebilir. Başka bir olası öbekleri adlı küçük iletilere büyük ileti ayırmak, söz konusu öbekleri bir öbek teker teker gönderilir ve alıcı tarafında büyük ileti yeniden oluşturmak için bir çözümdür. Uygulama bu parçalama yapabilirsiniz ve serbest Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl bir özel protokolü veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` çağrıları `innerChannel.Open` iç kanal açın.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` öncelikle ayarlar `stopReceive` için `true` göstermek için bekleyen `ReceiveChunkLoop` durdurmak için. Ardından bekler `receiveStopped``ManualResetEvent`, ne zaman ayarlanır `ReceiveChunkLoop` durdurur. Varsayılarak `ReceiveChunkLoop` durdurur belirtilen süre içinde `OnClose` çağrıları `innerChannel.Close` kalan zaman aşımı ile.  
+ `OnClose` öncelikle ayarlar `stopReceive` için `true` göstermek için bekleyen `ReceiveChunkLoop` durdurmak için. Ardından bekler `receiveStopped` <xref:System.Threading.ManualResetEvent>, ne zaman ayarlanır `ReceiveChunkLoop` durdurur. Varsayılarak `ReceiveChunkLoop` durdurur belirtilen süre içinde `OnClose` çağrıları `innerChannel.Close` kalan zaman aşımı ile.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` çağrıları `innerChannel.Abort` iç kanal iptal etmek için. Varsa bir bekleyen `ReceiveChunkLoop` adresinden bir özel durum alır bekleyen `innerChannel.Receive` çağırın.  

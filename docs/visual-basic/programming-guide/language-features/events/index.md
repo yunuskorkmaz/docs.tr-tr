@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332879"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065797"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio projesi görselleştirme ancak çoğu aktivita typu EventDriven programlarıdır — yani, yürütmenin akışını adlı dış oluşumları tarafından belirlenir *olayları*.  
@@ -87,7 +87,7 @@ Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio pr
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Bir temel sınıftan devralınan olaylarını işleme  
- *Türetilmiş sınıflar*— özellikleri bir temel sınıftan devralınan sınıflar — kendi temel sınıfı kullanılarak oluşturulan olayları işleyebilir `Handles``MyBase` deyimi.  
+ *Türetilmiş sınıflar*— özellikleri bir temel sınıftan devralınan sınıflar — kendi temel sınıfı kullanılarak oluşturulan olayları işleyebilir `Handles MyBase` deyimi.  
   
 #### <a name="to-handle-events-from-a-base-class"></a>Bir temel sınıf olayları işlemek için  
   
@@ -99,10 +99,10 @@ Yordamları gerçekte bir sırayla yürütülen bir dizi olarak Visual Studio pr
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Adım adım nasıl bildirme ve bir sınıf için olay açıklamasını sağlar.|  
-|[İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Bir olay işleyici yordamı yazma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Zaman uyumsuz olarak çağrılacak kendi olay işleyicileri izin veren özel bir olayı tanımlamak nasıl gösterir.|  
-|[Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Bellek olayı işlendiğinde kullanan özel bir olayı tanımlamak nasıl gösterir.|  
+|[İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Adım adım nasıl bildirme ve bir sınıf için olay açıklamasını sağlar.|  
+|[İzlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Bir olay işleyici yordamı yazma işlemi gösterilmektedir.|  
+|[Nasıl yapılır: Engellemekten Kaçınacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Zaman uyumsuz olarak çağrılacak kendi olay işleyicileri izin veren özel bir olayı tanımlamak nasıl gösterir.|  
+|[Nasıl yapılır: Bellekten kazanacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Bellek olayı işlendiğinde kullanan özel bir olayı tanımlamak nasıl gösterir.|  
 |[Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Devralınan bileşenler olay işleyicileri ile ortaya çıkan ortak sorunları listeler.|  
 |[Olaylar](../../../../standard/events/index.md)|İçindeki olay modeli genel bakış sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesneleri ile ilişkili olayları ile nasıl çalışılacağını açıklar.|  

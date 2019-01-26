@@ -2,12 +2,12 @@
 title: Veritabanı erişimi etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850408"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066096"
 ---
 # <a name="database-access-activities"></a>Veritabanı erişimi etkinlikleri
 Veritabanı erişimi etkinlikleri iş akışı içindeki bir veritabanına erişmek izin verin. Bu etkinliklerin alma veya bilgileri değiştirin ve veritabanlarına erişim ver [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) veritabanına erişmek için.  
@@ -75,7 +75,7 @@ Public class DbUpdate: AsyncCodeActivity
 |bağlantı dizesi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken, ayarlanırsa `ProviderName` de ayarlamanız gerekir.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Tür <xref:System.Data.Common.DbCommand> yürütülecek.|
-|SQL|Çalıştırılacak SQL komutu.|
+|Sql|Çalıştırılacak SQL komutu.|
 |Parametreler|SQL sorgu parametreleri koleksiyonu.|
 |AffectedRecords|Son işlem tarafından etkilenen kayıtların sayısı.|
 
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  Yürütülecek sorgu yapılandırılan kendi `Sql` özelliği ve parametreler aracılığıyla geçirilir `Parameters` koleksiyonu.
 
- Sonra `DbQueryScalar` olan yürütüldü, skaler döndürülür `Result``out` bağımsız değişken (tür `TResult`, yani temel sınıfta tanımlanan <xref:System.Activities.AsyncCodeActivity%601>).
+ Sonra `DbQueryScalar` olan yürütüldü, skaler döndürülür `Result out` bağımsız değişken (tür `TResult`, yani temel sınıfta tanımlanan <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -128,7 +128,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |bağlantı dizesi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken, ayarlanırsa `ProviderName` de ayarlamanız gerekir.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Tür <xref:System.Data.Common.DbCommand> yürütülecek.|
-|SQL|Çalıştırılacak SQL komutu.|
+|Sql|Çalıştırılacak SQL komutu.|
 |Parametreler|SQL sorgu parametreleri koleksiyonu.|
 |Sonuç|Sorgu yürütüldükten sonra elde edilen skaler. Bu bağımsız değişken türünde `TResult`.|
 
@@ -187,7 +187,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |bağlantı dizesi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken, ayarlanırsa `ProviderName` de ayarlamanız gerekir.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Tür <xref:System.Data.Common.DbCommand> yürütülecek.|
-|SQL|Çalıştırılacak SQL komutu.|
+|Sql|Çalıştırılacak SQL komutu.|
 |Parametreler|SQL sorgu parametreleri koleksiyonu.|
 |Eşleyici|İşlev eşleme mapping (<xref:System.Func%601><`DbDataReader`, `TResult`>) bir kayda alan `DataReader` sorgu yürütülürken zaman almış ve türünde bir nesne örneğini döndürür `TResult` içineklenecek`Result` koleksiyonu.<br /><br /> Bu durumda, tek bir yürütme nabzını içinde eşleme gerçekleştirilir, ancak bildirimli olarak Tasarımcısı'nı kullanarak yazılması olamaz.|
 |MapperFunc|İşlev eşleme mapping (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) bir kayda alan `DataReader` sorgu yürütülürken zaman almış ve türünde bir nesne örneğini döndürür `TResult` içineklenecek`Result` koleksiyonu.<br /><br /> Bu durumda, eşleme, birden çok yürütme darbelerin gerçekleştirilir. Bu işlev için XAML sıralanabilir ve bildirimli olarak yazılmış (herhangi bir mevcut etkinlik eşlemede katılabilir).|
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  Yürütülecek sorgu yapılandırılan kendi `Sql` özelliği ve parametreler aracılığıyla geçirilir `Parameters` koleksiyonu.
 
- Sonra `DbQueryDataSet` yürütülür `DataSet` döndürülür `Result``out` bağımsız değişken (tür `TResult`, diğer bir deyişle temel sınıfta tanımlanan <xref:System.Activities.AsyncCodeActivity%601>).
+ Sonra `DbQueryDataSet` yürütülür `DataSet` döndürülür `Result out` bağımsız değişken (tür `TResult`, diğer bir deyişle temel sınıfta tanımlanan <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -240,7 +240,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |bağlantı dizesi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken, ayarlanırsa `ProviderName` de ayarlamanız gerekir.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Tür <xref:System.Data.Common.DbCommand> yürütülecek.|
-|SQL|Çalıştırılacak SQL komutu.|
+|Sql|Çalıştırılacak SQL komutu.|
 |Parametreler|SQL sorgu parametreleri koleksiyonu.|
 |Sonuç|<xref:System.Data.DataSet> Sorgu yürütüldükten sonra elde edilir.|
 

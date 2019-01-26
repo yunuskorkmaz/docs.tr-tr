@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679077"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066258"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679077"
   
  UI Otomasyon istemcileri erişim yöntemleri ve özellikleri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim düzeni sınıfları ve hakkında bilgi almak için bunları kullanmayı [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], veya işlemek için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Bu denetim düzeni sınıfları bulunan <xref:System.Windows.Automation> ad alanı (örneğin, <xref:System.Windows.Automation.InvokePattern> ve <xref:System.Windows.Automation.SelectionPattern>).  
   
- İstemcilerin kullandığı <xref:System.Windows.Automation.AutomationElement> yöntemleri (gibi <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> veya <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) veya [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] erişmek için erişimciler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desen özellikleri. Her denetim düzeni sınıfı alan bir üyenin (örneğin, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' veya <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), bu denetim desenini tanımlar ve bir parametre olarak geçirilen <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> veya <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bu deseni için alınacak bir <xref:System.Windows.Automation.AutomationElement>.  
+ İstemcilerin kullandığı <xref:System.Windows.Automation.AutomationElement> yöntemleri (gibi <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> veya <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) veya [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] erişmek için erişimciler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desen özellikleri. Her denetim düzeni sınıfı alan bir üyenin (örneğin, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> veya <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), bu denetim desenini tanımlar ve bir parametre olarak geçirilen <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> veya <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bu deseni için alınacak bir <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Dinamik Denetim desenleri  

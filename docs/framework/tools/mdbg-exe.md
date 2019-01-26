@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0993de6ebc56198a36bd3644c4352ec7380e844e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600394"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066408"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework Komut Satırı Hata Ayıklayıcı)
 NET Framework Komut Satırı Hata Ayıklayıcısı, araç satıcılarının ve uygulama geliştiricilerin, .NET Framework ortak dil çalışma zamanını hedefleyen programlardaki hataları bulmalarına ve düzeltmelerine yardımcı olur. Bu araç, hata ayıklama hizmetleri sağlamak için çalışma zamanı hata ayıklama API kullanır. MDbg.exe'yi yalnızca yönetilen kodda hata ayıklamak için kullanabilirsiniz; yönetilmeyen kodda hata ayıklama desteği yoktur.  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**Göster**] [*satırları*]|Gösterilecek satırların sayısını belirtir.|  
 |**s**[**adım**]|Yürütmeyi geçerli satırda sonraki işleve taşır veya geçilecek işlev yoksa sonraki satıra taşır.|  
 |**Su**[**harcama**] [\* &#124; [~]*threadNumber*]|Geçerli iş parçacığı veya tarafından belirtilen iş parçacığını askıya *threadNumber* parametresi.  Varsa *threadNumber* olarak belirtilen `*`, komut tüm iş parçacıkları için geçerlidir. İş parçacığı numarası ile başlarsa `~`, komut tarafından belirtilen tüm iş parçacıklarına uygulanır *threadNumber*. Askıya alınan iş parçacığı, işlem ya da yeniden çalıştırdığınızda çalışmasını dışlanır **Git** veya **adım** komutu. İşlemde askıya alınmamış iş parçacığı vardır ve dağıttığınız **Git** komutu, işlem devam etmez. Bu durumda, işleme girmek için CTRL-C tuşlarına basın.|  
-|**SY**[**simge**] *commandName* [*gt; commandvalue &*]|Aşağıdaki komutlardan birini belirtir:<br /><br /> -   `symbol path` [`"``value``"`]-Görüntüler veya geçerli simge yolunu ayarlar.<br />-   `symbol addpath` `"` `value` `"` -Geçerli simge yolunuza ekler.<br />-   `symbol reload` [`"``module``"`]-Tüm simgeleri veya belirtilen modüle ilişkin simgeleri yeniden yükler.<br />-   `symbol list` [`module`]-Tüm modüller veya belirtilen modül için yüklenmiş olan simgeleri gösterir.|  
+|**SY**[**simge**] *commandName* [*gt; commandvalue &*]|Aşağıdaki komutlardan birini belirtir:<br /><br /> -   `symbol path` [`"value"`]-Görüntüler veya geçerli simge yolunu ayarlar.<br />-   `symbol addpath` `"value"` -Geçerli simge yolunuza ekler.<br />-   `symbol reload` [`"module"`]-Tüm simgeleri veya belirtilen modüle ilişkin simgeleri yeniden yükler.<br />-   `symbol list` [`module`]-Tüm modüller veya belirtilen modül için yüklenmiş olan simgeleri gösterir.|  
 |**t**[**hread**] [*gt; newThread*] [-*nick Takmaad*`]`|Parametresiz thread komutu, geçerli işlemdeki yönetilen tüm iş parçacıklarını görüntüler. İş parçacıkları genellikle iş parçacığı numaralarıyla tanımlanır; ancak, iş parçacığının atanmış bir takma adı varsa, onun yerine takma ad görüntülenir. Kullanabileceğiniz `-nick` bir iş parçacığına bir takma ad atamak için parametre.<br /><br /> -   **iş parçacığı** `-nick` *threadName* çalışmakta olan iş parçacığına bir takma ad atar.<br /><br /> Takma adlar sayı olamaz. Geçerli iş parçacığına bir takma ad atandıysa, eski takma ad yenisiyle değiştirilir. Yeni takma ad boş bir dize ("") ise, geçerli iş parçacığına ilişkin takma ad silinir ve iş parçacığına yeni takma ad atanmaz.|  
 |**u**[**p**]|Etkin yığın çerçevesini yukarı taşır.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Bir tanıtıcıyla izlenen değişkeni yazdırır. Tanıtıcı, ad veya adresle belirtilebilir.|  

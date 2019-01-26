@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739290"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066148"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımı ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesaplayıcı hizmet uygular, ancak gerçekleştirilen işlemlerin bir veritabanı tablosu ve hesap makinesi işlemleri için toplam çalışan bir durum bilgisi olan bir sunucu günlüğü korumak için genişletilir. Sunucu günlüğü tablosu kalıcı Yazar bağımlı istemci işlemi tamamlanmazsa, bir istemci Eşgüdümlü işlem - sonucunu Web hizmeti işlemi güncelleştirmeleri veritabanına kaydedilmiş olmamasını sağlar.  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` Özelliği, bir işlem tamamlandığında, hizmet örneği geri olup olmadığını belirtir. Ayarlayarak `false`, hizmetin işlemi istekler genelinde aynı hizmet örneği tutar. Değişen Toplam korumak için gereklidir. Varsa kümesine `true`, her eylem tamamlandıktan sonra yeni bir örneği oluşturulur.  
   
-    -   `TransactionAutoCompleteOnSessionClose` Özelliği, bekleyen işlemler oturumu kapattığında tamamlanıp tamamlanmadığını belirtir. Ayarlayarak `false`, tek işlemler için ayarlayın ya da gerekli `OperationBehaviorAttribute``TransactionAutoComplete` özelliğini `true` veya açıkça bir çağrı gerektirecek şekilde `SetTransactionComplete` işlemleri tamamlamak için yöntemi. Bu örnek iki yaklaşımı gösterir.  
+    -   `TransactionAutoCompleteOnSessionClose` Özelliği, bekleyen işlemler oturumu kapattığında tamamlanıp tamamlanmadığını belirtir. Ayarlayarak `false`, tek işlemler için ayarlayın ya da gerekli <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> özelliğini `true` veya açıkça bir çağrı gerektirecek şekilde <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> işlemleri tamamlamak için yöntemi. Bu örnek iki yaklaşımı gösterir.  
   
 -   Üzerinde `ServiceContractAttribute`:  
   

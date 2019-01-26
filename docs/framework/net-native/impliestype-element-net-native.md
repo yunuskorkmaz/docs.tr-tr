@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548056"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065979"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; Öğesi (.NET Yerel)
 Bu ilke kapsayan tür veya yöntem uygulanmışsa, ilke bir türe uygulanır.  
@@ -99,7 +99,7 @@ Bu ilke kapsayan tür veya yöntem uygulanmışsa, ilke bir türe uygulanır.
 </Type>  
 ```  
   
- `<ImpliesType>` Öğesi içinde de görünebilir bir `<Method>` öğesi, bazı durumlarda bir genel yöntem örnekleme yansıtan bir tür örneği oluşturmada gösterdiğinden. Örneğin, bir genel yöntem Imagine `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` belirli bir kitaplık dinamik olarak ilişkili birlikte erişecek <xref:System.Collections.Generic.List%601> ve <xref:System.Array> türleri. Bu olarak ifade edilebilir:  
+ `<ImpliesType>` Öğesi içinde de görünebilir bir `<Method>` öğesi, bazı durumlarda bir genel yöntem örnekleme yansıtan bir tür örneği oluşturmada gösterdiğinden. Örneğin, bir genel yöntem Imagine `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` belirli bir kitaplık dinamik olarak ilişkili birlikte erişecek <xref:System.Collections.Generic.List%601> ve <xref:System.Array> türleri. Bu olarak ifade edilebilir:  
   
 ```xml  
 <Type Name="MyType">  
