@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6db5b3d56c9dd4998625098b9868b276238a978
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558650"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066395"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |**-t**[**p**] *infile*|İçinde depolanan ortak anahtarın belirtecini görüntüler *infile*. İçeriğini *infile* kullanarak bir anahtar çifti dosyasını daha önce oluşturulmuş bir ortak anahtar olmalıdır **-p**.  Kullanmayın **-t [p]** belirteci doğrudan bir anahtar çifti dosyasından ayıklamak için seçeneği.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, ortak dil çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **- Tp** seçeneği belirtece ek olarak ortak anahtarı görüntüler. Varsa <xref:System.Reflection.AssemblySignatureKeyAttribute> derlemeye özniteliği uygulandı, belirteç kimlik anahtarı içindir ve karma algoritması ve kimlik anahtarı adı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
 |**-T**[**p**] *assembly*|Genel anahtar belirtecini görüntüler *derleme.* *Derleme* bir derleme bildirimi içeren dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **- Tp** seçeneği belirtece ek olarak ortak anahtarı görüntüler. Varsa <xref:System.Reflection.AssemblySignatureKeyAttribute> derlemeye özniteliği uygulandı, belirteç kimlik anahtarı içindir ve karma algoritması ve kimlik anahtarı adı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
 |`-TS` `assembly` `infile`|Test imzası uygular imzalanmış veya kısmen imzalanmış `assembly` içindeki anahtar çifti ile `infile`.|  
-|-`TSc``assembly``container`|Test imzası uygular imzalanmış veya kısmen imzalanmış `assembly` anahtar kapsayıcısı içindeki anahtar çifti ile `container`.|  
+|-`TSc` `assembly` `container`|Test imzası uygular imzalanmış veya kısmen imzalanmış `assembly` anahtar kapsayıcısı içindeki anahtar çifti ile `container`.|  
 |**-v** *derleme*|İçindeki tanımlayıcı adı doğrular *derleme*burada *derleme* bir derleme bildirimi içeren dosyanın adıdır.|  
 |**-vf**  *derleme*|İçindeki tanımlayıcı adı doğrular *derleme.* Farklı **- v** seçeneği **-vf** kullanarak devre dışı olsa bile doğrulama zorlar **- Vr** seçeneği.|  
 |**-Vk**  *regfile.reg* *derleme* [*userlist*] [*infile*]|Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. İçin geçerli olan derleme adlandırma kurallarını **- Vr** seçeneğini uygulamak için **– Vk** de. Hakkında bilgi için *userlist* ve *infile* seçeneklerini görmek **– Vr** seçeneği.|  
