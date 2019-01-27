@@ -2,12 +2,12 @@
 title: Kısmi Güven Özelliği Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564736"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kümesinde Windows Communication Foundation (WCF) destekler. Kısmi güvende desteklenen özellikler bölümünde anlatıldığı gibi belirli senaryoları birtakım geçici olarak tasarlanmıştır [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
@@ -65,7 +65,7 @@ Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kü
   
 -   Tüm serileştirilebilir `[DataMember]` alanlar ve özellikler bir `[DataContract]` türü genel olmalıdır ve okuma/yazma. Serileştirme ve seri durumundan çıkarma [salt okunur](https://go.microsoft.com/fwlink/?LinkID=98854) WCF kısmen güvenilen bir uygulamada çalışırken alanları desteklenmiyor.  
   
--   `[Serializable]` /ISerializable programlama modeli, kısmi güven ortamında desteklenmez.  
+-    `[Serializable]` /ISerializable programlama modeli, kısmi güven ortamında desteklenmez.  
   
 -   Bilinen türler, kod veya makine düzeyinde yapılandırma (machine.config) belirtilmelidir. Uygulama düzeyinde yapılandırma güvenlik nedenleriyle, bilinen türleri belirtilemez.  
   
@@ -92,7 +92,7 @@ Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kü
   
 -   Uygulamanın tam olarak güvenilen bir uygulama kullanıcılar, uygulamayı bir kısmi güven ortamında çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremez dağıtılması durumunda emin olun. Bunu yapmak, davranışı çalışmaz ve hiçbir özel durum. Bunu sağlamak için bkz: **levelfinal** seçeneği kullanılarak [Caspol.exe (kod erişimi güvenliği ilke aracı)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Bir ortak davranışı örneği için bkz [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Bir ortak davranışı örneği için bkz [nasıl yapılır: Enterprise uç noktalarını kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Yapılandırma  
  Bunun tek istisnası kısmen güvenilen kod yalnızca yerel WCF yapılandırma bölümlerini yükleyebilir `app.config` dosya. WCF bölümleri machine.config veya bir kök başvuru WCF yapılandırma bölümlerini yüklenecek ConfigurationPermission(Unrestricted) web.config dosyası gerektirir. Yapılandırma yüklendiğinde WCF yapılandırma bölümlerine (davranışları, bağlamaları) yerel yapılandırma dosyası sonuçları bir özel durum dışında bu izin olmadan başvuruyor.  
@@ -159,10 +159,10 @@ Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kü
 ## <a name="unlisted-features"></a>Listede bulunmayan özellikleri  
  Kısmi güven ortamında çalışan kaynağa erişmek veya içinde eylemi uygulamak denemek olduğunda bilgilerini veya bu eylemi bir parça kullanılamaz bulmak için en iyi yolu bir `try` blok ve ardından `catch` hatası. Yinelenen hata izleme dosyaları taşmasını önlemek için kaynağın veya ilk güvenlik hatasından sonra işlem izleme WCF devre dışı bırakır. Kaynağa erişim veya bir eylem gerçekleştirmek için bir girişimde ilk kez her başarısız kaynağa erişim için bir özel durum izleme yoktur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Desteklenen Dağıtım Senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Kısmi Güven En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Desteklenen Dağıtım Senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [Kısmi Güven En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

@@ -2,12 +2,12 @@
 title: İşlem Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533773"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066253"
 ---
 # <a name="transaction-protocols"></a>İşlem Protokolleri
 Windows Communication Foundation (WCF), WS-Atomic işlem ve WS-koordinasyon protokollerini kullanır.  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF), WS-Atomic işlem ve WS-koordinasyon prot
   
  R1232: Giden `wscoor:Register` iletileri kullanmalıdır `IssuedTokenOverTransport` kimlik doğrulama modu açıklanan [güvenlik protokollerini](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- `wsse:Timestamp` Öğesi kullanılarak imzalanmalıdır `SecurityContextToken``STx` verildi. Bu imza, belirli bir işlemle ilişkili belirtecin kanıtını olduğu ve işlemde kaydetme katılımcı kimliğini doğrulamak için kullanılır. HTTPS üzerinden RegistrationResponse ileti gönderilir.  
+ `wsse:Timestamp` Öğesi kullanılarak imzalanmalıdır `SecurityContextToken STx` verildi. Bu imza, belirli bir işlemle ilişkili belirtecin kanıtını olduğu ve işlemde kaydetme katılımcı kimliğini doğrulamak için kullanılır. HTTPS üzerinden RegistrationResponse ileti gönderilir.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC Protokolü bağlama yapılandırması  
  WCF HTTPS üzerinden tek yönlü (veri birimi) iletileri destekler. İletileri arasında bağıntı uygulama ayrıntısı bırakılır.  

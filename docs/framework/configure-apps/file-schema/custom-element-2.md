@@ -1,5 +1,5 @@
 ---
-title: Özel öğe NameValueSectionHandler ve DictionarySectionHandler
+title: NameValueSectionHandler ve DictionarySectionHandler özel öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693804"
 ---
-# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Özel öğe NameValueSectionHandler ve DictionarySectionHandler
+# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler özel öğesi
 
-Kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları.
+Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;**\<sectionName >**
 
 ## <a name="attributes"></a>Öznitelikler
 
-Yok.
+Hiçbiri
 
-## <a name="parent-element"></a>Üst öğesi
+## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
@@ -36,15 +36,15 @@ Yok.
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Ekle >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler>  | Özel uygulama ayarlarını ekler. |
-| [**\<kaldırma >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> |    Önceden tanımlanmış bir ayar kaldırır. |
-| [**\<Clear >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> | Bir bölümdeki tüm önceden tanımlanmış ayarları temizler. |
+| [**\<Ekle >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler>  | Özel uygulama ayarları ekler. |
+| [**\<kaldırma >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> |    Önceden tanımlanmış ayar kaldırır. |
+| [**\<Temizle >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> | Bir bölümdeki tüm önceden tanımlanmış ayarlar temizler. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<SectionName >** öğesidir tarafından tanımlanan bir özel bir  **\<bölüm >** içinde etiketi  **\<configSections >** öğesi.
+ **\<SectionName >** öğedir tarafından tanımlanan özel bir öğe bir  **\<bölüm >** içindeki  **\<configSections >** öğesi.
 
-Aşağıdaki tabloda, her yapılandırma bölümü işleyicisi için nesne ConfigurationSettings.GetConfig yöntemi türünü döndürür gösterilmektedir:
+Aşağıdaki tabloda, her yapılandırma bölümü işleyicisi için ConfigurationSettings.GetConfig yöntemi nesnenin türü döndürür gösterilmektedir:
 
 | Yapılandırma bölümü işleyicisi                        | Dönüş türü                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
@@ -53,9 +53,9 @@ Aşağıdaki tabloda, her yapılandırma bölümü işleyicisi için nesne Confi
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek kullanan bölümler bildirmek nasıl gösterir <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıfları. 
+Aşağıdaki örnek, kullanan bölümler bildirmek gösterilmektedir <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıfları. 
 
-İlk özel öğe  **\<dictionarySample >**, tarafından okunur ayarları içeren <xref:System.Configuration.DictionarySectionHandler> sınıfını `System.dll` derleme. İkinci özel öğesi  **\<mySection >**, tarafından okunur ayarları içeren <xref:System.Configuration.NameValueSectionHandler> sınıfını `System.dll` derleme.
+İlk özel öğe  **\<dictionarySample >**, UX'te insanlar tarafından ayarları içeren <xref:System.Configuration.DictionarySectionHandler> sınıfını `System.dll` derleme. İkinci özel öğe  **\<mySection >**, UX'te insanlar tarafından ayarları içeren <xref:System.Configuration.NameValueSectionHandler> sınıfını `System.dll` derleme.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ Aşağıdaki örnek kullanan bölümler bildirmek nasıl gösterir <xref:System.
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework için yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)

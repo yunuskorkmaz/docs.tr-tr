@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: MT
+ms.openlocfilehash: d6db5b3d56c9dd4998625098b9868b276238a978
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558650"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -59,11 +59,11 @@ sn [-quiet][option [parameter(s)]]
 |**-pc**  *kapsayıcı* *outfile* [*hashalg*]|İçindeki anahtar çiftinden ortak anahtarı ayıklar *kapsayıcı* ve depolar *outfile*. Kullanırsanız *hashalg* seçeneği, RSA algoritması ortak anahtarı ayıklamak için kullanılır.|  
 |**-Pb** [**y** *&#124;* **n**]|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. Belirtirseniz *y*güçlü tam güvene yüklendiğinde tam güven derlemeleri doğrulanmaz için adları <xref:System.AppDomain>. Belirtirseniz *n*, doğruluk, ancak belirli bir tanımlayıcı adı için tanımlayıcı adlar doğrulanır. <xref:System.Security.Permissions.StrongNameIdentityPermission> Tam güvenle çalışan derlemelere etkisi yoktur. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Kullanılmazsa `y` ya da `n` belirtilirse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Not:**  64 bit bilgisayarlarda, bu parametreyi hem 32-bit hem de 64-bit Sn.exe örneklerinde ayarlamanız gerekir.|  
 |**-q**[**uiet**]|Sessiz mod kullanılacağını belirtir; başarı iletilerinin görüntülenmesini engeller.|  
-|**-R**[**bir**] *derleme* *infile*|Daha önce imzalanmış veya gecikmeli imzalanmış bir derleme içindeki anahtar çifti ile yeniden imzalar *infile*.<br /><br /> Varsa **-Ra** olan kullanılırsa, derlemedeki tüm dosyalar için karmalar hesaplanır.|  
+|**-R**[**a**] *assembly* *infile*|Daha önce imzalanmış veya gecikmeli imzalanmış bir derleme içindeki anahtar çifti ile yeniden imzalar *infile*.<br /><br /> Varsa **-Ra** olan kullanılırsa, derlemedeki tüm dosyalar için karmalar hesaplanır.|  
 |**-Rc**[**bir**] *derleme kapsayıcısı*|Daha önce imzalanmış veya gecikmeli imzalanmış bir derleme içindeki anahtar çifti ile yeniden imzalar *kapsayıcı*.<br /><br /> Varsa **- Rca** olan kullanılırsa, derlemedeki tüm dosyalar için karmalar hesaplanır.|  
 |**-Rh** *derleme*|Derlemedeki tüm dosyaların karma değerlerini yeniden hesaplar.|  
 |**-t**[**p**] *infile*|İçinde depolanan ortak anahtarın belirtecini görüntüler *infile*. İçeriğini *infile* kullanarak bir anahtar çifti dosyasını daha önce oluşturulmuş bir ortak anahtar olmalıdır **-p**.  Kullanmayın **-t [p]** belirteci doğrudan bir anahtar çifti dosyasından ayıklamak için seçeneği.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, ortak dil çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **- Tp** seçeneği belirtece ek olarak ortak anahtarı görüntüler. Varsa <xref:System.Reflection.AssemblySignatureKeyAttribute> derlemeye özniteliği uygulandı, belirteç kimlik anahtarı içindir ve karma algoritması ve kimlik anahtarı adı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
-|**-T**[**p**] *derleme*|Genel anahtar belirtecini görüntüler *derleme.* *Derleme* bir derleme bildirimi içeren dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **- Tp** seçeneği belirtece ek olarak ortak anahtarı görüntüler. Varsa <xref:System.Reflection.AssemblySignatureKeyAttribute> derlemeye özniteliği uygulandı, belirteç kimlik anahtarı içindir ve karma algoritması ve kimlik anahtarı adı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
+|**-T**[**p**] *assembly*|Genel anahtar belirtecini görüntüler *derleme.* *Derleme* bir derleme bildirimi içeren dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **- Tp** seçeneği belirtece ek olarak ortak anahtarı görüntüler. Varsa <xref:System.Reflection.AssemblySignatureKeyAttribute> derlemeye özniteliği uygulandı, belirteç kimlik anahtarı içindir ve karma algoritması ve kimlik anahtarı adı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
 |`-TS` `assembly` `infile`|Test imzası uygular imzalanmış veya kısmen imzalanmış `assembly` içindeki anahtar çifti ile `infile`.|  
 |-`TSc``assembly``container`|Test imzası uygular imzalanmış veya kısmen imzalanmış `assembly` anahtar kapsayıcısı içindeki anahtar çifti ile `container`.|  
 |**-v** *derleme*|İçindeki tanımlayıcı adı doğrular *derleme*burada *derleme* bir derleme bildirimi içeren dosyanın adıdır.|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçlar](../../../docs/framework/tools/index.md)  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Araçlar](../../../docs/framework/tools/index.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

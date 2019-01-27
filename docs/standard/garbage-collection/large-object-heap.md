@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415539"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066434"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerde büyük nesne yığını
 
@@ -34,7 +34,7 @@ Küçük nesneleri nesil 0 her zaman ayrılır ve kendi ömürlerine bağlı ola
 
 Yalnızca 2. nesil toplama sırasında toplanan oldukları için büyük nesneler, kuşak 2 ait. Bir nesil toplandığında, tüm genç generation(s) de toplanır. Örneğin, 1. kuşak GC gerçekleştiğinde, her iki nesil 1 ve 0 toplanır. Ve 2. nesil GC gerçekleştiğinde, tam yığın toplanır. Bu nedenle, 2. nesil GC olarak da adlandırılan bir *tam GC*. Bu makalede tam GC yerine 2. nesil GC başvuruyor, ancak koşulları birbirinin yerine kullanılabilir.
 
-Nesiller GC yığınında mantıksal bir görünümünü sağlar. Fiziksel olarak, yönetilen yığın segmentler Canlı nesneler. A *Yönetilen yığın segment* çağırarak OS GC ayırır bellek öbek [VirtualAlloc işlevi](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) adına yönetilen kod. CLR yüklendiğinde, GC iki ilk öbek segmentini ayırır: küçük nesneleri (küçük nesne yığını veya SOH) için diğeri için büyük nesneler (büyük nesne yığını için).
+Nesiller GC yığınında mantıksal bir görünümünü sağlar. Fiziksel olarak, yönetilen yığın segmentler Canlı nesneler. A *Yönetilen yığın segment* çağırarak OS GC ayırır bellek öbek [VirtualAlloc işlevi](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) adına yönetilen kod. CLR yüklendiğinde, GC iki ilk öbek segmentini ayırır: küçük nesneleri (küçük nesne yığını veya SOH) için diğeri için büyük nesneler (büyük nesne yığını için).
 
 İstek, koyarak ardından maddelerindeki ayırma yönetilen nesneler Bu yönetilen yığın kesimlerinde. Nesne 85.000 bayttan daha az ise segmenti için SOH yerleştirilir; Aksi takdirde, bir LOH kesiminde konur. Segment (küçük öbekler halinde) daha fazla uygulanır ve daha fazla nesne açtığına ayrılır.
 SOH GC varlığını sürdürmesini nesneleri sonraki nesle yükseltilir. Bir nesil 0 toplamadan nesneler, kuşak 1 nesnelerinin artık kabul edilir ve benzeri. Ancak, eski nesil varlığını sürdürmesini nesneleri eski nesil olarak değerlendirilir. Diğer bir deyişle, gelen 2. nesil Dışarıda Kalanlar, 2. nesil nesneleri, ve (2. nesil ile toplanır) LOH nesneleri survivor LOH öğesinden gelir.
@@ -57,9 +57,9 @@ Bir atık toplama işlemi tetiklendiğinde, GC Canlı nesneleri izler ve bunlar�
 
 Büyük nesne ayırma isteklerini karşılamak için yeterli boş alan yoksa, GC ilk işletim sisteminden daha fazla kesim almaya çalışır. Bu başarısız olursa umuduyla bazı yer açmayı, içinde 2. nesil GC tetikler.
 
-1. nesil veya 2. nesil GC sırasında atık toplayıcı olan Canlı nesne üzerinde işletim sistemine çağırarak parçaları sürümleri [VirtualFree işlevine](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). (Kısa ömürlü segment gen0/çöp toplayıcı bazı burada korumak gen1 canlı, çünkü burada kaydedilen üzerinde uygulamanızın içinde hemen ayırma dışında) sonra son Canlı nesne segmentin sonuna boşluk kaydı geri alınmış aynıdır. Ve bunlar, işletim Sisteminin bunları yeniden diske veri yazmak gerekmez anlamı sıfırlanır rağmen boş alanları kaydedilmiş kalır.
+1. nesil veya 2. nesil GC sırasında atık toplayıcı olan Canlı nesne üzerinde işletim sistemine çağırarak parçaları sürümleri [VirtualFree işlevine](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree). (Kısa ömürlü segment gen0/çöp toplayıcı bazı burada korumak gen1 canlı, çünkü burada kaydedilen üzerinde uygulamanızın içinde hemen ayırma dışında) sonra son Canlı nesne segmentin sonuna boşluk kaydı geri alınmış aynıdır. Ve bunlar, işletim Sisteminin bunları yeniden diske veri yazmak gerekmez anlamı sıfırlanır rağmen boş alanları kaydedilmiş kalır.
 
-LOH segment, yalnızca LOH yalnızca 2. nesil GC'ler sırasında toplanan olduğundan, bu tür bir GC sırasında serbest bırakılabilir. Şekil 3, çöp toplayıcı'nın bir segmente (kesim 2) geri işletim sistemi sürümleri ve kalan segmentler hakkında daha fazla alan kaydeder burada bir senaryo gösterilmektedir. Kaydı geri alınmış boşluk kesim sonunda, büyük nesne ayırma isteklerini karşılamak için kullanması gereken, bellek yeniden kaydeder. (Bir işleme ve kaydetmek için hakkında açıklama belgelerine bakın [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+LOH segment, yalnızca LOH yalnızca 2. nesil GC'ler sırasında toplanan olduğundan, bu tür bir GC sırasında serbest bırakılabilir. Şekil 3, çöp toplayıcı'nın bir segmente (kesim 2) geri işletim sistemi sürümleri ve kalan segmentler hakkında daha fazla alan kaydeder burada bir senaryo gösterilmektedir. Kaydı geri alınmış boşluk kesim sonunda, büyük nesne ayırma isteklerini karşılamak için kullanması gereken, bellek yeniden kaydeder. (Bir işleme ve kaydetmek için hakkında açıklama belgelerine bakın [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
 ![Şekil 3: Gen 2 GC sonra LOH](media/loh/loh-figure-3.jpg)  
 Şekil 3: 2. nesil GC sonra LOH
@@ -302,13 +302,13 @@ Bazen LOH sıkıştırılmamıştır çünkü LOH thoought parçalanma kaynağı
 
 Çöp toplayıcısının sık yeni almak için yığın kesimlerini OS yönetilen ve boş olanları işletim sistemine yeniden sürüm gerektiren büyük geçici nesneler nedeniyle VM parçalanma görmek için daha yaygındır.
 
-LOH VM parçalanmasına neden olup olmadığını doğrulamak için bir kesme noktası ayarlayabilirsiniz [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) ve [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) kimin çağrı görmek için. Örneğin, kimlerin OS 8MBB daha büyük sanal bellek öbeklere ayırmak denedi görmek için şunun gibi bir kesme noktası ayarlayabilirsiniz:
+LOH VM parçalanmasına neden olup olmadığını doğrulamak için bir kesme noktası ayarlayabilirsiniz [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) ve [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) kimin çağrı görmek için. Örneğin, kimlerin OS 8MBB daha büyük sanal bellek öbeklere ayırmak denedi görmek için şunun gibi bir kesme noktası ayarlayabilirsiniz:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Bu komut ayıklayıcıya girer ve çağrı yığını yalnızca şu durumlarda gösterir [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) bir ayırma boyutu 8 MB (0x800000) değerinden büyük olarak adlandırılır.
+Bu komut ayıklayıcıya girer ve çağrı yığını yalnızca şu durumlarda gösterir [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) bir ayırma boyutu 8 MB (0x800000) değerinden büyük olarak adlandırılır.
 
 CLR 2.0 denilen bir özelliği eklendi *VM Hoarding* , scenarious için yararlı olabilir burada kesim (yığın nesnesi büyük ve küçük üzerinde de dahil olmak üzere) sık alınan ve yayımlanmış. Adlı bir başlangıç bayrak belirttiğiniz VM Hoarding belirtmek için `STARTUP_HOARD_GC_VM` barındırma API'si aracılığıyla. İşletim sistemi boş segmentlere geri serbest bırakılması, yerine CLR bu segmentlerde belleği kaydeder ve onları bir bekleme listesine koyar. (CLR için çok büyük olduğundan kesimleri bunu değil olduğunu unutmayın.) CLR, yeni segment isteklerini karşılamak için daha sonra bu kesimler kullanır. Yeterince büyük bir bulabilirsiniz, uygulamanızın yeni bir segment duyduğunda bekleme listeden bir CLR kullanır.
 

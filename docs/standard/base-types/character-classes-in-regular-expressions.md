@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622955"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Bir karakter sınıfı içeren bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri kümesini tanımlar. .NET içinde normal ifade dili aşağıdaki karakter sınıflarını destekler:  
@@ -115,7 +115,7 @@ ms.locfileid: "53131475"
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
   
- [*^ character_group*]  
+ [*^character_group*]  
   
  Burada *character_group* eşleşmenin başarılı olması için giriş dizesinde yer alamaz karakterlerin tek tek bir listesi verilmiştir. *character_group* bir veya daha fazla sabit karakter, herhangi bir birleşimini içerebilir [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ya da karakter sınıfları.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "53131475"
 ## <a name="any-character-"></a>Herhangi Bir Karakter: .  
  Nokta karakterini (.) dışında herhangi bir karakterle eşleşir `\n` (yeni satır karakteri, \u000A) aşağıdaki iki duruma sahip:  
   
--   Bir normal ifade deseni tarafından değiştirilirse <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya deseni kısmı, içerip içermediğini `.` karakter sınıfı tarafından değiştirildiğinde `s` seçeneği `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+-   Bir normal ifade deseni tarafından değiştirilirse <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği veya deseni kısmı, içerip içermediğini `.` karakter sınıfı tarafından değiştirildiğinde `s` seçeneği `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Aşağıdaki örnekte olan farklı davranışlarını gösterir `.` karakter sınıfının varsayılan olarak ve <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği. Normal ifade `^.+` dize başlangıcında başlar ve her karakter ile eşleşir. Varsayılan olarak eşleştirme, ilk satırın sonunda biter; satır başı karakteri normal ifade deseniyle eşleşen `\r` veya \u000D, ancak eşleşmiyor `\n`. Çünkü <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği Giriş dizesinin tamamının tek bir satır olarak yorumladığından, giriş dizesindeki her karakterle eşleşir dahil olmak üzere `\n`.  
   
@@ -176,12 +176,12 @@ ms.locfileid: "53131475"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Herhangi bir karakterle eşleştiği için `.` bir normal ifade deseni herhangi bir karakterle birden çok kez eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Herhangi bir karakterle eşleştiği için `.` bir normal ifade deseni herhangi bir karakterle birden çok kez eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Başa dön](#Top)  
   
 <a name="CategoryOrBlock"></a>   
-## <a name="unicode-category-or-unicode-block-p"></a>Unicode kategorisi veya Unicode bloğu: \p{}  
+## <a name="unicode-category-or-unicode-block-p"></a>Unicode Category or Unicode Block: \p{}  
  Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakterin büyük harf olabilir (tarafından temsil edilen `Lu` kategorisi), bir ondalık basamak ( `Nd` kategorisi), bir matematik sembolü ( `Sm` kategorisi), veya bir paragraf ayracı ( `Zl` kategorisi). Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  
@@ -248,7 +248,7 @@ ms.locfileid: "53131475"
  ECMAScript uyumlu davranış belirtilirse, `\w` eşdeğerdir `[a-zA-Z_0-9]`. ECMAScript normal ifadeler hakkında daha fazla bilgi için "ECMAScript eşleşme davranışı" bölümüne bakın. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Herhangi bir sözcük karakteriyle eşleştiği için `\w` bir normal ifade deseni herhangi bir sözcük karakteri birden çok kez ardından belirli bir sözcük karakteriyle eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Herhangi bir sözcük karakteriyle eşleştiği için `\w` bir normal ifade deseni herhangi bir sözcük karakteri birden çok kez ardından belirli bir sözcük karakteriyle eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Aşağıdaki örnekte `\w` dil öğesi, bir sözcükteki yinelenen karakterlerle eşleştirilecek. Örnek bir normal ifade desenini tanımlar `(\w)\1`, yorumlanabilen gibi.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "53131475"
  ECMAScript uyumlu davranış belirtilirse, `\W` eşdeğerdir `[^a-zA-Z_0-9]`. ECMAScript normal ifadeler hakkında daha fazla bilgi için "ECMAScript eşleşme davranışı" bölümüne bakın. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Herhangi bir sözcük olmayan karakterle eşleştiği için `\W` bir normal ifade deseni tarafından belirli bir sözcük olmayan karakterle birden çok kez ardından herhangi bir sözcük olmayan karakterle eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Herhangi bir sözcük olmayan karakterle eşleştiği için `\W` bir normal ifade deseni tarafından belirli bir sözcük olmayan karakterle birden çok kez ardından herhangi bir sözcük olmayan karakterle eşleşmeye çalışıyorsa dil öğesi bir yavaş belirleyici ile birlikte sık kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Aşağıdaki örnekte gösterilmiştir `\W` karakter sınıfı.  Bir normal ifade desenini tanımlar `\b(\w+)(\W){1,2}`, bir veya iki sözcük olmayan karakterleri, boşluk veya noktalama gibi arkasından bir sözcük eşleşir. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
@@ -506,7 +506,7 @@ ms.locfileid: "53131475"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> veya<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -veya-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -594,6 +594,6 @@ ms.locfileid: "53131475"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Char.GetUnicodeCategory%2A>  
-- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- <xref:System.Char.GetUnicodeCategory%2A>
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)

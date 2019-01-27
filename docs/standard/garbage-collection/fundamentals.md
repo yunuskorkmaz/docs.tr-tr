@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982873"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066339"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp Toplamanın Temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -98,7 +98,7 @@ ms.locfileid: "50982873"
   
  Yönetilen her işlem için bir yönetilen yığın yok. İşlemdeki tüm iş parçacıkları, aynı yığındaki nesneler için bellek ayrılamadı.  
   
- Bellek ayırmak için atık toplayıcısı Win32 çağırır [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) işlevi ve segmentini ayırır yönetilen uygulamalar için aynı anda bellek. Çöp toplayıcı da parçaları gerektiği gibi ayırır ve Win32 çağırarak parçaları için işletim sisteminde (bunları tüm nesnelerden temizledikten sonra) sürümleri [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) işlevi.  
+ Bellek ayırmak için atık toplayıcısı Win32 çağırır [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) işlevi ve segmentini ayırır yönetilen uygulamalar için aynı anda bellek. Çöp toplayıcı da parçaları gerektiği gibi ayırır ve Win32 çağırarak parçaları için işletim sisteminde (bunları tüm nesnelerden temizledikten sonra) sürümleri [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) işlevi.  
   
 > [!IMPORTANT]
 >  Boyutu çöp toplayıcısının ayrılan parçaların uygulamaya özgü ve düzenli güncelleştirmeleri dahil olmak üzere dilediğiniz zaman değiştirilebilir. Uygulamanız hiçbir zaman hakkında varsayımlar veya belirli bir segment boyutuna göre değişir ve segment ayırma için kullanılabilir bellek miktarını yapılandırmak için denemeniz gerekir.  
@@ -146,7 +146,7 @@ ms.locfileid: "50982873"
 ||32 bit:|64 bit|  
 |-|-------------|-------------|  
 |GC iş istasyonu|16 MB|256 MB|  
-|Sunucu GC|64 MB|4 GB|  
+|Server GC|64 MB|4 GB|  
 |GC sunucusuyla > 4 mantıksal CPU|32 MB|2 GB|  
 |Sunucu GC > 8 ile mantıksal CPU|16 MB|1 GB|  
   

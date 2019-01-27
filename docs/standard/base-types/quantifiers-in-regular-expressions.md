@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678271"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
 Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunması mevcut olmalıdır, miktar belirleyiciler belirtin.  .NET tarafından desteklenen miktar belirleyiciler aşağıdaki tabloda listelenmektedir.  
@@ -31,8 +31,8 @@ Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunma
 |`*`|`*?`|Sıfır veya daha fazla kez eşleştirin.|  
 |`+`|`+?`|Bir veya daha fazla kez eşleştirin.|  
 |`?`|`??`|Sıfır veya bir kez eşleştirin.|  
-|`{` *N* `}`|`{` *N* `}?`|Tam olarak eşleşmesi *n* kez.|  
-|`{` *N* `,}`|`{` *N* `,}?`|En az eşleşen *n* kez.|  
+|`{` *n* `}`|`{` *n* `}?`|Tam olarak eşleşmesi *n* kez.|  
+|`{` *n* `,}`|`{` *n* `,}?`|En az eşleşen *n* kez.|  
 |`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Gelen eşleşen *n* için *m* kez.|  
   
  Miktarları `n` ve `m` tamsayı sabit değerlerdir. Normalde, miktar belirleyiciler doyumsuz; Bunlar, mümkün olduğunca çok tekrarı belirli desenleri eşleştirilecek normal ifade altyapısı neden. Ekleme `?` karakter için bir miktar belirleyiciyi yapar, yavaş; mümkün olduğu kadar az oluşum eşleştirilecek normal ifade altyapısı sağlar. Doyumsuz ve yavaş miktar belirleyiciler arasındaki farkı eksiksiz bir açıklaması için konudaki [Greedy ve yavaş miktar belirleyiciler](#Greedy) bu konuda.  
@@ -273,5 +273,5 @@ Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunma
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
