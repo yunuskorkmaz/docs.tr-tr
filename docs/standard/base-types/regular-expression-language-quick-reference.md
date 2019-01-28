@@ -126,7 +126,7 @@ ms.locfileid: "54531427"
 ## <a name="quantifiers"></a>Miktar Belirleyiciler  
  Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
   
-|Miktar Belirleyici|Açıklama|Desen|Eşleşmeler|  
+|Miktar Niteleyici|Açıklama|Desen|Eşleşmeler|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Önceki öğeyle sıfır kez veya daha fazla eşleşir.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Önceki öğeyle bir kez veya daha fazla eşleşir.|`"be+"`|"been" içinde "bee", "bent" içinde "be"|  
