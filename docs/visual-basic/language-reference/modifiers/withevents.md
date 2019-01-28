@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 240058a534456ae20c9c129a068bae575ac45eda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1a6cecdf724603b8f4617fe4e8b5ef2c0acdeff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624567"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Bir veya daha fazla bildirilen üye değişkenleri olayları yükseltebilirsiniz bir sınıfın bir örneğine başvuru belirtir.  
+Bir veya daha fazla bildirilmiş üye değişkenleri, olayları tetikleyebilen bir sınıf örneğine başvurduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir değişken kullanarak tanımlandığında `WithEvents`, bir yöntem kullanarak değişkenin olayları işleme bildirimli olarak belirtebilirsiniz `Handles` anahtar sözcüğü.  
+ Bir değişken kullanarak tanımlandığında `WithEvents`, bir yöntem kullanarak değişkenin olaylarını işler bildirimli olarak belirtebilirsiniz `Handles` anahtar sözcüğü.  
   
- Kullanabileceğiniz `WithEvents` yalnızca düzeyinde sınıfı veya modülü. Bu bildirimi bağlamının anlamına gelir bir `WithEvents` değişkeni bir sınıf veya modülü olmalıdır ve kaynak dosyasını, ad alanı, yapı veya yordam olamaz.  
+ Kullanabileceğiniz `WithEvents` yalnızca düzeyinde sınıfı veya modülü. Bildirim bağlamı başka bir deyişle bir `WithEvents` değişken bir sınıf veya modül olmalıdır ve bir kaynak dosyası, ad alanı, yapı ya da yordamın olamaz.  
   
- Kullanamazsınız `WithEvents` yapısı üyede.  
+ Kullanamazsınız `WithEvents` yapı üyesi üzerinde.  
   
- Yalnızca bağımsız değişkenleri bildirebilir — değil diziler — ile `WithEvents`.  
+ Yalnızca bağımsız değişkenleri bildirebilirsiniz; dizi değildir — ile `WithEvents`.  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Öğe türleri.** Bildirmelisiniz `WithEvents` bunlar kabul edebilmesi için nesne değişkenleri olmasını değişkenleri sınıf örnekleri. Ancak, bunları olarak bildiremezsiniz `Object`. Bunları olaylar oluşturabilir belirli sınıfı olarak bildirilmelidir.  
+-   **Öğe türleri.** Bildirmeniz gerekir `WithEvents` kabul edebilir, böylece nesne değişkenleri olmasını değişkenleri sınıfı örneği. Ancak, bunları olarak bildiremezsiniz `Object`. Bunları, olayları tetikleyebilen belirli sınıf olarak bildirilmelidir.  
   
- `WithEvents` Bu bağlamda değiştirici kullanılabilir: [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ `WithEvents` Bu bağlamda değiştirici kullanılabilir: [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
