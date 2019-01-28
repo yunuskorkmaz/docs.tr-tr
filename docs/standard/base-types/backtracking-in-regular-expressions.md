@@ -101,7 +101,7 @@ ms.locfileid: "54615986"
   
 -   Desendeki "s" ile, eşleştirilen "e" karakterini izleyen "s"yi ("expressions"daki ilk "s") karşılaştırır. Eşleştirme başarılıdır.  
   
- Geri izleme kullandığınızda, normal ifade desenini 55 karakter uzunluğundaki giriş dizesiyle eşleştirmek, 67 karşılaştırma işlemi gerektirir. Genellikle, normal bir ifade deseninin tek bir değişim yapısı veya tek bir isteğe bağlı miktar belirleyicisi varsa, deseni eşleştirmek için gereken karşılaştırma işlemlerinin sayısı, giriş dizesindeki karakterlerin sayısının iki katıdır.  
+ Geri izleme kullandığınızda, normal ifade desenini 55 karakter uzunluğundaki giriş dizesiyle eşleştirmek, 67 karşılaştırma işlemi gerektirir. Genellikle, normal bir ifade deseninin tek bir değişim yapısı veya tek bir isteğe bağlı miktar niteleyicisi varsa, deseni eşleştirmek için gereken karşılaştırma işlemlerinin sayısı, giriş dizesindeki karakterlerin sayısının iki katıdır.  
   
  [Başa dön](#top)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "54615986"
   
  `(?<=` *alt ifade* `)` bir pozitif geriye yönelik onaydır; yani karakteri veya karakterleri geçerli konumu eşleşmelidir önce olduğundan *subexpression*. `(?<!`*alt ifade* `)` bir negatif geriye yönelik onaydır; yani karakteri veya karakterleri geçerli konumu eşleşmemelidir önce olduğundan *subexpression*. Her iki pozitif ve negatif geriye yönelik onaylar olduğunda en kullanışlı *subexpression* önceki alt ifade bir alt kümesidir.  
   
- Aşağıdaki örnek, bir e-posta adresi kullanıcı adını doğrulayan iki denk normal ifade deseni kullanır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar belirleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örnekteki çıktının yürütme zamanını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
+ Aşağıdaki örnek, bir e-posta adresi kullanıcı adını doğrulayan iki denk normal ifade deseni kullanır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar niteleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örnekteki çıktının yürütme zamanını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -189,7 +189,7 @@ ms.locfileid: "54615986"
   
  `(?=` *alt ifade* `)` geçerli konumu eşleşmelidir sonra bir pozitif ileriye yönelik onaydır; yani karakterin veya karakter olduğu *subexpression*. `(?!`*alt ifade* `)` geçerli konumu eşleşmemelidir sonra bir negatif ileriye yönelik onaydır; yani karakterin veya karakter olduğu *subexpression*. Her iki pozitif ve negatif ileriye yönelik onaylar olduğunda en kullanışlı *subexpression* sonraki alt ifade bir alt kümesidir.  
   
- Aşağıdaki örnekte, tam olarak belirtilen bir tür adını doğrulayan iki denk normal ifade deseni kullanılmaktadır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkincisi, iç içe bir miktar belirleyiciyi pozitif bir ileriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örnekteki çıktının yürütme zamanını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
+ Aşağıdaki örnekte, tam olarak belirtilen bir tür adını doğrulayan iki denk normal ifade deseni kullanılmaktadır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkincisi, iç içe bir miktar niteleyiciyi pozitif bir ileriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örnekteki çıktının yürütme zamanını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
