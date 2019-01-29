@@ -4,7 +4,7 @@
 ## [Kesin adlandırma](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [Bağımlılıklar](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [Kaynak Bağlantısı](sourcelink.md)
 ### [Yayımlama](publish-nuget-package.md)
 ## [Sürüm Oluşturma](versioning.md)
 ### [Hataya neden olan değişiklikler](breaking-changes.md)
