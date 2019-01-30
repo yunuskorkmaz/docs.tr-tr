@@ -3,12 +3,12 @@ title: Null başvuru türleri için Tasarım
 description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156494"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204775"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Tasarım amacınızla daha net bir şekilde boş değer atanabilir ve NULL olmayan bir başvuru türleri için express
 
@@ -190,7 +190,7 @@ Ana Bu sınıf için sorulara katılımcı anket yanıtları oluşturmak için s
 1. Anket katılım isteyin. Kişi onayı değil eksik (veya boş) bir yanıt döndürür.
 1. Her bir soru sorun ve yanıt kaydedin. Her yanıt, ayrıca eksik (veya null) olabilir.
 
-Aşağıdaki kodu ekleyin, `SurveyRespondent` sınıfı:
+Aşağıdaki kodu ekleyin, `SurveyResponse` sınıfı:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ Son adım, anket sonuçlarını görüntülemektir. Yazdığınız sınıfların
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Çünkü `surveyResponses` bir null değer alamaz başvurusu, türü hiçbir denetim gerekli XML'deki başvurmadan önce. `Answer` Yöntemi null olmayan bir dize döndürür, bu nedenle, aşırı yüklemesini seçin `GetValueOrDefault` , varsayılan değer için ikinci bir bağımsız değişken alır.
+Çünkü `surveyResponses` bir NULL olmayan bir başvuru türü seri durumdan başvurmadan önce hiçbir denetim gereklidir. `Answer` Yöntemi null olmayan bir dize döndürür, bu nedenle, aşırı yüklemesini seçin `GetValueOrDefault` , varsayılan değer için ikinci bir bağımsız değişken alır.
 
 Ardından, bu üç ifade gövdeli üyeler ekleyin `SurveyRun` sınıfı:
 
@@ -228,7 +228,7 @@ Herhangi bir ihtiyaç duymazsanız `null` tüm NULL olmayan bir başvuru türler
 
 ## <a name="get-the-code"></a>Kodu alma
 
-Öğreticinin tamamlanan kodu alabilirsiniz bizim [örnekleri](https://github.com/dotnet/samples) depoda [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) klasör.
+Öğreticinin tamamlanan kodu alabilirsiniz bizim [örnekleri](https://github.com/dotnet/samples) depoda [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) klasör.
 
 Boş değer atanabilir ve NULL olmayan bir başvuru türleri arasında tür bildirimleri değiştirerek denemeler yapın. Yanlışlıkla başvuru olmayan emin olmak için farklı uyarıları oluşturan nasıl bkz bir `null`.
 
