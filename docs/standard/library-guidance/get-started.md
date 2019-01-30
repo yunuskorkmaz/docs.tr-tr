@@ -4,12 +4,12 @@ description: Başlarken .NET kitaplıkları oluşturmak.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145731"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204656"
 ---
 # <a name="get-started"></a>Kullanmaya başlayın
 
@@ -29,9 +29,9 @@ Açık kaynak .NET kitaplıkları için NuGet paketleri NuGet.org üzerinde yay�
 
 NuGet, kullanımı kolay var olan paketleri bir .NET kitaplığı oluşturulurken kolaylaştırır. NuGet bağımlılıklarını genel kaynakları uyuşmazlıkları ve kaçınma yöntemleri hakkında bilgi edinin.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Kaynak Bağlantısı](./sourcelink.md)
 
-SourceLink, kullanıcıların .NET kitaplığınızın kaynak kodunda hata ayıklama sırasında adım olanak tanıyan harika bir araçtır. Bu makalede SourceLink nedir ve neden kullanılması gerektiği hakkında genel bir bakış verilmiştir.
+Kaynak bağlantı, kullanıcıların .NET kitaplığınızın kaynak kodunda hata ayıklama sırasında adım olanak tanıyan harika bir araçtır. Bu makalede, kaynak bağlantı nedir ve neden kullanılması gerektiği bir genel bakıştır.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Yayımlama](./publish-nuget-package.md)
 

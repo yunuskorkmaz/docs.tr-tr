@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529534"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204567"
 ---
 # <a name="net-framework-system-requirements"></a>.NET framework sistem gereksinimleri
 
@@ -78,12 +78,14 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 - Tüm platformlar için en son Windows hizmet paketine yükseltin ve kullanılabilir olan kritik güncelleştirmeleri yükleyin öneririz [Windows Update Web sitesini](https://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik.
 
-- 64-bit işletim sistemlerinde .NET Framework, WOW64 (32-bit bir 64-bit makinede işleme) hem de yerel 64-bit işlemeyi destekler.
+- 64-bit işletim sistemlerinde .NET Framework, hem WOW64 (işleme bir 64-bit makinede 32-bit) destekler ve | Yerel 64-bit işleme.
 
 ## <a name="supported-server-operating-systems"></a>Desteklenen sunucu işletim sistemleri
 
 | İşletim sistemi | Desteklenen sürümler | İşletim sistemi ile önceden | Yüklenebilir ayrı olarak |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server 2019 | 64 bit | .NET Framework 4.7.2 | -- |
+| Windows Server sürüm 1809 | 64 bit | .NET Framework 4.7.2 | -- |
 | Windows Server sürüm 1803 | 64 bit | .NET Framework 4.7.2 | -- |
 | Windows Server 1709 sürümü | 64 bit | .NET framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows Server 2016 | 64 bit | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET framework 4.7<br/><br/> .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |

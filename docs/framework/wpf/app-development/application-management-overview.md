@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae02f77948da9b1371db1d1b67ce5030d207c0e8
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592039"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204853"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
    
   
 ## <a name="the-application-class"></a>Uygulama sınıfı  
- İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], genel uygulama kapsamlı işlevi içinde saklanmış olduğu <xref:System.Windows.Application> sınıfı. <xref:System.Windows.Application> Sınıfı aşağıdaki işlevleri içerir:  
+ WPF içinde ortak uygulama kapsamlı işlevsellik içinde kapsüllenir <xref:System.Windows.Application> sınıfı. <xref:System.Windows.Application> Sınıfı aşağıdaki işlevleri içerir:  
   
 -   İzleme ve uygulama yaşam süresi ile etkileşim kurma.  
   
@@ -56,10 +56,10 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>Uygulama tanımı  
- İşlevselliğini kullanmaya <xref:System.Windows.Application> sınıfı, bir uygulama tanımı uygulamalıdır. A [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamanın tanımıdır türetildiği bir sınıf <xref:System.Windows.Application> ve özel bir ile yapılandırılmış [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] ayarı.  
-  
+ İşlevselliğini kullanmaya <xref:System.Windows.Application> sınıfı, bir uygulama tanımı uygulamalıdır. Bir WPF uygulaması tanımı, türetilen sınıftır <xref:System.Windows.Application> ve özel bir MSBuild ayarı ile yapılandırılır.  
+
 ### <a name="implementing-an-application-definition"></a>Uygulama tanımı uygulama  
- Tipik bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama tanımı hem biçimlendirme hem de arka plan kod kullanılarak gerçekleştirilir. Bu, uygulama özellikleri, kaynakları bildirimli olarak ve olayları işleme ve uygulamaya özgü davranış gerideki kod uygulama çalışırken olayları kaydetme biçimlendirme kullanmanıza olanak sağlar.  
+ Tipik bir WPF uygulaması tanımı, biçimlendirme ve arka plan kod hem kullanılarak uygulanır. Bu, uygulama özellikleri, kaynakları bildirimli olarak ve olayları işleme ve uygulamaya özgü davranış gerideki kod uygulama çalışırken olayları kaydetme biçimlendirme kullanmanıza olanak sağlar.  
   
  Aşağıdaki örnek, biçimlendirme hem de arka plan kod kullanarak bir uygulama tanımı uygulamak gösterilmektedir:  
   
@@ -70,19 +70,19 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  İşaretleme dosyasının ve birlikte çalışması için arka plan kod dosyasında, aşağıdaki izin vermek için yapılması gerekir:  
   
--   Biçimlendirme içinde `Application` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturulmamasını [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] oluşturmak için bir `partial` türetilen sınıf <xref:System.Windows.Application> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu eklenmesini gerektiren bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] için ad alanı bildirimi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ).  
+- Biçimlendirme içinde `Application` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturmak MSBuild neden olur. bir `partial` türetilen sınıf <xref:System.Windows.Application> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu XAML şema için bir XML ad alanı bildirimi eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
 -   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` öznitelik, biçimlendirmede ve öğesinden türetilmelidir <xref:System.Windows.Application>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Yeni bir WPF uygulaması proje veya WPF tarayıcı uygulaması kullanarak proje oluşturduğunuzda [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], uygulama tanımı varsayılan olarak dahil edilir ve biçimlendirme hem de arka plan kod kullanılarak tanımlanır.  
+>  Yeni bir WPF uygulaması veya Visual Studio kullanarak WPF tarayıcı uygulaması projesi oluşturduğunuzda, uygulama tanımı varsayılan olarak dahil edilir ve biçimlendirme hem de arka plan kod kullanılarak tanımlanır.  
   
- Bu kod, bir uygulama tanımı uygulamak için gereken en düşük gereksinimdir. Ancak, ek bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] yapılandırma oluşturmak ve uygulamayı çalıştırmadan önce uygulama tanımına yapılması gerekir.  
+ Bu kod, bir uygulama tanımı uygulamak için gereken en düşük gereksinimdir. Ancak, ek bir MSBuild yapılandırma oluşturmak ve uygulamayı çalıştırmadan önce uygulama tanımına yapılması gerekir.  
   
 ### <a name="configuring-the-application-definition-for-msbuild"></a>MSBuild için uygulama tanımını yapılandırma  
- Tek başına uygulamalar ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] çalıştırılmadan önce belirli bir düzeyde altyapısının uygulaması gerektirir. Bu altyapı en önemli parçası giriş noktasıdır. Bir kullanıcı tarafından bir uygulama başlatıldığında, işletim sistemi uygulamaları başlatma için iyi bilinen bir işlev, giriş noktası çağırır.  
+ Çalıştırılmadan önce tek başına uygulamalar ve XAML tarayıcı uygulamaları (XBAP) belirli bir düzeyde altyapısının uygulaması gerektirir. Bu altyapı en önemli parçası giriş noktasıdır. Bir kullanıcı tarafından bir uygulama başlatıldığında, işletim sistemi uygulamaları başlatma için iyi bilinen bir işlev, giriş noktası çağırır.  
   
- Geleneksel olarak, geliştiriciler kendileri için teknolojisine bağlı olarak, bazılarını veya tümünü bu kod yazmak gerekli sahip. Ancak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] işaretleme dosyasının, uygulama tanımının olarak yapılandırıldığında, bu kod oluşturur bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` aşağıda gösterildiği gibi öğe [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] proje dosyası:  
+ Geleneksel olarak, geliştiriciler kendileri için teknolojisine bağlı olarak, bazılarını veya tümünü bu kod yazmak gerekli sahip. Uygulama tanımınız'ın işaretleme dosyasının bir MSBuild yapılandırıldığında ancak WPF Bu kod sizin için oluşturur `ApplicationDefinition` aşağıdaki MSBuild proje dosyasında gösterildiği gibi öğe:  
   
 ```xml  
 <Project   
@@ -95,16 +95,14 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 </Project>  
 ```  
   
- Arka plan kod dosyası kod içerdiğinden, olarak işaretlenmiş bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` öğesi, olarak normal bir durumdur.  
+ Arka plan kod dosyası kod içerdiği için bir MSBuild işaretlenmiş `Compile` öğesi, olarak normal bir durumdur.  
   
- Bu uygulamayı [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] yapılandırmaları biçimlendirme ve arka plan kod dosyaları için bir uygulama tanımının neden [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] aşağıdaki gibi kod oluşturmak için:  
+ Uygulama tanımı biçimlendirme ve arka plan kod dosyaları için bu MSBuild yapılandırmalarını uygulama aşağıdaki gibi bir kod oluşturmak MSBuild neden olur:  
   
- [!code-csharp[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode1)]
- [!code-vb[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode1)]  
-[!code-csharp[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode2)]
-[!code-vb[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode2)]  
+ [!code-csharp[auto-generated-code](~/samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs)]
+ [!code-vb[auto-generated-code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb)]  
   
- Giriş noktası yöntemi içeren ek altyapı kod ile uygulama tanımının sonuç kodunu artırmaktadır `Main`. <xref:System.STAThreadAttribute> Özniteliği uygulandığı `Main` yöntemi belirtmek için ana [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] için iş parçacığı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamasıdır için gerekli olan bir STA iş parçacığı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. Çağrıldığında, `Main` yeni bir örneğini oluşturur `App` çağırmadan önce `InitializeComponent` olayları kaydedin ve bu özellikleri ayarlamak için yöntemi, biçimlendirme içinde uygulanır. Çünkü `InitializeComponent` oluşturulur, açıkça çağırmanız gerekmez `InitializeComponent` yaptığınız gibi bir uygulama tanımından <xref:System.Windows.Controls.Page> ve <xref:System.Windows.Window> uygulamaları. Son olarak, <xref:System.Windows.Application.Run%2A> yöntemi, uygulamayı başlatmak için çağrılır.  
+ Giriş noktası yöntemi içeren ek altyapı kod ile uygulama tanımının sonuç kodunu artırmaktadır `Main`. <xref:System.STAThreadAttribute> Özniteliği uygulandığı `Main` WPF uygulaması için ana kullanıcı Arabirimi iş parçacığı WPF uygulamaları için gerekli olan bir STA iş parçacığı olduğunu belirtmek için yöntemi. Çağrıldığında, `Main` yeni bir örneğini oluşturur `App` çağırmadan önce `InitializeComponent` olayları kaydedin ve bu özellikleri ayarlamak için yöntemi, biçimlendirme içinde uygulanır. Çünkü `InitializeComponent` oluşturulur, açıkça çağırmanız gerekmez `InitializeComponent` yaptığınız gibi bir uygulama tanımından <xref:System.Windows.Controls.Page> ve <xref:System.Windows.Window> uygulamaları. Son olarak, <xref:System.Windows.Application.Run%2A> yöntemi, uygulamayı başlatmak için çağrılır.  
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Geçerli uygulamanın başlama  
@@ -126,7 +124,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>Uygulama ömrü  
- Yaşam süresi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama tarafından gerçekleştirilen bazı olaylar tarafından işaretlenen <xref:System.Windows.Application> uygulamanızın ne zaman başlayıp, size bildirmek için etkin ve devre dışı ve kapatıldı.  
+ WPF uygulaması ömrünü tarafından gerçekleştirilen çeşitli olayları tarafından işaretlenen <xref:System.Windows.Application> uygulamanızın ne zaman başlayıp, size bildirmek için etkin ve devre dışı ve kapatıldı.  
   
   
 <a name="Splash_Screen"></a>   
@@ -137,14 +135,12 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="starting-an-application"></a>Uygulama başlatma  
  Sonra <xref:System.Windows.Application.Run%2A> çağrılır ve uygulama başlatılır, uygulama çalıştırmak hazır olur. Şu zaman miktarlara <xref:System.Windows.Application.Startup> olayı oluşturulur:  
   
- [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind1)]
- [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind1)]  
-[!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind2)]
-[!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind2)]  
+[!code-csharp[Startup-event](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs?range=3-11,31-33)]
+[!code-vb[Startup-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb?range=5-11,30-32)]
   
- Bu noktada göstermek için en yaygın bir şey yapmak için bir uygulamanın yaşam süresi olan bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Bu noktada, bir uygulamanın yaşam yapmak için en yaygın bir uygulamanın UI göstermesi için şeydir.  
   
-<a name="Showing_a_User_Interface"></a>   
+<a name="Showing_a_User_Interface"></a>
 ### <a name="showing-a-user-interface"></a>Bir kullanıcı arabirimi gösterme  
  Çoğu tek başına Windows uygulamalarını bir <xref:System.Windows.Window> çalışmaya başladığında çalışıyor. <xref:System.Windows.Application.Startup> Olay işleyicisi, aşağıdaki kodda gösterildiği gibi bunu yapabilirsiniz, tek bir konumda olduğundan.  
   
@@ -156,7 +152,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 > [!NOTE]
 >  İlk <xref:System.Windows.Window> uygulama içinde tek başına bir örneği için varsayılan olarak ana uygulama penceresini olur. Bu <xref:System.Windows.Window> nesne tarafından başvurulan <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> özelliği. Değerini <xref:System.Windows.Application.MainWindow%2A> özelliği değiştirilebilir programlı olarak farklı bir pencere, ilk örneği <xref:System.Windows.Window> ana pencereyi olmalıdır.  
   
- Olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ilk başladığında, bu büyük olasılıkla gidin bir <xref:System.Windows.Controls.Page>. Bu aşağıdaki kod gösterilmektedir.  
+ Bir XBAP ilk kez başlatıldığında, büyük olasılıkla gider bir <xref:System.Windows.Controls.Page>. Bu aşağıdaki kod gösterilmektedir.  
   
  [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
@@ -169,7 +165,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Application.StartupUri%2A> gelen bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] gitmek için bir <xref:System.Windows.Controls.Page>.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Application.StartupUri%2A> gitmek için bir XBAP gelen bir <xref:System.Windows.Controls.Page>.  
   
  [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
@@ -186,7 +182,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  `wpfapplication.exe /StartMinimized`  
   
- Uygulama başlatma sırasında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] işletim sisteminden komut satırı bağımsız değişkenleri alır ve bunları geçirmeden <xref:System.Windows.Application.Startup> aracılığıyla olay işleyicisi <xref:System.Windows.StartupEventArgs.Args%2A> özelliği <xref:System.Windows.StartupEventArgs> parametresi. Alabilir ve aşağıdaki gibi bir kod kullanarak komut satırı bağımsız değişkenleri depolayın.  
+ Uygulama başlatma sırasında WPF işletim sisteminden komut satırı bağımsız değişkenleri alır ve bunları geçirmeden <xref:System.Windows.Application.Startup> aracılığıyla olay işleyicisi <xref:System.Windows.StartupEventArgs.Args%2A> özelliği <xref:System.Windows.StartupEventArgs> parametresi. Alabilir ve aşağıdaki gibi bir kod kullanarak komut satırı bağımsız değişkenleri depolayın.  
   
  [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
@@ -195,7 +191,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Kod tutamaçları <xref:System.Windows.Application.Startup> denetlemek için olup olmadığını **/StartMinimized** komut satırı bağımsız değişkeni belirtildi; bu durumda, ana penceresi açılır. bir <xref:System.Windows.WindowState> , <xref:System.Windows.WindowState.Minimized>. Dikkat edin çünkü <xref:System.Windows.Window.WindowState%2A> özelliği ayarlanmalıdır programlı olarak ana <xref:System.Windows.Window> kodda açıkça açılması gerekir.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] alamaz ve komut satırı bağımsız değişkenleri kullanarak tasarlandıkça olduğundan işlem [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] dağıtımı (bkz [bir WPF uygulamasını dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Ancak, almak ve bunları başlatmak için kullanılan URL sorgu dizesi parametreleri işlem.  
+ XBAP'ler almak ve ClickOnce dağıtımını kullanarak tasarlandıkça olduğundan işlem komut satırı bağımsız değişkenleri (bkz [bir WPF uygulamasını dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Ancak, almak ve bunları başlatmak için kullanılan URL sorgu dizesi parametreleri işlem.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Uygulama etkinleştirme ve devre dışı bırakma  
@@ -225,7 +221,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  A <xref:System.Windows.Window> de etkin ve devre dışı bırakıldı. Bkz: <xref:System.Windows.Window.Activated?displayProperty=nameWithType> ve <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> daha fazla bilgi için.  
   
 > [!NOTE]
->  Ne <xref:System.Windows.Application.Activated?displayProperty=nameWithType> ya da <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> oluşturulur [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+>  Ne <xref:System.Windows.Application.Activated?displayProperty=nameWithType> ya da <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> XBAP'ler için tetiklenir.  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Uygulama kapatma  
@@ -242,7 +238,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  Uygulama kapatma yönetmenize yardımcı olmak için <xref:System.Windows.Application> sağlar <xref:System.Windows.Application.Shutdown%2A> yöntemi <xref:System.Windows.Application.ShutdownMode%2A> özelliği ve <xref:System.Windows.Application.SessionEnding> ve <xref:System.Windows.Application.Exit> olayları.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A> yalnızca sahip uygulamalardan çağrılabilen <xref:System.Security.Permissions.UIPermission>. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar her zaman bu izne sahip. Ancak, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Internet bölgesi kısmi güven güvenliği korumalı alanında çalışan yapın.  
+>  <xref:System.Windows.Application.Shutdown%2A> yalnızca sahip uygulamalardan çağrılabilen <xref:System.Security.Permissions.UIPermission>. Tek başına WPF uygulamaları her zaman bu izne sahip. Bununla birlikte Internet bölgesi kısmi güven güvenliği korumalı alanında çalışan XBAP'ler yoktur.  
   
 #### <a name="shutdown-mode"></a>Kapatma  
  Çoğu uygulama, tüm windows kapatıldığı veya ana penceresi kapatıldığında aşağı kapatın. Bazı durumlarda, ancak diğer uygulamaya özgü koşulları ne zaman bir uygulama kapanırken belirleyebilirsiniz. Koşullar altında uygulamanızın kapatma ayarlayarak belirtebilirsiniz <xref:System.Windows.Application.ShutdownMode%2A> aşağıdakilerden biriyle <xref:System.Windows.ShutdownMode> sabit listesi değerleri:  
@@ -253,14 +249,14 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 -   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
- Varsayılan değer olan <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnLastWindowClose>, uygulamanın son penceresinde kullanıcı tarafından kapatıldığında, bir uygulama otomatik olarak kapanır anlamına gelir. Ancak, uygulamanız kapatılmalıdır, ne zaman ana pencerenin kapalı, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ayarlarsanız otomatik olarak yapar <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Bu, aşağıdaki örnekte gösterilir.  
+ Varsayılan değer olan <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnLastWindowClose>, uygulamanın son penceresinde kullanıcı tarafından kapatıldığında, bir uygulama otomatik olarak kapanır anlamına gelir. Ana pencere kapatıldığında, uygulamanızın kapatılmalıdır, ayarlarsanız ancak WPF otomatik olarak yapar <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Bu, aşağıdaki örnekte gösterilir.  
   
  [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  Uygulamaya özgü kapatma koşullar varsa, ayarladığınız <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. Bu durumda, onu açıkça çağırarak bir uygulamayı kapatmak için sizin sorumluluğunuzdur <xref:System.Windows.Application.Shutdown%2A> yöntemi; Aksi halde, uygulamanız tüm pencereler kapatılırsa bile çalışmaya devam edecek. Unutmayın <xref:System.Windows.Application.Shutdown%2A> örtük olarak çağırılamaz zaman <xref:System.Windows.Application.ShutdownMode%2A> ya da <xref:System.Windows.ShutdownMode.OnLastWindowClose> veya <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> ayarlanabilir bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], ancak göz ardı edilir; bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] her zaman, onu bir tarayıcıda veya tarayıcı barındırdığında çıkıldığında zaman kapatıldığında [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kapatılır. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A> bir XBAP ayarlanabilir, ancak göz ardı edilir; Bunu bir tarayıcıda veya XBAP barındıran tarayıcı kapatıldığında çıkıldığında, bir XBAP her zaman kapatılır. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
 #### <a name="session-ending"></a>Oturum sonlandırılıyor  
  Tarafından açıklanan kapatma koşulları <xref:System.Windows.Application.ShutdownMode%2A> özelliği uygulamaya özeldir. Bazı durumlarda, yine de bir uygulama sonucu olarak bir dış koşul kapatılabilir. Bir kullanıcı Windows oturumu şu eylemleri sona erdiğinde en yaygın dış durum meydana gelir:  
@@ -283,34 +279,31 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  Bu örnekte, kodu inceler <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> nasıl Windows oturumu sona belirlemek için özellik. Kullanıcıya bir onay iletisi göstermek için bu değeri kullanır. Kullanıcı oturumunu sona erdirmek için istemezse, kod ayarlar <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> için `true` bitiş'den Windows oturumu önlemek için.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding> için harekete Geçirilmemesi [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
-  
+>  <xref:System.Windows.Application.SessionEnding> XBAP'ler için oluşmaz.
+
 #### <a name="exit"></a>Çık  
- Bir uygulama kapatıldığında, kalıcı bir uygulama durumu gibi son işlemleri gerçekleştirmek gerekebilir. Bu durumlarda, işleyebilirsiniz <xref:System.Windows.Application.Exit> olay.  
+ Bir uygulama kapatıldığında, kalıcı bir uygulama durumu gibi son işlemleri gerçekleştirmek gerekebilir. Bu durumlarda, işleyebilirsiniz <xref:System.Windows.Application.Exit> olayı olarak `App_Exit` aşağıdaki örnekte olay işleyicisi yok. Olay işleyicisinde olarak tanımlanan *App.xaml* dosya. Uygulaması vurgulanan *App.xaml.cs* ve *Application.xaml.vb* dosyaları.
   
- [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+[!code-xaml[Defining-the-Exit-event-handler](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]  
   
- [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind1)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind1)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind2)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind2)]  
+ [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
+ [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
  Tam bir örnek için bkz. [kalan ve geri yükleme uygulama kapsamı özellikleri arasında uygulama oturumları](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
   
- <xref:System.Windows.Application.Exit> Her iki tek başına uygulamalar tarafından işlenebilir ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. İçin [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> , aşağıdaki koşullarda ortaya çıkar:  
+ <xref:System.Windows.Application.Exit> tek başına uygulamalar ve XBAP'ler tarafından işlenebilir. XBAP'ler için <xref:System.Windows.Application.Exit> , aşağıdaki koşullarda ortaya çıkar:  
   
--   Bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] sayfadan çıkıldığında.  
+-   Sayfadan bir XBAP çıkıldığında.  
   
--   İçinde [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], barındıran sekmesini [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kapatılır.  
+-   İçinde [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], XBAP barındırma sekmesini kapalı olduğunda.  
   
 -   Tarayıcı kapatıldığında.  
   
 #### <a name="exit-code"></a>Çıkış kodu  
- Uygulamalar genellikle bir kullanıcı isteğine yanıt olarak işletim sistemi tarafından başlatılabilir. Ancak, bir uygulama belirli bir görevi gerçekleştirmek için başka bir uygulama tarafından başlatılabilir. Başlatılan uygulamalar kapatıldığında başlatılırken uygulama altında başlatılan uygulama kapatma koşul bilmek isteyebilir. Bu durumda, Windows uygulamaların kapatma sırasında bir uygulama çıkış kodu iade izin verir. Varsayılan olarak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları bir çıkış kodu 0 değerini döndürür.  
+ Uygulamalar genellikle bir kullanıcı isteğine yanıt olarak işletim sistemi tarafından başlatılabilir. Ancak, bir uygulama belirli bir görevi gerçekleştirmek için başka bir uygulama tarafından başlatılabilir. Başlatılan uygulamalar kapatıldığında başlatılırken uygulama altında başlatılan uygulama kapatma koşul bilmek isteyebilir. Bu durumda, Windows uygulamaların kapatma sırasında bir uygulama çıkış kodu iade izin verir. Varsayılan olarak, WPF uygulamaları bir çıkış kodu 0 değerini döndürür.  
   
 > [!NOTE]
->  Hata ayıklaması yaptığınızda gelen [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], uygulama çıkış kodu görüntülenen **çıkış** uygulama, aşağıdaki gibi görünen bir ileti kapatır zaman penceresi:  
+>  Visual Studio'dan hata ayıklaması yaparken uygulama çıkış kodu görüntülenen **çıkış** uygulama, aşağıdaki gibi görünen bir ileti kapatır zaman penceresi:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -324,7 +317,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  Çıkış kodu değerini algılamak ve değiştirmesini işleyerek <xref:System.Windows.Application.Exit> olay. <xref:System.Windows.Application.Exit> Olay işleyicisine geçirilen bir <xref:System.Windows.ExitEventArgs> çıkış kodu ile erişimi sağlayan <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> özelliği. Daha fazla bilgi için bkz. <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Çıkış kodu her iki tek başına uygulamalarda ayarlayabilirsiniz ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Ancak, çıkış kodu değerini için göz ardı edilir [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+>  Çıkış kodu, hem tek başına uygulamalar hem de XBAP'ler ayarlayabilirsiniz. Ancak, çıkış kodu değerini XBAP'ler için göz ardı edilir.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>İşlenmeyen özel durumları  
@@ -338,30 +331,28 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 -   Çalışan bir uygulama tutmak çalışılıyor.  
   
--   Kayıt, geliştirici dostu ayrıntılı özel durum bilgileri Windows olay günlüğünde.  
+-   Ayrıntılı, geliştirici dostu özel durum bilgilerini ve Windows olay günlüğüne kaydetme.  
   
  Bu destek uygulama bağlıdır işlenmeyen özel durumlar, korumakta üzerinde ne olduğu <xref:System.Windows.Application.DispatcherUnhandledException> olayı için oluşturulur.  
   
- [!code-xaml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
+[!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
- [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind1)]
- [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind1)]  
-[!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind2)]
-[!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind2)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  <xref:System.Windows.Application.DispatcherUnhandledException> Olay işleyicisine geçirilen bir <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> durum da dahil olmak üzere işlenmeyen özel durumla ilgili bağlamsal bilgileri içeren bir parametre (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). Özel durumu işlemek nasıl belirlemek için bu bilgileri kullanabilirsiniz.  
   
- Ne zaman işleneceğini <xref:System.Windows.Application.DispatcherUnhandledException>, ayarlamalısınız <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> özelliğini `true`; Aksi takdirde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hala özel durum işlenmemiş olarak değerlendirir ve daha önce açıklanan varsayılan davranışa geri döner. İşlenmeyen bir özel durum oluşturulursa ve her iki <xref:System.Windows.Application.DispatcherUnhandledException> olay işlenmez veya olay işlenir ve <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> ayarlanır `false`, uygulamayı hemen kapanıyorsa öyle kapanır. Ayrıca, başka hiçbir <xref:System.Windows.Application> olayları ortaya çıkar. Sonuç olarak, işlemeniz gereken <xref:System.Windows.Application.DispatcherUnhandledException> uygulamanızın uygulama kapatılmadan önce çalışmalıdır kodu varsa.  
+ Ne zaman işleneceğini <xref:System.Windows.Application.DispatcherUnhandledException>, ayarlamalısınız <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> özelliğini `true`; Aksi takdirde, WPF hala özel durum işlenmemiş olarak değerlendirir ve daha önce açıklanan varsayılan davranışa geri döner. İşlenmeyen bir özel durum oluşturulursa ve her iki <xref:System.Windows.Application.DispatcherUnhandledException> olay işlenmez veya olay işlenir ve <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> ayarlanır `false`, uygulamayı hemen kapanıyorsa öyle kapanır. Ayrıca, başka hiçbir <xref:System.Windows.Application> olayları ortaya çıkar. Sonuç olarak, işlemeniz gereken <xref:System.Windows.Application.DispatcherUnhandledException> uygulamanızın uygulama kapatılmadan önce çalışmalıdır kodu varsa.  
   
  İşlenmeyen bir özel durum sonucu olarak bir uygulama kapanabilir olsa da, bir uygulama genellikle bir kullanıcı isteğine yanıt olarak sonraki bölümde açıklandığı gibi kapanır.  
   
 <a name="Application_Lifetime_Events"></a>   
 ### <a name="application-lifetime-events"></a>Uygulama yaşam süresi olayları  
- Tek başına uygulamalar ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tam olarak aynı yaşam süresi yok. Aşağıdaki şekilde, bir tek başına uygulama kullanım ömrü içinde anahtar olayları gösterir ve bunlar yükseltilir dizisini gösterir.  
+ Tek başına uygulamalar ve XBAP'ler tam olarak aynı yaşam süresi yok. Aşağıdaki şekilde, bir tek başına uygulama kullanım ömrü içinde anahtar olayları gösterir ve bunlar yükseltilir dizisini gösterir.  
   
  ![Tek başına uygulama &#45; uygulama nesnesi olayları](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
- Benzer şekilde, aşağıdaki şekilde yaşam sürelerinin başlarında anahtar olayları gösterir. bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]ve bunlar yükseltilmiş dizisini gösterir.  
+ Benzer şekilde, aşağıdaki şekilde bir XBAP ömrünü anahtar olayları gösterir ve bunlar yükseltilir dizisini gösterir.  
   
  ![XBAP &#45; uygulama nesnesi olayları](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   

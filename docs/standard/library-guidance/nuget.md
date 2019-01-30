@@ -4,12 +4,12 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724313"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204619"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,9 +69,9 @@ Bir NuGet paketi birçok destekler [meta veri özelliklerini](/nuget/reference/n
 
 **✔️ YAPMAK** 64 x 64 ve en iyi sonuçları görüntülemek için saydam bir arka plana sahip bir paket simge görüntüsü kullanın.
 
-**✔️ DÜŞÜNÜN** ayarlama [SourceLink](./sourcelink.md) NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için.
+**✔️ DÜŞÜNÜN** ayarlama [kaynak bağlantısı](./sourcelink.md) NuGet paketi ve derlemeler için kaynak denetimi meta verilerini eklemek için.
 
-> SourceLink otomatik olarak ekler `RepositoryUrl` ve `RepositoryType` NuGet paketi meta verileri. SourceLink Ayrıca paket tam kaynak kodu hakkında bilgi oluşturulmuş ekler. Örneğin, bir Git deposundan oluşturulan bir paket olarak meta veriler eklenen işleme karması sahip olur.
+> Kaynak bağlantısı otomatik olarak ekler `RepositoryUrl` ve `RepositoryType` NuGet paketi meta verileri. Kaynak bağlantısı, ayrıca paket tam kaynak kodu hakkında bilgi oluşturulmuş ekler. Örneğin, bir Git deposundan oluşturulan bir paket olarak meta veriler eklenen işleme karması sahip olur.
 
 ## <a name="pre-release-packages"></a>Yayın öncesi paketleri
 

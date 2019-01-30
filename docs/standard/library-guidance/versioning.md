@@ -4,12 +4,12 @@ description: Sürüm oluşturma .NET kitaplıkları için en iyi yöntem öneril
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169605"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204749"
 ---
 # <a name="versioning"></a>Sürüm oluşturma
 
@@ -87,7 +87,7 @@ Derleme dosyası sürümü Windows dosya sürümünü görüntülemek için kull
 
 ### <a name="assembly-informational-version"></a>Derleme Bilgilendirme sürümü
 
-Derleme Bilgilendirme sürümü ek sürüm bilgileri kaydetmek için kullanılır ve çalışma zamanı davranışı üzerinde hiçbir etkisi olmaz. Bu sürümü isteğe bağlıdır. SourceLink kullanıyorsanız, bu sürüm derleme NuGet Paket sürümü Ayrıca kaynak denetimi sürümü ile ayarlanır. Örneğin, `1.0.0-beta1+204ff0a` işleme karması gelen derlemenin derlendiği kaynak kodu içerir. Daha fazla bilgi için [SourceLink](./sourcelink.md).
+Derleme Bilgilendirme sürümü ek sürüm bilgileri kaydetmek için kullanılır ve çalışma zamanı davranışı üzerinde hiçbir etkisi olmaz. Bu sürümü isteğe bağlıdır. Kaynak bağlantısı kullanıyorsanız, bu sürüm derleme NuGet Paket sürümü Ayrıca kaynak denetimi sürümü ile ayarlanır. Örneğin, `1.0.0-beta1+204ff0a` işleme karması gelen derlemenin derlendiği kaynak kodu içerir. Daha fazla bilgi için [kaynak bağlantısı](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler - giriş C# Öğreticisi
 description: İlk C# programınızı oluşturma ve nesne yönelimli kavramları keşfedin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066079"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204788"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Nesne yönelimli programlama ile ilgili sınıfları ve nesneleri keşfedin
 
@@ -156,14 +156,14 @@ Oluşturucu, Bakiye doğrudan güncelleştirmek yerine bir ilk işlem ekler, bö
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 Ardından, negatif bakiyesi olan bir hesap oluşturulmaya çalışılırken tarafından hata koşulları yakalama test edin:
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 Kullandığınız [ `try` ve `catch` deyimleri](../../language-reference/keywords/try-catch.md) bir özel durum oluşturabildiğini varsaymasını kod bloğu işaretlemek için ve beklediğiniz bu hataları yakalamak için. Bir negatif dengelemek için bir özel durum kodu test etmek için aynı tekniği kullanabilirsiniz:
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

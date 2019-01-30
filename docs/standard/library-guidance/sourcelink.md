@@ -1,33 +1,33 @@
 ---
-title: SourceLink ve .NET kitaplıkları
-description: .NET kitaplıkları için hata ayıklama geliştirmek için SourceLink kullanmaya yönelik en iyi yöntem önerileri.
+title: Kaynak bağlantısı ve .NET kitaplıkları
+description: .NET kitaplıkları için hata ayıklama geliştirmek için kaynak bağlantısı kullanılarak için en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333544"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204762"
 ---
-# <a name="sourcelink"></a>SourceLink
+# <a name="source-link"></a>Kaynak bağlantısı
 
-SourceLink NuGet geliştiricilerin .NET derlemeleri, kaynak kodda hata ayıklama sağlayan bir teknolojidir. SourceLink NuGet paketini oluştururken yürütür ve kaynak denetimi meta verilerini derlemeler ve paket içine katıştırır. Paketi indirebilir ve Visual Studio'da etkin SourceLink sahip geliştiriciler, kaynak kodunda adım adım ilerleyebilirsiniz. SourceLink harika bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verilerini sağlar.
+Kaynak bağlantısı kaynak geliştiriciler tarafından nuget'ten .NET bütünleştirilmiş kodda hata ayıklama sağlayan bir teknolojidir. Kaynak bağlantısı NuGet paketini oluştururken yürütür ve kaynak denetimi meta verilerini derlemeler ve paket içine katıştırır. Paketi indirebilir ve Visual Studio'da etkin kaynak bağlantısı olan geliştiriciler, kaynak kodunda adım adım ilerleyebilirsiniz. Kaynak bağlantısı harika bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verilerini sağlar.
 
-## <a name="sourcelink-demo"></a>SourceLink Tanıtımı
+## <a name="source-link-demo"></a>Kaynak bağlantı Tanıtımı
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-sourcelink"></a>SourceLink kullanma
+## <a name="using-source-link"></a>Kaynak bağlantısı kullanılarak
 
-SourceLink kullanımıyla ilgili yönergeleri bulunabilir [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub deposu.
+Kaynak bağlantısı kullanılarak yönergeler bulunabilir [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub deposu.
 
-Kullanabileceğiniz [NuGet paket Gezgini](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) SourceLink meta verileri pakete başarıyla katıştırılmış olduğunu onaylamak için. Denetleme `Repository` açıklama tanımlayıcısına sahip meta veri varsa ve her hedefin .dll ile .pdb dosyaları bulunur.
+Kullanabileceğiniz [NuGet paket Gezgini](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) kaynak bağlantısı meta verileri pakete başarıyla katıştırılmış olduğunu onaylamak için. Denetleme `Repository` açıklama tanımlayıcısına sahip meta veri varsa ve her hedefin .dll ile .pdb dosyaları bulunur.
 
-![NuGet paket Gezgini'nde SourceLink](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink, NuGet paket Gezgini")
+![NuGet paket Gezgininde bağlantı kaynağı](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet paket Gezgininde bağlantı kaynağı")
 
-**✔️ DÜŞÜNÜN** SourceLink kaynak denetimi meta verilerini, derlemeleri ve NuGet paketleri eklemek için kullanma.
+**✔️ DÜŞÜNÜN** kaynak denetimi meta verilerini, derlemeleri ve NuGet paketleri eklemek için kaynak bağlantısı kullanılarak.
 
 > [!TIP]
 > Türleriniz için hata ayıklayıcı öznitelikleri ekleyerek, geliştirici hata ayıklama deneyimi daha da geliştirebilirsiniz.
@@ -37,7 +37,7 @@ Kullanabileceğiniz [NuGet paket Gezgini](https://github.com/NuGetPackageExplore
 
 **✔️ DÜŞÜNÜN** sembol dosyaları yayımlama (`*.pdb`).
 
-> Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
+> En iyi hata ayıklama deneyimi için kitaplığınızın pubish sembol dosyalarını gereken yanı sıra kaynak bağlantısı kullanın. Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Önceki](dependencies.md)

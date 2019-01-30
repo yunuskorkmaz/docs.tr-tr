@@ -9,16 +9,16 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7031fe21e53b38f686d229b350b8dfef7dd93bdc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691768"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204827"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma
 
-Dinamik nesneler özellikler ve yöntemler gibi üyeleri çalışma zamanında yerine, derleme zamanında ortaya çıkarır. Bu, bir statik türü veya biçimi eşleşmeyen yapılar ile çalışmak için nesneleri oluşturmanızı sağlar. Örneğin, bir dinamik Nesne geçerli HTML biçimlendirmeyi öğeler ve öznitelikler herhangi bir birleşimini içerebilir HTML belge nesne modeli (DOM) başvurmak için kullanabilirsiniz. Her HTML belgesi benzersiz olduğundan, belirli bir HTML belge üyelerini çalışma zamanında belirlenir. Bir HTML öğesi özniteliklerini başvurmak için kullanılan genel bir yöntem için öznitelik adı geçirmektir `GetProperty` öğenin yöntemi. Başvuru `id` HTML öğesi özniteliklerini `<div id="Div1">`, başvuru edinip `<div>` öğesini ve ardından `divElement.GetProperty("id")`. Dinamik Nesne kullanırsanız, başvurabileceğiniz `id` olarak özniteliği `divElement.id`.  
+Dinamik nesneler özellikler ve yöntemler gibi üyeleri çalışma zamanında yerine derleme zamanında ortaya çıkarır. Bu, bir statik türü veya biçimi eşleşmeyen yapılar ile çalışmak için nesneleri oluşturmanızı sağlar. Örneğin, bir dinamik Nesne geçerli HTML biçimlendirmeyi öğeler ve öznitelikler herhangi bir birleşimini içerebilir HTML belge nesne modeli (DOM) başvurmak için kullanabilirsiniz. Her HTML belgesi benzersiz olduğundan, belirli bir HTML belge üyelerini çalışma zamanında belirlenir. Bir HTML öğesi özniteliklerini başvurmak için kullanılan genel bir yöntem için öznitelik adı geçirmektir `GetProperty` öğenin yöntemi. Başvuru `id` HTML öğesi özniteliklerini `<div id="Div1">`, başvuru edinip `<div>` öğesini ve ardından `divElement.GetProperty("id")`. Dinamik Nesne kullanırsanız, başvurabileceğiniz `id` olarak özniteliği `divElement.id`.  
   
  Dinamik nesneler, IronPython ve Ironruby gibi dinamik dilleri uygun erişim de sağlar. Çalışma zamanında yorumlanır dinamik bir komut dosyasına başvuruda bulunmak için dinamik bir nesne kullanabilirsiniz.  
   

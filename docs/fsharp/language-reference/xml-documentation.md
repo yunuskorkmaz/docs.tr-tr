@@ -2,12 +2,12 @@
 title: XML Belgeleri (F#)
 description: Desteği hakkında bilgi edinin F# açıklamalardan belgeleri oluşturmak için.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fb5eb682ff1188136b31b64e2d7c537d2c9a0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153650"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204684"
 ---
 # <a name="xml-documentation"></a>XML Belgeleri
 
@@ -15,7 +15,7 @@ ms.locfileid: "53153650"
 
 ## <a name="generating-documentation-from-comments"></a>Belge açıklamaları oluşturma
 
-Destek F# açıklamalardan belgeleri oluşturmak aynı diğer .NET Framework dillerinde, için. Diğer .NET Framework dillerde olduğu gibi [-doc derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) Sandcastle gibi bir araç kullanarak belgeleme dönüştürebilirsiniz bilgilerini içeren bir XML dosyası üretebilir sağlar. Diğer .NET Framework dillerinde genel olarak yazılır derlemeleri ile kullanılmak üzere tasarlanmış araçları kullanılarak oluşturulan belgeleri üzerinde derlenmiş formuna dayalı API'leri bir görünümünü oluşturmak F# oluşturur. Özellikle Destek Araçları sürece F#, bu araçları tarafından oluşturulan belgeleri eşleşmiyor F# görünümünü bir API.
+Destek F# açıklamalardan belgeleri oluşturmak aynı diğer .NET Framework dillerinde, için. Diğer .NET Framework dillerde olduğu gibi [-doc derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) gibi bir araç kullanarak belgeleme dönüştürebilirsiniz bilgilerini içeren bir XML dosyası üretebilir sayesinde [DocFX](https://dotnet.github.io/docfx/) veya [ Sandcastle](https://github.com/EWSoftware/SHFB). Diğer .NET Framework dillerinde genel olarak yazılır derlemeleri ile kullanılmak üzere tasarlanmış araçları kullanılarak oluşturulan belgeleri üzerinde derlenmiş formuna dayalı API'leri bir görünümünü oluşturmak F# oluşturur. Özellikle Destek Araçları sürece F#, bu araçları tarafından oluşturulan belgeleri eşleşmiyor F# görünümünü bir API.
 
 XML'den belgeleri oluştur hakkında daha fazla bilgi için bkz: [XML belgeleri yorumları &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
@@ -31,9 +31,9 @@ XML belgeleri yorumları yazmak için iki yolu vardır. Yalnızca XML etiketleri
 |**\<param name = "**_adı_**"\>**_açıklama_**\</param\>**|Bir işlev veya metot parametresi için bir açıklama ve adını belirtir.|
 |**\<typeparam name = "**_adı_**"\>**_açıklama_**\</typeparam\>**|Bir tür parametresi için bir açıklama ve adını belirtir.|
 |**\<döndürür\>**_metin_ **\< /döndürür\>**|Belirten *metin* dönüş değeri bir işlev veya metot açıklar.|
-|**\<özel durum cref = "**_türü_**"\>**_açıklama_**\</exception\>**|Oluşturulabilecek özel durum ve durum durumlarda türünü belirtir.|
+|**\<exception cref="**_type_**"\>**_description_**\</exception\>**|Oluşturulabilecek özel durum ve durum durumlarda türünü belirtir.|
 |**\<see cref = "**_başvuru_**"\>**_metin_ **\< /bakın\>**|Başka bir program öğesi için satır içi bağlantı belirtir. *Başvuru* XML belge dosyası içinde görünen addır. *Metin* bağlantıya gösterilen metin.|
-|**\<SeeAlso cref = "**_başvuru_**" /\>**|Başka bir türe yönelik belgelere ayrıca bağlantı belirtir. *Başvuru* XML belge dosyası içinde görünen addır. Ayrıca bkz: bağlantılar genellikle belgeleri sayfasının en altında görünür.|
+|**\<seealso cref="**_reference_**"/\>**|Başka bir türe yönelik belgelere ayrıca bağlantı belirtir. *Başvuru* XML belge dosyası içinde görünen addır. Ayrıca bkz: bağlantılar genellikle belgeleri sayfasının en altında görünür.|
 |**\<para\>**_metin_**\</para\>**|Paragraf metni belirtir. Bu metin içinde ayırmak için kullanılan **açıklamalar** etiketi.|
 
 ## <a name="example"></a>Örnek
