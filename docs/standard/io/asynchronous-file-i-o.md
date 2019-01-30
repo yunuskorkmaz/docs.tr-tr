@@ -40,7 +40,7 @@ C# ve Visual Basic her zaman uyumsuz programlama için iki anahtar vardır:
 
 - Bir zaman uyumsuz yöntemin sonucuna uygulanan `Await` (Visual Basic) veya `await` (C#) işleci.
 
-Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için [zaman uyumsuz programlama ile zaman uyumsuz ve await (C#)](../../csharp/programming-guide/concepts/async/index.md) veya [Asynchronous Programming with Async and Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
+Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için [zaman uyumsuz programlama ile zaman uyumsuz ve await (C#)](../../csharp/programming-guide/concepts/async/index.md) veya [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 Aşağıdaki örnek, dosyaları zaman uyumsuz olarak bir dizinden başka bir dizine kopyalamak için <xref:System.IO.FileStream> nesnelerini nasıl kullanacağınızı gösterir. <xref:System.Web.UI.WebControls.Button.Click> denetimi için <xref:System.Windows.Controls.Button> olay işleyicisinin, zaman uyumsuz bir yöntem çağırdığı için `async` değiştiricisi ile işaretlendiğine dikkat edin.
 
