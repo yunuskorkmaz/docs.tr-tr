@@ -1,24 +1,24 @@
 ---
-title: '&lt;Girdileri&gt;'
+title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4c7fa4f778642d549deebce6e7476f4da13a0d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587066"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283692"
 ---
-# <a name="ltentriesgt"></a><span data-ttu-id="e02fe-102">&lt;Girdileri&gt;</span><span class="sxs-lookup"><span data-stu-id="e02fe-102">&lt;entries&gt;</span></span>
-<span data-ttu-id="e02fe-103">Bir yönlendirme girişi, ne zaman eşleşen filtre ileti göndermek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="e02fe-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
+# <a name="entries"></a><span data-ttu-id="40c3c-101">\<Giriş ></span><span class="sxs-lookup"><span data-stu-id="40c3c-101">\<entries></span></span>
+<span data-ttu-id="40c3c-102">Bir yönlendirme girişi, ne zaman eşleşen filtre ileti göndermek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="40c3c-102">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
   
- <span data-ttu-id="e02fe-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e02fe-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="e02fe-105">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="e02fe-105">\<routing></span></span>  
-<span data-ttu-id="e02fe-106">\<routingTables ></span><span class="sxs-lookup"><span data-stu-id="e02fe-106">\<routingTables></span></span>  
-<span data-ttu-id="e02fe-107">\<Tablo ></span><span class="sxs-lookup"><span data-stu-id="e02fe-107">\<table></span></span>  
-<span data-ttu-id="e02fe-108">\<Giriş ></span><span class="sxs-lookup"><span data-stu-id="e02fe-108">\<entries></span></span>  
+ <span data-ttu-id="40c3c-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="40c3c-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="40c3c-104">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="40c3c-104">\<routing></span></span>  
+<span data-ttu-id="40c3c-105">\<routingTables ></span><span class="sxs-lookup"><span data-stu-id="40c3c-105">\<routingTables></span></span>  
+<span data-ttu-id="40c3c-106">\<Tablo ></span><span class="sxs-lookup"><span data-stu-id="40c3c-106">\<table></span></span>  
+<span data-ttu-id="40c3c-107">\<Giriş ></span><span class="sxs-lookup"><span data-stu-id="40c3c-107">\<entries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e02fe-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e02fe-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40c3c-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="40c3c-108">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -35,24 +35,24 @@ ms.locfileid: "54587066"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e02fe-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="e02fe-110">Attributes and Elements</span></span>  
- <span data-ttu-id="e02fe-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e02fe-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="40c3c-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="40c3c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="40c3c-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="40c3c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e02fe-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="e02fe-112">Attributes</span></span>  
- <span data-ttu-id="e02fe-113">Yok.</span><span class="sxs-lookup"><span data-stu-id="e02fe-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="40c3c-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="40c3c-111">Attributes</span></span>  
+ <span data-ttu-id="40c3c-112">Yok.</span><span class="sxs-lookup"><span data-stu-id="40c3c-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="e02fe-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="e02fe-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="40c3c-113">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="40c3c-113">Child Elements</span></span>  
   
-|<span data-ttu-id="e02fe-115">Öğe</span><span class="sxs-lookup"><span data-stu-id="e02fe-115">Element</span></span>|<span data-ttu-id="e02fe-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e02fe-116">Description</span></span>|  
+|<span data-ttu-id="40c3c-114">Öğe</span><span class="sxs-lookup"><span data-stu-id="40c3c-114">Element</span></span>|<span data-ttu-id="40c3c-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="40c3c-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e02fe-117">\<filtreleri ></span><span class="sxs-lookup"><span data-stu-id="e02fe-117">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="e02fe-118">Bu önceden tanımlanmış bir istemci uç noktası için bir filtre eşler.</span><span class="sxs-lookup"><span data-stu-id="e02fe-118">Maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="e02fe-119">Bu filtreyle eşleşen iletileri bu hedefe gönderilir.</span><span class="sxs-lookup"><span data-stu-id="e02fe-119">Messages matching this filter will be sent to this destination.</span></span>|  
+|[<span data-ttu-id="40c3c-116">\<filtreleri ></span><span class="sxs-lookup"><span data-stu-id="40c3c-116">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="40c3c-117">Bu önceden tanımlanmış bir istemci uç noktası için bir filtre eşler.</span><span class="sxs-lookup"><span data-stu-id="40c3c-117">Maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="40c3c-118">Bu filtreyle eşleşen iletileri bu hedefe gönderilir.</span><span class="sxs-lookup"><span data-stu-id="40c3c-118">Messages matching this filter will be sent to this destination.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="e02fe-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="e02fe-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="40c3c-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="40c3c-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="e02fe-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="e02fe-121">Element</span></span>|<span data-ttu-id="e02fe-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e02fe-122">Description</span></span>|  
+|<span data-ttu-id="40c3c-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="40c3c-120">Element</span></span>|<span data-ttu-id="40c3c-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="40c3c-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e02fe-123">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="e02fe-123">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="e02fe-124">Bir yönlendirme tablosu içeren bir yapılandırma bölümü.</span><span class="sxs-lookup"><span data-stu-id="e02fe-124">A configuration section that contains a routing table.</span></span>|  
+|[<span data-ttu-id="40c3c-122">\<Yönlendirme ></span><span class="sxs-lookup"><span data-stu-id="40c3c-122">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="40c3c-123">Bir yönlendirme tablosu içeren bir yapılandırma bölümü.</span><span class="sxs-lookup"><span data-stu-id="40c3c-123">A configuration section that contains a routing table.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e02fe-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e02fe-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40c3c-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="40c3c-124">See also</span></span>
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

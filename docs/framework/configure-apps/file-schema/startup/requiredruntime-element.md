@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt; öğesi'
+title: <requiredRuntime> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222135"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254736"
 ---
-# <a name="ltrequiredruntimegt-element"></a><span data-ttu-id="76c92-102">&lt;requiredRuntime&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="76c92-102">&lt;requiredRuntime&gt; element</span></span>
+# <a name="requiredruntime-element"></a><span data-ttu-id="627b1-102">\<requiredRuntime > öğesi</span><span class="sxs-lookup"><span data-stu-id="627b1-102">\<requiredRuntime> element</span></span>
 
-<span data-ttu-id="76c92-103">Uygulama yalnızca sürüm 1.0 ortak dil çalışma zamanının desteklediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="76c92-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="76c92-104">Bu öğe, kullanım dışı ve artık kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="76c92-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="76c92-105">[ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="76c92-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>
+<span data-ttu-id="627b1-103">Uygulama yalnızca sürüm 1.0 ortak dil çalışma zamanının desteklediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="627b1-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="627b1-104">Bu öğe, kullanım dışı ve artık kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="627b1-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="627b1-105">[ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="627b1-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>
 
-<span data-ttu-id="76c92-106">\<Yapılandırma > \<başlangıç > \<requiredRuntime ></span><span class="sxs-lookup"><span data-stu-id="76c92-106">\<configuration> \<startup> \<requiredRuntime></span></span>
+<span data-ttu-id="627b1-106">\<Yapılandırma > \<başlangıç > \<requiredRuntime ></span><span class="sxs-lookup"><span data-stu-id="627b1-106">\<configuration> \<startup> \<requiredRuntime></span></span>
 
-## <a name="syntax"></a><span data-ttu-id="76c92-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="76c92-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="627b1-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="627b1-107">Syntax</span></span>
 
 ```xml
    <requiredRuntime  
@@ -30,49 +30,49 @@ version="runtime version"
 safemode="true|false"/>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="76c92-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="76c92-108">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="627b1-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="627b1-108">Attributes and elements</span></span>
 
-<span data-ttu-id="76c92-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="76c92-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="627b1-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="627b1-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="76c92-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="76c92-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="627b1-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="627b1-110">Attributes</span></span>
 
-|<span data-ttu-id="76c92-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="76c92-111">Attribute</span></span>|<span data-ttu-id="76c92-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76c92-112">Description</span></span>|
+|<span data-ttu-id="627b1-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="627b1-111">Attribute</span></span>|<span data-ttu-id="627b1-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="627b1-112">Description</span></span>|
 |---------------|-----------------|
-|`version`|<span data-ttu-id="76c92-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="76c92-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76c92-114">Bu uygulamanın desteklediği .NET Framework sürümünü belirten bir dize değeri.</span><span class="sxs-lookup"><span data-stu-id="76c92-114">A string value that specifies the version of the .NET Framework that this application supports.</span></span> <span data-ttu-id="76c92-115">Dize değeri, .NET Framework yükleme kökü altında bulunan dizin adı eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="76c92-115">The string value must match the directory name found under the .NET Framework installation root.</span></span> <span data-ttu-id="76c92-116">Dize değeri içeriğini çözümlenmemiş.</span><span class="sxs-lookup"><span data-stu-id="76c92-116">The contents of the string value are not parsed.</span></span>|
-|`safemode`|<span data-ttu-id="76c92-117">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="76c92-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76c92-118">Çalışma zamanı başlatma kodunu çalışma zamanı sürümünü belirlemek için kayıt defterini arayıp aramayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="76c92-118">Specifies whether the runtime startup code searches the registry to determine the runtime version.</span></span>|
+|`version`|<span data-ttu-id="627b1-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="627b1-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="627b1-114">Bu uygulamanın desteklediği .NET Framework sürümünü belirten bir dize değeri.</span><span class="sxs-lookup"><span data-stu-id="627b1-114">A string value that specifies the version of the .NET Framework that this application supports.</span></span> <span data-ttu-id="627b1-115">Dize değeri, .NET Framework yükleme kökü altında bulunan dizin adı eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="627b1-115">The string value must match the directory name found under the .NET Framework installation root.</span></span> <span data-ttu-id="627b1-116">Dize değeri içeriğini çözümlenmemiş.</span><span class="sxs-lookup"><span data-stu-id="627b1-116">The contents of the string value are not parsed.</span></span>|
+|`safemode`|<span data-ttu-id="627b1-117">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="627b1-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="627b1-118">Çalışma zamanı başlatma kodunu çalışma zamanı sürümünü belirlemek için kayıt defterini arayıp aramayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="627b1-118">Specifies whether the runtime startup code searches the registry to determine the runtime version.</span></span>|
 
-## <a name="safemode-attribute"></a><span data-ttu-id="76c92-119">safemode özniteliği</span><span class="sxs-lookup"><span data-stu-id="76c92-119">safemode attribute</span></span>
+## <a name="safemode-attribute"></a><span data-ttu-id="627b1-119">safemode özniteliği</span><span class="sxs-lookup"><span data-stu-id="627b1-119">safemode attribute</span></span>
 
-|<span data-ttu-id="76c92-120">Değer</span><span class="sxs-lookup"><span data-stu-id="76c92-120">Value</span></span>|<span data-ttu-id="76c92-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76c92-121">Description</span></span>|
+|<span data-ttu-id="627b1-120">Değer</span><span class="sxs-lookup"><span data-stu-id="627b1-120">Value</span></span>|<span data-ttu-id="627b1-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="627b1-121">Description</span></span>|
 |-----------|-----------------|
-|`false`|<span data-ttu-id="76c92-122">Çalışma zamanı başlatma kodunu kayıt defterinde arar.</span><span class="sxs-lookup"><span data-stu-id="76c92-122">The runtime startup code looks in the registry.</span></span> <span data-ttu-id="76c92-123">Varsayılan değer budur.</span><span class="sxs-lookup"><span data-stu-id="76c92-123">This is the default value.</span></span>|
-|`true`|<span data-ttu-id="76c92-124">Çalışma zamanı başlatma kodunu kayıt defterinde aramaz.</span><span class="sxs-lookup"><span data-stu-id="76c92-124">The runtime startup code does not look in the registry.</span></span>|
+|`false`|<span data-ttu-id="627b1-122">Çalışma zamanı başlatma kodunu kayıt defterinde arar.</span><span class="sxs-lookup"><span data-stu-id="627b1-122">The runtime startup code looks in the registry.</span></span> <span data-ttu-id="627b1-123">Varsayılan değer budur.</span><span class="sxs-lookup"><span data-stu-id="627b1-123">This is the default value.</span></span>|
+|`true`|<span data-ttu-id="627b1-124">Çalışma zamanı başlatma kodunu kayıt defterinde aramaz.</span><span class="sxs-lookup"><span data-stu-id="627b1-124">The runtime startup code does not look in the registry.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="76c92-125">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="76c92-125">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="627b1-125">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="627b1-125">Child elements</span></span>
 
-<span data-ttu-id="76c92-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="76c92-126">None.</span></span>
+<span data-ttu-id="627b1-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="627b1-126">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="76c92-127">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="76c92-127">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="627b1-127">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="627b1-127">Parent elements</span></span>
 
-|<span data-ttu-id="76c92-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="76c92-128">Element</span></span>|<span data-ttu-id="76c92-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76c92-129">Description</span></span>|
+|<span data-ttu-id="627b1-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="627b1-128">Element</span></span>|<span data-ttu-id="627b1-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="627b1-129">Description</span></span>|
 |-------------|-----------------|
-|`configuration`|<span data-ttu-id="76c92-130">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="76c92-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
-|`startup`|<span data-ttu-id="76c92-131">İçeren `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="76c92-131">Contains the `<requiredRuntime>` element.</span></span>|
+|`configuration`|<span data-ttu-id="627b1-130">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="627b1-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`startup`|<span data-ttu-id="627b1-131">İçeren `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="627b1-131">Contains the `<requiredRuntime>` element.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="76c92-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="76c92-132">Remarks</span></span>
- <span data-ttu-id="76c92-133">Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="76c92-133">Applications built to support only version 1.0 of the runtime must use the `<requiredRuntime>` element.</span></span> <span data-ttu-id="76c92-134">Sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan uygulamalar kullanmalıdır `<supportedRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="76c92-134">Applications built using version 1.1 or later of the runtime must use the `<supportedRuntime>` element.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="76c92-135">Kullanırsanız [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyasını belirtmek için işlev, kullanmanız gereken `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesi.</span><span class="sxs-lookup"><span data-stu-id="76c92-135">If you use the [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="76c92-136">`<supportedRuntime>` Öğesi yok sayıldı kullandığınızda [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span><span class="sxs-lookup"><span data-stu-id="76c92-136">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>
-
- <span data-ttu-id="76c92-137">`version` Öznitelik dizesini belirtilen .NET Framework sürümü için yükleme klasör adıyla eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="76c92-137">The `version` attribute string must match the installation folder name for the specified version of the .NET Framework.</span></span> <span data-ttu-id="76c92-138">Bu dize yorumlanmaz.</span><span class="sxs-lookup"><span data-stu-id="76c92-138">This string is not interpreted.</span></span> <span data-ttu-id="76c92-139">Çalışma zamanı başlatma kodunu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmedi; Başlangıç kodu, hata iletisi gösterir ve sonlandırılır.</span><span class="sxs-lookup"><span data-stu-id="76c92-139">If the runtime startup code does not find a matching folder, the runtime is not loaded; the startup code shows an error message and quits.</span></span>
+## <a name="remarks"></a><span data-ttu-id="627b1-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="627b1-132">Remarks</span></span>
+ <span data-ttu-id="627b1-133">Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="627b1-133">Applications built to support only version 1.0 of the runtime must use the `<requiredRuntime>` element.</span></span> <span data-ttu-id="627b1-134">Sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan uygulamalar kullanmalıdır `<supportedRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="627b1-134">Applications built using version 1.1 or later of the runtime must use the `<supportedRuntime>` element.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="76c92-140">Microsoft Internet Explorer'da barındırılan bir uygulama için başlatma kodunun yoksayar `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="76c92-140">The startup code for an application that is hosted in Microsoft Internet Explorer ignores the `<requiredRuntime>` element.</span></span>
+> <span data-ttu-id="627b1-135">Kullanırsanız [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyasını belirtmek için işlev, kullanmanız gereken `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesi.</span><span class="sxs-lookup"><span data-stu-id="627b1-135">If you use the [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="627b1-136">`<supportedRuntime>` Öğesi yok sayıldı kullandığınızda [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span><span class="sxs-lookup"><span data-stu-id="627b1-136">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="76c92-141">Örnek</span><span class="sxs-lookup"><span data-stu-id="76c92-141">Example</span></span>
+ <span data-ttu-id="627b1-137">`version` Öznitelik dizesini belirtilen .NET Framework sürümü için yükleme klasör adıyla eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="627b1-137">The `version` attribute string must match the installation folder name for the specified version of the .NET Framework.</span></span> <span data-ttu-id="627b1-138">Bu dize yorumlanmaz.</span><span class="sxs-lookup"><span data-stu-id="627b1-138">This string is not interpreted.</span></span> <span data-ttu-id="627b1-139">Çalışma zamanı başlatma kodunu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmedi; Başlangıç kodu, hata iletisi gösterir ve sonlandırılır.</span><span class="sxs-lookup"><span data-stu-id="627b1-139">If the runtime startup code does not find a matching folder, the runtime is not loaded; the startup code shows an error message and quits.</span></span>
 
-<span data-ttu-id="76c92-142">Aşağıdaki örnek, bir yapılandırma dosyasında çalışma zamanı sürümü belirtmek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="76c92-142">The following example shows how to specify the runtime version in a configuration file.</span></span>
+> [!NOTE]
+> <span data-ttu-id="627b1-140">Microsoft Internet Explorer'da barındırılan bir uygulama için başlatma kodunun yoksayar `<requiredRuntime>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="627b1-140">The startup code for an application that is hosted in Microsoft Internet Explorer ignores the `<requiredRuntime>` element.</span></span>
+
+## <a name="example"></a><span data-ttu-id="627b1-141">Örnek</span><span class="sxs-lookup"><span data-stu-id="627b1-141">Example</span></span>
+
+<span data-ttu-id="627b1-142">Aşağıdaki örnek, bir yapılandırma dosyasında çalışma zamanı sürümü belirtmek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="627b1-142">The following example shows how to specify the runtime version in a configuration file.</span></span>
 
 ```xml
 <configuration>
@@ -82,8 +82,8 @@ safemode="true|false"/>
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="76c92-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="76c92-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="627b1-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="627b1-143">See also</span></span>
 
-- [<span data-ttu-id="76c92-144">Başlangıç Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="76c92-144">Startup Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="76c92-145">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="76c92-145">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="76c92-146">Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma</span><span class="sxs-lookup"><span data-stu-id="76c92-146">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [<span data-ttu-id="627b1-144">Başlangıç Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="627b1-144">Startup Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="627b1-145">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="627b1-145">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="627b1-146">Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma</span><span class="sxs-lookup"><span data-stu-id="627b1-146">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

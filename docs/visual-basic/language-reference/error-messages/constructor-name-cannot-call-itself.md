@@ -1,5 +1,5 @@
 ---
-title: Oluşturucu &#39; &lt;adı&gt; &#39; kendisini çağıramaz
+title: Yapıcı '<name>' kendisini çağıramaz
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662731"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276048"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a><span data-ttu-id="94dcf-102">Oluşturucu &#39; &lt;adı&gt; &#39; kendisini çağıramaz</span><span class="sxs-lookup"><span data-stu-id="94dcf-102">Constructor &#39;&lt;name&gt;&#39; cannot call itself</span></span>
-<span data-ttu-id="94dcf-103">A `Sub New` bir sınıf veya yapı yordamda kendisini çağırır.</span><span class="sxs-lookup"><span data-stu-id="94dcf-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
+# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="44f67-102">Yapıcı '\<adı >' kendisini çağıramaz</span><span class="sxs-lookup"><span data-stu-id="44f67-102">Constructor '\<name>' cannot call itself</span></span>
+<span data-ttu-id="44f67-103">A `Sub New` bir sınıf veya yapı yordamda kendisini çağırır.</span><span class="sxs-lookup"><span data-stu-id="44f67-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
   
- <span data-ttu-id="94dcf-104">Bir sınıfın bir örneği başlatmak için bir oluşturucu amacı olan veya ilk çalıştırıldığında yapısı oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="94dcf-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="94dcf-105">Sağlanan tüm farklı parametre listeleri sahip bir sınıf veya yapı birçok oluşturucuya sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="94dcf-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="94dcf-106">Bir oluşturucu kendi ek işlevselliği gerçekleştirmek için başka bir oluşturucuyu çağırmak için izin verilir.</span><span class="sxs-lookup"><span data-stu-id="94dcf-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="94dcf-107">Ancak bir oluşturucu kendi çağrılacak anlamsız olduğu ve hatta, sonsuz özyineleme durumuna yol izin veriyorsa, neden olur.</span><span class="sxs-lookup"><span data-stu-id="94dcf-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
+ <span data-ttu-id="44f67-104">Bir sınıfın bir örneği başlatmak için bir oluşturucu amacı olan veya ilk çalıştırıldığında yapısı oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="44f67-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="44f67-105">Sağlanan tüm farklı parametre listeleri sahip bir sınıf veya yapı birçok oluşturucuya sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="44f67-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="44f67-106">Bir oluşturucu kendi ek işlevselliği gerçekleştirmek için başka bir oluşturucuyu çağırmak için izin verilir.</span><span class="sxs-lookup"><span data-stu-id="44f67-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="44f67-107">Ancak bir oluşturucu kendi çağrılacak anlamsız olduğu ve hatta, sonsuz özyineleme durumuna yol izin veriyorsa, neden olur.</span><span class="sxs-lookup"><span data-stu-id="44f67-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
   
- <span data-ttu-id="94dcf-108">**Hata Kimliği:** BC30298</span><span class="sxs-lookup"><span data-stu-id="94dcf-108">**Error ID:** BC30298</span></span>  
+ <span data-ttu-id="44f67-108">**Hata Kimliği:** BC30298</span><span class="sxs-lookup"><span data-stu-id="44f67-108">**Error ID:** BC30298</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="94dcf-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="94dcf-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="44f67-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="44f67-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="94dcf-110">Çağrılan Oluşturucusu parametre listesini kontrol edin.</span><span class="sxs-lookup"><span data-stu-id="94dcf-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="94dcf-111">Bu, çağrıyı yapan Oluşturucusu farklı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="94dcf-111">It should be different from that of the constructor making the call.</span></span>  
+1.  <span data-ttu-id="44f67-110">Çağrılan Oluşturucusu parametre listesini kontrol edin.</span><span class="sxs-lookup"><span data-stu-id="44f67-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="44f67-111">Bu, çağrıyı yapan Oluşturucusu farklı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="44f67-111">It should be different from that of the constructor making the call.</span></span>  
   
-2.  <span data-ttu-id="94dcf-112">Farklı bir oluşturucuyu çağırmak düşünmüyorsanız kaldırmak `Sub New` tamamen çağırın.</span><span class="sxs-lookup"><span data-stu-id="94dcf-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
+2.  <span data-ttu-id="44f67-112">Farklı bir oluşturucuyu çağırmak düşünmüyorsanız kaldırmak `Sub New` tamamen çağırın.</span><span class="sxs-lookup"><span data-stu-id="44f67-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94dcf-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94dcf-113">See also</span></span>
-- [<span data-ttu-id="94dcf-114">Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok</span><span class="sxs-lookup"><span data-stu-id="94dcf-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a><span data-ttu-id="44f67-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44f67-113">See also</span></span>
+- [<span data-ttu-id="44f67-114">Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok</span><span class="sxs-lookup"><span data-stu-id="44f67-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
