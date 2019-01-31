@@ -1,20 +1,20 @@
 ---
-title: '&lt;endpointBehaviors&gt; &lt;davranışı&gt;'
+title: <behavior> , <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 73ba25cd2f4fe588aa620bfe566a979c08a83e22
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 34306f99f2343c987700e964aaa9800aa3f488fa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148207"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283952"
 ---
-# <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt; &lt;davranışı&gt;
+# <a name="behavior-of-endpointbehaviors"></a>\<davranış >, \<endpointBehaviors >
 `behavior` Öğesi içeren bir koleksiyon için bir uç nokta davranışını ayarlar. Her davranış tarafından dizine kendi `name`. Uç noktalar, bu adı aracılığıyla her davranışı bağlayabilirsiniz. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Varsayılan yapılandırma ve adsız bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<davranışı >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -59,4 +59,4 @@ ms.locfileid: "54148207"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<endpointBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Uç nokta davranışı öğelerinin koleksiyonu.|
+|[\<endpointBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Uç nokta davranışı öğelerinin koleksiyonu.|

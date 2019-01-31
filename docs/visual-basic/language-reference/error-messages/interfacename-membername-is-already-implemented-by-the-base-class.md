@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; taban sınıfı tarafından zaten uygulanmış &#39; &lt;baseclassname&gt;&#39;. Yeniden uygulanmasına &lt;türü&gt; varsayıldı'
+title: "'<interfacename>. <membername>' taban sınıfı tarafından zaten uygulanmış '<baseclassname>'. Yeniden uygulanmasına <type> varsayıldı"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 22a3bd4e8c09c0d070e7fa5e75571a7215c3a274
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5d9f21069c7b9aa54940525b7678bc3987b77c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507206"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264157"
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; taban sınıfı tarafından zaten uygulanmış &#39; &lt;baseclassname&gt;&#39;. Yeniden uygulanmasına &lt;türü&gt; varsayıldı
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<InterfaceName >. \<membername >' taban sınıfının tarafından zaten uygulanmış\<baseclassname >'. Yeniden uygulanmasına \<türü > varsayıldı
 Bir özellik, yordam veya türetilmiş bir sınıf içinde olay kullanan bir `Implements` temel sınıfta zaten uygulanmış bir arabirim üyesi belirleme yan tümcesi.  
   
  Türetilmiş bir sınıf, taban sınıfı tarafından uygulanan bir arabirim üyesi yeniden uygulayın. Bu temel sınıf uygulamasına geçersiz kılma ile aynı değildir. Daha fazla bilgi için [uygular](../../../visual-basic/language-reference/statements/implements-clause.md).  

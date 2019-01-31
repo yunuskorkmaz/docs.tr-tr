@@ -1,15 +1,15 @@
 ---
-title: '&lt;basicHttpBinding&gt; &lt;iletisi&gt;'
+title: <message> , <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: f4f50f0cf3010259677af2c8675cb2551c29ae42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b954ec770ca0c59dec0b25634ccbc59f086d1a99
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497061"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274462"
 ---
-# <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;iletisi&gt;
+# <a name="message-of-basichttpbinding"></a>\<İleti >, \<basicHttpBinding >
 İleti düzeyi güvenliği ayarlarını tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  

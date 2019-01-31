@@ -1,5 +1,5 @@
 ---
-title: Deyim bir satır dışında blok sona &#39;varsa&#39; deyimi
+title: Deyim, bir satır 'If' deyimi dışında blok sona erdiremez
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32005
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-ms.openlocfilehash: 78fe136acbd09e202b1daeb16dd540cf42ada390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cee52f0ca00395d93c469aae6498fd3793f1085
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574722"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266328"
 ---
-# <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>Deyim bir satır dışında blok sona &#39;varsa&#39; deyimi
+# <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>Deyim, bir satır 'If' deyimi dışında blok sona erdiremez
 Tek satırlı `If` deyimi biri olan virgülle (:) ayırarak çeşitli deyimleri içeren bir `End` deyim için bir denetim bloğu tek satır dışında `If`. Tek satırlı `If` deyimleri kullanmayın `End If` deyimi.  
   
  **Hata Kimliği:** BC32005  

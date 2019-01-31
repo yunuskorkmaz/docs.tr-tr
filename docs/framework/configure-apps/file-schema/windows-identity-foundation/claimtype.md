@@ -1,16 +1,16 @@
 ---
-title: '&lt;ClaimType&gt;'
+title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234971"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267241"
 ---
-# <a name="ltclaimtypegt"></a>&lt;ClaimType&gt;
+# <a name="claimtype"></a>\<claimType >
 Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep belirtir.  
   
  \<system.identityModel>  
@@ -42,7 +42,7 @@ Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep b
 |isteğe bağlı|Talep türü isteğe bağlı olup olmadığını belirten bir Boole değeri. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

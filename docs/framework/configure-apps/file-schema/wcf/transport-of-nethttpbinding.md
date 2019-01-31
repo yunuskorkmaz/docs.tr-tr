@@ -1,15 +1,15 @@
 ---
-title: '&lt;netHttpBinding&gt; &lt;taşıma&gt;'
+title: <transport> , <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 0195708d24e61dfee4c396518c94d5e21b7783bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578893"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281001"
 ---
-# <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; &lt;taşıma&gt;
+# <a name="transport-of-nethttpbinding"></a>\<Aktarım >, \<netHttpBinding >
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
   
 \<system.serviceModel>  

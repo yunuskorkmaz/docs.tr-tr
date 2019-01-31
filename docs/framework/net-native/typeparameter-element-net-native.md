@@ -1,17 +1,17 @@
 ---
-title: '&lt;TypeParameter&gt; Öğesi (.NET Yerel)'
+title: <TypeParameter> Öğesi (.NET yerel)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79e7a61f66a29ad4eeca1c6413b87d4b9ee9632e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644345"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263569"
 ---
-# <a name="lttypeparametergt-element-net-native"></a>&lt;TypeParameter&gt; Öğesi (.NET Yerel)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter > öğesi (.NET yerel)
 Bir yönteme geçirilen tür bağımsız değişkeni tarafından temsil edilen bir türün ilke uygulanır.  
   
 ## <a name="syntax"></a>Sözdizimi  

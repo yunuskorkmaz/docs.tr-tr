@@ -1,15 +1,15 @@
 ---
-title: WCF &lt;bookmarkResumptionQuery&gt;
+title: <bookmarkResumptionQuery> WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147817"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255126"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF &lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > WCF
 
 İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu temsil eder. Sorgu için yer imi sürdürme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
   

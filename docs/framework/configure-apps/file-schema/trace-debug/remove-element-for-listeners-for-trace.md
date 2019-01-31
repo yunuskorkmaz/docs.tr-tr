@@ -1,5 +1,5 @@
 ---
-title: '&lt;kaldırma&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;'
+title: <remove> için <listeners> için <trace> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: c1587c28e05609970c732192752578d089ec9f35
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5a6b94756cb1b451d40229674dd887dd9f84676b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083840"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267072"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;kaldırma&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;
+# <a name="remove-element-for-listeners-for-trace"></a>\<kaldırma > öğesi için \<dinleyicileri > için \<İzleme >
 Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.  
   
  \<Yapılandırma >  

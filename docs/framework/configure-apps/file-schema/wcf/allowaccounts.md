@@ -1,15 +1,15 @@
 ---
-title: '&lt;allowAccounts&gt;'
+title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: c1c4630e6191dbbe02688a4e4a9db9e18b8d36d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3121146577122446ba82528fc6e46dadbf5033
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508424"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255555"
 ---
-# <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
+# <a name="allowaccounts"></a>\<allowAccounts >
 Kullanıcı işlemleri için Windows Communication Foundation (WCF) hizmetlerini barındıran hesapları ve Paylaşım Hizmeti bağlantı erişim izni verilen belirten yapılandırma öğelerinin bir koleksiyonunu içerir.  
   
  \<system.serviceModel.activation>  

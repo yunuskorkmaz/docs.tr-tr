@@ -4,12 +4,12 @@ description: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sor
 ms.date: 01/24/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6f01357906fd4398f68dadfb35dbce816f4302c0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: a951e884a7494b0dcc808fc3dafbfadebc5577dc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066213"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254996"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Öğretici: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları sınıflandırmak için kullanın.
 
@@ -106,6 +106,8 @@ Sınıflandırma görevleri sık aşağıdaki türlerden biri şunlardır:
 
 * İkili: ya da A veya b
 * Veya çoklu sınıflar: tek bir model kullanarak tahmin edilebilmesi birden çok kategori.
+
+Sorun kategorisi tahmininizde birden çok kategoriden (veya çoklu sınıflar) olamayacağından bu sorun türünün veya çoklu sınıflar sınıflandırma görevi yerine iki kullanın (ikili).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 

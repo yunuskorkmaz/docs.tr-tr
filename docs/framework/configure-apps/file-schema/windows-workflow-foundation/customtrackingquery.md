@@ -1,16 +1,16 @@
 ---
-title: '&lt;customTrackingQuery&gt;'
+title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 9ee5a4a25d379eafb936098597df1ec61ff09f0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e525bc4c77649a6c6d70ddb2408b6ecce4a0f09
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263777"
 ---
-# <a name="ltcustomtrackingquerygt"></a>&lt;customTrackingQuery&gt;
+# <a name="customtrackingquery"></a>\<customTrackingQuery >
 Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu özel izleme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;webMessageEncoding&gt;'
+title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 90102c25c1c5b83af8f629d18b790af9297fa88c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640257"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260040"
 ---
-# <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
+# <a name="webmessageencoding"></a>\<webMessageEncoding >
 Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabilir ve bir Windows Communication Foundation (WCF) bağlaması içinde kullanıldığında yazılan için "ham" ikili içeriğin sağlar.  
   
  \<system.serviceModel>  

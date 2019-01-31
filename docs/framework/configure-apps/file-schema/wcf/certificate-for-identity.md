@@ -1,15 +1,15 @@
 ---
-title: '&lt;kimlik&gt; için &lt;sertifika&gt;'
+title: <certificate> için <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 28a1b992a70986652030ad42d4d4a5738350ae1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 804600e4eb1612cd8654fc58ec3df28596c1e84d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676165"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265044"
 ---
-# <a name="ltcertificategt-for-ltidentitygt"></a>&lt;kimlik&gt; için &lt;sertifika&gt;
+# <a name="certificate-for-identity"></a>\<Sertifika > için \<kimliği >
 Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını belirtir.  
   
  Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  

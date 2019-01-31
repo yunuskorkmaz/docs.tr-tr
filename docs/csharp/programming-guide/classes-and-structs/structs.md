@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240391"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261626"
 ---
 # <a name="structs-c-programming-guide"></a>Yapılar (C# Programlama Kılavuzu)
 
@@ -28,8 +28,8 @@ Yapılar sınıflar olarak aynı sözdizimini çoğunu paylaşır. Struct'ın ad
 - Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.  
 - Yapılar parametrelerine sahip oluşturucular bildirebilirsiniz. 
 - Bir yapı, başka bir yapı veya sınıfından devralamaz ve temel bir sınıfı olamaz. Tüm yapıları doğrudan devralan <xref:System.ValueType>, işlevinden devralan <xref:System.Object>.  
-- Bir yapı, arabirim uygulayabilir.  
-- Bir yapı boş değer atanabilir bir tür kullanılan ve boş değer atanabilir.  
+- Bir yapı, arabirim uygulayabilir. 
+- Bir yapı olamaz `null`, ve bir yapı değişkene atanamaz `null` boş değer atanabilir bir tür değişkenin bildirildiği sürece.
   
 ## <a name="related-sections"></a>İlgili bölümler  
 

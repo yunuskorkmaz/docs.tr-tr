@@ -1,5 +1,5 @@
 ---
-title: 'Geçici Win32 kaynak dosyasını oluştururken hata &#39; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;'
+title: "'<filename>' Win32 kaynak dosyasını oluştururken hata oldu: <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30137
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 5339f994560c6c7e2c40651c5ea326f3713d3649
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3af4ff0ace8afcb2f576ec4fde022672def0b90b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265096"
 ---
-# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Geçici Win32 kaynak dosyasını oluştururken hata &#39; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;
+# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Geçici Win32 kaynak dosyası kaydedilirken hata oluştu '\<dosya adı >': \<hata iletisi >
 Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, bellek içi kaynağı yazma kullanmak için bir dosya adı alınırken bir hata bildirdi.  
   
  **Hata Kimliği:** BC30137  

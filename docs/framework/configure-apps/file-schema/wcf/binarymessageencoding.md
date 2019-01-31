@@ -1,15 +1,15 @@
 ---
-title: '&lt;binaryMessageEncoding&gt;'
+title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 7753340be01c407157d9a0576f31db4245c0b4f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faad93554954accd341a1fc2262251fbda61910c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672857"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254541"
 ---
-# <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
+# <a name="binarymessageencoding"></a>\<binaryMessageEncoding >
 Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan bir ikili ileti Kodlayıcısı tanımlar.  
   
  \<system.serviceModel>  

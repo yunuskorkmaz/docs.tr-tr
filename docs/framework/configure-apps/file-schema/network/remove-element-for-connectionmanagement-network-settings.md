@@ -1,5 +1,5 @@
 ---
-title: '&lt;kaldırma&gt; connectionManagement (ağ ayarları) için'
+title: connectionManagement için <remove> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62f7793c8f25f4803e881e2f183c99c62000ca23
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702554"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270536"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;kaldırma&gt; connectionManagement (ağ ayarları) için
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<kaldırma > connectionManagement (ağ ayarları) için
 Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.  
   
  \<Yapılandırma >  

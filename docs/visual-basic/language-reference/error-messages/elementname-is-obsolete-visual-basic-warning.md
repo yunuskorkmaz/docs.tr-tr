@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarısı)'
+title: "'<elementname>' eski (Visual Basic Uyarısı)"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40008
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: eeeca3354592bfc6d657b435c42ad5644fd2b97d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6d927ef6681838d8a77a0c6018eb6bbe30913e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552404"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255868"
 ---
-# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;ElementName&gt; &#39; eski (Visual Basic uyarısı)
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >' eski (Visual Basic uyarısı)
 Bir ifade ile işaretlenmiş bir programlama öğesi erişmeye <xref:System.ObsoleteAttribute> özniteliğini ve bir uyarı olarak değerlendirilecek yönergesi.  
   
  Herhangi bir programlama öğesi artık uygulayarak kullanımda olarak işaretleyebilirsiniz <xref:System.ObsoleteAttribute> ona. Bunu yaparsanız özniteliğin ayarlayabilirsiniz <xref:System.ObsoleteAttribute.IsError%2A> ya da özellik `True` veya `False`. Ayarlarsanız `True`, derleyici bir hata öğe kullanma girişimi değerlendirir. Ayarlarsanız `False`, veya bu izin varsayılan `False`, öğe kullanma girişimi varsa, derleyici bir uyarı verir.  

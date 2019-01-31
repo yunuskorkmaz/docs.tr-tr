@@ -1,15 +1,15 @@
 ---
-title: Etkinleştirme için &lt;tanılama&gt;
+title: <diagnostics> Etkinleştirme için
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 5d8fcce28182dcac945655a52d829945a432a9b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac235b9a3c125cd3fe63ccd899e2ff92d4d3f31b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723920"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278462"
 ---
-# <a name="ltdiagnosticsgt-for-activation"></a>Etkinleştirme için &lt;tanılama&gt;
+# <a name="diagnostics-for-activation"></a>\<Tanılama > etkinleştirme
 Windows Communication Foundation (WCF) dinleyicinin Tanılama işlevleri yapılandırır.  
   
  \<system.serviceModel.activation>  

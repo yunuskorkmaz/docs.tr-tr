@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;ifade&gt; &#39; tür kısıtlaması olarak kullanılamaz'
+title: "'<expression>' tür kısıtlaması olarak kullanılamaz"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742139"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264680"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;ifade&gt; &#39; tür kısıtlaması olarak kullanılamaz
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<ifadesi >' tür kısıtlaması olarak kullanılamaz
 Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyor bir ifade içerir.  
   
  Tür parametresi için geçirilen tür bağımsız değişkeni gereksinimlerine kısıtlaması listesini uygular. Herhangi bir bileşimini aşağıdaki gereksinimleri belirtebilirsiniz:  

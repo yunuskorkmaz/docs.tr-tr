@@ -1,5 +1,5 @@
 ---
-title: '&lt;bkz:&gt; - C# Programlama Kılavuzu'
+title: <see> - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: fb8b7dd0f1620895ff95917977745ac391dadf61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31806ad06cc97fa27f1944f2500f0f9cbb29f561
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718604"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262107"
 ---
-# <a name="ltseegt-c-programming-guide"></a>&lt;bkz:&gt; (C# programlama Kılavuzu)
+# <a name="see-c-programming-guide"></a>\<bkz: > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  

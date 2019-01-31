@@ -1,5 +1,5 @@
 ---
-title: Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt;&#39;
+title: "'<typename1>' türünün değeri '<typename2>' olarak değiştirilemez"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627609"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261249"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Türü değeri &#39; &lt;typename1&gt; &#39; dönüştürülemez &#39; &lt;typename2&gt;&#39;
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'
 Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derleme bir proje başvurusu olan bir dosya başvurusunun karışması tür uyuşmazlığı olabilir '\<assemblyname >'. Dosya başvurusu değiştirmeyi deneyin '\<DosyaYolu >' projesinde '\<projectname1 >' proje başvurusu ile '\<projectname2 >'.  
   
  Bir proje, hem bir proje başvurusu hem de bir dosya başvurusu burada yapar bir durumda, derleyici bir türden diğerine dönüştürülüp dönüştürülemeyeceği garanti edemez.  

@@ -1,17 +1,17 @@
 ---
-title: '&lt;Parameter&gt; Öğesi (.NET Yerel)'
+title: <Parameter> Öğesi (.NET yerel)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537185"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266409"
 ---
-# <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt; Öğesi (.NET Yerel)
+# <a name="parameter-element-net-native"></a>\<Parametresi > öğesi (.NET yerel)
 Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  

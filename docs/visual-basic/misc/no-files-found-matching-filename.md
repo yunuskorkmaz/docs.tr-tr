@@ -1,17 +1,17 @@
 ---
-title: Eşleşen dosya bulunamadı '&lt;filename&gt;'
+title: Eşleşen dosya bulunamadı '<filename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-ms.openlocfilehash: 6498992a0868a45d5783f7d4f8816fef995b9c4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcd0bf78adcbd339c1b58f82f445fe43446366f3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729346"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263776"
 ---
-# <a name="no-files-found-matching-ltfilenamegt"></a>Eşleşen dosya bulunamadı '&lt;filename&gt;'
+# <a name="no-files-found-matching-filename"></a>Eşleşen dosya bulunamadı '\<dosya adı >'
 Dosya adı hatalı veya dosya yok.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

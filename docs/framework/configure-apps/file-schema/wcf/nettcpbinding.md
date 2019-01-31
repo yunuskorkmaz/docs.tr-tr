@@ -1,17 +1,17 @@
 ---
-title: '&lt;netTcpBinding&gt;'
+title: <netTcpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0dc07bfb7b26e433fd3ff2b004253d8d2d90bf62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe2ae5923e4cd46abadc7103655dea410a97b60
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573446"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258051"
 ---
-# <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
+# <a name="nettcpbinding"></a>\<netTcpBinding>
 
 Çapraz makine haberleşmesi için güvenli, güvenilir ve iyileştirilmiş bağlama belirtir. Varsayılan olarak, bir çalışma zamanı iletişim yığını Windows güvenliği ile ileti güvenliği ve kimlik doğrulaması, ileti teslimi ve ikili ileti kodlama için TCP oluşturur.
 

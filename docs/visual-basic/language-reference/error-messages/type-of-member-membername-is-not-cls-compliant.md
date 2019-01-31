@@ -1,5 +1,5 @@
 ---
-title: Üye türü &#39; &lt;membername&gt; &#39; CLS uyumlu değil
+title: "'<membername>' üyesinin türü CLS uyumlu değil"
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603859"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254099"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Üye türü &#39; &lt;membername&gt; &#39; CLS uyumlu değil
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>Üye türü '\<membername >' CLS uyumlu değil
 Bu üye olmadığı için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu, bileşen içinde bir hata olmadığından [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ve Visual Basic desteği bu veri türü. Ancak, başka bir bileşen kesinlikle CLS uyumlu bir kod halinde yazılmış bu veri türünü desteklemiyor olabilir. Böyle bir bileşene başarıyla bileşeniniz ile etkileşim kurmak mümkün olmayabilir.  
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  
