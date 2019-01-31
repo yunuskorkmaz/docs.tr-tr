@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; öğesi için &lt;yapılandırma&gt;'
+title: <appSettings> için <configuration> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190937"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289594"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > öğesi için \<yapılandırma >
 
 Özel uygulama ayarları içerir. .NET Framework tarafından sağlanan önceden tanımlanmış yapılandırma bölümü budur.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+&nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,7 +53,7 @@ ms.locfileid: "50190937"
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel bir uygulama yapılandırma bilgilerini depolayan bir uygulama. Belirtilen anahtar/değer çiftleri  **\<appSettings >** öğesi kullanılarak koddan erişilebilir <xref:System.Configuration.ConfigurationSettings> sınıfı.
+ **\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel bir uygulama yapılandırma bilgilerini depolayan bir uygulama. Belirtilen anahtar/değer çiftleri  **\<appSettings >** öğesi kullanılarak koddan erişilebilir <xref:System.Configuration.ConfigurationSettings> sınıfı.
 
 Kullanabileceğiniz **dosya** özniteliğini  **\<appSettings >** öğesinin *Web.config* ve uygulama yapılandırma dosyaları. Bu öznitelik belirtilen ayarları geçersiz kılar veya ek ayarlar sağlayan bir yapılandırma dosyası belirtir  **\<appSettings >** öğesi. **Dosya** özniteliği, ne zaman bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak bir kullanıcının istediği gibi kaynak denetimi takım geliştirme senaryolarda kullanılabilir.
 

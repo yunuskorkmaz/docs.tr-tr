@@ -1,19 +1,19 @@
 ---
-title: Bir derlemeyi belirtme&#39;s konumu
+title: Derlemenin Konumunu Belirtme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 4b5d732eb669119e346c61dce29b579911798edf
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083580"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259000"
 ---
-# <a name="specifying-an-assembly39s-location"></a>Bir derlemeyi belirtme&#39;s konumu
+# <a name="specifying-an-assemblys-location"></a>Derlemenin Konumunu Belirtme
 Derlemenin konumunu belirtmek için iki yolu vardır:  
   
 -   Kullanarak [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğesi.  

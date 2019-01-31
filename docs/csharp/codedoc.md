@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 15bdd65b96159b4c9b6eb45016f8bdde58c1efe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576206"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271362"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -53,7 +53,7 @@ Kodu basit matematik kitaplığı şu şekildedir:
 Artık kitaplığınızı kullanan ancak kaynak koduna erişiminiz yoksa üçüncü taraf geliştiriciler için kodunuzdan bir API başvuru belgesi oluşturmak yönetebilmek istiyorsunuz.
 Daha önce belirtildiği gibi XML belge etiketleri Bunu başarmak için kullanılabilir. Artık için standart XML etiketlerini görülecektir C# derleyici destekler.
 
-### <a name="ltsummarygt"></a>&lt;Özeti&gt;
+### <a name="summary"></a>\<Summary >
 
 `<summary>` Etiketi bir tür veya üye hakkında kısa bilgiler ekler.
 Ben ekleyerek kullanımını kazandırabileceğinizi göstereceğiz `Math` sınıf tanımı ve ilk `Add` yöntemi. Kodunuzun geri kalanı için geçerli çekinmeyin.
@@ -62,27 +62,27 @@ Ben ekleyerek kullanımını kazandırabileceğinizi göstereceğiz `Math` sın�
 
 `<summary>` Etiketi çok önemlidir ve içeriği IntelliSense ya da bir API başvuru belgesini türe veya üyeye bilgilerinin birincil kaynağı olduğundan, dahil öneririz.
 
-### <a name="ltremarksgt"></a>&lt;Açıklamalar&gt;
+### <a name="remarks"></a>\<REMARKS >
 
 `<remarks>` Etiketi tamamlayan türleri veya üyeleri hakkında bilgi, `<summary>` etiketi sağlar. Bu örnekte, yalnızca bu sınıfa ekleyeceksiniz.
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="ltreturnsgt"></a>&lt;döndürür&gt;
+### <a name="returns"></a>\<döndürür >
 
 `<returns>` Etiketi dönüş değeri bir yöntem bildiriminde açıklanmaktadır.
 Önce aşağıdaki örnekte gösterildiği gibi `<returns>` ilk etiket `Add` yöntemi. Diğer yöntemler hakkında aynısını yapabilir.
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;value&gt;
+### <a name="value"></a>\<Değer >
 
 `<value>` Etiketi benzer `<returns>` özelliklerini kullanmasını dışında etiketleyin.
 Varsayarak, `Math` kitaplığı adlı statik bir özellik olan `PI`, İşte bu etiketi nasıl kullanırsınız:
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;Örnek&gt;
+### <a name="example"></a>\<Örnek >
 
 Kullandığınız `<example>` örneği, XML belgelerinde dahil etmek için etiket.
 Bu alt kullanılmasına `<code>` etiketi.
@@ -91,14 +91,14 @@ Bu alt kullanılmasına `<code>` etiketi.
 
 `code` Etiketi satır sonu ve girinti uzun örnekleri için korur.
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="para"></a>\<para >
 
 Kullandığınız `<para>` kendi üst etiketinin içinde içeriği biçimlendirmek için etiket. `<para>` genellikle gibi bir etiket içinde kullanılan `<remarks>` veya `<returns>`paragraflara metin ayırmak için.
 İçeriğini biçimlendirebilirsiniz `<remarks>` sınıfı tanımınız için etiket.
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="ltcgt"></a>&lt;c&gt;
+### <a name="c"></a>\<c >
 
 Biçimlendirme hala konusu, kullandığınız `<c>` metin olarak kod parçası olarak işaretlemek için etiket.
 Nasıl olduğunu `<code>` etiketi ancak satır içi. Hızlı kod örneği bir etiketin içeriği bir parçası olarak göstermek istediğinizde yararlıdır.
@@ -106,7 +106,7 @@ Belgelerine güncelleştirelim `Math` sınıfı.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;özel durum&gt;
+### <a name="exception"></a>\<Özel Durum >
 
 Kullanarak `<exception>` etiketi, bir yöntemi özel durum oluşturabilecek, geliştiricilere sağlar.
 Bakarak, `Math` kitaplığı, gördüğünüz gibi her ikisi de `Add` yöntemleri, belirli bir koşul karşılandığında bir özel durum oluşturur. Değil yine de o kadar belirgin tamsayıdır `Divide` yöntemi oluşturursa yanı, `b` parametresi sıfırsa. Artık özel durum belgeleri bu yöntemine ekleyin.
@@ -116,7 +116,7 @@ Bakarak, `Math` kitaplığı, gördüğünüz gibi her ikisi de `Add` yöntemler
 `cref` Öznitelik geçerli derleme ortamdan kullanılabilir bir özel durum başvuru temsil eder.
 Bu proje ya da başvurulan bir derlemede tanımlanan herhangi bir türü olabilir. Değerini çözümlenemezse, derleyici bir uyarı verir.
 
-### <a name="ltseegt"></a>&lt;Bkz:&gt;
+### <a name="see"></a>\<bkz: >
 
 `<see>` Etiketi başka bir kod öğesi için bir belge sayfasına tıklatılabilir bir bağlantı oluşturmanıza olanak tanır. Sonraki Örneğimizde, ikisi arasındaki tıklatılabilir bir bağlantı oluşturacağız `Add` yöntemleri.
 
@@ -125,7 +125,7 @@ Bu proje ya da başvurulan bir derlemede tanımlanan herhangi bir türü olabili
 `cref` Olduğu bir **gerekli** temsil eden bir tür veya geçerli derleme ortamdan kullanılabilir olan kendi üyesi başvuru özniteliği.
 Bu proje ya da başvurulan bir derlemede tanımlanan herhangi bir türü olabilir.
 
-### <a name="ltseealsogt"></a>&lt;SeeAlso&gt;
+### <a name="seealso"></a>\<SeeAlso >
 
 Kullandığınız `<seealso>` bunu aynı şekilde etiketi `<see>` etiketi. Tek fark, içeriği genellikle "bir Ayrıca bkz:" bölümünde yerleştirilir. Buraya ekleyeceğiz bir `seealso` üzerinde tamsayı etiketi `Add` tamsayı parametre kabul eden diğer sınıfı yöntemleri başvurmak için yöntemi:
 
@@ -134,33 +134,33 @@ Kullandığınız `<seealso>` bunu aynı şekilde etiketi `<see>` etiketi. Tek f
 `cref` Öznitelik, bir tür veya geçerli derleme ortamdan kullanılabilir olan kendi üyesi başvuru temsil eder.
 Bu proje ya da başvurulan bir derlemede tanımlanan herhangi bir türü olabilir.
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="param"></a>\<param >
 
 Kullandığınız `<param>` bir yöntemin parametre açıklamak için etiket. İşte bir örnek üzerinde iki `Add` yöntemi: Etiket açıklar parametresi belirtildiğinden **gerekli** `name` özniteliği.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
+### <a name="typeparam"></a>\<typeparam >
 
 Kullandığınız `<typeparam>` tıpkı etiketi `<param>` etiketi ancak genel parametre açıklamak genel tür veya yöntem bildirimleri.
 Hızlı bir genel yöntem ekleme, `Math` bir miktar diğerinden daha büyük olup olmadığı denetlenecek sınıfı.
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="ltparamrefgt"></a>&lt;paramref&gt;
+### <a name="paramref"></a>\<paramref >
 
 Bazen ne olabilir bir yöntem ne yaptığını açıklayan ortasında olabilir bir `<summary>` etiketi ve parametre başvurusu yapmak isteyebilirsiniz. `<paramref>` Etikettir yalnızca bu harika. Şimdi güncelleştirme özeti sayfamızda çift tabanlı `Add` yöntemi. Gibi `<param>` parametre adı belirtilen etiketi **gerekli** `name` özniteliği.
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
+### <a name="typeparamref"></a>\<typeparamref >
 
 Kullandığınız `<typeparamref>` tıpkı etiketi `<paramref>` etiketi ancak genel parametre açıklamak genel tür veya yöntem bildirimleri.
 Daha önce oluşturduğunuz genel aynı yöntemi kullanabilirsiniz.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="list"></a>\<listesi >
 
 Kullandığınız `<list>` etiket biçimi belgeleri bilgilerine bir sıralı liste, sırasız liste veya tablo.
 Sırasız bir listesini her matematik işleminin olun, `Math` kitaplığı destekler.
@@ -179,7 +179,7 @@ Kodunuz aracılığıyla ayrıntılı belgeler Web sitesi ile tıklanabilir çap
 Bu bir onarımı kabus bu koda katkıda bulunmak isteyen bir geliştirici olarak gittiği çalışılamayacak için çok fazla bilgi bulunmaktadır.
 Ne yapmam yardımcı olabilecek bir XML etiket vardır:
 
-### <a name="ltincludegt"></a>&lt;include&gt;
+### <a name="include"></a>\<Ekle >
 
 `<include>` Etiket türleri açıklayan yorumlar ayrı bir XML dosyasında ve doğrudan sizin kaynak kodu dosyasında belge açıklamaları yerleştirme aksine, kaynak kodunuzdaki üyelerine başvurmak olanak tanır.
 
