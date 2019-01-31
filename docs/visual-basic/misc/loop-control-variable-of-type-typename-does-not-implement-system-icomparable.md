@@ -1,17 +1,17 @@
 ---
-title: Döngü denetim değişkeni türü '&lt;typename&gt;' 'System.IComparable' arabirimini uygulamıyor.
+title: Döngü denetim değişkeni türü '<typename>' 'System.IComparable' arabirimini uygulamıyor.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-ms.openlocfilehash: 6508d89807439bd01756c25ddb5fbc6c3edd60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bc1b23c5b43478669bd4ce3ba7321c1a30394fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273479"
 ---
-# <a name="loop-control-variable-of-type-lttypenamegt-does-not-implement-the-systemicomparable-interface"></a>Döngü denetim değişkeni türü '&lt;typename&gt;' 'System.IComparable' arabirimini uygulamıyor.
+# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Döngü denetim değişkeni türü '\<typename >' 'System.IComparable' arabirimini uygulamıyor.
 Uygulamayan bir tür bir değişkendir `System.IComparable` arabirimi. `System.IComparable` bir değer türü veya bir sınıf tarafından uygulanmalıdır.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Barındırma ve çalıştırma temel Windows Communication Foundation servisi'
+title: Nasıl temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129382"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277777"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl Yapılır: Barındırma ve çalıştırma temel Windows Communication Foundation servisi
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma
 
-Üçüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
+Üçüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](getting-started-tutorial.md) konu.
 
 Bu konu, bir Windows Communication Foundation (WCF) hizmeti bir konsol uygulamasında barındırma açıklar. Bu yordam, aşağıdaki adımlardan oluşur:
 
@@ -142,14 +142,14 @@ End Module
 
 **2. adım** – bir örneğini oluşturur <xref:System.ServiceModel.ServiceHost> Hizmeti'ni barındıracak şekilde sınıfı. Oluşturucu, iki parametre, hizmet sözleşmesi uygulayan sınıf türünü ve hizmetin taban adresi alır.
 
-**3. adım** – oluşturur bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesi oluşur. <xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlanan ve hizmet türüne uygulayın. Bu örnekte kullanılan bağlamanın <xref:System.ServiceModel.WSHttpBinding> WS - için uygun uç noktalarına bağlamak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../docs/framework/wcf/bindings-overview.md). Adres, uç noktayı tanımlamak için taban adresi olarak eklenir. Tam uç nokta adresi "CalculatorService" Bu kodu belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"`.
+**3. adım** – oluşturur bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesi oluşur. <xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlanan ve hizmet türüne uygulayın. Bu örnekte kullanılan bağlamanın <xref:System.ServiceModel.WSHttpBinding> WS - için uygun uç noktalarına bağlamak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](bindings-overview.md). Adres, uç noktayı tanımlamak için taban adresi olarak eklenir. Tam uç nokta adresi "CalculatorService" Bu kodu belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"`.
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**4. adım** – meta veri değişimi etkinleştirin. İstemciler, meta veri değişimi, hizmet işlemlerini aramak için kullanılacak proxy üretmek için kullanır. Etkinleştirmek için meta veri değişimi oluşturma bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın, örnek 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`ve davranışların eklenmesi <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.
+**4. adım** – meta veri değişimi etkinleştirin. İstemciler, meta veri değişimi, hizmet işlemlerini aramak için kullanılacak proxy üretmek için kullanır. Etkinleştirmek için meta veri değişimi oluşturma bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın, örnek 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`ve davranışların eklenmesi <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.
 
-**5. adım** – açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için. Uyarı kodunu kullanıcının isabet bekler girin. Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [kullanım Kapat ve iptal WCF istemci kaynakları serbest bırakmak için](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**5. adım** – açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için. Uyarı kodunu kullanıcının isabet bekler girin. Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [kullanım Kapat ve iptal WCF istemci kaynakları serbest bırakmak için](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > App.config dosyasında GettingStartedLib kodunda yaptığınız değişiklikleri yansıtacak şekilde düzenleyin:
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> Bu gibi hizmetlere HTTP adresleri dinlemek makinede kaydetme izni gerektirir. Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.
+> Bu gibi hizmetlere HTTP adresleri dinlemek makinede kaydetme izni gerektirir. Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](feature-details/configuring-http-and-https.md). Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Artık hizmeti çalışıyor. Sonraki görevde bir WCF istemcisi oluşturma.
 
 > [!div class="nextstepaction"]
-> [Nasıl Yapılır: Bir WCF istemcisi oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Nasıl yapılır: Bir WCF istemcisi oluşturma](how-to-create-a-wcf-client.md)
 
-Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
+Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](troubleshooting-the-getting-started-tutorial.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
+- [Başlarken](samples/getting-started-sample.md)
+- [Kendini Barındırma](samples/self-host.md)

@@ -1,5 +1,5 @@
 ---
-title: Hangi&#39;s eski .NET Framework sınıf kitaplığı
+title: .NET Framework Sınıf Kitaplığı'nda Artık Kullanılmayanlar
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541267"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287826"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Hangi&#39;s eski .NET Framework sınıf kitaplığı
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework Sınıf Kitaplığı'nda Artık Kullanılmayanlar
 .NET Framework, zaman içinde değişir. Her yeni sürümü, yeni türler ve yeni işlevleri sağlayan bir tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değişir. Örneğin, bazı türleri destekledikleri teknoloji tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli olan yeni yöntemlerle olandır.  
   
  .NET Framework ve ortak dil çalışma zamanı desteği (bir .NET Framework'ün sonraki sürüm üzerinde çalıştırmak için .NET Framework sürümü ile geliştirilen uygulamaları olanak tanır) geriye dönük uyumluluk çaba harcar. Bu, yalnızca bir tür veya tür üyesi kaldırmak zorlaştırır. Bunun yerine, .NET Framework türü veya tür üyesi artık kullanılmayan veya kullanım dışı olarak işaretleyerek kullanılması gerektiğini gösterir. Bir tür veya üye kullanım dışı bırakılıyor, böylece geliştiriciler, kaybolur ve yanıtlamak için bunun kaldırılması için zamanınız farkında İmleme içerir. Ancak, türe veya üyeye kullanan mevcut kodu .NET Framework'ün yeni sürümde çalışmaya devam eder.  

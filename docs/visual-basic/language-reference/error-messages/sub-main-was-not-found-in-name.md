@@ -1,5 +1,5 @@
 ---
-title: '&#39;Sub Main&#39; bulunamadı &#39; &lt;adı&gt;&#39;'
+title: "'<name>' içinde 'Sub Main' bulunamadı"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30420
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: f3d544815d9589d852c3e49fe5f1b7985779cef4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc354c03f33cb5ac7784236a8124281179dadf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686198"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287553"
 ---
-# <a name="39sub-main39-was-not-found-in-39ltnamegt39"></a>&#39;Sub Main&#39; bulunamadı &#39; &lt;adı&gt;&#39;
+# <a name="sub-main-was-not-found-in-name"></a>'Sub Main' bulunamadı '\<adı >'
 `Sub Main` olan eksik veya yanlış konumu belirtilmedi için.  
   
  **Hata Kimliği:** BC30420  

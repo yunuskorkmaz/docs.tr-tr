@@ -1,5 +1,5 @@
 ---
-title: Varsayılan özellik &#39; &lt;propertyname1&gt; &#39; varsayılan özelliğiyle çakışıyor &#39; &lt;propertyname2&gt; &#39; içinde &#39; &lt;classname&gt; &#39;ve olarak bildirilmemelidir &#39;gölge&#39;
+title: "'<propertyname1>' varsayılan özelliği, '<propertyname2>' içindeki '<classname>' varsayılan özelliğiyle çakıştığından, 'Shadows' olarak bildirilmemelidir"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521432"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270416"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Varsayılan özellik &#39; &lt;propertyname1&gt; &#39; varsayılan özelliğiyle çakışıyor &#39; &lt;propertyname2&gt; &#39; içinde &#39; &lt;classname&gt; &#39;ve olarak bildirilmemelidir &#39;gölge&#39;
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Varsayılan özellik '\<propertyname1 >' varsayılan özelliğiyle çakışıyor '\<propertyname2 >', '\<SınıfAdı >' ve 'Shadows' olarak bildirilmemelidir
 Temel sınıfta tanımlanan bir özellik olarak aynı ada sahip bir özellik bildirildi. Bu durumda, bu sınıf özelliği temel sınıf özelliğini gölge.  
   
  Bu ileti bir uyarıdır. `Shadows` Varsayılan olarak kabul edilir. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  

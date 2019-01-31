@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCredentials&gt; Öğesi &lt;serviceCertificate&gt;'
+title: <serviceCertificate> ' ın <clientCredentials> öğesi
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 2f1d95238a16bfd286a64973c6e5cfb95fe02dc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7134e8b3d253575bf26f26490372aa94549c73b7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744888"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279688"
 ---
-# <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; Öğesi &lt;serviceCertificate&gt;
+# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate >, \<clientCredentials > öğesi
 İstemci bir hizmete kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.  
   
  \<system.ServiceModel>  

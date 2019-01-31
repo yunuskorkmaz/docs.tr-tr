@@ -1,15 +1,15 @@
 ---
-title: '&lt;mtomMessageEncoding&gt;'
+title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: b9fe4a9eb0176c97920c0dde5cb003c8ca1ae989
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be0a11c71083c713042ab572cb78fbae27d52912
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697445"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277699"
 ---
-# <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
+# <a name="mtommessageencoding"></a>\<mtomMessageEncoding >
 SOAP ileti aktarım en iyi duruma getirme mekanizması (temel MTOM) iletiler için kullanılan kodlama ve ileti sürüm oluşturmayı belirtir.  
   
  \<system.serviceModel>  

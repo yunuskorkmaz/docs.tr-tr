@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a6c13ba5bfd28cec87df1c021ed1f303d7d1f4f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154391"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266630"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Kaldırma ve var olan .NET uygulamalarını Azure Iaas (bulut altyapısını kullanıma hazır) için kaydırma
 
@@ -89,7 +89,11 @@ Site kurtarma kısmen özellikle karma ortamlar için de yapılan şirket içind
 
 - **Azure geçişi**
 
-    [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
+    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+
+- **Azure geçiş Merkezi**
+
+    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
 
 - **Site Recovery ile azure'a geçirme**
 
