@@ -1,15 +1,15 @@
 ---
-title: '&lt;kapsamların&gt; &lt;eklenmesi&gt;'
+title: <add> , <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2681d5e757a1c1efc33fb3ef8804e94f8b391757
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705579"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288684"
 ---
-# <a name="ltaddgt-of-ltscopesgt"></a>&lt;kapsamların&gt; &lt;eklenmesi&gt;
+# <a name="add-of-scopes"></a>\<Ekle >, \<kapsamları >
 Özel bir kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan URI ekler.  
   
 \<system.ServiceModel>  

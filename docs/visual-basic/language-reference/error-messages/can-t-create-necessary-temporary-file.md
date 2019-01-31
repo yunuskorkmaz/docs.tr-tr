@@ -1,17 +1,17 @@
 ---
-title: İçin&#39;t gereken geçici dosya oluşturma
+title: Gereken geçici dosya oluşturulamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: c10444129f2a57bfef7f523a291e0f6d30e68d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9118eeee68696bf79c889c2382eadd31eff17ea8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610376"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278310"
 ---
-# <a name="can39t-create-necessary-temporary-file"></a>İçin&#39;t gereken geçici dosya oluşturma
+# <a name="cant-create-necessary-temporary-file"></a>Gereken geçici dosya oluşturulamıyor
 Her iki sürücü dolu içeren TEMP ortam değişkeni tarafından belirtilen dizin veya bir geçersiz veya salt okunur sürücü veya dizin TEMP ortam değişkeni belirtir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

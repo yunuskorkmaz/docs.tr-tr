@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt; &lt;eşi&gt;'
+title: <peer> , <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 132c001de02e223375453c91832f461b96b57dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2090e79e6affe8ade6e2e52b94d2c4e1dafe8fa1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741275"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266032"
 ---
-# <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; &lt;eşi&gt;
+# <a name="peer-of-servicecredentials"></a>\<Eş >, \<issuedTokenAuthentication >
 Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.  
   
  \<system.ServiceModel>  

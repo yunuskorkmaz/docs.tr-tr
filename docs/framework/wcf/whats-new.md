@@ -1,16 +1,16 @@
 ---
-title: Hangi&#39;s Windows Communication Foundation 4.5'deki yenilikler
+title: Windows Communication Foundation 4.5'teki Yenilikler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873524"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280013"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -58,7 +58,7 @@ Bu konu, Windows Communication Foundation (WCF) sürüm 4.5 için yeni özellikl
  Bazı üçüncü taraf WSDL işleme yığınları diğer belgelerde bir import aracılığıyla bağımlılıkları olan WSDL belgeleri işlemek mümkün değildir.  WCF artık tüm WSDL bilgileri tek bir belge içinde döndürülmesi belirtmenize olanak verir. Tek bir WSDL belgesi ekleme istemek için "? singleWSDL" meta veri hizmetinden isterken URI.
 
 ## <a name="websocket-support"></a>WebSocket desteği
- WebSockets, 80 ve 443 bağlantı noktaları üzerinden TCP için benzer performans özelliklerini doğru çift yönlü iletişimi sağlayan bir teknolojidir. İki yeni bağlamalar iletişim WebSocket aktarımı üzerinden desteklemek üzere eklendi. <xref:System.ServiceModel.NetHttpBinding> ve <xref:System.ServiceModel.NetHttpsBinding>. Daha fazla bilgi için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).
+ WebSockets, 80 ve 443 bağlantı noktaları üzerinden TCP için benzer performans özelliklerini doğru çift yönlü iletişimi sağlayan bir teknolojidir. İki yeni bağlamalar iletişim WebSocket aktarımı üzerinden desteklemek üzere eklendi. <xref:System.ServiceModel.NetHttpBinding> ve <xref:System.ServiceModel.NetHttpsBinding>. Daha fazla bilgi için bkz: [Sistem tarafından sağlanan bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerler
  Aşağıdaki tabloda, değişen ayarlar ve ek bilgilerin nerede bulunacağı açıklanır.

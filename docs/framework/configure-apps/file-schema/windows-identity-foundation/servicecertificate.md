@@ -1,16 +1,16 @@
 ---
-title: '&lt;serviceCertificate&gt;'
+title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 008d2269a72759117658e27ec130cc8cf62cfdfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400419"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261615"
 ---
-# <a name="ltservicecertificategt"></a>&lt;serviceCertificate&gt;
+# <a name="servicecertificate"></a>\<serviceCertificate >
 Şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasını yapılandırır.  
   
  \<System.IdentityModel.Services >  
@@ -32,7 +32,7 @@ ms.locfileid: "47400419"
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

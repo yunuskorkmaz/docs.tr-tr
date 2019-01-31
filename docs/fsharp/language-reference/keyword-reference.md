@@ -3,10 +3,10 @@ title: Klavye Başvurusu
 description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857911"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
@@ -64,7 +64,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`null`|[Null Değerler](values/null-values.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Bir nesne olmaması gösterir.<br /><br />Ayrıca genel parametre kısıtlama kullanılan.|
 |`of`|[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Temsilciler](delegates.md)<br /><br />[Özel Durum Türleri](exception-handling/exception-types.md)|Kategori değerlerinin türünü belirtmek için ayrılmış birleşimler ve temsilci ve özel durum bildirimleri kullanılır.|
 |`open`|[Önemli Bildirimler: `open` Anahtar Sözcüğü](import-declarations-the-open-keyword.md)|Bir ad alanında veya modülde içeriğini nitelik olmadan kullanılabilir hale getirmek için kullanılır.|
-|`or`|[Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Bir Boolean olarak Boole koşullarla kullanılan `or` işleci. Eşdeğer '||`.<br /><br />Üye kısıtlamaları da kullanılır.|
+|`or`|[Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](generics/constraints.md)|Bir Boolean olarak Boole koşullarla kullanılan `or` işleci. Eşdeğer `||`.<br /><br />Üye kısıtlamaları da kullanılır.|
 |`override`|[Üyeler](members/index.md)|Bir sürümünü temel sürümden farklı bir Özet veya sanal yöntemi uygulamak için kullanılır.|
 |`private`|[Erişim Denetimi](access-control.md)|Aynı typ nebo modul kodda üye erişimi kısıtlar.|
 |`public`|[Erişim Denetimi](access-control.md)|Türü dışında bir üye erişim sağlar.|

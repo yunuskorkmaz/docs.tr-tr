@@ -1,16 +1,16 @@
 ---
-title: '&lt;System.IdentityModel.Services&gt;'
+title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873407"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273981"
 ---
-# <a name="ltsystemidentitymodelservicesgt"></a>&lt;System.IdentityModel.Services&gt;
+# <a name="systemidentitymodelservices"></a>\<System.IdentityModel.Services >
 WS-Federasyon protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.  
   
  \<System.IdentityModel.Services >  
@@ -28,7 +28,7 @@ WS-Federasyon protokolünü kullanarak kimlik doğrulaması için yapılandırma
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -37,7 +37,7 @@ WS-Federasyon protokolünü kullanarak kimlik doğrulaması için yapılandırma
 |[\<Federationconfiguration'a >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Yapılandırma ayarları içeren <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP modülleri.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
- Yok.  
+ Hiçbiri  
   
 ## <a name="remarks"></a>Açıklamalar  
  Ekleme bir `<system.identityModel.services>` bölümüne uygulamanızın yapılandırma dosyasına WSFAM ve SAM için ayarları sağlamak için.  

@@ -3,19 +3,19 @@ title: .NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler, modüler ve bağımsız bir şekilde dağıtılabilen hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve bir hizmeti ve bağımlılıklarını ardından yalıtılmış bir ortamda çalıştırılır tek bir birim halinde paketleme tarafından test basitleştirin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030444"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479951"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
 
 ![Kitap kapsar](./media/cover-small.png)
 
-**Sürüm v2.1.03** - ASP.NET Core 2.1 için güncelleştirilmiş
+**Sürüm v2.2.00** - ASP.NET core'a 2.2 güncelleştirildi
 
 Mikro hizmet tabanlı uygulamaları geliştirmek ve bunları yönetmek için giriş niteliğindeki bu kılavuzda, kapsayıcıları kullanma. Mimari Tasarım açıklar ve .NET Core ve Docker kapsayıcılarını kullanarak uygulama yaklaşıyor. 
 
@@ -49,7 +49,7 @@ Bu kılavuzda eğitim sonra Microsoft Azure üzerinde üretime hazır mikro hizm
 
 ## <a name="version"></a>Sürüm
 
-Bu kılavuzda kaplayacak şekilde yeniden düzenlendi **.NET Core 2.1** yanı sıra birçok ek güncelleştirme sürümü ilgili aynı "(yani. wave" teknolojileri Azure ve ek 3. taraf teknolojileri) ile .NET Core 2.1 zamanlı durdurulmasıyla. İşte bu kitap sürümü de sürümüne güncelleştirildi **2.1**. 
+Bu kılavuzda kaplayacak şekilde yeniden düzenlendi **.NET Core 2.2** yanı sıra birçok ek güncelleştirme sürümü ilgili aynı "(yani. wave" teknolojileri Azure ve ek 3. taraf teknolojileri) ile .NET Core 2.2 zamanlı durdurulmasıyla. İşte bu kitap sürümü de sürümüne güncelleştirildi **2.2**. 
 
 ## <a name="what-this-guide-does-not-cover"></a>Ne bu kılavuzda ele alınmamaktadır
 
@@ -124,6 +124,8 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Scott Hunter**, .NET ekibi, Microsoft iş ortağı Direktörü PM
 >
+> **Nish Anil**, üst düzey Program Yöneticisi, Microsoft .NET ekibi
+>
 > **Dylan Reisenberger**, Mimar ve Polly Bykov'un geliştirme
 >
 > **Steve Smith**, yazılım mesleğini geliştirme & ASPSmith Ltd., eğitmen
@@ -147,7 +149,6 @@ Katılımcılar ve gözden geçirenler:
 > **Charles Lowell**, yazılım mühendisi, VS CAT ekibi, Microsoft
 >
 > **Miguel Veloso**, Turing sınama en üst düzey Danışman
-
 
 ## <a name="copyright"></a>Telif Hakkı
 

@@ -1,5 +1,5 @@
 ---
-title: Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
+title: Maalesef bu C# hatasıyla ilgili ayrıntı yok
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,14 +882,14 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f172d9579e18bffdde98756bd3acf471a80e6211
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576024"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262776"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Maalesef bu C# hatasıyla ilgili ayrıntı yok
 Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
   
  [Visual C# dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  

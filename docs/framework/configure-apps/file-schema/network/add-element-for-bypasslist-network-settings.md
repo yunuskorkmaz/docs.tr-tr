@@ -1,5 +1,5 @@
 ---
-title: '&lt;ekleme&gt; bypasslist (ağ ayarları) için'
+title: bypasslist için <add> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680787"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265668"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;ekleme&gt; bypasslist (ağ ayarları) için
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Ekle > bypasslist (ağ ayarları) için
 Bir IP adresi veya DNS adı için proxy atlama listesi ekler.  
   
  \<Yapılandırma >  

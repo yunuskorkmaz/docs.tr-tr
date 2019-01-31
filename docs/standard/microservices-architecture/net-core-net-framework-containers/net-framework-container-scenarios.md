@@ -3,13 +3,13 @@ title: .NET Framework Docker kapsayıcıları için ne zaman
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Framework Docker kapsayıcıları için ne zaman
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128758"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479912"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>.NET Framework Docker kapsayıcıları için ne zaman
 
@@ -31,7 +31,7 @@ Ancak, bile bu olağanüstü ilerleme ile .NET Standard 2.0 ve .NET Core 2.1 ber
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılabilir değil .NET teknolojileri kullanarak 
 
-Bazı .NET Framework teknolojilerini .NET Core (sürüm 2.1 şu andan itibaren)'ın geçerli sürümünde kullanılabilir değil. Bunların bazılarını daha sonra .NET Core sürümlerde kullanılabilir olacaktır (.NET Core 2.x), ancak diğerleri desenleri .NET Core tarafından hedeflenen ve hiçbir zaman kullanılabilir yeni uygulama için geçerli değildir.
+Bazı .NET Framework teknolojilerini .NET Core (sürüm 2.2 şu andan itibaren)'ın geçerli sürümünde kullanılabilir değil. Bunların bazılarını daha sonra .NET Core sürümlerde kullanılabilir olacaktır (.NET Core 2.x), ancak diğerleri desenleri .NET Core tarafından hedeflenen ve hiçbir zaman kullanılabilir yeni uygulama için geçerli değildir.
 
 Aşağıdaki liste de .NET Core kullanılamayan teknolojilerinin çoğu gösterir 2.x:
 

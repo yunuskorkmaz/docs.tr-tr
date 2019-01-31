@@ -1,5 +1,5 @@
 ---
-title: Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; örnek bir arabirim türü olduğundan
+title: Erişen örnek bir arabirim türü olduğundan geç bağlanan tekrar yükleme çözümü '<procedurename>' öğesine uygulanamaz
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651528"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272662"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; örnek bir arabirim türü olduğundan
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz '\<procedurename >' örnek bir arabirim türü olduğundan
 Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvurulan nesne bir arabirim için veri türüne sahip. `Object` Bağımsız değişken başvuru geç bağlama olarak çözümlemek için derleyici zorlar.  
   
  Bu durumlarda, derleyici aşırı yükleme yerine temel alınan arabirimini uygulayan sınıfa aracılığıyla çözümler. Sınıfı aşırı yüklü sürümlerini adlandırdığında derleyici bu sürümü adını farklı olduğundan, bir yükleme olarak dikkate almaz. Bu sırayla başvuru gidermek için doğru seçim olabilir, yeniden adlandırılmış sürüm yoksayma konusunda derleyici neden olur.  

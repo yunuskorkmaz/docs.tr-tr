@@ -1,17 +1,17 @@
 ---
-title: '&lt;MsmqIntegrationBinding&gt;'
+title: <msmqIntegrationBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744927"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271921"
 ---
-# <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
+# <a name="msmqintegrationbinding"></a>\<MsmqIntegrationBinding >
 MSMQ yönlendirme iletileri tarafından sıraya alma desteği sağlayan bir bağlama tanımlar.  
   
  \<system.ServiceModel>  

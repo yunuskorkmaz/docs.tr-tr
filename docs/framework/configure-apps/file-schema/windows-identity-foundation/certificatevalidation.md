@@ -1,16 +1,16 @@
 ---
-title: '&lt;certificateValidation&gt;'
+title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838346"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273903"
 ---
-# <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
+# <a name="certificatevalidation"></a>\<certificateValidation >
 Belirteç işleyicileri sertifikalarını doğrulamak için ayar denetler. Belirli bir işleyici kendi Doğrulayıcı ile yapılandırılmışsa, bu ayarlar geçersiz kılınır.  
   
  \<system.identityModel>  

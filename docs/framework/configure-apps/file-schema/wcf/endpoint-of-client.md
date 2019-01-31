@@ -1,15 +1,15 @@
 ---
-title: '&lt;istemci&gt; &lt;uç noktası&gt;'
+title: <endpoint> , <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598311"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287774"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;istemci&gt; &lt;uç noktası&gt;
+# <a name="endpoint-of-client"></a>\<uç noktası >'ın \<istemci >
 Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktalarının adres özelliklerini belirtir.  
   
  \<system.ServiceModel>  

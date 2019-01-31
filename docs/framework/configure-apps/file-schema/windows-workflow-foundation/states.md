@@ -1,16 +1,16 @@
 ---
-title: '&lt;durumları&gt;'
+title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: d1ec35b1c434b8188fde7b546e2dee42a93f5c91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 018ea20342475de40a8392a9272724e37902ecb9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550584"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257726"
 ---
-# <a name="ltstatesgt"></a>&lt;durumları&gt;
+# <a name="states"></a>\<durumları >
 İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumları koleksiyonunu temsil eder.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

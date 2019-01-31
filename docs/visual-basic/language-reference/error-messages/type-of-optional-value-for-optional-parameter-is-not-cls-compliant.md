@@ -1,5 +1,5 @@
 ---
-title: İsteğe bağlı parametre için isteğe bağlı değerin türü &lt;parametername&gt; CLS uyumlu değil
+title: <parametername> isteğe bağlı parametresi için isteğe bağlı değerin türü CLS uyumlu değil
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960355"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261431"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>İsteğe bağlı parametre için isteğe bağlı değerin türü &lt;parametername&gt; CLS uyumlu değil
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>İsteğe bağlı parametre için isteğe bağlı değerin türü \<parametername > CLS uyumlu değil
 Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` bildirir, ancak bir [isteğe bağlı](../../../visual-basic/language-reference/modifiers/optional.md) parametresi ile uyumlu olmayan bir türün varsayılan değeri.  
   
  İle uyumlu olması için bir yordam için [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), yalnızca CLS uyumlu türler kullanmalıdır. Bu parametre türleri, dönüş türü ve tüm yerel değişkenlerin türleri için geçerlidir. Ayrıca, isteğe bağlı parametrelerinin varsayılan değerleri için geçerlidir.  

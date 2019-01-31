@@ -1,5 +1,5 @@
 ---
-title: Derlemesine başvuru gereklidir &#39; &lt;assemblyname&gt; &#39; temel sınıfını içeren &#39; &lt;classname&gt;&#39;
+title: "'<assemblyname>' temel sınıfını içeren '<classname>' derlemesine başvuru gereklidir"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: f2aa8f1f05ce15bd25992b7f1851854952108813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506287"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273286"
 ---
-# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>Derlemesine başvuru gereklidir &#39; &lt;assemblyname&gt; &#39; temel sınıfını içeren &#39; &lt;classname&gt;&#39;
+# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>Derlemesine başvuru gereklidir '\<assemblyname >' temel sınıfını içeren\<SınıfAdı >'
 Derlemesine başvuru gereklidir '\<assemblyname >' temel sınıfını içeren\<SınıfAdı >'. Projenize ekleyin.  
   
  Sınıf bir dinamik bağlantı kitaplığı (DLL) tanımlanır veya projenize doğrudan başvurulmuyor derleme. Visual Basic Derleyicisi sınıfı birden fazla DLL ya da derleme tanımlanan durumunda belirsizlik önlemek için bir başvuru gerektirir.  

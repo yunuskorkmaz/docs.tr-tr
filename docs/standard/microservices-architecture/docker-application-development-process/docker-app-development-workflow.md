@@ -3,13 +3,13 @@ title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayrıntılarını anlayın. Adım adım başlar ve dockerfile'ları iyileştirmek ve Visual Studio kullanırken kullanılabilir Basitleştirilmiş akışıyla sonlandırmak üzere bazı ayrıntıları alın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/27/2018
-ms.openlocfilehash: 52053f270067ba0cc3ab8535560ec8145eda0758
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.date: 01/07/2019
+ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084985"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480107"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -97,14 +97,14 @@ Benzer şekilde, Visual Studio da çözümün tamamının seçeneğiyle için bi
 
 Alma gibi resmi bir depodan bir temel görüntünün üstüne kapsayıcınız için genellikle özel bir görüntü oluşturun [Docker Hub](https://hub.docker.com/) kayıt defteri. Visual Studio'da Docker desteğini etkinleştirmek ne olacağını perde tam olarak olmasıdır. Mevcut bir Dockerfile kullanacağı `aspnetcore` görüntü.
 
-Daha önce hangi Docker görüntülerini ve seçtiğiniz işletim sistemi ve framework bağlı olarak kullanabilirsiniz depoları açıklanmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız, kullanılacak görüntüyü olan `microsoft/dotnet:2.1-aspnetcore-runtime`. Bu nedenle, kapsayıcınız için kullanacağınız hangi temel Docker görüntüsüne belirtmeniz yeterlidir. Ekleyerek bunu `FROM microsoft/dotnet:2.1-aspnetcore-runtime` Dockerfile için. Bu Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürüm olsaydı, bu değeri güncelleştirin.
+Daha önce hangi Docker görüntülerini ve seçtiğiniz işletim sistemi ve framework bağlı olarak kullanabilirsiniz depoları açıklanmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız, kullanılacak görüntüyü olan `microsoft/dotnet:2.2-aspnetcore-runtime`. Bu nedenle, kapsayıcınız için kullanacağınız hangi temel Docker görüntüsüne belirtmeniz yeterlidir. Ekleyerek bunu `FROM microsoft/dotnet:2.2-aspnetcore-runtime` Dockerfile için. Bu Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürüm olsaydı, bu değeri güncelleştirin.
 
 Bir sürüm numarası ile Docker Hub resmi bir .NET görüntü deposundan kullanarak aynı dil özellikleri (geliştirme, test ve üretim dahil) tüm makinelerde kullanılabilir olmasını sağlar.
 
 Aşağıdaki örnek bir ASP.NET Core kapsayıcı için bir örnek Dockerfile gösterir.
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch) 2.1 sürümünü temel alır. Ayar budur `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Bu temel görüntü hakkında daha fazla bilgi için bkz: [ASP.NET Core, Docker görüntüsü](https://hub.docker.com/r/microsoft/aspnetcore/) sayfası ve [.NET Core, Docker görüntüsü](https://hub.docker.com/r/microsoft/dotnet/) sayfası.) Dockerfile içinde ayrıca isteyin (Bu durumda, SUNMAYA ayarı ile yapılandırılmış olarak 80 numaralı bağlantı noktası) çalışma zamanında kullanacağınız TCP bağlantı noktasında dinlemek için Docker gerekir.
+Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch) 2.2 sürümünü temel alır. Ayar budur `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. (Bu temel görüntü hakkında daha fazla bilgi için bkz: [.NET Core, Docker görüntüsü](https://hub.docker.com/r/microsoft/dotnet/) sayfası.) Dockerfile içinde ayrıca isteyin (Bu durumda, SUNMAYA ayarı ile yapılandırılmış olarak 80 numaralı bağlantı noktası) çalışma zamanında kullanacağınız TCP bağlantı noktasında dinlemek için Docker gerekir.
 
 Dil ve çerçeve kullanmakta olduğunuz bağlı olarak bir Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, giriş noktası satırla `["dotnet", "MySingleContainerWebApp.dll"]` bir .NET Core uygulamasını çalıştırmak için Docker söyler. .NET uygulaması derleme ve çalıştırma için SDK ve .NET Core CLI (dotnet CLI) kullanıyorsanız, bu ayar farklı olacaktır. ENTRYPOINT satır ve diğer ayarları uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır alt çizgidir.
 
@@ -132,20 +132,20 @@ Dil ve çerçeve kullanmakta olduğunuz bağlı olarak bir Dockerfile içinde ek
 
 ### <a name="using-multi-arch-image-repositories"></a>Çok yay görüntü depolarını kullanarak
 
-Tek bir depoda bir Linux görüntüsü ve bir Windows görüntüsünü gibi platformu çeşitleri içerebilir. Bu özellik, (yani Linux ve Windows) birden çok platform karşılamak için tek depo oluşturmak Microsoft (temel Görüntü Oluşturucu) gibi satıcıları sağlar. Örneğin, [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Docker Hub kayıt defterinde depo aynı depo adını kullanarak Linux ve Windows Nano sunucu için destek sağlar.
+Tek bir depoda bir Linux görüntüsü ve bir Windows görüntüsünü gibi platformu çeşitleri içerebilir. Bu özellik, (yani Linux ve Windows) birden çok platform karşılamak için tek depo oluşturmak Microsoft (temel Görüntü Oluşturucu) gibi satıcıları sağlar. Örneğin, [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Docker Hub kayıt defterinde depo aynı depo adını kullanarak Linux ve Windows Nano sunucu için destek sağlar.
 
 Açık bir platformu hedefleyen bir etiket belirtirseniz, aşağıdaki durumlarda ister:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-stretch-slim` \
-  Hedefleri: .NET Core 2.1 çalışma zamanı Linux üzerinde yalnızca
+- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
+  Hedefleri: .NET Core çalışma zamanı Linux üzerinde yalnızca 2.2
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709` \
-  Hedefleri: .NET Core 2.1 çalışma zamanı Windows Nano Sunucu'da yalnızca
+- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
+  Hedefleri: .NET Core çalışma zamanı Windows Nano Sunucu'da yalnızca 2.2
 
 Ancak, görüntü adının aynısını bile aynı etiketi ile çok yay görüntüleri belirtirseniz (gibi `aspnetcore` görüntü) dağıtmakta, Linux veya Windows sürümü işletim sistemi Docker konağı bağlı olarak aşağıdaki örnekte gösterildiği gibi kullanın:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime` \
-  Çok arch: .NET Core 2.1 çalışma zamanı Linux veya Windows Nano sunucu üzerinde Docker ana bilgisayar işletim sistemi bağlı olarak yalnızca
+- `microsoft/dotnet:2.2-aspnetcore-runtime` \
+  Çok arch: .NET Core çalışma zamanı Linux veya Windows Nano sunucu üzerinde Docker ana bilgisayar işletim sistemi bağlı olarak yalnızca 2.2
 
 Windows konaktan görüntü çekme bu şekilde, Windows değişken çeker ve bir Linux ana bilgisayarından görüntü adının aynısını çekme Linux değişken çeker.
 
@@ -174,11 +174,11 @@ Büyük olasılıkla çok aşamalı bir Dockerfile içinde ayrıntılı olarak �
 İlk Dockerfile aşağıdakine benzeyebilir:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS build
+ 5  FROM microsoft/dotnet:2.2-sdk AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ Son iyileştirme için yalnızca böyle satırı 20 gereksizdir, satır olarak 2
 Sonuç dosyası ise:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS publish
+ 5  FROM microsoft/dotnet:2.2-sdk AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

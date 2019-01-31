@@ -1,5 +1,5 @@
 ---
-title: Devralınan üyesi arasında varsayılan özellik erişimi belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
+title: Varsayılan özellik erişimi '<defaultpropertyname>' arabiriminin '<interfacename1>' devralınan üyesi ile '<defaultpropertyname>' arabiriminin '<interfacename2>' devralınan üyesi arasında belirsiz
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518650"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270595"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Devralınan üyesi arasında varsayılan özellik erişimi belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Devralınan üyelerin arasında varsayılan özellik erişimi belirsiz\<defaultpropertyname >' arabiriminin '\<interfacename1 >' ve '\<defaultpropertyname >' arabiriminin '\< interfacename2 >'
 Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır. Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
   
 ```  

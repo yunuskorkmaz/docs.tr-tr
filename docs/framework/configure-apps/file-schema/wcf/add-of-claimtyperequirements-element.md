@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; öğesi &lt;ekleme&gt;'
+title: <add> ' ın <claimTypeRequirements> öğesi
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: fb5e723f6cff9f6e573a45a1dabe008beb9399e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6971837ef2e68de54179daaf225394b9de769987
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687329"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275593"
 ---
-# <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; öğesi &lt;ekleme&gt;
+# <a name="add-of-claimtyperequirements-element"></a>\<Ekle >, \<claimTypeRequirements > öğesi
 Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetleri, belirli bir talep türleri kümesini sahip olması gerekir gelen kimlik gereksinimleri belirtin.  
   
  \<system.ServiceModel>  

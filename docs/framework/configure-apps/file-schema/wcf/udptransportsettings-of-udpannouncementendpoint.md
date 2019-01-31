@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpAnnouncementEndpoint&gt; için &lt;udpTransportSettings&gt;'
+title: <udpTransportSettings> , <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 5b1cb23e589847dc54d16ecda1747c9e78e45e11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 349cf7bde8a0fbe76a1a4b22d3eddec93191a20b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613785"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262165"
 ---
-# <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpAnnouncementEndpoint&gt; için &lt;udpTransportSettings&gt;
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<Udpannouncementendpoint >, \<Udptransportsettings >
 Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).  
   
 \<system.ServiceModel>  

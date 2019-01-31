@@ -1,5 +1,5 @@
 ---
-title: Derlemesine başvuru gereklidir &#39; &lt;assemblyIdentity&gt; &#39; türünü içeren &#39; &lt;typename&gt;&#39;, ancak arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı projeleri &#39; &lt;projectname1&gt; &#39; ve &#39; &lt;projectname2&gt;&#39;
+title: "'<assemblyidentity>' türünü içeren '<typename>' derlemesi için başvuru gerekiyordu, ancak '<projectname1>' ile '<projectname2>' projeleri arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30969
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 1a0c2a2fd235026729901153a0c0c300f914a78f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553015"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285200"
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Derlemesine başvuru gereklidir &#39; &lt;assemblyIdentity&gt; &#39; türünü içeren &#39; &lt;typename&gt;&#39;, ancak arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı projeleri &#39; &lt;projectname1&gt; &#39; ve &#39; &lt;projectname2&gt;&#39;
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Derlemesine başvuru gereklidir '\<assemblyIdentity >' türünü içeren '\<typename >', ancak proje arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı\<projectname1 >' ve '\< projectname2 >'
 Sınıfı, yapıyı, arabirimi, sabit listesi veya projenizin dışında tanımlı temsilci, gibi bir tür bir ifade kullanır. Ancak, birden fazla derleme türü tanımlayan proje başvurularına sahip.  
   
  Alıntı projeleri, aynı ada sahip derlemeler üretir. Bu nedenle, derleyici tür için kullanmak üzere hangi derleme erişme belirlenemiyor.  

@@ -1,21 +1,21 @@
 ---
-title: '&lt;soapProcessing&gt;'
+title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152014"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279675"
 ---
-# <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
+# <a name="soapprocessing"></a>\<soapProcessing >
 
 Farklı bir bağlama türleri ve ileti sürümleri arasında iletileri hazırlamak için kullanılan istemci uç noktası davranışını tanımlar.
 
 **\<sistemi. ServiceModel >**   
 &nbsp;&nbsp;**\<davranışlar >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors>**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<davranışı >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
   

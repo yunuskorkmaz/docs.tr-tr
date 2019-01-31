@@ -1,5 +1,5 @@
 ---
-title: '&#39;IsNot&#39; türünde işlenen &#39;typename&#39; yalnızca karşılaştırılabilir &#39;hiçbir şey&#39;, çünkü &#39;typename&#39; boş değer atanabilir bir tür'
+title: "'typename' türündeki 'IsNot' işleneni, 'typename' boş değer atanabilir bir tür olduğundan, sadece 'Nothing' ile karşılaştırılabilir."
 ms.date: 07/20/2015
 f1_keywords:
 - bc32128
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 65b04c85bccd169bbb2eea847d7b8af96c1a292f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caa009606825225dd4063780f9a22fb82f21cf4e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505724"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271297"
 ---
-# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; türünde işlenen &#39;typename&#39; yalnızca karşılaştırılabilir &#39;hiçbir şey&#39;, çünkü &#39;typename&#39; boş değer atanabilir bir tür
+# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>'typename' türündeki 'IsNot' işleneni, 'typename' boş değer atanabilir bir tür olduğundan, sadece 'Nothing' ile karşılaştırılabilir.
 Boş değer atanabilir olarak bildirilen bir değişken için bir ifade dışında karşılaştırıldığında `Nothing` kullanarak `IsNot` işleci.  
   
  **Hata Kimliği:** BC32128  

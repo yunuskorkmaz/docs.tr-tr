@@ -1,5 +1,5 @@
 ---
-title: '&lt;döndürür&gt; - C# Programlama Kılavuzu'
+title: <returns> - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 1a8b2395d9f738be1bceb4ffb0381f250b03434e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 873f515830c072f31548bee84a8ca9eec83fde27
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506998"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274146"
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;döndürür&gt; (C# programlama Kılavuzu)
+# <a name="returns-c-programming-guide"></a>\<döndürür > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  

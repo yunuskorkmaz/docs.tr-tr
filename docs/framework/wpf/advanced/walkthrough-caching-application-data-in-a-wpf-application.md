@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513730"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480068"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma
-Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamalar yerine özgün kaynaktan alınması önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
+Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Önbelleğe almayı kullanmanızı sağlar sınıfını sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
 
@@ -218,7 +218,7 @@ ms.locfileid: "54513730"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Çıkarma veya sona erme bilgi sağlanmazsa, varsayılan değer <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, önbellek girişlerinin başka bir deyişle, süresi dolmayacak tabanlı yalnızca mutlak bir saat. Yalnızca bellek baskısı olduğunda, bunun yerine, önbellek girişlerinin süresinin. En iyi uygulama, her zaman açık mutlak ya da kaplamayı sona erme sağlamanız gerekir.
+     Çıkarma veya sona erme bilgi sağlanmazsa, varsayılan değer <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, önbellek girişlerinin başka bir deyişle, süresi dolmayacak tabanlı yalnızca mutlak bir saat. Yalnızca bellek baskısı olduğunda, bunun yerine, önbellek girişlerinin süresinin. En iyi uygulama, her zaman açık mutlak ya da bir olmaadığını sağlamanız gerekir.
 
 7.  İçinde `if/then` engelleme ve önceki adımda eklediğiniz kodun, izlemek ve metin dosyasının yolu koleksiyona eklemek istediğiniz dosya yolları için bir koleksiyon oluşturmak için aşağıdaki kodu ekleyin:
 
@@ -254,7 +254,7 @@ ms.locfileid: "54513730"
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      Önbellek girişinin süresi dolduğunda görmeniz mümkün olmayacaktır, tarih ve saat damgası eklenir.
@@ -296,7 +296,7 @@ ms.locfileid: "54513730"
 
      Önbelleğe alınmış içeriği metin dosyasından bir ileti kutusunda görüntülenir. Zaman damgası dosya çubuğunda dikkat edin.
 
-3.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden **.**
+3.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
 
      Zaman damgası değiştirilmez. Bu, önbelleğe alınmış içeriği görüntülendiğini gösterir.
 
@@ -306,7 +306,7 @@ ms.locfileid: "54513730"
 
 5.  Oluşturduğunuz bir metin dosyasını bir metin düzenleyicisinde açın. Henüz herhangi bir değişiklik yapmayın.
 
-6.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden **.**
+6.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
 
      Zaman damgası yeniden dikkat edin.
 

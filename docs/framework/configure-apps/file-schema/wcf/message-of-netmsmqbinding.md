@@ -1,15 +1,15 @@
 ---
-title: '&lt;netMsmqBinding&gt; &lt;iletisi&gt;'
+title: <message> , <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: b636a22fe7c6bcfae5b8f81c1566ea39c9f8ced5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 060c7dc07e53d0114241ac7528a24363e78715c6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683748"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257192"
 ---
-# <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; &lt;iletisi&gt;
+# <a name="message-of-netmsmqbinding"></a>\<İleti >, \<netMsmqBinding >
 SOAP ileti güvenlik ayarları bu tanımlar `netMsmqBinding` bağlama.  
   
  \<system.ServiceModel>  

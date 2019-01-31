@@ -3,13 +3,13 @@ title: Resmi .NET Docker görüntüleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Resmi .NET Docker görüntüleri
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131384"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479613"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
@@ -31,13 +31,13 @@ Neden birden çok görüntü? Geliştirme, derleme ve kapsayıcılı uygulamalar
 
 ### <a name="during-development-and-build"></a>Geliştirme ve derleme sırasında
 
-Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli ' dir. Resmin boyutu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek için özelliği gibi önemli değildir. Bazı araçlar ve "derleme aracısı kapsayıcılar" geliştirme .NET Core görüntüsü kullanma (*microsoft / dotnet:2.1-sdk*) geliştirme ve derleme işlemi sırasında. Bir Docker kapsayıcısı içinde oluştururken, önemli yönleri, uygulamanızı derlemek için gereken öğelerdir. Bu, derleyici ve diğer .NET bağımlılıklar içerir.
+Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli ' dir. Resmin boyutu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek için özelliği gibi önemli değildir. Bazı araçlar ve "derleme aracısı kapsayıcılar" geliştirme .NET Core görüntüsü kullanma (*microsoft / dotnet:2.2-sdk*) geliştirme ve derleme işlemi sırasında. Bir Docker kapsayıcısı içinde oluştururken, önemli yönleri, uygulamanızı derlemek için gereken öğelerdir. Bu, derleyici ve diğer .NET bağımlılıklar içerir.
 
 Bu tür bir yapı görüntüyü neden önemlidir? Bu görüntü için üretim dağıtmayın. Bunun yerine, bir üretim görüntüsüne yerleştirdiğiniz içerik oluşturmak için kullandığınız bir görüntüsüdür. Bu görüntü, sürekli tümleştirme (CI) ortamınızda kullanılan veya Docker çok aşamalı kullanırken yapı ortamı oluşturur.
 
 ### <a name="in-production"></a>Üretimde
 
-Üretim ortamında önemli ne kadar hızlı dağıtabilir ve bir üretim .NET Core görüntüyle kapsayıcılarınızı Başlat ' dir. Bu nedenle, yalnızca çalışma zamanı görüntüyü temel alarak *microsoft / dotnet:2.1-aspnetcore-çalışma zamanı* , küçük, böylelikle onu hızlı ağ üzerinden Docker kayıt defterinizden Docker konaklarınıza izler. Sonuçları işleme için kapsayıcı başlatılmasını süreye etkinleştirme içeriğini çalıştırmak hazır olursunuz. Docker modelinde c derleme için gerek yoktur\# kod, derleme kapsayıcısı burada ne zaman dotnet yapıyı çalıştırmak veya dotnet yayımlama kullanıyor.
+Üretim ortamında önemli ne kadar hızlı dağıtabilir ve bir üretim .NET Core görüntüyle kapsayıcılarınızı Başlat ' dir. Bu nedenle, yalnızca çalışma zamanı görüntüyü temel alarak *microsoft / dotnet:2.2-aspnetcore-çalışma zamanı* , küçük, böylelikle onu hızlı ağ üzerinden Docker kayıt defterinizden Docker konaklarınıza izler. Sonuçları işleme için kapsayıcı başlatılmasını süreye etkinleştirme içeriğini çalıştırmak hazır olursunuz. Docker modelinde c derleme için gerek yoktur\# kod, derleme kapsayıcısı burada ne zaman dotnet yapıyı çalıştırmak veya dotnet yayımlama kullanıyor.
 
 Bu en iyi duruma getirilmiş görüntüde yalnızca ikili dosyalar ve uygulamayı çalıştırmak için gereken diğer içerik yerleştirin. Örneğin, dotnet tarafından oluşturulan içerik yayımlama yalnızca derlenmiş .NET ikili dosyaları, görüntüler, .js ve .css dosyaları içerir. Zaman içinde pre-jıtted (IL derlemeden çalışma zamanında gerçekleşen yerel için) içeren resimler görürsünüz paketleri.
 
@@ -47,8 +47,8 @@ Docker Hub .NET resmi depoları geçirirken, Sınıflandırılmamış veya etike
 
 | Görüntü                                       | Açıklamalar                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Microsoft/dotnet:**2.1-aspnetcore-çalışma zamanı** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeler, Linux ve Windows (çok arch) |
-| Microsoft/dotnet:**sdk 2.1**                | .NET core SDK'ları dahil, Linux ve Windows (çok arch)                                  |
+| Microsoft/dotnet:**aspnetcore-2.2-çalışma zamanı** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeler, Linux ve Windows (çok arch) |
+| Microsoft/dotnet:**2.2-sdk**                | .NET core SDK'ları dahil, Linux ve Windows (çok arch)                                  |
 
 >[!div class="step-by-step"]
 >[Önceki](net-container-os-targets.md)

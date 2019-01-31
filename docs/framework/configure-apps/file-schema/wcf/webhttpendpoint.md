@@ -1,15 +1,15 @@
 ---
-title: '&lt;webHttpEndpoint&gt;'
+title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: b69ace451e90c824cdf8b911d596fdd158eb3f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b4dd3a61a9b5ad1b35cce4025a50ac4220fd77e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491726"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256440"
 ---
-# <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
+# <a name="webhttpendpoint"></a>\<webHttpEndpoint >
 Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) otomatik olarak bağlama ekler [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) davranışı. Bir REST hizmeti yazarken Bu uç noktayı kullanın.  
   
 \<system.ServiceModel>  

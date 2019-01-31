@@ -1,16 +1,16 @@
 ---
-title: '&lt;certificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206897"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269347"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference >
 Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir.  
   
  \<System.IdentityModel.Services >  
@@ -50,7 +50,7 @@ Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için ku
 |isChainIncluded|Sertifika zinciri kullanarak doğrulama gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Varsayılan değer: "true"; Sertifika zinciri kullanarak doğrulama gerçekleştirilir. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

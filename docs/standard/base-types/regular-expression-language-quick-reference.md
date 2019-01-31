@@ -92,11 +92,11 @@ ms.locfileid: "55204892"
   
 |Onaylama işlemi|Açıklama|Desen|Eşleşmeler|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlamalıdır; çok satırlı modu satırın başlangıcında başlamalıdır.|`^\d{3}`|"901 - 333-", "901"|  
-|`$`|Varsayılan olarak, eşleşme önce ya da dizenin sonunda gerçekleşmelidir `\n` sonunda dize; çok satırlı modu, çizgi veya önce bitmeden önce gerçekleşmelidir `\n` satırın sonunda.|`-\d{3}$`|"-333" içinde "-901-333"|  
-|`\A`|Eşleşme dizenin başlangıcında gerçekleşmelidir.|`\A\d{3}`|"901 - 333-", "901"|  
-|`\Z`|Eşleşme dizenin sonunda veya önce sonunda gerçekleşmelidir `\n` dizenin sonunda.|`-\d{3}\Z`|"-333" içinde "-901-333"|  
-|`\z`|Eşleşme dizenin sonunda gerçekleşmelidir.|`-\d{3}\z`|"-333" içinde "-901-333"|  
+|`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlamalıdır; çok satırlı modu satırın başlangıcında başlamalıdır.|`^\d{3}`|"901-333-" içinde "901"|  
+|`$`|Varsayılan olarak, eşleşme önce ya da dizenin sonunda gerçekleşmelidir `\n` sonunda dize; çok satırlı modu, çizgi veya önce bitmeden önce gerçekleşmelidir `\n` satırın sonunda.|`-\d{3}$`|"-901-333" içinde "-333"|  
+|`\A`|Eşleşme dizenin başlangıcında gerçekleşmelidir.|`\A\d{3}`|"901-333-" içinde "901"|  
+|`\Z`|Eşleşme dizenin sonunda veya önce sonunda gerçekleşmelidir `\n` dizenin sonunda.|`-\d{3}\Z`|"-901-333" içinde "-333"|  
+|`\z`|Eşleşme dizenin sonunda gerçekleşmelidir.|`-\d{3}\z`|"-901-333" içinde "-333"|  
 |`\G`|Eşleşme önceki eşleşmenin sona erdiği noktada gerçekleşmelidir.|`\G\(\d\)`|"(1)(3)(5)[7](9\)" içinde "(1)", "(3)", "(5)"|  
 |`\b`|Eşleşme arasındaki sınırda gerçekleşmemelidir bir `\w` (alfasayısal) ve bir `\W` (alfasayısal olmayan) karakter.|`\b\w+\s\w+\b`|"them theme them them" içinde "them theme", "them them"|  
 |`\B`|Eşleşme gerçekleşmemelidir bir `\b` sınır.|`\Bend\w*\b`|"end sends endure lender" içinde "ends", "ender"|  

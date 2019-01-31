@@ -1,15 +1,15 @@
 ---
-title: '&lt;iriParsing&gt; öğesi (Uri ayarları)'
+title: <iriParsing> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256663"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; öğesi (Uri ayarları)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > öğesi (Uri ayarları)
 Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup olmadığını belirten bir <xref:System.Uri> ve IRI ayrıştırma kurallarını uygulanıp.  
   
 ## <a name="schema-hierarchy"></a>Şema hiyerarşisi  

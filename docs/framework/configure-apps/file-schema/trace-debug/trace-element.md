@@ -1,5 +1,5 @@
 ---
-title: '&lt;İzleme&gt; öğesi'
+title: <trace> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 668e69b534617dbe05bbefde6e85b905601961fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083528"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257804"
 ---
-# <a name="lttracegt-element"></a>&lt;İzleme&gt; öğesi
+# <a name="trace-element"></a>\<İzleme > öğesi
 Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.  
   
  \<Yapılandırma >  

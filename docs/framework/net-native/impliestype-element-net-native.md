@@ -1,17 +1,17 @@
 ---
-title: '&lt;ImpliesType&gt; Öğesi (.NET Yerel)'
+title: <ImpliesType> Öğesi (.NET yerel)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065979"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288021"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; Öğesi (.NET Yerel)
+# <a name="impliestype-element-net-native"></a>\<Impliestype > öğesi (.NET yerel)
 Bu ilke kapsayan tür veya yöntem uygulanmışsa, ilke bir türe uygulanır.  
   
 ## <a name="syntax"></a>Sözdizimi  

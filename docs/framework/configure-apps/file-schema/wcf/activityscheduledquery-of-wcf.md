@@ -1,15 +1,15 @@
 ---
-title: WCF &lt;activityScheduledQuery&gt;
+title: <activityScheduledQuery> WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: fd7830bc178de0693f0632cea3b390d792408ec1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147886"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272909"
 ---
-# <a name="ltactivityscheduledquerygt-of-wcf"></a>WCF &lt;activityScheduledQuery&gt;
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > WCF
 
 Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu zamanlanmış etkinlik kayıtlarına abone olmak izleme Katılımcısı için gereklidir.  
   

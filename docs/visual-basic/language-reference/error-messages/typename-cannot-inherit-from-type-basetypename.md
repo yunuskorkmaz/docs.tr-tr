@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;TypeName&gt; &#39; devralamaz &lt;türü&gt; &#39; &lt;basetypename&gt; &#39; temelinin erişimini genişlettiğinden &lt;türü&gt; derleme dışından'
+title: "'<typename>', <type> temelinin erişimini derleme dışına genişlettiğinden <basetypename> '<type>' öğesinden devralamaz"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30910
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 108025132bdd0fa86df5ed142aaa39c7b7e18062
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556489"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269828"
 ---
-# <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;TypeName&gt; &#39; devralamaz &lt;türü&gt; &#39; &lt;basetypename&gt; &#39; temelinin erişimini genişlettiğinden &lt;türü&gt; derleme dışından
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' öğesinden devralamaz \<türü > '\<basetypename >' temelinin erişimini genişlettiğinden \<türü > derleme dışından
 Bir sınıf veya arabirim bir temel sınıftan devraldığı veya arabirimi ancak daha az kısıtlayıcı bir erişim düzeyi yok.  
   
  Örneğin, bir `Public` arabirim sınıfından devralan bir `Friend` arabirimi veya `Protected` sınıfının devraldığı bir `Private` sınıfı. Bu, temel sınıf veya hedeflenen düzeyinin ötesinde erişmek için bir arabirimi kullanıma sunar.  

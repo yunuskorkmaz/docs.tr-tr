@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCertificate&gt; Öğesi &lt;sertifikası&gt;'
+title: <certificate> ' ın <clientCertificate> öğesi
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 37eef7a435447d22b56e865ac72ef5d4c1ff0674
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94241d022e8a97253100a67e2a779593861c093c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708902"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286461"
 ---
-# <a name="ltcertificategt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; Öğesi &lt;sertifikası&gt;
+# <a name="certificate-of-clientcertificate-element"></a>\<Sertifika >, \<clientCertificate > öğesi
 Bir X.509 belirtir iletileri imzalamak ve şifrelemek için kullanılan sertifika.  
   
  \<system.ServiceModel>  

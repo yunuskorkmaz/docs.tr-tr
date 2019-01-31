@@ -1,5 +1,5 @@
 ---
-title: '&lt;ekleme&gt; öğesi için &lt;appSettings&gt;'
+title: <add> için <appSettings> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dde773dc722cf75da9d922ccf28af4bf4a09636c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194351"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277478"
 ---
 # <a name="add-element-for-appsettings"></a>\<Ekle > öğesi için \<appSettings >
 
 Özel uygulama ayarı ekler.
 
 [**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Ekle >**
+&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,7 +36,7 @@ ms.locfileid: "50194351"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **Anahtarı**   | Gerekli öznitelik.<br><br>Eklenecek anahtar adını belirtir. |
+| **anahtar**   | Gerekli öznitelik.<br><br>Eklenecek anahtar adını belirtir. |
 | **value** | Gerekli öznitelik.<br><br>Eklenecek anahtar değerini belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
@@ -47,7 +47,7 @@ ms.locfileid: "50194351"
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

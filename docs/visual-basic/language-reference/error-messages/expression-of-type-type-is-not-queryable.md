@@ -1,5 +1,5 @@
 ---
-title: Türündeki ifade &lt;türü&gt; sorgulanabilir değil
+title: <type> türündeki ifade sorgulanabilir değil
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521497"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261262"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>Türündeki ifade &lt;türü&gt; sorgulanabilir değil
+# <a name="expression-of-type-type-is-not-queryable"></a>Türündeki ifade \<türü > sorgulanabilir değil
 Türündeki ifade \<türü > sorgulanabilir değil. Bir derleme başvurusunun ve/veya ad alanı alma LINQ sağlayıcısı için eksik olmadığından emin olun.  
   
  Sorgulanabilir türleri <xref:System.Linq>, <xref:System.Data.Linq>, ve <xref:System.Xml.Linq> ad alanları. Bir veya daha fazla LINQ sorguları gerçekleştirmek için bu ad alanları içeri aktarmanız gerekir.  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;localServiceSettings&gt; öğesi'
+title: <localServiceSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 6427f28bfbaa38df20696911f5f72c73d992c971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535236"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288840"
 ---
-# <a name="ltlocalservicesettingsgt-element"></a>&lt;localServiceSettings&gt; öğesi
+# <a name="localservicesettings-element"></a>\<localServiceSettings > öğesi
 Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.  
   
  \<system.serviceModel>  

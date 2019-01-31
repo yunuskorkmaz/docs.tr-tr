@@ -1,15 +1,15 @@
 ---
-title: '&lt;knownCertificates&gt; &lt;ekleme&gt;'
+title: <add> , <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 1189b394669acb826342b0a250b39db738599495
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022030489551bfaf48cffd4ba983bbd3c99abc87
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579478"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274293"
 ---
-# <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;knownCertificates&gt; &lt;ekleme&gt;
+# <a name="add-of-knowncertificates"></a>\<Ekle >, \<knownCertificates >
 Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.  
   
  \<system.ServiceModel>  

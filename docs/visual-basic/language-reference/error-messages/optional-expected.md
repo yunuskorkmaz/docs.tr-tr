@@ -1,5 +1,5 @@
 ---
-title: '&#39;İsteğe bağlı&#39; bekleniyor'
+title: "'Optional' bekleniyor"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30202
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 46bd84e2bcf5c5bea11a5c9d8b6e9254c49e3021
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ad0d0890b73103a0678b13409a24190329d37d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642483"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266340"
 ---
-# <a name="39optional39-expected"></a>&#39;İsteğe bağlı&#39; bekleniyor
+# <a name="optional-expected"></a>'Optional' bekleniyor
 Bir yordam bildirimi isteğe bağlı bağımsız değişkeni gerekli bir bağımsız değişkeni tarafından izlenir. İsteğe bağlı bir bağımsız değişkeni aşağıdaki her bağımsız değişken isteğe bağlı olmalıdır.  
   
  **Hata Kimliği:** BC30202  

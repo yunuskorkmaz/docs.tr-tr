@@ -1,5 +1,5 @@
 ---
-title: Bir taban formunu değiştirmenin etkileri&#39;görünümünü
+title: Taban Formun Görünüşünü Değiştirmenin Etkileri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: b942c160d7c4f89b1aad97c2dfdef1d060c18e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639230"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260170"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Bir taban formunu değiştirmenin etkileri&#39;görünümünü
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>Taban Formun Görünüşünü Değiştirmenin Etkileri
 Uygulama geliştirme sırasında genellikle diğer forms projesinde (veya diğer projelerde) devraldığını taban formun görünüşünü değiştirmeniz gerekebilir.  
   
  Taban formun görünüşünü için tasarım zamanında değiştirir (ayar ve özellikleri ekleme ve denetimleri çıkarılmasının olması) temel formu içeren bir proje derlenirken devralınan formlar üzerinde yansıtılır. Yalnızca temel forma değişiklikleri kaydetmek yeterli değil. Bir proje oluşturmak için Seç **derleme** gelen **derleme** menüsü.  

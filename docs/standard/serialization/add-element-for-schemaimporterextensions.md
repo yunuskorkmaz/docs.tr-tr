@@ -1,18 +1,18 @@
 ---
-title: '&lt;ekleme&gt; öğesi için &lt;schemaImporterExtensions&gt;'
+title: <add> için <schemaImporterExtensions> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 212ce43dc50735da71091111a0fd03eca0583315
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577691"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270569"
 ---
-# <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;ekleme&gt; öğesi için &lt;schemaImporterExtensions&gt;
+# <a name="add-element-for-schemaimporterextensions"></a>\<Ekle > öğesi için \<schemaImporterExtensions >
 Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türlerini .NET Framework türleriyle eşlemek için. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<Yapılandırma >  

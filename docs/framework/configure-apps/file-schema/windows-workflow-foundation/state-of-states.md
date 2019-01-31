@@ -1,16 +1,16 @@
 ---
-title: '&lt;Durum&gt; , &lt;durumları&gt;'
+title: <state> , <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 1ddf7e0ed2849764f3b21e8cf1c31d98762c0d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696249"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271440"
 ---
-# <a name="ltstategt-of-ltstatesgt"></a>&lt;Durum&gt; , &lt;durumları&gt;
+# <a name="state-of-states"></a>\<durumu >, \<durumları >
 Kendisi için bir izleme kaydını yayılan abone olunan etkinlik durumunu içeren bir yapılandırma öğesi.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

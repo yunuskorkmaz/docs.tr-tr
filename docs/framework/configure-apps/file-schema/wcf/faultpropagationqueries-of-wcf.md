@@ -1,15 +1,15 @@
 ---
-title: WCF &lt;faultPropagationQueries&gt;
+title: <faultPropagationQueries> WCF
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144970"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280403"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF &lt;faultPropagationQueries&gt;
+# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries > WCF
 
 Bir etkinlik içinde oluşan hataların işlenmesi izlemek için kullanılan sorguları koleksiyonunu temsil eder.  Bu olay bir FaultHandler bir hata her işlediğinde oluşur. Bir etkinlik içinde oluşan hataların işlenmesi izlemek için böyle bir sorgu kullanmanız gerekir. Sorgu hata yayma kayıtlara abone olmak izleme Katılımcısı için gereklidir.  
   

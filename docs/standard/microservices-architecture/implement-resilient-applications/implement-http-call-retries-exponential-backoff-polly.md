@@ -3,13 +3,13 @@ title: İle Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 description: Polly ile HttpClientFactory HTTP hatalarını işlemek nasıl öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362762"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479652"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 
@@ -21,9 +21,9 @@ Ancak, kendi özel kodunuzu içeren HttpClient Polly'nın kitaplığı kullanara
 
 Aşağıdaki adımlar, Http nasıl kullanabileceğinizi gösterir önceki bölümde açıklanan HttpClientFactory, yeniden denemeler Polly ile tümleştirilir.
 
-**ASP.NET Core 2.1 referans paketleri**
+**ASP.NET Core 2.2 referans paketleri**
 
-NuGet kullanarak ASP.NET Core 2.1 paketleri bitvise projeniz vardır. Genelde gerekir `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` nuget'ten en yeni ASP.NET Core 2.2 paketleri, projenizdeki kullanmanızı öneririz ancak bu yana .NET Core 2.1 kullanılabilir. Genelde gerekir `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly`.
 
 **Polly'nın yeniden deneme ilkesi, başlatma ile istemci yapılandırma**
 

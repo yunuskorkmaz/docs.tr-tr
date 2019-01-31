@@ -1,5 +1,5 @@
 ---
-title: Yapı &#39; &lt;structurename&gt; &#39; en az bir örnek üye değişkeni veya işaretlenmemiş en az bir örnek olay bildirimi içermelidir &#39;özel&#39;
+title: "'<structurename>' yapısı en az bir örnek üye değişkeni veya 'Custom' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30941
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: d8c654c212a459d40c6cf20cd62c3e0fcda8511b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603787"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267462"
 ---
-# <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>Yapı &#39; &lt;structurename&gt; &#39; en az bir örnek üye değişkeni veya işaretlenmemiş en az bir örnek olay bildirimi içermelidir &#39;özel&#39;
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Yapı '\<structurename >' en az bir örnek üye değişkeni veya 'Custom' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir
 Bir yapı tanımı, herhangi bir paylaşılmayan değişkenler veya paylaşılmayan, özel olmayan olaylar içermez.  
   
  Her yapı bir değişken ya da her belirli bir örneğine (yerine paylaşılmayan) tüm örneklerini topluca uygulandığı bir olay olmalıdır ([paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)). Paylaşılmayan sabitler, özellikler ve yordamlar bu gereksinimi karşılamıyor. Ayrıca, herhangi bir paylaşılmayan değişkenler ve yalnızca bir paylaşılmayan olay varsa, bu olay olamaz bir `Custom` olay.  

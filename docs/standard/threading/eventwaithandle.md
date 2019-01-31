@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050eb3eb5fe41778d7a979f94cdd258650b33e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d410470a6722901f52e80be1b45527abbb464f9f
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588931"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479834"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Sinyal ve sinyalleri için bekleyen birbirleri ile iletişim kurmak için iş parçacığı sınıfı sağlar. Olay bekleme tanıtıcıları (yalnızca olaylar olarak da bilinir) bir veya daha fazla bekleyen iş parçacıklarının serbest bırakmak için işareti bekleme tanıtıcıları ' dir. Bu sinyal sonra bir olay bekleme tanıtıcısı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı ya da bir yerel olay bekleme tanıtıcısı (yerel olay) temsil edebilir veya adlandırılmış sistem olay işleyici (veya sistem olayın, tüm işlemler için görünür olarak adlandırılır) bekleyin.  
@@ -68,4 +68,4 @@ ms.locfileid: "54588931"
 - <xref:System.Threading.WaitHandle>
 - <xref:System.Threading.AutoResetEvent>
 - <xref:System.Threading.ManualResetEvent>
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+- [EventWaitHandle, CountdownEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

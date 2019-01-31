@@ -1,15 +1,15 @@
 ---
-title: '&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;'
+title: <add> , <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: cc9ef6c8712ff764240c4c2f0322bd94b1aaccc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9179abfb26229a845d9618afe30b088252c9c2db
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698446"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267665"
 ---
-# <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;
+# <a name="add-of-baseaddressprefixfilter"></a>\<Ekle >, \<baseAddressPrefixFilter >
 IIS içinde bir Windows Communication Foundation (WCF) uygulaması uygun Internet Information Services (IIS) bağlamalarını seçmek için bir mekanizma sağlayan doğrudan bir filtre belirtir bir yapılandırma öğesini temsil eder.  
   
  \<system.ServiceModel>  

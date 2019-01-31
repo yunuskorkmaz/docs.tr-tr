@@ -1,16 +1,16 @@
 ---
-title: '&lt;activityScheduledQuery&gt;'
+title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: 0e69c32a7c292fda90828396c402c95e4899600a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2199e66342c6fa3afca9d8ccd3b620560b123ede
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687446"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260846"
 ---
-# <a name="ltactivityscheduledquerygt"></a>&lt;activityScheduledQuery&gt;
+# <a name="activityscheduledquery"></a>\<activityScheduledQuery >
 Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu zamanlanmış etkinlik kayıtlarına abone olmak izleme Katılımcısı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

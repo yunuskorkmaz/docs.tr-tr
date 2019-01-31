@@ -1,25 +1,25 @@
 ---
-title: WCF &lt;activityStateQuery&gt;
+title: <activityStateQuery> WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151797"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254801"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>WCF &lt;activityStateQuery&gt;
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > WCF
 
 Yaşam döngüsü değişiklikleri bir iş akışı örneği oluşturan etkinliklerinin izlemek için kullanılan bir sorgu temsil eder. Örneğin, "E-posta Gönder" etkinlik içinde bir iş akışı örneği tamamlanan her zaman izlemek isteyebilirsiniz. Bu sorgu, etkinlik durumu kayıt nesnelerine abone olmak izleme Katılımcısı için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.  
   
 Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel > \<İzleme >  
+\<system.serviceModel> \<tracking>  
 \<profilleri > \<trackingProfile >  
 \<İş akışı >  
 \<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Sözdizimi  
   

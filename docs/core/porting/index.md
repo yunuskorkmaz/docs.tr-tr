@@ -4,12 +4,12 @@ description: Taşıma işlemlerini anlamanıza ve .NET Core için bir .NET Frame
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170047"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266578"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework kodunuzu .NET Core için bağlantı noktası
 
@@ -41,7 +41,7 @@ Bu, projeniz .NET Core taşırken göz önüne almanız tavsiye ederiz işlemidi
 
 Aşağıdaki liste, taşıma işlemi sırasında kullanılacak yararlı bulabileceğiniz araçları gösterir:
 
-* .NET portability Analyzer - [komut satırı aracını](https://github.com/Microsoft/dotnet-apiport/releases) veya [Visual Studio Uzantısı](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), nasıl taşınabilir kod arasında .NET Framework ve .NET Core ile olan bir rapor oluşturabilen bir araç zinciri bir derleme tarafından bütünleştirilmiş kod çözümleme sorunları. Daha fazla bilgi için [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
+* .NET portability Analyzer - [komut satırı aracını](https://github.com/Microsoft/dotnet-apiport/releases) veya [Visual Studio Uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), nasıl taşınabilir kod arasında .NET Framework ve .NET Core ile olan bir rapor oluşturabilen bir araç zinciri bir derleme tarafından bütünleştirilmiş kod çözümleme sorunları. Daha fazla bilgi için [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
 * .NET API Çözümleyicisi - olası uyumluluk risk bulur bir Roslyn çözümleyicinizi C# farklı platformlarda API'leri ve kullanım dışı API'lere giden çağrıların algılar. Daha fazla bilgi için [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md).
 * Ters paket arama - A [yararlı web hizmeti](https://packagesearch.azurewebsites.net) türü için arama yapın ve bu türü içeren paketleri olanak tanır.
 

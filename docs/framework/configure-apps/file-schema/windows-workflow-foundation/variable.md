@@ -1,16 +1,16 @@
 ---
-title: '&lt;Değişkeni&gt;'
+title: <variable>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: 185e7e7196f6679ec3d1fae8a2a256b934022ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487e54ac5c70351d00df4275302bc9f4e92292c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647887"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270608"
 ---
-# <a name="ltvariablegt"></a>&lt;Değişkeni&gt;
+# <a name="variable"></a>\<değişken >
 Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

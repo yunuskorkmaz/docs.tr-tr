@@ -1,16 +1,16 @@
 ---
-title: "&lt;Federationconfiguration'u&gt;"
+title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 6f658fb4746211ac9d7001899133111c64f22408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645125"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286409"
 ---
-# <a name="ltfederationconfigurationgt"></a>&lt;Federationconfiguration'u&gt;
+# <a name="federationconfiguration"></a>\<Federationconfiguration'a >
 Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken, Federasyon kimlik doğrulaması WS-Federation protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> beyana dayalı erişim denetimi sağlamak için sınıf.  
   
  \<System.IdentityModel.Services >  

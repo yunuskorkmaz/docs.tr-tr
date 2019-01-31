@@ -3,13 +3,13 @@ title: Hedef .NET kapsayıcıları ile hangi işletim sistemi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Hedef .NET kapsayıcıları ile hangi işletim sistemi
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147206"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479873"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Hedef .NET kapsayıcıları ile hangi işletim sistemi
 
@@ -38,21 +38,21 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, işletim sistemi ve sür�
 </thead>
 <tbody>
 <tr>
-<td>Microsoft / dotnet:2.1-çalışma zamanı</td>
-<td>.NET core 2.1 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</td>
+<td>Microsoft / dotnet:2.2-çalışma zamanı</td>
+<td>.NET core 2.2 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.1-aspnetcore-çalışma zamanı</td>
-<td><p>ASP.NET Core 2.1 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</p>
+<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı</td>
+<td><p>ASP.NET Core 2.2 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</p>
 <p>ASP.NET Core için birkaç en iyi duruma getirme aspnetcore görüntüsü vardır.</p></td>
 </tr>
 <tr class="even">
-<td>Microsoft / dotnet:2.1-aspnetcore-çalışma zamanı-alpine</td>
-<td>.NET core 2.1 çalışma zamanı üzerinde Linux Alpine distro yalnızca</td>
+<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı-alpine</td>
+<td>.NET core 2.2 Alpine Linux distro'üzerinde salt çalışma zamanı</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.1-aspnetcore-çalışma zamanı-nanoserver-1803</td>
-<td>.NET core 2.1 (Windows Server sürümü 1803) Windows Nano Sunucu'da salt çalışma zamanı</td>
+<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı-nanoserver-1803</td>
+<td>.NET core 2.2 (Windows Server sürümü 1803) Windows Nano Sunucu'da salt çalışma zamanı</td>
 </tr>
 </tbody>
 </table>

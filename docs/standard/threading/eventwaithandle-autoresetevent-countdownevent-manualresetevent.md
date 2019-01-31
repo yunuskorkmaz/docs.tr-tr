@@ -1,5 +1,5 @@
 ---
-title: EventWaitHandle, CountdownEvent ManualResetEvent
+title: EventWaitHandle, CountdownEvent
 ms.date: 09/14/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c682fbcc09609a9a4e59b29d5c8997a5ae21d2bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fafdc2a360038021217d9a42406c971b1094678b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266533"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479938"
 ---
-# <a name="eventwaithandle-countdownevent-manualresetevent"></a>EventWaitHandle, CountdownEvent ManualResetEvent
+# <a name="eventwaithandle-countdownevent"></a>EventWaitHandle, CountdownEvent
 
 Olay bekleme tanıtıcıları birbirine sinyal ve birbirlerinin sinyalleri bekleyen etkinlikleri eşitlemek için iş parçacığı izin verir. Bu eşitleme olaylar üzerinde işletim sistemi bekleme tanıtıcıları temel alır ve iki tür olarak ayrılabilir: sinyal olduğunda otomatik olarak sıfırlayan ve el ile Sıfırlanan.  
   
@@ -26,9 +26,6 @@ Olay bekleme tanıtıcıları, birçok aynı eşitleme senaryolarda kullanışl�
 
  [EventWaitHandle](eventwaithandle.md)  
  <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> Veya el ile sıfırlama olayları ve yerel ya da olaylar veya sistem olaylarını adlı sınıfı ya da otomatik temsil eder.  
-  
- [ManualResetEvent ve ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md)  
- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Sınıf türetilir <xref:System.Threading.EventWaitHandle> ve el ile sıfırlamanız gerekir yerel bir olayı temsil eder. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> Sınıfı, aynı işlem içinde olaylar için kullanılan basit ve hızlı bir sürümü.  
   
  [CountdownEvent](countdownevent.md)  
  <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> Sınıfı çatal/birleştir paralellik desenleri bekleme tanıtıcıları kullanan koda uygulanması için basitleştirilmiş bir yol sağlar.  

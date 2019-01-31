@@ -1,5 +1,5 @@
 ---
-title: '&lt;ekleme&gt; webRequestModules (ağ ayarları) için'
+title: webRequestModules için <add> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: d78405546d00797677134e038bbaa69bf088f88e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575716"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287137"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;ekleme&gt; webRequestModules (ağ ayarları) için
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Ekle > webRequestModules (ağ ayarları) için
 Uygulamaya özel bir Web isteği modülü ekler.  
   
  \<Yapılandırma >  

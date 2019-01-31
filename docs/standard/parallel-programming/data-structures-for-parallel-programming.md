@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517623"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479704"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama eşzamanlı koleksiyon sınıfları, hafif eşitleme temellerine ve yavaş başlatma türlerine yönelik birtakım dahil olmak üzere, kullanışlı olan birkaç yeni türlerini tanıtır. Bu tür görev paralel kitaplığı ve PLINQ'da dahil olmak üzere birden çok iş parçacıklı uygulamanın kodlar ile kullanabilirsiniz.  
@@ -41,7 +41,7 @@ ms.locfileid: "54517623"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Birden çok iş parçacığı bir nokta, her görev gelişini işaret eder ve ardından bazı veya tüm görevleri gelmiş kadar engelleyin sağlayarak paralel algoritma üzerinde çalışmanıza olanak sağlar. Daha fazla bilgi için [engel](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Bir kolayca randevu mekanizması sağlayarak çatallanma ve birleşme senaryolarını basitleştirir. Daha fazla bilgi için [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Benzer şekilde bir eşitleme temel <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> daha basit ancak yalnızca işlem içi iletişim için kullanılabilir. Daha fazla bilgi için [ManualResetEvent ve ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Benzer şekilde bir eşitleme temel <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> daha basit ancak yalnızca işlem içi iletişim için kullanılabilir.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Aynı anda bir kaynağa erişmek için iş parçacığı sayısını veya bir kaynak havuzu sınırları eşitleme temel. Daha fazla bilgi için [semafor ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|İş parçacığı neden karşılıklı dışlama kilidini temel bir döngüde beklenecek kilit çalışıyor veya *döndürme*, bir süre önce kuantum sonuçlanmıyor. Burada kilidi beklemek kısa olması beklenir senaryolarda <xref:System.Threading.SpinLock> teklifler daha iyi performans kilitleme diğer formları daha. Daha fazla bilgi için [SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Döngü sayısı aşılırsa, belirtilen bir süre boyunca ve en sonunda döndürme küçük, basit bir tür iş parçacığı bir bekleme durumuna yerleştirin.  Daha fazla bilgi için [SpinWait](../../../docs/standard/threading/spinwait.md).|  

@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492839"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285031"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
 G/ç ve CPU sınır yazma zaman uyumsuz kod basit .NET görev tabanlı zaman uyumsuz model kullanmaktır. Model tarafından sunulan `Task` ve `Task<T>` türleri ve `async` ve `await` C# ve Visual Basic anahtar sözcükleri. (Dile özgü kaynakları bulunur [Ayrıca bkz:](#see-also) bölümüne.) Bu makalede .NET zaman uyumsuz nasıl kullanıldığını açıklar ve perde kullanılan zaman uyumsuz framework hakkında Öngörüler sağlar.
 
-## <a name="task-and-tasklttgt"></a>Görev ve görev&lt;T&gt;
+## <a name="task-and-taskt"></a>Görev ve görev\<T >
 
 Görevleridir olarak bilinen uygulamak için kullanılan yapıları [, Promise modeli eşzamanlılık](https://en.wikipedia.org/wiki/Futures_and_promises).  Kısacası, bunlar sonraki bir noktada, "iş promise" tamamlanacak promise temiz bir API ile birlikte olanak sağlar.
 
@@ -114,7 +114,7 @@ Ben/O-bağlı iş neredeyse hiçbir zaman CPU üzerinde harcadığı olduğundan
 
 Ayrıca, (örneğin, bir kullanıcı Arabirimi güncelleştirme) UI iş parçacığı için iş gönderme ile çok basit `async` yöntemleri ve ek iş (örneğin, bir iş parçacığı açısından güvenli temsilci çağırma) gerektirmez.
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Görev ve görev derinlemesine&lt;T&gt; CPU bağımlı işlem için
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Görev ve görev derinlemesine\<T > CPU bağımlı işlem için
 
 CPU bağımlı `async` kodudur miyim/O-sınırdan biraz farklı `async` kod.  İş CPU üzerinde yapıldığından, hesaplama için bir iş parçacığı ayrılması etrafında erişmenin bir yolu yoktur.  Kullanımını `async` ve `await` arka plan ile etkileşim kurmak için temiz bir yol, iş parçacığı ve hızlı yanıt veren zaman uyumsuz yöntemi çağıran kişi tutmak sağlar.  Bu paylaşılan veriler için herhangi bir koruma sağlamaz unutmayın.  Paylaşılan veri kullanıyorsanız, uygun eşitleme stratejisi uygulamak gerekecektir.
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;izni&gt; - C# Programlama Kılavuzu'
+title: <permission> - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 5d78261807ab06bd5f89b5438648c5eb0dc56ad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4725e82c6b085e220f63346a8c6838ecc288efa1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739465"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263660"
 ---
-# <a name="ltpermissiongt-c-programming-guide"></a>&lt;izni&gt; (C# programlama Kılavuzu)
+# <a name="permission-c-programming-guide"></a>\<izni > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  

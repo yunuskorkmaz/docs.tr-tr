@@ -1,5 +1,5 @@
 ---
-title: '&lt;SeeAlso&gt; - C# Programlama Kılavuzu'
+title: <seealso> - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e75480db9aebdeb2199694168abf4f774773b9c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42cc976a160f1ff9ce08fc4ab71ed03984034850
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543558"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267619"
 ---
-# <a name="ltseealsogt-c-programming-guide"></a>&lt;SeeAlso&gt; (C# programlama Kılavuzu)
+# <a name="seealso-c-programming-guide"></a>\<SeeAlso > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
