@@ -1,23 +1,23 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837769"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277465"
 ---
-# <a name="ltclaimtyperequiredgt"></a><span data-ttu-id="cd233-102">&lt;claimTypeRequired&gt;</span><span class="sxs-lookup"><span data-stu-id="cd233-102">&lt;claimTypeRequired&gt;</span></span>
-<span data-ttu-id="cd233-103">Gelen güvenlik belirteçleri için gerekli talep kümesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="cd233-103">Specifies the set of required claims for incoming security tokens.</span></span>  
+# <a name="claimtyperequired"></a><span data-ttu-id="34706-101">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="34706-101">\<claimTypeRequired></span></span>
+<span data-ttu-id="34706-102">Gelen güvenlik belirteçleri için gerekli talep kümesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="34706-102">Specifies the set of required claims for incoming security tokens.</span></span>  
   
- <span data-ttu-id="cd233-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="cd233-104">\<system.identityModel></span></span>  
-<span data-ttu-id="cd233-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="cd233-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="cd233-106">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="cd233-106">\<claimTypeRequired></span></span>  
+ <span data-ttu-id="34706-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="34706-103">\<system.identityModel></span></span>  
+<span data-ttu-id="34706-104">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="34706-104">\<identityConfiguration></span></span>  
+<span data-ttu-id="34706-105">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="34706-105">\<claimTypeRequired></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd233-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cd233-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34706-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="34706-106">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -28,20 +28,20 @@ ms.locfileid: "48837769"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cd233-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="cd233-108">Attributes and Elements</span></span>  
- <span data-ttu-id="cd233-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="cd233-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="34706-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="34706-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="34706-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="34706-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cd233-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="cd233-110">Attributes</span></span>  
- <span data-ttu-id="cd233-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="cd233-111">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="34706-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="34706-109">Attributes</span></span>  
+ <span data-ttu-id="34706-110">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="34706-110">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="cd233-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="cd233-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="34706-111">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="34706-111">Child Elements</span></span>  
   
-|<span data-ttu-id="cd233-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="cd233-113">Element</span></span>|<span data-ttu-id="cd233-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd233-114">Description</span></span>|  
+|<span data-ttu-id="34706-112">Öğe</span><span class="sxs-lookup"><span data-stu-id="34706-112">Element</span></span>|<span data-ttu-id="34706-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="34706-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cd233-115">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="cd233-115">\<claimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|<span data-ttu-id="cd233-116">Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep belirtir.</span><span class="sxs-lookup"><span data-stu-id="cd233-116">Specifies a single optional or required claim for incoming security tokens.</span></span>|  
+|[<span data-ttu-id="34706-114">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="34706-114">\<claimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|<span data-ttu-id="34706-115">Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep belirtir.</span><span class="sxs-lookup"><span data-stu-id="34706-115">Specifies a single optional or required claim for incoming security tokens.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="cd233-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="cd233-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="34706-116">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="34706-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="cd233-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="cd233-118">Element</span></span>|<span data-ttu-id="cd233-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd233-119">Description</span></span>|  
+|<span data-ttu-id="34706-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="34706-117">Element</span></span>|<span data-ttu-id="34706-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="34706-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cd233-120">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="cd233-120">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="cd233-121">Hizmet düzeyi kimlik ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="cd233-121">Specifies service-level identity settings.</span></span>|
+|[<span data-ttu-id="34706-119">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="34706-119">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="34706-120">Hizmet düzeyi kimlik ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="34706-120">Specifies service-level identity settings.</span></span>|
