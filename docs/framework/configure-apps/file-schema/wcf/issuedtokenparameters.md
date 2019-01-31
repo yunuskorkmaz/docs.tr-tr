@@ -1,15 +1,15 @@
 ---
-title: '&lt;İssuermetadata&gt;'
+title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: d3770764e75b3bfd1345ac6a44761861595309d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b40bd6edd27f4c3b4b530387417311e1f93a921
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627466"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283601"
 ---
-# <a name="ltissuedtokenparametersgt"></a>&lt;İssuermetadata&gt;
+# <a name="issuedtokenparameters"></a>\<İssuermetadata >
 Bir federe güvenlik senaryosundaki güvenlik belirteci için parametreleri belirtir.  
   
  \<system.serviceModel>  

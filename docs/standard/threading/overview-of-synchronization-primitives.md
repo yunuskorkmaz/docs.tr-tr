@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9faac620c98362c5f9f650121bb88b207ed4863b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146582"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270773"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme temellerine genel bakış
 
@@ -112,7 +112,7 @@ Davranışını bir <xref:System.Threading.EventWaitHandle> , sinyal kendi sıf�
 
 Windows üzerinde kullanabileceğiniz <xref:System.Threading.EventWaitHandle> işlemler arası eşitleme. Bunu yapmak için oluşturun bir <xref:System.Threading.EventWaitHandle> birini kullanarak bir adlandırılmış sistem eşitleme olayı temsil eden örneği [EventWaitHandle oluşturucular](<xref:System.Threading.EventWaitHandle.%23ctor%2A>) bir ad belirtir veya <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> yöntemi.
 
-Daha fazla bilgi için [EventWaitHandle](eventwaithandle.md), [AutoResetEvent](autoresetevent.md), ve [ManualResetEvent ve ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) makaleler. API Başvurusu için bkz: <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent>, ve <xref:System.Threading.ManualResetEventSlim>.
+Daha fazla bilgi için [EventWaitHandle](eventwaithandle.md) ve [ManualResetEvent ve ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) makaleler. API Başvurusu için bkz: <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent>, ve <xref:System.Threading.ManualResetEventSlim>.
 
 ### <a name="countdownevent-class"></a>CountdownEvent sınıfı
 

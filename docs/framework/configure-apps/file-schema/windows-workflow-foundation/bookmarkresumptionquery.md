@@ -1,16 +1,16 @@
 ---
-title: '&lt;bookmarkResumptionQuery&gt;'
+title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: a5eb00d1e094484e3ec01e0db18719ec50e4b953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb298bcbc5b4bf5d699d3c79936ca3c15f67c0e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515081"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268190"
 ---
-# <a name="ltbookmarkresumptionquerygt"></a>&lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery"></a>\<bookmarkResumptionQuery >
 İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu temsil eder. Sorgu için yer imi sürdürme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

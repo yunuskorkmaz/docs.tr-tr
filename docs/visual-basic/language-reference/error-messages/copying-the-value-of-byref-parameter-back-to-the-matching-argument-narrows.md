@@ -1,5 +1,5 @@
 ---
-title: Değerini kopyalayarak &#39;ByRef&#39; parametre &#39; &lt;parametername&gt; &#39; eşleşen bağımsız değişkene geri türüne daralan &#39; &lt;typename1&gt; &#39; &#39; &lt;typename2&gt;&#39;
+title: "'ByRef' '<parametername>' parametresinin değeri '<typename1>' türünden '<typename2>' türüne daralan eşleşen bağımsız değişkene geri kopyalanıyor"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506293"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276620"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Değerini kopyalayarak &#39;ByRef&#39; parametre &#39; &lt;parametername&gt; &#39; eşleşen bağımsız değişkene geri türüne daralan &#39; &lt;typename1&gt; &#39; &#39; &lt;typename2&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' parametresinin değeri kopyalama '\<parametername >' eşleşen bağımsız değişkene geri türüne daralan '\<typename1 >' türü için '\<typename2 >'
 Bir yordam bağımsız değişken için karşılık gelen parametre türü widens çağrılır ve bağımsız değişken parametre dönüştürme daraltma.  
   
  Bir sınıf veya yapı tanımladığınızda, bu sınıf veya yapı türü diğer türlerine dönüştürmek için bir veya daha fazla dönüştürme işleçleri tanımlayabilirsiniz. Bu bir sınıfınız geri türlerine veya yapı türü dönüştürmek için geriye doğru dönüştürme işleçleri de tanımlayabilirsiniz. Bir yordam çağrısında, sınıf veya yapı türünü kullandığınızda, Visual Basic, karşılık gelen bir parametresinin türü için bir bağımsız değişken türünü dönüştürmek için bu dönüştürme işleçlerini kullanabilirsiniz.  
