@@ -1,5 +1,5 @@
 ---
-title: '&lt;relativeBindForResources&gt; öğesi'
+title: <relativeBindForResources> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3aa3ca9c9d0e64b2290b503f09b83140b4d029b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534806"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289815"
 ---
-# <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt; öğesi
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources > öğesi
 Araştırma için uydu derlemelerini en iyi duruma getirir.  
   
  \<Yapılandırma > öğesi  

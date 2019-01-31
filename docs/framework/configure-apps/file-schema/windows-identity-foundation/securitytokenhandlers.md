@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206191"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277530"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers >
 Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.  
   
  \<system.identityModel>  

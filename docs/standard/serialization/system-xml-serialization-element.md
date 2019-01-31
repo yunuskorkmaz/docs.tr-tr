@@ -1,19 +1,19 @@
 ---
-title: '&lt;System.xml.Serialization&gt; öğesi'
+title: <system.xml.serialization> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 8b85eef0f2c3bbb2d0d4a5548f5cbb4a66b0431d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f41e3811fc6bab8a354f75f46b0ac79c0ce42f99
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609570"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288697"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a>&lt;System.xml.Serialization&gt; öğesi
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> Element
 XML serileştirme denetlemek için üst düzey öğe. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<Yapılandırma >  

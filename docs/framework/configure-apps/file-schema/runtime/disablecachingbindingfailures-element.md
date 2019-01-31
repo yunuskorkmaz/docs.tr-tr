@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCachingBindingFailures&gt; öğesi'
+title: <disableCachingBindingFailures> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c99eb6b77a969a1c5003743b0407821e2537b683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543873"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289724"
 ---
-# <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; öğesi
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > öğesi
 Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.  
   
  \<Yapılandırma > öğesi  
