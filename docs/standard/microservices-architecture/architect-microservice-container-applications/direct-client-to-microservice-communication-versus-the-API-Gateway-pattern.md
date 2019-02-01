@@ -3,13 +3,13 @@ title: Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizmet iletişimi kullanımlarını anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 7e81b46c2dbcee3b3658ab3c2e576644f0e7b372
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030548"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479900"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -107,7 +107,7 @@ Daha fazla bilgi için [ağ geçidi toplama düzeni](https://docs.microsoft.com/
 
 **Geniş kapsamlı kritik konular veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürün tarafından sunulan özelliklerin bağlı olarak, her bir mikro hizmetin işlevinden bir katmana geniş kapsamlı kritik konular birleştirerek her mikro hizmet uygulaması basitleştirir ağ geçidine boşaltabilirsiniz. Bu, özellikle aşağıdaki işlevleri gibi iç her mikro hizmet içinde düzgün bir şekilde uygulamak için karmaşık olabilir özelleştirilmiş bir özellik için kullanışlıdır:
 
-- Kimlik doğrulama ve yetkilendirme
+- Kimlik doğrulaması ve yetkilendirme
 - Hizmet bulma tümleştirmesi
 - Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve hizmet kalitesi
@@ -134,7 +134,7 @@ Her uygulama bağlı olarak API ağ geçitleri ürünleri tarafından sunulan ç
 
 **Şekil 4-14**. API ağ geçidinizin Azure API Yönetimi'ni kullanma
 
-Bu tür bir API ağ geçitleri "ince" olduğu gibi Azure API Management, tek bir API ağ geçidi olabilir olgusu bir ürünü kullanmaya riskli olmadığı durumlarda, bu durumda, doğru tek parça gelişmek özel C# kod uygulamayıp anlamı bileşeni. Bu ürünler, burada da iç mikro hizmetler API'lerinden filtreleyebilir ve yayımlanan API'leri tek bu katmandaki yetkilendirme uygulamak giriş iletişim için ters Ara sunucu gibi davranır.
+Bu tür bir API ağ geçitleri "ince" olduğu gibi Azure API Management, tek bir API ağ geçidi olabilir olgusu bir ürünü kullanmaya riskli olmadığı durumlarda, bu durumda, doğru tek parça gelişmek özel C# kod uygulamayıp anlamı bileşeni. 
 
 API ağ geçidi ürünler genellikle burada, ayrıca iç mikro hizmetler API'lerinden filtre yanı sıra bu tek katmanda yayımlanan API'leri için yetkilendirme uygulama giriş iletişim için ters proxy gibi davranır.
 

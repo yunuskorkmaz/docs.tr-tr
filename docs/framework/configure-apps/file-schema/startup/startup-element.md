@@ -1,5 +1,5 @@
 ---
-title: '&lt;Başlangıç&gt; öğesi'
+title: <startup> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083723"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280208"
 ---
-# <a name="ltstartupgt-element"></a>&lt;Başlangıç&gt; öğesi
+# <a name="startup-element"></a>\<Başlangıç > öğesi
 
 Ortak dil çalışma zamanı başlatma bilgileri belirtir.
 
@@ -61,7 +61,7 @@ Ortak dil çalışma zamanı başlatma bilgileri belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-  **\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır  **\<requiredRuntime >** öğesi.
+ **\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır  **\<requiredRuntime >** öğesi.
 
  Microsoft Internet Explorer'da barındırılan bir uygulama için başlatma kodunun yoksayar  **\<başlangıç >** öğesi ve onun alt öğeleri.
 
