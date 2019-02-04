@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743549"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674886"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Tür Dönüştürme İşlevleri (Visual Basic)
 Bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına derlenmiş satır içi işlevlerdir. Bazen bir yordam performansı artıran dönüştürme gerçekleştirmek için hiçbir çağrı yoktur. Her işlev bir özel veri türü için bir ifade olacak şekilde zorlar.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 - aracılığıyla 4.94065645841246544E-324; negatif değerleri 4.94065645841246544E-324 1.79769313486231570E + 308 pozitif değerler için aracılığıyla.|  
 |`CDec`|[Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|sıfır ölçeklendirilmiş sayılar için diğer bir deyişle, ondalık konumu olmayan sayılar 79,228,162,514,264,337,593,543,950,335 +/-. 28 ondalık basamaklı sayılar için +/-7.9228162514264337593543950335 aralığıdır. En küçük olası sıfır olmayan 0.0000000000000000000000000001 (+/-1E-28) sayısıdır.|  
 |`CInt`|[Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) aracılığıyla <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647); kesirli bölümleri yuvarlanır.<sup> 1</sup> <br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile tamsayı dönüştürmesi için kayan nokta performansını iyileştirir `CInt` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek. |  
-|`CLng`|[Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) aracılığıyla <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 64-bit tamsayıya dönüştürme kayan nokta performansını iyileştirir `CLng` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
+|`CLng`|[Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) aracılığıyla <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 64-bit tamsayıya dönüştürme kayan nokta performansını iyileştirir `CLng` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
 |`CObj`|[Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)|Herhangi bir geçerli ifade.|  
 |`CSByte`|[SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) aracılığıyla <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile işaretli bayt dönüştürme kayan nokta performansını iyileştirir `CSByte` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
 |`CShort`|[Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) aracılığıyla <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 16 bit tam sayı dönüşümü kayan nokta performansını iyileştirir `CShort` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  

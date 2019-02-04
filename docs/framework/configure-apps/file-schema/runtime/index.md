@@ -2,12 +2,18 @@
 title: Çalışma Zamanı Ayarları Şeması
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - schema runtime settings
-  - 'configuration schema [.NET Framework], runtime settings'
-  - runtime settings schema
+- schema runtime settings
+- configuration schema [.NET Framework], runtime settings
+- runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675432"
 ---
 # <a name="runtime-settings-schema"></a>Çalışma Zamanı Ayarları Şeması
 Çalışma zamanı ayarları, .NET Framework'ü hedefleyen uygulamaları yapılandırmak için ortak dil çalışma zamanı tarafından kullanılır.  
@@ -127,5 +133,5 @@ ms.author: ronpet
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Nasıl yapılır: Eş zamanlı çöp toplama devre dışı bırak](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Eş zamanlı çöp toplama devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

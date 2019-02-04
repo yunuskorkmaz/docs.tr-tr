@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aff7ec439e845c4be8d43ae622fe44fa2c476c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597872"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675042"
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme içeriği görüntüle
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyayı Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmekte olan dosyanın derleme olup, bu bilgileri derlemenin özniteliklerini yanı sıra diğer modül ve derlemelerdeki başvuruları ekleyebilirsiniz. Bu bilgiler bir dosyaya bir bütünleştirilmiş kod veya bir derlemenin parçası olup ve dosyanın diğer modüllerde veya derlemeler için başvurular olup saptamanıza yardımcı olabilir.  
@@ -89,6 +89,6 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
  Bir derleme bildirimi derlemenin içeriğine bağlı olarak farklı yönergeler bir dizi içerebilir. ECMA belgeleri, derleme bildiriminde yönergeleri kapsamlı bir listesi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı"ve" Bölüm III: CIL'i yönerge kümesi". Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uygulama Etki Alanları ve Derlemeler](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- [Uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
 - [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

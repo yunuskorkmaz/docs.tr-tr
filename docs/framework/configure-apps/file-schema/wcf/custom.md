@@ -2,12 +2,12 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 2b268d9d040bbeed2b3563783226f7ca8c18e3b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5ff066c32f7d08ec989d6cd04e16c89f0a36f6fa
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254294"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675029"
 ---
 # <a name="custom"></a>\<Özel >
 Özel eş Çözücü hizmetinin ayarlarını belirtir.  
@@ -53,7 +53,7 @@ ms.locfileid: "55254294"
 |[\<Çözümleyici >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Bir eş çözümlemek için kullanılan bir eş çözümleyici ağ Kimliğini ağ içinde katılan çeşitli düğümleri temsil eden bir eş düğüm adresleri kümesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, hizmet ve herhangi bir özel bağlayıcı ayarları barındıran eş uç nokta adresini de dahil olmak üzere bir özel eş Çözücü hizmetinin temel ayarlarını tanımlar. Bir özel Çözücü oluşturma hakkında daha fazla bilgi için bkz. [PeerChannel'a uygulamaya özel Çözücü ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
+ Bu öğe, hizmet ve herhangi bir özel bağlayıcı ayarları barındıran eş uç nokta adresini de dahil olmak üzere bir özel eş Çözücü hizmetinin temel ayarlarını tanımlar. Bir özel Çözücü oluşturma hakkında daha fazla bilgi için bkz. [PeerChannel'a uygulamaya özel Çözücü ekleme](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
@@ -61,4 +61,4 @@ ms.locfileid: "55254294"
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
 - [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- [Bir özel Çözücü PeerChannel'a uygulamaya ekleme](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+- [Bir özel Çözücü PeerChannel'a uygulamaya ekleme](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

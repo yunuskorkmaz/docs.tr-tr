@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274163"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675406"
 ---
 # <a name="identity"></a>\<Kimliği >
 Kimlik öğesi, bir istemci geliştiricisinin beklenen hizmet kimliğini tasarım zamanında belirtmenizi sağlar. Anlaşma işlemi istemci ve hizmet arasındaki Windows Communication Foundation (WCF) altyapı beklenen hizmet eşleşme değerleri bu öğenin kimliğini emin olur ve bu nedenle doğrulanabilir. Daha fazla bilgi için [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -55,7 +55,8 @@ Kimlik öğesi, bir istemci geliştiricisinin beklenen hizmet kimliğini tasarı
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Özel >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Özel eş Çözücü için bir netPeerTcpBinding belirtir.|  
-|[\<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Farklı uç noktalar için yapılandırır.|  
+|[\<uç noktası >](endpoint-element.md)|Hizmet uç noktaları yapılandırır.|  
+|[\<uç noktası >'ın \<istemci >](endpoint-of-client.md)|Kanal uç noktaları yapılandırır.|  
 |[\<veren >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Güvenlik belirteci hizmeti (STS) Federasyon Hizmeti için belirtir.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Güvenlik belirteci hizmeti (STS için) Federasyon Hizmeti meta veri uç noktası belirtir.|  
 |[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Verilen bir belirteç parametrelerini özel bir bağlama tanımlar.|  

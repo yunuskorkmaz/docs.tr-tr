@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680316"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675445"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Erişilebilirlik .NET Framework'teki yenilikler
 
@@ -292,7 +292,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 .NET Framework 4.7.1 WPF erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz. [erişilebilirlik geliştirmeleri ' WPF'de](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Windows Forms erişilebilirlik geliştirmeleri
+### <a name="windows-forms-accessibility-improvements"></a>Windows Forms erişilebilirlik geliştirmeleri
 
 .NET Framework 4.7.1'da, Windows Forms (WinForms) aşağıdaki alanlarda erişilebilirlik değişiklikleri içerir.
 
@@ -358,7 +358,7 @@ Erişilebilirlik teknoloji Araçlar, geliştiricilerin .NET Framework 4.7.1 ile 
 - Geliştirilmiş ekran okuyucu davranışı.
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>ASP.NET web denetimleri
+### <a name="aspnet-web-controls"></a>ASP.NET web denetimleri
 
 ASP.NET .NET Framework 4.7.1 ve Visual Studio 2017 15.3 ile başlayarak, Visual Studio'da Erişilebilirlik teknolojisi ile ASP.NET web denetimleri nasıl artırır. Değişiklikler şunları içerir:
 
@@ -369,14 +369,14 @@ ASP.NET .NET Framework 4.7.1 ve Visual Studio 2017 15.3 ile başlayarak, Visual 
 - Klavye ile gezintiyi iyileştirmeye yönelik değişiklikler deneyimleri denetimler için gibi **alanları** iletişim kutusunda **çağrı alanları Düzenle** DataPager denetimi Sihirbazı **ObjectContext yapılandırın**  iletişim kutusunda veya **yapılandırma veri seçimi** iletişim **veri kaynağı yapılandırma** Sihirbazı.
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK Tools
+### <a name="net-sdk-tools"></a>.NET SDK Tools
 
 [Yapılandırma Aracı (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) ve [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) çeşitli erişilebilirlik sorunları çözme tarafından geliştirilmiştir. Bunların çoğu tanımlanmayan bir ad veya doğru uygulanmadı belirli bir UI Otomasyon düzenleri gibi küçük problemler yoktu. Birçok kullanıcı bu yanlış değerini kullanan sunulacaktır, ancak ekran okuyucular gibi yardımcı teknolojiler kullanan müşteriler bu SDK Araçları daha erişilebilir bulabilirsiniz. 
 
 Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları değiştirir.
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı Tasarımcısı
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı Tasarımcısı
 
 İş akışı tasarımcısında erişilebilirlik değişiklikler şunları içerir:
 

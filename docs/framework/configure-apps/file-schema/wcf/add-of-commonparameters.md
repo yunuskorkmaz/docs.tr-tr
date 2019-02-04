@@ -2,12 +2,12 @@
 title: <add> , <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 63ff98d91db7c8c112b0b00e9bd37c3262bcad6d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258633"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674431"
 ---
 # <a name="add-of-commonparameters"></a>\<Ekle >, \<commonParameters >
 Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin belirtir. Genellikle bu parametre, dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  
@@ -47,7 +47,7 @@ Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Hizmetler tarafından kullanılan ortak parametreleri koleksiyonu. Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.|  
+|[\<commonParameters >](commonparameters.md)|Hizmetler tarafından kullanılan ortak parametreleri koleksiyonu. Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `<commonParameters>` Öğesi, dünya çapında Örneğin çok hizmette kullanılan parametreleri tanımlar `ConnectionString` kullanırken <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -92,4 +92,4 @@ Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [İş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+- [\<commonParameters >](commonparameters.md)

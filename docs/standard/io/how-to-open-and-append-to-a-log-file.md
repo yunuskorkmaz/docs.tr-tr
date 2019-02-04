@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Açın ve bir günlük dosyasına Ekle'
-ms.date: 03/30/2017
+ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,18 +13,20 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921b13e057929d7d6b283b26014a4c1f195f39c9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622743"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674847"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Nasıl yapılır: Açın ve bir günlük dosyasına Ekle
-<xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> akışlardan karakterleri okuma ve yazma karakter. Aşağıdaki kod örneği açılır `log.txt` giriş dosyasını veya zaten mevcut değilse ve dosyanın sonuna bilgi ekler dosyası oluşturur. Dosyanın içeriğini görüntülemek için standart çıktıya ardından yazılır. Bu örnek için alternatif olarak, bilgileri tek bir dize veya dize dizisi olarak depolanabilir ve <xref:System.IO.File.WriteAllText%2A> veya <xref:System.IO.File.WriteAllLines%2A> yöntemi, aynı işlevselliği elde etmek için kullanılabilir.  
+<xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> akışlardan karakterleri okuma ve yazma karakter. Aşağıdaki kod örneği açılır *log.txt* dosya girişi için veya mevcut değil ve günlük bilgilerini dosyanın sonuna ekler oluşturur. Örnek sonra dosyanın içeriğini görüntülemek için standart çıktı yazar. 
+
+Bu örnek için alternatif olarak, tek dize veya dize dizisi olarak bilgi depolamak ve kullanmak <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> veya <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> aynı işlevselliği elde etmek için yöntemi.  
   
 > [!NOTE]
->  Visual Basic kullanıcıları tarafından sağlanan özellikler ve yöntemler kullanmayı seçebilir <xref:Microsoft.VisualBasic.Logging.Log> sınıfı veya <xref:Microsoft.VisualBasic.FileIO.FileSystem> oluşturmak veya günlük dosyaları yazma sınıfı.  
+> Visual Basic kullanıcıları tarafından sağlanan özellikler ve yöntemler kullanmayı seçebilir <xref:Microsoft.VisualBasic.Logging.Log> sınıfı veya <xref:Microsoft.VisualBasic.FileIO.FileSystem> oluşturmak veya günlük dosyaları yazma sınıfı.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]
@@ -32,15 +34,15 @@ ms.locfileid: "54622743"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.IO.StreamWriter>
-- <xref:System.IO.StreamReader>
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
-- [Nasıl yapılır: Dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [Nasıl yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [Nasıl yapılır: Bir dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)
-- [Nasıl yapılır: Bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)
-- [Nasıl yapılır: Dizeden karakterleri okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
-- [Nasıl yapılır: Bir dizeye karakter yazma](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+- <xref:System.IO.StreamWriter>  
+- <xref:System.IO.StreamReader>  
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
+- [Nasıl yapılır: Dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [Nasıl yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Nasıl yapılır: Bir dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [Nasıl yapılır: Bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [Nasıl yapılır: Dizeden karakterleri okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
+- [Nasıl yapılır: Bir dizeye karakter yazma](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [Dosya ve akış g/ç](../../../docs/standard/io/index.md)

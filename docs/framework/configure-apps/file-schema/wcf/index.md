@@ -2,12 +2,12 @@
 title: WCF Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508908"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675367"
 ---
 # <a name="wcf-configuration-schema"></a>WCF Yapılandırma Şeması
 Windows Communication Foundation (WCF) yapılandırma öğeleri WCF hizmet ve istemci uygulamaları yapılandırmanıza olanak sağlar. Kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturup istemciler ve hizmetler için yapılandırma dosyalarını değiştirin. Yapılandırma dosyaları XML olarak biçimlendirilir olduğundan, bir metin düzenleyicisi kullanarak bunları el ile düzenlemek istiyorsanız, XML'e alışık olmanız gerekir. Aksi takdirde içine sorunları unfound XML öğesi etiketi veya öznitelik gibi çalışabilir. Bunun nedeni, XML öğesi etiketleri ve öznitelikleri duyarlıdır.  
@@ -36,5 +36,5 @@ Windows Communication Foundation (WCF) yapılandırma öğeleri WCF hizmet ve is
  Seri hale getiricileri genişletme gibi kullanırken seçenekleri ayarlamak için üst düzey öğe <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Windows Communication Foundation uygulamaları için yapılandırma](../../../wcf/configuring-services.md)  
  WCF hizmetleri ve istemcilerin nasıl yapılandırılacağını açıklar.

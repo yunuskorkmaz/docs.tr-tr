@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192622"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674587"
 ---
 # <a name="application-domains"></a>Uygulama etki alanları
 
@@ -48,7 +48,7 @@ ms.locfileid: "50192622"
     > [!NOTE]
     >  Tek tek derlemeleri veya türleri kaldıramazsınız. Tam bir etki alanının yüklemesi kaldırılabilir.  
   
--   Bir uygulamada çalışan kod doğrudan koda veya kaynaklara başka bir uygulamaya ait olamaz. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasında doğrudan çağrıları engelleyerek bu yalıtımı zorlar. Etki alanları arasında geçen nesneler kopyalanamaz veya proxy tarafından erişilebilir. Nesne kopyalanırsa, yapılan nesne çağrısı yerel. Diğer bir deyişle arayan ve başvurulan nesne aynı uygulama etki alanındadır. Nesne bir proxy sunucusu üzerinden erişiliyorsa, nesneye çağrı uzak çağrıdır. Bu durumda arayan ve başvurulan nesne farklı uygulama etki alanlarındadır. Etki alanları arası çağrıları, iki işlem arasında veya iki makine arasında çağrıları olarak aynı uzak çağrı altyapısını kullanır. Bu nedenle, başvurulan nesne için meta veriler, yöntem çağrısının JIT olarak derlenmiş doğru olmasını izin vermek için her iki uygulama etki alanları için kullanılabilir olmalıdır. Arama etki alanı için çağrılan nesne meta verilerine erişimi yoksa, derleme türünde bir özel durum ile başarısız olabilir **System.IO.FileNotFound**. Bkz: [uzak nesneleri](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) daha fazla ayrıntı için. Etki alanları arasında nesnelerin nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   Bir uygulamada çalışan kod doğrudan koda veya kaynaklara başka bir uygulamaya ait olamaz. Ortak dil çalışma zamanı, farklı uygulama etki alanlarındaki nesneler arasında doğrudan çağrıları engelleyerek bu yalıtımı zorlar. Etki alanları arasında geçen nesneler kopyalanamaz veya proxy tarafından erişilebilir. Nesne kopyalanırsa, yapılan nesne çağrısı yerel. Diğer bir deyişle arayan ve başvurulan nesne aynı uygulama etki alanındadır. Nesne bir proxy sunucusu üzerinden erişiliyorsa, nesneye çağrı uzak çağrıdır. Bu durumda arayan ve başvurulan nesne farklı uygulama etki alanlarındadır. Etki alanları arası çağrıları, iki işlem arasında veya iki makine arasında çağrıları olarak aynı uzak çağrı altyapısını kullanır. Bu nedenle, başvurulan nesne için meta veriler, yöntem çağrısının JIT olarak derlenmiş doğru olmasını izin vermek için her iki uygulama etki alanları için kullanılabilir olmalıdır. Arama etki alanı için çağrılan nesne meta verilerine erişimi yoksa, derleme türünde bir özel durum ile başarısız olabilir <xref:System.IO.FileNotFoundException>. Daha fazla bilgi için [uzak nesneleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Etki alanları arasında nesnelerin nasıl erişilebileceğini belirleme mekanizması nesne tarafından belirlenir. Daha fazla bilgi için bkz. <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   Kodun çalışma biçiminin kapsamı içinde çalıştığı uygulama tarafından. Diğer bir deyişle, uygulama etki alanı, uygulama sürümü ilkeleri, eriştiği uzak derleme ve etki alanına yüklenen derlemelerin bulunacağı hakkında bilgi konumu gibi yapılandırma ayarlarını sağlar.  
   

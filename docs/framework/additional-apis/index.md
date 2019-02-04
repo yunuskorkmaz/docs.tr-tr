@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198373"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674418"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'ler
 
@@ -29,7 +29,7 @@ Ayrıca, bazı kitaplıklar belirli platformlara veya .NET Framework uygulamalar
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | İş parçacığı güvenli ve hiçbir zaman içeriklerini değiştirmek için kesin koleksiyonlar sağlar. |
 | <xref:System.Net.Http.WinHttpHandler> | Bir ileti işleyicisi sağlar <xref:System.Net.Http.HttpClient> Windows WinHTTP arabirimi esas alan. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | SIMD donanım tabanlı hızlandırma yararlanabilirsiniz vektör türleri içeren bir kitaplık sağlar.| 
+| <xref:System.Numerics> | SIMD donanım tabanlı hızlandırma yararlanabilirsiniz vektör türleri içeren bir kitaplık sağlar.| 
 | <xref:System.Threading.Tasks.Dataflow> | TPL veri akışı kitaplığı, eşzamanlılık kullanan uygulamaların sağlamlığını artırmak için veri akışı bileşenleri sağlar. |  
 
 ## <a name="platform-specific-libraries"></a>Platforma özgü kitaplıklar
@@ -46,11 +46,11 @@ Bu API, ürün altyapısını destekler ve amaçlayan/desteklenen doğrudan sizi
 | -------- |
 | [System.Net.Connection sınıfı](../../../docs/framework/additional-apis/connection.md) |
 | [System.Net.Connection.m\_WriteList alan](../../../docs/framework/additional-apis/m_writelist.md) |
-| [System.Net.ConnectionGroup sınıfı](../../../docs/framework/additional-apis/connectiongroup.md) |
+| [System.Net.ConnectionGroup Class](../../../docs/framework/additional-apis/connectiongroup.md) |
 | [System.Net.ConnectionGroup.m\_ConnectionList Field](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [System.Net.CoreResponseData sınıfı](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders alan](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode alan](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
+| [System.Net.CoreResponseData Class](../../../docs/framework/additional-apis/coreresponsedata.md) |
+| [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
+| [System.Net.CoreResponseData.m\_StatusCode Field](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
 | [System.Net.HttpWebRequest. \_AutoRedirects alan](../../../docs/framework/additional-apis/_autoredirects.md) |
 | [System.Net.HttpWebRequest. \_CoreResponse alan](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
 | [System.Net.HttpWebRequest. \_HttpResponse alan](../../../docs/framework/additional-apis/_httpresponse.md) |
