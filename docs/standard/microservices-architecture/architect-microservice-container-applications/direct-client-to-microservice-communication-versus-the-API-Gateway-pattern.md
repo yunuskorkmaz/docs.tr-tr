@@ -4,12 +4,12 @@ description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 7e81b46c2dbcee3b3658ab3c2e576644f0e7b372
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479900"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675458"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -25,7 +25,7 @@ Olası bir yaklaşım, doğrudan istemci-mikro hizmet iletişimi mimarisi kullan
 
 Bu yaklaşımda, her bir mikro hizmetin her mikro hizmet için farklı bir TCP bağlantı noktası ile bazen genel bir uç nokta vardır. Belirli bir hizmet için bir URL örneği azure'da aşağıdaki URL'yi olabilir:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 URL kümede kullanılan yük dengeleyici eşlemek bir küme, temel bir üretim ortamında hangi sırayla istekleri mikro hizmetler arasında dağıtır. Üretim ortamlarında gibi uygulama teslim denetleyicisi (ADC) olabilir. [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) mikro hizmetlerin ve Internet arasında. Bu, yalnızca Yük Dengeleme gerçekleştirir, ancak SSL sonlandırma sunarak hizmetlerinizin güvenliğini sağlar ve saydam bir katman olarak görev yapar. Bu, CPU yoğunluklu SSL sonlandırma ve diğer yönlendirme görevlerini Azure Application gateway'e boşaltarak konaklarınız yükünü artırır. Herhangi bir durumda, bir yük dengeleyici ve ADC bir mantıksal uygulama mimarisi açısından saydam.
 

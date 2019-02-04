@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280208"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674574"
 ---
 # <a name="startup-element"></a>\<Başlangıç > öğesi
 
@@ -61,7 +61,7 @@ Ortak dil çalışma zamanı başlatma bilgileri belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
- **\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır  **\<requiredRuntime >** öğesi.
+  **\<SupportedRuntime >** öğesi sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılması gerekir. Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır  **\<requiredRuntime >** öğesi.
 
  Microsoft Internet Explorer'da barındırılan bir uygulama için başlatma kodunun yoksayar  **\<başlangıç >** öğesi ve onun alt öğeleri.
 
@@ -70,7 +70,7 @@ Ortak dil çalışma zamanı başlatma bilgileri belirtir.
  Bu uygulamanız gibi eski etkinleştirme yollarını kullanıyorsa yararlı bir özniteliktir [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), ve daha önceki bir sürümü yerine CLR'nin sürüm 4 etkinleştirmek için bu yollar istediğiniz veya uygulamanız ise ile oluşturulmuş [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ancak bağımlıdır .NET Framework'ün önceki bir sürümüyle oluşturulmuş bir karma mod derleme. Bu senaryolarda, öznitelik ayarlanmış `true`.
 
 > [!NOTE]
-> Özniteliğini `true` CLR sürüm 1.1 veya CLR Version 2.0 sürümü ile aynı işleme, etkili bir şekilde işlem içi yan yana özelliğini devre dışı bırakma yüklenmesini engeller (bkz [COM birlikte çalışma için yan yana yürütme](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).
+> Özniteliğini `true` CLR sürüm 1.1 veya CLR Version 2.0 sürümü ile aynı işleme, etkili bir şekilde işlem içi yan yana özelliğini devre dışı bırakma yüklenmesini engeller (bkz [COM birlikte çalışma için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Örnek
 
@@ -97,5 +97,5 @@ Ortak dil çalışma zamanı başlatma bilgileri belirtir.
 - [Başlangıç Ayarları Şeması](index.md)
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM birlikte çalışma için yan yana yürütme](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [COM birlikte çalışma için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [İşlem İçi Yan Yana Yürütme](../../../deployment/in-process-side-by-side-execution.md)

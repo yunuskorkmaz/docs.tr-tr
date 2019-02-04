@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127855"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675484"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -31,7 +31,7 @@ Kısacası, etki alanı olayları, express, açıkça, etki alanı uzmanları ta
 
 Yalnızca bir veritabanı işlemi gibi bir etki alanı olaya ilişkin ya da tüm işlemleri başarıyla tamamlamak ya da bunların hiçbiri yapın, sağlamak önemlidir.
 
-Etki alanı olayları Mesajlaşma stili olayları, önemli bir fark dışında benzer. Gerçek Mesajlaşma, message queuing, ileti aracıları veya AMPQ kullanarak service bus ile bir ileti her zaman zaman uyumsuz olarak gönderilen ve işlemleri ve makineler iletilir. Bu, birden çok sınırlanmış Bağlamlar, mikro hizmetler veya hatta farklı uygulamalara tümleştirmek için kullanışlıdır. Ancak, etki alanı olayları, çalışmakta olan etki alanı işlemi bir olaydan yükseltmek istediğiniz, ancak aynı etki alanı içinde gerçekleşmesi için tüm yan etkileri istediğiniz.
+Etki alanı olayları Mesajlaşma stili olayları, önemli bir fark dışında benzer. Gerçek Mesajlaşma, message queuing, ileti aracıları veya AMQP kullanarak service bus ile bir ileti her zaman zaman uyumsuz olarak gönderilen ve işlemleri ve makineler iletilir. Bu, birden çok sınırlanmış Bağlamlar, mikro hizmetler veya hatta farklı uygulamalara tümleştirmek için kullanışlıdır. Ancak, etki alanı olayları, çalışmakta olan etki alanı işlemi bir olaydan yükseltmek istediğiniz, ancak aynı etki alanı içinde gerçekleşmesi için tüm yan etkileri istediğiniz.
 
 Etki alanı olayları ve yan etkileri (olay işleyicileri tarafından yönetilen daha sonra tetiklenen eylemler) neredeyse anında gerçekleşmelidir genellikle işlem içinde ve aynı etki alanı içinde. Bu nedenle, etki alanı olayları zaman uyumlu veya zaman uyumsuz olabilir. Tümleştirme olayları, ancak her zaman uyumsuz olması gerekir.
 
