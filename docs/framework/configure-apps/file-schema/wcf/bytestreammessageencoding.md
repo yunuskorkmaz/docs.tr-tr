@@ -2,57 +2,57 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: b1215f864822de7c2df181ff92858cb73700c0d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286279"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674288"
 ---
-# <a name="bytestreammessageencoding"></a><span data-ttu-id="8c31d-101">\<byteStreamMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="8c31d-101">\<byteStreamMessageEncoding></span></span>
-<span data-ttu-id="8c31d-102">Bir karakter kodlamasını belirtmek için seçeneği ile bayt akışı olarak kodlamasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8c31d-102">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
+# <a name="bytestreammessageencoding"></a><span data-ttu-id="828c4-101">\<byteStreamMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="828c4-101">\<byteStreamMessageEncoding></span></span>
+<span data-ttu-id="828c4-102">Bir karakter kodlamasını belirtmek için seçeneği ile bayt akışı olarak kodlamasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="828c4-102">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
   
- <span data-ttu-id="8c31d-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="8c31d-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="8c31d-104">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="8c31d-104">\<bindings></span></span>  
-<span data-ttu-id="8c31d-105">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="8c31d-105">\<customBinding></span></span>  
-<span data-ttu-id="8c31d-106">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="8c31d-106">\<binding></span></span>  
-<span data-ttu-id="8c31d-107">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="8c31d-107">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="828c4-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="828c4-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="828c4-104">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="828c4-104">\<bindings></span></span>  
+<span data-ttu-id="828c4-105">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="828c4-105">\<customBinding></span></span>  
+<span data-ttu-id="828c4-106">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="828c4-106">\<binding></span></span>  
+<span data-ttu-id="828c4-107">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="828c4-107">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c31d-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c31d-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="828c4-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="828c4-108">Syntax</span></span>  
   
 ```xml  
 <byteStreamMessageEncoding />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8c31d-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c31d-109">Attributes and Elements</span></span>  
- <span data-ttu-id="8c31d-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8c31d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="828c4-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="828c4-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="828c4-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="828c4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8c31d-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8c31d-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="828c4-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="828c4-111">Attributes</span></span>  
   
-|<span data-ttu-id="8c31d-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="8c31d-112">Attribute</span></span>|<span data-ttu-id="8c31d-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c31d-113">Description</span></span>|  
+|<span data-ttu-id="828c4-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="828c4-112">Attribute</span></span>|<span data-ttu-id="828c4-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="828c4-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="8c31d-114">messageVersion</span><span class="sxs-lookup"><span data-stu-id="8c31d-114">messageVersion</span></span>|<span data-ttu-id="8c31d-115">Bağlama kullanılarak gönderilen iletilerin SOAP sürümünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="8c31d-115">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="8c31d-116">Bu özellik yalnızca ileti sürümü değeri için ayarlanabilir <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="8c31d-116">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="8c31d-117">Bayt akışı ileti Kodlayıcı herhangi bir ileti sürümlerini desteklemez.</span><span class="sxs-lookup"><span data-stu-id="8c31d-117">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="8c31d-118">Bu öznitelik türünde <xref:System.ServiceModel.Channels.MessageVersion>.</span><span class="sxs-lookup"><span data-stu-id="8c31d-118">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
+|<span data-ttu-id="828c4-114">messageVersion</span><span class="sxs-lookup"><span data-stu-id="828c4-114">messageVersion</span></span>|<span data-ttu-id="828c4-115">Bağlama kullanılarak gönderilen iletilerin SOAP sürümünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="828c4-115">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="828c4-116">Bu özellik yalnızca ileti sürümü değeri için ayarlanabilir <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="828c4-116">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="828c4-117">Bayt akışı ileti Kodlayıcı herhangi bir ileti sürümlerini desteklemez.</span><span class="sxs-lookup"><span data-stu-id="828c4-117">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="828c4-118">Bu öznitelik türünde <xref:System.ServiceModel.Channels.MessageVersion>.</span><span class="sxs-lookup"><span data-stu-id="828c4-118">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8c31d-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c31d-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="828c4-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="828c4-119">Child Elements</span></span>  
   
-|<span data-ttu-id="8c31d-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="8c31d-120">Element</span></span>|<span data-ttu-id="8c31d-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c31d-121">Description</span></span>|  
+|<span data-ttu-id="828c4-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="828c4-120">Element</span></span>|<span data-ttu-id="828c4-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="828c4-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8c31d-122">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="8c31d-122">\<readerQuotas></span></span>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="8c31d-123">Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar.</span><span class="sxs-lookup"><span data-stu-id="8c31d-123">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="8c31d-124">Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="8c31d-124">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|<span data-ttu-id="828c4-122">[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="828c4-122">[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span></span>|<span data-ttu-id="828c4-123">Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar.</span><span class="sxs-lookup"><span data-stu-id="828c4-123">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="828c4-124">Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="828c4-124">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8c31d-125">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c31d-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="828c4-125">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="828c4-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="8c31d-126">Öğe</span><span class="sxs-lookup"><span data-stu-id="8c31d-126">Element</span></span>|<span data-ttu-id="8c31d-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c31d-127">Description</span></span>|  
+|<span data-ttu-id="828c4-126">Öğe</span><span class="sxs-lookup"><span data-stu-id="828c4-126">Element</span></span>|<span data-ttu-id="828c4-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="828c4-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8c31d-128">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="8c31d-128">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="8c31d-129">Özel bağlama tüm bağlama yeteneklerini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="8c31d-129">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="828c4-128">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="828c4-128">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="828c4-129">Özel bağlama tüm bağlama yeteneklerini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="828c4-129">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8c31d-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c31d-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="828c4-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="828c4-130">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [<span data-ttu-id="8c31d-131">İleti Kodlama</span><span class="sxs-lookup"><span data-stu-id="8c31d-131">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [<span data-ttu-id="8c31d-132">İleti Kodlayıcı Seçme</span><span class="sxs-lookup"><span data-stu-id="8c31d-132">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [<span data-ttu-id="8c31d-133">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="8c31d-133">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="8c31d-134">Bağlamaları Genişletme</span><span class="sxs-lookup"><span data-stu-id="8c31d-134">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="8c31d-135">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="8c31d-135">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="8c31d-136">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="8c31d-136">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="828c4-131">İleti Kodlama</span><span class="sxs-lookup"><span data-stu-id="828c4-131">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [<span data-ttu-id="828c4-132">İleti Kodlayıcı Seçme</span><span class="sxs-lookup"><span data-stu-id="828c4-132">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [<span data-ttu-id="828c4-133">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="828c4-133">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="828c4-134">Bağlamaları Genişletme</span><span class="sxs-lookup"><span data-stu-id="828c4-134">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="828c4-135">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="828c4-135">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="828c4-136">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="828c4-136">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
