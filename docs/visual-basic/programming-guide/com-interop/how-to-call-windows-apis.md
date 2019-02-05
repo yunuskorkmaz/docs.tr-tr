@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb667c8492c1e20b82e16ae8d640aee872969e5
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650711"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738649"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Nasıl yapılır: (Visual Basic) Windows API'lerini çağırma
 Bu örnekte, tanımlar ve çağrı `MessageBox` user32.dll işlevi ve bir dize geçirir.  
@@ -39,6 +39,6 @@ Bu örnekte, tanımlar ve çağrı `MessageBox` user32.dll işlevi ve bir dize g
 - [Yakından Platform çağırma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Platform Çağırma Örnekleri](../../../framework/interop/platform-invoke-examples.md)
 - [Yönetilmeyen DLL İşlevlerini Kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Yayma yansıma ile bir yöntem tanımlama](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [Yayma yansıma ile bir yöntem tanımlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)

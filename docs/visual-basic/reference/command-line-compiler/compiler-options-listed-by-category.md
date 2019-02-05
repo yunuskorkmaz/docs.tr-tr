@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 9c46d557df35d575b28cc5843f82670613f62f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551624"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738909"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamında (IDE) programları derleme alternatif olarak sağlanır. İşlevsel kategoriye göre sıralanmış Visual Basic komut satırı derleyicisini seçeneklerin bir listesi verilmiştir.  
@@ -128,6 +128,4 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Alfabetik listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Proje Tasarımcısı giriş](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))
-- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

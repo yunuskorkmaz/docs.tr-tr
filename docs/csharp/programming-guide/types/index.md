@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ed666208c3d9bf2e9eb7d7f316cac3767e1bc718
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604323"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739325"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 ## <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri  
@@ -88,8 +88,8 @@ Değer türleri ve başvuru türleri cts'deki
  Yerleşik sayısal türler yapı birimleridir ve özellikleri ve yöntemleri erişebileceğiniz sahiptirler:  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  Ancak bildirmek ve bunların basit toplama olmayan türlermiş gibi bunlara değer atayamazsınız:  

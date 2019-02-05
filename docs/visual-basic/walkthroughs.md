@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086770"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739468"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -47,9 +47,6 @@ ms.locfileid: "44086770"
  [COM nesnelerinde kalıtım uygulama](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Visual Basic 6.0 bir sınıf içeren bir COM nesnesi oluşturun ve Visual Basic'te bir temel sınıf olarak kullanmak nasıl gösterir.  
   
- [Çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Bir sözcük örnekleri için bir metin dosyası arar birden çok iş parçacıklı bir uygulamanın nasıl oluşturulacağını gösterir.  
-  
  [My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Varsayılan açıklar `My.Application.Log` ayarları ve uygulama ayarlarını belirleme.  
   
@@ -80,5 +77,5 @@ ms.locfileid: "44086770"
  [Visual Basic'te bir nesneyi kalıcı kılma](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Basit bir nesne oluşturmak ve verileri bir dosyaya kalıcı hale getirmek nasıl gösterir.  
   
- [Önce test desteği kullanımdan üret özelliği](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [İzlenecek yol: Önce test desteği kullanımdan üret özelliği](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Önce test geliştirme, burada ilk birim testleri yazma ve ardından başarılı testler yapmak için kaynak kodunu yazma işlemi gösterilmektedir.

@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168994"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738740"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Birim testi C# .NET Core dotnet testi ve xUnit kullanma
 
@@ -66,7 +66,7 @@ Ardından, oluşturma *PrimeService.Tests* dizin. Ana hat aşağıdaki dizin yap
     /PrimeService.Tests
 ```
 
-Olun *PrimeService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje oluşturma [ `dotnet new xunit` ](../tools/dotnet-new.md). Bu komut, xUnit test kitaplık olarak kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.csproj* aşağıdaki koda benzer dosya:
+Olun *PrimeService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje oluşturma [ `dotnet new xunit` ](../tools/dotnet-new.md). Bu komut, kullanan bir test projesi oluşturur. [xUnit](https://xunit.github.io/) test kitaplığı olarak. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.csproj* aşağıdaki koda benzer dosya:
 
 ```xml
 <ItemGroup>
@@ -172,4 +172,5 @@ Ana Kitaplığı'nda daha fazla test, daha fazla Teoriler ve daha fazla kod ekle
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
+- [xUnit.net resmi sitesi](https://xunit.github.io)
 - [ASP.NET Core test denetleyici mantığında](/aspnet/core/mvc/controllers/testing)

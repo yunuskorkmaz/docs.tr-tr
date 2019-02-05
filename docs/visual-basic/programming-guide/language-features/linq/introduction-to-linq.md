@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524059"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739208"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ), Visual Basic sorgu özellikleri ekler ve her tür veri ile çalışırken, basit ve güçlü özellikler sağlar. Bir sorguyu işlenmek üzere bir veritabanına göndermek veya her arama yaptığınız veri türü için farklı sorgu sözdizimiyle çalışmak yerine LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak birleştirilmiş sözdizimi kullanır.  
@@ -240,7 +240,7 @@ LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri üy
   
  [Nasıl yapılır: Bir sorgu sonucunda en düşük ve en fazla değeri bulma](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Özel Kitap bölümleri  
  [Bölüm 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) içinde [Visual Basic 2008 programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  

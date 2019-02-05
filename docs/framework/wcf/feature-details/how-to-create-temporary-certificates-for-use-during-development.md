@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma'
+title: 'Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698590"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738636"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma
 
 Güvenli hizmet veya Windows Communication Foundation (WCF) kullanan istemci geliştirirken, genellikle bir kimlik bilgisi olarak kullanılacak bir X.509 sertifikası sağlamak gereklidir. Sertifika bilgisayar güvenilen kök sertifika yetkilileri deposunda bulunan kök yetkilisi sertifikalarıyla oluşan bir zincir, genellikle parçasıdır. Bir sertifika zinciri olan sertifika genellikle kök yetkilisi kuruluşunuz veya iş birimi olduğu kümesi kapsam olanak tanır. Bu geliştirme zamanında benzetmek için güvenlik gereksinimlerini karşılamak için iki sertifika oluşturabilirsiniz. İlk otomatik olarak imzalanan bir sertifika olduğundan güvenilen kök sertifika yetkilileri deposunda yerleştirilir ve ikinci sertifikayı ilk konumdan oluşturulur ve yerel makine konumun Kişisel depolama alanı kişisel mağazasında şirket içinde veya yerleştirilir. Geçerli kullanıcı konumu. Bu konuda, Powershell kullanarak bu iki sertifikaları oluşturma adımlarında size kılavuzluk eder [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet'i.
 
@@ -70,7 +70,7 @@ Kendinden imzalı bir sertifika oluşturulduktan sonra güvenilen kök sertifika
 
 4. Sağ tıklayın **sertifikaları** klasörü ve tıklatın **tüm görevler**, ardından **alma**.
 
-5. Ekrandaki Sihirbazı izleyin TempCa.cer depoya içeri aktarma yönergeleri.
+5. Ekrandaki Sihirbazı izleyin RootCA.pfx depoya içeri aktarma yönergeleri.
 
 ## <a name="using-certificates-with-wcf"></a>WCF ile sertifika kullanma
 
@@ -115,5 +115,5 @@ Geçici kök yetkilisi sertifikalarını sildiğinizden emin olun **güvenilen k
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sertifikalarla Çalışma](working-with-certificates.md)
-- [Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)

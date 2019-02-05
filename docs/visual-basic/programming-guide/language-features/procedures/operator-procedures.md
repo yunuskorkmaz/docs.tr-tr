@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 611195143fd216caab0b5f89badefb93d7dea017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589116"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739572"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
 Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basic deyimleri bir dizisidir (gibi `*`, `<>`, veya `And`) bir sınıf veya yapı tanımladığınız üzerinde. Bu da adlandırılır *İşleç aşırı yüklemesi*.  
@@ -44,7 +44,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bir işleç yordamı bildirmek için sözdizimi aşağıdaki gibidir:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
  Aşağıdaki yapıya bağlı yüksek ve düşük düzey parçaları olarak 128-bit imzalı bir tamsayı değeri depolar. Tanımladığı `+` işleci iki eklemek için `veryLong` değerleri ve bir sonuç üretmek `veryLong` değeri.  
@@ -79,7 +79,6 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Daha fazla bilgi ve örnekler için bkz. [işleci aşırı yüklemesi Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

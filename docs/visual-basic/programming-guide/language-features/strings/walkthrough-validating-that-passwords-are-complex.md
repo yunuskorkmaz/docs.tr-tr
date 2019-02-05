@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733954"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738571"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>İzlenecek yol: Parolaların karmaşık olduğunu doğrulama (Visual Basic)
 Bu yöntem, bazı güçlü parola özelliklerini denetler ve bir dize parametresi başarısız parola denetleyen hakkında bilgilerle güncelleştirir.  
@@ -31,7 +31,7 @@ Bu yöntem, bazı güçlü parola özelliklerini denetler ve bir dize parametres
 -   Üye erişimi <xref:System.Text.RegularExpressions> ad alanı. Ekleme bir `Imports` üye adları kodunuzda tamamen niteleyemiyorsanız deyimi. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Güvenlik  
- Parola ağ üzerinden taşıyorsanız, verileri aktarmak için güvenli bir yöntem kullanmanız gerekir. Daha fazla bilgi için [ASP.NET Web uygulaması güvenliği](https://msdn.microsoft.com/library/330a99hc).  
+ Parola ağ üzerinden taşıyorsanız, verileri aktarmak için güvenli bir yöntem kullanmanız gerekir. Daha fazla bilgi için [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Doğruluğunu geliştirebilir `ValidatePassword` karmaşıklık denetimleri ekleyerek işlevi:  
   
@@ -45,4 +45,4 @@ Bu yöntem, bazı güçlü parola özelliklerini denetler ve bir dize parametres
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web uygulaması güvenliği](https://msdn.microsoft.com/library/330a99hc)
+- [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
