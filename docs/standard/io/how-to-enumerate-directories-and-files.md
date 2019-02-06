@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580466"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758670"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: Dizinleri ve dosyaları numaralandırma
 Dizin ve dosyaların büyük koleksiyonlarla çalışıyorsanız numaralandırılabilir koleksiyonları diziler daha iyi performans sağlar. Dizinleri ve dosyaları numaralandırma için numaralandırılabilir bir dizin veya dosya adları topluluğu döndüren yöntemler kullanın veya kendi <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, veya <xref:System.IO.FileSystemInfo> nesneleri.  
@@ -65,4 +65,4 @@ Aşağıdaki örnekte <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayPro
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Dosya ve akış g/ç](../../../docs/standard/io/index.md)
+- [Dosya ve akış g/ç](../../../docs/standard/io/index.md)

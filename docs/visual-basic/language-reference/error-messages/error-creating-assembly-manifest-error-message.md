@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266487"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758371"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Derleme bildirimi oluşturulurken hata oluştu: \<hata iletisi >
 Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, derleme oluşturma öncesi Emisyonu aşamasında bir hata bildirdi.  
@@ -29,6 +29,6 @@ Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assem
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [İmzalama sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [İmzalama Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

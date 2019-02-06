@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707888"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758437"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>İşleme ve .NET özel durumları atma
 
@@ -69,4 +69,4 @@ Aşağıdaki tabloda neler bunlara neden olabilecek örnekleri ile sık kullanı
 - [Nasıl yapılır: Finally bloklarını kullanma](how-to-use-finally-blocks.md)
 - [COM Birlikte Çalışma Özel Durumlarını İşleme](handling-com-interop-exceptions.md)
 - [Özel Durumlar için En İyi Yöntemler](best-practices-for-exceptions.md)
-- [Her geliştirme bilmeniz hakkında özel durumlar çalışma zamanında gereken](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
+- [Her geliştiricinin bilmesi hakkında özel durumlar çalışma zamanında için gerekenler](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)

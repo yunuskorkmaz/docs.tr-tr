@@ -1,77 +1,77 @@
 ---
 title: .NET API Çözümleyicisi
-description: .NET API Çözümleyicisi kullanım dışı API ve platform uyumluluğu sorunları algılamak nasıl yardımcı olabileceğini öğrenin.
+description: .NET API Çözümleyicisi kullanım dışı API ve platform uyumluluğu sorunları algılayın nasıl yardımcı olabileceğini öğrenin.
 author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696890"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759138"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
-.NET API Çözümleyicisi olası uyumluluk için C# API'leri farklı platformlarda risklerini ve kullanım dışı API çağrıları algılar bulur Roslyn Çözümleyicisi ' dir. Bu geliştirme herhangi bir aşamasında tüm C# geliştiricileri için faydalı olabilir.
+.NET API Çözümleyicisi olası uyumluluk risk bulduğu Roslyn çözümleyicinizi olduğu C# farklı platformlarda API'leri ve kullanım dışı API'lere giden çağrıların algılar. Tüm kullanıcılar için yararlı olabilir C# geliştiriciler geliştirme herhangi bir aşamasında.
 
-API Çözümleyicisi bir NuGet paketi olarak gelir [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/). Projede başvuru sonra otomatik olarak kod izler ve sorunlu API kullanımı gösterir. Ampul üzerinde tıklayarak olası düzeltmeler hakkında öneriler de alabilirsiniz. Aşağı açılan menüden uyarıları gizlemek için bir seçenek içerir.
+API Çözümleyicisi bir NuGet paketi olarak gelir [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/). Bir proje başvurusu sonra otomatik olarak kod izler ve sorunlu API kullanımı gösterir. Ampul üzerinde tıklayarak üzerinde olası düzeltmeleri önerileri de sahip olabilirsiniz. Aşağı açılan menüyü uyarıları bastırmak için bir seçenek içerir.
 
 > [!NOTE]
 > .NET API Çözümleyicisi hala bir yayın öncesi sürümüdür.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio 2017 veya Mac (tüm sürümler) için Visual Studio.
+* Visual Studio 2017 veya Visual Studio için Mac (tüm sürümler).
 
-## <a name="discovering-deprecated-apis"></a>Kullanım dışı API'leri keşfetme
+## <a name="discovering-deprecated-apis"></a>Kullanım dışı API'lerini keşfetme
 
-### <a name="what-are-deprecated-apis"></a>Hangi API'leri kullanım?
+### <a name="what-are-deprecated-apis"></a>Hangi API'leri kullanım dışı?
 
-.NET ailesi, müşteri gereksinimlerini daha iyi karşılamak için sürekli olarak yükseltme büyük ürünleri kümesidir. Bazı API'leri Kaldır ve yenileriyle değiştirme için doğal. Bir API daha iyi bir alternatif mevcut olduğunda kullanım dışı olarak kabul edilir. Bir API kullanım dışıdır ve kullanılmaması bilgilendirmek için bir yoldur ile işaretlemek için <xref:System.ObsoleteAttribute> özniteliği. Bu yaklaşımın bir dezavantajı tüm eski API'leri için yalnızca bir tanılama kimliği olmasıdır (C# ' ta, [CS0612](../../csharp/misc/cs0612.md)). Bunun anlamı:
-- Belgeleri her örneği için ayrılmış mümkün değildir.
-- Belirli kategorisini uyarıları gizlemek mümkün değildir. Tüm ya da bunların hiçbiri gizleyebilirsiniz.
-- Yeni bir kullanımdan kaldırma kullanıcıları bilgilendirmek için başvurulan bir derleme veya paket hedefleme güncelleştirilmesi gerekir.
+.NET ailesi, sürekli daha iyi müşteri gereksinimlerini karşılamak için yükseltilen büyük ürünleri kümesidir. Bazı API'leri kullanımdan kaldırma ve bunları yenileriyle değiştirme doğaldır. Bir API, daha iyi bir alternatif varsa, kullanım dışı olarak kabul edilir. Bir API kullanım dışıdır ve kullanılmamalıdır bildiren bir yoludur kendisiyle işaretlemek için <xref:System.ObsoleteAttribute> özniteliği. Bu yaklaşımın bir dezavantajı, tüm eski API'ler için yalnızca bir tanılama kimliği olduğundan emin olup (için C#, [CS0612](../../csharp/misc/cs0612.md)). Bunun anlamı:
+- Her çalışması için belgelerin adanmış mümkün değildir.
+- Belirli kategori uyarıları bastırmak mümkün değildir. Tüm veya bunların hiçbiri gösterilmemesini sağlayabilirsiniz.
+- Yeni bir kullanımdan kaldırılma kullanıcılara bildirmek için başvurulan bir derleme veya paket hedef güncelleştirilmesi gerekir.
 
-API Çözümleyicisi bireysel uyarılar görünümünü denetime izin veren (hangi kullanımdan kaldırma hatası için anlamına gelir) DE ile başlayan API özgü hata kodları kullanır. Çözümleyicisi tarafından tanımlanan kullanım dışı API'leri tanımlanan [platform/dotnet-compat](https://github.com/dotnet/platform-compat) deposu.
+API Çözümleyicisi, tek tek uyarılar görünümünü denetime izin veren (hangi için kullanımdan kaldırma hatası anlamına gelir) DE ile başlayan API özgü hata kodları kullanır. Kaldırılmış API'ler çözümleyici tarafından tanımlanan tanımlanan [platform/dotnet-compat](https://github.com/dotnet/platform-compat) depo.
 
 ### <a name="using-the-api-analyzer"></a>API Çözümleyicisi'ni kullanma
 
-Kullanım dışı bir API, gibi <xref:System.Net.WebClient>, kullanılan bir kod yeşil dalgalı çizgi ile vurgular API Çözümleyicisi. Üzerinden API çağrısı geldiğinizde, bir ampul API kullanımdan aşağıdaki örnekteki gibi bilgiler görüntülenir:
+Kullanım dışı API, aşağıdakiler gibi <xref:System.Net.WebClient>, kullanılan bir kod içeren bir yeşil dalgalı satırı vurgular API Çözümleyicisi. API çağrılarında geldiğinizde, aşağıdaki örnekte olduğu gibi API kullanımdan kaldırma hakkında bilgi içeren bir ampul görüntülenir:
 
-!["Ekran WebClient API yeşil dalgalı çizgi ve ampul soldaki"](media/api-analyzer/green-squiggle.jpg)
+!["Ekran, WebClient API'SİYLE yeşil dalgalı çizgi ve ampul sol taraftaki"](media/api-analyzer/green-squiggle.jpg)
 
-**Hata listesi** penceresi, aşağıdaki örnekte gösterildiği gibi kullanım dışı API başına benzersiz bir kimliği uyarılarla içerir (`DE004`): 
+**Hata listesi** penceresi, aşağıdaki örnekte gösterildiği gibi uyarılarla kullanım dışı API başına benzersiz bir kimlik içerir (`DE004`): 
 
-!["Uyarı'nin kimlik ve açıklama gösteren Hata Listesi penceresi ekran görüntüsü"](media/api-analyzer/warnings.jpg)
+!["Hata listesi penceresine uyarı'nın kimlik ve açıklama gösteren ekran görüntüsü"](media/api-analyzer/warnings.jpg)
 
-Kimliği temel tıklayarak neden API kullanım dışı hakkında ayrıntılı bilgi içeren bir Web sayfası gitmeniz ve kullanılabilir alternatif API'leri ile ilgili öneriler.
+Kimliğinde tıklayarak, API'nin neden kullanım dışı bırakıldı hakkında ayrıntılı bilgi ile bir Web sayfasına gidin ve kullanılabilecek diğer API'ler ile ilgili öneriler.
 
-Tüm uyarılar vurgulanan üyesinde sağ tıklayıp seçerek gizlenebilir **bastır \<tanılama kimliği >**. Uyarıları gizlemek için iki yolu vardır: 
+Tüm uyarılar vurgulanan üyesinde sağ tıklatıp seçerek gizlenebilir **bastır \<tanılama kimliği >**. Uyarıları bastırmak için iki yolu vardır: 
 
 * [yerel olarak (kaynak)](#suppressing-warnings-locally)
-* [Genel (dosyasındaki bir gizleme)](#suppressing-warnings-globally) - önerilen
+* [Genel (içinde bir gizleme dosyası)](#suppressing-warnings-globally) - önerilen
 
 ### <a name="suppressing-warnings-locally"></a>Yerel olarak uyarıları gizleme
 
-Yerel olarak uyarıları gizlemek için için uyarıları bastırma ve ardından istediğiniz üyesinde sağ **hızlı Eylemler ve yapan yeniden düzenlemeler** > **bastır *tanılama kimliği* \<tanılama kimliği >** > **kaynağındaki**. [#Pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) önişlemci yönergesi kaynak kodunuzda tanımlanan kapsam eklenen uyarı: !["Kod ekran Çerçeveli ile #pragma uyarısı devre dışı bırak"](media/api-analyzer/suppress-in-source.jpg)
+Yerel olarak uyarıları bastırmak için için uyarıları gösterme ve ardından istediğiniz üyesinde sağ **hızlı Eylemler ve yeniden düzenlemeler** > **bastır *tanılama kimliği* \<tanılama kimliği >** > **kaynağındaki**. [#Pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) uyarı önişlemci yönergesi, tanımlanan kapsam içinde kaynak kodunuza eklenir: !["Kod #pragma uyarı ile Çerçeveli ekran devre dışı bırak"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Uyarıları gizleme genel
 
-Gizlemek için uyarılar için uyarıları bastırma ve ardından istediğiniz üyesinde genel olarak, sağ **hızlı Eylemler ve yapan yeniden düzenlemeler** > **bastır *tanılama kimliği* \<tanılama kimliği >** > **gizleme dosyasında**.
+Bastırmak için uyarıları genel olarak, sağ için uyarıları gösterme ve ardından istediğiniz üyesinde **hızlı Eylemler ve yeniden düzenlemeler** > **bastır *tanılama kimliği* \<tanılama kimliği >** > **gizleme dosyasında**.
 
-!["Ekran WebClient API yeşil dalgalı çizgi ve ampul soldaki"](media/api-analyzer/suppress-in-sup-file.jpg)
+!["Ekran, WebClient API'SİYLE yeşil dalgalı çizgi ve ampul sol taraftaki"](media/api-analyzer/suppress-in-sup-file.jpg)
 
-A *GlobalSuppressions.cs* dosya sonra ilk gizleme projenize eklenir. Yeni genel suppressions bu dosyaya eklenir.
+A *GlobalSuppressions.cs* sonra ilk gizleme dosyası projenize eklenir. Yeni genel gizlemeleri bu dosyasına eklenir.
 
-!["Ekran WebClient API yeşil dalgalı çizgi ve ampul soldaki"](media/api-analyzer/suppression-file.jpg)
+!["Ekran, WebClient API'SİYLE yeşil dalgalı çizgi ve ampul sol taraftaki"](media/api-analyzer/suppression-file.jpg)
 
-Genel gizleme, projeler arasında tutarlılığı API kullanımı için önerilen yoldur.
+Genel gizlemeyi API kullanımı projeler arasında tutarlılığı için önerilen yoldur.
 
 ## <a name="discovering-cross-platform-issues"></a>Platformlar arası sorunları bulma
 
-Benzer şekilde kullanım dışı API'leri, platformlar arası olmayan tüm API'leri Çözümleyicisi tanımlar. Örneğin, <xref:System.Console.WindowWidth?displayProperty=nameWithType> Windows ancak Linux ve macOS çalışır. Tanılama kimliği gösterilen **hata listesi** penceresi. Sağ tıklayarak bu uyarı gizleyebilirsiniz ve seçerek **hızlı Eylemler ve yapan yeniden düzenlemeler**. Burada iki seçeneğiniz kullanımdan durumlarda aksine (kullanım dışı üye kullanmaya devam et ve Uyarıları bastırma ya da hiç kullanmayabilirsiniz), burada yalnızca belirli platformlar için kodunuzu geliştiriyorsanız, diğer tüm platformlar için tüm uyarıları sizin gizleyebilirsiniz kodunuzu çalıştırmayı planlayın. Bunu yapmak için proje dosyanızı düzenleyin ve eklemek yeterlidir `PlatformCompatIgnore` yok sayılacak tüm platformlar listeler özelliği. Kabul edilen değerler şunlardır: `Linux`, `macOS`, ve `Windows`.
+Benzer şekilde kullanımdan kaldırılan API'leri, platformlar arası olmayan tüm API'leri Çözümleyicisi tanımlar. Örneğin, <xref:System.Console.WindowWidth?displayProperty=nameWithType> Windows ancak Linux ve macOS üzerinde çalışır. Tanılama kimliği gösterilen **hata listesi** penceresi. Sağ tıklayarak bu uyarının gösterilmemesi tıklayıp **hızlı Eylemler ve yeniden düzenlemeler**. İki seçenek olduğu kullanımdan kaldırma çalışmaları aksine (kullanım dışı üye kullanmaya devam edebilirsiniz ve Uyarıları bastırma ya da hiç kullanmayabilirsiniz), burada yalnızca belirli platformlar için kodunuzu geliştiriyorsanız, diğer tüm platformlar için tüm uyarıları sizin gösterilmemesini sağlayabilirsiniz kodunuzu çalıştırmayı planlayın. Bunu yapmak için proje dosyanızı düzenlemeniz ve eklemeniz yeterlidir `PlatformCompatIgnore` yok sayılacak tüm platformları listeler özelliği. Kabul edilen değerler şunlardır: `Linux`, `macOS`, ve `Windows`.
 
 ```xml
 <PropertyGroup>
@@ -79,7 +79,7 @@ Benzer şekilde kullanım dışı API'leri, platformlar arası olmayan tüm API'
 </PropertyGroup>
 ```
 
-Kodunuzu birden çok platformu hedefleyen ve bunların bazıları üzerinde desteklenmeyen bir API yararlanmak isterseniz koduyla kısmı önleyebilirsiniz bir `if` deyimi:
+Kodunuzun birden çok platformu hedefleyen ve bunlardan bazıları üzerinde desteklenmeyen API yararlanmak istiyorsanız kodu ile bu bölümü önleyebilirsiniz bir `if` deyimi:
 
 ```csharp
 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -89,28 +89,28 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 }
 ```
 
-Hedef framework ve işletim sistemi ayrıca koşullu derleyebilir, ancak şu anda, gerçekleştirmeniz gereken [el ile](../frameworks.md#how-to-specify-target-frameworks).
+Hedef framework ve işletim sistemi da koşullu olarak derleyebilirsiniz, ancak şu anda, gerçekleştirmeniz gereken [el ile](../frameworks.md#how-to-specify-target-frameworks).
 
 ## <a name="supported-diagnostics"></a>Desteklenen tanılama
 
 Şu anda Çözümleyicisi aşağıdaki durumlarda işler:
 
-* Bir .NET standart oluşturur API kullanımı <xref:System.PlatformNotSupportedException> (PC001).
-* Bir .NET standart .NET Framework 4.6.1 (PC002) kullanılabilir olmayan API kullanımı.
-* UWP (PC003) mevcut olmayan yerel bir API kullanımı.
+* .NET Standard oluşturan API'si kullanımı <xref:System.PlatformNotSupportedException> (PC001).
+* Bir .NET standart .NET Framework 4.6.1 (PC002) üzerinde bulunmayan API kullanımı.
+* UWP (PC003) mevcut olmayan bir yerel API kullanımı.
 * Kullanım dışı (DEXXXX) işaretlenmiş bir API kullanımı.
 
 ## <a name="ci-machine"></a>CI makine
 
-Bu tanılama yalnızca IDE'de kullanılabilir, ancak ayrıca projenizi oluşturmanın bir parçası olarak komut satırında, CI sunucunun içerir.
+Bu tanılama yalnızca IDE içinde kullanılabilir, ancak ayrıca CI sunucu içeren projenizi oluşturma işleminin parçası olarak komut satırında.
 
 ## <a name="configuration"></a>Yapılandırma
 
-Tanılama nasıl değerlendirilmelidir kullanıcı karar: uyarılar, hatalar, öneriler olarak ya da devre dışı bırakılmış. Örneğin, bir mimari, karar verebilirsiniz uyumluluk sorunları hata olarak ele alınması gerektiğini, diğerleri yalnızca önerileri oluşturmak karşın bazı kullanım dışı API çağrıları uyarılar oluşturun. Bunu ayrı olarak tanılama kimliği ve proje tarafından yapılandırabilirsiniz. Bu nedenle yapmak için **Çözüm Gezgini**, gitmek **bağımlılıkları** projenizi düğümünde. Düğümleri genişletin **bağımlılıkları** > **çözümleyiciler** > **Microsoft.DotNet.Analyzers.Compatibility**. Select tanılama kimliği sağ tıklayın **kural kümesi önem derecesi ayarlanmıştır** ve istediğiniz seçeneği seçin.
+Kullanıcı tanılama nasıl işleneceğini karar: uyarıları, hataları, önerileri olarak ya da devre dışı. Örneğin, bir mimari, karar verebilirsiniz uyumluluk sorunları hata olarak işlem görecek, diğerleri yalnızca önerileri oluşturmak uyarıları, kullanım dışı bazı API'lere giden çağrıların oluşturmanız. Bunu ayrı olarak tanılama kimliği ve proje göre yapılandırabilirsiniz. Bu nedenle yapmak için **Çözüm Gezgini**, gitmek **bağımlılıkları** projenizi düğümünde. Düğümleri genişletin **bağımlılıkları** > **Çözümleyicileri** > **Microsoft.DotNet.Analyzers.Compatibility**. Select tanılama kimliği sağ tıklayın **kural kümesi önem derecesini ayarlayın** ve istediğiniz seçeneği belirleyin.
 
-!["Tanılama ve açılan iletişim kuralı önem derecesi ayarlanmıştır gösteren çözüm Gezgini'nin ekran"](media/api-analyzer/disable-notifications.jpg)
+!["Tanılama ve açılır iletişim kutusu ile kural kümesi önem derecesi gösteren çözüm Gezgini'nin ekran görüntüsü"](media/api-analyzer/disable-notifications.jpg)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [API Çözümleyicisi](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) blog postası.
-* [API Çözümleyicisi](https://youtu.be/eeBEahYXGd0) gösteri video YouTube'da.
+- [API Çözümleyicisi](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) blog gönderisi.
+- [API Çözümleyicisi](https://youtu.be/eeBEahYXGd0) tanıtım YouTube video.

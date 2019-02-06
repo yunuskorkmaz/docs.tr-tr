@@ -4,12 +4,12 @@ description: .NET Framework ve .NET Core yan yana karşı çözüm derlemek iste
 author: conniey
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f3469c7f5c8c95cb5bf2ce522c8732c90744755
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498667"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759671"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Hem .NET Framework ve .NET Core desteklemek için proje düzenleme
 
@@ -69,7 +69,7 @@ Dikkat edilecek değişiklikler şunlardır:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* Lütfen [.NET Core belgeleri taşıma] [ porting-doc] .NET Core ile geçirme hakkında daha fazla yardım almak için.
+Lütfen [.NET Core belgeleri taşıma] [ porting-doc] .NET Core ile geçirme hakkında daha fazla yardım almak için.
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Mevcut proje"

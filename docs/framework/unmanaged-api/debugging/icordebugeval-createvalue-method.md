@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0af820b590271e16cbfb443c193fd0afb4ed3358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad40087ca61f1b07c0e0e36e785d89b84132962a
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604130"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759554"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue Yöntemi
 Belirtilen türde bir değer sıfır ya da null bir başlangıç değeriyle birlikte oluşturur.  
@@ -67,4 +67,5 @@ HRESULT CreateValue (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CreateValueForType yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) Icordebugvalue
+- [CreateValueForType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
+- [Icordebugeval arabirimi](icordebugeval-interface.md)
