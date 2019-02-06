@@ -1,29 +1,29 @@
 ---
 title: Özellik Mühendisliği modeli eğitimi için metinsel verilere - ML.NET uygulamak
 description: Özellik Mühendisliği modeli eğitimi için metinsel verilere ML.NET ile uygulamak hakkında bilgi edinin
-ms.date: 11/07/2018
+ms.date: 02/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ed24561c8cc821ece8a21ca61e22a11bda2516d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9c3e131a46ad02c60178aa60c45dcc95472e32c7
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152168"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758397"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="630c8-103">Özellik Mühendisliği machine learning modeli eğitimi ML.NET ile metinsel veriler için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="630c8-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="376f1-103">Özellik Mühendisliği machine learning modeli eğitimi ML.NET ile metinsel veriler için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="376f1-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="630c8-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="630c8-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="376f1-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="376f1-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="630c8-105">Metinsel veriler hakkında bilgi edinmek için metin özellikleri ayıklamak gerekir.</span><span class="sxs-lookup"><span data-stu-id="630c8-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="630c8-106">ML.NET bazı temel metin özelliği ayıklama mekanizmalar vardır:</span><span class="sxs-lookup"><span data-stu-id="630c8-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="376f1-105">Metinsel veriler hakkında bilgi edinmek için metin özellikleri ayıklamak gerekir.</span><span class="sxs-lookup"><span data-stu-id="376f1-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="376f1-106">ML.NET bazı temel metin özelliği ayıklama mekanizmalar vardır:</span><span class="sxs-lookup"><span data-stu-id="376f1-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="630c8-107">`Text normalization` (noktalama işaretleri, Vurgu, küçük harf vb. için geçiş kaldırılıyor.)</span><span class="sxs-lookup"><span data-stu-id="630c8-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="630c8-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="630c8-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="630c8-109">`Stopword` kaldırma.</span><span class="sxs-lookup"><span data-stu-id="630c8-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="630c8-110">`Ngram` ve `skip-gram` ayıklama.</span><span class="sxs-lookup"><span data-stu-id="630c8-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="630c8-111">`TF-IDF` ölçeklendirme.</span><span class="sxs-lookup"><span data-stu-id="630c8-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="630c8-112">`Bag of words` dönüştürme.</span><span class="sxs-lookup"><span data-stu-id="630c8-112">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="376f1-107">`Text normalization` (noktalama işaretleri, Vurgu, küçük harf vb. için geçiş kaldırılıyor.)</span><span class="sxs-lookup"><span data-stu-id="376f1-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="376f1-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="376f1-108">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="376f1-109">`Stopword` kaldırma.</span><span class="sxs-lookup"><span data-stu-id="376f1-109">`Stopword` removal.</span></span>
+- <span data-ttu-id="376f1-110">`Ngram` ve `skip-gram` ayıklama.</span><span class="sxs-lookup"><span data-stu-id="376f1-110">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="376f1-111">`TF-IDF` ölçeklendirme.</span><span class="sxs-lookup"><span data-stu-id="376f1-111">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="376f1-112">`Bag of words` dönüştürme.</span><span class="sxs-lookup"><span data-stu-id="376f1-112">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="630c8-113">ML.NET metin özelliği ayıklama mekanizmalarını kullanarak aşağıdaki örnekte gösterilmiştir [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="630c8-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="376f1-113">ML.NET metin özelliği ayıklama mekanizmalarını kullanarak aşağıdaki örnekte gösterilmiştir [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="376f1-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText
@@ -34,19 +34,14 @@ Sentiment   SentimentText
 ```
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
-// as a catalog of available operations and as the source of randomness.
-var mlContext = new MLContext();
-
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
-{
-    Column = new[] {
+var reader = mlContext.Data.CreateTextReader(new[] 
+    {
         new TextLoader.Column("IsToxic", DataKind.BL, 0),
         new TextLoader.Column("Message", DataKind.TX, 1),
     },
-    HasHeader = true
-});
+    hasHeader: true
+);
 
 // Read the data.
 var data = reader.Read(dataPath);
@@ -57,27 +52,27 @@ var messageTexts = data.GetColumn<string>(mlContext, "Message").Take(20).ToArray
 // Apply various kinds of text operations supported by ML.NET.
 var pipeline =
     // One-stop shop to run the full text featurization.
-    mlContext.Transforms.Text.FeaturizeText("Message", "TextFeatures")
+    mlContext.Transforms.Text.FeaturizeText("TextFeatures", "Message")
 
     // Normalize the message for later transforms
-    .Append(mlContext.Transforms.Text.NormalizeText("Message", "NormalizedMessage"))
+    .Append(mlContext.Transforms.Text.NormalizeText("NormalizedMessage", "Message"))
 
     // NLP pipeline 1: bag of words.
-    .Append(new WordBagEstimator(mlContext, "NormalizedMessage", "BagOfWords"))
+    .Append(new WordBagEstimator(mlContext, "BagOfWords", "NormalizedMessage"))
 
     // NLP pipeline 2: bag of bigrams, using hashes instead of dictionary indices.
-    .Append(new WordHashBagEstimator(mlContext, "NormalizedMessage", "BagOfBigrams",
+    .Append(new WordHashBagEstimator(mlContext, "BagOfBigrams","NormalizedMessage", 
                 ngramLength: 2, allLengths: false))
 
     // NLP pipeline 3: bag of tri-character sequences with TF-IDF weighting.
-    .Append(mlContext.Transforms.Text.TokenizeCharacters("Message", "MessageChars"))
-    .Append(new NgramEstimator(mlContext, "MessageChars", "BagOfTrichar",
-                ngramLength: 3, weighting: NgramTransform.WeightingCriteria.TfIdf))
+    .Append(mlContext.Transforms.Text.TokenizeCharacters("MessageChars", "Message"))
+    .Append(new NgramExtractingEstimator(mlContext, "BagOfTrichar", "MessageChars", 
+                ngramLength: 3, weighting: NgramExtractingEstimator.WeightingCriteria.TfIdf))
 
     // NLP pipeline 4: word embeddings.
-    .Append(mlContext.Transforms.Text.TokenizeWords("NormalizedMessage", "TokenizedMessage"))
-    .Append(mlContext.Transforms.Text.ExtractWordEmbeedings("TokenizedMessage", "Embeddings",
-                WordEmbeddingsTransform.PretrainedModelKind.GloVeTwitter25D));
+    .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedMessage", "NormalizedMessage"))
+    .Append(mlContext.Transforms.Text.ExtractWordEmbeddings("Embeddings", "TokenizedMessage",
+                WordEmbeddingsExtractingTransformer.PretrainedModelKind.GloVeTwitter25D));
 
 // Let's train our pipeline, and then apply it to the same data.
 // Note that even on a small dataset of 70KB the pipeline above can take up to a minute to completely train.
