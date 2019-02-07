@@ -3,10 +3,10 @@ title: F#Bileşen tasarım yönergeleri
 description: Yazmak için kılavuzları edinin F# diğer çağıranlar tarafından tüketim için hazırlanmış bileşenleri.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066031"
 ---
 # <a name="f-component-design-guidelines"></a>F#Bileşen tasarım yönergeleri
@@ -74,7 +74,7 @@ Aşağıdaki tablo, .NET adlandırma ve büyük/küçük harf kurallarını izle
 |-----------|------|------|----------|-------|
 | Somut türleri | PascalCase | İsim / sıfat | Liste, çift, karmaşık | Yapılar, sınıflar, numaralandırmalar, temsilciler, kayıtlar ve birleşimler bunun somut türleridir. Tür adları içinde OCaml, geleneksel olarak küçük olsa F# türleri için .NET adlandırma şeması BENİMSEDİ.
 | DLL'ler           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak öneki gibi iç zaman kullanmak `takımlar yazın = TAlpha | TBeta | TDelta.` |
+| Birleşim etiketleri     | PascalCase | İsim | Bazı, ekleme, başarılı | Bir ön ek, genel API'ler kullanmayın. İsteğe bağlı olarak bir önek gibi iç olduğunda kullanın `type Teams = TAlpha | TBeta | TDelta.` |
 | Olay          | PascalCase | Fiili | ValueChanged / ValueChanging |  |
 | Özel Durumlar     | PascalCase |      | WebException ise | Adı "Özel durum" ile bitmelidir. |
 | Alan          | PascalCase | İsim | Geçerli ad  | |
