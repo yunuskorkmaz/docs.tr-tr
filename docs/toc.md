@@ -1189,7 +1189,7 @@
 ## [Öğreticiler](machine-learning/tutorials/index.md)
 ### [Yaklaşım analizi (ikili sınıflandırma)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Sorun sınıflandırması (çok sınıflı sınıflandırma)](machine-learning/tutorials/github-issue-classification.md)
-### [Taksi ücreti göstergesi (gerileme)](machine-learning/tutorials/taxi-fare.md)
+### [Fiyat tahmini (regresyon)](machine-learning/tutorials/taxi-fare.md)
 ### [Süsen çiçekleri (kümeleme)](machine-learning/tutorials/iris-clustering.md)
 ## [Nasıl yapılır kılavuzları](machine-learning/how-to-guides/index.md)
 ### Verileri hazırlama
@@ -1200,7 +1200,7 @@
 #### [Metin dosyasından veri yükleme](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Normalleştiriciler ile verileri önceden işleme](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Modeli eğitme, değerlendirme ve açıklama
-#### [Metin dosyasında bulunmayan verilerle modeli eğitme](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Gerçek zamanlı veri kaynaklarıyla modeli eğitme](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Çapraz doğrulama kullanarak modeli eğitme](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Ara işlem hattı veri değerlerini inceleme](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Regresyon modelini eğitme](machine-learning/how-to-guides/train-regression-model-ml-net.md)
