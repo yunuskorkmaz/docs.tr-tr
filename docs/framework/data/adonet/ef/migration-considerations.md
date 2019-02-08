@@ -2,12 +2,12 @@
 title: Geçiş konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13f9b97435665138f78db6a481d27172d3253679
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575625"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827909"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "54575625"
  Mevcut bir uygulamasına geçirmek için yol [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama türü ve mevcut veri erişim stratejisi bağlıdır. Mevcut bir uygulamasına geçirirken ancak, her zaman aşağıdaki görevleri gerçekleştirmeniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Visual Studio 2008 ile başlayan varlık veri modeli araçları kullandığınızda bu görevlerin tümü otomatik olarak gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Visual Studio 2008 ile başlayan varlık veri modeli araçları kullandığınızda bu görevlerin tümü otomatik olarak gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 1.  Uygulamayı yükseltin.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "54575625"
   
 2.  Eşleme ve modelleri tanımlar.  
   
-     Model ve eşleme dosyalarını kavramsal modeldeki varlıklar tanımlayın. yapıları tablolar gibi veri kaynağı, saklı yordamlar ve görünümleri; ve varlıkları ve veri kaynağı Yapılar arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: El ile bir modeli tanımlamak ve dosyaları eşleme](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     Model ve eşleme dosyalarını kavramsal modeldeki varlıklar tanımlayın. yapıları tablolar gibi veri kaynağı, saklı yordamlar ve görünümleri; ve varlıkları ve veri kaynağı Yapılar arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: El ile bir modeli tanımlamak ve dosyaları eşleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
-     Depolama modelde tanımlı türleri nesne veri kaynağı adı eşleşmelidir. Var olan uygulama veri nesneleri olarak sunarsa, kavramsal modelde tanımlı özellikleri ve varlıkları adlarını bu var olan veri sınıfları ve özellikleri ile eşleştiğinden emin olun. Daha fazla bilgi için [nasıl yapılır: Modelleme ve özel nesneler ile çalışma dosyaları eşleme özelleştirme](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Depolama modelde tanımlı türleri nesne veri kaynağı adı eşleşmelidir. Var olan uygulama veri nesneleri olarak sunarsa, kavramsal modelde tanımlı özellikleri ve varlıkları adlarını bu var olan veri sınıfları ve özellikleri ile eşleştiğinden emin olun. Daha fazla bilgi için [nasıl yapılır: Modelleme ve özel nesneler ile çalışma dosyaları eşleme özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100)).  
   
     > [!NOTE]
-    >  Varlık veri modeli Tasarımcısı, varolan nesneleri eşleştirmek için kavramsal modeldeki varlıklar yeniden adlandırmak için kullanılabilir. Daha fazla bilgi için [varlık veri modeli Tasarımcısı](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
+    >  Varlık veri modeli Tasarımcısı, varolan nesneleri eşleştirmek için kavramsal modeldeki varlıklar yeniden adlandırmak için kullanılabilir. Daha fazla bilgi için [varlık veri modeli Tasarımcısı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
 3.  Bağlantı dizesini tanımlar.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "54575625"
   
 4.  Visual Studio projesini yapılandırın.  
   
-     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeleri ve model ve eşleme dosyalarını Visual Studio projeye eklenmesi gerekiyor. Bu eşleme dosyaları, bunlar bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: El ile bir Entity Framework projesinin yapılandırma](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeleri ve model ve eşleme dosyalarını Visual Studio projeye eklenmesi gerekiyor. Bu eşleme dosyaları, bunlar bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: El ile bir Entity Framework projesinin yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Varolan nesneleri olan uygulamalar için dikkat edilmesi gerekenler  
- İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "düz eski" destekleyen CLR nesnelerine (POCO), Kalıcılık ignorant nesneleri olarak da bilinir. Çoğu durumda, var olan nesne ile çalışabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] küçük değişiklikler yaparak. Daha fazla bilgi için [Working with Entities POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Ayrıca bir uygulamaya geçirebileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanın. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+ İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "düz eski" destekleyen CLR nesnelerine (POCO), Kalıcılık ignorant nesneleri olarak da bilinir. Çoğu durumda, var olan nesne ile çalışabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] küçük değişiklikler yaparak. Daha fazla bilgi için [Working with Entities POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Ayrıca bir uygulamaya geçirebileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanın. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET sağlayıcıları kullanan uygulamalar için dikkat edilmesi gerekenler  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] SqlClient, örneğin bir sağlayıcı sekmeli veri döndürmek için bir veri kaynağını olanak sağlar. Veri da yüklenebilir içine bir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri kümesi. Aşağıdaki listede açıklanmıştır varolan kullanan bir uygulamayı yükseltme için dikkat edilecekler [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayıcısı:  
@@ -74,26 +74,26 @@ ms.locfileid: "54575625"
   
  Uygulama verileri görüntülemek için bir sorgunun sonuçlarını sıralar, bir <xref:System.Windows.Forms.DataGridView> veya denetimin sonucuna bağlanması için uygulamanızı değiştirebileceğiniz diğer veri bağlamayı destekleyen bir denetim türü, bir <xref:System.Data.Objects.ObjectQuery%601>.  
   
- Daha fazla bilgi için [denetimlerine nesne bağlama](https://msdn.microsoft.com/library/2fd34855-929b-4303-a91e-4bb69d958f2b).  
+ Daha fazla bilgi için [denetimlerine nesne bağlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] veri kaynağı denetimleri.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İçinde veri bağlamayı kolaylaştırmak amacıyla tasarlanmış bir veri kaynağı denetimi içeren [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları. Daha fazla bilgi için [Entity Framework Veri kaynağı denetimini](https://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İçinde veri bağlamayı kolaylaştırmak amacıyla tasarlanmış bir veri kaynağı denetimi içeren [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları. Daha fazla bilgi için [EntityDataSource Web sunucusu denetimine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Diğer Konular  
  Entity Framework uygulamalarını belirli türlerdeki geçirdiğinizde, uygulanabilir dikkat edilecek noktalar aşağıda verilmiştir.  
   
  Veri Hizmetleri kullanıma sunan uygulamalar.  
- Web Hizmetleri ve Windows Communication Foundation (WCF) tabanlı uygulamaları istek/yanıt XML ileti biçimi kullanarak bir temel alınan veri kaynağı kullanıma sunar. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İkili, XML, kullanarak varlık nesneleri serileştirmek destekler veya WCF veri sözleşme seri hale getirme. İkili ve WCF serileştirme tam nesne grafiklerini serileştirme destekler. Daha fazla bilgi için [N katmanlı uygulamalar oluşturma](https://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
+ Web Hizmetleri ve Windows Communication Foundation (WCF) tabanlı uygulamaları istek/yanıt XML ileti biçimi kullanarak bir temel alınan veri kaynağı kullanıma sunar. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İkili, XML, kullanarak varlık nesneleri serileştirmek destekler veya WCF veri sözleşme seri hale getirme. İkili ve WCF serileştirme tam nesne grafiklerini serileştirme destekler. Daha fazla bilgi için [N katmanlı uygulamalar oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
   
  XML verilerini kullanan uygulamalar.  
  Nesne serileştirme oluşturmanıza olanak sağlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri Hizmetleri. Bu hizmetler Internet AJAX tabanlı uygulamalar gibi XML verileri kullanan uygulamalar için veri sağlar. Bu gibi durumlarda kullanmayı [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Şu veri hizmetlerini varlık veri modelini temel ve standart temsili durum aktarımı (REST) HTTP eylemleri kullanarak varlık verilerini dinamik erişim sağlamak gibi Al koy ve gönderin. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../../docs/framework/data/wcf/index.md).  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yerel XML veri türünü desteklemiyor. Bu, bir XML sütunu içeren bir tabloya bir varlık eşlendiğinde XML sütunu için eşdeğer varlık özelliği bir dize olduğu anlamına gelir. Nesneler, bağlantısı kesilmiş ve XML olarak serileştirilmiş. Daha fazla bilgi için [nesneleri serileştirmek](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yerel XML veri türünü desteklemiyor. Bu, bir XML sütunu içeren bir tabloya bir varlık eşlendiğinde XML sütunu için eşdeğer varlık özelliği bir dize olduğu anlamına gelir. Nesneler, bağlantısı kesilmiş ve XML olarak serileştirilmiş. Daha fazla bilgi için [nesneleri serileştirmek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
- Uygulamanızın gerektirdiği sorgu XML verileri, LINQ to XML kullanarak LINQ sorgularının avantajlarından alabilir. Daha fazla bilgi için [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
+ Uygulamanızın gerektirdiği sorgu XML verileri, LINQ to XML kullanarak LINQ sorgularının avantajlarından alabilir. Daha fazla bilgi için [LINQ to XML](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb387098(v=vs.110)).  
   
  Durumunu korumak uygulamalar.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları bir Web sayfasının veya bir kullanıcı oturumunun durumunu sık sürdürmeniz gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği istemci görünüm durumu veya sunucu üzerinde oturum durumunu depolanan ve daha sonra alınabilir ve yeni bir nesne bağlamına eklenemeyeceği. Daha fazla bilgi için [iliştirme ve nesneleri ayırmaya](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları bir Web sayfasının veya bir kullanıcı oturumunun durumunu sık sürdürmeniz gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği istemci görünüm durumu veya sunucu üzerinde oturum durumunu depolanan ve daha sonra alınabilir ve yeni bir nesne bağlamına eklenemeyeceği. Daha fazla bilgi için [iliştirme ve nesneleri ayırmaya](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)

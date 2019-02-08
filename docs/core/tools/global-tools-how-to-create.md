@@ -4,16 +4,16 @@ description: Genel bir aracı oluşturmayı açıklar. Genel aracı ile .NET Cor
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144598"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826427"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Bir .NET Core genel .NET Core CLI'yı kullanarak aracı oluşturma
 
-Bu makalede nasıl oluşturulacağı ve bir .NET Core genel aracı paketlemeyi öğretir. .NET Core CLI bir konsol uygulaması olarak bir genel diğer kolayca yükleyip çalıştırabileceği Aracı'nı oluşturmanıza olanak sağlar. .NET core genel araçları, .NET Core CLI üzerinden yüklü olan NuGet paketlerdir. Genel araçları hakkında daha fazla bilgi için bkz. [.NET Core Araçları Genel genel bakış][global-tool-info].
+Bu makalede nasıl oluşturulacağı ve bir .NET Core genel aracı paketlemeyi öğretir. .NET Core CLI bir konsol uygulaması olarak bir genel diğer kolayca yükleyip çalıştırabileceği Aracı'nı oluşturmanıza olanak sağlar. .NET core genel araçları, .NET Core CLI üzerinden yüklü olan NuGet paketlerdir. Genel araçları hakkında daha fazla bilgi için bkz. [.NET Core Araçları Genel genel bakış](global-tools.md).
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ Bir paket olduğuna göre bu paketten aracını yükleyin:
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-`--add-source` Parametresi, geçici olarak kullanmak için .NET Core CLI bildirir `./nupkg` klasörü (bizim `<PackageOutputPath>` klasör) ek bir kaynak için NuGet paketlerini akış. Genel araçlarını yükleme hakkında daha fazla bilgi için bkz. [.NET Core Araçları Genel genel bakış][global-tool-info].
+`--add-source` Parametresi, geçici olarak kullanmak için .NET Core CLI bildirir `./nupkg` klasörü (bizim `<PackageOutputPath>` klasör) ek bir kaynak için NuGet paketlerini akış. Genel araçlarını yükleme hakkında daha fazla bilgi için bkz. [.NET Core Araçları Genel genel bakış](global-tools.md).
 
 Yükleme başarılı olursa, aracı ve yüklü sürümü çağırmak için kullanılan komut aşağıdaki örneğe benzer gösteren bir ileti görüntülenir:
 
@@ -191,5 +191,3 @@ Artık türüne erişebileceğinizi `botsay` ve aracından bir yanıt alın.
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

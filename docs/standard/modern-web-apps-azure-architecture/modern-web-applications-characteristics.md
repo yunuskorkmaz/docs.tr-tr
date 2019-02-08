@@ -3,13 +3,13 @@ title: Modern web uygulamalarının özellikleri
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Modern web uygulamalarının özellikleri
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147342"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828130"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
@@ -39,13 +39,13 @@ ASP.NET Core, düşük bellek ve işleme düzeyi yüksek olduğu için (genel bu
 
 ## <a name="cross-platform"></a>Platformlar arası
 
-ASP.NET Core platformlar arası ve Linux ve MacOS yanı sıra üzerinde Windows çalıştırabilirsiniz. Bu hem geliştirme hem de ASP.NET Core ile oluşturulan uygulamaları dağıtımını için birçok yeni seçenek açar. Genellikle, Linux bugün çalıştırılmaya, docker kapsayıcıları, avantajlarından yararlanmak ASP.NET Core uygulamalar, ana bilgisayar [kapsayıcıları ve mikro Hizmetler](../microservices-architecture/index.md).
+ASP.NET Core platformlar arası ve Linux, macOS ve Windows üzerinde çalıştırabilirsiniz. Bu hem geliştirme hem de ASP.NET Core ile oluşturulan uygulamaları dağıtımını için birçok yeni seçenek açar. Docker kapsayıcıları - hem Linux hem de Windows - avantajlarından yararlanmak ASP.NET Core uygulamalar, ana bilgisayar [kapsayıcıları ve mikro Hizmetler](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modüler ve gevşek bir şekilde
 
 Birinci sınıf vatandaşlar .NET Core NuGet paketleri olan ve ASP.NET Core uygulamaları birçok kitaplıkları NuGet aracılığıyla oluşur. İşlevinin bu ayrıntı düzeyi, uygulamaları yalnızca bağlıdır ve gerçekten, kendi Ayak izi ve güvenlik açığı yüzey alanı azaltma gerektirdikleri işlevi dağıtmaya sağlamaya yardımcı olur.
 
-ASP.NET Core, hem iç hem de uygulama düzeyinde bağımlılık ekleme da tam olarak destekler. Arabirimleri, gerektiğinde takas edilebilir birden çok uygulamalara sahip olabilir. Bağımlılık ekleme gevşek birkaç bunları test genişletin ve korumak daha kolay hale getirir, bu arabirimler için uygulamalara izin verir.
+ASP.NET Core da tam olarak destekler [bağımlılık ekleme](https://deviq.com/dependency-injection/), hem iç hem de uygulama düzeyi. Arabirimleri, gerektiğinde takas edilebilir birden çok uygulamalara sahip olabilir. Bu arabirimler için gevşek eşleştirmektir uygulamaların bağımlılık ekleme verir yerine bunları genişletmek daha kolay hale getirir, belirli uygulamaları korumak ve test edin.
 
 ## <a name="easily-tested-with-automated-tests"></a>Kolayca otomatik testler ile test
 
@@ -53,11 +53,11 @@ Birim testi ASP.NET Core uygulamaları desteklemek ve kendi gevşek eşleştirme
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Desteklenen geleneksel ve SPA davranışları
 
-Geleneksel web uygulamaları, biraz istemci tarafı davranışı söz konusu, ancak bunun yerine tüm gezinti, sorgular ve uygulama yapmanız gerekebilecek güncelleştirmeleri için sunucuda güvenmiştir. Kullanıcı tarafından yapılan her yeni işlem yeni bir web isteği, son kullanıcının tarayıcısında tam sayfada yeniden yüklenmesi olan sonuç çevrilmesi. Klasik Model-View-Controller (MVC) çerçeveleri, bu yaklaşım genellikle hangi sırayla ve bir modeli ile çalışmak bir görünüme dönmek bir farklı denetleyici eylemi için karşılık gelen her yeni isteği ile izleyin. Belirli bir sayfada tek bazı işlemler (zaman uyumsuz JavaScript ve XML) AJAX işlevselliği ile Gelişmiş, ancak birçok farklı MVC görünümleri ve URL uç noktalarına genel uygulama mimarisi kullanılır.
+Geleneksel web uygulamaları, biraz istemci tarafı davranışı söz konusu, ancak bunun yerine tüm gezinti, sorgular ve uygulama yapmanız gerekebilecek güncelleştirmeleri için sunucuda güvenmiştir. Kullanıcı tarafından yapılan her yeni işlem yeni bir web isteği, son kullanıcının tarayıcısında tam sayfada yeniden yüklenmesi olan sonuç çevrilmesi. Klasik Model-View-Controller (MVC) çerçeveleri, bu yaklaşım genellikle hangi sırayla ve bir modeli ile çalışmak bir görünüme dönmek bir farklı denetleyici eylemi için karşılık gelen her yeni isteği ile izleyin. Belirli bir sayfada tek bazı işlemler (zaman uyumsuz JavaScript ve XML) AJAX işlevselliği ile Gelişmiş, ancak birçok farklı MVC görünümleri ve URL uç noktalarına genel uygulama mimarisi kullanılır. Ayrıca, ASP.NET Core MVC Razor sayfaları, MVC stil sayfaları düzenlemek için daha basit bir yol da destekler.
 
 Tek sayfa uygulamaları (Spa'lar) aksine, çok az dinamik olarak üretilen sunucu tarafı sayfa yüklemelerinin (varsa) içerir. Birçok Spa'lar başlatmak ve uygulamayı çalıştırmak için gerekli JavaScript kitaplıklarını yükleyen bir statik HTML dosyası içinde başlatılır. Bu uygulamalar, web API'leri için veri gereksinimlerine ağır kullanımını olun ve çok daha zengin kullanıcı deneyimleri sağlayabilir.
 
-Birçok web uygulamaları (genellikle için içerik) geleneksel web uygulama davranışını ve Spa'lar (etkileşim için) bir bileşimini içerir. ASP.NET Core MVC (görünümleri ve/veya Razor sayfaları) hem de web aynı uygulama aynı araçları kullanarak ve framework kitaplıkları arka plandaki API'leri destekler.
+Birçok web uygulamaları (genellikle için içerik) geleneksel web uygulama davranışını ve Spa'lar (etkileşim için) bir bileşimini içerir. ASP.NET Core MVC iki destekler (görünümleri ya da sayfa tabanlı) ve aynı araçları kullanarak ve framework kitaplıkları arka plandaki aynı uygulamada, web API'leri.
 
 ## <a name="simple-development-and-deployment"></a>Basit bir geliştirme ve dağıtma
 

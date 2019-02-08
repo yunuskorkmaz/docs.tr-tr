@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e31f4391a057d0863f9dcdca00c90f9e591bc5e8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739143"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828416"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Önizleme 2) yenilikler
 
@@ -20,11 +20,12 @@ Bu makalede, .NET Core 3.0 (Önizleme 2) Yenilikler açıklanır. Büyük iyile�
 
 .NET core 3.0 için destek ekler C# 8.0.
 
-[İndirin ve .NET Core 3 Önizleme 2 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde. Yayın içinde tüm ayrıntılarını görebilirsiniz [.NET Core 3 Preview 2 sürüm notları](https://aka.ms/netcore3releasenotes).
+[İndirin ve .NET Core 3.0 Önizleme 2 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde. Yayın içinde tüm ayrıntılarını görebilirsiniz [.NET Core 3.0 Preview 2 sürüm notları](https://aka.ms/netcore3releasenotes).
 
-Preview 1 ile yayımlanmış olan hakkında daha fazla bilgi için bkz. [.NET Core 3.0 Önizleme 1 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
+Her sürümü ile yayımlanmış olan hakkında daha fazla bilgi için aşağıdaki duyuruları bakın:
 
-Önizleme 2 ile yayımlanmış olan hakkında daha fazla bilgi için bkz. [.NET Core 3.0 Önizleme 1 Duyurusu]().
+- [.NET core 3.0 Önizleme 1 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET core 3.0 Önizleme 2 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 

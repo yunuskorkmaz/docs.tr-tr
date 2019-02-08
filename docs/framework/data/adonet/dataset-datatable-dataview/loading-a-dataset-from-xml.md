@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594921"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827610"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML'den DataSet yükleme
 Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya bir belgeden oluşturulabilir. Ayrıca, .NET Framework ile büyük esneklik hangi bilgilerin, XML'den yüklenen sahip olduğunuz ve nasıl önceden şema veya ilişkisel yapısını <xref:System.Data.DataSet> oluşturulur.  
   
- Doldurmak için bir <xref:System.Data.DataSet> XML verileri ile kullanma **ReadXml** yöntemi <xref:System.Data.DataSet> nesne. **ReadXml** yöntemi bir akışa bir dosyadan okur ya da bir **XmlReader**ve kaynak XML ek olarak isteğe bağlı bağımsız değişkenleri alan **XmlReadMode** bağımsız değişken. (Hakkında daha fazla bilgi için **XmlReader**, bkz: [NIB: XmlTextReader ile XML verileri okunurken](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** yöntemi XML akışı veya belge ve yükleri içeriğini okur <xref:System.Data.DataSet> verilerle. İlişkisel şemasını oluşturacak <xref:System.Data.DataSet> bağlı olarak **XmlReadMode** belirtilen ve olup olmadığı bir ilişkisel şema zaten mevcut.  
+ Doldurmak için bir <xref:System.Data.DataSet> XML verileri ile kullanma **ReadXml** yöntemi <xref:System.Data.DataSet> nesne. **ReadXml** yöntemi bir akışa bir dosyadan okur ya da bir **XmlReader**ve kaynak XML ek olarak isteğe bağlı bağımsız değişkenleri alan **XmlReadMode** bağımsız değişken. Hakkında daha fazla bilgi için **XmlReader**, bkz: [XmlTextReader ile XML verileri okuma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** yöntemi XML akışı veya belge ve yükleri içeriğini okur <xref:System.Data.DataSet> verilerle. İlişkisel şemasını oluşturacak <xref:System.Data.DataSet> bağlı olarak **XmlReadMode** belirtilen ve olup olmadığı bir ilişkisel şema zaten mevcut.  
   
  Aşağıdaki tablo için seçenekleri açıklar **XmlReadMode** bağımsız değişken.  
   

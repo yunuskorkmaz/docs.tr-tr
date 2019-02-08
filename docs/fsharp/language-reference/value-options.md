@@ -1,13 +1,13 @@
 ---
 title: Değer seçenekleri
 description: Hakkında bilgi edinin F# seçenek türünün bir yapı sürümü seçeneği değer türü.
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613433"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828039"
 ---
 # <a name="value-options"></a>Değer seçenekleri
 
@@ -16,7 +16,7 @@ Değer seçenek türünde F# aşağıdaki iki koşul tuttuğunuzda kullanılır:
 1. Bir senaryo için uygun olan bir [ F# seçeneği](options.md).
 2. Bir yapı kullanarak sizin senaryonuzda bu performans artar.
 
-Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen". Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir. Ancak, büyük F# programlar yapılar, bazen bir program ömrü boyunca daha iyi toplam performans sağlayabilir çünkü etkin yolları akış birçok isteğe bağlı türler genellikle örneği.
+Tüm performans açısından duyarlı senaryoları "yapılar kullanarak çözülen". Bunları başvuru türleri yerine kullanırken kopyalama ek maliyeti dikkate almanız gerekir. Ancak, büyük F# programlar etkin yolları akış birçok isteğe bağlı türler genellikle örneği ve böyle durumlarda yapılar genellikle bir program ömrü boyunca daha iyi toplam performans sağlayabilir.
 
 ## <a name="definition"></a>Tanım
 

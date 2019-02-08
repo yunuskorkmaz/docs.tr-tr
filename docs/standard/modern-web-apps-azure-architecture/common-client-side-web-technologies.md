@@ -3,13 +3,13 @@ title: Ortak istemci tarafı web teknolojileri
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Ortak istemci tarafı web teknolojileri
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 36bb18d21740f406d33306c212195fa5dbb25ee1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153897"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828340"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
@@ -102,7 +102,7 @@ Angular da harika kullanım araçlarının komut satırı arabirimi (CLI) sağla
 
 Microsoft bir başvuru uygulaması geliştirmiştir [hizmetine](https://aka.ms/MicroservicesArchitecture), Angular SPA uygulamasını içerir. Bu uygulama, çevrimiçi mağaza kataloğuyla sepet, yükleme ve görüntüleme öğelerinden alışveriş ve sipariş oluşturma işleme yönetmek için Angular modüller içerir. Görüntüleyebilir ve örnek uygulamayı indirin [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
-### <a name="react"></a>react
+### <a name="react"></a>React
 
 Angular sunan tam bir Model-View-Controller deseni uygulaması, React ile görünümleri yalnızca ilgilenir. Bir SPA oluşturmak için ek kitaplıklar yararlanarak gerekecek bir çerçeve, yalnızca bir kitaplık değil.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066226"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828364"
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırarak ve sonuçları almak için kullanılır. Sonuçları ya da doğrudan yerleştirilen işlenen bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden çok kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katmanda işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -24,7 +24,7 @@ A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayı
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ODBC için veri sağlayıcısı|ODBC kullanarak kullanıma sunulan veri kaynakları. Kullanan <xref:System.Data.Odbc> ad alanı.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Oracle için veri sağlayıcısı|Oracle veri kaynakları için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İçin Oracle veri sağlayıcısı, Oracle istemci version 8.1.7 destekler ve daha sonra ve kullandığı <xref:System.Data.OracleClient> ad alanı.|  
 |EntityClient sağlayıcısı|Varlık veri modeli (EDM) uygulamaları için veri erişim sağlar. Kullanan <xref:System.Data.EntityClient> ad alanı.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Veri sağlayıcısı için SQL Server Compact 4.0.|Microsoft SQL Server Compact 4.0 için veri erişim sağlar. Kullanan [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) ad alanı.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Veri sağlayıcısı için SQL Server Compact 4.0.|Microsoft SQL Server Compact 4.0 için veri erişim sağlar. Kullanan [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) ad alanı.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Çekirdek nesnelerin .NET Framework veri sağlayıcıları  
  Aşağıdaki tabloda özetlenmiştir oluşturan dört çekirdek nesneleri bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı.  

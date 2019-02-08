@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688112"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826286"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework, rol tabanlı güvenlik yanı sıra kod erişimi güvenliği (CAS), ikisi için de ortak dil çalışma (CLR) tarafından sağlanan bir ortak altyapısı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında, çoğu uygulama sorumlusu ve kullanıcı izinleriyle çalıştırın. Sonuç olarak, bilgisayar sistemlerini kötü amaçlı, gizliliği bozulmuş ve özel veri olabilir veya yazılım hatası doldurulmuş yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırılır.  
@@ -23,7 +23,7 @@ ms.locfileid: "54688112"
  CLR kod gerçekleştirmek için izni olan işlemleri gerçekleştirmek için kod sağlar. Kod izinler isteyebilir ve bu istekleri yönetici tarafından ayarladığınız güvenlik ilkesine göre dikkate alınır.  
   
 > [!NOTE]
->  CLR içinde yürütülen kodun kendisi verilemiyor. Örneğin, kod isteyebilir ve güvenlik ilkesinin izin verdiği ancak hiçbir zaman daha fazla izin verilen daha az izin verilmesi. İzin verirken hiçbir izinlerle hiç başlatın ve sonra gerçekleştirilen belirli görev için en düşük izinleri ekleyin. Tüm izinleri ile başlayan ve ardından tek olanları reddetme müşteri adayları gerekli daha fazla izin veren gelen istenmeyen güvenlik açıkları içerebilir güvenli uygulamalar için. Daha fazla bilgi için [NIB: Güvenlik İlkesi yapılandırma](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) ve [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  CLR içinde yürütülen kodun kendisi verilemiyor. Örneğin, kod isteyebilir ve güvenlik ilkesinin izin verdiği ancak hiçbir zaman daha fazla izin verilen daha az izin verilmesi. İzin verirken hiçbir izinlerle hiç başlatın ve sonra gerçekleştirilen belirli görev için en düşük izinleri ekleyin. Tüm izinleri ile başlayan ve ardından tek olanları reddetme müşteri adayları gerekli daha fazla izin veren gelen istenmeyen güvenlik açıkları içerebilir güvenli uygulamalar için. Daha fazla bilgi için [güvenlik ilkesi yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) ve [Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Kod erişim izinleri üç tür vardır:  
   
@@ -38,14 +38,14 @@ ms.locfileid: "54688112"
 ### <a name="requesting-permissions"></a>İzinler isteyen  
  İzinler isteyen amacı çalıştırmak için ve yalnızca gerçekten gerekli izinleri aldığından emin olmak için hangi izinlerin uygulamanızın gerektirdiği çalışma zamanı bilgilendirmektir. Örneğin, uygulamanızın yerel diske veri yazmak gerekiyorsa gerektiriyorsa <xref:System.Security.Permissions.FileIOPermission>. Bu izin verilen henüz, diske yazma girişiminde bulunduğunda uygulama başarısız olur. Ancak, uygulama isterse `FileIOPermission` ve izin verilmeyen, uygulama gizliliğe özel oluşturur ve yüklenmeyecek.  
   
- Uygulamayı yalnızca diskten verileri okumak için gereken yere bir senaryoda, hiçbir zaman herhangi bir yazma izni verilmesi isteyebilir. Bir hata veya kötü amaçlı saldırı durumunda kodunuzun üzerinde çalıştığı veri zarar veremez. Daha fazla bilgi için [NIB: İzinleri isteyen](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ Uygulamayı yalnızca diskten verileri okumak için gereken yere bir senaryoda, hiçbir zaman herhangi bir yazma izni verilmesi isteyebilir. Bir hata veya kötü amaçlı saldırı durumunda kodunuzun üzerinde çalıştığı veri zarar veremez. Daha fazla bilgi için [izinleri isteyen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
 ## <a name="role-based-security-and-cas"></a>Rol tabanlı güvenlik ve CA'ları  
  Rol tabanlı güvenlik ve kod erişim güvenliği (CAS) hem uygulama, uygulamanız için genel güvenliği geliştirir. Rol tabanlı güvenlik bir Windows hesabı veya güvenlik sorumlusunun hakkında bilgi için geçerli iş parçacığı kullanılabilir hale getirme özel bir kimlik temel alabilir. Ayrıca, uygulamaları genellikle veri veya kullanıcı tarafından sağlanan kimlik bilgilerini temel kaynaklarına erişim sağlamak için gerekli değildir. Genellikle, bu tür uygulamalar, bir kullanıcının rolünü denetlemek ve bu rollere göre kaynaklarına erişim sağlama.  
   
  Bir bileşen çalışma zamanında geçerli kullanıcılar ve ilişkili rolleri tanımlamak rol tabanlı güvenlik sağlar. Bu bilgi çalışma zamanında izinler kümesini belirlemek için bir CAS ilkesini kullanmayı eşlenir. Belirtilen uygulama etki alanı için konağın varsayılan rol tabanlı güvenlik ilkesini değiştirmek ve bir kullanıcı ve bu kullanıcı ile ilişkilendirilen roller temsil eden bir varsayılan güvenlik sorumlusu kümesi.  
   
- CLR, yönetilen kod üzerindeki kısıtlamalar uygulamaya yönelik, mekanizma uygulamak için izinleri kullanır. Rol tabanlı güvenlik izinleri, kullanıcı (veya kullanıcı adına hareket Aracısı) belirli bir kimliğe sahip veya belirtilen bir rol üyesi olup olmadığını keşfetmek için bir mekanizma sağlar. Daha fazla bilgi için [güvenlik izinleri](https://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
+ CLR, yönetilen kod üzerindeki kısıtlamalar uygulamaya yönelik, mekanizma uygulamak için izinleri kullanır. Rol tabanlı güvenlik izinleri, kullanıcı (veya kullanıcı adına hareket Aracısı) belirli bir kimliğe sahip veya belirtilen bir rol üyesi olup olmadığını keşfetmek için bir mekanizma sağlar. Daha fazla bilgi için [güvenlik izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
  Oluşturmakta olduğunuz uygulama türüne bağlı olarak, rol tabanlı izinlere veritabanında uygulama düşünmelisiniz. SQL Server rol tabanlı güvenlik hakkında daha fazla bilgi için bkz. [SQL Server güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "54688112"
  Kullanımını etkinleştirmek için <xref:System.Data.SqlClient> izinleri belirli bir bölge için bir Sistem Yöneticisi ayarlayın ve belirli bir bölge için bir izin olarak ayarlanmış özel izin oluşturmalısınız. İzin kümeleri gibi varsayılan `LocalIntranet`, değiştirilemez. Örneğin dahil etmek için <xref:System.Data.SqlClient> izinlere sahip kod için bir <xref:System.Security.Policy.Zone> , `LocalIntranet`, bir sistem yöneticisi izninin'e ayarlanmış olarak kopyalanamadı `LocalIntranet`, "CustomLocalIntranet için" yeniden adlandırmak, ekleme <xref:System.Data.SqlClient> izinleri, içeri aktarma kullanılarak ayarlanan CustomLocalIntranet izni [Caspol.exe (kod erişimi güvenliği ilke aracı)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)ve izinleri kümesi `LocalIntranet_Zone` CustomLocalIntranet için.  
   
 ### <a name="sample-permission-set"></a>Örnek izin kümesi  
- .NET Framework veri sağlayıcısı için SQL Server için kısmen güvenilen bir senaryoda ayarlayın. bir örnek izin verilmiştir. Özel izin kümeleri oluşturma hakkında daha fazla bilgi için bkz. [NIB: yapılandırma izni ayarlar kullanarak Caspol.exe](https://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ .NET Framework veri sağlayıcısı için SQL Server için kısmen güvenilen bir senaryoda ayarlayın. bir örnek izin verilmiştir. Özel izin kümeleri oluşturma hakkında daha fazla bilgi için bkz. [yapılandırma izni ayarlar kullanarak Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>ADO.NET kod erişim güvenlik izinlerini kullanarak doğrulanıyor  
- Kısmi güven senaryoları için CA ayrıcalıkları belirli yöntemler için kodunuzdaki belirterek gerektirebilir bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Bu ayrıcalık yürürlükte kısıtlı güvenlik ilkesi tarafından izin verilmiyorsa, kodunuzu çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik İlkesi hakkında daha fazla bilgi için bkz. [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) ve [NIB: Güvenlik İlkesi en iyi](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ Kısmi güven senaryoları için CA ayrıcalıkları belirli yöntemler için kodunuzdaki belirterek gerektirebilir bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Bu ayrıcalık yürürlükte kısıtlı güvenlik ilkesi tarafından izin verilmiyorsa, kodunuzu çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik İlkesi hakkında daha fazla bilgi için bkz. [Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) ve [güvenlik ilkesi en iyi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, belirli bir bağlantı dizesi gerektirir kodunun nasıl yazılacağını gösterir. Sınırsız izinleri reddetme benzetim <xref:System.Data.SqlClient>, gerçek hayatta CAS ilkesini kullanarak bir Sistem Yöneticisi uygulayan.  
@@ -196,6 +196,6 @@ Failed, as expected: Request failed.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Yerelde ve .NET Framework kodunda güvenlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rol Tabanlı Güvenlik](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

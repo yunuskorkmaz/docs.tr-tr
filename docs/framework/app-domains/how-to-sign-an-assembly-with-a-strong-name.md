@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599224"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826908"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
@@ -42,6 +42,9 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
 3.  Seçin **derlemeyi imzalamayı** kutusu.  
   
 4.  İçinde **bir tanımlayıcı ad anahtar dosyası seç** kutusunda  **\<Gözat … >** ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için seçin  **\<yeni … >** ve adını girin **katı ad anahtarı oluştur** iletişim kutusu.  
+  
+> [!NOTE]
+>  Şunları [gecikme bir derlemeyi imzalamak](../../../docs/framework/app-domains/delay-sign-assembly.md), ortak anahtar dosyası seçin.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Derleme Bağlayıcısı'nı kullanarak bir derleme oluşturmak ve derlemeyi güçlü bir adla imzalamak için  
   

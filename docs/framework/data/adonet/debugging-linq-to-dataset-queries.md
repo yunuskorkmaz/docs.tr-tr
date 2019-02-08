@@ -2,12 +2,12 @@
 title: LINQ to DataSet sorgularında hata ayıklama
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680513"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825517"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet sorgularında hata ayıklama
 
@@ -16,7 +16,7 @@ Visual Studio destekler, hata ayıklama [!INCLUDE[linq_dataset](../../../../incl
 ## <a name="viewing-results"></a>Sonuçları görüntüleme  
  Sonucu görüntüleyebileceğiniz bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak deyimi. Bir kaynak penceresinde kullanarak, kaynak penceresinde bir sorgunun işaretçisini duraklatabilirsiniz ve bir DataTip görünür. Kopyalayıp bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] değişkenini kopyalayıp İzle penceresine veya QuickWatch iletişim kutusu yapıştırın. İçinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], bir sorgu oluşturulduğunda veya bildirildi, ancak yalnızca sorgu yürütüldüğünde değerlendirilmez. Bu adlandırılır *ertelenmiş yürütme*. Bu nedenle sorgu değişkeni değerlendirilene kadar bir değeri yok. Daha fazla bilgi için [LINQ to DataSet sorgularında](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
   
- Hata ayıklayıcı sorgu sonuçlarını görüntülemek için bir sorguyu değerlendirmelidir. Bu örtülü değerlendirme, görüntülediğinizde gerçekleşir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] hata ayıklayıcı ve sorgu sonucunda önünde bulundurmanız gereken bazı etkilere sahiptir. Her değerlendirme sorgusunun zaman alır. Sonuç düğümlerinin genişletilmesi zaman alır. Bazı sorgular için yinelenen değerlendirme belirgin bir performans düşüşüyle neden olabilir. Bir sorgunun değerlendirilmesi verilerin değerinde veya programınızın durumunu yapılan değişiklikler etkilere neden olabilir. Tüm sorguların yan etkisi yoktur. Bir sorgu yan etkileri olmadan güvenli bir şekilde değerlendirilip değerlendirilmediğini belirlemek için sorguyu uygulayan kodu anlamanız gerekir. Daha fazla bilgi için [yan etkiler ve ifadeler](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).  
+ Hata ayıklayıcı sorgu sonuçlarını görüntülemek için bir sorguyu değerlendirmelidir. Bu örtülü değerlendirme, görüntülediğinizde gerçekleşir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] hata ayıklayıcı ve sorgu sonucunda önünde bulundurmanız gereken bazı etkilere sahiptir. Her değerlendirme sorgusunun zaman alır. Sonuç düğümlerinin genişletilmesi zaman alır. Bazı sorgular için yinelenen değerlendirme belirgin bir performans düşüşüyle neden olabilir. Bir sorgunun değerlendirilmesi verilerin değerinde veya programınızın durumunu yapılan değişiklikler etkilere neden olabilir. Tüm sorguların yan etkisi yoktur. Bir sorgu yan etkileri olmadan güvenli bir şekilde değerlendirilip değerlendirilmediğini belirlemek için sorguyu uygulayan kodu anlamanız gerekir. Daha fazla bilgi için [yan etkiler ve ifadeler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Düzenle ve Devam Et  
  Düzenle ve devam et değişiklikleri desteklemiyor [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgular. Ekleme, kaldırma veya değiştirme, bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimi hata ayıklama oturumu sırasında bir iletişim kutusu görünür bildiren değişikliğin Düzenle ve devam et tarafından desteklenmez. Bu noktada, ya değişiklikleri geri almak veya hata ayıklama oturumunu durdurmak ve düzenlenen kodla yeni bir oturumu yeniden başlatabilirsiniz.  

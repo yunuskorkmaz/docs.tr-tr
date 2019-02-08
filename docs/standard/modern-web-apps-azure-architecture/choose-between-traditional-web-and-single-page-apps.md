@@ -3,17 +3,17 @@ title: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim
 description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek sayfa uygulamaları (Spa'lar) arasında seçim yapma öğrenin.
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745309"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825751"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ile tek sayfa uygulamaları (Spa'lar) arasında seçim yapma
 
-> "Atwood'ın yasaları: JavaScript'te yazılmış herhangi bir uygulama JavaScript'te sonunda yazılır."  
+> "Atwood'ın yasaları: JavaScript'te yazılmış herhangi bir uygulama sonunda yazılır JavaScript'te."  
 > _\- Jeff Atwood_
 
 Bugün web uygulamaları oluşturmak için iki genel yaklaşım vardır: sunucu ve tek sayfa uygulamaları (Spa'lar) bir web tarayıcısında kullanıcı arabirimi mantığının çoğunu gerçekleştirmek uygulama mantığı çoğunu gerçekleştir geleneksel web uygulamaları öncelikle web API'leri kullanarak web sunucusu ile iletişim kurma. Karma bir yaklaşım da mümkündür, en basit olan konak bir veya daha fazla zengin SPA benzeri alt uygulamalar daha büyük geleneksel web uygulaması içinde.
@@ -38,9 +38,13 @@ SPA çerçeveleri büyük gerektiren ek olarak, mimari ve güvenlik uzmanlığı
 
 Kullanıcı deneyiminde SPA modeli tarafından olası yapılan geliştirmeler, bu konuları karşı ağırlıklı gerekir.
 
+## <a name="razor-components"></a>Razor Bileşenleri
+
+ASP.NET Core 3.0 zengin, etkileşimli oluşturmaya yönelik yeni bir model sunar ve birleştirilebilir UI Razor bileşen olarak adlandırılıyordu. Razor bileşenleri, geliştiricilerin sunucu ve tarayıcıya teslim edilmek üzere bu kod için Razor ile kullanıcı arabirimini oluşturma imkan tanır ve istemci tarafı WebAssembly adlı bir JavaScript kitaplığı kullanılarak yürütülür. ASP.NET Core 3.0 halen gelişim aşamasında olan, ancak bu e-kitap 3.0 güncelleştirme bu teknoloji hakkında daha fazla bilgi görmek beklemelisiniz. Razor bileşenler (kod Blazor adlı) hakkında daha fazla bilgi için bkz. [Blazor ile çalışmaya başlama](https://blazor.net/docs/get-started.html).
+
 ## <a name="when-to-choose-traditional-web-apps"></a>Ne zaman geleneksel web uygulamaları seçin
 
-Çekme geleneksel web uygulamaları için daha önce belirtilen nedenlerden daha ayrıntılı bir açıklaması verilmiştir.
+Yukarıda belirtilen nedenlerden çekme geleneksel web uygulamaları için daha ayrıntılı bir açıklaması verilmiştir.
 
 **Uygulamanız basit, salt okunur büyük olasılıkla, istemci-tarafı gereksinimleri vardır**
 
@@ -86,7 +90,7 @@ Aşağıdaki karar tablosu için temel faktör, geleneksel web uygulaması ve bi
 | **faktörü**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
 | JavaScript/TypeScript konusunda gerekli ekip | **En az**             | **Gerekli**                |
-| R betiği oluşturmanıza destek tarayıcılar                   | **Desteklenen**           | **Desteklenmiyor**           |
+| R betiği oluşturmanıza destek tarayıcılar                   | **Destekleniyor**           | **Desteklenmiyor**           |
 | En düşük istemci tarafında uygulama davranışı             | **Uygundur**         | **Düşünülecek**                |
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **Uygundur**             |
 

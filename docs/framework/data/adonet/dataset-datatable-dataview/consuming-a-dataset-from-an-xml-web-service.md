@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608488"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828299"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Bir XML Web hizmetinden DataSet kullanma
 <xref:System.Data.DataSet> Kısmen Internet üzerinden veri uygun taşıma kolaylaştırmak için bağlantısı kesik bir tasarım ile için tasarlanmıştır. **Veri kümesi** girdi olarak belirlenebilir veya ek kodlamaya gerek kalmadan, XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **veri kümesi** bir XML Web hizmeti bir istemci ve arka. **Veri kümesi** örtük olarak biçimini kullanarak bir XML akışı dönüştürülür, ağ üzerinden gönderilen ve ardından XML Akışı'ndan reconstructed bir **veri kümesi** alan uçta. Bu, basit ve esnek bir yöntem iletme ve XML Web Hizmetleri kullanarak ilişkisel verileri döndürmek için sağlar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "54608488"
  Aşağıdaki örnek, bir XML Web hizmeti ve Kullan istemci oluşturma işlemi gösterilmektedir **veri kümesi** (değiştirilen veriler dahil) ilişkisel verilerin taşınması ve güncelleştirmelerden özgün veri kaynağına geri çözmek için.  
   
 > [!NOTE]
->  Biz, her zaman güvenlikle ilgili etkileri XML Web hizmeti oluştururken düşünmenizi öneririz. XML Web hizmeti güvenli hale getirme hakkında daha fazla bilgi için bkz: [güvenli hale getirme XML Web Hizmetleri oluşturulan kullanarak ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Biz, her zaman güvenlikle ilgili etkileri XML Web hizmeti oluştururken düşünmenizi öneririz. XML Web hizmeti güvenli hale getirme hakkında daha fazla bilgi için bkz: [güvenli hale getirme XML Web Hizmetleri oluşturulan kullanarak ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Bir veri kümesini kullanan ve döndüren bir XML Web hizmeti oluşturmak için  
   
@@ -266,5 +266,5 @@ ms.locfileid: "54608488"
 - [DataAdapter’dan bir DataSet Doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

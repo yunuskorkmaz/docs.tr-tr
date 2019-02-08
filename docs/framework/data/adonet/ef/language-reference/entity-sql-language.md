@@ -2,12 +2,12 @@
 title: Entity SQL dili
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 0c698f04c3b95ffb204a20d41e91ef3f6210c5d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b26d9a88130e0449d437ae9dd88e5e818f29f54d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494106"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826232"
 ---
 # <a name="entity-sql-language"></a>Entity SQL dili
 Entity SQL SQL'e benzeyen bir depolamadan bağımsız sorgu dilidir. Entity SQL sorgu bir varlığın verilerinin nesneleri ya da tablo biçiminde sağlar. Aşağıdaki durumlarda varlık SQL kullanmayı düşünmeniz gerekir:  
@@ -48,31 +48,31 @@ Entity SQL SQL'e benzeyen bir depolamadan bağımsız sorgu dilidir. Entity SQL 
 ## <a name="using-entity-sql-with-object-queries"></a>Entity SQL nesnesi sorgularıyla kullanma  
  Entity SQL ile nesne sorguları kullanmak istiyorsanız, daha fazla bilgi için aşağıdaki konulara bakın:  
   
- [Nasıl yapılır: Varlık türü nesnesi döndüren bir sorgu yürütme](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [Nasıl yapılır: Varlık türü nesnesi döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
   
- [Nasıl yapılır: Parametreli bir sorgu yürütme](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [Nasıl yapılır: Parametreli bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))  
   
- [Nasıl yapılır: Gezinti özellikleri kullanarak ilişkilerde gezinme](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [Nasıl yapılır: Gezinti özellikleri kullanarak ilişkilerde gezinme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896321(v=vs.100))  
   
- [Nasıl yapılır: Bir kullanıcı tanımlı işlevi çağırma](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
+ [Nasıl yapılır: Bir kullanıcı tanımlı işlevi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))  
   
- [Nasıl yapılır: Verileri filtreleme](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [Nasıl yapılır: Verileri filtreleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716755(v=vs.100))  
   
- [Nasıl yapılır: Verileri sıralama](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
+ [Nasıl yapılır: Verileri sıralama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716784(v=vs.100))  
   
- [Nasıl yapılır: Verileri gruplandırma](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
+ [Nasıl yapılır: Verileri gruplandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896341(v=vs.100))  
   
- [Nasıl yapılır: Veri toplama](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [Nasıl yapılır: Veri toplama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716738(v=vs.100))  
   
- [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))  
   
- [Nasıl yapılır: Temel türlerin koleksiyonunu döndüren bir sorgu yürütme](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [Nasıl yapılır: Temel türlerin koleksiyonunu döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738451(v=vs.100))  
   
- [Nasıl yapılır: Bir entitycollection'ın ilgili nesneleri sorgulama](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [Nasıl yapılır: Bir entitycollection'ın ilgili nesneleri sorgulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716708(v=vs.100))  
   
- [Nasıl yapılır: Sırada iki sorgu birleşimi](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [Nasıl yapılır: Sırada iki sorgu birleşimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))  
   
- [Nasıl yapılır: Sorgu sonuçları sayfasından](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Nasıl yapılır: Sorgu sonuçları sayfasından](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  

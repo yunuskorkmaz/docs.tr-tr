@@ -3,13 +3,13 @@ title: Ortak web uygulaması mimarileri
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Ortak web uygulaması mimarileri keşfedin
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129941"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826739"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -87,7 +87,7 @@ Uygulamanın büyümesi gerektiğinde gibi daha karmaşık ve güçlü dağıtı
 
 Dahili olarak, bu projenin kuruluşunuzun birden çok proje sorumluluğa tabanlı uygulama Bakımı artırır.
 
-Bu birimi artırmaya veya genişletmeye bulut tabanlı isteğe bağlı ölçeklenebilirlik avantajlarından yararlanmak için ölçeklendirilebilir. Büyütme, uygulamanızı barındıran sunucuların ek CPU, bellek, disk alanı veya diğer kaynaklar ekleme anlamına gelir. Bu fiziksel sunucularda veya sanal makinelerde olup olmadığını ölçek genişletme bu sunucular ek örneklerini eklemek anlamına gelir. Uygulamanızı birden çok örneğine barındırıldığında, bir yük dengeleyici tek tek uygulama örneklerine istekleri atamak için kullanılır.
+Bu birimi artırmaya veya genişletmeye bulut tabanlı isteğe bağlı ölçeklenebilirlik avantajlarından yararlanmak için ölçeklendirilebilir. Büyütme, uygulamanızı barındıran sunucuların ek CPU, bellek, disk alanı veya diğer kaynaklar ekleme anlamına gelir. Bunlar, fiziksel sunucuları, sanal makineler ve kapsayıcılar olup olmadığını ölçek genişletme bu sunucular ek örneklerini eklemek anlamına gelir. Uygulamanızı birden çok örneğine barındırıldığında, bir yük dengeleyici tek tek uygulama örneklerine istekleri atamak için kullanılır.
 
 Azure'da bir web uygulaması ölçeklendirme için en kolay yaklaşım, uygulamanın App Service planında el ile ölçeklendirme yapılandırmaktır. Şekil 5-6 kaç tane örnek bir uygulama hizmet veren yapılandırmak için uygun Azure Pano ekranı gösterilir.
 
@@ -212,9 +212,9 @@ Docker görüntülerini çok daha hızlı olduğundan, güncelleştirmeleri dağ
 
 Kapsayıcıları tasarım gereği kendiliğinden sabittir gibi güncelleştirme betikleri bazı belirli bir yapılandırma veya dosya sol için diskte hesabı Unut ancak, hiçbir zaman bozuk VM'ler hakkında endişelenmenize gerek.
 
-_Docker kapsayıcıları tek parça daha basit web uygulamaları dağıtımını için kullanabilirsiniz. Bu artırır sürekli tümleştirme ve sürekli dağıtım işlem hatları ve üretim için dağıtım başarı elde etmenize yardımcı olur. Daha fazla "neden üretimde çalışmaz makineme çalışır?"_
+Docker kapsayıcıları tek parça daha basit web uygulamaları dağıtımını için kullanabilirsiniz. Bu artırır sürekli tümleştirme ve sürekli dağıtım işlem hatları ve üretim için dağıtım başarı elde etmenize yardımcı olur. Daha fazla "neden üretimde çalışmaz makineme çalışır?"
 
-Bir mikro hizmet tabanlı mimariye pek çok faydası vardır, ancak bu avantajlar bulunan artan karmaşıklık bedeli. Bazı durumlarda, maliyetleri ağır basıyor, tek bir kapsayıcı veya yalnızca birkaç kapsayıcıları çalışan bir tek parçalı dağıtım uygulaması daha iyi bir seçenektir.
+Bir mikro hizmet tabanlı mimariye pek çok faydası vardır, ancak bu avantajlar bulunan artan karmaşıklık bedeli. Daha iyi bir seçenek tek bir kapsayıcı veya yalnızca birkaç kapsayıcıları çalışan bir tek parçalı dağıtım uygulaması, bu nedenle bazı durumlarda, maliyetler, ağır basıyor.
 
 Tek parça bir uygulamayı kolayca iyi ayrılmış mikro hizmetler halinde decomposable olmayabilir. Mikro hizmetler karşı daha dayanıklı bir uygulama sağlamak için birbirinden çalışması gerekir. Uygulamanın bağımsız özellik dilimleri teslim edilemiyor, bu ayırma karmaşıklık yalnızca ekler.
 
@@ -224,7 +224,7 @@ Erken geliştirme bir uygulamanın, sizin dair NET bir fikir doğal işlevsel s�
 
 Bir uygulamaya birçok ayrı işlemler ayırma yükü tanıtır. Özellikler farklı işlemlere ayırmak daha karmaşık yoktur. İletişim protokolleri, daha karmaşık hale gelir. Yerine yöntem çağrılarını, hizmetler arasında zaman uyumsuz iletişim kullanmanız gerekir. Bir mikro hizmet mimarisi için taşırken, birçok hizmetine uygulama mikro hizmetler sürümünde yapı taşlarını eklemeniz gerekir: olay veri yolu işleme, ileti dayanıklılık ve yeniden denemeler, nihai tutarlılığa kadar giden ve daha fazla.
 
-Çok daha kolay [eShopOnWeb başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnWeb) tek kapsayıcı monolitik kapsayıcı kullanımını destekler. İki web uygulaması uygulama içerir: Geleneksel MVC ve Razor sayfaları kullanarak birbirine kullanarak bir tane. Her ikisini de kullanarak çözüm kök başlatılabilir `docker-compose build` ve `docker-compose up` komutları. Bu komut, her web için ayrı kapsayıcıları yapılandırır kullanarak örnek `Dockerfile` her web projesinin kök dizininde bulunan ve her kapsayıcı ayrı bir bağlantı noktası üzerinde çalışır. Bu uygulama kaynağını Github'dan indirip yerel olarak çalıştırın. Tek parça bu uygulama bir kapsayıcı ortamında dağıtılan fayda sağlar.
+Çok daha kolay [eShopOnWeb başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnWeb) tek kapsayıcı monolitik kapsayıcı kullanımını destekler. Uygulama, geleneksel MVC görünümleri, web API'leri ve Razor sayfaları içeren bir web uygulaması içerir. Bu uygulamayı kullanarak çözüm kök başlatılabilir `docker-compose build` ve `docker-compose up` komutları. Bu komut, web kapsayıcısı yapılandırır kullanarak örnek `Dockerfile` web projesinin kök dizininde bulunan ve belirtilen bir bağlantı noktası kapsayıcı çalışır. Bu uygulama kaynağını Github'dan indirip yerel olarak çalıştırın. Tek parça bu uygulama bir kapsayıcı ortamında dağıtılan fayda sağlar.
 
 Biri için kapsayıcı dağıtımı uygulamanın her örneği aynı ortamda çalıştığı anlamına gelir. Bu, burada erken test ve geliştirme gerçekleşmesi Geliştirici ortamı içerir. Geliştirme ekibi, uygulamayı üretim ortamına eşleşen bir kapsayıcı ortamında çalıştırabilirsiniz.
 
@@ -236,24 +236,14 @@ Son olarak, ASP.NET'in, iş mantığı ve depolama sunucusu arasında bir ayrım
 
 `eShopOnWeb` Üzerinde .NET Core projesi çalıştırır. Bu nedenle, Windows tabanlı veya Linux tabanlı kapsayıcılar içinde çalıştırabilirsiniz. Aynı ana bilgisayar türü için SQL Server kullanmak istediğiniz bir dağıtım için Docker unutmayın. Linux tabanlı kapsayıcılar bir daha küçük kaplama alanı izin ve tercih edilir.
 
-Visual Studio 2017 Docker desteği, bir projeye sağ tıklayarak mevcut bir uygulamaya eklemek için kullanabileceğiniz **Çözüm Gezgini** seçip **Ekle** > **Docker desteği** . Bu, gerekli dosyaları ekler ve bunları kullanmak için projeyi değiştirir. Geçerli `eShopOnWeb` örnek zaten bu dosyaları yerinde sahiptir.
+Visual Studio 2017 veya sonraki bir projeye sağ tıklayarak mevcut bir uygulamaya Docker desteği eklemek için kullanabileceğiniz **Çözüm Gezgini** seçip **Ekle** > **Docker Destek**. Bu, gerekli dosyaları ekler ve bunları kullanmak için projeyi değiştirir. Geçerli `eShopOnWeb` örnek zaten bu dosyaları yerinde sahiptir.
 
-Çözüm düzeyinde `docker-compose.yml` dosya ne oluşturmak için görüntüler ve başlatmak için hangi kapsayıcıları hakkında bilgiler içerir. Dosya kullanmanıza olanak tanır `docker-compose` iki sürümü de aynı zamanda web uygulamasını başlatmak için komutu. Bağımlılıklar, ayrı bir veritabanı kapsayıcısı gibi yapılandırmak için de kullanabilirsiniz.
+Çözüm düzeyinde `docker-compose.yml` dosya ne oluşturmak için görüntüler ve başlatmak için hangi kapsayıcıları hakkında bilgiler içerir. Dosya kullanmanıza olanak tanır `docker-compose` birden çok uygulama aynı anda başlatmak için komutu. Bu durumda, yalnızca Web projesi kullanıma sunuluyor. Bağımlılıklar, ayrı bir veritabanı kapsayıcısı gibi yapılandırmak için de kullanabilirsiniz.
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` Dosya başvuruları `Dockerfile` içinde `Web` ve `WebRazorPages` projeleri. `Dockerfile` Nasıl uygulama üzerinde yapılandırılır ve hangi temel kapsayıcı kullanılacak belirtmek için kullanılır. `WebRazorPages`' `Dockerfile`:
+`docker-compose.yml` Dosya başvuruları `Dockerfile` içinde `Web` proje. `Dockerfile` Nasıl uygulama üzerinde yapılandırılır ve hangi temel kapsayıcı kullanılacak belirtmek için kullanılır. `Web`' `Dockerfile`:
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Docker ile ilgili sorunları giderme
@@ -300,10 +289,9 @@ Kapsayıcılı uygulama çalıştırıldıktan sonra siz durduruncaya kadar çal
 
 Çalışan Docker kapsayıcılar, aksi takdirde kullanılacak geliştirme ortamınızda deneyebilir bağlantı noktalarına bağlı olabilir olduğunu unutmayın. Çalıştırın veya çalışan bir Docker kapsayıcısı aynı bağlantı noktasını kullanarak bir uygulamanın hatalarını ayıklama kullanmayı denerseniz, sunucunun bu bağlantı noktasına bağlanamaz bildiren bir hata alırsınız. Bir kez daha, kapsayıcı durdurma Sorun giderildi.
 
-Visual Studio'yu kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bunu yaptığınızda Docker çalıştığından emin olun. Docker çalışmıyorsa Sihirbazı başlattığınızda sihirbaz düzgün çalışmıyor. Ayrıca, sihirbazın geçerli kapsayıcı seçiminizi doğru Docker desteği Ekle inceler. Windows kapsayıcıları için destek eklemek istiyorsanız, Windows yapılandırılmış kapsayıcılarla çalışan Docker varken, Sihirbazı çalıştırmak gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, yapılandırılmış Linux kapsayıcıları ile çalışan Docker varken Sihirbazı'nı çalıştırın.
+Visual Studio'yu kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bunu yaptığınızda Docker Masaüstü çalıştığından emin olun. Docker Masaüstü çalışmıyorsa Sihirbazı başlattığınızda sihirbaz düzgün çalışmıyor. Ayrıca, sihirbazın geçerli kapsayıcı seçiminizi doğru Docker desteği Ekle inceler. Windows kapsayıcıları için destek eklemek istiyorsanız, Docker Windows yapılandırılmış kapsayıcılarla çalıştıran masaüstü varken, Sihirbazı çalıştırmak gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, yapılandırılmış Linux kapsayıcıları ile çalışan Docker varken Sihirbazı'nı çalıştırın.
 
-> ### <a name="references--common-web-architectures"></a>Başvuruları – ortak web mimarileri
->
+### <a name="references--common-web-architectures"></a>Başvuruları – ortak web mimarileri
 > - **Temiz mimarisi**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Çoklu kare mimarisi**  

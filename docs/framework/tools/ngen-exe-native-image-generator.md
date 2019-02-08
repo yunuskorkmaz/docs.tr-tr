@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d6550282f9a64912ec3306a3b898845e894d165
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592633"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827220"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -50,7 +50,7 @@ Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performans�
   
  Windows 8'de bkz [Native Image Task](#native-image-task).  
   
- Ngen.exe ve yerel görüntü hizmetini kullanma hakkında ek bilgi için bkz: [Native Image Service][Native Image Service].  
+ Ngen.exe ve yerel görüntü hizmetini kullanma hakkında ek bilgi için bkz: [Native Image Service](#native-image-service).  
   
 > [!NOTE]
 >  1.0 ve 1.1 .NET Framework sürümleri için Ngen.exe sözdizimi bulunabilir [Native Image Generator (Ngen.exe) Legacy Syntax](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
@@ -96,7 +96,7 @@ ngen /? | /help
 |--------------|-----------------|  
 |`1`|Yerel görüntüler, boşta kalma süresi beklenmeden hemen oluşturulur ve yüklenir.|  
 |`2`|Yerel görüntüler boşta kalma süresi beklenmeden, ancak tüm 1 öncelikli eylemler (ve bağımlılıkları) tamamlandıktan sonra yüklenir.|  
-|`3`|Yerel görüntüler, yerel görüntü hizmeti bilgisayarın boşta olduğunu algıladığında yüklenir. Bkz: [yerel görüntü hizmeti][Native Image Service].|  
+|`3`|Yerel görüntüler, yerel görüntü hizmeti bilgisayarın boşta olduğunu algıladığında yüklenir. Bkz: [yerel görüntü hizmeti](#native-image-service).|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>Senaryolar  
@@ -313,7 +313,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>Ertelenen işlem  
- Çok büyük bir uygulama için yerel görüntü oluşturmak uzun bir süre alabilir. Benzer şekilde, paylaşılan bir bileşene veya bilgisayar seçeneklerine yapılan değişiklikler pek çok yerel görüntünün güncellenmesini gerektirebilir. `install` Ve `update` eylemlerinde bir `/queue` yerel görüntü hizmeti tarafından Ertelenen yürütme için işlemi kuyruklar seçeneği. Ayrıca, Ngen.exe sahip `queue` ve `executeQueuedItems` hizmet üzerinde bir miktar denetim sağlayan eylemler. Daha fazla bilgi için [Native Image Service][Native Image Service].  
+ Çok büyük bir uygulama için yerel görüntü oluşturmak uzun bir süre alabilir. Benzer şekilde, paylaşılan bir bileşene veya bilgisayar seçeneklerine yapılan değişiklikler pek çok yerel görüntünün güncellenmesini gerektirebilir. `install` Ve `update` eylemlerinde bir `/queue` yerel görüntü hizmeti tarafından Ertelenen yürütme için işlemi kuyruklar seçeneği. Ayrıca, Ngen.exe sahip `queue` ve `executeQueuedItems` hizmet üzerinde bir miktar denetim sağlayan eylemler. Daha fazla bilgi için [Native Image Service](#native-image-service).  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>Yerel görüntüler ve JIT derlemesi  
@@ -470,7 +470,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- Tüm görüntüleri güncelleştirmek uzun süren bir işlem olabilir. Yürütme için güncelleştirmeleri kullanarak yerel görüntü hizmeti tarafından sıraya alabilirsiniz `/queue` seçeneği. Daha fazla bilgi için `/queue` seçeneği ve yükleme öncelikleri bkz [Native Image Service][Native Image Service].  
+ Tüm görüntüleri güncelleştirmek uzun süren bir işlem olabilir. Yürütme için güncelleştirmeleri kullanarak yerel görüntü hizmeti tarafından sıraya alabilirsiniz `/queue` seçeneği. Daha fazla bilgi için `/queue` seçeneği ve yükleme öncelikleri bkz [Native Image Service](#native-image-service).  
   
 ```  
 ngen update /queue  
@@ -511,7 +511,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  Olduğu gibi `install` eylemi, bir uzantı sağlamak ya Ngen.exe'nin derlemeyi içeren veya bir tam yol belirtilmesini dizinden yürütülmesini gerektirir.  
   
- Yerel görüntü hizmetiyle ilgili örnekler için bkz. [Native Image Service][Native Image Service].  
+ Yerel görüntü hizmetiyle ilgili örnekler için bkz. [Native Image Service](#native-image-service).  
   
 ## <a name="native-image-task"></a>Yerel Görüntü Görevi  
  Yerel görüntü görevi oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görevi oluşturur ve yerel görüntüleri için desteklenen senaryolar için bir otomatik olarak geri kazanır. (Bkz [yerel görüntüler oluşturma](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Ayrıca, kullanmak yükleyicileri sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturup ertelenmiş aynı anda yerel görüntüleri güncelleştir.  
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN v4.0.30319|Evet|Evet|  
 |NET Framework NGEN v4.0.30319 64|Hayır|Evet|  
   
- Yerel görüntü Görevi çalıştırırken Windows 8 veya daha sonra .NET Framework 4.5 ve sonraki sürümlerinde kullanılabilir. Önceki Windows sürümlerinde .NET Framework kullanan [Native Image Service][Native Image Service].  
+ Yerel görüntü Görevi çalıştırırken Windows 8 veya daha sonra .NET Framework 4.5 ve sonraki sürümlerinde kullanılabilir. Önceki Windows sürümlerinde .NET Framework kullanan [Native Image Service](#native-image-service).  
   
 ### <a name="task-lifetime"></a>Görev ömrü  
  Genel olarak, Windows Görev Zamanlayıcısı'nı bilgisayar boşta olduğunda her gece yerel görüntü görevi başlatır. Görev uygulama yükleyicileri, tüm ertelenmiş yerel görüntü güncelleştirme istekleri ve herhangi bir otomatik görüntü oluşturma tarafından sıraya alınan tüm ertelenmiş çalışmadır denetler. Görev, bekleyen iş öğeleri tamamlandıktan ve kapanır. Bilgisayar, Görev yürütülürken boşta kaldıktan durduğunda, görev durdurur.  
@@ -589,5 +589,3 @@ ngen executeQueuedItems
 - [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
-[Native Image Service]: #native-image-service

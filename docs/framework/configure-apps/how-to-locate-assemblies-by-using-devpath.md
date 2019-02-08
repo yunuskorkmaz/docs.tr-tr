@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084503"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826687"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Nasıl yapılır: DEVPATH kullanarak derlemelerin bulun
 Geliştiriciler, oluşturmakta olduğunuz paylaşılan bir derleme birden çok uygulama ile doğru şekilde çalıştığından emin olmak isteyebilirsiniz. Geliştirme döngüsü sırasında genel derleme önbelleğinde sürekli derleme almak yerine Geliştirici derlemesi için derleme çıktı dizinine işaret eden bir DEVPATH ortam değişkeni oluşturabilirsiniz.  
@@ -44,4 +44,5 @@ Geliştiriciler, oluşturmakta olduğunuz paylaşılan bir derleme birden çok u
 >  Yalnızca geliştirme sırasında bu ayarı kullanın. Çalışma zamanı, tanımlayıcı adlı derlemeler DEVPATH içinde bulunan sürümlerinde denetlemez. Yalnızca bulduğu ilk derlemeyi de kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework uygulamalarını yapılandırma](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+
+- [Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](index.md)

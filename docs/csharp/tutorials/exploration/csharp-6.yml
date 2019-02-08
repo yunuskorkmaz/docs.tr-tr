@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634265"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807045"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Aynı deneyin `Caps` yöntemi. Küçük geliştirme budur ancak akıllıca kullanıldığında daha okunabilir bir kod özellikle veri aktarımı nesneleri (Dto) ve diğer türler en az bir davranış için oluşturur.
+    Aynı deneyin `AllCaps` yöntemi. Küçük geliştirme budur ancak akıllıca kullanıldığında daha okunabilir bir kod özellikle veri aktarımı nesneleri (Dto) ve diğer türler en az bir davranış için oluşturur.
 - title: Tek bir sınıfı içeri aktarılıyor
   durationInMinutes: 2
   content: "Kodunuzu sürekli olarak bir sınıfın statik yöntemleri kullanırsanız, her zaman sınıf adı dahil olmak üzere, kodunuzun anlamı gizler. `Person` Sınıfı şu anda içeri aktarmalar `System` ad alanı, yalnızca olsa bile <xref:System.Console?displayProperty=nameWithType> kullanılır. Değiştirme `using` deyimi aşağıdaki gibi:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n`static using` Bildirimi gibi çok sayıda statik yöntemleriyle kapsamlı kullanımını tek bir sınıf yapmak daha büyük programlarda daha kullanışlı olur [ `string` ](xref:System.String) sınıfı veya <xref:System.Math?displayProperty=nameWithType> sınıfı.\n"

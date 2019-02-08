@@ -4,12 +4,12 @@ description: C# dilinde öznitelikleri nasıl çalıştığını öğrenin.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029833"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826830"
 ---
 # <a name="using-attributes-in-c"></a>Öznitelikleri kullanarak C# #
 
@@ -137,7 +137,7 @@ Ayrıca her zaman örneği oluşturulur. Çağırma `GetCustomAttributes` arka a
 * `[Obsolete]`. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
 
 * `[Conditional]`. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
-Eşleşme dize, bir `#define` yönergesi, ardından bu yöntem (ancak yöntemin kendisi değil) yapılan her çağrı C# derleyicisi tarafından kaldırılacak. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
+Bu dize eşleşmiyorsa bir `#define` yönergesi, ardından bu yöntem (ancak yöntemin kendisi değil) yapılan her çağrı tarafından kaldırılacak C# derleyici. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
 
 * `[CallerMemberName]`. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
 

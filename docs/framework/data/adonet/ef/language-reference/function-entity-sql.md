@@ -2,12 +2,12 @@
 title: İŞLEV (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: 6da7c1c11cb6211764fac5ca7b210788784a7c21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0ace658de0cc6d1ee2d50c9e86d66dea1ac649a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697367"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827545"
 ---
 # <a name="function-entity-sql"></a>İŞLEV (varlık SQL)
 Bir işlev bir varlık SQL sorgusu komutu kapsamında tanımlar.  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Daha fazla bilgi için [nasıl yapılır: Bir kullanıcı tanımlı işlevi çağırma](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
+ Daha fazla bilgi için [nasıl yapılır: Bir kullanıcı tanımlı işlevi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  İşlevler Ayrıca model içinde bildirilebilir. Model içinde bildirilen işlevlerle aynı şekilde komutta bildirilen satır içi işlevleri gibi yürütülür. Daha fazla bilgi için [kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
   

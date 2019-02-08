@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707485"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828351"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda JIT şifrelenmemiş bir bağlantı dizeleri kullanarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Ayrıca, bağlantı dizesini hiç olmadığı kadar değişirse, uygulamanızı derlenmelidir. Bu nedenle, bir uygulama yapılandırma dosyasında bağlantı dizelerini depolamanızı öneririz.  
@@ -70,7 +70,7 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  .NET Framework 2.0 ile başlayarak <xref:System.Configuration.ConfigurationManager> yapılandırma dosyaları yerel bilgisayarda kullanım dışı değiştirme ile çalışırken kullanılan <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET yapılandırma dosyaları ile çalışmak için kullanılır. Yapılandırma dosyalarını bir Web sunucusu ile çalışacak şekilde tasarlanmıştır ve gibi yapılandırma dosyanın bölümleri programlı erişim sağlayan **system.web**.  
   
 > [!NOTE]
->  Yapılandırma dosyalarını çalışma zamanında erişme izinleri verme çağırana gerektirir; gerekli izinler, uygulama ve yapılandırma dosyası konumu türüne bağlıdır. Daha fazla bilgi için [yapılandırma sınıflarını kullanarak](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc) ve <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET uygulamaları için ve <xref:System.Configuration.ConfigurationManager> Windows uygulamaları için.  
+>  Yapılandırma dosyalarını çalışma zamanında erişme izinleri verme çağırana gerektirir; gerekli izinler, uygulama ve yapılandırma dosyası konumu türüne bağlıdır. Daha fazla bilgi için [yapılandırma sınıflarını kullanarak](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) ve <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET uygulamaları için ve <xref:System.Configuration.ConfigurationManager> Windows uygulamaları için.  
   
  Kullanabileceğiniz <xref:System.Configuration.ConnectionStringSettingsCollection> uygulama yapılandırma dosyalarından bağlantı dizelerini almak için. Bir koleksiyonunu içeren <xref:System.Configuration.ConnectionStringSettings> tek giriş her biri temsil eden nesneleri **connectionStrings** bölümü. Bağlantı dizesi öznitelikleri, veya sağlayıcı adını belirterek bir bağlantı dizesi alma olanak tanıyan özelliklerini eşleyin.  
   
@@ -102,7 +102,7 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Yapılandırma dosyası bölümleri kullanarak şifreleme korumalı yapılandırma  
- ASP.NET 2.0 kullanılmaya adlı yeni bir özellik *yapılandırmanın korumalı*, yapılandırma dosyasındaki hassas bilgileri şifrelemek etkinleştirir. Öncelikli olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarında yapılandırma dosyası bölümleri şifrelemek için korumalı yapılandırma de kullanılabilir. Korumalı yapılandırma özelliklerinin ayrıntılı bir açıklaması için bkz [şifreleme yapılandırma bilgilerini kullanarak korumalı Yapılandırması](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+ ASP.NET 2.0 kullanılmaya adlı yeni bir özellik *yapılandırmanın korumalı*, yapılandırma dosyasındaki hassas bilgileri şifrelemek etkinleştirir. Öncelikli olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarında yapılandırma dosyası bölümleri şifrelemek için korumalı yapılandırma de kullanılabilir. Korumalı yapılandırma özelliklerinin ayrıntılı bir açıklaması için bkz [şifreleme yapılandırma bilgilerini kullanarak korumalı Yapılandırması](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
  Şu yapılandırma dosyasını gösterir parçalara **connectionStrings** şifrelenmiş sahip sonra bölüm. **ConfigProtectionProvider** şifreleme ve şifre çözme bağlantı dizeleri için kullanılan korumalı yapılandırma sağlayıcısını belirtir. **EncryptedData** bölüm şifre metni içerir.  
   
@@ -136,16 +136,16 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
   
 |Sağlayıcı|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Şifrelemek ve verilerin şifresini çözmek için RSA şifreleme algoritması kullanır. RSA algoritması, ortak anahtar şifreleme ve dijital imzalar için kullanılabilir. İki farklı anahtar kullanan olarak da bilinen "ortak anahtarı" ya da asimetrik şifreleme olmasıdır. Kullanabileceğiniz [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) Web.config dosyasında bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için. Dosya işlediğinde, ASP.NET yapılandırma dosyasının şifresini çözer. ASP.NET uygulamasını kimliği şifrelemek ve şifrelenmiş bölümlerindeki şifreyi çözmek için kullanılan şifreleme anahtarını okuma erişiminiz olması gerekir.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Şifrelemek ve verilerin şifresini çözmek için RSA şifreleme algoritması kullanır. RSA algoritması, ortak anahtar şifreleme ve dijital imzalar için kullanılabilir. İki farklı anahtar kullanan olarak da bilinen "ortak anahtarı" ya da asimetrik şifreleme olmasıdır. Kullanabileceğiniz [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) Web.config dosyasında bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için. Dosya işlediğinde, ASP.NET yapılandırma dosyasının şifresini çözer. ASP.NET uygulamasını kimliği şifrelemek ve şifrelenmiş bölümlerindeki şifreyi çözmek için kullanılan şifreleme anahtarını okuma erişiminiz olması gerekir.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Yapılandırma bölümleri şifrelemek için Windows Data Protection API (DPAPI) kullanır. Windows yerleşik Şifreleme Hizmetleri kullanır ve makineye özgü ya da kullanıcı hesaplarına özgü koruması için yapılandırılabilir. Makineye özgü koruma, bilgi paylaşımı için gereken aynı sunucuda birden fazla uygulama için yararlıdır. Kullanıcı hesaplarına özgü koruma, paylaşılan bir barındırma ortamı gibi belirli bir kullanıcı kimliği ile çalışan hizmetler ile kullanılabilir. Her uygulama, dosyalar ve veritabanları gibi kaynaklara erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
   
- Her iki sağlayıcıları verileri güçlü şifreleme sağlar. Ancak, Web grubu gibi yalnızca birden çok sunucuda aynı şifrelenmiş yapılandırma dosyası kullanmayı planladığınıza varsa `RsaProtectedConfigurationProvider` verileri şifrelemek ve bunları başka bir sunucuya almak için kullanılan şifreleme anahtarlarını dışarı aktarmak sağlar. Daha fazla bilgi için [alma ve verme korumalı yapılandırma RSA anahtar kapsayıcılarının](https://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
+ Her iki sağlayıcıları verileri güçlü şifreleme sağlar. Ancak, Web grubu gibi yalnızca birden çok sunucuda aynı şifrelenmiş yapılandırma dosyası kullanmayı planladığınıza varsa `RsaProtectedConfigurationProvider` verileri şifrelemek ve bunları başka bir sunucuya almak için kullanılan şifreleme anahtarlarını dışarı aktarmak sağlar. Daha fazla bilgi için [alma ve verme korumalı yapılandırma RSA anahtar kapsayıcılarının](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Yapılandırma sınıflarını kullanma  
  <xref:System.Configuration> Ad alanı yapılandırma ayarları ile çalışma için sınıflar sağlar programlı olarak. <xref:System.Configuration.ConfigurationManager> Sınıfı makine, uygulama ve kullanıcı yapılandırma dosyalarına erişim sağlar. Bir ASP.NET uygulaması oluşturuyorsanız, kullanabileceğiniz <xref:System.Web.Configuration.WebConfigurationManager> olsa da gibi ASP.NET uygulamalarının özgü ayarları erişmenize olanak tanıyan bulunan aynı işlevselliği sağlar sınıfını  **\< System.Web >**.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> Ad alanı, şifreleme ve verilerin şifresini çözmek için ek seçenekler sağlayan sınıflar içerir. Yapılandırma kullanılarak kullanılabilir olmayan Şifreleme Hizmetleri korumalı gerektiriyorsa, bu sınıfları kullanın. Diğerleri yalnızca yönetilen uygulamalar bu sınıfların bazıları için yönetilmeyen Microsoft CryptoAPI sarmalayıcıları bağlıdır. Daha fazla bilgi için [Şifreleme Hizmetleri](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  <xref:System.Security.Cryptography> Ad alanı, şifreleme ve verilerin şifresini çözmek için ek seçenekler sağlayan sınıflar içerir. Yapılandırma kullanılarak kullanılabilir olmayan Şifreleme Hizmetleri korumalı gerektiriyorsa, bu sınıfları kullanın. Diğerleri yalnızca yönetilen uygulamalar bu sınıfların bazıları için yönetilmeyen Microsoft CryptoAPI sarmalayıcıları bağlıdır. Daha fazla bilgi için [Şifreleme Hizmetleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>App.config örneği  
  Bu örnekte şifreleme geçiş yapmayı gösteren **connectionStrings** konusundaki bir **app.config** bir Windows uygulaması için dosya. Bu örnekte, yordam bağımsız değişkeni, örneğin, "MyApplication.exe" olarak uygulamanın adını alır. **App.config** dosya ardından şifrelenir ve "MyApplication.exe.config" adı altında yürütülebilir dosyayı içeren klasöre kopyalanır.  
@@ -167,12 +167,12 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Daha fazla bilgi için ASP.NET uygulamalarının güvenliğini sağlama [NIB: ASP.NET güvenlik](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik yöntemler bir bakışta](https://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici merkezinde.  
+ ASP.NET uygulamalarının güvenliğini sağlama hakkında daha fazla bilgi için bkz. [güvenli hale getirme ASP.NET web siteleri](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Uygulamaları Yapılandırma](../../../../docs/framework/configure-apps/index.md)
-- [ASP.NET Web sitesi yönetimi](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ASP.NET Web sitesi yönetimi](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

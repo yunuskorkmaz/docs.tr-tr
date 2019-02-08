@@ -3,13 +3,13 @@ title: ASP.NET Core MVC geliştirme uygulamaları
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.NET Core MVC uygulamaları geliştirme
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.date: 01/30/2019
+ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058509"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827892"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -17,6 +17,24 @@ ms.locfileid: "54058509"
 > _-Andrew Hunt ve David Thomas_
 
 ASP.NET Core, modern bulut için iyileştirilmiş web uygulamaları oluşturmaya yönelik platformlar arası, açık kaynaklı bir çerçevedir. ASP.NET Core uygulamaları, basit ve modüler, bağımlılık ekleme, büyük Test Edilebilirlik ve bakımı etkinleştirmek için yerleşik destek. Görünüm tabanlı uygulamaların yanı sıra modern web API'leri oluşturmaya destekler, MVC ile birleştirilmiş ASP.NET Core, Kurumsal web uygulamaları oluşturmak güçlü bir çerçeve olan.
+
+## <a name="mvc-and-razor-pages"></a>MVC ve Razor sayfaları
+
+ASP.NET Core MVC, web tabanlı API'leri ve uygulamaları oluşturmak için faydalı olan birçok yeni özellik sunar. Terimi MVC "Model-View-Controller", birden fazla parçaya kullanıcı isteklerini yanıtlama sorumluluklarını'kurmak keser bir UI desenini gösterir. Bu düzen aşağıdaki ek olarak, ayrıca özellikleri ASP.NET Core uygulamalarınızı Razor sayfaları uygulayabilirsiniz. Razor sayfaları, ASP.NET Core MVC oluşturulur ve yönlendirme, model bağlama, vb. için aynı özellikleri kullanın. Ancak, sahip ayrı bir klasör ve dosyaları denetleyicileri, görünümler, vb. için ve öznitelik tabanlı yönlendirme kullanarak yerine, Razor sayfaları tek bir klasöre yerleştirilir ("/ Sayfa"), bu klasördeki göreli konumlarını temel rota ve tanıtıcı işleyicilerle ister Denetleyici eylemleri yerine.
+
+Yeni bir ASP.NET Core uygulaması oluştururken, oluşturmak istediğiniz uygulamanın türüne aklınızda bir plana sahip olmalısınız. Visual Studio'da çeşitli şablonlardan seçeneğini belirleyin. Üç yaygın proje şablonları, Web API'si, Web uygulaması ve Web uygulaması (Model-View-Controller) ' dir. Bir proje oluşturduğunuzda bu karar yalnızca yapabilmenize rağmen değiştirilemeyen bir karar değil. Web API projesi Standart Model-View-Controller denetleyicileri kullanır: varsayılan olarak yalnızca görünümleri eksik. Benzer şekilde, varsayılan Web uygulaması şablonu Razor sayfaları kullanır ve bu nedenle ayrıca bir görünüm klasörü eksik. Daha sonra Görünüm tabanlı davranış desteklemek için bu projeler için bir görünüm klasörü ekleyebilirsiniz. Web API ve Model-View-Controller projeleri sayfalar klasöründe varsayılan olarak içermez, ancak daha sonra Razor sayfaları tabanlı olarak davranışı desteklemek için bir tane ekleyebilirsiniz. Bu üç Şablonları üç farklı türde varsayılan kullanıcı etkileşimi destekleyen olarak düşünebilirsiniz: veri (web API), sayfa ve görünüm tabanlı. Ancak, karıştırın ve isterseniz bunları tek bir proje içinde bir bölümünü veya tamamını eşleşmesi.
+
+### <a name="why-razor-pages"></a>Neden Razor sayfaları?
+
+Razor sayfaları Visual Studio'da yeni web uygulamaları için varsayılan yaklaşım olur. Razor sayfaları SPA olmayan formlar gibi sayfa tabanlı uygulama özellikleri oluşturmanın daha basit bir yol sunar. Denetleyicileri ve görünümleri kullanarak, birçok farklı bağımlılıklara çalışan çok büyük denetleyicilerine sahip uygulamalar için ortak olduğundan ve görünüm modelleri ve birçok farklı görünümleri döndürdü. Bu, karmaşıklık çok sonuçlandı ve genellikle tek sorumluluk ilke veya açık/kapalı ilkeleri etkili bir şekilde izleyen yaramadı denetleyicileri sonuçlandı. Razor sayfaları belirli bir mantıksal "Sayfa" bir web uygulaması, Razor işaretlemesi ile sunucu tarafı mantık kapsülleyerek bu sorunu giderir. Hiçbir sunucu tarafı mantığı içeren bir Razor sayfası, yalnızca bir Razor dosyasını (örneğin, "Index.cshtml") oluşabilir. Ancak, çoğu Önemsiz Razor sayfaları, kural tarafından hangi Razor dosyasını (örneğin, "Index.cshtml.cs") ".cs" uzantısı ile aynı adlı bir ilişkili sayfa modeli sınıfı sahip olur.
+
+Bir Razor sayfa sayfa modeli MVC denetleyicisi sorumluluklarını bir viewmodel birleştirir. Denetleyici eylem yöntemleri ile isteklerini işlemek yerine "OnGet()" gibi sayfa modeli işleyicileri, varsayılan olarak, ilişkili sayfa işleme yürütülür. Razor sayfaları hala mimari ASP.NET Core MVC özelliklerinin tümünü sağlamanın yanı sıra tek tek sayfaları, ASP.NET Core uygulaması oluşturma işlemini basitleştirir. Yeni sayfa tabanlı işlevselliği için iyi bir varsayılan seçim oldukları.
+
+### <a name="when-to-use-mvc"></a>MVC kullanıldığı durumlar
+
+Web API'leri oluşturuyorsanız, MVC örüntüsü Razor sayfaları kullanmaya çalışıyor değerinden daha anlamlı olur. Projenizi yalnızca web API uç noktaları açığa çıkarır, ideal olarak Web API proje şablonundan başlamalıdır, ancak tüm ASP.NET Core uygulamaları için denetleyicileri ve ilişkili API uç noktalarını eklemek kolaydır Aksi takdirde. Görünüm tabanlı MVC yaklaşım var olan bir uygulamayı ASP.NET MVC 5 veya daha önceki ASP.NET Core MVC geçiş yapıyorsanız ve en az çaba ile bunu yapmak istiyorsanız kullanmanız gerekir. İlk geçiş yaptıktan sonra bile toptan geçiş olarak veya yeni özellikler için Razor sayfaları benimsemek için mantıklı olup olmadığını değerlendirebilirsiniz.
+
+Razor sayfaları veya MVC görünümleri kullanarak web uygulamanızı oluşturmak seçtiğiniz olsun, uygulamanız benzer performans sahip olur ve bağımlılık ekleme, filtreler, model bağlama ve doğrulama, vs. desteğini içerir.
 
 ## <a name="mapping-requests-to-responses"></a>Eşleme isteklerini yanıtlar
 
@@ -58,6 +76,18 @@ public class ProductsController : Controller
 }
 ```
 
+Razor sayfaları, öznitelik yönlendirme kullanmaz. Bir Razor sayfası için ek yol şablonu bilgi parçası olarak belirtebilirsiniz, `@page` yönergesi:
+
+```csharp
+@page "{id:int}"
+```
+
+Önceki örnekte, söz konusu sayfada bir tamsayı değerine sahip bir yol BC `id` parametresi. Örneğin, *Products.cshtml* sayfa kök dizininde bulunan `/Pages` bu rota olması gerekir:
+
+```csharp
+"/Products/123"
+```
+
 Belirtilen bir isteğin bir rota için eşleşen, ancak önce eylem yöntemi çağırıldıktan sonra ASP.NET Core MVC gerçekleştirecek [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulama](/aspnet/core/mvc/models/validation) istekte. Model bağlama, gelen HTTP veri çağrılacak eylem yönteminin bir parametre olarak belirtilen .NET türlerine dönüştürme için sorumludur. Örneğin, bir eylem yönteminin bir int kimliği parametre bekliyor, bu parametre, isteğin bir parçası sağlanan bir değerden sağlamak model bağlama deneyecek. Bunu yapmak için model bağlama için gönderilen bir formu değerleri, rota değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değeri bulundu varsayıldığında, da bir tamsayıya eylem metodun Metoda geçilen önce dönüştürülür.
 
 Model doğrulama, model bağlama sonra ancak eylem yöntemi çağrılmadan önce gerçekleşir. Model doğrulama, model türü üzerinde isteğe bağlı öznitelikleri kullanır ve belirtilen model nesnesi belirli veri gereksinimlere uymasını sağlamak yardımcı olabilir. Belirli değerleri olarak belirtilebilir gerekli veya belirli bir uzunlukta veya sayısal aralık için sınırlı, vs. Doğrulama öznitelikleri belirtildiğinde, ancak modelin kendi gereksinimlerine uymuyor ModelState.IsValid özelliği false olacak ve başarısız doğrulama kuralları kümesi isteği yapan istemcinin göndermek kullanılabilir.
@@ -65,6 +95,8 @@ Model doğrulama, model bağlama sonra ancak eylem yöntemi çağrılmadan önce
 Model doğrulama kullanıyorsanız, her zaman uygulamanızı geçersiz veriler bozuk olmadığından emin olmak için tüm durum değiştirme komutları gerçekleştirmeden önce model geçerli olduğunu denetleyin. Kullanabileceğiniz bir [filtre](/aspnet/core/mvc/controllers/filters) her eylem için bu kodu eklemek için gereken önlemek için. Ortak ilkelere ve geniş kapsamlı kritik konular hedef temelinde uygulanabilir, ASP.NET Core MVC filtreleri grupları istekleri sızdırılması bir yol sunar. Bireysel işlemlere, tüm denetleyicileri veya genel olarak bir uygulama için filtre uygulanabilir.
 
 ASP.NET Core MVC Web API'lerini destekleyen [ _içerik anlaşması_](/aspnet/core/mvc/models/formatting), istekleri yanıtlar nasıl biçimlendirilmesi gerektiğini belirtmek izin verme. İstekte sağlanan üstbilgileri bağlı olarak, XML, JSON veya desteklenen başka bir biçimde yanıt veriyor eylemleri biçimlendirir. Bu özellik, farklı veri biçimi gereksinimlerine sahip birden çok istemci tarafından kullanılmak üzere aynı API sağlar.
+
+Web API projelerini göz önünde bulundurmalıdır kullanarak `[ApiController]` bireysel denetleyicileri, temel denetleyici sınıfı veya tüm derleme uygulanabilen özniteliği. Bu öznitelik, doğrulama hataları ayrıntılarını içeren bir BadRequest otomatik model doğrulama denetimini ve geçersiz bir model ile herhangi bir eylem döndürür ekler. Öznitelik, ayrıca tüm Eylemler, geleneksel bir yol kullanılarak yerine öznitelik rotası sahip ve daha ayrıntılı ProblemDetails bilgi hatalara yanıt verir gerektirir.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Başvuruları – isteklerini yanıtlar eşleme
 >
@@ -76,6 +108,8 @@ ASP.NET Core MVC Web API'lerini destekleyen [ _içerik anlaşması_](/aspnet/cor
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtreleri**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **ApiController özniteliği**
+ > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
@@ -132,13 +166,13 @@ Uygulamanın nesne modeli ve arabirimleri ApplicationCore projede yerleştirilme
 
 Kalıcılık nasıl gerçekleştirildiğini veya nasıl bir kullanıcı, bildirimleri gönderilebilir gibi uygulama ayrıntılarını altyapı projede tutulur. Bu proje, Entity Framework Core gibi uygulamaya özel paketler başvurur, ancak proje dışında bu uygulamaların ayrıntılarını kullanıma sunmamalıdır. Altyapı hizmetleri ve depoları ApplicationCore projede tanımlanan arabirimi uygulamalıdır ve bunun Kalıcılık uygulamalarını alma ve varlıkları ApplicationCore içinde tanımlanan depolama sorumludur.
 
-ASP.NET Core UI projesi herhangi bir kullanıcı Arabirimi düzeyi sorunları için sorumlu olan, ancak iş mantığı ya da altyapı ayrıntıları içermemelidir. Aslında, ideal olarak, hatta bir bağımlılık iki projeler arasında hiçbir bağımlılık yanlışlıkla sunulan olmanıza yardımcı olur altyapısı projesi hakkında sahip olmamalıdır. Bu, bir üçüncü taraf DI kapsayıcı kayıt defteri sınıflar her projede DI kuralları tanımlamak olanak tanıyan StructureMap gibi kullanarak gerçekleştirilebilir.
+ASP.NET Core UI projesi herhangi bir kullanıcı Arabirimi düzeyi sorunları için sorumlu olan, ancak iş mantığı ya da altyapı ayrıntıları içermemelidir. Aslında, ideal olarak, hatta bir bağımlılık iki projeler arasında hiçbir bağımlılık yanlışlıkla sunulan olmanıza yardımcı olur altyapısı projesi hakkında sahip olmamalıdır. Bu, modül sınıfları her projede DI kuralları tanımlamak olanak tanıyan Autofac gibi bir üçüncü taraf DI kapsayıcı kullanarak gerçekleştirilebilir.
 
 Uygulama Ayrıntıları uygulamadan ayırma başka bir yaklaşım, uygulamanın çağrı belki de tek bir Docker kapsayıcılarında dağıtılmış mikro hizmetler, sahip olmaktır. Bu sorunları ve iki projeler arasında DI yararlanarak daha ayırma daha da fazla ayrımı sağlar, ancak ek karmaşıklığa sahiptir.
 
 ### <a name="feature-organization"></a>Özellik kuruluş
 
-Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler veya özellik dilim adlandırılır (Ayrıca bkz: [Dikey dilimleri](https://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler olarak adlandırılır veya [özellik dilimleri](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (Ayrıca bkz: [Dikey dilimleri](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC, bu amaçla alanlarını destekler. Alanlara kullanarak denetleyicileri ve görünümleri klasörleri (aynı zamanda ilişkili herhangi bir model) her alan klasördeki ayrı kümeleri oluşturabilirsiniz. Şekil 7-1 alanlara kullanarak bir örnek klasör yapısını gösterir.
 
@@ -220,7 +254,7 @@ Bunları denetleyicileri veya Eylemler uygulayabilirsiniz böylece filtreleri ö
 public class AccountController : Controller
 
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // overrides the Authorize attribute
     public async Task<IActionResult> Login() {}
     public async Task<IActionResult> ForgotPassword() {}
 }
@@ -262,6 +296,8 @@ public class ValidateModelAttribute : ActionFilterAttribute
     }
 }
 ```
+
+Ekleyebileceğiniz `ValidateModelAttribute` projenize ekleyerek NuGet bağımlılık olarak [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) paket. API'leri için kullanabileceğiniz `ApiController` ayrı bir gerek kalmadan bu davranışı zorlamak için öznitelik `ValidateModel` filtre.
 
 Benzer şekilde, bir filtre, bir kaydı var ve bu denetimleri eylemi gerçekleştirmek için gereksinimini ortadan kaldırır eylem yürütülmeden önce bir 404 döndüren denetlemek için kullanılabilir. Genel kurallar çekilen ve altyapı kod ve iş mantığı, kullanıcı Arabiriminden ayırmak için çözümünüzün düzenlenmiş sonra MVC eylemi yöntemlerinizi son derece basit olması gerekir:
 
@@ -384,6 +420,13 @@ Bu ilke ile ardından kullanılabilir \[Authorize\] herhangi bir denetleyici ve/
 
 **Şekil 7-4.** Belirteç tabanlı kimlik doğrulaması için Web API'leri.
 
+Kendi kimlik doğrulama hizmetinizi oluşturun, Azure AD ile tümleştirmek ve OAuth veya uygulama bir açık kaynak aracı gibi kullanarak hizmet [IdentityServer](https://github.com/IdentityServer).
+
+#### <a name="custom-security"></a>Özel güvenlik
+
+"Çalışırken kendi" uygulama şifreleme, kullanıcı üyeliğini veya belirteç oluşturma sistemi hakkında özellikle dikkatli olun. Özel bir uygulama daha iyi bir güvenlik neredeyse kesindir sahip olacak çok sayıda ticari ve açık kaynaklı alternatifleri kullanılabilir vardır.
+
+
 > ### <a name="references--security"></a>Başvurular: güvenlik
 >
 > - **Güvenlik belgeleri genel bakış**  
@@ -396,12 +439,14 @@ Bu ilke ile ardından kullanılabilir \[Authorize\] herhangi bir denetleyici ve/
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Kimlik doğrulama ve yetkilendirme için Azure App Service'te API Apps**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+> - **Kimlik sunucusu**  
+>   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>İstemci iletişimi
 
 ASP.NET Core uygulamaları, sayfalarını sunmadan ve web API'leri aracılığıyla veri isteklerine yanıt ek olarak, bağlı istemciler ile doğrudan iletişim kurabilir. Bu giden iletişim birçok farklı aktarım teknoloji, en yaygın durdurulmasını WebSockets kullanabilirsiniz. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucusu istemci iletişim işlevselliği eklemek basit yapan bir kitaplıktır. SignalR değişik WebSockets, aktarım teknolojilerini destekler ve uygulama Ayrıntıları ' geliştiriciden biri koyma çok soyutlar.
 
-ASP.NET Core SignalR ile ASP.NET Core 2.1 kullanılabilir.
+ASP.NET Core SignalR ile ASP.NET Core 2.1 sürümünden başlayarak kullanılmaktadır.
 
 Gerçek zamanlı istemci iletişimi WebSockets doğrudan ya da diğer teknikleri kullanarak olup olmadığını uygulama senaryoları çeşitli yararlıdır. Bazı örnekler:
 

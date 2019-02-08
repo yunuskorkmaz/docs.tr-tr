@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: 117043a461779dee19f1c99361c44a33f5904993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b897be62a940f1d27e9a8cf2eb54eec460b60468
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583528"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825946"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Tablolar arası sorgular (LINQ to DataSet)
 Tek bir tabloyu sorgulamak ek tablolar arası sorgular içinde de gerçekleştirebilirsiniz [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu kullanılarak yapılır bir *birleştirme*. Bir veri kaynağı nesne kimliği başvurun ya da bir ürün gibi başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesneleri ile ilişki join nedir Nesne yönelimli programlama, nesneleri arasındaki ilişkiler her bir nesnenin başka bir nesneye başvuran bir üyesine sahip olduğundan gitmek oldukça kolaydır. Dış veritabanı tablolarında ancak ilişkilerinde gezinme basit değildir. Veritabanı tabloları yerleşik ilişkileri içermez. Bu gibi durumlarda, her bir kaynaktan gelen öğelerle eşleme için birleştirme işlemi kullanılabilir. Örneğin, ürün bilgileri ve satış bilgilerini içeren iki tablo göz önünde bulundurulduğunda, satış bilgilerinin ve ürünleri için aynı satış siparişi eşleştirmek için bir birleştirme işlemi kullanabilirsiniz.  
@@ -21,7 +21,7 @@ Tek bir tabloyu sorgulamak ek tablolar arası sorgular içinde de gerçekleştir
   
  <xref:System.Linq.Enumerable.GroupJoin%2A> Operatörün doğrudan bir eşdeğer ilişkisel veritabanı bağlamında; İç birleşimler sol dış birleştirmeler ve bir üst uyguladıkları. İkinci koleksiyonda bağlantılı öğe yok bile bir sol dış birleşim ilk (soldaki) koleksiyonun her öğesine döndüren bir birleşim geçerlidir.  
   
- Birleşimler hakkında daha fazla bilgi için bkz. [birleştirme işlemleri](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).  
+ Birleşimler hakkında daha fazla bilgi için bkz. [birleştirme işlemleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120)).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, geleneksel bir birleşim gerçekleştirir `SalesOrderHeader` ve `SalesOrderDetail` Ağustos ay çevrimiçi siparişler edinme AdventureWorks örnek veritabanındaki tablolar.  
@@ -33,5 +33,5 @@ Tek bir tabloyu sorgulamak ek tablolar arası sorgular içinde de gerçekleştir
 - [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Tek Tablolu Sorgular](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
 - [Türü Belirtilmiş DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [Birleştirme İşlemleri](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)
+- [Birleştirme İşlemleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

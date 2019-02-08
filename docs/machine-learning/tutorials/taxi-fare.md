@@ -1,24 +1,24 @@
 ---
-title: ML.NET ile bir regresyon learner kullanarak New York taksi fares tahmin edin
-description: ML.NET ile bir regresyon learner kullanarak fares tahmin edin.
+title: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme
+description: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333791"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828403"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak New York taksi fares tahmin edin
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme
 
 > [!NOTE]
 > Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Bu öğretici ML.NET oluşturmak için nasıl kullanılacağını gösterir. bir [regresyon modeli](../resources/glossary.md#regression) oturan taksi fares tahmin etmeye yönelik.
+Bu öğretici ML.NET oluşturmak için nasıl kullanılacağını gösterir. bir [regresyon modeli](../resources/glossary.md#regression) Fiyatlar, özellikle tahmin etmede, New York City taksi fares.
 
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]

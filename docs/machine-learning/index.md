@@ -3,12 +3,12 @@ title: ML.NET Content Guide
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları ML.NET kullanarak .NET uygulamalarınızla tümleştirin öğrenin.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550467"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826290"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET Content Guide
 
@@ -31,7 +31,7 @@ Temel bilgileri anlamak için bkz: [ML.NET eğitim modeli için temel kavramlar]
 
 [Sınıflandırma bir çok sınıflı sınıflandırma modeli kullanarak GitHub sorunları](tutorials/github-issue-classification.md) bir GitHub sorunu alan etiketini belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
-[Taksi taksi bir regresyon modeli kullanarak tahmin](tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
+[Bir regresyon modeli kullanarak fiyatları tahmin etmeye](tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
 [Iris çiçek sınıflandırma özellikleri tarafından](tutorials/iris-clustering.md) kullanarak Iris veri kümesini analiz etmek için bir kümeleme modeli kullanmayı gösterir. 
 

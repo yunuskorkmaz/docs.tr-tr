@@ -3,13 +3,13 @@ title: ASP.NET Core uygulamaları verilerle çalışın
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.NET Core uygulamalarında verilerle çalışma
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532688"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827181"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Birden çok ilişki içerebilir ve bu alt ilişkilerini de içerebilir ThenInclude kullanma. EF Core varlıkların sonuç kümesi almak için tek bir sorgu çalıştırır.
+Birden çok ilişki içerebilir ve bu alt ilişkilerini de içerebilir ThenInclude kullanma. EF Core varlıkların sonuç kümesi almak için tek bir sorgu çalıştırır. Alternatif olarak geçirerek gezinme özelliklerinin gezinme özelliklerini dahil edebilirsiniz bir '.' -dizeye ayrılmış `.Include()` genişletme yöntemi, şu şekilde:
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+Filtreleme mantığı Kapsüllenen yanı sıra bir belirtimi doldurmak için hangi özelliklerin dahil olmak üzere verilerin döndürülmesi için Şekil belirtebilirsiniz. EShopOnWeb örnek belirtimi içerisinde istekli yükleme bilgileri kapsüllemek gösteren çeşitli özellikleri içerir. Belirtimi burada bir sorgunun parçası olarak nasıl kullanıldığını görebilirsiniz:
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 İlgili verileri yükleme için başka bir seçenek kullanmaktır _açık yükleme_. Açık yükleme zaten alınmış bir varlığa, ek verileri sağlar. Bu veritabanı için ayrı bir istek gerektirdiğinden, veritabanı sayısını en aza indirmeniz gerekir web uygulamaları için önerilmez her istek için yapılan başvurular.
 
 _Yavaş Yükleniyor_ uygulama tarafından başvurulduğu, ilgili verileri otomatik olarak yükleyen bir özelliktir. EF Core 2.1 sürümünde Gecikmeli yükleme için destek ekledi. Yavaş yükleniyor, varsayılan olarak etkin değildir ve yükleme gerektirir `Microsoft.EntityFrameworkCore.Proxies`. Her web isteğini içinde yapılan ek veritabanı sorguları kullanımını sonuçlanır beri gibi açık yükleme ile yavaş yükleniyor genellikle web uygulamaları için devre dışı bırakılması gerekir. Ne yazık ki, ne zaman gecikmesi küçüktür ve genellikle test etmek için kullanılan veri kümelerinin küçük geliştirme zamanında yavaş çoğunlukla yükleyerek sonucunda ek yükü gözden kaçan gider. Ancak, daha fazla kullanıcı, daha fazla veri ve daha fazla gecikme, bir üretim ortamında ek veritabanı istekler genellikle kötü performans yavaş yükleniyor ağır kullanan web uygulamaları için neden olabilir.
 
 [Web uygulamalarında yavaş yükleniyor varlıkları kaçının](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>Veri şifreleme
+
+EF Core durumunu doğru şekilde yalıtılacak modelinizi sağlayan çeşitli özelliklerini destekler. Bir ortak etki alanı modelleri koleksiyon Gezinti özellikleri genel olarak erişilebilir liste türleri olarak ortaya sorunudur. Bu, büyük olasılıkla Nesne geçersiz bir durumda bırakarak koleksiyona ilgili önemli iş kuralları kullanmayan, bu koleksiyon türleri, içeriğini işlemek herhangi bir ortak çalışanı sağlar. İlişkili koleksiyonlar yalnızca okuma erişimi ve açıkça yolları, istemciler, bu örnekte olduğu gibi değiştirebilirsiniz tanımlama yöntemler sağlar, bu çözüme verilmiştir:
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Bu varlık türünün ortak ortaya çıkarmıyor Not `List` veya `ICollection` özelliği, ancak bunun yerine sunan bir `IReadOnlyCollection` arka plandaki liste türü sarmalayan türü. Ne zaman destek alanı kullanmak için Entity Framework Core belirtebilir bu düzeni kullanmak şu şekilde:
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Etki alanı modeliniz geliştirmek başka bir kimlik eksik olan ve yalnızca özelliklerine göre ayırt edilen türleri için değer nesneleri kullanarak yoludur. Bu türler varlıklarınızı özelliklerini kullanarak nereye ait ve aynı kavram kullanan birden çok varlık arasında yinelenen mantık kaçınabilirsiniz değer nesnesi için mantıksal belirli korunmasına yardımcı olabilirsiniz. Entity Framework Core içinde bunların sahibi olan varlık aynı tabloda değer nesnelerini türüne ait bir varlık olarak yapılandırarak kalıcı yapılabilir şu şekilde:
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+Bu örnekte, `ShipToAddress` özelliği türüdür `Address`. `Address` olduğu gibi çeşitli özelliklere sahip bir değer nesnesini `Street` ve `City`. EF Core eşler `Order` kendi tek sütunlu tablo nesnesine `Address` özelliği sütun adını her özelliğin adı. Bu örnekte, `Order` tabloda sütunları gibi dahil `ShipToAddress_Street` ve `ShipToAddress_City`.
+
+[EF Core 2.2 sahip olunan varlık koleksiyonları için destek sunuyor](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Dayanıklı bağlantıları
 
@@ -253,7 +322,7 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Daha az kapsülleme sağladığından, geliştiriciler, verilerin depolanma şeklini hakkında daha fazla bilmeniz Dapper gerektirir nasıl verimli bir şekilde sorgulayın ve bu getirmek için daha fazla kod yazın. Etkilenir her sorgu modeli, yalnızca yeni bir geçiş (başka bir EF Core özelliği) oluşturma ve/veya tek bir yerde bir DbContext eşleme bilgilerini güncelleştirmek yerine değiştiğinde güncelleştirilmesi gerekir. Bu sorgular, derleme süresi garantileri değil, sahip, bu nedenle, çalışma zamanında değişikliklere yanıt olarak model veya veritabanı, hataları hızlı bir şekilde algılaması daha zor hale kesilebilir. Bu bileşim lisanslarınıza Dapper son derece hızlı performans sağlar.
+Daha az kapsülleme sağladığından, geliştiriciler, verilerin depolanma şeklini hakkında daha fazla bilmeniz Dapper gerektirir nasıl verimli bir şekilde sorgulayın ve bu getirmek için daha fazla kod yazın. Etkilenir her sorgu modeli, yalnızca yeni bir geçiş (başka bir EF Core özelliği) oluşturma ve/veya tek bir yerde bir DbContext eşleme bilgilerini güncelleştirmek yerine değiştiğinde güncelleştirilmesi gerekir. Bu sorgular, derleme zamanı garanti sahip, bu nedenle, çalışma zamanında değişikliklere yanıt olarak model veya veritabanı, hataları hızlı bir şekilde algılaması daha zor hale bozabilir. Bu bileşim lisanslarınıza Dapper son derece hızlı performans sağlar.
 
 EF Core, çoğu uygulama ve neredeyse tüm uygulamaların belirli kısımlarını çoğu için kabul edilebilir performans sunar. Bu nedenle, geliştirici üretkenliği faydalarını, performansa daha ağır basar olasılığı düşüktür. Önbelleğe alınan bir avantaj sorgular, gerçek sorgu yalnızca yürütülebilecek küçük bir yüzdesi görece küçük yapmadan zaman, sorgu performansı farklılıkları tartışmalı.
 

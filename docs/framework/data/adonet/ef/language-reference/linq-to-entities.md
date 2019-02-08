@@ -2,12 +2,12 @@
 title: LINQ - Varlıklar
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514757"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825790"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varlık çerçevesi kavramsal modeline karşı sorgular yazmaya olanak tanıyan dil ile tümleşik sorgu (LINQ) destekler. Entity Framework sorguları nesne bağlamı karşı yürütülen komut ağaç sorguları tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. Oluşturma ve bir LINQ to Entities sorgusunda yürütme işlemi aşağıda verilmiştir:  
@@ -90,6 +90,7 @@ LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varl�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Dil ile tümleşik sorgu (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Dil ile tümleşik sorgu (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ ve ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629621"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825738"
 ---
 # <a name="annotating-typed-datasets"></a>Türü belirtilmiş DataSets için yorum ekleme
 Ek açıklamalar, belirlenmiş öğelerin adlarını değiştirmek etkinleştirme <xref:System.Data.DataSet> arka plandaki şema değiştirmeden. Temel alınan şemadaki öğelerin adlarını değiştirme neden belirlenmiş **veri kümesi** değil veri kaynağında mevcut yanı sıra veri kaynağında bulunan nesnelere başvuru kaybetmek nesneleri başvurmak için.  
@@ -74,7 +74,7 @@ Ek açıklamalar, belirlenmiş öğelerin adlarını değiştirmek etkinleştirm
 |**Üst** erişimcisi|TableNameRow|typedParent|  
 |**Veri kümesi** olayları|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Kullanılacak yazılan **veri kümesi** ek açıklamaları, aşağıdakileri içermelidir **xmlns** , XML Şeması Tanım Dili (XSD) şemaya başvurusu. (Bir xsd veritabanı tabloları oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Kullanılacak yazılan **veri kümesi** ek açıklamaları, aşağıdakileri içermelidir **xmlns** , XML Şeması Tanım Dili (XSD) şemaya başvurusu. Veritabanı tablolarından bir xsd oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

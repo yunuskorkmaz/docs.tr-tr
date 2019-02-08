@@ -2,15 +2,15 @@
 title: Modelleme ve eşleme
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 847d518710b21df714343b541401ff7fc8443fb3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083630"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828312"
 ---
 # <a name="modeling-and-mapping"></a>Modelleme ve eşleme
-İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz depolama modeli, kavramsal model ve uygulamanızı en iyi iki şekilde arasındaki eşlemeyi uygun. Varlık veri modeli araçları Visual Studio'da oluşturmanızı sağlayan bir. [edmx dosyası](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı ya da model değiştiğinde, dosya.  
+İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz depolama modeli, kavramsal model ve uygulamanızı en iyi iki şekilde arasındaki eşlemeyi uygun. Varlık veri modeli araçları Visual Studio'da oluşturmanızı sağlayan bir. [edmx dosyası](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı ya da model değiştiğinde, dosya.  
   
  Entity Framework 4.1 ile başlangıç Code First geliştirme program aracılığıyla kullanarak bir model oluşturabilirsiniz. Code First geliştirmeye yönelik iki farklı senaryo vardır. Her iki durumda da geliştirici bir model, .NET Framework sınıf tanımları kodlayarak tanımlar ve ardından isteğe bağlı olarak ek eşlemesi veya yapılandırma veri ek açıklamaları ya da fluent API'sini kullanarak belirtir.  
   

@@ -3,13 +3,13 @@ title: Azure barındırma önerileri için ASP.NET Core web uygulamaları
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azure barındırma önerileri ASP.NET web uygulamaları için
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/27/2018
-ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125938"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828390"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
@@ -22,7 +22,7 @@ ms.locfileid: "53125938"
 
 Web uygulamaları ile barındırılabilir:
 
-- App Service Web uygulamaları
+- App Service Web Apps
 
 - Kapsayıcılar
 
@@ -32,7 +32,7 @@ Web uygulamaları ile barındırılabilir:
 
 Bu App Service Web Apps için önerilen çoğu senaryo için yaklaşımdır. Mikro hizmet mimarileri için bir kapsayıcı tabanlı bir yaklaşım veya Service Fabric göz önünde bulundurun. Uygulamanızı çalıştıran makineler hakkında daha fazla denetime ihtiyacınız varsa, Azure sanal makineler göz önünde bulundurun.
 
-### <a name="app-service-web-apps"></a>App Service Web uygulamaları
+### <a name="app-service-web-apps"></a>App Service Web Apps
 
 App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma getirilmiş tam olarak yönetilen bir platform sunar. Bu Azure altyapınızla ilgilenirken, sizin işlerinize odaklanmanızı odaklanmanıza olanak tanır, çalıştırmak ve uygulamayı ölçeklendirmek gereken sunan bir hizmet (PaaS) olarak platformudur. App Service Web Apps'in temel özelliklerinden bazıları:
 

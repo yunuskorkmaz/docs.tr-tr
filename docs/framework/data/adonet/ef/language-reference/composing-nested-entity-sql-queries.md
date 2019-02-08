@@ -2,12 +2,12 @@
 title: İç içe geçmiş Entity SQL sorguları oluşturma
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589487"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827324"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç içe geçmiş Entity SQL sorguları oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir zengin işlevsel bir dildir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tablosal sonuçtaki kümesine sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş deyimler olabilir karmaşık ifadeleri oluşturmayı destekler. İfade bir değer parametreli veya başka bir ifadenin oluşur.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Aşağıdaki örnek düzgün ifadeleri iç içe gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Nasıl yapılır: UNION iki sorgunun sipariş](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Aşağıdaki örnek düzgün ifadeleri iç içe gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Nasıl Yapılır: UNION iki sorgunun sipariş](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>İç içe geçmiş sorgularda projeksiyonu  
  Proje yan tümcesi iç içe geçmiş sorgularda sunucuda Kartezyen ürün sorgulara çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucular bu sunucu performansını olumsuz etkileyebilir, çok büyük almak TempDB tablodaki neden olabilir.  

@@ -3,13 +3,13 @@ title: Azure için geliştirme işlemi
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azure için geliştirme işlemi
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152623"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827480"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 

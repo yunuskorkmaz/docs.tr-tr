@@ -3,13 +3,13 @@ title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
 description: ASP.NET Core ve Azure kullanarak tek parça web uygulamaları oluşturmaya uçtan uca yönergeler sağlar. bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148112"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827870"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif Hakkı © 2018 Microsoft Corporation
+Telif Hakkı © Microsoft Corporation 2019
 
 Tüm hakları saklıdır. Bu kitap içeriğini bir parçası çoğaltılamaz veya herhangi bir araçla yayımcı yazılı izni olmadan herhangi bir biçimdeki aktarılamaz.
 
@@ -43,7 +43,7 @@ Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.
 
 Yazar:
 
-> **Steve Smith (@ardalis)**, yazılım mimarisi Danışmanı [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - yazılım mühendisi ve Eğitmen - [Ardalis.com](https://ardalis.com)
 
 Düzenleyiciler:
 
@@ -63,11 +63,11 @@ Düzenleyiciler:
 
 - Uygulama ile aynı sunucuya .NET sürümlerinin yan yana sürüm oluşturma.
 
-Geleneksel .NET uygulamalar yapın ve bu gereksinimleri destekler, ancak yukarıdaki senaryoları için geliştirilmiş destek sunmak için ASP.NET Core ve .NET Core getirilmiştir.
+Geleneksel .NET uygulamalar yapın ve bu gereksinimlerin çoğu destekler, ancak yukarıdaki senaryoları için geliştirilmiş destek sunmak için ASP.NET Core ve .NET Core getirilmiştir.
 
 Microsoft Azure gibi hizmetleri kullanarak bulutta web uygulamalarını barındırmak giderek daha fazla kuruluşların seçim. Aşağıda, uygulama veya kuruluşunuz için önemliyse, uygulamanızı bulutta barındırma dikkate almanız gerekir:
 
-- Daha az yatırım veri merkezi maliyetlerini (donanım, yazılım, boşluk, yardımcı programlar, vb.)
+- Daha az yatırım veri merkezi maliyetlerini (donanım, yazılım, boşluk, yardımcı programlar, sunucu yönetimi, vb.)
 
 - Esnek fiyatlandırma (boş kapasite için değil, kullanıma bağlı olarak ödeme).
 
@@ -81,7 +81,7 @@ ASP.NET Core, Azure üzerinde barındırılan Web uygulamalarıyla geleneksel al
 
 ## <a name="purpose"></a>Amaç
 
-Bu kılavuz, ASP.NET Core ve Azure kullanarak tek parça web uygulamaları oluşturmaya, uçtan uca yönergeler sağlar.
+Bu kılavuz, uygulama oluşturmaya uçtan uca yönergeler sağlar *tek parça* web uygulamaları ASP.NET Core ve Azure kullanarak. Bu bağlamda, bu uygulamaların etkileşim kuran hizmetler ve uygulamalar koleksiyonu olarak değil, tek bir birim olarak dağıtıldığını olgu "tek parça" ifade eder.
 
 Bu kılavuz için tamamlayıcı ["_.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi_"](../microservices-architecture/index.md) hangi odaklanır daha fazla üzerinde Docker, mikro hizmetler ve kapsayıcılar dağıtımının Kurumsal uygulamalarını barındırmak için.
 

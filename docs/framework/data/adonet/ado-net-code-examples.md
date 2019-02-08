@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597638"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825907"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>Türü belirlenmiş ObjectQuery
-Bu örnekteki kod bir <xref:System.Data.Objects.ObjectQuery%601> veri kategorileri nesneler olarak döndürülecek. Daha fazla bilgi için [nesne sorgularını](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
+Bu örnekteki kod bir <xref:System.Data.Objects.ObjectQuery%601> veri kategorileri nesneler olarak döndürülecek. Daha fazla bilgi için [nesne sorgularını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Veri uygulamaları oluşturma](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
-- [Bir varlık veri modeli (varlık çerçevesi görevler) sorgulama](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
-- [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [Veri uygulamaları oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Bir varlık veri modeli (varlık çerçevesi görevler) sorgulama](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

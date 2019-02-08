@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504008"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826466"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
@@ -38,11 +38,11 @@ Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı 
 
 ## <a name="publishing-basics"></a>Yayımlama temelleri
 
-`<TargetFramework>` Ayar proje dosyasının, uygulamanızı yayımladığınızda, varsayılan hedef Framework'ü belirtir. Hedef çerçeve için herhangi bir geçerli değiştirebilirsiniz [hedef çerçeve adı (TFM)](../../standard/frameworks.md). Örneğin, projeniz kullanıyorsa `<TargetFramework>netcoreapp2.2</TargetFramework>`, .NET Core 2.2 hedefleyen bir ikili oluşturulur. Bu ayarda belirttiğiniz TFM tarafından kullanılan varsayılan hedef olduğunu [ `dotnet publish` ] [ dotnet-publish] komutu.
+`<TargetFramework>` Ayar proje dosyasının, uygulamanızı yayımladığınızda, varsayılan hedef Framework'ü belirtir. Hedef çerçeve için herhangi bir geçerli değiştirebilirsiniz [hedef çerçeve adı (TFM)](../../standard/frameworks.md). Örneğin, projeniz kullanıyorsa `<TargetFramework>netcoreapp2.2</TargetFramework>`, .NET Core 2.2 hedefleyen bir ikili oluşturulur. Bu ayarda belirttiğiniz TFM tarafından kullanılan varsayılan hedef olduğunu [ `dotnet publish` ](../tools/dotnet-publish.md) komutu.
 
 Birden fazla framework hedeflemek istiyorsanız, ayarlayabileceğiniz `<TargetFrameworks>` birden fazla noktalı virgülle ayrılmış TFM değer ayarlanamadı. İle altyapılarından birini yayımlayabilirsiniz `dotnet publish -f <TFM>` komutu. Örneğin, `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` çalıştırıp `dotnet publish -f netcoreapp2.1`, .NET Core 2.1'i hedefleyen bir ikili oluşturulur.
 
-Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ] [ dotnet-publish] komutu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme Yapılandırması** modu **hata ayıklama** ile değiştirmediyse `-c` parametresi. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` yayımlar `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ](../tools/dotnet-publish.md) komutu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme Yapılandırması** modu **hata ayıklama** ile değiştirmediyse `-c` parametresi. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` yayımlar `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 .NET Core SDK 3.0 kullanıyorsanız, varsayılan mod uygulamaları .NET Core sürümlerini hedefleyen 2.1 veya 2.2 3.0 framework bağımlı yürütülebilir dosya olduğu için yayımlayın.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Uygulamayı çalıştırdığınızda ([`dotnet run`][dotnet-run]), aşağıdaki çıktıyı görüntülenir:
+Uygulamayı çalıştırdığınızda ([`dotnet run`](../tools/dotnet-run.md)), aşağıdaki çıktıyı görüntülenir:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ Aşağıdaki anahtarlar ile kullanmalısınız `dotnet publish` bir SCD yayımla
 
 - [.NET core uygulama dağıtımına genel bakış](index.md)
 - [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

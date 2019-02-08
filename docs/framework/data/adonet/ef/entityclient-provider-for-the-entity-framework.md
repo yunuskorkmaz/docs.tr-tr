@@ -2,12 +2,12 @@
 title: Entity Framework için EntityClient sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 33ad1e89260296f09426e335450d9d8ba3461d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541202"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826453"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient sağlayıcısı
 EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
@@ -40,7 +40,7 @@ EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için E
 ## <a name="managing-transactions"></a>İşlemleri yönetme  
  Varlık Çerçevesi'nde, işlem kullanmanın iki yolu vardır: otomatik ve açık. Otomatik işlemleri kullanma <xref:System.Transactions> ad alanı ve açık işlemleri <xref:System.Data.EntityClient.EntityTransaction> sınıfı.  
   
- Kavramsal bir modeli aracılığıyla sunulan verileri güncelleştirmek için; bkz: [nasıl yapılır: Entity Framework işlemleri yönetme](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
+ Kavramsal bir modeli aracılığıyla sunulan verileri güncelleştirmek için bkz: [nasıl yapılır: Entity Framework işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için E
  [Nasıl yapılır: İle ilişkilerde gezinme işleci gidin](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağlantılarını yönetme ve işlemler](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Bağlantılarını yönetme ve işlemler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Dil Başvurusu](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
