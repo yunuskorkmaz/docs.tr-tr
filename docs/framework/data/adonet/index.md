@@ -2,6 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
+ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903617"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çıkaran bir sınıflar kümesidir. ADO.NET, veri paylaşımı, dağıtılmış uygulamalar oluşturmak için zengin bir bileşenler kümesi sağlar. İlişkisel erişimi, XML ve uygulama verileri sağlayan .NET Framework'ün önemli bir parçasıdır. ADO.NET, geliştirme ihtiyaçlarınıza göre ön uç bir veritabanı istemciler ve uygulamalar, Araçlar, dilleri veya Internet tarayıcıları tarafından kullanılan orta katman iş nesneleri oluşturma da dahil olmak üzere çeşitli destekler.  
@@ -38,23 +44,20 @@ ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çık
  Özellikleri ve Oracle için .NET Framework veri sağlayıcısı özgü davranışları açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- Visual Studio, .NET Framework ve şifreleme için güvenlik konulara bağlantılar sağlar.  
+ [Dil ile tümleşik sorgu (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ LINQ konulara bağlantılar sağlar ve kullanarak örnekleri C#.  
   
- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- LINQ konuları ve örnekler için bağlantılar sağlar.  
+ [Dil ile tümleşik sorgu (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ LINQ konuları ve Visual Basic kullanan örnekler için bağlantılar sağlar.  
   
  [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)  
  Nasıl kullanılacağını açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] açık veri Protokolü (OData) uygulayan veri hizmetlerini Web veya intranet üzerinde dağıtmak için.  
   
- [Çekirdek geliştirme teknolojileri](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [.NET framework geliştirme Kılavuzu](../../development-guide.md)  
  .NET Framework'teki standart geliştirme görevleri hakkında daha fazla bilgi için bağlantılar sağlar.  
   
- [Gelişmiş geliştirme teknolojileri](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- Gelişmiş geliştirme görevlerini ve .NET Framework teknikleri hakkında daha fazla bilgi için bağlantılar sağlar.  
-  
- [Örnekler ve hızlı Başlangıçlar](https://msdn.microsoft.com/library/ms184422.aspx)  
- Tüm örnekleri ve hızlı başlangıç örnekleri .NET Framework ile ilişkili tüm listeleri sağlar.  
+ [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)  
+ .NET örnekleri ve öğreticilerle bir listesini sağlar.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)

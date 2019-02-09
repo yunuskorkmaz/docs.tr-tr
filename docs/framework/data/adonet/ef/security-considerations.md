@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612833"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904139"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli oluşturmaya yönelik önerileri de izlemelidir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -38,7 +38,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
 -   Korumalı yapılandırmayı kullanarak yapılandırma dosyasının bölümlerini şifreler.  
   
-     ASP.NET sayesinde bir yapılandırma dosyasındaki hassas bilgileri şifrelemek korumalı yapılandırma adı verilen bir özellik sağlar. Öncelikli olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarını yapılandırma dosyalarında bölümleri şifrelemek için korumalı yapılandırma da kullanabilirsiniz. Yeni korumalı yapılandırma özelliklerinin ayrıntılı bir açıklaması için bkz [şifreleme yapılandırma bilgilerini kullanarak korumalı Yapılandırması](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     ASP.NET sayesinde bir yapılandırma dosyasındaki hassas bilgileri şifrelemek korumalı yapılandırma adı verilen bir özellik sağlar. Öncelikli olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarını yapılandırma dosyalarında bölümleri şifrelemek için korumalı yapılandırma da kullanabilirsiniz. Yeni korumalı yapılandırma özelliklerinin ayrıntılı bir açıklaması için bkz [şifreleme yapılandırma bilgilerini kullanarak korumalı Yapılandırması](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
 -   Bağlantı dizeleri, güvenli yapılandırma dosyalarında Store.  
   
@@ -98,7 +98,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
      SQL ekleme saldırılarına karşı yapılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] tarafından kötü amaçlı bir sorgu koşulu ve parametre adları kullanılan değerleri giriş sağlama. SQL ekleme riskini önlemek için hiçbir kullanıcı girişi ile birleştirmemelisiniz [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut metni.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, her yerde değişmez değerleri kabul edildiğini parametreleri kabul eder. Sorguyu doğrudan yerine bir dış aracı ekleme değişmez parametreli sorgular kullanmanız gerekir. Güvenli bir şekilde oluşturmak için Sorgu Oluşturucu yöntemleri kullanmayı da düşünmelisiniz [varlık SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, her yerde değişmez değerleri kabul edildiğini parametreleri kabul eder. Sorguyu doğrudan yerine bir dış aracı ekleme değişmez parametreli sorgular kullanmanız gerekir. Kullanmayı da düşünmelisiniz [Sorgu Oluşturucu yöntemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) varlık SQL güvenli bir şekilde oluşturmak için.  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ekleme saldırılarını:  
   
@@ -132,7 +132,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
  Aşağıdaki güvenlik konuları oluşturma ve varlık türleri ile çalışmaktan olduğunda geçerlidir.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Bir Objectcontext'e uygulama etki alanları arasında paylaşmayın.  
- Paylaşımı bir <xref:System.Data.Objects.ObjectContext> ile birden fazla uygulama etki alanı bağlantı dizesindeki bilgiler ortaya çıkarabilir. Bunun yerine, serileştirilmiş nesneler veya nesne grafiklerini diğer uygulama etki alanı denetleyicisine aktarmak ve ardından bu nesnelere ekleyin bir <xref:System.Data.Objects.ObjectContext> uygulama etki alanındaki. Daha fazla bilgi için [nesneleri serileştirmek](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Paylaşımı bir <xref:System.Data.Objects.ObjectContext> ile birden fazla uygulama etki alanı bağlantı dizesindeki bilgiler ortaya çıkarabilir. Bunun yerine, serileştirilmiş nesneler veya nesne grafiklerini diğer uygulama etki alanı denetleyicisine aktarmak ve ardından bu nesnelere ekleyin bir <xref:System.Data.Objects.ObjectContext> uygulama etki alanındaki. Daha fazla bilgi için [nesneleri serileştirmek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Tür güvenlik ihlallerini önleyin.  
  Tür güvenliği ihlal edilirse [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nesnelerdeki verilerin bütünlüğünü garanti edemez. Güvenilmeyen uygulamaların tam güvenilir kod erişimi güvenliği çalışmasına izin verirseniz tür güvenlik ihlallerini oluşabilir.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619389"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903812"
 ---
 # <a name="establishing-the-connection"></a>Bağlantı kurma
 Microsoft SQL Server'a bağlanmak için <xref:System.Data.SqlClient.SqlConnection> SQL Server için .NET Framework veri sağlayıcısı nesnesi. Bir OLE DB veri kaynağına bağlanmak için <xref:System.Data.OleDb.OleDbConnection> nesnesini OLE DB için .NET Framework veri sağlayıcısı. Bir ODBC veri kaynağına bağlanmak için <xref:System.Data.Odbc.OdbcConnection> ODBC için .NET Framework veri sağlayıcısı nesnesi. Bir Oracle veri kaynağına bağlanmak için <xref:System.Data.OracleClient.OracleConnection> Oracle için .NET Framework veri sağlayıcısı nesnesi. Güvenli bir şekilde depolamak ve bağlantı dizelerini almak için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Tümleşik Güvenlik'i ve ASP.NET  
  SQL Server'ın tümleşik güvenlik (güvenilen bağlantılar olarak da bilinir) olarak SQL Server'a bağlanırken koruma sağlamaya yardımcı olur, bir kullanıcı kimliği ve bağlantı dizesinde parola kullanıma sunmuyor ve bağlantı kimliğini doğrulamak için önerilen yöntemdir. Tümleşik güvenlik geçerli güvenlik kimliği ya da belirtecinde, yürütme işlemi kullanır. Masaüstü uygulamaları için bu genellikle şu anda oturum açmış kullanıcı kimliğidir.  
   
- ASP.NET uygulamaları için güvenlik kimlik birkaç farklı seçenekten birini için ayarlanabilir. Bir ASP.NET uygulamasını SQL Server'a bağlanırken kullandığı güvenlik kimlik daha iyi anlamak için bkz: [ASP.NET kimliğe bürünme](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [ASP.NET kimlik doğrulaması](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), ve [nasıl yapılır: Erişim SQL Server'ı kullanarak Windows tümleşik güvenliği](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ ASP.NET uygulamaları için güvenlik kimlik birkaç farklı seçenekten birini için ayarlanabilir. Bir ASP.NET uygulamasını SQL Server'a bağlanırken kullandığı güvenlik kimlik daha iyi anlamak için bkz: [ASP.NET kimliğe bürünme](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [ASP.NET kimlik doğrulaması](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100)), ve [nasıl yapılır: Erişim SQL Server'ı kullanarak Windows tümleşik güvenliği](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100)).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Bir OLE DB veri kaynağına bağlanma  
  OLE DB için .NET Framework veri sağlayıcısı (aracılığıyla SQLOLEDB, OLE DB sağlayıcısı için SQL Server), OLE DB kullanılarak kullanıma sunulan veri kaynaklarına bağlantı sağlayan kullanarak **OleDbConnection** nesne.  

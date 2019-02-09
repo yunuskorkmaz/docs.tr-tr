@@ -2,12 +2,12 @@
 title: LINQ - SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 141505eed8e76bb5f9811b5d2bdc166885905cde
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196836"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904293"
 ---
 # <a name="linq-to-sql"></a>LINQ - SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ilişkisel verileri nesne gibi yönetmek için çalışma zamanı altyapısı sağlayan sürüm 3.5.  
@@ -35,8 +35,11 @@ ms.locfileid: "50196836"
  Visual Basic ve C# örneklere bağlantılar sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Genel bir bakış sağlar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] teknolojileri.  
+ [Dil ile tümleşik sorgu (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
+ Provides overviews of LINQ technologies in C#.
+ 
+ [Dil ile tümleşik sorgu (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Visual Basic'te LINQ teknoloji genel bakış sağlar.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Açıklar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Visual Basic kullanıcıları için teknolojileri.  

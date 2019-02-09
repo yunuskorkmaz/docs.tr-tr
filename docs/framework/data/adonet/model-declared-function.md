@@ -2,12 +2,12 @@
 title: model olarak bildirilen işlev
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 5db7d49fd4b839cef47db8086b4ef39ce4dc6aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31efbab4b8323ff8cec9498fa20fa40b1efb819e
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725148"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904071"
 ---
 # <a name="model-declared-function"></a>model olarak bildirilen işlev
 A *model olarak bildirilen işlev* kavramsal modelde bildirildi, ancak bu kavramsal modelde tanımlı değil, bir işlevdir. İşlevi barındırma veya depolama ortamında tanımlanabilir. Örneğin, bir model olarak bildirilen işlev dolayısıyla kavramsal modelde sunucu tarafında işlevselliği kullanıma sunma, bir veritabanında tanımlı bir işlev eşleştirilmiş olabilir.  
@@ -24,7 +24,7 @@ A *model olarak bildirilen işlev* kavramsal modelde bildirildi, ancak bu kavram
 -   Parametre adı ve türü de dahil olmak üzere, parametre bilgileri. (İsteğe bağlı)  
   
 ## <a name="example"></a>Örnek  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. CSDL model olarak bildirilen bir işlevi bir uygulamasıdır bir [işlev içeri aktarma](https://msdn.microsoft.com/library/125704ae-56c7-4233-80b7-389a10f3a65d). Aşağıdaki CSDL işlev tanımını içeri aktarma ile varlık kapsayıcısı tanımlar. Dönüş türü belirtildiği işlevi için dönüş türü void olduğunu unutmayın.  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) kavramsal modeller tanımlamak için. CSDL bir model olarak bildirilen bir işlevi bir işlev içeri aktarma uygulamasıdır (kullanarak [Functionımport öğesi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)). Aşağıdaki CSDL işlev tanımını içeri aktarma ile varlık kapsayıcısı tanımlar. Dönüş türü belirtildiği işlevi için dönüş türü void olduğunu unutmayın.  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   

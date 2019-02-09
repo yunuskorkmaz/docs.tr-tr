@@ -2,12 +2,12 @@
 title: Entity Framework için SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b47b035932062b859d470716903e826b2bb6f3d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569108"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903835"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework için SqlClient
 Bu bölümde, .NET Framework veri sağlayıcısı için Entity Framework, Microsoft SQL Server üzerinde çalışacak şekilde etkinleştirir SQL Server'nin (SqlClient) açıklanmaktadır.  
@@ -18,7 +18,7 @@ Bu bölümde, .NET Framework veri sağlayıcısı için Entity Framework, Micros
  SqlClient kullanmak için "System.Data.SqlClient" dize atamak `Provider` özniteliği `Schema` öğesi.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken şema özniteliği  
- `ProviderManifestToken` gerekli bir özniteliktir `Schema` SSDL öğesinde. Bu belirteç sağlayıcı bildirimi çevrimdışı senaryolar için yüklemek için kullanılır. Hakkında daha fazla bilgi için `ProviderManifestToken` özniteliği için bkz: [şema öğesi (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
+ `ProviderManifestToken` gerekli bir özniteliktir `Schema` SSDL öğesinde. Bu belirteç sağlayıcı bildirimi çevrimdışı senaryolar için yüklemek için kullanılır. Hakkında daha fazla bilgi için `ProviderManifestToken` özniteliği için bkz: [şema öğesi (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
  SqlClient farklı SQL Server sürümleri için veri sağlayıcısı olarak kullanılabilir. Bu sürümleri, farklı özelliklere sahip. Örneğin, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] desteklemediği `varchar(max)` ve `nvarchar(max)` ile sunulan türleri [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
@@ -29,7 +29,7 @@ Bu bölümde, .NET Framework veri sağlayıcısı için Entity Framework, Micros
 |2000|2005|2008|  
   
 > [!NOTE]
->  Visual Studio 2010 ile başlayarak [ADO.NET varlık veri modeli Araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) SQL Server 2000 desteklemez.  
+>  Visual Studio 2010 ile başlayarak [ADO.NET varlık veri modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) SQL Server 2000 desteklemez.  
   
 ## <a name="provider-namespace-name"></a>Sağlayıcı Namespace adı  
  Tüm sağlayıcılar, bir ad belirtmeniz gerekir. Bu özellik, hangi önekin türleri ve işlevleri gibi belirli yapılar için sağlayıcı tarafından kullanılan Entity Framework söyler. Ad alanı için SqlClient sağlayıcısı bildirimleri `SqlServer`. Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

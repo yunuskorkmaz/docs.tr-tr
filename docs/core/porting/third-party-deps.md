@@ -2,14 +2,14 @@
 title: .NET Core için bağlantı noktası kod için bağımlılıkları analiz edin
 description: .NET Framework projenizden .NET Core için bağlantı noktası için dış bağımlılıkları analiz etmeyi öğrenin.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415227"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904328"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Bağımlılıklarınızı .NET Core için bağlantı noktası kod çözümleme
 
@@ -93,13 +93,13 @@ Proje dosyasını düzenleyerek uyarıyı bastırmak için bulma `PackageReferen
 
 Visual Studio'da Derleyici uyarılarını gizleme hakkında daha fazla bilgi için bkz: [NuGet paketleri için uyarıları gizleme](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
-### <a name="port-your-packages-to-packagereference"></a>Paketleriniz için bağlantı noktası `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>Paketleriniz için bağlantı noktası `PackageReference`
 
 .NET core kullanan [PackageReference](/nuget/consume-packages/package-references-in-project-files) Paket bağımlılıklarını belirtmek için. Kullanıyorsanız [packages.config](/nuget/reference/packages-config) paketlerinizi belirtmek için üzerinde dönüştürmek ihtiyacınız olacak `PackageReference`.
 
 Daha fazla bilgi edinebilirsiniz [PackageReference packages.config'ten geçiş](/nuget/reference/migrate-packages-config-to-package-reference).
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>.NET Core üzerinde NuGet paket bağımlılık çalıştırmaz ne yapılacağını
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>.NET Core üzerinde NuGet paket bağımlılık çalıştırmaz ne yapılacağını
 
 .NET Core üzerinde bağımlı bir NuGet paketi çalışmazsa yapabileceğiniz birkaç şey vardır:
 
@@ -119,6 +119,5 @@ Yukarıdakilerden herhangi biri ile sorunu çözemezseniz, .NET Core için bağl
 
 Dosya sistemindeki bir DLL gibi bir NuGet paketi olmayan bağımlılığa sahip. Bu bağımlılık taşınabilirliğinin belirlemek için tek yol [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) aracı. Araç, .NET Framework'ü hedefleyen derlemeler analiz edin ve .NET Core gibi diğer .NET platformları için taşınabilir olmayan API'leri tanımlayın. Aracı veya konsol uygulaması olarak çalıştırabilirsiniz bir [Visual Studio Uzantısı](../../standard/analyzers/portability-analyzer.md).
 
-## <a name="next-steps"></a>Sonraki adımlar
-
-Bir kitaplığı taşıma, kullanıma [Kitaplıklarınızı taşıma](libraries.md).
+>[!div class="step-by-step"]
+>[Next](libraries.md)

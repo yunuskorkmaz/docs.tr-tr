@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: e41b0d039d88e5e0dae594b03fd7c1b346b19e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4081558f9ea6a1bc258ab4cbebe6c2f72ee2c60c
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563229"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903380"
 ---
 # <a name="executing-a-command"></a>Komut yürütme
 Devralınan kendi komut nesnesi .NET Framework ile birlikte dahil edilen her .NET Framework veri sağlayıcısı olan <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesnesi, ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesne. Komutları yürütmek bu nesneleri kullanıma sunan yöntemlerin her biri, komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi gerekli.  
@@ -42,5 +42,4 @@ Devralınan kendi komut nesnesi .NET Framework ile birlikte dahil edilen her .NE
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataReader ile çalışma](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

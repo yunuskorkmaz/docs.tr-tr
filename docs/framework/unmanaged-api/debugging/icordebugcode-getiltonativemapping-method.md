@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8614dd612fff2886c4e44a977d05a575fce74eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e49c24a4b98a5287ec27b1667f45055d9a94d53
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648949"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903409"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping Metodu
 Eşlemeleri için yerel uzaklıklar Microsoft Ara dili (MSIL) kaydırır temsil eden "Cor_debug_ıl_to_natıve_map" örneklerinin bir dizisini alır.  
@@ -46,7 +46,7 @@ HRESULT GetILToNativeMapping (
  [out] Gerçek döndürülen öğe sayısına bir işaretçi `map` dizisi.  
   
  `map`  
- [out] Bir dizi `COR_DEBUG_IL_TO_NATIVE_MAP` stuctures, her biri bir MSIL uzaklık bir eşleme yerel uzaklık temsil eder.  
+ [out] Bir dizi `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları, her biri bir MSIL uzaklık bir eşleme yerel uzaklık temsil eder.  
   
  Sıralama yok döndürülen öğe dizisi yok.  
   

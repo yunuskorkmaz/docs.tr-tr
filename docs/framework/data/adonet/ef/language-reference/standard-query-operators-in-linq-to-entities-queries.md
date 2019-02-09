@@ -2,15 +2,15 @@
 title: LINQ to Entities sorgularında standart sorgu işleçleri
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: d055898a78d57da4dfc276b24d643e38046abd0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577513"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904643"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
-Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntem sunmaktadır. Bu yöntemlerin çoğu dizileri üzerinde çalışır; Bu bağlamda türü uygulayan bir nesne dizisidir <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevselliği, filtreleme, projeksiyon, toplama, sıralama, gruplandırma, sayfalama ve daha fazlasını içerir. Bazıları, standart sorgu işleçleri anahtar sözcüğü sözdizimi adanmış böylece sorgu ifade sözdizimi kullanılarak çağrılabilir sık kullanılır. Bir sorgu ifadesinde, bir sorgu yöntemi tabanlı eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir. Eşdeğer sorgu ifadesi tümceleri sahip standart sorgu işleçleri bir listesi için bkz. [standart sorgu işleçlerine genel bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntem sunmaktadır. Bu yöntemlerin çoğu dizileri üzerinde çalışır; Bu bağlamda türü uygulayan bir nesne dizisidir <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevselliği, filtreleme, projeksiyon, toplama, sıralama, gruplandırma, sayfalama ve daha fazlasını içerir. Bazıları, standart sorgu işleçleri anahtar sözcüğü sözdizimi adanmış böylece sorgu ifade sözdizimi kullanılarak çağrılabilir sık kullanılır. Bir sorgu ifadesinde, bir sorgu yöntemi tabanlı eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir. Eşdeğer sorgu ifadesi tümceleri sahip standart sorgu işleçleri bir listesi için bkz. [standart sorgu işleçlerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Standart sorgu işleçlerinin tüm desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konuda özgü standart sorgu işleçleri hakkında bilgi sağlanır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Bilinen sorunlar hakkında daha fazla bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgularını görmek [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, 
 |`Sum`|Null değeri döndürür.|Null değeri döndürür.|Bir dizideki null olmayan değer toplamını döndürür.|Bir dizi sayısal değerlerin toplamını hesaplar.|  
   
 ## <a name="type-methods"></a>Tür yöntemleri  
- Tür dönüştürme ve test ile ilgilenirken siz iki LINQ yöntemleri bağlamında desteklenir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu yalnızca desteklenen türleri uygun eşleme türleri olduğu anlamına gelir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] türü. Bu tür bir listesi için bkz. [kavramsal Model türleri (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Tür yöntemler `Convert` ve `OfType`.  
+ Tür dönüştürme ve test ile ilgilenirken siz iki LINQ yöntemleri, Entity Framework bağlamında her ikisi de desteklenir. Bu, yalnızca desteklenen türleri uygun Entity Framework türe eşleme türleri: anlamına gelir. Bu tür bir listesi için bkz. [kavramsal Model türleri (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Tür yöntemler `Convert` ve `OfType`.  
   
  `OfType` varlık türleri için desteklenir. `Convert` kavramsal model temel türler için desteklenir.  C# `is` ve `as` yöntemleri de desteklenir.  
   
@@ -78,4 +78,4 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Standart Sorgu İşleçlerine Genel Bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Standart Sorgu İşleçlerine Genel Bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

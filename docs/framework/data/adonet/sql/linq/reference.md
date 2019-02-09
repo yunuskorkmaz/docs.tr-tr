@@ -2,12 +2,12 @@
 title: Başvuru
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583073"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904706"
 ---
 # <a name="reference"></a>Başvuru
 Bu bölümde yönelik başvuru bilgileri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] geliştiriciler.  
@@ -40,8 +40,9 @@ Bu bölümde yönelik başvuru bilgileri [!INCLUDE[vbtecdlinq](../../../../../..
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  İçin bir portal sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] konuları.  
   
- [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- İçin bir portal sağlar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] konuları.  
+ [Dil ile tümleşik sorgu (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Dil ile tümleşik sorgu (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ İçin Portal sağlayan [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] konuları.  
   
  [Pokud teknoloji genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Açıklayan nasıl <xref:System.Web.UI.WebControls.LinqDataSource> denetiminin [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] aracılığıyla Web geliştiricileri için [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] veri kaynağı denetimi mimarisi.

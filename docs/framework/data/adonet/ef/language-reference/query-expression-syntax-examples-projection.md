@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: c12fdd70b7174d6e6fbae10d5132c9e3e2a7eb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e4b30c5d4d1cd5703ff6ec15a1c3fe32e41f42a
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733382"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903730"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Sorgu ifadesi söz dizimi örnekleri: Projeksiyon
-Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve `From … From …` sorgu anahtar sözcükleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. `From … From …` eşdeğerdir sorgu tabanlı, `SelectMany` yöntemi. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
+Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve `From … From …` sorgu anahtar sözcükleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. `From … From …` eşdeğerdir sorgu tabanlı, `SelectMany` yöntemi. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
   

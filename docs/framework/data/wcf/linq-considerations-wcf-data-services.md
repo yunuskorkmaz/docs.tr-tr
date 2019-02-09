@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: b73f1063c83d61e02a01cb31932d93c468996598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741502"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904614"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ konuları (WCF Data Services)
 Bu konu içinde hangi LINQ sorguları oluşan ve kullanırken yürütülen yolu hakkında bilgi sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Oluşturma ve sorgu yürütme hakkında daha fazla bilgi için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmetine bağlı bkz [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Bu konu içinde hangi LINQ sorguları oluşan ve kullanırken yürütülen yolu 
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- LINQ hakkında daha fazla genel bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ LINQ hakkında daha fazla genel bilgi için bkz: [dil ile tümleşik sorgu (LINQ) - C# ](../../../csharp/programming-guide/concepts/linq/index.md) veya [dil ile tümleşik sorgu (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  LINQ sorguları, önceki örnekte, aynı zamanda sorgu yöntemleri bir dizi standart sorgu işleçleri bilinen gösterilen iki dile özgü bildirim temelli sorgu söz dizimini kullanarak oluşturmak sağlar. Önceki örnekle eşdeğer olan bir sorgu yalnızca yöntem tabanlı sözdizimi kullanılarak birleştirilebilir aşağıdaki örnekte gösterildiği gibi:  
   

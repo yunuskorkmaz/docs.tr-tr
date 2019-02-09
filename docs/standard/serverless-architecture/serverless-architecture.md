@@ -4,16 +4,16 @@ description: Çeşitli mimarileri ve web uygulamaları, mobil ve IOT gibi sunucu
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150309"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904789"
 ---
 # <a name="serverless-architecture"></a>Sunucusuz mimari
 
-Sunucusuz mimarileri kullanarak birçok yaklaşım vardır. Bu bölümde, sunucusuz tümleştirme yaygın mimarileri örnekleri inceler. Ayrıca, ek zorluklarına neden olur veya ek göz önünde bulundurarak sunucusuz uygularken gerektiren sorunları da kapsar. Çeşitli tasarım örnekleri son olarak, çeşitli sunucusuz kullanım durumları göstermek sağlanır.
+Kullanarak birçok yaklaşım vardır [sunucusuz](http://azure.com/serverless) mimariler. Bu bölümde, sunucusuz tümleştirme yaygın mimarileri örnekleri inceler. Ayrıca, ek zorluklarına neden olur veya ek göz önünde bulundurarak sunucusuz uygularken gerektiren sorunları da kapsar. Çeşitli tasarım örnekleri son olarak, çeşitli sunucusuz kullanım durumları göstermek sağlanır.
 
 Sunucusuz konakları genellikle bir kapsayıcı tabanlı varolan veya PaaS katman sunucusuz örneğini yönetmek için kullanın. Örneğin, Azure işlevleri üzerinde temel [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service, örnekleri ölçeklendirme ve Azure işlevleri kodu yürüten çalışma zamanının yönetmek için kullanılır. Windows tabanlı işlevler için PaaS ve ölçekler konak çalışırken out .NET çalışma zamanı. Linux tabanlı işlevler için ana bilgisayar kapsayıcıları yararlanır.
 

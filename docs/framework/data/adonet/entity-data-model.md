@@ -2,12 +2,12 @@
 title: Varlık Veri Modeli
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c8b2f23a6ba5d6aea9f6d1458e8b7a6bf7bfc734
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688317"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904827"
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
 Varlık veri modeli (EDM) depolanan hâli ne olursa olsun, veri yapısını açıklayan kavramları kümesidir. EDM varlık ilişkisi içinde 1976 Peter Chen tarafından açıklanan modelinden taşır, ancak ayrıca varlık ilişkisi modeli üzerinde oluşturur ve geleneksel kullanımları genişletir.  
@@ -62,6 +62,6 @@ Varlık veri modeli (EDM) depolanan hâli ne olursa olsun, veri yapısını aç�
  [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ADO.NET varlık veri modeli araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
-- [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL Belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

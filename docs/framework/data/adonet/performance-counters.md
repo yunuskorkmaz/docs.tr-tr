@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: a17d0b2382f105bb6299386e45a6746e05c39feb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539070"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903785"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET performans sayaçları
 ADO.NET 2.0 desteği her ikisini de içeren genişletilmiş destek performans sayaçları için sunulan <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient>. <xref:System.Data.SqlClient> ADO.NET önceki sürümlerinde kullanılabilen performans sayaçlarının kullanımdan kaldırıldı ve bu konuda açıklanan yeni performans sayaçları ile değiştirilmiştir. ADO.NET performans sayaçları, uygulamanızı ve kullandığı bağlantı kaynağının durumunu izlemek için kullanabilirsiniz. Performans sayaçlarını Windows Performans İzleyicisi'ni kullanarak izlenebilir veya kullanılarak programlı olarak erişilebilir <xref:System.Diagnostics.PerformanceCounter> sınıfını <xref:System.Diagnostics> ad alanı.  
@@ -202,27 +202,27 @@ Class Program
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
 End Class  
 ```  
-  
+
 ```csharp  
 using System;  
 using System.Data.SqlClient;  
@@ -372,32 +372,32 @@ class Program
     private static string GetIntegratedSecurityConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;Integrated Security=True;" +  
           "Initial Catalog=AdventureWorks";  
     }  
     private static string GetSqlConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" +  
-        //  "Initial Catalog=AdventureWorks";  
+          "Initial Catalog=AdventureWorks";  
     }  
   
     private static string GetSqlConnectionStringDifferent()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" +  
           "User Id=LowPriv;Password=Data!05;";  
     }  
 }  
 ```  
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [OLE DB, ODBC ve Oracle Bağlantı Havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET için performans sayaçları](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)
+- [ASP.NET için performans sayaçları](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Çalışma Zamanı Profili Oluşturma](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-- [Performans eşiklerini izlemeye giriş](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Performans eşiklerini izlemeye giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

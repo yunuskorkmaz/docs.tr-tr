@@ -2,14 +2,14 @@
 title: .NET Framework'te bağlantı noktası koddan .NET Core
 description: Taşıma işlemlerini anlamanıza ve .NET Core için bir .NET Framework projesi taşırken faydalı bulabileceğiniz araçları keşfedin.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266578"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903562"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework kodunuzu .NET Core için bağlantı noktası
 
@@ -37,8 +37,6 @@ Bu, projeniz .NET Core taşırken göz önüne almanız tavsiye ederiz işlemidi
 
 5. Taşıma için planınızı yürütün!
 
-## <a name="tools-to-help"></a>Yardımcı olacak araçlar
-
 Aşağıdaki liste, taşıma işlemi sırasında kullanılacak yararlı bulabileceğiniz araçları gösterir:
 
 * .NET portability Analyzer - [komut satırı aracını](https://github.com/Microsoft/dotnet-apiport/releases) veya [Visual Studio Uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), nasıl taşınabilir kod arasında .NET Framework ve .NET Core ile olan bir rapor oluşturabilen bir araç zinciri bir derleme tarafından bütünleştirilmiş kod çözümleme sorunları. Daha fazla bilgi için [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ Ayrıca, bağlantı noktası daha küçük çözümleri veya .NET Core proje dos
 > CsprojToVs2017 üçüncü taraf bir araçtır. Tüm projeleriniz için çalışacak bir garanti yoktur ve ince değişiklikler, bağımlı davranış neden. CsprojToVs2017 olarak kullanılmalıdır bir _başlangıç noktası_ otomatikleştirilebilir temel işlemleri otomatikleştirir. Bu geçişi proje dosya biçimleri için garantili bir çözüm değildir.
 
 >[!div class="step-by-step"]
->[Next](third-party-deps.md)
+>[Next](net-framework-tech-unavailable.md)

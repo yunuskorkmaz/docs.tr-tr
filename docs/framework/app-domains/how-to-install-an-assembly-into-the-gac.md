@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adeaaa6626a1c9e9e4543613a8fa9e94d2b67e89
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 233a7803cb59f9bfeac15d293dc3fb5a0db449c9
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826843"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903748"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Nasıl yapılır: Bir derlemeyi genel derleme önbelleğine yükleme
 
-Bazı uygulamalar paylaşan derlemeleri genel bütünleştirilmiş kod önbelleği (GAC) depolar. Bütünleştirilmiş kod içine yüklemek [genel derleme önbelleği](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) aşağıdaki bileşenlerden biri ile: 
+Bazı uygulamalar paylaşan derlemeleri genel bütünleştirilmiş kod önbelleği (GAC) depolar. Bütünleştirilmiş kod içine yüklemek [genel derleme önbelleği](gac.md) aşağıdaki bileşenlerden biri ile: 
 - [Windows Installer](#windows-installer)
 - [Genel Derleme Önbelleği Aracı](#global-assembly-cache-tool)
 
@@ -29,7 +29,7 @@ Bazı uygulamalar paylaşan derlemeleri genel bütünleştirilmiş kod önbelle�
 
 ## <a name="windows-installer"></a>Windows Installer
 
-[Windows Installer](https://docs.microsoft.com/en-us/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), Windows yükleme altyapısı, derlemeleri genel bütünleştirilmiş kod önbelleğine eklemek için önerilen yoludur. Windows Installer, derlemeleri genel derleme önbelleğini ve diğer avantajlar başvuru sayımı sağlar. İçin Windows Installer bir yükleyici paketi oluşturmak için kullanın [WiX toolset uzantı Visual Studio 2017 için](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
+[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), Windows yükleme altyapısı, derlemeleri genel bütünleştirilmiş kod önbelleğine eklemek için önerilen yoludur. Windows Installer, derlemeleri genel derleme önbelleğini ve diğer avantajlar başvuru sayımı sağlar. İçin Windows Installer bir yükleyici paketi oluşturmak için kullanın [WiX toolset uzantı Visual Studio 2017 için](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
 
 ## <a name="global-assembly-cache-tool"></a>Genel Derleme Önbelleği Aracı
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 Bu komutta  *\<derleme adı >* genel bütünleştirilmiş kod önbelleğine yüklenecek derlemenin adıdır.
 
-Varsa *gacutil.exe* kullanın, sistem yolunda değil [VS için geliştirici komut istemi  *\<sürüm >*](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs).
+Varsa *gacutil.exe* kullanın, sistem yolunda değil [VS için geliştirici komut istemi  *\<sürüm >*](../tools/developer-command-prompt-for-vs.md).
 
 Aşağıdaki örnek, dosya adı ile bir derlemeyi yükler *hello.dll* genel bütünleştirilmiş kod önbelleğine.
 

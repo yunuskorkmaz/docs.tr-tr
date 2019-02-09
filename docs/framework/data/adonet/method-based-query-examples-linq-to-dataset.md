@@ -2,15 +2,15 @@
 title: Metot tabanlı sorgu örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 0e904d975860dad6bf11344435b249c3bad84b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f2b319d313706fa78e52cfd9aff1361455a441e
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632861"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903927"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Metot tabanlı sorgu örnekleri (LINQ to DataSet)
-Bu bölümde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standart sorgu işleçleri kullanmak metot tabanlı sorgu söz dizimi örneklerde programlama. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanarak doldurulur `FillDataSet` yöntemi içinde belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için [standart sorgu işleçlerine genel bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Bu bölüm, standart sorgu işleçleri kullanmak metot tabanlı sorgu söz dizimi örneklerde programlama için veri kümesi LINQ sağlar. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanarak doldurulur `FillDataSet` yöntemi içinde belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Projeksiyon](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

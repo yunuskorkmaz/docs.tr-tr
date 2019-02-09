@@ -2,14 +2,14 @@
 title: .NET Core için bağlantı kitaplıkları
 description: Kitaplık .NET Framework projelerinden .NET Core için bağlantı noktası hakkında bilgi edinin.
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/7/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169704"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904694"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework kitaplıkları .NET Core için bağlantı noktası
 
@@ -40,38 +40,6 @@ Bu makalede proje dosyasına taşımak için bir parçası olarak eklenmiş olan
 
 [.NET Core'a taşıma -, üçüncü taraf bağımlılıklarını çözümleme](~/docs/core/porting/third-party-deps.md)   
 Bu konu, taşınabilirlik ve üçüncü taraf bağımlılıklarının üzerinde .NET Core NuGet paket bağımlılık çalıştırmaz ne yapılacağını açıklar.
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET framework teknolojilerini .NET Core üzerinde kullanılamaz
-
-.NET Framework kitaplıkları için çeşitli teknolojilerden, uygulama etki alanları, uzaktan iletişim, kod erişim güvenliği (CAS) ve güvenlik gibi .NET Core ile kullanmak için kullanılamaz. Kitaplıklarınızı bir veya daha fazla teknolojiler kullanıyorsa, aşağıda ana hatlarıyla belirtilen alternatif yaklaşımlar göz önünde bulundurun. Corefx'te takım API uyumluluğu hakkında daha fazla bilgi için tutan bir [davranış değişiklikleri/compat sonu ve kullanım dışı/eski API'ler listesi](https://github.com/dotnet/corefx/wiki/ApiCompat) github'da.
-
-API veya teknoloji yalnızca şu anda uygulanmadı çünkü kasıtlı olarak desteklenmeyen var. kapsıyor değil. Sorunu bildirin [dotnet/corefx'te depo sorunları](https://github.com/dotnet/corefx/issues) github'da belirli API'ler ve teknolojileri için sorulacak. [Sorunları istekleri taşıma](https://github.com/dotnet/corefx/labels/port-to-core) ile işaretlenmiş `port-to-core` etiketi.
-
-### <a name="appdomains"></a>Uygulama etki alanları
-
-Uygulama etki alanları uygulamaları birbirinden yalıtın. Uygulama etki alanları, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Bunlar .NET Core uygulanmaz. Gelecekte bu özelliği eklemeyi planlıyoruz yok. Kod bir ayırma işlemi için ayrı işlemler öneririz veya alternatif olarak kapsayıcıları kullanma. Dinamik derlemeler yüklenmesi için yeni öneririz <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı.
-
-.NET Framework'ten kod geçiş daha kolay hale getirmek için size bazı kullanıma <xref:System.AppDomain> .NET Core API yüzeyini. Bazı API işlevleri normalde (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), bazı üyeleri hiçbir şey yapma (örneğin, <xref:System.AppDomain.SetCachePath%2A>), ve bunlardan bazıları throw <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A>). Kullandığınız karşı türlerini işaretleyin [ `System.AppDomain` başvuru kaynağı](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) içinde [dotnet/corefx'te GitHub deposu](https://github.com/dotnet/corefx) uygulanan sürümünüzle eşleşen dalı seçin emin olun.
-
-### <a name="remoting"></a>Uzaktan iletişim
-
-.NET uzaktan iletişim sorunlu bir mimari belirlenmiştir. Bu, artık desteklenmeyen AppDomain arası iletişim için kullanılır. Ayrıca, uzaktan iletişimi sürdürmek pahalı olan çalışma zamanı desteği gerektirir. Bu nedenlerle, .NET Core, .NET uzaktan iletişim desteklenmez ve gelecekte destek eklemeyi planlıyoruz yok.
-
-İşlemler arasında iletişim için işlemler arası iletişim (IPC) mekanizmasını Remoting, alternatif olarak gibi göz önünde bulundurun <xref:System.IO.Pipes> veya <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> sınıfı.
-
-Makine arasında ağ tabanlı bir çözüm alternatif olarak kullanın. Tercihen, HTTP gibi bir düşük ek yük düz metin protokol kullanın. [Kestrel web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ASP.NET Core tarafından kullanılan web sunucusu, burada bir seçenektir. Ayrıca kullanmayı <xref:System.Net.Sockets> ağ tabanlı, makineler arası senaryolar için. Daha fazla seçenek için bkz: [.NET açık kaynak Geliştirici projeler: Mesajlaşma](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
-
-### <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
-
-Çalışma zamanı veya bir yönetilen uygulama veya kitaplık kullanır veya çalışan hangi kaynaklara sınırlamak için framework güvenmektedir, korumalı alana alma, [.NET Framework üzerinde desteklenmiyor](~/docs/framework/misc/code-access-security.md) ve .NET Core, bu nedenle de desteklenmez. Olduğunu çok fazla çalışma zamanı ve .NET Framework durumlarda ayrıcalıkların CA'lar güvenlik sınırı davranılması devam oluştuğu inanıyoruz. Ayrıca, CA uygulaması daha karmaşık hale getirir ve genellikle doğruluk performans şifrelemelerini kullanmak istemediğiniz uygulamalar için.
-
-En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanmanız ayrıcalık kümesi.
-
-### <a name="security-transparency"></a>Güvenlik saydamlık
-
-Benzer şekilde CA'ları, güvenlik saydamlık korumalı kod güvenlik kritik kod, bildirim temelli bir şekilde ayrılması verir ancak olan [artık bir güvenlik sınırı olarak desteklenen](~/docs/framework/misc/security-transparent-code.md). Bu özellik tarafından Silverlight yoğun olarak kullanılır. 
-
-En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanmanız ayrıcalık kümesi.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework kodunuzu .NET Framework 4.7.2 yeniden hedefleme
 
@@ -163,3 +131,6 @@ Sonuç olarak, taşıma çaba yoğun olarak .NET Framework kodunuzu nasıl yapı
 1. Sonraki katmanı kod bağlantı noktası, çekme ve önceki adımları yineleyin.
 
 Kitaplığınızın temel ile başlayın ve temel dışa taşıma ve her katman gerektiği gibi test, bağlantı noktası oluşturma sorunları aynı anda bir kod katmanı için yalıtılmış olduğu sistematik bir işlem olur.
+
+>[!div class="step-by-step"]
+>[Next](project-structure.md)

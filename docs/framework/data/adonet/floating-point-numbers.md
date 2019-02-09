@@ -2,12 +2,12 @@
 title: Kayan nokta sayıları
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 8f5985576e966f1a853c9ee8d7bfef4b9bf6fc40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589379"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903966"
 ---
 # <a name="floating-point-numbers"></a>Kayan nokta sayıları
 Bu konuda kayan nokta sayıları ile çalışırken, geliştiricilerin sık karşılaştığınız sorunları bazıları açıklanmaktadır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Bu sorunları şekilde bilgisayarları kayan nokta sayıları depolamak ve gibi belirli bir sağlayıcıya özgü olmayan neden olduğu <xref:System.Data.SqlClient> veya <xref:System.Data.OracleClient>.  
@@ -19,5 +19,5 @@ Bu konuda kayan nokta sayıları ile çalışırken, geliştiricilerin sık kar�
  Eşitlik karşılaştırma sorunları gidermek için en az anlamlı basamaklarında değişikliklere göz ardı edilir, böylece uygulamanız kodlama göz önünde bulundurun. Örneğin, iki sayıyı eşit olup olmadığını görmek için karşılaştırmak yerine başka bir sayıyı bir sayıdan çıkarır. Fark yuvarlama kabul edilebilir bir kenar boşluğu içinde ise, aynı olmaları durumunda gibi uygulamanızın sayıları davranabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kayan Noktalı Sayıların Neden Duyarlık Kaybedebileceği](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Kayan Noktalı Sayıların Neden Duyarlık Kaybedebileceği](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

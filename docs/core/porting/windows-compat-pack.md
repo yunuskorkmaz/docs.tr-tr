@@ -2,14 +2,14 @@
 title: .NET Core kod bağlantı noktası için Windows Uyumluluk Paketi kullanma
 description: Windows Uyumluluk Paketi hakkında bilgi edinmek ve nasıl, kullanabilir, bağlantı noktası var olan .NET Framework kodu .NET Core için
 author: terrajobst
-ms.date: 11/13/2017
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0a409c953ce38ed4c2959adaf4de9d3730ce37f4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169943"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903761"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core kod bağlantı noktası için Windows Uyumluluk Paketi kullanma
 
@@ -78,4 +78,3 @@ Daha fazla bilgi için [uyumluluk paketinin belirtim](https://github.com/dotnet/
     ```
 
 Bir tanıtım için kullanıma [Windows Uyumluluk Paketi Channel 9 video](https://channel9.msdn.com/Events/Connect/2017/T123).
-
