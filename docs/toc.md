@@ -191,9 +191,11 @@
 ### [dotnet-svcutil.xmlserializer](core/additional-tools/dotnet-svcutil.xmlserializer-guide.md)
 ### [XML Serileştirici Oluşturucusu](core/additional-tools/xml-serializer-generator.md)
 ## [.NET Framework’ten Taşıma](core/porting/index.md)
-### [.NET Core için proje düzenleme](core/porting/project-structure.md)
+### [.NET Core’da kullanılamayan .NET Framework teknolojileri](core/porting/net-framework-tech-unavailable.md)
 ### [Üçüncü taraf bağımlılıklarını çözümleme](core/porting/third-party-deps.md)
 ### [Kitaplıkları taşıma](core/porting/libraries.md)
+### [.NET Core için proje düzenleme](core/porting/project-structure.md)
+### [.NET Core’a taşıma konusunda yardımcı olabilecek araçlar](core/porting/tools.md)
 ### [Windows Uyumluluk Paketi Kullanma](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Kaynaktan .NET Core derleme](core/build/index.md)
