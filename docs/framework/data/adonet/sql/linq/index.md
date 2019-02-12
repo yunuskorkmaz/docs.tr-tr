@@ -2,12 +2,12 @@
 title: LINQ - SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904293"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092234"
 ---
 # <a name="linq-to-sql"></a>LINQ - SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ilişkisel verileri nesne gibi yönetmek için çalışma zamanı altyapısı sağlayan sürüm 3.5.  
@@ -47,11 +47,11 @@ ms.locfileid: "55904293"
  [LINQ ve ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Bağlantılar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] portalı.  
   
- [LINQ to SQL izlenecek yollar](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [LINQ to SQL izlenecek yollar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  İzlenecek yollar için kullanılabilir listeler [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Belgelerde kullanılan örnek veritabanları indirmek açıklar.  
   
- [Pokud teknoloji genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Pokud Web sunucusu denetimine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  Açıklayan nasıl <xref:System.Web.UI.WebControls.LinqDataSource> denetiminin [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] aracılığıyla Web geliştiricileri için [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] veri kaynağı denetimi mimarisi.

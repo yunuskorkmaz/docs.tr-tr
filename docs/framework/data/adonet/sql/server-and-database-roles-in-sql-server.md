@@ -2,12 +2,12 @@
 title: Sunucu ve SQL Server veritabanı rolleri
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643084"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091818"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Sunucu ve SQL Server veritabanı rolleri
 Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya kullanıcı grubu için izinler atamak izin veren rol tabanlı güvenliği kullanın. Sabit sunucu ve sabit veritabanı rollerine atanmış izinler sabit kümesine sahiptir.  
@@ -27,8 +27,8 @@ Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya ku
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Sunucu düzeyinde roller](/sql/relational-databases/security/authentication-access/server-level-roles) ve [sabit sunucu rollerinin izinlerini](https://msdn.microsoft.com/library/ms175892.aspx) SQL Server Çevrimiçi Kitapları'nda|Sabit sunucu rolleri ve SQL Server'da bunlarla ilişkili izinleri açıklar.|  
-|[Veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles) ve [sabit veritabanı rollerinin izinlerini](https://msdn.microsoft.com/library/ms189612.aspx) SQL Server Çevrimiçi Kitapları'nda|Sabit veritabanı rolleri ve bunlarla ilişkili izinleri açıklar.|  
+|[Sunucu düzeyinde roller](/sql/relational-databases/security/authentication-access/server-level-roles)|Sabit sunucu rolleri ve SQL Server'da bunlarla ilişkili izinleri açıklar.|  
+|[Veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles)|Sabit veritabanı rolleri ve bunlarla ilişkili izinleri açıklar.|  
   
 ## <a name="database-roles-and-users"></a>Veritabanı rolleri ve kullanıcıları  
  Veritabanı nesneleri ile çalışmak için oturum açma bilgileri veritabanı kullanıcı hesaplarına eşlenmesi gerekir. Veritabanı kullanıcıları, bu rolleri ile ilişkilendirilmiş tüm izin kümeleri devralan veritabanı rollerine sonra eklenebilir. Tüm izinler verilebilir.  
@@ -58,8 +58,8 @@ Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya ku
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kimlik ve erişim denetimi](https://msdn.microsoft.com/library/bb510418.aspx) SQL Server Çevrimiçi Kitapları'nda|Sorumluları, rol, kimlik bilgileri, güvenliği sağlanabilir öğeler ve izinleri açıklayan konulara bağlantılar içerir.|  
-|[İlkeleri](/sql/relational-databases/security/authentication-access/principals-database-engine) SQL Server Çevrimiçi Kitapları'nda|İlkeleri açıklanır ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
+|[Veritabanı altyapısı izinleri ile çalışmaya başlama](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Sorumluları, rol, kimlik bilgileri, güvenliği sağlanabilir öğeler ve izinleri açıklayan konulara bağlantılar içerir.|  
+|[İlkeleri](/sql/relational-databases/security/authentication-access/principals-database-engine)|İlkeleri açıklanır ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

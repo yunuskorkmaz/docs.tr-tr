@@ -2,12 +2,12 @@
 title: Toplu sorgular
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858698"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094132"
 ---
 # <a name="aggregate-queries"></a>Toplu sorgular
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen `Average`, `Count`, `Max`, `Min`, ve `Sum` toplama işleçleri. Toplama işleçleri aşağıdaki özellikleri Not [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ ms.locfileid: "43858698"
   
 -   Toplam değer sorguları genellikle bir koleksiyon yerine bir sayı döndürür.  
   
-     Daha fazla bilgi için [toplama işlemleri](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Daha fazla bilgi için [toplama işlemleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 -   Anonim türler karşı toplamalar çağrılamıyor.  
   

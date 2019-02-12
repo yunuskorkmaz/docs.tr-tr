@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855289"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092507"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Hata Ayıklama, İzleme ve Profil Oluşturma
 Bir .NET Framework uygulamasında hata ayıklamak için derleyici ve çalışma zamanı ortamı uygulamaya eklemek bir hata ayıklayıcı etkinleştirmek için yapılandırılması gerekir ve hem simge hem de satır üretmek için mümkün olduğunda, uygulama ve onun ilişkili Microsoft Ara eşler Dil (MSIL). Yönetilen bir uygulama hata ayıklama sonra performansını artırmak üzere profili. Profil oluşturma değerlendirir ve en sık yürütülen kodu kaynak kodu satırlarını açıklar ve ne kadar bunları yürütmek için alır.  
@@ -47,7 +47,7 @@ Bir .NET Framework uygulamasında hata ayıklamak için derleyici ve çalışma 
  Uygulama performansını izlemek için kullanabileceğiniz sayaçlar açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ASP.NET ve AJAX Uygulamalarında Hata Ayıklama](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Visual Studio'da ASP.NET veya ASP.NET Core uygulamalarının hatalarını ayıklama](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  Önkoşullar ve nasıl bir ASP.NET uygulama geliştirme süresince veya dağıtım sonrasında hata ayıklama için yönergeler sağlar.  
   
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  

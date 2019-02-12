@@ -3,15 +3,21 @@ title: Olaylar Oluşturma ve İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - delegate model for events
-  - 'application development [.NET Framework], events'
-  - 'events [.NET Framework]'
+- delegate model for events
+- application development [.NET Framework], events
+- events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093599"
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
 .NET Framework olayları temsilci modeline dayanır. Temsilci modeli ile kaydetmek ve bildirim sağlayıcıdan almak abone sağlayan gözlemci tasarım deseni izler. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  
@@ -39,7 +45,7 @@ ms.author: ronpet
   
  Birden fazla olay işleme yöntemine yapılan başvuruları tutabilen anlamına gelen çok noktaya yayın temsilcileri, bir. Ayrıntılar için bkz <xref:System.Delegate> başvuru sayfası. Temsilciler, esneklik ve olay işlemede ayrıntılı denetim sağlar. Bir temsilci, olay kayıtlı olay işleyicilerinin bir listesini tutarak olayı yükselten sınıf için olay dağıtıcısı rolü olarak görev yapar.  
   
- Senaryolar için burada <xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmadığı, bir temsilci tanımlayabilirsiniz. Bir temsilci tanımlama gerektiren senaryolar ne zaman, genel türleri tanımayan kodla çalışmanız gerekmesi gibi nadir rastlanır. Bir temsilci ile işaretle `delegate` (C#) ve `Delegate` (Visual Basic'te) bildirimindeki anahtar sözcüğü. Aşağıdaki örnek adlı bir temsilcinin nasıl belirtileceğini gösterir `ThresholdReachedEventHandler`.  
+ Senaryolar için burada <xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmadığı, bir temsilci tanımlayabilirsiniz. Bir temsilci tanımlama gerektiren senaryolar ne zaman, genel türleri tanımayan kodla çalışmanız gerekmesi gibi nadir rastlanır. Bir temsilci ile işaretle `delegate` (içinde C#) ve `Delegate` (Visual Basic'te) bildirimindeki anahtar sözcüğü. Aşağıdaki örnek adlı bir temsilcinin nasıl belirtileceğini gösterir `ThresholdReachedEventHandler`.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -65,7 +71,7 @@ ms.author: ronpet
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Statik ve Dinamik Olay İşleyicileri  
- .NET Framework, abonelerin statik veya dinamik olarak olay bildirimlerine kaydetmek sağlar. Statik olay işleyiciler, olaylarını işledikleri sınıfın ömrü için geçerli olur. Dinamik olay işleyicileri açıkça etkinleştirilir ve program yürütme sırasında genellikle bazı koşullu program mantığı yanıtta devre dışı bırakıldı. Örneğin, olay bildirimleri yalnızca belirli koşullar altında gerekirse ya da uygulama çoklu olay işleyicileri sağlıyorsa ve uygun birini kullanmak için çalışma zamanı koşullarını tanımlayın kullanılabilir. Önceki bölümdeki örnek, dinamik olarak bir olay işleyicisi eklemek gösterilmektedir. Daha fazla bilgi için [olayları](../../visual-basic/programming-guide/language-features/events/index.md) ve [olayları](../../csharp/programming-guide/events/index.md).  
+ .NET Framework, abonelerin statik veya dinamik olarak olay bildirimlerine kaydetmek sağlar. Statik olay işleyiciler, olaylarını işledikleri sınıfın ömrü için geçerli olur. Dinamik olay işleyicileri açıkça etkinleştirilir ve program yürütme sırasında genellikle bazı koşullu program mantığı yanıtta devre dışı bırakıldı. Örneğin, olay bildirimleri yalnızca belirli koşullar altında gerekirse ya da uygulama çoklu olay işleyicileri sağlıyorsa ve uygun birini kullanmak için çalışma zamanı koşullarını tanımlayın kullanılabilir. Önceki bölümdeki örnek, dinamik olarak bir olay işleyicisi eklemek gösterilmektedir. Daha fazla bilgi için [olayları](../../visual-basic/programming-guide/language-features/events/index.md) (Visual Basic'te) ve [olayları](../../csharp/programming-guide/events/index.md) (içinde C#).  
   
 ## <a name="raising-multiple-events"></a>Birden Çok Olay Oluşturma  
  Sınıfınız birden çok olayı harekete geçirirse derleyici olay temsilci örneği başına tek alan oluşturur. Olay sayısı büyükse, her temsilci tek bir alanın depolama maliyeti kabul edilebilir olmayabilir. Bu durumlarda, .NET Framework olay özelliklerini sağlar. olay temsilcilerini depolamak için seçtiğiniz başka bir veri yapısı ile kullanabilirsiniz.  

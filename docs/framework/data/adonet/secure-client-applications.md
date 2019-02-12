@@ -2,12 +2,12 @@
 title: Güvenli istemci uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599627"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092715"
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güvenlik açıklarına karşı korunması gereken birçok bölümü oluşur. Güvenli kullanıcı arabirimleri oluşturmak, birçok sorunu verileri veya sistem kaynaklarına erişebilmeniz için önce saldırganların engelleyerek engelleyebilirsiniz.  
@@ -21,7 +21,7 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
  [Güvenlik ve Kullanıcı Girdisi](../../../../docs/standard/security/security-and-user-input.md)  
  Kullanıcı girişi içeren zarif ve potansiyel olarak tehlikeli olabilecek hataları nasıl ele alınacağını açıklar.  
   
- [ASP.NET Web sayfalarında kullanıcı girişini doğrulama](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ [ASP.NET Web sayfalarında kullanıcı girişini doğrulama](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  ASP.NET doğrulama denetimleri kullanarak kullanıcı girişi doğrulama genel bakış.  
   
  [Windows Forms'ta Kullanıcı Girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
@@ -39,7 +39,7 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
  [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Bir Windows Forms uygulaması yönetilmeyen uygulamalarda etkileşim açıklar.  
   
- [ClickOnce dağıtımı için Windows Forms uygulamaları](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [Windows Forms için ClickOnce Dağıtımı](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Nasıl kullanılacağını açıklar `ClickOnce` dağıtım bir Windows Forms uygulamasında ve güvenlikle ilgili etkileri anlatılmaktadır.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET ve XML Web Hizmetleri  
@@ -51,23 +51,23 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[NIB: ASP.NET güvenliği](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET uygulamalarının güvenliğini nasıl ele alınmaktadır.|  
-|[ASP.NET kullanılarak oluşturulan XML Web Hizmetleri güvenli hale getirme](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET Web hizmeti için güvenlik uygulamak nasıl ele alınmaktadır.|  
-|[Betik açıklara genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Kötü amaçlı karakterler bir Web sayfasına eklemek için çalışır bir betik yararlanma saldırılara karşı koruma sağlamak nasıl ele alınmaktadır.|  
-|[ASP.NET Web uygulamaları için NIB: temel güvenlik uygulamaları](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Genel güvenlik bilgileri ve bağlantılar daha fazla tartışma için|  
+|[ASP.NET Web sitelerinin güvenliğini sağlama](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET uygulamalarının güvenliğini nasıl ele alınmaktadır.|  
+|[ASP.NET kullanılarak oluşturulan XML Web Hizmetleri güvenli hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET Web hizmeti için güvenlik uygulamak nasıl ele alınmaktadır.|  
+|[Betik açıklara genel bakış](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Kötü amaçlı karakterler bir Web sayfasına eklemek için çalışır bir betik yararlanma saldırılara karşı koruma sağlamak nasıl ele alınmaktadır.|  
+|[Web uygulamaları için temel güvenlik yöntemleri](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Genel güvenlik bilgileri ve bağlantılar daha fazla tartışma için|  
   
 ## <a name="remoting"></a>Uzaktan iletişim  
  .NET uzaktan iletişim uygulama bileşenlerinin tümü tek bir bilgisayarda veya tüm dünya genelindeki dağılmış yaygın olarak dağıtılmış uygulamaları kolayca oluşturmanıza olanak sağlar. Diğer işlemlerde aynı bilgisayarda veya alt ağ üzerinden erişilebilen herhangi bir bilgisayarda nesneleri kullanan istemci uygulamalar oluşturabilirsiniz. .NET uzaktan iletişim, aynı işlemi diğer uygulama etki alanları ile iletişim kurmak için de kullanabilirsiniz.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Uzak uygulama yapılandırması](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|Ortak sorunları önlemek için uzaktan iletişim uygulamalarını yapılandırmak nasıl ele alınmaktadır.|  
-|[Uzaktan iletişim güvenlik](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Kimlik doğrulaması ve şifreleme hem de uzaktan iletişim için ilgili ek güvenlik konuları açıklanmaktadır.|  
+|[Uzak uygulama yapılandırması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Ortak sorunları önlemek için uzaktan iletişim uygulamalarını yapılandırmak nasıl ele alınmaktadır.|  
+|[Uzaktan iletişim güvenlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Kimlik doğrulaması ve şifreleme hem de uzaktan iletişim için ilgili ek güvenlik konuları açıklanmaktadır.|  
 |[Güvenlik ve uzaktan yönetim konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı kesişimi ile ilgili güvenlik konuları açıklanmaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Veri erişim stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)
 - [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: N katmanı ve uzak uygulamalarla LINQ-SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 614adf9e00f912e0dddb6674fe4c4ab329f652c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32035720992a679457f11414ab282f949b450082
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734548"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094080"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N katmanı ve uzak uygulamalarla LINQ-SQL
 Kullanan n katmanlı veya çok katmanlı uygulamaları oluşturabileceğiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Genellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlamı, varlık sınıfları ve sorgu oluşturma mantığı bulunur Orta katmanda veri erişim katmanı (DAL). İş mantığı ve kalıcı olmayan herhangi bir veri tamamen kısmi sınıflar ve yöntemler varlıkları ve veri bağlamı uygulanabilir veya ayrı sınıflarda uygulanabilir.
@@ -16,7 +16,7 @@ Kullanan n katmanlı veya çok katmanlı uygulamaları oluşturabileceğiniz [!I
 
  Orta katmanda varlıkları kendi durumunu izler ve ertelenmiş yüklenmesini ve veritabanına değişiklikleri gönderme yöneten veri bağlamı tarafından oluşturulur. Bu varlıkların "eklenir" `DataContext`. Varlıkları serileştirme aracılığıyla başka bir katmana gönderildikten sonra Bununla birlikte, yani ayrılmış, haline gelmeden `DataContext` durumlarına artık izlemektir. İstemci güncelleştirmeleri geri gönderir varlıkları eklenemeyeceği, önce veri bağlamı için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanına değişiklikleri gönderebilirsiniz. İstemci, özgün değerlerine sağlamaktan sorumludur ve/veya olanlar için iyimser eşzamanlılık denetimlerinin gerekli olduğunda zaman damgaları için orta katman yedekleyin.
 
- ASP.NET uygulamalarında <xref:System.Web.UI.WebControls.LinqDataSource> Bu karmaşıklığı çoğunu yönetir. Daha fazla bilgi için [NIB: Pokud Web sunucusu denetimine genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136).
+ ASP.NET uygulamalarında <xref:System.Web.UI.WebControls.LinqDataSource> Bu karmaşıklığı çoğunu yönetir. Daha fazla bilgi için [LinqDataSource Web sunucusu denetimine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)).
 
 ## <a name="additional-resources"></a>Ek Kaynaklar
  Kullanan n katmanlı uygulamaları ekleme hakkında daha fazla bilgi için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], aşağıdaki konulara bakın:

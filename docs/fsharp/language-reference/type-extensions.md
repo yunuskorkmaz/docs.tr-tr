@@ -1,13 +1,13 @@
 ---
-title: Tür Uzantıları
+title: Tür Genişletmeleri
 description: Bilgi nasıl F# türü uzantılara izin ver bir önceden tanımlanmış nesne türü için yeni üye ekleyin.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066161"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092481"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
@@ -100,6 +100,8 @@ Artık erişebilirsiniz `RepeatElements` üyesi ise gibi <xref:System.Collection
 Genişletilmiş tür yansıma tarafından incelendiğinde, isteğe bağlı uzantılar görünmez. İsteğe bağlı uzantılar, modüller halinde olmalıdır ve uzantıyı içeren modül açık veya aksi halde kapsam içinde olduğunda yalnızca kapsamda oldukları.
 
 İsteğe bağlı uzantı üyeleri, nesne örneğinin örtülü olarak ilk parametre olarak geçirildiği statik üyeler için derlenmiştir. Örnek üyeleri veya göre nasıl bildirilen statik üye oldukları gibi ancak bunlar işlevi görür.
+
+İsteğe bağlı uzantı üyeleri olmayan de görünür C# veya VB tüketici. Bunlar yalnızca diğer tüketilebilir F# kod.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Genel SORUMLULUĞUN iç ve isteğe bağlı türü uzantıları
 

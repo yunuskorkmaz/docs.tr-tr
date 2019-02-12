@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198159"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091727"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak veri erişim hakkında bilgi sağlar.  
@@ -20,8 +20,11 @@ Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML k
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  ADO.NET mimarisini ve ADO.NET sınıflarının uygulama verilerini yönetmek ve Microsoft SQL Server, OLE DB veri kaynakları ve XML gibi veri kaynaklarıyla etkileşim kurmak için nasıl kullanılacağını açıklar.  
   
- [LINQ portalı](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- İlgili belgeler için dil tümleşik sorgu (LINQ) bağlantılar sağlar.  
+ [Dil ile Tümleşik Sorgu (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
+ Dil tümleşik sorgu (LINQ) kullanmaya yönelik ilgili belgeler için bağlantılar sağlar C#.  
+  
+ [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ İlgili belgeler için dil tümleşik sorgu (Visual Basic kullanarak LINQ) bağlantılar sağlar.  
   
  [İşlem Gerçekleştirme](../../../docs/framework/data/transactions/index.md)  
  İşlemler için .NET Framework desteğini açıklar.  

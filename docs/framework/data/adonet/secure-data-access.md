@@ -2,12 +2,12 @@
 title: Güvenli veri erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494645"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094041"
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenlik mekanizmalarını anlamaları gerekir. Ayrıca, diğer özellikler veya uygulamanızı içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
@@ -24,7 +24,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırma kullanma gibi bağlantı bilgileriyle korumaya yönelik teknikleri açıklar.|  
-|[Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
+|[Veri erişim stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
 |[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Çalışma zamanında kullanıcı girdisi bağlantı dizeleri nasıl oluşturulduğu açıklanır.|  
 |[SQL Server Güvenliğine Genel Bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
   
@@ -46,7 +46,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Betik açıklara genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Açıklara komut dosyası ve SQL deyimi karşı koruma sağlamak açıklar.|  
+|[Betik açıklara genel bakış](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Açıklara komut dosyası ve SQL deyimi karşı koruma sağlamak açıklar.|  
   
 ## <a name="probing-attacks"></a>Saldırıları araştırma  
  Saldırganlar genellikle saldırının sisteminize bağlamak için sunucu, veritabanı veya tablo adı gibi bir özel durum bilgilerini kullanın. Özel durumlar uygulamanızın veya veri kaynağı hakkında belirli bilgiler içerdiğinden daha iyi istemci için gerekli bilgileri yalnızca göstererek, uygulama ve veri kaynağı korumalı olmasını sağlayabilirsiniz.  
@@ -75,7 +75,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[COM + rol tabanlı güvenlik ve .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Yönetilen kodda COM + security Hizmetleri ile tümleştirme nasıl ele alınmaktadır.|  
+|[Rol Tabanlı Güvenlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Yönetilen kodda COM + security Hizmetleri ile tümleştirme nasıl ele alınmaktadır.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen Kod ile Birlikte Çalışma  
  .NET Framework için COM bileşenlerini, COM + Hizmetleri, dış tür kitaplıkları ve birçok işletim sistemi Hizmetleri dahil olmak üzere, yönetilmeyen kod ile etkileşim sağlar. Yönetilmeyen kod ile çalışma, yönetilen kod için güvenlik çevresi dışına gitmesini içerir. Hem kodunuz hem de onu çağıran herhangi bir kod kod iznini yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> belirtilmiş işareti). Yönetilmeyen kod uygulamanıza istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı sürece, yönetilmeyen kod ile birlikte çalışma kaçınmanız gerekir.  
@@ -90,7 +90,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Veri erişim stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

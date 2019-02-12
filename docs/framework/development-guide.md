@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123767"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092962"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi sağlar.  
@@ -79,5 +79,5 @@ Bu bölümde, oluşturma, yapılandırma, hata ayıklama, güvenli ve .NET Frame
  [Araçlar](../../docs/framework/tools/index.md)  
  Açıklar yardımcı olacak araçlar, yapılandırma, uygulamaları geliştirin ve .NET Framework teknolojilerini kullanarak dağıtın.  
   
- [.NET framework örnekleri](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Bağlantılar, .NET Framework teknolojilerini gösteren örnek uygulamalar için MSDN kod örnekleri Galerisine sağlar.
+ [.NET örnekler ve öğreticiler](../samples-and-tutorials/index.md)  
+ Örnekler ve öğreticiler size yardımcı olacak bağlantılar .NET hakkında bilgi sağlar.

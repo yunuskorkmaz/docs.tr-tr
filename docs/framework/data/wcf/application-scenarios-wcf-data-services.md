@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709162"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093300"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gösterme ve veri olarak kullanmak için bir dizi temel senaryoları destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda, bu senaryolar için ilgili konuları işaret eder.  
@@ -37,11 +37,11 @@ ms.locfileid: "54709162"
 -   [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Silverlight tabanlı istemci uygulamasında akış.  
- -   [WCF Veri Hizmetleri (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Nasıl yapılır: Veri hizmeti verilerini (WCF Veri Hizmetleri/Silverlight) denetimlere bağlama](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Nasıl yapılır: Veri hizmeti verileri (Silverlight istemcisi) denetimlere bağlama](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] AJAX tabanlı istemci uygulamada akış.  
  -   [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709162"
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Veri Hizmetleri (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  Kullanımına sunun ve tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişilen ve bir akış olarak değiştirilen bir ikili büyük nesne ile akış.  
  -   [Akış Sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

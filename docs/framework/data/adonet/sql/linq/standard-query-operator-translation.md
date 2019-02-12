@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588580"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093937"
 ---
 # <a name="standard-query-operator-translation"></a>Standart sorgu işleci çevirisi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standart sorgu işleçleri SQL komutlara çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantikleri belirler.  
   
- Standart sorgu işleçleri karşı tanımlanmış *dizileri*. Bir sıra *sıralı* ve dizinin her öğesi için başvuru kimliği kullanır. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Standart sorgu işleçleri karşı tanımlanmış *dizileri*. Bir sıra *sıralı* ve dizinin her öğesi için başvuru kimliği kullanır. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL ilgilenen öncelikli olarak *değer kümeleri sıralanmamış*. Sıralamadır genellikle bir açıkça belirtilen, bir sorgu sonucunu yerine Ara sonuçlar uygulanan sonrası işlem. Kimlik değerleri tarafından tanımlanır. Bu nedenle SQL sorguları multisets ile dağıtılacak anlaşılabilir (*paketleri*) yerine *ayarlar*.  
   

@@ -1,11 +1,10 @@
 ---
-title: 'Nasıl yapılır: özel durumları yakalamak için Try-Catch bloğu kullanma'
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: Özel durumları yakalamak için Try-Catch bloğu kullanma'
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842391"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092754"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Özel durumları yakalamak için try/catch bloğu kullanma
 
-Özel durum oluşturma olasılığı olan kod bölümlerini yerleştirileceği bir `try` özel durumları işleyen bloğu ve yerde kodu bir `catch` blok. `catch` Bloğudur bir dizi deyim anahtar sözcüğü ile başlayan `catch`ve ardından bir özel durum türünü ve bir eylem gerçekleştirilebilir.
+Yükseltme veya bir özel durum herhangi bir kod deyim koyun bir `try` blok ve özel durum ya da bir veya daha fazla özel durumları işlemek için kullanılan bir yerde ifadeleri `catch` aşağıdaki blokları `try` blok. Her `catch` blok özel durum türü içerir ve bu özel durum türü işlemek için gereken ek ifadeleri içerebilir.
 
-Aşağıdaki kod örneğinde bir `try` / `catch` olası bir özel durum yakalamak için blok. `Main` Yöntemi içeren bir `try` ile engelleyecek bir <xref:System.IO.StreamReader> adlı bir veri dosyası açılır deyimi `data.txt` ve dosyanın bir dize yazar. Aşağıdaki `try` bloğu bir `catch` oluşur herhangi bir özel durumu yakalar blok `try` blok.
+Aşağıdaki örnekte, bir <xref:System.IO.StreamReader> adlı bir dosya açılır *data.txt* ve dosyasından bir satır alır. Kod herhangi üç özel durum fırlatabilir beri yerleştirilir bir `try` blok. Üç `catch` bloğu özel durumları yakalamak ve bunları konsola sonuçları görüntüleyerek işlemek.
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-Ortak dil çalışma zamanı bir catch bloğu tarafından yakalandı özel durumu yakalar. Çalışma zamanının nasıl yapılandırdığına bağlı olarak hata ayıklama iletişim kutusu görüntülenirse, program yürütme durdurur ve özel durum bilgilerini içeren bir iletişim kutusu görünür veya bir hata stderr biçiminde yazdırılır.
+Ortak dil çalışma zamanı (CLR) tarafından işlenmemiş özel durumları yakalayan `catch` engeller. Bir özel durum CLR tarafından yakalandı, aşağıdaki sonuçlardan birini CLR yapılandırmanıza bağlı olarak oluşabilir:
 
-> [!NOTE] 
-> Hemen hemen her kod satırının bir özel durum, özellikle ortak dil çalışma zamanı tarafından kendisi gibi attığı özel durumları oluşabilir <xref:System.OutOfMemoryException>. Uygulamaların çoğu bu özel durumlar gerekmez, ancak, başkaları tarafından kullanılacak kitaplıkları yazarken bu olasılığını bilmeniz gerekir. Öneriler ne zaman bir Try bloğu içinde kod için bkz: [özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md).
+- A **hata ayıklama** iletişim kutusu görüntülenir.
+- Program yürütme durdurur ve özel durum bilgilerini içeren bir iletişim kutusu görüntülenir.
+- Bir hata yazdırır [standart hata çıkış akışına](xref:System.Console.Error).
+
+> [!NOTE]
+> Çoğu kod gibi bazı özel durumlar ve özel durum oluşturabilecek <xref:System.OutOfMemoryException>, CLR tarafından herhangi bir anda atılabilir. Uygulamalar, bu özel durumlar için gerekli değildir, ancak başkaları tarafından kullanılacak kitaplıkları yazarken olasılığını unutmayın. Kod ne zaman öneriler için bir `try` engellemek için bkz: [özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Durumlar](index.md)
+[Özel Durumlar](index.md)  
+[. NET'te g/ç hataları işleme](../io/handling-io-errors.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566664"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094028"
 ---
 # <a name="wcf-data-services-overview"></a>WCF veri hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanarak oluşturma ve veri hizmetlerinin Web veya intranet tüketim sağlayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Verilerinizi tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunmanıza olanak sağlar. Bu, erişmenize olanak tanır ve özellikle standart HTTP fiilleri, temsili durum aktarımı (REST) semantiği kullanarak, değişiklik verilerini al koy, Gönder ve Sil. Bu konu desenler ve uygulamalar tarafından tanımlanan genel bir bakış sağlar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve ayrıca tarafından sağlanan özellikleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yararlanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework tabanlı uygulamalarda.  
@@ -59,6 +59,6 @@ ms.locfileid: "54566664"
 - [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Bir veri hizmeti (WCF Veri Hizmetleri) erişme](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [Veri Hizmeti kaynaklarına (WCF Veri Hizmetleri) erişme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Temsili durum aktarımı (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

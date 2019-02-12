@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614365"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092559"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabileceğiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışları verileri çeşitli veri kaynaklarından gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu veriler olarak kullanıma sunmak için veri sağlayıcıları kullanan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içerir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı, yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti için veri modelini tanımlar. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "54614365"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - ve -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Desteklenmez|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - ve -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|Desteklenmez|Desteklenmez|  
   
- <sup>1</sup> Bu örnekte, `Address` temsil eden bir karmaşık tür özelliği `Customers` adlı bir özellik olan varlık `StreetAddress`. Northwind veri hizmetleri tarafından kullanılan model, bu karmaşık türü açıkça tanımlamıyor. Ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] kullanabileceğiniz sağlayıcısı [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] karmaşık bir tür tanımlamak için Araçlar. Daha fazla bilgi için [nasıl yapılır: Karmaşık türler oluşturup](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> Bu örnekte, `Address` temsil eden bir karmaşık tür özelliği `Customers` adlı bir özellik olan varlık `StreetAddress`. Northwind veri hizmetleri tarafından kullanılan model, bu karmaşık türü açıkça tanımlamıyor. Ne zaman veri modeli tanımlanmıştır kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] kullanabileceğiniz sağlayıcısı [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] karmaşık bir tür tanımlamak için Araçlar. Daha fazla bilgi için [nasıl yapılır: Karmaşık türler oluşturup](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> bu URI, bu durumda, bir medya bağlantısı girişinin olan bir varlığa ait medya kaynağı olarak ikili büyük nesne (BLOB) döndüren bir özellik tanımlandığında desteklenir `Customers`. Daha fazla bilgi için [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

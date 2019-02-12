@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737000"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093456"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Bir veri hizmeti istemci uygulaması (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlanarak akış. Bir kaynak adresi URI sağlar ve istek iletilerinin erişmek veya kaynak temsil eden temel alınan verileri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu çalıştırır ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -45,7 +45,7 @@ Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../
  HTTP isteği iletisi üst bilgisinde yükü ileti biçimi istenir. Daha fazla bilgi için [OData: İşlemleri](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Erişme ve verileri istemci kitaplığı kullanarak değiştirme  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] daha kolay kullanmayı sağlayan istemci kütüphaneleri içerir bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight tabanlı istemci uygulamalarından akış. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Daha fazla bilgi için [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) ve [WCF Veri Hizmetleri (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] daha kolay kullanmayı sağlayan istemci kütüphaneleri içerir bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight tabanlı istemci uygulamalarından akış. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Daha fazla bilgi için [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) ve [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Kullanabileceğiniz **hizmet Başvurusu Ekle** veri hizmetine başvuru eklemek için Visual Studio'da iletişim kutusu. Bu araç, başvurulan veri hizmetinden hizmet meta verileri ister ve oluşturur <xref:System.Data.Services.Client.DataServiceContext> , veri hizmetini temsil eder, aynı zamanda varlıkları temsil eden istemci veri hizmeti sınıfları oluşturur. Daha fazla bilgi için [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
   

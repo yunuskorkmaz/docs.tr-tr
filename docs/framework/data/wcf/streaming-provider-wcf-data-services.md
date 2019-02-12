@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697354"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093846"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  
@@ -89,7 +89,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
  Daha fazla bilgi için [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) ve [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Varsayılan olarak, Internet Information Services (IIS) istekleri 4 MB boyutunu da sınırlar. Veri hizmetinizi IIS üzerinde çalışan akışlar 4 MB'tan büyük alma etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:  
+ Varsayılan olarak, Internet Information Services (IIS) istekleri 4 MB boyutunu da sınırlar. Veri hizmetinizi IIS üzerinde çalışan akışlar 4 MB'tan büyük alma etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:  
   
   
   
@@ -119,7 +119,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
 -   Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, veya <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> yöntemlerini kullanmanız gerekir eTag ve sağlanan içerik türü değerleri yöntem parametreleri. ETag veya Content-Type üst bilgilerinde ayarlı değil, <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı uygulaması.  
   
--   Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. Çünkü [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu, bu tür kodlamayı desteklemez, büyük ikili akışlar kabul etmesi gereken bir akış veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız. Daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu bkz [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. Çünkü [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu, bu tür kodlamayı desteklemez, büyük ikili akışlar kabul etmesi gereken bir akış veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız. Daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu bkz [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Sürüm gereksinimleri  

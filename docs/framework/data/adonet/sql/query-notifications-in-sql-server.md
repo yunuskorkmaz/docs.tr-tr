@@ -2,12 +2,12 @@
 title: SQL Server'da sorgu bildirimleri
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636696"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092299"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da sorgu bildirimleri
 Hizmet Aracısı altyapı inşa edilen uygulamalar, veriler değiştiğinde bildirim almak sorgu bildirimleri sağlar. Bu özellik, bilgileri bir veritabanından, bir Web uygulaması gibi bir önbellek sağlamanız ve kaynak veriler değiştiğinde bildirim almak gereken uygulamalar için özellikle yararlıdır.  
@@ -26,17 +26,17 @@ Hizmet Aracısı altyapı inşa edilen uygulamalar, veriler değiştiğinde bild
   
  Veriler değiştiğinde, güvenilir saniyenin bildirimleri gereken bir uygulama geliştiriyorsanız, bölümleri gözden geçirin. **verimli bir sorgu bildirimleri stratejisi planlama** ve **sorgu alternatifleri Bildirimleri** içinde [bildirimleri için planlama](https://go.microsoft.com/fwlink/?LinkId=211984) konu SQL Server Books Online. Sorgu bildirimleri ve SQL Server hizmet Aracısı hakkında daha fazla bilgi için aşağıdaki konulara bağlantılar da SQL Server Books Online'a bakın.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server belgeleri**  
   
--   [Sorgu bildirimleri kullanma](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [Sorgu bildirimleri kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Bildirim için sorgu oluşturma](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Bildirim için sorgu oluşturma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Hizmet Aracısı](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Geliştirme (hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker Geliştirici Bilgi Merkezi](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Geliştirici Bilgi Merkezi](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Geliştirme (hizmet Aracısı)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Geliştirici Kılavuzu (hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sorgu Bildirimlerini Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

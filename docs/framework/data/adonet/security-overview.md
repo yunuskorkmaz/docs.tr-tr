@@ -2,12 +2,12 @@
 title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570492"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091805"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  
@@ -89,7 +89,7 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server'ı hedefleyen güvenli ADO.NET uygulamalar oluşturmaya yönelik rehberlik uygulama senaryoları ile SQL Server güvenliğine genel bakış sağlar.|  
-|[Veri erişim stratejileri için öneriler](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
+|[Veri erişim stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
   
 ## <a name="security-policy-and-administration"></a>Güvenlik İlkesi ve yönetim  
  Yanlış kod erişimi güvenliği (CAS) ilkesi yönetme, olası güvenlik zayıf oluşturabilirsiniz. Bir uygulama dağıtıldıktan sonra teknikleri, güvenlik izleme için kullanılmalıdır ve yeni tehditleri değerlendirilen riskleri ortaya çıkmaya başladı.  
@@ -98,11 +98,11 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Oluşturma ve Güvenlik İlkesi'ni yönetme hakkında bilgi sağlar.|  
-|[NIB: Güvenlik İlkesi en iyi uygulamalar](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
+|[Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Oluşturma ve Güvenlik İlkesi'ni yönetme hakkında bilgi sağlar.|  
+|[Güvenlik İlkesi en iyi uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Yerel Güvenlik ve .NET Framework kodu PAVE](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [.NET içinde güvenlik](../../../standard/security/index.md)
 - [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

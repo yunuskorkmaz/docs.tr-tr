@@ -1,13 +1,13 @@
 ---
 title: Simge ve İşleç Başvurusu
 description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092949"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -81,7 +81,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Kod yazılmamış tırnak sınırlandırır.<br /></li></ul>|
 |`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sağ tarafı; sol tarafındaki eşitse, aksi takdirde döndürür `false`.<br /></li></ul>|
 |`=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>"Equal" işlemi, sağ tarafında boş değer atanabilir bir tür olduğunda hesaplar.<br /></li></ul>|
-|`==`|Yok.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
+|`==`|Uygulanamaz.|<ul><li>İçinde kullanılmadı F#. Kullanım `=` eşitlik işlemleri için.<br /></li></ul>|
 |`>`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafında, aksi takdirde sağ tarafındaki büyük döndürür `false`.<br /></li></ul>|
 |`>?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, "büyüktür" işlemi hesaplar.<br /></li></ul>|
 |`>>`|[İşlevler](../functions/index.md)|<ul><li>İki işlev (İleri birleşim işleci) oluşturur.<br /></li></ul>|
@@ -133,7 +133,7 @@ Aşağıdaki tabloda öncelik işleçleri ve diğer deyim anahtar sözcükleri s
 |`or`, <code>&#124;&#124;</code>|Sol|
 |`&`, `&&`|Sol|
 |`:>`, `:?>`|Sağ|
-|`!=`*OP*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *Aç* , `&`<br /><br />(dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
+|`<`*OP*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op*, `&`<br /><br />(dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
 |`^`*OP*<br /><br />(dahil olmak üzere `^^^`)|Sağ|
 |`::`|Sağ|
 |`:?`|İlişkili değil|

@@ -1,13 +1,13 @@
 ---
 title: F#kod biçimlendirme yönergeleri
 description: Biçimlendirme kuralları bilgi F# kod.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254836"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093625"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#kod biçimlendirme yönergeleri
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-Yeni bir satır ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek arabirim uygulamaları veya üyeleri kaydında bildiriyorsanız preferrable:
+Yeni bir satır ve yeni bir satıra kapatma belirteci açma belirteci yerleştirerek arabirim uygulamaları veya üyeleri kaydında bildiriyorsanız tercih edilir:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Açılış yerleştirme belirteci yeni bir satıra içerikleri üzerinde bir kapsam sekmeli ve yeni bir satıra kapatma belirteci kullanıyorsanız preferrable:
+Açılış yerleştirme belirteci yeni bir satıra içerikleri üzerinde bir kapsam sekmeli ve yeni bir satıra kapatma belirteci kullanıyorsanız tercih edilir:
 
 * Kod girintileme farklı kapsamlarla kayıtları dolaşma
 * Bir işleve öğesine ekleyerek sorgularınızı
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 Bu kuralların listesi ve dizi öğeleri için geçerlidir.
+
+## <a name="formatting-copy-and-update-record-expressions"></a>Kopyalama ve güncelleştirme kayıt ifadeleri biçimlendirme
+
+Benzer yönergeleri uygulamak için bir kayıt kopyalama ve güncelleştirme hala bir kayıt ifadesidir.
+
+Kısa ifade tek bir satırda uygun:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Daha uzun ifadeleri, yeni satırları kullanmanız gerekir:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+Ve olarak kayıt yönergeleriyle, için küme ayraçlarını ayrı satırlara atayın ve bir kapsam ifadesiyle sağ girinti isteyebilirsiniz. Parantez olmadan isteğe bağlı bir değerle kaydırma gibi bazı özel durumlarda, tek bir satırda bir küme ayracı tutmanız gerekebileceğini unutmayın:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>Biçimlendirme listeler ve diziler
 

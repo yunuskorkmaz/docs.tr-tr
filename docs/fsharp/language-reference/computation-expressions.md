@@ -2,12 +2,12 @@
 title: Hesaplama İfadeleri
 description: Yazma hesaplamalar için uygun söz dizimini oluşturmayı F# olması sıralı ve birleşik kullanarak denetleyebilir, akışı yapılarını ve bağlamalar.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610703"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093521"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -218,6 +218,7 @@ Aşağıdaki tablo, bir iş akışı Oluşturucu sınıfta kullanılabilir yönt
 |`Yield`|`'T -> M<'T>`|İçin adlı `yield` hesaplama ifadeleri ifadelerinde.|
 |`YieldFrom`|`M<'T> -> M<'T>`|İçin adlı `yield!` hesaplama ifadeleri ifadelerinde.|
 |`Zero`|`unit -> M<'T>`|İçin boş olarak adlandırılan `else` , dallar `if...then` hesaplama ifadeleri ifadelerinde.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Hesaplama deyimine geçirilecek gösterir `Run` üyesi olarak bir teklif. Bu, tüm tırnak içine bir hesaplama örneklerini çevirir.|
 
 Bir oluşturucu sınıftaki yöntemlerin birçoğu kullanın ve dönüş bir `M<'T>` genellikle örneğin birleştirilmeye, hesaplamalar türünü belirtir ayrı olarak tanımlanan bir tür olan yapı `Async<'T>` zaman uyumsuz iş akışları için ve `Seq<'T>` Sıralı iş akışları. Bu yöntem imzalarını birleştirilir ve birbirleri ile iç içe geçmiş kendisine etkinleştirin; böylelikle bir yapı döndürülen iş akışı nesnesinin sonraki geçirilebilir. Derleyici, bir hesaplama ifade ayrıştırırken, yukarıdaki tabloda yöntemleri ve hesaplama ifadesi kodu kullanarak, iç içe geçmiş işlev çağrıları bir dizi ifade dönüştürür.
 

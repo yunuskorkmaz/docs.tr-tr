@@ -2,12 +2,12 @@
 title: SQL Server'da veritabanları arası erişimi etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596884"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093859"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server'da veritabanları arası erişimi etkinleştirme
 Veritabanları arası sahiplik zinciri, başka bir veritabanındaki nesneleri bir yordamda bir veritabanına bağlı olduğunda gerçekleşir. Tüm nesne sahipleri için aynı oturum açma hesabı eşlenmiş bir kesintisiz sahiplik zinciri gerektirir veritabanları arası sahiplik zinciri tek bir veritabanı içinde sahiplik zinciri olarak aynı şekilde çalışır. Kaynak nesne kaynak veritabanında ve hedef nesnelerin hedef veritabanları aynı oturum açma hesabı sahip olur, SQL Server hedef nesneleri izinlerini kontrol etmez.  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[EXECUTE AS kullanarak veritabanı kimliğe bürünme genişletme](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) ve [çapraz seçeneği zincirleme DB sahipliği](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)SQL Server Kitapları Çevrimiçi.|Veritabanları arası sahiplik zinciri için bir SQL Server örneğini yapılandırma konuları açıklanmaktadır.|  
+|[EXECUTE AS kullanarak veritabanı kimliğe bürünme genişletme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) ve [çapraz seçeneği zincirleme DB sahipliği](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Makaleler veritabanları arası sahiplik zinciri için bir SQL Server örneğini yapılandırmak nasıl açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

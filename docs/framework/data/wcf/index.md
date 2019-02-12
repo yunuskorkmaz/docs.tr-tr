@@ -2,9 +2,15 @@
 title: WCF Veri Hizmetleri 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6fd81a6bd4449cc0ef11b68320f366368d5edb7e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092494"
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 
@@ -112,7 +118,7 @@ Yine de bazı ek bilgiler ihtiyacım...
 
  WCF veri hizmetlerinde kullanılabilen işlevler ve özellikler hakkında genel bir bakış sağlar.
 
- [WCF veri hizmetlerinde yenilikler nelerdir?](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+ [WCF Veri Hizmetleri 5.0 yenilikler nelerdir?](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
  WCF Veri Hizmetleri ve yeni OData özellikleri için destek yeni işlevler açıklanmaktadır.
 

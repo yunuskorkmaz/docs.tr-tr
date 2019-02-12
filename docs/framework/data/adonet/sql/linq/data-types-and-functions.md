@@ -2,12 +2,12 @@
 title: Veri türleri ve işlevleri
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711901"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091441"
 ---
 # <a name="data-types-and-functions"></a>Veri türleri ve işlevleri
 Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve ortak dil çalışma zamanı (CLR) yayınları için LINQ açıklar. Desteklenen üyeleri ve yapıları, LINQ to SQL sorgularında kullanılabilir.  
@@ -34,4 +34,3 @@ Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve or
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Visual Studio'da .NET framework sınıf kitaplığı](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743042"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093963"
 ---
 # <a name="enabling-query-notifications"></a>Sorgu bildirimlerini etkinleştirme
 Sorgu bildirimleri kullanan uygulamaları bir ortak gereksinimleri vardır. Veri kaynağı doğru SQL sorgu bildirimleri destekleyecek şekilde yapılandırılmalıdır ve kullanıcı doğru istemci ve sunucu tarafı izinlere sahip olmalıdır.  
@@ -28,25 +28,25 @@ Sorgu bildirimleri kullanan uygulamaları bir ortak gereksinimleri vardır. Veri
 ## <a name="query-notifications-requirements"></a>Sorgu bildirimleri gereksinimleri  
  Sorgu bildirimleri yalnızca belirli bir gereksinimler listesini karşılayan SELECT deyimleri için desteklenir. Aşağıdaki tablo, SQL Server Çevrimiçi Kitaplar'da Service Broker ve Sorgu Bildirimleri belgelerine bağlantılar sağlar.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server belgeleri**  
   
--   [Bildirim için sorgu oluşturma](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Bildirim için sorgu oluşturma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Hizmet aracısı için güvenlik konuları](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Hizmet aracısı için güvenlik konuları](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Güvenlik ve koruma (hizmet Aracısı)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Güvenlik ve koruma (hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Bildirim Hizmetleri için güvenlik konuları](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Bildirim Hizmetleri için güvenlik konuları](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Sorgu bildirim izinleri](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Sorgu bildirim izinleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Service Broker için Uluslararası konular](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Service Broker için Uluslararası konular](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Çözüm tasarımı konuları (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Çözüm tasarımı konuları (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker Geliştirici Bilgi Merkezi](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Geliştirici Bilgi Merkezi](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Geliştirici Kılavuzu (hizmet Aracısı)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Geliştirici Kılavuzu (hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Örnek kodu çalıştırma etkinleştirme sorgu bildirimleri  
  Hizmet Aracısı etkinleştirmek için **AdventureWorks** veritabanı SQL Server Management Studio kullanarak, aşağıdaki Transact-SQL deyimi çalıştırın:  

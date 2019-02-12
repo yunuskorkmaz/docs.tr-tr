@@ -1,14 +1,14 @@
 ---
 title: Machine learning işlem - ML.NET bir CSV dosyasından fazla sayıda sütun ile veri yükleme
 description: Çok sütunlu veri verileri makine öğrenimi modeli oluşturma, eğitim ve puanlama ML.NET ile kullanım için bir CSV dosyasından öğrenin
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a06d7edfb4746a39377116b15903b68f8723cb02
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479717"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091974"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Machine learning işlem - ML.NET bir CSV dosyasından fazla sayıda sütun ile veri yükleme
 
@@ -33,7 +33,7 @@ Kullanarak bu dosyayı okuma `TextLoader`:
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
     // We read the first 10 values as a single float vector.

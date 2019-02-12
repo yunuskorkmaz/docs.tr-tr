@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596897"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093040"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türleri, hem yönetilen hem de yönetilmeyen bellekte bir ortak gösterilmesi ve birlikte çalışma sıralayıcısı ile özel işlem gerektirmez. Bu tür adında *türlerse* arasında geçirildiğinde, dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kod.  
@@ -49,7 +49,7 @@ ms.locfileid: "54596897"
   
 -   Tamsayı dizisi gibi belirli bir türlerse tek boyutlu dizi. Ancak blittable türleri değişken bir dizi içeren bir tür kendisini değil blok halinde kopyalanabilir.  
   
--   Biçimlendirilmiş değer türleri yalnızca bir blok halinde kopyalanabilir türler (ve biçimlendirilmiş türleri olarak sıralanmış, sınıflar) bulunur. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Biçimlendirilmiş değer türleri yalnızca bir blok halinde kopyalanabilir türler (ve biçimlendirilmiş türleri olarak sıralanmış, sınıflar) bulunur. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Nesne başvuruları blittable değil. Bu blittable başlarına olan nesnelere yapılan başvuruların dizisi içerir. Örneğin, blittable bir yapısı tanımlayabilirsiniz, ancak bu yapıların yapılan başvuruların dizisi içeren bir blok halinde kopyalanabilir türü tanımlayamazsınız.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54596897"
   
  Bazı yönetilen veri türleri, yönetilmeyen bir ortamda farklı bir gösterimi gerektirir. Bu blittable olmayan veri türlerini sıralanabilir bir biçime dönüştürülmelidir. Örneğin, çünkü bunlar sıralanabilir önce dize nesnelerini dönüştürülmelidir yönetilen dizeler kopyalanamaz türler ' dir.  
   
- Kopyalanamaz türleri aşağıdaki tabloda <xref:System> ad alanı. [Temsilciler](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), statik bir yöntem veya bir sınıf örneğine başvuruda bulunan veri yapılarını hangilerinin ayrıca kopyalanamaz.  
+ Kopyalanamaz türleri aşağıdaki tabloda <xref:System> ad alanı. [Temsilciler](default-marshaling-behavior.md#default-marshaling-for-delegates), statik bir yöntem veya bir sınıf örneğine başvuruda bulunan veri yapılarını hangilerinin ayrıca kopyalanamaz.  
   
 |Örnekteki türü|Açıklama|  
 |-------------------------|-----------------|  

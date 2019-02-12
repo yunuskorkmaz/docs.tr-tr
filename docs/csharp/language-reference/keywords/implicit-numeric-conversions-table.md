@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058470"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093560"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Örtük sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -38,9 +38,9 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 
 - Duyarlık ancak değil büyüklük kayıp dönüşümlerse içinde `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
   
-- Herhangi bir örtük dönüştürme vardır `char`, `byte` ve `sbyte` türleri.  
+- Herhangi bir örtük dönüştürme vardır `char`, `byte`, ve `sbyte` türleri.  
 
-- Öğesinden örtük dönüştürme işlemi yok `char`, `double` ve `decimal` türleri.
+- Öğesinden örtük dönüştürme işlemi yok `double` ve `decimal` türleri.
   
 - Arasında örtük dönüştürme işlemi yok `decimal` türü ve `float` veya `double` türleri.  
   
