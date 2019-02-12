@@ -1,29 +1,29 @@
 ---
 title: Özellik Mühendisliği modeli eğitimi için metinsel verilere - ML.NET uygulamak
 description: Özellik Mühendisliği modeli eğitimi için metinsel verilere ML.NET ile uygulamak hakkında bilgi edinin
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9c3e131a46ad02c60178aa60c45dcc95472e32c7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758397"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092221"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="376f1-103">Özellik Mühendisliği machine learning modeli eğitimi ML.NET ile metinsel veriler için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="376f1-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="fc39c-103">Özellik Mühendisliği machine learning modeli eğitimi ML.NET ile metinsel veriler için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="fc39c-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="376f1-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="376f1-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="fc39c-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="fc39c-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="376f1-105">Metinsel veriler hakkında bilgi edinmek için metin özellikleri ayıklamak gerekir.</span><span class="sxs-lookup"><span data-stu-id="376f1-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="376f1-106">ML.NET bazı temel metin özelliği ayıklama mekanizmalar vardır:</span><span class="sxs-lookup"><span data-stu-id="376f1-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="fc39c-105">Metinsel veriler hakkında bilgi edinmek için metin özellikleri ayıklamak gerekir.</span><span class="sxs-lookup"><span data-stu-id="fc39c-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="fc39c-106">ML.NET bazı temel metin özelliği ayıklama mekanizmalar vardır:</span><span class="sxs-lookup"><span data-stu-id="fc39c-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="376f1-107">`Text normalization` (noktalama işaretleri, Vurgu, küçük harf vb. için geçiş kaldırılıyor.)</span><span class="sxs-lookup"><span data-stu-id="376f1-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="376f1-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="376f1-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="376f1-109">`Stopword` kaldırma.</span><span class="sxs-lookup"><span data-stu-id="376f1-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="376f1-110">`Ngram` ve `skip-gram` ayıklama.</span><span class="sxs-lookup"><span data-stu-id="376f1-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="376f1-111">`TF-IDF` ölçeklendirme.</span><span class="sxs-lookup"><span data-stu-id="376f1-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="376f1-112">`Bag of words` dönüştürme.</span><span class="sxs-lookup"><span data-stu-id="376f1-112">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="fc39c-107">`Text normalization` (noktalama işaretleri, Vurgu, küçük harf vb. için geçiş kaldırılıyor.)</span><span class="sxs-lookup"><span data-stu-id="fc39c-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="fc39c-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="fc39c-108">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="fc39c-109">`Stopword` kaldırma.</span><span class="sxs-lookup"><span data-stu-id="fc39c-109">`Stopword` removal.</span></span>
+- <span data-ttu-id="fc39c-110">`Ngram` ve `skip-gram` ayıklama.</span><span class="sxs-lookup"><span data-stu-id="fc39c-110">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="fc39c-111">`TF-IDF` ölçeklendirme.</span><span class="sxs-lookup"><span data-stu-id="fc39c-111">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="fc39c-112">`Bag of words` dönüştürme.</span><span class="sxs-lookup"><span data-stu-id="fc39c-112">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="376f1-113">ML.NET metin özelliği ayıklama mekanizmalarını kullanarak aşağıdaki örnekte gösterilmiştir [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="376f1-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="fc39c-113">ML.NET metin özelliği ayıklama mekanizmalarını kullanarak aşağıdaki örnekte gösterilmiştir [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="fc39c-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText
@@ -35,7 +35,7 @@ Sentiment   SentimentText
 
 ```csharp
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(new[] 
+var reader = mlContext.Data.CreateTextLoader(new[] 
     {
         new TextLoader.Column("IsToxic", DataKind.BL, 0),
         new TextLoader.Column("Message", DataKind.TX, 1),

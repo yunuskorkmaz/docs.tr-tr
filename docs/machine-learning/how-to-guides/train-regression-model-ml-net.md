@@ -1,24 +1,24 @@
 ---
 title: ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme
 description: Bir machine learning ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitmek nasıl keşfedin
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: febf12565b9ae5509efec9f350f413df99ba1c05
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739455"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092910"
 ---
-# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="59c2e-103">ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="59c2e-103">Train a regression model to predict a value using ML.NET</span></span>
+# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="4400d-103">ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="4400d-103">Train a regression model to predict a value using ML.NET</span></span>
 
-<span data-ttu-id="59c2e-104">Genellikle, ML.NET modeli eğitimi için üç adım vardır:</span><span class="sxs-lookup"><span data-stu-id="59c2e-104">Generally, there are three steps for model training in ML.NET:</span></span>
+<span data-ttu-id="4400d-104">Genellikle, ML.NET modeli eğitimi için üç adım vardır:</span><span class="sxs-lookup"><span data-stu-id="4400d-104">Generally, there are three steps for model training in ML.NET:</span></span>
 
-1. <span data-ttu-id="59c2e-105">Eğitim verileri bir formda almak bir `IDataView`</span><span class="sxs-lookup"><span data-stu-id="59c2e-105">Get the training data in a form of an `IDataView`</span></span>
-2. <span data-ttu-id="59c2e-106">'Öğrenme işlem hattınızı' temel 'işleçleri' (estimators) dizisi olarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="59c2e-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
-3. <span data-ttu-id="59c2e-107">Çağrı `Fit` işlem hattında, eğitilen model elde edilir.</span><span class="sxs-lookup"><span data-stu-id="59c2e-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+1. <span data-ttu-id="4400d-105">Eğitim verileri bir formda almak bir `IDataView`</span><span class="sxs-lookup"><span data-stu-id="4400d-105">Get the training data in a form of an `IDataView`</span></span>
+2. <span data-ttu-id="4400d-106">'Öğrenme işlem hattınızı' temel 'işleçleri' (estimators) dizisi olarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="4400d-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
+3. <span data-ttu-id="4400d-107">Çağrı `Fit` işlem hattında, eğitilen model elde edilir.</span><span class="sxs-lookup"><span data-stu-id="4400d-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
 
-<span data-ttu-id="59c2e-108">Bu [örnek dosyası](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), tahmin edilen etiketi (`target`) son sütunu (12) ve geri kalan özellikleri:</span><span class="sxs-lookup"><span data-stu-id="59c2e-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
+<span data-ttu-id="4400d-108">Bu [örnek dosyası](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), tahmin edilen etiketi (`target`) son sütunu (12) ve geri kalan özellikleri:</span><span class="sxs-lookup"><span data-stu-id="4400d-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
 
 ```console
 feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;feature_8;feature_9;feature_10;target
@@ -35,7 +35,7 @@ var mlContext = new MLContext();
 // Step one: read the data as an IDataView.
 
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
         columns: new TextLoader.Column[]
         {
             // We read the first 11 values as a single float vector.

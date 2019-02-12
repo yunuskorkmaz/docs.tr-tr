@@ -5,96 +5,96 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: c95ad9371854257059861b7d1e48c7afbc957ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613236"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091662"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a><span data-ttu-id="73e38-102">Nasıl yapılır: İstemci veri hizmeti sınıfları (WCF Veri Hizmetleri) el ile oluşturma</span><span class="sxs-lookup"><span data-stu-id="73e38-102">How to: Manually Generate Client Data Service Classes (WCF Data Services)</span></span>
-<span data-ttu-id="73e38-103">WCF veri hizmetleri sağlamak kullandığınızda istemci veri hizmeti sınıfları otomatik olarak oluşturmak Visual Studio ile tümleştirilir **hizmet Başvurusu Ekle** bir Visual Studio projenize bir veri hizmetine başvuru eklemek için iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="73e38-103">WCF Data Services integrates with Visual Studio to enable you to automatically generate client data service classes when you use the **Add Service Reference** dialog box to add a reference to a data service in a Visual Studio project.</span></span> <span data-ttu-id="73e38-104">Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="73e38-104">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span> <span data-ttu-id="73e38-105">Kod oluşturma aracı kullanılarak el ile de aynı istemci veri hizmeti sınıfları oluşturabilirsiniz `DataSvcUtil.exe`.</span><span class="sxs-lookup"><span data-stu-id="73e38-105">You can also manually generate the same client data service classes by using the code-generation tool, `DataSvcUtil.exe`.</span></span> <span data-ttu-id="73e38-106">WCF Veri Hizmetleri ile birlikte, bu aracı, veri hizmeti tanımından .NET Framework sınıfları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="73e38-106">This tool, which is included with WCF Data Services, generates .NET Framework classes from the data service definition.</span></span> <span data-ttu-id="73e38-107">Veri Hizmeti sınıfları kavramsal model (.csdl) dosyası ve bir Visual Studio projesinde bir Entity Framework modelini temsil eden .edmx dosyası üretmek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="73e38-107">It can also be used to generate data service classes from the conceptual model (.csdl) file and from the .edmx file that represents an Entity Framework model in a Visual Studio project.</span></span>
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a><span data-ttu-id="fd7e9-102">Nasıl yapılır: İstemci veri hizmeti sınıfları (WCF Veri Hizmetleri) el ile oluşturma</span><span class="sxs-lookup"><span data-stu-id="fd7e9-102">How to: Manually Generate Client Data Service Classes (WCF Data Services)</span></span>
+<span data-ttu-id="fd7e9-103">WCF veri hizmetleri sağlamak kullandığınızda istemci veri hizmeti sınıfları otomatik olarak oluşturmak Visual Studio ile tümleştirilir **hizmet Başvurusu Ekle** bir Visual Studio projenize bir veri hizmetine başvuru eklemek için iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-103">WCF Data Services integrates with Visual Studio to enable you to automatically generate client data service classes when you use the **Add Service Reference** dialog box to add a reference to a data service in a Visual Studio project.</span></span> <span data-ttu-id="fd7e9-104">Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="fd7e9-104">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span> <span data-ttu-id="fd7e9-105">Kod oluşturma aracı kullanılarak el ile de aynı istemci veri hizmeti sınıfları oluşturabilirsiniz `DataSvcUtil.exe`.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-105">You can also manually generate the same client data service classes by using the code-generation tool, `DataSvcUtil.exe`.</span></span> <span data-ttu-id="fd7e9-106">WCF Veri Hizmetleri ile birlikte, bu aracı, veri hizmeti tanımından .NET Framework sınıfları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-106">This tool, which is included with WCF Data Services, generates .NET Framework classes from the data service definition.</span></span> <span data-ttu-id="fd7e9-107">Veri Hizmeti sınıfları kavramsal model (.csdl) dosyası ve bir Visual Studio projesinde bir Entity Framework modelini temsil eden .edmx dosyası üretmek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-107">It can also be used to generate data service classes from the conceptual model (.csdl) file and from the .edmx file that represents an Entity Framework model in a Visual Studio project.</span></span>
 
- <span data-ttu-id="73e38-108">Bu konudaki örnek Northwind örnek veri hizmetini temel alan istemci veri hizmeti sınıfları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="73e38-108">The example in this topic creates client data service classes based on the Northwind sample data service.</span></span> <span data-ttu-id="73e38-109">Bu hizmet, tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="73e38-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="73e38-110">Bu konudaki örnekler için Northwind modeli kavramsal model dosyası gerektirir.</span><span class="sxs-lookup"><span data-stu-id="73e38-110">Some examples in this topic require the conceptual model file for the Northwind model.</span></span> <span data-ttu-id="73e38-111">Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="73e38-111">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span> <span data-ttu-id="73e38-112">Bu konudaki örnekler için Northwind modeli .edmx dosyası gerektirir.</span><span class="sxs-lookup"><span data-stu-id="73e38-112">Some examples in this topic require the .edmx file for the Northwind model.</span></span> <span data-ttu-id="73e38-113">Daha fazla bilgi için [.edmx dosyasını genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span><span class="sxs-lookup"><span data-stu-id="73e38-113">For more information, see [.edmx File Overview](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span>
+ <span data-ttu-id="fd7e9-108">Bu konudaki örnek Northwind örnek veri hizmetini temel alan istemci veri hizmeti sınıfları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-108">The example in this topic creates client data service classes based on the Northwind sample data service.</span></span> <span data-ttu-id="fd7e9-109">Bu hizmet, tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="fd7e9-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="fd7e9-110">Bu konudaki örnekler için Northwind modeli kavramsal model dosyası gerektirir.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-110">Some examples in this topic require the conceptual model file for the Northwind model.</span></span> <span data-ttu-id="fd7e9-111">Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="fd7e9-111">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span> <span data-ttu-id="fd7e9-112">Bu konudaki örnekler için Northwind modeli .edmx dosyası gerektirir.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-112">Some examples in this topic require the .edmx file for the Northwind model.</span></span> <span data-ttu-id="fd7e9-113">Daha fazla bilgi için [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="fd7e9-113">For more information, see [.edmx File Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).</span></span>
 
-### <a name="to-generate-c-classes-that-support-data-binding"></a><span data-ttu-id="73e38-114">Veri bağlamayı destekleyen C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-114">To generate C# classes that support data binding</span></span>
+### <a name="to-generate-c-classes-that-support-data-binding"></a><span data-ttu-id="fd7e9-114">Veri bağlamayı destekleyen C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-114">To generate C# classes that support data binding</span></span>
 
--   <span data-ttu-id="73e38-115">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-115">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-115">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-115">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="73e38-116">İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="73e38-116">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="fd7e9-116">İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-116">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a><span data-ttu-id="73e38-117">Veri bağlamayı destekleyen Visual Basic sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-117">To generate Visual Basic classes that support data binding</span></span>
+### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a><span data-ttu-id="fd7e9-117">Veri bağlamayı destekleyen Visual Basic sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-117">To generate Visual Basic classes that support data binding</span></span>
 
--   <span data-ttu-id="73e38-118">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-118">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-118">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-118">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="73e38-119">Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="73e38-119">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="fd7e9-119">Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-119">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-c-classes-based-on-the-service-uri"></a><span data-ttu-id="73e38-120">Hizmet URI'si temel C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-120">To generate C# classes based on the service URI</span></span>
+### <a name="to-generate-c-classes-based-on-the-service-uri"></a><span data-ttu-id="fd7e9-120">Hizmet URI'si temel C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-120">To generate C# classes based on the service URI</span></span>
 
--   <span data-ttu-id="73e38-121">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-121">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-121">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-121">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="73e38-122">İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="73e38-122">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="fd7e9-122">İçin sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-122">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a><span data-ttu-id="73e38-123">Visual Basic sınıf tabanlı hizmet URI'si oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-123">To generate Visual Basic classes based on the service URI</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a><span data-ttu-id="fd7e9-123">Visual Basic sınıf tabanlı hizmet URI'si oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-123">To generate Visual Basic classes based on the service URI</span></span>
 
--   <span data-ttu-id="73e38-124">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-124">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-124">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-124">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="73e38-125">Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="73e38-125">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="fd7e9-125">Sağlanan değer değiştirmelisiniz `/uri:` Northwind örnek veri hizmeti örneğinizi URI parametresiyle.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-125">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="73e38-126">Kavramsal model dosyasını (CSDL) temel alan C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-126">To generate C# classes based on the conceptual model file (CSDL)</span></span>
+### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="fd7e9-126">Kavramsal model dosyasını (CSDL) temel alan C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-126">To generate C# classes based on the conceptual model file (CSDL)</span></span>
 
--   <span data-ttu-id="73e38-127">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-127">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-127">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-127">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
-### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="73e38-128">Kavramsal model dosyasını (CSDL) temel alan Visual Basic sınıflar oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-128">To generate Visual Basic classes based on the conceptual model file (CSDL)</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="fd7e9-128">Kavramsal model dosyasını (CSDL) temel alan Visual Basic sınıflar oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-128">To generate Visual Basic classes based on the conceptual model file (CSDL)</span></span>
 
--   <span data-ttu-id="73e38-129">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-129">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-129">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-129">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
-### <a name="to-generate-c-classes-based-on-the-edmx-file"></a><span data-ttu-id="73e38-130">.Edmx dosyasını temel alan C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-130">To generate C# classes based on the .edmx file</span></span>
+### <a name="to-generate-c-classes-based-on-the-edmx-file"></a><span data-ttu-id="fd7e9-130">.Edmx dosyasını temel alan C# sınıfları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-130">To generate C# classes based on the .edmx file</span></span>
 
--   <span data-ttu-id="73e38-131">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-131">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-131">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-131">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
-### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a><span data-ttu-id="73e38-132">.Edmx dosyasını temel alan Visual Basic sınıflar oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="73e38-132">To generate Visual Basic classes based on the .edmx file</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a><span data-ttu-id="fd7e9-132">.Edmx dosyasını temel alan Visual Basic sınıflar oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="fd7e9-132">To generate Visual Basic classes based on the .edmx file</span></span>
 
--   <span data-ttu-id="73e38-133">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="73e38-133">At the command prompt, execute the following command without line breaks:</span></span>
+-   <span data-ttu-id="fd7e9-133">Komut isteminde satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="fd7e9-133">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 
-## <a name="see-also"></a><span data-ttu-id="73e38-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73e38-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd7e9-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd7e9-134">See also</span></span>
 
-- [<span data-ttu-id="73e38-135">Veri Hizmeti İstemci Kitaplığı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="73e38-135">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [<span data-ttu-id="73e38-136">Nasıl yapılır: Bir veri hizmeti başvurusu ekleme</span><span class="sxs-lookup"><span data-stu-id="73e38-136">How to: Add a Data Service Reference</span></span>](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
-- [<span data-ttu-id="73e38-137">WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)</span><span class="sxs-lookup"><span data-stu-id="73e38-137">WCF Data Service Client Utility (DataSvcUtil.exe)</span></span>](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+- [<span data-ttu-id="fd7e9-135">Veri Hizmeti İstemci Kitaplığı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fd7e9-135">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [<span data-ttu-id="fd7e9-136">Nasıl yapılır: Bir veri hizmeti başvurusu ekleme</span><span class="sxs-lookup"><span data-stu-id="fd7e9-136">How to: Add a Data Service Reference</span></span>](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [<span data-ttu-id="fd7e9-137">WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)</span><span class="sxs-lookup"><span data-stu-id="fd7e9-137">WCF Data Service Client Utility (DataSvcUtil.exe)</span></span>](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)

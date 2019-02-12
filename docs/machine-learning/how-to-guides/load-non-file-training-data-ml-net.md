@@ -1,32 +1,32 @@
 ---
 title: Bir metin dosyasına - ML.NET olmayan veriler ile machine learning modeli eğitme
 description: ML.NET machine learning modeli eğitimi tahmin işlem hattının parçası olarak dosya olmayan eğitim verilerini yüklemek için nasıl kullanılacağını keşfedin.
-ms.date: 11/07/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 971c5c62acc9dd7bf29aa11ce898c2b76822c3d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ffbc69629aa9dc6cea5d33c704bc9c57a4a612c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125408"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092026"
 ---
-# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="d53f2-103">Bir metin dosyasına - ML.NET olmayan veriler ile machine learning modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="d53f2-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="866c6-103">Bir metin dosyasına - ML.NET olmayan veriler ile machine learning modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="866c6-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
 
-<span data-ttu-id="d53f2-104">ML.NET kanıtlanabilir yaygın olarak kullanıldığı yerler kullanılmasıdır `TextLoader` eğitim verilerini bir dosyadan okuma için.</span><span class="sxs-lookup"><span data-stu-id="d53f2-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
-<span data-ttu-id="d53f2-105">Ancak, gerçek zamanlı eğitim senaryolarda veri başka bir yerde, aşağıdaki gibi olabilir:</span><span class="sxs-lookup"><span data-stu-id="d53f2-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
+<span data-ttu-id="866c6-104">ML.NET kanıtlanabilir yaygın olarak kullanıldığı yerler kullanılmasıdır `TextLoader` eğitim verilerini bir dosyadan okuma için.</span><span class="sxs-lookup"><span data-stu-id="866c6-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
+<span data-ttu-id="866c6-105">Ancak, gerçek zamanlı eğitim senaryolarda veri başka bir yerde, aşağıdaki gibi olabilir:</span><span class="sxs-lookup"><span data-stu-id="866c6-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
 
-* <span data-ttu-id="d53f2-106">SQL tablolarında</span><span class="sxs-lookup"><span data-stu-id="d53f2-106">in SQL tables</span></span>
-* <span data-ttu-id="d53f2-107">günlük dosyalarından ayıklanan</span><span class="sxs-lookup"><span data-stu-id="d53f2-107">extracted from log files</span></span>
-* <span data-ttu-id="d53f2-108">çalışma sırasında oluşturulan</span><span class="sxs-lookup"><span data-stu-id="d53f2-108">generated on the fly</span></span>
+* <span data-ttu-id="866c6-106">SQL tablolarında</span><span class="sxs-lookup"><span data-stu-id="866c6-106">in SQL tables</span></span>
+* <span data-ttu-id="866c6-107">günlük dosyalarından ayıklanan</span><span class="sxs-lookup"><span data-stu-id="866c6-107">extracted from log files</span></span>
+* <span data-ttu-id="866c6-108">çalışma sırasında oluşturulan</span><span class="sxs-lookup"><span data-stu-id="866c6-108">generated on the fly</span></span>
 
-<span data-ttu-id="d53f2-109">Kullanım [şema kavramayı](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) varolan getirmek için C# `IEnumerable` ML.NET içine bir `DataView`.</span><span class="sxs-lookup"><span data-stu-id="d53f2-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
+<span data-ttu-id="866c6-109">Kullanım [şema kavramayı](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) varolan getirmek için C# `IEnumerable` ML.NET içine bir `DataView`.</span><span class="sxs-lookup"><span data-stu-id="866c6-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
 
-<span data-ttu-id="d53f2-110">Bu örnekte, müşteri karmaşıklığı tahmin modeli ve aşağıdaki özellikleri ayıklama üretim sisteminizde oluşturacaksınız:</span><span class="sxs-lookup"><span data-stu-id="d53f2-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
+<span data-ttu-id="866c6-110">Bu örnekte, müşteri karmaşıklığı tahmin modeli ve aşağıdaki özellikleri ayıklama üretim sisteminizde oluşturacaksınız:</span><span class="sxs-lookup"><span data-stu-id="866c6-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
 
-* <span data-ttu-id="d53f2-111">Müşteri Kimliği (model tarafından göz ardı)</span><span class="sxs-lookup"><span data-stu-id="d53f2-111">Customer ID (ignored by the model)</span></span>
-* <span data-ttu-id="d53f2-112">Müşteri (hedef 'etiketi') çoğaltılmaları olup olmadığı</span><span class="sxs-lookup"><span data-stu-id="d53f2-112">Whether the customer has churned (the target 'label')</span></span>
-* <span data-ttu-id="d53f2-113">'Demografik kategori' ('genç yetişkin' gibi bir dize vs.)</span><span class="sxs-lookup"><span data-stu-id="d53f2-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
-* <span data-ttu-id="d53f2-114">Son 5 gün ziyaret sayısı.</span><span class="sxs-lookup"><span data-stu-id="d53f2-114">The number of visits from the last 5 days.</span></span>
+* <span data-ttu-id="866c6-111">Müşteri Kimliği (model tarafından göz ardı)</span><span class="sxs-lookup"><span data-stu-id="866c6-111">Customer ID (ignored by the model)</span></span>
+* <span data-ttu-id="866c6-112">Müşteri (hedef 'etiketi') çoğaltılmaları olup olmadığı</span><span class="sxs-lookup"><span data-stu-id="866c6-112">Whether the customer has churned (the target 'label')</span></span>
+* <span data-ttu-id="866c6-113">'Demografik kategori' ('genç yetişkin' gibi bir dize vs.)</span><span class="sxs-lookup"><span data-stu-id="866c6-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
+* <span data-ttu-id="866c6-114">Son 5 gün ziyaret sayısı.</span><span class="sxs-lookup"><span data-stu-id="866c6-114">The number of visits from the last 5 days.</span></span>
 
 ```csharp
 private class CustomerChurnInfo
@@ -40,7 +40,7 @@ private class CustomerChurnInfo
 }
 ```
 
-<span data-ttu-id="d53f2-115">Bu veri yükleme `DataView` ve aşağıdaki kodu kullanarak bir model eğitip:</span><span class="sxs-lookup"><span data-stu-id="d53f2-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
+<span data-ttu-id="866c6-115">Bu veri yükleme `DataView` ve aşağıdaki kodu kullanarak bir model eğitip:</span><span class="sxs-lookup"><span data-stu-id="866c6-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging,
@@ -54,7 +54,7 @@ IEnumerable<CustomerChurnInfo> churnData = GetChurnInfo();
 // Turn the data into the ML.NET data view.
 // We can use CreateDataView or CreateStreamingDataView, depending on whether 'churnData' is an IList,
 // or merely an IEnumerable.
-var trainData = mlContext.CreateStreamingDataView(churnData);
+var trainData = mlContext.Data.ReadFromEnumerable(churnData);
 
 // Build the learning pipeline.
 // In our case, we will one-hot encode the demographic category, and concatenate that with the number of visits.

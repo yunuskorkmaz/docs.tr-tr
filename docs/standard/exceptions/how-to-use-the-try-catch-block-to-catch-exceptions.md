@@ -1,11 +1,10 @@
 ---
-title: 'Nasıl yapılır: özel durumları yakalamak için Try-Catch bloğu kullanma'
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: Özel durumları yakalamak için Try-Catch bloğu kullanma'
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842391"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092754"
 ---
-# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="66850-102">Özel durumları yakalamak için try/catch bloğu kullanma</span><span class="sxs-lookup"><span data-stu-id="66850-102">How to use the try/catch block to catch exceptions</span></span>
+# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="9e489-102">Özel durumları yakalamak için try/catch bloğu kullanma</span><span class="sxs-lookup"><span data-stu-id="9e489-102">How to use the try/catch block to catch exceptions</span></span>
 
-<span data-ttu-id="66850-103">Özel durum oluşturma olasılığı olan kod bölümlerini yerleştirileceği bir `try` özel durumları işleyen bloğu ve yerde kodu bir `catch` blok.</span><span class="sxs-lookup"><span data-stu-id="66850-103">Place the sections of code that might throw exceptions in a `try` block and place code that handles exceptions in a `catch` block.</span></span> <span data-ttu-id="66850-104">`catch` Bloğudur bir dizi deyim anahtar sözcüğü ile başlayan `catch`ve ardından bir özel durum türünü ve bir eylem gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="66850-104">The `catch` block is a series of statements beginning with the keyword `catch`, followed by an exception type and an action to be taken.</span></span>
+<span data-ttu-id="9e489-103">Yükseltme veya bir özel durum herhangi bir kod deyim koyun bir `try` blok ve özel durum ya da bir veya daha fazla özel durumları işlemek için kullanılan bir yerde ifadeleri `catch` aşağıdaki blokları `try` blok.</span><span class="sxs-lookup"><span data-stu-id="9e489-103">Place any code statements that might raise or throw an exception in a `try` block, and place statements used to handle the exception or exceptions in one or more `catch` blocks below the `try` block.</span></span> <span data-ttu-id="9e489-104">Her `catch` blok özel durum türü içerir ve bu özel durum türü işlemek için gereken ek ifadeleri içerebilir.</span><span class="sxs-lookup"><span data-stu-id="9e489-104">Each `catch` block includes the exception type and can contain additional statements needed to handle that exception type.</span></span>
 
-<span data-ttu-id="66850-105">Aşağıdaki kod örneğinde bir `try` / `catch` olası bir özel durum yakalamak için blok.</span><span class="sxs-lookup"><span data-stu-id="66850-105">The following code example uses a `try`/`catch` block to catch a possible exception.</span></span> <span data-ttu-id="66850-106">`Main` Yöntemi içeren bir `try` ile engelleyecek bir <xref:System.IO.StreamReader> adlı bir veri dosyası açılır deyimi `data.txt` ve dosyanın bir dize yazar.</span><span class="sxs-lookup"><span data-stu-id="66850-106">The `Main` method contains a `try` block with a <xref:System.IO.StreamReader> statement that opens a data file called `data.txt` and writes a string from the file.</span></span> <span data-ttu-id="66850-107">Aşağıdaki `try` bloğu bir `catch` oluşur herhangi bir özel durumu yakalar blok `try` blok.</span><span class="sxs-lookup"><span data-stu-id="66850-107">Following the `try` block is a `catch` block that catches any exception that results from the `try` block.</span></span>
+<span data-ttu-id="9e489-105">Aşağıdaki örnekte, bir <xref:System.IO.StreamReader> adlı bir dosya açılır *data.txt* ve dosyasından bir satır alır.</span><span class="sxs-lookup"><span data-stu-id="9e489-105">In the following example, a <xref:System.IO.StreamReader> opens a file called *data.txt* and retrieves a line from the file.</span></span> <span data-ttu-id="9e489-106">Kod herhangi üç özel durum fırlatabilir beri yerleştirilir bir `try` blok.</span><span class="sxs-lookup"><span data-stu-id="9e489-106">Since the code might throw any of three exceptions, it's placed in a `try` block.</span></span> <span data-ttu-id="9e489-107">Üç `catch` bloğu özel durumları yakalamak ve bunları konsola sonuçları görüntüleyerek işlemek.</span><span class="sxs-lookup"><span data-stu-id="9e489-107">Three `catch` blocks catch the exceptions and handle them by displaying the results to the console.</span></span>
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-<span data-ttu-id="66850-108">Ortak dil çalışma zamanı bir catch bloğu tarafından yakalandı özel durumu yakalar.</span><span class="sxs-lookup"><span data-stu-id="66850-108">The common language runtime catches exceptions that are not caught by a catch block.</span></span> <span data-ttu-id="66850-109">Çalışma zamanının nasıl yapılandırdığına bağlı olarak hata ayıklama iletişim kutusu görüntülenirse, program yürütme durdurur ve özel durum bilgilerini içeren bir iletişim kutusu görünür veya bir hata stderr biçiminde yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="66850-109">Depending on how the runtime is configured, a debug dialog box appears, or the program stops executing and a dialog box with exception information appears, or an error is printed out to STDERR.</span></span>
+<span data-ttu-id="9e489-108">Ortak dil çalışma zamanı (CLR) tarafından işlenmemiş özel durumları yakalayan `catch` engeller.</span><span class="sxs-lookup"><span data-stu-id="9e489-108">The Common Language Runtime (CLR) catches exceptions not handled by `catch` blocks.</span></span> <span data-ttu-id="9e489-109">Bir özel durum CLR tarafından yakalandı, aşağıdaki sonuçlardan birini CLR yapılandırmanıza bağlı olarak oluşabilir:</span><span class="sxs-lookup"><span data-stu-id="9e489-109">If an exception is caught by the CLR, one of the following results may occur depending on your CLR configuration:</span></span>
 
-> [!NOTE] 
-> <span data-ttu-id="66850-110">Hemen hemen her kod satırının bir özel durum, özellikle ortak dil çalışma zamanı tarafından kendisi gibi attığı özel durumları oluşabilir <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="66850-110">Almost any line of code can cause an exception, particularly exceptions that are thrown by the common language runtime itself, such as <xref:System.OutOfMemoryException>.</span></span> <span data-ttu-id="66850-111">Uygulamaların çoğu bu özel durumlar gerekmez, ancak, başkaları tarafından kullanılacak kitaplıkları yazarken bu olasılığını bilmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="66850-111">Most applications don't have to deal with these exceptions, but you should be aware of this possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="66850-112">Öneriler ne zaman bir Try bloğu içinde kod için bkz: [özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="66850-112">For suggestions on when to set code in a Try block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
+- <span data-ttu-id="9e489-110">A **hata ayıklama** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="9e489-110">A **Debug** dialog box appears.</span></span>
+- <span data-ttu-id="9e489-111">Program yürütme durdurur ve özel durum bilgilerini içeren bir iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="9e489-111">The program stops execution and a dialog box with exception information appears.</span></span>
+- <span data-ttu-id="9e489-112">Bir hata yazdırır [standart hata çıkış akışına](xref:System.Console.Error).</span><span class="sxs-lookup"><span data-stu-id="9e489-112">An error prints out to the [standard error output stream](xref:System.Console.Error).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="66850-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="66850-113">See also</span></span>
+> [!NOTE]
+> <span data-ttu-id="9e489-113">Çoğu kod gibi bazı özel durumlar ve özel durum oluşturabilecek <xref:System.OutOfMemoryException>, CLR tarafından herhangi bir anda atılabilir.</span><span class="sxs-lookup"><span data-stu-id="9e489-113">Most code can throw an exception, and some exceptions, like <xref:System.OutOfMemoryException>, can be thrown by the CLR itself at any time.</span></span> <span data-ttu-id="9e489-114">Uygulamalar, bu özel durumlar için gerekli değildir, ancak başkaları tarafından kullanılacak kitaplıkları yazarken olasılığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="9e489-114">While applications aren't required to deal with these exceptions, be aware of the possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="9e489-115">Kod ne zaman öneriler için bir `try` engellemek için bkz: [özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="9e489-115">For suggestions on when to set code in a `try` block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
 
-- [<span data-ttu-id="66850-114">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="66850-114">Exceptions</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9e489-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e489-116">See also</span></span>
+
+[<span data-ttu-id="9e489-117">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="9e489-117">Exceptions</span></span>](index.md)  
+[<span data-ttu-id="9e489-118">. NET'te g/ç hataları işleme</span><span class="sxs-lookup"><span data-stu-id="9e489-118">Handling I/O errors in .NET</span></span>](../io/handling-io-errors.md)
