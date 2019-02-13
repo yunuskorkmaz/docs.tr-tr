@@ -4,12 +4,12 @@ description: Komut satırı arabirimi (CLI) araçlarını nasıl genişletebilec
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170242"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093014"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçları genişletilebilirlik modeli
 
@@ -79,7 +79,7 @@ Bu tür araçların bunları kullanan projenin bağımlılık grafı denetiminin
 Daha zengin örnekler ve bu farklı birleşimlerini bulabilirsiniz [.NET Core CLI depo](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
 Ayrıca bkz [kullanılan araçları uygulaması](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) aynı depodaki.
 
-### <a name="custom-targets"></a>Özel hedefleri
+## <a name="custom-targets"></a>Özel hedefleri
 NuGet yeteneğine sahip [paket özel MSBuild hedeflerini ve özellik dosyalarını](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). .NET Core CLI araçları, MSBuild kullanmak için taşıma ile aynı mekanizması genişletilebilirlik artık .NET Core projeleri için geçerlidir. Derleme işlemini genişletme istediğinizde ya da yapı çağırıldığı yapılandırmayı incelemek istediğiniz veya oluşturulan dosyalar gibi yapı işleminde yapıtlar erişmek istediğinizde, bu tür bir genişletilebilirlik kullanırsınız , vs.
 
 Aşağıdaki örnekte, hedefin proje gördüğünüz kullanarak dosya `csproj` söz dizimi. Bu bildirir [ `dotnet pack` ](dotnet-pack.md) ne derlemelerine yanı sıra hedef dosyaları yerleştirmek paket komutunu *derleme* paket klasöründen. Bildirim `<ItemGroup>` sahip öğe `Label` özelliğini `dotnet pack instructions`, hedef altında tanımlanmış.
@@ -137,7 +137,7 @@ Aşağıdaki örnekte, hedefin proje gördüğünüz kullanarak dosya `csproj` s
 
 Ancak, kullanıcılarınıza daha iyi bir kullanıcı deneyimi sağlamak istiyorsanız, proje başına Araçlar ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, her proje araç aslında yalnızca ne olursa olsun gerekli parametreleri ve gerekli çevirir kabul [ `dotnet msbuild` ](dotnet-msbuild.md) hedef yürüterek çağırma. Bu tür bir synergy örneği gördüğünüz [MVP Zirvesi 2016 HACK Maratonunda örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) depoda [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) proje.
 
-### <a name="path-based-extensibility"></a>YOL tabanlı genişletilebilirliği
+## <a name="path-based-extensibility"></a>YOL tabanlı genişletilebilirliği
 YOL tabanlı genişletilebilirliği, genellikle kavramsal olarak tek bir projede birden fazla kapsayan bir aracı gerek duyduğunuz geliştirme makineler için kullanılır. Bu uzantı mekanizması en büyük dezavantajı, bu aracın bulunduğu makineye bağlıdır ' dir. Başka bir makineye ihtiyacınız varsa, bunu dağıtmak gerekir.
 
 Bu düzen CLI araç takımı genişletilebilirlik çok kolaydır. İçinde anlatıldığı gibi [.NET Core CLI genel bakış](index.md), `dotnet` sürücü sonra adlı herhangi bir komutu çalıştırabilir `dotnet-<command>` kuralı. Varsayılan çözümleme mantığı ilk çeşitli konumlardan araştırmaları ve son olarak sisteme yolu geri döner. İstenen komut yolu sistemde mevcut ve çağrılabilir, bir ikili dosyadır `dotnet` sürücü, çağırılır.
