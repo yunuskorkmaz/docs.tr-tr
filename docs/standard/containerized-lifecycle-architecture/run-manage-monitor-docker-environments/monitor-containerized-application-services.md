@@ -1,15 +1,15 @@
 ---
 title: Kapsayıcı uygulama hizmetlerini izleme
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Kapsayıcı mimarileri izleme bazı önemli noktalar öğrenin
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153933"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221192"
 ---
 # <a name="monitor-containerized-application-services"></a>Kapsayıcı uygulama hizmetlerini izleme
 
@@ -50,7 +50,7 @@ Application Insights kaynağı oluşturmak için aşağıdaki listede verilen ma
 -   **Web sayfaları için Application Insights:**  
 <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
-## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite'e
+## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
 [Operations Management Suite](https://microsoft.com/oms) log analytics, otomasyon, backup ve site recovery sağlayan bir Basitleştirilmiş BT yönetimi çözümüdür. Temel [sorguları](https://blogs.technet.microsoft.com/msoms/2016/01/21/easy-microsoft-operations-management-suite-search-queries/) , Operations Management Suite içinde yükseltebilirsiniz [uyarılar](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-monitoring-alerts) ve düzeltme aracılığıyla [Azure Otomasyonu](https://docs.microsoft.com/azure/automation/). Ayrıca sorunsuz bir şekilde, tek bir cam bölmesinde görüntülemenizi sağlamak için mevcut yönetim çözümleri ile tümleşir. Operations Management Suite, yönetmek ve şirket içi koruma hem de bulut altyapısında yardımcı olur.
 
@@ -88,7 +88,7 @@ Operations Management Suite kapsayıcı çözümü kullanarak bunu yapabilirsini
 
 Sorgu türü gibi çalıştırarak performans bilgileri görebilir performans, Şekil 6-3'te gösterildiği gibi =.
 
-![DockerPerfMetricsView](./media/image3.png){width = "5.78625 in" height = "3,25 in"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Şekil 6-3: Docker ana bilgisayarları Operations Management Suite tarafından gösterilen performans ölçümleri
 

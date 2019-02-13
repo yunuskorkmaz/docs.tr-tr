@@ -1,16 +1,16 @@
 ---
 title: parametre değiştiricisi içinde- C# başvurusu
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631418"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219561"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametre değiştiricisi (C# Başvurusu)
 
@@ -20,11 +20,14 @@ ms.locfileid: "54631418"
 
 Yukarıdaki örnekte gösteren `in` değiştiricisi gereksiz genellikle çağıran sitede. Ayrıca, yöntem bildiriminde yalnızca gereklidir.
 
+
 > [!NOTE] 
 > `in` Anahtar sözcüğü de kullanılabilir bir genel tür parametresi tür parametresi değişken karşıtı, kapsamında olduğunu belirtmek için bir `foreach` deyimi veya bir parçası olarak bir `join` bir LINQ sorgu yan tümcesi. Kullanımı hakkında daha fazla bilgi için `in` anahtar sözcüğü şu bağlamlarda bkz [içinde](in.md), bu kullanan tüm bağlantılar sağlar.
   
  Değişkenleri olarak geçirildi `in` bağımsız değişken bir yöntem çağrısında iletilmeden önce başlatılması gerekir. Ancak, çağrılan yöntem olmayan bir değer atamak veya bağımsız değişkenini değiştirin.  
-  
+
+`in` Parametre değiştiricisi kullanılabilir C# 7.2 ve üzeri. Derleyici Hatası önceki sürümlerini oluşturmak `CS8107` ("özelliği 'salt okunur başvurular' kullanılabilir değil C# 7.0. Lütfen dil 7.2 veya üzeri bir sürümü kullanın.") Derleyici dil sürüm yapılandırmak için bkz [seçin C# dil sürümü](../configure-language-version.md).
+
  Ancak `in`, `ref`, ve `out` anahtar sözcükleri neden farklı çalışma zamanı davranışı, derleme zamanında yöntem imzasının parçası değerlendirilmez. Tek fark, bir yöntem aldığını ise, bu nedenle, yöntemler aşırı yüklenemez bir `ref` veya `in` bağımsız değişkeni ve diğer alır bir `out` bağımsız değişken. Örneğin, aşağıdaki kod derlemeyecektir:  
   
 ```csharp

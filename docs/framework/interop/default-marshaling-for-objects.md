@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528032"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219613"
 ---
 # <a name="default-marshaling-for-objects"></a>Nesneler için Varsayılan Hazırlama
 Parametreler ve alanlar olarak yazılan <xref:System.Object?displayProperty=nameWithType> yönetilmeyen koda aşağıdaki türlerden biri olarak kullanıma sunulabilir:  
@@ -323,15 +323,15 @@ Değere ve başvuruya göre geçirilen çeşitleri
   
 |Başlangıç|Bitiş|Değişiklikleri geri yayılmaz|  
 |----------|--------|-----------------------------|  
-|**Değişken***v* |**Nesne***o* |hiçbir zaman|  
-|**Nesne***o* |**Değişken***v* |hiçbir zaman|  
-|**Değişken*****\*****BD* |**Ref nesne***o* |Her zaman|  
-|**Ref nesne***o* |**Değişken*****\*****BD* |Her zaman|  
-|**Değişken***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Nesne***o* |hiçbir zaman|  
-|**Değişken***v* **(VT_BYREF** *&#124;* **VT_)** |**Ref nesne***o* |Yalnızca türü değişmemişse.|  
+|**Değişken***v*|**Nesne***o*|hiçbir zaman|  
+|**Nesne***o*|**Değişken***v*|hiçbir zaman|  
+|**Değişken*****\*****BD*|**Ref nesne***o*|Her zaman|  
+|**Ref nesne***o*|**Değişken*****\*****BD*|Her zaman|  
+|**Değişken***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Nesne***o*|hiçbir zaman|  
+|**Değişken***v* **(VT_BYREF** *&#124;* **VT_)** |**Ref nesne***o*|Yalnızca türü değişmemişse.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
-- [Yönlü öznitelikler](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)

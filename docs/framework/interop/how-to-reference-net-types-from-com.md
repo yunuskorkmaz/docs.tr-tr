@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9826f8af06693fdff0d5bea75cfa3f2586faa4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5151d89feccbe68daa5a8de4aa3b75a42511899
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582130"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220276"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Nasıl yapılır: COM başvurusu .NET türlerinden
 Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki farklar büyük ölçüde görünmez. Microsoft Visual Basic istemciler, bir .NET nesnesini sözdizimi, özelliklerini ve nesne yöntemleri ve tam olarak bunu herhangi bir COM nesnesi gibi alanlar nesne tarayıcısında görüntüleyebilirsiniz.  
@@ -46,5 +46,5 @@ Bakış açısıyla, istemci ve sunucu kodu, COM ve .NET Framework arasındaki f
 ## <a name="see-also"></a>Ayrıca bkz.
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
-- [Bir .NET nesnesini çağırma](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
-- [COM erişimi için bir uygulama dağıtma](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+- [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için bir uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

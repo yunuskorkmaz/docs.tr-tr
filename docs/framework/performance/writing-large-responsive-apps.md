@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540669"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219847"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir. 
@@ -37,7 +37,7 @@ Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktar
  Uygulamanızda performans hedeflerini önemli müşteri deneyimleri veya senaryoları ayarlayın ve performansını ölçmek için testleri yazmak gerekir. Başarısız olan testler bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size rehberlik, ne sorun olabilir, hipotezler varsayımınızın deneme ile test ve kod değişikliği. Performans gerilemeleri neden değişiklikleri yalıtabilirsiniz için normal test ile zaman içinde temel performans ölçümleri kurun. Sıkı bir şekilde performans iş yaklaşan tarafından zaman ihtiyacınız olmayan kod güncelleştirmeleriyle önlenir. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi araçları, tüm fark kolaylaştırır.  
- Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar. Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone analiz aracı](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar. Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) ve [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView disk g/ç gibi ayrıntılı sorunlara odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve şaşırtıcı derecede güçlü bir araçtır. Performansla ilgili yakalayabilirsiniz [olay izleme için Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünümü, uygulama başına bir kolayca, her işlem, yığın başına ve başına iş parçacığı bilgileri. PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınlarını ne kadar bellek ayırmaları için katkıda bulunan ne kadar ve ne tür gösterir. Zengin Yardım konuları, tanıtımlar ve videolar aracıyla dahil Ayrıntılar için bkz. (gibi [PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9). 
   
@@ -466,9 +466,8 @@ class Compilation { /*...*/
 - [Sunu bu konunun videosu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Performans](../../../docs/framework/performance/index.md)
-- [.NET Performans İpuçları](https://msdn.microsoft.com/library/ms973839.aspx)
+- [.NET Performans İpuçları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone Performans analiz aracı](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Visual Studio Profiler uygulama performans sorunlarını bulun](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 PerfView öğreticiler](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET derleyici Platformu SDK'sı](../../csharp/roslyn-sdk/index.md)
 - [github'da dotnet/roslyn depo](https://github.com/dotnet/roslyn)

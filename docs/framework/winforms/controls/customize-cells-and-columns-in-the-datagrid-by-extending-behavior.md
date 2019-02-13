@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 2be1e4be9f9cd3dc0d8f4f5c406c98932cb48238
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbeb161a9813b2d1b479b76360149ed08212459f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629767"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220712"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli yollarla görünümünü ve davranışını özellikleri, olayları kullanarak özelleştirip Yahoo! companion sınıfları sağlar. Bazen, bu özellikleri sağlamak ötesine gidin, hücre için gereksinimlerine sahip olabilir. Kendi özel oluşturabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> genişletilmiş işlevselliği sağlamak için sınıf.  
@@ -68,7 +68,7 @@ ms.locfileid: "54629767"
   
 -   Sistem, System.Windows.Forms ve System.Drawing derlemelerine başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.DataGridView>

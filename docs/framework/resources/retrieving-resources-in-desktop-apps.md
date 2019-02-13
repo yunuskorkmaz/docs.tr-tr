@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539759"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221233"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak kaynaklar için varsayılan veya bağımsız kültür ile ana derleme paketi ve her bir dil veya uygulamanızın desteklediği kültür için bir ayrı uydu derleme oluşturma gerekir. Ardından <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıf. Kaynaklarınızı ana derlemeyi ve uydu derlemeler içinde değil eklemek isterseniz da ikili .resources dosyalarına doğrudan bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyalarındaki kaynaklar alınıyor](#from_file) daha sonra bu makale.  İçindeki kaynakları almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, [oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'nde.  
@@ -158,7 +158,7 @@ Dizin yapısı ve .resources dosyaları için adlandırma kuralları
  Kaynaklarınızı oluşturduktan sonra bunları uygun dizine yerleştirilir, oluşturun bir <xref:System.Resources.ResourceManager> çağırarak kaynakları kullanmak için nesne <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> yöntemi. İlk parametre (örneğin önceki bölümde "dize" olacaktır) uygulamanın varsayılan .resources dosyasının kök adı belirtir. İkinci parametre (önceki örnek "Kaynaklar") kaynakların konumunu belirtir. Üçüncü parametre belirtir <xref:System.Resources.ResourceSet> kullanılacak uygulama. Üçüncü parametre ise `null`, varsayılan çalışma zamanı <xref:System.Resources.ResourceSet> kullanılır.  
   
 > [!NOTE]
->  Tek başına .resources dosyaları kullanarak ASP.NET uygulamaları dağıtmayın. Bu, kilitleme sorunları ve sonu XCOPY dağıtımının neden olabilir. ASP.NET kaynakları uydu derlemelerinde dağıtmanızı öneririz. Daha fazla bilgi için [ASP.NET Web sayfası kaynaklarına genel bakış](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+>  Tek başına .resources dosyaları kullanarak ASP.NET uygulamaları dağıtmayın. Bu, kilitleme sorunları ve sonu XCOPY dağıtımının neden olabilir. ASP.NET kaynakları uydu derlemelerinde dağıtmanızı öneririz. Daha fazla bilgi için [ASP.NET Web sayfası kaynaklarına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Örneği sonra <xref:System.Resources.ResourceManager> nesnesi, kullandığınız <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>, ve <xref:System.Resources.ResourceManager.GetStream%2A> kaynakları almak için daha önce bahsedildiği gibi yöntemleri. Ancak, .resources dosyaları doğrudan kaynaklarından alınmasını derlemelerden gömülü kaynaklar alınmasını farklıdır. .Resources dosyaları, kaynakları alırken <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri daima geçerli kültüre bakılmaksızın varsayılan kültürün kaynakları alır. Her iki uygulamanın geçerli kültürün veya belirli bir kültürün kaynaklarını almak için çağırmalıdır <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, veya <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemi ve kaynaklarını alınacak olan kültürü belirtin. Geçerli kültürün kaynakları almak için değerini belirtin. <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği olarak `culture` bağımsız değişken. Resource manager kaynaklarını alamıyorsa `culture`, uygun kaynakları almak için standart kaynak geri dönüş kurallarını kullanır.  
   

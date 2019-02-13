@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 4f3bec715858f1d618957b61d3e15f9251f9fd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ea95ad21ee02745e835dc469ec3849af5a5a2d7
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639139"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219899"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Nasıl yapılır: Windows Forms BindingSource ile bir Web hizmetine bağlama
 Windows Form denetimi bir XML Web hizmeti çağırma alınan sonuçları bağlamak istiyorsanız, kullanabileceğiniz bir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu yordam, bağlama için benzer bir <xref:System.Windows.Forms.BindingSource> bir türü için bileşen. Web hizmeti tarafından kullanıma sunulan türleri ve yöntemleri içeren bir istemci-tarafı proxy oluşturmanız gerekir. Bir istemci-tarafı proxy Web hizmeti (.asmx) kendisi ya da Web Hizmetleri Açıklama Dili (WSDL) dosyası oluşturur. Ayrıca, istemci tarafı proxy ortak özellik olarak Web hizmeti tarafından kullanılan karmaşık türler alanları açığa çıkarmalıdır. Ardından bağlama <xref:System.Windows.Forms.BindingSource> Web kullanıma sunulan türlerden proxy hizmeti.  
@@ -70,7 +70,7 @@ Windows Form denetimi bir XML Web hizmeti çağırma alınan sonuçları bağlam
   
 -   Sistem, System.Drawing System.Web.Services, System.Windows.Forms ve System.Xml derlemesine ilişkin başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)

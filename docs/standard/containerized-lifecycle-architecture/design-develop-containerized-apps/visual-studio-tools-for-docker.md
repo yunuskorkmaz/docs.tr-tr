@@ -1,16 +1,16 @@
 ---
 title: Windows üzerinde Docker için Visual Studio Araçları
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Visual Studio 2017 sürüm 15.7 ve üzeri Docker araçları tanışın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/12/2018
+ms.date: 11/23/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a373a8ebfef605b9845a684d3987355f8841aa1b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151219"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219548"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>(Windows için Visual Studio) Docker için Visual Studio araçlarını kullanma
 
@@ -76,7 +76,7 @@ Ana menüden **Araçları** > **seçenekleri**, genişletin **kapsayıcı Araçl
 
 Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımcı olabilir.
 
-| Ad | Varsayılan ayar | Uygulandığı öğe: | Açıklama |
+| Ad | Varsayılan ayar | Uygulanan Öğe | Açıklama |
 | -----|:---------------:|:----------:| ----------- |
 | Otomatik olarak proje yükünde gerekli Docker görüntülerini çekme | Açık | Docker Compose | Proje yüklenirken daha yüksek performans için Visual Studio Docker çekme işlemi arka planda böylece kodunuzu çalıştırmak hazır olduğunuzda, görüntü zaten yüklenene veya yükleme sürecinde başlar. Yalnızca projeler yükleniyor ve kod gözatma ise, ihtiyacınız olmayan kapsayıcı görüntülerini yüklenmesini önlemek için kapatabilirsiniz. |
 | Kapsayıcıları arka planda otomatik olarak Başlat | Açık | Docker Compose | Yeniden performansı artırmak için Visual Studio kapsayıcı ile birim başlatmalar, derleme ve kapsayıcı çalıştırma için hazır oluşturur. Kapsayıcı oluşturulduğunda denetlemek istiyorsanız, kapatır. |

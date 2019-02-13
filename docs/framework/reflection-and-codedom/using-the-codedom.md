@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486218"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219600"
 ---
 # <a name="using-the-codedom"></a>CodeDOM'yi Kullanma
 CodeDOM, kaynak kod öğelerinin birçok ortak türleri temsil eden türler sağlar. Bir nesne grafiğini derlemek için CodeDOM öğelerini kullanarak bir kaynak kod modeli oluşturan bir program tasarlayabilirsiniz. Bu nesne grafiği, desteklenen bir programlama dili için bir CodeDOM kod üreticisi kullanan bir kaynak kodu olarak işlenebilir. CodeDOM, kaynak kodu ikili bir birleştirme dosyasına derlemek için de kullanılabilir.  
@@ -127,4 +127,4 @@ CodeDOM, kaynak kod öğelerinin birçok ortak türleri temsil eden türler sağ
   
  CodeDOM türlerinin her biri için belgeler için başvuru belgelerine bakın <xref:System.CodeDom> ad alanı.  
   
- Belirli bir kod öğesi türünü temsil eden CodeDOM öğesini bulmaya yönelik hızlı bir grafik için bkz: [CodeDOM hızlı başvuru](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Belirli bir kod öğesi türünü temsil eden CodeDOM öğesini bulmaya yönelik hızlı bir grafik için bkz: [CodeDOM hızlı başvuru](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)).

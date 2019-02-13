@@ -1,15 +1,15 @@
 ---
 title: Tek yapılı uygulamalar
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Tek yapılı uygulamaları kapsayıcıya alma için temel kavramları anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743275"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221361"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -21,7 +21,7 @@ Kapsayıcı yalnızca bir şeyi yapar ve tek bir işlemde çalıştığı asıl,
 
 ![](./media/image1.png)
 
-Şekil 4-1: örnek olarak tek parça uygulama mimarisi
+Şekil 4-1: Tek parçalı uygulama mimarisi örneği
 
 Bu yaklaşımın bir dezavantajı, varsa veya uygulama büyürken, ölçeklendirme gerektiren gelir. Uygulamanın tamamı ölçeği, gerçekten bir sorun değildir. Diğer bileşenleri daha az kullanılır ancak çoğu durumda, uygulamanın bazı bölümlerini sıkıştırma ölçeklendirme gerektiren noktalarıdır.
 
@@ -35,13 +35,13 @@ Altyapı açısından bakıldığında, her sunucu aynı konak içindeki birçok
 
 ![](./media/image2.png)
 
-Şekil 4-2: birden çok uygulama/kapsayıcı çalıştıran bir konağa
+Şekil 4-2: Birden çok uygulama/kapsayıcı çalıştıran bir konağa
 
 Her örneği için özel VM'ler kullanarak azure'da tek yapılı uygulamalar dağıtabilirsiniz. Kullanarak [Azure VM ölçek kümeleri](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), Vm'leri bir kolayca ölçeklendirebilirsiniz. [Azure uygulama hizmetleri](https://azure.microsoft.com/services/app-service/) tek yapılı uygulamaları çalıştırabilir ve Vm'leri yönetmek zorunda kalmadan örneklerini kolayca ölçeklendirin. 2016 tarihinden beri Azure uygulama hizmetleri dağıtımını basitleştirme amacıyla da Docker kapsayıcılar'ın tek örneklerine çalıştırabilirsiniz. Ve Docker kullanarak Docker konağı olarak tek bir VM dağıtma ve birden çok örneğini çalıştırmak. Azure, Şekil 4-3'te gösterildiği gibi kullanarak ölçeklendirme yönetebilirsiniz.
 
 ![](./media/image3.png)
 
-Şekil 4-3: bir tek Docker uygulama uygulamalar/kapsayıcıları ölçeklendirme-giden birden çok konak
+Şekil 4-3: Bir tek Docker uygulama uygulamalar/kapsayıcıları ölçeklendirme-giden birden çok konak
 
 Dağıtım çeşitli Konaklara geleneksel dağıtım teknikleri aracılığıyla yönetebilirsiniz. Docker ana bilgisayarları gibi komutları kullanarak yönetebileceğiniz `docker run` biz daha sonra bu e-kitap açıklayan sürekli teslim (CD) işlem hatları gibi Otomasyon aracılığıyla el ile.
 
@@ -65,7 +65,7 @@ Azure App Service'i kullanarak, kullanımı kolay olan ve başlayabilirsiniz ve 
 
 ![](./media/image4.png)
 
-Şekil 4-4: bir kapsayıcı Visual Studio uygulamalar/kapsayıcılardan Azure App Service'e yayımlama
+Şekil 4-4: Bir kapsayıcı, Visual Studio uygulamalar/kapsayıcılardan Azure App Service'te yayımlama
 
 Şekil 4-4, aynı zamanda yayımlama akışı görüntüyü Azure Container Registry (bir kayıt defteri Azure dağıtımlarınız için neredeyse ve Azure Active Directory'de gruplar ve hesaplar tarafından güvenliği sağlanan) olabilecek bir kapsayıcı kayıt defteri veya başka bir Docker kayıt aracılığıyla gönderim gösterir Docker Hub veya şirket içi kayıt defterleri gibi.
 

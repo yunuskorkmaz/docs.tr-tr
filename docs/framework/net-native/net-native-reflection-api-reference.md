@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531190"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221374"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türlerini içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
@@ -25,7 +25,7 @@ ms.locfileid: "54531190"
 -   [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
   
 > [!NOTE]
->  Bu başvuru için benzersiz olan üç özel durum türlerini belgeleri [!INCLUDE[net_native](../../../includes/net-native-md.md)]. .NET Framework Çekirdek yansıma API'si için başvuru belgeleri için bkz. [System.Reflection ad alanlarında](https://msdn.microsoft.com/library/gg145033.aspx). .NET Framework Çekirdek birlikte çalışma API'si için başvuru belgeleri için bkz. <xref:System.Runtime.InteropServices>.  
+>  Bu başvuru için benzersiz olan üç özel durum türlerini belgeleri [!INCLUDE[net_native](../../../includes/net-native-md.md)]. .NET Framework Çekirdek yansıma API'si için başvuru belgeleri için bkz. <xref:System.Reflection>, <xref:System.Reflection.Context> ve <xref:System.Reflection.Emit> ad alanları. .NET Framework Çekirdek birlikte çalışma API'si için başvuru belgeleri için bkz. <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection ad alanı  
  <xref:System.Reflection> Ad alanı, .NET Framework'te yansıma için kullanılan temel türleri içerir. İçin [!INCLUDE[net_native](../../../includes/net-native-md.md)], iki yeni özel durum türlerini de içerir:  

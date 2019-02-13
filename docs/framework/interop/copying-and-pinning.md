@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507089"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219626"
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Veri sıralarken, birlikte çalışma sıralayıcısı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını başka bir bellek konumuna bir bellek konumunda yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirilmedi.  
@@ -79,6 +79,5 @@ Değere ve başvuruya göre geçirilen başvuru türleri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
-- [Birlikte çalışma sıralayıcısı ile bellek yönetimi](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
-- [Yönlü öznitelikler](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Birlikte Çalışma için Hazırlama](interop-marshaling.md)

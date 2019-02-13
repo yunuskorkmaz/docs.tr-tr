@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: f76fb1d52754999c16021f2417aebb8825e46340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b20b45ee18c22ed864972dc20cd72247ed3db2c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700019"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219379"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -205,7 +205,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
 - [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Nasıl yapılır: COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [İzlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
 - [İzlenecek yol: Yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [İzlenecek yol: Excel için ilk VSTO eklentinizi oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)

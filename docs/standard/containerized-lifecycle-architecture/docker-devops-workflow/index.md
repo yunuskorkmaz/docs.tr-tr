@@ -1,15 +1,15 @@
 ---
-title: Microsoft araçları ile docker uygulaması devops iş akışı
-description: Microsoft araçları ile Microsoft Platformu ve Toolsdevops iş akışı ile kapsayıcı Docker uygulaması yaşam döngüsü
+title: Microsoft araçları ile docker uygulaması DevOps iş akışı
+description: Microsoft araçları ile Microsoft Platformu ve araçları DevOps iş akışı ile kapsayıcı Docker uygulaması yaşam döngüsü
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a2d88dda9f3560675fcb6826960c6e76fa7daf92
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128446"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219081"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulaması DevOps iş akışı
 
@@ -34,5 +34,5 @@ Kapsayıcılı uygulama geliştirme karmaşıklığını iş karmaşıklığın�
 -   Kuruluşların kolayca sağlayabilirsiniz (veri, PaaS, vb.) Azure bileşenlerini bağımlılığın yanı sıra Azure Container Registry'de depolanan özel görüntülerden Docker kapsayıcıları oldukları zaten araçlarıyla Azure Resource Manager şablonlarını kullanma deneyimli çalışma.
 
 >[!div class="step-by-step"]
->[Önceki](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Önceki](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[İleri](docker-application-outer-loop-devops-workflow.md)

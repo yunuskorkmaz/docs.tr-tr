@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41bf58e4b7e9e284606e244cf3cfdf298f7a7ae8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667264"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220646"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama bulunur.  
@@ -54,4 +54,4 @@ winmdexp [options] winmdmodule
 - [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe Hata İletileri](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [Derleme, dağıtım ve yapılandırma araçları (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+- [Derleme, dağıtım ve yapılandırma araçları (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

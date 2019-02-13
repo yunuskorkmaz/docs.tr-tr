@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540578"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220984"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
@@ -80,7 +80,7 @@ DLR kullanılarak geliştirilen diller örnekleri şunları içerir:
 
  Bir hizmet kümesi için daha iyi CLR DLR ekler dinamik dili destekleyen. Bu hizmetler şunları içerir:
 
--   İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) veya [ifade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Site önbelleğe alma çağırın. A *dinamik çağrı sitesini* gerçekleştirmek olduğu gibi bir işlem kodu bir yerinde olduğundan `a + b` veya `a.b()` dinamik nesneler üzerinde. DLR özelliklerini önbelleğe `a` ve `b` (genellikle bu nesne türleri) ve işlemi hakkında bilgi. Bu tür bir işlem daha önce gerçekleştirilen varsa DLR önbellekten hızlı dağıtım için gerekli tüm bilgileri alır.
 
@@ -96,5 +96,6 @@ Yalnızca .NET Framework ile ancak diğer altyapıları ve Silverlight ve com gi
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)
-- [İfade Ağaçları](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [İfade ağaçları (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [İfade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [İzlenecek yol: Dinamik nesneler oluşturma ve kullanma](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572974"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219769"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
@@ -128,7 +128,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**İzin türünü ayarlama**|İstemci üzerinde çalıştırmak için bu uygulama için gerekli minimum izin kümesi. Bu izin kümeleri açıklamasını ve yapabilir veya talep değil, hangi izinlerin [NIB: Adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**İzin türünü ayarlama**|İstemci üzerinde çalıştırmak için bu uygulama için gerekli minimum izin kümesi. Bu izin kümeleri açıklamasını ve yapabilir veya talep değil, hangi izinlerin [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Ayrıntılar**|Bir izni temsil etmek için uygulama bildirimi için oluşturulan XML ayarlayın. Uygulama bildirimi XML biçimi iyi bir anlayışa sahip değilseniz bu XML el ile düzenlemeniz değil. Daha fazla bilgi için [ClickOnce Uygulama bildirimi](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Dağıtım bildirim sekmesi  

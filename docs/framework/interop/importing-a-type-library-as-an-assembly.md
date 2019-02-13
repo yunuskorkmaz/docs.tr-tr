@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e346b326255ea46babc2e4c9101a1724671514d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517580"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218913"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna karşılık, CLS uyumlu derleyiciler türü meta verileri bir derleme oluşturur. İki tür bilgi kaynakları oldukça farklıdır. Bu konu, bir tür kitaplığından meta verileri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derlemesi adı verilir ve içerdiği tür bilgilerini COM türlerini kullanmak .NET Framework uygulamaları etkinleştirir.  
@@ -31,7 +31,7 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
 -   Tasarım-zamanı-yalnızca birlikte çalışma derlemelerini kullanarak: İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], derleyicinin tür bilgilerini birlikte çalışma bütünleştirilmiş kod yürütülebilir dosyanın içine gömmek için bildirebilirsiniz. Derleyici, uygulamanızın kullandığı tür bilgilerini katıştırır. Uygulamanızla birlikte çalışma derlemesi dağıtmak gerekmez. Önerilen yöntem budur.  
   
--   Birlikte çalışma derlemelerini dağıtma: Standart bir birlikte çalışma derlemesine başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesi uygulamanızla dağıtılması gerekir. Bu tekniği kullanır ve özel bir COM bileşeni kullanmıyorsanız, her zaman, yönetilen kodda birleştirmek istiyorsanız COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+-   Birlikte çalışma derlemelerini dağıtma: Standart bir birlikte çalışma derlemesine başvuru oluşturabilirsiniz. Bu durumda, birlikte çalışma derlemesi uygulamanızla dağıtılması gerekir. Bu tekniği kullanır ve özel bir COM bileşeni kullanmıyorsanız, her zaman, yönetilen kodda birleştirmek istiyorsanız COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Tasarım-zamanı-yalnızca birlikte çalışma derlemelerini kullandığınızda, tür bilgilerini COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesine gömebilirsiniz. Ancak, birincil birlikte çalışma derlemesi uygulamanızla birlikte dağıtmak gerekmez.  
   
@@ -44,7 +44,7 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
 -   Visual Studio  
   
-     Visual Studio COM türleri bir tür kitaplığındaki bir derleme meta verileri otomatik olarak dönüştürür. Yönergeler için [nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) ve [izlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
+     Visual Studio COM türleri bir tür kitaplığındaki bir derleme meta verileri otomatik olarak dönüştürür. Yönergeler için [nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [izlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md), ve [izlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
   
 -   [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -66,19 +66,20 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
     -   Tür kitaplığını derlemeye dönüştürme kurallarını bilgi.  
   
-     Özel bir sarmalayıcı yazma Gelişmiş bir tekniktir. Özel bir sarmalayıcı oluşturmak hakkında ek bilgi için bkz. [standart sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)).  
+     Özel bir sarmalayıcı yazma Gelişmiş bir tekniktir. Özel bir sarmalayıcı oluşturmak hakkında ek bilgi için bkz. [standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).  
   
- COM birlikte çalışma içeri aktarma işlemi hakkında daha fazla bilgi için bkz: [tür kitaplığını derlemeye dönüştürme özeti](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)).  
+ COM birlikte çalışma içeri aktarma işlemi hakkında daha fazla bilgi için bkz: [tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)
-- [Tür kitaplığını derlemeye dönüştürme özeti](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Standart sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
-- [Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](../../../docs/framework/interop/compiling-an-interop-project.md)
 - [Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [İzlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+- [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

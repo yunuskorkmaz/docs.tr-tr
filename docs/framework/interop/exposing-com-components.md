@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff12472ae5c7b2abbf1af338c2a1aea2a72907d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677153"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220120"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>COM Bileşenlerini .NET Framework'te Gösterme
-Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak için gereken işlem özetler. COM sunucuları, sıkı bir şekilde yazma hakkında ayrıntılar .NET Framework ile tümleştirmek için bkz: [birlikte çalışma için tasarım konuları](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).
+Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak için gereken işlem özetler. COM sunucuları, sıkı bir şekilde yazma hakkında ayrıntılar .NET Framework ile tümleştirmek için bkz: [birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
   
  Mevcut COM değerli kaynakları yönetilen kodda orta katman iş uygulamaları veya yalıtılmış işlevi olarak bileşenlerdir. İdeal bir bileşeni olan birincil birlikte çalışma derlemesi ve sıkı bir şekilde COM tarafından uygulanan programlama standartlarına uyar  
   
@@ -26,7 +26,7 @@ Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak iç
   
      Ortak dil çalışma zamanı, COM türleri dahil olmak üzere tüm türleri için meta verileri gerektirir. COM türleri olarak meta veriler içe içeren bir derlemenin almak için birkaç yolu vardır.  
   
-2.  [Yönetilen kodda COM türleri oluşturma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)).  
+2.  [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
      COM türlerini inceleyin, örnekleri etkinleştirmek ve herhangi bir yönetilen türü için yaptığınız gibi COM nesnesinin yöntemlerini çağırır.  
   
@@ -40,7 +40,7 @@ Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak iç
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilmeyen Kod ile Birlikte Çalışma](index.md)
-- [Birlikte çalışma için tasarım konuları](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))
+- [Birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu](com-interop-sample-net-client-and-com-server.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../standard/language-independence-and-language-independent-components.md)
 - [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

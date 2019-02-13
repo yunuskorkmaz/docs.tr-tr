@@ -1,15 +1,15 @@
 ---
 title: Docker uygulamaları için geliştirme ortamı
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Docker geliştirme yaşam döngüsü destek en önemli geliştirme aracı seçenekleri tanışın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152422"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220003"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker uygulamaları için geliştirme ortamı
 
@@ -47,5 +47,5 @@ Docker uygulamaları ve Microsoft araçları en modern dilde geliştirebilirsini
 Temel olarak, Linux veya Windows Docker tarafından desteklenen herhangi bir modern dilde kullanabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](orchestrate-high-scalability-availability.md)
+>[Önceki](deploy-azure-kubernetes-service.md)
 >[İleri](docker-apps-inner-loop-workflow.md)

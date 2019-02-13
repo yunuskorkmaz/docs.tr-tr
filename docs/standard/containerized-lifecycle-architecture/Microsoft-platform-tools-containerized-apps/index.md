@@ -1,15 +1,15 @@
 ---
 title: Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Docker uygulama yaşam döngüsü desteklemek için Microsoft'un teklifleri tanışın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 0e883041624f99d51b49994f02f3a42fc945a96d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152350"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219587"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
@@ -28,7 +28,7 @@ Tablo 3-1: Herhangi bir teknoloji için DevOps iş akışı Aç
 
 | Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf: Azure eklenebilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Herhangi bir Docker kayıt defteri<br /> |
+| Docker uygulamaları için Platform   | • Microsoft Visual Studio ve Visual Studio Code<br /> • .NET<br /> • Microsoft Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> • Azure kapsayıcı kayıt defteri<br /> | • Herhangi bir kod Düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dile (Node.js, Java, Go, vb.)<br /> • Herhangi bir orchestrator ve Zamanlayıcı<br /> • Any Docker registry<br /> |
 | Docker uygulamaları için DevOps     | • Azure DevOps Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure kapsayıcı hizmeti<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, vs.<br /> • Jenkins, Chef, Puppet, hız, CircleCI, Travis CI, vs.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vs.<br /> |
 | Yönetim ve izleme  | • Operations Management Suite<br /> • Uygulama öngörüleri<br /> | • Marathon, Chronos, vb.<br />
 

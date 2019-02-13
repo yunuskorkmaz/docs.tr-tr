@@ -2,24 +2,30 @@
 title: .NET uygulamalarında kaynakları
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221049"
 ---
 # <a name="resources-in-net-apps"></a>.NET uygulamalarında kaynakları
 Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir. Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir. Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir. Kaynaklar ve kalıcı nesneler formlar, dizeler, görüntüler dahil olmak üzere çeşitli verileri içerebilir. (Kalıcı nesneleri bir kaynak dosyasına yazmak için, nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizi bir kaynak dosyasında depolamak bütün uygulamanızı yeniden derlemeden bu verileri değiştirmenize olanak tanır. Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.  
   
  .NET Framework ve .NET Core oluşturulması ve yerelleştirilmesi kaynakları için kapsamlı destek sağlar. Ayrıca, .NET, paketleme ve dağıtma yerelleştirilmiş kaynakları için basit bir modeli destekler.  
   
- ASP.net'deki kaynaklar hakkında daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+ ASP.net'deki kaynaklar hakkında daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  ## <a name="creating-and-localizing-resources"></a>Kaynakları Oluşturma ve Yerelleştirme  
  Yerelleştirilmemiş bir uygulamada, özellikle aksi takdirde kaynak koddaki birden fazla konumda sabit kodlanmış olabilen dizeler için kaynak dosyalarını uygulama verilerinin bir deposu olarak kullanabilirsiniz. En yaygın olarak, kaynakları metin (.txt) veya XML (.resx) dosyaları olarak oluşturun ve kullanın [Resgen.exe (kaynak dosya oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) bunları ikili .resources dosyalarına derlemek için. Bu dosyalar, bir dil derleyicisi tarafından uygulamanın yürütülebilir dosyası içine gömülebilir. Kaynak oluşturma hakkında daha fazla bilgi için bkz. [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

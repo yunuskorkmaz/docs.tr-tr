@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544672"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219449"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
 [Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak, özellik veya dizin oluşturucu ait oldukları aynı görünürlük veya erişim düzeyini bu erişimcilerine sahip. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  
@@ -29,7 +29,7 @@ ms.locfileid: "54544672"
   
 -   Bir arabirim veya açık bir erişimci değiştiriciler kullanamazsınız [arabirimi](../../../csharp/language-reference/keywords/interface.md) üye uygulaması.  
   
--   Erişimci değiştiricileri yalnızca özellik veya dizin oluşturucusu hem de varsa kullanabilirsiniz `set` ve `get` erişimcileri. Bu durumda, değiştirici biri yalnızca iki erişimci üzerinde izin verilir.  
+-   Erişimci değiştiricileri yalnızca özellik veya dizin oluşturucusu hem de varsa kullanabilirsiniz `set` ve `get` erişimcileri. Bu durumda, değiştirici, yalnızca iki erişimci her biri izin verilir.  
   
 -   Özellik veya dizin oluşturucusu varsa bir [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi, erişimci değiştiricisi eşleşmelidir geçersiz kılınan erişimcisinin erişimcisi varsa.  
   

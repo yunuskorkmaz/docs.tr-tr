@@ -1,15 +1,15 @@
 ---
 title: Docker kapsayıcıları, görüntüleri ve kayıt defterleri
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Kayıt defterleri uygulamaları dağıtma Docker şekilde genel play önemli bir rol öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 7a2e20e09561a5cc91aa29059fb8d19a14205bb5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142755"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221205"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüleri ve kayıt defterleri
 
@@ -35,4 +35,4 @@ Kayıt defterindeki görüntüleri koyarak çerçevesi düzeyinde, bağımlılı
 
 >[!div class="step-by-step"]
 >[Önceki](docker-terminology.md)
->[İleri](Docker-application-lifecycle/index.md)
+>[İleri](road-to-modern-applications-based-on-containers.md)

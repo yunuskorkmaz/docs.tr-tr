@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632796"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219535"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu aracılığıyla kullanıma sunar. RCW, .NET istemcileri için normal bir nesne görünmesine karşın, birincil bir .NET istemcisi ve COM nesnesi arasındaki çağrıların sıralamakta işlevidir.  
@@ -58,7 +58,6 @@ COM arabirimlerinde ve çalışma zamanı aranabilir sarmalayıcısı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [COM Sarmalayıcıları](com-wrappers.md)
-- [Seçilen arabirimleri sıralama](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
 - [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)
-- [Tür kitaplığını derlemeye dönüştürme özeti](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)

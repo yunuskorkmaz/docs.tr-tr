@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041492"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220118"
 ---
 # <a name="net-framework-tools"></a>.NET Framework Araçları
 .NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.  
@@ -129,7 +129,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Windows Forms tarafından kullanılan kullanıcı arabirimi (UI) kaynaklarını (.resx veya .resources dosyaları) yerelleştirmenize yardımcı olur. Dizeleri çevirebilir ve ardından yerelleştirilmiş dizeleri içerecek şekilde denetimleri boyutlandırabilir, taşıyabilir ve gizleyebilirsiniz.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Araçlar](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [WPF araçları](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  İsXPS Conformance Aracı (isXPS.exe) ve profil oluşturma araçları performans gibi araçlar içerir.  
   
  [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md)  

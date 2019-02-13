@@ -1,15 +1,15 @@
 ---
 title: Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: "\"Dış döngü\" DevOps iş akışının adımları öğrenin"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143655"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220945"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -21,11 +21,11 @@ ms.locfileid: "53143655"
 
 Şimdi daha ayrıntılı bu adımların her birini inceleyelim.
 
-## <a name="step-1-inner-loop-development-workflow"></a>1. adım: İç döngü geliştirme iş akışı
+## <a name="step-1-inner-loop-development-workflow"></a>1. Adım: İç döngü geliştirme iş akışı
 
 Bu adım ayrıntılı bölüm 4'te açıklanan ancak özeti için işte dış döngü, CI işlem hattı eylemleri başlatma kodunu (Git gibi) kaynak denetimi yönetim sistemine hangi geliştirici gönderim şu başladığı.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>2. adım: Kaynak kodu denetimi tümleştirme ve Azure DevOps Services ve Git ile yönetim
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>2. Adım: Kaynak kodu denetimi tümleştirme ve Azure DevOps Services ve Git ile yönetim
 
 Bu adımda, birleştirilmiş bir takım farklı geliştiricilerden gelen kod sürümünü toplamak için bir sürüm denetimi sistemi olması gerekir.
 
@@ -35,7 +35,7 @@ Kendi makinelerde test ederken, geliştiriciler tarafından oluşturulan bir yer
 
 Azure DevOps Hizmetleri ve Team Foundation Server Git ve Team Foundation sürüm denetimi destekler. Bunlar arasında seçin ve bir uçtan uca Microsoft deneyimi için kullanın. Kodunuzu dış depolardaki (örneğin, GitHub, Git depoları şirket içi veya Subversion gibi) ancak de yönetebilirsiniz ve yine de bağlanabilir ve DevOps CI işlem hattınızı için başlangıç noktası olarak kodu alma mümkün olmayacaktır.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>3. adım: Derleme, CI, tümleştirme ve Test ile Azure DevOps Hizmetleri ve Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>3. Adım: Derleme, CI, tümleştirme ve Test ile Azure DevOps Hizmetleri ve Docker
 
 CI, modern yazılım test etme ve teslim için standart olarak belirlendi. Docker çözümü, bir görev ayrımı nettir geliştirme ve operasyon ekipleri arasında tutar. Docker görüntülerinin değiştirilemezlik ne olan geliştirilen, CI aracılığıyla test ve üretim ortamında çalışması arasında tekrarlanabilir bir dağıtım sağlar. Docker altyapısı Geliştirici dizüstü bilgisayarlar arasında dağıtılmış ve test altyapısı kapsayıcıları ortamlar genelinde taşınabilir hale getirir.
 
@@ -157,7 +157,7 @@ Azure DevOps Hizmetleri Docker uzantısını kullanarak, Şekil 5-5'te gösteril
 
 **Daha fazla bilgi** daha fazla bilgi için Azure DevOps Services için Docker uzantısını hakkında Git <https://aka.ms/vstsdockerextension>. Azure Container Registry hakkında daha fazla bilgi için şuraya gidin <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>4. adım: CD dağıtma
+## <a name="step-4-cd-deploy"></a>4. Adım: CD dağıtma
 
 Docker görüntülerinin değiştirilemezlik ne geliştirilen, CI aracılığıyla test ve üretim ortamında çalışması tekrarlanabilir bir dağıtım sağlar. Docker kayıt defterinizde (özel veya genel) yayımlanmış uygulama Docker görüntüleri oluşturduktan sonra bunları sahip olabileceğiniz birden fazla ortam dağıtabilirsiniz (üretim, QA, hazırlama, vb.) gelen Azure DevOps hizmetlerini kullanarak CD işlem hattı işlem hattı görevler veya Azure DevOps Services Release Management.
 
@@ -223,11 +223,11 @@ Azure kapsayıcı hizmeti: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>5. adım: Çalıştırma ve yönetme
+## <a name="step-5-run-and-manage"></a>5. Adım: Çalıştırma ve yönetme
 
 Çalıştıran ve uygulamaları yönetmek için Kurumsal üretim sırasında önemli bir konu içinde ve kendisinin ve işlemleri türü nedeniyle düzeyidir ve bu alan büyük kapsamını yanı sıra bu düzeyde (BT işlemleri) çalışan kişiler, biz tüm sonraki HARCANMIŞTIR Bunu açıklayan için bölüm.
 
-## <a name="step-6-monitor-and-diagnose"></a>6. adım: İzleme ve tanılama
+## <a name="step-6-monitor-and-diagnose"></a>6. Adım: İzleme ve tanılama
 
 Bu konuda, üretim sistemleri BT işlemleri gerçekleştiren görevler bir parçası olarak bir sonraki bölümde de ele alınmıştır; Bununla birlikte, uygulamayı sürekli olarak geliştirilir, bu adımda elde edilen içgörüleri Geliştirme takımına geri besleme gerekir vurgulamak önemlidir. Görevleri ve işlemleri genellikle tarafından gerçekleştirilen olsa da bu açısından bakıldığında, ayrıca DevOps, parçasıdır BT.
 
@@ -235,4 +235,4 @@ Yalnızca izleme ve tanılama DevOps bölge içinde yüzde 100 olduğunda izleme
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](../run-manage-monitor-docker-environments/index.md)
+>[İleri](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

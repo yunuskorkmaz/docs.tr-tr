@@ -1,15 +1,15 @@
 ---
 title: Docker terimleri
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Docker ile çalışırken, her gün kullanılan bazı temel terminoloji öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 1efb2fa567bd452f0a0a5ee5afb6f759511e4145
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1514a2199efe52a411f61649fc21e906bba5b13c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151323"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218729"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 

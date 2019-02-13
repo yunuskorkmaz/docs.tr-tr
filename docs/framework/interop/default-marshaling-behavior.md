@@ -1,5 +1,5 @@
 ---
-title: Varsayılan Hazırlama Davranışı
+title: Varsayılan Sıralama Davranışı
 ms.date: 06/26/2018
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689006"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221296"
 ---
-# <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
+# <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen bellek geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Yerleşik kurallar bir çağrılan geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana döndürmesi ve performans iyileştirmelerini sağlayıp altında Sıralayıcı koşulda veri türü dönüşümleri olarak sıralama gibi etkinlikler denetler.  
   
  Bu bölümde, birlikte çalışma hazırlama hizmet varsayılan davranış özelliklerini tanımlar. Bu, diziler, Boole türleri, char türü, temsilciler, sınıflar, nesneleri, dizeleri ve yapıları hazırlama hakkında ayrıntılı bilgi sunar.  
   
 > [!NOTE]
->  Genel türlerin sıralama desteklenmiyor. Daha fazla bilgi edinmek, [birlikte çalışma genel türleri kullanarak](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
+>  Genel türlerin sıralama desteklenmiyor. Daha fazla bilgi edinmek, [birlikte çalışma genel türleri kullanarak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Birlikte çalışma sıralayıcısı ile bellek yönetimi  
  Birlikte çalışma sıralayıcısı, yönetilmeyen kod tarafından ayrılan bellek boşaltmak her zaman çalışır. Bu davranışı COM bellek yönetimi kuralları ile uyumludur, ancak yerel C++ yöneten kuralları farklıdır.  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  Ancak, her bir platform çağırma gibi prototip yöntemi tanımlarsanız, değiştirin **BSTR** tür bir <xref:System.String> yazın ve arama `MethodOne`, ortak dil çalışma zamanı ücretsiz dener `b` iki kez. Kullanarak da hazırlama davranışını değiştirebilirsiniz <xref:System.IntPtr> türleri yerine **dize** türleri.  
   
- Çalışma zamanı, her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntemi. Birlikte çalıştığınız bellek ile ayrılıp değil **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntemi kullanarak el ile bellek. Benzer şekilde, otomatik bellek boşaltma burada bellek hiçbir zaman bellekten kaldırılmalıdır durumlarda, tür kaçınabilirsiniz olarak kullanırken **GetCommandLine** işlevi Kernel32.dll dosyasından çekirdek bellek için bir işaretçi döndürür. El ile bellek serbest bırakma hakkında daha fazla bilgi için bkz [arabellekler örneği](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Çalışma zamanı, her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntemi. Birlikte çalıştığınız bellek ile ayrılıp değil **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntemi kullanarak el ile bellek. Benzer şekilde, otomatik bellek boşaltma burada bellek hiçbir zaman bellekten kaldırılmalıdır durumlarda, tür kaçınabilirsiniz olarak kullanırken **GetCommandLine** işlevi Kernel32.dll dosyasından çekirdek bellek için bir işaretçi döndürür. El ile bellek serbest bırakma hakkında daha fazla bilgi için bkz [arabellekler örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Sınıflar için varsayılan sıralama  
  Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve her zaman arabirimleri olarak sıralanmış. Bazı durumlarda, sınıf hazırlamak için kullanılan arabirimi sınıf arabirimi bilinir. Tercih ettiğiniz bir arabirime sahip sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface).  

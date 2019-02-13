@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596143"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218989"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe kullanarak birincil birlikte çalışma derlemeleri oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:  
@@ -38,7 +38,7 @@ Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:
   
 1.  Komut isteminde, şunları yazın:  
   
-     **Tlbimp** *tlbfile***/birincil/keyfile:** *filename* **/out:** *assemblyname*   
+     **Tlbimp** *tlbfile***/birincil/keyfile:** *filename* **/out:** *assemblyname*  
   
      Bu komutta *tlbfile* COM tür kitaplığı içeren bir dosya *filename* kapsayıcısı veya anahtar çiftini içeren dosyanın adı ve *assemblyname* olduğu tanımlayıcı ad ile işaretlenecek derlemenin adı.  
   
@@ -46,7 +46,7 @@ Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:
   
  Bağımlı bir birincil birlikte çalışma derlemesi, özgün tür kitaplığına farklı bir sürüm numarası geçerli dizinde yüklendiğinde bulunabilirlik değil. Windows kayıt defterinde bağımlı birincil birlikte çalışma derlemesi veya kullanın **/reference** Tlbimp.exe bağımlı DLL bulur emin olmak için seçeneği.  
   
- Ayrıca, birden çok tür kitaplığı sürümünü sarabilirsiniz. Yönergeler için [nasıl yapılır: Birden çok tür kitaplığı sürümünü sarmalama](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
+ Ayrıca, birden çok tür kitaplığı sürümünü sarabilirsiniz. Yönergeler için [nasıl yapılır: Birden çok tür kitaplığı sürümünü sarmalama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, COM tür kitaplığı içeri aktarır `LibUtil.tlb` ve derlemeyi imzalar `LibUtil.dll` anahtar dosyasını kullanarak bir katı adla `CompanyA.snk`. Bu örnek varsayılan ad üretir belirli ad alanı adı gt;(yok) `LibUtil`.  

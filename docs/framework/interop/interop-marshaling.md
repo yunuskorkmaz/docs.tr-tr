@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453261"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221257"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a> Birlikte çalışma hazırlama veri çağrıları sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -77,7 +77,7 @@ Grup aynı sıralama işlemi
   
  Bileşen yazarı, bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tablo, .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterir. Ayrıca, birleşimler için gereksinimleri hazırlama ortaya çıkan gösterir.  
   
-|.NET istemci|COM sunucusu|Hazırlama gereksinimleri|  
+|.NET istemcisi|COM sunucusu|Hazırlama gereksinimleri|  
 |-----------------|----------------|-----------------------------|  
 |MTA (varsayılan)|MTA<br /><br /> STA|Birlikte çalışma hazırlama.<br /><br /> Birlikte çalışabilirlik ve COM hazırlama.|  
 |STA|MTA<br /><br /> STA|Birlikte çalışabilirlik ve COM hazırlama.<br /><br /> Birlikte çalışma hazırlama.|  
@@ -148,12 +148,12 @@ Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar
 |[Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)|Veri hazırlama için birlikte çalışma hazırlama hizmeti kullanan kurallar açıklanmaktadır.|  
 |[Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)|Yöntem parametreleri bildirmek ve yönetilmeyen kitaplıkları tarafından dışarı aktarılan işlevler için bağımsız değişkenler geçirmek açıklar.|  
 |[COM Birlikte Çalışma ile Verileri Hazırlama](marshaling-data-with-com-interop.md)|Hazırlama davranışı değiştirmek için COM sarmalayıcıları özelleştirmeyi açıklar.|  
-|[Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme işlemini açıklamaktadır.|  
-|[Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](how-to-map-hresults-and-exceptions.md)|HRESULT'ları için özel durumları eşleme açıklar ve .NET Framework'teki kendi karşılaştırılabilir özel durum sınıfı için her HRESULT tam eşleme sağlar.|  
-|[Genel türleri kullanarak birlikte çalışma](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Hangi eylemler genel türler COM birlikte çalışabilirlik için kullanılırken desteklenen açıklar.|  
+|[Nasıl yapılır: Yönetilen kodu DCOM'dan WCF'ye geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme işlemini açıklamaktadır.|  
+|[Nasıl yapılır: Harita HRESULTs ve özel durumları](how-to-map-hresults-and-exceptions.md)|HRESULT'ları için özel durumları eşleme açıklar ve .NET Framework'teki kendi karşılaştırılabilir özel durum sınıfı için her HRESULT tam eşleme sağlar.|  
+|[Genel türleri kullanarak birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Hangi eylemler genel türler COM birlikte çalışabilirlik için kullanılırken desteklenen açıklar.|  
 |[Yönetilmeyen Kod ile Birlikte Çalışma](index.md)|Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.|  
 |[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM bileşenlerini .NET Framework'te uygulamanıza ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
-|[Birlikte çalışma için tasarım konuları](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Tümleşik COM bileşenlerini yazmak için ipuçları sağlar.|  
+|[Birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Tümleşik COM bileşenlerini yazmak için ipuçları sağlar.|  
   
  [Başa dön](#top)  
   

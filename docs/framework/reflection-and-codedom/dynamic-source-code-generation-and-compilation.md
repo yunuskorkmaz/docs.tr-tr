@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582599"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220315"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dinamik Kaynak Kodu Oluşturma ve Derleme
 .NET Framework kod belge nesne geliştiricilerin kodunu temsil eden tek bir modelini temel alan kaynak kodu, çalışma zamanında birden fazla programlama dilinde oluşturmak için kaynak kodu yayma programlar sağlayan modeli (CodeDOM) adlı bir mekanizma içerir İşlenecek.  
@@ -37,10 +37,10 @@ ms.locfileid: "48582599"
  [Kaynak kodu üretme ve CodeDOM grafiğinden bir programı derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
  Kaynak kodu oluşturun ve oluşturulan kod içinde tanımlanan sınıflar kullanarak dış bir derleyici ile derleme açıklar `System.CodeDom.Compiler` ad alanı.  
   
- [Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
  XML belgeleri açıklamaları olan kod oluşturma ve XML belgeleri çıktısı oluşturması oluşturulan kodu derlemek için CodeDOM kullanmayı açıklar.  
   
- [Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
  CodeDOM alanlar, özellikler, bir yöntem, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturmak için nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -51,5 +51,5 @@ ms.locfileid: "48582599"
  Arabirimleri oluşturma ve çalışma zamanında kod derlemek için tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [CodeDOM hızlı başvuru](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [CodeDOM hızlı başvuru](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
  Kaynak kod öğelerini temsil eden CodeDOM öğeleri bulmak, geliştiriciler için hızlı bir yol sağlar.

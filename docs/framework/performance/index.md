@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d3e26c835a96bba3c97e471075f5d02b5330461
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201575"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221179"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Mükemmel performans gösteren uygulamalar oluşturmak istiyorsanız, tasarım ve performans planlamanız başka bir uygulama özelliğini tasarladığınız gibi. Microsoft tarafından sağlanan araçları uygulamalarınızın performansını ölçmek için vb., gerekirse, bellek kullanımı, kod veriminde ve yanıt hızını iyileştirme yapın. Bu konu, Microsoft sağlar ve uygulama geliştirmenin belirli alanları için performansı kapsayan diğer konulara bağlantılar sağlar Performans analiz araçlarını listeler.  
@@ -32,8 +32,8 @@ Mükemmel performans gösteren uygulamalar oluşturmak istiyorsanız, tasarım v
   
 |Aracı|Açıklama|  
 |----------|-----------------|  
-|Visual Studio Performans Analizi|Windows işletim sistemi çalıştıran bilgisayarlara dağıtılan .NET Framework uygulamalarınızı CPU kullanımı çözümlemek için kullanın.<br /><br /> Bu araç kullanılabilir **hata ayıklama** Visual Studio'da bir proje açtıktan sonra menü. Daha fazla bilgi için [performans Gezgini](/visualstudio/profiling/performance-explorer). **Not:** kullanım Windows Phone Uygulama analizi (sonraki satıra bakın) Windows Phone hedeflenirken.|  
-|Windows Phone Uygulama analizi|CPU ve bellek, ağ veri aktarım hızını, uygulama yanıt verme hızını ve Windows Phone uygulamalarınızda pil tüketimini çözümlemek için kullanın.<br /><br /> Bu araç kullanılabilir **hata ayıklama** yükledikten sonra Visual Studio'da bir Windows Phone projesi için menü [Windows Phone SDK'sı](https://go.microsoft.com/fwlink/?LinkId=265773). Daha fazla bilgi için [uygulamasını Windows Phone için profil oluşturma](https://msdn.microsoft.com/library/windowsphone/develop/jj215908\(v=vs.105\).aspx).|  
+|Visual Studio Performans Analizi|Windows işletim sistemi çalıştıran bilgisayarlara dağıtılan .NET Framework uygulamalarınızı CPU kullanımı çözümlemek için kullanın.<br /><br /> Bu araç kullanılabilir **hata ayıklama** Visual Studio'da bir proje açtıktan sonra menü. Daha fazla bilgi için [performans Gezgini](/visualstudio/profiling/performance-explorer). **Not:**  Windows Phone Uygulama analizi kullanın (sonraki satıra bakın) Windows Phone hedeflenirken.|  
+|Windows Phone Uygulama analizi|CPU ve bellek, ağ veri aktarım hızını, uygulama yanıt verme hızını ve Windows Phone uygulamalarınızda pil tüketimini çözümlemek için kullanın.<br /><br /> Bu araç kullanılabilir **hata ayıklama** yükledikten sonra Visual Studio'da bir Windows Phone projesi için menü [Windows Phone SDK'sı](https://go.microsoft.com/fwlink/?LinkId=265773). Daha fazla bilgi için [uygulamasını Windows Phone 8 için profil oluşturma](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU ve bellekle ilgili performans sorunlarını tanımlamak için kullanın. Bu araç atık toplama ve JIT derlemesi hakkında bilgilerin yanı sıra gelişmiş bellek ve CPU araştırmaları sağlamak için Windows (ETW) ve CLR Profil oluşturma API'leri için olay izleme kullanır. PerfView kullanma hakkında daha fazla bilgi için bkz uygulama ile birlikte gelen eğitim ve Yardım dosyaları [kanal 9 video eğitimleri](https://channel9.msdn.com/Series/PerfView-Tutorial), ve [blog gönderilerini](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> Belleğe özgü sorunlar için bkz: [kullanarak bellek incelemeleri için PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Windows Performans Çözümleyicisi](https://www.microsoft.com/download/details.aspx?id=30652)|Aynı bilgisayarda çoklu uygulamaları çalıştırırken, uygulamanızın bellek ve depolama kullanmak gibi genel sistem başarımını belirlemek için kullanın. Bu araç İndirme Merkezi'nden Windows değerlendirme ve dağıtım Seti'nin (ADK) parçası olarak kullanılabilir [!INCLUDE[win8](../../../includes/win8-md.md)]. Daha fazla bilgi için [Windows Performans Çözümleyicisi](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
@@ -47,10 +47,8 @@ Mükemmel performans gösteren uygulamalar oluşturmak istiyorsanız, tasarım v
 |--------------|---------|  
 |Tüm platformlar için .NET framework uygulamaları|[Atık Toplama ve Performans](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](../../../docs/framework/performance/performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C++, C# ve Visual Basic içinde yazılan uygulamalar|[C++, C# ve Visual Basic kullanan Windows Store uygulamaları için en iyi performans](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Phone|[Windows Phone için uygulama performans değerlendirmeleri](https://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Windows Phone Uygulama analizi](https://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Windows Phone uygulamalarınızı daha hızlı Market'te Al](https://msdn.microsoft.com/magazine/hh781024.aspx)|  
-|Windows Presentation Foundation (WPF)|[WPF Performans paketi](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
-|Silverlight|[Performans İpuçları](https://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  
-|ASP.NET|[ASP.NET performansa genel bakış](https://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b)|  
+|Windows Presentation Foundation (WPF)|[WPF Performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[ASP.NET performansa genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
 |Windows Forms|[Windows Forms uygulamalarının performansını artırmak için pratik ipuçları](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>İlgili Konular  

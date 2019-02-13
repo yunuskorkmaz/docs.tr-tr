@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531518"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221088"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
 COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı olabilir:  
@@ -60,7 +60,7 @@ COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen 
   
      Seçtiğiniz mekanizması bağımsız olarak, oluşturulan tür kitaplığı'nda yalnızca sağladığınız derlemede tanımlanan ortak türler dahil edilir.  
   
-     Ayrı bir dosya olarak bir tür kitaplığı paketi veya Win32 kaynak dosyası içinde olarak ekleme bir. AĞ tabanlı bir uygulama. Microsoft Visual Basic 6.0 bu işi sizin için otomatik olarak yapılır; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile eklemeniz gerekir. Yönergeler için [nasıl yapılır: Tür kitaplıkları Win32 kaynakları olarak ekleyin. AĞ tabanlı uygulamalar](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Ayrı bir dosya olarak bir tür kitaplığı paketi veya Win32 kaynak dosyası içinde olarak ekleme bir. AĞ tabanlı bir uygulama. Microsoft Visual Basic 6.0 bu işi sizin için otomatik olarak yapılır; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile eklemeniz gerekir. Yönergeler için [nasıl yapılır: Tür kitaplıkları Win32 kaynakları olarak ekleyin. AĞ tabanlı uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Tür Kitaplığı Dışarı Aktarıcı  
@@ -89,4 +89,4 @@ COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen 
 - [Bütünleştirilmiş Kod Güvenliği Konuları](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
-- [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak katıştırma](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+- [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak katıştırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

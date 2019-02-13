@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c2ae67b79559b0966ba0b36bbf420febbcb1672
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693324"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219938"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -105,7 +105,7 @@ caspol [options]
 ## <a name="remarks"></a>Açıklamalar  
  Güvenlik ilkesi üç ilke düzeyi kullanılarak ifade edilir: Makine ilkesi, kullanıcı ilkesi ve kuruluş ilkesi. Bir derlemenin aldığı izin kümesi, bu üç ilke düzeyi tarafından izin verilen izin kümelerinin kesişimi ile belirlenir. Her ilke düzey kod gruplarının hiyerarşik bir yapısı ile temsil edilir. Her kod grubunun bir üyelik koşulu vardır ve bu koşul hangi kodun o grubun üyesi olduğunu belirler. Adlandırılmış bir izin kümesi aynı zamanda her kod grubu ile ilişkilidir. Bu izin kümesi, çalışma zamanı tarafından, üyelik koşulunu karşılayan kodun sahip olmasına izin verilen izinleri belirtir. Bir kod grubu hiyerarşisi, ilişkili adlandırılmış izin kümeleriyle birlikte, güvenlik ilkesinin her düzeyini tanımlar ve korur. Kullanabileceğiniz **– kullanıcı**, **- customuser**, **– makine** ve **-enterprise** güvenlik ilkesinin düzeyini ayarlamak için Seçenekler.  
   
- Güvenlik İlkesi ve çalışma zamanının koda vereceği izinleri nasıl belirlediği hakkında daha fazla bilgi için bkz: [Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Güvenlik İlkesi ve çalışma zamanının koda vereceği izinleri nasıl belirlediği hakkında daha fazla bilgi için bkz: [Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Kod Grupları ve İzin Kümelerine Başvurma  
  Bir hiyerarşideki kod gruplarına başvuru yapılmasını sağlamak için **-liste** seçeneği sayısal etiketleriyle birlikte kod gruplarının girintili bir listesini görüntüler (1, 1.1, 1.1.1 ve benzeri). Kod gruplarını hedefleyen diğer komut satırı işlemleri belirli kod gruplarına başvuru yapmak için de sayısal etiketleri kullanır.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663173"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221101"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows, kaynak, yerelleştirme, Düzenleyici)
 
@@ -53,7 +53,7 @@ Bir Windows Forms projesindeki formda bulunan arabirim öğelerinin durumu genel
 
 - Bir kültür kaynak dosyası başka bir kültür kaynak dosyası olarak kaydedilebilir. Örneğin, İngilizce (ABD) kaynak dosyası Lehçe kaynak dosyası olarak kaydedilebilir. Genellikle yeni dosya daha sonra yeni kültür ile uyumlu olacak şekilde düzenlenir.
 
-Ayrıca bkz: [kaynakların hiyerarşik organizasyonu yerelleştirme için](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\)) veya [kaynakların hiyerarşik organizasyonu yerelleştirme için](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\)).
+Ayrıca bkz: [kaynakların hiyerarşik organizasyonu yerelleştirme için](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) veya [kaynakların hiyerarşik organizasyonu yerelleştirme için](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 Winres.exe, bir .resx dosyasını karşılık gelen .resources dosyasına dönüştüremez; bunun yerine Resgen.exe aracını kullanmalısınız. Resgen.exe hakkında daha fazla bilgi için bkz: [Resgen.exe (kaynak dosya oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 

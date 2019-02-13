@@ -1,15 +1,15 @@
 ---
 title: Docker uygulama yaşam döngüsüne giriş
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+description: Kapsayıcılı uygulama geliştirme yolculuğunu buradan başlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ea97631f1a5147129c8ac3b1a4b9fa18999d21b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 4ce6ac42a9605da029eb71d404bcf182fc0d3b9e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147573"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219301"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker uygulama yaşam döngüsüne giriş
  

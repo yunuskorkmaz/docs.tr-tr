@@ -1,15 +1,15 @@
 ---
-title: Mikro Hizmetleri ve yüksek ölçeklenebilirlik ve kullanılabilirlik için çok kapsayıcılı uygulamaları yönetme
-description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
+title: Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, iş yükü ve tüm kapsayıcıların yaşam döngüsü işleyen düzenleyicilerle yönetilen gerekir.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126906"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221166"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Mikro Hizmetleri ve yüksek ölçeklenebilirlik ve kullanılabilirlik için çok kapsayıcılı uygulamaları yönetme
 
@@ -181,4 +181,4 @@ Docker kapsayıcıları durum bilgisiz kendilerini olduğunu unutmayın. Durum b
 
 >[!div class="step-by-step"]
 >[Önceki](soa-applications.md)
->[İleri](docker-apps-development-environment.md)
+>[İleri](deploy-azure-kubernetes-service.md)

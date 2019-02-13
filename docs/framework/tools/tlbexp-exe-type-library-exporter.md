@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10e93af4172e6759cbe04f88e54b6e1db995efa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679012"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219483"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Tlbexp.exe yoksayar Not <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> alan.  
   
- Tür kitaplıkları derlemelerde bulunan tüm bilgileri barındıramayacağından, dışarı aktarma işlemi sırasında Tlbexp.exe bazı verileri atabilir. Dönüştürme işleminin açıklaması ve her bir tür kitaplığına yayılan bilgi parçasının kaynağının tanımlaması için bkz: [tür kitaplığına dönüştürme özeti derlemeye](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Tür kitaplıkları derlemelerde bulunan tüm bilgileri barındıramayacağından, dışarı aktarma işlemi sırasında Tlbexp.exe bazı verileri atabilir. Dönüştürme işleminin açıklaması ve her bir tür kitaplığına yayılan bilgi parçasının kaynağının tanımlaması için bkz: [tür kitaplığına dönüştürme özeti derlemeye](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  Tür kitaplığı dışarı Aktarıcı içeren yöntemleri dışarı Not <xref:System.TypedReference> parametre olarak `VARIANT`rağmen <xref:System.TypedReference> nesnenin yönetilmeyen kodda hiçbir anlamı vardır. İçeren yöntemleri dışarı aktardığınızda <xref:System.TypedReference> parametreleri, tür kitaplığı verme programı bir uyarı üretmez veya hata ve sonuçta elde edilen tür kitaplığını kullanan yönetilmeyen kod doğru şekilde çalışmaz.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Derlemeden tür kitaplığına dönüştürme özeti](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)
+- [Derlemeden tür kitaplığına dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

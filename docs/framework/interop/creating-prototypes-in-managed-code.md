@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564298"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219574"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
 Bu konu, yönetilmeyen işlevleri nasıl açıklar ve yönetilen kod yöntem tanımında açıklama birkaç öznitelik alanları tanıtır. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](marshaling-data-with-platform-invoke.md).  
@@ -226,7 +226,7 @@ interface IDemandStubsItf
 - [Giriş Noktası Belirtme](specifying-an-entry-point.md)
 - [Karakter Kümesi Belirtme](specifying-a-character-set.md)
 - [Platform Çağırma Örnekleri](platform-invoke-examples.md)
-- [Platform çağırmayla ilgili güvenlik konuları](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [Platform çağırmayla ilgili güvenlik konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL'lerde İşlevleri Tanımlama](identifying-functions-in-dlls.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](creating-a-class-to-hold-dll-functions.md)
 - [DLL İşlevini Çağırma](calling-a-dll-function.md)
