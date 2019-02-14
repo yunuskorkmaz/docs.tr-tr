@@ -123,8 +123,8 @@ ms.locfileid: "55204892"
  [Başa dön](#top)  
   
 <a name="quantifiers"></a>   
-## <a name="quantifiers"></a>Miktar Belirleyiciler  
- Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar belirleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
+## <a name="quantifiers"></a>Miktar Niceleyiciler  
+ Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar niceleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
   
 |Miktar Niteleyici|Açıklama|Desen|Eşleşmeler|  
 |----------------|-----------------|-------------|-------------|  
