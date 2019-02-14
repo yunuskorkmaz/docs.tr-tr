@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717408"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261368"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sunar ve hizmet davranışı veri yerine dağıtım noktasında tasarım. Bu konu, birincil teknikleri açıklar.  
@@ -91,7 +91,7 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
   
 -   `contract`. Sözleşme tanımlayan arabirimi belirtir. Bu tarafından belirtilen ortak dil çalışma zamanı (CLR) türüne uygulanan arabirimidir `name` özniteliği `service` öğesi.  
   
--   [\<uç noktası > öğesi başvurusu](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<uç noktası >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<Bağlamaları > öğesi  
  `bindings` Öğesi herhangi bir hizmette tanımlanan herhangi bir uç nokta tarafından kullanılan tüm bağlamaları için özellikleri içerir.  
@@ -101,7 +101,7 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
 ### <a name="the-binding-element"></a>\<Bağlama > öğesi  
  `binding` İçindeki öğe `bindings` öğesi, sistem tarafından sağlanan bağlamalar birini olabilir (bakın [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md)) veya özel bir bağlama (bkz [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` Öğeye sahip bir `name` belirtilen uç noktası ile bağlama karşılık gelen öznitelik `bindingConfiguration` özniteliği `endpoint` öğesi. Bu bağlama varsayılan bağlama türü için karşılık gelen sonra hiçbir ad belirtilmezse.  
   
- Hizmetler ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [Windows Communication Foundation uygulamaları yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+Hizmetler ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma WCF hizmetleri](configuring-services.md).
   
  [\<bağlama >](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)
-- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [WCF hizmetlerini yapılandırma](configuring-services.md)
 - [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<bağlama >](../../../docs/framework/misc/binding.md)

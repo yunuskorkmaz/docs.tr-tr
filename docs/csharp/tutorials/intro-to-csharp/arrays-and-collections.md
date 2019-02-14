@@ -3,12 +3,12 @@ title: Koleksiyonlar - giriş çalışın C# Öğreticisi
 description: Bilgi C# liste koleksiyonu bu öğreticideki keşfetmeye tarafından.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205288"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261277"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Veri koleksiyonları genel liste türünü kullanarak yönetmeyi öğrenin
 
@@ -19,9 +19,6 @@ Bu öğretici geliştirme için kullanabileceğiniz bir makine olmasını bekliy
 ## <a name="a-basic-list-example"></a>Temel listesi örneği
 
 Adlı bir dizin oluşturmak **liste-tutorial**. Geçerli dizin ve çalışma olun `dotnet new console`.
-
-> [!NOTE]
-> Yalnızca tamamladıysanız [10 dakika içinde .NET kullanmaya başlama](https://www.microsoft.com/net), yeni oluşturduğunuz myApp uygulamayı kullanmaya devam edebilirsiniz.
 
 Açık **Program.cs** sık kullandığınız düzenleyicide ve varolan kodu şu kodla değiştirin:
 

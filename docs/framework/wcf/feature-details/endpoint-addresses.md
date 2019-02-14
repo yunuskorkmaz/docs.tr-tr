@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730951"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261108"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumu belirten URI), oluşur. Uç nokta adresini Windows Communication Foundation (WCF) programlama modeli tarafından temsil edilir <xref:System.ServiceModel.EndpointAddress> isteğe bağlı içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası diğer uç noktalar tarafından kimlik doğrulaması sağlayan özelliği, Exchange, iletileri ve isteğe bağlı bir dizi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gereken diğer bir SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üst bilgiler ek sağlayın ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşime geçmek için adresleme bilgi. Bir uç nokta adresini kablo bir WS-Addressing uç nokta başvurusu (EPR) temsil edilir.  
@@ -119,7 +119,7 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
 -   Kullanarak kod içinde özel adres üstbilgileri oluşturma <xref:System.ServiceModel.Channels.AddressHeader> sınıfı ve ardından oluşumunu kullanılan bir <xref:System.ServiceModel.EndpointAddress>.  
   
--   Özel bir yapılandırmada [ \<üstbilgileri >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) altı olarak belirtilen [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+-   Özel bir yapılandırmada [ \<üstbilgileri >](../../configure-apps/file-schema/wcf/headers.md) altı olarak belirtilen [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi.  
   
  Dağıtımdan sonra üstbilgileri değiştirmenize izin verdiğinden, yapılandırma kod, genellikle tercih edilir.  
   
@@ -130,7 +130,7 @@ Her uç nokta bulun ve uç noktayı tanımlamak için kullanılır, ilişkili bi
   
 -   Kod içinde ekleyerek bir özel dinleme adresi belirtin. bir <xref:System.ServiceModel.Description.ClientViaBehavior> uç noktanın davranışı koleksiyon sınıfı.  
   
--   Yapılandırması, bir özel dinleme adresiyle belirtin `ListenUri` hizmetinin özniteliği [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+-   Yapılandırması, bir özel dinleme adresiyle belirtin `ListenUri` hizmetinin özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.  
   
 ### <a name="custom-soap-address-filter"></a>Özel SOAP adresi filtresi  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Birlikte kullanılan <xref:System.ServiceModel.EndpointAddress.Headers%2A> uç noktanın SOAP adresi filtresi tanımlamak için özellik (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Varsayılan olarak, bu filtre gelen iletisine sahip olduğunu doğrular bir `To` uç noktayla eşleşen ileti üst bilgisi kullanıcının URI ve tüm gerekli uç nokta üstbilgileri iletide.  

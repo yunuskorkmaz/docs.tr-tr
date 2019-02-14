@@ -2,12 +2,12 @@
 title: Hata işleme
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695562"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261160"
 ---
 # <a name="error-handling"></a>Hata işleme
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation işleme hatası  
@@ -22,7 +22,7 @@ ms.locfileid: "54695562"
   
  Yaygın olarak kullanılan en iyi uygulamaları ekleyebilir ve özel durum işleme uygulamanız genelinde yaygın bir yaklaşım sağlamak için uygulama blokları hedeflenir. Öte yandan, özel hata işleyicilerini ve hata sözleşmelerine birinin üzerinde kendi geliştirilen ayrıca çok kullanışlı olabilir. Örneğin, özel hata işleyicilerini FaultExceptions için tüm özel durumları otomatik olarak Yükselt ve günlüğe kaydetme özellikleri uygulamanıza eklemek için mükemmel bir fırsat sağlar.  
   
- Daha fazla bilgi için lütfen bkz [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Daha fazla bilgi için lütfen bkz [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Beklenen özel durumlar uğraşmanızı  
  Eylemin doğru kurs olan her işlem ya da ilgili genişletilebilirlik noktası beklenen özel durumları yakalamak için bunlar gelen kurtarılabilir bir FaultException içinde uygun özel hata dönüş bildirmeyeceğinize karar verdikten sonra\<T >  

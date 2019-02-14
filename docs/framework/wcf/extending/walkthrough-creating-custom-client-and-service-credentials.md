@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681748"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261558"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma
 Bu konu nasıl uygulanacağı özel istemci ve hizmet kimlik bilgilerini ve uygulama kodundan özel kimlik bilgilerini kullanmayı gösterir.  
@@ -23,8 +23,6 @@ Bu konu nasıl uygulanacağı özel istemci ve hizmet kimlik bilgilerini ve uygu
 -   İçin bir üreteci olarak gerçekleştirmek <xref:System.IdentityModel.Selectors.SecurityTokenManager> uygulamaları.  
   
  Hem <xref:System.ServiceModel.Description.ClientCredentials> ve <xref:System.ServiceModel.Description.ServiceCredentials> devralınan soyut sınıfları <xref:System.ServiceModel.Security.SecurityCredentialsManager> döndürmek için sözleşmeyi tanımlayan sınıf <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
-  
- Kimlik bilgileri sınıfları ve bunların nasıl WCF güvenlik mimarisine uygun hakkında daha fazla bilgi için bkz. [güvenlik mimarisi](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  WCF'de sağlanan varsayılan uygulamaları, sistem tarafından sağlanan kimlik bilgisi türlerini desteklemek ve güvenlik kimlik bilgileri türlerine işleyebilir belirteci yöneticisi oluşturun.  
   

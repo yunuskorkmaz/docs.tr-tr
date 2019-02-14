@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613668"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261121"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür tanıtır. Bu uygulamaları dokunmatik ekran arabirimi geçici bir çözüm olarak tasarlanmıştır. .NET framework 4.5, WCF hizmetlerini çağırmak Windows Store uygulamaları etkinleştirir.  
@@ -55,7 +55,7 @@ Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür t
  Hem metin ve ikili kodlamaları desteklenmektedir. Tüm WCF aktarma modları desteklenir. Daha fazla bilgi edinmek, [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Hizmet Başvurusu Ekle  
- Bir WCF hizmeti bir Windows Store uygulamasından çağırmak için Visual Studio 2012'in hizmet Başvurusu Ekle özelliğini kullanın. Hizmet bir Windows Store uygulaması içinde işiniz bittiğinde Başvurusu Ekle'nın bazı değişiklikler fark edeceksiniz. İlk yapılandırma dosyası yoksa oluşturulur. Kodda yapılandırılmalıdır için yapılandırma dosyaları, Windows Store uygulamaları kullanmayın. Bu yapılandırma kodu hizmet Başvurusu Ekle tarafından oluşturulan References.cs dosyasında bulunabilir. Bu dosyayı görmek için Çözüm Gezgini'nde "Tüm dosyaları göster" seçtiğinizden emin olun. Dosya hizmet başvuruları ve ardından Proje içinde Reference.svcmap düğümleri altında bulunur. WCF hizmetleri Windows Store uygulaması içinde oluşturulan tüm işlemler zaman uyumsuz görev tabanlı zaman uyumsuz desen kullanma olacaktır. Daha fazla bilgi için [görev tabanlı zaman uyumsuz desen](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Bir WCF hizmeti bir Windows Store uygulamasından çağırmak için Visual Studio 2012'in hizmet Başvurusu Ekle özelliğini kullanın. Hizmet bir Windows Store uygulaması içinde işiniz bittiğinde Başvurusu Ekle'nın bazı değişiklikler fark edeceksiniz. İlk yapılandırma dosyası yoksa oluşturulur. Kodda yapılandırılmalıdır için yapılandırma dosyaları, Windows Store uygulamaları kullanmayın. Bu yapılandırma kodu hizmet Başvurusu Ekle tarafından oluşturulan References.cs dosyasında bulunabilir. Bu dosyayı görmek için Çözüm Gezgini'nde "Tüm dosyaları göster" seçtiğinizden emin olun. Dosya hizmet başvuruları ve ardından Proje içinde Reference.svcmap düğümleri altında bulunur. WCF hizmetleri Windows Store uygulaması içinde oluşturulan tüm işlemler zaman uyumsuz görev tabanlı zaman uyumsuz desen kullanma olacaktır. Daha fazla bilgi için [zaman uyumsuz görevleri - görevler ile zaman uyumsuz programlama basitleştirmek](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Yapılandırma artık kod içinde oluşturulmuş olduğu için hizmet başvurusunu her güncelleştirildiğinde Reference.cs dosyasında yapılan değişikliklerin üzerine yazılır. Bu durumu ortadan kaldırmak için istemci proxy sınıfınızda uygulayabileceğiniz kısmi bir yöntemin içinde yapılandırma kod oluşturulur. Kısmi yöntem şu şekilde bildirilir:  
   
