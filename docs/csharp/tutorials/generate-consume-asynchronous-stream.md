@@ -1,0 +1,141 @@
+---
+title: Oluştur ve zaman uyumsuz akışları kullanma
+description: Bu gelişmiş Öğreticisi burada oluşturma ve zaman uyumsuz akışlar kullanan zaman uyumsuz olarak oluşturulan veri dizileri ile çalışmak için daha doğal bir yol sağlar senaryo da gösterilir.
+ms.date: 02/10/2019
+ms.custom: mvc
+ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56306017"
+---
+# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a><span data-ttu-id="e8d2d-103">Öğretici: Oluşturma ve kullanarak zaman uyumsuz akışlarını kullanmasını C# 8.0 ve .NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="e8d2d-103">Tutorial: Generate and consume async streams using C# 8.0 and .NET Core 3.0</span></span>
+
+<span data-ttu-id="e8d2d-104">C#8.0 tanıtır **zaman uyumsuz akışlar**, veri akışında öğeleri alınan veya zaman uyumsuz olarak oluşturulan bir akış veri kaynağı modeli.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-104">C# 8.0 introduces **async streams**, which model a streaming source of data when the elements in the data stream may be retrieved or generated asynchronously.</span></span> <span data-ttu-id="e8d2d-105">Zaman uyumsuz akışlar .NET standart 2.1 içinde tanıtılan ve zaman uyumsuz akış veri kaynakları için doğal bir programlama modeli sağlamak için .NET Core 3.0 uygulanan yeni arabirimleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-105">Async streams rely on new interfaces introduced in .NET Standard 2.1 and implemented in .NET Core 3.0 to provide a natural programming model for asynchronous streaming data sources.</span></span>
+
+<span data-ttu-id="e8d2d-106">Bu öğreticide şunları öğrenirsiniz nasıl yapılır:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-106">In this tutorial, you'll learn how to:</span></span>
+
+> [!div class="checklist"]
+> * <span data-ttu-id="e8d2d-107">Zaman uyumsuz olarak veri öğelerinin bir dizisi oluşturan bir veri kaynağı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-107">Create a data source that generates a sequence of data elements asynchronously.</span></span>
+> * <span data-ttu-id="e8d2d-108">Bu veri kaynağı zaman uyumsuz olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-108">Consume that data source asynchronously.</span></span>
+> * <span data-ttu-id="e8d2d-109">Yeni arabirim ve veri kaynağı önceki zaman uyumlu veri dizileri için tercih edilen olduğunda algılar.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-109">Recognize when the new interface and data source are preferred to earlier synchronous data sequences.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="e8d2d-110">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="e8d2d-110">Prerequisites</span></span>
+
+<span data-ttu-id="e8d2d-111">.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-111">You’ll need to set up your machine to run .NET Core, including the C# 8.0 beta compiler.</span></span> <span data-ttu-id="e8d2d-112">C# 8 beta derleyici sürümünden itibaren kullanılabilir [Visual Studio 2019 Önizleme 1](https://visualstudio.microsoft.com/vs/preview/), veya [.NET Core 3.0 Önizleme 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span><span class="sxs-lookup"><span data-stu-id="e8d2d-112">The C# 8 beta compiler is available starting with [Visual Studio 2019 preview 1](https://visualstudio.microsoft.com/vs/preview/), or [.NET Core 3.0 preview 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span></span> <span data-ttu-id="e8d2d-113">Zaman uyumsuz akışlar ilk .NET Core 3.0 Önizleme 1'de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-113">Async streams are first available in .NET Core 3.0 preview 1.</span></span>
+
+<span data-ttu-id="e8d2d-114">Oluşturmak ihtiyacınız olacak bir [GitHub erişim belirteci](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) GitHub GraphQL uç noktaya erişebilmesi için.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-114">You'll need to create a [GitHub access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) so that you can access the GitHub GraphQL endpoint.</span></span> <span data-ttu-id="e8d2d-115">GitHub erişim belirtecinizi için şu izinler seçin:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-115">Select the following permissions for your GitHub Access Token:</span></span>
+
+- <span data-ttu-id="e8d2d-116">Depo: durumu</span><span class="sxs-lookup"><span data-stu-id="e8d2d-116">repo:status</span></span>
+- <span data-ttu-id="e8d2d-117">public_repo</span><span class="sxs-lookup"><span data-stu-id="e8d2d-117">public_repo</span></span>
+
+<span data-ttu-id="e8d2d-118">GitHub API uç noktasına erişmek için kullandığı için erişim belirteci güvenli bir yere kaydedin.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-118">Save the access token in a safe place so you can use it to gain access to the GitHub API endpoint.</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="e8d2d-119">Kişisel erişim belirtecinizi güvenli tutun.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-119">Keep your personal access token secure.</span></span> <span data-ttu-id="e8d2d-120">Kişisel erişim belirteci ile herhangi bir yazılım erişim haklarınız kullanarak GitHub API çağrıları yapabilir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-120">Any software with your personal access token could make GitHub API calls using your access rights.</span></span>
+
+<span data-ttu-id="e8d2d-121">Bu öğreticide, aşina olduğunuz varsayılır C# ve .NET, Visual Studio veya .NET Core CLI gibi.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-121">This tutorial assumes you're familiar with C# and .NET, including either Visual Studio or the .NET Core CLI.</span></span>
+
+## <a name="run-the-starter-application"></a><span data-ttu-id="e8d2d-122">Başlangıç uygulaması çalıştırma</span><span class="sxs-lookup"><span data-stu-id="e8d2d-122">Run the starter application</span></span>
+
+<span data-ttu-id="e8d2d-123">Bu öğreticide kullanılan başlangıç uygulaması için kodu alma bizim [dotnet/samples](https://github.com/dotnet/samples) depoda [csharp/öğreticiler/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/start) klasör.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-123">You can get the code for the starter application used in this tutorial from our [dotnet/samples](https://github.com/dotnet/samples) repository in the [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/start) folder.</span></span>
+
+<span data-ttu-id="e8d2d-124">Başlangıç uygulaması kullanan bir konsol uygulamasıdır [GitHub GraphQL](https://developer.github.com/v4/) yazılan son sorunlar almak için arabirimi [dotnet/docs](https://github.com/dotnet/docs) depo.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-124">The starter application is a console application that uses the [GitHub GraphQL](https://developer.github.com/v4/) interface to retrieve recent issues written in the [dotnet/docs](https://github.com/dotnet/docs) repository.</span></span> <span data-ttu-id="e8d2d-125">Başlangıç başlangıç uygulaması için şu kodu bakarak `Main` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-125">Start by looking at the following code for the starter app `Main` method:</span></span>
+
+[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+
+<span data-ttu-id="e8d2d-126">Kümelerden yapabilirsiniz bir `GitHubKey` kişisel erişim belirtecinizi veya ortam değişkeni çağrısında son bağımsız değişken yerine `GenEnvVariable` kişisel erişim belirteci ile.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-126">You can either set a `GitHubKey` environment variable to your personal access token, or you can replace the last argument in the call to `GenEnvVariable` with your personal access token.</span></span> <span data-ttu-id="e8d2d-127">Kaynak başkalarıyla kaydetme veya paylaşılan kaynak deposunda koyarak erişim kodunuzu kaynak kodunda yerleştirmeyin.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-127">Don't put your access code in source code if you'll be saving the source with others, or putting it in a shared source repository.</span></span>
+
+<span data-ttu-id="e8d2d-128">GitHub istemci kodu oluşturduktan sonra `Main` bir ilerleme raporlama nesnesi ve bir iptal belirteci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-128">After creating the GitHub client, the code in `Main` creates a progress reporting object and a cancellation token.</span></span> <span data-ttu-id="e8d2d-129">Bu nesneler oluşturulduktan sonra `Main` çağrıları `runPagedQueryAsync` sorunları oluşturulan en son 250 alınacak.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-129">Once those objects are created, `Main` calls `runPagedQueryAsync` to retrieve the most recent 250 created issues.</span></span> <span data-ttu-id="e8d2d-130">Bu görev tamamlandıktan sonra sonuçlar görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-130">After that task has finished, the results are displayed.</span></span>
+
+<span data-ttu-id="e8d2d-131">Başlangıç uygulamasını çalıştırdığınızda, bu uygulamanın nasıl çalıştığı hakkında bazı önemli gözlemler yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-131">When you run the starter application, you can make some important observations about how this application runs.</span></span>  <span data-ttu-id="e8d2d-132">Her bir sayfa için bildirilen ilerleme durumunu görürsünüz Github'dan döndürdü.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-132">You'll see progress reported for each page returned from GitHub.</span></span> <span data-ttu-id="e8d2d-133">Github'da her yeni sayfa sorunların döndürmeden önce belirgin bir duraklama gözlemleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-133">You can observe a noticeable pause before GitHub returns each new page of issues.</span></span> <span data-ttu-id="e8d2d-134">Son olarak, yalnızca tüm 10 sayfaları Github'dan alındıktan sonra sorunlar görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-134">Finally, the issues are displayed only after all 10 pages have been retrieved from GitHub.</span></span>
+
+## <a name="examine-the-implementation"></a><span data-ttu-id="e8d2d-135">Uygulama inceleyin</span><span class="sxs-lookup"><span data-stu-id="e8d2d-135">Examine the implementation</span></span>
+
+<span data-ttu-id="e8d2d-136">Uygulama önceki bölümde açıklanan davranışı gözlemlenen neden ortaya çıkarır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-136">The implementation reveals why you observed the behavior discussed in the previous section.</span></span> <span data-ttu-id="e8d2d-137">Kodu incelemek `runPagedQueryAsync`:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-137">Examine the code for `runPagedQueryAsync`:</span></span>
+
+[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+
+<span data-ttu-id="e8d2d-138">Şimdi sayfalama algoritması ve zaman uyumsuz yapısını önceki kod üzerinde yoğunlaşabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-138">Let's concentrate on the paging algorithm and async structure of the preceding code.</span></span> <span data-ttu-id="e8d2d-139">(, Başvurabilirsiniz [GitHub GraphQL belgeleri](https://developer.github.com/v4/guides/) GitHub GraphQL API hakkında ayrıntılı bilgi için.) `runPagedQueryAsync` Yöntemi sorunları en son Yeniye numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-139">(You can consult the [GitHub GraphQL documentation](https://developer.github.com/v4/guides/) for details on the GitHub GraphQL API.) The `runPagedQueryAsync` method enumerates the issues from most recent to oldest.</span></span> <span data-ttu-id="e8d2d-140">Sayfa başına 25 sorunları istekleri ve inceler `pageInfo` önceki sayfaya ile devam etmek için yanıtın yapısı.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-140">It requests 25 issues per page and examines the `pageInfo` structure of the response to continue with the previous page.</span></span> <span data-ttu-id="e8d2d-141">Bu, çok sayfalı yanıtları için standart disk belleği desteği GraphQL'ın izler.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-141">That follows GraphQL's standard paging support for multi-page responses.</span></span> <span data-ttu-id="e8d2d-142">Yanıt içeren bir `pageInfo` içeren bir nesne bir `hasPreviousPages` değer ve bir `startCursor` önceki sayfaya istemek için kullanılan değer.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-142">The response includes a `pageInfo` object that includes a `hasPreviousPages` value and a `startCursor` value used to request the previous page.</span></span> <span data-ttu-id="e8d2d-143">Sorunları bulunan `nodes` dizisi.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-143">The issues are in the `nodes` array.</span></span> <span data-ttu-id="e8d2d-144">`runPagedQueryAsync` Yöntem tüm sayfalarındaki tüm sonuçları içeren bir dizi için bu düğümler ekler.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-144">The `runPagedQueryAsync` method appends these nodes to an array that contains all the results from all pages.</span></span>
+
+<span data-ttu-id="e8d2d-145">Alma ve sonuçları, bir sayfa geri sonra `runPagedQueryAsync` ilerleme raporları ve iptalleri denetler.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-145">After retrieving and restoring a page of results, `runPagedQueryAsync` reports progress and checks for cancellation.</span></span> <span data-ttu-id="e8d2d-146">İptal istenirse `runPagedQueryAsync` oluşturur bir <xref:System.OperationCanceledException>.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-146">If cancellation has been requested, `runPagedQueryAsync` throws an <xref:System.OperationCanceledException>.</span></span>
+
+<span data-ttu-id="e8d2d-147">Bu kodda geliştirilebilir birkaç öğe vardır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-147">There are several elements in this code that can be improved.</span></span> <span data-ttu-id="e8d2d-148">En önemlisi de `runPagedQueryAsync` döndürülen tüm sorunlar için depolama ayırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-148">Most importantly, `runPagedQueryAsync` must allocate storage for all the issues returned.</span></span> <span data-ttu-id="e8d2d-149">Tüm açık sorunları alınıyor alınan tüm sorunları depolamak için çok daha fazla bellek gerekeceğinden, bu örnek 250 sorunu durdurur.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-149">This sample stops at 250 issues because retrieving all open issues would require much more memory to store all the retrieved issues.</span></span> <span data-ttu-id="e8d2d-150">Ayrıca, algoritma ilerleme desteklemek ve iptalini destekleyen protokoller, ilk okuma anlaşılması zor sağlar.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-150">In addition, the protocols for supporting progress and supporting cancellation make the algorithm harder to understand on its first reading.</span></span> <span data-ttu-id="e8d2d-151">İlerleme durumunu burada bildirilir bulmak ilerleme sınıfı için aramanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-151">You must look for the progress class to find where progress is reported.</span></span> <span data-ttu-id="e8d2d-152">Üzerinden iletişime izlemek de <xref:System.Threading.CancellationTokenSource> ve onun ilişkili <xref:System.Threading.CancellationToken> burada İptal işlemi istendikten ve burada verilen anlamak için.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-152">You also have to trace the communications through the <xref:System.Threading.CancellationTokenSource> and its associated <xref:System.Threading.CancellationToken> to understand where cancellation is requested and where it's granted.</span></span>
+
+## <a name="async-streams-provide-a-better-way"></a><span data-ttu-id="e8d2d-153">Zaman uyumsuz akışlar daha iyi bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-153">Async streams provide a better way</span></span>
+
+<span data-ttu-id="e8d2d-154">Zaman uyumsuz akışlar ve ilişkili dil desteği tüm o endişelere.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-154">Async streams and the associated language support address all those concerns.</span></span> <span data-ttu-id="e8d2d-155">Bir sıra üretir kodu artık kullanabilirsiniz `yield return` ile bildirilen bir yöntemi öğeleri döndürmek için `async` değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-155">The code that generates the sequence can now use `yield return` to return elements in a method that was declared with the `async` modifier.</span></span> <span data-ttu-id="e8d2d-156">Kullanarak bir zaman uyumsuz akış tüketebileceği bir `await foreach` dizisi kullanılarak kullanma gibi döngü bir `foreach` döngü.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-156">You can consume an async stream using an `await foreach` loop just as you consume any sequence using a `foreach` loop.</span></span>
+
+<span data-ttu-id="e8d2d-157">Bu yeni dil özellikleri standart .NET 2.1 için eklenen ve .NET Core 3. 0'uygulanan üç yeni arabirimi bağlıdır:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-157">These new language features depend on three new interfaces added to .NET Standard 2.1 and implemented in .NET Core 3.0:</span></span>
+
+```csharp
+namespace System.Collections.Generic
+{
+    public interface IAsyncEnumerable<out T>
+    {
+        IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default);
+    }
+
+    public interface IAsyncEnumerator<out T> : IAsyncDisposable
+    {
+        T Current { get; }
+
+        ValueTask<bool> MoveNextAsync();
+    }
+}
+
+namespace System
+{
+    public interface IAsyncDisposable
+    {
+        ValueTask DisposeAsync();
+    }
+}
+```
+
+<span data-ttu-id="e8d2d-158">Bu üç arabirimi en bilmelisiniz C# geliştiriciler.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-158">These three interfaces should be familiar to most C# developers.</span></span> <span data-ttu-id="e8d2d-159">Zaman uyumlu karşılıkları benzer şekilde davranır:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-159">They behave in a manner similar to their synchronous counterparts:</span></span>
+
+- <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.IEnumerator%601?displayProperty=nameWithType>
+- <xref:System.IDisposable?displayProperty=nameWithType>
+
+<span data-ttu-id="e8d2d-160">Tanınmayan bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-160">One type that may be unfamiliar is <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e8d2d-161">`ValueTask` Yapısı için benzer bir API sağlar <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-161">The `ValueTask` struct provides a similar API to the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="e8d2d-162">`ValueTask` Bu arabirimleri, performansı artırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-162">`ValueTask` is used in these interfaces for performance reasons.</span></span>
+
+## <a name="convert-to-async-streams"></a><span data-ttu-id="e8d2d-163">Zaman uyumsuz akışlara dönüştürür</span><span class="sxs-lookup"><span data-stu-id="e8d2d-163">Convert to async streams</span></span>
+
+<span data-ttu-id="e8d2d-164">Ardından, dönüştürme `runPagedQueryAsync` bir zaman uyumsuz akış oluşturmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-164">Next, convert the `runPagedQueryAsync` method to generate an async stream.</span></span> <span data-ttu-id="e8d2d-165">İlk olarak, imzasını Değiştir `runPagedQueryAsync` döndürülecek bir `IAsyncEnumerable<JToken>`ve aşağıdaki kodda gösterildiği gibi parametre listesinden iptal belirtecini ve ilerleme nesneleri kaldırın:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-165">First, change the signature of `runPagedQueryAsync` to return an `IAsyncEnumerable<JToken>`, and remove the cancellation token and progress objects from the parameter list as shown in the following code:</span></span>
+
+[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+
+<span data-ttu-id="e8d2d-166">Sayfa getirildiği Başlatıcı kodunu her sayfada aşağıdaki kodda gösterildiği gibi işler:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-166">The starter code processes each page as the page is retrieved, as shown in the following code:</span></span>
+
+[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+
+<span data-ttu-id="e8d2d-167">Bu üç satırı aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-167">Replace those three lines with the following code:</span></span>
+
+[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+
+<span data-ttu-id="e8d2d-168">Bildirimi de kaldırabilirsiniz `finalResults` bu yöntemin önceki ve `return` takip eden döngü ifadesi, değiştiren.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-168">You can also remove the declaration of `finalResults` earlier in this method and the `return` statement that follows the loop you modified.</span></span>
+
+<span data-ttu-id="e8d2d-169">Zaman uyumsuz bir akış oluşturmak için değişiklikleri tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-169">You've finished the changes to generate an async stream.</span></span> <span data-ttu-id="e8d2d-170">Tamamlanmış yöntemi, aşağıdaki koda benzemelidir:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-170">The finished method should resemble the code below:</span></span>
+
+[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+
+<span data-ttu-id="e8d2d-171">Ardından, zaman uyumsuz akışın kullanmak için koleksiyon kullanan kodu değiştirin.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-171">Next, you change the code that consumes the collection to consume the async stream.</span></span> <span data-ttu-id="e8d2d-172">Aşağıdaki kodu bulun `Main` sorunları koleksiyonunu işlemler:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-172">Find the following code in `Main` that processes the collection of issues:</span></span>
+
+[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+
+<span data-ttu-id="e8d2d-173">Bu kodu aşağıdakiyle değiştirin `await foreach` döngü:</span><span class="sxs-lookup"><span data-stu-id="e8d2d-173">Replace that code with the following `await foreach` loop:</span></span>
+
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+
+<span data-ttu-id="e8d2d-174">Öğreticinin tamamlanan kodu alabilirsiniz [dotnet/samples](https://github.com/dotnet/samples) depoda [csharp/öğreticiler/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) klasör.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-174">You can get the code for the finished tutorial from the [dotnet/samples](https://github.com/dotnet/samples) repository in the [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) folder.</span></span>
+
+## <a name="run-the-finished-application"></a><span data-ttu-id="e8d2d-175">Tamamlanmış uygulamayı çalıştırın</span><span class="sxs-lookup"><span data-stu-id="e8d2d-175">Run the finished application</span></span>
+
+<span data-ttu-id="e8d2d-176">Uygulamayı yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-176">Run the application again.</span></span> <span data-ttu-id="e8d2d-177">Başlangıç uygulaması davranış davranışını karşılaştırın.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-177">Contrast its behavior with the behavior of the starter application.</span></span> <span data-ttu-id="e8d2d-178">Kullanılabilir duruma geldiği ilk sayfasını numaralandırılmış alan şeklinde.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-178">The first page of results is enumerated as soon as it's available.</span></span> <span data-ttu-id="e8d2d-179">Her yeni sayfa istenen ve alınan gözlemlenebilir bir duraklatma olan ve sonraki sayfanın sonuçlarını hızla numaralandırılır.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-179">There's an observable pause as each new page is requested and retrieved, then the next page's results are quickly enumerated.</span></span> <span data-ttu-id="e8d2d-180">`try`  /  `catch` Blok iptal işlemek için gerekli olmayan: çağıran koleksiyon numaralandırma durdurabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-180">The `try` / `catch` block isn't needed to handle cancellation: the caller can stop enumerating the collection.</span></span> <span data-ttu-id="e8d2d-181">Zaman uyumsuz akış her sayfada indirildiğini sonuçları oluşturduğundan ilerleme NET bir şekilde bildirilir.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-181">Progress is clearly reported because the async stream generates results as each page is downloaded.</span></span>
+
+<span data-ttu-id="e8d2d-182">Kodu inceleyerek, bellek kullanımı geliştirmeleri görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-182">You can see improvements in memory use by examining the code.</span></span> <span data-ttu-id="e8d2d-183">Artık, bunlar numaralandırılan önce tüm sonuçları depolamak için bir koleksiyon ayırması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-183">You no longer need to allocate a collection to store all the results before they're enumerated.</span></span> <span data-ttu-id="e8d2d-184">Çağıran, sonuçları kullanma ve bir depolama koleksiyon gerekip gerekmediğini belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-184">The caller can determine how to consume the results and if a storage collection is needed.</span></span>
+
+<span data-ttu-id="e8d2d-185">Başlangıç ve tamamlanan uygulamaların çalıştırın ve kendiniz için uygulamaları arasındaki farklar gözlemleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-185">Run both the starter and finished applications and you can observe the differences between the implementations for yourself.</span></span> <span data-ttu-id="e8d2d-186">Sonra Bu öğreticide başlatıldığında oluşturduğunuz GitHub erişim belirteci silebilirsiniz tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-186">You can delete the GitHub access token you created when you started this tutorial after you've finished.</span></span> <span data-ttu-id="e8d2d-187">Bir saldırganın bu belirteci erişim elde edilen, GitHub kimlik bilgilerinizi kullanarak API'leri erişim.</span><span class="sxs-lookup"><span data-stu-id="e8d2d-187">If an attacker gained access to that token, they could access GitHub APIs using your credentials.</span></span>
