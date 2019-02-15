@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717564"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304901"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717564"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Bu işlev tüm işlem yapar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına gelir. İçinde [vurgulayıcısı ile ilgili örnek](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), vurgulama dikdörtgeni dört windows örneği için fiziksel koordinatlarda alınan bulunduğu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], mantıksal koordinatlar. Örnek yokmuş [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu, vurgulama mantıksal koordinatlarda yanlış yerleştirme içinde-96 olmayan bir neden olacağından Masaüstü, çizilecek [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ortam.  
+     Bu işlev, tüm işlem DPI kullanan, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına haline getirir. İçinde [vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), vurgulama dikdörtgeni dört windows örneği için UI Otomasyon, mantıksal koordinatları elde fiziksel koordinatları konumunda bulunur. Örnek DPI kullanan değilse, vurgulama 96 DPI ortamında yanlış yerleştirme neden olacağından Masaüstü, mantıksal koordinatlarda çizilmiş.  
   
 2.  İmleç koordinatlarını edinmek için çağrı [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `GetPhysicalCursorPos`. Aşağıdaki örnek, bildirmek ve bu işlevi kullanmak gösterilmektedir.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717564"
  Uygulamanız ile olmayan doğrudan işlem içi iletişimi gerçekleştirir, [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu uygulamalarla sahip dönüştürmeniz kullanarak mantıksal ve fiziksel koordinatları arasında [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevleri `PhysicalToLogicalPoint` ve `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Vurgulayıcısı ile ilgili örnek](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

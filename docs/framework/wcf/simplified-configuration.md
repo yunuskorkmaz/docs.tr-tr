@@ -2,12 +2,12 @@
 title: Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498365"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305651"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman gerekli ayarları belirlemek kolay değildir. Yapılandırma dosyalarını WCF hizmetleri esnekliğini artırın, ancak bunlar ayrıca sorunları bulmak sabit bir çoğu için işlemcilerden kaynaklanıyor olabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bu sorunları giderir ve büyüklüğü ve karmaşıklığı ile hizmet yapılandırmasının azaltmak için bir yol sağlar.  
@@ -118,5 +118,5 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 - [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)
-- [Windows Communication Foundation uygulamaları için yapılandırma](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [WCF hizmetlerini yapılandırma](configuring-services.md)
 - [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

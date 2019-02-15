@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfd396568424c3a2300ed5d982e766afd5f925f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c22ee61769fdcbb92a73ca0dd55299ebbcf934
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725499"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305772"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain Yöntemi
 Ortak dil çalışma zamanı tarafından ana bilgisayara bir uygulama etki alanı oluşturulduğunu bildirmek için (CLR) çağrılır.  
@@ -37,7 +37,7 @@ HRESULT OnAppDomain (
   
 #### <a name="parameters"></a>Parametreler  
  `pAppdomain`  
- [in] Bir işaretçi bir [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) yeni uygulama etki alanını temsil eden arabirim nesne.  
+ [in] Bir işaretçi bir [IUnknown](/cpp/atl/iunknown) yeni uygulama etki alanını temsil eden arabirim nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

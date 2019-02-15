@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508528"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303406"
 ---
 # <a name="unmanaged-api-reference"></a>Yönetilmeyen API Başvurusu
 Bu bölüm, çalışma zamanı ana bilgisayarları, derleyiciler, çözücüler, obfuscators, hata ayıklayıcıları ve profil oluşturucuları gibi yönetilen-kodla ilgili uygulamaları tarafından kullanılan yönetilmeyen API'ları hakkında bilgi içerir.  
@@ -32,7 +32,7 @@ Bu bölüm, çalışma zamanı ana bilgisayarları, derleyiciler, çözücüler,
  [Sabitler](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  CorSym.idl içinde tanımlanmış sabitleri açıklar.  
   
- [Özel arabirim öznitelikleri](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Özel arabirim öznitelikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Bileşen Nesne Modeli (COM) özel arabirim öznitelikleri açıklar.  
   
  [Hata Ayıklama](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ Bu bölüm, çalışma zamanı ana bilgisayarları, derleyiciler, çözücüler,
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  
-  
- [.NET Framework için Gelişmiş okuma](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

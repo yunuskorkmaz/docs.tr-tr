@@ -2,12 +2,18 @@
 title: Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305655"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
 Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adlandırma API sağlar.  
@@ -15,8 +21,6 @@ Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adla
  Bir derlemeyi katı bir adla imzalamak, dosyaya derleme bildirimini içeren ortak bir anahtar şifrelemesi ekler. Tanımlayıcı ad imzalama ad benzersizliğini doğrulamaya yardımcı olan ad sahtekarlığını engeller ve bir referans çözüldüğünde çağıranlar benzersiz bir kimliği sağlar. Ancak, hiçbir güven düzeyi güçlü bir adla ilişkilidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Tanımlayıcı adlandırma genel statik işlevleri](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Tanımlayıcı adlandırma API'SİNİN kullandığı yönetilmeyen genel statik işlevleri açıklar.  
   
 > [!NOTE]
 >  Bu işlevlerin tümü başlayarak kullanımdan kaldırılan [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Önerilen alternatifleri için bkz: [Iclrstrongname](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) arabirimi.  
@@ -98,9 +102,6 @@ Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adla
   
  [StrongNameTokenFromPublicKey İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Bir ortak anahtar temsil eden bir belirteç alır. İle başlayarak kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Tanımlayıcı ad oluşturma yapıları](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Tanımlayıcı ad derlemeleri imzalama yönetmek için güçlü adlandırma API'SİNİN kullandığı yönetilmeyen yapının açıklar...  
   
  [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Bir ortak/özel anahtar çifti ikili biçimindeki ortak anahtarı temsil eder.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1987d5af904f1e151617d0cea6c183c52b8386e2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743848"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305486"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "54743848"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Önceden tanımlanmış bir AutomationElement için döndürülecek kalıcı bir yol kullanın  
   
--   İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir test betikleri gibi bir dosya iletişim kutusu veya menü öğesini açın ve UI Otomasyonu ağaçta yok, şu anda, örneği oluşturulur değil öğelere erişim gerektirebilir. Bu öğeleri yalnızca oluşturulabilir yeniden oluşturma, veya "kayıttan", belirli bir dizi tarafından [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] eylemleri kullanımının [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Automationıd, Denetim düzenleri ve olay dinleyicileri gibi özellikleri. Bkz: [Test betiği oluşturucu örneği](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) kullanan bir örnek için [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kullanıcı etkileşimi olmadan dayalı test betikleri oluşturmak için [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir test betikleri gibi bir dosya iletişim kutusu veya menü öğesini açın ve UI Otomasyonu ağaçta yok, şu anda, örneği oluşturulur değil öğelere erişim gerektirebilir. Yeniden oluşturma, veya "kayıttan", belirli bir dizi Automationıd denetim düzenleri ve olay dinleyicileri gibi UI Otomasyon özelliklerini kullanarak UI eylem bu öğeleri yalnızca oluşturulabilir.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585425"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305850"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
@@ -22,7 +22,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
  <xref:System.Windows.Forms.TableLayoutPanel> İçeriğinin HTML benzer işlevsellik sağlayan bir kılavuzda düzenler \<Tablo > öğesi. <xref:System.Windows.Forms.TableLayoutPanel> Denetimi denetimleri tam olarak her denetim konumunu belirtmek gerek kalmadan bir kılavuz düzeni yerleştirmenize olanak sağlar. Satırları ve sütunları hücrelerinden düzenlenir ve bu farklı boyutlarda olabilir. Hücreler, satırlar ve sütunlar arasında birleştirilebilir. Hücre bir form içeren ve diğer birçok bakımdan kapsayıcı olarak davranır her şeyi içerebilir.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> Denetimi ayrıca bir orantılı yeniden boyutlandırma özelliği sağlar çalışma zamanında, formunuzu yeniden boyutlandırıldığından düzeninizi sorunsuz bir şekilde değiştirebilirsiniz. Böylece <xref:System.Windows.Forms.TableLayoutPanel> denetimi de uygun veri girişi formlar ve yerelleştirilmiş uygulamalar gibi amaçlarla. Daha fazla bilgi için [izlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) ve [izlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ <xref:System.Windows.Forms.TableLayoutPanel> Denetimi ayrıca bir orantılı yeniden boyutlandırma özelliği sağlar çalışma zamanında, formunuzu yeniden boyutlandırıldığından düzeninizi sorunsuz bir şekilde değiştirebilirsiniz. Böylece <xref:System.Windows.Forms.TableLayoutPanel> denetimi de uygun veri girişi formlar ve yerelleştirilmiş uygulamalar gibi amaçlarla. Daha fazla bilgi için [izlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) ve [izlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  Genel olarak, kullanmamalısınız bir <xref:System.Windows.Forms.TableLayoutPanel> tüm düzen için bir kapsayıcı denetimi. Kullanım <xref:System.Windows.Forms.TableLayoutPanel> düzenini bölümlerini orantılı yeniden boyutlandırma özellikler sağlamak için kontrol eder.  
   
@@ -54,7 +54,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  "TableLayoutPanelExample" adlı bir Windows uygulaması projesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir Windows uygulaması projesi oluşturmak](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  "TableLayoutPanelExample" adlı bir Windows uygulaması projesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Formda seçin **Windows** **Form Tasarımcısı**.  
   
@@ -184,8 +184,8 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 - [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [İzlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [İzlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [İzlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [İzlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel Denetimi için En İyi Yöntemler](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize Özelliğine Genel Bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

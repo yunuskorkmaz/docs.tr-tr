@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730275"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304095"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma
-Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
+Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
   
 -   Implements <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
   
 2.  Yeni bir bileşen projeye ekleyin. Bu çağrı `DemoComponent`.  
   
-     Daha fazla bilgi için [NIB: nasıl yapılır: Yeni proje öğeleri ekleme](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Daha fazla bilgi için [nasıl yapılır: Yeni proje öğeleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
 3.  Projeyi oluşturun.  
   
@@ -80,7 +80,7 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
   
 1.  Çözümden proje Kaldır.  
   
-     Projeleri kaldırma hakkında daha fazla bilgi için bkz. [NIB: nasıl yapılır: Projeleri yeniden yükleyin ve kaldırma](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmeniz istenirse seçin **Evet**.  
+     Projeleri kaldırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Projeleri yeniden yükleyin ve kaldırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Kaydetmeniz istenirse seçin **Evet**.  
   
 2.  Yeni bir **Windows uygulama** çözüme bir proje. Formda açın **Tasarımcısı**.  
   
@@ -94,7 +94,7 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
  Bu izlenecek yol gösteren **araç kutusu** projenin bileşenlerinin alır ancak **araç kutusu** ayrıca alır denetimleri hesabıdır. İle kendi özel denetimler ekleyerek ve çözümünüze ait denetim projeleri kaldırma denemeler yapın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
-- [Nasıl yapılır: Araç kutusu sekmeleri düzenleme](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
-- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Nasıl yapılır: Araç kutusu sekmeleri düzenleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c905dfbb0fffcf37c8b196e883003ea70e509b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea03c037312ffdb66146dc0461e157c230aafcd2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534322"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304056"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "54534322"
  Denetiminin metin içeriğini gösterme kullanımının gerçekleştirilir <xref:System.Windows.Automation.TextPattern> metin akışına olarak bir metin kapsayıcı içeriğini temsil eden denetim düzeni. Buna karşılık, <xref:System.Windows.Automation.TextPattern> desteğini gerektirir <xref:System.Windows.Automation.Text.TextPatternRange> biçimi ve stili özniteliklerini göstermek için sınıf. <xref:System.Windows.Automation.Text.TextPatternRange> destekleyen <xref:System.Windows.Automation.TextPattern> bitişik temsil eden tarafından veya birden çok metin yayılma koleksiyonuyla metin kapsayıcısında ayrık <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları. <xref:System.Windows.Automation.Text.TextPatternRange> Seçim, karşılaştırma, alma ve geçişi gibi işlevleri destekler.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> Sınıfları Ekle veya metin değiştirme olanağı sağlamaz. Ancak, denetimin bağlı olarak bu tarafından gerçekleştirilmesi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> veya doğrudan klavye girdisi aracılığıyla. Bkz: [textpattern öğesine Ekle metin örnek](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) örneği.  
+> <xref:System.Windows.Automation.TextPattern> Sınıfları Ekle veya metin değiştirme olanağı sağlamaz. Ancak, denetimin bağlı olarak bu tarafından gerçekleştirilmesi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> veya doğrudan klavye girdisi aracılığıyla. Bkz: [textpattern öğesine Ekle metin örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) örneği.  
   
  Bu genel bakışta tanımlanan işlevselliği, yardımcı teknoloji satıcılar ve son kullanıcıları için önemlidir. Yardımcı teknolojiler kullanabileceğiniz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tam metin biçimlendirme için kullanıcı bilgilerini toplayın ve programlı gezinti ve metin seçimi <xref:System.Windows.Automation.Text.TextUnit> (karakter, sözcük, satır veya paragrafa).  
   
@@ -136,4 +136,4 @@ Başlangıç ve bitiş noktaları kümesi gösterilmektedir.
 - [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Metin hizmetleri altyapısı](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+- [Metin hizmetleri altyapısı](/windows/desktop/api/_tsf/)

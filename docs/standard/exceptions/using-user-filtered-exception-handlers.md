@@ -8,25 +8,26 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 228bae8db833abfa3c8c906d57e2177cde644548
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261426"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304615"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
+
 Şu anda, Visual Basic, kullanıcı tarafından filtrelenmiş özel durumu destekler. Kullanıcı tarafından filtrelenmiş özel durum işleyicileri catch ve özel durum için tanımladığınız gereksinimlerine göre özel durumları işleyin. Bu işleyicilerini **Catch** deyimiyle **olduğunda** anahtar sözcüğü.  
   
  Bu teknik, belirli bir özel durum nesnesi için birden çok hata karşılık gelen yararlıdır. Bu durumda, nesne, genellikle hatayla ilişkili söz konusu hata kodunu içeren bir özelliğe sahiptir. Yalnızca, işlemek istediğiniz belirli hata seçmek için ifade hata kodu özelliğini kullanabilirsiniz **Catch** yan tümcesi.  
   
  Aşağıdaki Visual Basic örnek gösterir **Catch/olduğunda** deyimi.  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch When Err = VBErr_ClassLoadException  
-      'Catch statements.  
+    'Try statements.  
+    Catch When Err = VBErr_ClassLoadException
+    'Catch statements.
 End Try  
 ```  
   
@@ -37,11 +38,11 @@ End Try
   
  Aşağıdaki Visual Basic örnek, belirli özel durum gösterir `ClassLoadException` içinde **Catch** deyimi hem de kullanıcı tarafından filtrelenmiş yan tümcesini kullanarak **olduğunda** anahtar sözcüğü.  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch cle As ClassLoadException When cle.IsRecoverable()  
-      'Catch statements.  
+    'Try statements.
+    Catch cle As ClassLoadException When cle.IsRecoverable()  
+    'Catch statements.
 End Try  
 ```  
 

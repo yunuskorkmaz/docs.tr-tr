@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: b35014993f10c3a60c16f784e7dd11b9a20f4f4c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d86293e2d8fedab1d9ed8a5dc0ad59bd1f386d93
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582141"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303874"
 ---
 # <a name="ui-automation-security-overview"></a>UI Otomasyon Güvenliğine Genel Bakış
 > [!NOTE]
@@ -60,4 +60,4 @@ ms.locfileid: "48582141"
   
  `UIAccess` "varsayılan olarak; false" diğer bir deyişle, öznitelik belirtilmezse veya derleme için hiçbir bildirim ise, uygulama koruma için erişim elde etmek mümkün olmayacaktır [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
- Daha fazla bilgi için [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] güvenlik, uygulamaları imzalamak ve derleme bildirimleri oluşturma bakın "Geliştirici en iyi yöntemler ve yönergeleri için uygulamalar bir en az ayrıcalıklı ortam" [MSDN](https://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp).
+ Daha fazla bilgi için [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] bkz: güvenlik, uygulamaları imzalamak ve derleme bildirimleri oluşturma [Geliştirici en iyi ve en az ayrıcalıklı bir ortamda uygulamalar için yönergeler](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10)).

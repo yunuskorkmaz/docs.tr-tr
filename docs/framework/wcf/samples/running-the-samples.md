@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535888"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304680"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz makine yapılandırmada çalıştırabilirsiniz. Sağlanan olarak örnekler tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek 's yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makineye ve çapraz makine yapılandırmaları bir örnek çalıştırmak açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örnekleri barındırılan hizmetler için adımları farklılığı olduğunu unutmayın. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz m
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Hizmeti, IIS tarafından barındırılıyorsa, hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebildiğinden emin olun: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir. Onay sayfasında görüntülenmiyorsa bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Hizmeti, IIS tarafından barındırılıyorsa, hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebildiğinden emin olun: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir. Onay sayfasında görüntülenmiyorsa bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 2.  Hizmet şirket içinde barındırılıyorsa Service.exe \service\bin, dile özgü klasörü altında çalıştırın. Hizmet etkinliğinin hizmet konsol penceresinde görüntülenir.  
   
 3.  \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   
@@ -81,5 +81,4 @@ Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz m
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)
-- [Bir çalışma grubunda ve makinelerdeki örneklerini çalıştırma](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
-- [Sorun Giderme İpuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+- [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

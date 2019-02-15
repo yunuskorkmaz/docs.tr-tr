@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 31973559411c5269fc1a5ba0cc743153ff356dae
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180199"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305681"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
@@ -34,4 +34,4 @@ ms.locfileid: "50180199"
  [UI Otomasyonu Belirtimi ve Topluluk Taahhüdü](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Erişilebilirlik örnekleri](https://msdn.microsoft.com/library/ms771315.aspx)
+- [Erişilebilirlik örnekleri](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

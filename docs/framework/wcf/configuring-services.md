@@ -1,17 +1,18 @@
 ---
-title: Hizmetleri Yapılandırma
+title: WCF hizmetlerini yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525059"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303625"
 ---
-# <a name="configuring-services"></a>Hizmetleri Yapılandırma
+# <a name="configuring-wcf-services"></a>WCF hizmetlerini yapılandırma
+
 Tasarlanmış ve hizmet sözleşmeniz uygulanan sonra hizmetinizin yapılandırmaya hazırsınız. Burada tanımlayın ve hizmetinizi burada bulunabilir, taşıma ve iletileri ve gerektiren güvenlik türünü göndermek ve almak için kullandığı ileti kodlama adresi belirtme dahil olmak üzere istemcilere nasıl kullanıma sunulan özelleştirme budur.  
   
  Yapılandırma burada kullanılan kesin kod veya tanımlayın ve bir hizmetin kendi güvenlik düzenleri, uç nokta adresleri ve kullanılan taşımalar belirleme gibi çeşitli yönlerini de özelleştirerek bir yapılandırma dosyası kullanarak tüm yöntemleri içerir. Büyük bir uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
