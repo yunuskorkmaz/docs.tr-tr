@@ -1,5 +1,5 @@
 ---
-title: Normal İfadelerdeki Miktar Belirleyiciler
+title: Normal İfadelerdeki Miktar Niceleyiciler
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -23,7 +23,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54678271"
 ---
-# <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
+# <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
 Bir karakter, Grup veya karakter sınıfı kaç tane giriş eşleşmenin bulunması mevcut olmalıdır, miktar belirleyiciler belirtin.  .NET tarafından desteklenen miktar belirleyiciler aşağıdaki tabloda listelenmektedir.  
   
 |Doyumsuz niceleyici|Yavaş miktar belirleyici|Açıklama|  
