@@ -2,12 +2,12 @@
 title: .NET Uzaktan İletişimden WCF'ye Taşınma
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415981"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333072"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET uzaktan iletişim kullanan bir uygulamayı geçirmek açıklar. Bu ürünler arasındaki benzer kavramları karşılaştırır ve ardından WCF birkaç ortak uzaktan iletişim senaryolarında nasıl yapılacağını anlatmaktadır.  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  [DataContract] özniteliği sıralanabilir ve istemci ile sunucu arasında seri durumdan bu türün biri olarak tanımlar. [DataMember] özniteliği, ayrı özellikler ve alanları serileştirmek için tanımlar.  
   
- WCF katmanlarda nesneyi gönderdiğinde, değerler yalnızca serileştirir ve diğer katmanında nesnesinin yeni bir örneğini oluşturur. Değerlerle tüm etkileşimler nesnesinin yalnızca yerel olarak – ortaya yolu .NET uzaktan iletişim başvuruya göre Nesneleri'ne diğer katmanla iletişim kurarlar değil. Daha fazla bilgi için aşağıdaki konulara bakın:  
-  
--   [Serileştirme ve Seri Durumdan Çıkarma](./feature-details/serialization-and-deserialization.md)  
-  
--   [Windows Communication Foundation'da seri hale getirme](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ WCF katmanlarda nesneyi gönderdiğinde, değerler yalnızca serileştirir ve diğer katmanında nesnesinin yeni bir örneğini oluşturur. Değerlerle tüm etkileşimler nesnesinin yalnızca yerel olarak – ortaya yolu .NET uzaktan iletişim başvuruya göre Nesneleri'ne diğer katmanla iletişim kurarlar değil. Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Özel durum işleme özellikleri  
   

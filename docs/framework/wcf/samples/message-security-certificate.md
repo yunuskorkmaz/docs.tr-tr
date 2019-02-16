@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: f031443ac14404f24e7137afc9176d445e62f2c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ead36beda4a56d779969eea0ed746bfb47891243
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583291"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333319"
 ---
 # <a name="message-security-certificate"></a>İleti Güvenliği Sertifikası
 Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS-güvenlik kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Bu örnek, tüm uygulama iletileri istemci ve sunucu arasındaki imzalanacak ve şifrelenecek şekilde varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -297,7 +297,7 @@ Press <ENTER> to terminate client.
   
 3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
@@ -325,7 +325,7 @@ Press <ENTER> to terminate client.
   
 12. Sunucuda, yönetici ayrıcalıklarıyla Visual Studio için geliştirici Komut İstemi'nde ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
   
-13. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   

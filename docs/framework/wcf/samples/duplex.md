@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 73e95f3a0abe8d19644a004cdac16a2246a4502f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adc26caaf1d3cebb8c8887ba94a1b4412378994c
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534010"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332084"
 ---
 # <a name="duplex"></a>Çift Yönlü
 Çift yönlü örnek tanımlaması ve çift yönlü sözleşme nasıl gösterir. Bir istemci bir hizmeti ile bir oturumu oluşturur ve hizmet üzerinde hizmet istemciye iletileri gönderebilir bir kanal sağlar. çift yönlü iletişim gerçekleşir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Çift yönlü sözleşme çifti arabirimleri tanımlanan — birincil arabirim istemciden hizmete ve hizmetten geri çağırma arabirimi istemciye. Bu örnekte `ICalculatorDuplex` sonucu bir oturumu üzerinden hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Sonuçlar döndürüyor hizmet `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir.  
@@ -170,7 +170,7 @@ client.Close();
 3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  İstemci bir çapraz makine yapılandırmaya çalışırken, hem de "localhost" değiştirdiğinizden emin olması `address` özniteliği [uç nokta](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi ve `clientBaseAddress` özniteliği [ \< bağlama >](../../../../docs/framework/misc/binding.md) öğesinin [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesi ile gösterildiği gibi aşağıdaki uygun makine adı:  
+    >  İstemci bir çapraz makine yapılandırmaya çalışırken, hem de "localhost" değiştirmeyi unutmayın `address` özniteliği [ \<uç noktası >'ın \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi ve `clientBaseAddress` öznitelik [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesinin [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesi ile gösterildiği gibi aşağıdaki uygun makine adı:  
   
     ```xml  
     <client>  

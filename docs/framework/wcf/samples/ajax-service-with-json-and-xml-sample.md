@@ -2,17 +2,17 @@
 title: JSON ve XML ile AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632302"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332356"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON ve XML ile AJAX Hizmeti Örneği
 Bu örnek, Windows Communication Foundation (WCF) JavaScript nesne gösterimi (JSON) veya XML veri döndüren bir zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturma için nasıl kullanılacağını gösterir. JavaScript kodu bir Web tarayıcısı istemcisini kullanarak bir AJAX hizmete erişebilir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
   
- Diğer AJAX örnekleri farklı olarak, bu örnek, ASP.NET AJAX kullanmaz ve <xref:System.Web.UI.ScriptManager> denetimi. Bazı ek yapılandırma ile WCF AJAX Hizmetleri herhangi bir HTML sayfasında JavaScript üzerinden erişilebilir ve bu senaryo burada gösterilir. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
+ Diğer AJAX örnekleri farklı olarak, bu örnek, ASP.NET AJAX kullanmaz ve <xref:System.Web.UI.ScriptManager> denetimi. Bazı ek yapılandırma ile WCF AJAX Hizmetleri herhangi bir HTML sayfasında JavaScript üzerinden erişilebilir ve bu senaryo burada gösterilir. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).
   
  Bu örnekte yanıt türü bir işlemin JSON ve XML arasında geçiş yapma gösterilmektedir. Bu işlev, mi hizmeti ASP.NET AJAX veya bir HTML/JavaScript istemci sayfası tarafından erişilecek yapılandırılmış bağımsız olarak kullanılabilir.  
   

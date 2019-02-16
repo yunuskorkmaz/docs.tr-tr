@@ -2,12 +2,12 @@
 title: İstemci Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 3a80121894ddbb753efbe047d14a14a57f8dddc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640010"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333306"
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapılandırılmasını etkinleştirmek için meta verileri sık sık yayımlayın. Hizmetin güvenilir olmadığı durumlarda, istemci uygulamalarının meta veriler ile ilgili güvenlik, işlemler, hizmet sözleşme türü istemci uygulamanın İlkesi vb. uygun olduğunu doğrulamalıdır. Aşağıdaki örnek, bir istemci, hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı yazma gösterilmiştir.  
@@ -28,7 +28,7 @@ Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapıland�
   
 3.  \Client\bin\Debug istemci uygulamasını çalıştırın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 5.  Örnek ile tamamladığınızda Cleanup.bat çalıştırarak sertifikaları kaldırın. Diğer güvenlik örnekleri aynı sertifikalarını kullanın.  
   
@@ -54,7 +54,7 @@ Hizmetleri otomatik olarak oluşturmayı ve istemci proxy türlerinin yapıland�
   
 10. İstemci bilgisayarda client.exe çalıştırın.  
   
-    1.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   

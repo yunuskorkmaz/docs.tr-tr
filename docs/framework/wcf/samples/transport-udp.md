@@ -2,12 +2,12 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485946"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332825"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  
@@ -52,15 +52,15 @@ UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject ve WCF nesne yaşam döngüsü  
  WCF sahip gibi nesnelerin ömrünü yönetmek için kullanılan ortak bir Durum makinesi <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişim için kullanılır. Bu iletişim nesneleri mevcut beş durum vardır. Bu durumlar tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
   
--   Oluşturulan: Bu durumu olan bir <xref:System.ServiceModel.ICommunicationObject> , ilk oluşturulduğunda. Bu durumda hiçbir giriş/çıkış (g/ç) gerçekleşir.  
+-   Oluşturma tarihi: Bu durumda, bir <xref:System.ServiceModel.ICommunicationObject> , ilk oluşturulduğunda. Bu durumda hiçbir giriş/çıkış (g/ç) gerçekleşir.  
   
--   Açılış: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Open%2A> çağrılır. Bu noktada, özellikler sabit yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş, yalnızca oluşturulan durumu geçerli değil.  
+-   Açma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Open%2A> çağrılır. Bu noktada, özellikler sabit yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş, yalnızca oluşturulan durumu geçerli değil.  
   
--   Açıldı: Açık işlem tamamlandığında bu duruma nesneleri geçişi. Bu geçiş, yalnızca açılış durumu geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
+-   Açıldı: Bu durum açma işlemi tamamlandığında geçiş nesneleri. Bu geçiş, yalnızca açılış durumu geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
   
--   Kapatma: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal şekilde kapatılmasını için çağrılır. Bu geçiş, yalnızca açık durumu geçerli değil.  
+-   Kapatma: Bu nesneler geçiş durumu <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal şekilde kapatılmasını için çağrılır. Bu geçiş, yalnızca açık durumu geçerli değil.  
   
--   Kapalı: kapanış durum nesneleri artık kullanılabilir değildir. Genel olarak, en fazla yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişim ortaya çıkabilir. Bu durum atıldı için eşdeğerdir.  
+-   Kapalı: Kapanış durum nesneleri artık kullanılabilir değildir. Genel olarak, en fazla yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişim ortaya çıkabilir. Bu durum atıldı için eşdeğerdir.  
   
 -   Hatalı: Faulted durumunda nesneleri incelemesi erişebilir, ancak artık kullanılamaz. Nesnesi, bir kurtarılamaz bir hata oluştuğunda, bu duruma geçer. Bu durum yalnızca geçerli geçiş halinde olan `Closed` durumu.  
   
@@ -108,7 +108,7 @@ ArraySegment<byte> messageBuffer = EncodeMessage(message);
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
-### <a name="the-udpchannellistener"></a>UdpChannelListener  
+### <a name="the-udpchannellistener"></a>The UdpChannelListener  
  `UdpChannelListener` Örnek uyguladığını türetildiği <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngüde UDP yuvayı kullanan veri alır. Verileri daha sonra ileti kodlama çerçevesini kullanarak iletilere dönüştürülür.  
   
 ```csharp
@@ -255,7 +255,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Standart bir bağlaması ekleniyor  
  Bizim bağlama öğesi, aşağıdaki iki şekilde kullanılabilir:  
   
--   Özel bağlama üzerinden: özel bir bağlama bağlama öğeleri bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
+-   Özel bağlama üzerinden: Özel bağlama bağlama öğeleri bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
   
 -   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. Bu sistem tanımlı bağlamalar sayısı gibi sağlar WCF `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Her biri bu bağlamaları, iyi tanımlanmış bir profili ile ilişkilidir.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP Test hizmet ve istemci  
- Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. İki testleri hizmet kodu içerir — bir test koddan bağlamaları ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla bunu yapar. Her iki testleri iki uç nokta kullanır. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `true`. Başka bir uç noktası ile özel bir bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `false`. İki test de bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve ardından kullanıcının hizmet kapatmadan önce ENTER tuşuna basın bekleyin.  
+ Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. İki testleri hizmet kodu içerir — bir test koddan bağlamaları ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla bunu yapar. Her iki testleri iki uç nokta kullanır. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) kümesine `true`. Başka bir uç noktası ile özel bir bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) kümesine `false`. İki test de bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve ardından kullanıcının hizmet kapatmadan önce ENTER tuşuna basın bekleyin.  
   
  Hizmeti test uygulamayı başlattığınızda aşağıdaki çıktıyı görmeniz gerekir.  
   

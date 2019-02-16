@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742753"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332617"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteği açıklanmaktadır. WCF yararlanarak Microsoft Message (daha önce MSMQ da bilinir) Queuing tarafından bir aktarım olarak queuing için destek sağlar ve aşağıdaki senaryolara olanak tanır:  
@@ -63,6 +63,3 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
   
  [Kuyruğa Alınan İletişim için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Kuyruğa alınmış iletişim WCF kullanmak için en iyi uygulamalar açıklanmaktadır.  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

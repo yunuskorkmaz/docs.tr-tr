@@ -2,12 +2,12 @@
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873485"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332682"
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 
@@ -460,7 +460,7 @@ Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştiril
 
 1. Gelen Client.exe başlatma *\client\bin*. İstemci etkinliği istemci konsol uygulamasında görüntülenir.
 
-  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için
 
@@ -500,11 +500,11 @@ Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştiril
 
 14. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın.
 
-   İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Sonra örnek temizleme
 
 Sonra örnek temizlemek için çalıştırma *Cleanup.bat* örnek çalıştırmayı tamamladığınızda samples klasöründe. Bu, sunucu ve istemci sertifikaları sertifika deposundan kaldırır.
 
 > [!NOTE]
-> Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bu bilgisayarlar arasında sertifikalar kullanmak, içinde CurrentUser - yüklü hizmet sertifikalarını temizlendiğinden emin WCF örnekleri çalıştırırsanız TrustedPeople depolayın. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bu bilgisayarlar arasında sertifikalar kullanmak, içinde CurrentUser - yüklü hizmet sertifikalarını temizlendiğinden emin WCF örnekleri çalıştırırsanız TrustedPeople depolayın. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

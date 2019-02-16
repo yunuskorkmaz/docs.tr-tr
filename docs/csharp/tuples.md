@@ -3,12 +3,12 @@ title: Tanımlama grubu türleri - C# Kılavuzu
 description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155138"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332760"
 ---
 # <a name="c-tuple-types"></a>C# demet türleri #
 
@@ -82,7 +82,7 @@ Burada aday alan adları demet alan yansıtılan değil iki koşul vardır:
 
 Bu koşullar belirsizlik kaçının. Bu adlar, tanımlama grubu alanın alan adları olarak kullanıldıysa belirsizliğe neden olur. Bu koşulların hiçbiri, derleme zamanı hatalarına neden. Bunun yerine, öğeler olmadan öngörülen adları bunlar için öngörülen anlam adları yok.  Aşağıdaki örnekler, bu koşullar göstermektedir:
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Bu durumlarda, bir dizi alan adı projeksiyonlar kullanılabilir değil, C# 7.0 ile yazılan kod için değişiklik olacağından derleyici hataları neden olmaz.
 
@@ -90,29 +90,31 @@ Bu durumlarda, bir dizi alan adı projeksiyonlar kullanılabilir değil, C# 7.0 
 
 C# 7.3 ile başlayarak, tanımlama grubu türleri desteği `==` ve `!=` işleçleri. Bu işleçler sırayla sağ bağımsız değişkeni her üyesi sol bağımsız değişkeni her üyesi karşılaştırarak çalışır. Bu karşılaştırmalar kısa devre oluşturur. Bunlar üyeleri bir çifti eşit değil olarak değerlendiriliyor durdurur. Aşağıdaki kod örnekleri kullan `==`, ancak tüm uygulamak için karşılaştırma kurallarını `!=`. Aşağıdaki kod örneği, iki tamsayı çiftleri için bir eşitlik karşılaştırması gösterir:
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Tanımlama grubu eşitliği testleri daha kullanışlı hale çeşitli kurallar vardır. Tanımlama grubu eşitliği gerçekleştirir [dönüştürmeler yükseltilmiş](~/_csharplang/spec/conversions.md#lifted-conversion-operators) diziler biri aşağıdaki kodda gösterildiği gibi boş değer atanabilir bir tanımlama grubu ise:
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 Tanımlama grubu eşitliği, ayrıca hem de tanımlama gruplarının her üye üzerinde örtük dönüştürmeleri gerçekleştirir. Bunlar, dönüştürme, yükseltilmiş dönüştürmeler ve diğer örtük dönüştürmeleri genişletme içerir. Aşağıdaki örnekler bir tamsayı 2 bölütlü uzun bir 2-demet tamsayıya örtülü dönüştürme nedeniyle karşılaştırılabilir uzun:
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Tanımlama grubu üyelerinin adları eşitliği testleri katılmaz. Ancak, biri açık adlar ile sabit tanımlama grubu ise, bu adlar diğer işlenen adları eşleşmiyorsa derleyici uyarı CS8383 oluşturur.
 Her iki işlenen demet sabit olduğu durumda, uyarıyı sağ işlenen üzerinde aşağıdaki örnekte gösterildiği gibi verilmiştir:
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Son olarak, diziler, iç içe geçmiş bir tanımlama grubu içerebilir. Tanımlama grubu eşitliği "aşağıdaki örnekte gösterilen şeklini" iç içe geçmiş tanımlama grupları halinde aracılığıyla her işlenen karşılaştırılır:
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+Eşitlik (ya da eşitsizlik) için iki diziler karşılaştırmak için bir derleme zamanı hata farklı şekiller zaman sahiptirler. Kazanılan derleyici ' iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları karşılaştırmak için çalışır.
 
 ## <a name="assignment-and-tuples"></a>Atama ve diziler
 
-Burada her sağ tarafı öğe örtük karşılık gelen sol tarafı öğesine dönüştürülebilir aynı sayıda öğe olan tanımlama grubu türleri arasında atama dili destekler. Diğer dönüştürme atamalarını kabul edilmez. Tanımlama grubu türleri arasında izin atamaları türlerini bakalım.
+Burada her sağ tarafı öğe örtük karşılık gelen sol tarafı öğesine dönüştürülebilir aynı sayıda öğe olan tanımlama grubu türleri arasında atama dili destekler. Diğer dönüştürme atamalarını bulundurulmaz. Bu farklı şekillere sahip oldukları zaman bir tanımlama grubu atamak için bir derleme zamanı hatasına neden olur. Derleyici iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları atamak için deneme olmaz.
+Tanımlama grubu türleri arasında izin atamaları türlerini bakalım.
 
 Aşağıdaki örneklerde kullanılan bu değişkenleri göz önünde bulundurun:
 

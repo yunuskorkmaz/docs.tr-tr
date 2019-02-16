@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d35d5115f6005578164d13b94c9940152ddc1c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57a5df92b1e1dd20575c7930ac2a6eb546e1400
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734467"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333007"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Bu örnek gösterir `netNamedPipeBinding` aynı makinede çapraz proses haberleşmesi sağlayan bağlama. Adlandırılmış Kanallar makinelerde çalışmaz. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmeti.  
@@ -19,7 +19,7 @@ Bu örnek gösterir `netNamedPipeBinding` aynı makinede çapraz proses haberle�
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- İstemci ve hizmet yapılandırma dosyalarında bağlama belirtildi. Bağlama türü belirtilen `binding` özniteliği [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnek yapılandırmada gösterildiği öğesi:  
+ İstemci ve hizmet yapılandırma dosyalarında bağlama belirtildi. Bağlama türü belirtilen `binding` özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) veya [ \<uç noktası >'ın \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) gösterildiği öğesi Aşağıdaki örnek yapılandırma:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

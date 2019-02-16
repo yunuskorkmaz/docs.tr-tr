@@ -2,17 +2,17 @@
 title: Temel AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 7a9529b79c9993e045e6bb28a7ad608f453a694e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f488ea1784e41c0c8e4bb815397ab81de95e53b
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509993"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332446"
 ---
 # <a name="basic-ajax-service"></a>Temel AJAX Hizmeti
 Bu örnek, Windows Communication Foundation (WCF) temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için nasıl kullanılacağını gösterir. Hizmeti kullandığı <xref:System.ServiceModel.Web.WebGetAttribute> hizmet HTTP GET isteklerine yanıt verir ve yanıtları için JavaScript nesne gösterimi (JSON) veri biçimini kullanacak şekilde yapılandırılmış emin olmak için özniteliği.  
   
- WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).  
   
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  

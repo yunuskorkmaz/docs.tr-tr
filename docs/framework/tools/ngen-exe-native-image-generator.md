@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 879655e21a9cca00e64aef9215fcfac776e73bcb
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 8451cecc204e8795b7a073422b34c623bce172c2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221309"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333098"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Yerel görüntü hizmetiyle ilgili örnekler için bkz. [Native Image Service](#native-image-service).  
   
 ## <a name="native-image-task"></a>Yerel Görüntü Görevi  
- Yerel görüntü görevi oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görevi oluşturur ve yerel görüntüleri için desteklenen senaryolar için bir otomatik olarak geri kazanır. (Bkz [yerel görüntüler oluşturma](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Ayrıca, kullanmak yükleyicileri sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturup ertelenmiş aynı anda yerel görüntüleri güncelleştir.  
+ Yerel görüntü görevi oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görevi oluşturur ve yerel görüntüleri için desteklenen senaryolar için bir otomatik olarak geri kazanır. Ayrıca, kullanmak yükleyicileri sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturup ertelenmiş aynı anda yerel görüntüleri güncelleştir.  
   
  Yerel görüntü görevi her CPU için mimarisini hedefleyen uygulamalar için derleme izin vermek için bilgisayarda her mimari desteklenen sonra kayıtlı:  
   

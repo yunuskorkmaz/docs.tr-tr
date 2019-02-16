@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme'
+title: 'Nasıl yapılır: Oturumlarla iletileri güvenli hale getirme'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185358"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333059"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Nasıl yapılır: Oturumlarla iletileri güvenli hale getirme
 
 Bu konuda, bu tür bir oturumu destekleyen sistem tarafından sağlanan bağlamalar, ancak değil, varsayılan olarak kullanarak bir güvenilir oturum içinde değiştirilen iletileri için ileti düzeyi güvenliği etkinleştirmek için gereken adımlar açıklanmaktadır. Kesin kod kullanarak veya bildirimli olarak yapılandırma dosyasında bir güvenli, güvenilir oturum etkinleştirin. Bu yordam, güvenli, güvenilir oturum etkinleştirmek için hizmet ve istemci yapılandırma dosyalarını kullanır.
 
@@ -21,7 +21,7 @@ Bu yordam, aşağıdaki üç temel görevleri oluşur:
 
 1. İstemci Hizmeti ile kimlik doğrulaması için kullanmanız gereken istemci kimlik bilgisi türü belirtin.
 
-Uç nokta yapılandırma öğesi içeren ilk görevi önemli olduğu bir `bindingConfiguration` (Bu örnekte) adlı bir bağlama yapılandırmasını başvuran öznitelik `MessageSecurity`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi daha sonra güvenilir oturumlar etkinleştirmek için bu ada başvuran `enabled` özniteliği [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) öğesine `true`. Sıralı teslim Güvenceleri güvenilir bir oturumda ayarlayarak kullanılabilir olmasını gerektiren `ordered` özniteliğini `true`.
+Uç nokta yapılandırma öğesi içeren ilk görevi önemli olduğu bir `bindingConfiguration` (Bu örnekte) adlı bir bağlama yapılandırmasını başvuran öznitelik `MessageSecurity`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi daha sonra güvenilir oturumlar etkinleştirmek için bu ada başvuran `enabled` özniteliği [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) öğesine `true`. Sıralı teslim Güvenceleri güvenilir bir oturumda ayarlayarak kullanılabilir olmasını gerektiren `ordered` özniteliğini `true`.
 
 Bu yapılandırma yordamını tabanlı örnek kaynak kopyası için bkz: [WS güvenilir oturum](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -34,11 +34,11 @@ Bu yapılandırma yordamını tabanlı örnek kaynak kopyası için bkz: [WS gü
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenilir oturum kullanılacak WSHttpBinding hizmetini yapılandırma
 
-Bu yordamda açıklanan [nasıl yapılır: Exchange ileti içinde bir güvenilir oturum](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Bu yordamda açıklanan [nasıl yapılır: Oturumda ileti bir güvenilir](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenilir oturum kullanılacak WSHttpBinding istemciyi Yapılandırma
 
-Bu yordamda açıklanan [nasıl yapılır: Exchange ileti içinde bir güvenilir oturum](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Bu yordamda açıklanan [nasıl yapılır: Oturumda ileti bir güvenilir](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Yapılandırma modu ve ClientCredentialType ayarlayın
 

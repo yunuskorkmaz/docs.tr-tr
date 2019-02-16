@@ -2,12 +2,12 @@
 title: 'Tasarım desenleri: Liste tabanlı yayımlama-abone ol'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717920"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333398"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım desenleri: Liste tabanlı yayımlama-abone ol
 Bu örnek, bir Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterilmektedir.  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  \Datasource\bin DataSource.exe çalıştırma\\, dile özgü klasörü altında. Veri kaynak etkinliği konsol penceresinde görüntülenir. Veri kaynağı bilgilerini hizmetine gönderir. sonra her bir istemciye geçirilmelidir.  
   
-4.  İstemci, veri kaynağı ve hizmet programlarını iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci, veri kaynağı ve hizmet programlarını iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   

@@ -2,12 +2,12 @@
 title: Internet Information Services Barındırma En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 931ba4162ed34ab391bd0ba2de2cb5a0e16ede6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521874"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333423"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet Information Services Barındırma En İyi Uygulamaları
 Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak için bazı en iyi uygulamalar açıklanmaktadır.  
@@ -82,5 +82,6 @@ Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak iç
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Barındırma hizmeti örnekleri](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)
+
+- [Barındırma hizmeti örnekleri](../samples/hosting.md)
 - [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

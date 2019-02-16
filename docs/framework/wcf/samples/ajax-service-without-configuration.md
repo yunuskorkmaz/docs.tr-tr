@@ -2,17 +2,17 @@
 title: Yapılandırma Olmadan AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: f722eac27fadbd772b85a638c3c9171c2783a8b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ea5c61ea3f0f8adcce6dc14be11a8b098c7ca0f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582194"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332929"
 ---
 # <a name="ajax-service-without-configuration"></a>Yapılandırma Olmadan AJAX Hizmeti
 Bu örnek herhangi bir yapılandırma dosyası olmadan temel ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet (bir Web tarayıcısı istemcisini JavaScript kodunu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için Windows Communication Foundation (WCF) nasıl yapılacağı açıklanır. Ayarlar. Hizmet bir AJAX uç noktası otomatik olarak etkinleştirmeyi .svc dosyasında özel bir sözdizimi kullanır.  
   
- WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [Ajax örnekleri](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [Ajax örnekleri](ajax.md).  
   
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  

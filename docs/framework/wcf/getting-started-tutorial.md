@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491369"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332253"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communication Foundation (WCF) için size yöneliktir. Bu konu başlığının altındaki listenin sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımlar tanıtıcı bir anlayış verir. Her biri bir veya daha fazla hizmet işlemlerini kullanıma sunan bir veya daha fazla uç noktaları, bir hizmet sunar. *Uç nokta* Hizmetin nerede hizmet bulunabilir, adres nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.
@@ -22,7 +22,7 @@ Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communica
 
 Bu bölümdeki konular, geliştirme ortamı olarak Visual Studio kullandığınız varsayılır. Başka bir geliştirme ortamı kullanıyorsanız, Visual Studio özgü yönergeleri yoksayın.
 
-Sabit diskinize indirilebilir ve çalıştırma, konularına bakın ve örnek uygulamalar için [Windows Communication Foundation örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Bu konu bakın, özellikle de [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).
+Sabit diskinize indirilebilir ve çalıştırma, konularına bakın ve örnek uygulamalar için [Windows Communication Foundation (WCF) örnekleri](./samples/index.md). Bu konu bakın, özellikle de [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).
 
 Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).
 
@@ -58,7 +58,7 @@ Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz:
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-- [Windows Communication Foundation Örnekleri](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation (WCF) örnekleri](./samples/index.md)
 - [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.

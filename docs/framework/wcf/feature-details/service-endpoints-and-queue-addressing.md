@@ -2,12 +2,12 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613928"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332526"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabileceği ve hizmet uç noktaları sıralara nasıl eşleştiği anlatılmaktadır. Aşağıdaki çizimde, bir anımsatıcı Klasik Windows Communication Foundation (WCF) uygulama dağıtımı kuyruğa gösterir.  
@@ -46,7 +46,7 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
   
  Kuyruk adresi dinleme URI olarak gelen iletileri okumak için dinleyici tarafından kullanılır. Diğer bir deyişle, kuyruk adresi için dinleme bağlantı noktası TCP yuvası eşdeğerdir.  
   
- Kuyruktan okuyan bir uç nokta ServiceHost açılırken daha önce belirtilen aynı düzeni kullanarak sıraya adresini belirtmeniz gerekir. Örnekler için bkz [ağ MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md) ve [Message Queuing tümleştirme bağlama örnekleri](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Kuyruktan okuyan bir uç nokta ServiceHost açılırken daha önce belirtilen aynı düzeni kullanarak sıraya adresini belirtmeniz gerekir. Örnekler için bkz [ağ MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Kuyruktaki birden fazla anlaşma  
  Sıradaki iletilerin farklı sözleşmeler uygulayabilirsiniz. Bu durumda, aşağıdakilerden birini başarıyla okumak ve tüm iletileri işlemek için doğru olduğunu gereklidir:  

@@ -1,15 +1,15 @@
 ---
 title: Bir GitHub sorunu sınıflı sınıflandırma senaryosunda ML.NET kullanın
 description: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları için belirli bir alanla atamak sınıflandırmak için nasıl kullanılacağını keşfedin.
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739429"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333527"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Öğretici: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları sınıflandırmak için kullanın.
 
@@ -20,11 +20,11 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Sorunu anlama
 > * Uygun makine öğrenimi algoritması seçin
 > * Verilerinizi hazırlama
-> * Özellikleri ayıklayın ve verileri dönüştürme
+> * Verileri dönüştürme
 > * Modeli eğitme
-> * Farklı bir veri kümesiyle modeli değerlendirme
-> * Test verileri sonucu eğitilen modeli ile tek bir örneğini tahmin edin
-> * Test verileri ile yüklenen bir model tek bir örneğini tahmin edin
+> * Modeli değerlendirme
+> * Eğitilen modeli tahmin edin
+> * Dağıtma ve yüklenen modeliyle tahmin edin
 
 > [!NOTE]
 > Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -55,8 +55,8 @@ Bu öğreticide, bir makine öğrenimi düzenli bir şekilde taşımak işlem sa
 3. **Derleme ve eğitme** 
    * **Modeli eğitme**
    * **Modeli değerlendirme**
-4. **Çalıştır**
-   * **Model tüketim**
+4. **Model dağıtma**
+   * **Tahmin modelini kullanın**
 
 ### <a name="understand-the-problem"></a>Sorunu anlama
 
@@ -146,7 +146,7 @@ Yolları kısa bir süre önce indirilen dosyaları ve genel değişkenleri tutm
 * `_testDataPath` Yolun model değerlendirmek için kullanılan veri kümesine sahiptir.
 * `_modelPath` eğitilen modelin kaydedildiği yolu vardır.
 * `_mlContext` olan <xref:Microsoft.ML.MLContext> , işlem bağlamı sağlar.
-* `_trainingDataView` olan <xref:Microsoft.ML.Data.IDataView> eğitim veri kümesi işlemek için kullanılır.
+* `_trainingDataView` olan <xref:Microsoft.Data.DataView.IDataView> eğitim veri kümesi işlemek için kullanılır.
 * `_predEngine` olan <xref:Microsoft.ML.PredictionEngine%602> tek Tahminler elde etmek için kullanılır.
 * `_reader` olan <xref:Microsoft.ML.Data.TextLoader> yüklemek ve veri kümeleri dönüştürmek için kullanılır.
 
@@ -187,7 +187,7 @@ Başlatma `_mlContext` yeni bir örneğini genel değişkenin `MLContext` ile ra
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Ardından, başlatma `_trainingDataView` <xref:Microsoft.ML.Data.IDataView> genel değişken ve ile veri yükleme `_trainDataPath` parametresi.
+Ardından, başlatma `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> genel değişken ve ile veri yükleme `_trainDataPath` parametresi.
 
  Giriş ve çıkış olarak [ `Transforms` ](../basic-concepts-model-training-in-mldotnet.md#transformer), `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
 
@@ -195,7 +195,7 @@ ML.NET içinde veri benzer bir `SQL view`. Bu, gevşek değerlendirilen, şema v
 
 Önceden oluşturduğunuz beri `GitHubIssue` veri modeli türüyle eşleşen veri kümesi şeması, başlatma, eşleme ve veri kümesi bir kod satırının içine yükleniyor birleştirebilirsiniz.
 
-Satırın ilk bölümü (`CreateTextReader<GitHubIssue>(hasHeader: true)`) oluşturur bir <xref:Microsoft.ML.Data.TextLoader> veri kümesi şema çıkarımını yapma tarafından `GitHubIssue` veri türü ve veri kümesi üst bilgisini kullanarak model.
+Satırın ilk bölümü (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) oluşturur bir <xref:Microsoft.ML.Data.TextLoader> veri kümesi şema çıkarımını yapma tarafından `GitHubIssue` veri türü ve veri kümesi üst bilgisini kullanarak model.
 
 Oluşturduğunuz zaman veri şemasını önceden tanımlanmış `GitHubIssue` sınıfı. Şemanızı için:
 
@@ -245,6 +245,9 @@ Model eğitim ve diğer değerleri varsayılan olarak, hesaplanan zaman **etiket
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> ML.NET sürüm 0.10 dönüştürme parametreleri sırası değişti. Bu, kullanıma alma hatası, yapı kadar. Dönüşümlerin parametre adları, önceki kod parçacığında gösterildiği gibi kullanın.
+
 Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak `Concatenate` dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kod ile işlem hattı için bu dönüşümü ekleyin:
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 ### <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-Öğrenme algoritmasını eklemek için <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> nesne.  `SdcaMultiClassTrainer` Eklenir `pipeline` ve özellikleri tespit `Title` ve `Description` (`Features`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri.
-
-Aşağıdaki kodu ekleyin `BuildAndTrainModel` yöntemi:
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-Bir öğrenme algoritması oluşturduğunuza göre eklenecek `pipeline`. Ayrıca okunabilir özgün durumuna döndürülecek değer etiketi eşlemek gerekir. Aşağıdaki kod ile bu eylemlerin her ikisini birden yapın:
+Öğrenme algoritmasını eklemek için çağrı `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` döndüren sarmalayıcı yöntemini bir <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> nesne.  `SdcaMultiClassTrainer` Eklenir `pipeline` ve özellikleri tespit `Title` ve `Description` (`Features`) ve `Label` giriş geçmiş verilerden bilgi edinmek için parametreleri. Ayrıca okunabilir özgün durumuna döndürülecek değer etiketi eşlemek gerekir. Aşağıdaki kod ile bu eylemlerin her ikisini birden yapın:
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ Sırada `model` olduğu bir `transformer` ortak bir üretim senaryosu, tek tek �
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>Eğitilen modeli tahmin edin
+
 Eğitilen modelin tahmine test etmek için bir GitHub sorunu Ekle `Predict` bir örneğini oluşturarak yöntemi `GitHubIssue`:
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ Bu tahmin etmek için kullanabileceğiniz `Area` sorun verileri tek bir örneği
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>Modeli kullanılarak: tahmin
+### <a name="using-the-model-prediction-results"></a>Modeli kullanılarak: tahmin sonuçlarını
 
 Görüntü `GitHubIssue` ve karşılık gelen `Area` tahmin sonuçları paylaşmak ve bunlar üzerinde buna göre hareket için etiket.  Aşağıdakileri kullanarak sonuçları için bir görüntü oluşturmak <xref:System.Console.WriteLine?displayProperty=nameWithType> kod:
 
@@ -356,7 +355,7 @@ Eğitim veri kümesi ile daha önce yaptığınız gibi eşleme başlatma birle�
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` İçin bir sarmalayıcı olan <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A> belirtilen veri kümesi kullanan model için Kalite Ölçümleri hesaplar yöntemi. Döndürür bir <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> sınıflı sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne.
+`MulticlassClassificationContext.Evaluate` İçin bir sarmalayıcı olan <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> belirtilen veri kümesi kullanan model için Kalite Ölçümleri hesaplar yöntemi. Döndürür bir <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> sınıflı sınıflandırma değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne.
 Model kalitesini belirlemek için ölçümleri görüntülemek için bunları ilk almanız gerekir.
 Kullanımına dikkat edin `Transform` machine Learning yöntemi `_trainedModel` özellikleri giriş ve tahmin döndürmek için genel değişkeni (dönüştürücü). Aşağıdaki kodu ekleyin `Evaluate` yöntemi sonraki satır olarak:
 
@@ -409,7 +408,7 @@ Bir konsol iletisi ile yazarak dosyasının nerede yazılmıştır görüntüley
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Kaydedilen modeli ile test veri sonucu tahmin edin
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Dağıtma ve yüklenen modeliyle tahmin edin
 
 Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Evaluate` yöntemi çağrısı, aşağıdaki kodu kullanarak:
 
@@ -478,11 +477,11 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > * Sorunu anlama
 > * Uygun makine öğrenimi algoritması seçin
 > * Verilerinizi hazırlama
-> * Özellikleri ayıklayın ve verileri dönüştürme
+> * Verileri dönüştürme
 > * Modeli eğitme
-> * Farklı bir veri kümesiyle modeli değerlendirme
-> * Test verileri sonucu eğitilen modeli ile tek bir örneğini tahmin edin
-> * Test verileri ile yüklenen bir model tek bir örneğini tahmin edin
+> * Modeli değerlendirme
+> * Eğitilen modeli tahmin edin
+> * Dağıtma ve yüklenen modeliyle tahmin edin
 
 Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin.
 > [!div class="nextstepaction"]

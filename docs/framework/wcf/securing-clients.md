@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721116"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333475"
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamalıdır. Bir istemciyi, bu nedenle, güvenli hale getirme işlem basittir: (yayımlanıyorsa) hizmetinden alınan meta verileri kullanın ve bir istemci oluşturun. Meta veriler istemci yapılandırma belirler. Hizmet istemci kimlik bilgileri sağlamanız gerekiyorsa, gereksinime uyan bir kimlik bilgisini edinmeniz gerekir. Bu konu başlığı altında daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
  Oluşturulan Svcutil.exe aracını dosya, inceleyin yapılandırma varsa [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) hangi istemci kimlik bilgisi türü gerekip gerekmediğini bölümü. Bölüm içinde güvenlik gereksinimlerini belirtin bağlama öğeleridir. Özellikle, inceleyin \<Güvenlik > her bağlama öğesi. Bu öğe içeren `mode` özniteliği üç değerlerden birine ayarlayın (`Message`, `Transport`, veya `TransportWithMessageCredential`). Öznitelik değeri modu belirler ve alt öğeleri önemli olduğu modu belirler.  
   
  `<security>` Öğesi ya da içerebilir bir `<transport>` veya `<message>` öğe veya her ikisi de. Önemli güvenlik modunu eşleşen bir öğedir. Örneğin, aşağıdaki kod güvenlik modunu belirtir `"Message"`ve kimlik bilgisi türü için istemci `<message>` öğesi `"Certificate"`. Bu durumda, `<transport>` öğesi yoksayıldı. Ancak, `<message>` öğeyi belirten bir X.509 sertifikası sağlanmalıdır.  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  Unutmayın `clientCredentialType` özniteliği `"Windows"`, aşağıdaki örnekte gösterildiği gibi gerçek kimlik değerini belirtmeniz gerekmez. İstemcisini çalıştıran kişinin gerçek kimlik bilgilerini (Kerberos belirteci) Windows tümleşik güvenliği sağlar olmasıdır.  
   
 ```xml  
@@ -107,29 +107,21 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
 </configuration>  
 ```  
   
- Yapılandırmada istemci kimlik bilgilerini ayarlamak için eklemek bir [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) yapılandırma dosyasına öğesi. Ayrıca, hizmet uç noktası için eklenen davranış öğesi bağlanmalıdır kullanarak `behaviorConfiguration` özniteliği [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnekte gösterildiği gibi bir öğe. Değerini `behaviorConfiguration` özniteliği davranışı değerini eşleşmelidir `name` özniteliği.  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ Yapılandırmada istemci kimlik bilgilerini ayarlamak için eklemek bir [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) yapılandırma dosyasına öğesi. Ayrıca, hizmet uç noktası için eklenen davranış öğesi bağlanmalıdır kullanarak `behaviorConfiguration` özniteliği [ \<uç noktası >, \<istemci >](../configure-apps/file-schema/wcf/endpoint-of-client.md) aşağıdaki örnekte gösterildiği gibi bir öğe. Değerini `behaviorConfiguration` özniteliği davranışı değerini eşleşmelidir `name` özniteliği.  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  İstemci kimlik bilgileri değerlerini bazıları, uygulama yapılandırma dosyaları, örneğin kullanılarak küme, kullanıcı adı ve parola veya Windows kullanıcı ve parola değerlerini olamaz. Bu kimlik bilgileri değerlerini yalnızca kodda belirtilebilir.  

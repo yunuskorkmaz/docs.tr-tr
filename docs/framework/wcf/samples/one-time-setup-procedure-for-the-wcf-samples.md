@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583427"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333462"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve genel sanal dizinden çalıştırın. Bu tek seferlik Kurulum yordamı diskte bir klasörü oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
   
 3.  Visual Studio 2012 yüklü değil ve işletim sisteminizi Windows Server 2008 SP2 değil ya da daha sonra yükleme [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Aşağıdaki komutları çalıştırın. Bu komutlar neden çalıştırılmalıdır hakkında daha fazla bilgi için bkz. [IIS barındırılan hizmet başarısız](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Aşağıdaki komutları çalıştırın. Bu komutlar neden çalıştırılmalıdır hakkında daha fazla bilgi için bkz. [IIS barındırılan hizmet başarısız](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  IIS yeniden yüklenirse, aşağıdaki komutları yeniden çalıştırılması gerekir.

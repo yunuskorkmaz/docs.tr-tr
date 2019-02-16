@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Yapılandırma'
+title: 'Nasıl yapılır: Temel Windows Communication Foundation istemcisi yapılandırma'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: 3f267edf87711de8a5969e3e0b577648008c5a75
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 18acec48b2af78877f99335da38ccb0ae8942824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562196"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332331"
 ---
-# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Yapılandırma
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Nasıl yapılır: Temel Windows Communication Foundation istemcisi yapılandırma
 
 Beşinci altı görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
 
@@ -19,7 +19,7 @@ Bu konuda ele alınmıştır kullanılarak oluşturulan istemci yapılandırma d
 
 ## <a name="configure-a-windows-communication-foundation-client"></a>Bir Windows Communication Foundation istemcisi yapılandırma
 
-GettingStartedClient projeden oluşturulan yapılandırma dosyası (App.config) açın. Aşağıdaki örnek, oluşturulan yapılandırma dosyasının bir görünümüdür. Altında [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, bulma [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.
+GettingStartedClient projeden oluşturulan yapılandırma dosyası (App.config) açın. Aşağıdaki örnek, oluşturulan yapılandırma dosyasının bir görünümüdür. Altında [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, bulma [ \<uç noktası >](../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,17 +53,17 @@ Bu örnekte istemci şu adresten bulunduğu hizmete erişmek için kullandığı
 
 Uç nokta öğesini belirten `ServiceReference1.ICalculator` hizmet sözleşmesi WCF istemci ve hizmet arasındaki iletişim için kullanılır. WCF kanalı sistem tarafından sağlanan ile yapılandırılmış <xref:System.ServiceModel.WSHttpBinding>. Bu sözleşme kullanılarak oluşturulmuş **hizmet Başvurusu Ekle** Visual Studio'da. Bu temelde GettingStartedLib projede tanımlanan sözleşme bir kopyasıdır. <xref:System.ServiceModel.WSHttpBinding> Bağlama HTTP taşıma, birlikte çalışabilen güvenlik ve diğer yapılandırma ayrıntılarını belirtir.
 
-Bu yapılandırma ile oluşturulan istemciyi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: istemci kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
+Bu yapılandırma ile oluşturulan istemciyi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir istemci kullanın](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Nasıl yapılır: WCF istemcisini kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+> [Nasıl yapılır: WCF istemci kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)

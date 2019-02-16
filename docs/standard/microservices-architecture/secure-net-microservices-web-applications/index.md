@@ -4,12 +4,12 @@ description: .NET mikro Hizmetleri ve Web uygulamaları - güvenlik ASP.NET Core
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 9a60f326035a6d04aa39a14c98fc1c711ffe494a
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362307"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333512"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro Hizmetleri ve Web uygulamaları
 
@@ -191,7 +191,7 @@ Bu iş akışını kullanırken, ASP.NET Core kimliği ara yazılımı gerekli o
 
 Yerel ASP.NET Core kimliği kullanıcılar için güvenlik belirteçlerini vermek tercih ettiğiniz yerine, bir dış kimlik sağlayıcısı kullanarak, bazı iyi üçüncü taraf kitaplıklar avantajlarından yararlanabilirsiniz.
 
-[Identityserver4](https://github.com/IdentityServer/IdentityServer4) ve [OpenIddict](https://github.com/openiddict/openiddict-core) Openıd Connect sağlayıcılar, ASP.NET Core kimliği ile izin verecek şekilde güvenlik belirteçleri bir ASP.NET Core hizmeti kolayca tümleştirin. [Identityserver4 belgeleri](https://identityserver4.readthedocs.io/en/release/) kitaplığı kullanmak için ayrıntılı yönergeler içerir. Ancak, Identityserver4 sorunu belirteçleri kullanarak için temel adımlar şunlardır.
+[Identityserver4](https://github.com/IdentityServer/IdentityServer4) ve [OpenIddict](https://github.com/openiddict/openiddict-core) Openıd Connect sağlayıcılar, ASP.NET Core kimliği ile izin verecek şekilde güvenlik belirteçleri bir ASP.NET Core hizmeti kolayca tümleştirin. [Identityserver4 belgeleri](https://identityserver4.readthedocs.io/en/latest/) kitaplığı kullanmak için ayrıntılı yönergeler içerir. Ancak, Identityserver4 sorunu belirteçleri kullanarak için temel adımlar şunlardır.
 
 1. Uygulama çağırırsınız. Identityserver4 uygulamanın HTTP istek işleme ardışık düzenine eklemek için UseIdentityServer Startup.Configure yöntem. Bu kitaplık OAuth2 uç noktaları /connect/token gibi Openıd Connect ve isteklere hizmet sağlar.
 
@@ -199,17 +199,17 @@ Yerel ASP.NET Core kimliği kullanıcılar için güvenlik belirteçlerini verme
 
 3. Kimlik sunucusu, aşağıdaki veriler ayarlayarak yapılandırın:
 
-   - [Kimlik bilgilerini](https://identityserver4.readthedocs.io/en/release/topics/crypto.html) imzalama için kullanılacak.
+   - [Kimlik bilgilerini](https://identityserver4.readthedocs.io/en/latest/topics/crypto.html) imzalama için kullanılacak.
 
-   - [Kimlik ve API kaynaklarına](https://identityserver4.readthedocs.io/en/release/topics/resources.html) kullanıcılar için erişim isteyebilir:
+   - [Kimlik ve API kaynaklarına](https://identityserver4.readthedocs.io/en/latest/topics/resources.html) kullanıcılar için erişim isteyebilir:
 
       - API kaynaklarını korumalı veriler veya bir erişim belirteci ile bir kullanıcının erişebildiği işlevleri temsil eder. Örnek bir API kaynağı bir web API (veya API kümesi) verilebilir yetkilendirme gerektirir.
 
       - Kimlik kaynaklarını bir kullanıcıyı tanımlamak için bir istemci için verilen bilgileri (talep) temsil eder. Talepler, kullanıcı adı, e-posta adresi vb. içerebilir.
 
-   - [İstemcileri](https://identityserver4.readthedocs.io/en/release/topics/clients.html) , bağlama belirteci istemek için.
+   - [İstemcileri](https://identityserver4.readthedocs.io/en/latest/topics/clients.html) , bağlama belirteci istemek için.
 
-   - Kullanıcı bilgileri depolama mekanizması gibi [ASP.NET Core kimliği](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) veya alternatif.
+   - Kullanıcı bilgileri depolama mekanizması gibi [ASP.NET Core kimliği](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) veya alternatif.
 
 İstemcileri ve Identityserver4 kaynakları kullanmak için belirttiğinizde, geçirebilirsiniz bir <xref:System.Collections.Generic.IEnumerable%601> bellek içi istemci veya kaynak depolarını ele yöntemleri için uygun türde bir koleksiyonu. Veya daha karmaşık senaryolarda, istemci veya kaynak sağlayıcısı türleri aracılığıyla bağımlılık ekleme sağlayabilir.
 
@@ -300,7 +300,7 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı yerel bir sertifika yetkil
   [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
 - **Identityserver4. Resmi belgeleri** \
-  [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
+  *<https://identityserver4.readthedocs.io/en/latest/>*
 
 >[!div class="step-by-step"]
 >[Önceki](../implement-resilient-applications/monitor-app-health.md)

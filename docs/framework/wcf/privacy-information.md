@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683979"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333410"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  
@@ -402,5 +402,5 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
  Web Hizmetleri Açıklama Dili (WSDL), bağlantı noktasının bir tanım içeriyor. Her bağlantı noktası bir uç nokta adresi ve uygulama tarafından kullanılan hizmetler temsil eden bir bağlaması var. WSDL gösterme, yapılandırma kullanrak kapatılabilir. Makinede hiçbir bilgi tutulmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Communication Foundation'a](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation'a](index.md)
 - [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)

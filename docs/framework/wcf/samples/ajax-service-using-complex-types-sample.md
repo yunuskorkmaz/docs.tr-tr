@@ -2,17 +2,17 @@
 title: Karmaşık Türler Kullanan AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 338d7105180df94f85647da413fc682451b7c9d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676672"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333488"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Karmaşık Türler Kullanan AJAX Hizmeti Örneği
 Bu örnek, Windows Communication Foundation (WCF) karmaşık türler örneklerini oluşturur ve bunları arasındaki hizmet ve istemci JavaScript nesne gösterimi (JSON) olarak gönderir, bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturma için nasıl kullanılacağını gösterir. JavaScript kodu bir Web tarayıcısı istemcisini kullanarak bir AJAX hizmete erişebilir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
   
- WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize <xref:System.Web.UI.ScriptManager> denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize <xref:System.Web.UI.ScriptManager> denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).  
   
 > [!NOTE]
 >  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  

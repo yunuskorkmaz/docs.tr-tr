@@ -2,12 +2,12 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 9dde928beb348dcb41c6b908c8e5d2a04243172c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fd3d199a529c96299350aba7f43b0393e1178f5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671479"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332903"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
@@ -138,7 +138,7 @@ ms.locfileid: "54671479"
   
 3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54671479"
   
 9. İstemci, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-10. İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
