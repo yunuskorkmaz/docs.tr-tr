@@ -34,7 +34,7 @@ Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma 
 </runtime>  
 ```  
   
-  **\<AssemblyBinding >** sipariş duyarlı öğeleridir. Herhangi bir .NET Framework sürüm 1.1 derlemeler için derleme bağlama yönlendirme bilgisini ardından herhangi bir .NET Framework sürüm 1.0 derlemeler için derleme bağlama yönlendirme bilgisini ilk olarak girmeniz gerekir. Son olarak, kullanılmayan tüm .NET Framework derleme yeniden yönlendirmesi için derleme bağlama yönlendirme bilgisini girin **appliesTo** özniteliği ve bu nedenle tüm .NET Framework sürümleri için geçerlidir. Yeniden yönlendirme bir çakışma olması durumunda, yapılandırma dosyasındaki eşleşen ilk yönlendirme cümlesi kullanılır.  
+ **\<AssemblyBinding >** sipariş duyarlı öğeleridir. Herhangi bir .NET Framework sürüm 1.1 derlemeler için derleme bağlama yönlendirme bilgisini ardından herhangi bir .NET Framework sürüm 1.0 derlemeler için derleme bağlama yönlendirme bilgisini ilk olarak girmeniz gerekir. Son olarak, kullanılmayan tüm .NET Framework derleme yeniden yönlendirmesi için derleme bağlama yönlendirme bilgisini girin **appliesTo** özniteliği ve bu nedenle tüm .NET Framework sürümleri için geçerlidir. Yeniden yönlendirme bir çakışma olması durumunda, yapılandırma dosyasındaki eşleşen ilk yönlendirme cümlesi kullanılır.  
   
  Örneğin, .NET Framework sürüm 1.0 derlemesine bir başvuru ve başka bir başvuru bir .NET Framework sürüm 1.1 derlemesine yönlendirmek için aşağıdaki sözde kod gösterilen yöntemi kullanın.  
   
