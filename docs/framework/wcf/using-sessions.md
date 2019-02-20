@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533148"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442730"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
@@ -137,7 +137,7 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
  Arasında bir etkileşim yoktur <xref:System.ServiceModel.SessionMode> sözleşme numaralandırmada ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Kanallar ve belirli hizmet nesneleri arasındaki ilişki denetleyen özelliği. Daha fazla bilgi için [oturumları Instancing ve eşzamanlılık](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext nesneleri paylaşma  
- Hangi oturum tabanlı kanal de denetleyebilirsiniz veya çağrı ile ilişkili <xref:System.ServiceModel.InstanceContext> kendinizi bu ilişkiyi gerçekleştirerek nesne. Tam bir örnek için bkz. [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Hangi oturum tabanlı kanal de denetleyebilirsiniz veya çağrı ile ilişkili <xref:System.ServiceModel.InstanceContext> kendinizi bu ilişkiyi gerçekleştirerek nesne. 
   
 ## <a name="sessions-and-streaming"></a>Oturumlarının ve akış  
  Büyük miktarda veri aktarmak için akış aktarım WCF arabelleğe alma ve iletilerini tamamen belleğindeki işleme varsayılan davranışına uygun bir alternatif modundadır. Oturum tabanlı bir bağlamayla çağrıları akışı yapılırken beklenmeyen davranışı elde edebilirsiniz. Tüm akış çağrılar kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, oturumları desteklemiyor tek kanalı (veri birimi kanal) yapılır. Birden çok istemci aynı hizmet nesnesi akış çağrıları üzerinden oturum tabanlı bir bağlama yapın ve hizmet nesnenin eşzamanlılık modu, tek ve kendi örnek bağlamı modu için ayarlanmışsa ayarlanır `PerSession`, tüm çağrıları, veri birimi kanal ve bu nedenle gitmelidir. yalnızca bir çağrı teker teker işlenir. Bir veya daha fazla istemciler daha sonra zaman aşımına uğrayabilir. Bu sorunu geçici olarak ya da hizmet nesnenin ayarlayarak çalışabilir `InstanceContextMode` için `PerCall` veya birden fazla eşzamanlılık.  

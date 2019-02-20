@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 26f57b039b8e2fb3c56af926eeb63dc3c4c33b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70ca9c2c0bcaa258acaa7649adad32acdcd90dfb
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542411"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441651"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Formları Tasarımcısında Tasarım Zamanı Hataları
 Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı başarısız olduğunda görüntülenen tasarım zamanı hata listesinin kullanımını ve anlamı açıklanmaktadır. Bu hata listesi görüntülenirse, tasarımcıda bir hatayı, ancak kodunuzda hataları düzeltmek için yardımcı olması amacıyla yorumladığınıza değil.  
@@ -53,7 +53,7 @@ Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı ba�
  Hata koşulu yoksaymak ve tasarımcı yüklemeye devam etmek seçebilirsiniz. Bu eylem seçme içinde beklenmeyen davranışlara neden olabilir. Örneğin, denetimleri tasarım yüzeyinde görünmeyebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Tasarım zamanı geliştirme sorunlarını giderme](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Tasarım zamanı geliştirme sorunlarını giderme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Denetim ve Bileşen Yazmada Sorun Giderme](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
 - [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [Windows Form Tasarımcısı hata iletileri](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+- [Windows Form Tasarımcısı hata iletileri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

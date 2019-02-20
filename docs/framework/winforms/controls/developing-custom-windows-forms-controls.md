@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525542"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442717"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework ile Özel Windows Forms Denetimleri Geliştirme
 Windows Forms denetimleri, kullanıcı arabiriminin işlevselliğini kapsülleyen ve istemci tarafı Windows tabanlı uygulamalarda kullanılır, yeniden kullanılabilir bileşenleridir. Yalnızca Windows Forms pek çok kullanıma hazır denetimi sağlar, ayrıca kendi denetimleri geliştirmek için altyapı sağlar. Mevcut denetimleri birleştirmek, mevcut denetimleri genişletmek veya kendi özel denetimler yazar. Bu bölümde, arka plan bilgileri ve Windows Forms denetimleri geliştirmenize yardımcı olacak örnekler sağlar.  
@@ -51,13 +51,13 @@ Windows Forms denetimleri, kullanıcı arabiriminin işlevselliğini kapsülleye
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Bileşenler için tasarım zamanı öznitelikleri](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Bileşenler için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Böylece bunlar görsel tasarımcılar, tasarım zamanında doğru bir şekilde görüntülenir, bileşenleri ve denetimleri uygulamak için meta veri öznitelikleri listeler.  
   
- [Tasarım zamanı desteği sunma](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  Sınıflar gibi düzenleyiciler ve tasarımcılar, tasarım zamanı desteği sağlayan uygulama açıklar.  
   
- [Nasıl yapılır: Lisans bileşenleri ve denetimleri](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Nasıl yapılır: Lisans bileşenleri ve denetimleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Lisans, bir denetim ya da bileşen uygulamak açıklar.  
   
- Ayrıca bkz: [tasarım zamanında Windows Forms denetimleri geliştirme](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Ayrıca bkz: [tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md).

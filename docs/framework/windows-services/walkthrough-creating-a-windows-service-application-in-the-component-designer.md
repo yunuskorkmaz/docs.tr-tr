@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15f05f1d05a50676eb25cfa568598a575cb9cf5a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123676"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442912"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>İzlenecek yol: bir Windows hizmeti uygulaması oluşturma
+# <a name="walkthrough-create-a-windows-service-app"></a>İzlenecek yol: Bir Windows hizmeti uygulaması oluşturma
 
 Bu makalede, Visual Studio'da bir olay günlüğüne iletiler yazan basit bir Windows hizmeti uygulaması oluşturma işlemini gösterir.
 
@@ -26,7 +26,7 @@ Başlamak için projeyi oluşturmak ve hizmetin düzgün çalışması için ger
 
 1. Visual Studio'da menü çubuğunda, **dosya** > **yeni** > **proje** (veya basın **Ctrl** + **Shift**+**N**) açmak için **yeni proje** iletişim.
 
-2. Bulun ve seçin **Windows hizmeti** proje şablonu. Genişletin **yüklü** > [**Visual C#** veya **Visual Basic**] > **Windows Masaüstü**, veya tür **Windowshizmeti** sağ üst köşedeki arama kutusuna.
+2. Bulun ve seçin **Windows hizmeti** proje şablonu. Genişletin **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Windows Masaüstü**, veya tür **Windows Hizmet** sağ üst köşedeki arama kutusuna.
 
    ![Visual Studio'da yeni proje iletişim kutusunda Windows hizmet şablonu](media/new-project-dialog.png)
 
@@ -86,7 +86,7 @@ Kod Düzenleyicisi'nde bulun <xref:System.ServiceProcess.ServiceBase.OnStart%2A>
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Bir hizmet uygulaması, uzun süre çalışan, genellikle yoklar veya sistemde izleyen bir şey olacak şekilde tasarlanmıştır. İzleme ayarlanır <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi. Ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aslında izleme yapmaz. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemi hizmetin çalışması başladıktan sonra işletim sistemine döndürmesi gerekir. Sonsuza kadar döngü veya engelleme gerçekleştirmemelidir. Basit bir yoklama mekanizması kurmak için kullanabileceğiniz <xref:System.Timers.Timer?displayProperty=nameWithType> aşağıdaki gibi bileşeni: içinde <xref:System.ServiceProcess.ServiceBase.OnStart%2A> bileşen üzerinde parametreleri ayarlayın ve ardından yöntemi <xref:System.Timers.Timer.Enabled%2A> özelliğini `true`. Zamanlayıcı, aynı zamanda hizmetiniz izlemeyi yapabileceği kodunuzda olayları periyodik olarak başlatır. Bunu yapmak için aşağıdaki kodu kullanabilirsiniz:
+Bir hizmet uygulaması, uzun süre çalışan, genellikle yoklar veya sistemde izleyen bir şey olacak şekilde tasarlanmıştır. İzleme ayarlanır <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi. Ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aslında izleme yapmaz. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemi hizmetin çalışması başladıktan sonra işletim sistemine döndürmesi gerekir. Sonsuza kadar döngü veya engelleme gerçekleştirmemelidir. Basit bir yoklama mekanizması kurmak için kullanabileceğiniz <xref:System.Timers.Timer?displayProperty=nameWithType> bileşeni aşağıdaki gibi: İçinde <xref:System.ServiceProcess.ServiceBase.OnStart%2A> bileşen üzerinde parametreleri ayarlayın ve ardından yöntemi <xref:System.Timers.Timer.Enabled%2A> özelliğini `true`. Zamanlayıcı, aynı zamanda hizmetiniz izlemeyi yapabileceği kodunuzda olayları periyodik olarak başlatır. Bunu yapmak için aşağıdaki kodu kullanabilirsiniz:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -296,7 +296,7 @@ Bir Windows hizmeti çalıştırmadan önce Hizmet Denetimi Yöneticisi ile kayd
     > [!IMPORTANT]
     > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> Hesabının olay günlüğüne yazma olanağı dahil olmak üzere geniş izinlere sahip. Bu hesabı kullanırken dikkatli olun; kötü amaçlı yazılımlardan gelecek saldırı riskinizi arttırabilir. Diğer görevler için kullanmayı <xref:System.ServiceProcess.ServiceAccount.LocalService> hesabı yerel bilgisayarda ayrıcalıklı olmayan kullanıcı olarak davranan ve herhangi bir uzak sunucuya anonim kimlik bilgilerini sunar. Bu örnek kullanmaya çalışırsanız başarısız <xref:System.ServiceProcess.ServiceAccount.LocalService> olay günlüğüne yazma izni gerektiğinden, hesap.
 
-Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: ekleme yükleyiciler hizmetinize uygulama](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama hizmetinize yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(İsteğe bağlı) Başlangıç parametrelerini ayarlayın
 
@@ -431,7 +431,7 @@ Windows hizmeti oluşturduğunuza göre bunu yükleyebilirsiniz. Bir Windows hiz
 
     Varsa **installutil.exe** işlem hata raporları, nedenini bulmak için yükleme günlüğüne bakın. Varsayılan olarak günlük hizmeti yürütülebilir dosyası ile aynı klasörde bulunur. Yükleme başarısız olabilir <xref:System.ComponentModel.RunInstallerAttribute> sınıfı üzerinde mevcut değil `ProjectInstaller` öznitelik olarak ayarlanmazsa, sınıf **true**, veya `ProjectInstaller` sınıfı işaretlenmemiş **genel**.
 
-Daha fazla bilgi için [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Başlat ve Çalıştır hizmeti
 
@@ -452,7 +452,7 @@ Daha fazla bilgi için [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../.
 1. Açık **Olay Görüntüleyicisi'ni** türüne başlatarak **Olay Görüntüleyicisi'ni** Windows görev çubuğunda ve sonra arama kutusuna **Olay Görüntüleyicisi'ni** Arama sonuçlarından.
 
    > [!TIP]
-   > Visual Studio'da açıp olay günlüklerini erişebilirsiniz **Sunucu Gezgini** (klavye: **Ctrl**+**Alt**+**S**) ve genişletme **olay günlüklerini** düğüm yerel bilgisayar.
+   > Visual Studio'da açıp olay günlüklerini erişebilirsiniz **Sunucu Gezgini** (klavye: **CTRL**+**Alt**+**S**) ve genişletme **olay günlüklerini** düğüm yerel bilgisayar.
 
 2. İçinde **Olay Görüntüleyicisi'ni**, genişletme **uygulama ve hizmet günlükleri**.
 
@@ -472,7 +472,7 @@ Daha fazla bilgi için [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../.
     installutil.exe /u MyNewService.exe
     ```
 
-   Hizmet başarıyla kaldırırsa **installutil.exe** hizmetinizin başarıyla kaldırıldığını bildirir. Daha fazla bilgi için [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Hizmet başarıyla kaldırırsa **installutil.exe** hizmetinizin başarıyla kaldırıldığını bildirir. Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -487,4 +487,4 @@ Uygulama çalıştığında bir olay günlüğü oluşturmak yerine, uygulama y�
 - [Windows hizmet uygulamaları](../../../docs/framework/windows-services/index.md)
 - [Windows hizmeti uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Hizmetleri (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Hizmetleri (Windows)](/windows/desktop/Services/services)

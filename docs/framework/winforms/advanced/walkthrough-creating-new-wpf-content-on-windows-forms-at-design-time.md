@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500505"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441469"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'ta tasarım zamanında yeni WPF içeriği oluşturma
 
@@ -61,7 +61,7 @@ Yeni bir WPF denetim oluşturma ve bunu projenize ekleyerek herhangi bir öğeyi
 
     - Dosya UserControl1.xaml açılır [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
 
 3. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine **200**.
 

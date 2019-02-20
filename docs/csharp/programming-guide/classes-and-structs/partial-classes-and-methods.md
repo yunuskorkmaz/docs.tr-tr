@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713324"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441677"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 Tanımı bölmek mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapı](../../../csharp/language-reference/keywords/struct.md)e [arabirimi](../../../csharp/language-reference/keywords/interface.md) ya da iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosyası türü veya yönteminde tanımının bir bölümünü içerir ve uygulama derlendiğinde tüm parçaları bir araya getirilir.  
@@ -111,7 +111,7 @@ Tanımı bölmek mümkündür bir [sınıfı](../../../csharp/language-reference
 ## <a name="example-1"></a>Örnek 1  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, alanları ve sınıf oluşturucusunun `CoOrds`, bir kısmi sınıf tanımı ve üye bildirilir `PrintCoOrds`, başka bir kısmi sınıf tanımında bildirilir.  
+ Aşağıdaki örnek, alanları ve sınıf oluşturucusunun `Coords`, bir kısmi sınıf tanımı ve üye bildirilir `PrintCoords`, başka bir kısmi sınıf tanımında bildirilir.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  

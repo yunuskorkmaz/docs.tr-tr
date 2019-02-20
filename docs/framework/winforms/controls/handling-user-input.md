@@ -9,15 +9,15 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a60ad943edae3775b00be99c08ad992af935ac13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c6319929d4b419cc0a2e1cfd097bfae7d997120
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636462"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443014"
 ---
 # <a name="handling-user-input"></a>Kullanıcı Girişini İşleme
-Bu konu tarafından sağlanan ana klavye ve fare olayları açıklar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Bir olay işleme, denetim yazarları korumalı geçersiz kılmalıdır `On` *EventName* bir temsilci olaya eklemek yerine yöntemi. Olayları gözden geçirmek için bkz: [Raising Events bir bileşenin](https://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
+Bu konu tarafından sağlanan ana klavye ve fare olayları açıklar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Bir olay işleme, denetim yazarları korumalı geçersiz kılmalıdır `On` *EventName* bir temsilci olaya eklemek yerine yöntemi. Olayları gözden geçirmek için bkz: [Raising Events bir bileşenin](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
   
 > [!NOTE]
 >  Bir olay, temel sınıfın bir örneği ile ilişkili hiçbir veri olup olmadığını <xref:System.EventArgs> bağımsız değişken olarak geçirilen `On` *EventName* yöntemi.  

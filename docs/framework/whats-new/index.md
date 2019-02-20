@@ -3,19 +3,13 @@ title: .NET Framework'teki yenilikler
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- what's new [.NET Framework]
+  - 'what''s new [.NET Framework]'
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416033"
 ---
 # .NET Framework'teki yenilikler <a name="introduction"></a>
 
@@ -612,7 +606,7 @@ WPF, .NET Framework 4.7 aşağıdaki geliştirmeleri içerir:
 
 **WPF API'leri yazdırma için yeni uygulama**
 
-WPF API'leri yazdırmak <xref:System.Printing.PrintQueue?displayProperty=nameWithType> çağrı Windows sınıfı [yazdırma belge paket API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) kullanım dışı yerine [XPS yazdırma API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx). Uygulama uyumluluğu üzerinde bu değişikliğin etkisini için bkz: [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+WPF API'leri yazdırmak <xref:System.Printing.PrintQueue?displayProperty=nameWithType> çağrı Windows sınıfı [yazdırma belge paket API](/windows/desktop/printdocs/tailored-app-printing-api) kullanım dışı yerine [XPS yazdırma API](/windows/desktop/printdocs/xps-printing). Uygulama uyumluluğu üzerinde bu değişikliğin etkisini için bkz: [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="v462" />
 
@@ -1168,7 +1162,7 @@ SqlClient artık otomatik olarak daha hızlı bağlantıları bir AlwaysOn Kulla
 
 **Örnekler**
 
- Bir dizi vardır [WPF örnekleri](https://msdn.microsoft.com/library/ms771633.aspx) MSDN'de. En popüler örnekleri (kullanımlarına göre) 200'den fazla içine taşınacak bir [açık kaynak GitHub deposu](https://github.com/Microsoft/WPF-Samples). Bize bir çekme isteği veya açılış göndererek örneklerimizi geliştirmemize yardımcı olun bir [GitHub sorunu](https://github.com/Microsoft/WPF-Samples/issues).
+ WPF örnek sayısı vardır [WPF/Microsoft-Samples](https://github.com/Microsoft/WPF-Samples) GitHub deposu. Bize bir çekme isteği veya açılış göndererek örneklerimizi geliştirmemize yardımcı olun bir [GitHub sorunu](https://github.com/Microsoft/WPF-Samples/issues).
 
  **DirectX uzantıları**
 
@@ -1316,7 +1310,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
     - **Şifreleme güncelleştirmeleri**
 
-         <xref:System.Security.Cryptography?displayProperty=nameWithType> API güncelleştiriliyor desteklemek için [Windows CNG şifreleme API'leri](/windows/desktop/SecCNG/cng-reference). .NET Framework'ün önceki sürümlerini yararlandı tamamen açık bir [önceki sürümünü Windows şifreleme API'leri](/windows/desktop/SecCrypto/cryptography-portal) temeli olarak <xref:System.Security.Cryptography?displayProperty=nameWithType> uygulaması. Bu desteklediğinden CNG API desteklemek için istekleri bizde [modern şifreleme algoritmalarını](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), hangi belirli türdeki uygulamalar için önemli.
+         <xref:System.Security.Cryptography?displayProperty=nameWithType> API güncelleştiriliyor desteklemek için [Windows CNG şifreleme API'leri](/windows/desktop/SecCNG/cng-reference). .NET Framework'ün önceki sürümlerini yararlandı tamamen açık bir [önceki sürümünü Windows şifreleme API'leri](/windows/desktop/SecCrypto/cryptography-portal) temeli olarak <xref:System.Security.Cryptography?displayProperty=nameWithType> uygulaması. Bu desteklediğinden CNG API desteklemek için istekleri bizde [modern şifreleme algoritmalarını](/windows/desktop/SecCNG/cng-features#suite-b-support), hangi belirli türdeki uygulamalar için önemli.
 
          .NET Framework 4.6 Windows CNG şifreleme API'lerini destekleyen aşağıdaki yeni iyileştirmeleri içerir:
 
@@ -1765,7 +1759,7 @@ Yönetilmeyen profil oluşturma API'si şu şekilde geliştirilmiştir:
 
 ASP.NET 4.5 ve 4.5.1 Web formları, WebSocket desteği, zaman uyumsuz işleyiciler, performans iyileştirmeleri ve diğer birçok özelliği için bağlama modeli ekler. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
-- [ASP.NET 4.5 ve Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 ve Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Visual Studio 2013 için ASP.NET and Web Tools Sürüm Notları](/aspnet/visual-studio/overview/2013/release-notes)
 

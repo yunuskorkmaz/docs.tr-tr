@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: a5e8e023da0eeebf5185f57eb51aa796f6f03a1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639347"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441989"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
 Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimlerini kullanan bir uygulamayı planlarken, aşağıdaki konuları göz önünde bulundurun:  
@@ -31,6 +31,6 @@ Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmişti
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)
-- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
 - [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662809"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443029"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bitlik (4 bayt) tamsayıları tutar.  
@@ -40,7 +40,7 @@ Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bi
 
 Bildirmek ve başlatmak bir `Integer` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `Integer` (diğer bir deyişle, bu ise kısa <xref:System.Int32.MinValue?displayProperty=nameWithType> veya ondan <xref:System.Int32.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 16,342 eşit ve ikili sabit değerler atanır `Integer` değerleri.
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 90,946 eşit ve ikili sabit değerler atanır `Integer` değerleri.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 

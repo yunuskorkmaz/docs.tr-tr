@@ -51,7 +51,7 @@ Konumsal, adlandırılmamış veya adlandırılmış parametreleri fazla öznite
 
 ### <a name="attribute-targets"></a>Öznitelik hedefleri
 
-*Hedef* özniteliği öznitelik uygulandığı varlıktır. Örneğin, bir öznitelik, bir sınıf, belirli bir yöntemi veya tüm derleme geçerli olabilir. Varsayılan olarak, kendisinden öğe için bir özniteliğini uygular. Ancak, bir yöntem veya, parametre veya dönüş değeri bir öznitelik uygulanmış olup olmadığını açıkça, örneğin, belirleyebilirsiniz.
+*Hedef* bir öznitelik varlığı özniteliğidir. Örneğin, bir öznitelik, bir sınıf, belirli bir yöntemi veya tüm derleme geçerli olabilir. Varsayılan olarak, kendisinden öğe için bir özniteliğini uygular. Ancak, bir yöntem veya, parametre veya dönüş değeri bir öznitelik uygulanmış olup olmadığını açıkça, örneğin, belirleyebilirsiniz.
 
 Bir öznitelik hedefi açıkça tanımlamak için aşağıdaki sözdizimini kullanın:
 

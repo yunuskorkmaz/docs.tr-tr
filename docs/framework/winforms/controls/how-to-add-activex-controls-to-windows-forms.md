@@ -6,12 +6,12 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 2fa5d81c196e1730eafb177b20b5cba64b2daae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52f914b1d6fe5d8a2707e1f4ab176036ebf62cf9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721155"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441794"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme
 Windows Form Tasarımcısı ana bilgisayar Windows Forms denetimleri için iyileştirilmiştir, ancak Windows Forms ActiveX denetimleri de koyabilirsiniz.  
@@ -19,7 +19,7 @@ Windows Form Tasarımcısı ana bilgisayar Windows Forms denetimleri için iyile
 > [!CAUTION]
 >  ActiveX denetimleri kendilerine eklenen zaman Windows Forms için performans sınırlamalar vardır.  
   
- ActiveX denetimleri formunuza eklemeden önce araç kutusuna eklemeniz gerekir. Daha fazla bilgi için [COM bileşenlerini, özelleştirme araç kutusu iletişim kutusunda](https://msdn.microsoft.com/library/171333f3-f207-4e02-bbdc-17862556212c).  
+ ActiveX denetimleri formunuza eklemeden önce araç kutusuna eklemeniz gerekir. Daha fazla bilgi için [COM bileşenlerini, özelleştirme araç kutusu iletişim kutusunda](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100)).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -35,7 +35,7 @@ Windows Form Tasarımcısı ana bilgisayar Windows Forms denetimleri için iyile
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
-- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

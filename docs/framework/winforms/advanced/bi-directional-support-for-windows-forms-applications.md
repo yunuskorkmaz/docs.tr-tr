@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676854"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442977"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu formlarda bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilen tüm denetimler içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
   
 ## <a name="culture-support"></a>Kültür desteği  
- Tarih, saat, para birimi ve diğer bilgileri ile bir uygulamanın nasıl çalıştığını, kültür ve UI kültür ayarları belirleyin. Diğer diller için olduğu gibi kültür ve kullanıcı Arabirimi kültürünü desteği çift yönlü diller için aynıdır.   Ayrıca bkz: [genel Windows Formları ve Web formları için kültüre özgü sınıflar](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) veya [genel Windows Formları ve Web formları için kültüre özgü sınıflar](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ Tarih, saat, para birimi ve diğer bilgileri ile bir uygulamanın nasıl çalıştığını, kültür ve UI kültür ayarları belirleyin. Diğer diller için olduğu gibi kültür ve kullanıcı Arabirimi kültürünü desteği çift yönlü diller için aynıdır. Daha fazla bilgi için [genel Windows Formları ve web formları için kültüre özgü sınıflar](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft ve RightToLeftLayout özellikleri  
- Temel <xref:System.Windows.Forms.Control> forms türettiğiniz, sınıfı içeren bir <xref:System.Windows.Forms.Control.RightToLeft%2A> form denetimlerini ve okuma düzenini değiştirmek için ayarlayabileceğiniz özelliği. Formun ayarlarsanız <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği, varsayılan form üzerinde denetimleri tarafından devralınan bu ayarı. Ancak, aynı zamanda ayarlayabileceğiniz <xref:System.Windows.Forms.Control.RightToLeft%2A> çoğu denetimlerinde Tek tek özellik. Ayrıca bkz: [nasıl yapılır: Görüntüleme sağdan sola metin Windows Forms Genelleştirme için](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Temel <xref:System.Windows.Forms.Control> forms türettiğiniz, sınıfı içeren bir <xref:System.Windows.Forms.Control.RightToLeft%2A> form denetimlerini ve okuma düzenini değiştirmek için ayarlayabileceğiniz özelliği. Formun ayarlarsanız <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği, varsayılan form üzerinde denetimleri tarafından devralınan bu ayarı. Ancak, aynı zamanda ayarlayabileceğiniz <xref:System.Windows.Forms.Control.RightToLeft%2A> çoğu denetimlerinde Tek tek özellik. Ayrıca bkz: [nasıl yapılır: Görüntüleme sağdan sola metin Windows Forms Genelleştirme için](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).  
   
  Etkisini <xref:System.Windows.Forms.Control.RightToLeft%2A> özelliği bir denetimden diğerine gösterebileceğini. Bazı denetimler özelliği yalnızca okuma düzeni olarak ayarlar <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ToolTip> kontrol eder. Diğer denetimlerde <xref:System.Windows.Forms.Control.RightToLeft%2A> okuma düzeni hem Düzen özelliğini değiştirir. Bu içerir <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.CheckBox> kontrol eder. Diğer denetimleri gerektiren <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> özelliği, sağdan sola düzenini yansıtmak için uygulanabilir. Aşağıdaki tabloda Ayrıntılar üzerinde nasıl sağlar <xref:System.Windows.Forms.Control.RightToLeft%2A> ve <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> özellikleri ayrı ayrı Windows Forms denetimlerini etkiler.  
   
@@ -119,5 +119,5 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET Web uygulamaları için çift yönlü destek](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [ASP.NET Web uygulamaları için çift yönlü destek](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))
 - [Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 9aace854a9583268ef7aac6ac1f57534cfdfe1e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47279c5e8fa24accca36280f9a97200982a1451a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515527"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441807"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Nasıl yapılır: Bir forma ToolStripContainer ekleme
 Program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStripContainer> bir Windows forma ve denetimleri ile doldurabilirsiniz.  
@@ -30,7 +30,7 @@ Program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStr
   
 -   System.Drawing System.Text ve System.Windows.Forms derlemelere başvuruları.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) veya [ToolStripContainer görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ToolStripContainer>

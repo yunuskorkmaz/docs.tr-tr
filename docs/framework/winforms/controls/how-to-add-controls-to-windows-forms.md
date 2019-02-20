@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611364"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443178"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a denetimler ekleme
 Çoğu forms formunun yüzeyine denetimler ekleyerek, bir kullanıcı arabirimi (UI) tanımlamak için tasarlanmıştır. A *denetimi* bilgilerini görüntülemek veya kullanıcı girişi kabul etmek için kullanılan bir form üzerinde bir bileşendir. Denetimleri hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "54611364"
   
 ### <a name="to-draw-a-control-on-a-form"></a>Formda bir denetim çizmek için  
   
-1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  İçinde **araç kutusu**, formunuza eklemek istediğiniz denetim tıklayın.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54611364"
   
 ### <a name="to-drag-a-control-to-a-form"></a>Bir forma bir denetimi sürükleyin  
   
-1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Formu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  İçinde **araç kutusu**, formunuza sürükleyin ve istediğiniz denetim tıklayın.  
   

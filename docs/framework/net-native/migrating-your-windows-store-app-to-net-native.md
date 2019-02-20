@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b04465d9141cdf595c4055ba64eb49083c1c514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667904"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443042"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 .NET yerel uygulamaları Windows Store veya Geliştirici bilgisayara statik derlenmesini sağlar. Bu Windows Store uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derlemeden farklıdır veya [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farklar rağmen .NET Native ile uyumluluğu korumak çalışır [.NET için Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Çoğunlukla, .NET için Windows Store uygulamaları iş öğeleri de .NET Native ile çalışır.  Ancak, bazı durumlarda, davranış değişiklikleri karşılaşabilirsiniz. Bu belge aşağıdaki alanlarda standart .NET için Windows Store uygulamaları ve .NET Native arasındaki farklar açıklanır:  
@@ -149,7 +149,7 @@ ms.locfileid: "54667904"
   
  **Çeşitli API'ler**  
   
--   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> Özelliği oluşturur bir <xref:System.PlatformNotSupportedException> özel durum, bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türü için uygulanan değil. GUID kullanılan birincil COM desteği.  
+-   [TypeInfo.GUID](xref:System.Type.GUID) özelliği oluşturur bir <xref:System.PlatformNotSupportedException> özel durum, bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türü için uygulanan değil. GUID kullanılan birincil COM desteği.  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](https://support.microsoft.com/kb/2803771) ve [KB2803755](https://support.microsoft.com/kb/2803755).  
   

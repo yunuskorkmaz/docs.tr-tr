@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: bd8dd1e7a01378ce3eb278993321fd5063715e7c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041154"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442873"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri ek olarak, Windows Forms ActiveX ve özel denetimler ekleyebilirsiniz. İhtiyacınız olan denetimi burada listelenen bulamazsanız, kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz ihtiyacınız [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -228,8 +228,8 @@ Denetimleri Windows formlarında kullanılan bileşenler ve alfabetik bir listes
  [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Adım adım yol gösteren konulara, hangi tür denetimi oluşturmak için kendi denetiminizi oluşturma hakkında diğer bilgi ve öneriler sağlar.  
   
- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Visual Basic 6.0 denetimlerinde ilgili denetimin eşleyen bir tablo sağlar [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Denetimleri artık sınıflarda olduğuna dikkat edin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms ActiveX denetimlerinde kullanmayı açıklar.

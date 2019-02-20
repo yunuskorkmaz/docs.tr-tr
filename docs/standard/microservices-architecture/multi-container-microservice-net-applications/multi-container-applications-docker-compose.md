@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145260"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442236"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama 
 
@@ -91,9 +91,9 @@ Hizmetler bu dosyadaki kök anahtardır. Bu anahtarın altında dağıtmak ve y�
 | webmvc       | Sunucu tarafı c mikro hizmetler kullanan ASP.NET Core MVC uygulaması da dahil olmak üzere kapsayıcı\#|
 | catalog.api  | Katalog ASP.NET Core Web API'si mikro hizmet de dahil olmak üzere kapsayıcı |
 | ordering.api | ASP.NET Core Web API'si sıralama mikro hizmet de dahil olmak üzere kapsayıcı |
-| SQL.Data     | Linux için mikro hizmetler veritabanlarını barındıran SQL Server çalıştıran kapsayıcı |
+| sql.data     | Linux için mikro hizmetler veritabanlarını barındıran SQL Server çalıştıran kapsayıcı |
 | Basket.api   | Sepet ASP.NET Core Web API'si mikro hizmet ile kapsayıcı |
-| Basket.Data  | REDIS çalıştıran kapsayıcısı önbellek hizmeti, sepet veritabanı olarak REDIS önbelleği ile |
+| basket.data  | REDIS çalıştıran kapsayıcısı önbellek hizmeti, sepet veritabanı olarak REDIS önbelleği ile |
 
 ### <a name="a-simple-web-service-api-container"></a>Basit bir Web hizmeti API'si kapsayıcı
 
@@ -458,7 +458,7 @@ Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotn
 
 1.  **SDK'sı**: geliştirme ve derleme senaryolar için.
 2.  **çalışma zamanı**: üretim senaryosu için ve
-3.  **çalışma zamanı deps**: üretim bir senaryo için [kendi içindeki uygulamaları](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+3.  **çalışma zamanı deps**: üretim bir senaryo için [kendi içindeki uygulamaları](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Çalışma zamanı görüntüleri de aspnetcore otomatik ayarı sağlar\_URL'ler 80 numaralı bağlantı noktasını ve daha hızlı başlatma alınırken yardımcı olmak için derleme; öncesi ngend önbellek.
 
@@ -468,7 +468,7 @@ Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotn
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **.NET Core Uygulamaları için Docker Görüntülerinizi Derleme** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Önceki](data-driven-crud-microservice.md)

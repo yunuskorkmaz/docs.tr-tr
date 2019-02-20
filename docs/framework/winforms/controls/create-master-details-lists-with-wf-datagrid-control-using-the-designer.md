@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 5773c52a1cedfe373d25d42ff78720368ecb7a5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c8b1e6240f35032e7c8714138591293b8498dfc
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632783"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442340"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Windows Forms Tasarımcısı'nı kullanarak DataGrid denetimi ile ana-Ayrıntılar listeleri oluşturma
 
@@ -27,10 +27,10 @@ ms.locfileid: "54632783"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Tasarımcıda bir ana-Ayrıntılar listesi oluşturmak için  
   
-1.  İki ekleme <xref:System.Windows.Forms.DataGrid> formu için denetimler. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: Araç kutusu öğeleri Ekle](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  İki ekleme <xref:System.Windows.Forms.DataGrid> formu için denetimler. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: Araç kutusu öğeleri Ekle](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
-    >  Aşağıdaki adımlar Visual Studio kullanan 2005, geçerli olmayan **veri kaynakları** penceresi tasarım zamanı veri bağlama için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) ve [nasıl yapılır: Görüntü ilgili verileri bir Windows Forms uygulamalarındaki](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Aşağıdaki adımlar Visual Studio kullanan 2005, geçerli olmayan **veri kaynakları** penceresi tasarım zamanı veri bağlama için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) ve [nasıl yapılır: Görüntü ilgili verileri bir Windows Forms uygulamalarındaki](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
 2.  İki veya daha fazla tablodan sürükleyin **Sunucu Gezgini** form.  
   

@@ -2,21 +2,15 @@
 title: Windows Hizmet Uygulamaları Geliştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035928"
 ---
 # <a name="develop-windows-service-apps"></a>Windows hizmet uygulamaları geliştirme
 
@@ -31,7 +25,7 @@ Visual Studio veya .NET Framework SDK'sını kullanarak bir hizmet olarak yükle
 
 Bir hizmet ve hizmet uygulamaları diğer ortak proje türlerinden farklılıklar ömrünü Windows hizmet uygulamaları, genel bir bakış sağlar.
 
-[İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[İzlenecek yol: Bileşen tasarımcısında Windows hizmeti uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Visual Basic ve Visual C# içinde bir hizmet oluşturma örneği sağlar.
 
@@ -39,7 +33,7 @@ Visual Basic ve Visual C# içinde bir hizmet oluşturma örneği sağlar.
 
 Hizmet programlamada kullanılan dil öğelerini açıklar.
 
-[Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 
 Oluşturma ve Windows services Windows hizmeti proje şablonunu kullanarak yapılandırma işlemi açıklanır.
 
@@ -51,4 +45,4 @@ Oluşturma ve Windows services Windows hizmeti proje şablonunu kullanarak yapı
 
 <xref:System.ServiceProcess.ServiceInstaller> -Özelliklerini açıklar <xref:System.ServiceProcess.ServiceInstaller> ile birlikte kullanılan sınıfı <xref:System.ServiceProcess.ServiceProcessInstaller> yüklemek ve hizmetinizi kaldırmak için sınıf.
 
-[Şablonlardan proje oluşturma](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) -projeleri açıklar ve bunlar arasında seçim yapma Bu bölümde kullanılan türleri.
+[Şablonlardan proje oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) -projeleri açıklar ve bunlar arasında seçim yapma Bu bölümde kullanılan türleri.

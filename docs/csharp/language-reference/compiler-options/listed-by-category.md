@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546994"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442418"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
@@ -54,7 +54,8 @@ Aşağıdaki derleyici seçeneklerinin kategoriye göre sıralanır. Alfabetik l
 |[-reference](reference-compiler-option.md)|Bir derlemeyi içeren bir dosyanın meta verilerini alır.|
 |-Çözümleyicisi|Bu derleme Çözümleyicileri çalıştırın (kısa form: / a)|
 |-additionalfile|Doğrudan kod üretimini etkilemez, ancak bir hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilir ek dosya adları.|
-
+|-ekleme|Tüm kaynak dosyaları PDB'de ekleyin.|
+|-ekleme:\<dosya listesi >|Belirli dosyaları PDB'de ekleyin.|
 ## <a name="debuggingerror-checking"></a>Hata ayıklama/hata denetimi
 
 |Seçenek|Amaç|

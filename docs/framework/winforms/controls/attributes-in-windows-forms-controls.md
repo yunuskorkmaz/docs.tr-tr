@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: b95f865b673dda14976f671cd2b01e7dde38997c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636072"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441248"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Öznitelikler
 .NET Framework özel denetimleri ve bileşenleri üyelerine uygulayabilirsiniz özniteliklerin çeşitli sağlar. Bazı bu öznitelikler bir sınıfın çalışma zamanı davranışını etkiler ve diğer tasarım zamanı davranışını etkiler.  
@@ -63,5 +63,5 @@ ms.locfileid: "54636072"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Attribute>
 - [Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [Tasarım zamanı desteği sunma](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 442a6175b1b378cf3489314e190c58312a327c01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738595"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442119"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a kullanıcı arabirimi olmadan denetimler ekleme
 Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğer denetimleri farklı bileşenleri bir kullanıcı arabirimi kullanıcıya sağlamaz ve bu nedenle Windows Form Tasarımcısı yüzeyine görüntülenmesi gerekmez. Bir forma bir bileşen eklendiğinde Windows Form Tasarımcısı yeniden boyutlandırılabilir Tepsisi tüm bileşenleri görüntülendiği formun alt kısmındaki görüntüler. Bir denetim, bileşen tepsisine eklendikten sonra bileşeni seçebilir ve herhangi bir form denetiminde olduğu gibi özelliklerini ayarlayın.  
@@ -29,13 +29,13 @@ Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğ
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Bir Windows forma bir bileşen eklemek için  
   
-1.  Formu açın. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Formu açın. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  İçinde **araç kutusu**bir bileşene tıklayın ve formunuza sürükleyin.  
   
      Bileşen, bileşen tepsisinde görünür.  
   
- Ayrıca, bileşenler çalışma zamanında bir forma eklenebilir. Özellikle bileşenleri farklı bir kullanıcı arabirimi denetimleri bir görsel ifade olmadığı için yaygın bir senaryo budur. Aşağıdaki örnekte bir <xref:System.Windows.Forms.Timer> bileşen çalışma zamanında eklenir. (Visual Studio birkaç farklı zamanlayıcılar içerdiğine dikkat edin; bu durumda, bir Windows Forms kullanın <xref:System.Windows.Forms.Timer> bileşeni. Visual Studio'da farklı zamanlayıcılar hakkında daha fazla bilgi için bkz. [sunucu tabanlı zamanlayıcılar giriş](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Ayrıca, bileşenler çalışma zamanında bir forma eklenebilir. Özellikle bileşenleri farklı bir kullanıcı arabirimi denetimleri bir görsel ifade olmadığı için yaygın bir senaryo budur. Aşağıdaki örnekte bir <xref:System.Windows.Forms.Timer> bileşen çalışma zamanında eklenir. (Visual Studio birkaç farklı zamanlayıcılar içerdiğine dikkat edin; bu durumda, bir Windows Forms kullanın <xref:System.Windows.Forms.Timer> bileşeni. Visual Studio'da farklı zamanlayıcılar hakkında daha fazla bilgi için bkz. [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)  
   
 > [!CAUTION]
 >  Bileşenler genellikle etkili bir şekilde çalışması bileşeni için ayarlanmalıdır denetime özgü özelikleri sahiptir. Durumunda, <xref:System.Windows.Forms.Timer> aşağıdaki bileşen, ayarladığınız `Interval` özelliği. Bileşenlerin özellikleri söz konusu bileşen için gerekli olarak ayarlayın, projenize eklerken emin olun.  

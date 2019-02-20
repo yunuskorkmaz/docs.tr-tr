@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: f2648ffc9a733266c463c165f4beb77b7c098ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746292"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441742"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Nasıl yapılır: Bir StatusBar denetimine panel ekleme
 > [!IMPORTANT]
@@ -123,7 +123,7 @@ ms.locfileid: "54746292"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Koleksiyon Düzenleyicisi iletişim kutusu](https://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)
+- [Koleksiyon Düzenleyicisi iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
 - [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
 - [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)

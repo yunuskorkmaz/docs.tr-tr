@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f838f94698375eca27027c4769fcc5f54f96528c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195660"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443191"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider Bileşeni (Windows Forms)
 Windows Forms `HelpProvider` bileşen bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  
@@ -33,4 +33,4 @@ Windows Forms `HelpProvider` bileşen bir HTML Yardım 1.x Yardım dosyası (HTM
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
- Ayrıca bkz: [Windows Forms uygulamalarındaki yardım sistemleri](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).
+ Ayrıca bkz: [Windows Forms uygulamalarındaki yardım sistemleri](../advanced/help-systems-in-windows-forms-applications.md).

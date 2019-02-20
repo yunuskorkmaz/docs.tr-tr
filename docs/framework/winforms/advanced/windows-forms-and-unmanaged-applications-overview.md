@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: a920a81cbcb3ef097cf5ff72233c74b612c2bc64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 964597f2e47cee8f61111a684375e73e8a13107d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645567"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442353"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
 Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uygulamalar ile çalışabilirler. Aşağıdaki bölümlerde, Windows Forms uygulamalarının ve denetimlerinin destekleyen ve destekledikleri değil, senaryolar ve yapılandırmaları açıklanmaktadır.  
@@ -58,8 +58,8 @@ Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uyg
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [COM birlikte çalışabilirlik örnekleri](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)
+- [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [COM birlikte çalışabilirlik örnekleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [COM için Bütünleştirilmiş Kod Paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)

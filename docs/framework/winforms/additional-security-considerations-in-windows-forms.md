@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 2d7f5bfc1532775d092fbee1ef9cdc3c7ed5efc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496663"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442535"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Microsoft Win32 API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği güvenlik ayarlarını etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "54496663"
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|Pano bazı sınırlamalarla birlikte kullanılabilir. Verileri Pano'ya (Kopyala veya Kes komutu işlemi) yerleştirme olanağı kısıtlanır. Pano verilerini yapıştırma, bir metin kutusu gibi kabul iç denetimleri kabul edebilir, ancak kullanıcı denetimleri programlama yoluyla Pano okunamıyor.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|Pano kullanılamaz.|  
   
- Varsayılan olarak, yerel Intranet bölgesine alır <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> erişim ve Internet bölgesi alan <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> erişim. Bu uygulamayı panoya kopyalayabilir, ancak uygulama program aracılığıyla için yapıştırın veya panodan okuma anlamına gelir. Bu kısıtlamalar, başka bir uygulama tarafından panoya kopyalandı programların dosyasından okurken içerik tam güven olmadan engelleyin. Uygulamanızın tam Pano erişimi gerektirir, ancak izinlere sahip değilsiniz, uygulamanız için izinler yükseltmesine gerekecektir. Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Varsayılan olarak, yerel Intranet bölgesine alır <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> erişim ve Internet bölgesi alan <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> erişim. Bu uygulamayı panoya kopyalayabilir, ancak uygulama program aracılığıyla için yapıştırın veya panodan okuma anlamına gelir. Bu kısıtlamalar, başka bir uygulama tarafından panoya kopyalandı programların dosyasından okurken içerik tam güven olmadan engelleyin. Uygulamanızın tam Pano erişimi gerektirir, ancak izinlere sahip değilsiniz, uygulamanız için izinler yükseltmesine gerekecektir. Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="window-manipulation"></a>Pencere işleme  
  <xref:System.Security.Permissions.UIPermission> Sınıfı da pencere işleme ve diğer kullanıcı Arabirimi ile ilgili eylemler ve ilişkili gerçekleştirme izni denetler <xref:System.Security.Permissions.UIPermissionWindow> sabit listesi değeri erişim düzeyini gösterir. Aşağıdaki tablo olası izin düzeylerini gösterir.  
@@ -86,7 +86,7 @@ ms.locfileid: "54496663"
   
  Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanızın istemelisiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yolu düşünmeniz gerekir; çoğu durumda, Windows Forms Win32 API yönetilen bir alternatif sağlar. İşlevler. Mevcut olmadığı anlamına gelir ve uygulamanın yönetilmeyen kod erişmeniz gerekiyorsa uygulama izinlerini yükseltmesine gerekecektir.  
   
- Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [NIB: Genel Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)

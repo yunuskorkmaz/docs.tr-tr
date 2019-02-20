@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709228"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443016"
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde kendi uç noktalar üzerinden gerçekleşir. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve adresi hizmet nerede bulacağını belirler. Her uç nokta, benzersiz bir adres olmalıdır. Uç nokta adresini tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini temsil eden bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmetin güvenlik kimliğini ve isteğe bağlı bir koleksiyonunu temsil eden <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üst bilgileri tanımlamak veya uç nokta ile etkileşime geçmek için adresleme daha ayrıntılı bilgi sağlar. Örneğin, gelen iletileri işlemek nasıl, nerede uç nokta bir yanıt iletisi göndermelidir veya birden fazla örneği bulunduğunda, belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin üst bilgileri belirtebilir.  
@@ -39,7 +39,7 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
  IIS ile barındırırken, yönetmediğiniz <xref:System.ServiceModel.ServiceHost> kendiniz örneği. Taban adresi her zaman IIS'de barındırırken hizmetinin .svc dosyasında belirtilen adrestir. Bu nedenle, göreli bir uç nokta adresleri için IIS tarafından barındırılan hizmet uç noktası kullanmanız gerekir. Tam uç nokta adresi hizmetin dağıtılmasına hatalara neden olabilir. Daha fazla bilgi için [Internet Information Services-Hosted bir WCF Hizmeti dağıtma](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Uç nokta adresleri yapılandırmasında tanımlama  
- Bir uç nokta yapılandırma dosyasında tanımlamak için [ \<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+ Bir uç nokta yapılandırma dosyasında tanımlamak için [ \<uç noktası >](../configure-apps/file-schema/wcf/endpoint-element.md) öğesi.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

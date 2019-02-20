@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505698"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442301"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Uygulama bağlantı noktasını açmanız gerekebilir. Ayrıntılar için bkz [güvenlik duvarı yönergeleri](../../../docs/framework/wcf/samples/firewall-instructions.md) gelen SDK örnekleri.  
   
--   Diğer olası sorunları için örnekleri konusuna [örnekleri bir çalışma grubu ve makineler üzerinde çalışan](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Diğer olası sorunları için örnekleri konusuna [Windows Communication Foundation örneklerini çalıştırma](./samples/running-the-samples.md).  
   
 -   İstemci, Windows kimlik bilgilerini kullanıyor ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos gibi yapılandırın.  
   

@@ -2,12 +2,12 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624944"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443243"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış proje ve öğe şablonlarını Visual Studio'da WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için kullanabileceğiniz şablonlardır.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış pro
  Bir Web projesi var olan proje ise bir hizmet ana bilgisayar dosyası (service1.svc'yi) da oluşturulur.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmeti proje ve öğe şablonu.  
- Bu şablonlar, olduğu gibi bir web hizmeti erişilebilir bir iş akışı, bir iş akışı hizmeti barındıran WCF hizmetleri oluşturun. Ayrı şablonlar, XAML veya zorunlu programlama modelleri için mevcut. Şablonları kullanarak, sıralı veya Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation öğreticiler](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Bu şablonlar, olduğu gibi bir web hizmeti erişilebilir bir iş akışı, bir iş akışı hizmeti barındıran WCF hizmetleri oluşturun. Ayrı şablonlar, XAML veya zorunlu programlama modelleri için mevcut. Şablonları kullanarak, sıralı veya Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir iş akışı oluşturmak](../windows-workflow-foundation/how-to-create-a-workflow.md). İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  İş akışları kullanılan XOML türü yerine kodunu olanları temel visual Studio tasarımcısı daha değişkendir. XOML, oluşturulacak varsayılan iş akışı türü akışıdır.  
   

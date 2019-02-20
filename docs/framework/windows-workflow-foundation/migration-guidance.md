@@ -2,12 +2,12 @@
 title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676880"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441222"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft ikinci ana sürüm Windows Workflow Foundation (WF) yayımladı. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çıkan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; artık WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğunu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yeni bir iş akışı teknoloji vardır (System.Activities. türlerinde\* ad alanları; WF4 başvurulan). WF4 benimsemek ne zaman düşünürken öncelikle zamanlamasını denetlemek bilmek önemlidir.  
@@ -35,7 +35,7 @@ ms.locfileid: "54676880"
  [WF kılavuz: Durum makinesi](https://go.microsoft.com/fwlink/?LinkId=153855)  
  Bir Durum makinesi Etkinlik olmaması durumunda modelleme WF4 denetim akışı açıklanır.  
   
- Bu kılavuz yalnızca .NET Framework 4'ü hedefleyen iş akışı projeleri için geçerli olduğunu unutmayın. Durum makine iş akışları .NET 4.0.1'in Platform güncelleştirme 1 sürümünde eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. .NET 4.0.1'in - 4.0.3 ve .NET Framework 4.5, durum makine iş akışları hakkında daha fazla bilgi için bkz. [4.0.1'in güncelleştirmek için Microsoft .NET Framework 4 özellikleri](https://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) ve [durum makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Bu kılavuz yalnızca .NET Framework 4'ü hedefleyen iş akışı projeleri için geçerli olduğunu unutmayın. Durum makine iş akışları .NET 4.0.1'in Platform güncelleştirme 1 sürümünde eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. .NET 4.0.1'in - 4.0.3 ve .NET Framework 4.5, durum makine iş akışları hakkında daha fazla bilgi için bkz. [4.0.1'in güncelleştirmek için Microsoft .NET Framework 4 özellikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) ve [durum makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF geçiş Kitapçığı: Özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Örnekler ve yeniden tasarlanmasını WF4 WF3 özel etkinliklere yönelik yönergeler sağlar.  

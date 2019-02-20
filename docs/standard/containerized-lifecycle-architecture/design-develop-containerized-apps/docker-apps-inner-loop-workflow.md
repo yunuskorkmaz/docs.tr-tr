@@ -4,12 +4,12 @@ description: Docker uygulamaları geliştirmek için "İç döngü" iş akışı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219094"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442327"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -120,7 +120,7 @@ DockerFile içinde ayrıca isteyin (örneğin, bağlantı noktası 80) çalışm
 
 Docker, uygulamayı çalıştırmak nasıl olduğunu bilmesi için kullanmakta olduğunuz dil/framework bağlı olarak DockerFile içinde ekleyebilirsiniz yapılandırmanın diğer satırlar var. ENTRYPOINT satırla örneği için ihtiyacınız \["dotnet", "MyCustomMicroservice.dll"\] oluşturup hizmetinizi çalıştırmak için bir yaklaşım bağlı olarak birden çok çeşitleri olabilir ancak bir .NET Core uygulamasını çalıştırmak için. .NET uygulaması derleyebilir ve için SDK'sı ve dotnet CLI kullanıyorsanız, biraz farklı olacaktır. ENTRYPOINT satırı artı ek satırlar, uygulamanız için seçtiğiniz dil/platforma bağlı olarak farklı olacaktır alt çizgidir.
 
-**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için Git [ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md).
 
 Kendi görüntülerinizi oluşturma hakkında daha fazla bilgi edinmek için Git [ https://docs.docker.com/engine/\ öğreticiler/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 

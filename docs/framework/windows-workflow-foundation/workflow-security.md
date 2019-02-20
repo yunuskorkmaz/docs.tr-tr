@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 2979f8e50b7fc0d0fab419a89e708517fd271be8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199207"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441778"
 ---
 # <a name="workflow-security"></a>İş akışı güvenliği
 Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birçok farklı teknoloji ile tümleşiktir. Bu teknolojiler ile etkileşim güvenlik sorunları yanlış yapıldığında, iş akışınıza neden olabilir.
@@ -40,12 +40,12 @@ Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication 
 
 -   İş akışlarında kullanılan bir Windows Communication Foundation (WCF) uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için [WCF güvenliğine genel bakış](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Konak düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](https://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için.
+-   Konak düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](https://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için.
 
 -   Gelen iletinin ServiceSecurityContext ayrıca OperationContext erişimi tarafından iş akışı içinde kullanılabilir.
 
 ## <a name="wf-security-pack-ctp"></a>WF güvenlik paketi CTP
- İlk topluluk teknoloji Önizleme (CTP) sürümü bir dizi etkinlikleri ve kendi uygulama temel Microsoft WF güvenlik paketi CTP 1. [Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)içinde [.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF (4) ve [Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx).  Microsoft WF güvenlik paketi CTP 1 etkinlikleri ve hangi kolayca iş akışı kullanarak güvenlikle ilgili çeşitli senaryoları etkinleştirmek nasıl çalışılacağını, tasarımcılar içerir dahil olmak üzere:
+ İlk topluluk teknoloji Önizleme (CTP) sürümü bir dizi etkinlikleri ve kendi uygulama temel Microsoft WF güvenlik paketi CTP 1. [Windows Workflow Foundation](index.md) içinde [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) ve [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF güvenlik paketi CTP 1 etkinlikleri ve hangi kolayca iş akışı kullanarak güvenlikle ilgili çeşitli senaryoları etkinleştirmek nasıl çalışılacağını, tasarımcılar içerir dahil olmak üzere:
 
 1.  Bir istemci kimliği iş akışında kimliğine bürünme
 

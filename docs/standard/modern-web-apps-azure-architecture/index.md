@@ -4,13 +4,8 @@ description: ASP.NET Core ve Azure kullanarak tek parça web uygulamaları oluş
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827870"
 ---
+
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama
 
 ![kapak resmi](./media/cover.png)
@@ -107,7 +102,7 @@ Bu noktalar ve fırsatlar genel olarak anladığından emin olmak için bu kıla
 ## <a name="references"></a>Referanslar
 
 - **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
 >[Next](modern-web-applications-characteristics.md)

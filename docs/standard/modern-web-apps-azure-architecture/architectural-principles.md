@@ -3,13 +3,13 @@ title: Mimari ilkeleri
 description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Mimari ilkeleri
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828104"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442990"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
@@ -99,21 +99,10 @@ Sınıfları yukarıdaki özellikleri veya davranışlardan birini olma gereksin
 
 En azından web uygulamalarının bir veritabanını başka uygulamalarla paylaşma yerine kendi iş modeli için kendi sürdürme deposundan ile kendi sınırlanmış bağlam olması için çaba göstermelisiniz. Sınırlanmış Bağlamlar arasında iletişimi sağlayan iş mantığı için paylaşılan bir veritabanı üzerinden değil, programlama arabirimleri aracılığıyla gerçekleşir ve gerçekleşmesi değişikliklere yanıt olarak gerçekleştirilecek olayları yerleştirin. Ayrıca, kendi ayrı bir sınırlanmış Bağlamlar ideal olarak uygulanan mikro hizmetlere bağlamları harita yakından sınırlanmış.
 
-> ### <a name="references--modern-web-applications"></a>Başvuruları – Modern Web uygulamaları
-> - **Görev ayrımı nettir**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Kapsülleme**  
-> <https://deviq.com/encapsulation/>
-> - **Bağımlılık tersine çevirme ilkesi**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Özel bağımlılıklar İlkesi**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Kendiniz yineleme**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Kalıcılık Ignorance**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Sınırlanmış bağlam**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Ek kaynaklar
+
+* [JAVA tasarım desenleri: İlkeleri](https://java-design-patterns.com/principles/)
+* [Sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Önceki](choose-between-traditional-web-and-single-page-apps.md)

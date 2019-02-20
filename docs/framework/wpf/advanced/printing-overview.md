@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695614"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442067"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricilerin yeni zengin bir yazdırma ve yazdırma sistemi yönetimi sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazı bu yazdırma sistemi geliştirmeler de oluşturma geliştiricilere sunulan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaların ve geliştiricilerin kullanarak yönetilmeyen kod. Bu yeni işlevselliği özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -29,7 +29,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS hakkında  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] bir elektronik belge biçimi, bir Biriktirme dosyası biçimi ve sayfa açıklaması dili içindir. Kullanan açık belge biçimi olan [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tarafından dijital belgeleri oluşturulan, paylaşılan, yazdırılır, görüntülediğiniz arşivlenmiş ve işlemini basitleştirir. Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], bkz: [XPS Web sitesi](https://www.microsoft.com/xps).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] bir elektronik belge biçimi, bir Biriktirme dosyası biçimi ve sayfa açıklaması dili içindir. Kullanan açık belge biçimi olan [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tarafından dijital belgeleri oluşturulan, paylaşılan, yazdırılır, görüntülediğiniz arşivlenmiş ve işlemini basitleştirir. Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], bkz: [XPS belgeleri](/windows/desktop/printdocs/documents).  
   
  Yazdırma için çeşitli teknikler [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tabanlı içerik kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla XPS dosyalarını yazdırma](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha faydalı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmeniz [MXDC_ESCAPE işlevi](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). Windows Forms geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu, ancak bir karma GDI XPS yazdırma yolu yoksa desteği. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
   
@@ -144,6 +144,6 @@ Gerekli olmayan uygulamalar için [!INCLUDE[TLA2#tla_metro](../../../../includes
 - <xref:System.Printing.PrintQueue>
 - [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
 - [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [XPS belgeleri](/windows/desktop/printdocs/documents)
 - [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
 - [Microsoft XPS Belge dönüştürücü (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

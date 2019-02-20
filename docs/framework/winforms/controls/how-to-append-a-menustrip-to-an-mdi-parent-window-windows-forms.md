@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: MDI Üst Penceresine MenuStrip Ekleme (Windows Forms)'
+title: 'Nasıl yapılır: (Windows Forms) MDI üst penceresine MenuStrip ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500644"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442756"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Nasıl yapılır: MDI Üst Penceresine MenuStrip Ekleme (Windows Forms)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Nasıl yapılır: (Windows Forms) MDI üst penceresine MenuStrip ekleme
 Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MDI ana penceresinde farklı olabilir. Örneğin, bir elektronik tablo MDI olabilir ve MDI alt bir grafik olabilir. Bu durumda, farklı türlerde MDI alt pencereleri etkin olarak MDI üst menü içeriğini MDI alt menü içeriğini güncelleştirmek istediğiniz.  
   
  Aşağıdaki yordam kullanır <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, ve <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> MDI üst menüye MDI alt menüsünü eklenecek özellikleri. MDI alt penceresini kapatarak eklenmiş menü MDI üst kaldırır.  
   
- Ayrıca bkz: [Çok Belgeli Arabirim (MDI) uygulamaları](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
+ Ayrıca bkz: [Çok Belgeli Arabirim (MDI) uygulamaları](../advanced/multiple-document-interface-mdi-applications.md).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Bir MDI üst menü öğesi eklemek için  
   

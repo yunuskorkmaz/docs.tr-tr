@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 31c056f823cc38d370d7d23b7e91d682aa571f76
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748908"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441547"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip Denetimi
 <xref:System.Windows.Forms.ContextMenuStrip> Bir denetimle ilişkilendirme bir kısayol menü denetimi sağlar.  
@@ -20,22 +20,22 @@ ms.locfileid: "43748908"
  [ContextMenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  Denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: ContextMenuStrip'ni Bir Denetimle İlişkilendirme](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
+ [Nasıl yapılır: Contextmenustrip'ni bir denetimle ilişkilendirme](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
  Yapma açıklayan bir <xref:System.Windows.Forms.ContextMenuStrip> belirli bir denetimi için kısayol menüsü.  
   
- [Nasıl yapılır: Bir ContextMenuStrip'e Menü Öğeleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
+ [Nasıl yapılır: Bir Contextmenustrip'e menü öğeleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
  Seçilebilir seçenekleri açıklar bir <xref:System.Windows.Forms.ContextMenuStrip>.  
   
- [Nasıl yapılır: ContextMenuStrip Denetim Kenar Boşluklarını ve Görüntü Kenar Boşluklarını Yapılandırma](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
+ [Nasıl yapılır: Yapılandırma ContextMenuStrip denetim kenar boşluklarını ve görüntü kenar boşluklarını](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
  Nasıl özelleştirileceğini açıklar bir <xref:System.Windows.Forms.ContextMenuStrip> çeşitli şekillerde denetim ve görüntü kenar boşluğu özelliklerini ayarlayarak.  
   
- [Nasıl yapılır: ContextMenuStrip Denetimlerinde Denetim Kenar Boşluklarını ve Görüntü Kenar Boşluklarını Etkinleştirme](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
+ [Nasıl yapılır: Kenar boşluklarını ve görüntü kenar boşluklarını ContextMenuStrip denetimlerinde denetim etkinleştir](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Nasıl etkinleştirileceği açıklanır <xref:System.Windows.Forms.ContextMenuStrip> kenar boşluğu açma ve kapatma denetleyin.  
   
- [Nasıl yapılır: ContextMenuStrip Açma Olayını İşleme](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
+ [Nasıl yapılır: ContextMenuStrip açma olayını işleme](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Davranışını özelleştirmek nasıl açıklar bir <xref:System.Windows.Forms.ContextMenuStrip> denetim işleme tarafından <xref:System.Windows.Forms.ToolStripDropDown.Opening> olay.  
   
- Ayrıca bkz: [ContextMenuStrip görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233646\(v=vs.110\)) veya [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
+ Ayrıca bkz: [ContextMenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100)) veya [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100)).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.MenuStrip>  

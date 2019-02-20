@@ -1,13 +1,13 @@
 ---
 title: Null başvuru türleri
 description: Bu makalede eklenen boş değer atanabilir başvuru türleri, genel bir bakış sağlanmaktadır C# 8. Özellik null başvuru özel durumlar, yeni ve mevcut projeler için karşı güvenliği nasıl sağladığını öğreneceksiniz.
-ms.date: 12/03/2018
-ms.openlocfilehash: f18fc9dbce2f934b216b3eb0b80658fec6b44c46
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 02/19/2019
+ms.openlocfilehash: f08e000edc29ed76c6539c27db005182396bfb5a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156488"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443165"
 ---
 # <a name="nullable-reference-types"></a>Null başvuru türleri
 
@@ -25,6 +25,8 @@ Bu yeni özellik, önceki sürümlerinde başvuru değişkenleri işlenmesi üze
 - **Bir başvuru null olabilir**. Bir başvuru türü null'a veya daha sonra null olarak atanan uyarı verilir.
 - **Başvuru null değil olarak kabul edilir**. Derleyici, başvuru türleri başvurusu kaldırıldığında tüm uyarılar sorun değil. (Null olabilir bir değişken başvuru olduğunda boş değer atanabilir başvurularla derleyici uyarıları verir).
 
+Null başvuru türleri'nın eklenmesiyle, amacınız daha net bir şekilde bildirebilirsiniz. `null` Doğru şekilde temsil eden bir değişken değerine başvurmadığından değerdir. Tümünü kaldırmak için bu özelliği kullanmayın `null` kodunuzdan değerleri. Bunun yerine, derleyici ve kodunuzu okuyan diğer geliştiriciler için amacınız bildirmeniz gerekir. Amacınız bildirerek, derleyici, bu amacı ile tutarsız kod yazdığınızda bildirir.
+
 A **boş değer atanabilir bir başvuru türü** aynı söz dizimini kullanarak belirtilen [boş değer atanabilen değer türleri](programming-guide/nullable-types/index.md): bir `?` değişkenin türüne eklenir. Örneğin, bir null olabilen bir dize değişkeni aşağıdaki değişken bildirimini temsil eden `name`:
 
 ```csharp
@@ -41,18 +43,57 @@ name!.Length;
 
 Bu işleci hakkında ayrıntıları edinebilirsiniz [Taslak null başvuru türleri](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md#the-null-forgiving-operator) github'da belirtimi teklifi.
 
+## <a name="nullability-of-types"></a>Null değer alabilme durumunun türleri
+
+Herhangi bir başvuru türü'nın dört birine sahip *nullabilities*, uyarılar oluşturulduğunda açıklar:
+
+- *Nonnullable*: Bu türün değişkenlerine null atanamaz. Bu tür değişkenler referanstan null işaretli olması gerekmez.
+- *Boş değer atanabilir*: Bu türün değişkenlerine null atanabilir. İlk denetlemeden bu tür değişkenleri başvuruluyor `null` bir uyarısına neden olur.
+- *Oblivious*: Bu ön,C# 8 durumu. Bu tür bir değişken başvurusu veya uyarılar olmadan atanmış.
+- *Bilinmeyen*: Bu, genellikle tür parametreleri için kısıtlamalar derleyicinin tür olmalıdır nerede söyleme *boş değer atanabilir* veya *nonnullable*.
+
+Öğesinin bir değişken bildirimi bir tür tarafından denetlenir *boş değer atanabilir bağlam* değişkenin bildirildiği içinde.
+
 ## <a name="nullable-contexts"></a>Boş değer atanabilir bağlamları
 
-Boş değer atanabilir bağlamları derleyici başvuru türü değişkenler yorumlaması için ayrıntılı denetim olanağı. Boş değer atanabilir bağlamı herhangi belirli kaynak satırı, `enabled` veya `disabled`. Öncesi düşünebilirsinizC# tüm kodunuzda derleme olarak 8 derleyici bir `disabled` boş değer atanabilir Bağlam: Herhangi bir başvuru türü null olabilir. Bir başvuru türü değişkenler başvurusu kaldırıldığında uyarı oluşturulmaz.
+Boş değer atanabilir bağlamları derleyici başvuru türü değişkenler yorumlaması için ayrıntılı denetim olanağı. **Boş değer atanabilir bir ek açıklama bağlam** herhangi belirli kaynağını çizgidir `enabled` veya `disabled`. Öncesi düşünebilirsinizC# tüm kodunuzda derleme olarak 8 derleyici bir `disabled` boş değer atanabilir Bağlam: Herhangi bir başvuru türü null olabilir. **Boş değer atanabilir uyarı bağlamı** ayarlanabilir `enabled`, `disabled`, veya `safeonly`. Boş değer atanabilir uyarı bağlamı, akış Analizi ile derleyici tarafından oluşturulan uyarıların belirtir.
 
-Boş değer atanabilir bağlamı, yeni bir pragma kullanılarak denetlenir:
+Boş değer atanabilir ek bağlam ve boş değer atanabilir uyarı bağlamı için bir proje kullanarak ayarlanabilir `NullableContextOptions` öğesinde, `csproj` dosya. Bu öğe, derleyicinin tür öğesinin nasıl yorumlayacağını ve hangi uyarıların oluşturulan yapılandırır. Geçerli ayarlar şunlardır:
 
-- `#nullable enable` boş değer atanabilir bağlamının etkin ayarlar.
-- `#nullable disable` boş değer atanabilir bağlam devre dışı olarak ayarlar.
+- `enable`: Boş değer atanabilir bir ek açıklama bağlam **etkin**. Boş değer atanabilir uyarı bağlamı **etkin**.
+  - Bir başvuru türü değişkenler `string` örneğin atanamayan yararlanabilirsiniz.  Tüm öğesinin uyarıları etkinleştirildi.
+- `disable`: Boş değer atanabilir bir ek açıklama bağlam **devre dışı**. Boş değer atanabilir uyarı bağlamı **devre dışı**.
+  - Bir başvuru türü değişkenler yalnızca önceki sürümleri gibi oblivious C#. Öğesinin tüm uyarıları devre dışı bırakıldı.
+- `safeonly`: Boş değer atanabilir bir ek açıklama bağlam **etkin**. Boş değer atanabilir uyarı bağlamı **safeonly**.
+  - Bir başvuru türü değişkenler nonnullable ' dir. Tüm güvenlik öğesinin uyarıları etkinleştirildi.
+- `warnings`: Boş değer atanabilir bir ek açıklama bağlam **devre dışı**. Boş değer atanabilir uyarı bağlamı **etkin**.
+  - Bir başvuru türü değişkenler oblivious. Tüm öğesinin uyarıları etkinleştirildi.
+- `safeonlywarnings`: Boş değer atanabilir bir ek açıklama bağlam **devre dışı**. Boş değer atanabilir uyarı bağlamı **safeonly**.
+  - Bir başvuru türü değişkenler oblivious. Tüm güvenlik öğesinin uyarıları etkinleştirildi.
 
-Varsayılan null bağlam `disabled`. Bu karar, mevcut kod değişiklikleri ve yeni bir uyarı olmadan derlediğinden anlamına gelir.
+Bu aynı bağlamları projenizde her yerde ayarlamak için yönergeleri de kullanabilirsiniz:
 
-Derleyici, devre dışı bırakılmış bir boş değer atanabilir bağlamında aşağıdaki kuralları kullanır:
+- `#nullable enable`: Boş değer atanabilir uyarı bağlamına ve boş değer atanabilir bir ek açıklamanın bağlamı ayarlar **etkin**.
+- `#nullable disable`: Boş değer atanabilir uyarı bağlamına ve boş değer atanabilir bir ek açıklamanın bağlamı ayarlar **devre dışı**.
+- `#nullable safeonly`: Boş değer atanabilir bir ek açıklama içerik kümesine **etkin**ve uyarı bağlamına **safeonly**.
+- `#nullable restore`: Uyarı bağlamı null ve boş değer atanabilir bir ek açıklama bağlam proje ayarlarına geri yükler.
+- `#pragma warning disable nullable`: Boş değer atanabilir uyarı bağlamı kümesine **devre dışı**.
+- `#pragma warning enable nullable`: Boş değer atanabilir uyarı bağlamı kümesine **etkin**.
+- `#pragma warning restore nullable`: Boş değer atanabilir uyarı bağlamı proje ayarlarına geri yükler.
+- `#pragma warning safeonly nullable`: Boş değer atanabilir uyarı bağlamı ayarlar **safeonly**.
+
+Varsayılan boş değer atanabilir ek açıklaması ve uyarı bağlamı `disabled`. Bu karar, mevcut kod değişiklikleri ve yeni bir uyarı olmadan derlediğinden anlamına gelir.
+
+Arasındaki farklar `enabled` ve `safeonly` boş değer atanabilir uyarı bağlamı null olmayan bir başvuru null başvuru atamak için uyarıları olan. Aşağıdaki atama bir uyarı oluşturur. bir `enabled` uyarı bağlamı, ancak bir `safeonly` uyarı bağlamı. Ancak, ikinci satırın nereye `s` referans edildi, bir uyarı üretir bir `safeonly` Bağlam:
+
+```csharp
+string s = null; // warning when nullable warning context is enabled.
+var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
+```
+
+### <a name="nullable-annotation-context"></a>Boş değer atanabilir bir ek açıklamanın bağlamı
+
+Derleyici, bir boş değer atanabilir devre dışı bırakılmış ek açıklama bağlamında aşağıdaki kuralları kullanır:
 
 - Boş değer atanabilir başvuruları devre dışı bırakılmış bir bağlamda bildiremezsiniz.
 - Tüm başvuru değişkenleri null atanabilir.
@@ -61,25 +102,26 @@ Derleyici, devre dışı bırakılmış bir boş değer atanabilir bağlamında 
 
 Davranış önceki sürümleri aynıdır C#.
 
-Derleyici, etkin bir boş değer atanabilir bağlamında aşağıdaki kuralları kullanır:
+Derleyici, bir boş değer atanabilir etkin ek açıklama bağlamında aşağıdaki kuralları kullanır:
 
 - Herhangi bir değişken başvuru türünde bir **atanamayan başvuru**.
 - Herhangi bir değer atanamayan başvurusu güvenli bir şekilde başvurusu kaldırılabilir.
 - Herhangi bir boş değer atanabilir bir başvuru türü (tarafından belirtildiği `?` Değişken bildiriminde türden sonra) null olabilir. Statik analiz değeri, başvurusu kaldırıldığında, null olmayan değer biliniyorsa belirler. Aksi halde, derleyici sizi uyarır.
 - Null forgiving işleci, bir null başvuru null olmadığını bildirmek için kullanabilirsiniz.
 
-Daha zengin bir dil bilgisi nullable bağlamlarını için önerilen ve gelecekteki önizlemelere kullanılabilir olacak. Boş değer atanabilir bağlamları hakkında daha fazla bilgi için bkz. [boş değer atanabilir başvurusu belirtiminin](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md#nullable-contexts) taslak.
+Bir boş değer atanabilir etkin ek açıklama bağlamındaki `?` bir başvuru türü için eklenen karakter bildirir bir **boş değer atanabilir bir başvuru türü**. **Null forgiveness işleci** (`!`) ifade null olmadığını bildirmek için bir ifade eklenebilir.
 
-## <a name="null-states-of-nullable-references"></a>Null başvuru null durumları
+## <a name="nullable-warning-context"></a>Boş değer atanabilir uyarı bağlamı
 
-Derleyici statik analiz belirlemek için kullanır. **null durumu** herhangi bir null başvuru. Null ya da durumudur **değil null** veya **belki de null**. Derleyici bunun belirlendiğinde bir null başvuru başvuru varsa **belki de null**, derleyici sizi uyarır. Boş değer atanabilir bir başvuru durumu **belki de null** sürece derleyici iki koşullardan birini belirleyebilirsiniz:
+Boş değer atanabilir uyarı bağlamı null yapılabilir bir ek açıklama bağlamdan farklıdır. Yeni ek açıklamaların bile devre dışı bırakıldığında uyarılar etkin hale getirilebilir. Derleyici statik akış analizi belirlemek için kullanır. **null durumu** herhangi bir başvuru. Null ya da durumudur **değil null** veya **belki de null** olduğunda *boş değer atanabilir uyarı bağlamı* değil **devre dışı**. Derleyici bunun belirlendiğinde bir başvuru başvuru değilse **belki de null**, derleyici sizi uyarır. Bir başvuru durumu **belki de null** sürece derleyici iki koşullardan birini belirleyebilirsiniz:
 
 1. Değişken kesinlikle bir null olmayan değere atandı.
-1. Değişkeni null karşı XML'deki başvurmadan önce iade edildi.
+1. Değişkenin veya ifadenin null karşı XML'deki başvurmadan önce iade edilmiş.
 
-NULL olmayan başvurular hiçbir zaman null değerine ayarlanırsa, derleyici zorlar. Bunları bir null olmayan değere başlatmanız gerekir. Aksi takdirde, NULL olmayan bir başvuru başlatılan değildi derleyici sizi uyarır. Boş değer atanabilir bir başvuru NULL olmayan bir başvuru atama her derleyici Ayrıca, sizi uyarır **null olabilir**. Yalnızca atayabilirsiniz boş değer atanabilir bir başvuru NULL olmayan bir başvuru, null başvuru ise gelir **değil null**.
+Bir değişkenin veya ifadenin başvuru her derleyici uyarıları oluşturur. bir **belki de null** boş değer atanabilir uyarı bağlamı olduğunda durumu `enabled` veya `safeonly`. Ayrıca, uyarılar oluşturulur, bir **belki de null** değişkenin veya ifadenin atandığı nonnullable başvuru türüne boş değer atanabilir bir ek açıklamanın bağlamı olduğunda `enabled`.
 
 ## <a name="learn-more"></a>Daha fazla bilgi edinin
 
 - [Taslak null başvuru belirtimi](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md)
 - [Boş değer atanabilir başvuruları öğreticiye giriş](tutorials/nullable-reference-types.md)
+- [Var olan bir geçiş için boş değer atanabilir başvuruları kod tabanı](tutorials/upgrade-to-nullable-references.md)

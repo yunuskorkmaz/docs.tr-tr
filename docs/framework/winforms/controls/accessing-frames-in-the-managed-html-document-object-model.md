@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653833"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443230"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
@@ -38,8 +38,6 @@ Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belge
   
  Bu kural kullanarak açın ve windows için de geçerlidir. <xref:System.Windows.Forms.HtmlWindow.Open%2A> ve <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> yöntemleri. Açtığınız pencere barındırılan sayfasından farklı bir etki alanında ise <xref:System.Windows.Forms.WebBrowser> denetimi, kullanılamaz bu pencereyi taşımak ya da içeriğini inceleyin. Kullanıyorsanız bu sınırlamalar da uygulanır <xref:System.Windows.Forms.WebBrowser> denetimini Windows Forms tabanlı uygulamanızı dağıtmak için kullanılan Web sitesinden farklı bir Web sitesini görüntülemek için. Kullanırsanız [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamanızı bir Web sitesinden ve yüklemek için dağıtım teknolojisini <xref:System.Windows.Forms.WebBrowser> Web sitesi B görüntülemek için access Web sitesinin B'nin veri mümkün olmayacaktır.  
   
- Siteler arası betik hakkında daha fazla bilgi için bkz. [hakkında çerçeveler betik oluşturma ve güvenlik](https://msdn.microsoft.com/library/ms533028.aspx).  
-  
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ÇERÇEVE öğesi &#124; nesne çerçeve](https://msdn.microsoft.com/library/ms535250.aspx)
+- [\<Çerçeve > öğesi](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
