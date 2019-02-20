@@ -259,6 +259,7 @@
 ### [C# 6’yi keşfetme](csharp/tutorials/exploration/csharp-6.yml)
 ### [Boş değer atanabilir başvuru türleri ile çalışma](csharp/tutorials/nullable-reference-types.md)
 ### [Asenkron akışlar oluşturma ve kullanma](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [Bir uygulamayı boş değer atanabilir başvuru türlerine yükseltme](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [Konsol Uygulaması](csharp/tutorials/console-teleprompter.md)
 ### [REST İstemcisi](csharp/tutorials/console-webapiclient.md)
 ### [C# ve .NET içinde devralma](csharp/tutorials/inheritance.md)
