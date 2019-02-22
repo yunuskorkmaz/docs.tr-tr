@@ -1,13 +1,13 @@
 ---
 title: Diziler
 description: Nasıl kullanacağınızı öğrenin F# büyük, varsa, dizileri, veri koleksiyonu sıralı ancak mutlaka tüm öğeleri kullanılacak beklemiyoruz.
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612003"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583933"
 ---
 # <a name="sequences"></a>Diziler
 
@@ -98,7 +98,7 @@ Sonsuz sıraları kullanarak tanımlayabilirsiniz [Seq.initInfinite](https://msd
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) hesaplama işlevden bir duruma alır ve dizideki sonraki her öğe oluşturmak için bunu dönüştüren bir sıra üretir. Durum işlem her öğe için kullanılır ve her öğenin hesaplanan gibi değiştirebilirsiniz yalnızca bir değerdir. İkinci bağımsız değişkeni `Seq.unfold` sırasını başlatmak için kullanılan ilk değerdir. `Seq.unfold` sıra döndürerek sonlandırması sağlar durumu için bir seçenek türü kullanır `None` değeri. Aşağıdaki kod sırası, iki örnek gösterir `seq1` ve `fib`, tarafından oluşturulan bir `unfold` işlemi. Birincisi, `seq1`, yalnızca basit bir sıra numarası 100 adede kadar olan. İkinci `fib`, kullandığı `unfold` Fibonacci sırayı hesaplamak için. Fibonacci dizideki her öğe için önceki iki Fibonacci sayıların toplamı olduğundan, durum değeri önceki iki sayı dizisindeki oluşan bir demet ' dir. İlk değer `(1,1)`, dizideki ilk iki sayı.
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) hesaplama işlevden bir duruma alır ve dizideki sonraki her öğe oluşturmak için bunu dönüştüren bir sıra üretir. Durum işlem her öğe için kullanılır ve her öğenin hesaplanan gibi değiştirebilirsiniz yalnızca bir değerdir. İkinci bağımsız değişkeni `Seq.unfold` sırasını başlatmak için kullanılan ilk değerdir. `Seq.unfold` sıra döndürerek sonlandırması sağlar durumu için bir seçenek türü kullanır `None` değeri. Aşağıdaki kod sırası, iki örnek gösterir `seq1` ve `fib`, tarafından oluşturulan bir `unfold` işlemi. Birincisi, `seq1`, yalnızca basit bir sıra sayıları 20 ile. İkinci `fib`, kullandığı `unfold` Fibonacci sırayı hesaplamak için. Fibonacci dizideki her öğe için önceki iki Fibonacci sayıların toplamı olduğundan, durum değeri önceki iki sayı dizisindeki oluşan bir demet ' dir. İlk değer `(1,1)`, dizideki ilk iki sayı.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 

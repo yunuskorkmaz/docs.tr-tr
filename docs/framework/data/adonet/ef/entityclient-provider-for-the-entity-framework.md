@@ -2,12 +2,12 @@
 title: Entity Framework için EntityClient sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826453"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583985"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient sağlayıcısı
 EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
@@ -24,13 +24,12 @@ EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için E
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.EntityClient.EntityCommand> nesne ve atadıkları kişiler bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu metni için kendi <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliği. Bu [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu kavramsal model liste fiyatından göre sıralanmış ürünleri ister. Aşağıdaki kod, depolama modelinin olanağıyla hiç sahiptir.  
   
- `EntityCommand cmd = conn.CreateCommand();`  
-  
- `cmd.CommandText = @"``SELECT VALUE p`  
-  
- `FROM AdventureWorksEntities.Product AS p`  
-  
- `ORDER BY p.ListPrice ";`  
+ ```csharp
+EntityCommand cmd = conn.CreateCommand();
+cmd.CommandText = @"SELECT VALUE p
+  FROM AdventureWorksEntities.Product AS p
+  ORDER BY p.ListPrice";
+```
   
 ## <a name="executing-queries"></a>Sorgular yürütme  
  Bir sorgu yürütüldüğünde, ayrıştırılmış ve kurallı komut ağacına dönüştürülür. Tüm sonraki işleme, komut ağacı üzerinde gerçekleştirilir. Komut ağacı olduğu anlamına gelir iletişimin <xref:System.Data.EntityClient> ve arka plandaki [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı gibi <xref:System.Data.SqlClient>.  

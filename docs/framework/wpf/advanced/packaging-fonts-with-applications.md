@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632354"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583426"
 ---
 # <a name="packaging-fonts-with-applications"></a>Uygulamalarla Yazı Tiplerini Paketleme
 Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.  
@@ -31,7 +31,7 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ve [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] yazı tiplerinin bir tür bayrak, yazı tipi katıştırma lisans hakları yazı tipini gösteren fsType içerir. Ancak, yalnızca bir belge – içinde depolanan katıştırılmış yazı tiplerini başvurduğu bu tür bir uygulamada katıştırılmış yazı tipi başvurmuyor. Bir yazı tipi için haklar oluşturarak yazı tipi alabilirsiniz bir <xref:System.Windows.Media.GlyphTypeface> nesne ve bunlara başvurma kendi <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> özelliği. "İşletim sistemi/2 ve Windows ölçümlerini" bölümüne bakın [OpenType Belirtimi](https://www.microsoft.com/typography/otspec/os2.htm) fsType bayrağı hakkında daha fazla bilgi için.  
   
- [Microsoft Typography](https://www.microsoft.com/typography/links/) Web sitesi belirli yazı tipleriyle veya özel bir çalışma için yazı tipi sağlayıcısı bulun yardımcı olabilecek ilgili bilgiler içerir.  
+ [Microsoft Typography](https://docs.microsoft.com/typography/) Web sitesi belirli yazı tipleriyle veya özel bir çalışma için yazı tipi sağlayıcısı bulun yardımcı olabilecek ilgili bilgiler içerir.  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>İçerik öğeleri olarak yazı tipi ekleme  
@@ -175,7 +175,7 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft tipografi: Bağlantılar, haber ve kişiler](https://www.microsoft.com/typography/links/)
+- [Microsoft tipografi: Bağlantılar, haber ve kişiler](https://docs.microsoft.com/typography/)
 - [OpenType Belirtimi](https://www.microsoft.com/typography/otspec/)
 - [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [Örnek OpenType Yazı Tipi Paketi](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

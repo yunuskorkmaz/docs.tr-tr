@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573406"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583673"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parçasıdır. Simetrik algoritmalar, bir anahtarın ve başlangıç vektörünün (IV) oluşturulmasını gerektirir. Anahtar, verinizin şifresini çözmemesi gereken herkesten gizli tutulmalıdır. IV'nin gizli olması gerekmez ancak her oturum için değiştirilmesi gerekir. Asimetrik algoritmalar bir ortak anahtarın, bir de özel anahtarın oluşturulmasını gerektirir. Ortak anahtar herhangi birine verilebilirken, özel anahtar yalnızca ortak anahtar ile şifrelenen verilerin şifresini çözecek tarafça bilinmelidir. Bu bölümde, hem simetrik, hem de asimetrik algoritmalar için anahtarların nasıl oluşturulacağı ve yönetileceği açıklanmaktadır.  
@@ -34,11 +34,11 @@ Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parças
  Aşağıdaki örnek, TripleDES algoritmasını uygulayan <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> sınıfının yeni bir örneğinin oluşturulmasını gösterir.  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
 ```  
   
  Önceki kod yürütüldüğünde, yeni bir anahtar ve IV oluşturulur ve bulundukları **anahtarı** ve **IV** özellikleri, sırasıyla.  
@@ -46,15 +46,15 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
  Bazen birden çok anahtar oluşturmanız gerekebilir. Bu durumda, Simetrik algoritma uygulayan bir sınıf yeni bir örneğini oluşturabilir ve çağırarak yeni bir anahtar ve IV oluşturma **GenerateKey** ve **Generateıv** yöntemleri. Aşağıdaki kod örneği, simetrik şifreleme sınıfının yeni bir örneğini yapıldıktan sonra yeni anahtar ve Iv'lerin oluşturma işlemini gösterir.  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
-TDES.GenerateIV()  
-TDES.GenerateKey()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+tdes.GenerateIV()  
+tdes.GenerateKey()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
-TDES.GenerateIV();  
-TDES.GenerateKey();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
+tdes.GenerateIV();  
+tdes.GenerateKey();  
 ```  
   
  Önceki kod yürütüldüğünde, bir anahtar ve IV oluşturulur, yeni bir örneğini **TripleDESCryptoServiceProvider** yapılır. Başka bir anahtar ve IV oluşturulur **GenerateKey** ve **Generateıv** yöntemi çağrılır.  
@@ -76,16 +76,16 @@ TDES.GenerateKey();
   
 ```vb  
 'Generate a public/private key pair.  
-Dim RSA as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
+Dim rsa as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
 'Save the public key information to an RSAParameters structure.  
-Dim RSAKeyInfo As RSAParameters = RSA.ExportParameters(false)  
+Dim rsaKeyInfo As RSAParameters = rsa.ExportParameters(false)  
 ```  
   
 ```csharp  
 //Generate a public/private key pair.  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
 //Save the public key information to an RSAParameters structure.  
-RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
+RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.

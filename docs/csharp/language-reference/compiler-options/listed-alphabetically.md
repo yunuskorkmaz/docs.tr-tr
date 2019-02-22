@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 439366791fcd8fa40bb3fe8fc2982272798120ef
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441612"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583660"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -38,6 +38,8 @@ Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel
 |[-doc](doc-compiler-option.md)|Oluşturmak için bir XML belgesi dosyasını belirtir.|
 |-ekleme|Tüm kaynak dosyaları PDB'de ekleyin.|
 |-ekleme:\<dosya listesi >|Belirli dosyaları PDB'de ekleyin.|
+|-errorendlocation|Çıkış satırı ve sütunu her hatanın bitiş konumunun.|
+|-errorlog:\<file>|Tüm derleyici ve Çözümleyicisi tanılama günlük dosyayı belirtin.|
 |[-errorreport](errorreport-compiler-option.md)|Derleyici iç hatalarının nasıl işleneceğini belirtir: istemi, Gönder veya yok. Varsayılan, Yok'tur.|
 |[-filealign](filealign-compiler-option.md)|Çıkış dosyası bölümleri için kullanılan hizalamayı belirtir.|
 |[-fullpaths](fullpaths-compiler-option.md)|Derleyicinin tam olarak nitelenmiş yollar oluşturmasını neden olur.|
@@ -70,12 +72,14 @@ Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel
 |[-reference](reference-compiler-option.md)|Belirtilen derleme dosyalarından meta verilere başvurur.|
 |[-refout](refout-compiler-option.md)|Birincil derlemesi ek olarak bir başvuru bütünleştirilmiş kodu oluşturur.|
 |[-refonly](refonly-compiler-option.md)|Birincil bir derleme yerine bir başvuru bütünleştirilmiş kodu oluşturur.|
+|-reportanalyzer|Yürütme süresi gibi ek Çözümleyicisi bilgileri rapor.|
 |[-resource](resource-compiler-option.md)|Belirtilen kaynak katıştırır.|
 |-Kural kümesi:\<dosyası >|Belirli tanılama devre dışı bırakan bir kural kümesi dosyası belirtin.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|
 |[-target](target-compiler-option.md)|Dört seçenekten birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-hedef: Modül](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|Sağlar [güvenli](../../../csharp/language-reference/keywords/unsafe.md) kod.|
 |[-utf8output](utf8output-compiler-option.md)|Çıkışları derleyici iletilerini UTF-8 kodlaması.|
+|-Sürüm|Derleyicinin sürüm numarası ve çıkış görüntüler.|
 |[-warn](warn-compiler-option.md)|Uyarı düzeyi (0-4) ayarlar.|
 |[-warnaserror](warnaserror-compiler-option.md)|Belirli uyarıları hata olarak bildirir.|
 |[-win32icon](win32icon-compiler-option.md)|Bu simge, çıkış için kullanır.|

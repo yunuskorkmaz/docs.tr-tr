@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516830"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583699"
 ---
 # <a name="impersonating-and-reverting"></a>Kimliğe Bürünme ve Geri Alma
 Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç edinme gerekebilir. Örneğin, ASP.NET tabanlı uygulamanız farklı zamanlarda birden çok kullanıcı adına hareket gerekebilir. Uygulamanızı yönetici Internet Information Services (IIS) temsil eden bir belirteci kabul edin, bu kullanıcının kimliğine bürün, bir işlemi gerçekleştirmek ve önceki kimliğine geri dönülemiyor. Ardından, daha az haklarına sahip bir kullanıcıyı temsil eden IIS belirtecinden kabul, başka bir işlem gerçekleştirmek ve yeniden geri.  
@@ -29,31 +29,31 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
 2.  Yeni bir örneğini oluşturma **WindowsIdentity** belirtece geçirerek sınıfı. Aşağıdaki kod, bu çağrıyı gösterir. burada `hToken` Windows belirteci temsil eder.  
   
     ```csharp  
-    WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
+    WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
     ```  
   
     ```vb  
-    Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
+    Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
 3.  Kimliğe bürünme, yeni bir örneğini oluşturarak başlayın <xref:System.Security.Principal.WindowsImpersonationContext> sınıfı ve onunla başlatma <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> başlatılmış sınıfının, aşağıdaki kodda gösterildiği yöntemi.  
   
     ```csharp  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
     ```  
   
     ```vb  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
 4.  Artık bürünülecek gerektiğinde, çağrı <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> kimliğe bürünme, aşağıdaki kodda gösterildiği şekilde geri dönmek için yöntemi.  
   
     ```csharp  
-    MyImpersonation.Undo();  
+    myImpersonation.Undo();  
     ```  
   
     ```vb  
-    MyImpersonation.Undo()  
+    myImpersonation.Undo()  
     ```  
   
  Kodu zaten eklenmiş güvenilen bir <xref:System.Security.Principal.WindowsPrincipal> nesne iş parçacığı için örnek yöntemi çağırabilirsiniz **doğrulamasından**, bir hesap belirteci almaz. Bu yalnızca ne zaman yararlı olduğuna dikkat edin **WindowsPrincipal** iş parçacığında nesnesini temsil eden görevli işlemin şu anda Yürütülüyor bir başka bir kullanıcı. Örneğin, Windows kimlik doğrulaması açık ve kapalı kimliğe bürünme ASP.NET kullanarak bu durumla karşılaşabilirsiniz. Bu durumda, işlem geçerli sorumlu sayfa erişiyor Windows kullanıcı temsil ederken, Internet Information Services (IIS) içinde yapılandırılmış bir hesap altında çalışıyor.  

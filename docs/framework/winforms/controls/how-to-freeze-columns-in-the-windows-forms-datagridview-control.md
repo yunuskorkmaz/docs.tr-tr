@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: b7a657af2d6caf2217aedf56422f135f0b2d667e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e65f0fd329f624aa186748d298257b15617c17
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619428"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584271"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView denetiminde sütunları dondurma
 Kullanıcılar, Windows formlarında gösterilen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetimi, bazen için ihtiyaç duydukları tek bir sütun veya sütun kümesi için sık bakın. Örneğin, müşteri bilgilerinin birçok sütunları içeren bir tablo görüntülerken, müşteri adına dışında görünür bölgesi için diğer sütunları etkinleştirme sırasında her zaman görüntülemek yararlıdır.  
@@ -26,7 +26,7 @@ Kullanıcılar, Windows formlarında gösterilen verileri görüntülerken <xref
   
  <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> Özelliği sütunun sütun her zaman bir grid içinde görünür olup olmadığını belirler.  
   
- Visual Studio'da bu görevi için desteği yoktur.  Ayrıca bkz: [nasıl yapılır: Sütunları dondurma Windows Forms DataGridView denetimi Tasarımcısı'nı kullanarak](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\)).  
+ Visual Studio'da bu görevi için desteği yoktur.  Ayrıca bkz: [nasıl yapılır: Sütunları dondurma Windows Forms DataGridView denetimi Tasarımcısı'nı kullanarak](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-freeze-a-column-programmatically"></a>Bir sütunu programlı olarak dondurmak için  
   

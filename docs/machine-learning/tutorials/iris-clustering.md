@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 03a584095badf4b1c3318833f6e67367f27b32ba
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093612"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583725"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Öğretici: Küme Iris çiçek kümeleme learner ML.NET ile kullanma
 
@@ -84,7 +84,7 @@ Varolan sınıf tanımına kaldırın ve sınıfları tanımlar aşağıdaki kod
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` giriş verisi sınıfıdır ve veri kümesindeki her bir özellik tanımı yok. Kullanım [sütun](xref:Microsoft.ML.Data.ColumnAttribute) veri kümesi dosyasında kaynak sütun dizinlerini belirtmek için özniteliği.
+`IrisData` giriş verisi sınıfıdır ve veri kümesindeki her bir özellik tanımı yok. Kullanım [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) veri kümesi dosyasında kaynak sütun dizinlerini belirtmek için özniteliği.
 
 `ClusterPrediction` Sınıfı temsil eder, uygulanan kümeleme modeli çıktısını bir `IrisData` örneği. Kullanım [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) bağlanacak öznitelik `PredictedClusterId` ve `Distances` alanlarını **PredictedLabel** ve **puanı** sütunları sırasıyla. Kümeleme görev olması durumunda bu sütun şu anlama gelir:
 
@@ -127,7 +127,7 @@ Aşağıdaki kodu ekleyin `Main` yöntemi veri yükleme şekilde ayarlamak için
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Sütun adları ve dizinlerini tarafından tanımlanan şema eşleştiğini Not `IrisData` sınıfı. <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> Değeri belirtir `float` türü.
+Kullanım [genel `CreateTextLoader` ](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) dataset şemanın çıkarsandığı yöntemi `IrisData` sınıf tanımını.
 
 Kullanım örneği <xref:Microsoft.ML.Data.TextLoader> oluşturmak için örnek bir <xref:Microsoft.Data.DataView.IDataView> temsil eden bir eğitim veri kümesi için veri kaynağı örneği:
 

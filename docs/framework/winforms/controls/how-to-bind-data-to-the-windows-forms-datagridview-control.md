@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9b72766ce2e93472a07eebdf7bf59cc7b0328d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220581"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584063"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView denetimine veri bağlama
 
 <xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli veri kaynakları için bağlayabilirsiniz için standart Windows Forms veri bağlama modelini destekler. Genellikle, adlarınıza bir <xref:System.Windows.Forms.BindingSource> , veri kaynağı ile etkileşimi yönetir. <xref:System.Windows.Forms.BindingSource> Seçerek ya da veri konumu değiştirirken büyük esneklik sağlayan bir Windows Forms veri kaynağı olabilir. Veri kaynakları hakkında daha fazla bilgi için <xref:System.Windows.Forms.DataGridView> destekler, bkz [DataGridView denetimine genel bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
 
-Visual Studio DataGridView denetimine veri bağlama için kapsamlı destek sunar. Daha fazla bilgi için [nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetimine veri bağlama](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+Visual Studio DataGridView denetimine veri bağlama için kapsamlı destek sunar. Daha fazla bilgi için [nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetimine veri bağlama](bind-data-to-the-datagrid-using-the-designer.md).  
 
 DataGridView denetimine veri bağlama için:
 
@@ -40,7 +40,7 @@ Bu örnek gerektirir:
 
 - Sistem, System.Windows.Forms, System.Data ve System.Xml derlemesine ilişkin başvurular.  
 
-Derleme ve bu örneği çalıştırmak için kodun içine yapıştırın *Form1* kod dosyasına yeni bir Windows Forms projesi.  Daha fazla bilgi için [nasıl yapılır: Derleme ve Visual Studio kullanarak tam bir Windows Formları kod örneği çalıştırma](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)). Binanın öğrenmek için C# veya bkz. Visual Basic komut satırı [csc.exe ile komut satırı derleme](/csharp/language-reference/compiler-options/command-line-building-with-csc-exe) veya [komut satırından derleme](/visual-basic/reference/command-line-compiler/building-from-the-command-line).  
+Derleme ve bu örneği çalıştırmak için kodun içine yapıştırın *Form1* kod dosyasına yeni bir Windows Forms projesi. Binanın öğrenmek için C# veya bkz. Visual Basic komut satırı [csc.exe ile komut satırı derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 Doldurma `connectionString` örnekte SQL Server Northwind örnek veritabanı bağlantınız için değerleri değişken. Windows kimlik doğrulama, tümleşik güvenlik olarak da bilinir, bağlantı dizesinde parola depolamak daha veritabanına bağlanmak için daha güvenli bir yoludur. Bağlantı güvenliği hakkında daha fazla bilgi için bkz: [bağlantı bilgilerini korumak](../../data/adonet/protecting-connection-information.md).  
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579530"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584388"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Forms için yazar denetimleri
 Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlamak veya verileri işlemek, kullanıcı girişi kabul edebilir, olaylara yanıt vermesi veya herhangi bir sayıda kullanıcı ve uygulama bağlanma diğer işlevlerini gerçekleştirmek. Bir denetimi bir bileşen aslında bir grafik arabirimine sahip olduğundan, bir bileşen mu, yanı sıra kullanıcı etkileşimi sağlamak herhangi bir işlevini hizmet verebilir. Denetimler belirli bir amaca hizmet eder oluşturulur ve denetimleri yazma başka bir programlama görevdir. Aklınızda yazma işleminin hızlandırılmasının denetimine genel bakış aşağıdaki adımları temsil eder. Bağlantılar tek tek adımlara ek bilgi sağlar.  
   
 > [!NOTE]
->  Web formlarında kullanmak üzere özel bir denetim yazmak istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Web formlarında kullanmak üzere özel bir denetim yazmak istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
 >   
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -49,7 +49,7 @@ Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil 
   
 9. Tasarım iyileştirme yineleyin.  
   
-10. Paketleme ve denetim dağıtma. Ayrıntılar için bkz [uygulamaları dağıtma, hizmetleri ve bileşenleri](https://msdn.microsoft.com/library/wtzawcsz).  
+10. Paketleme ve denetim dağıtma. Ayrıntılar için bkz [Visual Studio'daki dağıtımı da ilk bakmak](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: Visual Basic ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

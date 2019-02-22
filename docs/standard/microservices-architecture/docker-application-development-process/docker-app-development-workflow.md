@@ -4,12 +4,12 @@ description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480107"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584310"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -489,7 +489,7 @@ Burada önemli olan nokta Şekil 5-12'de gösterildiği gibi Visual Studio 2017'
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Test etme ve dağıtma düzenleyicilerle hakkında bir Not
 
-Docker compose up ve docker run komutları (veya çalışan ve kapsayıcıları Visual Studio'da hata ayıklama) kapsayıcıları geliştirme ortamınızda test etmek için yeterli. Ancak burada hedef gibi düzenleyicileri, üretim dağıtımları için bu yaklaşım kullanmamalısınız [Kubernetes](https://kubernetes.io/) veya [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Kubernetes kullanıyorsanız kullanmak zorunda [pod'ların](https://kubernetes.io/docs/concepts/workloads/pods/pod/) kapsayıcıları düzenlemek için ve [Hizmetleri](https://kubernetes.io/docs/concepts/services-networking/service/) bunları ağ. Ayrıca [dağıtımları](https://kubernetes.io/docs/tutorials/k8s201/#deployments) pod oluşturulmasını ve değiştirilmesini düzenlemek için.
+Docker compose up ve docker run komutları (veya çalışan ve kapsayıcıları Visual Studio'da hata ayıklama) kapsayıcıları geliştirme ortamınızda test etmek için yeterli. Ancak burada hedef gibi düzenleyicileri, üretim dağıtımları için bu yaklaşım kullanmamalısınız [Kubernetes](https://kubernetes.io/) veya [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Kubernetes kullanıyorsanız kullanmak zorunda [pod'ların](https://kubernetes.io/docs/concepts/workloads/pods/pod/) kapsayıcıları düzenlemek için ve [Hizmetleri](https://kubernetes.io/docs/concepts/services-networking/service/) bunları ağ. Ayrıca [dağıtımları](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) pod oluşturulmasını ve değiştirilmesini düzenlemek için.
 
 ![6 - uygulamanızı veya mikro Hizmetleri test etme](./media/image17.png)
 

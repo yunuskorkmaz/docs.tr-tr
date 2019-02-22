@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129525"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583959"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -57,20 +57,20 @@ Karakter ve dize işleme C# dilinde Unicode kodlaması kullanır. `char` Türün
 Bu özetler C#ait sayısal türler.
 
 * İmzalı tam sayı
-    - `sbyte`:  8 bit, -128-127 aralığında
-    - `short`: 16 bit, -32.768 32.767 arasındadır
-    - `int`  : 32 bit, -2.147.483.648 2,147,483,647 aralığındaki
-    - `long` : 64 bit, –9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile arasındadır
+    - `sbyte`:  8 bit, -128 ile 127 arasındadır
+    - `short`: 16 bit ile 32.767 -32.768 arasındadır
+    - `int`  : 32 bit, aralık 2,147,483,648 ila 2,147,483,647
+    - `long` : 64 bit,-9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile arasındadır
 * İşaretsiz tamsayı
-    - `byte`   :  8 bit aralık 0 - 255
-    - `ushort` : 16 bit aralık 0 - 65,535
-    - `uint`   : Aralık 0 - 32 bitlik 4.294.967.295'e
-    - `ulong`  : 64 bit aralık 0 - 18,446,744,073,709,551,615
+    - `byte`   :  8 bit, 0 ile 255 arasında
+    - `ushort` : 16 bit, 0 ile 65.535 arasında
+    - `uint`   : 32 bit ve aralığı 0'dan 4.294.967.295'e kadar
+    - `ulong`  : 64 bit, aralığı 0-18,446,744,073,709,551,615
 * Kayan nokta
-    - `float`  : 32 bit aralığı 1.5 × 10'dan<sup>−45</sup> -3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
-    - `double` : 64 bit aralığı 5.0 × 10'dan<sup>−324</sup> -1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
+    - `float`  : 32 bit aralığı 1.5 × 10'dan<sup>-45</sup> 3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
+    - `double` : 64 bit aralığı 5.0 × 10'dan<sup>-324</sup> 1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
 * Ondalık
-    - `decimal` : 128 bit aralığı olan en az –7.9 × 10<sup>−28</sup> -7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
+    - `decimal` : 128 bit aralığı olan en az-7.9 × 10<sup>-28</sup> 7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
     
 C# programları kullanım *tür bildirimleri* yeni türler oluşturmak için. Bir tür bildirimi, adı ve yeni türün üyeleri belirtir. Beş C#'s türleri kategorilerini kullanıcı tanımlanabilir: Sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 

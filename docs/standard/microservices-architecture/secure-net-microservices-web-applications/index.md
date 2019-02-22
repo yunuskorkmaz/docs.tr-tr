@@ -19,7 +19,7 @@ Mikro hizmet senaryolarda, kimlik doğrulaması genellikle merkezi olarak yönet
 
 **Şekil 9-1**. Bir API ağ geçidi ile merkezi kimlik doğrulaması
 
-Hizmetleri doğrudan erişilebilir, kimlik doğrulama hizmeti Azure Active Directory veya bir güvenlik belirteci hizmeti (STS), kullanıcıların kimliklerini doğrulamak için kullanılabilir davranan bir özel kimlik doğrulama mikro hizmet gibi. Güven kararları güvenlik belirteçleri veya tanımlama bilgileri ile hizmetler arasında paylaşılır. (Bu belirteçler, gerekirse, ASP.NET Core ile uygulamalar arasında paylaşılabilir [veri koruma hizmetleri](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) Bu düzen, Şekil 9-2'de gösterilmiştir.
+Hizmetleri doğrudan erişilebilir, kimlik doğrulama hizmeti Azure Active Directory veya bir güvenlik belirteci hizmeti (STS), kullanıcıların kimliklerini doğrulamak için kullanılabilir davranan bir özel kimlik doğrulama mikro hizmet gibi. Güven kararları güvenlik belirteçleri veya tanımlama bilgileri ile hizmetler arasında paylaşılır. (Bu belirteçleri uygulayarak gerekirse ASP.NET Core uygulamaları arasında paylaşılabilir [tanımlama bilgisi paylaşımını](/aspnet/core/security/cookie-sharing).) Bu düzen, Şekil 9-2'de gösterilmiştir.
 
 ![Mikro hizmetler doğrudan erişildiğinde, kimlik doğrulama ve yetkilendirme içerir, güven, mikro hizmetler arasında paylaşılan adanmış bir mikro hizmet veren bir güvenlik belirteci tarafından işlenir.](./media/image2.png)
 
@@ -271,7 +271,7 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı yerel bir sertifika yetkil
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Tanımlama bilgilerini uygulamalar arasında paylaşma** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Kimliğe giriş** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı yerel bir sertifika yetkil
 - **Michell Anicas. OAuth 2 giriş** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (ASP.NET OAuth sağlayıcıları için GitHub deposunu. \
+- **AspNet.Security.OAuth.Providers** (ASP.NET OAuth sağlayıcıları için GitHub deposunu) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Azure AD'yi bir ASP.NET Core web uygulamasıyla tümleştirme** \

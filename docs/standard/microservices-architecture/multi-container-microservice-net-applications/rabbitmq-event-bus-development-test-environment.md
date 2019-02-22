@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152246"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584375"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Uygulama geliştirme veya test ortamı için RabbitMQ ile bir olay yolu
 
@@ -30,13 +30,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Implementation using RabbitMQ API
     //...
+}
 ```
 
 Ortak kod örnek geliştirme/test olay Bus RabbitMQ uygulamasıdır. RabbitMQ sunucu bağlantısı işlemek ve kuyruklara ileti olay yayımlamak için kod sağlamak vardır. Her bir olay türü için tümleştirme olay işleyicileri koleksiyonlarının sözlüğü uygulamak de vardır; Bu olay türlerini, Şekil 6-21'de gösterildiği gibi farklı bir örneğini ve her alıcı mikro hizmet için farklı Aboneliklerde olabilir.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Basit bir uygulama yayımlama RabbitMQ ile yöntemi
 
-Aşağıdaki kod bir Basitleştirilmiş olay veri yolu uygulaması için de Geliştirilmiş RabbitMQ, parçasıdır [gerçek kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) hizmetine biri. Genellikle geliştirmeleri yapmadıkça kod gerekmez. Kod, bağlantı ve RabbitMQ kanala alır, bir ileti oluşturur ve ardından kuyruğuna bir ileti yayımlar.
+Aşağıdaki kod bir ***Basitleştirilmiş*** tam senaryoyu canlandırmak üzere, RabbitMQ için bir olay veri yolu uygulaması sürümü. Bu şekilde bağlantı gerçekten işlemez. Gerçek kod tam uygulamayı görmek için bkz [dotnet-mimari/hizmetine](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) depo. 
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

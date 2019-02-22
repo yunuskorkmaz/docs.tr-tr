@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527633"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583842"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme
 Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlarında size kılavuzluk eder. Bu izlenecek yolda geliştirilmiş basit denetimin hizalamasını izin kendi <xref:System.Windows.Forms.Control.Text%2A> özelliği değiştirilecek. Yükseltme değil veya olaylarını işleme.  
@@ -34,7 +34,7 @@ Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlar
     public class FirstControl:Control {}  
     ```  
   
-2.  Özelliklerini tanımlayın. (Bir denetim birçok özellikleri devraldığından özelliklerini tanımlamak gerekmez <xref:System.Windows.Forms.Control> sınıfı, ancak çoğu özel denetimler genellikle ek özellikleri tanımlar.) Aşağıdaki kod parçası adlı bir özellik tanımlar `TextAlignment` , `FirstControl` görüntülenmesini biçimlendirmek için kullandığı <xref:System.Windows.Forms.Control.Text%2A> özelliği öğesinden devralınan <xref:System.Windows.Forms.Control>. Özellikleri tanımlama hakkında daha fazla bilgi için bkz. [özelliklerine genel bakış](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Özelliklerini tanımlayın. (Bir denetim birçok özellikleri devraldığından özelliklerini tanımlamak gerekmez <xref:System.Windows.Forms.Control> sınıfı, ancak çoğu özel denetimler genellikle ek özellikleri tanımlar.) Aşağıdaki kod parçası adlı bir özellik tanımlar `TextAlignment` , `FirstControl` görüntülenmesini biçimlendirmek için kullandığı <xref:System.Windows.Forms.Control.Text%2A> özelliği öğesinden devralınan <xref:System.Windows.Forms.Control>. Özellikleri tanımlama hakkında daha fazla bilgi için bkz. [özelliklerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlar
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Öznitelikler için denetim sağlar. Öznitelikler, tasarım zamanında denetiminizi ve özellikleri ve olayları uygun şekilde görüntülemek bir görsel tasarımcı sağlar. Aşağıdaki kod parçası özniteliklere uygulanır `TextAlignment` özelliği. Visual Studio gibi bir tasarımcıda <xref:System.ComponentModel.CategoryAttribute.Category%2A> özniteliği (kod parçasında gösterilen) bir mantıksal kategorisi altında görüntülenecek özelliği neden olur. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Öznitelik neden olur, alt kısmında görüntülenmesi açıklayıcı bir dize **özellikleri** penceresi zaman `TextAlignment` özellik seçildiğinde. Öznitelikler hakkında daha fazla bilgi için bkz. [bileşenler için tasarım zamanı öznitelikleri](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Öznitelikler için denetim sağlar. Öznitelikler, tasarım zamanında denetiminizi ve özellikleri ve olayları uygun şekilde görüntülemek bir görsel tasarımcı sağlar. Aşağıdaki kod parçası özniteliklere uygulanır `TextAlignment` özelliği. Visual Studio gibi bir tasarımcıda <xref:System.ComponentModel.CategoryAttribute.Category%2A> özniteliği (kod parçasında gösterilen) bir mantıksal kategorisi altında görüntülenecek özelliği neden olur. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Öznitelik neden olur, alt kısmında görüntülenmesi açıklayıcı bir dize **özellikleri** penceresi zaman `TextAlignment` özellik seçildiğinde. Öznitelikler hakkında daha fazla bilgi için bkz. [bileşenler için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
