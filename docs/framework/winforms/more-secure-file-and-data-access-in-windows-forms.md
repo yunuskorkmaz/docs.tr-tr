@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679324"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664932"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
@@ -351,7 +351,7 @@ public void Write()
 ## <a name="database-access"></a>Veritabanı erişimi  
  Bir veritabanına erişmek için gerekli izinlere veritabanı sağlayıcısı'na bağlı olarak değişiklik gösterir; Ancak, uygun izinlerle çalışmakta olan uygulamalar, veri bağlantısı aracılığıyla bir veritabanına erişebilir. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişimi güvenliği ve ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Kısmi güvende çalıştırmak için uygulamanızın istediğinden bir veritabanına doğrudan erişemez, verilerinize erişmek bir alternatif anlamına gelir, bir Web hizmetini kullanabilirsiniz. Program aracılığıyla bir ağ üzerinden erişilebilen bir yazılım parçasıdır bir Web hizmetidir. Web hizmetleri sayesinde, uygulamalar, kod grubu bölgeler arasında veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgelerinden uygulamalar aynı sunucuda barındırılan bir Web hizmeti çağırmak amacıyla sağlayan, kaynak sitelerini erişim hakkı verilir. Daha fazla bilgi için [ASP.NET AJAX Web hizmetlerini](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx).  
+ Kısmi güvende çalıştırmak için uygulamanızın istediğinden bir veritabanına doğrudan erişemez, verilerinize erişmek bir alternatif anlamına gelir, bir Web hizmetini kullanabilirsiniz. Program aracılığıyla bir ağ üzerinden erişilebilen bir yazılım parçasıdır bir Web hizmetidir. Web hizmetleri sayesinde, uygulamalar, kod grubu bölgeler arasında veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgelerinden uygulamalar aynı sunucuda barındırılan bir Web hizmeti çağırmak amacıyla sağlayan, kaynak sitelerini erişim hakkı verilir. Daha fazla bilgi için [ASP.NET AJAX Web hizmetlerini](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) veya [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Registry Access  
  <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sistem kayıt defteri erişimi denetler. Varsayılan olarak, yerel olarak çalıştırıyorsanız, yalnızca uygulamalar kayıt defterine erişebilir.  <xref:System.Security.Permissions.RegistryPermission> yalnızca bir uygulama kayıt defteri erişimini deneyin verme hakkı tanımaz; işletim sistemi güvenlik kayıt defterindeki hala zorladığından erişim başarılı olur, garantilemez.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 15f05f1d05a50676eb25cfa568598a575cb9cf5a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442912"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665036"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>İzlenecek yol: Bir Windows hizmeti uygulaması oluşturma
 
@@ -476,7 +476,7 @@ Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Hizmet oluşturduğunuza göre diğerleri Windows hizmetinizi yüklemek için kullanabileceğiniz tek başına Kurulum programını oluşturmak isteyebilirsiniz. ClickOnce Windows hizmetlerini desteklemiyor, ancak kullanabileceğiniz [WiX Toolset](http://wixtoolset.org/) bir Windows hizmeti için bir yükleyici oluşturmak üzere. Diğer fikir edinmek için bkz: [Yükleyici paketi oluştur](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Hizmet oluşturduğunuza göre diğerleri Windows hizmetinizi yüklemek için kullanabileceğiniz tek başına Kurulum programını oluşturmak isteyebilirsiniz. ClickOnce Windows hizmetlerini desteklemiyor, ancak kullanabileceğiniz [WiX Toolset](http://wixtoolset.org/) bir Windows hizmeti için bir yükleyici oluşturmak üzere. Diğer fikir edinmek için bkz: [Yükleyici paketi oluştur](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Kullanımını keşfedebilirsiniz bir <xref:System.ServiceProcess.ServiceController> bileşenin yüklediğiniz hizmete komutlar göndermenizi sağlar.
 
