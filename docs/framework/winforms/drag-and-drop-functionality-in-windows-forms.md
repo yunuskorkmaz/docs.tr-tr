@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527035"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664776"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms'ta Sürükle ve Bırak İşlevi
-Windows Forms, bir dizi yöntem, olayları ve sürükle-bırak davranışı uygulayan sınıflar içerir. Bu konu, Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz: [sürükle ve bırak işlemleri ve Pano desteği](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms, bir dizi yöntem, olayları ve sürükle-bırak davranışı uygulayan sınıflar içerir. Bu konu, Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz: [sürükle ve bırak işlemleri ve Pano desteği](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Sürükle ve bırak işlemleri gerçekleştirme  
  Bir Sürükle ve bırak işlemi gerçekleştirmek için <xref:System.Windows.Forms.Control.DoDragDrop%2A> yöntemi <xref:System.Windows.Forms.Control> sınıfı. Bir Sürükle ve bırak işlemi nasıl gerçekleştirilir hakkında daha fazla bilgi için bkz. <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Bir Sürükle ve bırak işlemi başlamadan önce üzerinde fare işaretçisi sürüklenmelidir dikdörtgen almak için kullanın <xref:System.Windows.Forms.SystemInformation.DragSize%2A> özelliği <xref:System.Windows.Forms.SystemInformation> sınıfı.  

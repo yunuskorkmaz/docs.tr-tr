@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745889"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665153"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "54745889"
 5.  Bir Windows Forms ekleme <xref:System.Windows.Forms.Timer> forma bileşen.  
   
     > [!NOTE]
-    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> bileşeni, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> bileşeni, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 6.  Ayarlama <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `true`.  
   

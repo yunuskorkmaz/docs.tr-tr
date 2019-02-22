@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543532"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664399"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka plan işlemi kullanan bir Form uygulama
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kullanıcı arabirimi (UI) istemediğiniz veya kullanabileceğiniz "askıda," <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  
@@ -57,7 +57,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 5.  İlk Yeniden Adlandır <xref:System.Windows.Forms.Button> denetimi `startAsyncButton` ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Start Async`. İkinci <xref:System.Windows.Forms.Button> denetimi `cancelAsyncButton`, ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Cancel Async`. Ayarlama, <xref:System.Windows.Forms.Control.Enabled%2A> özelliğini `false`.  
   
-6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 7.  Sürükleme bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** forma ve yeniden adlandırmak `resultLabel`.  
   
@@ -75,7 +75,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Zaman uyumsuz olay işleyicileri uygulamak için  
   
-1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 2.  Adlı yeni bir yöntem oluşturma `ComputeFibonacci`, formunuzda. Bu yöntem asıl işi yapan ve arka planda çalışır. Bu kod, daha büyük sayılar için tamamlamak için katlanarak uzun zaman ayırdığınız özellikle verimsiz Fibonacci algoritma özyinelemeli uygulamasını gösterir. Uygulamanızdaki gecikmelere neden olabilir bir işlem göstermek için yalnızca tanım amaçlıdır için burada kullanılır.  
   
@@ -109,7 +109,8 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-implement-progress-reporting"></a>İlerleme durumunu bildirme uygulamak için  
   
-1.  İçinde **özellikleri**, penceresinde `backgroundWorker1`. <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini `true` olarak ayarlayın.  
+1.  İçinde **özellikleri**, penceresinde `backgroundWorker1`. 
+  <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini `true` olarak ayarlayın.  
   
 2.  İki değişken bildirin `FibonacciCalculator` formu. Bu ilerleme durumunu izlemek için kullanılır.  
   

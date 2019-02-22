@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: fa835663edc54a2e4fd70a038f8900f32b0effba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738553"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664360"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Görsel stilleri kullanarak bunları destekleyen işletim sistemlerinde arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda destek çeşitli düzeylerde anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve diğer UI öğeleri ile işletim sisteminin geçerli görsel stili.  
@@ -56,7 +56,7 @@ ms.locfileid: "54738553"
   
  Ana sınıflarını <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> görsel stiller tarafından desteklenen tüm denetim veya kullanıcı arabirimi öğesi tanımlamak için bir foundation sınıftır. Ek olarak <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> kendisini <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanı, çok sayıda iç içe geçmiş sınıflar içerir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ile `static` döndüren özellikler bir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> her denetim, Denetim bölümü veya görsel tarafından desteklenen diğer kullanıcı Arabirimi öğesi durumu stilleri.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Çizim ve her biri hakkında bilgi almak için yöntemler sağlar <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sisteminin geçerli görsel stil tarafından tanımlanır. Varsayılan boyutunda, arka plan türü ve renk tanımları alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> görsel stiller (UxTheme) API Windows Kabuğu bölümünden Windows Platform SDK'sının işlevselliğini sarmalar. Daha fazla bilgi için [Windows XP görsel stilleri kullanarak](https://msdn.microsoft.com/library/ms997649.aspx).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Çizim ve her biri hakkında bilgi almak için yöntemler sağlar <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sisteminin geçerli görsel stil tarafından tanımlanır. Varsayılan boyutunda, arka plan türü ve renk tanımları alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> görsel stiller (UxTheme) API Windows Kabuğu bölümünden Windows Platform SDK'sının işlevselliğini sarmalar. Daha fazla bilgi için [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
   
  Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: Bir görsel stilde öğe işleme](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   

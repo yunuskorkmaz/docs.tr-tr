@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593797"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664568"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi
 Windows Forms ilgili Windows iletilerini işleme sırasında başlatılan olaylara dayalı bir kullanıcı giriş modeli içerir. Bu bölümdeki konular, belirli görevlerin nasıl gerçekleştirileceğini gösteren kod örnekleri dahil olmak üzere, fare ve klavye kullanıcı girişi hakkında bilgi sağlar.  
@@ -27,14 +27,14 @@ Windows Forms ilgili Windows iletilerini işleme sırasında başlatılan olayla
  [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  Bilgi üzerinde fare olayları ve fare imleçleri ve fare yakalamayı dahil olmak üzere diğer fare güvenlikle ilgili özellikler sağlar.  
   
- [Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [Nasıl yapılır: Fare ve kod klavye olaylarının benzetimini yapma](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Program aracılığıyla fare ve klavye girdisi benzetimini yapmak için birkaç farklı yolu gösterilmektedir.  
   
- [Nasıl yapılır: Windows Forms Denetimlerinde Kullanıcı Girdi Olaylarını İşleme](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Nasıl yapılır: Windows Forms denetimlerinde kullanıcı girdi olaylarını işleme](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Çoğu kullanıcı girdi olaylarını işleme ve her olay hakkında bilgiler raporları bir kod örneği sunar.  
   
  [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  Windows Forms uygulamalarında kullanıcı girişini doğrulama yöntemleri açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- Ayrıca bkz: [Windows Forms'ta olay işleyicileri oluşturma](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Ayrıca bkz: [Windows Forms'ta olay işleyicileri oluşturma](creating-event-handlers-in-windows-forms.md).

@@ -4,12 +4,12 @@ description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güven
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: fd2bff04e06bf0561ee0c95d87978f834f192172
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362425"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664048"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma
 
@@ -46,8 +46,8 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafın
 - **Veri korumayı yapılandırma** \
   [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
-- **Anahtar Yönetimi ve yaşam süresi** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+- **Veri koruma anahtar yönetimi ve ASP.NET Core yaşam süresi** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings*](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu. \
   [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)

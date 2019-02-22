@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 3ac1bc5482d00419ec8a41815633150e30b4039a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613993"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664633"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Denetim dört görünüm modu vardır: LargeIcon, SmallIcon, liste ve ayrıntılar.  
@@ -45,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
   
  <xref:System.Windows.Forms.ListView.Activation%2A> Özelliği belirler kullanıcı listesindeki bir öğeyi etkinleştirmek için ne tür bir eylem yapmanız gerekir: seçenekler <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, ve <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> öğesini etkinleştirmek için tek tıklamayla etkinleştirme gerektirir. <xref:System.Windows.Forms.ItemActivation.TwoClick> etkinleştirme öğesini etkinleştirmek için çift gerektirir; tek tıklamayla öğe metin rengini değiştirir. <xref:System.Windows.Forms.ItemActivation.Standard> kullanıcının bir öğe etkinleştirmek için çift tıklayın. etkinleştirme gerektirir, ancak öğe görünüm değiştirmez.  
   
- <xref:System.Windows.Forms.ListView> Denetimi ayrıca görsel stilleri ve diğer özelliklerin gruplandırma, kutucuk görünümü ve ekleme işaretleri dahil olmak üzere Windows XP platformunda destekler. Daha fazla bilgi için [Windows XP özellikleri ve Windows Forms denetimleri](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Denetimi ayrıca görsel stilleri ve diğer özelliklerin gruplandırma, kutucuk görünümü ve ekleme işaretleri dahil olmak üzere Windows XP platformunda destekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ListView>

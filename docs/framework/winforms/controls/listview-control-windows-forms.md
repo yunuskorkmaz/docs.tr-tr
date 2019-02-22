@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591948"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664893"
 ---
 # <a name="listview-control-windows-forms"></a>ListView Denetimi (Windows Forms)
 Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz.  
@@ -81,9 +81,6 @@ Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntül
   
  [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Birden fazla bölme içeren bir Windows formunu yerleştirmeye ilişkin yönergeler sağlar.  
-  
- [Windows XP özellikleri ve Windows Forms denetimleri](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Geçerli Windows XP özgü özelliklerinden yararlanmanıza açıklanmaktadır <xref:System.Windows.Forms.ListView> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

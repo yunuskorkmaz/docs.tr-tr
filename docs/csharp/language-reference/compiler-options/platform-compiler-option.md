@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635673"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663905"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# Derleyici Seçenekleri)
 Hangi sürümü ortak dil çalışma zamanı (CLR), derleme çalıştırılıp belirtir.  
@@ -36,6 +36,8 @@ Hangi sürümü ortak dil çalışma zamanı (CLR), derleme çalıştırılıp b
   
 -   **ARM** derlemenizi Gelişmiş RISC makinesi (ARM) işlemciye sahip bir bilgisayar üzerinde çalıştırılacak.  
   
+-   **ARM64** derlemenizi 64 bit CLR tarafından A64 yönerge kümesini destekleyen bir Gelişmiş RISC makinesi (ARM) işlemciye sahip bir bilgisayar üzerinde çalıştırılacak.  
+
 -   **x64** derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayara 64 bit CLR tarafından çalıştırılacak.  
   
 -   **x86** derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak.  

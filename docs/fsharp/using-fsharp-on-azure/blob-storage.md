@@ -1,20 +1,20 @@
 ---
-title: F# kullanarak Azure Blob depolamayı kullanmaya başlama
+title: Azure Blob Depolama kullanmaya başlamaF#
 description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037288"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664997"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F# kullanarak Azure Blob depolamayı kullanmaya başlama #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Azure Blob Depolama kullanmaya başlamaF# #
 
 Azure Blob Depolama, yapılandırılmamış verileri nesne/BLOB olarak bulutta depolayan bir hizmettir. BLOB Depolama, herhangi bir türde metin veya belge, medya dosyası veya uygulama Yükleyici gibi ikili veri depolayabilir. BLOB storage ayrıca nesne depolama olarak adlandırılır.
 
-Bu makalede, Blob depolamayı kullanarak ortak görevleri nasıl gerçekleştireceğinizi gösterir. Örnekler, F# .NET için Azure depolama istemci kitaplığı kullanarak kullanarak yazılır. Kapsanan görevleri yüklemek, listelemek, indirmek ve blobları silme işlemini içerir.
+Bu makalede, Blob depolamayı kullanarak ortak görevleri nasıl gerçekleştireceğinizi gösterir. Örnekleri kullanılarak yazılan F# .NET için Azure depolama istemci kitaplığı kullanarak. Kapsanan görevleri yüklemek, listelemek, indirmek ve blobları silme işlemini içerir.
 
 Blob depolama kavramsal bir genel bakış için bkz: [blob depolama için .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Blob depolama kavramsal bir genel bakış için bkz: [blob depolama için .NET K
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account). Ayrıca bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `blobs.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri ya da kullanılabilir bir F# uygulama veya bir F# betiği. Oluşturmak için bir F# betik, bir dosya oluşturun `.fsx` uzantısı, örneğin `blobs.fsx`içinde F# geliştirme ortamı.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` ve `Microsoft.WindowsAzure.ConfigurationManager` paketler ve başvuru `WindowsAzure.Storage.dll` ve `Microsoft.WindowsAzure.Configuration.dll` komut dosyası kullanarak bir `#r` yönergesi.
 
@@ -42,7 +42,7 @@ Bu öğreticide bir Azure depolama bağlantı dizesi gerekir. Bağlantı dizeler
 
 [!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Her zaman depolama hesabı anahtarınızı korumak dikkatli olun. Sabit kodlama veya başkalarının erişebileceği bir düz metin dosyasına kaydederek diğer kullanıcılara dağıtmaktan kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
+Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
 
 Gerçek uygulamalar, depolama bağlantı dizenizi korumak için en iyi yolu, içinde bir yapılandırma dosyasıdır. Bir yapılandırma dosyasından bağlantı dizesini getirmek için bunu yapabilirsiniz:
 
@@ -216,23 +216,24 @@ Varsayılan olarak, Azure depolama, veri erişimi hesap erişim anahtarlarını 
 
 Varsayılan olarak, depolama hesabınızdaki blob verileri yalnızca depolama hesabı sahibi erişilebilir. Blob depolamaya yönelik isteklerine kimlik doğrulaması varsayılan olarak hesap erişim anahtarı gerektirir. Ancak, belirli blob verilerinin diğer kullanıcılar tarafından kullanılabilmesini sağlamak isteyebilirsiniz.
 
-BLOB depolamaya erişimi denetleme hakkında daha fazla bilgi için bkz: [erişim denetimi için blob depolama bölümünde .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data).
-
-
 ### <a name="encrypting-blob-data"></a>BLOB verilerini şifreleme
 
 Azure Storage hem istemci hem de sunucuda blob verilerin şifrelenmesini destekler.
-
-Blob verilerini şifreleme hakkında daha fazla bilgi için bkz [blob depolama bölümünde şifreleme için .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Blob storage'nın temellerini öğrendiğinize göre daha fazla bilgi için bu bağlantıları izleyin.
 
 ### <a name="tools"></a>Araçlar
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) bir F# tür Blob, tablo ve kuyruk Azure depolama varlıkları keşfedin ve bunları CRUD işlemleri kolayca uygulamak için kullanılan sağlayıcısı.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) bir F# Microsoft Azure tablo depolama hizmeti kullanım API'si
-- [Microsoft Azure Depolama Gezgini (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) Microsoft'un Windows, OS X ve Linux'ta Azure depolama verileriyle görsel olarak çalışmanızı sağlayan ücretsiz, tek başına uygulamasıdır.
+
+- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Bir F# Blob, tablo ve kuyruk Azure depolama varlıkları keşfedin ve bunları CRUD işlemleri kolayca uygulamak için kullanılan bir tür sağlayıcısı.
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Bir F# API, Microsoft Azure tablo depolama hizmetini kullanma
+
+- [Microsoft Azure Depolama Gezgini (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Microsoft'un Windows, OS X ve Linux'ta Azure depolama verileriyle görsel olarak çalışmanızı sağlayan ücretsiz, tek başına uygulama.
 
 ### <a name="blob-storage-reference"></a>BLOB storage başvurusu
 
@@ -246,3 +247,4 @@ Blob storage'nın temellerini öğrendiğinize göre daha fazla bilgi için bu b
 - [Linux üzerinde AzCopy komut satırı yardımcı programı ile veri aktarma](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Hızlı Başlangıç: NET'i kullanarak nesne depolamada blob oluşturma](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c77a004d52afc67a3811ff98e9a62c788c001803
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197120"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664789"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms'ta Olay İşleyicileri Oluşturma
 Bir olay işleyicisi, hangi eylemlerin bir ileti kuyruğu bir ileti alır ya da kullanıcı bir düğmeyi tıkladığında gibi bir olay meydana gerçekleştirilen belirler, kodunuzda bir yordamdır. Bir olay oluştuğunda, olay işleyicisi veya etkinliğin işleyicisi yürütülür. Olaylar için birden fazla işleyici atanabilir ve belirli olayları işleyen yöntemleri dinamik olarak değiştirilebilir. Windows Form Tasarımcısı, olay işleyicileri oluşturma için de kullanabilirsiniz.  
@@ -25,16 +25,16 @@ Bir olay işleyicisi, hangi eylemlerin bir ileti kuyruğu bir ileti alır ya da 
  [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  Olayların nasıl işleneceğini açıklar.  
   
- [Nasıl yapılır: Windows Forms için Çalışma Zamanındaki Olay İşleyicileri](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
  Dinamik olarak sistem veya kullanıcı olaylarına yanıt için yönergeler sağlar.  
   
- [Nasıl yapılır: Windows Forms'ta Tek Olay İşleyicisine Birden Fazla Olay Bağlama](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
  Olaylar ile birden çok denetim aynı işlevselliği atamak için yönergeler sağlar.  
   
  [Windows Forms'ta Olayların Sırası](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Windows Forms denetimlerinde olay oluşturulan sırasını anlatır.  
   
- [Nasıl yapılır: tasarımcıyı kullanarak olay işleyicileri oluşturma](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Nasıl yapılır: Tasarımcıyı kullanarak olay işleyicileri oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))  
  Olay işleyicilerini oluşturma Windows Form Tasarımcısı'nı kullanmayı açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

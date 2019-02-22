@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573981"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664750"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  
@@ -37,7 +37,7 @@ Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan veri
  Windows Forms veri bağlama denetimi özellikleri genel özelliklerini kullanarak bir nesne örneğinde destekler <xref:System.Windows.Forms.Binding> türü. Windows Forms da destekler bağlama göre liste denetimleri gibi bir <xref:System.Windows.Forms.ListControl> örneğini bir nesneye bir <xref:System.Windows.Forms.BindingSource> kullanılır.  
   
  dizi veya koleksiyon  
- Veri kaynağı olarak çalışmak için bir liste uygulamalıdır <xref:System.Collections.IList> arabirim; bir örnek örneği bir dizi olacaktır <xref:System.Array> sınıfı. Diziler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Nesneler (Visual Basic) bir dizi oluşturma](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Veri kaynağı olarak çalışmak için bir liste uygulamalıdır <xref:System.Collections.IList> arabirim; bir örnek örneği bir dizi olacaktır <xref:System.Array> sınıfı. Diziler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Nesneler (Visual Basic) bir dizi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100)).  
   
  Genel olarak, kullanmanız gereken <xref:System.ComponentModel.BindingList%601> oluşturduğunuzda veri bağlama nesneleri listeler. <xref:System.ComponentModel.BindingList%601> Genel bir sürümü <xref:System.ComponentModel.IBindingList> arabirimi. <xref:System.ComponentModel.IBindingList> Arabirimini genişletir <xref:System.Collections.IList> özelliklerini, yöntemlerini ve olaylarını çift yönlü veri bağlama için gerekli ekleyerek arabirimi.  
   

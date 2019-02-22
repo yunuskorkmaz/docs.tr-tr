@@ -2,16 +2,10 @@
 title: Windows Forms Denetimleri
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms controls
-- controls [Windows Forms]
-- Windows Forms controls, about Windows Forms controls
+  - Windows Forms controls
+  - 'controls [Windows Forms]'
+  - 'Windows Forms controls, about Windows Forms controls'
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526253"
 ---
 # <a name="windows-forms-controls"></a>Windows Forms Denetimleri
 Tasarım ve kullanıcı arabirimi, Windows Forms uygulamalarının değiştirme gibi ekleme, hizalama ve yerleştirmenize gerekecektir. Denetimleri form nesnelerin içerdiği nesneleridir. Her denetim türü kendi özellikleri, yöntemleri ve belirli bir amaç için uygun hale getiren olayları sahiptir. Tasarımcıda denetimleri işlemenizi ve denetimlerini çalışma zamanında dinamik olarak eklemek için kod yazın.  
@@ -39,5 +33,3 @@ Tasarım ve kullanıcı arabirimi, Windows Forms uygulamalarının değiştirme 
  [İstemci Uygulamaları](../../../../docs/framework/develop-client-apps.md)  
  Windows tabanlı uygulamalar geliştirmeye genel bakış sağlar.  
   
- [Windows Forms izlenecek yollar](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- Windows Formları ve denetimleri ile ilgili izlenecek yol konuları listeler.

@@ -2,12 +2,12 @@
 title: ADO.NET teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828481"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664802"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı programlamak için sağlayarak geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu sürüm stratejisidir. Bu platform, ADO.NET varlık çerçevesi ve ilgili teknolojileri içerir.  
@@ -28,7 +28,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı prog
  Entity SQL bir varlık veri modeli ile etkileşime geçmek için tasarlanmış bir metin tabanlı sorgu dilidir. SQL devralma, karmaşık türler ve açık ilişkileri gibi daha üst düzey modelleme kavramları açısından sorgulamak için yapıları içeren bir SQL diyalekti varlıktır. Geliştiriciler, varlık SQL doğrudan nesne hizmetlerle de kullanabilirsiniz. Daha fazla bilgi için [Entity SQL dili](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient, bir varlık veri modeli ile etkileşim kurmak için kullanılan yeni bir .NET Framework Veri Sağlayıcısı ' dir. EntityClient gösterme, .NET Framework Veri Sağlayıcı modelini izler <xref:System.Data.EntityClient.EntityConnection> ve <xref:System.Data.EntityClient.EntityCommand> nesneleri döndüren bir <xref:System.Data.EntityClient.EntityDataReader>. EntityClient, depolama özgü veri sağlayıcıları için esnek eşlemesi Entity SQL dili ile çalışır. Daha fazla bilgi için [EntityClient ve varlık SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient, bir varlık veri modeli ile etkileşim kurmak için kullanılan yeni bir .NET Framework Veri Sağlayıcısı ' dir. EntityClient gösterme, .NET Framework Veri Sağlayıcı modelini izler <xref:System.Data.EntityClient.EntityConnection> ve <xref:System.Data.EntityClient.EntityCommand> nesneleri döndüren bir <xref:System.Data.EntityClient.EntityDataReader>. EntityClient, depolama özgü veri sağlayıcıları için esnek eşlemesi Entity SQL dili ile çalışır. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Varlık veri modeli araçları  
  Komut satırı araçları, sihirbazlar ve tasarımcılar EDM oluşturmayı kolaylaştırmak için Entity Framework sağlayan uygulamalar. EntityDataSource denetim üzerinde EDM temel veri bağlama senaryoları destekler. Programlama yüzey EntityDataSource denetimin diğer veri kaynağı denetimleri Visual Studio'da benzer. Daha fazla bilgi için [ADO.NET varlık veri modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
