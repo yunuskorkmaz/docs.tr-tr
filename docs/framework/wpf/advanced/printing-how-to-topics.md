@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441209"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747362"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
@@ -30,9 +30,6 @@ Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma si
   
  [Yazdırma Kuyruklarının Alt Kümesini Numaralandırma](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.  
-  
- [NOTINBUILD: Nasıl yapılır: Yazdırma şemasını ve yeni yazdırma sistemi sınıfları oluşturma](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Yönetilen kod programcılar genişletilmiş bir tartışma özel yazdırma cihazları veya yeni veya genel olmayan özellikler yazıcılarla yazdırma şemasını genişletebilirsiniz.  
   
  [Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Sistem nesnesinin özelliklerini ve bunların türlerini çalışma zamanında bulma için yönergeleri yazdırın.  

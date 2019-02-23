@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 47964fa27ca3b8cbc509467a9b21f942bfc7cc75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 193746e8efda5d7bc9e086bb0abf934cfeb1741a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239962"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748602"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Birim testi dotnet testi ve xUnit kullanarak Visual Basic .NET Core kitaplıkları
 
@@ -30,7 +30,7 @@ Bu yeni dizin içinde çalıştırma [ `dotnet new sln` ](../tools/dotnet-new.md
     /PrimeService
 ```
 
-Olun *PrimeService* geçerli dizin ve çalışma [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) kaynak proje oluşturmak için. Yeniden adlandırma *Class1.VB* için *PrimeService.VB*. Teste dayalı geliştirme (TDD) kullanmak için bir başarısız uygulaması oluşturun. `PrimeService` sınıfı:
+Olun *PrimeService* geçerli dizin ve çalışma [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) kaynak proje oluşturmak için. Yeniden adlandırma *Class1.VB* için *PrimeService.VB*. Bir başarısız uygulamasını oluşturun `PrimeService` sınıfı:
 
 ```vb
 Namespace Prime.Services
@@ -92,7 +92,7 @@ Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](..
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.vb* gelen *PrimeService.Tests* dizin adlı yeni bir Visual Basic dosyası oluşturup *PrimeService_IsPrimeShould.VB*. Aşağıdaki kodu ekleyin:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. Kaldırma *UnitTest1.vb* gelen *PrimeService.Tests* dizin adlı yeni bir Visual Basic dosyası oluşturup *PrimeService_IsPrimeShould.VB*. Aşağıdaki kodu ekleyin:
 
 ```vb
 Imports Xunit

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865650"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746791"
 ---
 # <a name="windows-forms-security"></a>Windows Forms Güvenliği
 Windows Forms (kod tabanlı güvenlik düzeyleri kod, kodu çalıştıran kullanıcının bağımsız olarak ayarlanır) bir güvenlik modeli sunar. Bu bilgisayar sisteminizin üzerinde zaten bir yerde olabilir herhangi bir güvenlik şemaları ek niteliğindedir. Bunlar tarayıcı (örneğin, bölgeye göre güvenlik Internet Explorer'da kullanılabilir) veya işletim sistemi (örneğin, Windows NT kimlik tabanlı güvenlik) de içerebilir.  
@@ -33,10 +33,10 @@ Windows Forms (kod tabanlı güvenlik düzeyleri kod, kodu çalıştıran kullan
  Pano'yu kullanıyor ve yönetilmeyen kod kısmen güvenilen bir ortamda aramaların gerçekleştirme penceresi işleme açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [NIB: Varsayılan güvenlik ilkesi](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [Varsayılan güvenlik ilkesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Tam güven, yerel Intranet ve İnternet'e izin kümeleri, verilen varsayılan izinleri listeler.  
   
- [NIB: Genel Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  .NET Framework Güvenlik İlkesi Yönetimi ve izinleri yükseltme hakkında bilgi verir.  
   
  [Tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Windows Forms (kod tabanlı güvenlik düzeyleri kod, kodu çalıştıran kullan
  [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)  
  Kodu .NET Framework karşı güvenli bir şekilde yazmak için en iyi açıklayan konulara bağlantılar sağlar.  
   
- [NIB: İzinleri isteyen](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [İzinler isteyen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  Kodunuzu çalıştırmak için gereken izinleri bilmeniz çalışma zamanının özniteliklerin kullanmayı açıklar.  
   
  [Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Windows Forms (kod tabanlı güvenlik düzeyleri kod, kodu çalıştıran kullan
  [Kod erişimi güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)  
  Çalıştırma zamanında güvenlik ilkesi .NET Framework ile çalışmanın temelleri açıklanır.  
   
- [NIB: Güvenlik ilkesini değiştirmek ne zaman belirleme](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [Güvenlik ilkesini değiştirmek ne zaman belirleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Uygulamalarınızı varsayılan güvenlik ilkesinden ayırmak gerektiğinde olmadığının nasıl belirleneceğini açıklar.  
   
- [NIB: Güvenlik ilkesi dağıtma](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [Güvenlik İlkesi dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  Güvenlik İlkesi değişikliklerini dağıtmak için en iyi şekilde açıklar.

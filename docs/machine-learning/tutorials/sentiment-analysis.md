@@ -4,12 +4,12 @@ description: ML.NET ikili sınıflandırma senaryoda yaklaşım tahmin uygun eyl
 ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9afdf1d8369e71f9614ebc2bf327e98d31b988ff
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092767"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748394"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: ML.NET kullanımda bir yaklaşım analizi ikili sınıflandırma senaryosu
 
@@ -204,6 +204,9 @@ ML. NET dönüştürme işlem hatları, verilerinizi, eğitim veya test etmeden 
 Ardından, arama `mlContext.Transforms.Text.FeaturizeText` hangi featurizes metin sütununu (`SentimentText`) adı verilen sayısal bir vektör sütununa `Features` makine öğrenimi algoritması tarafından kullanılan. Bu döndüren bir sarmalayıcı çağrısı, bir <xref:Microsoft.ML.Data.EstimatorChain%601> bir işlem hattı etkin olacak. Bu ad `pipeline` eğitmen için ardından ekleyeceği şekilde `EstimatorChain`. Bu, sonraki kod satırı ekleyin:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+>[!WARNING]
+> ML.NET sürüm 0.10 dönüştürme parametreleri sırası değişti. Bu, kullanıma alma hatası kadar uygulamayı çalıştırın ve model derleme. Dönüşümlerin parametre adları, önceki kod parçacığında gösterildiği gibi kullanın.
 
 Bu ön işleme/özellik kazandırma sayesinde adımdır. ML.NET içinde kullanılabilir ek bileşenler kullanarak modelinizi ile daha iyi sonuçlar etkinleştirebilirsiniz.
 

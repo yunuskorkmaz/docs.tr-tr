@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685535"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745926"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps Metodu
 Meta veri değerleri tarafından belirtilen ParamDef başvurulan parametresi için belirteç alır.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] Geniş karakter cinsinden döndürülen boyutu `szName`.  
   
  `pdwAttr`  
- [out] Parametresi ile ilişkili herhangi bir öznitelik bayrağı için bir işaretçi.  
+ [out] Parametresi ile ilişkili herhangi bir öznitelik bayrağı için bir işaretçi. Bu, bir bit maskesi, `CorParamAttr` değerleri.  
   
  `pdwCPlusTypeFlag`  
  [out] Parametre belirten bir bayrak için bir işaretçi bir <xref:System.ValueType>.  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out] Boyutu `ppValue` geniş karakterler ya da sıfır `ppValue` bir dize tutmaz.  
   
+## <a name="remarks"></a>Açıklamalar
+
+Sıralı değerleri `pulSequence` parametreleri için 1 ile başlar. Dönüş değeri bir sıra numarası 0 sahiptir.
+
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Tam Olarak Nitelenmiş Tür Adlarını Belirtme
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628545"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747255"
 ---
-# <a name="specifying-fully-qualified-type-names"></a>Tam Olarak Nitelenmiş Tür Adlarını Belirtme
+# <a name="specifying-fully-qualified-type-names"></a>Tam olarak nitelenmiş tür adlarını belirtme
 Çeşitli yansıma işlemleri için geçerli bir giriş için tür adları belirtmeniz gerekir. Bir derleme adı belirtimi, bir ad alanı belirtimine ve bir tür adı tam olarak nitelenmiş tür adını içerir. Tür adı belirtimleri kullanılan yöntemleri tarafından gibi <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="grammar-for-type-names"></a>Tür adları için dil bilgisi  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>Genel türleri belirtme
+
+SimpleTypeSpec\`SAYIYI temsil eden bir açık genel tür ile 1'den *n* genel tür parametreleri. Örneğin, başvuru açık genel tür listesini almak için\<T > ya da kapalı genel tür listesi\<dizesi >, kullanın ``Type.GetType("System.Collections.Generic.List`1")`` genel tür sözlük için bir başvuru almak için\<TKey, TValue >, kullanın ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
 ## <a name="specifying-pointers"></a>İşaretçileri belirtme  
  SimpleTypeSpec * bir yönetilmeyen işaretçi temsil eder. Örneğin, MyType tür işaretçisi almak için kullanın `Type.GetType("MyType*")`. MyType tür işaretçisi için bir işaretçi almak için kullanın `Type.GetType("MyType**")`.  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` bir tek boyutlu dizi alt sınırı 0 ile alır.  
   
 -   `Type.GetType("MyArray[*]")` Bilinmeyen alt sınır olan bir tek boyutlu dizi alır.  
-  
 -   `Type.GetType("MyArray[][]")` iki boyutlu bir dizinin dizisini alır.  
   
 -   `Type.GetType("MyArray[*,*]")` ve `Type.GetType("MyArray[,]")` dikdörtgen iki boyutlu bir dizi ile Bilinmeyen alt sınırını alır.  

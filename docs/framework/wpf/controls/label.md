@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500301"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746908"
 ---
 # <a name="label"></a>Etiketle
 <xref:System.Windows.Controls.Label> denetimleri genellikle sağladığı bilgileri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Tarihsel olarak, bir <xref:System.Windows.Controls.Label> yalnızca metin içermiştir ancak <xref:System.Windows.Controls.Label> ile birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olduğu bir <xref:System.Windows.Controls.ContentControl>, ya da metin içerebilir veya <xref:System.Windows.UIElement>.  
   
  A <xref:System.Windows.Controls.Label> için erişim anahtarlarını hem işlevsel hem de visual desteği sağlar. Hızlı klavye erişim denetimleri gibi etkinleştirmek için sık kullanılan bir <xref:System.Windows.Controls.TextBox>. Atamak için bir <xref:System.Windows.Controls.Label> için bir <xref:System.Windows.Controls.Control>ayarlayın <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> kullanıcı erişim tuşuna bastığında odağı alması gereken denetimi özelliği.  
   
- Aşağıdaki görüntüde bir <xref:System.Windows.Controls.Label> "hedefleyen temaları" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcının bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için [nasıl yapılır: bir etiketin hedef özelliği ayarlanmış](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ Aşağıdaki görüntüde bir <xref:System.Windows.Controls.Label> "hedefleyen temaları" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcının bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için [nasıl yapılır: Bir etiket için Target özelliği ayarlamak](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
  ![Görüntü özellikleri kullanıma göre etiketlenmiş](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir etiketin hedef özelliğini ayarlayın](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Nasıl yapılır: Erişim anahtarı ve metin kaydırması içeren bir denetim oluşturma](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Label>

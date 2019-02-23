@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714899"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746250"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>İzlenecek yol: Profesyonel stilde ToolStrip denetimi oluşturma
 Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sınıfından türetilen yazarak bir profesyonel görünümünü ve davranışını denetleyen <xref:System.Windows.Forms.ToolStripProfessionalRenderer> türü.  
@@ -49,7 +49,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 2.  İçinde **Çözüm Gezgini**, istediğiniz dilde bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosyası silerek projenin varsayılan denetimini silin.  
   
-     Daha fazla bilgi için [NIB: nasıl yapılır: , Silme, kaldırmak ve öğeleri hariç](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Daha fazla bilgi için [nasıl yapılır: , Silme, kaldırmak ve öğeleri hariç](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Yeni bir <xref:System.Windows.Forms.UserControl> öğesinin **StackViewLibrary** proje. Yeni kaynak dosyanın temel adı verin `StackView`.  
   
@@ -121,7 +121,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 8.  Yeniden adlandırma `mailStackButton_Click` olay işleyicisine `stackButton_Click`.  
   
-     Daha fazla bilgi için [nasıl yapılır: Bir tanımlayıcı (Visual Basic) yeniden adlandırmak](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Daha fazla bilgi için [bir kod sembol yeniden düzenlemeyi yeniden adlandırma](/visualstudio/ide/reference/rename).  
   
 9. Aşağıdaki kodu ekleyin `stackButton_Click` olay işleyicisi.  
   
@@ -135,7 +135,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
 12. 10 ve 11. adımları yineleyin `contactsStackButton` ve `tasksStackButton` kontrol eder.  
   
 ## <a name="defining-icons"></a>Simge tanımlama  
- Her `StackView` düğmeye sahip bir ilişkili simge. Kolaylık olması için simgeleri Base64 ile kodlanmış bir dize olarak, önce seri durumdan temsil edilen bir <xref:System.Drawing.Bitmap> ondan oluşturulur. Bir üretim ortamında bir kaynak olarak bit eşlem verileri depolamak ve simgelerini Windows Form Tasarımcısı'nda görünür. Daha fazla bilgi için [nasıl yapılır: Windows formlarına arka plan görüntüleri ekleme](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Her `StackView` düğmeye sahip bir ilişkili simge. Kolaylık olması için simgeleri Base64 ile kodlanmış bir dize olarak, önce seri durumdan temsil edilen bir <xref:System.Drawing.Bitmap> ondan oluşturulur. Bir üretim ortamında bir kaynak olarak bit eşlem verileri depolamak ve simgelerini Windows Form Tasarımcısı'nda görünür. Daha fazla bilgi için [nasıl yapılır: Windows formlarına arka plan görüntüleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Simgeleri tanımlamak için  
   

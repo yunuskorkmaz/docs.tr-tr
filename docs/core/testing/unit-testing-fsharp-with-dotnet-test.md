@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 08ebe39fd6e992fdcdc10e19d87d565e76d909a2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239205"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745952"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Birim testi F# kitaplıkları .NET core'da dotnet testi ve xUnit kullanma
 
@@ -30,7 +30,7 @@ Bu yeni dizin içinde çalıştırma [ `dotnet new sln` ](../tools/dotnet-new.md
     /MathService
 ```
 
-Olun *MathService* geçerli dizin ve çalışma [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) kaynak proje oluşturmak için.  Teste dayalı geliştirme (TDD) kullanmak için bir matematik hizmetin başarısız uygulaması oluşturacaksınız:
+Olun *MathService* geçerli dizin ve çalışma [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) kaynak proje oluşturmak için.  Matematik hizmet başarısız uyarlamasını oluşturacaksınız:
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ Yürütme [ `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` ](../t
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Açık *Tests.fs* ve aşağıdaki kodu ekleyin:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. Açık *Tests.fs* ve aşağıdaki kodu ekleyin:
 
 ```fsharp
 [<Fact>]

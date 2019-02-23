@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9813a1b969d0232ec842b91385d0ad893b71c0d6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467287"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747333"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel Denetimi (Windows Forms)
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim kılavuz içeriği düzenler. Düzen uygulandığından hem tasarım ve çalışma zamanı, uygulama ortamı değiştikçe dinamik olarak değiştirebilirsiniz. Üst denetimi yeniden boyutlandırma gibi değişiklikler veya metin uzunluğu nedeniyle yerelleştirme değiştirme yanıt verebilir böylece bu panelinde denetimlerin orantılı olarak yeniden boyutlandırmak için yeteneği verir.  
@@ -29,22 +29,22 @@ ms.locfileid: "43467287"
  [TableLayoutPanel Denetiminde AutoSize Davranışı](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)  
  Yöntemler açıklanır <xref:System.Windows.Forms.TableLayoutPanel> denetimi, otomatik boyutlandırma davranışını destekler.  
   
- [Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [Nasıl yapılır: Sabitleme ve TableLayoutPanel denetiminde alt denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  Sabitleme ve yerleştirme alt denetimlerinde gösterilmiştir bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi.  
   
- [Nasıl yapılır: Yerelleştirmeye İyi Cevap Veren Bir Windows Forms Düzeni Tasarlama](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [Nasıl yapılır: Yerelleştirmeye iyi cevap veren bir Windows Forms düzeni tasarlama](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  Kullanmayı gösterir bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi yerelleştirmeye iyi cevap veren bir form oluşturun.  
   
- [Nasıl yapılır: Veri Girişi İçin Yeniden Boyutlandırılabilir Windows Formu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [Nasıl yapılır: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Kullanmayı gösterir bir <xref:System.Windows.Forms.TableLayoutPanel> denetiminin yeniden boyutlandırma için iyi cevap veren bir form oluşturun.  
   
-1.  [Nasıl yapılır: TableLayoutPanel Denetiminde Bir Denetimi Hizalama ve Uzatma](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1.  [Nasıl yapılır: Hizalama ve denetim TableLayoutPanel denetiminde uzatma](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [Nasıl yapılır: Bir TableLayoutPanel Denetimindeki Satırları ve Sütunları Yayma](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2.  [Nasıl yapılır: TableLayoutPanel denetimi içindeki satırları ve sütunları span](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [Nasıl yapılır: Bir TableLayoutPanel Denetimindeki Satırları ve Sütunları Düzenleme](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3.  [Nasıl yapılır: Bir TableLayoutPanel denetimindeki satırları ve sütunları Düzenle](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ ms.locfileid: "43467287"
  [Yerelleştirme](../../../../docs/standard/globalization-localization/localization.md)  
  Yerelleştirme için İlgili Konular'a genel bir bakış sağlar.  
   
- Ayrıca bkz: [yerelleştirme uygulamaları](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) veya [uygulamaları yerelleştirme](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ Ayrıca bkz: [yerelleştirme uygulamaları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120)).

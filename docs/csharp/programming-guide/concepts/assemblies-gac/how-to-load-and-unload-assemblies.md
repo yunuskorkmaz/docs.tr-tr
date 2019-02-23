@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Yükleme ve yüklemelerini kaldırma derlemeleri (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509356"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748758"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Nasıl yapılır: Yükleme ve yüklemelerini kaldırma derlemeleri (C#)
 Programınız tarafından başvurulan derlemeler otomatik olarak derleme zamanında yüklenir, ancak geçerli uygulama etki alanına çalışma zamanında belirli derlemeleri yüklemek mümkündür. Daha fazla bilgi için [nasıl yapılır: Bir uygulama etki alanına derlemeler yükleme](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -27,5 +27,5 @@ Programınız tarafından başvurulan derlemeler otomatik olarak derleme zamanı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [Nasıl yapılır: Uygulama etki alanına derlemeler yükleme](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

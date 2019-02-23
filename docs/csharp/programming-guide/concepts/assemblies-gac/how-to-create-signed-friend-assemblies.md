@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 3db82db502c7404ce235c5824b58046fbd4dbe7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54307313eb7955a40e290218aacf27be320e745b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705436"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746668"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)
 Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kullanma işlemini gösterir. İki derleme tanımlayıcı ada gerekir. Bu örnekte iki derleme, aynı anahtarları kullanmak olsa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
@@ -91,7 +91,7 @@ Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kulla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)

@@ -4,12 +4,12 @@ description: Adım adım örnek bir çözüm oluşturmak bir etkileşimli deneyi
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307220"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747989"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Birim testi NUnit ve .NET Core ile C#
 
@@ -42,7 +42,7 @@ Olun *PrimeService* aşağıdaki komut kaynak projesi oluşturmak için geçerli
 dotnet new classlib
 ```
 
-Yeniden adlandırma *Class1.cs* için *PrimeService.cs*. Teste dayalı geliştirme (TDD) kullanmak için bir başarısız uygulaması oluşturun. `PrimeService` sınıfı:
+Yeniden adlandırma *Class1.cs* için *PrimeService.cs*. Bir başarısız uygulamasını oluşturun `PrimeService` sınıfı:
 
 ```csharp
 using System;
@@ -117,7 +117,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. İçinde *PrimeService.Tests* dizini yeniden adlandırma *UnitTest1.cs* dosyasını *PrimeService_IsPrimeShould.cs* ve tüm içeriğini aşağıdaki kodla değiştirin:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. İçinde *PrimeService.Tests* dizini yeniden adlandırma *UnitTest1.cs* dosyasını *PrimeService_IsPrimeShould.cs* ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 using NUnit.Framework;

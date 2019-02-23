@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 35519be6ddaed64b3e5e2129efb611e0a812ebc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535184"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745670"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Bu modül bir parçası olacağı derlemenin adını belirtir.  
@@ -49,6 +49,6 @@ Bu modül bir parçası olacağı derlemenin adını belirtir.
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
-- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Arkadaş Bütünleştirilmiş Kodları](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239165"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746882"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Birim testi dotnet testi ve NUnit kullanarak Visual Basic .NET Core kitaplıkları
 
@@ -44,7 +44,7 @@ Olun *PrimeService* aşağıdaki komut kaynak projesi oluşturmak için geçerli
 dotnet new classlib -lang VB
 ```
 
-Yeniden adlandırma *Class1.VB* için *PrimeService.VB*. Teste dayalı geliştirme (TDD) kullanmak için bir başarısız uygulaması oluşturun. `PrimeService` sınıfı:
+Yeniden adlandırma *Class1.VB* için *PrimeService.VB*. Bir başarısız uygulamasını oluşturun `PrimeService` sınıfı:
 
 ```vb
 Imports System
@@ -116,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. İçinde *PrimeService.Tests* dizini yeniden adlandırma *UnitTest1.vb* dosyasını *PrimeService_IsPrimeShould.VB* ve tüm içeriğini aşağıdaki kodla değiştirin:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. İçinde *PrimeService.Tests* dizini yeniden adlandırma *UnitTest1.vb* dosyasını *PrimeService_IsPrimeShould.VB* ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 ```vb
 Imports NUnit.Framework

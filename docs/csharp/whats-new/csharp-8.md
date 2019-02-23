@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: a1d41418b2f546c62f1d6a51b19337ee2d303ccc
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665261"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747628"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -41,7 +41,7 @@ C#Daha fazla yerde daha fazla desen ifade kodunuzda kullanabilmeniz için bu sö
 
 Yeni yerde yeni desenler yanı sıra C# 8.0 ekler **özyinelemeli desenleri**. Bir ifade deseni herhangi bir ifade sonucudur. Yalnızca başka bir desen ifadesi çıkışına uygulanan bir desen ifadesi özyinelemeli modelidir.
 
-### <a name="switch-expressions"></a>anahtar ifadeler
+### <a name="switch-expressions"></a>Anahtar ifadeler
 
 Genellikle, bir [ `switch` ](../language-reference/keywords/switch.md) deyimi, her bir değer oluşturuyor, `case` engeller. **Anahtar ifadeler** , daha kısa ifade sözdizimini kullanacak şekilde etkinleştirin. Vardır daha az tekrarlı `case` ve `break` anahtar sözcükleri ve daha az küme ayraçları.  Örneğin, rainbow renklerini listeleyen aşağıdaki enum göz önünde bulundurun:
 
@@ -177,7 +177,7 @@ static string Quadrant(Point p) => p switch
 
 Eşleşen atma deseni önceki anahtarda ya da `x` veya `y`, iki değil, 0'dır. Bir switch ifadesi bir değer üreten veya bir özel durum. Servis taleplerini hiçbiri eşleşen switch ifadesi bir özel durum oluşturur. Tüm olası durumların anahtar İfadenizde kapsamaz varsa derleyici bir uyarı oluşturur.
 
-## <a name="using-declarations"></a>bildirimi kullanarak
+## <a name="using-declarations"></a>Bildirimi kullanarak
 
 A **using bildirimi** bir Değişken bildiriminde öncesinde `using` anahtar sözcüğü. Bu, derleyiciye bildirilen değişkenin kapsayan kapsamı sona atılmalıdır bildirir. Örneğin, bir metin dosyasına yazan aşağıdaki kodu düşünün:
 
@@ -247,23 +247,23 @@ int M()
     int x = 7;
     return Add(x, y);
 
-    int Add(int left, int right) => left + right;
+    static int Add(int left, int right) => left + right;
 }
 ```
 
 ## <a name="disposable-ref-structs"></a>Atılabilir başvuru yapı birimleri
 
-A `struct` ile bildirilen `ref` değiştiricisi hiçbir arabirim uygulayamaz ve bu nedenle uygulayamaz <xref:System.IDisposable>. Bu nedenle, etkinleştirmek için bir `ref struct` çıkarılması için bunu bir erişilebilir olmalıdır `void Dispose()` yöntemi.
+A `struct` ile bildirilen `ref` değiştiricisi hiçbir arabirim uygulayamaz ve bu nedenle uygulayamaz <xref:System.IDisposable>. Bu nedenle, etkinleştirmek için bir `ref struct` çıkarılması için bunu bir erişilebilir olmalıdır `void Dispose()` yöntemi. Bu durum için de geçerlidir `readonly ref struct` bildirimleri.
 
 ## <a name="nullable-reference-types"></a>Null başvuru türleri
 
 Boş değer atanabilir bir ek açıklama bir bağlam içinde bir başvuru türünün herhangi bir değişken olarak kabul edilir bir **nonnullable başvuru türü**. Bir değişken null olabilir belirtmek istiyorsanız, tür adıyla ekleme `?` değişken olarak bildirmek için bir **boş değer atanabilir bir başvuru türü**.
 
-Nonnullable başvuru türleri için derleyici yerel değişkenler bir null olmayan değer bildirildiğinde başlatılır emin olmak için akış analizini kullanır. Oluşturma sırasında alanları yeniden başlatılması gerekir. Değişken tüm oluşturucular veya bir başlatıcı içinde ayarlı değilse, derleyici bir uyarı oluşturur. Ayrıca, nonnullable başvuru türleri null olabilir bir değer atanamaz.
+Nonnullable başvuru türleri için derleyici yerel değişkenler bir null olmayan değer bildirildiğinde başlatılır emin olmak için akış analizini kullanır. Oluşturma sırasında alanları yeniden başlatılması gerekir. Değişkeni bir başlatıcıya veya kullanılabilir oluşturucular herhangi bir çağrı tarafından ayarlanmamışsa, derleyici bir uyarı oluşturur. Ayrıca, nonnullable başvuru türleri null olabilir bir değer atanamaz.
 
 Null başvuru türlerine atanan olmayan veya null'a emin olmak için denetlenmez. Ancak derleyici, erişilen veya nonnullable başvuru türüne atanan önce herhangi bir değişken bir boş değer atanabilir bir başvuru türünün null karşı seçeneğinin işaretli olduğundan emin olmak için akış analizini kullanır.
 
-Genel Bakış özelliği hakkında daha fazla bilgi [null başvuru türleri](../nullable-references.md). Bu yeni bir uygulamada kendiniz denemek [null başvuru türleri öğretici](../tutorials/nullable-reference-types.md). Hakkında bilgi edinin yapmak için var olan bir geçiş adımlarını codebase null başvuru türleri [null başvuru türleri öğreticinin kullanmak üzere bir uygulamayı geçirme] içinde kullanımını... /Tutorials/upgrade-to-Nullable-References.MD).
+Genel Bakış özelliği hakkında daha fazla bilgi [null başvuru türleri](../nullable-references.md). Bu yeni bir uygulamada kendiniz denemek [null başvuru türleri öğretici](../tutorials/nullable-reference-types.md). Hakkında bilgi edinin yapmak için var olan bir geçiş adımlarını codebase null başvuru türlerinde kullanımı [öğretici türleri null yapılabilir başvurusu kullanmak için bir uygulamayı geçirme](../tutorials/upgrade-to-nullable-references.md).
 
 ## <a name="asynchronous-streams"></a>Zaman uyumsuz akışlar
 
@@ -301,7 +301,7 @@ Zaman uyumsuz akışlar kendiniz müşterilerimize öğreticide deneyebilirsiniz
 
 Aralıkları ve dizinlerini sağlayan bir kısa sözdizimleri bir dizi içinde alt aralıklara belirtmek için <xref:System.Span%601>, veya <xref:System.ReadOnlySpan%601>.
 
-Dizin belirtebilirsiniz **sonundan**. Belirttiğiniz **sonundan** kullanarak `^` işleci. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. Dizin `^0` "Bitiş" ya da geçmiş, son öğeden bir anlamına gelir.
+Dizin belirtebilirsiniz **sonundan**. Belirttiğiniz **sonundan** kullanarak `^` işleci. Bilginiz `array[2]` öğe "başından itibaren 2" anlamına gelir. Şimdi, `array[^2]` öğe "2 sonundan" anlamına gelir. Dizin `^0` "Bitiş" ya da son öğeyi izleyen dizini anlamına gelir.
 
 Belirtebileceğiniz bir **aralığı** ile **aralık işleci**: `..`. Örneğin, `0..^0` dizi aralığının tamamı belirtir: 0'ın başından itibaren en fazla, ancak son 0 dahil değil. İki işlenenden "Başlangıç" veya "sonuna" kullanabilir. Ayrıca, iki işlenenden atlanabilir. Varsayılanlar `0` başlangıç dizini ve `^0` son dizini.
 

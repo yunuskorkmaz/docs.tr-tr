@@ -2,12 +2,12 @@
 title: Arkadaş derlemeler (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de27643be8f5ddbf533ebb75b66666fc6bc148b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576986"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748199"
 ---
 # <a name="friend-assemblies-c"></a>Arkadaş derlemeler (C#)
 A *arkadaş derleme* başka bir derlemenin erişebilen bir derleme [iç](../../../../csharp/language-reference/keywords/internal.md) türler ve üyeler. Derleme arkadaş derleme olarak belirlerseniz, artık türleri ve üyeleri edebilmeleri genel olarak diğer derlemeler tarafından erişilecek işareti yok. Bu, özellikle aşağıdaki senaryolarda kullanışlıdır:  
@@ -76,5 +76,5 @@ public class ClassWithFriendMethod
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

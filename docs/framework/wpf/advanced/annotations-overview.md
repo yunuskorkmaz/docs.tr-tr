@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543480"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746448"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik olduğundan. Bu Notlar ya da yorumlarınız "ek açıklamalar", bir belgeye bilgi bayrağı veya daha sonra başvurmak için ilgi öğelerini vurgulamak için ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgeleri kişisel açıklamalar ekleme yeteneği genellikle kullanılabilir olsa çok sınırlıdır.  
@@ -75,4 +75,4 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
 - [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
 - [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
 - [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Nasıl yapılır: MenuItem için bir komut ekleme](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Nasıl yapılır: MenuItem için bir komut ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2079d4b4f6bedcc30c4826f8798729c5c9263751
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 120e2ecdf5869200fa9280ce3fc0a2a3a76c667f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648114"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748329"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunların dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework çeşitli dağıtım teknolojileri içerir. Dağıtım teknolojisi dağıtmak için kullanılan bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldığını sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Yükleme ve kaldırma uygulamalarının kolaylaştırır, ancak yüklü uygulamaları bir sürüm oluşturma açısından güncel kalmasını sağlamaya yönelik olanakları sağlamaz.  
   
- Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], bkz: [Windows Installer dağıtımı](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
+ Windows Installer ile ilgili daha fazla bilgi için bkz. [Windows Installer dağıtımı](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
@@ -99,7 +99,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 > [!NOTE]
 >  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz: [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
   
- Bu dosyalar üretilen olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] oluşturulmuştur. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f). Yalnızca biçimlendirme gibi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kullanılarak görüntülenmesi ve genellikle bir Web sunucusuna yayımlanan [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Bu dosyalar üretilen olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] oluşturulmuştur. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Yalnızca biçimlendirme gibi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kullanılarak görüntülenmesi ve genellikle bir Web sunucusuna yayımlanan [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] dağıtım tekniklerden birini kullanarak istemcilere dağıtılabilir. Ancak, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] önerilir çünkü aşağıdaki özellikleri sağlar:  
   

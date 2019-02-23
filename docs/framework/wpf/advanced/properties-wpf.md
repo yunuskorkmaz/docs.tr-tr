@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546035"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745579"
 ---
 # <a name="properties-wpf"></a>Özellikler (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlayan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Topluca, bu hizmetleri genellikle WPF özellik sistemi olarak adlandırılır. Tarafından yedeklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlar bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetleri genellikle WPF özellik sistemi adlandırılır. Tarafından desteklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Çerçeve Özelliği Meta Verileri](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [Salt Okunur Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Özellik Değeri Devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [DependencyObjects için Güvenli Oluşturucu Desenleri](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [Koleksiyon Türü Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [Çerçeve Özelliği Meta Verileri](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Salt Okunur Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Özellik Değeri Devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [DependencyObjects için Güvenli Oluşturucu Desenleri](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Koleksiyon Türü Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.DependencyProperty>  

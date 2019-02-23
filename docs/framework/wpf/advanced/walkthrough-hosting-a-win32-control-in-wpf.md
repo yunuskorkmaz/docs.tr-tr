@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 8e6da9e9e48238c33a3522034c53ecdcb5ec99cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691560"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747537"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 denetimini barındırma
 Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
@@ -140,16 +140,16 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
   
  Geleneksel bir Win32 uygulaması için olduğu gibi kullanıcının da öğeyi liste kutusunda üzerine tıklayarak seçebilirsiniz. Görüntülenen verileri seçme, ekleme veya bir öğe ekleme kullanıcının liste kutusunun durumu her değiştiğinde güncelleştirilir.  
   
- Liste kutusu öğeleri eklemek için göndermek bir [ `LB_ADDSTRING` ileti](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx). Öğeleri silmek için gönderme [ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx) geçerli seçimin indisini almak ve ardından [ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx) öğeyi silmek için. Örnek ayrıca gönderir [ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx)ve öğe sayısını gösteren görüntü güncelleştirmek için döndürülen değer kullanır. ' In iki örneği [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) önceki bölümde açıklanan PInvoke bildirimleri birini kullanın.  
+ Liste kutusu öğeleri eklemek için göndermek bir [ `LB_ADDSTRING` ileti](/windows/desktop/Controls/lb-addstring). Öğeleri silmek için gönderme [ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel) geçerli seçimin indisini almak ve ardından [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring) öğeyi silmek için. Örnek ayrıca gönderir [ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)ve öğe sayısını gösteren görüntü güncelleştirmek için döndürülen değer kullanır. ' In iki örneği [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) önceki bölümde açıklanan PInvoke bildirimleri birini kullanın.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Kullanıcı bir öğeyi seçer veya seçimi değiştirir denetimin ana penceresine göndererek bildirir bir [ `WM_COMMAND` ileti](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx), oluşturursa <xref:System.Windows.Interop.HwndHost.MessageHook> sayfa için olay. Ana pencere yordamına aynı bilgileri ana penceresinin işleyici alır. Ayrıca bir Boolean değerine bir başvuru geçirir `handled`. Ayarladığınız `handled` için `true` ileti işlenmiş olduğunu ve başka bir işleme gerek olmadığını göstermek için.  
+ Kullanıcı bir öğeyi seçer veya seçimi değiştirir denetimin ana penceresine göndererek bildirir bir [ `WM_COMMAND` ileti](/windows/desktop/menurc/wm-command), oluşturursa <xref:System.Windows.Interop.HwndHost.MessageHook> sayfa için olay. Ana pencere yordamına aynı bilgileri ana penceresinin işleyici alır. Ayrıca bir Boolean değerine bir başvuru geçirir `handled`. Ayarladığınız `handled` için `true` ileti işlenmiş olduğunu ve başka bir işleme gerek olmadığını göstermek için.  
   
- [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) işlemek istediğiniz bir olay olup olmadığını belirlemek için bildirim kimliği incelemeniz gerekir böylece çeşitli nedenlerle gönderilir. Kimliği üst sınırı içinde yer alan `wParam` parametresi. Örnek kimliği ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcının yapılan veya değiştirilen seçimi, kimliği olacaktır [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx).  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) işlemek istediğiniz bir olay olup olmadığını belirlemek için bildirim kimliği incelemeniz gerekir böylece çeşitli nedenlerle gönderilir. Kimliği üst sınırı içinde yer alan `wParam` parametresi. Örnek kimliği ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcının yapılan veya değiştirilen seçimi, kimliği olacaktır [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange).  
   
- Zaman [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) olan alınan örnek seçili öğenin dizinini denetimi göndererek alır bir [ `LB_GETCURSEL` ileti](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx). Metin iletisini almanız için önce oluşturmanız bir <xref:System.Text.StringBuilder>. Ardından Denetim gönderdiğiniz bir [ `LB_GETTEXT` ileti](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx). Boş geçmesi <xref:System.Text.StringBuilder> nesnesinin `wParam` parametresi. Zaman [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) döndürür, <xref:System.Text.StringBuilder> seçilen öğenin metnini içerir. Bu kullanımı [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) henüz başka bir PInvoke bildirimi gerektirir.  
+ Zaman [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) olan alınan örnek seçili öğenin dizinini denetimi göndererek alır bir [ `LB_GETCURSEL` ileti](/windows/desktop/Controls/lb-getcursel). Metin iletisini almanız için önce oluşturmanız bir <xref:System.Text.StringBuilder>. Ardından Denetim gönderdiğiniz bir [ `LB_GETTEXT` ileti](/windows/desktop/Controls/lb-gettext). Boş geçmesi <xref:System.Text.StringBuilder> nesnesinin `wParam` parametresi. Zaman [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) döndürür, <xref:System.Text.StringBuilder> seçilen öğenin metnini içerir. Bu kullanımı [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) henüz başka bir PInvoke bildirimi gerektirir.  
   
  Son olarak, ayarlama `handled` için `true` iletinin işlendiğini göstermek için.  
   

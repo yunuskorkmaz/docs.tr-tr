@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241768"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746052"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Birim testi F# dotnet testi ve NUnit kullanarak .NET core'da kitaplıkları
 
@@ -45,7 +45,7 @@ Olun *MathService* aşağıdaki komut kaynak projesi oluşturmak için geçerli 
 dotnet new classlib -lang F#
 ```
 
-Teste dayalı geliştirme (TDD) kullanmak için bir matematik hizmetin başarısız uygulama oluşturun:
+Bir matematik hizmetin başarısız uygulama oluşturun:
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Açık *UnitTest1.fs* ve aşağıdaki kodu ekleyin:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. Açık *UnitTest1.fs* ve aşağıdaki kodu ekleyin:
 
 ```fsharp
 namespace MathService.Tests

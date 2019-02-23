@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863062"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747038"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Denetim seçeneklerin bir listesi kullanıcıların sayısını gösterir. Listede gösterilen ve denetim genişletir ve daraltır gizli. Varsayılan durumuna görüntüleme tek bir seçim listesi daraltılmıştır. Kullanıcı seçeneklerinin tam listesi görmek için bir düğmesine tıklar.  
@@ -21,9 +21,6 @@ ms.locfileid: "43863062"
   
  ![Birleşik giriş kutuları varsayılan ve basılı durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Daraltılabilir ve Genişletilebilir  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: ComboBoxItem alma](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ComboBox>

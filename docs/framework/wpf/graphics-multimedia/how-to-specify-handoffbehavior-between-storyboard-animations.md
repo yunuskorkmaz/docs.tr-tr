@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 9a27c377e2993c1e67ada508071698a541cec660
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a6da3f58fc6e999f5196cf5d8d3fd00f1098fc50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305447"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745859"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Nasıl yapılır: Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme
 Bu örnekte, görsel taslak animasyonları arasında iletim davranışı belirtmek gösterilmektedir. <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Özelliği <xref:System.Windows.Media.Animation.BeginStoryboard> belirtir nasıl yeni bir özellik için zaten uygulanmış olan tüm mevcut vm'lere etkileşim.  
@@ -24,5 +24,4 @@ Bu örnekte, görsel taslak animasyonları arasında iletim davranışı belirtm
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animasyon ve zamanlama](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
 - [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)

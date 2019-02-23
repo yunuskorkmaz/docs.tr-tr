@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543860"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748589"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı bir grafik donanım özelliği ve çalıştıran bir cihaz için performans düzeyi tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
@@ -90,7 +90,7 @@ ms.locfileid: "54543860"
 |Kullanan taranmış içerik <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|İşlenen kullanarak herhangi bir içerik <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> yöntemi <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Kullanan döşenmiş içerik <xref:System.Windows.Media.TileBrush>|Herhangi bir içerik döşenmiş <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği <xref:System.Windows.Media.TileBrush> ayarlanır <xref:System.Windows.Media.TileMode.Tile>.|  
 |Grafik donanımının doku maksimum boyutunu aşan yüzeyler|Çoğu grafik donanımının için 2048 x 2048 veya 4096 x 4096 piksel boyutunda yüzeyler var.|  
-|Herhangi bir işlem bellek, grafik donanımının, video RAM gereksinim aşıyor|Dahil edilen Perforator aracını kullanarak uygulama video RAM kullanımını izleyebildiğinden [WPF Performans Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) Windows SDK.|  
+|Herhangi bir işlem bellek, grafik donanımının, video RAM gereksinim aşıyor|Dahil edilen Perforator aracını kullanarak uygulama video RAM kullanımını izleyebildiğinden [WPF Performans Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) Windows SDK.|  
 |Katmanlı windows|Katmanlı pencerelere izin ver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana bir dikdörtgen olmayan pencere içeriğini işlemek için uygulamaları. Windows görüntü sürücü modeli (WDDM) gibi destekleyen işletim sistemlerinde [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ve [!INCLUDE[win7](../../../../includes/win7-md.md)]katmanlı donanım hızlandırılmış dizisidir. Diğer sistemlerde gibi [!INCLUDE[winxp](../../../../includes/winxp-md.md)]katmanlı windows hiçbir Donanım hızlandırmalı yazılım tarafından işlenir.<br /><br /> Katmanlı windows etkinleştirebilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşağıdaki ayarlayarak <xref:System.Windows.Window> özellikleri:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -117,7 +117,7 @@ ms.locfileid: "54543860"
 |Perforator|İşleme davranışını çözümlemek için kullanın.|  
 |Visual Profil Oluşturucu|Kullanımını profil oluşturma için kullanmak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeni ve olay işleme görsel ağaç öğeler tarafından gibi hizmetler.|  
   
- WPF Performans Suite performans verileri zengin, grafik bir görünümünü sağlar. WPF Performans araçları hakkında daha fazla bilgi için bkz: [WPF Performans Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ WPF Performans Suite performans verileri zengin, grafik bir görünümünü sağlar. WPF Performans araçları hakkında daha fazla bilgi için bkz: [WPF Performans Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>DirectX Tanılama Aracı  
  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Tanılama aracı, Dxdiag.exe, gidermenize yardımcı olmak üzere tasarlanan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-ilgili sorunlar. Varsayılan yükleme klasörünü [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] tanı aracıdır:  
@@ -133,6 +133,6 @@ DirectX Tanılama Aracı ana penceresi
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [WPF Performans paketi](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [WPF Performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Grafik İşleme Kayıt Defteri Ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

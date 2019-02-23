@@ -2,12 +2,6 @@
 title: Programlama Kavramları (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147248"
 ---
 # <a name="programming-concepts-visual-basic"></a>Programlama Kavramları (Visual Basic)
 Bu bölümde, Visual Basic Dil programlama kavramları açıklanmıştır.  
@@ -16,7 +10,7 @@ Bu bölümde, Visual Basic Dil programlama kavramları açıklanmıştır.
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
+|[.NET derlemeleri](../../../standard/assembly/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
 |[Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Zaman uyumsuz çözümleri kullanarak yazma açıklar [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükleri. Bir kılavuz içerir.|  
 |[Öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Öğe türleri, alanları, yöntemleri ve özellikleri gibi öznitelikleri kullanarak programlama hakkında ek bilgi sağlamak nasıl ele alınmaktadır.|  
 |[Arayan bilgileri (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Bir yöntemin arayanı hakkında bilgi edinmek nasıl açıklar. Bu bilgiler, dosya yolu ve kaynak kodunun satır numarasını ve arayanın üye adı içerir.|  

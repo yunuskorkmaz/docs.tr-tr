@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Yük derlemeleri ve yüklemelerini kaldırma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: adfe23c2c70b1f49e23fb7c3866c8dac5c9c09ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dc773c9e32c293ab5155b15e45f5255e31ab9a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549710"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745217"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Nasıl yapılır: Yük derlemeleri ve yüklemelerini kaldırma (Visual Basic)
 Programınız tarafından başvurulan derlemeler otomatik olarak derleme zamanında yüklenir, ancak geçerli uygulama etki alanına çalışma zamanında belirli derlemeleri yüklemek mümkündür. Daha fazla bilgi için [nasıl yapılır: Bir uygulama etki alanına derlemeler yükleme](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -26,5 +26,5 @@ Programınız tarafından başvurulan derlemeler otomatik olarak derleme zamanı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [Nasıl yapılır: Uygulama etki alanına derlemeler yükleme](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

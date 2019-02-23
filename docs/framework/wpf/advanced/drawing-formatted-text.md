@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562784"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748472"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -85,7 +85,7 @@ Fırça darbesi ve vurgulamaya uygulanan bir resim fırçası örneği
  ![Metin yolu geometri izleyen küre](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Metin yolu geometri izleyen küre  
   
- Daha fazla bilgi için [nasıl yapılır: Bir PathGeometry animasyon metnini oluşturmak](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Daha fazla bilgi için [nasıl yapılır: Bir PathGeometry animasyon metnini oluşturmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Biçimlendirilmiş metin için ilgi çekici diğer kullanımlar için dönüştürüldükten sonra oluşturabilirsiniz bir <xref:System.Windows.Media.PathGeometry> nesne. Örneğin, içinde görüntülemek için video bölebilirsiniz.  
   
@@ -128,4 +128,4 @@ Metnin yolu geometrisini video görüntüleme
 - [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
 - [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
-- [Nasıl yapılır: Bir PathGeometry animasyon metnini oluşturma](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+- [Nasıl yapılır: Bir PathGeometry animasyon metnini oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

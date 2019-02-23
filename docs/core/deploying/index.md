@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266916"
 ---
 # <a name="net-core-application-deployment"></a>.NET core uygulama dağıtımı
 
@@ -30,7 +24,7 @@ Bir FDD için yalnızca uygulama ve üçüncü taraf bağımlılıklarının da�
 
 Bir FDD dağıtma, çok sayıda avantaj vardır:
 
-- .NET Core uygulamanızı önceden çalışır hedef işletim sistemlerini tanımlamak zorunda değilsiniz. .NET Core yürütülebilir dosyaları ve kitaplıkları işletim sisteminden bağımsız olarak için ortak bir PE dosyası biçimini kullandığından, .NET Core uygulamanızı alttaki işletim sisteminden bağımsız olarak çalıştırabilirsiniz. PE dosyası biçimi hakkında daha fazla bilgi için bkz. [.NET bütünleştirilmiş kodu dosya biçimi](../../standard/assembly-format.md).
+- .NET Core uygulamanızı önceden çalışır hedef işletim sistemlerini tanımlamak zorunda değilsiniz. .NET Core yürütülebilir dosyaları ve kitaplıkları işletim sisteminden bağımsız olarak için ortak bir PE dosyası biçimini kullandığından, .NET Core uygulamanızı alttaki işletim sisteminden bağımsız olarak çalıştırabilirsiniz. PE dosyası biçimi hakkında daha fazla bilgi için bkz. [.NET bütünleştirilmiş kodu dosya biçimi](../../standard/assembly/file-format.md).
 
 - Dağıtım paketinin boyutu küçüktür. Yalnızca uygulamanız ve onun bağımlılıklarını, .NET Core kendisini dağıtırsınız.
 

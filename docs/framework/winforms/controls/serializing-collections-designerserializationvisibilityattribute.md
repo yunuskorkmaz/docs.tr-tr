@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533552"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747670"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>İzlenecek yol: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme
 Özel kontrollerinizi, bazen bir koleksiyon özelliği olarak açığa çıkarır. Bu izlenecek yolda nasıl kullanılacağını gösterir <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> koleksiyonu tasarım zamanında nasıl serileştirildiği denetlemek için sınıf. Uygulama <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> , koleksiyon özelliği için değer özelliği serileştirilecek sağlar.  
   
- Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -36,9 +36,9 @@ ms.locfileid: "54533552"
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Bir denetim ile seri hale getirilebilir bir koleksiyon oluşturmak için  
   
-1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun `SerializationDemoControlLib`. Daha fazla bilgi için [Windows Denetim Kitaplığı şablonu](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun `SerializationDemoControlLib`. Daha fazla bilgi için [Windows Denetim Kitaplığı şablonu](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Yeniden adlandırma `UserControl1` için `SerializationDemoControl`. Daha fazla bilgi için [nasıl yapılır: Tanımlayıcıları yeniden adlandırın](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Yeniden adlandırma `UserControl1` için `SerializationDemoControl`. Daha fazla bilgi için [bir kod sembol yeniden düzenlemeyi yeniden adlandırma](/visualstudio/ide/reference/rename).  
   
 3.  İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> özelliğini `10`.  
   
@@ -129,16 +129,16 @@ ms.locfileid: "54533552"
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Standart türlerin koleksiyonunu serileştirmek nasıl öğrendikten sonra özel kontrollerinizi tasarım zamanı ortamına daha derin tümleştirme göz önünde bulundurun. Aşağıdaki konular, özel kontrollerinizi, tasarım zamanı tümleştirmeyi geliştirmek nasıl açıklar:  
   
--   [Tasarım zamanı mimarisi](https://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
+-   [Tasarım zamanı mimarisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
 -   [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Tasarımcı serileştirmeye genel bakış](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+-   [Tasarımcı serileştirmeye genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
 -   [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Tasarımcı serileştirmeye genel bakış](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
-- [Nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Tasarımcı serileştirmeye genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
 - [İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

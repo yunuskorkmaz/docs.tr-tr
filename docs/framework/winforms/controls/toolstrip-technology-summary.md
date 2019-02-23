@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736024"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747145"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip Teknoloiji Özeti
 Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullanımını destekleyen sınıflar.  
@@ -63,26 +63,26 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
 ### <a name="task-dialog-boxes"></a>Görev iletişim kutuları  
  Visual Studio'da bir denetim Tasarımcısı'nda akıllı etiketine tıkladığınızda kolay erişim için bir görev listesi çok sık kullanılan komutlar için görüntüler.  
   
--   [MenuStrip görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [ContextMenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [StatusStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer görevleri iletişim kutusu](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [ToolStripContainer görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Öğeler Koleksiyonu Düzenleyicisi  
  Visual Studio'da tıkladığınızda, **öğe düzenleme** görev listesinde veya seçin ve denetim sağ tıklayın **öğe düzenleme** Koleksiyonu Düzenleyicisi denetimi için kısayol menüsünde görüntülenir. Koleksiyon düzenleyiciler, ekleme, kaldırma ve denetimi içeren öğeleri yeniden sıralamak olanak tanır. Ayrıca, görüntüleyebilir ve denetimi ve denetimin öğeleri özelliklerini değiştirin.  
   
--   [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip öğeler Koleksiyonu Düzenleyicisi](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [StatusStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Denetimleri barındırma  
  <xref:System.Windows.Forms.ToolStripControlHost> Sınıfı için yerleşik sarmalayıcıları sağlar <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar> kontrol eder. Başka var veya COM denetiminde de barındırabilir bir <xref:System.Windows.Forms.ToolStripControlHost>.  

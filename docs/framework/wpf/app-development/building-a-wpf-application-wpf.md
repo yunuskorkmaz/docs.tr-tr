@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 3bae07f8b72225ccb502a32fbc03fb4651c80d63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654288"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745644"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir (.exe) kütüphaneler (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ve anahtar derleme işlemindeki adımları açıklar.  
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUD
   
 -   Microsoft Build Engine (MSBuild). Kod ve XAML dosyaları ek olarak, uygulamanın bir MSBuild proje dosyası içermesi gerekir. Daha fazla bilgi için "MSBuild" konusuna bakın.  
   
--   Visual Studio. Visual Studio WPF uygulamaları MSBuild ile derleme ve kullanıcı Arabirimi oluşturmak için bir görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için [Visual Studio'da uygulama geliştirme](https://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) ve [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
+-   Visual Studio. Visual Studio WPF uygulamaları MSBuild ile derleme ve kullanıcı Arabirimi oluşturmak için bir görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için [yazmak ve kodunuzu Visual Studio kullanarak yönetme](/visualstudio/ide/index-writing-code) ve [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF derleme işlem hattı  

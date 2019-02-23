@@ -3,21 +3,23 @@ title: SOA uygulamaları
 description: Kapsayıcıları SOA uygulamalar için kullanışlı bir dağıtım seçeneği de olabilir aklınızda size aittir.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 4fd39e075c5730cf7fddb0138cdb5267a914c91f
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 353ba738143b7dcd92c7c75ac27ea6a7370f9da6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221270"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745839"
 ---
-# <a name="soa-applications"></a>SOA uygulamaları
+# <a name="service-oriented-applications"></a>Hizmet odaklı uygulamalar
 
-SOA aşırı kullanılmasına bir terim olan ve çok sayıda farklı şeyler farklı kişilere geliyordu. Ancak bu, yapı mimarisi (en yaygın olarak HTTP Hizmetleri) farklı türde sınıflandırılabilir birden çok Hizmetleri'nde parçalama tarafından uygulamanızın en az ve kullanımın ortak paydası olmasını, SOA, veya hizmet yönlendirmesi, ortalama olarak alt sistemler ister ya da diğer durumlarda, farklı katmanları.
+Hizmet odaklı mimari (SOA) birçok farklı şey farklı kişilere geliyordu aşırı kullanılmasına bir terim oluştu. Ancak, alt sistemleri gibi farklı türlerde veya diğer durumlarda, katmanları olarak sınıflandırılan çeşitli Hizmetleri (en yaygın olarak HTTP Hizmetleri) parçalama tarafından uygulamanızın mimarisini yapısı bir ortak paydası SOA anlamına gelir.
 
-Bugün, kapsayıcı görüntüsü içinde bulunan tüm bağımlılıkları olduğundan, dağıtımıyla ilgili sorunları çözer. Bu hizmetleri Docker kapsayıcıları olarak dağıtabilirsiniz. Ancak, SOAs genişletmek gerektiğinde bağlı olarak tek örnek dağıtıyorsanız zorlukları karşılaşabilirsiniz. Burada bir Docker yazılım veya orchestrator kümeleme yardımcı olacak budur. Mikro hizmetler yaklaşımları inceleyeceğiz, şu anda sonraki bölümde daha ayrıntılı olarak inceleyeceğiz.
+Bugün, bu hizmetler, tüm bağımlılıkları kapsayıcı görüntüsüne dahil olduğu dağıtımıyla ilgili sorunları çözmeye Docker kapsayıcıları olarak dağıtabilirsiniz. Ancak, out SOAs Ölçeklendirmesi gerektiğinde, bağlı olarak tek örnek dağıtıyorsanız zorlukları karşılaşabilirsiniz. Bu sınama, yazılım veya bir orchestrator kümeleme Docker kullanarak işlenebilir. Mikro hizmetler yaklaşımları inceleyeceğiz, sonraki bölümde daha ayrıntılı düzenleyicileri şu konuları inceleyeceğiz.
 
-Günün sonunda, kapsayıcı kümeleme çözümleri daha gelişmiş bir mikro hizmetler mimarisi her mikro hizmet kendi veri modelini sahip olduğu veya bir hem bir geleneksel SOA mimarisi için kullanışlı olur. Ayrıca, birden çok veritabanı sayesinde, ayrıca SOA Hizmetleri tarafından paylaşılan tek parça veritabanlarıyla çalışmak yerine veri katmanı ölçeklendirme. Ancak, verileri bölme hakkında bir tartışma tamamen mimari ve tasarım hakkında olur.
+Docker kapsayıcıları yararlı (ancak gerekli değil) hizmet odaklı geleneksel mimarilerde hem de daha gelişmiş bir mikro hizmet mimarileri için.
+
+Günün sonunda, kapsayıcı kümeleme çözümleri ve her bir mikro hizmet kendi veri modelini sahibi olan daha gelişmiş bir mikro hizmet mimarisi bir hem bir geleneksel SOA mimarisi için yararlı olur. Ve birden çok veritabanı sayesinde, ayrıca SOA Hizmetleri tarafından paylaşılan tek parça veritabanlarıyla çalışmak yerine veri katmanı ölçeğini genişletebilirsiniz. Ancak, verileri bölme hakkında bir tartışma tamamen mimari ve tasarım hakkında olur.
 
 >[!div class="step-by-step"]
 >[Önceki](state-and-data-in-docker-applications.md)

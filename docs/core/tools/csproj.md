@@ -3,12 +3,12 @@ title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222070"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748016"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -48,8 +48,8 @@ Aşağıdaki tablo, hangi öğe ve hangi gösterir [eğik çizgi genelleştirmel
 | Öğe           | Glob içerir                              | Glob Dışla                                                  | Glob Kaldır                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                        |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | Yok                        |
-| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Yok                        |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
 
 Projenizde eğik çizgi genelleştirmeler sahip ve en son SDK'sını kullanarak oluşturmaya çalışırsanız, aşağıdaki hatayı alırsınız:
 
@@ -97,26 +97,26 @@ Kök `<Project>` öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk
 İhtiyacınız `Sdk` öznitelik kümesi bu kimlikler birine üzerinde `<Project>` .NET Core araçları kullanın ve kodu derleyebilmeniz için öğesi. 
 
 ### <a name="packagereference"></a>PackageReference
-A `<PackageReference>` öğe projeye NuGet bağımlılık belirtir. `Include` Özniteliği paket kimliğini belirtir 
+A `<PackageReference>` öğesi öğeyi belirten bir [projedeki NuGet bağımlılık](/nuget/consume-packages/package-references-in-project-files). `Include` Özniteliği paket kimliğini belirtir 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Sürüm
-`Version` geri yüklemek için paket sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterimine eşdeğerdir `[1.2.3]` tam 1.2.3-Beta için Paket sürümü.
+Gerekli `Version` özniteliği geri yüklemek için paket sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/reference/package-versioning#version-ranges-and-wildcards) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterimine eşdeğerdir `[1.2.3]` tam 1.2.3-Beta için Paket sürümü.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets ve ExcludeAssets PrivateAssets
-`IncludeAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması. 
+`IncludeAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması. Varsayılan olarak, tüm paket varlıklar dahil edilir.
 
 `ExcludeAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` değil kullanılması.
 
-`PrivateAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması ancak sonraki projeye akış değil. 
+`PrivateAssets` öznitelik belirtir ait hangi varlıklar tarafından paket belirtilen `<PackageReference>` kullanılması ancak sonraki projeye akış değil. `Analyzers`, `Build` Ve `ContentFiles` bu özniteliği mevcut olmadığında varlıkları varsayılan olarak özel.
 
 > [!NOTE]
 > `PrivateAssets` eşdeğerdir *project.json*/*xproj* `SuppressParent` öğesi.
 
-Bu öznitelikler, bir veya daha fazla aşağıdaki öğelerden birini içerebilir:
+Bu öznitelik, bir veya daha fazla noktalı virgülle ayrılmış aşağıdaki öğeleri içerebilir `;` listeleniyorsa, birden fazla karakter:
 
 * `Compile` -lib klasörünün içeriğini karşı derleme kullanılabilir.
 * `Runtime` – çalışma zamanı klasörünün içeriğini dağıtılır.
@@ -206,12 +206,64 @@ Paketi için telif hakkı ayrıntıları.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 İstemci paketi yüklemeden önce paket lisansını kabul etmek için tüketici sor olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+SPDX lisans ifadesi veya genellikle kullanıcı Arabirimi görüntüler yanı sıra nuget.org adresinde gösterilir, paket içindeki bir lisans dosyasının yolu.
+
+Tam listesi sunulmaktadır [SPDX lisans tanımlayıcıları](https://spdx.org/licenses/). NuGet.org yalnızca OSI kabul eder veya kullanırken onaylanan FSF lisans türü ifadesi lisansı.
+
+Bir lisans ifadenin tam sözdizimi aşağıda açıklanan [ABNF](https://tools.ietf.org/html/rfc5234).
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> Yalnızca biri `PackageLicenseExpression`, `PackageLicenseFile` ve `PackageLicenseUrl` teker teker belirtilebilir.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+SPDX tanımlayıcı atanmamış lisans kullandığınız ya da özel bir lisanstır paket içindeki bir lisans dosyası yolu (Aksi takdirde `PackageLicenseExpression` VPN'ye olan)
+
+> [!NOTE]
+> Yalnızca biri `PackageLicenseExpression`, `PackageLicenseFile` ve `PackageLicenseUrl` teker teker belirtilebilir.
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-Bir paket için uygun olan lisans URL'si.
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-Genellikle kullanıcı Arabiriminde gösterilir paketin giriş sayfası için bir URL yanı sıra nuget.org görüntüler.
+Bir paket için uygun olan lisans URL'si. (_Visual Studio 15.9.4, .NET SDK'sı 2.1.502 ve 2.2.101 beri kullanım dışı_)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Bir [SPDX lisans tanımlayıcısı](https://spdx.org/licenses/) veya ifade, yani `Apache-2.0`.
+
+Değiştirir `PackageLicenseUrl`, ile birleştirilemez `PackageLicenseFile` ve Visual Studio 15.9.4, .NET SDK'sı 2.1.502 veya 2.2.101, gerektirir ya da daha yeni.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Yani dosya diskte, proje dosyasının göreli bir yol lisansına `LICENSE.txt`.
+
+Değiştirir `PackageLicenseUrl`, ile birleştirilemez `PackageLicenseExpression` ve Visual Studio 15.9.4, .NET SDK'sı 2.1.502 veya 2.2.101, gerektirir ya da daha yeni.
+
+Lisans dosyası, proje için örnek kullanım açıkça ekleyerek iyileştirmesiyle doludur emin olmak ihtiyacınız olacak:
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 Kullanıcı Arabirimi ekranı pakette için simge olarak kullanılacak bir URL saydam arka plana sahip 64 x 64 görüntüsü.
 

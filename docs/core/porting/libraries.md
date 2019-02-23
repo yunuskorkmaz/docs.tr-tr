@@ -2,14 +2,14 @@
 title: .NET Core için bağlantı kitaplıkları
 description: Kitaplık .NET Framework projelerinden .NET Core için bağlantı noktası hakkında bilgi edinin.
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904694"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745566"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework kitaplıkları .NET Core için bağlantı noktası
 
@@ -26,7 +26,7 @@ Bu makalede, varsayılır:
 
 Ayrıca şu konu başlıklarının içeriğini tanıdık olmanız gerekir:
 
-[.NET standard](~/docs/standard/net-standard.md)   
+[.NET standard](../../standard/net-standard.md)\
 Bu konuda, tüm .NET uygulamalarında kullanılabilir olacak şekilde tasarlanmıştır .NET API'lerinin resmi belirtimi açıklanmaktadır.
 
 [Paketler, meta paketler ve çerçeveler](~/docs/core/packages.md)   

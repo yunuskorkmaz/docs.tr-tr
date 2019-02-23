@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 8d787f8deb8f3b7d1e59d99e71662960a5c04e15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652091"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745427"
 ---
 # <a name="internal-c-reference"></a>internal (C# Başvurusu)
 `internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türler ve tür üyeleri için. 
@@ -32,7 +32,7 @@ public class BaseClass
 
  Bir karşılaştırması `internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Derlemeler hakkında daha fazla bilgi için bkz. [derlemeler ve genel derleme önbelleği](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
+ Derlemeler hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).  
   
  Bir grup için uygulama kodunun kalanı görmeden özel bir şekilde işbirliği bileşenlerinin sağladığından bir ortak iç erişim bileşeni tabanlı geliştirme kullanılır. Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları. Bu üyeleri iç olduğundan, framework kullanan kodu sunulmaz.  
   

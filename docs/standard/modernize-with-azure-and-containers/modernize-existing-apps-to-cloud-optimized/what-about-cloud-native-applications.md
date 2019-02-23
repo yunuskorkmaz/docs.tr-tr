@@ -4,16 +4,16 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152578"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746422"
 ---
 # <a name="what-about-cloud-native-applications"></a>Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
 
-Ancak [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulamaları odaklandığı değildir bu kılavuz, bu modernizasyonu olgunluk seviyesi bir anlayışa sahip ve bu bulut için iyileştirilmiş uygulamalardan ayırt etmek için yararlı olur.
+Ancak [bulutta yerel](https://azure.microsoft.com/overview/cloudnative/) uygulamaları odaklandığı değildir bu kılavuz, bu modernizasyonu olgunluk seviyesi bir anlayışa sahip ve bu bulut için iyileştirilmiş uygulamalardan ayırt etmek için yararlı olur.
 
 Şekil 4-3, bulutta çalışan uygulamalar uygulama modernizasyonu olgunluk düzeyinde yerleştirir:
 
@@ -23,7 +23,7 @@ Ancak [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-clou
 
 Bulutta yerel modernizasyonu olgunluk seviyesi, genellikle yeni geliştirme yatırımlarından gerektirir. Genellikle bulut yerel düzeye taşıma önemli ölçüde dağıtılabilir otonom alt (mikro) oluşturarak büyük uygulamalar ölçek ve ölçeği artırmak mümkün olduğunca uygulamaları modernize etme işletme ihtiyaçlarına göre bağımsız olarak yönetilir uzun dönem ve artışı evrimi çevikliği sağlayan bu otonom uygulamanın bölümlerinin maliyetlerini düşürürken çalışırken uygulamanın diğer bölgelerden avantajları önemli rekabet. 
 
-Ana yapı taşına [bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) uygulamaları ile çevikliği evrim geçiren ve ölçeklendirin ya da dağıtılmış bir tek parçalı mimari sağlamak zor olurdu sınırları için mikro hizmetler mimari yaklaşımları dayanır Şirket içi veya Bulut ortamı.
+Bulutta çalışan uygulamalar, ana yapı taşına çeviklikle evrim geçiren ve şirket içi veya Bulut için Dağıtılmış bir tek parçalı mimari sağlamak zor olurdu limitleri ölçek, mikro hizmetler mimari yaklaşımları dayanır ortam.
 
 Şekil 4-4, yerel bulut modelinin temel özellikleri gösterilmektedir.  
 
@@ -33,19 +33,19 @@ Ana yapı taşına [bulutta yerel](https://www.gartner.com/doc/3181919/architect
 
 Ayrıca, yapay zeka (AI), machine learning (ML) ve IOT gibi diğer hizmetler ekleyerek temel modern web uygulamaları ve bulutta çalışan uygulamaları genişletebilirsiniz. Olası bulut için iyileştirilmiş yaklaşımlardan birini genişletmek için bu hizmetlerin herhangi birini kullanabilirsiniz.
 
-Bulutta yerel düzeyinde uygulamalarda temel fark uygulama mimaridir. [Bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) olan uygulamalar üzerinde mikro hizmet tabanlı uygulamaları tanımına göre. Bulutta yerel uygulamaların özel mimariler, teknolojiler ve platformlar, tek parçalı bir web uygulaması ya da geleneksel N katmanlı uygulama karşılaştırma gerektirir.
+Bulutta yerel düzeyinde uygulamalarda temel fark uygulama mimaridir. Bulutta yerel uygulamalar üzerinde mikro hizmet tabanlı uygulamaları tanımına göre yapılandırılır. Bulutta yerel uygulamaların özel mimariler, teknolojiler ve platformlar, tek parçalı bir web uygulaması ya da geleneksel N katmanlı uygulama karşılaştırma gerektirir.
 
 ## <a name="cloud-native-applications-details"></a>Bulutta çalışan uygulamalar ayrıntıları
 
-[Bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) büyük ve görev açısından kritik uygulamalar için daha gelişmiş veya olgun bir durumu. Bulutta yerel uygulamalar genellikle mimarisi ve mevcut uygulamaları modernize etme tarafından oluşturulan yerine sıfırdan tasarım gerektirir. Bulutta çalışan uygulama ve daha basit bir bulut için iyileştirilmiş web uygulaması arasındaki temel fark, mikro hizmet mimarilerinde bulutta yerel bir yaklaşım kullanmak için önerilir. Bulut için iyileştirilmiş uygulamalar ayrıca monolitik web uygulamaları veya N katmanlı uygulamalar olabilir.
+Bulutta yerel, büyük ve görev açısından kritik uygulamalar için daha gelişmiş veya olgun bir durumdur. Bulutta yerel uygulamalar genellikle mimarisi ve mevcut uygulamaları modernize etme tarafından oluşturulan yerine sıfırdan tasarım gerektirir. Bulutta çalışan uygulama ve daha basit bir bulut için iyileştirilmiş web uygulaması arasındaki temel fark, mikro hizmet mimarilerinde bulutta yerel bir yaklaşım kullanmak için önerilir. Bulut için iyileştirilmiş uygulamalar ayrıca monolitik web uygulamaları veya N katmanlı uygulamalar olabilir.
 
-[On iki Faktörlü uygulama](https://12factor.net/) (mikro hizmetler yaklaşımları yakından ilgili düzenleri koleksiyonu) bir gereksinim için ayrıca değerlendirilir [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) uygulama mimarileri.
+[On iki Faktörlü uygulama](https://12factor.net/) (mikro hizmetler yaklaşımları yakından ilgili düzenleri koleksiyonu) de bulutta yerel uygulama mimarileri için bir gereksinim olarak kabul edilir.
 
 [Bulut yerel bilgisayar Foundation (CNCF)](https://www.cncf.io/) olan bir birincil promoter bulutta yerel ilkeler. Microsoft, bir [CNCF üyesi](https://azure.microsoft.com/blog/announcing-cncf/).
 
 Örnek bir tanım ve bulutta çalışan uygulamalar özellikleri hakkında daha fazla bilgi için Gartner bkz [Mimar ve bulutta çalışan uygulamalar tasarlamak nasıl](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Bulutta çalışan bir uygulamanın nasıl uygulanacağını hakkında Microsoft'tan belirli yönergeler için bkz [.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi](https://aka.ms/microservicesebook).
 
-Tam bir uygulamaya geçirirseniz dikkate alınması gereken en önemli faktör [bulutta yerel](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) modelidir bir mikro hizmet tabanlı mimariye yeniden oluşturma gerekir. Bu açıkça büyük yeniden düzenleme işlemi nedeniyle ilgili geliştirme önemli bir yatırım gerektirir. Bu seçenek, genellikle yeni düzeyde ölçeklenebilirlik ve uzun vadeli çevikliği gereken görev açısından kritik uygulamalar için seçilir. Ancak, doğru buluta özgü birkaç yeni senaryolar için mikro hizmetler ekleyerek taşımadan ve sonunda uygulamayı mikro Hizmetleri tam olarak yeniden düzenleme. Bazı senaryolar için en iyi seçenektir artımlı bir yaklaşımdır.
+Bir mikro hizmet tabanlı mimariye yeniden oluşturma, tam bir uygulama bulutta yerel modeline geçirme, dikkate alınması gereken en önemli faktör olan. Bu açıkça büyük yeniden düzenleme işlemi nedeniyle ilgili geliştirme önemli bir yatırım gerektirir. Bu seçenek, genellikle yeni düzeyde ölçeklenebilirlik ve uzun vadeli çevikliği gereken görev açısından kritik uygulamalar için seçilir. Ancak, doğru buluta özgü birkaç yeni senaryolar için mikro hizmetler ekleyerek taşımadan ve sonunda uygulamayı mikro Hizmetleri tam olarak yeniden düzenleme. Bazı senaryolar için en iyi seçenektir artımlı bir yaklaşımdır.
 
 ## <a name="what-about-microservices"></a>Mikro hizmetler hakkında neler diyeceksiniz? 
 

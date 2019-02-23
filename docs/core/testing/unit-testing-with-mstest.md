@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4f6e1bb9a03a8f98052ec7bc911f22c288df6fe0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170301"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746856"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Birim testi MSTest ve .NET Core ile C#
 
@@ -26,7 +26,7 @@ Shell penceresini açın. Adlı bir dizin oluşturun *birim-test-kullanarak-mste
     /PrimeService
 ```
 
-Olun *PrimeService* geçerli dizin ve çalışma [ `dotnet new classlib` ](../tools/dotnet-new.md) kaynak proje oluşturmak için. Yeniden adlandırma *Class1.cs* için *PrimeService.cs*. Teste dayalı geliştirme (TDD) kullanmak için bir başarısız uygulaması oluşturun. `PrimeService` sınıfı:
+Olun *PrimeService* geçerli dizin ve çalışma [ `dotnet new classlib` ](../tools/dotnet-new.md) kaynak proje oluşturmak için. Yeniden adlandırma *Class1.cs* için *PrimeService.cs*. Bir başarısız uygulamasını oluşturun `PrimeService` sınıfı:
 
 ```csharp
 using System;
@@ -93,7 +93,7 @@ Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](..
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-TDD yaklaşım geçer hale getirme ve süreci tekrarlayarak yazma bir başarısız test için çağırır. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin ve yeni bir C# adlı dosya *PrimeService_IsPrimeShould.cs* aşağıdaki içeriğe sahip:
+Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. Kaldırma *UnitTest1.cs* gelen *PrimeService.Tests* dizin ve yeni bir C# adlı dosya *PrimeService_IsPrimeShould.cs* aşağıdaki içeriğe sahip:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

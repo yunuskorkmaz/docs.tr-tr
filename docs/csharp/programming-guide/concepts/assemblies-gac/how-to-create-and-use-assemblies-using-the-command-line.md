@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623852"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746895"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)
 Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
@@ -125,5 +125,5 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
-- [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

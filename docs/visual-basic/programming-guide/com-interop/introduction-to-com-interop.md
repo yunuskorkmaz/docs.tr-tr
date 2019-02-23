@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 68e750fccd988a9cf7e08b4e7169bd2385d48e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734863"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745605"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği kullanıma sunma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel kullanımda olsa, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamalar birçok avantaj sunar.  
@@ -38,7 +38,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
   
 -   Derlemenin düzgün çalışması gereken izinler.  
   
- Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz. [derlemeler ve genel derleme önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>İçeri ve dışarı aktarma tür kitaplıkları  
  Visual Studio bir tür kitaplığından bilgileri içeri aktarmanıza olanak sağlayan, Tlbimp gibi bir yardımcı içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıkları oluşturabilirsiniz.  
@@ -57,7 +57,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
 - [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Birlikte Çalışma için Hazırlama](../../../framework/interop/interop-marshaling.md)

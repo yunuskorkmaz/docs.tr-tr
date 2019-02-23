@@ -3,12 +3,12 @@ title: DotNet vstest komutu
 description: Dotnet vstest komutu, bir projeyi ve tüm bağımlılıklarını oluşturur.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169034"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747735"
 ---
 # <a name="dotnet-vstest"></a>DotNet vstest
 
@@ -18,7 +18,7 @@ ms.locfileid: "53169034"
 
 `dotnet-vstest` -Belirtilen dosyalardan testleri çalıştırır.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 ```
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-vstest` Komutu çalıştırmaları `VSTest.Console` çalıştırılacak komut satırı uygulaması otomatik birim ve kodlanmış UI uygulama testleri.
+`dotnet-vstest` Komutu çalıştırmaları `VSTest.Console` otomatik birim testleri çalıştırmak için komut satırı uygulamasıdır.
 
 ## <a name="arguments"></a>Arguments
 
@@ -73,11 +73,11 @@ Hedef platform mimarisi, test yürütmesi için kullanılır. Geçerli değerler
 
 `--Framework|/Framework:<Framework Version>`
 
-Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10`, ve `FrameworkUap10`.
+Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`, `FrameworkCore10`, ve `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
-Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Açık bir çekirdek sayısı ile bir ayarlar dosyası ayarlayın.
+Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Runsettings dosyasında RunConfiguration düğümü altındaki MaxCpuCount özelliği ayarlayarak açık bir çekirdek sayısını belirtin.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Hedef platform mimarisi, test yürütmesi için kullanılır. Geçerli değerler
 
 `--Framework|/Framework:<Framework Version>`
 
-Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework35`, `Framework40`, `Framework45`, ve `FrameworkCore10`.
+Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`, ve `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Açık bir çekirdek sayısı ile bir ayarlar dosyası ayarlayın.
+Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Runsettings dosyasında RunConfiguration düğümü altındaki MaxCpuCount özelliği ayarlayarak açık bir çekirdek sayısını belirtin.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Hedef platform mimarisi, test yürütmesi için kullanılır. Geçerli değerler
 
 `--Framework|/Framework:<Framework Version>`
 
-Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework35`, `Framework40`, `Framework45`, ve `FrameworkCore10`.
+Test çalıştırması için kullanılan hedef .NET Framework sürümü. Geçerli değerler örnekler `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`, ve `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Açık bir çekirdek sayısı ile bir ayarlar dosyası ayarlayın.
+Testleri paralel olarak yürütür. Varsayılan olarak, makinedeki tüm mevcut çekirdekler kullanılabilir duruma gelir. Runsettings dosyasında RunConfiguration düğümü altındaki MaxCpuCount özelliği ayarlayarak açık bir çekirdek sayısını belirtin.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

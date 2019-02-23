@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662744"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746568"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662744"
 -   Sahip <xref:System.SerializableAttribute> özniteliği uygulandı.  
   
 > [!NOTE]
->  Uzaktan erişilebilir .NET Framework nesneleri oluşturma hakkında daha fazla bilgi için bkz. [nesneleri Uzaktan erişilebilir hale getirme](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Uzaktan erişilebilir .NET Framework nesneleri oluşturma hakkında daha fazla bilgi için bkz. [nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  WPF UI türleri Uzaktan erişilebilir değildir. Sorunu çözmek için ana uygulamalardan görüntülenecek WPF UI eklentileri tarafından oluşturulan etkinleştirmek için .NET Framework eklenti modeli WPF genişletir. Bu destek, iki tür tarafından WPF sağladığı: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve iki statik yöntemler tarafından uygulanan <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türleri ve yöntemleri şu şekilde kullanılır:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "54662744"
   
 |İşlem hattı derleme projesi|Yapı çıkış yolu|  
 |-------------------------------|-----------------------|  
-|Daralma|`..\HostXBAP\Contracts\`|  
+|Sözleşme|`..\HostXBAP\Contracts\`|  
 |Eklenti görünümü|`..\HostXBAP\AddInViews\`|  
 |Ekleme tarafı bağdaştırıcısı|`..\HostXBAP\AddInSideAdapters\`|  
 |Konak tarafı bağdaştırıcısı|`..\HostXBAP\HostSideAdapters\`|  
@@ -286,6 +286,6 @@ ms.locfileid: "54662744"
 - <xref:System.LoaderOptimizationAttribute>
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Uygulama Etki Alanları](../../../../docs/framework/app-domains/application-domains.md)
-- [.NET framework uzaktan iletişimi genel bakış](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Nesneleri Uzaktan erişilebilir hale getirme](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [.NET framework uzaktan iletişimi genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/how-to-topics.md)

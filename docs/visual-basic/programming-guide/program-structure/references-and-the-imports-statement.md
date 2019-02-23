@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: c50a25dc0802f275e5cd4e0068e1a68bf559abc1
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: d9a227f60edf142832ab41e3ea99f33c53a42229
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066044"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748316"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
 Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ekle** komutunu **proje** menüsü. Başvuruları Visual Basic'te tür kitaplıkları, ancak daha fazla bilgi içeren gibi olan derlemeler için işaret edebilir.  
@@ -53,6 +53,6 @@ Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ek
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
 - [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
 - [Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

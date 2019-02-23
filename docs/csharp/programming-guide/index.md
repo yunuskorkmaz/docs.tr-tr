@@ -1,20 +1,14 @@
 ---
-title: C# Programlama Kılavuzu
+title: 'C# Programlama Kılavuzu'
 ms.date: 05/02/2017
 f1_keywords:
-- cs.langref
+  - cs.langref
 helpviewer_keywords:
-- reference tables [C#]
-- C# language, programming guide
-- Visual C#, programming concepts
-- C# language, concepts
+  - 'reference tables [C#]'
+  - 'C# language, programming guide'
+  - 'Visual C#, programming concepts'
+  - 'C# language, concepts'
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: d09b350e959544bc15cc6f7a646ae85e155c1108
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495990"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET Framework aracılığıyla erişilebilir özellikler sağlar.  
@@ -71,7 +65,7 @@ Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET
 ## <a name="platform-sections"></a>Platform bölümleri  
  [Uygulama Etki Alanları](../../framework/app-domains/application-domains.md)  
   
- [Derlemeler ve Genel Derleme Önbelleği](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [.NET derlemeleri](../../standard/assembly/index.md)  
   
  [Öznitelikler](../../csharp/programming-guide/concepts/attributes/index.md)  
   

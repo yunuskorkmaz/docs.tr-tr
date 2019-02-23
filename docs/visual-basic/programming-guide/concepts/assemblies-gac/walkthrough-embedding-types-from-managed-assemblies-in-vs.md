@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma"
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245485"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747550"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma
 Tanımlayıcı adlı bir yönetilen bütünleştirilmiş koddan tür bilgilerini katıştırma, sürüm bağımsızlığı elde etmek için bir uygulama türlerinde gevşek mümkündür. Diğer bir deyişle, programınız her sürüm için derlenmesi zorunda kalmadan bir yönetilen kitaplık birden çok sürümünden türler kullanmak üzere yazılabilir.  
@@ -222,8 +222,8 @@ End Function
   
 6.  Dosya Gezgini'nde, çıkış yolu klasörü (örneğin, C:\TypeEquivalenceSample) açın. Programı çalıştırmak üzere TypeEquivalenceClient.exe çift tıklayın. Program, yeniden derlenen kalmadan TypeEquivalenceRuntime derlemenin yeni sürümü yansıtır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)

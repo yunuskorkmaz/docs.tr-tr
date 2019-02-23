@@ -1,13 +1,13 @@
 ---
 title: .NET core çalışma zamanı tanımlayıcı (RID) Kataloğu
 description: Çalışma zamanı tanımlayıcı (RID) ve RID'de .NET Core nasıl kullanıldığı hakkında bilgi edinin.
-ms.date: 07/19/2018
-ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534555"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745748"
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -35,7 +35,7 @@ Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: 
 
 - `[architecture]` İşlemci mimaridir. Örneğin: `x86`, `x64`, `arm`, veya `arm64`.
 
-- `[additional qualifiers]` Daha fazla farklı platformları ayırt. Örneğin: `aot` veya `corert`.
+- `[additional qualifiers]` Daha fazla farklı platformları ayırt. Örneğin: `aot`
 
 ## <a name="rid-graph"></a>RID grafiği
 
@@ -82,22 +82,22 @@ Bunları ile çalışırken göz önünde bulundurmanız sahip RID'ler hakkında
 RID kullanabilmek için RID mevcut bilmeniz gerekir. Yeni değerleri, platform için düzenli olarak eklenir.
 En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) Corefx'te depo dosyası.
 
-.NET core 2.0 SDK'sını taşınabilir RID'ler kavramını sunar. Belirli bir sürümü ya da işletim sistemi dağıtım bağlı olmayan RID grafiğe eklenen yeni değerleri oldukları. Bunlar, birden çok Linux dağıtımları ile ilgilenirken yararlıdır.
+.NET core 2.0 SDK'sını taşınabilir RID'ler kavramını sunar. Bunlar, belirli bir sürümü ya da işletim sistemi dağıtım bağlı değil ve .NET Core 2.0 ve üzeri kullanıyorsanız tercih RID grafiğe eklenen yeni değerlerdir. Birden çok Linux dağıtım paketlerini dağıtım RID'ler çoğu bu yana uğraşmanızı eşlendi olduğunda taşınabilir RID'ler için yararlıdır.
 
-Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID'ler gösterir. Ele alınmamıştır `arm` veya `corert` değerleri.
+Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID'ler küçük bir kısmı gösterir.
 
 ## <a name="windows-rids"></a>Windows RID
 
-- Taşınabilir
-  - `win-x86`
+Yalnızca ortak değerleri listelenmektedir. En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) Corefx'te depo dosyası.
+
+- Taşınabilir (.NET Core 2.0 veya sonraki sürümler)
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7 / Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8 / Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1 / Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -112,87 +112,40 @@ Bkz: [Windows üzerinde .NET Core önkoşulları](windows-prerequisites.md) daha
 
 ## <a name="linux-rids"></a>Linux RID
 
-- Taşınabilir
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64` (.NET core 1.1 veya sonraki sürümler)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64` (.NET core 1.1 veya sonraki sürümler)
-- Gentoo (.NET Core 2.0 veya sonraki sürümler)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+Yalnızca ortak değerleri listelenmektedir. En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) Corefx'te depo dosyası. Aşağıdaki listede bulunmayan bir dağıtım çalıştıran cihazlar, taşınabilir RID'ler biri ile çalışabilir. Örneğin, listede olmayan bir Linux dağıtımı çalıştıran Raspberry Pi cihazlar ile hedeflenebilir `linux-arm`.
+
+- Taşınabilir (.NET Core 2.0 veya sonraki sürümler)
+  - `linux-x64` (CentOS, Debian, Fedora, Ubuntu ve türevleri çoğu masaüstü dağıtımları ister)
+  - `linux-musl-x64` (Kullanan basit dağıtımlar [musl](https://wiki.musl-libc.org/projects-using-musl.html) ister Alpine Linux)
+  - `linux-arm` (ARM üzerinde çalışan Linux dağıtımları, Raspberry Pi gibi)
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (Yerini `linux-x64` RHEL sürümünden sonraki bir sürümü 6'için)
   - `rhel.6-x64` (.NET core 2.0 veya sonraki sürümler)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64` (.NET core 2.0 veya sonraki sürümler)
-  - `rhel.7.4-x64` (.NET core 2.0 veya sonraki sürümler)
 - Tizen (.NET Core 2.0 veya sonraki sürümler)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Ubuntu türevleri
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64` (.NET core 2.0 veya sonraki sürümler)
-  - `linuxmint.18.1-x64` (.NET core 2.0 veya sonraki sürümler)
-  - `linuxmint.18.2-x64` (.NET core 2.0 veya sonraki sürümler)
-  - `linuxmint.18.3-x64` (.NET core 2.0 veya sonraki sürümler)
-- SUSE Enterprise Linux (SLES) (.NET Core 2.0 veya sonraki sürümler)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux'ı (.NET Core 2.1 veya sonraki sürümler)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 Bkz: [Linux üzerinde .NET Core önkoşulları](linux-prerequisites.md) daha fazla bilgi için.
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID'ler eski markalama "OSX" kullanın.
+macOS RID'ler eski markalama "OSX" kullanın. Yalnızca ortak değerleri listelenmektedir. En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) Corefx'te depo dosyası.
 
-- `osx-x64` (.NET core 2.0 veya sonraki sürümler için en düşük sürüm olan `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64` (.NET core 1.1 veya sonraki sürümler)
-- `osx.10.13-x64`
+- Taşınabilir (.NET Core 2.0 veya sonraki sürümler)
+  - `osx-x64` (En düşük işletim sistemi sürümü olan macOS 10.12 Sierra)
+- macOS 10.10 Yosemite
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra (.NET Core 1.1 veya sonraki sürümler)
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra (.NET Core 1.1 veya sonraki sürümler)
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave (.NET Core 1.1 veya sonraki sürümler)
+  - `osx.10.14-x64`
 
 Bkz: [macos'ta .NET Core önkoşulları](macos-prerequisites.md) daha fazla bilgi için.
-
-## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID'ler (.NET Core 2.0 veya sonraki sürümler)
-
-- `android`
-- `android.21`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

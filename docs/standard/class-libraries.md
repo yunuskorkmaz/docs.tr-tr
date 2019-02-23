@@ -1,53 +1,53 @@
 ---
 title: .NET sınıf kitaplıkları
-description: Nasıl .NET sınıf kitaplıkları, Grup yararlı işlevi için birden çok uygulama tarafından kullanılan modüllere etkinleştirmek öğrenin.
+description: .NET sınıf kitaplıkları, nasıl Grup yararlı işlevleri için birden çok uygulama tarafından kullanılan modüller halinde olanak öğrenin.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207179"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745774"
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
-Sınıf kitaplıkları olan [paylaşılan kitaplık](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) .NET kavramı. Birden çok uygulama tarafından kullanılan modüllere kullanışlı işlevsellik componentize olanak sağlar. Gerekli veya uygulama başlangıcında bilinmiyor işlevselliği yüklenirken olarak de kullanılabilir. Sınıf kitaplıkları kullanarak açıklanmıştır [.NET derleme dosyası biçimi](assembly-format.md).
+Sınıf kitaplıklarının [paylaşılan kitaplık](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) .NET kavramı. Birden çok uygulama tarafından kullanılan modüller halinde kullanışlı işlevsellik componentize sağlıyor. Gerekli olmadığında veya uygulama başlatılırken bilinmeyen işlevselliği yükleme olarak de kullanılabilir. Sınıf kitaplıkları kullanılarak tanımlanır [.NET bütünleştirilmiş kodu dosya biçimi](assembly/file-format.md).
 
 Kullanabileceğiniz sınıf kitaplıkları üç tür vardır:
 
-*   **Platforma özgü** sınıf kitaplıkları tüm API'leri (örneğin, .NET Framework, Xamarin iOS için) belirli bir platformda erişimi, ancak yalnızca uygulamaları ve bu platformu hedefleyen kitaplıklar tarafından kullanılabilir.
+*   **Platforma özgü** sınıf kitaplıkları, tüm API'lere erişim (örneğin, .NET Framework, Xamarin iOS için) belirli bir platforma sahip, ancak yalnızca uygulamaları ve bu platformu hedefleyen kitaplıklar tarafından kullanılabilir.
 *   **Taşınabilir** sınıf kitaplıkları API kümesini erişimi ve uygulamaları ve birden çok platformu hedefleyen kitaplıklar tarafından kullanılabilir.
-*   **.NET standart** sınıf kitaplıkları olan bir birleşme hem de en iyi sağlayan tek bir modelini platforma özgü ve taşınabilir kitaplığı prototip.
+*   **.NET standard** sınıf kitaplıkları vardır ve her ikisinin sağlayan bir tek modeline platforma özgü ve taşınabilir kitaplık kanıtı birleşmesi.
 
 ## <a name="platform-specific-class-libraries"></a>Platforma özgü sınıf kitaplıkları
 
-Platforma özgü kitaplıkları tek bir .NET uygulaması (örneğin, Windows .NET Framework) bağlı olan ve bu nedenle önemli bağımlılıkları bilinen yürütme ortamda alabilir. Bu tür bir ortamda bilinen bir dizi API (.NET ve işletim sistemi API'leri) kullanıma sunmak ve korumak ve beklenen durumu (örneğin, Windows kayıt defteri) kullanıma sunar.
+Platforma özgü kitaplıklar tek bir .NET uygulaması (örneğin, Windows üzerinde .NET Framework) bağlıdır ve önemli bağımlılıkları bir bilinen yürütme ortamında bu nedenle alabilir. Böyle bir ortam API'leri (.NET ve işletim sistemi API'leri) bilinen bir dizi kullanıma korumak ve beklenen durumu (örneğin, Windows kayıt defteri) kullanıma sunar.
 
-Platform belirli kitaplıkları oluşturan geliştiriciler, temel platform olarak tam olarak yararlanabilir. Kitaplıkların her zaman sadece platform denetimleri veya başka biçimlerde koşullu kod (modül birden çok platform için tek kaynak belirleme kodu) gereksiz yapmadan platform, verilen çalışır.
+Platforma özgü kitaplıklar oluşturmak geliştiriciler, temel alınan platformu tam olarak yararlanabilir. Kitaplıkları, her zaman sadece platformu, platform denetimleri veya diğer tür koşullu kodu (mod, birden çok platform için tek kaynağını kod) gereksiz yapma verilen üzerinde çalışır.
 
-Platforma özgü kitaplıkları, .NET Framework için birincil sınıf kitaplığı türü olmuştur. Diğer .NET uygulamaları ortaya çıktı gibi platforma özgü kitaplıkları baskın kitaplık türünü kalan.
+Platforma özgü kitaplıklar, .NET Framework için birincil sınıf kitaplığı türü silinmiş. Diğer .NET uygulamaları ortaya gibi platforma özgü kitaplıklar baskın kitaplık türünü kaldı.
 
 ## <a name="portable-class-libraries"></a>Taşınabilir sınıf kitaplıkları
 
-Taşınabilir kitaplıklara birden çok .NET uygulamalarında desteklenir. Bunlar yine bir bilinen yürütme ortamı bağımlılıkları alabilir, ancak, bir dizi somut .NET uygulamalarında kesişimi ile oluşturulan bir yapay ortamıdır. Bu açık API'ler ve platform varsayımlar ne platforma özgü kitaplığa kullanılabilir olacağını, bir alt anlamına gelir.
+Taşınabilir kitaplıklar, birden çok .NET uygulamalarında desteklenir. Bunlar yine de bir bilinen yürütme ortamında bağımlılıkları alabilir, ancak bir dizi somut .NET uygulamalarını kesişimi ile oluşturulan yapay bir ortamdır. Bu açık API'ler ve platform varsayımlar ne bir platforma özgü kitaplığında kullanılabilir hale gelir, bir alt anlamına gelir.
 
-Taşınabilir bir kitaplık oluşturduğunuzda bir platform yapılandırması seçin. Bu, (örneğin, .NET Framework 4.5 +, Windows Phone 8.0 +) desteklemesi gereken platformlar kümesidir. Destek, daha az API'leri ve daha az platform varsayımlar opt daha fazla platformlar yapabilirsiniz, en düşük genel payda. Bu özellik ilk başta, kişiler bu yana genellikle düşünme "daha, daha fazla platformlar sonuçlar daha az kullanılabilir API'leri desteklenen Bul ancak iyidir" kafa karıştırıcı olması.
+Taşınabilir Kitaplığı oluştururken bir platform yapılandırmasını seçin. Bunlar için (örneğin, .NET Framework 4.5 +, Windows Phone 8.0 +) desteklemek için gereken platformları yer alır. Daha fazla platform desteği, daha az API'leri ve yapabileceğiniz, daha az sayıda platform varsayımlar en küçük ortak paydası iyileştirilmiş. Bu özelliğin ilk başta, kişilerin bu yana genellikle düşünme "daha, daha fazla platformlar sonuçları daha az kullanılabilir API'leri desteklenen Bul ancak daha iyidir" kafa karıştırıcı olması.
 
-Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklarını (koşullu derleme yönergeleri kullanarak) bir kaynaktan oluşturan taşınabilir kitaplıklara geçtiniz. Vardır [çeşitli yaklaşımlar](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) taşınabilir kitaplıklara içinde platforma özgü işlevselliği erişmek için [yemi anahtar](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) en yaygın olan kabul teknik bu noktada.
+Geliştiricilerin çoğu kitaplık üretir birden çok platforma özgü kitaplıklar (koşullu derleme yönergeleri kullanarak) bir kaynaktan gelen, taşınabilir kitaplıklara geçtiniz. Vardır [çeşitli yaklaşımlar](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) taşınabilir kitaplıklar, platforma özgü işlevinin erişmek için [baıt anahtar](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) en yaygın olan kabul yöntemi bu noktada.
 
-## <a name="net-standard-class-libraries"></a>Standart .NET sınıf kitaplıkları
+## <a name="net-standard-class-libraries"></a>.NET standart sınıf kitaplıkları
 
-.NET standart kitaplıkları yerine yeni bir platforma özgü ve taşınabilir kitaplıkları kavramlarını ' dir. Platforma özgü (yapay platformları veya platform kesişimlerini) temel platformdan tüm işlevselliği kullanıma herkese açık. Bunlar, tüm desteklenen platformlarda çalıştıkları herkese açık taşınabilir.
+.NET standard kitaplıkları yenisini platforma özgü ve taşınabilir kitaplıklar kavramları vardır. Platforma özgü oldukları anlamında bunlar temel alınan Platformu (yapay platformları veya platform kesişimlerini) tüm işlevselliği kullanıma sunma. Bunlar tüm destekleyici platformlar üzerinde çalıştıkları anlamında taşınabilir.
 
-.NET standart kitaplığı kümesi sunan _sözleşmeleri_. .NET uygulamaları, tam olarak ya da hiç her sözleşme desteklemesi gerekir. Her uygulama, bu nedenle, .NET Standart sözleşmeler, bir kümesini destekler. Corollary, .NET standart her sınıf kitaplığı sözleşme bağımlılıklarını destekleyen platformlarda desteklenir.
+.NET Standard kitaplığı kümesi sunan _sözleşmeleri_. .NET uygulamaları, tam olarak ya da hiç her sözleşme desteklemesi gerekir. Her uygulama, bu nedenle, .NET Standard sözleşmeleri kümesini destekler. Corollary her .NET Standard sınıf kitaplığı, sözleşme bağımlılıklarını destekleyen platformlarında desteklenir.
 
-.NET standart .NET Framework'ün tüm işlevselliği kullanıma sunmuyor (ya da bir hedefi olan), ancak bunlar taşınabilir sınıf kitaplıkları daha pek çok daha fazla API'lerini kullanıma. Daha fazla API'leri zamanla eklenir.
+.NET standart .NET Framework'ün tamamını işlevselliğini kullanıma sunmuyor (ya da bir hedefi olan), ancak bunlar taşınabilir sınıf kitaplıkları daha pek çok daha fazla API'leri kullanıma. Zaman içinde daha fazla API eklenir.
 
-.NET standart kitaplıkları aşağıdaki platformları destekler:
+.NET Standard kitaplıkları aşağıdaki platformları destekler:
 
 * .NET Core
 * .NET Framework
@@ -58,8 +58,8 @@ Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklar�
 * Windows Phone
 * Windows Phone Silverlight
 
-Daha fazla bilgi için bkz: [.NET standart](net-standard.md) konu.
+Daha fazla bilgi için [.NET Standard](net-standard.md) konu.
 
 ## <a name="mono-class-libraries"></a>Mono sınıf kitaplıkları
 
-Sınıf kitaplıkları Mono kitaplıkları yukarıda açıklanan üç tür dahil olmak üzere üzerinde desteklenir. Mono genellikle (doğru) olarak Microsoft .NET Framework'ün bir platformlar arası uygulaması görüldü. Kısmen platforma özgü .NET Framework kitaplıkları Mono çalışma zamanı değiştirilme ya da yeniden derleme olmadan çalışan çünkü bu oluştu. Bu özellik taşınabilir sınıf kitaplıkları oluşturulmasını önce yerinde olduğu şekilde (yalnızca tek yönlü çalıştınız rağmen) .NET Framework ve Mono arasında ikili taşınabilirlik etkinleştirmek için belirgin bir seçim oluştu.
+Sınıf kitaplıkları kitaplıkları yukarıda açıklanan üç türü de dahil olmak üzere, Mono desteklenir. Mono genellikle (doğru) Microsoft .NET Framework'ün bir platformlar arası uygulama görüldü. Platforma özgü .NET Framework kitaplıkları değişiklik olmadan veya yeniden derleme Mono çalışma zamanı üzerinde çalıştırabileceğiniz parçası olarak, bu nedeni. Bu özellik taşınabilir sınıf kitaplıkları oluşturma önce bir yerde olduğu şekilde (sadece tek yöndedir eşleştirmenin rağmen) .NET Framework ve Mono arasında ikili taşınabilirlik etkinleştirmek için bir belirgin seçim oluştu.

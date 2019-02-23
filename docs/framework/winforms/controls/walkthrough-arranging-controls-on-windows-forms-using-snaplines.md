@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543230"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748040"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. Windows Form Tasarımcısı, bunu gerçekleştirmek için çok sayıda düzen araçları sunar. En önemli biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
@@ -222,7 +222,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Tasarım ortamında dayama çizgileri devre dışı bırakmak için  
   
-1.  Gelen **Araçları** menüsünde, açık **seçenekleri** iletişim kutusu. Windows Form Tasarımcısı iletişim kutusunu açın. Ayrıntılar için bkz [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Gelen **Araçları** menüsünde, açık **seçenekleri** iletişim kutusu. Windows Form Tasarımcısı iletişim kutusunu açın. Ayrıntılar için bkz [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   
 2.  Seçin **genel** düğümü. İçinde **Düzen modu** bölümünde, seçimi değiştirme **dayama çizgileri** için **LayoutMode**.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme'
+title: 'İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197142"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748420"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme
 
@@ -75,7 +75,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 4.  Seçin <xref:System.Windows.Window>.
 
-5.  Özellikler penceresinde veya XAML Düzenleyicisi'ni kullanarak oluşturmak için bir olay işleyicisi <xref:System.Windows.Window> adlı `Window_Loaded` için <xref:System.Windows.FrameworkElement.Loaded> olay. Daha fazla bilgi için [nasıl yapılır: basit bir olay işleyicisi oluşturun](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+5.  Özellikler penceresinde veya XAML Düzenleyicisi'ni kullanarak oluşturmak için bir olay işleyicisi <xref:System.Windows.Window> adlı `Window_Loaded` için <xref:System.Windows.FrameworkElement.Loaded> olay. Daha fazla bilgi için [nasıl yapılır: Basit olay işleyicisi oluşturun](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      Aşağıdaki XAML MainWindow.xaml için gösterir.
 
@@ -100,4 +100,4 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Nasıl Yaparım: WPF uygulamalarında Entity Framework ile çalışmaya?](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [Nasıl Yaparım WPF uygulamalarında Entity Framework ile çalışmaya başlama?](https://go.microsoft.com/fwlink/?LinkId=159868)

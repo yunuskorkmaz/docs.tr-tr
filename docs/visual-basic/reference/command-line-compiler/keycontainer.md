@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: d9ceb7b4351d2278835014235bc1f3b5f15b65c0
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 18aa82610d337354647a74d2f4ebe768925e2de0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758293"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746357"
 ---
 # <a name="-keycontainer"></a>-keycontaıner
 Bir derlemeyi tanımlayıcı bir ad vermek bir anahtar çifti için bir anahtar kapsayıcısı adını belirtir.  
@@ -50,7 +50,7 @@ vbc -keycontainer:key1 input.vb
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

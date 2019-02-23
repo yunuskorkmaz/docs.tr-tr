@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d49e9dec1cdbd2942fb9d1b94be32e44ca4311a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690416"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748066"
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uygulamanın davranışını etkilemek için ağacında doğrudan düzenlemezsiniz ağaç yapısında öğeleri ve bileşenleri düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca birkaç ağaç yapısı metaphors program öğeler arasındaki ilişkileri tanımlamak için kullanır. Çoğunlukla WPF geliştiricilerinin kod içinde bir uygulama oluşturun veya nesne ağaç benzetimini düşünmek kavramsal olarak çalışırken XAML içinde uygulama bölümlerini tanımlayan ancak olacak belirli bir API'yi çağırıp ya da bunu yerine bazı genel yapmak için özel biçimlendirme kullanma Nesne ağacında işlemeyi API gibi XML DOM kullanabilir WPF sunan bir ağaç benzetimini görünümü sağlayan iki yardımcı sınıflar <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>. Bu aynı ağaçları belirli anahtar WPF özellikleri davranışını anlamak için yararlı olduğundan koşulları görsel ağacı ve mantıksal ağaç WPF belgelerinde de kullanılır. Bu konu ne görsel ağacı ve mantıksal ağaç temsil tanımlar, böyle ağaçları için genel bir nesne ağacında kavramdır nasıl ilişkili olduğunu açıklar ve tanıtır <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -29,7 +29,7 @@ Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uyg
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>Mantıksal ağacı  
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu öğeleri geri nesnelerin özelliklerini ayarlayarak içerik için kullanıcı Arabirimi öğeleri ekleyin. Örneğin, öğeleri eklediğiniz bir <xref:System.Windows.Controls.ListBox> düzenleme denetimini kendi <xref:System.Windows.Controls.ItemsControl.Items%2A> özelliği. Bunu yaparak, öğeleri yerleştirdiğinizi <xref:System.Windows.Controls.ItemCollection> diğer bir deyişle <xref:System.Windows.Controls.ItemsControl.Items%2A> özellik değeri. Benzer şekilde, eklemek için nesneleri için bir <xref:System.Windows.Controls.DockPanel>, düzenleme, kendi <xref:System.Windows.Controls.Panel.Children%2A> özellik değeri. Burada, nesne eklemeyi <xref:System.Windows.Controls.UIElementCollection>. Kod örneği için bkz: [bir öğe dinamik olarak ekleme](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419).  
+ İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu öğeleri geri nesnelerin özelliklerini ayarlayarak içerik için kullanıcı Arabirimi öğeleri ekleyin. Örneğin, öğeleri eklediğiniz bir <xref:System.Windows.Controls.ListBox> düzenleme denetimini kendi <xref:System.Windows.Controls.ItemsControl.Items%2A> özelliği. Bunu yaparak, öğeleri yerleştirdiğinizi <xref:System.Windows.Controls.ItemCollection> diğer bir deyişle <xref:System.Windows.Controls.ItemsControl.Items%2A> özellik değeri. Benzer şekilde, eklemek için nesneleri için bir <xref:System.Windows.Controls.DockPanel>, düzenleme, kendi <xref:System.Windows.Controls.Panel.Children%2A> özellik değeri. Burada, nesne eklemeyi <xref:System.Windows.Controls.UIElementCollection>. Kod örneği için bkz: [nasıl yapılır: Dinamik olarak bir öğe ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms752374(v=vs.100)).  
   
  İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], liste öğelerini yerleştirdiğinizde bir <xref:System.Windows.Controls.ListBox> veya denetimleri veya diğer kullanıcı Arabirimi öğelerinde bir <xref:System.Windows.Controls.DockPanel>, ayrıca <xref:System.Windows.Controls.ItemsControl.Items%2A> ve <xref:System.Windows.Controls.Panel.Children%2A> özellikleri, açıkça veya dolaylı olarak, aşağıdaki örnekte olduğu gibi.  
   

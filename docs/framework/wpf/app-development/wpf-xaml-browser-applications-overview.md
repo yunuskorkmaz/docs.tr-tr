@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611988"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747025"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "54611988"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma  
- Microsoft Visual Studio ile yeni bir XBAP projesi oluşturmak için en basit yoludur. Yeni bir proje oluştururken **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Microsoft Visual Studio ile yeni bir XBAP projesi oluşturmak için en basit yoludur. Yeni bir proje oluştururken **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
  XBAP projesinin çalıştırdığınızda, tek başına bir pencereyi yerine bir tarayıcı penceresinde açılır. XBAP Visual Studio'dan hata ayıklaması yaparken uygulama Internet bölgesi izinle çalışır ve bu nedenle bu izinleri aşılırsa güvenlik özel durum oluşturur. Daha fazla bilgi için [güvenlik](../../../../docs/framework/wpf/security-wpf.md) ve [WPF kısmi güven güvenliği](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

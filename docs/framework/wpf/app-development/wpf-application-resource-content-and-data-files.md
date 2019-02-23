@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fed7127624714e67121c388e70b8b833d88d772
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606302"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746542"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veriler içeren dosyaları bağımlıdır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses. Windows Presentation Foundation (WPF), yapılandırma, belirlemekten ve bu tür bir uygulama verileri dosyaları olarak adlandırılan veri dosyalarını kullanarak özel destek sunar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
@@ -53,7 +53,7 @@ ms.locfileid: "54606302"
 -   Uygulama verileri dosyanızı yerelleştirilebilir olması gerekir (bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
->  Bu bölümde açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [uygulama kaynaklarını yönetme (.NET) ](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Bu bölümde açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [uygulama kaynakları yönetme (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Kaynak dosyalarını yapılandırma  
  İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], kaynak dosya yer aldığı bir dosya, bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak bir `Resource` öğesi.  
