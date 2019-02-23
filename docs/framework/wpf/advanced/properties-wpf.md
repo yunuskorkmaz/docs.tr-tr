@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546035"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745579"
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="da4e3-102">Özellikler (WPF)</span><span class="sxs-lookup"><span data-stu-id="da4e3-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="da4e3-103"> işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlayan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği.</span><span class="sxs-lookup"><span data-stu-id="da4e3-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="da4e3-104">Topluca, bu hizmetleri genellikle WPF özellik sistemi olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="da4e3-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="da4e3-105">Tarafından yedeklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.</span><span class="sxs-lookup"><span data-stu-id="da4e3-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="65d35-102">Özellikler (WPF)</span><span class="sxs-lookup"><span data-stu-id="65d35-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="65d35-103">işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlar bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği.</span><span class="sxs-lookup"><span data-stu-id="65d35-103">provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="65d35-104">Toplu olarak, bu hizmetleri genellikle WPF özellik sistemi adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="65d35-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="65d35-105">Tarafından desteklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.</span><span class="sxs-lookup"><span data-stu-id="65d35-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da4e3-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="da4e3-106">In This Section</span></span>  
- [<span data-ttu-id="da4e3-107">Bağımlılık Özelliklerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="da4e3-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [<span data-ttu-id="da4e3-108">Ekli Özelliklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="da4e3-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [<span data-ttu-id="da4e3-109">Bağımlılık Özelliği Geri Aramaları ve Doğrulama</span><span class="sxs-lookup"><span data-stu-id="da4e3-109">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [<span data-ttu-id="da4e3-110">Özel Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="da4e3-110">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [<span data-ttu-id="da4e3-111">Bağımlılık Özelliği Meta Verisi</span><span class="sxs-lookup"><span data-stu-id="da4e3-111">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [<span data-ttu-id="da4e3-112">Çerçeve Özelliği Meta Verileri</span><span class="sxs-lookup"><span data-stu-id="da4e3-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [<span data-ttu-id="da4e3-113">Bağımlılık Özelliği Değer Önceliği</span><span class="sxs-lookup"><span data-stu-id="da4e3-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [<span data-ttu-id="da4e3-114">Salt Okunur Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="da4e3-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [<span data-ttu-id="da4e3-115">Özellik Değeri Devralma</span><span class="sxs-lookup"><span data-stu-id="da4e3-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [<span data-ttu-id="da4e3-116">Bağımlılık Özelliği Güvenliği</span><span class="sxs-lookup"><span data-stu-id="da4e3-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [<span data-ttu-id="da4e3-117">DependencyObjects için Güvenli Oluşturucu Desenleri</span><span class="sxs-lookup"><span data-stu-id="da4e3-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [<span data-ttu-id="da4e3-118">Koleksiyon Türü Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="da4e3-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [<span data-ttu-id="da4e3-119">XAML Yükleme ve Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="da4e3-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [<span data-ttu-id="da4e3-120">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="da4e3-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="65d35-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="65d35-106">In This Section</span></span>  
+- [<span data-ttu-id="65d35-107">Bağımlılık Özelliklerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="65d35-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [<span data-ttu-id="65d35-108">Ekli Özelliklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="65d35-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [<span data-ttu-id="65d35-109">Özel Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="65d35-109">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [<span data-ttu-id="65d35-110">Bağımlılık Özelliği Meta Verisi</span><span class="sxs-lookup"><span data-stu-id="65d35-110">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [<span data-ttu-id="65d35-111">Bağımlılık Özelliği Geri Aramaları ve Doğrulama</span><span class="sxs-lookup"><span data-stu-id="65d35-111">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [<span data-ttu-id="65d35-112">Çerçeve Özelliği Meta Verileri</span><span class="sxs-lookup"><span data-stu-id="65d35-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [<span data-ttu-id="65d35-113">Bağımlılık Özelliği Değer Önceliği</span><span class="sxs-lookup"><span data-stu-id="65d35-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [<span data-ttu-id="65d35-114">Salt Okunur Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="65d35-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [<span data-ttu-id="65d35-115">Özellik Değeri Devralma</span><span class="sxs-lookup"><span data-stu-id="65d35-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [<span data-ttu-id="65d35-116">Bağımlılık Özelliği Güvenliği</span><span class="sxs-lookup"><span data-stu-id="65d35-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [<span data-ttu-id="65d35-117">DependencyObjects için Güvenli Oluşturucu Desenleri</span><span class="sxs-lookup"><span data-stu-id="65d35-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [<span data-ttu-id="65d35-118">Koleksiyon Türü Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="65d35-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [<span data-ttu-id="65d35-119">XAML Yükleme ve Bağımlılık Özellikleri</span><span class="sxs-lookup"><span data-stu-id="65d35-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [<span data-ttu-id="65d35-120">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="65d35-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
-## <a name="reference"></a><span data-ttu-id="da4e3-121">Başvuru</span><span class="sxs-lookup"><span data-stu-id="da4e3-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="65d35-121">Başvuru</span><span class="sxs-lookup"><span data-stu-id="65d35-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -44,13 +44,13 @@ ms.locfileid: "33546035"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="da4e3-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="da4e3-122">Related Sections</span></span>  
- [<span data-ttu-id="da4e3-123">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="da4e3-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="da4e3-124">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="da4e3-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="da4e3-125">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="da4e3-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="da4e3-126">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="da4e3-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="da4e3-127">Olaylar</span><span class="sxs-lookup"><span data-stu-id="da4e3-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="da4e3-128">Giriş</span><span class="sxs-lookup"><span data-stu-id="da4e3-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="da4e3-129">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="da4e3-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="da4e3-130">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="da4e3-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="da4e3-131">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="da4e3-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="65d35-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="65d35-122">Related Sections</span></span>  
+ [<span data-ttu-id="65d35-123">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="65d35-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="65d35-124">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="65d35-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="65d35-125">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="65d35-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [<span data-ttu-id="65d35-126">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="65d35-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [<span data-ttu-id="65d35-127">Olaylar</span><span class="sxs-lookup"><span data-stu-id="65d35-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [<span data-ttu-id="65d35-128">Giriş</span><span class="sxs-lookup"><span data-stu-id="65d35-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="65d35-129">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="65d35-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="65d35-130">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="65d35-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [<span data-ttu-id="65d35-131">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="65d35-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

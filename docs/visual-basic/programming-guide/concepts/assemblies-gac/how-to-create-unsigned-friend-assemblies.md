@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturma'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698212"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748134"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="1500a-102">Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="1500a-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
-<span data-ttu-id="1500a-103">Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="1500a-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="6c709-102">Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="6c709-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="6c709-103">Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="6c709-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="1500a-104">Bir derleme ve arkadaş derleme oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="1500a-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="6c709-104">Bir derleme ve arkadaş derleme oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="6c709-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="1500a-105">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="1500a-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="6c709-105">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="6c709-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="1500a-106">Adlı bir Visual Basic dosyası oluşturma `friend_signed_A.` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="1500a-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="1500a-107">Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B arkadaş derleme olarak bildirmek için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="1500a-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="6c709-106">Adlı bir Visual Basic dosyası oluşturma `friend_signed_A.` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="6c709-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="6c709-107">Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_signed_B arkadaş derleme olarak bildirmek için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="6c709-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ ms.locfileid: "54698212"
     End Class  
     ```  
   
-3.  <span data-ttu-id="1500a-108">Derleme ve aşağıdaki komutu kullanarak friend_signed_A imzalayın.</span><span class="sxs-lookup"><span data-stu-id="1500a-108">Compile and sign friend_signed_A by using the following command.</span></span>  
+3.  <span data-ttu-id="6c709-108">Derleme ve aşağıdaki komutu kullanarak friend_signed_A imzalayın.</span><span class="sxs-lookup"><span data-stu-id="6c709-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  <span data-ttu-id="1500a-109">Adlı bir Visual Basic dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="1500a-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="1500a-110">Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `Friend` türleri ve üyeleri friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="1500a-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="6c709-109">Adlı bir Visual Basic dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="6c709-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="6c709-110">Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `Friend` türleri ve üyeleri friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="6c709-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,24 +69,24 @@ ms.locfileid: "54698212"
     End Module  
     ```  
   
-5.  <span data-ttu-id="1500a-111">Aşağıdaki komutu kullanarak friend_signed_B derleyin.</span><span class="sxs-lookup"><span data-stu-id="1500a-111">Compile friend_signed_B by using the following command.</span></span>  
+5.  <span data-ttu-id="6c709-111">Aşağıdaki komutu kullanarak friend_signed_B derleyin.</span><span class="sxs-lookup"><span data-stu-id="6c709-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     <span data-ttu-id="1500a-112">Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="1500a-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="1500a-113">Bütünleştirilmiş kod kullanarak açıkça ayarlayabilirsiniz `/out` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="1500a-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
+     <span data-ttu-id="6c709-112">Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="6c709-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="6c709-113">Bütünleştirilmiş kod kullanarak açıkça ayarlayabilirsiniz `/out` derleyici seçeneği.</span><span class="sxs-lookup"><span data-stu-id="6c709-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
   
-6.  <span data-ttu-id="1500a-114">Friend_signed_B.exe dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="1500a-114">Run the friend_signed_B.exe file.</span></span>  
+6.  <span data-ttu-id="6c709-114">Friend_signed_B.exe dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="6c709-114">Run the friend_signed_B.exe file.</span></span>  
   
-     <span data-ttu-id="1500a-115">Program iki dizeyi görüntüler: "Class1.Test" ve "Class2.Test".</span><span class="sxs-lookup"><span data-stu-id="1500a-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="6c709-115">Program iki dizeyi görüntüler: "Class1.Test" ve "Class2.Test".</span><span class="sxs-lookup"><span data-stu-id="6c709-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="1500a-116">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="1500a-116">.NET Framework Security</span></span>  
- <span data-ttu-id="1500a-117">Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="1500a-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="1500a-118">Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `Friend` türler ve üyeler.</span><span class="sxs-lookup"><span data-stu-id="1500a-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="6c709-116">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="6c709-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="6c709-117">Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="6c709-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="6c709-118">Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `Friend` türler ve üyeler.</span><span class="sxs-lookup"><span data-stu-id="6c709-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1500a-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1500a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c709-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c709-119">See also</span></span>
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="1500a-120">Derlemeler ve Genel Derleme Önbelleği (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1500a-120">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
-- [<span data-ttu-id="1500a-121">Arkadaş derlemeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1500a-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
-- [<span data-ttu-id="1500a-122">Nasıl yapılır: (Visual Basic) imzalı arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="1500a-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [<span data-ttu-id="1500a-123">Programlama Kılavuzu kavramları</span><span class="sxs-lookup"><span data-stu-id="1500a-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="6c709-120">.NET derlemeleri</span><span class="sxs-lookup"><span data-stu-id="6c709-120">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="6c709-121">Arkadaş derlemeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c709-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [<span data-ttu-id="6c709-122">Nasıl yapılır: (Visual Basic) imzalı arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="6c709-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [<span data-ttu-id="6c709-123">Programlama Kılavuzu kavramları</span><span class="sxs-lookup"><span data-stu-id="6c709-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
