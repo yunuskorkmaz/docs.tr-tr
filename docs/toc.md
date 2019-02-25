@@ -31,7 +31,8 @@
 ### [Taşınabilirlik Çözümleyicisi](standard/analyzers/portability-analyzer.md)
 ### [Framework Çözümleyicisi](standard/analyzers/framework-analyzer.md)
 ## [Özel durumları işleme ve atma](standard/exceptions/)
-## [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly-format.md)
+## [.NET’te bütünleştirilmiş kodlar](standard/assembly/index.md)
+### [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly/file-format.md) 
 ## [Atık Toplama](standard/garbage-collection/)
 ## [Genel Türler](standard/generics.md)
 ## [Temsilciler ve lambda ifadeleri](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Programlama Kavramları](visual-basic/programming-guide/concepts/index.md)
-### [Derlemeler ve Genel Derleme Önbelleği](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [.NET’te bütünleştirilmiş kodlar](standard/assembly/index.md)
 ### [Async ve Await ile Zaman Uyumsuz Programlama](visual-basic/programming-guide/concepts/async/index.md)
 ### [Öznitelikler](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [İfade Ağaçları](visual-basic/programming-guide/concepts/expression-trees/index.md)
