@@ -3,12 +3,12 @@ title: XML açıklamalarıyla kodunuzu belgeleme
 description: XML belgeleri yorumları ile kodunuzu belgeleme ve derleme zamanında XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271362"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583712"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML açıklamalarıyla kodunuzu belgeleme
 
@@ -194,9 +194,9 @@ Ayrı bir dosyada XML yorumlarınızı sahip olduğunuza göre şimdi nasıl kod
 
 Ve elinizde vardır: okunabilir olan geri kodumuz olduğundan ve hiçbir belge bilgi kaybı olmadı.
 
-`filename` Öznitelik belgeleri içeren XML dosyasının adını temsil eder.
+`file` Öznitelik belgeleri içeren XML dosyasının adını temsil eder.
 
-`path` Özniteliğini temsil eder bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) için sorgu `tag name` belirtilen mevcut `filename`.
+`path` Özniteliğini temsil eder bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) için sorgu `tag name` belirtilen mevcut `file`.
 
 `name` Öznitelik ad tanımlayıcısı açıklamaları önündeki etiketinde temsil eder.
 

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: d0e1dafc700b55a63342331b3280337d2c93cbd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acd665c702dd3b765cdeffde5470893e7097695
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631834"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747696"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Nasıl yapılır: Bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma
 Özel veya paylaşılan derlemeler olabilir: varsayılan olarak, diğer uygulamalar tarafından kullanılmak üzere amaçlanmamıştır çünkü basit programlarının çoğu özel bir derleme oluşur.  
@@ -29,5 +29,5 @@ ms.locfileid: "54631834"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET derlemeleri](../../../../standard/assembly/index.md)
 - [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)
