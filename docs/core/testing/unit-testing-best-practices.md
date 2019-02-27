@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151533"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836259"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Birim testi .NET Core ve .NET Standard ile en iyi uygulamalar
 
@@ -18,7 +18,7 @@ Birim testleri yazma için çok sayıda avantaj vardır; belgeler, regresyonla s
 
 Bu kılavuzda, esnek ve kolay anlaşılır testlerinizi tutmak için birim testleri yazılırken bazı en iyi uygulamaları öğreneceksiniz.
 
-Tarafından [John Reese](https://reesespieces.io) performanstan özel ile [Roy Osherove](http://osherove.com/)
+Tarafından [John Reese](https://reese.dev) performanstan özel ile [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Neden birim testi?
 
