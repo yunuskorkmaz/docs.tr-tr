@@ -3,15 +3,15 @@ title: AKS/Kubernetes kümeler halinde Linux kapsayıcıları olarak dağıtıla
 description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221402"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835518"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>AKS/Kubernetes orchestrator Linux kapsayıcıları olarak dağıtılan bir ASP.NET Core 2.1 uygulamaları oluşturun
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux kapsayıcıları olarak dağıtılan bir AKS/Kubernetes orchestrator içinde ASP.NET Core 2.1 uygulamaları oluşturun
 
 Azure Kubernetes Hizmetleri (AKS), kapsayıcı dağıtımı ve Yönetimi basitleştirin Azure'nın yönetilen Kubernetes düzenlemeleri hizmetleridir.
 
@@ -35,11 +35,11 @@ Bu örnek, örnek oluşturmak için ek bilgisine ihtiyacınız yoktur, bir Visua
 
 **Şekil 4-36**. ASP.NET Core uygulaması oluşturma
 
-Örnek proje oluşturmak için Seç sahip **dosya** > **yeni** > **proje** Visual Studio'da. Aranacak sahip olduğu bir proje, çeşitli türleri için şablonlar listesi görürsünüz sonra **Web** > **.NET Core** Sol paneldeki. Bu örnek için select **ASP.NET Core Web uygulaması**.
+Visual Studio'da örnek proje oluşturmak için seçin **dosya** > **yeni** > **proje**seçin **Web**proje türleri ardından sol bölmedeki **ASP.NET Core Web uygulaması**.
 
-Sonraki iletişim kutusunda, .NET Core ve ASP.NET Core 2.1 hedef çerçeve Şekil 4-37 gösterilen üst pulldowns olarak seçtiniz ve ASP.NET Core Web API uygulaması oluşturmak için API seçeneğini seçip emin olun.
+Visual Studio web projeleri için şablonları listeler. Bizim örneğimizde, seçin **API** bir ASP.NET Web API uygulaması oluşturmak için.
 
-.NET Core 2.1 dahil Visual Studio 2017 sürüm 15.7.0 ya da daha büyük ve otomatik olarak yüklenir ve seçtiğiniz sizin için yapılandırılır **.NET Core çoklu platform geliştirme** yüklemesi sırasında iş yükü.
+Çerçeve ASP.NET Core 2.1 seçtiğinizden emin olun. .NET core 2.1 Visual Studio 2017'ın son sürümünde bulunan ve otomatik olarak yüklenir ve Visual Studio 2017'yi yüklediğinizde sizin için yapılandırılır.
 
 ![API seçeneği belirlenmiş bir ASP.NET Core Web uygulaması türünü seçmek için visual Studio iletişim.](media/create-web-api-application.png)
 
@@ -47,7 +47,7 @@ Sonraki iletişim kutusunda, .NET Core ve ASP.NET Core 2.1 hedef çerçeve Şeki
 
 .NET Core herhangi bir önceki sürümü varsa, indirin ve 2.1 sürümü <https://www.microsoft.com/net/download/core#/sdk>.
 
-Önceki adımda ya da daha sonra projeyi başlattıktan sonra gerekirse projesi oluşturduğunuz sırada, Docker desteği ekleyebilirsiniz. Proje oluşturulduktan sonra Docker desteğini eklemesi için proje dosyasında sağ **Çözüm Gezgini** seçip **Ekle** > **Docker desteği** üzerinde bağlam menüsü.
+Docker desteği projeyi oluştururken ekleyebilir veya daha sonra bu nedenle, "projenizin herhangi bir zamanda docker kapsayıcılarında çalıştırın". Proje oluşturulduktan sonra Docker desteği eklemek için Çözüm Gezgini'nde proje düğümüne sağ tıklayın ve seçin **Ekle** > **Docker desteği** bağlam menüsünde.
 
 ![Mevcut bir projeye Docker desteği eklemek için bağlam menüsü seçeneği: (Proje) sağ tıklayın > Ekle > Docker desteği.](media/add-docker-support-to-project.png)
 
@@ -59,13 +59,13 @@ Docker destek eklemeyi tamamlamak için Windows veya Linux seçebilirsiniz. Bu �
 
 **Şekil 4-39**. Linux kapsayıcıları seçme.
 
-Bu basit adımları uygulayarak bir Linux kapsayıcısı üzerinde çalışan ASP.NET Core 2.1 uygulamanız gerekir.
+Bu basit adımları uygulayarak bir Linux kapsayıcısı üzerinde çalışan ASP.NET Core 2.1 uygulamanızı sahip.
 
 Gördüğünüz gibi Visual Studio 2017 ile Docker arasında tümleştirme için geliştirici üretkenliği tamamen yönlendirilmiş demektir.
 
-Basabilirsiniz artık **F5** oluşturup çalıştırın.
+Uygulamanız ile çalıştırabileceğiniz artık **F5** kullanarak veya anahtar **Play** düğmesi.
 
-Proje çalıştırdıktan sonra kullanarak görüntüleri listeleyebilirsiniz `docker images` komutu. Görmelisiniz `mssampleapplication` otomatik dağıtma, projenin Visual Studio 2017 ile oluşturulan görüntü.
+Proje çalıştırdıktan sonra kullanarak görüntüleri listeleyebilirsiniz `docker images` komutu. Görmelisiniz `mssampleapplication` Projemizin Visual Studio 2017 ile otomatik dağıtımı tarafından oluşturulmuş görüntü.
 
 ```console
 docker images
@@ -77,17 +77,17 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Azure kapsayıcı kayıt defterinde çözümü
 
-Resim gibi herhangi bir Docker kayıt defterine yükleyin [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) veya Docker hub'ı AKS kümeye, kayıt defterinden görüntüleri dağıtılacak şekilde. Bu durumda, biz görüntü Azure Container Registry'ye yükleme.
+Resim gibi herhangi bir Docker kayıt defterine yükleyin [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) ya da Docker Hub, AKS kümeye, kayıt defterinden görüntüleri dağıtılacak şekilde. Bu durumda, biz görüntü Azure Container Registry'ye yükleme.
 
 ### <a name="create-the-image-in-release-mode"></a>Yayın modunda görüntüsü oluşturma
 
-Görüntüyü oluşturmak **yayın** burada gösterildiği gibi sürümüne (üretim için hazır) modunu değiştirme ve uygulamayı yeniden çalıştırmak için F5 tuşuna basın.
+Görüntüde artık oluşturacağız **yayın** için değiştirerek modu (üretim için hazır) **yayın**gösterildiği Şekil 4-41 ve önce yaptığımız gibi uygulamayı çalıştırma.
 
 ![Yayın modunda oluşturmak için VS araç seçeneği.](media/select-release-mode.png)
 
 **Şekil 4-41**. Sürüm modu seçme
 
-Yürütüyorsa `docker image` komutu, oluşturulan her iki görüntüleri göreceksiniz. Birincisi `debug` diğeri `release` modu.
+Yürütüyorsa `docker image` komutu, oluşturulan her iki görüntüleri için bir tane göreceksiniz `debug` diğeri `release` modu.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Yeni bir etiket oluşturmak için görüntü
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 Her iki durumda da adı elde. Bizim örneğimizde `mssampleacr.azurecr.io`.
 
-Artık son görüntü (sürüm görüntü) aşağıdaki komutla alma görüntü etiketleyebilirsiniz:
+Artık, görüntünün en son görüntü (sürüm görüntü) alma komutu ile etiketleyebilirsiniz:
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Çalıştırdıktan sonra `docker tag` komutu, görüntülerle listesi `docker images` komutu. Yeni etiket görüntüsüyle görmeniz gerekir.
+Çalıştırdıktan sonra `docker tag` komutu, görüntülerle listesi `docker images` komut ve yeni etiket görüntüsüyle görmelisiniz.
 
 ![Docker görüntüleri komuttan çıkış konsol.](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ Bu komut biraz uzun sürebilir. görüntü karşıya ancak işlem sırasında ge
 
 **Şekil 4-46**. Düğüm görünümü
 
-Sonraki adım, AKS Kubernetes kümenize kapsayıcınızı dağıtmaktır. Bunun için bir dosya gereksinim (**.yml dosyası dağıtma**), bu durumda, içerir:
+Sonraki adım, AKS Kubernetes kümenize kapsayıcınızı dağıtmaktır. Bunun için bir dosyasına ihtiyacınız vardır (**.yml dosyası dağıtma**), aşağıdakileri içerir:
 
 ```yml
 apiVersion: apps/v1beta1

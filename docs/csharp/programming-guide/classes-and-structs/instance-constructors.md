@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: e3ba825fcbf40e08a2cb4488de2bbed9257c2508
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08321d566bd3cdb1fba545f7f498fbef560217c7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592841"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835310"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Örnek Oluşturucuları (C# Programlama Kılavuzu)
 Örnek oluşturucuları oluşturup kullandığınızda tüm örnek üye değişkenlerini başlatmak için kullanılan [yeni](../../../csharp/language-reference/keywords/new.md) ifade bir nesne oluşturmak için bir [sınıfı](../../../csharp/language-reference/keywords/class.md). Başlatmak için bir [statik](../../../csharp/language-reference/keywords/static.md) sınıf veya bir statik olmayan sınıf içinde statik değişkenler bir statik Oluşturucu tanımlamanız gerekir. Daha fazla bilgi için [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "54592841"
   
  [!code-csharp[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
   
- Böylece `CoOrd` varsayılan veya özel ilk değerleri ile oluşturulan nesnelere şöyle:  
+ Böylece `Coords` varsayılan veya özel ilk değerleri ile oluşturulan nesnelere şöyle:  
   
  [!code-csharp[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
   

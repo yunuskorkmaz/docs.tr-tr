@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547754"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836597"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem inisiyatifiyle önemli bir öğesidir [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Güvenli kod dağıtımını kolaylaştırmak için standart mühendislik süreçlerine ile birlikte kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization measurability ve ek yapı ile en iyi birleştiren on aşamadan oluşan dahil olmak üzere:  
@@ -94,5 +94,4 @@ Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microso
 - [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
 - [Güvenilir bilgi işlem](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [Uygulama iş parçacığı modelleme](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
-- [Güvenlik yönergeleri: .NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+- [.NET içinde güvenlik](../../standard/security/index.md)

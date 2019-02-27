@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696223"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836324"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana gerekmez. Nesne odaklı programlama ile ilgili bilgi sahibi olduğunuz ve sınıfları tasarlama ne yapılacağını bildiğiniz, ihtiyacınız olan bilgileri çoğunu zaten vardır. Özel öznitelikler sınıflardır doğrudan veya dolaylı olarak türetilen temelde geleneksel <xref:System.Attribute?displayProperty=nameWithType>. Yalnızca geleneksel sınıflar gibi özel öznitelikler, veri depolama ve alma yöntemler içerir.  
@@ -118,7 +118,7 @@ Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana ger
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Değer farklı birleşimleri uyum sağlamak için oluşturucu aşırı yüklenebilir. Ayrıca tanımlarsanız bir [özelliği](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) özel öznitelik sınıfınız için bir adlandırılmış ve konumsal parametreler birleşimi öznitelik başlatılırken kullanabilirsiniz. Genellikle, gerekli tüm parametreleri konumsal ve tüm isteğe bağlı parametreleri olarak adlandırılan tanımlarsınız. Bu durumda, öznitelik gerekli parametresi olmadan başlatılamaz. Diğer tüm parametreler isteğe bağlıdır. Visual Basic'te bir ParamArray bağımsız değişkeni bir öznitelik sınıfı için oluşturucular kullanmamalısınız unutmayın.  
+ Değer farklı birleşimleri uyum sağlamak için oluşturucu aşırı yüklenebilir. Ayrıca tanımlarsanız bir [özelliği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) özel öznitelik sınıfınız için bir adlandırılmış ve konumsal parametreler birleşimi öznitelik başlatılırken kullanabilirsiniz. Genellikle, gerekli tüm parametreleri konumsal ve tüm isteğe bağlı parametreleri olarak adlandırılan tanımlarsınız. Bu durumda, öznitelik gerekli parametresi olmadan başlatılamaz. Diğer tüm parametreler isteğe bağlıdır. Visual Basic'te bir ParamArray bağımsız değişkeni bir öznitelik sınıfı için oluşturucular kullanmamalısınız unutmayın.  
   
  Aşağıdaki kod örneği, önceki Oluşturucusu isteğe bağlıdır ve gerekli parametreleri kullanarak uygulanabilir kullanan bir öznitelik nasıl gösterir. Bu öznitelik gerekli bir Boole değeri ve isteğe bağlı bir dize özelliği olduğu varsayılır.  
   
@@ -127,7 +127,7 @@ Kendi özel öznitelikler tasarlamak için çok sayıda yeni kavramları ana ger
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Özellikleri bildirme  
- İsterseniz adlandırılmış bir parametre tanımlayın veya, özniteliği tarafından depolanan değer döndürmek için kolay bir yol sağlar, bildirmek bir [özelliği](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Öznitelik özellikleri ile döndürülecek veri türünün açıklaması genel varlıklar olarak bildirilmelidir. Özelliğin değerini tutun ve ilişkilendirin değişkeni tanımlamanız **alma** ve **ayarlamak** yöntemleri. Aşağıdaki kod örneği, özniteliğinde basit bir özelliğin uygulanması gösterilmektedir.  
+ İsterseniz adlandırılmış bir parametre tanımlayın veya, özniteliği tarafından depolanan değer döndürmek için kolay bir yol sağlar, bildirmek bir [özelliği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Öznitelik özellikleri ile döndürülecek veri türünün açıklaması genel varlıklar olarak bildirilmelidir. Özelliğin değerini tutun ve ilişkilendirin değişkeni tanımlamanız **alma** ve **ayarlamak** yöntemleri. Aşağıdaki kod örneği, özniteliğinde basit bir özelliğin uygulanması gösterilmektedir.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

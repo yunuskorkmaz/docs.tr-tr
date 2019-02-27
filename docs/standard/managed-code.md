@@ -1,44 +1,44 @@
 ---
-title: Hangi yönetilen kodu?
-description: Yönetilen kod öğrenin, yürütme bir çalışma zamanı tarafından ortak dil çalışma zamanı (CLR) yönetilen kodudur.
+title: Hangi yönetilen kod?
+description: Yönetilen kod öğrenin, yürütme bir çalışma zamanı tarafından ortak dil çalışma zamanı (CLR) yönetilen koddur.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574549"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836285"
 ---
 # <a name="what-is-managed-code"></a>Nedir "yönetilen kod"?
 
-.NET Framework ile çalışırken, terimi genellikle karşılaşır "yönetilen kod". Bu belgede, bu terim ne anlama geldiğini ve ek bilgiler çevresinde anlatılmıştır.
+.NET Framework ile çalışırken, terimi sıklıkla karşılaşır "yönetilen kod". Bu belgede bu terim ne anlama geldiğini ve çevresinde ek bilgiler açıklanmaktadır.
 
-Bu çok basitçe, yönetilen kod yalnızca olan:, yürütme çalışma zamanı tarafından yönetilen kod. Bu durumda, söz konusu çalışma zamanı adlı **ortak dil çalışma zamanı** veya uygulamadan bağımsız olarak CLR ([Mono](https://www.mono-project.com/) veya .NET Framework veya .NET Core). CLR yönetilen kod alma, makine koda derleme ve, yürütülmekte sorumlu içindir. En üstünde, çalışma zamanı birkaç sağlayan otomatik bellek yönetimi, güvenlik sınırları gibi önemli hizmetler güvenliği vb. yazın.
+Çok basit geçirmek için yönetilen kod yalnızca olmasıdır: olan yürütme çalışma zamanı tarafından yönetilen kod. Bu durumda, söz konusu çalışma zamanı çağrılır **ortak dil çalışma zamanı** veya CLR, uygulama bağımsız olarak ([Mono](https://www.mono-project.com/) veya .NET Framework veya .NET Core). CLR, yönetilen kodu alma, makine kodu derleme ve ardından yürütme sorumlu olan. Üzerinde çalışma zamanı birkaç sağlayan güvenlik sınırları otomatik bellek yönetimi gibi önemli Hizmetleri tür güvenliği vs.
 
-Bunu, "yönetilmeyen kod" olarak da adlandırılan bir C/C++ programı çalıştırılır şekilde karşılaştırın. Yönetilmeyen dünyada Programcı neredeyse her şeyi sorumlu olur. Gerçek program esas olarak, işletim sistemi (OS) belleğe yükleyen ve başlatan bir ikili dosyadır. Bellek yönetimi için güvenlik konuları başka her şey Programcı yükünü olan.
+Bunu, "yönetilmeyen kodun" olarak da bilinir, bir C/C++ programı çalıştıracağınız şekilde karşılaştırın. Yönetilmeyen dünyasında, programcı neredeyse her şeyi sorumlu olur. Gerçek program esas olarak, işletim sistemi (OS) belleğine yükler ve başlatan bir ikili dosyadır. Bellek yönetimi için güvenlik konuları, diğer her şey bir yük programcının kararına olan.
 
-Yönetilen kod C#, Visual Basic, F # ve diğerleri gibi .NET üzerinde çalıştırılabilir üst düzey dillerden biriyle yazılır. Bu dillerde kendi ilgili derleyicisi ile yazılan kod derleme yaparken makine kodu almadım. Aldığınız **Ara dile** çalışma zamanı sonra derleyen ve yürütür kodu. C++ bu kural için bir özel aynıdır Windows üzerinde çalışan yerel, yönetilmeyen ikili dosyaları üretebilir.
+Yönetilen kod gibi .NET üzerinde çalıştırılabilir kullanışını birinde yazılır C#, Visual Basic F# ve diğerleri. Kendi ilgili derleyici ile bu dillerde yazılmış kodu derlediğinizde, makine kodu elde etmezsiniz. Size **Ara dil** derler ve çalıştırır daha sonra çalışma zamanı kodu. C++ Windows üzerinde çalışan yerel, yönetilmeyen ikili dosyaları oluşturabilir bu kuralın tek özel durumu aynıdır.
 
 ## <a name="intermediate-language--execution"></a>Ara dil ve yürütme
 
-"Ara dil" (veya kısaca IL) nedir? Üst düzey .NET dilinde yazılan kod derlenmesini ürünüdür. Bir kez yazılmış bu dillerden birinde IL dışında yapılan bir ikili alırsınız kodunuzu derleyin. IL çalışma zamanı en üstünde çalışan herhangi belirli bir dilden bağımsız olduğunu dikkate almak önemlidir; Bunu, bu nedenle inclined varsa okuyabilir için ayrı bir belirtimi bile yoktur.
+"Ara dili" (veya kısaca IL) nedir? Üst düzey .NET dillerinde yazılan kod derlemesinin bir üründür. Bir kez yazılan bu dillerden birinde IL dışında yapılan bir ikili erişmenizi sağlayacak kodunuzu derleyin. IL çalışma zamanı üzerinde çalışan herhangi belirli bir dilden bağımsız olduğunu unutmayın; bile, bu nedenle yazmaya, okuyabileceği, için ayrı bir belirtim yoktur.
 
-Üst düzey kodunuzdan IL üretmek sonra büyük olasılıkla çalıştırmak isteyeceksiniz. Burada CLR devreye girer ve işlemini başlatır budur **zaman içinde sadece** derleme, veya **JIT lık** IL kodunuzdan gerçekte bir CPU üzerinde çalıştırılabilir makine kodu. Bu şekilde, CLR kodunuzu tam olarak yaptıklarını bilir ve etkili bir şekilde yapabilirsiniz _yönetmek_ onu.
+Üst düzey kodunuzdan IL üretmek sonra çalıştırmak büyük olasılıkla isteyeceksiniz. CLR burada devreye girer ve işlemine başlar **Just-ın-Time** derleme, veya **JIT-ing** IL kodunuzdan makine koduna, gerçekten CPU üzerinde çalıştırılabilir. Bu şekilde, CLR tam olarak, kodunuzun ne yaptığını bilir ve etkili bir şekilde yapabilirsiniz _yönetme_ bu.
 
-Ara dil bazen de ortak Ara dili (CIL) veya Microsoft Ara dili (MSIL) denir.
+Ara dil, bazen de ortak Ara dil (CIL) veya Microsoft Ara dil (MSIL) denir.
 
 ## <a name="unmanaged-code-interoperability"></a>Yönetilmeyen kod birlikte çalışabilirliği
 
-Elbette, CLR sınırlar arasında yönetilen ve yönetilmeyen world sağlar ve çok, bile yapan kod [temel sınıf kitaplıkları](framework-libraries.md). Bu adlı **birlikte çalışabilirlik** veya yalnızca **birlikte çalışabilirliği** kısaca. Bu hükümleri, örneğin, bir yönetilmeyen kitaplığı kaydırma ve içine çağrı olanak tanır. Bununla birlikte, kod sınırları çalışma zamanının başarılı olduğunda, bunu yaptığınızda, yürütme gerçek yönetim yeniden yönetilmeyen kod el ile ve bu nedenle aynı kısıtlamalara altında kalan olduğunu dikkate almak önemlidir.
+Elbette, yönetilen ve yönetilmeyen dünya sınırları geçirme CLR sağlar ve birçok yapan, bile kod [temel sınıf kitaplıkları](framework-libraries.md). Bu adlandırılır **birlikte çalışabilirlik** veya yalnızca **Interop** kısaca. Bu hükümler, örneğin, yönetilmeyen bir kitaplığı sarmalayın ve içine çağırmak çalıştırmasına olanak tanır. Ancak, kod çalışma zamanının sınırlarını geçtiğinde, bunu yaptıktan sonra yürütme yönetimini yeniden yönetilmeyen kod el ile ve bu nedenle aynı kısıtlamalara altında düştüğünde olduğunu unutmayın.
 
-Bu, C# olarak bilinen yararlanarak doğrudan kodunda işaretçileri gibi yönetilmeyen yapılar kullanmanıza olanak sağlayan bir dil benzer **güvenli olmayan içerik** paylaştırılabilen bir kod için yürütme yönetilmiyor tarafından belirler CLR.
+Buna benzer C# olarak bilinen yararlanarak doğrudan kod içinde yönetilmeyen yapıları işaretçi gibi kullanmanıza olanak sağlayan bir dil **güvenli olmayan bir bağlam** kendisi için yürütme yönetilmiyor kod parçasını belirler CLR tarafından.
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-*   [.NET framework kavramsal genel bakış](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Güvenli Olmayan Kod ve İşaretçiler](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [Birlikte çalışabilirlik (C# programlama Kılavuzu)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework'ün genel bakış](../framework/get-started/overview.md)
+* [Güvenli Olmayan Kod ve İşaretçiler](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Native ile birlikte çalışma](./native-interop/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603774"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836272"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Arabirim uygulamalarına temsil eden MethodDef belirteçleri numaralandırır.  
+Tüm arabirimleri tarafından belirtilen uygulanan numaralandırır `TypeDef`. 
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `phEnum`  
  [out içinde] Numaralandırıcı bir işaretçi.  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak hiçbir MethodDef belirteçleri vardır. Bu durumda, `pcImpls` sıfır olarak ayarlanır.|  
+
+## <a name="remarks"></a>Açıklamalar
+
+Sabit bir koleksiyonunu döndürür `mdInterfaceImpl` belirteçler tarafından belirtilen uygulanan her arabirim için `TypeDef`. Arabirimi belirteçleri, arabirimler belirtilmiş sırayla döndürülür (aracılığıyla `DefineTypeDef` veya `SetTypeDefProps`). Özellikler döndürülen `mdInterfaceImpl` belirteçleri kullanılarak sorgulanabilir [Getınterfaceımplprops](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

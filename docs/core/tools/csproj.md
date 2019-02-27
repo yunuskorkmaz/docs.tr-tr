@@ -3,12 +3,12 @@ title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8b44c445fbfd3d15cc8e6c53e640a8ae5e284d27
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748016"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836221"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -208,7 +208,7 @@ Paketi için telif hakkı ayrıntıları.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-SPDX lisans ifadesi veya genellikle kullanıcı Arabirimi görüntüler yanı sıra nuget.org adresinde gösterilir, paket içindeki bir lisans dosyasının yolu.
+Bir [SPDX lisans tanımlayıcısı](https://spdx.org/licenses/) veya ifade. Örneğin: `Apache-2.0`
 
 Tam listesi sunulmaktadır [SPDX lisans tanımlayıcıları](https://spdx.org/licenses/). NuGet.org yalnızca OSI kabul eder veya kullanırken onaylanan FSF lisans türü ifadesi lisansı.
 
@@ -236,23 +236,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX tanımlayıcı atanmamış lisans kullandığınız ya da özel bir lisanstır paket içindeki bir lisans dosyası yolu (Aksi takdirde `PackageLicenseExpression` VPN'ye olan)
 
-> [!NOTE]
-> Yalnızca biri `PackageLicenseExpression`, `PackageLicenseFile` ve `PackageLicenseUrl` teker teker belirtilebilir.
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-Bir paket için uygun olan lisans URL'si. (_Visual Studio 15.9.4, .NET SDK'sı 2.1.502 ve 2.2.101 beri kullanım dışı_)
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-Bir [SPDX lisans tanımlayıcısı](https://spdx.org/licenses/) veya ifade, yani `Apache-2.0`.
-
-Değiştirir `PackageLicenseUrl`, ile birleştirilemez `PackageLicenseFile` ve Visual Studio 15.9.4, .NET SDK'sı 2.1.502 veya 2.2.101, gerektirir ya da daha yeni.
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-Yani dosya diskte, proje dosyasının göreli bir yol lisansına `LICENSE.txt`.
-
 Değiştirir `PackageLicenseUrl`, ile birleştirilemez `PackageLicenseExpression` ve Visual Studio 15.9.4, .NET SDK'sı 2.1.502 veya 2.2.101, gerektirir ya da daha yeni.
 
 Lisans dosyası, proje için örnek kullanım açıkça ekleyerek iyileştirmesiyle doludur emin olmak ihtiyacınız olacak:
@@ -264,6 +247,12 @@ Lisans dosyası, proje için örnek kullanım açıkça ekleyerek iyileştirmesi
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+Bir paket için uygun olan lisans URL'si. (_Visual Studio 15.9.4, .NET SDK'sı 2.1.502 ve 2.2.101 beri kullanım dışı_)
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 Kullanıcı Arabirimi ekranı pakette için simge olarak kullanılacak bir URL saydam arka plana sahip 64 x 64 görüntüsü.
 

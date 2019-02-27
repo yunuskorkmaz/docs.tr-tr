@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747628"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835440"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -119,13 +119,13 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
         // other cases removed for brevity...
         _ => 0M
     };
-    ```
+```
 
-Pattern matching creates a concise syntax for expressing this algorithm.
+Desen eşleştirme bu algoritma ifade etmek için kısa bir söz dizimi oluşturur.
 
-### Tuple patterns
+### <a name="tuple-patterns"></a>Kayıt düzenleri
 
-Some algorithms depend on multiple inputs. **Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).  The following code shows a switch expression for the game *rock, paper, scissors*:
+Birden çok girişler bazı algoritmalar bağlıdır. **Kayıt düzenleri** olarak ifade edilen birden çok değerlere göre geçiş yapmanıza izin bir [demet](../tuples.md).  Aşağıdaki kod oyun için bir switch ifadesi gösterir *rock, inceleme, Makas*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -139,13 +139,13 @@ public static string RockPaperScissors(string first, string second)
         ("scissors", "paper") => "scissors cuts paper. Scissors wins.",
         (_, _) => "tie"
     };
-    ```
+```
 
-The messages indicate the winner. The discard case represents the three combinations for ties, or other text inputs.
+Birinci iletileri gösterir. Atma durum TIES veya diğer metin girişi için üç birleşimleri temsil eder.
 
-### Positional patterns
+### <a name="positional-patterns"></a>Konumsal desenleri
 
-Some types include a `Deconstruct` method that deconstructs its properties into discrete variables. When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.  Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:
+Bazı türler bir `Deconstruct` özelliklerini ayrık değişkenlere deconstructs yöntemi. Olduğunda bir `Deconstruct` yöntemi erişilebilir, kullanabileceğiniz **konumsal desenleri** nesnenin özelliklerini inceleyin ve bu özellikler için bir düzen kullanın.  Aşağıdakileri göz önünde bulundurun `Point` içeren sınıf bir `Deconstruct` ayrık değişkenleri yöntemini `X` ve `Y`:
 
 ```csharp
 public class Point

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692970"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836428"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans daha türetilmiş türde (ayrıntılı) veya orijinal olarak belirtilenden daha az türetilmiş bir tür (less yazımına özgü) kullanma olanağı için başvuran terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf varsayılmaktadır `Base` ve adlı bir türetilmiş sınıf `Derived`.  
@@ -135,7 +135,7 @@ ms.locfileid: "54692970"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Genel ve Genel Olmayan Temsilcilerde Değişken  
  Önceki kodda, imzası `MyMethod` oluşturulan genel temsilcinin imzasını tam olarak eşleşir: `Func<Base, Derived>` (`Func(Of Base, Derived)` Visual Basic'te). Tüm temsilci türleri Genel temsilci türünden oluşturulduğu sürece, bu genel temsilcinin değişkenleri veya daha fazla türetilmiş parametre türleri yöntem parametreleri depolanabilir ve daha az türetilmiş dönüş türleri örnek gösterir <xref:System.Func%602>.  
   
- Bu önemli bir noktadır. Kovaryans ve kontravaryans, genel temsilcilerin tür parametrelerindeki etkileri sıradan temsilci bağlamadaki etkilerini Kovaryans ve kontravaryans benzer (bkz [Temsilcilerde varyans](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Ancak, temsilci bağlamadaki değişken, yalnızca değişken türde parametreleri olan genel temsilci türleriyle değil, tüm temsilci türleriyle birlikte çalışır. Ayrıca, temsilci bağlamada değişken, bir yöntemin daha kısıtlayıcı parametre türleri ve daha az kısıtlayıcı dönüş türü olan herhangi bir temsilciye bağlanmasına olanak tanırken, genel temsilcilerin atanması yalnızca her iki temsilci türünün de aynı genel tür tanımından oluşturulması durumunda çalışır.  
+ Bu önemli bir noktadır. Kovaryans ve kontravaryans, genel temsilcilerin tür parametrelerindeki etkileri sıradan temsilci bağlamadaki etkilerini Kovaryans ve kontravaryans benzer (bkz [Temsilcilerde varyans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [ Temsilcilerde varyans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). Ancak, temsilci bağlamadaki değişken, yalnızca değişken türde parametreleri olan genel temsilci türleriyle değil, tüm temsilci türleriyle birlikte çalışır. Ayrıca, temsilci bağlamada değişken, bir yöntemin daha kısıtlayıcı parametre türleri ve daha az kısıtlayıcı dönüş türü olan herhangi bir temsilciye bağlanmasına olanak tanırken, genel temsilcilerin atanması yalnızca her iki temsilci türünün de aynı genel tür tanımından oluşturulması durumunda çalışır.  
   
  Aşağıdaki örnekte, temsilci bağlamadaki değişkenin ve genel tür parametrelerindeki değişkenin birleşik etkisi gösterilmektedir. Örneğin, gelen en az üç tür içeren bir tür hiyerarşisi tanımlanmaktadır türetilmiş (`Type1`) en çok türetilene (`Type3`). Sıradan temsilci bağlamada değişken parametre türü bir yöntemi bağlamak için kullanılan `Type1` ve dönüş türü `Type3` temsilci parametre türüne sahip `Type2` ve dönüş türü `Type2`. Sonuç olarak oluşan genel temsilci daha sonra genel temsilci türü türünde bir parametreye sahip başka bir değişkene atanır `Type3` ve dönüş türü `Type1`, Kovaryans ve kontravaryans, genel tür parametrelerinin kullanarak. İkinci atama, hem değişken türünün hem de temsilci türüyle aynı genel tür tanımından, bu durumda, kendisinden oluşturulacağı gerektirir <xref:System.Func%602>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692970"
   
  Visual Basic ve C#, birlikte değişken veya değişken karşıtı türde parametrelerin kullanılmasına ilişkin kuralların ihlal edilmesine veya arabirimlerden ve temsilcilerden başka türde tür parametrelerine birlikte değişken veya değişken karşıtı ek açıklamalar eklenmesine izin vermez. [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) tür denetimler gerçekleştirmez ancak <xref:System.TypeLoadException> kuralları ihlal eden bir tür yüklemeyi denerseniz oluşturulur.  
   
- Bilgi ve örnek kod için bkz. [genel arabirimlerde varyans](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Bilgi ve örnek kod için bkz. [Variance in Generic Interfaces (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) ve [Variance in Generic Interfaces (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
  [Başa dön](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692970"
 
 - [Kovaryans ve kontravaryans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Kovaryans ve kontravaryans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Temsilcilerde Varyans](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [Temsilcilerde varyans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Temsilcilerde varyans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

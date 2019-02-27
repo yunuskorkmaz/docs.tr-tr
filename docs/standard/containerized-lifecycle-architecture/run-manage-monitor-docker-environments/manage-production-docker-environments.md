@@ -3,13 +3,13 @@ title: Üretim Docker ortamlarını yönetme
 description: Bir kapsayıcı tabanlı üretim ortamı yönetmek için önemli noktaları tanışın.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219496"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836623"
 ---
 # <a name="manage-production-docker-environments"></a>Üretim Docker ortamlarını yönetme
 
@@ -23,26 +23,24 @@ Azure sanal makine ölçek kümeleri'ni kullanarak bu kümeleri dağıtmak ve k�
 
 Tablo 6-1, kendi düzenleyicileri, zamanlayıcılar ve kümeleme platformu ile ilgili genel yönetim araçlarını listeler.
 
-Tablo 6-1: Docker Yönetim Araçları
+**Tablo 6-1**. Docker Yönetim Araçları
 
-
-| Yönetim Araçları      | Açıklama           | İlgili düzenleyicileri |
-|-----------------------|-----------------------|-----------------------|
-| Container Service\(Azure portalındaki kullanıcı Arabirimi yönetim) | [Kapsayıcı hizmeti](https://azure.microsoft.com/services/container-service/) almak bir kolayca sağlar şekilde çalışmaya [azure'da kapsayıcı kümesi dağıtma](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) Mesosphere DC/OS, Kubernetes ve Docker Swarm gibi popüler düzenleyicilerle göre. <br /><br /> Kapsayıcı hizmeti bu platformların yapılandırma en iyi duruma getirir. Boyutu, konak sayısını ve istediğiniz düzenleyici araçlarını seçmek yeterlidir ve kapsayıcı hizmeti, diğer her şey yapar. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Docker Evrensel denetim düzlemi\(şirket içi veya Bulut) | [Docker Evrensel denetim düzlemi](https://docs.docker.com/v1.11/ucp/overview/) docker kurumsal sınıf küme yönetimi çözümüdür. Bu, tüm küme tek bir yerden yönetmenize yardımcı olur. <br /><br /> Docker Evrensel denetim düzlemi, adlı Docker Swarm, Docker Evrensel denetim düzlemi ile Docker Trusted Registry sağlayan Docker Datacenter'a ticari ürünün bir parçası olarak dahil edilir. <br /><br /> Docker Datacenter veya Azure gibi genel bir buluttan sağlanan şirket yüklü olabilir. | Docker Swarm\(Container Service tarafından desteklenen) |
-| Docker Bulutu\(Tutum; bulut SaaS olarak da bilinir) | [Docker Bulutu](https://docs.docker.com/docker-cloud/) düzenleme özelliklerinden ve bir Docker kayıt defteri derleme ve test olanakları Dockerized uygulama görüntülerini ayarlama ve ana bilgisayar altyapınızı yönetmenize yardımcı olacak araçlar sağlar barındırılan bir yönetim hizmeti (SaaS) ve görüntülerinizi somut altyapınızı dağıtmaya otomatikleştirmenize yardımcı olmak için dağıtım özellikleri. Altyapınızı Container Service'teki Docker Swarm kümesi çalıştıran SaaS Docker Bulutu hesabınıza bağlanabilirsiniz. | Docker Swarm\(Container Service tarafından desteklenen) |
-| Mesosphere Marathon\(şirket içi veya Bulut) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) üretim düzeyinde kapsayıcı düzenleme ve Zamanlayıcı platformu mesosphere tarafından sunulan DC/OS ve Apache Mesos içindir. <br /><br /> Mesos ile çalışır (Apache Mesos üzerinde DC/OS tabanlı) uzun süre çalışan denetimine Hizmetleri ve sağlayan bir [işlemi ve kapsayıcı yönetimi için web kullanıcı Arabirimi](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Web kullanıcı Arabirimi yönetim aracını sağlar | Mesosphere DC/OS\(üzerinde Apache Mesos tabanlı; Container Service tarafından desteklenen) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) işlemlerini, zamanlama ve küme altyapısı yayılır. Bu kümeleri arasında kapsayıcı merkezli altyapı sağlama konakları, dağıtım, ölçeklendirme ve uygulama kapsayıcıların işlemlerini otomatikleştirmek için bir açık kaynak platformudur. | Google Kubernetes\(Container Service tarafından desteklenen) |
+| Yönetim Araçları | Açıklama | İlgili düzenleyicileri |
+|------------------|-------------|-----------------------|
+| [Kapsayıcılar için Azure İzleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Adanmış Azure Kubernetes yönetim aracı | Azure Kubernetes hizmeti (AKS) |
+| [Kubernetes Web UI (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes yönetim aracı, izleyebilir ve yerel Kubernetes kümesini yönetme | Azure Kubernetes Service'i (AKS)<br/>Yerel Kubernetes |
+| [Service Fabric için Azure portalı](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure'da, şirket içi, yerel geliştirme ve diğer bulutlarda Service Fabric kümelerini yönetmek için çevrimiçi ve Masaüstü sürümü | Azure Service Fabric |
+| [Kapsayıcı (Log Analytics'e) izleme](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Genel kapsayıcı Yönetimi y izleme çözümüdür. Kubernetes kümelerini aracılığıyla yönetebilirsiniz [kapsayıcılar için Azure İzleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service'i (AKS)<br/>Mesosphere DC/OS ve diğerleri. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Başka bir küme dağıtımı ve yönetimi için Azure Service Fabric seçimdir. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) olduğundan kapsayıcı düzenleme ve bunun yanı sıra Geliştirici içeren bir Microsoft mikro hizmet platformu programlama modelleri, üst düzeyde ölçeklenebilir bir mikro hizmet uygulamaları oluşturmak için. Service Fabric gibi geçerli Linux Önizleme sürümlerinde Docker destekler [Linux üzerinde Service Fabric Önizleme](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)ve Windows kapsayıcıları için [sonraki sürümde](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Başka bir küme dağıtımı ve yönetimi için Azure Service Fabric seçimdir. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) olduğundan kapsayıcı düzenleme ve bunun yanı sıra Geliştirici içeren bir Microsoft mikro hizmet platformu programlama modelleri, yüksek düzeyde ölçeklenebilir bir mikro hizmet uygulamaları oluşturmak için. Service Fabric, Linux ve Windows kapsayıcıları Docker'ı destekler ve Windows ve Linux sunucularını çalıştırabilirsiniz.
 
 Service Fabric araçlarını aşağıda verilmiştir:
 
--   [Service Fabric için Azure portalı](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) küme ilgili işlemleri (oluşturma/güncelleştirme/silme) bir küme veya (VM'ler, yük dengeleyici, ağ, vs.) altyapısını yapılandırma
+- [Service Fabric için Azure portalı](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) küme ilgili işlemleri (oluşturma/güncelleştirme/silme) bir küme veya (VM'ler, yük dengeleyici, ağ, vs.) altyapısını yapılandırma
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) Öngörüler ve Service Fabric kümesinde düğümler/VM'ler ekler açısından ve uygulama ve Hizmetleri açısından belirli işlemleri sağlayan bir özel web kullanıcı Arabirimi aracıdır.
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) özelleştirilmiş web UI ve Öngörüler ve Service Fabric kümesinde düğümler/VM'ler ekler açısından ve uygulama ve Hizmetleri açısından belirli işlemleri sağlayan masaüstü çoklu platform araç.
 
 >[!div class="step-by-step"]
 >[Önceki](run-microservices-based-applications-in-production.md)

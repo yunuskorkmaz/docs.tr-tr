@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842833"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836558"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
-.NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, bir C#, C + gibi .NET Framework'ü hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir +/ CLI, Eiffel, F #, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
+.NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, birinde gibi .NET Framework hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir C#, C + +/ CLI, Eiffel, F#, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
   
 > [!NOTE]
 >  Bu ilk kısmı bu makalede, dilden bağımsız bileşenlerin oluşturulması açıklanmaktadır — diğer bir deyişle, herhangi bir dilde yazılmış uygulamalar tarafından tüketilebilecek bileşenlerin. Birden çok dilde yazılmış kaynak kodundan tek bileşen veya uygulama da oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#CrossLang) ikinci bölümündeki bu makalede.  
   
- Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşim kurmayı nesneleri arayanlara tüm diller için ortak olan özellikleri göstermesi gerekir. Bu ortak özellikler kümesi, oluşturulmuş derlemeler için uygulanan bir kurallar kümesi olan ortak dil belirtimi (CLS ile), tanımlanır. Ortak dil belirtimi bölüm ı, yan tümceler 7 ila 11'de tanımlanan [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşim kurmayı nesneleri arayanlara tüm diller için ortak olan özellikleri göstermesi gerekir. Bu ortak özellikler kümesi, oluşturulmuş derlemeler için uygulanan bir kurallar kümesi olan ortak dil belirtimi (CLS ile), tanımlanır. Ortak dil belirtimi bölüm ı, yan tümceler 7 ila 11'de tanımlanan [ECMA-335 standardı: Ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Bileşeniniz ortak dil belirtimi için uyuyorsa, CLS uyumlu olması sağlanır ve CLS destekleyen programlama diliyle yazılmış derlemedeki koddan erişilebilir. Bileşeniniz ortak dil belirtimi için derleme zamanında uygulayarak uyup uymadığını belirleyebilirsiniz <xref:System.CLSCompliantAttribute> özniteliğini kaynak kodunuza. Daha fazla bilgi için [CLSCompliantAttribute özniteliği](#CLSAttribute).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48842833"
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS uyumluluğu kuralları  
- Bu bölüm, CLS uyumlu bileşen oluşturma kurallarını anlatır. Kuralları tam listesi için bölüm ı, madde 11'ine bakın [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Bu bölüm, CLS uyumlu bileşen oluşturma kurallarını anlatır. Kuralları tam listesi için bölüm ı, madde 11'ine bakın [ECMA-335 standardı: Ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
 >  Çerçeveler (oluşturmak için bir dil derleyicisi kullanan geliştiriciler tüketiciler (CLS uyumlu bir bileşen programlı olarak erişen geliştiriciler), geçerli olduğundan ortak dil belirtimi CLS uyumuyla ilgili her kuralı açıklanır. CLS-compliant kitaplıkları) ve Genişleticileri (bir dil derleyicisi veya CLS uyumlu bileşenler oluşturan kod ayrıştırıcısı gibi bir araç oluşturan geliştiriciler). Bu makale, çerçeveler için geçerli olarak kurallarında odaklanır. Ancak, Genişleticiler için geçerli kurallar bazıları da Reflection.Emit kullanılarak oluşturulan derlemeler için uygulanabilir unutmayın.  
@@ -100,7 +100,7 @@ ms.locfileid: "48842833"
   
 -   Parametreleri ve ortak sınıfların ve parametreleri genel yöntemlerin dönüş türleri ve türetilen sınıflar için erişilebilir yöntemlerin dönüş türleri.  
   
- CLS uyumluluğu kuralları, aşağıdaki tabloda listelenmiştir. Metin kuralları ndan alınmıştır [ECMA-335 standardı: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Ecma International telif hakkı 2012 olduğu. Aşağıdaki bölümlerde bu kurallar hakkında daha ayrıntılı bilgi bulunur.  
+ CLS uyumluluğu kuralları, aşağıdaki tabloda listelenmiştir. Metin kuralları ndan alınmıştır [ECMA-335 standardı: Ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Ecma International telif hakkı 2012 olduğu. Aşağıdaki bölümlerde bu kurallar hakkında daha ayrıntılı bilgi bulunur.  
   
 |Kategori|Bkz. |Kural|Kural numarası|  
 |--------------|---------|----------|-----------------|  
@@ -188,7 +188,7 @@ ms.locfileid: "48842833"
 |Uyumsuz tür|Açıklama|CLS uyumlu alternatif|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|8 bitlik işaretli tamsayı veri türü|<xref:System.Int16>|  
-|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok.|  
+|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Hiçbiri|  
 |<xref:System.UInt16>|16-bit işaretsiz tamsayı|<xref:System.Int32>|  
 |<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|  
 |<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64> (taşabilir), <xref:System.Numerics.BigInteger>, veya <xref:System.Double>|  
@@ -305,7 +305,7 @@ ms.locfileid: "48842833"
   
      Bu kural nedeniyle, CLS uyumlu türler CLS uyumlu olmayan üyeleri uygulamak için gerekli değildir. CLS uyumlu bir çerçeve, CLS olmayan uyumlu arabirimi uygulayan bir sınıfı gösterirse, CLS uyumlu olmayan tüm üyelerinin somut uygulamalarını da sağlamanız gerekir.  
   
- CLS uyumlu dil derleyicileri de birden fazla arabirimde aynı ada ve imzaya sahip üyelerin ayrı uygulamalarını sağlamak bir sınıf izin vermeniz gerekir.  Hem C# ve Visual Basic desteği [açık arabirim uygulamalarını](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) , aynı adlı yöntemlerin farklı uygulamalarını sağlamak için. Visual Basic de destekler `Implements` belirli bir üyenin hangi arabirimi ve açıkça atamak sağlayan anahtar sözcüğü uygular. Aşağıdaki örnek, tanımlayarak bu senaryoyu gösteren bir `Temperature` uygulayan sınıf `ICelsius` ve `IFahrenheit` arabirimlerini açık arabirim uygulamalarını olarak.  
+ CLS uyumlu dil derleyicileri de birden fazla arabirimde aynı ada ve imzaya sahip üyelerin ayrı uygulamalarını sağlamak bir sınıf izin vermeniz gerekir.  Hem C# ve Visual Basic desteği [açık arabirim uygulamalarını](../csharp/programming-guide/interfaces/explicit-interface-implementation.md) , aynı adlı yöntemlerin farklı uygulamalarını sağlamak için. Visual Basic de destekler `Implements` belirli bir üyenin hangi arabirimi ve açıkça atamak sağlayan anahtar sözcüğü uygular. Aşağıdaki örnek, tanımlayarak bu senaryoyu gösteren bir `Temperature` uygulayan sınıf `ICelsius` ve `IFahrenheit` arabirimlerini açık arabirim uygulamalarını olarak.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -548,23 +548,23 @@ ms.locfileid: "48842833"
   
  Tek bir derleme için iki sınıf paketlemek için modülleri derlemeniz gerekir. Visual Basic kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Visual Basic derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Visual Basic derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [komut satırından derleme](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  C# kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- C# derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ C# derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [yapı komut satırı ile csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Daha sonra [bağlantı aracını (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) iki modül bir birleştirme dosyasına derlemek için:  
+ Daha sonra [bağlayıcı seçenekleri](/cpp/build/reference/linker-options) iki modül bir birleştirme dosyasına derlemek için:  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Visual Basic kodunu derlemek için bu komutu kullanın:  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  C# ile derlemek için derleyicinin adını değiştirmek **vbc** için **csc**ve dosya uzantısını .vb yerine .cs olarak değiştirin:  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

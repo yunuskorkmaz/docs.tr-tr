@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865845"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835362"
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
-Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu dosya ve bellek alanı eşlemesini okuma ve yazma doğrudan bellek tarafından dosyasını değiştirmek birden çok işlem dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod bellek eşlemeli dosyalar açıklandığı gibi aynı şekilde access bellek eşlemeli dosyalar, yerel Windows işlevlerine erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://msdn.microsoft.com/library/ms810613.aspx).  
+Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu dosya ve bellek alanı eşlemesini okuma ve yazma doğrudan bellek tarafından dosyasını değiştirmek birden çok işlem dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod bellek eşlemeli dosyalar açıklandığı gibi aynı şekilde access bellek eşlemeli dosyalar, yerel Windows işlevlerine erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
   
  Bellek eşlemeli dosyalar iki tür vardır:  
   

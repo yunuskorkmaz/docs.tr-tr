@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645970"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835375"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
 Belirtilen türün üyelerini temsil eden MemberDef belirteçleri numaralandırır.  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `phEnum`  
  [out içinde] Numaralandırıcı bir işaretçi.  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|Numaralandırılacak hiçbir MemberDef belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koleksiyonlar bir sınıfın üyelerinin sıralanırken `EnumMembers` doğrudan sınıf üzerinde tanımlanan üyeler döndürür. Bile sınıfı, bu devralınan üyeleri için bir uygulama sağlar sınıfını devralan herhangi bir üye döndürmez. Devralınan üyeleri listeleme için arayan açıkça devralma zincirini yol gerekir. Devralma zincirini kurallarını özgün metaverileri gereğince yayılan derleyici ve dil bağlı olarak farklılık gösterebileceğini unutmayın.  
+ Koleksiyonlar bir sınıfın üyelerinin sıralanırken `EnumMembers` yalnızca üyeleri döndürür (alanlar ve yöntemler, ancak **değil** özellikleri veya olayları) doğrudan sınıf üzerinde tanımlanan. Bile sınıfı, bu devralınan üyeleri için bir uygulama sağlar sınıfını devralan herhangi bir üye döndürmez. Devralınan üyeleri listeleme için arayan açıkça devralma zincirini yol gerekir. Devralma zincirini kurallarını özgün metaverileri gereğince yayılan derleyici ve dil bağlı olarak farklılık gösterebileceğini unutmayın.
+ 
+ Özellikler ve olaylar değil numaralandırılan tarafından `EnumMembers`. Bu listeleme için kullanın [EnumProperties](imetadataimport-enumproperties-method.md) veya [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

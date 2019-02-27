@@ -5,12 +5,6 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202965"
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 .NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıf kapsamlı ve tümleşik kümesi sağlar. Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verilerini düzenleme yazma desteği.  
@@ -25,7 +19,7 @@ ms.locfileid: "50202965"
   
 -   <xref:System.Xml.Linq>  
   
- Tam bir listesi için bkz [System.Xml ad alanlarında](https://msdn.microsoft.com/library/gg145036.aspx) Web sayfası.  
+ Tam listesi için "System.Xml" için arama [.NET API browser](https://docs.microsoft.com/dotnet/api/?term=system.xml).  
   
  Bu ad alanındaki sınıflar, World Wide Web Consortium (W3C) önerileri destekler. Örneğin:  
   
@@ -33,13 +27,13 @@ ms.locfileid: "50202965"
   
 -   <xref:System.Xml.XmlReader?displayProperty=nameWithType> Ve <xref:System.Xml.XmlWriter?displayProperty=nameWithType> destek sınıfları [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) ve [ad alanları XML](https://www.w3.org/TR/REC-xml-names/) öneriler.  
   
--   Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: yapıları](https://www.w3.org/TR/xmlschema-1/) ve [XML şema bölümü 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
+-   Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: Yapıları](https://www.w3.org/TR/xmlschema-1/) ve [XML şema bölümü 2: Veri türleri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
   
 -   Sınıflar <xref:System.Xml.Xsl?displayProperty=nameWithType> uygun ad alanı desteği XSLT dönüşümleri [W3C XSLT 1.0](https://www.w3.org/TR/xslt) öneri.  
   
  .NET Framework XML sınıflarda aşağıdaki avantajları sağlar:  
   
--   **Üretkenlik.** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) XML programla kolaylaştırır ve SQL'e benzeyen bir sorgu deneyimi sağlar.  
+-   **Üretkenlik.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) XML programla kolaylaştırır ve SQL'e benzeyen bir sorgu deneyimi sağlar.  
   
 -   **Genişletilebilirlik.** .NET Framework'te XML sınıflarının soyut temel sınıflar ve sanal yöntemleri kullanılarak genişletilebilir. Örneğin, türetilmiş bir sınıf oluşturabilirsiniz <xref:System.Xml.XmlUrlResolver> yerel disk önbellek akışa depolayan sınıf.  
   
@@ -62,7 +56,7 @@ ms.locfileid: "50202965"
  XML verilerini işlemek için seçenekleri açıklar.  
   
  [XML Verilerini Bellek İçinde İşleme](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- XML verilerini bellek içi işleme için üç model açıklanmaktadır. [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> (W3C belge nesnesi modeline dayalı), sınıf ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modelini temel).  
+ XML verilerini bellek içi işleme için üç model açıklanmaktadır: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> (W3C belge nesnesi modeline dayalı), sınıf ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modelini temel).  
   
  [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
  XSLT işlemci kullanmayı açıklar.  

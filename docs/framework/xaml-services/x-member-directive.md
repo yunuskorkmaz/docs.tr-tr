@@ -2,12 +2,12 @@
 title: x:Member Yönergesi
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
-ms.openlocfilehash: dfc08d79bd8206269807d88d2c659f13be487276
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66d34ad6bc5b6bb98eba6219130035dc413b486f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177717"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835336"
 ---
 # <a name="xmember-directive"></a>x:Member Yönergesi
 XAML biçimlendirmede üye bildirir.  
@@ -38,4 +38,4 @@ XAML biçimlendirmede üye bildirir.
  Pratik kullanımını desteklemek üzere `x:Members` üyeleri üye tanımları işaretlemede belirtmek için bir yol değiştirilebilir bir sınıf ile ilişkili olması gerekir. Hedeflenen modeli olan `x:Members` belirten bir tür üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üye tanımları oluşturmayı mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu, XAML üyesi tanımları desteği uygulama modellerini sahip tek çerçeveleri için bırakılır. Genellikle, isteğe bağlı olarak, XAML ve aşağıdakilerden birini işaretleme-derleme MSBUILD yapı eylemleri arka plan kod ile tümleştirin veya üretim saf gelen XAML derlemeleri, bu özelliği desteklemek için gereklidir.  
   
 ## <a name="xproperty-for-windows-workflow-foundation"></a>x: Property Windows Workflow Foundation için  
- Windows Workflow Foundation için `x:Property` tamamen XAML veya XAML oluşan özel bir etkinlik üyelerini tanımlayan – dinamik üyeler bir etkinlik Tasarımcısı ile arka plan kod için tanımlanır. `x:Class` XAML üretim kök öğe üzerinde de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde bir gereksinim değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklendiğinde bir gereksinim haline gelir. Windows Workflow Foundation kullanmayan saf XAML tür adı için hedeflenen değeri olarak `x:Property` `Type` özniteliği ve bunun yerine burada belgelenmemiş bir kuralı kullanır. Daha fazla bilgi için [dinamik etkinliği oluşturma](https://msdn.microsoft.com/library/dd807392.aspx).
+ Windows Workflow Foundation için `x:Property` tamamen XAML veya XAML oluşan özel bir etkinlik üyelerini tanımlayan – dinamik üyeler bir etkinlik Tasarımcısı ile arka plan kod için tanımlanır. `x:Class` XAML üretim kök öğe üzerinde de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde bir gereksinim değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklendiğinde bir gereksinim haline gelir. Windows Workflow Foundation kullanmayan saf XAML tür adı için hedeflenen değeri olarak `x:Property` `Type` özniteliği ve bunun yerine burada belgelenmemiş bir kuralı kullanır. Daha fazla bilgi için [DynamicActivity oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).

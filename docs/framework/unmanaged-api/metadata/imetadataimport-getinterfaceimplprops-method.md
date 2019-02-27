@@ -1,6 +1,6 @@
 ---
-title: IMetaDataImport::GetInterfaceImplProps Metodu
-ms.date: 03/30/2017
+title: IMetaDataImport::GetInterfaceImplProps Yöntemi
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600564"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835726"
 ---
-# <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps Metodu
-Meta veri belirteçleri için bir işaretçi alır <xref:System.Type> belirtilen yöntemini uygulayan ve arabirim için bu yöntem bildirir.  
+# <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps Yöntemi
+Meta veri belirteçleri için bir işaretçi alır <xref:System.Type> belirtilen yöntemini uygulayan ve arabirim için bu yöntem bildirir.
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,6 +46,33 @@ HRESULT GetInterfaceImplProps (
   
  `ptkIface`  
  [out] Uygulanan yöntemi tanımlar arabirimi temsil eden meta veri belirteci.  
+
+## <a name="remarks"></a>Açıklamalar
+
+ Değeri elde `iImpl` çağırarak [Enumınterfaceımpls](imetadataimport-enuminterfaceimpls-method.md) yöntemi.
+ 
+ Örneğin, bir sınıf olduğunu varsayalım. bir `mdTypeDef` belirteç 0x02000007 değeri ile eşleşen türleri belirteçleri sahip üç arabirimi uygular: 
+
+- 0x02000003 (TypeDef)
+- 0x0100000A (TypeRef)
+- 0x0200001C (TypeDef)
+
+Kavramsal olarak, bu bilgileri, bir arabirim uygulaması tablosuna depolanır:
+
+| Satır numarası | Sınıf simgesi | Belirteç arabirimi |
+|------------|-------------|-----------------|
+| 4          |             |                 |
+| 5          | 02000007    | 02000003        |
+| 6          | 02000007    | 0100000A        |
+| 7          |             |                 |
+| 8          | 02000007    | 0200001C        |
+
+Geri çağırırsanız, belirteç bir 4 baytlık değerdir:
+
+- Daha düşük 3 baytlar satır numarasına tutun veya RID.
+- Belirteç türü – 0x09 için üst bayt tutar `mdtInterfaceImpl`.
+
+`GetInterfaceImplProps` bilgi tutulan belirteç tarafınıza sıradaki döndürür `iImpl` bağımsız değişken. 
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

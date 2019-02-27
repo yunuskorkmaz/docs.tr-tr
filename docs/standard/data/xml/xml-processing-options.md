@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c316ec79b519e1580f1d5dc7e122d770fb5b82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 585a6e568bde6e6eca15477eaa10b5c91c91c5a4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583170"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835557"
 ---
 # <a name="xml-processing-options"></a>XML işleme seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerinin bir listesi için aşağıdaki tablolara bakın.  
@@ -19,7 +19,7 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerinin bir
   
 |**Seçeneği**|**İşleme türü**|**Açıklama**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisini temel alan.<br />-SQL nesneleri, ilişkisel veriler ve XML veri benzer sorgu deneyimi sağlar.<br />-Sezgisel belge oluşturma ve dönüştürme özelliklerini sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
+|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisini temel alan.<br />-SQL nesneleri, ilişkisel veriler ve XML veri benzer sorgu deneyimi sağlar.<br />-Sezgisel belge oluşturma ve dönüştürme özelliklerini sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Stream tabanlı|-XML verilerine erişmek için hızlı, önbelleğe alınmamış, yalnızca iletme bir yol sağlar.<br />-Kullanarak nesne oluşturabilirsiniz <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> yöntemi ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesini belirtin <xref:System.Xml.XmlReaderSettings> sınıfı.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Stream tabanlı|-XML verileri oluşturmak için hızlı, önbelleğe alınmamış, yalnızca iletme bir yol sağlar.<br />-Kullanarak nesne oluşturabilirsiniz <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemi ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesini belirtin <xref:System.Xml.XmlWriterSettings> sınıfı.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|-Uygulayan [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM düzeyi 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.<br />-, Ekle, Kaldır, oluşturup düzenleyebilir düğümleri yöntemleri ve tanıdık DOM modelini temel alan özelliklerini kullanarak.<br />-W3C yerli kullanan mevcut kodu değiştiriyorsanız bu seçeneği kullanın|  
@@ -30,8 +30,8 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerinin bir
   
 |**Seçeneği**|**Açıklama**|  
 |----------------|---------------------|  
-|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|Olmayan önbelleğe alma hızlı, güvenli, yardımcı olan yalnızca iletme XML Ayrıştırıcı yüksek performanslı XML uygulamalar oluşturun.<br />-Dinamik bağlantı kitaplıklarını (DLL'ler); kullanabilirsiniz herhangi bir dil ile çalışır C++ kullanmanızı öneririz.|  
-|[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|-Windows işletim sisteminde bulunan XML işlemek için COM tabanlı teknoloji.<br />-XPath ve XSLT desteğiyle DOM yerel bir uygulamasını sağlar.<br />-Olay tabanlı SAX2 ayrıştırıcının içerir.|  
+|[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|Olmayan önbelleğe alma hızlı, güvenli, yardımcı olan yalnızca iletme XML Ayrıştırıcı yüksek performanslı XML uygulamalar oluşturun.<br />-Dinamik bağlantı kitaplıklarını (DLL'ler); kullanabilirsiniz herhangi bir dil ile çalışır C++ kullanmanızı öneririz.|  
+|[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|-Windows işletim sisteminde bulunan XML işlemek için COM tabanlı teknoloji.<br />-XPath ve XSLT desteğiyle DOM yerel bir uygulamasını sağlar.<br />-Olay tabanlı SAX2 ayrıştırıcının içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

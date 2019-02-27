@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ec66015159e03de8d2c16971c0e858ebc128014
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659650"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835115"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -78,7 +78,7 @@ ms.locfileid: "54659650"
  Bu durumda, `DoWork` D, türünde bir değişken kullanarak D adlı yeni `DoWork` çağrılır. C, B ve A türünde bir değişken D, bir çağrı örneğini erişmek için kullanılıp kullanılmadığını `DoWork` sanal devralma, bu çağrıları uygulanmasına yönelik yönlendirme kurallarını takip `DoWork` c sınıfı hakkında  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Sanal temel sınıf üyelerinin türetilmiş sınıflardan erişme  
- Sahip veya bir yöntem veya özellik geçersiz kılınan türetilmiş bir sınıf yöntem veya özellik temel anahtar sözcüğü kullanılarak taban sınıfta erişmeye devam edebilirsiniz. Aşağıdaki kod, bir örnek sağlar:  
+ Sahip veya bir yöntem veya özellik geçersiz kılınan türetilmiş bir sınıf yöntemi veya özelliği temel sınıf kullanarak erişmeye devam edebilirsiniz `base` anahtar sözcüğü. Aşağıdaki kod, bir örnek sağlar:  
   
  [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   

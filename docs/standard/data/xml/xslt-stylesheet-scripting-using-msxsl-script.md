@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267306"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835258"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>XSLT stil sayfası komut dosyalarını kullanarak \<msxsl: script >
 <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış betik `script` öğesi.  
@@ -45,7 +45,7 @@ ms.locfileid: "55267306"
   
  Kanıt derlemenizden almak için kullanın `this.GetType().Assembly.Evidence`. Bir Tekdüzen Kaynak Tanımlayıcısı (URI) öğesinden kanıt sağlamak için kullanın `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, derleme için güvenlik bölgesi varsayılan olarak tam güven için. Daha fazla bilgi için <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, derleme için güvenlik bölgesi varsayılan olarak tam güven için. Daha fazla bilgi için <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  İşlevler içinde bildirilebilir `msxsl:script` öğesi. Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanlarını gösterir. Listelenen ad alanlarını dışında sınıfları kullanabilirsiniz. Ancak, bu sınıflar, tam olarak nitelenmiş olmalıdır.  
   

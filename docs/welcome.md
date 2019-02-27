@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ee4f9cd33e33006697a15f0bdafb4cc9d7ecf809
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d5ee6d9cbb8beb819d023c92af1123ebc37b53c8
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147210"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834920"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 
@@ -42,7 +42,7 @@ En son özellikler hakkında bilgi için .NET uygulamaları eklendi ve desteklen
 
 ## <a name="documentation"></a>Belgeler
 
-Bu belge, platformlar ve diller arasında .NET kapsamını ele alır.  .NET ve aşağıdaki bölümlerden herhangi birini kendi dillerinde ile başlayabilirsiniz:
+Bu belge, platformlar ve diller arasında .NET kapsamını ele alır. .NET ve aşağıdaki bölümlerden herhangi birini kendi dillerinde ile başlayabilirsiniz:
 
 - [.NET Kılavuzu](standard/index.md)
 - [.NET Core Kılavuzu](core/index.md)

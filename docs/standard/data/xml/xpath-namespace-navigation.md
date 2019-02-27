@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702905"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835505"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Namespace Gezinti
 XPath sorguları ile XML belgeleri kullanmak için doğru adres XML ad alanları ve ad alanları tarafından içerilen öğelerin sahip. Ad alanları, adları, birden fazla bağlamında kullanıldığında oluşabilecek belirsizlikleri önleyebilir. Örneğin, adı `ID` farklı bir XML belgesi öğelerle ilişkili birden fazla tanımlayıcı bakabilirsiniz. Namespace sözdizimi URI'ler, adları ve bir XML belgesinin öğelerini ayırt önekler belirtir.  
   
- Bu konudaki örnek, bir XML belgesi ile gezinme, ön ekleri kullanımını gösterir <xref:System.Xml.XPath.XPathNavigator>. Ad alanları ve söz dizimi hakkında daha fazla bilgi için bkz: [anlama XML ad alanları](https://msdn.microsoft.com/library/aa468565.aspx).  
+ Bu konudaki örnek, bir XML belgesi ile gezinme, ön ekleri kullanımını gösterir <xref:System.Xml.XPath.XPathNavigator>. Ad alanları ve söz dizimi hakkında daha fazla bilgi için bkz: [XML dosyaları: XML ad alanları anlama](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Namespace bildirimi  
  Namespace bildirimi bir XML belgesinin öğelerini ayrılabilen ve hale adreslenebilir bir örneğini kullanırken <xref:System.Xml.XPath.XPathNavigator>. Namespace ön ekleri, ad alanları ele almak için kısa bir söz dizimi sağlar.  

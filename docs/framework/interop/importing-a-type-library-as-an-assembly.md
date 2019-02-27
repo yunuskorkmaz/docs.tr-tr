@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218913"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835245"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna karşılık, CLS uyumlu derleyiciler türü meta verileri bir derleme oluşturur. İki tür bilgi kaynakları oldukça farklıdır. Bu konu, bir tür kitaplığından meta verileri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derlemesi adı verilir ve içerdiği tür bilgilerini COM türlerini kullanmak .NET Framework uygulamaları etkinleştirir.  
@@ -44,7 +44,7 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
 -   Visual Studio  
   
-     Visual Studio COM türleri bir tür kitaplığındaki bir derleme meta verileri otomatik olarak dönüştürür. Yönergeler için [nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [izlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md), ve [izlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
+     Visual Studio COM türleri bir tür kitaplığındaki bir derleme meta verileri otomatik olarak dönüştürür. Yönergeler için [nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 -   [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
 - [Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

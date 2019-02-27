@@ -3,21 +3,15 @@ title: Dosya ve Stream g/ç - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279480"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 
@@ -47,7 +41,7 @@ Her zaman, sağlam özel durum dosya sistemi yöntemleri çağrılırken işleme
 
 Bu sınıfları kullanmaya ek olarak, Visual Basic kullanıcıları tarafından sağlanan özellikler ve yöntemler kullanabilirsiniz <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dosya g/ç için sınıf.
 
-Bkz: [nasıl yapılır: Dizinleri kopyalama](how-to-copy-directories.md), [nasıl yapılır: Create a Directory Listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: Dizinleri ve dosyaları numaralandırma](how-to-enumerate-directories-and-files.md).
+Bkz: [nasıl yapılır: Dizinleri kopyalama](how-to-copy-directories.md), [nasıl yapılır: Create a Directory Listing](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)), ve [nasıl yapılır: Dizinleri ve dosyaları numaralandırma](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Akışlar
 

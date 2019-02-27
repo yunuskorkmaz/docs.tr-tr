@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bf86986f9e6f72fca9d6e88ac16699ff7cdb4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606485"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836480"
 ---
 # <a name="applying-attributes"></a>Öznitelikleri Uygulama
 Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kullanın.  
@@ -37,7 +37,8 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
  Kural gereği, tüm öznitelik adları Öznitelik ile biter. Ancak, Visual Basic ve C# gibi çalışma zamanını hedef alan çeşitli diller, bir özniteliğin tam adını belirtmenizi gerektirmez. Örneğin, başlatmak istiyorsanız <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, olarak başvurmanız yeterlidir **Kullanımdan kalktı**.  
   
 ## <a name="applying-an-attribute-to-a-method"></a>Bir Yönteme Öznitelik Uygulama  
- Aşağıdaki kod örneğinde nasıl belirtileceğini gösterir **System.ObsoleteAttribute**, kodu kullanımdan kalkmış olarak işaretler. `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.  
+ Aşağıdaki kod örneğinde nasıl belirtileceğini gösterir **System.ObsoleteAttribute**, kodu kullanımdan kalkmış olarak işaretler. 
+  `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.  
   
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
@@ -57,4 +58,5 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Kavramları](/cpp/windows/attributed-programming-concepts)
-- [Öznitelikler](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [Öznitelikler (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [Öznitelikler genel bakış (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

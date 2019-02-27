@@ -11,36 +11,39 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198464"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835492"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
 
--   Geliştirme [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] XAML denetimleriyle içinde anlatıldığı gibi uygulamalar [C# veya Visual Basic kullanarak yol haritası için Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [nasıl tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), ve [.NET için Windows Store uygulamalarına genel bakış ](https://msdn.microsoft.com/library/windows/apps/br230302%28v=VS.110%29.aspx).
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
+
+-   Geliştirme [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] XAML denetimleriyle içinde anlatıldığı gibi uygulamalar [C# veya Visual Basic kullanarak yol haritası için Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [nasıl tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), ve [.NET için Windows Store uygulamalarına genel bakış ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 -   .NET Framework ile birlikte oluşturduğunuz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında kullanılmak üzere sınıf kütüphaneleri geliştirme.
 
--   [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekleyen tüm programlama dilleri tarafından kullanabilen, .WinMD dosyalarında paketlenmiş [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri geliştirme. Örneğin, [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+-   
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekleyen tüm programlama dilleri tarafından kullanabilen, .WinMD dosyalarında paketlenmiş [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri geliştirme. Örneğin, [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  Bu konu, .NET Framework'ün üç kategorinin tümü için sağladığı desteği ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] Bileşenleri için senaryoları açıklar. İlk bölüm .NET Framework ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] arasındaki temel ilişki hakkındaki temel bilgileri içerir ve Yardım sistemi ve IDE'de karşılaşabileceğiniz bazı farklılıkları açıklar. [İkinci bölüm](#WindowsRuntimeComponents) geliştirme senaryolarını anlatır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri.
 
 ## <a name="the-basics"></a>Temeller
  .NET Framework, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]'i sağlayarak ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekleyerek daha önce listelenen üç geliştirme senaryosunu destekler.
 
--   [.NET için Windows Store apps](https://msdn.microsoft.com/library/windows/apps/br230232(v=vs.110).aspx) .NET Framework sınıf kitaplıkları kütüphanesi görünümü sağlar ve yalnızca türleri ve oluşturmak için kullanabileceğiniz üyeleri içerir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri.
+-   [.NET framework ve Windows çalışma zamanı ad alanları](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) .NET Framework sınıf kitaplıkları kütüphanesi görünümü sağlar ve yalnızca türleri ve oluşturmak için kullanabileceğiniz üyeleri içerir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri.
 
     -   Geliştirme için Visual Studio (Visual Studio 2012 veya üzeri) kullandığınızda bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama veya [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni, başvuru bütünleştirilmiş kodları kümesi sağlar, yalnızca ilgili türleri ve üyeleri görürsünüz.
 
     -   Bu basitleştirilmiş API kümesi, .NET Framework'te veya yinelenen [!INCLUDE[wrt](../../../includes/wrt-md.md)] özelliklerindeki yinelenen özelliklerin kaldırılmasıyla basitleştirilir. Örneğin, yalnızca koleksiyon türlerinin genel sürümlerini içerir ve XML belge nesne modeli, [!INCLUDE[wrt](../../../includes/wrt-md.md)]XML API kümesi için kaldırılır.
 
-    -   [!INCLUDE[wrt](../../../includes/wrt-md.md)] öğesini yönetilen koddan çağırmak kolay olduğundan, yalnızca işletim sistemi API'sini sarmalayan özellikler de kaldırılır.
+    -   
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)] öğesini yönetilen koddan çağırmak kolay olduğundan, yalnızca işletim sistemi API'sini sarmalayan özellikler de kaldırılır.
 
-     Hakkında daha fazla bilgi edinmek için [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], bkz: [.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx). API seçim işlemi hakkında bilgi için bkz [Metro style apps için .NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET blog girişi.
+     Hakkında daha fazla bilgi edinmek için [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], bkz: [.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi için bkz [Metro style apps için .NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET blog girişi.
 
 -   [Windows çalışma zamanı](/uwp/api/) kullanıcı arabirimi öğeleri için yapı sağlar. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve işletim sistemi özelliklerine erişim sağlar. .NET Framework gibi [!INCLUDE[wrt](../../../includes/wrt-md.md)], C# ve Visual Basic derleyicilerinin [!INCLUDE[wrt](../../../includes/wrt-md.md)] öğesini .NET Framework sınıf kütüphanelerini kullandığı şekilde kullanmasını sağlayan meta verilere sahiptir. .NET Framework bazı farklılıkları gizleyerek [!INCLUDE[wrt](../../../includes/wrt-md.md)] kullanımını kolaylaştırır:
 
@@ -48,19 +51,22 @@ ms.locfileid: "50198464"
 
     -   Yaygın olarak kullanılan türlerdeki bazı farklılıklar (örneğin, ilkel türler ve koleksiyonlar) gizlidir. Yalnızca .NET Framework türü bölümünde açıklandığı gibi kullandığınız [görünür farklar IDE'de](#DifferencesVisibleInIDE), bu makalenin ilerleyen bölümlerinde.
 
- [!INCLUDE[wrt](../../../includes/wrt-md.md)] için .NET Framework desteği çoğu zaman saydamdır. Sonraki bölümde, yönetilebilir kod ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] arasındakı bazı belirgin farklar anlatılır.
+ 
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)] için .NET Framework desteği çoğu zaman saydamdır. Sonraki bölümde, yönetilebilir kod ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] arasındakı bazı belirgin farklar anlatılır.
 
 <a name="AboutReferenceDocumentation"></a>
 ### <a name="the-net-framework-and-the-includewrtincludeswrt-mdmd-reference-documentation"></a>.NET Framework ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] Başvuru Belgeleri
  Windows çalışma zamanı ve .NET Framework belge kümeleri ayrıdır. Eğer bir tür veya üyede Yardım'ı görüntülemek için F1'e basarsanız, uygun kümeden başvuru belgeleri görüntülenir. Ancak, göz atarsanız [Windows çalışma zamanı başvurusu](/uwp/api/) , kafa karıştırıcı örneklerle karşılaşabilirsiniz:
 
--   Gibi konular <xref:Windows.Foundation.Collections.IIterable%601> arabirimi Visual Basic veya C# için bildirim sözdizimi zorunda kalmaz. Bunun yerine, söz dizimi bölümünün üstünde bir not görünür (Bu durumda ".NET: Bu arabirim System.Collections.Generic.IEnumerable görünür\<T >"). Bunun nedeni .NET Framework ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]'in farklı arabirimlerle aynı işlevselliği sağlamasıdır. Ayrıca, davranışsal farklılıklar da bulunur: numaralandırıcıyı döndürmek için `IIterable`, bir `First` yöntemi yerine bir <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemine sahiptir. Ortak bir görevi gerçekleştirmek için farklı bir yol öğrenmenizi zorlamak yerine .NET Framework, aşina olduğunuz türü kullanmak için yönetilen kodunuzun görüntülenmesini sağlayarak [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekler. IDE'de `IIterable` arabirimini göremezsiniz, bu nedenle [!INCLUDE[wrt](../../../includes/wrt-md.md)] başvuru belgelerinde bu arabirimle karşılaşabileceğiniz tek yol doğrudan bu belgelere göz atmaktır.
+-   Gibi konular <xref:Windows.Foundation.Collections.IIterable%601> arabirimi Visual Basic veya C# için bildirim sözdizimi zorunda kalmaz. Bunun yerine, söz dizimi bölümünün üstünde bir not görünür (Bu durumda ".NET: Bu arabirim System.Collections.Generic.IEnumerable görünür\<T > "). Bunun nedeni .NET Framework ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]'in farklı arabirimlerle aynı işlevselliği sağlamasıdır. Ayrıca, davranışsal farklılıklar da bulunur: numaralandırıcıyı döndürmek için `IIterable`, bir `First` yöntemi yerine bir <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemine sahiptir. Ortak bir görevi gerçekleştirmek için farklı bir yol öğrenmenizi zorlamak yerine .NET Framework, aşina olduğunuz türü kullanmak için yönetilen kodunuzun görüntülenmesini sağlayarak [!INCLUDE[wrt](../../../includes/wrt-md.md)]'i destekler. IDE'de `IIterable` arabirimini göremezsiniz, bu nedenle [!INCLUDE[wrt](../../../includes/wrt-md.md)] başvuru belgelerinde bu arabirimle karşılaşabileceğiniz tek yol doğrudan bu belgelere göz atmaktır.
 
--   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> Belgeleri, yakından ilgili bir sorunu gösterir: parametre türleri farklı diller için farklı görünüyor. C# ve Visual Basic için, parametre türleri <xref:System.String?displayProperty=nameWithType> ve <xref:System.Uri?displayProperty=nameWithType>'dir. Yine bu durum, .NET Framework kendi `String` ve `Uri` türlerine sahip olduğu içindir ve bunun gibi yaygın şekilde kullanılan türler için .NET Framework kullanıcılarını bunu yapmak üzere farklı bir yol öğrenmeye zorlamak anlamsızdır. IDE'de .NET Framework, ilgili [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerini gizler.
+-   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> Belgeleri, yakından ilgili bir sorunu gösterir: Parametre türleri farklı diller için farklı görünüyor. C# ve Visual Basic için, parametre türleri <xref:System.String?displayProperty=nameWithType> ve <xref:System.Uri?displayProperty=nameWithType>'dir. Yine bu durum, .NET Framework kendi `String` ve `Uri` türlerine sahip olduğu içindir ve bunun gibi yaygın şekilde kullanılan türler için .NET Framework kullanıcılarını bunu yapmak üzere farklı bir yol öğrenmeye zorlamak anlamsızdır. IDE'de .NET Framework, ilgili [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerini gizler.
 
--   Bazı durumlarda, gibi <xref:Windows.UI.Xaml.GridLength> yapısı, .NET Framework, bir tür ile aynı ada ancak daha fazla işlevsellik sağlar. Örneğin, bir yapıcı ve özellik konuları kümesi `GridLength` ile ilişkilidir, ancak üyeler yalnızca yönetilen kodda mevcut olduğundan sadece Visual Basic ve #C için söz dizimi blokları vardır. [!INCLUDE[wrt](../../../includes/wrt-md.md)]'de, yapılar sadece alanlara sahiptir. [!INCLUDE[wrt](../../../includes/wrt-md.md)] Yapısı gerektirir yardımcı bir sınıf <xref:Windows.UI.Xaml.GridLengthHelper>, eşdeğer bir işlevselliği sağlamak için. Yönetilen kodu yazarken bu yardımcı sınıfını IDE'de görmezsiniz.
+-   Bazı durumlarda, gibi <xref:Windows.UI.Xaml.GridLength> yapısı, .NET Framework, bir tür ile aynı ada ancak daha fazla işlevsellik sağlar. Örneğin, bir yapıcı ve özellik konuları kümesi `GridLength` ile ilişkilidir, ancak üyeler yalnızca yönetilen kodda mevcut olduğundan sadece Visual Basic ve #C için söz dizimi blokları vardır. 
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)]'de, yapılar sadece alanlara sahiptir. [!INCLUDE[wrt](../../../includes/wrt-md.md)] Yapısı gerektirir yardımcı bir sınıf <xref:Windows.UI.Xaml.GridLengthHelper>, eşdeğer bir işlevselliği sağlamak için. Yönetilen kodu yazarken bu yardımcı sınıfını IDE'de görmezsiniz.
 
--   IDE'de, [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerinin <xref:System.Object?displayProperty=nameWithType>'den türediği görünür. <xref:System.Object> gibi, <xref:System.Object.ToString%2A?displayProperty=nameWithType>'den devralınan üyelere sahip oldukları görünür. Bu üyeler, türler gerçekten <xref:System.Object>'den devralınmış gibi işler ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri, <xref:System.Object>'e yayımlanabilir. Bu işlevsellik, .NET Framework'ün [!INCLUDE[wrt](../../../includes/wrt-md.md)] için sağladığı desteğin bir parçasıdır. Ancak, eğer [!INCLUDE[wrt](../../../includes/wrt-md.md)] başvuru belgelerindeki türleri görüntülerseniz, bu üyeler görünmez. Görünen bu devralınmış üyelere ait belgeler, <xref:System.Object?displayProperty=nameWithType> başvuru belgeleri tarafından sağlanır.
+-   IDE'de, [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerinin <xref:System.Object?displayProperty=nameWithType>'den türediği görünür. 
+  <xref:System.Object> gibi, <xref:System.Object.ToString%2A?displayProperty=nameWithType>'den devralınan üyelere sahip oldukları görünür. Bu üyeler, türler gerçekten <xref:System.Object>'den devralınmış gibi işler ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri, <xref:System.Object>'e yayımlanabilir. Bu işlevsellik, .NET Framework'ün [!INCLUDE[wrt](../../../includes/wrt-md.md)] için sağladığı desteğin bir parçasıdır. Ancak, eğer [!INCLUDE[wrt](../../../includes/wrt-md.md)] başvuru belgelerindeki türleri görüntülerseniz, bu üyeler görünmez. Görünen bu devralınmış üyelere ait belgeler, <xref:System.Object?displayProperty=nameWithType> başvuru belgeleri tarafından sağlanır.
 
 <a name="DifferencesVisibleInIDE"></a>
 ### <a name="differences-that-are-visible-in-the-ide"></a>IDE içerisinde Görünür Farklar
@@ -80,7 +86,8 @@ ms.locfileid: "50198464"
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
- [!INCLUDE[wrt](../../../includes/wrt-md.md)]'da, `IMap<K, V>` ve `IMapView<K, V>`, `IKeyValuePair` kullanılarak yinelenir. Bunları yönetilen koda geçirdiğinizde `IDictionary<TKey, TValue>` ve `IReadOnlyDictionary<TKey, TValue>` olarak görünürler, bu nedenle doğal olarak bunları numaralandırmak için `System.Collections.Generic.KeyValuePair<TKey, TValue>`'i kullanın.
+ 
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)]'da, `IMap<K, V>` ve `IMapView<K, V>`, `IKeyValuePair` kullanılarak yinelenir. Bunları yönetilen koda geçirdiğinizde `IDictionary<TKey, TValue>` ve `IReadOnlyDictionary<TKey, TValue>` olarak görünürler, bu nedenle doğal olarak bunları numaralandırmak için `System.Collections.Generic.KeyValuePair<TKey, TValue>`'i kullanın.
 
  Arabirimlerin yönetilen kodda görüntülenme şekli, bu arabirimlerin uygulanma şeklini etkiler. Örneğin, `PropertySet` sınıfı, yönetilen kodda `IMap<K, V>` olarak görünen `IDictionary<TKey, TValue>`'i uygular. `PropertySet`, `IDictionary<TKey, TValue>` yerine `IMap<K, V>`'i uyguluyormuş gibi görünür, bu nedenle yönetilen kodda, .NET Framework sözlüklerinde `Add` yöntemi gibi davranan bir `Add` yöntemine sahipmiş gibi görünür. Bir `Insert` yöntemine sahipmiş gibi görünmez.
 
@@ -89,15 +96,20 @@ ms.locfileid: "50198464"
 ### <a name="primitive-types"></a>İlkel Türler
  Yönetilen kodda [!INCLUDE[wrt](../../../includes/wrt-md.md)]'ın doğal kullanımını etkinleştirmek için, kodunuzda [!INCLUDE[wrt](../../../includes/wrt-md.md)] ilkel türleri yerine .NET Framework ilkel türleri görünür. .NET Framework'te, `Int32` yapısı gibi ilkel türler, `Int32.TryParse` yöntemi gibi birçok yararlı özellik ve yönteme sahiptir. Bunun tersine, [!INCLUDE[wrt](../../../includes/wrt-md.md)]'deki ilkel türler ve yapılar yalnızca alanlara sahiptir. Yönetilen kodda ilkelleri kullandığınızda, .NET Framework türleri gibi görünürler ve normalde yaptığınız gibi .NET Framework türlerinin özellik ve yöntemlerini kullanabilirsiniz. Aşağıdaki liste bir özet sağlar:
 
--   [!INCLUDE[wrt](../../../includes/wrt-md.md)] ilkelleri olan `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (Unicode karakterlerin sabit bir koleksiyonu), `Enum`, `UInt32`, `UInt64` ve `Guid` için, `System` ad alanında aynı ada sahip türü kullanın.
+-   
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)] ilkelleri olan `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (Unicode karakterlerin sabit bir koleksiyonu), `Enum`, `UInt32`, `UInt64` ve `Guid` için, `System` ad alanında aynı ada sahip türü kullanın.
 
--   `UInt8` için `System.Byte`'i kullanın.
+-   
+  `UInt8` için `System.Byte`'i kullanın.
 
--   `Char16` için `System.Char`'i kullanın.
+-   
+  `Char16` için `System.Char`'i kullanın.
 
--   `IInspectable` arabirimi için `System.Object`'i kullanın.
+-   
+  `IInspectable` arabirimi için `System.Object`'i kullanın.
 
--   `HRESULT` için, bir `System.Int32` üyesi olan bir yapı kullanın.
+-   
+  `HRESULT` için, bir `System.Int32` üyesi olan bir yapı kullanın.
 
  Arabirim türlerinde olduğu gibi, bu sunumun kanıtını görmek istediğiniz tek zaman.NET Framework projenizin, Javascript kullanılarak oluşturulmuş bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] uygulaması tarafından kullanılan bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] bileşeni olduğu zamandır.
 
@@ -127,7 +139,8 @@ ms.locfileid: "50198464"
 -   Bileşeninizdeki türler [!INCLUDE[wrt](../../../includes/wrt-md.md)] türlerinden türeyebilir. Denetimleri alanındaki ilkel denetim türlerinden türeyebilir <xref:Windows.UI.Xaml.Controls.Primitives> ad alanı veya denetimler gibi daha tamamlanmış <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ile başlayarak, yönetilen bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki tüm ortak türlerin mühürlenmesi gerekir. Başka bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki bir tür onlardan türeyemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
+    >  
+  [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ile başlayarak, yönetilen bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki tüm ortak türlerin mühürlenmesi gerekir. Başka bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenindeki bir tür onlardan türeyemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
 
 -   Bileşeninizin genel türlerindeki tüm parametre ve dönüş türlerinin, [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri olması gerekir (bileşeninizin tanımladığı [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri dahil).
 
@@ -146,9 +159,10 @@ ms.locfileid: "50198464"
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|.NET Framework türlerini ve oluşturmak için kullanabileceğiniz üyeleri açıklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]bileşenleri. (Windows Geliştirme Merkezi'nde.)|
+|[.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|.NET Framework türlerini ve oluşturmak için kullanabileceğiniz üyeleri açıklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve [!INCLUDE[wrt](../../../includes/wrt-md.md)]bileşenleri. (Windows Geliştirme Merkezi'nde.)|
 |[C# veya Visual Basic kullanan Windows Store uygulamaları için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Bir çok Hızlı Başlangıç konuları, kılavuzlar ve en iyi yöntemleri dahil olmak üzere C# veya Visual Basic kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olan anahtar kaynaklar sağlar. (Windows Geliştirme Merkezi'nde.)|
 |[Nasıl yapılır makaleleri (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Bir çok Hızlı Başlangıç konuları, kılavuzlar ve en iyi yöntemleri dahil olmak üzere C# veya Visual Basic kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olan anahtar kaynaklar sağlar. (Windows Geliştirme Merkezi'nde.)|
 |[C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework kullanarak bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeninin nasıl oluşturulacağını anlatır, JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının parçası olarak bu bileşenin nasıl kullanılacağını açıklar ve Visual Studio ile kombinasyonda nasıl hata ayıklama yapılacağını anlatır. (Windows Geliştirme Merkezi'nde.)|
-|[Windows çalışma zamanı başvurusu](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]'e ait başvuru belgeleri. (Windows Geliştirme Merkezi'nde.)|
+|[Windows çalışma zamanı başvurusu](/uwp/api/)|
+  [!INCLUDE[wrt](../../../includes/wrt-md.md)]'e ait başvuru belgeleri. (Windows Geliştirme Merkezi'nde.)|
 |[URI'yı Windows Çalışma Zamanı'na Geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan gelen bir URI'yi [!INCLUDE[wrt](../../../includes/wrt-md.md)]'e gönderdiğinizde oluşabilecek bir sorunu ve bunun nasıl önleneceğini açıklar.|

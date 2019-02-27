@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701826"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835349"
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 
@@ -27,7 +27,7 @@ Tarihleri ve saatleri saat dilimleri arasındaki farklar işlemek için çalış
 
 ## <a name="converting-to-coordinated-universal-time"></a>Dönüştürme için Eşgüdümlü Evrensel Saat
 
-Eşgüdümlü Evrensel Saat (UTC) bir yüksek duyarlıklı, atomik standart zamandır. Dünyanın saat dilimi UTC pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle, UTC saat dilimi boş veya saat dilimi bağımsız zaman bir türünü sağlar. UTC saati bir tarih zaman önerilir ve saatin taşınabilirlik bilgisayarlardaki önemlidir. (Ayrıntıları ve tarihler ve saatler kullanarak diğer en iyi yöntemler için bkz: [en iyi uygulamaları .NET Framework'DateTime ' ı kullanarak kodlama](https://msdn.microsoft.com/library/ms973825.aspx).) Tek tek saat dilimlerini UTC'ye dönüştürme zaman karşılaştırmalar kolaylaştırır.
+Eşgüdümlü Evrensel Saat (UTC) bir yüksek duyarlıklı, atomik standart zamandır. Dünyanın saat dilimi UTC pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle, UTC saat dilimi boş veya saat dilimi bağımsız zaman bir türünü sağlar. UTC saati bir tarih zaman önerilir ve saatin taşınabilirlik bilgisayarlardaki önemlidir. (Ayrıntıları ve tarihler ve saatler kullanarak diğer en iyi yöntemler için bkz: [en iyi uygulamaları .NET Framework'DateTime ' ı kullanarak kodlama](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Tek tek saat dilimlerini UTC'ye dönüştürme zaman karşılaştırmalar kolaylaştırır.
 
 > [!NOTE]
 > Ayrıca serileştirebilen bir <xref:System.DateTimeOffset> yapısı tek bir noktadan zaman içinde kesin bir şekilde göstermek için. Çünkü <xref:System.DateTimeOffset> nesneleri depolamak bir tarih ve saat değerini utc'den uzaklığı yanı sıra, her zaman belirli bir noktaya ilişki zamanın UTC'ye temsil ederler.

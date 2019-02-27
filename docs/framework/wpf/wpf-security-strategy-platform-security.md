@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640452"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836350"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -50,7 +50,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Tarihsel olarak, arabellek taşmalarına çok etkili güvenlik açıklarına neden olmuştur. Bir saldırganın bir arabellek sınırlarını Yazar kötü amaçlı kod eklenmesine izin veren bir kod güvenlik açığından yararlanan bir arabellek taşması oluşur. Bu daha sonra saldırgan, saldırganın kod yürütülmesine neden olacak bir işlevin dönüş adresi üzerine yazarak kod yürütme işlemini ele sağlar. Ele geçirilen bir işlem olarak aynı ayrıcalıklara sahip rastgele kod yürüten kötü amaçlı kod sonucudur.  
   
- Yüksek bir düzeyde /GS derleyici bayrağı, yerel dize arabelleği olan bir işlevin dönüş adresi korumak için bir özel güvenlik tanımlama bilgisi ekleyerek bazı olası arabellek taşması karşı korur. Bir işlev döndürdükten sonra güvenlik tanımlama bilgisi önceki değeriyle karşılaştırılır. Değer değiştiyse, bir arabellek taşması meydana gelebilir ve bir hata koşulu ile işlem durdurulur. İşlem durdurulurken, kötü amaçlı bir kodun yürütülmesini engeller. Bkz: [/GS (arabellek güvenlik denetimi)](https://msdn.microsoft.com/library/8dbf701c.aspx) daha fazla ayrıntı için.  
+ Yüksek bir düzeyde /GS derleyici bayrağı, yerel dize arabelleği olan bir işlevin dönüş adresi korumak için bir özel güvenlik tanımlama bilgisi ekleyerek bazı olası arabellek taşması karşı korur. Bir işlev döndürdükten sonra güvenlik tanımlama bilgisi önceki değeriyle karşılaştırılır. Değer değiştiyse, bir arabellek taşması meydana gelebilir ve bir hata koşulu ile işlem durdurulur. İşlem durdurulurken, kötü amaçlı bir kodun yürütülmesini engeller. Bkz: [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) daha fazla ayrıntı için.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] savunma için başka bir katmanı eklemek için /GS bayrağı ile derlenmiş [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
@@ -174,7 +174,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework ile birlikte ve tümleşik şekilde çalışarak, kapsamlı dağıtım teknolojisi [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (bkz [ClickOnce dağıtımı genel bakış](https://msdn.microsoft.com/library/142dbbz4.aspx) ayrıntılı bilgi için). Tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanarak uygulamaları dağıtılabilir [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]tarayıcıda tutulan uygulamalar ile dağıtılmalıdır korurken [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework ile birlikte ve tümleşik şekilde çalışarak, kapsamlı dağıtım teknolojisi [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (bkz [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) ayrıntılı bilgi için). Tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanarak uygulamaları dağıtılabilir [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]tarayıcıda tutulan uygulamalar ile dağıtılmalıdır korurken [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Kullanılarak dağıtılan uygulamalar [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bir ek güvenlik katmanı verilir [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; aslında [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] dağıtılan uygulamaları, ihtiyaç duydukları izinleri isteyin. Yalnızca izinleri verilen kullanıcılar, uygulamanın dağıtıldığı bölge için izinler kümesini aşarsa değil. Uygulama erişimi olan kaynakların sayısını başlatma bölgenin izin kümesi tarafından sağlanan olanlardan daha az olsalar bile, yalnızca gerekli olan izin kümesini azaltarak için en az azaltın. Sonuç olarak, uygulama geçirilirse, istemci makineye zarar olası azaltılır.  
   
@@ -210,9 +210,6 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Anlama ve korumalı modda Internet Explorer'ın çalışma](https://msdn.microsoft.com/library/bb250462.aspx)
-- [Windows XP hizmet paketi 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
-- [Windows Vista Güvenliği Kılavuzu](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
 - [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
 - [Güvenlik](../../../docs/framework/wpf/security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)

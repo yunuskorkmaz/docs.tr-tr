@@ -3,13 +3,13 @@ title: Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 7a98c34bfdbbdc9b34a04c891ca031f454ac4396
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221405"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834972"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Azure DevOps Hizmetleri'nde bir .NET Core 2.0 uygulama kapsayıcılar ve Kubernetes kümesine dağıtmak için CI/CD işlem hatları oluşturma
 
@@ -23,20 +23,20 @@ ms.locfileid: "56221405"
 
 Şekil 5-13'te gösterildiği gibi ilk aşaması derleme/CI işlem hattı ' dir. Azure DevOps Hizmetleri'nde, kodu derlemek, Docker görüntüleri oluşturun ve bunları gibi Docker Hub veya Azure Container Registry'den bir Docker kayıt defterine itme derleme/CD işlem hatları oluşturabilirsiniz.
 
-![](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Azure DevOps, yapı işlemi Görev tanımı tarayıcı görünümü.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
 **Şekil 5-13**. Azure Docker görüntülerinizi oluşturmak ve bir Docker kayıt defterine görüntü gönderme DevOps derleme/CI işlem hattında
 
 İkinci aşama dağıtımı/yayın işlem hattı oluşturmaktır. Azure DevOps Hizmetleri'nde bir Kubernetes kümesi için Azure DevOps Services, Kubernetes görevlerini kullanarak Şekil 5-14'te gösterildiği gibi hedefleyen bir dağıtım işlem hattı kolayca oluşturabilirsiniz.
 
-![MVC dağıtma](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Azure DevOps, tarayıcı görünümünü Kubernetes görev tanımına dağıtın.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
 **Şekil 5-14**. Azure DevOps Services Kubernetes kümesine dağıtmak, yayın/CD işlem hattı
 
 > [! İzlenecek yol] eShopModernized Kubernetes dağıtımı:
 >
 > Azure DevOps CI/CD işlem hatları ilişkin ayrıntılı bir kılavuz için Kubernetes dağıtımı yazıya bakın: \
->[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
 >[Önceki](docker-application-outer-loop-devops-workflow.md)

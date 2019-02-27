@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamaları Genelleştirme ve yerelleştirme
 
-Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](https://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dile yerelleştirilebilen bir uygulama da dahil olmak üzere, üç adımdan oluşur: genelleştirme, yerelleştirme gözden geçirme ve Yerelleştirme.
+Bir veya daha fazla dile yerelleştirilebilen bir uygulama da dahil olmak üzere bir dünya çapında kullanılmaya hazır uygulama geliştirmek, üç adımdan oluşur: genelleştirme, yerelleştirme gözden geçirme ve Yerelleştirme.
 
 [Genelleştirme](globalization.md)
 

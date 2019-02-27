@@ -45,5 +45,4 @@ Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel bakış](../../../docs/framework/get-started/overview.md)
-- [.NET Framework için yol haritası](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

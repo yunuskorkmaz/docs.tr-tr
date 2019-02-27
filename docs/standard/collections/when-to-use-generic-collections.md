@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40dc7abd8adffef04535f6492be14bf6463ca30d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674043"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835817"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
 Bir koleksiyon temel türünden türetilmesi ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliği avantaj elde edin çünkü genel koleksiyonları kullanarak genellikle önerilir. Genel koleksiyon türleri aynı zamanda genellikle gerçekleştirmek jenerik olmayan koleksiyon türleri ve karşılık gelen daha iyi (ve daha iyi türleri, türetilen temel jenerik olmayan koleksiyon türleri) koleksiyon öğelerine olduğunda değer türleri, genel türler ile olduğundan öğeler kutu gerek yoktur.  
@@ -46,7 +46,7 @@ Bir koleksiyon temel türünden türetilmesi ve türe özgü üyeleri uygulamak 
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> Hızlı ekleme ve sırasız öğeleri kaldırılmasını sağlar.  
   
 ## <a name="linq-to-objects"></a>Nesnelere LINQ  
- LINQ to Objects özelliği nesne türünün uyguladığı sürece bellek içi nesnelere erişmek için LINQ sorguları kullanmanızı sağlayan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. LINQ sorguları, verilere erişmek için yaygın bir düzen sağlar; genellikle daha kısa süren ve okunabilir standart olan `foreach` döngü; ve filtreleme, sıralama ve Gruplama yetenekler sağlar. LINQ sorguları da performansı artırır. Daha fazla bilgi için [LINQ to Objects'in](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ LINQ to Objects özelliği nesne türünün uyguladığı sürece bellek içi nesnelere erişmek için LINQ sorguları kullanmanızı sağlayan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. LINQ sorguları, verilere erişmek için yaygın bir düzen sağlar; genellikle daha kısa süren ve okunabilir standart olan `foreach` döngü; ve filtreleme, sıralama ve Gruplama yetenekler sağlar. LINQ sorguları da performansı artırır. Daha fazla bilgi için [LINQ to Objects'in (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects'in (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Ek işlevler  
  Bazı genel türleri jenerik olmayan koleksiyon türlerini bulunamadı işlevselliğe sahip. Örneğin, <xref:System.Collections.Generic.List%601> nongeneric için karşılık gelen sınıf <xref:System.Collections.ArrayList> sınıfı, bir dizi genel temsilciler gibi kabul yöntem olan <xref:System.Predicate%601> listedekiaramayöntemleribelirtmenizisağlarbirtemsilci<xref:System.Action%601>her liste öğesinde hareket yöntemleri temsil eden bir temsilci ve <xref:System.Converter%602> temsilci türleri arasında dönüştürmeler tanımlamanızı sağlar.  

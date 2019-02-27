@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244973"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835024"
 ---
 # <a name="new-modifier-c-reference"></a>New değiştiricisi (C# Başvurusu)
 
@@ -24,11 +24,11 @@ Bu örnekte, `BaseC.Invoke` tarafından gizleniyor `DerivedC.Invoke`. Alan `x` �
 
 Devralma üzerinden ad gizleme aşağıdaki biçimlerden birini alır:
 
-Genellikle, bir sabit, alan, özelliği veya bir sınıf veya yapı içinde tanıtılan türü kendi adını paylaşan tüm taban sınıfı üyelerini gizler.  Özel durumlar vardır.  Örneğin, adı ile yeni bir alan bildirmek `N` çağrılmayan bir tür ve temel tür olduğunu `N` bir yöntemi olması için yeni alan taban bildirimini çağırma sözdiziminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("Expressions" bölümünde "Üye arama" bölümüne bakın).
+- Genellikle, bir sabit, alan, özelliği veya bir sınıf veya yapı içinde tanıtılan türü kendi adını paylaşan tüm taban sınıfı üyelerini gizler.  Özel durumlar vardır.  Örneğin, adı ile yeni bir alan bildirmek `N` çağrılmayan bir tür ve temel tür olduğunu `N` bir yöntemi olması için yeni alan taban bildirimini çağırma sözdiziminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("Expressions" bölümünde "Üye arama" bölümüne bakın).
 
-Bir sınıf ya da struct'a dahil edilen bir yöntem özellikleri, alanları ve temel sınıfta bu adı paylaşan türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıfı yöntemlerini gizler.
+- Bir sınıf ya da struct'a dahil edilen bir yöntem özellikleri, alanları ve temel sınıfta bu adı paylaşan türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıfı yöntemlerini gizler.
 
-Bir sınıf veya yapı içinde tanıtılan bir dizin oluşturucu, aynı imzaya sahip tüm taban sınıfı dizin oluşturucularını gizler.
+- Bir sınıf veya yapı içinde tanıtılan bir dizin oluşturucu, aynı imzaya sahip tüm taban sınıfı dizin oluşturucularını gizler.
 
 Her ikisi de kullanmak için bir hata olduğunu `new` ve [geçersiz kılma](override.md) aynı üyede, çünkü iki değiştirici karşılıklı özel anlamlara sahiptir. `new` Değiştiricisi, aynı ada sahip yeni bir üye oluşturur ve ilk üyenin gizli hale gelmesine neden olur. `override` Değiştiricisi devralınan bir üyenin uygulanmasını genişletir.
 

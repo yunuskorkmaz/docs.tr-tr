@@ -3,21 +3,15 @@ title: Koleksiyonlar ve Veri Yapıları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- grouping data in collections
-- objects [.NET Framework], grouping in collections
-- Array class, grouping data in collections
-- threading [.NET Framework], safety
-- Collections classes
-- collections [.NET Framework]
+  - grouping data in collections
+  - 'objects [.NET Framework], grouping in collections'
+  - 'Array class, grouping data in collections'
+  - 'threading [.NET Framework], safety'
+  - Collections classes
+  - 'collections [.NET Framework]'
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154914"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflardan <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek, gt;System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeleri veya koleksiyondaki öğelerin bir aralığını değiştirin.  
@@ -33,7 +27,7 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
   
 -   **Koleksiyon listeleme olanağı**  
   
-     .NET framework koleksiyonları ya da uygulama <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonu aracılığıyla yinelenir etkinleştirmek için. Bir numaralandırıcı, koleksiyondaki her öğe için taşınabilir bir işaretçi olarak düşünülebilir. [Foreach içinde](~/docs/csharp/language-reference/keywords/foreach-in.md) deyimi ve [her biri için... Sonraki deyimi](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) tarafından kullanıma sunulan Numaralandırıcı kullanın <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi ve numaralandırıcıyı işlemek karmaşıklığı gizle. Ayrıca, herhangi bir koleksiyon uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> değerlendirilir bir *sorgulanabilir tür* ve LINQ ile sorgulanabilir. LINQ sorguları, verilere erişmek için genel bir desen sağlar. Genellikle daha kısa süren ve okunabilir standart `foreach` döngüye girer ve filtreleme, sıralama ve Gruplama yetenekler sağlar. LINQ sorguları da performansı artırır. Daha fazla bilgi için [LINQ to Objects'in](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) ve [LINQ sorgularına giriş (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     .NET framework koleksiyonları ya da uygulama <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonu aracılığıyla yinelenir etkinleştirmek için. Bir numaralandırıcı, koleksiyondaki her öğe için taşınabilir bir işaretçi olarak düşünülebilir. [Foreach içinde](../../csharp/language-reference/keywords/foreach-in.md) deyimi ve [her biri için... Sonraki deyimi](../../visual-basic/language-reference/statements/for-each-next-statement.md) tarafından kullanıma sunulan Numaralandırıcı kullanın <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi ve numaralandırıcıyı işlemek karmaşıklığı gizle. Ayrıca, herhangi bir koleksiyon uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> değerlendirilir bir *sorgulanabilir tür* ve LINQ ile sorgulanabilir. LINQ sorguları, verilere erişmek için genel bir desen sağlar. Genellikle daha kısa süren ve okunabilir standart `foreach` döngüye girer ve filtreleme, sıralama ve Gruplama yetenekler sağlar. LINQ sorguları da performansı artırır. Daha fazla bilgi için [LINQ to Objects'in (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects'in (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [LINQ sorguları (giriş C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md), ve [temel sorgu işlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
 -   **Bir diziye koleksiyon içeriği kopyalama özelliği**  
   

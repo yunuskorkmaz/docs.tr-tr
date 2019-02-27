@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620090"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836376"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksiyon kullanımını kısıtlayabilirsiniz. Genel olarak, türlerini kullanmaktan <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Genel ve eş zamanlı koleksiyonlar, büyük tür güvenliği ve diğer iyileştirmeler nedeniyle tercih edilen olarak sürümleridir.  
@@ -75,7 +75,7 @@ Koleksiyon sınıfınıza seçmeye emin olun. Yanlış türde kullanarak koleksi
     -   Ayrıca, genel koleksiyon sınıflarını dilediğinizi kullanabilirsiniz <xref:System.Collections.Generic> ad alanı türü kesin olarak belirterek dize koleksiyonlarını belirtilmiş <xref:System.String> , genel tür bağımsız değişkenleri için sınıf.  
   
 ## <a name="linq-to-objects-and-plinq"></a>Nesneleri ve PLINQ LINQ  
- LINQ to Objects'in bellek içi nesneler nesne türünün uyguladığı sürece erişmek için LINQ sorguları kullanmak geliştiricilerin sağlar <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorguları verilere erişmek için genel bir desen sağlar, genellikle daha kısa süren ve okunabilir standart `foreach` döngüye girer ve filtreleme, sıralama ve Gruplama yetenekler sağlar. Daha fazla bilgi için [LINQ to Objects'in](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ LINQ to Objects'in bellek içi nesneler nesne türünün uyguladığı sürece erişmek için LINQ sorguları kullanmak geliştiricilerin sağlar <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorguları verilere erişmek için genel bir desen sağlar, genellikle daha kısa süren ve okunabilir standart `foreach` döngüye girer ve filtreleme, sıralama ve Gruplama yetenekler sağlar. Daha fazla bilgi için [LINQ to Objects'in (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) ve [LINQ to Objects'in (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
  PLINQ, çok çekirdekli bilgisayarlara daha verimli kullanımı aracılığıyla birçok senaryoda daha hızlı sorgu yürütme sunduğu nesnelere LINQ paralel bir uygulaması sağlar. Daha fazla bilgi için [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

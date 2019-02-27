@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa6787e018b540dbf19b6da3473b699096cc4ae3
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674405"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834959"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Nasıl yapılır: Bir dosyadan metin okuma
 Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin dosyasındaki metnin nasıl zaman uyumlu ve zaman uyumsuz olarak okunacağını gösterir. Her iki örnek örneğini oluşturduğunuzda <xref:System.IO.StreamReader> sınıfı, dosyanın göreli veya mutlak yolunu sağlayın. 
@@ -51,7 +51,7 @@ Aşağıdaki örnek bir konsol uygulaması bir zaman uyumlu okuma işlemini gös
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
 - [Zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Nasıl yapılır: Create a directory listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [Nasıl yapılır: Create a directory listing](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [Hızlı Başlangıç: Dosyaları okuma ve yazma](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)  
 - [Nasıl yapılır: .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüştürme](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
 - [Nasıl yapılır: Okuma ve yeni oluşturulan veri dosyasına yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

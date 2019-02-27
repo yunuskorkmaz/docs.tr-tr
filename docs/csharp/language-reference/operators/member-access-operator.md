@@ -1,7 +1,7 @@
 ---
 title: biçimindeki telefon numarasıdır. Operator - C# başvurusu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333726"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836467"
 ---
 # <a name="-operator-c-reference"></a>biçimindeki telefon numarasıdır. operator (C# Başvurusu)
 
-Nokta işleci (`.`) üye erişimi için kullanılır. Dot işleci, bir tür veya ad alanı üyesi belirtir. Örneğin, nokta işleci, .NET Framework sınıf kitaplıkları belirli yöntemlerinde erişmek için kullanılır:
+Nokta `.`, genellikle üye erişimi için kullanılır.
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+Kullandığınız `.` aşağıdaki örneklerde gösterildiği gibi bir ad alanı veya tür, üye erişim belirteci:
 
-Örneğin, aşağıdaki sınıf göz önünde bulundurun:
+- Kullanım `.` iç içe geçmiş ad alanı içinde bir ad alanı, aşağıdaki örnek olarak erişmek için bir [ `using` yönergesi](../keywords/using-directive.md) gösterir:
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- Kullanım `.` forma bir *tam adı* aşağıdaki kodun gösterdiği gibi bir ad alanı içinde bir tür erişmek için:
 
-Değişken `s` iki üyesi olan `a` ve `b`; bunlara erişmek için nokta işlecini kullanın:
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  Kullanma [ `using` yönergesi](../keywords/using-directive.md) nitelenmiş adlar kullanımı isteğe bağlı yapmak için.
 
-Nokta ad alanı veya arabirimi, örneğin, ait oldukları belirten adlarının tam adları oluşturmak için de kullanılır.
+- Kullanım `.` erişimi [üyelerini türü](../../programming-guide/classes-and-structs/index.md#members), statik ve statik olmayan, aşağıdaki kodun gösterdiği olarak:
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-Using yönergesi bazı ad niteliği isteğe bağlı yapar:
+Ayrıca `.` çağrılacak bir [genişletme yöntemi](../../programming-guide/classes-and-structs/extension-methods.md).
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a>İşleç overloadability
 
-Ancak, bir tanımlayıcı belirsiz olduğunda nitelenmelidir:
-
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+İşleç `.` aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için [üye erişimi](~/_csharplang/spec/expressions.md#member-access) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
+- [?. ve? [] işleçleri](null-conditional-operators.md)
