@@ -13,7 +13,7 @@
 ### [Service Fabric’e Windows Kapsayıcıları ne zaman dağıtılmalıdır?](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md)
 ### [Windows Kapsayıcıları, Azure Container Service’e (ACS-Kubernetes) ne zaman dağıtılmalıdır?](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
 ### [Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme](./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md)
-### [Bulut için hazır olan dayanıklı hizmetler derleme: Bulutta geçici hataları kavrama](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+### [Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
 ### [İzleme ve telemetri ile uygulamalarınızı modernleştirme](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md)
 ### [Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 ### [Karma bulut senaryolarına geçiş](./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)

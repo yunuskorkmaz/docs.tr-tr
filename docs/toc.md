@@ -27,12 +27,12 @@
 ### [Temel Türler](standard/base-types/)
 ## [.NET Sınıf kitaplıkları](standard/class-libraries.md)
 ## [Çözümleyiciler](standard/analyzers/index.md)
-### [API Çözümleyicisi](standard/analyzers/api-analyzer.md) 
+### [API Çözümleyicisi](standard/analyzers/api-analyzer.md)
 ### [Taşınabilirlik Çözümleyicisi](standard/analyzers/portability-analyzer.md)
 ### [Framework Çözümleyicisi](standard/analyzers/framework-analyzer.md)
 ## [Özel durumları işleme ve atma](standard/exceptions/)
 ## [.NET’te bütünleştirilmiş kodlar](standard/assembly/index.md)
-### [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly/file-format.md) 
+### [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly/file-format.md)
 ## [Atık Toplama](standard/garbage-collection/)
 ## [Genel Türler](standard/generics.md)
 ## [Temsilciler ve lambda ifadeleri](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [.NET Core 2.1’deki yenilikler](core/whats-new/dotnet-core-2-1.md)
 ### [​.NET Core 2.0’daki Yenilikler](core/whats-new/dotnet-core-2-0.md)
 ## [Öğreticiler](core/tutorials/index.md)
-### [Visual Studio 2017 kullanarak Windows’da eksiksiz bir .NET Core çözümü derleme](core/tutorials/using-on-windows-full-solution.md)
 ### [MacOS üzerinde .NET Core kullanmaya başlama](core/tutorials/using-on-macos.md)
 ### [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](core/tutorials/using-on-mac-vs.md)
 ### [Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [.NET Core komut satırı ile projeleri düzenleme ve test etme](core/tutorials/testing-with-cli.md)
 ### [Platformlar Arası Araçlarla Kitaplık Geliştirme](core/tutorials/libraries.md)
 ### [ASP.NET Core uygulamaları geliştirme](core/tutorials/aspnet-core.md)
-### [.NET Core 1.0 için Paket Bağımlılığı Sürümlerini Yönetme](core/tutorials/managing-package-dependency-versions.md)
 ### [Yerel koddan .NET Core barındırma](core/tutorials/netcore-hosting.md)
 ### [Dotnet new için özel şablon oluşturma](core/tutorials/create-custom-template.md)
 ## [Paketler, Meta Paketler ve Çerçeveler](core/packages.md)
@@ -270,7 +268,9 @@
 ## [C# Turu](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## C# yenilikleri
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 - Önizleme 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Programlama Kavramları](visual-basic/programming-guide/concepts/index.md)
-### [.NET’te bütünleştirilmiş kodlar](standard/assembly/index.md)
 ### [Async ve Await ile Zaman Uyumsuz Programlama](visual-basic/programming-guide/concepts/async/index.md)
 ### [Öznitelikler](visual-basic/programming-guide/concepts/attributes/index.md)
+### [Çağıran Bilgileri](visual-basic/programming-guide/concepts/caller-information.md)
+### [Koleksiyonlar](visual-basic/programming-guide/concepts/collections.md)
+### [Kovaryans ve Kontravaryans](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [İfade Ağaçları](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [Yineleyiciler](visual-basic/programming-guide/concepts/iterators.md)
 ### [Dil ile Tümleşik Sorgu (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1211,7 +1213,7 @@
 #### [Ara işlem hattı veri değerlerini inceleme](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Regresyon modelini eğitme](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [Model özelliği önemini PFI ile belirleme](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### Eğitilen modeli kullanma  
+### Eğitilen modeli kullanma
 #### [PredictionEngine ile bir kerede bir tahmin](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Eğitilen bir modeli kullanıma hazır hale getirme](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
