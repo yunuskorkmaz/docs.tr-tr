@@ -1,5 +1,5 @@
 ---
-title: Icordebugprocessenum arabirimi1
+title: ICorDebugProcessEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcessEnum
@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e963c853a93c99c7dc48e8dddc4534f11f28f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e190c045a70daa04e58604b25ac398fb5a1648d0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657044"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979573"
 ---
-# <a name="icordebugprocessenum-interface1"></a><span data-ttu-id="e0359-102">Icordebugprocessenum arabirimi1</span><span class="sxs-lookup"><span data-stu-id="e0359-102">ICorDebugProcessEnum Interface1</span></span>
-<span data-ttu-id="e0359-103">Icordebugenum yöntemlerini uygular ve Icordebugprocess dizilerini numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="e0359-103">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
+# <a name="icordebugprocessenum-interface"></a><span data-ttu-id="3829f-102">ICorDebugProcessEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3829f-102">ICorDebugProcessEnum Interface</span></span>
+<span data-ttu-id="3829f-103">Icordebugenum yöntemlerini uygular ve Icordebugprocess dizilerini numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="3829f-103">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e0359-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="e0359-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3829f-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="3829f-104">Methods</span></span>  
   
-|<span data-ttu-id="e0359-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="e0359-105">Method</span></span>|<span data-ttu-id="e0359-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e0359-106">Description</span></span>|  
+|<span data-ttu-id="3829f-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="3829f-105">Method</span></span>|<span data-ttu-id="3829f-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3829f-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e0359-107">Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e0359-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|<span data-ttu-id="e0359-108">Belirtilen sayıda alır `ICorDebugProcess` örneklerden geçerli konumunda başlayan bir numaralandırma.</span><span class="sxs-lookup"><span data-stu-id="e0359-108">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="3829f-107">Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3829f-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|<span data-ttu-id="3829f-108">Belirtilen sayıda alır `ICorDebugProcess` örneklerden geçerli konumunda başlayan bir numaralandırma.</span><span class="sxs-lookup"><span data-stu-id="3829f-108">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e0359-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e0359-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3829f-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3829f-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e0359-110">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="e0359-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="3829f-110">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="3829f-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0359-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e0359-111">Requirements</span></span>  
- <span data-ttu-id="e0359-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0359-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3829f-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3829f-111">Requirements</span></span>  
+ <span data-ttu-id="3829f-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3829f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0359-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0359-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3829f-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3829f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e0359-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0359-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3829f-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3829f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0359-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0359-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3829f-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3829f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0359-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e0359-116">See also</span></span>
-- [<span data-ttu-id="e0359-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e0359-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3829f-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3829f-116">See also</span></span>
+- [<span data-ttu-id="3829f-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="3829f-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

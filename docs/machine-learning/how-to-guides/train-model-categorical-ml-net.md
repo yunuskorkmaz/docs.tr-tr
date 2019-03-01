@@ -1,33 +1,33 @@
 ---
 title: Kategorik veri - ML.NET özellik Mühendisliği, eğitim modeli için geçerlidir
 description: Özellik Mühendisliği için machine learning modeli eğitimi ML.NET kategorik verilerde uygulanacak hakkında bilgi edinin
-ms.date: 02/06/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092091"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968419"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="c475e-103">Kategorik veri - ML.NET özellik Mühendisliği, eğitim modeli için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="c475e-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="c6da3-103">Kategorik veri - ML.NET özellik Mühendisliği, eğitim modeli için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="c6da3-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
-<span data-ttu-id="c475e-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="c475e-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="c6da3-104">Herhangi bir float olmayan veri dönüştürmeniz gerekir `float` tüm ML.NET itibaren veri türleri `learners` özellikleri beklediğiniz bir `float vector`.</span><span class="sxs-lookup"><span data-stu-id="c6da3-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="c475e-105">Veri kümesi içeriyorsa `categorical` verileri (örneğin, ' enum'), ML.NET teklifler özellikleri dönüştürme birkaç yolu:</span><span class="sxs-lookup"><span data-stu-id="c475e-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="c6da3-105">Veri kümesi içeriyorsa `categorical` verileri (örneğin, ' enum'), ML.NET teklifler özellikleri dönüştürme birkaç yolu:</span><span class="sxs-lookup"><span data-stu-id="c6da3-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-- <span data-ttu-id="c475e-106">Bir kodlama sık erişimli</span><span class="sxs-lookup"><span data-stu-id="c475e-106">One-hot encoding</span></span>
-- <span data-ttu-id="c475e-107">Sık erişimli bir karma tabanlı kodlama</span><span class="sxs-lookup"><span data-stu-id="c475e-107">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="c475e-108">İkili kodlama (kategori dizini biraz dizisi ve kullanım BITS özellikler olarak dönüştürme)</span><span class="sxs-lookup"><span data-stu-id="c475e-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+- <span data-ttu-id="c6da3-106">Bir kodlama sık erişimli</span><span class="sxs-lookup"><span data-stu-id="c6da3-106">One-hot encoding</span></span>
+- <span data-ttu-id="c6da3-107">Sık erişimli bir karma tabanlı kodlama</span><span class="sxs-lookup"><span data-stu-id="c6da3-107">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="c6da3-108">İkili kodlama (kategori dizini biraz dizisi ve kullanım BITS özellikler olarak dönüştürme)</span><span class="sxs-lookup"><span data-stu-id="c6da3-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-<span data-ttu-id="c475e-109">A `one-hot encoding` bazı kategorileri çok yüksek kardinalite varsa kısıp olabilir (çok sayıda farklı değerler, küçük bir sık gerçekleşen ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c475e-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="c475e-110">Bu durumda, sayı tabanlı özellik seçimi ile kodlamak için yuva sayısını azaltın.</span><span class="sxs-lookup"><span data-stu-id="c475e-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="c6da3-109">A `one-hot encoding` bazı kategorileri çok yüksek kardinalite varsa kısıp olabilir (çok sayıda farklı değerler, küçük bir sık gerçekleşen ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c6da3-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="c6da3-110">Bu durumda, sayı tabanlı özellik seçimi ile kodlamak için yuva sayısını azaltın.</span><span class="sxs-lookup"><span data-stu-id="c6da3-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="c475e-111">Kategorik özellik kazandırma sayesinde kategorik dönüşümü emin olmak için doğrudan ML.NET öğrenme hattında şunlardır:</span><span class="sxs-lookup"><span data-stu-id="c475e-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+<span data-ttu-id="c6da3-111">Kategorik özellik kazandırma sayesinde kategorik dönüşümü emin olmak için doğrudan ML.NET öğrenme hattında şunlardır:</span><span class="sxs-lookup"><span data-stu-id="c6da3-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
 
-- <span data-ttu-id="c475e-112">yalnızca 'eğitim verilerini ve test verilerinizde eğitildi',</span><span class="sxs-lookup"><span data-stu-id="c475e-112">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="c475e-113">doğru şekilde tahmin zaman ek önceden işleme olmadan gelen yeni verilere uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c475e-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="c6da3-112">yalnızca 'eğitim verilerini ve test verilerinizde eğitildi',</span><span class="sxs-lookup"><span data-stu-id="c6da3-112">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="c6da3-113">doğru şekilde tahmin zaman ek önceden işleme olmadan gelen yeni verilere uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c6da3-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="c475e-114">Kategorik işleme için aşağıdaki örnekte [yetişkinlere yönelik görselleştirmenizdeki dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="c475e-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="c6da3-114">Kategorik işleme için aşağıdaki örnekte [yetişkinlere yönelik görselleştirmenizdeki dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="c6da3-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week

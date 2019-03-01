@@ -1,5 +1,5 @@
 ---
-title: Icordebugstringvalue arabirimi1
+title: ICorDebugStringValue Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596845"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965364"
 ---
-# <a name="icordebugstringvalue-interface1"></a><span data-ttu-id="19bb7-102">Icordebugstringvalue arabirimi1</span><span class="sxs-lookup"><span data-stu-id="19bb7-102">ICorDebugStringValue Interface1</span></span>
-<span data-ttu-id="19bb7-103">Dize değerlerine uygulanan Icordebugheapvalue öğesinin.</span><span class="sxs-lookup"><span data-stu-id="19bb7-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
+# <a name="icordebugstringvalue-interface"></a><span data-ttu-id="cf31d-102">ICorDebugStringValue Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cf31d-102">ICorDebugStringValue Interface</span></span>
+<span data-ttu-id="cf31d-103">Dize değerlerine uygulanan Icordebugheapvalue öğesinin.</span><span class="sxs-lookup"><span data-stu-id="cf31d-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="19bb7-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="19bb7-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="cf31d-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="cf31d-104">Methods</span></span>  
   
-|<span data-ttu-id="19bb7-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="19bb7-105">Method</span></span>|<span data-ttu-id="19bb7-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="19bb7-106">Description</span></span>|  
+|<span data-ttu-id="cf31d-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="cf31d-105">Method</span></span>|<span data-ttu-id="cf31d-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cf31d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="19bb7-107">GetLength Yöntemi</span><span class="sxs-lookup"><span data-stu-id="19bb7-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="19bb7-108">Bu tarafından başvurulan dizedeki karakter sayısını alır `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="19bb7-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
-|[<span data-ttu-id="19bb7-109">GetString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="19bb7-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="19bb7-110">Bu tarafından başvurulan dize alır `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="19bb7-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="cf31d-107">GetLength Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cf31d-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="cf31d-108">Bu tarafından başvurulan dizedeki karakter sayısını alır `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="cf31d-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="cf31d-109">GetString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cf31d-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="cf31d-110">Bu tarafından başvurulan dize alır `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="cf31d-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="19bb7-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="19bb7-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cf31d-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cf31d-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="19bb7-112">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="19bb7-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="cf31d-112">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="cf31d-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19bb7-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="19bb7-113">Requirements</span></span>  
- <span data-ttu-id="19bb7-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19bb7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf31d-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cf31d-113">Requirements</span></span>  
+ <span data-ttu-id="cf31d-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf31d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19bb7-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="19bb7-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cf31d-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf31d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="19bb7-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19bb7-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cf31d-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf31d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="19bb7-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19bb7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cf31d-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf31d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19bb7-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19bb7-118">See also</span></span>
-- [<span data-ttu-id="19bb7-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="19bb7-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="cf31d-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf31d-118">See also</span></span>
+- [<span data-ttu-id="cf31d-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="cf31d-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
