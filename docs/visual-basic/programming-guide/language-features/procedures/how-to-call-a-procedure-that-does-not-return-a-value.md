@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: f85c7a7edf4d05dc50166ad4f30080c2e595cf65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590649"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965572"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma
 A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkça çağıran bir tek başına deyimiyle çağırmanız. Bir ifade içinde adını kullanarak çağrılamıyor.  
@@ -26,7 +26,7 @@ A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkç
   
      Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> uygulama penceresini etkinleştirmek için işlevi. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> pencere başlığı tek bağımsız değişken olarak alır. Çağrıldığı koda bir değer döndürmez. Bir not defteri işlemi çalışmıyor, örneği oluşturur. bir <xref:System.ArgumentException>. `Shell` Yordam uygulamalardır belirtilen yolda varsayar.  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

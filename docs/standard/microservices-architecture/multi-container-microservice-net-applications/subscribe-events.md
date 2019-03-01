@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128966"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971786"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -93,17 +93,17 @@ Mikro hizmetlerde CQRS yaklaşımı kullanırken gibi daha gelişmiş, onu uygul
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Kararlılık ve dayanıklılık olay veri yoluna yayımlanırken tasarlama
 
-Dağıtılmış Mesajlaşma aracılığıyla tümleştirme olayları yayımladığınızda, olay veri yolu gibi sistem, başarısızlığa uğrar özgün veritabanının güncelleştirilmesi ve olay (diğer bir deyişle, hem tam işlemleri veya bunların hiçbiri) yayımlama sorununu vardır. Ürün fiyatı değiştirilir ve ardından bir ProductPriceChangedIntegrationEvent ileti yayımlar örneği için Basitleştirilmiş örnekte, daha önce gösterilen kodu verilerini veritabanına kaydeder. Başlangıçta, bu iki işlemler atomik olarak gerçekleştirilmesini temel görünebilir. İlgili bir dağıtılmış işlem kullanıyorsanız gibi eski sistemlerde olduğu gibi ancak, veritabanı ve ileti, aracı [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), bu tarafındanaçıklanannedenleriyleönerilmez[CAP Teoremi](https://www.quora.com/What-Is-CAP-Theorem-1).
+Dağıtılmış Mesajlaşma aracılığıyla tümleştirme olayları yayımladığınızda, olay veri yolu gibi sistem, başarısızlığa uğrar özgün veritabanının güncelleştirilmesi ve olay (diğer bir deyişle, hem tam işlemleri veya bunların hiçbiri) yayımlama sorununu vardır. Ürün fiyatı değiştirilir ve ardından bir ProductPriceChangedIntegrationEvent ileti yayımlar örneği için Basitleştirilmiş örnekte, daha önce gösterilen kodu verilerini veritabanına kaydeder. Başlangıçta, bu iki işlemler atomik olarak gerçekleştirilmesini temel görünebilir. İlgili bir dağıtılmış işlem kullanıyorsanız gibi eski sistemlerde olduğu gibi ancak, veritabanı ve ileti, aracı [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx), bu tarafındanaçıklanannedenleriyleönerilmez[CAP Teoremi](https://www.quora.com/What-Is-CAP-Theorem-1).
 
 Temelde, mikro hizmetler, ölçeklenebilir ve yüksek oranda kullanılabilir sistemleri oluşturmak için kullanın. CAP Teoremi (dağıtılmış) bir veritabanı (veya kendi modelini sahibi olan bir mikro hizmet) derlenemiyor diyor biraz basitleştirme, sürekli olarak kullanılabilir ve son derece tutarlı *ve* dayanıklı herhangi bir bölümü için. Bu üç özellik ikilisi seçmeniz gerekir.
 
-Mikro hizmet tabanlı mimariler, kullanılabilirlik ve dayanıklılık seçmelisiniz ve, güçlü tutarlılık devamlı müşterilerine göre ayarlayabilirler. Uygulamanız olarak bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalar, genellikle mesajlaşmada, dağıtılmış işlemler kullanmak istediğiniz değil [dağıtılmış işlemler](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) Windows Dağıtılmış İşlem üzerinde temel Düzenleyicisi (DTC) ile [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx).
+Mikro hizmet tabanlı mimariler, kullanılabilirlik ve dayanıklılık seçmelisiniz ve, güçlü tutarlılık devamlı müşterilerine göre ayarlayabilirler. Uygulamanız olarak bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalar, genellikle mesajlaşmada, dağıtılmış işlemler kullanmak istediğiniz değil [dağıtılmış işlemler](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) Windows Dağıtılmış İşlem üzerinde temel Düzenleyicisi (DTC) ile [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
 Şimdi ilk sorun ve kendi örnek geçelim. Veritabanı güncelleştirildikten sonra hizmetin kilitlenmesi durumunda (Bu durumda, kod satırının sonra sağ \_bağlamı. SaveChangesAsync()), ancak tümleştirme olay yayımlanmadan önce sistemin tutarsız hale gelebilir. Bu, ilgilendiğiniz belirli iş işleme bağlı olarak kritik bir iş olabilir.
 
 Mimari bölümünde daha önce bahsedildiği gibi bu sorunu uğraşmanızı için çeşitli yaklaşımlar olabilir:
 
--   Tam kullanarak [olay kaynağını belirleme düzeni](https://msdn.microsoft.com/library/dn589792.aspx).
+-   Tam kullanarak [olay kaynağını belirleme düzeni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
 -   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
@@ -304,7 +304,7 @@ Bazı ileti işleme kendiliğinden etkilidir. Bir sistem görüntüsü küçük 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **İleti Teklik uygularken** <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Tümleştirme olay iletileri alanında yinelenenleri kaldırma
 
@@ -337,7 +337,7 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Sınırlanmış Bağlamlar arasında iletişim kurma** <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **Son tutarlılık** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -345,14 +345,14 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 -   **Philip Brown. Tümleştirmeye yönelik stratejiler sınırlanmış bağlamlar** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Uludağ. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme** <br/>
+-   **Chris Richardson. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Uludağ. Olay kaynağını belirleme düzeni** <br/>
+-   **Chris Richardson. Olay kaynağını belirleme düzeni** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Olay kaynağını belirleme ile tanışın** <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **Olay Store veritabanı**. Resmi sitesi. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,7 +367,7 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Veri tutarlılığı temel bilgileri** <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 -   **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
@@ -380,9 +380,6 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 
 -   **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) * <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
-
--   **Dış (DTC) işlemleri katılan** (MSMQ) <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

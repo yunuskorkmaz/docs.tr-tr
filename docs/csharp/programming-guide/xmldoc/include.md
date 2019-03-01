@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 982e80696e0a8831397197c0c12d748d1d85c349
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286275"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978940"
 ---
 # <a name="include-c-programming-guide"></a>\<Ekle > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -44,7 +44,7 @@ ms.locfileid: "55286275"
 ## <a name="example"></a>Örnek  
  Bu çok dosyalı bir örnektir. Kullanan ilk dosya \<dahil >, aşağıda verilmiştir:  
   
- [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
  İkinci bir dosya, xml_include_tag.doc, aşağıdaki belgeleri açıklamaları içerir:  
   

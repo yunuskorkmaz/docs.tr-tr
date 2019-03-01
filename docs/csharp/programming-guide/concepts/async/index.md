@@ -1,13 +1,7 @@
 ---
-title: Zaman uyumsuz programlama ile async ve await (C#)
+title: 'Zaman uyumsuz programlama ile async ve await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759515"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -230,7 +224,7 @@ Windows çalışma zamanı programlamada zaman uyumsuz API'leri görevlere benze
    
   
 ##  <a name="BKMK_NamingConvention"></a> Adlandırma kuralı  
- Kural gereği, içeren yöntemlerin adlarına "Async" ekleme bir `async` değiştiricisi.  
+Kural olarak, yaygın olarak beklenebilir türleri döndüren yöntemler (örneğin `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) "Async" ile biten adlara sahip olmalıdır. Zaman uyumsuz bir işlem başlatın, ancak bir beklenebilir türü döndürmeyen yöntemleri adları "Async" ile bitemez, ancak bu yöntem değil döndürmesine veya bir işlemin sonucunu önermek için "Başlangıç", "Başlangıç" veya diğer bir fiil başlayabilir sahip olmamalıdır.
   
  Bir olay, taban sınıf veya arabirim sözleşmesi farklı bir ad öneriyorsa kuralı yoksayabilirsiniz. Örneğin, ortak olay işleyicileri gibi adlandırmamanız `Button1_Click`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Icordebugstepperenum arabirimi1
+title: ICorDebugStepperEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepperEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d9585fc3d10f7f58c7949eaef517e545d51010e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad6c48b08fbdc660fdaa7ce5bfda3a6c0529662a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572142"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980740"
 ---
-# <a name="icordebugstepperenum-interface1"></a>Icordebugstepperenum arabirimi1
+# <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum Arabirimi
 Icordebugenum yöntemlerini uygular ve ICorDebugStepper dizilerini numaralandırır.  
   
 ## <a name="methods"></a>Yöntemler  

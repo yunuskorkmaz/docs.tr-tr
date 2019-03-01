@@ -1,20 +1,20 @@
 ---
-title: F# kullanarak Azure kuyruk depolama ile çalışmaya başlama
+title: Azure kuyruk depolama kullanmaya başlamaF#
 description: Azure kuyrukları, uygulama bileşenleri arasında güvenilir ve zaman uyumsuz Mesajlaşma sağlar. Mesajlaşma etkinleştirir, uygulama bileşenlerinizin bağımsız olarak ölçeklendirme bulut.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569424"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974282"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F# kullanarak Azure kuyruk depolama ile çalışmaya başlama #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F kullanarak Azure kuyruk depolama ile çalışmaya başlama\#
 
 Azure kuyruk depolama, uygulama bileşenleri arasında bulut Mesajlaşma sağlar. Böylece ölçeklendirilebilmeleri ölçek için uygulamaları tasarlarken, uygulama bileşenleri genellikle birbirinden ayrılır. Kuyruk depolama, bulutta, masaüstünde, şirket içi sunucusunda veya mobil bir cihazda çalışan uygulama bileşenleri arasındaki iletişim için zaman uyumsuz Mesajlaşma sunar. Kuyruk depolama ayrıca zaman uyumsuz görevlerin yönetilmesini ve süreç iş akışlarının oluşturulmasını destekler.
 
-### <a name="about-this-tutorial"></a>Bu eğitim hakkında
+### <a name="about-this-tutorial"></a>Bu öğretici hakkında
 
 Bu öğreticide nasıl yazılacağını göstermektedir F# Azure kuyruk depolama kullanarak bazı ortak görevler için kod. Kapsanan görevler oluşturma ve kuyrukları silme ve ekleme, okuma ve silme kuyruk iletileri içerir.
 
@@ -25,9 +25,9 @@ Kuyruk depolama kavramsal bir genel bakış için bkz. Lütfen [kuyruk depolama 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account).
 Ayrıca, bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `queues.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri ya da kullanılabilir bir F# uygulama veya bir F# betiği. Oluşturmak için bir F# betik, bir dosya oluşturun `.fsx` uzantısı, örneğin `queues.fsx`içinde F# geliştirme ortamı.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi.
 
@@ -45,7 +45,7 @@ Bu öğreticide bir Azure depolama bağlantı dizesi gerekir. Bağlantı dizeler
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Her zaman depolama hesabı anahtarınızı korumak dikkatli olun. Sabit kodlama veya başkalarının erişebileceği bir düz metin dosyasına kaydederek diğer kullanıcılara dağıtmaktan kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
+Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
 
 Gerçek uygulamalar, depolama bağlantı dizenizi korumak için en iyi yolu, içinde bir yapılandırma dosyasıdır. Bir yapılandırma dosyasından bağlantı dizesini getirmek için bunu yapabilirsiniz:
 

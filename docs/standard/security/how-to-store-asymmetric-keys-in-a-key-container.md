@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42a42ee0fe5029dfe8340701595ba9dfab9a026d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680416"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972800"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store
-Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [anlama makine düzeyinde ve kullanıcı düzeyi RSA anahtar kapsayıcılarının](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
+Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [anlama makine düzeyinde ve kullanıcı düzeyi RSA anahtar kapsayıcılarının](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Asimetrik bir anahtar oluşturun ve bir anahtar kapsayıcısında kaydetmek için  
   

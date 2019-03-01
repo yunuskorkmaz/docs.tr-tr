@@ -1,15 +1,9 @@
 ---
-title: Kullanmaya başlayınF#
-description: Nasıl kullanmaya başlayacağınızı öğrenmek F# programlama dilidir.
+title: 'Kullanmaya başlayınF#'
+description: 'Nasıl kullanmaya başlayacağınızı öğrenmek F# programlama dilidir.'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170827"
 ---
-# <a name="get-started-with-f"></a>Kullanmaya başlayınF# #
+# <a name="get-started-with-f"></a>F ile çalışmaya başlama\#
 
 İle oluşturabileceğinize dair F# makinenizde veya çevrimiçi.
 
@@ -17,7 +11,7 @@ ms.locfileid: "53170827"
 
 Yükleme ve kullanma konusunda birden çok kılavuzları vardır F# makinenizde ilk kez.  Kararı yardımcı olması için aşağıdaki tabloyu kullanabilirsiniz:
 
-| İşletim Sistemi | Visual Studio tercih et | Visual Studio Code'u tercih et | Komut satırını mı tercih ediyorsunuz |
+| İşletim Sistemi | Prefer Visual Studio | Visual Studio Code'u tercih et | Komut satırını mı tercih ediyorsunuz |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
 | Windows | [Visual Studio ile çalışmaya başlama](get-started-visual-studio.md) | [Visual Studio Code ve Ionide kullanmaya başlama](get-started-vscode.md) | [.NET Core CLI kullanmaya başlama](get-started-command-line.md) |
 | macOS | [Mac için VS ile çalışmaya başlama](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code ve Ionide kullanmaya başlama](get-started-vscode.md) | [.NET Core CLI kullanmaya başlama](get-started-command-line.md) |

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553704"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977998"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme
 Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak koleksiyonları arasında ortak değerlere göre birden fazla koleksiyonun içeriğini birleştirmek. Bu değerler olarak bilinen *anahtar* değerleri. Geliştiricileri ilişkisel veritabanı kavramlarını tanıdık algılayacağı `Join` INNER JOIN as yan tümcesi ve `Group Join` olarak etkili bir şekilde, LEFT OUTER JOIN yan tümcesi.  
@@ -29,8 +29,8 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 2.  Bu konuda kullanım örnekleri `Person` ve `Pet` türleri ve verileri aşağıdaki kod örneği. Varsayılan bu kodu kopyalayın `Module1` Visual Basic ile oluşturulan modül.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join yan tümcesi iç birleşim gerçekleştirmek  
  INNER JOIN iki koleksiyon birleştirir. Kendisi için belirtilen anahtar değerlerine eşleşen öğe dahil edilir. Eşleşen bir öğeyi diğer koleksiyonda olmayan tüm koleksiyonlardan biri öğeleri hariç tutulur.  
@@ -45,7 +45,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 1.  Aşağıdaki kodu ekleyin `Module1` iki örtük ve açık iç birleşim örneklerini görmek için projenizdeki modülü.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join tümcesi bir sol dış birleşim gerçekleştirmek  
  SOL dış birleştirme sol taraftaki koleksiyonunun tüm öğeleri birleştirme ve yalnızca eşleşen değerler birleşimin sağ taraftaki koleksiyonunun içerir. Sol taraftaki koleksiyonda eşleşen öğe yok öğeleri birleşimin sağ taraftaki koleksiyonunun sorgu sonucu hariç tutulur.  
@@ -58,7 +58,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 1.  Aşağıdaki kodu ekleyin `Module1` gruplandırılmış bir sol dış birleşim hem gruplanmamış sol dış birleşim örneklerini görmek için projenizdeki modülü.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Bir bileşik anahtarı kullanarak bir katılma işlemi  
  Kullanabileceğiniz `And` anahtar sözcüğü bir `Join` veya `Group Join` eşleştirme yapılırken kullanılacak birden çok anahtar alanları tanımlamak için yan tümcesi birleştirilen koleksiyonlardan değerleri. `And` Anahtar sözcüğü belirtir belirtilen tüm anahtar alanları öğeleri katılması için aynı olmalıdır.  
@@ -67,7 +67,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 1.  Aşağıdaki kodu ekleyin `Module1` bir bileşik anahtarı kullanan bir birleşim örneklerini görmek için projenizdeki modülü.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>Kodu çalıştırma  
   
@@ -75,7 +75,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 1.  Değiştirin `Sub Main` içinde `Module1` bu konudaki örnek çalıştırmak için aşağıdaki kodu projenizdeki modülü.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  Örnekleri çalıştırmak için F5 tuşuna basın.  
   

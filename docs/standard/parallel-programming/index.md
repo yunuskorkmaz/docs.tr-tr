@@ -3,16 +3,10 @@ title: .NET içinde Paralel Programlama
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- parallel programming
+  - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112730"
 ---
 # <a name="parallel-programming-in-net"></a>.NET içinde Paralel Programlama
 
@@ -33,7 +27,7 @@ Aşağıdaki çizim, .NET Framework'te paralel programlama mimarisi üst düzey 
 |[Paralel Programlama için Veri Yapıları](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|İş parçacığı güvenli koleksiyon sınıfları, hafif eşitleme türleri ve yavaş başlatma türlerine yönelik belgeler için bağlantılar sağlar.|
 |[Paralel Tanılama Araçları](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Ve görevler ve Paralel Yığınlar için Visual Studio hata ayıklayıcı windows belgelerine bağlantılar sağlar [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).|
 |[PLINQ ve TPL için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Bölümleyicilerin nasıl çalıştığını ve varsayılan bölümleyicilerin nasıl yapılandırılacağını veya nasıl yeni bir bölümleyicinin oluşturulacağını açıklar.|
-|[Görev zamanlayıcılar](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Planlayıcıların nasıl çalıştığını ve varsayılan planlayıcıların nasıl yapılandırılması gerektiğini açıklar.|
+|[Görev zamanlayıcılar](xref:System.Threading.Tasks.TaskScheduler)|Planlayıcıların nasıl çalıştığını ve varsayılan planlayıcıların nasıl yapılandırılması gerektiğini açıklar.|
 |[PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# ve Visual Basic'teki lambda ifadelerine kısa bir genel bakış sunar ve PLINQ ve Görev Paralel Kitaplığı'nda nasıl kullanıldıklarını gösterir.|
 |[Daha Fazla Bilgi İçin](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET içinde paralel programlama için ek bilgi ve örnek kaynaklar için bağlantılar sağlar.|
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564324"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978665"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda tanıtım dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ Sorgu bildirim temelli söz dizimini kullanarak yazılır. Ancak, kod yeniden derlendiğinde sorgu söz dizimi yöntem çağrıları için .NET ortak dil çalışma zamanı (CLR) içine çevrilmelidir. Bu yöntem çağrıları gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu söz dizimi yerine doğrudan yöntem sözdizimini kullanarak bunları çağırabilirsiniz.  
@@ -20,7 +20,7 @@ ms.locfileid: "54564324"
 ## <a name="standard-query-operator-extension-methods"></a>Standart Sorgu İşleci Genişletme Yöntemleri  
  Aşağıdaki örnek, basit bir gösterir *sorgu ifadesi* ve anlamsal olarak eşdeğer olarak yazılmış sorguyu bir *metot tabanlı sorgu*.  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  İki örnek çıktısı aynıdır. Sorgu değişkeninin türü her iki formu içinde aynı olduğunu görebilirsiniz: <xref:System.Collections.Generic.IEnumerable%601>.  
   

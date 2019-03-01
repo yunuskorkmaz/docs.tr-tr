@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691235"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974399"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Nasıl yapılır: Bağımsız değişkenleri geçirmek yordamına (Visual Basic)
 Bir yordamı çağırdığınızda, parantez içinde bir bağımsız değişken listesiyle yordam adı izleyin. Yordamı tanımlar için gerekli her parametre karşılık gelen bir bağımsız değişken sağlayın ve isteğe bağlı bağımsız değişkenler sağlayabilirsiniz `Optional` parametreleri. Sağladığınız değil, bir `Optional` çağrı parametresi, sağladığınız sonraki herhangi bir bağımsız değişken, bunun yerine bağımsız değişken listesinde işaretlemek için virgül içermesi gerekir.  
@@ -39,7 +39,7 @@ Bir yordamı çağırdığınızda, parantez içinde bir bağımsız değişken 
   
      Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      Yukarıdaki örnekte, görüntülenecek iletiyi dize gerekli ilk bağımsız değişkeni sağlar. Bu ileti kutusunda gösterilecek düğmeler belirten isteğe bağlı ikinci parametresi için bağımsız değişken atlar. Çağrısı bir değer sağlamaz çünkü `MsgBox` varsayılan değeri kullandığını `MsgBoxStyle.OKOnly`, yalnızca görüntüleyen bir **Tamam** düğmesi.  
   

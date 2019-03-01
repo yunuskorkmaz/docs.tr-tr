@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543454"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980951"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve karşılaştırma gerçekleştirmek için nasıl kullandığını açıklar.  
@@ -44,7 +44,7 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
   
  Bir tarih kültürün dizeye dönüştürülecek geçirmek <xref:System.Globalization.CultureInfo> tarih nesnesinin nesnesine <xref:System.DateTime.ToString%28System.IFormatProvider%29> yöntemi. Örneğin, aşağıdaki görüntüler kod "04/07/2005 00:00:00" uygulamanın kültür ayarları ne olursa olsun.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Tarih değişmez değerleri, her zaman İngilizce kültürüne göre yorumlanır.  
@@ -60,11 +60,11 @@ Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve kar
   
  `StrComp` İşlevi bir sıralama ölçütüne göre iki karşılaştırılan dizeler arasındaki ilişkiyi gösteren bir tamsayı döndürür. Birinci dize ikinci dizeden büyükse sonuç için pozitif bir değer belirtir. Negatif bir sonuç ilk dize küçüktür, sıfır dizeler arasındaki belirtir.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  Ayrıca [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] iş ortağı `StrComp` işlevi <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi. Temel dize sınıfının statik, aşırı yüklenmiş bir yöntem budur. Aşağıdaki örnekte, bu yöntem nasıl kullanıldığı gösterilmektedir:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  Karşılaştırmalar nasıl gerçekleştirileceğini denetleyebilmek için ek bir aşırı yüklemesini kullanabilirsiniz <xref:System.String.Compare%2A> yöntemi. İle <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi kullanabileceğiniz `comparisonType` kullanmak için karşılaştırma türünü belirtmek için bağımsız değişken.  
   

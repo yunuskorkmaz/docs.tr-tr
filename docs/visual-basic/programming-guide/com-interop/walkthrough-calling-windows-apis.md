@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657980"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981471"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'ları çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'lerdir. Bunları kendi eşdeğer yordamları yazmak zor olduğunda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu arasında açık ve koyu gri alternatif olun.  
@@ -45,7 +45,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 4.  Aşağıdaki `Declare` sınıfı veya modülü DLL kullanmak istediğiniz işlev:  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
 ### <a name="parts-of-the-declare-statement"></a>Bölümleri Declare deyimi  
  `Declare` Deyimi aşağıdaki öğeleri içerir.  
@@ -79,7 +79,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 3.  Eşdeğer ekleme `Const` deyimleri sınıfı veya modülü bu sabiti uygulamanızın kullanılabilir hale getirmek için. Örneğin:  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>DLL yordamı çağırmak için  
   
@@ -87,7 +87,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 2.  Kodu `Click` eklediğiniz, uygun bağımsız değişkenleri sağlayın ve yordam çağrısı düğmesi için olay işleyicisi:  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
 3.  F5 tuşuna basarak projeyi çalıştırın. İleti kutusu ile görüntülenir **Evet** ve **Hayır** yanıt düğmeleri. Bunlardan birini tıklatın.  
   
@@ -100,11 +100,11 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 2.  Erişimini basitleştirmek için `MarshalAs` ekleyin, öznitelik bir `Imports` kod sınıfı veya modülü, aşağıdaki örnekte olduğu gibi en üstüne deyimi:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 3.  İçeri aktarılan işlevine yönelik bir işlev prototipi sınıf veya modül ve uygulama ekleme `MarshalAs` öznitelik parametreleri veya dönüş değeri. Aşağıdaki örnekte, türünü bekleyen bir API çağrısı `void*` olarak sıralanmış `AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
 ## <a name="api-calls-using-dllimport"></a>DllImport kullanarak API çağrıları  
  `DllImport` Özniteliği tür kitaplıklarını DLL'lerde işlevleri çağırmak için ikinci bir yol sağlar. `DllImport` kabaca kullanmakla eşdeğerdir bir `Declare` deyimi ancak işlevlerin çağrılma biçimini üzerinde daha fazla denetim sağlar.  
@@ -123,23 +123,23 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 5.  Erişimini basitleştirmek için `DllImport`, ekleme bir `Imports` başlangıç formu sınıfı için kod üstüne deyimi:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 6.  Önceki boş bir işlevi bildirmek `End Class` form ve işlev adı için bildirimi `MoveFile`.  
   
 7.  Uygulama `Public` ve `Shared` işlev bildirimi ve kümesi parametreler için değiştiriciler `MoveFile` Windows API işlevi kullanan bağımsız değişkenlerine göre:  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      İşlevinizi herhangi bir geçerli yordamı ad olabilir; `DllImport` özniteliği, DLL Dosyasının adını belirtir. Ayrıca parametreleri birlikte çalışabilirlik hazırlama işler ve verilere benzer olan Visual Studio veri türlerini seçebilmeniz dönüş değerleri türlerini API kullanır.  
   
 8.  Uygulama `DllImport` özniteliği için boş işlev. İlk parametre, aradığınız işlevi içeren DLL konumunu ve adını ' dir. Dosyalarının Windows Sistem dizinlerde yer alan yolunu belirtmeniz gerekmez. Windows API işlevin adını belirten bir adlandırılmış bağımsız değişken ikinci parametredir. Bu örnekte, `DllImport` özniteliği zorlar çağrıları `MoveFile` iletilmesi için `MoveFileW` KERNEL32 içinde. DLL. `MoveFileW` Yöntemi, bir dosya yolundan kopyalar `src` yoluna `dst`.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
 9. Kodu `Button2_Click` olay işleyicisi, işlev çağrısı için:  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
 10. Test.txt adlı bir dosya oluşturun ve sabit sürücünüzdeki C:\Tmp dizine yerleştirin. Gerekirse Tmp dizini oluşturun.  
   

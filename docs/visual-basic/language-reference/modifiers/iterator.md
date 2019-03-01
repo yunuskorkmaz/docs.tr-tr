@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: bbc18a8b25e0de128cc2c1828213212adad108ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06188560163491284eab0dcfc4bba6b029e65ce8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719501"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969290"
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
 Belirleyen bir işlev veya `Get` erişimcisinin yineleyici olduğunu.  
@@ -41,12 +41,12 @@ Belirleyen bir işlev veya `Get` erişimcisinin yineleyici olduğunu.
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir yineleyici işlevi gösterir. Yineleyici işleve sahip bir `Yield` içindeki bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. Her bir yinelemesini [her](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyiminin gövdesinde `Main` bir çağrı oluşturur `Power` yineleyici işlevi. Her yineleyici işleve çağrı için sonraki yürütme devam eder `Yield` sıradaki yinelemesi süresince gerçekleşen deyimi `For…Next` döngü.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, gösterir bir `Get` bir yineleyici erişimcisi. `Iterator` Özellik bildiriminde bir değiştiricidir.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
  Diğer örnekler için [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   

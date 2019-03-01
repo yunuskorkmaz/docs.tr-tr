@@ -5,12 +5,12 @@ helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: a708d9cfd7b1a5ded3088ee567660bd0b3a5423f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0190bfdff74814c1d537c9cad6a5cb2c8dd751e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731939"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971448"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te bir dizindeki dosya koleksiyonunu alma
 Aşırı Yüklemeleri <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> yöntem dizindeki dosyaların adlarını temsil eden dizeleri salt okunur bir koleksiyonunu döndürür:  
@@ -25,7 +25,7 @@ Aşırı Yüklemeleri <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?
   
 -   Birini <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> yöntemi aşırı yüklemeleri, içinde arama yapılacak dizinin yolunu ve adını sağlama `directory` parametresi. Aşağıdaki örnek, dizindeki tüm dosyaları döndürür ve eklenmeye `ListBox1`.  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  

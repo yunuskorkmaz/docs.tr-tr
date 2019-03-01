@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595584"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978507"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
@@ -55,7 +55,7 @@ Tornavida genel bir araç olarak ayarlayın
   
  Örneğin, oluşturma ve kullanma gibi belirli veri türü üzerinde çalışır bir kuyruk sınıfı isteyebilirsiniz `String`. Bu tür bir sınıftan bildirebilirsiniz <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  Artık `stringQ` özel olarak çalışmak için `String` değerleri. Çünkü `stringQ` yönelik bir programdır `String` için genelleştirilmiş yerine `Object` değerleri geç bağlama veya türü dönüştürme yok. Bu, yürütme zaman tasarrufu sağlar ve çalışma zamanı hataları azaltır.  
   
@@ -64,15 +64,15 @@ Tornavida genel bir araç olarak ayarlayın
 ## <a name="example-of-a-generic-class"></a>Genel bir sınıf örneği  
  Aşağıdaki örnek, genel bir sınıf bir çatı tanımı gösterilmektedir.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  Önceki çatıda `t` olduğu bir *tür parametresi*, diğer bir deyişle, sınıfı bildirdiğinizde, sağladığınız bir veri türü için yer tutucu. Başka bir yerde kodunuzda çeşitli sürümlerini bildirebilirsiniz `classHolder` çeşitli veri türleri için sağlama tarafından `t`. Aşağıdaki örnek, iki tür bildirimi gösterir.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  Yukarıdaki ifadelerden bildirin *oluşturulan sınıflar*, belirli bir türün tür parametresi değiştirir. Bu değişiklik, oluşturulan sınıftaki kod genelindeki yayılır. Aşağıdaki örnek, hangi gösterir `processNewItem` yordamı göründüğüne içinde `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
  Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
@@ -110,7 +110,7 @@ Tornavida genel bir araç olarak ayarlayın
 ### <a name="example-of-a-constraint"></a>Sınırlama örneği  
  Aşağıdaki örnek, bir sınıf uygulamak için tür bağımsız değişkeni gerektiren kısıtlamasına sahip iskelet tanımını gösterir <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  Öğesinden bir sınıf oluşturmak sonraki kod çalışırsa `itemManager` uygulamayan bir türü sağlamayı <xref:System.IComparable>, derleyici bir hata bildirir.  
   
@@ -132,7 +132,7 @@ Tornavida genel bir araç olarak ayarlayın
 ### <a name="example-of-multiple-constraints"></a>Birden çok kısıtlaması örneği  
  Aşağıdaki örnek tür parametresi kısıtlaması listesini içeren bir genel sınıfın bir çatı tanımı gösterir. Bu sınıfın bir örneğini oluşturur kodda tür bağımsız değişkeni her ikisi de uygulamalıdır <xref:System.IComparable> ve <xref:System.IDisposable> arabirimleri, bir başvuru türü olması ve erişilebilir parametresiz bir oluşturucu üzerinden kullanıma sunacaksınız.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Önemli koşullar  
  Genel türler tanıtır ve aşağıdaki koşulları kullanın:  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678843"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964942"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir sabit bildirme
 Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. Bir sabit bildirme tarafından bir değer anlamlı bir ad atayın. Bir sabit bildirildiğinde, değiştiren veya yeni bir değer atanır.  
@@ -43,7 +43,7 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
   
 -   Bir erişim belirticisi içeren bir bildirimi yazma `Const` anahtar sözcüğü ve aşağıdaki örneklerde gösterildiği gibi bir ifade:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      Zaman [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) olduğu `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) olduğu `On`, bir veri türü belirterek bir sabiti açıkça bildirmelidir (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, veya `String`).  
   
@@ -53,7 +53,7 @@ Kullandığınız `Const` deyimini bir sabit bildirme ve değerini ayarlayın. B
   
 -   İçeren bir bildirimi yazma `As` anahtar sözcüğü ve açık bir veri türü, aşağıdaki örneklerde olduğu gibi:  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      Kodunuzu daha okunabilir her satırda yalnızca tek bir sabit bildirirseniz olmasına rağmen tek bir satırda birden çok sabitleri bildirebilirsiniz. Birden çok sabitleri tek bir satıra bildirirseniz, tümü aynı erişim düzeyini olmaları gerekir (`Public`, `Private`, `Friend`, `Protected`, veya `Protected Friend`).  
   

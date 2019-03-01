@@ -5,26 +5,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722705"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980738"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 Bağımsız değişken gönderebilirsiniz `Main` yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak yöntemi:  
   
- [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
   
- [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
 >  Komut satırı bağımsız değişkenlerini etkinleştirmek için `Main` yöntemi bir Windows Forms uygulamasındaki el ile değiştirmeniz gerekir imzası `Main` program.CS'de webhostbuilder'a. Windows Forms Tasarımcısı tarafından oluşturulan kod oluşturur bir `Main` girdi parametresi olmadan. Ayrıca <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> veya <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> konsolda veya Windows uygulama herhangi bir noktasından komut satırı bağımsız değişkenleri erişmek için.  
   
  Parametresi `Main` yöntemi bir <xref:System.String> komut satırı bağımsız değişkenlerini temsil eden bir dizi. Genellikle, test ederek bağımsız değişkenleri var olup olmadığını belirlemeniz `Length` özelliği, örneğin:  
   
- [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]  
   
  Kullanarak dize bağımsız değişkenlerini sayısal türlere de dönüştürebilirsiniz <xref:System.Convert> sınıfı veya `Parse` yöntemi. Örneğin, aşağıdaki deyim dönüştürür `string` için bir `long` numarası kullanarak <xref:System.Int64.Parse%2A> yöntemi:  
   
@@ -53,7 +53,7 @@ long num = Convert.ToInt64(s);
   
 1.  Aşağıdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı ada sahip bir metin dosyası olarak kaydedin `Factorial.cs`.  
   
-     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
 2.  Gelen **Başlat** ekran veya **Başlat** menüsünde, Visual Studio'yu açın **Geliştirici komut istemi** penceresini ve ardından yeni dosyasını içeren klasöre gidin oluşturuldu.  
   

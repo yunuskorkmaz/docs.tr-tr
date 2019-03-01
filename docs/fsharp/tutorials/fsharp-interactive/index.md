@@ -1,15 +1,9 @@
 ---
-title: F# Etkileşimli (fsi.exe) Başvurusu
-description: Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.
+title: 'F# Etkileşimli (fsi.exe) Başvurusu'
+description: 'Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611067"
 ---
-# <a name="interactive-programming-with-f"></a>Etkileşimli ile programlamaF# #
+# <a name="interactive-programming-with-f"></a>Etkileşimli F ile programlama\#
 
 > [!NOTE]
 > Bu makalede, şu anda Windows deneyimi yalnızca açıklanmıştır.  Yazılacak.
@@ -44,7 +38,7 @@ Bazı kitaplıklar başvuran bir proje açıksa, bunları başvurabilirsiniz F# 
 Denetleyebileceğiniz F# ayarları ayarlayarak etkileşimli komut satırı bağımsız değişkenleri (Seçenekler). Üzerinde **Araçları** menüsünde **seçenekleri...** ve ardından  **F# Araçları**. Değiştirebileceğiniz iki ayar F# etkileşimli seçenekleri ve **64-bit F# etkileşimli** yalnızca çalıştırıyorsanız, ilgili ayarı F# etkileşimli bir 64-bit makinedeki. Bu ayar, fsi.exe veya 32 bit veya 64-bit işlem olarak çalıştırılacak şekilde belirlemek için makine mimarisi kullanan fsianycpu.exe adanmış 64-bit sürümünü çalıştırmak istediğiniz olup olmadığını belirler.
 
 
-## <a name="scripting-with-f"></a>İle betik oluşturmaF# #
+## <a name="scripting-with-f"></a>F ile betik oluşturma\#
 Betiklerini kullanan dosya uzantısı **.fsx** veya **.fsscript**. Kaynak kodu derleme ve daha sonra derlemede çalıştıran yerine yalnızca çalıştırabilirsiniz **fsi.exe** ve komut dosyasının dosya adı belirtin F# kaynak kodu, ve F# etkileşimli kod okur ve gerçek yürütür saat.
 
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: e406b72e5d2932464c407dce014dd8eceee59fb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30957934a68f8c09232a2be2f746b9d6efdedeab
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577301"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976700"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
 Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca statik üyeleri içeren sınıflar genel olarak kullanılır. Bir sınıf, bir veya daha fazla özel oluşturucular ve genel Oluşturucusu varsa, diğer sınıflar (iç içe geçmiş sınıflar dışında) bu sınıfın örnekleri oluşturulamaz. Örneğin:  
@@ -25,11 +25,11 @@ Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca stat
 ## <a name="example"></a>Örnek  
  Aşağıdaki özel bir oluşturucu kullanılarak sınıfının bir örneğidir.  
   
- [!code-csharp[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
   
  Aşağıdaki örnek ifade açıklamasını kaldırın, koruma düzeyi nedeniyle oluşturucusuna erişilemediğinden, bir hata oluşturacağına dikkat edin:  
   
- [!code-csharp[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
+ [!code-csharp[csProgGuideObjects#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#13)]  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

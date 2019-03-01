@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6aa05aab5bbd012c31dc31be38c0b3eaea13dd27
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415903"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966196"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -270,10 +270,10 @@ Etkinleştirmek veya TLS 1.2 ve/veya TLS 1.1, bunları destekleyen bir sistemde 
 
 | **OS** | **TLS 1.2 desteği** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | Desteklenen ve varsayılan olarak etkindir. |
-| Windows 8.1</br>Windows Server 2012 R2 | Desteklenen ve varsayılan olarak etkindir. |
-| Windows 8.0</br>Windows Server 2012 | Desteklenen ve varsayılan olarak etkindir. |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | , Varsayılan olarak etkin değildir ancak desteklenir. Bkz: [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings) TLS 1.2 etkinleştirme hakkında daha fazla ayrıntı için web sayfası. |
+| Windows 10<br>Windows Server 2016 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 8.1<br>Windows Server 2012 R2 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 8.0<br>Windows Server 2012 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | , Varsayılan olarak etkin değildir ancak desteklenir. Bkz: [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings) TLS 1.2 etkinleştirme hakkında daha fazla ayrıntı için web sayfası. |
 | Windows Server 2008 | TLS 1.2 ve TLS 1.1 desteği güncelleştirilmesi gerekiyor. Bkz: [Windows Server 2008 SP2'de TLS 1.1 ve TLS 1.2 desteği eklemek için güncelleştirme](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Desteklenmez. |
 
@@ -285,10 +285,10 @@ Bu tablo, .NET Framework 3.5 ile TLS 1.2 desteklemek ihtiyacınız olacak işlet
 
 | **OS** | **.NET Framework 3.5 ile TLS 1.2 desteklemek için gereken en düşük güncelleştirme** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Windows 10 sürüm 1511 ve Windows Server 2016 Technical Preview 4 için toplu güncelleştirme: 10 Mayıs 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [TLS sistem varsayılan Windows 8.1 ve Windows Server 2012 R2 üzerinde .NET Framework 3.5 dahil sürümleri için destek](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8.0</br>Windows Server 2012 | [TLS sistem varsayılan Windows Server 2012'de .NET Framework 3.5 dahil sürümleri için destek](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [TLS sistem varsayılan .NET Framework 3.5.1 Windows 7 SP1 ve Windows 2008 Server R2 SP1 üzerine de dahil sürümleri için destek](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 10<br>Windows Server 2016 | [Windows 10 sürüm 1511 ve Windows Server 2016 Technical Preview 4 için toplu güncelleştirme: 10 Mayıs 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [TLS sistem varsayılan Windows 8.1 ve Windows Server 2012 R2 üzerinde .NET Framework 3.5 dahil sürümleri için destek](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [TLS sistem varsayılan Windows Server 2012'de .NET Framework 3.5 dahil sürümleri için destek](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [TLS sistem varsayılan .NET Framework 3.5.1 Windows 7 SP1 ve Windows 2008 Server R2 SP1 üzerine de dahil sürümleri için destek](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [TLS sistem varsayılan Windows Vista SP2 ve Server 2008 SP2 üzerinde .NET Framework 2.0 SP2 dahil sürümleri için destek](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Desteklenmez |
 

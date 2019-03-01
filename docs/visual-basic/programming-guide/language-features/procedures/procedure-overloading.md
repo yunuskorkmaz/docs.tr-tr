@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712528"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975478"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 *Aşırı yükleme* bir yordam, birden çok sürümü aynı ada ancak farklı parametre listeleri kullanarak tanımlama anlamına gelir. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır. Parametre listesini değiştirerek bunu yapabilirsiniz.  
@@ -67,12 +67,12 @@ ms.locfileid: "54712528"
 ## <a name="multiple-versions-of-a-procedure"></a>Bir yordamın birden fazla sürümünü  
  Yazdığınız varsayalım bir `Sub` müşteriye adı veya hesap numarası başvurabileceğiniz istediğiniz bir müşterinin bakiyesi ve karşı bir işlem göndermeniz için yordamı. Bunu yapabilmek için iki farklı tanımlayabilirsiniz `Sub` yordamlar, aşağıdaki örnekte olduğu gibi:  
   
- [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]  
   
 ### <a name="overloaded-versions"></a>Aşırı yüklenmiş sürümleri  
  Aşırı yükleme tek yordam adı için bir alternatiftir. Kullanabileceğiniz [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğünü bir sürümüne ilişkin yordam her parametre listesi için aşağıdaki gibi tanımlayın:  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
 #### <a name="additional-overloads"></a>Ek aşırı yüklemeleri  
  Ayrıca herhangi bir işlem tutarı kabul etmek istiyorsanız `Decimal` veya `Single`, daha fazla aşırı `post` Bu çeşitleme için izin vermek için. Siz yaptıysanız her aşırı yüklemeleri önceki örnekte, dört olurdu `Sub` yordamları, aynı ada sahip tüm ancak dört farklı imzalara sahip.  
@@ -80,9 +80,9 @@ ms.locfileid: "54712528"
 ## <a name="advantages-of-overloading"></a>Aşırı yükleme avantajları  
  Bir yordamı aşırı yükleme çağrısının esneklik avantajlarındandır. Kullanılacak `post` yordamı çağıran kod, müşteri kimliği olarak edinebilirsiniz önceki örnekte bildirilen bir `String` veya `Integer`ve ardından her iki durumda da aynı yordamı çağırın. Aşağıdaki örnek bunu göstermektedir:  
   
- [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
- [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

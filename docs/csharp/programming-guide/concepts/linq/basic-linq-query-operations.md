@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728378"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968198"
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
 Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Aşağıdaki konularda daha ayrıntılı bilgi verilmiştir:  
@@ -39,7 +39,7 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
 ## <a name="obtaining-a-data-source"></a>Bir Veri Kaynağı Elde Etme  
  İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, ilk adımıdır veri kaynağını belirtmek için. Kullanmadan önce C# çoğu programlama dilinden olduğu gibi bir değişkeni bildirilmelidir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu `from` yan tümcesi gelen ilk veri kaynağı sunmak için (`customers`) ve *aralık değişkeni* (`cust`).  
   
- [!code-csharp[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  Yineleme değişkeni aralık değişkeni benzer bir `foreach` dışında bir sorgu ifadesinde gerçek yineleme gerçekleşir, döngü. Sorgu yürütüldüğünde, aralık değişkeni art arda gelen her öğe için bir başvuru olarak hizmet verecektir `customers`. Derleyicinin türü çıkarsayabilir `cust`, açıkça belirtmeniz gerekmez. Ek aralık değişkenleri sunulan tarafından bir `let` yan tümcesi. Daha fazla bilgi için [let yan tümcesi](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -49,22 +49,22 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
 ## <a name="filtering"></a>Filtreleme  
  Bir Boolean ifadesinin biçiminde bir filtre uygulamak için en yaygın sorgu işlemi olabilir. Filtre ifadesi doğru öğeleri döndürmek için sorguyu neden olur. Kullanarak bir sonuç getirdi `where` yan tümcesi. Filtre, geçerli kaynak sırasından çıkarılacak öğeleri belirtir. Aşağıdaki örnekte, yalnızca `customers` Londra bir adrese sahip döndürülür.  
   
- [!code-csharp[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
  Tanıdık C# mantıksal kullanabilirsiniz `AND` ve `OR` gibi birçok gerekli olduğu gibi ifadeler filtre uygulamak için işleçleri `where` yan tümcesi. Örneğin, yalnızca müşterilerin "Londra'dan" döndürülecek `AND` adı olan "aşağıdaki kodu yazdığınız Devon":  
   
- [!code-csharp[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+ [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
  Müşteriler Londra veya Paris döndürmek için aşağıdaki kodu yazabilirsiniz:  
   
- [!code-csharp[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
  Daha fazla bilgi için [burada yan tümcesi](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Sıralama  
  Genellikle döndürülen verileri sıralamak uygundur. `orderby` Yan tümcesi neden öğeleri döndürülen dizideki sıralanan türü için varsayılan karşılaştırıcı göre sıralanacak. Örneğin, aşağıdaki sorguyu göre sonuçları sıralamak için Genişletilebilir `Name` özelliği. Çünkü `Name` bir dize ise varsayılan karşılaştırıcı bir alfabetik sıralama A'dan Z'ye gerçekleştirir.  
   
- [!code-csharp[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
  Sonuçları Z'den A'ya, ters sırada sıralamak için kullanmak `orderby…descending` yan tümcesi.  
   
@@ -73,20 +73,20 @@ Bu konu, kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.m
 ## <a name="grouping"></a>Gruplandırma  
  `group` Yan tümcesi, belirttiğiniz bir anahtarına göre sonuçlarınızı Grup olanak sağlar. Örneğin sonuçların göre gruplanmış belirtebilirsiniz `City` Londra veya Paris tüm müşterilerden tek tek gruplar içinde olacak şekilde. Bu durumda, `cust.City` anahtardır.  
   
- [!code-csharp[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
  Son ne zaman bir sorgu ile bir `group` yan tümcesi, sonuçlarınızı bir liste biçiminde alın. Listedeki her öğe olan bir nesnedir bir `Key` üye ve bu anahtarın altında gruplanmış öğelerin listesi. Grupları bir dizi üreten bir bir sorgu üzerinde gezinmek, iç içe bir kullanmalısınız `foreach` döngü. Dış döngü her bir grup üzerinde yinelenir ve iç döngü her grubun üyeleri üzerinde yinelenir.  
   
  Grup işlemi sonuçlarını başvurmalıdır, kullanabileceğiniz `into` daha da sorgulanabilir bir tanımlayıcı oluşturmak için anahtar sözcüğü. Aşağıdaki sorgu, ikiden fazla müşteriler içeren gruplar döndürür:  
   
- [!code-csharp[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+ [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
  Daha fazla bilgi için [group yan tümcesi](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Katılma  
  Birleştirme işlemleri oluşturma dizileri arasında ilişkiler, veri kaynakları, açıkça modellenmez. Örneğin, tüm müşteriler ve aynı konumda olan dağıtımcıların bulmak için bir birleştirme gerçekleştirebilirsiniz. İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] `join` yan tümcesi her zaman çalışır nesne koleksiyonları veritabanı tabloları yerine karşı doğrudan.  
   
- [!code-csharp[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
  İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kullanmak zorunda değil `join` SQL'de çünkü bunu sıklıkta yabancı anahtarları [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesne modelinde öğelerin bir koleksiyonunu tutan özellikleri olarak temsil edilir. Örneğin, bir `Customer` nesneyi içeren koleksiyonu `Order` nesneleri. Birleşim gerçekleştirme yerine nokta gösterimi kullanılarak siparişleri erişin:  
   

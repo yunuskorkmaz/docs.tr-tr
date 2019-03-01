@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551793"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970304"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Devralma Temelleri (Visual Basic)
 `Inherits` Deyimi adlı yeni bir sınıf bildirmek için kullanılır bir *türetilmiş sınıf*olarak bilinen varolan bir sınıfa göre bir *temel sınıfı*. Türetilmiş sınıflarda devralınır ve genişletebilir, özellikleri, yöntemleri, olaylar, alanları ve temel sınıfta tanımlı sabitler. Aşağıdaki bölümde bazı devralma kuralları açıklar ve yol sınıflarını değiştirmek için kullanabileceğiniz değiştiricileri devralmıyor veya devralınan:  
@@ -62,14 +62,14 @@ ms.locfileid: "54551793"
   
  Aşağıdaki örnek, bir temel sınıf tanımlar `Payroll,` ve türetilmiş bir sınıf `BonusPayroll`, devralınan bir yöntemi geçersiz kılmalar `PayEmployee`. Yordamı, bir `RunPayroll`oluşturur ve sonra geçen bir `Payroll` nesne ve bir `BonusPayroll` bir işlev nesnesine `Pay`, yürütür `PayEmployee` her iki nesnenin yöntemi.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase anahtar sözcüğü  
  `MyBase` Anahtar sözcüğü davranacağını gibi geçerli bir sınıf örneğinin temel sınıfına başvuran bir nesne değişkeni. `MyBase` sık sık geçersiz kılınan ya da türetilen bir sınıfta gölgeli bir temel sınıf üyelerinin erişmek için kullanılır. Özellikle, `MyBase.New` bir temel sınıf oluşturucusu bir türetilmiş sınıf oluşturucusunda açıkça çağırmak için kullanılır.  
   
  Örneğin, temel sınıftan devralınan bir yöntemi geçersiz kılan türetilmiş bir sınıf tasarlarken varsayalım. Geçersiz kılınan yöntemi, temel sınıf yöntemini çağırın ve dönüş değeri aşağıdaki kod parçasını gösterildiği gibi değiştirin:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  Aşağıdaki listede kullanarak kısıtlamaları açıklamaktadır. `MyBase`:  
   

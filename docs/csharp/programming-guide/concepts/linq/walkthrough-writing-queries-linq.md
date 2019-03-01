@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 085a5f27225589989cf5b9d4b5871226624843ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d17d1d456752095dcc895eba291cd53745f9467d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554982"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968159"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C# (LINQ) sorgu yazma
 Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri gösterir.  
@@ -67,7 +67,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
      Ayrıca sorgunun unutmayın aralık değişkeni `student`, her bir başvuru olarak hizmet veren `Student` kaynakta, her nesne için üye erişimi sağlama.  
   
- [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#12)]  
   
 ## <a name="execute-the-query"></a>Sorguyu Yürütme  
   
@@ -81,7 +81,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 2.  Bu kodu ekledikten sonra derleme ve sonuçlarını görmek için uygulamayı çalıştırma **konsol** penceresi.  
   
- [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>Başka bir filtre koşulu eklemek için  
   
@@ -121,11 +121,11 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Gruplandırma sorgu ifadeleri güçlü bir özelliktir. Group yan tümcesi içeren sorgu grupları bir dizi oluşturur ve her grubu içeren bir `Key` ve bu grubun tüm üyelerinin oluşan bir dizi. Aşağıdaki yeni sorgu anahtarı olarak son adlarının ilk harflerini kullanarak Öğrenciler gruplandırır.  
   
-     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
 2.  Sorgu türü artık değiştirildiğine dikkat edin. Artık bir dizi olan grupları üretir bir `char` bir anahtarı ve bir dizi türü `Student` nesneleri. Sorgu türü değiştiğinden, aşağıdaki değişiklikleri kod `foreach` yürütme döngüsü ayrıca:  
   
-     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
 3.  Uygulamayı çalıştırmak ve sonuçları görüntülemek **konsol** penceresi.  
   
@@ -135,7 +135,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Açıkça kodlama `IEnumerables` , `IGroupings` hızla zahmetli hale gelebilir. Aynı sorgu yazabilirsiniz ve `foreach` daha rahat kullanarak döngü `var`. `var` Anahtar sözcüğü, nesne türlerini değiştirmez; yalnızca derleyicinin türlerini çıkarması bildirir. Türünü değiştirme `studentQuery` ve yineleme değişkeni `group` için `var` ve sorguyu yeniden çalıştırın. İçinde iç unutmayın `foreach` döngüsünün yineleme değişkeni hala türü olarak `Student`, ve sorgu yalnızca gibi çalışır. Değişiklik `s` yineleme değişkeni `var` ve sorguyu yeniden çalıştırın. Tam olarak aynı sonuçları elde ettiğimizi görürsünüz.  
   
-     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
      Hakkında daha fazla bilgi için [var](../../../../csharp/language-reference/keywords/var.md), bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -143,7 +143,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Önceki sorguya çalıştırdığınızda, grupları alfabetik sırada olmadığına dikkat edin. Bunu değiştirmek için sağlamalısınız bir `orderby` yan tümcesinden sonra `group` yan tümcesi. Ancak kullanmak için bir `orderby` yan tümcesi, ilk gerekir tarafından oluşturulan grupları başvuru olarak hizmet veren bir tanımlayıcı `group` yan tümcesi. Tanımlayıcısını kullanarak sağlama `into` anahtar sözcüğü, aşağıdaki gibi:  
   
-     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
      Bu sorgu çalıştırdığınızda, grupları, artık alfabetik olarak sıralanır görürsünüz.  
   
@@ -151,7 +151,7 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Kullanabileceğiniz `let` sorgu ifadesinde herhangi bir ifade sonucu için bir tanımlayıcı tanıtmak için anahtar sözcüğü. Bu tanımlayıcı aşağıdaki örnekte olduğu gibi bir kullanışlı olabilir veya birden çok kez hesaplanacak yok, bir ifadenin sonuçlarını depolayarak performansı geliştirebilirsiniz.  
   
-     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
      Daha fazla bilgi için [let yan tümcesi](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -159,17 +159,17 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
   
 1.  Bölümünde anlatıldığı gibi [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), bazı sorgu işlemlerinin yalnızca yöntemi söz dizimi kullanılarak belirtilebilir. Toplam puanı her biri için aşağıdaki kodu hesaplar `Student` kaynak dizisi, ve ardından aramaları `Average()` sınıfının ortalama puanını hesaplamak için bu sorgunun sonuçlarının yöntemi.
   
-     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>Select yan tümcesinde dönüştürmek ya da planlamak için  
   
 1.  Öğeleri kaynak dizileri öğeleri farklı bir dizi oluşturmak için bir sorgu çok yaygındır. Silin veya önceki sorgu ve yürütme döngüsü açıklama ve aşağıdaki kodla değiştirin. Sorgu dizeleri bir dizi döndürmediğine dikkat edin (değil `Students`), ve bu olgu yansıtılır `foreach` döngü.  
   
-     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
 2.  Bu kılavuzda daha önce açıklanan kod ortalama sınıfı puanı yaklaşık 334 belirtilir. Bir dizi oluşturmak için `Students` birlikte sınıfı ortalama'den büyük olan toplam puanı, `Student ID`, anonim bir tür içinde kullanabileceğiniz `select` deyimi:  
   
-     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sorgular, C# ile çalışmanın temel özellikleri hakkında bilgi sahibi olduktan sonra belgelere ve örneklere LINQ sağlayıcısı, ilgilendiğiniz belirli türünün okumaya hazırsınız:  

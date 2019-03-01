@@ -3,14 +3,14 @@ title: Tanımlama grubu türleri - C# Kılavuzu
 description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332760"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971417"
 ---
-# <a name="c-tuple-types"></a>C# demet türleri #
+# <a name="c-tuple-types"></a>C# demet türleri
 
 C# diziler basit bir söz dizimi kullanılarak tanımladığınız türleridir. Avantajları, daha basit bir sözdizimi, dönüştürmeleri (kardinalite adlandırılır) sayısını ve türlerini öğeleri ve tutarlı kuralları kopyalar, eşitlik testleri ve atamaları göre kurallarını içerir. Bir tradeoff diziler bazı devralma ile ilişkili nesne yönelimli deyimlerini desteklemez. Bir genel bakış bölümünde alma [C# 7.0 yenilikleri içindeki diziler](whats-new/csharp-7.md#tuples) makalesi.
 

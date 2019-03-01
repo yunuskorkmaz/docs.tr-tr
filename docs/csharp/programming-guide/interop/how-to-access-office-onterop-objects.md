@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d646a73cc8616821372c5a0078b595291829ac27
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695120"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970200"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  
@@ -60,17 +60,17 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 2.  Aşağıdaki `using` kod dosyasının en üstüne yönergeleri.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>Banka hesabı listesini oluşturmak için  
   
 1.  Aşağıdaki sınıf tanımının içine yapıştırın **Program.cs**altında `Program` sınıfı.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
 2.  Aşağıdaki kodu ekleyin `Main` yöntemi oluşturmak için bir `bankAccounts` iki hesap içeren liste.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Hesap bilgileri Excel'e dışarı aktaran bir yöntemi bildirmek için  
   
@@ -82,19 +82,19 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 2.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel`. Kodu çalışma sayfasının ilk satırın ilk iki sütuna değerler ekler.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
 3.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel`. `foreach` Döngü, listesinde art arda gelen satır çalışma sayfasının ilk iki sütuna bilgi hesaplarının koyar.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
 4.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel` İçeriği sığdırmak için sütun genişliklerini ayarlamak için.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
      C# ' ın önceki sürümlerinde çünkü bu açık atama için bu işlemler gerektiren `ExcelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel <xref:Microsoft.Office.Interop.Excel.Range> yöntemi. Aşağıdaki satırları atama gösterir.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
      [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]ve sonraki sürümlerinde, döndürülen dönüştürür `Object` için `dynamic` derleme tarafından otomatik olarak başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği veya eşdeğer, varsa Excel **birlikte çalışma türlerini katıştır**özelliği ayarlanmışsa true. Bu özellik için varsayılan değer doğrudur.  
   
@@ -102,7 +102,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 1.  Aşağıdaki satırı sona Ekle `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
 2.  CTRL + F5 tuşlarına basın.  
   
@@ -126,11 +126,11 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 2.  Sonunda aşağıdaki ifadeyi ekleyin `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
 3.  Sonunda aşağıdaki ifadeyi ekleyin `DisplayInExcel`. `Copy` Yöntemi çalışma panoya ekler.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
 4.  CTRL + F5 tuşlarına basın.  
   
@@ -144,7 +144,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
      İçinde [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], PIA'ların yerine tür bilgilerini katıştırma olan varsayılan davranışı. Açık atama gerekli olmadığı için bu varsayılan nedeniyle birkaç önceki örneklerin basitleştirilmiştir. Örneğin, bildirimi `worksheet` içinde `DisplayInExcel` olarak yazılan `Excel._Worksheet workSheet = excelApp.ActiveSheet` yerine `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Çağrıları `AutoFit` çünkü aynı yöntemi de açık atama olmadan varsayılan gerektirecek `ExcelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel yöntemidir. Aşağıdaki kod, atama gösterir.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
 2.  Varsayılan değiştirme ve tür bilgilerini katıştırma yerine PIA'ların kullanmak için genişletme **başvuruları** düğümünde **Çözüm Gezgini** seçip **Microsoft.Office.Interop.Excel** veya **Microsoft.Office.Interop.Word**.  
   
@@ -156,17 +156,17 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 1.  İki çağrıları değiştirin `AutoFit` içinde `DisplayInExcel` aşağıdaki deyimi.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
      <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Yöntemi her biri, isteğe bağlı, yedi değer parametresi vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, none, bazı veya tüm kullanımları için bağımsız değişkenleri sağlayın sağlar. Önceki tabloda parametreleri yalnızca biri için bir bağımsız değişken sağlanan `Format`. Çünkü `Format` ilk parametre parametre listesinde parametre adı sağlamanız gerekmez. Ancak, deyim parametre adı, aşağıdaki kodda gösterildiği gibi dahil olup olmadığını anlamak daha kolay olabilir.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
 2.  Sonuçları görmek için CTRL + F5 tuşlarına basın. Diğer biçimlere listelenen <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> sabit listesi.  
   
 3.  1. adım gerekli bağımsız değişkenler gösteren aşağıdaki kod ile deyiminde karşılaştırma [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] veya önceki sürümleri.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, tam bir örnek gösterir.  

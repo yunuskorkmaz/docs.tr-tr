@@ -1,17 +1,11 @@
 ---
-title: Arabirimleri - C# Programlama Kılavuzu
+title: 'Arabirimleri - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- interfaces [C#]
-- C# language, interfaces
+  - 'interfaces [C#]'
+  - 'C# language, interfaces'
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 26748902be1c67ed8032fca63ff39f3626a5d673
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681826"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -21,7 +15,7 @@ Arabirimleri kullanarak, bir sınıfta birden çok kaynaktan davranışı gibi d
   
 Bir arabirim kullanarak tanımladığınız [arabirimi](../../language-reference/keywords/interface.md) anahtar sözcüğü. Aşağıdaki örnekte gösterildiği gibi.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 Struct'ın adı geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-program/identifier-names.md). Kural gereği, arabirimi adlarını büyük harf ile başlayan `I`.
 

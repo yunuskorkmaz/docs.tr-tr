@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746279"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968731"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 Belirtilen sayıda deyim grubunu yineler.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  Aşağıdaki örnekte, `index` değişkeni 1 değeriyle başlatır ve sonra değerini bitiş döngünün her yineleme ile artırılır `index` 5 ulaşır.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  Aşağıdaki örnekte, `number` değişkeni 2'de başlar ve değerini sonra biten bir döngü her yinelemede 0,25 tarafından azaltılmış `number` 0 ulaşır. `Step` Bağımsız değişkeni `-.25` 0,25 döngünün her yinelemesinden şirket tarafından değeri azaltır.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  A [sırada... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md) veya [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md) ne zaman önceden deyimleri bir döngüde çalıştırılacak kaç kez tanımadığınız iyi çalışır. Ancak, ne zaman beklediğiniz zaman, belirli sayıda döngü çalıştırılacak bir `For`... `Next` döngü daha iyi bir seçimdir. Döngü girdiğinizde yineleme sayısını belirler.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>İç içe döngüleri  
  İç içe yerleştirebilirsiniz `For` içindeki başka bir döngü koyarak döngüleri. Aşağıdaki örnek, iç içe geçmiş gösterir `For`... `Next` adım farklı değerlere sahip yapılar. Dış döngü, her döngü için bir dize oluşturur. Döngünün her yinelemesinden için bir döngü sayaç değişkeni iç döngü azaltır.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  İç içe döngüleri, her döngü benzersiz olması gerekir `counter` değişkeni.  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bir genel listeden tüm öğeleri kaldırır. Yerine bir [her biri için... Sonraki deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md), örnekte gösterildiği bir `For`... `Next` azalan sırada yenileyen deyimi. Örneğin bu tekniği kullanır, çünkü `removeAt` yöntemi kaldırılan öğeyi sonra bir daha düşün dizin değerine sahip öğeleri neden olur.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek kullanılarak bildirilen bir sabit listesi üzerinden yinelenir bir [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, İşleç aşırı yüklemeleri için bir sınıf deyimi parametreleri kullanmak `+`, `-`, `>=`, ve `<=` işleçleri.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Collections.Generic.List%601>

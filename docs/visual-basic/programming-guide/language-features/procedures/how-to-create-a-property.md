@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734045"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970967"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Nasıl yapılır: Bir özelliği (Visual Basic) oluşturma
 Bir özellik tanımı arasında içine bir `Property` ifadesi ve bir `End Property` deyimi. Bu tanımı içinde tanımladığınız bir `Get` yordamı, bir `Set` yordamı veya her ikisi. Bu yordamlar özelliğin tüm kod arasındadır.  
@@ -54,11 +54,11 @@ Bir özellik tanımı arasında içine bir `Property` ifadesi ve bir `End Proper
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir tam adı, iki bağlı ad, ad ve Soyadı depolayan bir okuma/yazma özelliği oluşturur. Çağıran kod zaman okur `fullName`, `Get` yordam iki bağlı adları birleştirir ve tam adını döndürür. Çağıran kod yeni bir tam ad atarken `Set` yordamı iki bağlı adlarına sonu dener. Bir alan bulamazsa, tüm ad depolar.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  Aşağıdaki örnek özellik yordamları tipik çağrıları gösterir `fullName`. İlk çağrı özellik değerini ayarlayan ve ikinci çağrı alır.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

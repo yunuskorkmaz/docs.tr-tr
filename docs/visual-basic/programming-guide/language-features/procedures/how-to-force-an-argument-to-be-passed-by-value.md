@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706647"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970291"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Nasıl yapılır: Bağımsız değişkeni (Visual Basic) değere göre geçirilecek şekilde zorlama
 Yordam bildirimi geçirme mekanizması belirler. Bir parametre bildirilirse [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic bekliyor karşılık gelen bağımsız değişken başvuru ile geçirilecek. Bu yordam çağıran koddaki bağımsız değişken temel programlama öğenin değerini değiştirmek sağlar. Temel alınan öğe bu tür değişiklik karşı korumak istiyorsanız, geçersiz kılabilirsiniz `ByRef` geçirme mekanizmasında yordamı çağırma bağımsız değişken adı parantez içine alarak. Çağrısında bağımsız değişken listesini çevreleyen parantezler yanı sıra bu parantezler var.  
@@ -35,9 +35,9 @@ Yordam bildirimi geçirme mekanizması belirler. Bir parametre bildirilirse [ByR
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek geçersiz kılan bir `ByRef` parametre bildirimi. Zorlayan çağrısında `ByVal`, iki düzeyi parantez unutmayın.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Zaman `str` bağımsız değişken listesi içinde ek parantez içine `setNewString` yordamı çağıran koddaki değerini değiştiremez ve `MsgBox` "değiştirilemez, ByVal aktarılırsa" görüntüler. Zaman `str` içine alınmayan ek parantez içine yordamı, değiştirebilir ve `MsgBox` görüntüler "İnString bağımsız değişken için yeni bir değer budur."  
   

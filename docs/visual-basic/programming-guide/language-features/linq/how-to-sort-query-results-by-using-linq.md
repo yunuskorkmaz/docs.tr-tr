@@ -11,12 +11,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672779"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967795"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ (Visual Basic) kullanarak sorgu sonuçlarını sıralama
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır.  
@@ -69,7 +69,7 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
      Aşağıdaki kodu ekleyin `Load` veri Bağlamınızı özellikleri olarak sunulur ve sonuçları sıralamak tabloları sorgulamak için olay. Sorgu sonuçları azalan düzende müşteri siparişleri sayısına göre sıralar. Siparişler aynı sayıda olan müşteriler, artan düzende (varsayılan) şirket adına göre sıralanır.  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  Projenizi çalıştırma ve sonuçları görüntülemek için F5 tuşuna basın.  
   

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562758"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965546"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
 A *Boole ifadesi* değeri olarak değerlendirilen bir ifade olan [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` veya `False`. `Boolean` ifadeler çeşitli biçimlerde olabilir. Basit doğrudan karşılaştırma değeri olan bir `Boolean` değişkenini bir `Boolean` sabit değer, aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>İki anlamı = işleci  
  Dikkat atama ifadesi `newCustomer = True` önceki örnekte ifade olarak aynı görünür, ancak farklı bir işlev gerçekleştirir ve farklı şekilde kullanılır. Yukarıdaki örnekte, ifade `newCustomer = True` bir Boolean değeri temsil eder ve `=` oturum bir karşılaştırma işleci yorumlanır. Tek başına bir deyimde `=` oturum bir atama işleci yorumlanır ve sağdaki sol değişkenine bir değer atar. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  Daha fazla bilgi için bkz: [değer karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) ve [deyimleri](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -50,7 +50,7 @@ A *Boole ifadesi* değeri olarak değerlendirilen bir ifade olan [Boole veri tü
 ## <a name="short-circuiting-operators"></a>Kısa devre işleçleri  
  Mantıksal işleçler `AndAlso` ve `OrElse` olarak bilinen davranışlar *kısa devre*. Short-circuiting işleci sol işlenenin önce değerlendirir. Sol işlenen tüm ifadenin değerini belirlerse, program yürütme sağ ifade değerlendirmeden ilerler. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  Önceki örnekte, işlecin sol ifade değerlendirir `45 < 12`. Sol ifade için değerlendirdiğinden `False`, tüm mantıksal ifade değerlendirilmelidir `False`. Program yürütme, bu nedenle kodun içinde atlar `If` sağ ifade değerlendirme olmadan blok `testFunction(3)`. Bu örnek arama `testFunction()` tüm deyimin sol ifade falsifies olduğundan.  
   
@@ -59,7 +59,7 @@ A *Boole ifadesi* değeri olarak değerlendirilen bir ifade olan [Boole veri tü
 ### <a name="comparison-with-non-short-circuiting-operators"></a>Karşılaştırma işleçleri olmayan--kestirmeler  
  Bunun aksine, mantıksal işlecinin iki tarafı değerlendirilir, mantıksal işleçler `And` ve `Or` kullanılır. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  Önceki örneği çağrıları `testFunction()` sol ifadenin değerlendirdiği olsa bile `False`.  
   

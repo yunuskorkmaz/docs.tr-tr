@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128862"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971838"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Bulutta geçici hataları benimseyin
 
@@ -35,7 +35,7 @@ Benzer bir senaryo, HTTP Hizmetleri kullanan bir uygulama ortaya çıkabilir. Bu
 
 Bu teknikler HTTP kaynağı hem de veritabanı kaynaklarını kullanabilirsiniz. Böylece, bu teknikler Hizmetleri düzeyinde (HTTP) ve veri katmanı düzeyinde (TCP) Şekil 4-9'da uygulama 3 katmanlı mimarisini temel alır. Yalnızca bir tek uygulama katmanına ek (ek hizmet veya mikro hizmetler) veritabanı olarak kullanan tek parçalı bir uygulamada, veritabanı bağlantı düzeyinde geçici hataları işleme yeterli olabilir. Bu senaryoda, yalnızca belirli bir yapılandırma veritabanı bağlantısı gereklidir.
 
-Kullanmakta olduğunuz, .NET sürümüne bağlı olarak veritabanına erişen dayanıklı iletişimleri uygularken basit olabilir (örneğin, [Entity Framework 6 veya sonrası](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), bu yapılandırma adımlarından oluşur Veritabanı bağlantısı). Veya ek kitaplıklar gibi kullanmanız gerekebilir [geçici hata işleme uygulama bloğu](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (önceki sürümlerine yönelik .NET), veya hatta kendi kitaplığı uygulayın.
+Kullanmakta olduğunuz, .NET sürümüne bağlı olarak veritabanına erişen dayanıklı iletişimleri uygularken basit olabilir (örneğin, [Entity Framework 6 veya sonrası](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Bu, veritabanı bağlantısını yapılandırma adımlarından oluşur). Veya ek kitaplıklar gibi kullanmanız gerekebilir [geçici hata işleme uygulama bloğu](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (önceki sürümlerine yönelik .NET), veya hatta kendi kitaplığı uygulayın.
 
 HTTP yeniden deneme ve devre Kesiciler uygularken, .NET için zamanlayıcısının [Polly](https://github.com/App-vNext/Polly) .NET Framework 4.0, .NET Framework 4.5 ve .NET standart, .NET Core desteği içeren 1.1 kitaplığı.
 
@@ -49,11 +49,11 @@ Bulutta kısmi hata işleme stratejileri uygulama hakkında bilgi edinmek için 
 
 -   **Varlık çerçevesi bağlantı dayanıklılığı ve yeniden deneme mantığı (sürüm 6 ve üzeri)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **Geçici hata işleme uygulama bloğu**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Polly kitaplığını dayanıklı HTTP iletişimi**
 

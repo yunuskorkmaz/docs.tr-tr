@@ -2,12 +2,12 @@
 title: Zkratka
 description: Byref ve byref-like türleri hakkında F#, alt düzey programlama için kullanılır.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611587"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976557"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Tüm bu kuralların birlikte sahibi anlamına bir `inref` işaretçi işaret edi
 
 Amacı `outref<'T>` işaretçi gelen yalnızca okunmalıdır belirtmektir. Beklenmedik bir şekilde, `outref<'T>` değer adını rağmen temel alınan okuma izin verir. Bu, uyumluluk amacıyla kullanılır. Anlamsal olarak, `outref<'T>` farklı değildir `byref<'T>`.
 
-### <a name="interop-with-c"></a>C# ile birlikte çalışma #
+### <a name="interop-with-c"></a>C ile birlikte çalışma\#
 
 C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` döndürür. Aşağıdaki tabloda nasıl F# ne yorumlar C# gösterir:
 

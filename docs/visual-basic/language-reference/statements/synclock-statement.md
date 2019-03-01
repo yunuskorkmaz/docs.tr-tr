@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979820"
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
 Bir deyim bloğunu için özel bir kilit bloğu yürütmeden önce alır.  
@@ -81,13 +81,13 @@ End SyncLock
  Varsa `simpleMessageList` sınıfın tüm örnekleri, değişkenleri arasında iletilerinin bir listesini paylaşılan `messagesList` ve `messagesLast` olarak bildirilmesi `Shared`. Bu durumda, değişken `messagesLock` ayrıca olmalıdır `Shared`, her örnek için kullanılan tek kilit nesnesi böylece olacaktır.  
   
 ### <a name="code"></a>Kod  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Açıklama  
  Aşağıdaki örnek, iş parçacığı kullanır ve `SyncLock`. Sürece `SyncLock` deyimi, deyim bloğunu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı olur. Açıklama `SyncLock` ve `End SyncLock` bırakarak etkisini görmek için ifadeleri `SyncLock` anahtar sözcüğü.  
   
 ### <a name="code"></a>Kod  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>Açıklamalar  
   

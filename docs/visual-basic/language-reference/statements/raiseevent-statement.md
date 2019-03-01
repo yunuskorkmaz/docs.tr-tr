@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655016"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973307"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent Deyimi
 Tetikleyiciler bir olay, bir sınıf, form ya da belge içinde Modül düzeyinde bildirilmiş.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Olayı ortaya çıkar modülü içinde bildirilmedi, bir hata meydana gelir. Aşağıdaki kod parçası, bir olay bildirimi ve olay harekete geçirilen bir yordam gösterir.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  Kullanamazsınız `RaiseEvent` modülünde açıkça bildirilmeyen olayları yükseltmek için. Örneğin, tüm form devralma bir <xref:System.Windows.Forms.Control.Click> olaydan <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, kullanarak yükseltilemez `RaiseEvent` türetilmiş bir biçimde. Bildirirseniz bir `Click` olay isteğe bağlı olarak form modülünde formun kendi gölgeleri <xref:System.Windows.Forms.Control.Click> olay. Formun yine de çağırabilirsiniz <xref:System.Windows.Forms.Control.Click> çağırarak olay <xref:System.Windows.Forms.Control.OnClick%2A> yöntemi.  
   
@@ -63,12 +63,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Ekleme bir `WithEvents` değişken bildirimleri bölümüne `Form1` sınıfı.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kodu için kod ekleyin `Form1`. Oluşabilecek, gibi yinelenen yordamlarla değiştirin `Form_Load`, veya `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Önceki örneği çalıştırmak ve etiketli düğmeye tıklayın için F5 tuşuna basın **Başlat**. İlk metin kutusuna saniye sayısı başlar. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 79b07891d794200507cdb97a869992ef093aff23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648771"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979872"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# programcıları için bir özel durum tarafından etkilenebilecek bölümü kod tarafından kullanılır. İlişkili [catch](../../../csharp/language-reference/keywords/try-catch.md) blokları, oluşturulan özel durumları işlemek için kullanılır. A [son](../../../csharp/language-reference/keywords/try-finally.md) blok olup olmadığı bir özel durum bağımsız olarak çalışan kodu içeren `try` ayrılmış kaynakları serbest bırakmak gibi bloğu `try` blok. A `try` blok gerektiren bir veya daha fazla ilişkili `catch` blokları veya `finally` blok veya her ikisini de.  
   
  Aşağıdaki örneklerde gösterildiği bir `try-catch` deyimi, bir `try-finally` ifadesi ve bir `try-catch-finally` deyimi.  
   
- [!code-csharp[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#6)]  
   
- [!code-csharp[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#7)]  
   
- [!code-csharp[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
  A `try` olmadan engelleyecek bir `catch` veya `finally` blok bir derleyici hatasına neden olur.  
   
@@ -37,11 +37,11 @@ A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# p
   
 -   Oluşturun ve yeni, daha belirli bir özel durum.  
   
-     [!code-csharp[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
+     [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
 -   Kısmen için ek işleme iletmeden önce özel bir durumu işlemek istersiniz. Aşağıdaki örnekte, bir `catch` bloğu özel durumu yeniden atamadan önce bir hata günlüğü için bir giriş eklemek için kullanılır.  
   
-     [!code-csharp[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
+     [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally blokları  
  A `finally` blok içinde gerçekleştirilen eylemler temizlemek sağlayan bir `try` blok. Varsa, `finally` bloğun son, sonra `try` bloğu ve eşleşen `catch` blok. A `finally` bloğu her zaman çalışır, bağımsız olarak, bir özel durum olup olmadığını veya `catch` özel durum türüyle eşleşen bloğu bulundu.  
@@ -50,7 +50,7 @@ A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok, C# p
   
  Aşağıdaki örnekte, `finally` açılmış bir dosyayı kapatmak için kullanılan blok `try` blok. Dosya kapatılmadan hemen önce dosya tanıtıcısı durumu denetlenir dikkat edin. Varsa `try` blok dosyayı açamaz, dosya tanıtıcısı hala değerine sahip `null` ve `finally` blok kapatmak deneyin değil. Alternatif olarak, dosya başarıyla açılıp açılmadığını `try` bloğu `finally` blok açık dosyayı kapatır.  
   
- [!code-csharp[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
+ [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

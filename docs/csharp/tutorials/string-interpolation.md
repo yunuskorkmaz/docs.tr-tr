@@ -3,14 +3,14 @@ title: C# dize ilişkilendirme
 description: Dize ilişkilendirme ile C# dilinde bir sonuç dizesi olarak biçimlendirilmiş bir ifade sonuçları eklemeyi öğrenin.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727865"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976063"
 ---
-# <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
+# <a name="string-interpolation-in-c"></a>C'de dize ilişkilendirme\#
 
 Bu öğreticide nasıl kullanılacağını gösterir [dize ilişkilendirme](../language-reference/tokens/interpolated.md) biçimlendirmek ve ifade sonuçları bir sonuç dizesine eklemek için. Örnekler C# temel kavramları ve .NET türü biçimlendirme ile ilgili bilgi sahibi olduğunuz varsayılır. Dize ilişkilendirme veya .NET türü biçimlendirme için yeni başladıysanız, kullanıma [etkileşimli dize ilişkilendirme öğretici](../tutorials/intro-to-csharp/interpolated-strings.yml) ilk. . NET'te türleri biçimlendirme hakkında daha fazla bilgi için bkz. [NET'teki biçimlendirme türleri](../../standard/base-types/formatting-types.md) konu.
 

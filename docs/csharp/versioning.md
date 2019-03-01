@@ -3,14 +3,14 @@ title: C# sürüm oluşturma - C# Kılavuzu
 description: Sürüm oluşturma, C# ve .NET dillerinde nasıl çalıştığını anlamak
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243497"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965676"
 ---
-# <a name="versioning-in-c"></a>C# sürümü oluşturma #
+# <a name="versioning-in-c"></a>C sürüm oluşturma\#
 
 Bu öğreticide, hangi sürüm anlamına gelir. NET'te öğreneceksiniz. Ayrıca dikkat edilecek Etkenler öğreneceksiniz sürüm kitaplığınızı yanı sıra bir Kitaplığı'nın yeni bir sürüme yükseltme.
 

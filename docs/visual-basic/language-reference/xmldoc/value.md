@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 5aab2307a1967ea660282c7b324eaddfe798a155
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 89a2daad1c47ea8e2a045b2e22a9569e54086e8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857898"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970746"
 ---
 # <a name="value-visual-basic"></a>\<Değer > (Visual Basic)
 Bir özelliğin açıklamasını belirtir.  
@@ -33,7 +33,7 @@ Bir özelliğin açıklamasını belirtir.
 ## <a name="example"></a>Örnek  
  Bu örnekte `<value>` hangi değeri açıklamak için etiket `Counter` özelliği tutar.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

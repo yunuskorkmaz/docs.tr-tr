@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828377"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965234"
 ---
 # <a name="debugging-structures"></a>Hata Ayıklama Yapıları
+
 Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen yapıları açıklar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
@@ -25,7 +26,7 @@ Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen yapıları 
 
  [Clr_debuggıng_versıon yapısı](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) hata ayıklama amacıyla ortak dil çalışma zamanı (CLR) ürün sürümünü tanımlar.
 
- [Codechunkınfo yapısı1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) kod bellekte tek bir öbek temsil eder.
+ [Codechunkınfo yapısı](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) kod bellekte tek bir öbek temsil eder.
 
  [Cor_actıve_functıon](cor-active-function-structure.md) bir iş parçacığının çerçevelerde şu an etkin olan işlevler hakkında bilgiler içerir.
 
@@ -71,9 +72,8 @@ Bu bölümde, hata ayıklama API'SİNİN kullandığı yönetilmeyen yapıları 
 
  [StackTrace_SimpleContext yapısı](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) tam yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` yapısı.
 
-
-
 ## <a name="related-sections"></a>İlgili Bölümler
+
  [Hata Ayıklama Coclass’ları](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

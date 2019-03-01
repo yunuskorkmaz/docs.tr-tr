@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: dc05b3acda5183ddc9a7c0bdddf08a3934c298f6
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738922"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979469"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -42,11 +42,11 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
   
  Bir sınıf için oluşturucu oluşturmak için adlandırılmış bir yordam oluşturma `Sub New` sınıf tanımında herhangi bir yerde. Parametreli bir kurucu oluşturmak için bağımsız değişken adları ve veri türlerini belirtin `Sub New` gibi aşağıdaki kodda gösterildiği gibi diğer her türlü yordam bağımsız değişkenleri belirtmeniz gerekir:  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  Oluşturucular sık, aşağıdaki kodda gösterildiği gibi aşırı:  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  Başka bir sınıftan türetilmiş bir sınıf tanımladığınızda, ilk satır bir oluşturucunun taban sınıf parametre almayan bir erişilebilir oluşturucuya sahip olmadığı sürece temel sınıf oluşturucusuna bir çağrı olması gerekir. Örneğin, yukarıdaki oluşturucu içeren temel sınıf için bir çağrı olabilir `MyBase.New(s)`. Aksi takdirde, `MyBase.New` isteğe bağlıdır ve Visual Basic çalışma zamanı örtük olarak çağırır.  
   

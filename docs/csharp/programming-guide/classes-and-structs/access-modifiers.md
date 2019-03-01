@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731705"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977571"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
@@ -33,7 +33,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka kodda
   
  Aşağıdaki örnekler, bir tür ve üye erişim değiştiricileri belirtmeniz göstermektedir:  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  Tüm erişim değiştiricileri tüm türleri veya üyeleri tüm bağlamlarda tarafından kullanılabilir ve bazı durumlarda bir tür üyesi erişilebilirliği kapsayan türü erişilebilirliğini tarafından sınırlanır. Aşağıdaki bölümler, erişilebilirlik hakkında daha fazla ayrıntı sağlar.  
   
@@ -59,7 +59,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka kodda
   
  Uygun anahtar sözcüğü bir sınıf veya yapı üyesi için erişim düzeyi ayarlamak için üye bildirimi için aşağıdaki örnekte gösterildiği gibi ekleyin.  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  Korumalı dahili erişilebilirlik düzeyi korumalı veya iç, not anlamına gelir. korumalı ve iç. Diğer bir deyişle, korumalı, dahili bir üye aynı derlemedeki türetilmiş sınıflar da dahil olmak üzere herhangi bir sınıftan erişilebilir. Aynı derlemenin yalnızca türetilmiş sınıflarda erişilebilirlik sınırlamak için sınıfı iç bildirmek ve üyeleri protected olarak bildirin. Ayrıca, C# 7.2 ile başlayarak, kapsayan sınıfı iç yapmaya gerek kalmadan aynı sonucu elde etmek için özel bir korumalı erişim değiştiricisi kullanabilirsiniz.  

@@ -2,20 +2,14 @@
 title: Visual Basic'de İşleçler ve İfadeler
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 9d63a458ed747db0a63d2c648460a1a21f7cfbc8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739000"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlem gerçekleştiren bir kod öğedir. Değişkenleri, sabitleri, sabit değerleri, özellikleri, değeri öğeleri dahil döndürür `Function` ve `Operator` yordamları ve ifadeler.  
@@ -58,7 +52,7 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
   
  Aşağıdaki örnekte gösterildiği gibi birkaç işleç bir tek ifadesi veya deyimi, eylemler gerçekleştirebilirsiniz.  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  Önceki örnekte, Visual Basic ifade işlemlerinde atama işlecinin sağ tarafında gerçekleştirir (`=`), ardından sonuç değerini değişkenine atar `x` soldaki. Bir ifade ancak bir anlayış birleştirilebilir işleçleri dizi pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığınızdan emin olmak gereklidir.  
   

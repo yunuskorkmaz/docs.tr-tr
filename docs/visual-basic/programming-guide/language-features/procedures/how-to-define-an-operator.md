@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738662"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973294"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir işleci tanımlama
 Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını tanımlayın (gibi `*`, `<>`, veya `And`) bir veya iki işlenenden olduğunda sınıf veya yapı türü.  
@@ -30,11 +30,11 @@ Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını 
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek tanımlar `+` işleci bir yapı için adlı `height`. Yapı ayak ve inç cinsinden yüksekliklerini kullanır. Bir *inç* 2,54 santimetre ve bir *altbilgi* 12 inçtir. Normalleştirilmiş değerleri (inç < 12.0) sağlamak için oluşturucu gerçekleştirir *modül* aritmetik 12. `+` İşleci normalleştirilmiş değerler oluşturmak için oluşturucu kullanır.  
   
- [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
  Yapıyı test edebilirsiniz `height` aşağıdaki kod ile.  
   
- [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
   
   
 ## <a name="see-also"></a>Ayrıca bkz.

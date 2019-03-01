@@ -2,12 +2,12 @@
 title: Dilim (F#)
 description: Varolan dilimleri kullanma hakkında bilgi edinin F# veri türleri ve diğer veri türleri için kendi dilim tanımlama.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970121"
 ---
 # <a name="slices"></a>Dilimler
 
@@ -95,7 +95,7 @@ F# Çekirdek kitaplığı tanımlamıyor `GetSlice`3B diziler için. Bu veya dah
 
 F# Çekirdek kitaplığı dilimler sınırlı sayıda türleri için tanımlar. Daha fazla veri türleri için dilim tanımlamak istiyorsanız, tür tanımını kendisi veya bir tür uzantısında bunu yapabilirsiniz.
 
-Örneğin, işte dilimleri nasıl tanımlayabilir <xref:System.ArraySegment`1> sınıfı için uygun veri işlemesine izin vermek için:
+Örneğin, işte dilimleri nasıl tanımlayabilir <xref:System.ArraySegment%601> sınıfı için uygun veri işlemesine izin vermek için:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Satır içi kullanım gerekli değilse, kutulama önlemek için kullanın
 
-Aslında bir yapı türü dilimleri tanımlıyorsanız, öneririz, `inline` `GetSlice` üyesi. F# Derleyici dilimleme sonucunda herhangi bir yığın ayırma önleme isteğe bağlı bağımsız değişkenler yerine iyileştirir. Bu yapılar gibi dilimleme için kritik öneme <xref:System.Span`1> , olması ayrılamaz yığında.
+Aslında bir yapı türü dilimleri tanımlıyorsanız, öneririz, `inline` `GetSlice` üyesi. F# Derleyici dilimleme sonucunda herhangi bir yığın ayırma önleme isteğe bağlı bağımsız değişkenler yerine iyileştirir. Bu yapılar gibi dilimleme için kritik öneme <xref:System.Span%601> yığınında ayrılamaz.
 
 ```fsharp
 open System

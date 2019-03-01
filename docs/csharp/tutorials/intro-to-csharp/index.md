@@ -1,16 +1,10 @@
 ---
-title: Giriş C# -etkileşimli öğreticileri
-description: Bilgi C# tarayıcınızda ve kendi geliştirme ortamınızda ile çalışmaya başlama
+title: 'Giriş C# -etkileşimli öğreticileri'
+description: 'Bilgi C# tarayıcınızda ve kendi geliştirme ortamınızda ile çalışmaya başlama'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186155"
 ---
-# <a name="introduction-to-c"></a>GirişC# #
+# <a name="introduction-to-c"></a>C giriş\#
 
 Hoş Geldiniz giriş C# öğreticiler. Bu, tarayıcınızda çalıştırabilirsiniz etkileşimli dersleri başlayın.
 

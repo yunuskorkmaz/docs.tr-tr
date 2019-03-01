@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 741374cc375e33868239161af23a38af7680b290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f13964c09b60d02cd5e9f5fc9e2998d7758c3d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684073"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979313"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirtir.  
@@ -53,7 +53,7 @@ Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirti
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tanımlayan bir `ReadOnly` özelliği üzerinde bir çalışan işe tarih. Bu özellik değerini dahili olarak sınıf deposu bir `Private` sınıf içinde değişken ve yalnızca kod, bu değeri değiştirebilirsiniz. Ancak, özelliğidir `Public`, ve sınıfı erişebilen herhangi bir kod özelliği okuyabilirsiniz.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
  `ReadOnly` Bu bağlamda değiştirici kullanılabilir:  
   

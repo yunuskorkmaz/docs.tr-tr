@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 081359f32438c6474fe5c229634b60969e25a24e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631509"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965390"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML Özniteliği Axis Özelliği (Visual Basic)
 İçin bir öznitelik değeri erişim sağlayan bir <xref:System.Xml.Linq.XElement> nesne veya koleksiyonu içindeki ilk öğeye <xref:System.Xml.Linq.XElement> nesneleri.  
@@ -65,7 +65,7 @@ object.@<attribute>
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte adlı XML öznitelik değerleri, alınacağı gösterilmektedir `type` adlı XML öğesi bir koleksiyondan `phone`.  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   
@@ -80,7 +80,7 @@ object.@<attribute>
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, hem bir XML öğesi için öznitelikleri bildirimli olarak, XML ve dinamik olarak örneğine bir öznitelik ekleyerek bir parçası olarak oluşturma işlemi gösterilmektedir bir <xref:System.Xml.Linq.XElement> nesne. `type` Özniteliği bildirimli olarak oluşturulur ve `owner` özniteliği dinamik olarak oluşturulur.  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   
@@ -91,7 +91,7 @@ object.@<attribute>
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek açılı ayraç sözdizimini XML özniteliğinin değerini almak için kullanır. `number-type`, Visual Basic'te geçerli bir tanımlayıcı değil.  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bildirir `ns` olarak bir XML ad alanı öneki. XML değişmez değer oluşturun ve ilk alt düğüm tam adı ile erişmek için bir ad alanı öneki kullanır "`ns:name`".  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
+ [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   

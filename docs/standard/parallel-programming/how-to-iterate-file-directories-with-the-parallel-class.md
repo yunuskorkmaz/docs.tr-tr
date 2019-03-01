@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme'
+title: 'Nasıl yapılır: Paralel sınıfla dosya dizinlerini yineleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596383"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965273"
 ---
-# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
+# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel sınıfla dosya dizinlerini yineleme
 Çoğu durumda, dosya yineleme kolayca paralel bir işlemdir. Konu [nasıl yapılır: PLINQ ile dosya dizinlerini yineleme](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) birçok senaryo için bu görevi gerçekleştirmek için en kolay yolu gösterir. Ancak, kodunuzu türlerde dosya sistemine erişirken oluşabilecek özel durumları ile uğraşmak zorunda kaldığında zorluklar ortaya çıkabilir. Aşağıdaki örnek, sorunun bir yaklaşımı gösterir. Tüm dosya ve klasörlerin belirtilen dizinin altındaki geçirmek için bir yığın tabanlı yineleme kullanır ve catch ve çeşitli özel durumları işlemek için kodunuzu sağlar. Elbette, özel durumları işlemeye size kalmıştır yoludur.  
   
 ## <a name="example"></a>Örnek  
@@ -30,7 +30,7 @@ ms.locfileid: "45596383"
   
  Yerel örnek kullanan `fileCount` işlenen dosyalarının toplam sayısını sayısını korumak için değişkeni. Değişken aynı anda birden çok görev tarafından erişilebilir olduğundan erişimi çağırarak eşitlenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> yöntemi.  
   
- Ana üzerinde bir özel durum oluşturulursa, iş parçacığı başlatılır iş parçacıkları unutmayın <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi çalışmaya devam. Bu iş parçacıkları durdurmak için özel durum işleyicileri Boolean değişkenini ve değerini paralel döngü her yinelemede denetleyin. Bir özel durum değeri gösterir kullanırsanız <xref:System.Threading.Tasks.ParallelLoopState> durdurma veya döngüden kesme değişkeni. Daha fazla bilgi için [nasıl yapılır: durdurma veya döngüden bir Parallel.For döngüsü](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
+ Ana üzerinde bir özel durum oluşturulursa, iş parçacığı başlatılır iş parçacıkları unutmayın <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi çalışmaya devam. Bu iş parçacıkları durdurmak için özel durum işleyicileri Boolean değişkenini ve değerini paralel döngü her yinelemede denetleyin. Bir özel durum değeri gösterir kullanırsanız <xref:System.Threading.Tasks.ParallelLoopState> durdurma veya döngüden kesme değişkeni. Daha fazla bilgi için [nasıl yapılır: Durdurma veya döngüden bir Parallel.For döngüsü](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

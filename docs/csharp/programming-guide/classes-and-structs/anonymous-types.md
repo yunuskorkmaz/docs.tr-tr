@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729765"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971175"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan tek bir nesnede salt okunur özellikler kümesi kapsüllemek için kullanışlı bir yol sağlar. Tür adı derleyici tarafından oluşturulan ve kaynak kod düzeyinde kullanılabilir değildir. Her bir özellik türü, derleyici tarafından algılanır.  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Anonim türdeki üye adları belirtmezseniz, derleyici bunları başlatmak için kullanılan özellik adıyla aynı anonim türdeki üyeleri sağlar. Önceki örnekte gösterilen şekilde bir ifadeyle başlatılan bir özellik için bir ad sağlamanız gerekir. Aşağıdaki örnekte, anonim tür özelliklerini adlarıdır `Color` ve `Price`.  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  Bir değişkeni başlatmak için anonim bir tür kullandığınızda, genellikle, değişken türü örtük olarak belirlenmiş yerel değişken olarak kullanarak bildirdiğiniz [var](../../../csharp/language-reference/keywords/var.md). Yalnızca derleyicinin erişim anonim tür temel adına sahip olduğundan Değişken bildiriminde tür adı belirtilemez. Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

@@ -3,14 +3,14 @@ title: İçindeki numaralandırır C# -giriş C# Öğreticisi
 description: Bilgi C# sayısal türler, özellikler ve yöntemler keşfetmeye tarafından.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197463"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978624"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>İntegral ve kayan nokta numaraları ile düzenlemeC# #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>İntegral ve kayan nokta numaralarını c ile düzenleme\#
 
 Bu öğretici sayısal türlerle ilgili öğretir C# etkileşimli olarak. Az miktarda kod yazacaksınız ve ardından derleyin ve kod çalıştırması. Öğreticiyi dersler ve içinde matematik işlemlerini inceleyen bir dizi içeren C#. Bu dersler size C# dilinin temellerini öğretin.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9227d10e2c12f88d33b283d1f1328d628b64afa0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903893"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975738"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 ## <a name="what-is-a-parallel-query"></a>Paralel Sorgu nedir?  
@@ -33,7 +33,7 @@ ms.locfileid: "55903893"
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable Sınıfı  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Sınıfı hemen hemen tüm PLINQ işlevselliğini gösterir.  Bu ve diğer <xref:System.Linq?displayProperty=nameWithType> ad alanı türleri, System.Core.dll dosyasına derlenir derlenir. Visual Studio'daki varsayılan C# ve Visual Basic projeleri derleme başvurusu hem ad alanını içeri aktarır.  
   
- <xref:System.Linq.ParallelEnumerable> Bunu her birini paralelleştirmeye çalışmasa LINQ to Objects'in desteklediği tüm standart sorgu işleçlerinin uygulamalarını içerir. İle aşina değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [LINQ'e giriş](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
+ <xref:System.Linq.ParallelEnumerable> Bunu her birini paralelleştirmeye çalışmasa LINQ to Objects'in desteklediği tüm standart sorgu işleçlerinin uygulamalarını içerir. İle aşina değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [LINQ'e giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) ve [Lınq'ye giriş (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).  
   
  Standart sorgu işleçler ek olarak <xref:System.Linq.ParallelEnumerable> sınıfı, bir paralel yürütmeye özel davranışları etkinleştirme yöntemleri kümesi içerir. PLINQ'ya özgü bu yöntemler aşağıdaki tabloda listelenmiştir.  
   

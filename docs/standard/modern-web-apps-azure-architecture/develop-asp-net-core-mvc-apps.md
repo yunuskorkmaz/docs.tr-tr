@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827892"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978338"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -172,7 +172,7 @@ Uygulama Ayrıntıları uygulamadan ayırma başka bir yaklaşım, uygulamanın 
 
 ### <a name="feature-organization"></a>Özellik kuruluş
 
-Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler olarak adlandırılır veya [özellik dilimleri](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (Ayrıca bkz: [Dikey dilimleri](https://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler olarak adlandırılır veya [özellik dilimleri](https://msdn.microsoft.com/magazine/mt763233.aspx) (Ayrıca bkz: [Dikey dilimleri](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC, bu amaçla alanlarını destekler. Alanlara kullanarak denetleyicileri ve görünümleri klasörleri (aynı zamanda ilişkili herhangi bir model) her alan klasördeki ayrı kümeleri oluşturabilirsiniz. Şekil 7-1 alanlara kullanarak bir örnek klasör yapısını gösterir.
 
@@ -311,7 +311,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin hakkında [gerçek dünya ASP.NET Core MVC filtreleri](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin hakkında [gerçek ASP.NET Core MVC filtreleri](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Başvuruları – uygulamaları yapılandırma
 >

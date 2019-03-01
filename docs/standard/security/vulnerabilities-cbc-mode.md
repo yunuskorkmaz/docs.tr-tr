@@ -4,12 +4,12 @@ description: Algılama ve doldurmayı kullanarak Şifre blok zincirleme (CBC) mo
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066187"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974295"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
 
@@ -92,7 +92,7 @@ Kendi ileti biçimi değiştirebilirsiniz ancak kimlik doğrulamasız CBC şifre
   - Ayrıca, burada saldırganın birden çok kez farklı ileti uzaklığı ile şifrelenmiş aynı düz metin zorlayacak durumlarda düz metin kurtarma da engellemez.
 - Şifre çözme çağrısı zamanlama sinyal Donuklaştır değerlendirmesi kapısı:
   - Durma süresini hesaplama şifre çözme işlemi doldurma içeren veri segmenti için gereken en uzun süreyi aşan en az olmalıdır.
-  - Saat hesaplamaları kılavuzunda göre yapılmalıdır [yüksek çözünürlüklü zaman damgaları alınırken](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), kullanarak değil <xref:System.Environment.TickCount?displayProperty=nameWithType> (tabi Top-üzerinden/taşma) veya iki sistem zaman damgaları (tabi NTP ayarlama çıkararak hatalar).
+  - Saat hesaplamaları kılavuzunda göre yapılmalıdır [yüksek çözünürlüklü zaman damgaları alınırken](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), kullanarak değil <xref:System.Environment.TickCount?displayProperty=nameWithType> (tabi Top-üzerinden/taşma) veya iki sistem zaman damgaları (tabi NTP ayarlama çıkararak hatalar).
   - Saat hesaplamaları tüm potansiyel özel durumlar dahil olmak üzere şifre çözme işlemi tamamlanmıyorsa yönetilmelidir veya C++ uygulamaları, yalnızca sona sıfır.
   - Başarı veya başarısızlık henüz belirlendiyse, zamanlama kapısı süresi dolduğunda, hata döndürmesi gerekir.
 - Kimliği doğrulanmamış şifre çözme işlemi Hizmetleri "geçersiz" iletileri hakkında güncelleştirmekte gelen olduğunu algılamak için bir izleme olması gerekir.
@@ -103,7 +103,7 @@ Kendi ileti biçimi değiştirebilirsiniz ancak kimlik doğrulamasız CBC şifre
 Windows şifreleme karşı yerleşik programları için: Sonraki nesil (CNG) kitaplığı:
 
 - Şifre çözme çağrıdır [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), belirten `BCRYPT_BLOCK_PADDING` bayrağı.
-- Anahtar tanıtıcısı çağırarak başlatılmış [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) ile [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) kümesine `BCRYPT_CHAIN_MODE_CBC`.
+- Anahtar tanıtıcısı çağırarak başlatılmış [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) ile [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) kümesine `BCRYPT_CHAIN_MODE_CBC`.
   - Bu yana `BCRYPT_CHAIN_MODE_CBC` etkilenen varsayılan kod değil atamış herhangi bir değer `BCRYPT_CHAINING_MODE`.
 
 Eski Windows şifreleme API üzerinde derlenmiş programlar için:

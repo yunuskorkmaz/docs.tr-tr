@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 3520c78df1593f72a144d70238f0fd0c763cdd64
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3dce7e4bce0b056437445b92f52f6c6360844289
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835804"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966144"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -63,9 +63,9 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2.  Aşağıdaki `Imports` deyimleri (Visual Basic) veya `using` zaten yoksa, kod dosyasının en üstüne yönergeleri (C#).  
   
-     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
+     [!code-vb[csOfficeWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#1)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Banka hesabı listesini oluşturmak için  
   
@@ -73,23 +73,23 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2.  Tanımını değiştirin `Account` aşağıdaki kodla sınıfı. Sınıf tanımları kullanın *otomatik uygulanan Özellikler*. Daha fazla bilgi için [Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
 3.  Oluşturmak için bir `bankAccounts` iki hesap içeren liste için aşağıdaki kodu ekleyin `ThisAddIn_Startup` yönteminde *ThisAddIn.vb* veya *ThisAddIn.cs*. Liste bildirimlerini *koleksiyon başlatıcıları*. Daha fazla bilgi için [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-vb[csOfficeWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#3)]  
   
 ### <a name="to-export-data-to-excel"></a>Verileri Excel'e aktarmak için  
   
 1.  Aynı dosyada, aşağıdaki yöntemi ekleyin `ThisAddIn` sınıfı. Yöntemi, bir Excel çalışma kitabı oluşturun ayarlar ve için verileri dışarı aktarır.  
   
-     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-vb[csOfficeWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#4)]  
   
      Bu yöntemi, iki yeni C# özellikleri kullanılır. Bu özelliklerin her ikisi de Visual Basic'te zaten mevcut.  
   
@@ -99,11 +99,11 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
     -   `Range` Ve `Offset` özelliklerini [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) nesne kullanım *özellikleri dizine* özelliği. Bu özellik, aşağıdaki tipik C# sözdizimi ile bu özellikler COM türünden kullanmasını sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan kaldırır, nesne `Value2` özelliği. `Value` Özelliği tarihine, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.  
   
-         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   
          Dilin önceki sürümlerinde aşağıdaki özel sözdizimini gereklidir.  
   
-         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#6)]  
   
          Dizinli Özellikler kendi oluşturulamıyor. Özelliği, yalnızca mevcut Dizinlenmiş özelliklerin tüketimini destekler.  
   
@@ -111,15 +111,15 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel` İçeriği sığdırmak için sütun genişliklerini ayarlamak için.  
   
-     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
      C# başka bir özellik bu eklemeleri gösterir: değerlendirmesini `Object` döndürülen Office gibi COM konaklarından türü yokmuş gibi [dinamik](../../../csharp/language-reference/keywords/dynamic.md). Bu otomatik olarak gerçekleşir, **birlikte çalışma türlerini katıştır** varsayılan değerine ayarlanır `True`, ya da eşdeğer, ne zaman derlemesi tarafından başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği. Tür `dynamic` geç bağlama, zaten Visual Basic'te kullanılabilir izin verir ve Visual C# 2008 ve dilin önceki sürümlerinde gerekli açık atama önler.  
   
      Örneğin, `excelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi. Olmadan `dynamic`, tarafından döndürülen nesne dönüştürmelisiniz `excelApp.Columns[1]` örneği olarak `Range` çağırmadan önce yöntemi `AutoFit`.  
   
-     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]  
   
      Birlikte çalışma türlerini katıştırma hakkında daha fazla bilgi için yordam "PIA başvurusu bulmak için" ve "PIA bağımlılık geri yüklemek için" bölümüne bakın. Hakkında daha fazla bilgi için `dynamic`, bkz: [dinamik](../../../csharp/language-reference/keywords/dynamic.md) veya [türünü kullanarak dinamik](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -127,9 +127,9 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 1.  Sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` yöntemi. Çağrı `DisplayInExcel` iki bağımsız değişken içeriyor. İlk bağımsız değişken işlenecek hesaplarının listesi adıdır. İkinci bağımsız değişkeni nasıl işlenecek verileri olduğunu tanımlayan bir çok satırlı lambda ifadesidir. `ID` Ve `balance` her hesap için değerleri, bitişik hücrelerde görüntülenir ve Bakiye küçükse sıfır satır kırmızı renkte görüntülenir. Daha fazla bilgi için [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]  
   
 2.  Programı çalıştırmak için F5 tuşuna basın. Hesaplarından veri içeren bir Excel çalışma sayfası görünür.  
   
@@ -137,9 +137,9 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 1.  Sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` Excel çalışma kitabının bağlantısını içeren bir Word belgesi oluşturmak için yöntemi.  
   
-     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]  
   
      Bu kod, C# ' deki yeni özelliklerin bazılarını gösterir: atlamak için özelliği `ref` anahtar sözcüğü COM programlama, adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler. Bu özellikler, Visual Basic'te zaten mevcut. [Denetlemeye](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) yöntemi yedi parametresi, isteğe bağlı başvuru parametreleri tanımlanan tüm vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler adıyla erişmek ve bu parametreleri yalnızca bağımsız değişken göndermemeniz için istediğiniz parametreleri belirtmek etkinleştirin. Bu örnekte, bağımsız değişkenleri Panosu'ndaki çalışma kitabı bağlantısını oluşturulması gerektiğini belirtmek için gönderilen (parametre `Link`) ve bağlantı Word belgesinde bir simge olarak görüntülenecek olan (parametre `DisplayAsIcon`). Visual C# ayrıca sayesinde atlamak `ref` bu bağımsız değişkenler için anahtar sözcüğü.
   

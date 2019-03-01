@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655991"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973281"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 XML değişmez değerleri ve XML eksen özellikleri kullanılmak üzere XML ad alanı öneklerini alır.  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bir varsayılan XML ad alanı ve bir XML ad alanı öneki ile tanımlanan aktarır `ns`. Ardından, her iki ad alanlarını XML değişmez değerlerini oluşturur.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek XML ad alanı öneki alır `ns`. Ardından, ad alanı öneki kullanıyor ve öğenin son formunu görüntüleyen bir XML değişmez değer oluşturur.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   
@@ -82,7 +82,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek XML ad alanı öneki alır `ns`. XML değişmez değer oluşturun ve ilk alt düğüm tam adı ile erişmek için bir ad alanı öneki kullanır `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  Bu kod, aşağıdaki metni görüntüler:  
   

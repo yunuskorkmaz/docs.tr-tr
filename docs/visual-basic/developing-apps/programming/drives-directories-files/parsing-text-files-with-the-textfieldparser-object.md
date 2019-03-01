@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 09821e9b1985913b7433b070ae19c4818265926e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585408"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969745"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>(Visual Basic) TextFieldParser nesnesiyle metin dosyalarını ayrıştırma
 `TextFieldParser` Ayrıştırmak için ve günlük dosyaları veya eski bir veritabanı bilgileri gibi bir metin ayrılmış genişlikte sütun olarak yapılandırılmış çok büyük bir dosya işlem nesnesi sağlar. Bir metin dosyası ayrıştırma `TextFieldParser` parse metodunu metin alanlarını ayıklamak için kullanılan ayrılmış dizeleri simgeleştirilecek dize işleme yöntemlerini benzer olmakla birlikte, bir metin dosyası içinde yineleme için benzer.  
@@ -19,11 +19,11 @@ ms.locfileid: "54585408"
 ## <a name="parsing-different-types-of-text-files"></a>Farklı türde metin dosyalarını ayrıştırma  
  Metin dosyaları, virgül veya bir sekme alanı gibi karakteriyle ayrılmış çeşitli genişliğinin alanları olabilir. Tanımlama `TextFieldType` ve kullanır aşağıdaki örnekte olduğu gibi bir sınırlayıcı `SetDelimiters` yöntemi, bir sekmeyle ayrılmış metin dosyası tanımlamak için:  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
  Diğer metin dosyaları sabit alan genişlikleri olabilir. Böyle durumlarda tanımlamanız gerekir. `TextFieldType` olarak `FixedWidth` ve aşağıdaki örnekte olduğu gibi her bir alanın genişlikleri tanımlayın. Bu örnekte `SetFieldWidths` metin sütunları tanımlamak için yöntem: ilk sütun 5 karakter geniş değilse, 10 saniyedir, 11'in altında üçüncü ve dördüncü değişken genişliğidir.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
  Biçim tanımlandıktan sonra dosyası aracılığıyla döngü kullanarak `ReadFields` sırayla her satırı işlemek için yöntemi.  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messags
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 4b4210983aa5bd57f1b0a89f2f06f089e98670f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c12d0cde7d8128400769cd2e93361bb10e08f59b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594957"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967028"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>Nasıl yapılır: Günlük iletileri (Visual Basic) yazma
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızla ilgili bilgileri günlüğe kaydetmek için nesneleri. Bu örnek nasıl kullanılacağını gösterir `My.Application.Log.WriteEntry` izleme bilgileri günlüğe kaydetmek için yöntemi.  
@@ -19,7 +19,7 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızla ilgili bilgi
 ## <a name="example"></a>Örnek  
  Bu örnekte `My.Application.Log.WriteEntry` izleme bilgilerini yazmak için yöntemi.  
   
- [!code-vb[VbVbalrMyApplicationLog#11](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-write-log-messages_1.vb)]  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Günlüğe yazma veri kullanıcı parolalar gibi hassas bilgiler içermediğinden emin olun. Daha fazla bilgi için [uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  

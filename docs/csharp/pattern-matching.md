@@ -3,14 +3,14 @@ title: Desen eşleştirme C# Kılavuzu
 description: Desen eşleştirme ifadelerinde C# öğrenin
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522032"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969990"
 ---
-# <a name="pattern-matching"></a>Desen Eşleştirme #
+# <a name="pattern-matching"></a>Desen Eşleştirme
 
 Desenler test değeri belirli bir sahip *şekli*ve *ayıklamak* eşleşen şekil sahip olduğunda bu değerden daha fazla bilgi. Desen eşleştirme bugün kullanmakta olduğunuz algoritmaları için daha kısa bir söz dizimi sağlar. Zaten mevcut söz dizimini kullanarak algoritmaları desen de oluşturun. Yazdığınız `if` veya `switch` test değerleri deyimleri. Ardından bu deyimleri eşleştiğinde ayıklayın ve bu değer bilgileri kullanın. Yeni sözdizimi öğeleri, zaten alışık deyimleri uzantılarıdır: `is` ve `switch`. Bu yeni uzantılar bir değer test etme ve bu bilgileri ayıklamak birleştirin.
 
@@ -36,7 +36,7 @@ C# 7.0 önce bir dizide her tür test gerekecektir `if` ve `is` ifadeleri:
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-Yukarıdaki kod, klasik bir ifade olduğunu *türü deseni*: bir değişkenin türünü ve bu türüne göre farklı bir eylem gerçekleştirmesine belirlemek için test ettiğiniz.
+Yukarıdaki kod, klasik bir ifade olduğunu *türü deseni*: Bir değişken türünü belirlemek için test etme ve bu türüne göre farklı bir eylem gerçekleştirmesine.
 
 Bu kod daha basit hale uzantılarını kullanarak `is` ifade bir değişken ise test atamak için başarılı olur:
 
@@ -111,7 +111,7 @@ Son olarak, ekleyebileceğiniz bir `null` bağımsız değişken değil emin olm
 
 Giriş `var` desen eşleşmesi için eşleşmesi ifadelerden biri tanıtan yeni kurallar.
 
-İlk kuralı olan `var` bildirimi izleyen normal türü çıkarım kuralları: türü anahtar ifadenin statik türü olarak algılanır. Bu kuraldan türü her zaman eşleşir.
+İlk kuralı olan `var` bildirimini normal tür çıkarımı kurallarını izler: Türü, anahtar ifadenin statik türü olarak algılanır. Bu kuraldan türü her zaman eşleşir.
 
 İkinci kuralı olan bir `var` bildirimi, diğer tür deseni ifadeler içeren null denetimi sahip değil. Bu değişkeni boş olabilir ve bu durumda null denetimi gereklidir anlamına gelir.
 

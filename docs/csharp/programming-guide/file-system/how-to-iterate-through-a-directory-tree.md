@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613850"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976336"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Bir dizin ağacı ile yineleme (C# Programlama Kılavuzu)
 Her iç içe geçmiş alt dizinde bir belirtilen kök klasöre herhangi derinliği her dosyaya erişmek deyimi "dizin ağacı yineleme" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Yalnızca dosya veya alt dizini olarak adını alabilirsiniz bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  İşlenen belirli özel durumları ve her bir dosya veya klasör üzerinde gerçekleştirilen belirli eylemler yalnızca örnek olarak verilmiştir. Belirli gereksinimlerinizi karşılamak için bu kodu değiştirmeniz gerekir. Daha fazla bilgi için koddaki açıklamalara bakın.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, özyineleme kullanmadan dosya ve klasörleri dizin ağacı ile yineleme gösterilmektedir. Bu tekniği kullanan genel <xref:System.Collections.Generic.Stack%601> son giren ilk çıkar (LIFO) yığında olan koleksiyon türü.  
   
  İşlenen belirli özel durumları ve her bir dosya veya klasör üzerinde gerçekleştirilen belirli eylemler yalnızca örnek olarak verilmiştir. Belirli gereksinimlerinizi karşılamak için bu kodu değiştirmeniz gerekir. Daha fazla bilgi için koddaki açıklamalara bakın.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  Genel olarak, uygulamanızı açmak için izni olup olmadığını belirlemek için her klasör test çok zaman alır. Bu nedenle, kod örneği bu işlemde bölümü yalnızca kapsayan bir `try/catch` blok. Değiştirebileceğiniz `catch` izinlerinizi yükseltmek ve yeniden erişmek deneyin bir klasöre erişimi reddedildiğinde, böylece engelleyin. Bir kural olarak, yalnızca bilinmeyen bir durumda, uygulamanızın çıkmadan işleyebileceği özel durumları yakalayın.  
   

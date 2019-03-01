@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: aa31f0f618990d4e57520a1098ec80b722e1cbe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1cff4d72a294a4635df72dc91c46fa5da92aa388
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543676"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976206"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML Dosyasını İşleme (Visual Basic)
 Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz: [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları, karşılık gelen belirlemek için kimlik dizesi kullanabilirsiniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] meta verileri/yansıma öğesi.  
@@ -39,7 +39,7 @@ Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir ki
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod nasıl kimliği için bir sınıf dizeleri gösterir ve üyelerini oluşturulur.  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

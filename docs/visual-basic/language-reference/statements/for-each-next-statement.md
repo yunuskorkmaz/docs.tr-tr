@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700435"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975010"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 Bir koleksiyondaki her öğe için bir deyim grubunu yineler.  
@@ -64,7 +64,7 @@ Next [ element ]
   
  Aşağıdaki örnekte, `For Each`...`Next` deyimi bir listesi koleksiyonun tüm öğeleri yinelenir.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  Daha fazla örnek için bkz. [koleksiyonları](../../../standard/collections/index.md) ve [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  Aşağıdaki örnek, iç içe geçmiş gösterir `For Each`...`Next` yapılar.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  İç içe döngüleri, her döngü benzersiz olması gerekir `element` değişkeni.  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir `Continue For` ve `Exit For` deyimleri.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  Herhangi bir sayıda koyabilirsiniz `Exit For` deyimlerinde bir `For Each` döngü. Kullanıldığında içinde iç içe geçmiş `For Each` döngüleri `Exit For` iç döngü ve aktarımları denetimi iç içe geçme sonraki daha yüksek düzeye çıkmak yürütülmesine neden olur.  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  Aşağıdaki örnek, bir yineleyici işlevi kullanır. Yineleyici işleve sahip bir `Yield` içindeki bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. İçinde `ListEvenNumbers` yöntemi, her bir yinelemesini `For Each` diğerine geçer yineleyici işlevine bir çağrı oluşturur ve deyim gövdesi `Yield` deyimi.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  Daha fazla bilgi için [yineleyiciler](../../programming-guide/concepts/iterators.md), [Yield deyimi](../../../visual-basic/language-reference/statements/yield-statement.md), ve [yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  Aşağıdaki örnekte, atamasını `m` ilk değeri olarak `n` ne zaman derleme değil `Option Strict` üzerinde olduğundan dönüştürülmesi bir `Long` için bir `Integer` ise daralan dönüştürmedir. İçinde `For Each` deyimi, ancak hiçbir derleyici hatası olduğunu bildirdi, rağmen atama için `number` aynı dönüştürme gerektiriyor `Long` için `Integer`. İçinde `For Each` büyük bir sayı içeren deyimi, bir çalışma zamanı hatası oluşur, <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> büyük sayıya uygulanır.  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>IEnumerator çağrıları  
  Zaman yürütülmesini bir `For Each`... `Next` döngü başlatır, Visual Basic doğrular `group` geçerli koleksiyon nesnesine başvuruyor. Aksi durumda, bir özel durum oluşturur. Aksi takdirde, çağrı <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Current%2A> ilk öğesi döndürülecek Numaralandırıcı nesnesi bir özelliğidir. Varsa `MoveNext` koleksiyonu boş ise, herhangi bir sonraki öğe başka bir deyişle, gösterir `For Each` döngü durdurur ve denetim deyime geçer `Next` deyimi. Aksi takdirde, Visual Basic ayarlar `element` ilk öğe ve deyim bloğunu çalıştırır.  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, kullanarak C:\ dizinindeki tüm klasörleri listeler <xref:System.IO.DirectoryInfo> sınıfı.  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek örneklerini sıralar bir `Car` depolanan sınıfı bir <xref:System.Collections.Generic.List%601>. `Car` Sınıfının Implements <xref:System.IComparable%601> gerektiren arabirimi <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanmasını.  
@@ -170,7 +170,7 @@ End Sub
   
  İçinde `ListCars` yöntemi `cars.Sort()` deyimi listeyi sıralar. Bu çağrıyı <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi <xref:System.Collections.Generic.List%601> neden `CompareTo` otomatik olarak çağrılmasına yöntemi `Car` nesneler `List`.  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Koleksiyonlar](../../../standard/collections/index.md)

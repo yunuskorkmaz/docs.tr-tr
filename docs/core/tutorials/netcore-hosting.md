@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanı nasıl çalıştığını denetleme ge
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583855"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980379"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Yerel koddan .NET çalışma zamanı denetlemek için özel bir .NET Core konak yazma
 
@@ -68,7 +68,7 @@ CoreCLR kitaplığı yüklendikten sonra sonraki adıma kullanarak bu işlevlere
 
 Ortak özellikler şunlardır:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Bu bir bütünleştirilmiş kodu yolları listesidir (Windows üzerinde ';' ile ayrılmış ve ':' Linux üzerinde), çalışma zamanı varsayılan olarak resovle şunları yapabilecek. Bazı ana bilgisayarlar, sabit kodlanmış bildirimlerinin derlemeleri yüklemek listesi vardır. Diğer tüm kitaplık belirli konumlara koyduğunuzdan (yanındaki *coreclr.dll*, örneğin) bu listede.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Bu bir bütünleştirilmiş kodu yolları listesidir (Windows üzerinde ';' ile ayrılmış ve ':' Linux üzerinde), çalışma zamanı varsayılan olarak çözümleyebilmesi. Bazı ana bilgisayarlar, sabit kodlanmış bildirimlerinin derlemeleri yüklemek listesi vardır. Diğer tüm kitaplık belirli konumlara koyduğunuzdan (yanındaki *coreclr.dll*, örneğin) bu listede.
 * `APP_PATHS` Bu araştırma için bir derleme'da güvenilir platform derlemeleri (TPA) listesinde bulunamazsa yollarının bir listesidir. Daha fazla denetim TPA listesini kullanarak derlemeleri üzerinde yüklü olan konak olduğundan, yüklemek ve bunları doğrudan belirterek listelemek için beklediği hangi derlemelerin belirlemek ana bilgisayarlar için en iyi yöntem var. Ancak, çalışma zamanında yoklama gerekirse bu özellik bu senaryonun etkinleştirebilirsiniz.
 *  `APP_NI_PATHS` Bu liste, yerel görüntüler için araştırıldığı yolları olacak şekilde hazırlanmıştır dışında APP_PATHS için benzerdir.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Bu özellik, p/Invoke yerel kitaplıklar aranıyor çağrıldığı zaman yükleyici araştırma yolları bir listesidir.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529482"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974815"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
 A *lambda ifadesi* bir işlevi veya alt yordam bir temsilci geçerli olduğu yerlerde kullanılabilmesi için bir ad olmadan. Lambda ifadeleri, işlev veya alt yordamlar olabilir ve tek satır veya çok satırlı olabilir. Bir lambda ifadesi olan geçerli kapsamını değer geçirebilirsiniz.  
@@ -26,19 +26,19 @@ A *lambda ifadesi* bir işlevi veya alt yordam bir temsilci geçerli olduğu yer
   
  Aşağıdaki örnek bağımsız değişkeni artırır ve değer döndüren bir lambda ifadesidir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi söz dizimi işlevi için gösterir.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  Aşağıdaki örnek bir değer konsola bir lambda ifadesidir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi sözdizimi bir alt yordam gösterir.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  Önceki örneklerde bir değişken lambda ifadeleri atanmış olduğuna dikkat edin. Değişkenine başvuruda bulunduğunuzda, lambda ifadesini çağırmak. Bildirme ve aşağıdaki örnekte gösterildiği gibi aynı zamanda bir lambda ifadesini çağırmak.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Bir lambda ifadesi bir işlev çağrısı değeri olarak döndürülebilir (örnekte gösterildiği gibi [bağlam](#context) bu konunun ilerleyen bölümlerinde), veya bağımsız değişken olarak bir temsilci türü alan parametresi aşağıda gösterildiği gibi geçirilen örnek.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
  Bir lambda ifadesi sözdizimi standart işlevi veya alt yordam benzer. Farklar aşağıdaki gibidir:  
@@ -114,7 +114,7 @@ End Class
   
  Yerel değişkenler ve parametreler kapsayan kapsamda erişim, kapsamı ömründen uzun genişletebilirsiniz. Bir lambda ifadesi başvuran bir temsilci çöp toplama için kullanılabilir olmayan sürece özgün ortam değişkenlerine erişimi korunur. Aşağıdaki örnekte, değişken `target` için yerel `makeTheGame`, yöntem, lambda ifadesi `playTheGame` tanımlanır. Döndürülen lambda ifadesi, atanan Not `takeAGuess` içinde `Main`, hala yerel değişkene erişimi vardır `target`.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  Aşağıdaki örnek, çeşitli iç içe geçmiş lambda ifadesinin erişim haklarını gösterir. Ne zaman döndürülen lambda ifadesi yürütülmediyse `Main` olarak `aDel`, bu öğeleri erişir:  
   
@@ -128,16 +128,16 @@ End Class
   
 -   Yer alan bir lambda ifadesi parametre: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>Bir temsilci türüne dönüştürme  
  Bir lambda ifadesi bir uyumlu temsilci türüne örtük olarak dönüştürülebilir. Uyumluluk için genel gereksinimler hakkında daha fazla bilgi için bkz. [gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Örneğin, aşağıdaki kod örneği dönüştürür örtük olarak bir lambda ifadesi gösterir `Func(Of Integer, Boolean)` veya eşleşen bir temsilci imzası.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  Aşağıdaki kod örneği için örtük olarak dönüştüren bir lambda ifadesi gösterir `Sub(Of Double, String, Double)` veya eşleşen bir temsilci imzası.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  Lambda ifadeleri için temsilci atama ya da yordamlar için bağımsız değişken olarak geçirileceğini parametre adları belirtin ama temsilciden alınması türlerine izin vererek veri türlerini atlayın.  
   
@@ -145,11 +145,11 @@ End Class
   
 -   Aşağıdaki örnek döndüren bir lambda ifadesi tanımlar `True` bağımsız değişkeni boş değer atanabilir bir atanan değer varsa ve `False` değerini ise `Nothing`.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   Aşağıdaki örnek, bir dizi içinde son öğenin dizinini döndüren bir lambda ifadesi tanımlar.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

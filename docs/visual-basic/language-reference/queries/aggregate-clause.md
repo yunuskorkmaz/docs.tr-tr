@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547098"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981965"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
 Bir veya daha fazla toplama işlevleri, bir koleksiyon için geçerlidir.  
@@ -54,25 +54,25 @@ Kullanılabilir standart toplama işlevleri şunlardır `Aggregate` yan tümcesi
 
 Döndürür `true` koleksiyondaki tüm öğeler belirtilen bir koşulu; karşılıyorsanız, döndürür, aksi takdirde `false`. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Tüm
 
 Döndürür `true` koleksiyondaki herhangi bir öğeyi; belirtilen bir koşulu karşılıyorsa döndürür, aksi takdirde `false`. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Ortalama
 
 Koleksiyondaki tüm öğelerin ortalamasını hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifade sonucunu hesaplar. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Sayı
 
 Koleksiyondaki öğe sayısını sayar. İsteğe bağlı bir tedarik `Boolean` ifade yalnızca bir koşulu karşılayan koleksiyondaki öğe sayısı. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Grup
 
@@ -86,25 +86,25 @@ Koleksiyondaki öğe sayısını sayar. İsteğe bağlı bir tedarik `Boolean` i
 
 Koleksiyondan maksimum değeri hesaplar ve koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min.
 
 Koleksiyondan minimum değeri hesaplar ve koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Toplam
 
 Koleksiyondaki tüm öğelerin toplamını hesaplar ve koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Bir örnek verilmiştir:
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Örnek  
 
 Aşağıdaki örnek nasıl kullanılacağını gösterir `Aggregate` yan tümcesi bir sorgu sonucuna toplama işlevleri uygulamak için.  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Kullanıcı tanımlı toplama işlevleri oluşturma
 
@@ -112,11 +112,11 @@ Aşağıdaki örnek nasıl kullanılacağını gösterir `Aggregate` yan tümces
   
  Örneğin, aşağıdaki örnek, sayıdan oluşan bir koleksiyon ORTANCA değerini hesaplar. özel bir toplama işlevi gösterir. İki aşırı yükleme `Median` genişletme yöntemi. İlk aşırı yükleme, giriş olarak bir koleksiyon türü kabul eden `IEnumerable(Of Double)`. Varsa `Median` toplama işlevi türü için bir sorgu alanını adlı `Double`, bu yöntem çağrılır. İkinci aşırı yüklemesi `Median` yöntemi herhangi bir genel tür geçirilebilir. Genel aşırı yüklemesini `Median` yöntemi başvuran ikinci bir parametre alır `Func(Of T, Double)` lambda ifadesi (bir koleksiyondan) bir tür için bir değer türüne karşılık gelen değeri olarak projeye `Double`. Ardından bir aşırı yüklemesini ORTANCA değeri hesaplama Temsilciler `Median` yöntemi. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  Aşağıdaki örnek, çağıran örnek sorgular gösterir `Median` toplama türü koleksiyonunda işlevi `Integer`ve bir koleksiyon türü `Double`. Çağıran bir sorgu `Median` toplama türü koleksiyonunu işlevi `Double` aşırı yüklemesini çağırır `Median` türünde bir girdi olarak kabul eden yöntemi `Double`. Çağıran bir sorgu `Median` toplama türü koleksiyonunu işlevi `Integer` genel aşırı yüklemesini çağırır `Median` yöntemi.  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

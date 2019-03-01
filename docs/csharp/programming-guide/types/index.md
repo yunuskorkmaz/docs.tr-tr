@@ -1,23 +1,17 @@
 ---
-title: Türleri - C# Programlama Kılavuzu
+title: 'Türleri - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739325"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 ## <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri  
@@ -39,7 +33,7 @@ ms.locfileid: "55739325"
   
  Derleyici, kodunuzda gerçekleştirilen tüm işlemler olduğundan emin olmak için tür bilgilerini kullanır. *denkliği*. Örneğin, türünde bir değişken bildirirseniz [int](../../../csharp/language-reference/keywords/int.md), derleyici değişkeni buna ek olarak kullanmanızı ve çıkarma işlemleri sağlar. Türünde bir değişkende aynı işlemleri gerçekleştirmeyi denerseniz [bool](../../../csharp/language-reference/keywords/bool.md), aşağıdaki örnekte gösterildiği gibi derleyici bir hata oluşturur:  
   
- [!code-csharp[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]  
   
 > [!NOTE]
 >  C ve C++ geliştiricileri seçeneğinde bu C# ' ta [bool](../../../csharp/language-reference/keywords/bool.md) öğesine dönüştürülebilir değildir [int](../../../csharp/language-reference/keywords/int.md).  
@@ -49,11 +43,11 @@ ms.locfileid: "55739325"
 ### <a name="specifying-types-in-variable-declarations"></a>Değişken bildirimlerinde türleri belirtme  
  Ne zaman bir değişken bildirdiğinizde veya sabit bir program, türünü belirtmeniz veya kullanın [var](../../../csharp/language-reference/keywords/var.md) anahtar sözcüğünü kullanarak derleyicinin türü sağlar. Aşağıdaki örnek, hem yerleşik sayısal türler hem de kullanıcı tanımlı karmaşık türler kullanan bazı değişken bildirimlerini gösterir:  
   
- [!code-csharp[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]  
   
  Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında belirtilir. Aşağıdaki imza gerektiren bir yöntemi gösterir bir [int](../../../csharp/language-reference/keywords/int.md) giriş bağımsız değişkeni olarak bir dize döndürür:  
   
- [!code-csharp[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]  
   
  Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](../../../csharp/language-reference/keywords/int.md) Boolean değerini atayın [true](../../../csharp/language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.  
   
@@ -104,13 +98,13 @@ char c = 'Z';
   
  Kullandığınız [yapı](../../../csharp/language-reference/keywords/struct.md) kendi özel değer türlerinizi oluşturmak için anahtar sözcüğü. Genellikle, bir yapının bir kapsayıcı gibi küçük bir ilişkili değişken kümesi için aşağıdaki örnekte gösterildiği gibi kullanılır:  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md). .NET içindeki değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../../csharp/language-reference/keywords/value-types.md).  
   
  Değer türlerinin diğer kategorisi [enum](../../../csharp/language-reference/keywords/enum.md). Bir numaralandırma, adlandırılmış tam sayı sabitler kümesini tanımlar. Örneğin, <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırma .NET sınıf kitaplığı'nda adlandırılmış bir dosyanın nasıl açılacağını belirten sabit tamsayı Seti içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanır:  
  
- [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]  
   
  `System.IO.FileMode.Create` Sabitinin değeri 2'dir. Ancak, ad, kaynak kodu okuyanlar için daha anlamlı olur ve bu nedenle sabit ve değişmez sayılar yerine numaralandırmalar kullanılması daha iyidir. Daha fazla bilgi için bkz. <xref:System.IO.FileMode?displayProperty=nameWithType>.  
   
@@ -133,7 +127,7 @@ IMyInterface iface = new MyClass();
   
  Öğeleri değer türleri olsa bile, tüm diziler başvuru türleridir. Diziler dolaylı olarak türetilen <xref:System.Array?displayProperty=nameWithType> sınıfı, ancak bildirme ve bunları C# tarafından sağlanan Basitleştirilmiş sözdizimi ile aşağıdaki örnekte gösterildiği gibi kullanın:  
   
- [!code-csharp[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]  
   
  Başvuru türleri devralmayı tam olarak destekler. Bir sınıf oluşturduğunuz zaman, herhangi bir arabirim veya tanımlanmamış sınıfı devralabilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md), ve diğer sınıflar, sizin sınıfınızdan miras ve sanal yöntemlerinizi geçersiz kılabilir. Kendi sınıflarınızı nasıl oluşturabileceğiniz hakkında daha fazla bilgi için bkz. [sınıfları ve yapıları](../../../csharp/programming-guide/classes-and-structs/index.md). Devralma ve sanal yöntemler hakkında daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -142,7 +136,7 @@ IMyInterface iface = new MyClass();
   
  Değişmez değerler olduğu ve tüm türler nihai olarak türetmek için gelen <xref:System.Object?displayProperty=nameWithType>, yazabilir ve aşağıdaki gibi kodu derleyin:  
   
- [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]  
   
 ## <a name="generic-types"></a>Genel türler  
  Bir türü bir veya daha fazla bildirilmiş *tür parametrelerindeki* gerçek tür için bir yer tutucu olarak hizmet veren ( *somut tür*) türün bir örneğini oluşturduğunda, istemci kodunun sağlayacağı. Bu türler olarak adlandırılır *genel türler*. Örneğin, .NET türü <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> gereği adı verilen bir tür parametresine sahip *T*. Bir türün örneğini oluşturduğunuzda dize listesi yer alacak nesnelerin türünü belirtin:  

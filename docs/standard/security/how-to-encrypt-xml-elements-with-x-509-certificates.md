@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19edbebb4dcc4ad48c28ee427084510f8d743c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637839"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970980"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme
 Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi bir öğesinde şifrelemek için ad alanı.  XML şifreleme, exchange veya bir kolayca okunan verilerin hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifreleme konumundaki XML şifreleme standardı hakkında daha fazla bilgi için World Wide Web Consortium (W3C) belirtimi bakın <https://www.w3.org/TR/xmldsig-core/>.  
   
  XML şifreleme herhangi bir XML öğesini değiştirin veya ile belge için kullanabileceğiniz bir <`EncryptedData`> şifrelenmiş XML verilerini içeren öğe. <`EncryptedData`> Öğesi, anahtarları ve şifreleme sırasında kullanılan işlemler hakkında bilgi içeren alt öğelerini içerebilir.  XML şifreleme şifrelenmiş birden çok öğe içeren bir belge sağlar ve bir öğe birden çok kez şifrelenmesini sağlar.  Bu yordam kod örneğinde nasıl oluşturulacağını gösterir bir <`EncryptedData`> öğesi birlikte, daha sonra şifre çözme sırasında kullanabileceğiniz diğer alt öğeleri.  
   
- Bu örnekte, iki anahtar kullanarak bir XML öğesi şifreler.  Bir test X.509 sertifikası kullanarak oluşturur [sertifika oluşturma Aracı (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) ve sertifikayı sertifika deposuna kaydeder.  Örnek daha sonra program aracılığıyla sertifikayı alır ve bir XML öğesini kullanarak şifrelemek için kullandığı <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> yöntemi.  Dahili olarak <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> yöntemi ayrı oturum anahtarı oluşturur ve XML belgesi şifrelemek için kullanır. Bu yöntem oturum anahtarı şifreler ve şifrelenmiş XML yanı sıra içinde yeni bir kaydeder <`EncryptedData`> öğesi.  
+ Bu örnekte, iki anahtar kullanarak bir XML öğesi şifreler. Bir test X.509 sertifikası kullanarak oluşturur [sertifika oluşturma Aracı (Makecert.exe)](/windows/desktop/SecCrypto/makecert) ve sertifikayı sertifika deposuna kaydeder. Örnek daha sonra program aracılığıyla sertifikayı alır ve bir XML öğesini kullanarak şifrelemek için kullandığı <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> yöntemi. Dahili olarak <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> yöntemi ayrı oturum anahtarı oluşturur ve XML belgesi şifrelemek için kullanır. Bu yöntem oturum anahtarı şifreler ve şifrelenmiş XML yanı sıra içinde yeni bir kaydeder <`EncryptedData`> öğesi.  
   
  XML öğesinin şifresini çözmek için basitçe çağrı <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> yöntemi otomatik olarak X.509 sertifika deposundan alır ve gerekli şifre çözme işlemleri gerçekleştirir.  Bu yordam kullanılarak şifrelenmiş bir XML öğesinin şifresini çözmek hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifresini](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
@@ -36,7 +36,7 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Bir XML öğesini X.509 sertifikası ile şifrelemek için  
   
-1.  Kullanım [sertifika oluşturma Aracı (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) test X.509 sertifikası oluşturma ve yerel kullanıcı depolama alanına yerleştir.  Değişim anahtarı oluşturmanız gerekir ve anahtar dışarı aktarılabilir yapmanız gerekir. Şu komutu çalıştırın:  
+1.  Kullanım [sertifika oluşturma Aracı (Makecert.exe)](/windows/desktop/SecCrypto/makecert) test X.509 sertifikası oluşturma ve yerel kullanıcı depolama alanına yerleştir.  Değişim anahtarı oluşturmanız gerekir ve anahtar dışarı aktarılabilir yapmanız gerekir. Şu komutu çalıştırın:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  

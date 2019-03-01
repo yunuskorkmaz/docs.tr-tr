@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5828e28b84ec62c7ed674757090806d73c61caea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522446"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966742"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase Deyimi (Visual Basic)
 Dizi değişkenlerini serbest bırakmak ve öğeleri için kullanılan bellek ayırması için kullanılır.  
@@ -35,7 +35,7 @@ Erase arraylist
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Erase` dizilerinin temizleyin ve kendi bellek boş deyim (1000 ve 100 depolama öğeleri sırasıyla). `ReDim` İfadesi üç boyutlu diziye yeni bir dizi örneği atar.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

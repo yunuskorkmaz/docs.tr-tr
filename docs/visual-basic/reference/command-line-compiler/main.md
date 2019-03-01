@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e636da1d277f80f58268b24b69802006eb8315
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638788"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966287"
 ---
 # <a name="-main"></a>-Ana
 Sınıf veya içeren modül belirtir `Sub Main` yordamı.  
@@ -33,7 +33,7 @@ Sınıf veya içeren modül belirtir `Sub Main` yordamı.
   
  Zaman `location` devralan bir sınıf olan <xref:System.Windows.Forms.Form>, derleyici varsayılan bir ıloggerfactory sağlar `Main` sınıfı Hayır ise, uygulama başladığında yordamı `Main` yordamı. Bu, kodu geliştirme ortamında oluşturulmuş komut satırında derleme sağlar.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>-Ana Visual Studio tümleşik geliştirme ortamında ayarlamak için  
   

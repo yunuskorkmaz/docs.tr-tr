@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660807"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971799"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama
 A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye izin verir. Her parametre için bir yordam adı ve veri türünü belirten bir değişken bildirmek aynı şekilde bildirin. Ayrıca geçirme mekanizma belirtin ve parametre isteğe bağlıdır.  
@@ -36,7 +36,7 @@ A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye 
   
      Aşağıdaki örnek, ana hat tanımlar. bir `Sub` yordamı üç parametrelere sahip. İlk iki gereklidir ve üçüncü isteğe bağlıdır. Parametre bildirimleri parametre listesinde virgülle ayrılır.  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      İlk parametre kabul eden bir `customer` nesnesi ve `updateCustomer` doğrudan geçirilen değişkeni güncelleştirebilirsiniz `c` geçirilen bağımsız değişken olduğundan [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçirilen çünkü yordamın son iki bağımsız değişken değerlerini değiştiremezsiniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

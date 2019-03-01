@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710488"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971539"
 ---
 # <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
 Bir özellik yordamı bir özel özellik bir modül, sınıf veya yapı işleyen Visual Basic deyimleri bir dizisidir. Özellik yordamları olan olarak da bilinen *özellik erişimcileri*.  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
  Aşağıdaki özelliği tam adı, iki bağlı ad, ad ve Soyadı depolar. Çağıran kod zaman okur `fullName`, `Get` yordam iki bağlı adları birleştirir ve tam adını döndürür. Çağıran kod yeni bir tam ad atarken `Set` yordamı iki bağlı adlarına sonu dener. Bir alan bulamazsa, tüm ad depolar.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  Aşağıdaki örnek özellik yordamları tipik çağrıları gösterir `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653625"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966079"
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -82,7 +82,7 @@ End Event
 ## <a name="remarks"></a>Açıklamalar  
  Olay bildirildikten sonra kullanın `RaiseEvent` deyimini olayı oluşturun. Tipik bir olay bildirildi ve aşağıdaki parçası gösterildiği gibi oluşturulur:  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  Yordamlar, aşağıdaki istisnalarla birlikte bağımsız olarak olay bağımsız değişkenleri bildirebilirsiniz: olay bağımsız değişkenleri, adlandırılmış olamaz `ParamArray` bağımsız değişken veya `Optional` bağımsız değişkenler. Olaylar, dönüş değeri yoktur.  
@@ -106,11 +106,11 @@ End Event
   
  Ekleme bir `WithEvents` değişken bildirimleri bölümüne `Form1` sınıfı:  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
  Aşağıdaki kodu için kod ekleyin `Form1`. Oluşabilecek, gibi yinelenen yordamlarla değiştirin `Form_Load` veya `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Önceki örneği çalıştırmak ve etiketli düğmeye tıklayın için F5 tuşuna basın **Başlat**. İlk metin kutusuna saniye sayısı başlar. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   

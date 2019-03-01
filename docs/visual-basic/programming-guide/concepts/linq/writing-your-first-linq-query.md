@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506257"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975153"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir özel sorgu dilinde ifade edilir. Zaman içinde farklı dillerde farklı türde veri kaynakları için örneğin, ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu, uygulama geliştiricisi, her veri kaynağı veya desteklenmeyen veri biçimi türü için yeni bir sorgu dili öğrenmek için gerekli kılar.  
@@ -34,7 +34,7 @@ A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir ö
 > [!NOTE]
 >  Üzerinde [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), emin **Option Infer** ayarlanır **üzerinde**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Çıktı:  
   
@@ -47,7 +47,7 @@ A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular, bir ö
   
  Kaynak verileri zaten uygulamazsa <xref:System.Collections.Generic.IEnumerable%601>, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcı işlevselliğini uygulamak için gereken *standart sorgu işleçleri* bu veri kaynağı. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML belgesini sorgulanabilir bir yükleme işi işler <xref:System.Xml.Linq.XElement> , aşağıdaki örnekte gösterildiği gibi yazın. Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  İle [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], önce bir nesne-ilişkisel tasarım zamanında el ile ya da kullanarak eşleme oluşturma [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) Visual Studio'da. Sorgularınızın karşı nesneleri ve çalışma zamanında yazma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı ile iletişimi gerçekleştirir. Aşağıdaki örnekte, `customers` veritabanında belirli bir tabloyu temsil eder ve <xref:System.Data.Linq.Table%601> destekleyen genel <xref:System.Linq.IQueryable%601>.  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Aşağıdaki örnek sorguda yürütüldüğünde, tamsayı dizisinden tüm çift sayıları döndürür `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Sorgu ifadesi üç yan tümce içeriyor: `From`, `Where`, ve `Select`. Belirli bir işlevi ve amacı, her sorgu ifadesi yan tümcesi ele alınmıştır [temel sorgu işlemleri (Visual Basic)](basic-query-operations.md). Daha fazla bilgi için [sorguları](../../../../visual-basic/language-reference/queries/index.md). Unutmayın, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], sorgu tanımı genellikle bir değişkende depolanır ve daha sonra yürütülür. Sorgu değişkeni gibi `evensQuery` önceki örnekte, sorgulanabilir tür olmalıdır. Türünü `evensQuery` olduğu `IEnumerable(Of Integer)`, yerel tür çıkarımı kullanarak derleyici tarafından atanmış.  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
  Tipik bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu benzer bir önceki örnekte `evensQuery` tanımlanır. Sorgu oluşturur, ancak anında yürütmeye başlamaz. Bunun yerine, sorgu tanımı sorgu değişkeninde depolanır `evensQuery`. Daha sonra genellikle kullanarak sorguyu bir `For Each` değerler ya da bir standart sorgu işleci gibi uygulayarak bir dizisini döndüren döngü `Count` veya `Max`. Bu işlem olarak adlandırılır *ertelenmiş yürütme*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  Değerler dizisi için alınan yineleme değişkeni kullanarak verilere `For Each` döngü (`number` önceki örnekte). Çünkü sorgu değişkeni `evensQuery`, sorgu sonuçları yerine sorgu tanımı tutan bir sorgu, sorgu değişkeni birden fazla kez kullanarak istediğiniz sıklıkta yürütebilirsiniz. Örneğin, ayrı bir uygulama tarafından sürekli olarak güncelleştirilmekte uygulamanızda bir veritabanı olabilir. Bir sorgu, veritabanından alınan veri oluşturduktan sonra kullanabileceğiniz bir `For Each` sorguyu tekrar tekrar yürütmek için döngü her zaman en son verileri alınıyor.  
   
  Aşağıdaki örnek nasıl ertelenmiş yürütme gösterir çalışır. Sonra `evensQuery2` tanımlanır ve ile yürütülen bir `For Each` döngü, önceki örneklerde olduğu gibi bazı öğeler veri kaynağında `numbers` değiştirilir. Ardından ikinci `For Each` döngü çalıştırır `evensQuery2` yeniden. Sonuçları ikinci seferde farklı olduğu `For Each` döngü yürütür sorguyu yeniden, yeni değerleri kullanarak `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Çıktı:  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Aşağıdaki sorgu, tamsayı dizisi çift sayıların sayısını döndürür. Sorgu tanımı kaydedilmez, ve `numEvens` basit `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  Kullanarak aynı sonucu elde edebileceğiniz `Aggregate` yöntemi.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  Çağırarak bir sorgunun zorlayabilirsiniz `ToList` veya `ToArray` sorgu (anlık) veya (Ertelenmiş), aşağıdaki kodda gösterildiği gibi sorgu değişkeni üzerinde yöntemi.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  Önceki örneklerde, `evensQuery3` bir sorgu değişkeni, ancak `evensList` bir listedir ve `evensArray` bir dizidir.  
   

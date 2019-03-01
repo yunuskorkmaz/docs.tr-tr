@@ -1,35 +1,29 @@
 ---
-title: Ad alanları - C# Programlama Kılavuzu
+title: 'Ad alanları - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: bde7c6fae0afc165a4013645f8d8506ccca06da1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744160"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
 
 Ad alanlarında, C# programlama iki yolla yoğun olarak kullanılır. İlk olarak, .NET Framework ad alanları, çok sayıda sınıfa gibi düzenlemek için kullanır:  
   
-[!code-csharp[csProgGuide#22](../inside-a-program/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]  
   
 `System` bir ad alanı ve `Console` bu ad alanındaki bir sınıftır. `using` Anahtar sözcüğü kullanılabilir, böylece tam adı, aşağıdaki örnekte olduğu gibi gerekli değildir:  
   
-[!code-csharp[csProgGuide#1](../inside-a-program/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
-[!code-csharp[csProgGuide#25](../inside-a-program/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]  
   
 Daha fazla bilgi için [using yönergesi](../../language-reference/keywords/using-directive.md).  
   
 İkinci olarak, kendi ad alanlarını bildirme sınıf ve yöntem adları büyük programlama projelerinde kapsamını denetlemenize yardımcı olabilir. Kullanım [ad alanı](../../language-reference/keywords/namespace.md) aşağıdaki örnekteki gibi bir ad alanı bildirmek için anahtar:  
   
-[!code-csharp[csProgGuideNamespaces#6](codesnippet/CSharp/index_4.cs)]
+ [!code-csharp[csProgGuideNamespaces#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#6)]
 
 Ad geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-program/identifier-names.md).
 

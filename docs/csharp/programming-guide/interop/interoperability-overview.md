@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499efae13a0805ba161cd9db160d697b496183c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502072"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974711"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -30,7 +30,7 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
 ## <a name="c-interop"></a>C++ Birlikte Çalışma  
  C++ birlikte çalışması, olarak da bilinir, yalnızca çalışır (IJW), yerel bir C++ sınıfı C# veya başka bir .NET Framework dilde yazılan kod tarafından tüketilebilir böylece sarmalamak için kullanabilirsiniz. Bunu yapmak için yerel bir DLL veya COM bileşeni sarmalamak için C++ kod yazın. Diğer .NET Framework dillerinde aksine [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] birlikte çalışabilirlik sağlar yönetilen ve yönetilmeyen kod aynı uygulama ve hatta aynı dosyanın bulunduğu desteği vardır. Ardından kullanarak C++ kodu derleme **/CLR** yönetilen bir bütünleştirilmiş kod üretmek için derleyici anahtarı. Son olarak, C# projenize derlemesine bir başvuru ekleyin ve diğer yönetilen sınıfları kullanırken Sarmalanan nesneleri kullanın.  
   
-## <a name="exposing-com-components-to-c"></a>C# için COM bileşenlerini gösterme  
+## <a name="exposing-com-components-to-c"></a>C için COM bileşenlerini gösterme\#
  Bir C# projeden bir COM bileşeni kullanabilir. Genel adımlar aşağıdaki gibidir:  
   
 1.  Kullanın ve kaydetmek için bir COM bileşeni bulun. Kaydedilecek regsvr32.exe veya Geri Al – kaydı bir COM DLL kullanın.  

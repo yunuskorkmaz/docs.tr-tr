@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616205"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967379"
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
 Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlemede yalnızca erişilebileceğini belirtir.  
@@ -40,7 +40,7 @@ Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlem
 ## <a name="example"></a>Örnek  
  Aşağıdaki sınıf kullandığı `Friend` diğer programlama öğelerinin belirli üyelere erişmek için aynı bütünleştirilmiş kod içinde değiştiricisi.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Kullanım  
  Kullanabileceğiniz `Friend` şu bağlamlarda değiştiricisi:  

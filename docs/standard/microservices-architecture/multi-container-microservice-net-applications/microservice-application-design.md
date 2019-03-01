@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130500"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981887"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -61,7 +61,7 @@ Mikro hizmetler geliştirilen ve birbirinden kapsayıcıları olarak dağıtıla
 
 Her mikro hizmet, diğer mikro Hizmetleri tam olarak ölçeklendirilebilmeleri izin veren, kendi veritabanı vardır. Gerektiğinde, veritabanlarından farklı mikro hizmetler arasında tutarlılık (aracılığıyla bir mantıksal olay veri yolu), uygulama düzeyinde tümleştirme olayları kullanılarak komut ve sorgu sorumluluğu ayrımı (CQRS) işlenmiş olarak sağlanır. Bu nedenle iş kısıtlamalarını nihai tutarlılık arasında birden fazla mikro hizmetin yaklaşımını benimseyin gerekir ve ilgili veritabanları.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>Hizmetine: .NET Core ve kapsayıcılar kullanılarak dağıtılmış mikro hizmetler için bir başvuru uygulaması
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: .NET Core ve kapsayıcılar kullanılarak dağıtılmış mikro hizmetler için bir başvuru uygulaması
 
 Böylece bilmiyor bir hypothetic iş etki alanı düşünmek yerine teknolojileri ve mimari odaklanabilirsiniz iyi bilinen iş etki alanı seçmiş olduğunuz — yani, bir katalog sunar bir Basitleştirilmiş e-ticaret (e-Atölye) uygulama ürünler, işle ilgili diğer işlevleri gerçekleştiren müşterilerden siparişleri alır ve envanter doğrular. Bu kapsayıcı tabanlı uygulama kaynak kodunu kullanılabilir [hizmetine](https://aka.ms/MicroservicesArchitecture) GitHub deposu.
 
@@ -158,7 +158,7 @@ Yazılım mimarları ve geliştiricileri tarafından kullanılan birçok mimari 
 
 - Basit CRUD, tek katmanlı tek katmanlı.
 
-- [Geleneksel N katmanlı](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
+- [Geleneksel N katmanlı](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
 - [Etki alanı tasarım N katmanlı odaklı](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 

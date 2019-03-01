@@ -2,15 +2,9 @@
 title: Visual Basic'de Değişkenler
 ms.date: 07/20/2015
 helpviewer_keywords:
-- variables [Visual Basic]
-- values [Visual Basic], storing
+  - 'variables [Visual Basic]'
+  - 'values [Visual Basic], storing'
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 50b82285d31d40adfce07a61cd7902cdb2809a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672233"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic'de Değişkenler
 Genellikle hesaplamalar Visual Basic ile zaman değerlerini depolamak sahiptir. Örneğin, çeşitli değerleri hesaplama, aralarında karşılaştırma ve üzerinde karşılaştırmanın sonucuna bağlı olarak farklı işlemler gerçekleştirmek isteyebilirsiniz. Bunları karşılaştırmak istiyorsanız değerlerini korumak sahip.  
@@ -23,7 +17,7 @@ Genellikle hesaplamalar Visual Basic ile zaman değerlerini depolamak sahiptir. 
 ## <a name="assigning-values"></a>Değerler atama  
  Atama deyimleri, sonucu aşağıdaki örnekte gösterildiği gibi bir değişkene atayın ve hesaplamalar gerçekleştirmek için kullanın.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Eşittir işareti (`=`) bir atama işleci, eşitlik işleci Bu örnekte olduğu. Değişkene atanan değer `applesSold`.  

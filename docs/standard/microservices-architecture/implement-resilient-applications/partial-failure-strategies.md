@@ -4,12 +4,12 @@ description: Kısmi hataları düzgün bir şekilde işlemek için çeşitli str
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362775"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981328"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Kısmi hata işleme stratejileri
 
@@ -33,7 +33,7 @@ Kısmi hatalarıyla ilgili stratejiler aşağıda verilmiştir.
   [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
 - **Dayanıklılık ekleme ve performansı en iyi duruma getirme**\
-  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bölme perdesi.** GitHub deposu. Polly ilke uygulamasıyla. \
   [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)

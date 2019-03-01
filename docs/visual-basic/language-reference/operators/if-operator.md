@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686679"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965923"
 ---
 # <a name="if-operator-visual-basic"></a>If İşleci (Visual Basic)
 Kullanır, koşullu olarak iki değerden birini döndürmek için değerlendirmesi. `If` İşleci iki bağımsız değişkeni veya üç bağımsız değişken ile çağrılabilir.  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  Bir `If` üç bağımsız değişkenlerle çağrıldı işleci çalışır gibi bir `IIf` işlevi da kullanması hariç, değerlendirme kısa devre oluşturur. Bir `IIf` işlevi ise üç bağımsız değişkenlerinden biri her zaman değerlendirilir bir `If` üç bağımsız değişkenlere sahip bir işleç iki yalnızca değerlendirir. İlk `If` bağımsız değişken değerlendirilir ve sonuç olarak cast bir `Boolean` değeri `True` veya `False`. Değer ise `True`, `argument2` olan değerlendirilir ve değer döndürülür, ancak `argument3` değerlendirilmez. Varsa değerini `Boolean` ifade `False`, `argument3` olan değerlendirilir ve değer döndürülür, ancak `argument2` değerlendirilmez. Aşağıdaki örnekler, kullanımını gösterir `If` üç bağımsız değişken kullanıldığında:  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  Değerini aşağıdaki örnekte kısa devre değerlendirmesi. Örnek değişkeni ayırmak için iki deneme gösterir `number` değişkenin `divisor` olmadığı dışında `divisor` sıfırdır. Bu durumda 0 döndürdü ve çalışma zamanı hatası neden olacağından bölme işlemi gerçekleştirmek için hiç girişimde. Çünkü `If` ifade kullanır, değerlendirme kısa devre oluşturur, ikinci veya ilk bağımsız değişkenin değerine bağlı olarak, üçüncü bağımsız değişkeni değerlendirir. İlk bağımsız değişken true ise, bölen sıfır değil ve ikinci bağımsız değişkeni değerlendirir ve bölme işlemi gerçekleştirmek güvenlidir. İlk bağımsız değişken false ise, yalnızca üçüncü bağımsız değişken değerlendirilir ve 0 değeri döndürülür. Bölen 0 olduğunda, bu nedenle, hiçbir hata sonuçları ve bölme işlemi gerçekleştirmek için girişimde bulunulmaz. Ancak, çünkü `IIf` kullanmaz kısa devre değerlendirmesi, ilk bağımsız değişken false olduğunda bile ikinci bağımsız değişken değerlendirilir. Bu, bir çalışma zamanı sıfırla bölme hatasına neden olur.  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>İşleci iki bağımsız değişkeni ile çağrılırsa  
  İlk bağımsız değişkeni `If` atlanabilir. Bu, yalnızca iki bağımsız değişkeni kullanılarak çağrılacak işleci sağlar. Aşağıdaki listede yalnızca geçerli `If` işleci iki bağımsız değişkenlerle çağrılır.  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  Zaman `Boolean` bağımsız değişken atlanırsa, ilk bağımsız değişken başvuru veya boş değer atanabilir tür olmalıdır. İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişkenin değeri döndürülür. Diğer durumlarda, ilk bağımsız değişkenin değeri döndürülür. Aşağıdaki örnekte, bu değerlendirme nasıl çalıştığı gösterilmektedir.  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

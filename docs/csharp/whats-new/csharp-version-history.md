@@ -3,14 +3,14 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186234"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981939"
 ---
-# <a name="the-history-of-c"></a>C# geçmişi #
+# <a name="the-history-of-c"></a>C geçmişi\#
 
 Bu makalede, her ana sürümüne geçmişini sağlar C# dili. C# Takım etmeden yenilik yapın ve yeni özellikler eklemek. Dil özelliği durum, gelecek sürümlerinde bulunabilir kabul özellikleri dahil olmak üzere ayrıntılı [dotnet/roslyn deposundaki](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) GitHub üzerinde.
 
@@ -19,11 +19,11 @@ Bu makalede, her ana sürümüne geçmişini sağlar C# dili. C# Takım etmeden 
 
 C# Derleme araçları, varsayılan dil sürümü en son ana dil sürümü düşünün. Bu bölümdeki diğer makalelerinde ayrıntılı ana sürümler arasında nokta sürümleri olabilir. Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin. Üç nokta sürümleri beri olmuştur C# 7.0:
 
-* [C#7.3](csharp-7-3.md):
+* [C# 7.3](csharp-7-3.md):
   - C#7.3 şu anda içinde [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
-* [C#7.2](csharp-7-2.md):
+* [C# 7.2](csharp-7-2.md):
   - C#şu anda, 7.2 [Visual Studio 2017 sürüm 15.5](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
-* [C#7.1](csharp-7-1.md):
+* [C# 7.1](csharp-7-1.md):
   - Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# sürüm 1.0

@@ -4,12 +4,12 @@ description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307441"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980236"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
@@ -137,9 +137,11 @@ Azure geliştirme alanları geliştirme ekipleri, hızla yineleyin ve yalnızca 
 
 Temel bir paylaşılan geliştirme alanında Azure ayarlayabilirsiniz. Her geliştirici yalnızca uygulama kendi parçası üzerinde odaklanın yinelemeli olarak tüm diğer hizmetler içeren bir geliştirme alanında ön işleme kod geliştirme ve bulut kendi senaryoları bağımlı kaynakları. Bağımlılıkları her zaman güncel olduğundan ve geliştiricilerin üretim yansıtan bir şekilde çalışıyoruz.
 
-Azure geliştirme alanları, yalıtım ve ekip üyeleriniz bozucu ödemeden olmadan çalışmanıza olanak sağlayan bir alan kavramı sağlar. Bu özellik üzerinde URL ön düzeltmeleri bağlı olduğu için bu alan için herhangi bir geliştirme alanı önek her kapsayıcının istek için URL'de kullanıyorsanız, özel bir sürümünü çalışacak şekilde kapsayıcı dağıtılır mevcut. Aksi takdirde, genel/birleşik sürümü çalışacaktır.
+Azure geliştirme alanları göreli yalıtım ve takımınızın iş bozucu ödemeden olmadan çalışmanıza olanak sağlayan bir alanı kavramını sunar. Her geliştirme alan bir mikro hizmet (ya da birden çok), geçersiz kılmanıza da olanak tanıyan bir hiyerarşik yapının "top" ana geliştirme alanından kendi iş ilerleme-mikro hizmet ile parçasıdır.
 
-Gördüğünüz [hizmetine wiki sayfasında Azure geliştirme alanları](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS), somut örneği pratik bir görünüm elde edin.
+Bu özellik temel geliştirme alanında varsa herhangi bir geliştirme alanı önek URL'de kullanırken, bir istek hedef mikro hizmet sunulur için URL ön ekleri üzerinde Aksi takdirde ilk hiyerarşi içinde bulunan hedef mikro hizmet örneğinin kadar iletilir , en üstte ana geliştirme alanına sonunda alınıyor.
+
+Gördüğünüz [hizmetine wiki sayfasında Azure geliştirme alanları](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS), somut örneği pratik bir görünüm elde edin.
 
 Daha fazla bilgi için makaleyi kontrol [Azure geliştirme alanları ile takım geliştirme](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

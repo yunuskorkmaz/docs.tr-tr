@@ -3,12 +3,12 @@ title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 8b44c445fbfd3d15cc8e6c53e640a8ae5e284d27
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836221"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981536"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -45,11 +45,14 @@ Bunu yapmak için ana nedeni, proje dosyanızda dağınıklık azaltmaktır. Olu
 
 Aşağıdaki tablo, hangi öğe ve hangi gösterir [eğik çizgi genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) her ikisi de dahil ve hariç SDK'yı: 
 
-| Öğe           | Glob içerir                              | Glob Dışla                                                  | Glob Kaldır                |
+| Öğe           | Glob içerir                                | Glob Dışla                                                    | Glob Kaldır                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Yok                        |
-| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \* \* / \*.resx   |
+
+> [!NOTE]
+> **Glob hariç** her zaman hariç `./bin` ve `./obj` tarafından temsil edilen klasörleri `$(BaseOutputPath)` ve `$(BaseIntermediateOutputPath)` MSBuild özellikleri sırasıyla. Bir bütün olarak tüm dışlar tarafından temsil edilen `$(DefaultItemExcludes)`.
 
 Projenizde eğik çizgi genelleştirmeler sahip ve en son SDK'sını kullanarak oluşturmaya çalışırsanız, aşağıdaki hatayı alırsınız:
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612027"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981458"
 ---
 # <a name="string-functions-visual-basic"></a>Dize İşlevleri (Visual Basic)
 Aşağıdaki tabloda, Visual Basic dizeleri arama ve işleme için sağladığı işlevleri listeler.  
@@ -51,27 +51,27 @@ Aşağıdaki tabloda, Visual Basic dizeleri arama ve işleme için sağladığı
 ## <a name="example"></a>Örnek  
  Bu örnekte `UCase` bir dizeyi büyük harfli sürümünü döndürmek için işlevi.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `LTrim` değişkenden önce gelen boşlukları işlevi ve `RTrim` önceki boşlukları kaldırır işlevi bir dize değişkeninden yerleştirir. Kullandığı `Trim` her iki türdeki alanı kesmek için işlevi.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `Mid` işlevini bir dizeden belirtilen sayıda karakteri döndürür.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `Len` bir dizedeki karakter sayısını döndürmek için.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `InStr` içindeki başka bir dizenin ilk geçtiği konumu döndürmek için işlevi.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, çeşitli kullanımları gösterir `Format` kullanarak işleve `String` biçimleri ve kullanıcı tanımlı biçimleri. Tarih Ayırıcı (`/`), zaman ayırıcı (`:`) ve AM/PM göstergeleri (`t` ve `tt`), sisteminiz tarafından gösterilecek biçimlendirilmiş Sonuç kodu kullanarak yerel ayarlara bağlıdır. Saatler ve tarihler görüntülendiğinde geliştirme ortamında, kısa saat biçimini ve kod yerel ayarının kısa tarih biçimi kullanılır.  
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, Visual Basic dizeleri arama ve işleme için sağladığı
 > [!NOTE]
 >  24 saatlik düzende, AM/PM göstergeleri kullanan yerel ayarlar için (`t` ve `tt`) herhangi bir şey görüntülemez.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

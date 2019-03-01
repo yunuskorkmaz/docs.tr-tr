@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667485"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977805"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama
 Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağlayan nesneleri oluşturabileceğiniz öğesinden. Bunu yapmak için bir veya daha fazla belirttiğiniz *tür parametrelerindeki* tanımında. Sınıf çeşitli veri türlerini kullanan nesneler için bir şablon olarak hizmet verebilir. Bu şekilde tanımlanan bir sınıfa bir *genel sınıf*.  
@@ -64,7 +64,7 @@ Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağl
   
      Aşağıdaki örnek çok basit bir listeyi yöneten bir sınıf tanımlar. İç dizide listesini tutar `items`ve kod kullanarak liste öğelerini veri türünü bildirebilirsiniz. Parametreli bir kurucu kullanarak sağlayan çokluğun ayarlamak üzere kod `items`, ve varsayılan oluşturucu, bu ayarlar 9 (için toplam 10 öğe).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      Bir sınıftan bildirebilirsiniz `simpleList` listesini tutmak için `Integer` değerleri, bir listesi için başka bir sınıf `String` değerleri ve başka tutacak `Date` değerleri. Üyeleri listele veri türünü hariç, tüm bu sınıflardan oluşturulan nesnelerin aynı şekilde davranır.  
   
@@ -72,7 +72,7 @@ Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağl
   
      Sınıf sınayabilirsiniz `simpleList` aşağıdaki kod ile.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

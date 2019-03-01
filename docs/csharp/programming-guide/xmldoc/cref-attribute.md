@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204294"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971370"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref Özniteliği (C# Programlama Kılavuzu)
 `cref` Bir XML belgeleri etiketi özniteliğinde "kod başvurusu" anlamına gelir Bu etiket iç metni bir kod öğe türü, yöntemi veya özelliği belirtir. Gibi belgeleri Araçları [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) kullanın `cref` köprüler burada türe veya üyeye belgelenen sayfasına otomatik olarak oluşturmak için öznitelikleri.  
@@ -18,7 +18,7 @@ ms.locfileid: "55204294"
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte gösterildiği `cref` kullanılan öznitelikler [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md) etiketler.  
   
- [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
  Derlendiğinde, program şu XML dosyası oluşturur. Dikkat `cref` özniteliğini `GetZero` yöntemi, örneğin, dönüştürülmüş derleyicisi tarafından `"M:TestNamespace.TestClass.GetZero"`. "/ M:" ön eki "method" anlamına gelir ve DocFX ve Sandcastle gibi belgeleri araçları tarafından tanınan bir kuraldır. Ön ekleri tam bir listesi için bkz. [XML dosyasını işleme](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c816b9e5e2ed24f60962797428d4b28033068885
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681917"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978637"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Adlandırılmış bağımsız değişkenler* bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirli bir parametre için bir bağımsız değişken belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenlere* bazı parametrelerin bağımsız değişkenleri atlamak sağlar. Her iki tekniği, yöntemleri, Dizinleyicileri, Oluşturucular ve temsilciler ile kullanılabilir.  
@@ -76,7 +76,7 @@ ms.locfileid: "54681917"
   
  İsteğe bağlı parametreler tüm gerekli parametrelerden sonra parametre listesinin sonunda tanımlanır. Çağıran, isteğe bağlı parametreler izleyenler herhangi biri için bağımsız değişken sağlıyorsa, önceki tüm isteğe bağlı parametrelerin bağımsız değişkenleri sağlamanız gerekir. Bağımsız değişken listesini virgülle ayrılmış boşlukları desteklenmez. Örneğin, aşağıdaki kodda, yöntem örnek `ExampleMethod` bir gerekli ve isteğe bağlı parametrelerden ile tanımlanır.  
   
- [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#15)]  
   
  Aşağıdaki çağrı `ExampleMethod` üçüncü parametresi için kullanılabilir ancak ikinci bağımsız değişken sağlandığından bir derleyici hatasına neden olur.  
   
@@ -97,7 +97,7 @@ ExampleMethod isteğe bağlı parametreler
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, Oluşturucusu `ExampleClass` isteğe bağlı olduğu bir parametresi vardır. Örnek yöntemi `ExampleMethod` bir gerekli parametresi `required`ve isteğe bağlı parametrelerden `optionalstr` ve `optionalint`. Kodda `Main` , yöntem ve oluşturucu çağrılacak farklı yolları gösterir.  
   
- [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
   
 ## <a name="com-interfaces"></a>COM arabirimleri  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneleri ve diğer geliştirmeler desteği yanı sıra Office Otomasyon API'leri gibi COM API'leri ile birlikte çalışabilirlik büyük ölçüde geliştirebilirsiniz.  
@@ -109,11 +109,11 @@ AutoFormat parametreleri
   
  C# 3.0 ve önceki sürümlerde, bağımsız değişken aşağıdaki örnekte gösterildiği gibi her parametre için gereklidir.  
   
- [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#3)]  
   
  Ancak, büyük ölçüde çağrısı basitleştirebilirsiniz `AutoFormat` C# 4.0 sunulan adlandırılmış ve isteğe bağlı bağımsız değişkenler, kullanarak. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, parametrenin varsayılan değeri değiştirmek istemiyorsanız, isteğe bağlı parametresi için bağımsız değişkeni atlamak etkinleştirin. Aşağıdaki çağrıda yedi parametreleri yalnızca biri için bir değer belirtilirse.  
   
- [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
  Daha fazla bilgi ve örnekler için bkz. [nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   

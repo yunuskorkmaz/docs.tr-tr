@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496955"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981432"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türleri için varsayılan değerdir `null` başvuru. Değer türleri için varsayılan değer, değer türü null olmasına göre değişir.  
@@ -30,11 +30,11 @@ Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türler
   
  Boş değer atanamayan bir değer türünde bir değişken ise atama `Nothing` için varsayılan değer olarak bildirilen tür için ayarlar. Bu tür değişken bir üye içeriyorsa, bunlar varsayılan değerlerine demektir. Aşağıdaki örnekte, skaler türleri için bunu göstermektedir.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  Bir değişken bir başvuru türü ise, atama `Nothing` değişkene ayarlar bir `null` değişkenin türüne başvuru. Ayarlanmış bir değişken bir `null` başvurusu herhangi bir nesne ile ilişkili değil. Aşağıdaki örnekte bu gösterir.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  Bir başvuru (veya boş değer atanabilen değer türü olup olmadığını) değişken denetlenirken `null`, kullanmayın `= Nothing` veya `<> Nothing`. Her zaman `Is Nothing` veya `IsNot Nothing`.  
   
@@ -42,7 +42,7 @@ Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türler
   
  Aşağıdaki örnekte kullanan karşılaştırmalar `Is` ve `IsNot` işleçleri.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  Kullanmadan bir değişken bildirirseniz bir `As` yan tümcesi ve `Nothing`, değişkeni bir tür olan `Object`. Bunun bir örneği `Dim something = Nothing`. Bu durumda bir derleme zamanı hatası oluşur, `Option Strict` açıktır ve `Option Infer` kapalıdır.  
   

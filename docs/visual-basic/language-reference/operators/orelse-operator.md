@@ -11,12 +11,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 70bbfef54d3f716e0e7463a39ee15e8480066695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5a0a3420d86df67e38df390ce98fbbe43c69459
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603020"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981365"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse İşleci (Visual Basic)
 Kısa devre kapsamlı mantıksal veya işlecini iki gerçekleştirir.  
@@ -57,14 +57,14 @@ result = expression1 OrElse expression2
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `OrElse` mantıksal veya işlecini iki ifadelerini gerçekleştirmek için işleci. Sonuç bir `Boolean` gösteren bir değer ya da iki ifadenin true olup olmadığını. İlk ifade yanlışsa `True`, ikinci değerlendirilmez.  
   
- [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
  Yukarıdaki örnekte sonuçlarını üretir `True`, `True`, ve `False` sırasıyla. Hesaplamasında `firstCheck`, ilk zaten olduğundan ikinci ifade değerlendirilmez `True`. Ancak, ikinci ifade hesaplamasına değerlendirilir `secondCheck`.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte gösterildiği bir `If`... `Then` iki yordam çağrılarını içeren deyimi. İlk çağrı döndürürse `True`, ikinci yordam çağrılmaz. İkinci yordam, kodun bu bölümünü çalıştırıldığında, her zaman gerçekleştirilmesi gereken önemli görevleri gerçekleştiriyorsa bu beklenmeyen sonuçlara neden.  
   
- [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)

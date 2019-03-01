@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75776e0d78bc1d8a834333ea4c3cc0a9291d1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681072"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965026"
 ---
 # <a name="implements-statement"></a>Implements Deyimi
 Bir veya daha fazla arabirimleri veya sınıfta uygulanması gereken arabirim üyeleri veya yapı tanımı göründüğü belirtir.  
@@ -46,14 +46,14 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek nasıl kullanılacağını gösterir `Implements` deyimi bir arabirimin üyeleri uygulamak için. Adlı bir arabirim tanımlar `ICustomerInfo` bir olay, bir özellik ve bir yordam. Sınıf `customerInfo` arabirim içinde tanımlanmış tüm üyelerini uygular.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  Unutmayın sınıfı `customerInfo` kullanan `Implements` sınıf tüm üyelerini uyguladığını göstermek için ayrı bir kaynak kod satırında deyimi `ICustomerInfo` arabirimi. Her sınıf üyesi'ı kullanan `Implements` anahtar sözcüğü, arabirim üyesini uyguladığını belirtmek için üye bildiriminin bir parçası olarak.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki iki yordamdan önceki örnekte uygulanan arabirimi nasıl kullanabileceğinizi gösterir. Uygulamasını test etmek için bu yordamları, proje ve çağrı ekleme `testImplements` yordamı.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulayan](../../../visual-basic/language-reference/statements/implements-clause.md)

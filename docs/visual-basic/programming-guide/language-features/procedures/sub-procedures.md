@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638125"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977584"
 ---
 # <a name="sub-procedures-visual-basic"></a>Alt Yordamlar (Visual Basic)
 A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Sub` deyimleri. `Sub` Yordamı bir görevi gerçekleştirir ve çağıran koda denetim döndürür, ancak çağrıldığı koda bir değer döndürmez.  
@@ -30,7 +30,7 @@ A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Su
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bildirmek için söz dizimi bir `Sub` yordam şu şekildedir:  
   
- `[` *değiştiriciler* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *değiştiriciler* `] Sub` *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -43,11 +43,11 @@ A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Su
   
  Parametre listesindeki her parametre için sözdizimi aşağıdaki gibidir:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*veri türü*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*veri türü*  
   
  Parametre isteğe bağlıysa, varsayılan değer bildiriminin bir parçası olarak da belirtmeniz gerekir. Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:  
   
- `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Yerel değişkenleri olarak Parametreler  
  Her bir parametre, yordama denetimi başarılı olduğunda, yerel bir değişken olarak kabul edilir. Bu, yaşam süresi yordamın aynıdır ve kapsamı bütün bir yordamdır anlamına gelir.  
@@ -66,11 +66,11 @@ A `Sub` yordamdır kapsadığı Visual Basic deyimleri bir dizi `Sub` ve `End Su
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
  Aşağıdaki `Sub` yordamı uygulamasıdır gerçekleştirmek üzere hangi görev bilgisayar işleci bildirir ve ayrıca bir zaman damgasını gösterir. Bu kod, her görevin başlangıcında çoğaltmak yerine uygulama yalnızca çağırır `tellOperator` çeşitli konumlardan. Her çağrı bir dizede geçirir `task` Başlatılmakta olan görevi tanımlayan bir bağımsız değişken.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  Aşağıdaki örnek, tipik bir çağrı gösterir `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

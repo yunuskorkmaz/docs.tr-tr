@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adf5884c759d4dd4267dba732d8b9f39c63cd320
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973398"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme
 Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu listeler ve bir dizinde metin dosyaları inceler, küçük bir uygulamanın nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya öznitelikleri ve içeriğindeki birinci satırın uygulama sağlar. Bir günlük dosyasına yazmak için bir seçenek yoktur.  
@@ -57,13 +57,13 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 2.  Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` Çağrı açılır **klasöre Gözat** iletişim kutusu. Sonra kullanıcı **Tamam**, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği gönderilen bağımsız değişken olarak `ListFiles` sonraki adımda eklenen yöntemi.  
   
 3.  Aşağıdaki `ListFiles` yöntemi.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      Bu kod önce temizler **ListBox**.  
   
@@ -83,7 +83,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 2.  Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      Kod içinde bir öğe seçildiğinde doğrular `ListBox`. Ardından dosya yolu girdisinden elde `ListBox`. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> Yöntemi, dosyanın hala varolup olmadığını denetlemek için kullanılır.  
   
@@ -91,7 +91,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 3.  Aşağıdaki `GetTextForOutput` yöntemi.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      Kod <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> dosya parametrelerini elde etmek için yöntemi. Dosya parametrelerini eklenen bir <xref:System.Text.StringBuilder>.  
   
@@ -107,7 +107,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 1.  Sonuna aşağıdaki kodu ekleyin `examineButton_Click` olay işleyicisi.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      Bu kod, seçilen dosya ile aynı dizine günlük dosyasına koymak için günlük dosyası yolu ayarlar. Geçerli tarih ve saate dosya bilgilerin günlük girişinin metnini ayarlayın.  
   
@@ -123,7 +123,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 2.  Olay işleyicisine aşağıdaki kodu ekleyin.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Bu kod, geçerli dizine klasör tarayıcı varsayılan dizinini ayarlar.  
   
@@ -135,7 +135,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 1.  Aşağıdaki `SetEnabled` yöntemi.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` Yöntemi etkinleştirir veya bir öğe olup olmadığını seçildiğinde bağlı olarak denetimleri devre dışı bırakan `ListBox`.  
   
@@ -157,7 +157,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
 ## <a name="full-example-using-systemio"></a>System.IO kullanarak tam örnek  
  Aşağıdaki eşdeğer sınıflardan örnekte <xref:System.IO> kullanmak yerine ad alanı `My.Computer.FileSystem` nesneleri.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.IO>

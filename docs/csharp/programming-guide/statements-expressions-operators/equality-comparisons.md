@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972930"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik Karşılaştırmaları (C# Programlama Kılavuzu)
 Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlarda, için test ettiğiniz *değer eşitliği*olarak da bilinen *denklik*, iki değişkenin içerdiği değerlerin eşit olduğu anlamına gelir. Diğer durumlarda iki değişkenin bellekte aynı alt nesneye başvurmadığını belirlemeniz gerekir. Bu yeni eşitlik türüne adlı *eşitlik*, veya *kimlik*. Bu konu, bu iki eşitlik türünü açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  
@@ -18,7 +18,7 @@ Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlard
 ## <a name="reference-equality"></a>Başvuru eşitliği  
  Başvuru eşitliği iki nesne başvurusunun aynı alt nesneye başvurması anlamına gelir. Aşağıdaki örnekte gösterildiği gibi bu basit atama yoluyla oluşabilir.  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  Bu kodda, iki nesne oluşturulur ancak arama deyiminden sonra her iki başvuru aynı nesneye başvurun. Bu nedenle başvuru eşitliğine sahiplerdir. Kullanım <xref:System.Object.ReferenceEquals%2A> iki başvurunun aynı nesneye başvurup başvurmadığını belirlemek için yöntemi.  
   

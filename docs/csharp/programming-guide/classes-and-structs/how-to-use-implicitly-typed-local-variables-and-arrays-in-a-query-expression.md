@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e3534abf961ba7b8a41eed592455962e5b551e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695679"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979040"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Nasıl yapılır: Kullanım türü örtük olarak belirlenmiş yerel değişkenleri ve dizileri sorgu ifadesinde (C# Programlama Kılavuzu)
 Derleyici, bir yerel değişken türünü belirlemek için istediğiniz zaman, türü örtük olarak belirlenmiş yerel değişkenleri kullanabilirsiniz. Sorgu ifadelerinde sık kullanılan anonim türler depolamak için örtük olarak yazılan yerel değişkenler kullanmanız gerekir. Aşağıdaki örnekler sorgularda örtük olarak yazılan yerel değişkenler isteğe bağlıdır ve gerekli kullanımlarını gösterir.  
@@ -20,12 +20,12 @@ Derleyici, bir yerel değişken türünü belirlemek için istediğiniz zaman, t
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek yaygın bir senaryo gösterilmektedir `var` anahtar sözcüğü gereklidir: Anonim türler bir dizi üreten bir sorgu ifadesi. Bu senaryoda, sorgu değişkeni hem de yineleme değişkeni `foreach` ifadesi örtük olarak belirlenmelidir kullanarak `var` anonim türünün bir türü adına erişim izni olmadığı için. Anonim türler hakkında daha fazla bilgi için bkz. [anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
- [!code-csharp[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#32)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `var` benzer bir durumda, ancak, anahtar sözcük kullanımını `var` isteğe bağlıdır. Çünkü `student.LastName` dize, sorgunun döndürdüğü yürütülmesini dizeler dizisidir. Bu nedenle, türü `queryID` olarak bildirilmesi `System.Collections.Generic.IEnumerable<string>` yerine `var`. Anahtar sözcüğü `var` kolaylık sağlamak için kullanılır. Örnekte, yineleme değişkeni `foreach` ifadesi bir dize olarak açıkça belirlenmiş ancak kullanarak bunun yerine bildirilebilir `var`. Yineleme değişkeni türü kullanımını anonim bir tür olmadığından `var` seçeneği, bir gereksinim değildir. Unutmayın, `var` kendisini çıkarır ve atamak için bir tür ancak derleyici bir yönerge değil.  
   
- [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#33)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

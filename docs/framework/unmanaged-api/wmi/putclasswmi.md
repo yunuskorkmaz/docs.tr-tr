@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614516"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972813"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi işlevi
 Yeni bir sınıf oluşturur veya mevcut olanı güncelleştirir.  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Tüm niteleyicileri ile değiştirilmiş özellik kümesi, WMI depolamaz </br> Aksi durumda, küme bu nesne yerelleştirilmez ve tüm niteleyicileri storedwith başladığınız varsayılır Bu örneği. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Tüm niteleyicileri ile değiştirilmiş özellik kümesi, WMI depolamaz <br> Aksi durumda, küme bu nesne yerelleştirilmez ve tüm niteleyicileri storedwith başladığınız varsayılır Bu örneği. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Sınıfı, yok, veya zaten varsa üzerine oluşturun. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1. | Sınıf güncelleştirin. Sınıf araması başarılı olması mevcut olması gerekir. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Bir sınıf oluşturun. Sınıf zaten varsa başarısız olur. |

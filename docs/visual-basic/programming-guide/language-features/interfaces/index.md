@@ -2,86 +2,80 @@
 title: Arabirimler (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654428"
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
-*Arabirimler* özellikleri, yöntemleri ve sınıfları uygulayabilirsiniz olayları tanımlayın. Arabirimleri, özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanıza olanak sağlar; Bu, var olan kodu tehlikeye atmadan arabirimlerinizi için geliştirilmiş uygulamaları geliştirebilirsiniz çünkü uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamaları geliştirerek herhangi bir zamanda yeni özellikleri ekleyebilirsiniz.  
+*Arabirimleri* özellikleri, yöntemleri ve sınıfları uygulayan olayları tanımlayın. Arabirim Özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanızı sağlar; Varolan kodu tehlikeye atmadan, arabirimler için geliştirilmiş uygulamalar geliştirebilirsiniz çünkü bu uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamalar geliştirerek, herhangi bir zamanda yeni özellikler ekleyebilirsiniz.  
   
- Neden arabirimleri sınıf devralma yerine kullanmak isteyebilirsiniz birkaç nedeni vardır:  
+ Neden arabirimleri sınıf devralma yerine kullanmak isteyebileceğiniz birkaç neden vardır:  
   
--   Arabirimleri daha çok, büyük olasılıkla belirli işlevleri sağlamak için nesne türlerini ilgisiz, uygulamalarınızın gerektirdiği durumlar için uygundur.  
+-   Arabirimleri daha iyi, uygulamalarınızın birçok nesne türlerini belirli işlevleri sağlamak için büyük olasılıkla ilgisi olmayan gereken durumlar için uygundur.  
   
--   Birden çok arabirimleri uygulayabilir tek bir uygulama tanımlayabilirsiniz çünkü arabirimleri temel sınıflar daha esnektir.  
+-   Arabirimleri temel sınıfları daha esnek olduğu birden fazla arabirim uygulayabilir tek bir uygulamasını tanımlayabilirsiniz.  
   
--   Arabirimler iyi durumda içinde uygulama bir taban sınıftan devralın gerekmez.  
+-   Arabirimleri, uygulama temel sınıfından devralmak erişiminiz yok gibi durumlarda faydalıdır.  
   
--   Sınıf devralma kullanamadığında arabirimleri yararlı olur. Örneğin, yapıları sınıflardan devralan olamaz, ancak arabirimleri uygulayabilir.  
+-   Sınıf devralma kullanamadığınızda arabirimleri yararlı olur. Örneğin, yapılar sınıfı devralamaz ancak arabirimleri uygulayabilir.  
   
 ## <a name="declaring-interfaces"></a>Arabirimleri bildirme  
- Arabirim tanımları içine içinde `Interface` ve `End Interface` deyimleri. Aşağıdaki `Interface` deyimi, isteğe bağlı bir ekleyebilirsiniz `Inherits` deyimi bir veya daha fazla devralınan arabirimlerini listeler. `Inherits` Deyimleri bildiriminde açıklamaları dışındaki diğer tüm deyimleri gelmelidir. Arabirim tanımı kalan deyimlerinde olmalıdır `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, ve `Enum` deyimleri. Herhangi bir uygulama kodu veya uygulama koduyla ilişkili deyimleri arabirimleri içeremez `End Sub` veya `End Property`.  
+ Arabirim tanımları içinde içine `Interface` ve `End Interface` deyimleri. Aşağıdaki `Interface` deyimi, isteğe bağlı ekleyebilirsiniz `Inherits` listeleyen bir veya daha fazla devralınan arabirimi deyimi. `Inherits` Deyimleri bildiriminde açıklamaları dışındaki diğer tüm ifadeler gelmelidir. Arabirim tanımı kalan ifadeler olmalıdır `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, ve `Enum` deyimleri. Arabirimleri, herhangi bir uygulama kodu veya uygulama kodu ile ilişkilendirilmiş ifadeler içeremez `End Sub` veya `End Property`.  
   
- Arabirim deyimleri bir ad alanında bulunan `Friend` varsayılan olarak, ancak bunlar aynı zamanda açıkça olarak bildirilebilir `Public` veya `Friend`. Arabirimleri tanımlanan sınıflar, modüller, arabirimler içinde ve yapıları olan `Public` varsayılan olarak, ancak bunlar aynı zamanda açıkça olarak bildirilebilir `Public`, `Friend`, `Protected`, veya `Private`.  
+ Bir ad alanındaki arabirimi deyimleri olan `Friend` varsayılan olarak, ancak bunlar da açıkça olarak bildirilebilir `Public` veya `Friend`. Arabirimler, sınıflar, modüller, arabirimler içinde tanımlanan ve yapıları, `Public` varsayılan olarak, ancak bunlar da açıkça olarak bildirilebilir `Public`, `Friend`, `Protected`, veya `Private`.  
   
 > [!NOTE]
->  `Shadows` Anahtar sözcüğü tüm arabirimi üyelerine uygulanabilir. `Overloads` Anahtar sözcüğü uygulanabilir `Sub`, `Function`, ve `Property` deyimleri bir arabirim tanımı'nda bildirilir. Ayrıca, `Property` deyimleri olabilir `Default`, `ReadOnly`, veya `WriteOnly` değiştiricileri. Diğer değiştiricileri hiçbiri —`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, veya `Overridable`— izin verilir. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+>  `Shadows` Anahtar sözcüğü tüm arabirimi üyelerine uygulanabilir. `Overloads` Anahtar sözcüğü uygulanabilir `Sub`, `Function`, ve `Property` deyimleri bir arabirim tanımı içinde bildirilen. Ayrıca, `Property` deyimleri olabilir `Default`, `ReadOnly`, veya `WriteOnly` değiştiriciler. Diğer değiştiricilere hiçbiri —`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, veya `Overridable`— izin verilir. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Örneğin, aşağıdaki kod bir işlevi, bir özellik ve bir olay ile bir arabirim tanımlar.  
+ Örneğin, aşağıdaki kod, bir işlev, bir özellik ve bir olay ile bir arabirim tanımlar.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
-## <a name="implementing-interfaces"></a>Arabirimler uygulama  
- Visual Basic ayrılmış sözcük `Implements` iki yolla kullanılır. `Implements` Deyimi güveninin bir sınıf veya yapı bir arabirimi uygular. `Implements` Anahtar sözcüğü güveninin bir sınıf üyesi veya yapı üyesi belirli arabirim üye uygular.  
+## <a name="implementing-interfaces"></a>Arabirimleri uygulama  
+ Visual Basic ayrılmış sözcük `Implements` iki şekilde kullanılır. `Implements` Deyimi, bir sınıf veya yapı bir arabirim uyguladığını belirtir. `Implements` Anahtar sözcüğü bir sınıf veya yapı üyesi belirli arabirim üyesini uyguladığını belirtir.  
   
 ### <a name="implements-statement"></a>Implements Deyimi  
- Bir sınıf veya yapı bir veya daha fazla arabirimlerini uygular, içermelidir `Implements` deyimi hemen sonra `Class` veya `Structure` deyimi. `Implements` Deyim için bir sınıf tarafından uygulanacak arabirim virgülle ayrılmış bir liste gerekir. Sınıf veya yapı kullanan tüm arabirimi üyeleri uygulamalıdır `Implements` anahtar sözcüğü.  
+ Bir sınıf veya yapı bir veya daha fazla arabirim uygularsa içermelidir `Implements` deyimi hemen sonra `Class` veya `Structure` deyimi. `Implements` Deyimi bir sınıf tarafından uygulanacak arabirim virgülle ayrılmış listesini gerektiriyor. Sınıf veya yapıda kullanarak tüm arabirim üyelerini uygulamalıdır `Implements` anahtar sözcüğü.  
   
 ### <a name="implements-keyword"></a>Implements anahtar sözcüğü  
- `Implements` Anahtar sözcüğü uygulanacak arabirim üyeleri virgülle ayrılmış bir listesini gerektirir. Genellikle, yalnızca tek bir arabirim üye belirtildi, ancak birden çok üye belirtebilirsiniz. Implements deyimi sınıfı içinde belirtilmelidir arabirim adı, arabirim üyesini belirtimi oluşur; bir süre; ve üye işlevi, özelliği veya uygulanacak olay adı. Arabirim üyesini uygulayan bir üyenin adını herhangi bir yasal tanımlayıcı kullanabilirsiniz ve bunlarla sınırlı değildir `InterfaceName_MethodName` Visual Basic önceki sürümlerinde kullanılan kural.  
+ `Implements` Anahtar sözcüğünü gerektiriyor-uygulanacak arabirim üyeleri virgülle ayrılmış listesi. Genellikle, yalnızca tek bir arabirim üyesi belirtildi, ancak birden çok üye belirtebilirsiniz. Bir sınıf içinde Implements deyimi belirtilmesi gerekir arabirim adının bir arabirim üyesi belirtimi oluşur; bir süre; ve üye işlevi, özellik ya da uygulanacak olay adı. Bir arabirim üyesi uygulayan bir üyenin adını herhangi bir yasal tanımlayıcı kullanabilirsiniz ve bunlarla sınırlı değildir `InterfaceName_MethodName` Visual Basic'in önceki sürümlerinde kullanılan kural.  
   
- Örneğin, aşağıdaki kodu adlı bir alt yordama bildirme gösterilmektedir `Sub1` arabirim yöntemini uygular:  
+ Örneğin, aşağıdaki kod nasıl adlı bir alt yordam gösterir `Sub1` bir arabirimin yöntemini uygulayan:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
- Parametre türleri ve dönüş türleri uygulayan üyesinin arabirimi arabirimi özelliği veya üye bildiriminde eşleşmelidir. Arabirim öğesi uygulamak için en yaygın arabirimi, aynı ada sahip bir üye içeren önceki örnekte gösterildiği gibi yoludur.  
+ Parametre türleri ve dönüş türleri uygulayan üyenin arabirimi arabirimi özelliği veya üye bildiriminde eşleşmelidir. Bir öğenin bir arabirim uygulamak için en yaygın arabirimi, aynı ada sahip bir üye ile önceki örnekte gösterildiği gibi yoludur.  
   
- Bir arabirim yöntemini uyarlamasını bildirmek için de dahil olmak üzere örneği yöntemi bildirimlerinde yasal özniteliklerini kullanabilirsiniz `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default`, ve `Static`. `Shared` Özniteliği olmadığından yasal bir örnek yöntemi yerine bir sınıfı tanımlar.  
+ Bir arabirim yönteminin uygulanması tanımlamak için de dahil olmak üzere örnek yöntem bildirimlerinde geçerlidir herhangi bir özniteliği kullanabilirsiniz `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default`, ve `Static`. `Shared` Özniteliği olmadığından geçerli bir örnek yöntemi yerine bir sınıf tanımlar.  
   
- Kullanarak `Implements`, birden çok yöntem aşağıdaki örnekteki gibi bir arabirim tanımlanan uygulayan tek bir yöntem de yazabilirsiniz:  
+ Kullanarak `Implements`, birden çok yöntem aşağıdaki örnekteki gibi bir arabirim içinde tanımlanmış uygulayan tek bir yöntemi de yazabilirsiniz:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
- Özel üye arabirim üyesini uygulamak için kullanabilirsiniz. Özel üye bir arabirim üye uygular, doğrudan nesne değişkenleri sınıf için kullanılabilir olmasa da bu üyede arabirimi yoluyla kullanılabilir duruma gelir.  
+ Özel üye arabirim üyesini uygulamak için kullanabilirsiniz. Doğrudan nesne değişkenleri sınıf için kullanılabilir olmamasına rağmen bu üyede özel üye bir arabirim üyesi geliştirdiğinde arabirimi yoluyla kullanılabilir hale gelir.  
   
 ### <a name="interface-implementation-examples"></a>Arabirimi uygulama örnekleri  
- Bir arabirimi uygulayan sınıflar, tüm alt özellikleri, yöntemleri ve olayları uygulamalıdır.  
+ Bir arabirimi uygulayan sınıflar tüm özelliklerini, yöntemlerini ve olaylarını uygulamalıdır.  
   
- Aşağıdaki örnek, iki arabirim tanımlar. İkinci arabirim `Interface2`, devralınan `Interface1` ve bir ek özellik ve yöntem tanımlar.  
+ Aşağıdaki örnek, iki arabirim tanımlar. İkinci arabirimini `Interface2`, devralınan `Interface1` ve bir ek özellik ve yöntem tanımlar.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
- Sonraki örnek uygulayan `Interface1`, önceki örnekte tanımlanan arabirimi:  
+ Sonraki örnekte uygulayan `Interface1`, önceki örnekte tanımlanan arabirimi:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
- Son örnek uygulayan `Interface2`, bir yöntem de dahil olmak üzere devralınan `Interface1`:  
+ Son örnek uygulayan `Interface2`, öğesinden devralınan bir yöntemi de dahil olmak üzere `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
- Readonly özelliği readwrite özelliğiyle uygulayabilirsiniz (diğer bir deyişle, uygulayan sınıfa readonly bildirmeniz gerekmez).  Arabirimi uygulama en az arabirimi bildirir üyeleri uygulamak taahhüt eder, ancak özelliğinizi yazılabilir izin verme gibi daha fazla işlevsellik sunabilir.  
+ Readwrite özelliğine sahip bir readonly özelliği uygulayabilirsiniz (diğer bir deyişle, uygulayan sınıfa salt okunur bildirmeniz gerekmez).  Arabirimi uygulama en az bildiren arabirimin üyeleri uygulamak taahhüt, ancak özelliğinizi yazılabilir olması izin verme gibi daha fazla işlevsellik sunabilir.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Arabirimleri Oluşturma ve Uygulama](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Tanımlama ve kendi arabirimi uygulama işlemi boyunca sürer ayrıntılı bir yordam sağlar.|  
-|[Genel Arabirimlerde Varyans](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans genel arabirimler açıklanır ve .NET Framework değişken genel arabirimler listesini sağlar.|
+|[İzlenecek yol: Arabirimleri Oluşturma ve Uygulama](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Tanımlama ve kendi arabirimini uygulayan işlemine götürür ayrıntılı bir yordam sağlar.|  
+|[Genel Arabirimlerde Varyans](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans in generic Interfaces açıklar ve .NET Framework'teki değişken genel arabirimler bir listesini sağlar.|

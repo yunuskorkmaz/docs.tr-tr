@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0e50de6217e01a7bcb68ab27a9595d91981dd4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681397"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968835"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML Değişmez Değerlerine Genel Bakış (Visual Basic)
 Bir *XML değişmez değeri* , Visual Basic kodunuzda doğrudan XML eklemenizi sağlar. XML değişmez sözdiziminin temsil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri ve bu, XML 1.0 sözdizimine benzer. Bu, kodunuzu son XML aynı yapıda olduğundan XML öğelerini ve belgeleri program aracılığıyla oluşturmak kolaylaştırır.  
@@ -26,11 +26,11 @@ Bir *XML değişmez değeri* , Visual Basic kodunuzda doğrudan XML eklemenizi s
 ## <a name="simple-literals"></a>Basit değişmez değerleri  
  Oluşturabileceğiniz bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne Visual Basic kod yazarak veya yapıştırarak geçerli XML biçiminde. Bir XML öğesi değişmez değeri döndüren bir <xref:System.Xml.Linq.XElement> nesne. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [XML sabit değerleri ve XML 1.0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). Aşağıdaki örnek, çeşitli alt öğeleri olan bir XML öğesi oluşturur.  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Bir XML belgesi bir XML değişmez değer ile başlatarak oluşturabileceğiniz `<?xml version="1.0"?>`, aşağıdaki örnekte gösterildiği gibi. Bir XML belgesi değişmez değeri döndüren bir <xref:System.Xml.Linq.XDocument> nesne. Daha fazla bilgi için [XML belgesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
 >  XML değişmez sözdiziminin Visual Basic'te XML 1.0 belirtimi için sözdizimi aynı değil. Daha fazla bilgi için [XML sabit değerleri ve XML 1.0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
@@ -47,12 +47,12 @@ Bir *XML değişmez değeri* , Visual Basic kodunuzda doğrudan XML eklemenizi s
   
  Örneğin, aşağıdaki kodu üyelerinden XML öğeleri oluşturmak için ekli bir sorgu kullanan `phoneNumbers2` dizisi ve ardından bu öğeleri alt öğeleri Ekle `contact2`.  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>Nasıl derleyicinin XML değişmez değerlerden nesnelerini oluşturur.  
  XML değişmez değerleri Visual Basic Derleyicisi eşdeğer çağrıları dönüştürecektir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oluşturmak için oluşturucu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne. Visual Basic Derleyicisi için bir çağrı Örneğin, aşağıdaki kod örneği İngilizceye <xref:System.Xml.Linq.XProcessingInstruction> XML sürüm yönergesi için oluşturucu çağrılar <xref:System.Xml.Linq.XElement> için oluşturucu `<contact>`, `<name>`, ve `<phone>` öğeleri ve çağrıları <xref:System.Xml.Linq.XAttribute> için oluşturucu `type` özniteliği. Öznitelikleri göz önünde bulundurulduğunda aşağıdaki örnekte, Visual Basic Derleyicisi özellikle çağıracak <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> iki kez Oluşturucusu. İlk değer geçer `type` için `name` parametresi ve değeri `home` için `value` parametresi. İkinci değer de geçecek `type` için `name` parametresi, ancak değeri `work` için `value` parametresi.  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Xml.Linq.XElement>

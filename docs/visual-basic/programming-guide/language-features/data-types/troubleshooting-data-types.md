@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728076"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974750"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -40,7 +40,7 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
   
  Aşağıdaki örnek, iki hatalı ve doğru karşılaştırma gösterir `Double` değerleri.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  Önceki örnekte <xref:System.Double.ToString%2A> yöntemi <xref:System.Double> daha iyi duyarlılık belirtmek için yapı `CStr` anahtar sözcüğünü kullanır. Varsayılan 15 basamak olsa da, isteğe bağlı olarak "G17" biçimi için 17 basamaklı genişletir.  
   
@@ -55,7 +55,7 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
   
  Aşağıdaki örnek, kayan nokta işlenenler kesinlik eksikliği olası gösterir.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  Önceki örnekte <xref:System.Double.ToString%2A> yöntemi <xref:System.Double> daha iyi duyarlılık belirtmek için yapı `CStr` anahtar sözcüğünü kullanır. Varsayılan 15 basamak olsa da, isteğe bağlı olarak "G17" biçimi için 17 basamaklı genişletir.  
   
@@ -89,7 +89,7 @@ Bu sayfada, iç veri türlerinde işlemler gerçekleştirdiğinizde oluşabilece
   
  Aşağıdaki örnek, bir sabit değer için hem başarısız hem başarılı atamalarını gösterir. bir `Char` değişkeni.  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  Var. olduğundan her zaman bir risk daraltma dönüştürmelerini kullanarak çalışma zamanında başarısız olabilir. Örneğin, bir dönüştürme `String` için `Char` başarısız olabilir `String` değer birden fazla karakter içeriyor. Bu nedenle, daha iyi kullanmak için programlama `C` karakter yazın.  
   

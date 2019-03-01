@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: dee30096f244adc34b83fdfdc6af0baabd372b4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa009168be3781c727cd5a9cb6976b8c16fb2843
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672415"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967496"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= İşleci (Visual Basic)
 Birleştiren bir `String` ifade bir `String` değişken veya özellik ve sonucu değişken veya özellik atar.  
@@ -42,7 +42,7 @@ variableorproperty &= expression
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `&=` işleci iki birleştirmek için `String` değişkenleri ve sonuç ilk değişkenine atayın.  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [& İşleci](../../../visual-basic/language-reference/operators/concatenation-operator.md)

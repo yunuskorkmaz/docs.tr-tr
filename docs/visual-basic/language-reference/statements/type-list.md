@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655081"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968276"
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 Belirtir *tür parametrelerindeki* için bir *genel* programlama öğesi. Birden çok parametre, virgüllerle ayrılır. Bir tür parametresi için sözdizimi aşağıdadır.  
@@ -80,17 +80,17 @@ Belirtir *tür parametrelerindeki* için bir *genel* programlama öğesi. Birden
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir çatı sözlüğe yeni bir giriş eklemek için iskelet bir işlev gibi genel bir sözlük sınıf tanımını gösterir.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
  Çünkü `dictionary` olan genel, bunu kullanan kod çeşitli nesneleri, aynı işlevlere sahip ancak farklı bir veri türü üzerinde çalışan her oluşturabilirsiniz. Aşağıdaki örnek, bir satırı oluşturan kodu gösterir. bir `dictionary` nesnesi ile `String` girişleri ve `Integer` anahtarları.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek önceki örneği tarafından oluşturulan eşdeğer iskelet tanımını gösterir.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [,](../../../visual-basic/language-reference/statements/of-clause.md)

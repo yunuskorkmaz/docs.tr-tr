@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: cfe987929099fc73ba3af9fe92b5871275c5396e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617557"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979859"
 ---
 # <a name="-operator-visual-basic"></a>+= İşleci (Visual Basic)
 Sayısal bir ifadenin değerini sayısal değişken veya özellik değerine ekler ve sonucu değişken veya özellik atar. Birleştirmek için de kullanılabilir bir `String` ifade bir `String` değişken veya özellik ve ata değişken veya özellik sonucu.  
@@ -51,9 +51,9 @@ variableorproperty += expression
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `+=` bir değişkenin değerini diğeriyle birleştirmek için işleci. İlk bölümü kullanan `+=` sayısal değişkenleriyle başka bir değer ekleyin. İkinci bölümü'nü kullanan `+=` ile `String` başka bir değerle birleştirilecek değişkenleri. Her iki durumda da sonucu ilk değişkenine atanır.  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#8)]  
   
  Değerini `num1` 13 ve değerini sunulmuştur `str1` "103" sunulmuştur.  
   

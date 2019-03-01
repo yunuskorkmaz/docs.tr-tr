@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555186"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970577"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -96,8 +96,8 @@ ms.locfileid: "54555186"
 ||<xref:System.UInt16>|Bir 16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değil.|**UShort**|**ushort**|**İmzasız short**|**uint16**|  
 ||<xref:System.UInt32>|32-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**uint**|**işaretsiz int**<br /> -veya-<br /> **İmzasız long**|**uint32**|  
 ||<xref:System.UInt64>|64-bit işaretsiz bir tamsayı.<br /><br /> CLS uyumlu değil.|**ULong**|**ulong**|**imzalanmamış __int64**|**uint64**|  
-|Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**</br> veya</br>**single**|  
-||<xref:System.Double>|Bir çift duyarlıklı (64-bit) kayan noktalı sayı.|**çift**|**double**|**double**|**float**</br> veya </br> **double**|  
+|Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**<br> veya<br>**single**|  
+||<xref:System.Double>|Bir çift duyarlıklı (64-bit) kayan noktalı sayı.|**çift**|**double**|**double**|**float**<br> veya <br> **double**|  
 |Mantıksal|<xref:System.Boolean>|Bir Boole değeri (true veya false).|**Boole değeri**|**bool**|**bool**|**bool**|  
 |Diğer|<xref:System.Char>|Unicode (16-bit) karakter.|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Ondalık (128-bit) bir değer.|**Ondalık**|**decimal**|**Ondalık**|**decimal**|  

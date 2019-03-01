@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600498"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972202"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri oluşan bir dizidir. İfadeler, değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri, oluşabilir veya *basit adı*. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Değişmez değerler ve basit adları  
  İki basit türde ifadeler sabit değerler ve basit adları var. Bir sabit değer adı yok sabit bir değerdir. Örneğin, aşağıdaki kod örneği, hem de `5` ve `"Hello World"` değişmez değerler şunlardır:  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Değişmez değerler hakkında daha fazla bilgi için bkz. [türleri](../../../csharp/language-reference/keywords/types.md).  
   
  Yukarıdaki örnekte, her ikisi de `i` ve `s` yerel değişkenler belirlemek basit adlarıdır. Bu değişkenleri ifadede kullanıldığında, değişken adı şu anda değişken bellek konumunda depolanan değeri için değerlendirir. Bu, aşağıdaki örnekte gösterilmiştir:  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Çağrı ifadeleri  
  Aşağıdaki kod örneğinde, çağrı `DoWork` çağırma ifadesidir.  
   

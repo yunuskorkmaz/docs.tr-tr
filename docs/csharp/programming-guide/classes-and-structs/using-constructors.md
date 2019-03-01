@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 3505cf44c187c2f7aa54ca61f38e5c40023d809d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d324cadee556552098710310cce7f192b9b4d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502604"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975166"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Oluşturucular sınıf veya yapının aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatılamıyor.  
@@ -25,7 +25,7 @@ Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md)
   
  Bir sınıf oluşturucu özel gibi yaparak oluşturulmasını engelleyebilir:  
   
- [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
  Daha fazla bilgi için [özel oluşturucular](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
@@ -56,15 +56,15 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Her iki sınıfları ve `structs` parametre oluşturucular tanımlayabilirsiniz. Parametre oluşturucular çağırılır, aracılığıyla bir `new` deyimi veya bir [temel](../../../csharp/language-reference/keywords/base.md) deyimi. Sınıfları ve `structs` birden çok oluşturucular da tanımlayabilirsiniz ve bunların hiçbiri varsayılan oluşturucuyu tanımlamak için gereklidir. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
+ [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
  Bu sınıf aşağıdaki deyimleri kullanarak oluşturulabilir:  
   
- [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
+ [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
  Bir oluşturucu kullanabilirsiniz `base` bir taban sınıfın oluşturucuyu çağırmak için anahtar sözcüğü. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
+ [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
  Blok Oluşturucu için yürütülmeden önce bu örnekte, temel sınıf için oluşturucu çağrılır. `base` Parametrelerle veya parametresiz anahtar sözcüğü kullanılabilir. Oluşturucu herhangi bir parametre için parametre olarak kullanılan `base`, veya bir ifade parçası olarak. Daha fazla bilgi için [temel](../../../csharp/language-reference/keywords/base.md).  
   
@@ -78,11 +78,11 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Bir kurucu kullanarak aynı nesnede başka bir oluşturucu çağırabilirsiniz [bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü. Gibi `base`, `this` parametrelerle veya parametresiz kullanılabilir ve oluşturucu içinde herhangi bir parametre için parametre olarak kullanılabilir `this`, veya bir ifade parçası olarak. Örneğin, önceki örnekte ikinci oluşturucu kullanılarak yazılabilir `this`:  
   
- [!code-csharp[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
+ [!code-csharp[csProgGuideObjects#59](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#59)]  
   
  Kullanımını `this` önceki örnekte anahtar sözcüğü bu oluşturucunun çağrılması neden olur:  
   
- [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
+ [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
  Oluşturucular olarak işaretlenebilir [genel](../../../csharp/language-reference/keywords/public.md), [özel](../../../csharp/language-reference/keywords/private.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [içkorumalı](../../../csharp/language-reference/keywords/protected-internal.md)veya [korunan özel](../../../csharp/language-reference/keywords/private-protected.md). Bu erişim değiştiricileri kullanıcılar sınıfın sınıf nasıl oluşturabilir tanımlayın. Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535275"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968263"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With Deyimi (Visual Basic)
 Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapı kullanırken yalnızca üyelerinin değerlerini okuyabilir veya çağırma yöntemlerinin ve kullanılan bir yapının üyelerine değer atamak çalışırsanız hata alırsınız bir `With...End With` deyimi.  
@@ -72,12 +72,12 @@ End With
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, her `With` blok, tek bir nesne üzerinde bir dizi deyim yürütür.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek Yuvalar `With…End With` deyimleri. İç içe içinde `With` deyimi, sözdizimi içteki nesneye başvurur.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Collections.Generic.List%601>

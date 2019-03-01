@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d32bc0a0fa3841746e93c8f21ba07776fc29816d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493426"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977935"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. Yazılmış istemci kodu için C#, F# ve Visual Basic bir genişletme yöntemi ve gerçekte bir tür içinde tanımlanan yöntemleri çağırma arasında görünür bir fark yoktur.  
@@ -21,13 +21,13 @@ Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemede
   
  Aşağıdaki örnek, standart sorgu işleci gösterilmektedir `OrderBy` yönteminde tamsayı dizisi. Parantez içindeki ifade bir lambda ifadesidir. Birçok standart sorgu işleçleri, lambda ifadeleri parametre olarak alır, ancak bu uzantı yöntemleri için bir gereklilik değildir. Daha fazla bilgi için [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  Uzantı yöntemleri statik yöntemler olarak adlandırılır ancak örnek yöntemi söz dizimi kullanılarak çağrılır. İlk parametreleri hangi tür yöntemin çalıştığını ve parametrenin öncesinde belirtir [bu](../../../csharp/language-reference/keywords/this.md) değiştiricisi. Genişletme yöntemleri ile kaynak kodunuza ad alanını açıkça aldığınızda kapsam içinde olan bir `using` yönergesi.  
   
  Aşağıdaki örnek için tanımlanmış bir uzantı yöntemini gösterir <xref:System.String?displayProperty=nameWithType> sınıfı. Bunun iç içe ve genel olmayan bir statik sınıf içinde tanımlandığına dikkat edin:  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  `WordCount` Genişletme yöntemi, bu kapsama alınabilir `using` yönergesi:  
   

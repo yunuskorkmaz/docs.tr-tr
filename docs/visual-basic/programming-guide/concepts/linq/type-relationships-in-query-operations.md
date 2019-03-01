@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731133"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979105"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 Kullanılan değişkenleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemleri kesin olarak belirlenmiştir ve birbiriyle uyumlu olması gerekir. Güçlü veri kaynağının, sorgu ve sorgu yürütme kullanılır. Aşağıdaki çizimde açıklamak için kullanılan terimler tanımlayan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu. Bir sorgunun bölümlerini hakkında daha fazla bilgi için bkz: [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ LINQ sorgusu bölümleri
   
  Visual Basic yapar güçlü yazarak uygun olarak da bilinen bir yerel tür çıkarımı uygulayarak *örtülü yazma*. Özellik, önceki örnekte kullanılır ve genelinde kullanılan görürsünüz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örnekler ve belgeler. Visual Basic'te yerel tür çıkarımı yalnızca'i kullanılarak başarılır bir `Dim` deyimi olmadan bir `As` yan tümcesi. Aşağıdaki örnekte, `city` bir dize olarak kesin.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Yerel tür çıkarımı yalnızca çalışır `Option Infer` ayarlanır `On`. Daha fazla bilgi için [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ LINQ sorgusu bölümleri
   
  Veri kaynağından döndürülen tür eşleşmeyen bir aralık değişkeni için açık bir tür belirtmeniz gerekebilir. Aralık değişkeninin türünü kullanarak belirtebileceğiniz bir `As` yan tümcesi. Ancak, bu hatayla sonuçlanır bir dönüştürme ise bir [daraltma dönüştürmesi](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve `Option Strict` ayarlanır `On`. Bu nedenle, veri kaynağından alınan değerleri dönüştürme almanızı öneririz. Kullanarak açık aralığı değişken türü için veri kaynağından değerleri dönüştürebilirsiniz <xref:System.Linq.Enumerable.Cast%2A> yöntemi. Seçilen değerleri de çevirebilirsiniz `Select` yan tümcesinin aralık değişkeni türünden farklı olan açık bir tür. Bu noktaları, aşağıdaki kodda gösterilmiştir.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Tüm öğeleri kaynak verilerin döndüren sorgular  
  Aşağıdaki örnekte gösterildiği bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulama işlemi, veri kaynağından seçilen öğelerin bir dizisini döndürür. Kaynak `names`, dizelerden oluşan bir dizi içeriyor ve sorgu çıktısı M harfi ile başlayan dizeleri içeren bir dizidir.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  Bu, aşağıdaki koda eşdeğerdir, ancak çok daha kısa ve yazmak daha kolay. Yerel tür çıkarımı sorgularda güvenme Visual Basic'te tercih edilen stilidir.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  Türleri açık veya örtük olarak belirlenmiş olup olmadığını aşağıdaki ilişkileri hem de önceki kod örnekleri, mevcut.  
   

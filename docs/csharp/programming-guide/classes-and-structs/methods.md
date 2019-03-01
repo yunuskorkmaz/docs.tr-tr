@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6e85a4dfdf562c0a479b19224e11e919da8716d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712161"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980366"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli metot bağımsız değişkenleri belirtme yürütülecek deyimler neden olur. C# içinde yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve programı başlatıldığında ortak dil çalışma zamanı tarafından (CLR) çağrılır.  
@@ -27,12 +27,12 @@ Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağı
   
  Yöntem parametreleri ayraç içine alınır ve virgülle ayrılır. Boş ayraçlar yöntemi hiçbir parametre gerektirmiyor gösterir. Bu sınıf, dört yöntemler içerir:  
   
- [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]  
   
 ## <a name="method-access"></a>Metot erişimini  
  Bir nesne üzerinde bir yöntemi çağırmak için bir alan erişme gibi olur. Nesne adından sonra bir nokta, adı yöntemi ve parantez ekleyin. Bağımsız değişkenler, parantez içinde listelenir ve virgülle ayrılır. Yöntemlerinin `Motorcycle` sınıfı bu nedenle aşağıdaki örnekte olduğu gibi çağrılabilir:  
   
- [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri vs. Arguments  
  Yöntem tanımını adlarını ve türlerini, gerekli olan herhangi bir parametre belirtir. Kod çağrıları metodu çağrılırken, her parametresi için bağımsız değişken olarak adlandırılan somut değerleri sağlar. Bağımsız değişken parametre türü ile uyumlu olması gerekir ancak çağıran kod içinde kullanılan bir bağımsız değişken adı (varsa) aynı adlı bir parametre olarak yönteminde tanımlanmış olması gerekmez. Örneğin:  
@@ -46,11 +46,11 @@ Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağı
   
  Bir başvuru türü kullanarak oluşturduğunuz `class` anahtar sözcüğü, aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]  
   
  Şimdi, bu tür bir yönteme temel alan bir nesne geçirirseniz, nesnesine bir başvuru geçirilir. Aşağıdaki örnek, türü bir nesne geçirir `SampleRefType` yöntemine `ModifyObject`.  
   
- [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]  
   
  Bu bağımsız değişken değerine göre bir yönteme geçirir, örnek önceki örnekteki gibi temelde aynı şeyi yapar. Ancak, bir başvuru türü kullanıldığından sonucu farklıdır. İçinde yapılan değişikliği `ModifyObject` için `value` parametre alanını `obj`, ayrıca değiştirir `value` bağımsız değişken alan `rt`, `TestRefType` yöntemi. `TestRefType` Yöntemi 33 çıkış olarak görüntüler.  
   
@@ -70,13 +70,13 @@ public ref double GetEstimatedDistance()
 
 `return` Anahtar sözcüğü de yöntemin yürütülmesini durdurur. Dönüş türü ise `void`, `return` deyimi bir değer olmadan, yöntemin yürütülmesini durdurmak yine de kullanışlıdır. Olmadan `return` anahtar sözcüğü, yöntem durdurur kod bloğunun sonuna ulaştığında yürütülüyor. Yöntemleriyle void olmayan dönüş türü kullanmak için gerekli `return` bir değer döndürmek için anahtar sözcüğü. Örneğin, bu iki yöntem kullanmak `return` anahtar sözcüğü, tamsayı döndüren için:  
   
- [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]  
   
  Yöntemi tarafından döndürülen bir değer kullanmak için yöntemi çağrılırken, aynı türde bir değer yeterli yöntemi çağrının kendisini her yerde kullanabilirsiniz. Ayrıca, dönüş değeri bir değişkene atayabilirsiniz. Örneğin, aşağıdaki iki kod örnekleri ve aynı hedefe ulaşmak:  
   
- [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]  
   
- [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]  
   
  Yerel değişken, bu durumda, kullanarak `result`depolamak için bir değer isteğe bağlıdır. Yöntemin tüm kapsam için bağımsız değişkenin özgün değeri depolamak gerekiyorsa gerekli olabilir veya kodun okunabilirliğini yardımcı olabilir.  
 
@@ -124,7 +124,7 @@ public static void FillMatrix(int[,] matrix)
   
  `startButton_Click` Yöntemi, bir zaman uyumsuz yöntemin dönüş türü void olan bir örnek verilmiştir. Çünkü `DoSomethingAsync` bir zaman uyumsuz yöntem çağrısı için görev `DoSomethingAsync` , aşağıdaki deyimi gösterildiği gibi beklenmesini gerekir: `await DoSomethingAsync();`. `startButton_Click` Yöntemi ile tanımlanmalıdır `async` değiştirici yöntemi sahip olduğu bir `await` ifade.  
   
- [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
  Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri, ancak bu tür parametreleri olan yöntemleri çağırabilir.  
   

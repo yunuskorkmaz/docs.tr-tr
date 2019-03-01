@@ -1,5 +1,5 @@
 ---
-title: Icordebugthread arabirimi1
+title: ICorDebugThread Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be30e91e017390befd26ada37daa0fc902bdaee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f2223230b18f175427bfbfeaa46bf1406d8c7e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617505"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976362"
 ---
-# <a name="icordebugthread-interface1"></a>Icordebugthread arabirimi1
+# <a name="icordebugthread-interface"></a>ICorDebugThread Arabirimi
 Bir işlemdeki bir iş parçacığını temsil eder. Yaşam süresi bir `ICorDebugThread` örneğidir ömrü, temsil ettiği iş parçacığı ile aynı.  
   
 ## <a name="methods"></a>Yöntemler  

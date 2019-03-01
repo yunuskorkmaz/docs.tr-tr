@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 6ed6f3d4fd77d714ab554d641c0c0fc4f403bbf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd57f63b5741822de7b11c1fafe90452a767aa34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715109"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965650"
 ---
 # <a name="addhandler-statement"></a>AddHandler Deyimi
 Bir olay, çalışma zamanında bir olay işleyicisi ile ilişkilendirir.  
@@ -42,7 +42,7 @@ AddHandler event, AddressOf eventhandler
 >  Özel olaylar için `AddHandler` deyimi çağırır olayın `AddHandler` erişimcisi. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Örnek  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)

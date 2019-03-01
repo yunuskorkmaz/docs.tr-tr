@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7a9c6c64f5aa482b6d21aab0c88fc204c6427a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974789"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanlarını bir Kalıcılık altyapısı olarak kullanma
 
@@ -163,7 +163,7 @@ Temel olarak, yalnızca Linux kapsayıcıları için kullanışlı bir seçim ol
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Kodu: MongoDB API'si, .NET Core uygulamalarında kullanma
 
-MongoDB API'si, projenize eklemek için gereken NuGet paketlerini .NET tabanlı ister gösterilen Locations.API projesinde aşağıdaki şekilde.
+MongoDB API'si için .NET Locations.API projesinde aşağıdaki şekilde gösterildiği gibi projenize eklemek için gereken NuGet paketlerini temel alır.
 
 ![Bağımlılıklar MongoDB NuGet paketleri gösteren Çözüm Gezgini görünümü.](./media/image21-bis.png)
 

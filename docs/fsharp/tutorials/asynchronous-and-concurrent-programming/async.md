@@ -2,14 +2,14 @@
 title: Zaman uyumsuz programlama
 description: Bilgi nasıl F# zaman uyumsuz programlama, kullanımı kolay ve doğal dil için dil düzeyinde bir programlama modeli aracılığıyla gerçekleştirilir.
 ms.date: 06/20/2016
-ms.openlocfilehash: e18697708741eef066a76bbffe35882f3639bb68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614486"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980093"
 ---
-# <a name="async-programming-in-f"></a>Zaman uyumsuz programlamaF# #
+# <a name="async-programming-in-f"></a>Zaman uyumsuz programlamada, F\#
 
 > [!NOTE]
 > Bu makaledeki bazı hatalar bulundu.  Bunu yeniden yazılıyor.  Bkz: [sorun #666](https://github.com/dotnet/docs/issues/666) değişiklikler hakkında bilgi edinmek için.
@@ -53,7 +53,7 @@ Dikkate almaya değer birkaç söz dizimi yapıları vardır:
 
 Ayrıca, normal `let`, `use`, ve `do` anahtar sözcükleri normal işlevinde olduğu gibi zaman uyumsuz sürümleri ile birlikte kullanılabilir.
 
-## <a name="how-to-start-async-code-in-f"></a>Zaman uyumsuz kodu başlamak nasılF# #
+## <a name="how-to-start-async-code-in-f"></a>Zaman uyumsuz kod içinde F başlatma\#
 
 Daha önce bahsedildiği gibi zaman uyumsuz kodu açıkça başlatılması gereken başka bir bağlamda yapılacak iş belirtimidir. Bunu yapmanın birincil iki yolu vardır:
 
@@ -152,7 +152,7 @@ for html in htmlList do
 
  F#ın derleyici çok katı, neredeyse imkansız vericidir gibi bir şey yapmadan "async" kod eşzamanlı olarak çalıştır. Bir uyarı arasında geliyorsa, kod nasıl çalışır düşündüğünüz yürütme olmaz işareti olmasıdır. Derleyici mutlu yapabilirsiniz, kodunuzu büyük olasılıkla beklenen şekilde çalıştırır.
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>İçin C#, incelemeye /VB ProgramcıF# #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>İçin C#/VB Programcı F aranıyor\#
 
 Bu bölümde zaman uyumsuz model hakkında bilgi sahibi olduğunuz varsayılır C#/VB. Kullanmıyorsanız, [zaman uyumsuz programlamada C# ](../../../csharp/async.md) bir başlangıç noktasıdır.
 

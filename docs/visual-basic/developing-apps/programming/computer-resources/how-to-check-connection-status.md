@@ -7,12 +7,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: c7a43fd154616e516f8c5e7d36d25f34924649ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3d5751ae7d88af05c2a77e9b64f9cb28179a35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499966"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973021"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te bağlantı durumunu denetleyin
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayar bir çalışma ağ veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.  
@@ -23,7 +23,7 @@ ms.locfileid: "54499966"
   
 -   Belirlemek olmadığını `IsAvailable` özelliği `True` veya `False`. Aşağıdaki kod, özelliğin durumunu denetler ve rapor:  
   
-     [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
+     [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
      Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir. Kod parçacığı Seçici'de bulunur **bağlantı ve ağ**. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).  
   

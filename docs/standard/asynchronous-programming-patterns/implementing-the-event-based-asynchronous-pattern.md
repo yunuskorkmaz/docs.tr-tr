@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: cab25e5a87345c69484f386584688a2efc8459d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579543"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973749"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -131,7 +131,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 |Sınıfın tamamı tek bir zaman uyumsuz işlemle|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
 |Sınıfta birden çok zaman uyumsuz işlemler|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
   
 ||Desteklenen birden çok eşzamanlı operasyonlar|Aynı anda yalnızca tek bir işlem|  
 |------|------------------------------------------------|----------------------------------|  

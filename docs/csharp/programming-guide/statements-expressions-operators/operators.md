@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603075"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981588"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 
@@ -20,11 +20,11 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
   
  Aşağıdaki C# deyimi tek bir birli işleç ve tek bir işlenen içerir. Artırım işleci `++`, işleneninin değerini değiştirir `y`.  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  Aşağıdaki C# deyimi, her biri iki işlenenli iki ikili işleç alır. Atama işleci `=`, tamsayı değişkeni sahip `y` ve ifade `2 + 3` işlenen olarak. İfade `2 + 3` kendisi, toplama işleci ve iki işlenenden oluşur `2` ve `3`.  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>İşleçler, değerlendirme ve İşleç önceliği
 

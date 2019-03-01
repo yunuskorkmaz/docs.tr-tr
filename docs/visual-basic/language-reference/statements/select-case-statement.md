@@ -21,12 +21,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: bc0b5037dc4e728a45dfdeb97c1b6aff449fcf2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9770574a1b25f37dcc91c1d0374340f762700be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551027"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968354"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case Deyimi (Visual Basic)
 Çeşitli deyim gruplarından birini bir ifadenin değerine bağlı olarak çalışır.  
@@ -80,7 +80,7 @@ End Select
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte bir `Select Case` değişkenin değerine karşılık gelen bir satır yazmak için yapı `number`. İkinci `Case` deyimi geçerli değeri ile eşleşen bir değer içeriyor `number`, "6 ve 8 dahil arasında" Yazar deyimi çalıştırır.  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>

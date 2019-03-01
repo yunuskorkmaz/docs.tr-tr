@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147270"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967977"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
 
@@ -78,7 +78,7 @@ Olay veri yolu gözlemci deseni ve yayımlama ilgili-abone ol modeli.
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Yayımlama/abone ol (Pub/Sub) deseni 
 
-Amacı [Yayımla/abone ol deseni](https://msdn.microsoft.com/library/ff649664.aspx) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetleri bildirimde bulunmak istiyorsunuz. Ancak gözlemci ve Pub/Sub desenler arasında önemli bir fark yoktur. "Birbirine alışık oldukları için" gözlemci desende yayın gözlemciler için doğrudan observable gerçekleştirilir. Ancak bir Pub/Sub düzeni kullanılırken yayımcı ve abone tarafından bilinen aracısı veya ileti Aracısı ya da olay veri yolu, adlı üçüncü bir bileşen, yoktur. Bu nedenle, Pub/Sub düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılmıştır.
+Amacı [Yayımla/abone ol deseni](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetleri bildirimde bulunmak istiyorsunuz. Ancak gözlemci ve Pub/Sub desenler arasında önemli bir fark yoktur. "Birbirine alışık oldukları için" gözlemci desende yayın gözlemciler için doğrudan observable gerçekleştirilir. Ancak bir Pub/Sub düzeni kullanılırken yayımcı ve abone tarafından bilinen aracısı veya ileti Aracısı ya da olay veri yolu, adlı üçüncü bir bileşen, yoktur. Bu nedenle, Pub/Sub düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılmıştır.
 
 ### <a name="the-middleman-or-event-bus"></a>Middleman ya da olay veri yolu 
 

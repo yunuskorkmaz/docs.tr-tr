@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 234cd23c487f92cfa1e2761dd7a6caadf8820704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685808"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979547"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
 Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı yüklü her sürüm için. Bu, genellikle her sürüm başka bir parametre listesi belirtmelisiniz anlamına gelir. Daha fazla bilgi için bkz: "Farklı imza" [yordam aşırı yüklemesi](./procedure-overloading.md).  
@@ -85,11 +85,11 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 ## <a name="implicit-overloads-for-optional-parameters"></a>İsteğe bağlı parametreler için örtük aşırı yüklemeleri  
  Bir yordamı bir [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametresi, bir isteğe bağlı parametre içeren ve olmadan bir tane olmak üzere iki aşırı yüklenmiş yordam eşdeğerdir. Bunlardan biri için karşılık gelen bir parametre listesi ile bu tür bir yordamı aşırı yükleme yapılamıyor. Aşağıdaki bildirimleri bu göstermektedir.  
   
- [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
- [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
- [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
  Birden fazla isteğe bağlı parametre içeren bir yordam için örtük aşırı yüklemeleri, önceki örnekte benzer mantığı tarafından gelen bir dizi yoktur.  
   
@@ -104,13 +104,13 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
   
  Aşağıdaki bildirimleri bu örtük aşırı yüklemeler göstermektedir.  
   
- [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
  Böyle bir yordam bir parametre listesiyle parametre dizisi için tek boyutlu bir dizi alan aşırı yükleyemez. Ancak, bir örtük aşırı imzalarını kullanabilirsiniz. Aşağıdaki bildirimleri bu göstermektedir.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Aşırı yükleme alternatif olarak yazısız programlama  
  Farklı veri türleri için bir parametre geçirmek çağıran kod izin vermek istiyorsanız, alternatif bir yaklaşım yazısız programlama ' dir. Tür denetleme anahtara ayarlayabilirsiniz `Off` ya da ile [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) veya [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneği. Ardından parametrenin veri türü bildirmek gerekmez. Ancak, bu yaklaşım, aşırı yüklemesi için kıyasla aşağıdaki dezavantajları bulunur:  

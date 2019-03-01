@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528881"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980782"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir yordam (Visual Basic) birden fazla sürümünü tanımlama
 Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yükleme* , her sürüm için aynı ada ancak farklı parametre listesini kullanarak. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır.  
@@ -33,7 +33,7 @@ Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yük
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tanımlayan bir `Sub` Müşteri'nin Dengeleme karşı bir işlem göndermeniz için yordamı. Kullandığı `Overloads` iki yordamı müşterinin adı ve diğer hesap numarası tarafından kabul eden bir sürümünü tanımlamak için anahtar sözcüğü.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  Çağıran kod olarak ya da Müşteri Kimliği edinebilirsiniz bir `String` veya `Integer`ve sonra her iki durumda da aynı çağıran deyimini kullanın.  
   

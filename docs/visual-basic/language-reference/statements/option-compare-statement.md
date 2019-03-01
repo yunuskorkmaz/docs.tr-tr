@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 59df00351d1c1cc4edf87853984d1d13187d4e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90e07afb1515b50ad6e2fd2a1bbe42f6da5fa95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532467"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968147"
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
 Dize verileri karşılaştırılırken kullanılan varsayılan karşılaştırma yöntemini bildirir.  
@@ -80,12 +80,12 @@ Option Compare { Binary | Text }
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Option Compare` ikili karşılaştırma varsayılan dize karşılaştırma yöntemini ayarlamak için ifade. Bu kodu kullanmak için açıklama durumundan çıkarın `Option Compare Binary` bildirimi ve kaynak dosyasının en üstüne yerleştir.  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Option Compare` varsayılan dize karşılaştırma yöntemini büyük/küçük harfe metin sıralama düzeni ayarlamak için ifade. Bu kodu kullanmak için açıklama durumundan çıkarın `Option Compare Text` bildirimi ve kaynak dosyasının en üstüne yerleştir.  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>

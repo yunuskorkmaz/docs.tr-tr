@@ -1,5 +1,5 @@
 ---
-title: Icordebugeval arabirimi1
+title: ICorDebugEval Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da68bc4218d59320997a341f8c4a860201ba643
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16beff67b4ef918afeb07ce4734fb8d2945e93c8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620337"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977207"
 ---
-# <a name="icordebugeval-interface1"></a>Icordebugeval arabirimi1
+# <a name="icordebugeval-interface"></a>ICorDebugEval Arabirimi
+
 Hata ayıklayıcının, hatası ayıklanan kod bağlamında kod yürütmesine olanak tanıyan yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  

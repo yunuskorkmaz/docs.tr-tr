@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731744"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972572"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler gerekiyor. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
@@ -44,7 +44,7 @@ Bir parametre bağımsız değişken geçirme
 ## <a name="parameter-data-type"></a>Parametre veri türü  
  Bir parametrenin veri türünü kullanarak tanımladığınız `As` bildiriminden yan tümcesi. Örneğin, aşağıdaki işlev bir dize ve tamsayı kabul eder.  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  Tür denetleme geçerseniz ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `Off,` `As` yan tümcesi, isteğe bağlıdır, hariç, herhangi bir parametre kullanıyorsa, tüm parametreleri onu kullanmanız gerekir. Tür denetleme ise `On`, `As` yan tümcesi tüm parametreler için gereklidir.  
   

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065875"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973736"
 ---
 # <a name="myresources-object"></a>My.Resources Nesnesi
 Uygulama kaynaklarına erişmek için özellikler ve sınıfları sağlar.  
@@ -53,29 +53,29 @@ Uygulama kaynaklarına erişmek için özellikler ve sınıfları sağlar.
 ## <a name="example"></a>Örnek  
  Bu örnek, bir formun başlık adlı dize kaynağı ayarlar `Form1Title` içinde uygulama kaynak dosyası. Örneğin çalışması, uygulama adlı bir dize olmalıdır `Form1Title` kaynak dosyasındaki.  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek form simgesini adlı simgesi ayarlar `Form1Icon` uygulamanın kaynak dosyasında depolanır. Örneğin çalışması, uygulama adlı bir simge olmalıdır `Form1Icon` kaynak dosyasındaki.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek adlı bir görüntü kaynağı için bir form arka plan görüntüsü ayarlar `Form1Background`, uygulama kaynak dosyasına olduğu. Bu örneğin çalışması, uygulama adlı bir görüntü kaynağı olmalıdır `Form1Background` kaynak dosyasındaki.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek adlı bir ses kaynak olarak depolanan ses çalar `Form1Greeting` uygulamanın kaynak dosya. Örneğin çalışması, uygulama adlı bir ses kaynağı olmalıdır `Form1Greeting` kaynak dosyasındaki. `My.Computer.Audio.Play` Yöntemi yalnızca Windows Forms uygulamaları için kullanılabilir.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, bir dize kaynağı uygulamanın kültürünü Fransızca sürümü alır. Kaynak adında `Message`. Kültürü değiştirme, `My.Resources` nesnesini kullanır, örnekte <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Bu örneğin çalışması, uygulama adlı bir dize olmalıdır `Message` Resources.fr-FR.resx bu kaynak dosyanın kültürünü Fransızca sürümü, kaynak dosya ve uygulama olması gerekir. Uygulama kaynak dosyanın kültürünü Fransızca sürümü yoksa `My.Resource` nesne kaynak varsayılan kültür kaynak dosyasından alır.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulama Kaynaklarını Yönetme (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

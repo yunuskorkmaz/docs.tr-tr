@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 08f9cf42f32c48e5dca09fc1141c55f6ba8af109
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9150ab3e29eaa6b692e2ab2be90bb0e87ba54941
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266279"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978668"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ ms.locfileid: "55266279"
  Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

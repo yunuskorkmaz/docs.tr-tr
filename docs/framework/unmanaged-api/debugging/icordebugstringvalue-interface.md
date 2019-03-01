@@ -1,5 +1,5 @@
 ---
-title: Icordebugstringvalue arabirimi1
+title: ICorDebugStringValue Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596845"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965364"
 ---
-# <a name="icordebugstringvalue-interface1"></a>Icordebugstringvalue arabirimi1
+# <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue Arabirimi
 Dize değerlerine uygulanan Icordebugheapvalue öğesinin.  
   
 ## <a name="methods"></a>Yöntemler  

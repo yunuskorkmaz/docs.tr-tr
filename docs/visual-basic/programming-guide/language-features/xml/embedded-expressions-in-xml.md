@@ -8,19 +8,19 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: c02b6ea0895d8b22ac71d0cb3ea6950861de47df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678765"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965793"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
 Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade içeren bir XML sabit değerleri oluşturmanıza olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı söz dizimi içinde kullanılan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
  Örneğin, bir XML öğesi değişmez değeri katıştırılmış ifadeler sabit metin içerikli birleştirme oluşturabilirsiniz.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
+ [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
  Varsa `isbnNumber` 12345 tamsayı içerir ve `modifiedDate` tarihi içeren 3/5/olduğunda bu kodu yürütür, değerini 2006 `book` olan:  
   
@@ -44,27 +44,27 @@ Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade i
   
 -   Bir XML öğesinin adındaki katıştırılmış bir ifade örneği:  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
+     [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
 -   Bir XML öğesi içeriğinde katıştırılmış bir ifade örneği:  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
+     [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
 -   Bir XML öğesi öznitelik adı bir gömülü ifade örneği:  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
+     [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
 -   Gömülü deyim bir XML öğesi öznitelik değeri örneği:  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
+     [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
 -   Bir XML öğesi özniteliği katıştırılmış bir ifadede örneği:  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
+     [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
 -   Bir XML belgesi kök öğesi içinde katıştırılmış bir ifade örneği:  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
+     [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
  Etkinleştirirseniz `Option Strict`, derleyici her katıştırılmış ifadenin türü için gerekli tür widens denetler. Tek özel durum için kod çalıştığında doğrulanır bir XML belgesi kök öğesidir. Olmadan derlerseniz `Option Strict`, türündeki ifadeler katıştırabilirsiniz `Object` ve çalışma zamanında türlerine doğrulanır.  
   

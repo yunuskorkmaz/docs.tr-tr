@@ -1,5 +1,5 @@
 ---
-title: Icordebugreferencevalue arabirimi1
+title: ICorDebugReferenceValue Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugReferenceValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbe5388d7c18202f4b89269141d33463edb07a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544279"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971443"
 ---
-# <a name="icordebugreferencevalue-interface1"></a>Icordebugreferencevalue arabirimi1
+# <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue Arabirimi
 Bir nesneye bir başvurusu olan bir değer yönetmek için yöntemler sağlar. (Diğer bir deyişle, bu arabirim işaretçisi yönetme yöntemleri sağlar.) Bu arabirim "ICorDebugValue" uygular.  
   
 ## <a name="methods"></a>Yöntemler  

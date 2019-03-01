@@ -1,5 +1,5 @@
 ---
-title: Icordebuggenericvalue arabirimi1
+title: ICorDebugGenericValue Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugGenericValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce4c1b73ab806958627bb68bfdcfcae890bc5e67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709838"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981991"
 ---
-# <a name="icordebuggenericvalue-interface1"></a>Icordebuggenericvalue arabirimi1
+# <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue Arabirimi
+
 "Tüm değerlere uygulanır Icordebugvalue" öğesinin. Bu arabirim, değer için Alma ve Ayarlama yöntemlerini sağlar.  
   
 ## <a name="methods"></a>Yöntemler  

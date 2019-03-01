@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1015e5b69f7701f772bc853bba53873fd065a996
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576921"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967938"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz. [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları kimliği dizesi belgeleri uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğeyi tanımlamak için kullanabilirsiniz.  
@@ -79,7 +79,7 @@ Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir ki
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki örnekler nasıl kimliği için bir sınıf dizeleri ve üyelerini oluşturulacak:  
   
- [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

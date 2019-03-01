@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506725"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979971"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
@@ -62,7 +62,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 |"G" ya da "g"|Genel|Sonuç: Daha fazla sabit noktalı veya bilimsel gösterim.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Anlamlı basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Sayısal türe bağlıdır.<br /><br /> Daha fazla bilgi: [Genel ("G") Biçim belirleyicisi](#GFormatString).|-123.456-123.456 ("G", en-US) -><br /><br /> -123,456-123.456 ("G", sv-SE) -><br /><br /> 123.4546 ("G4" en-US) -> 123.5<br /><br /> 123.4546 ("G4" sv-SE) 123,5 -><br /><br /> -1.234567890e-25 ("G", en-US) -> - 1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1, 25 23456789E|  
 |"N" ya da "n"|Sayı|Sonuç: Tamsayı ve ondalık basamakları, Grup ayırıcılar ve isteğe bağlı eksi işaretli ondalık ayırıcı.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [Sayısal ("N") Biçim belirleyicisi](#NFormatString).|1234.567 ("N" en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) 1 234,57 -><br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) 1 234,0 -><br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" ya da "p"|Yüzde|Sonuç: Sayısı 100 ile çarpılır ve yüzde simgesi ile görüntülenir.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [Yüzde ("P") biçim belirteci](#PFormatString).|1 ("P", en-US) -> % 100,00<br /><br /> 1 ("P", fr-FR) -> %100,00<br /><br /> -0.39678 ("P1", en-US) ->-39.7%<br /><br /> -0.39678 ("P1", fr-FR) -> - %39,7|  
-|"R" ya da "r"|Gidiş|Sonuç: Aynı numaraya gidiş dönüş yapabilen bir dize.<br /><br /> Tarafından desteklenen: <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger>.<br /><br /> Not: İçin önerilen <xref:System.Numerics.BigInteger> yalnızca yazın. İçin <xref:System.Double> türlerini, "G17" kullanır; <xref:System.Single> türleri "G9" kullanın. </br> Duyarlık belirtici: Yoksayıldı.<br /><br /> Daha fazla bilgi: [Round-trip ("R") biçim belirticisi](#RFormatString).|123456789.12345678 123456789.12345678 ("R") -&GT;<br /><br /> -1234567890.1234567-1234567890.12345678 ("R") -&GT;|  
+|"R" ya da "r"|Gidiş|Sonuç: Aynı numaraya gidiş dönüş yapabilen bir dize.<br /><br /> Tarafından desteklenen: <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger>.<br /><br /> Not: İçin önerilen <xref:System.Numerics.BigInteger> yalnızca yazın. İçin <xref:System.Double> türlerini, "G17" kullanır; <xref:System.Single> türleri "G9" kullanın. <br> Duyarlık belirtici: Yoksayıldı.<br /><br /> Daha fazla bilgi: [Round-trip ("R") biçim belirticisi](#RFormatString).|123456789.12345678 123456789.12345678 ("R") -&GT;<br /><br /> -1234567890.1234567-1234567890.12345678 ("R") -&GT;|  
 |"X" ya da "x"|Onaltılık|Sonuç: Bir onaltılık dize.<br /><br /> Tarafından desteklenir: Yalnızca integral türleri.<br /><br /> Duyarlık belirtici: Sonuç dizesindeki basamak sayısı.<br /><br /> Daha fazla bilgi: [Onaltılı ("X") Biçim belirleyicisi](#XFormatString).|255 ("X") FF -&GT;<br /><br /> -1 ("x") ff -><br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") 00FF -&GT;|  
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı|Sonuç: Oluşturur bir <xref:System.FormatException> çalışma zamanında.||  
   

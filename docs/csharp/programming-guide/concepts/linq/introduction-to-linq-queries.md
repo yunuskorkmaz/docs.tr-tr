@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73b7f8b8460e4cdfad5e1dbc669447ec6fe01b8f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605139"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969511"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
@@ -39,7 +39,7 @@ A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genelli
   
  Sorgulanabilir tür herhangi bir değişiklik veya olarak hizmet vermek için özel olarak değerlendirilmesi gerekir. bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Kaynak verileri bellekte bir sorgulanabilir tür olarak yoksa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı temsil etmesi gerekir, bu nedenle. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML belgesini sorgulanabilir bir yükleyen <xref:System.Xml.Linq.XElement> türü:  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  İle [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], önce bir nesne-ilişkisel tasarım zamanında el ile ya da kullanarak eşleme oluşturma [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) Visual Studio'da. Sorgularınızın karşı nesneleri ve çalışma zamanında yazma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı ile iletişimi gerçekleştirir. Aşağıdaki örnekte, `Customers` belirli bir tablo veritabanının yanı sıra, sorgu sonuç türünü temsil eden <xref:System.Linq.IQueryable%601>, türetilen <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
  Daha önce bahsedildiği gibi sorgu değişkeni sorgu komutlarını yalnızca depolar. Sorgunun gerçek yürütmesi içindeki sorgu değişkeni üzerinde yineleme kadar ertelenmiştir bir `foreach` deyimi. Bu kavram olarak adlandırılır *ertelenmiş yürütme* ve aşağıdaki örnekte gösterilmiştir:  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  `foreach` Burada sorgu sonuçlarının alındığı deyimi aynı zamanda. Örneğin, önceki sorguya, yineleme değişkeni de `num` her değeri (teker teker) döndürülen sırada tutar.  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Hemen Yürütmeyi Zorlama  
  Çeşitli kaynak öğeler üzerinde toplama işlevleri gerçekleştiren sorgular önce bu öğeler üzerinde yinelenmelidir. Gibi sorguların örnekleri `Count`, `Max`, `Average`, ve `First`. Bunlar açık bir yürütme `foreach` deyimi sorgu kullanması gerektiğinden `foreach` bir sonuç döndürmek için. Ayrıca sorguların bu türlerinin tek bir değer döndürmediğine dikkat edin bir `IEnumerable` koleksiyonu. Aşağıdaki sorgu kaynak dizideki çift sayıların sayısını döndürür:  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  Herhangi bir sorgunun hemen yürütülmesini zorlamak ve sonuçlarını önbelleğe kaydetmek için çağırabilirsiniz <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> yöntemleri.  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  Koyarak da yürütmeyi zorlayabilirsiniz `foreach` sorgu ifadesinin hemen sonra döngü. Çağırarak ancak `ToList` veya `ToArray` ayrıca tüm veriyi tek koleksiyon nesnesindeki önbelleğe alın.  
   

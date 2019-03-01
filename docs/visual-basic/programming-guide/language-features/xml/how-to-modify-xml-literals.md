@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636345"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974724"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Nasıl yapılır: XML değişmez değerleri (Visual Basic) değiştirme
 Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yöntemler sağlar. Ekleyebilir veya öğeler ve öznitelikler silme ve var olan bir öğe olan yeni bir XML öğesi değiştirebilirsiniz. Bu konu, varolan bir XML değişmez değer değiştirme çeşitli örneklerini sağlamaktadır.  
@@ -22,7 +22,7 @@ Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yönt
   
      Aşağıdaki kod örneği, tüm değerini güncelleştirir \<fiyat > öğeleri bir XML belgesi.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      Aşağıdaki örnek kaynak XML gösterir ve bu kod örneğindeki XML değiştirdi.  
   
@@ -65,7 +65,7 @@ Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yönt
   
 1.  XML değişmez değer için bir öznitelik eklemek için ilk XML değişmez değer için bir başvuru alın. Ardından, yeni bir XML özniteliği axis özelliği ekleyerek bir öznitelik ekleyebilirsiniz. Ayrıca, yeni bir ekleyebilirsiniz <xref:System.Xml.Linq.XAttribute> nesne değişmez değeri kullanarak XML <xref:System.Xml.Linq.XContainer.Add%2A> yöntemi. Aşağıdaki örnek, her iki seçeneği gösterir.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      Aşağıdaki örnek kaynak XML gösterir ve bu kod örneğindeki XML değiştirdi.  
   
@@ -111,7 +111,7 @@ Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yönt
   
      Aşağıdaki örnek, her tekniğin örneklerini gösterir.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      Aşağıdaki örnek kaynak XML gösterir ve bu kod örneğindeki XML değiştirdi.  
   
@@ -155,7 +155,7 @@ Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yönt
   
 1.  Bir öğe veya öznitelik, bir XML değişmez değeri kaldırmak için öğe veya öznitelik ve çağrı başvuru elde `Remove` yöntemi, aşağıdaki örnekte gösterildiği gibi.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      Aşağıdaki örnek kaynak XML gösterir ve bu kod örneğindeki XML değiştirdi.  
   
@@ -203,7 +203,7 @@ Visual Basic, XML değişmez değerlerini değiştirme için kullanışlı yönt
   
      Aşağıdaki kod örneği, tüm değiştirir \<açıklaması > öğeleri ile bir \<soyut > öğesi. İçeriği \<açıklaması > öğesi yeni korunur \<soyut > öğesi kullanarak <xref:System.Xml.Linq.XContainer.Nodes%2A> özelliği \<açıklaması > <xref:System.Xml.Linq.XElement> nesne.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      Aşağıdaki örnek kaynak XML gösterir ve bu kod örneğindeki XML değiştirdi.  
   

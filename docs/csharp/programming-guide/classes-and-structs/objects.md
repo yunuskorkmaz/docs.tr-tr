@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3391281ceeda031f6178f5909204624f3d6bb3dc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973567"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
@@ -28,7 +28,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
  Yapılar değer türleri olduğundan, bir değişken bir yapı nesnesinin tüm nesnesinin bir kopyasını tutar. Yapılar örneği de oluşturulabilir kullanarak `new` işleci, ancak bu zorunlu değildir, aşağıdaki örnekte gösterildiği gibi:  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  Hem bellek `p1` ve `p2` iş parçacığı yığında ayrılır. Bu bellek tür veya yöntem içinde bildirildiği birlikte geri kazanılır. Yapılar atamada neden kopyalanır nedenlerinden biri budur. Nesne tüm başvuruları kapsam dışına sahiplikten aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri kazanılan çöp olarak toplanacak) ortak dil çalışma zamanı tarafından andır. C++'ta gibi bir sınıf nesnesi belirleyici yok etmek mümkün değildir. Çöp toplama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bkz: [çöp toplama](../../../standard/garbage-collection/index.md).  
   
@@ -42,7 +42,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
 -   İki yapısı örneği örnek alanları aynı değerlere sahip olup olmadığını belirlemek için <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi. Tüm yapıları öğesinden örtük olarak devraldığı <xref:System.ValueType?displayProperty=nameWithType>, doğrudan nesne üzerinde aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  <xref:System.ValueType?displayProperty=nameWithType> Uygulaması `Equals` yansıma kullanır, çünkü bir yapıda alanlar nelerdir belirlemek mümkün olması gerekir. Kendi yapılar oluştururken, geçersiz kılma `Equals` türünüz için belirli bir verimli eşitlik algoritma sağlamak için yöntemi.  
   

@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600095"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978247"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
 .NET Framework derlemeleri oluştururken yardımcı olur. Diğerlerinin yanı sıra arabirimi birden çok modül derlemeler için derleme bildirimleri yazma, derlemeleri tanımlayıcı adlarla imzalama ve netmodule'ler oluşturmaya yardımcı yöntemler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile Method1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile yöntemi](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [AddImport Method1](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [Addımport yöntemi](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [CloseAssembly Yöntemi](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54600095"
   
  [GetResolutionScope Yöntemi](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [GetScope Method1](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope metodu](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [GetWin32ResBlob Yöntemi](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   

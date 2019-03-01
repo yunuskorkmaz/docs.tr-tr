@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 54a8a65db6e1f532cd21e36eeb5b98670efd4289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506400"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979489"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Bir belirsiz sayıda parametre (Visual Basic) isteyen bir yordamı aşırı yükleme
 Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi, parametre dizisi için tek boyutlu bir dizi alan aşırı yüklenmiş bir sürümünü tanımlayamaz. Daha fazla bilgi için bkz: "Örtük aşırı yüklemeleri için bir ParamArray parametresiyle" [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
@@ -37,13 +37,13 @@ Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/mo
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, tanımlı bir yordam gösterir. bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi ve aşırı yüklenmiş yordamları eşdeğer bir dizi.  
   
- [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
  Böyle bir yordam bir parametre listesiyle parametre dizisi için tek boyutlu bir dizi alan aşırı yükleyemez. Ancak, bir örtük aşırı imzalarını kullanabilirsiniz. Aşağıdaki bildirimleri bu göstermektedir.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
  Çağıran kod tarafından sağlanan bir veya daha fazla değer için olup olmadığını sınamak aşırı yüklenmiş sürümleri kodda yok `ParamArray` parametresi veya ise, kaç tane. Visual Basic denetim çağırma bağımsız değişken listesiyle eşleşen sürüme geçer.  
   

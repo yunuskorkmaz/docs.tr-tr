@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bfefccb32152cdb1aa1fdb156fbbd875c352218
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573342"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970928"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar programı çalıştırılırken bir hata oluştu belirtmek için kullanılır. Bir hata açıklayan özel durum nesneleri oluşturulur ve ardından *durum* ile [throw](../../../csharp/language-reference/keywords/throw.md) anahtar sözcüğü. Çalışma zamanı sonra en uyumlu özel durum işleyicisi arar.  
@@ -24,19 +24,19 @@ ms.locfileid: "54573342"
   
      Örneğin, bir yönteme parametre geçersiz bir değer varsa:  
   
-     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
 -   Nesne durumunu temel alan bir nesne için uygun bir çağrı yapılır.  
   
      Salt okunur bir dosyaya yazmak bir örnek çalışıyor olabilir. Örneği burada bir nesne durumu izin vermiyor bir işlem durumlarda, throw <xref:System.InvalidOperationException> veya üzerinde bu sınıfın bir türevi göre bir nesne. Bu bir örnektir oluşturan bir yöntemin bir <xref:System.InvalidOperationException> nesnesi:  
   
-     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
 -   Ne zaman bir yönteme bağımsız değişken, bir özel durum neden olur.  
   
      Bu durumda, özgün özel durum yakalandı ve bir <xref:System.ArgumentException> örneği oluşturulabilir. Özgün özel durum oluşturucusuna geçirilecek <xref:System.ArgumentException> olarak <xref:System.Exception.InnerException%2A> parametresi:  
   
-     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
  Özel durumlar adlı bir özellik içeren <xref:System.Exception.StackTrace%2A>. Bu dize, burada her yöntem için özel durum oluştu dosya adı ve satır numarasını birlikte geçerli çağrı yığınında yöntemler adını içerir. A <xref:System.Exception.StackTrace%2A> nesne otomatik olarak tarafından oluşturulan noktasından ortak dil çalışma zamanı (CLR) `throw` deyimi, böylece özel durum yığın izlemesi nerede başlamalıdır noktasından oluşturulmalıdır.  
   

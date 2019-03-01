@@ -2,14 +2,14 @@
 title: F# turu
 description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145529"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968302"
 ---
-# <a name="tour-of-f"></a>F# turu #
+# <a name="tour-of-f"></a>F turu\#
 
 F# hakkında bilgi edinmek için en iyi yolu, okuma ve F# kodu yazacak sağlamaktır. Bu makalede tura F# dilinin temel özelliklerinden bazıları aracılığıyla görür ve makinenizde yürütebilir bazı kod parçacıklarına verin. Bir geliştirme ortamını ayarlama bilgi edinmek için kullanıma [Başlarken](tutorials/getting-started/index.md).
 

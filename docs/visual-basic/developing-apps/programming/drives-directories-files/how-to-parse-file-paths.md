@@ -5,12 +5,12 @@ helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707758"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971994"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dosya yollarını ayrıştırma
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> Nesnesi, dosya yolları ayrıştırılırken çeşitli kullanışlı yöntemler sunar.  
@@ -27,13 +27,13 @@ ms.locfileid: "54707758"
   
 -   Kullanım <xref:System.IO.FileInfo.DirectoryName%2A> ve <xref:System.IO.FileInfo.Name%2A> özelliklerini <xref:System.IO.FileInfo> bir dosyanın adı ve yolu belirlemek için nesne. Bu örnek adını ve yolunu belirler ve bunları görüntüler.  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
 ### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>Bir dosyanın adı ve tam yolunu oluşturulacağı dizin birleştirmek için  
   
 -   Kullanım `CombinePath` yöntemi, dizin ve ad sağlama. Bu örnek, dizeleri alan `folderPath` ve `fileName` önceki örnekte oluşturulan, bunları bir araya getirir ve sonucu görüntüler.  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

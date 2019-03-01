@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 0ec66015159e03de8d2c16971c0e858ebc128014
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 6150074df9b921b4eb62169951122f5718e4f13d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835115"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969966"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -45,42 +45,42 @@ ms.locfileid: "56835115"
   
  Yalnızca temel sınıf üyesi olarak bildirilirse, türetilmiş bir sınıf bir temel sınıf üyesi geçersiz kılabilirsiniz [sanal](../../../csharp/language-reference/keywords/virtual.md) veya [soyut](../../../csharp/language-reference/keywords/abstract.md). Türetilen üye kullanmalısınız [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) açıkça yöntemi sanal bir çağrıda katılmak düşünüldüğünü göstermek için anahtar sözcüğü. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#20)]  
   
  Alanlar sanal olamaz; yalnızca yöntemler, özellikler, olaylar ve dizin oluşturucular sanal olabilir. Türetilmiş bir sınıf sanal bir üye değiştirdiğinde, bu üye temel sınıfın bir örneği bu sınıfın bir örneğini bile erişiliyor çağrılır. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#21)]  
   
  Sanal yöntemleri ve özellikleri türetilmiş sınıflar temel sınıf uygulamasına bir yöntem kullanmak zorunda kalmadan bir temel sınıf genişletmek etkinleştirin. Daha fazla bilgi için [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Arabirimdeki bir yöntem veya uygulaması türetilen sınıflar için sola yöntemleri kümesini tanımlamak için başka bir yol sağlar. Daha fazla bilgi için [arabirimleri](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Yeni üyeler ile taban sınıfı üyeleri gizleme  
  Türetilmiş üyelik bir temel sınıfta bir üye ile aynı ada sahip olmasını istediğiniz ancak bunu sanal bir çağrıda katılmak istemiyorsanız, kullanabileceğiniz [yeni](../../../csharp/language-reference/keywords/new.md) anahtar sözcüğü. `new` Anahtar sözcüğü bir sınıf üyesinin değiştirilmekte olan dönüş türünden önce yerleştirin. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
  Gizli bir temel sınıf üyeleri, türetilmiş sınıf temel sınıfın bir örneğine örneğini atayarak istemci kodundan hala erişilebilir. Örneğin:  
   
- [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
 ### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Sanal üyeler geçersiz kılmasını önlemek türetilen sınıflar  
  Sanal üyeler, kaç sınıflar olarak bildirilen sınıfı sanal üye arasında kaldırıldığı bildirilen bağımsız olarak sanal kalır. C sınıf B'den türeyen bir sınıf sanal bir üye bildirir ve B sınıf A'dan türer, C sınıfı sanal üye devralır ve geçersiz kılmak, bağımsız olarak, bu üye için bir geçersiz kılma bildirilen B sınıf olup seçeneğine sahiptir. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#22)]  
   
  Türetilmiş bir sınıf için bir geçersiz kılma olarak bildirerek sanal devralma durdurabilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md). Bu yerleştirme gerektirir `sealed` anahtar sözcüğünün önüne `override` sınıf üyesi bildiriminde anahtar sözcüğü. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#24)]  
   
  Önceki örnekte, yöntem `DoWork` artık sanal C'den türetilmiş sınıfına değil C örnekleri B türü veya tür a korumalı yöntemler cast olsa bile değiştirilebilir için türetilmiş sınıfları tarafından kullanarak yine de sanal `new` anahtar sözcüğü, aşağıdaki örnekte gösterildiği gibi:  
   
- [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#25)]  
   
  Bu durumda, `DoWork` D, türünde bir değişken kullanarak D adlı yeni `DoWork` çağrılır. C, B ve A türünde bir değişken D, bir çağrı örneğini erişmek için kullanılıp kullanılmadığını `DoWork` sanal devralma, bu çağrıları uygulanmasına yönelik yönlendirme kurallarını takip `DoWork` c sınıfı hakkında  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Sanal temel sınıf üyelerinin türetilmiş sınıflardan erişme  
  Sahip veya bir yöntem veya özellik geçersiz kılınan türetilmiş bir sınıf yöntemi veya özelliği temel sınıf kullanarak erişmeye devam edebilirsiniz `base` anahtar sözcüğü. Aşağıdaki kod, bir örnek sağlar:  
   
- [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#26)]  
   
  Daha fazla bilgi için [temel](../../../csharp/language-reference/keywords/base.md).  
   

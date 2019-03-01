@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655679"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978117"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
 A *alan* doğrudan içinde bildirilmiş herhangi bir türde bir değişken bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md). Alanlar *üyeleri* içeren kendi türü.  
@@ -23,15 +23,15 @@ A *alan* doğrudan içinde bildirilmiş herhangi bir türde bir değişken bir [
   
  Alanlar sınıf bloğunda alanının adından önce gelen alanın türünü ardından alanın erişim düzeyini belirterek bildirilir. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  Bir nesne bir alana erişmek için ardından alanın adı olarak nesne adından sonra bir nokta ekleyin `objectname.fieldname`. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  Bir alan, alanın bildirildiğinde atama işlecini kullanarak bir başlangıç değeri verilebilir. Otomatik olarak atamak için `day` alanı `"Monday"`, örneğin, bildirirsiniz `day` aşağıdaki örnekteki gibi:  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  Alanlar, nesne örneği için oluşturucu hemen çağrılmadan önce başlatılır. Oluşturucu bir alanın değerini atarsa, alanın bildirim sırasında belirtilen herhangi bir değer üzerine yazar. Daha fazla bilgi için [oluşturucuları kullanarak](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

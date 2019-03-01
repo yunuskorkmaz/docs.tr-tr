@@ -7,53 +7,53 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339325"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970707"
 ---
-# <a name="getting-started-with-linq-in-c"></a>C#'de LINQ'e Başlarken
-Bu bölüm LINQ belgeler ve örnekler kalan anlamanıza yardımcı olacak temel bilgiler içerir.  
+# <a name="getting-started-with-linq-in-c"></a>C'de lınq'e Başlarken\#
+Bu bölüm, LINQ belgelere ve örneklere geri kalanını anlamanıza yardımcı olacak temel bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Giriş LINQ sorgularını (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Temel LINQ Sorgu işlemi tüm diller ve veri kaynakları arasında ortak olan üç bölümden açıklar.  
+ [LINQ sorguları (C#) giriş](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ Tüm diller ve veri kaynakları arasında ortak olan temel LINQ sorgu işleminin üç bölümü açıklar.  
   
  [LINQ ve genel türler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
- LINQ kullanıldıkları gibi kısa bir genel türlere giriş sağlar.  
+ LINQ to kullanıldığından genel türler için kısa bir giriş sağlar.  
   
  [Temel LINQ Sorgu İşlemleri](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
- Sorgu işlemleri ve nasıl bunlar C# ile ifade edilir en yaygın türleri açıklanmaktadır.  
+ Sık karşılaşılan sorgu işlemleri ve içinde nasıl ifade açıklar C#.  
   
  [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
- Sorgularda alınan verileri dönüştüremez çeşitli yolları açıklanmaktadır.  
+ Sorgularda alınan verileri dönüştürebilirsiniz çeşitli yolları açıklar.  
   
  [LINQ Sorgu İşlemlerinde Tür İlişkileri](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- Nasıl türleri korunur ve/veya bir LINQ Sorgu işlemi üç bölümlerinde dönüştürülmüş açıklar  
+ Nasıl türleri korunur ve/veya bir LINQ sorgu işleminin üç bölümü içinde dönüştürülmüş açıklar  
   
  [LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- Yöntem sözdizimi ve sorgu söz dizimi LINQ sorgusu express için iki yol karşılaştırır.  
+ Yöntem sözdizimi ve sorgu söz dizimi bir LINQ Sorgu express için iki yol karşılaştırır.  
   
  [LINQ'i Destekleyen C# Özellikleri](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
- LINQ destekleyen C# 3.0 eklenen dil yapıları açıklar.  
+ Eklenen dil yapıları açıklar C# LINQ destekleyen 3.0.  
   
- [İzlenecek yol: Sorguları C# ile yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- C# üzerinde LINQ projesi oluşturma, basit veri kaynağı ekleme ve bazı temel sorgu işlemleri gerçekleştirmeye yönelik adım adım yönergeler.  
+ [İzlenecek yol: Sorguları yazmaC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ Oluşturmaya yönelik adım adım yönergeler bir C# LINQ projesi, basit bir veri kaynağı ekleme ve bazı temel sorgu işlemleri gerçekleştirme.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  LINQ teknolojileri açıklayan konulara bağlantılar sağlar.  
   
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- LINQ sorguları genel bir bakış içerir ve ek kaynaklara bağlantılar sağlar.  
+ LINQ sorguları genel bir bakış içerir ve ek kaynaklara bağlantılar sağlanmaktadır.  
   
  [Visual Studio IDE ve LINQ (C#) için Araçlar desteği](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Visual Studio ortamında tasarlama, kodlama ve LINQ etkin uygulama hata ayıklama için kullanılabilecek araçlar açıklanmaktadır.  
+ Tasarlama, kodlama ve LINQ etkinleştirilmiş uygulamanın hatalarını ayıklamaya yönelik Visual Studio ortamında kullanılabilen araçları açıklar.  
   
  [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- LINQ kullanılan standart yöntemler sunar.  
+ LINQ içinde kullanılan standart yöntemleri tanıtır.  
   
- [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Visual Basic ile LINQ kullanarak ilgili konulara bağlantılar sağlar.
+ [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ Visual Basic ile LINQ kullanma hakkındaki konulara bağlantılar sağlar.

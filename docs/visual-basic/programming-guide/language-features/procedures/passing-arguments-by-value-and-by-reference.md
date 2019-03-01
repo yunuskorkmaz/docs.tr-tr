@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978481"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
 Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle* veya *başvuruya göre*. Bu olarak bilinir *mekanizması geçirme*, yordamı çağıran koddaki bağımsız temel programlama öğesine değiştirip değiştiremeyeceğini belirler. Yordam bildirimi belirterek her parametre geçirme mekanizması belirler [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğü.  
@@ -66,7 +66,7 @@ Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle
  Aşağıdaki örnek, bağımsız değişkenleri değere göre geçirilecek zaman ve ne zaman geçirileceğini başvuruya göre gösterir. Yordam `Calculate` hem de bir `ByVal` ve `ByRef` parametresi. Faiz oranını verilen `rate`ve para ödülleriyle toplamını `debt`, yordamın için yeni bir değer hesaplamak için görevdir `debt` faiz oranını özgün değeri olarak diğer bir deyişle sonucu `debt`. Çünkü `debt` olduğu bir `ByRef` parametresini yeni toplam karşılık gelen çağıran koddaki bağımsız değişkenin değeri yansıtılır `debt`. Parametre `rate` olduğu bir `ByVal` parametresi çünkü `Calculate` değerini değiştirmemesi gerekir.  
   
 ### <a name="code"></a>Kod  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yordamlar](./index.md)

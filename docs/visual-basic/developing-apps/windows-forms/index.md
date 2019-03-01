@@ -2,15 +2,9 @@
 title: Windows Forms Uygulaması Temelleri (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592529"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -46,7 +40,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
   
 |Bitiş|Bkz. |  
 |--------|---------|  
-|Visual Studio ile yeni bir Windows Forms uygulaması oluşturma|[İzlenecek yol: Basit bir Windows formu oluşturma](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Visual Studio ile yeni bir Windows Forms uygulaması oluşturma|[Öğretici 1: Resim Görüntüleyici oluşturma](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Form üzerinde denetimleri kullanın|[Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl sınıfından devralma](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

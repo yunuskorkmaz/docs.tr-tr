@@ -2,12 +2,12 @@
 title: Giriş karakter kümesi (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641206"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976765"
 ---
 # <a name="input-character-set-entity-sql"></a>Giriş karakter kümesi (varlık SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] UTF-16 kodlamalı UNICODE karakterler kabul eder.  
@@ -24,7 +24,7 @@ ms.locfileid: "54641206"
   
  Anahtar sözcükler, ifadeler ve noktalama işaretleri için Latin normalleştirir herhangi bir UTF-16 karakter olabilir. Örneğin, Japonca bir kod seçin, geçerli bir anahtar sözcüktür.  
   
- Anahtar sözcükler, ifadeler ve noktalama işaretleri, yalnızca Latin karakterler olabilir. `SELECT` Japonca bir kod sayfasına bir anahtar değil. +,-, *, /, =, (,), ', [,] ve burada tırnak işareti olmayan diğer dil yapısı yalnızca Latin karakterler olabilir.  
+ Anahtar sözcükler, ifadeler ve noktalama işaretleri, yalnızca Latin karakterler olabilir. `SELECT` Japonca bir kod sayfasına bir anahtar değil. +,-, \*, /, =, (,), ', [,] ve burada tırnak işareti olmayan diğer dil yapısı yalnızca Latin karakterler olabilir.  
   
  Basit tanımlayıcı yalnızca Latin karakterler olabilir. Özgün değer karşılaştırıldığı bu karşılaştırma sırasında belirsizliği ortadan kaldırır. Örneğin, ABC Japonca ve Latin kod sayfaları farklı olacaktır.  
   

@@ -2,12 +2,12 @@
 title: Web Hizmetleri genel serileştirme teknolojisi örneği
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 27e0a7621bc77b62e36a0bbbdfa25f0ec3778798
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59224df97d54ac089293068bbb5dfa3fe26a8d8c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636592"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971877"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web Hizmetleri genel serileştirme teknolojisi örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -61,7 +61,7 @@ ms.locfileid: "54636592"
 2.  Tür `http://localhost/[virtual directory]/Service.asmx`burada `[virtual directory]` örnek yapılandırıldığında oluşturduğunuz sanal dizini temsil eder.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örnek Web hizmeti tanımının bağlantılar içeren bir varsayılan ASP.NET sayfasını görüntüler. Web hizmeti için kaynak kodu değiştirme ek olarak görünen özelleştirebilirsiniz. Daha fazla bilgi için [yapı XML Web hizmeti istemcileriyle](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Örnek Web hizmeti tanımının bağlantılar içeren bir varsayılan ASP.NET sayfasını görüntüler. Web hizmeti için kaynak kodu değiştirme ek olarak görünen özelleştirebilirsiniz. Daha fazla bilgi için [yapı XML Web hizmeti istemcileriyle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w3h45ebk(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,4 +69,4 @@ ms.locfileid: "54636592"
 - <xref:System.Web.Services>
 - <xref:System.Xml.Serialization>
 - [Serileştirme](../../../docs/standard/serialization/index.md)
-- [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+- [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

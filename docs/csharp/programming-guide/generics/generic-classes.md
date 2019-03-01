@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651792"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970226"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Genel Sınıflar (C# Programlama Kılavuzu)
 Genel sınıflar, belirli veri türüne özgü olmayan işlemler kapsüller. En yaygın Genel sınıflar için bağlantılı liste, karma tabloları, yığınlar, kuyruklar, ağaçlar ve benzeri gibi koleksiyonlar ile kullanılır. Ekleme ve koleksiyondan öğeleri kaldırma gibi işlemler temel olarak aynı şekilde depolanmakta olan veri türünden bağımsız olarak gerçekleştirilir.  
@@ -40,27 +40,27 @@ Genel sınıflar, belirli veri türüne özgü olmayan işlemler kapsüller. En 
   
  Tür parametreleri ve kısıtlamalar için kuralları, özellikle devralma ve üye erişilebilirliği ile ilgili genel bir sınıf davranışı için birkaç etkiler. Devam etmeden önce bazı terimler anlamanız gerekir. Genel bir sınıf için `Node<T>,` istemci kodu sınıf ya da kapalı bir oluşturulmuş tür oluşturmak için bir tür bağımsız değişkeni belirterek başvurabilir (`Node<int>`). Alternatif olarak, tür parametresi, genel bir temel sınıf belirttiğinizde örneğin belirtilmemiş bırakabilirsiniz, açık bir oluşturma türü oluşturulan (`Node<T>`). Genel sınıflar somut, kapalı oluşturulmuş veya açık oluşturulmuş taban sınıflardan devralınabilir:  
   
- [!code-csharp[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#16)]  
   
  Genel olmayan başka bir deyişle, somut, sınıflar devral kapalı oluşturulmuş taban sınıflarına, ancak değil açık oluşturulan sınıflar veya tür parametreleri istemci kodu oluşturmak için gerekli tür bağımsız değişkeni sağlamak için çalışma zamanında hiçbir yolu olmadığından temel sınıf.  
   
- [!code-csharp[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#17)]  
   
  Açık oluşturulan türlerinden devraldığına Genel sınıflar türetilen sınıf tarafından paylaşılmayan herhangi bir temel sınıf türü parametre türü bağımsız değişkenler aşağıdaki kodda gösterildiği gibi sağlamanız gerekir:  
   
- [!code-csharp[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#18)]  
   
  Açık oluşturulan türlerinden devraldığına Genel sınıflar bir alt kümesi olan kısıtlamaları belirtir veya yaptığından, temel tür kısıtlamalar:  
   
- [!code-csharp[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#19)]  
   
  Genel türler birden çok tür parametreleri ve kısıtlamalar, şu şekilde kullanabilirsiniz:  
   
- [!code-csharp[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#20)]  
   
  Açık oluşturulan ve kapalı oluşturulan türler, yöntem parametreleri olarak kullanılabilir:  
   
- [!code-csharp[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#21)]  
   
  Genel bir sınıf, arabirim uygularsa, bu sınıfın tüm örnekleri o arabirimine çevirebilirsiniz.  
   

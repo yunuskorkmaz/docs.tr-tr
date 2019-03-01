@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678408"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975621"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Anonim Tür Tanımı (Visual Basic)
 Anonim bir türün bir örneği bildirimine yanıt olarak, derleyicinin türü için belirtilen özellikleri içeren yeni bir sınıf tanımı oluşturur.  
@@ -17,7 +17,7 @@ Anonim bir türün bir örneği bildirimine yanıt olarak, derleyicinin türü i
 ## <a name="compiler-generated-code"></a>Derleyicinin ürettiği kodu  
  Aşağıdaki tanımını `product`, derleyici özellikleri içeren yeni bir sınıf tanımı oluşturur `Name`, `Price`, ve `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  Sınıf tanımı aşağıdaki gibi özellik tanımları içerir. Var olduğuna dikkat edin hiçbir `Set` anahtar özellikleri için yöntemi. Anahtar özelliklerin değerlerini salt okunurdur.  
   
@@ -66,13 +66,13 @@ End Class
   
      Örneğin, aşağıdaki örnekte, `Equals` döndürür `True` yalnızca `employee01` ve `employee08`. Her satır neden yeni örnek eşleşmiyor nedenini belirtir. önceki yorumun `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` uygun şekilde benzersiz bir GetHashCode algoritması sağlar. Algoritması yalnızca anahtar özellikler karma kodunu hesaplamak için kullanır.  
   
 -   `ToString` Aşağıdaki örnekte gösterildiği gibi bitişik özellik değerleri, bir dize döndürür. Hem anahtar hem de anahtar olmayan özellikler dahil edilir.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  Anonim bir türün açıkça adlandırılmış özellikleri ile oluşturulan bu yöntemleri çakışamaz. Diğer bir deyişle, kullanamazsınız `.Equals`, `.GetHashCode`, veya `.ToString` adlı bir özelliği için.  
   

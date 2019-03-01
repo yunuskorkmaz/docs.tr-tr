@@ -12,17 +12,17 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973411"
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 Visual Basic Derleyicisi kullanan *anlam çıkarma* olmadan bildirilen yerel değişkenlerin veri türlerini belirlemek için bir `As` yan tümcesi. Derleyici, başlatma ifadesinin türünden değişkeninin türü çıkarır. Bu, açıkça bir türü bildirmeden aşağıdaki örnekte gösterildiği gibi değişkenleri tanımlayın sağlar. Bildirimleri sonucu olarak hem de `num1` ve `num2` tamsayı olarak kesin olarak belirlenmiştir.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
 >  İstemiyorsanız, `num2` olarak yazılması için önceki örnekte bir `Integer`, gibi bir bildirim kullanarak başka bir tür belirtebilirsiniz `Dim num3 As Object = 3` veya `Dim num4 As Double = 3`.  
@@ -40,23 +40,23 @@ Visual Basic Derleyicisi kullanan *anlam çıkarma* olmadan bildirilen yerel de�
 ## <a name="examples"></a>Örnekler  
  Tür çıkarımı oluşuyor olmadan bildirilen yerel değişken bir `As` yan tümcesi ve başlatılır. Derleyici, değişken türü olarak atanan başlangıç değeri türünü kullanır. Örneğin, her biri aşağıdaki kod satırlarını türünde bir değişken bildirir `String`.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
  Aşağıdaki kod, tamsayı dizisi oluşturmak için iki eşdeğer yol gösterir.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
  Bir for döngüsü denetim değişkeni türünü tür çıkarımı kullanmak uygundur. Derleyici aşağıdaki kodda algılar `number` olduğu bir `Integer` çünkü `someNumbers2` önceki örnekten tamsayılar dizisidir.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
  Yerel tür çıkarımı kullanılabilir `Using` ifadeleri, aşağıdaki örnekte de gösterildiği gibi kaynak adı, türü oluşturmak için.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
  Aşağıdaki örnekte de gösterildiği gibi bir değişken türü işlevlerinin dönüş değerleri de çıkarılan. Her ikisi de `pList1` ve `pList2` çünkü dizilerdir işlemlerin `Process.GetProcesses` süreçlerini bir dizi döndürür.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
 ## <a name="option-infer"></a>Option Infer  
  `Option Infer` etkinleştirir, belirli bir dosya yerel tür çıkarımı izin verilip verilmeyeceğini belirtin. Dosyasının başında, etkinleştirmek veya seçeneği engellemek için aşağıdaki deyimleri birini yazın.  

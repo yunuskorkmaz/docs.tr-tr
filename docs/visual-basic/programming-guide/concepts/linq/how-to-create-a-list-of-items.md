@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 9b491d7bf5bf7dd0f15aa43f8721c245a97cc093
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69c20ac07a1e21371edae333d6ccbd7364995767
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717096"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971812"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Nasıl yapılır: Öğe listesi oluşturma
 Bu konuda kod tanımlar bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturur. Listenin konu desteklemek için tasarlanmıştır [izlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Nesnelerin bir listesini gerektiren uygulamalar için de kullanılabilir. Kod öğeleri, nesne başlatıcıları kullanarak Öğrenciler listesinde tanımlar.  
@@ -18,7 +18,7 @@ Bu konuda kod tanımlar bir `Student` sınıfı ve sınıf örneklerinin bir lis
 ## <a name="example"></a>Örnek  
  İzlenecek yol üzerinde çalışıyorsanız, bu kodu var. oluşturduğunuz proje için Module1.vb dosyasını kullanabilirsiniz. Az önce ile işaretlenen satırları değiştirin *** içinde `Main` sorgular ve bu kılavuzda sağlanan sorgu yürütme yöntemi.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)

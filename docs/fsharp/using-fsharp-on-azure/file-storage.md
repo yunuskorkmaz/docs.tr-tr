@@ -1,18 +1,18 @@
 ---
-title: F# kullanarak Azure dosya depolama ile çalışmaya başlama
+title: Azure dosya depolama kullanmaya başlamaF#
 description: Azure dosya depolama ile bulutta dosya data Store bir Azure sanal makineden (VM), bulut dosya paylaşımını bağlama ve bir şirket içi uygulamasından Windows çalıştıran.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569349"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969602"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>F# kullanarak Azure dosya depolama ile çalışmaya başlama #
+# <a name="get-started-with-azure-file-storage-using-f"></a>F kullanarak Azure dosya depolama ile çalışmaya başlama\#
 
-Azure dosya depolama, standart kullanarak bulutta dosya paylaşımları sağlayan bir hizmettir [sunucu ileti bloğu (SMB) Protokolü](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). SMB 2.1 ve SMB 3.0 desteklenir. Azure dosya depolama ile hızlı ve pahalı yeniden yazmalar olmadan Azure dosya paylaşımları kullanan eski uygulamaları geçirebilirsiniz. Azure sanal makineleri veya Bulut Hizmetleri veya şirket içi istemcilerden çalışan uygulamalar, yalnızca bir masaüstü uygulamanın tipik bir SMB paylaşımına bağlandığı şekilde bulutta dosya paylaşımı bağlayabilir. Uygulama bileşenleri herhangi bir sayıda sonra bağlayın ve File storage paylaşımını bağlayıp buna erişim.
+Azure dosya depolama, standart kullanarak bulutta dosya paylaşımları sağlayan bir hizmettir [sunucu ileti bloğu (SMB) Protokolü](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). SMB 2.1 ve SMB 3.0 desteklenir. Azure File Storage, Azure’a dosya paylaşımı kullanan eski uygulamaları maliyetli yeniden yazdırmaya ihtiyaç duymadan ve hızla taşıyabilmenizi sağlar. Azure Virtual Machines’de, Cloud Services’da veya şirket içi istemcilerde çalışan uygulamalar, bir masaüstü uygulamanın tipik SMB paylaşımı bağladığı gibi buluta bir dosya paylaşımı bağlayabilir. Ardından herhangi sayıda uygulama bileşeni eş zamanlı olarak File Storage paylaşımını bağlayıp buna erişim sağlayabilir.
 
 Dosya depolama kavramsal bir genel bakış için bkz. Lütfen [dosya depolama için .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -21,9 +21,9 @@ Dosya depolama kavramsal bir genel bakış için bkz. Lütfen [dosya depolama i�
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account).
 Ayrıca, bu hesap için depolama erişim anahtarınızı gerekir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Bir F# komut dosyası ve başlangıç F# Etkileşimli oluşturma
+## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
 
-Bu makaledeki örnekleri, F# uygulaması veya bir F# komut dosyası kullanılabilir. Bir F# komut dosyası oluşturmak için bir dosya oluşturun. `.fsx` uzantısı, örneğin `files.fsx`, F# geliştirme ortamınızda.
+Bu makaledeki örnekleri ya da kullanılabilir bir F# uygulama veya bir F# betiği. Oluşturmak için bir F# betik, bir dosya oluşturun `.fsx` uzantısı, örneğin `files.fsx`içinde F# geliştirme ortamı.
 
 Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` paket ve başvuru `WindowsAzure.Storage.dll` bir kullanarakbetiğinizde`#r`yönergesi.
 
@@ -41,7 +41,7 @@ Bu öğreticide bir Azure depolama bağlantı dizesi gerekir. Bağlantı dizeler
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Her zaman depolama hesabı anahtarınızı korumak dikkatli olun. Sabit kodlama veya başkalarının erişebileceği bir düz metin dosyasına kaydederek diğer kullanıcılara dağıtmaktan kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
+Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
 
 Gerçek uygulamalar, depolama bağlantı dizenizi korumak için en iyi yolu, içinde bir yapılandırma dosyasıdır. Bir yapılandırma dosyasından bağlantı dizesini getirmek için bunu yapabilirsiniz:
 
@@ -148,7 +148,7 @@ Azure dosya depolama hakkında daha fazla bilgi için şu bağlantılara göz at
 
 ### <a name="reference"></a>Başvuru
 
-- [.NET başvurusu için depolama istemcisi kitaplığı](https://msdn.microsoft.com/library/azure/mt347887.aspx)
+- [.NET başvurusu için Depolama İstemci Kitaplığı](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Dosya hizmeti REST API Başvurusu](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
 ### <a name="blog-posts"></a>Blog gönderileri

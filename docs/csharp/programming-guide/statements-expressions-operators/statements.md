@@ -6,19 +6,19 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 12c4561e9e2c2a9e3a211351b70fd83b8ca7bccd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640855"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971513"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  
   
  Bir ifade, tek satırlık bir noktalı virgülle biter kod ya da tek satırlı ifadeleri bir blok içinde bir dizi oluşabilir. Bir deyim bloğunu içine {} köşeli ayraçlar ve iç içe geçmiş blok içerebilir. Aşağıdaki kod, iki örnek tek satır deyimlerinin yanı sıra, çok satırlı deyim bloğunu gösterir:  
   
- [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
 ## <a name="types-of-statements"></a>Tür ifadeleri  
  Aşağıdaki tablo, C# ve daha fazla bilgi içeren konulara bağlantılar ile bunların ilişkili anahtar sözcükleri deyimlerinde çeşitli türlerde listeler:  
@@ -43,43 +43,43 @@ Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişke
 
 Aşağıdaki kod ilk ataması olmadan ve değişken bildirimleri ve sabit bir bildirimde ile gerekli başlatma örneklerini gösterir.
 
-[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+ [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>İfade deyimleri
 
 Aşağıdaki kod, ifade deyimleri, atama, atama ve yöntem çağrısının ile nesne oluşturma da dahil olmak üzere örneklerini gösterir.
 
-[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+ [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Boş deyim
 
 Aşağıdaki örnekler, iki kullanım için boş bir deyimi göstermektedir:
 
-[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+ [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Katıştırılmış ifadeler
 
  Dahil olmak üzere, bazı deyimleri [yapmak](../../../csharp/language-reference/keywords/do.md), [sırada](../../../csharp/language-reference/keywords/while.md), [için](../../../csharp/language-reference/keywords/for.md), ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md), bunları izleyen bir katıştırılmış deyim her zaman vardır. Bu katıştırılmış deyimi tek bir deyim ya da birden çok deyim tarafından alınmış olabilir {} bir deyim bloğunu ayraç. Katıştırılmış deyimler bile tek satır içine {} köşeli ayraçlar, aşağıdaki örnekte gösterildiği gibi:  
   
- [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
  İçinde içine alınmamış bir katıştırılmış deyim {} ayraçlar bir bildirim deyiminin veya etiketlenmiş deyim olamaz. Bu, aşağıdaki örnekte gösterilmiştir:  
   
- [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
  Hatayı düzeltmek için bir blok içinde gömülü deyim koyun:  
   
- [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
 ## <a name="nested-statement-blocks"></a>İç içe geçmiş deyim blokları  
  Aşağıdaki kodda gösterildiği gibi deyim blokları yuvalanabilir:  
   
- [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
 ## <a name="unreachable-statements"></a>Erişilemeyen deyimleri  
  Derleyici denetim akışını belirli bir ifadenin tüm koşullar altında hiçbir zaman ulaşabilir belirlerse, bu CS0162, uyarı aşağıdaki örnekte gösterildiği gibi üretecektir:  
   
- [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   

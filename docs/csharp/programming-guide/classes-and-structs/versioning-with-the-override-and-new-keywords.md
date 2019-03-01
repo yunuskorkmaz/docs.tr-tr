@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555992"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975868"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/language-reference/keywords/base.md) ve türetilmiş sınıfları farklı kitaplıklarında evrim geçiren ve geriye dönük uyumluluk sağlamak. Örneğin, yani yeni üyesi temel sunulmasıyla [sınıfı](../../../csharp/language-reference/keywords/class.md) türetilmiş bir sınıf üyesi olarak aynı ada sahip tamamen C# tarafından desteklenir ve beklenmeyen davranışlara yol değil. Ayrıca, bir sınıf devralınan bir yöntemi geçersiz kılmak için bir yöntem amaçlanmamıştır veya yöntemi devralınan bir yöntemi benzer ada gizler yeni bir yöntem olup olmadığını açıkça belirtmelidir anlamına gelir.  
@@ -34,15 +34,15 @@ C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/lan
   
  Bu uygulamada göstermek için bir süre Şirket A adlı bir sınıf oluşturduğunu varsayalım `GraphicsClass`, programınızı kullanır. Aşağıdaki `GraphicsClass`:  
   
- [!code-csharp[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#27)]  
   
  Bu sınıf, şirketinizin kullandığı ve yeni yöntem ekleme kendi sınıf türetmek için kullanın:  
   
- [!code-csharp[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#28)]  
   
  Yeni bir sürümü şirketi serbest kadar uygulamanız sorunsuz kullanılan `GraphicsClass`, aşağıdaki kod benzer:  
   
- [!code-csharp[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#29)]  
   
  Yeni sürümünü `GraphicsClass` artık adında bir yöntem içeriyorsa `DrawRectangle`. Başlangıçta, hiçbir şey olmaz. Yeni sürümü, eski sürümü ile yine ikili uyumlu değildir. Yeni bir sınıf, bu bilgisayar sistemlerinde yüklü olsa bile dağıttığınız herhangi bir yazılım çalışmaya devam eder. Var olan yöntem çağrıları `DrawRectangle` , türetilmiş sınıf içinde sürümünüzü başvurmaya devam eder.  
   
@@ -50,32 +50,32 @@ C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/lan
   
  Yeni bir temel sınıf yöntemini geçersiz kılmak için yönteminizi istiyorsanız kullanın `override` anahtar sözcüğü:  
   
- [!code-csharp[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#30)]  
   
  `override` Anahtar sözcüğü yapar herhangi bir nesne öğesinden türetilen emin `YourDerivedGraphicsClass` türetilmiş sınıf sürümünü kullanacak `DrawRectangle`. Türetilmiş nesneler `YourDerivedGraphicsClass` temel sınıf sürümü erişmeye devam edebilirsiniz `DrawRectangle` base anahtar sözcüğü kullanarak:  
   
- [!code-csharp[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
  Yeni bir temel sınıf yöntemini geçersiz kılmak için yönteminizi istemiyorsanız, aşağıdaki maddeler geçerlidir. İki yöntem arasındaki Karışıklığı önlemek için yöntem yeniden adlandırabilirsiniz. Bu, zaman alan ve hata yapmaya açık ve değil, bazı durumlarda kullanışlı olabilir. Projenizi görece küçük ise, yöntem yeniden adlandırmak için Visual Studio'nun yeniden düzenleme seçeneklerini kullanabilirsiniz. Daha fazla bilgi için [yeniden düzenleme sınıfları ve türleri (Sınıf Tasarımcısı)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
  Alternatif olarak, anahtar sözcüğü kullanarak uyarı engel olabilir `new` , türetilmiş bir sınıf tanımı içinde:  
   
- [!code-csharp[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
  Kullanarak `new` anahtar sözcüğü derleyiciye tanımınızı temel sınıfta yer alan tanımı gizler. Bu varsayılan davranıştır.  
   
 ## <a name="override-and-method-selection"></a>Geçersiz kılma ve yöntemi seçimi  
  Bir sınıf üzerinde adlı bir yöntemi, C# derleyicisi gibi birden fazla metot çağrısı ile uyumlu ise, çağrılacak en iyi yöntem seçer. aynı ada ve geçirilen parametre ile uyumlu olan parametreleri içeren iki yöntem olduğunda. Aşağıdaki yöntemlerden uyumlu olacaktır:  
   
- [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
  Zaman `DoWork` örneğinde adlı `Derived`, C# Derleyici ilk çağrı sürümleriyle uyumlu hale getirmek deneyecek `DoWork` ilk olarak bildirilmiş `Derived`. Geçersiz kılma yöntemleri sınıfta bildirilen dikkate alınmaz, bunlar bir yöntem temel sınıfta bildirilen yeni uygulamalarıdır. Yalnızca C# derleyicisi bir asıl yöntemi için yöntem çağrısının üzerinde eşleyemiyorsanız `Derived` uyumlu parametreler ve aynı ada sahip bir geçersiz kılınan yöntemine çağrı eşleşecek şekilde çalışacaktır. Örneğin:  
   
- [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
  Çünkü değişken `val` double'örtülü olarak dönüştürülebilir C# Derleyici çağrıları `DoWork(double)` yerine `DoWork(int)`. Bunu önlemek için iki yolu vardır. İlk olarak, yeni yöntemlerle aynı adı taşıyan sanal yöntemler bildirme kaçının. İkinci olarak, temel sınıf yöntemini listesi örneğini atayarak arama yaparak sanal yöntemini çağırmak için C# Derleyici bildirebilirsiniz `Derived` için `Base`. Sanal bir yöntem olduğundan yürütmesinin `DoWork(int)` üzerinde `Derived` olarak adlandırılır. Örneğin:  
   
- [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  Daha fazla örnek için `new` ve `override`, bkz: [bilerek, kullanım geçersiz kılma ve yeni anahtar sözcüklerle](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   

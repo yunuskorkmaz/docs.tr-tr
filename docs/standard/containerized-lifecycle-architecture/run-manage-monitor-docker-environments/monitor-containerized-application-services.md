@@ -3,17 +3,17 @@ title: Kapsayıcı uygulama hizmetlerini izleme
 description: Kapsayıcı mimarileri izleme bazı önemli noktalar öğrenin
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 925db543617deb28590cf6631ebbda3ee96836c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221192"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975751"
 ---
 # <a name="monitor-containerized-application-services"></a>Kapsayıcı uygulama hizmetlerini izleme
 
-Uygulamalar için kapsayıcılar ve mikro hizmetler halinde bölme uygulama davranışını çözümlemenize yarayan bir yol sağlamak önemlidir.
+Tüm uygulama davranışını çözümlemenize yarayan bir yol sağlamak bölme birden fazla kapsayıcılar ve mikro hizmet uygulamaları için önemlidir.
 
 ## <a name="microsoft-application-insights"></a>Microsoft Application Insights
 
@@ -25,76 +25,56 @@ Docker için ilgili olarak yaşam döngüsü olayları ve performans sayaçları
 
 ![örnek](./media/image1.png)
 
-Şekil 6-1: Application Insights Docker ana bilgisayarları ve kapsayıcıları izleme
+**Şekil 6-1**. Application Insights Docker ana bilgisayarları ve kapsayıcıları izleme
 
 Çalıştırdığınızda [Application Insights Docker görüntüsü](https://hub.docker.com/r/microsoft/applicationinsights/) ana bilgisayarınızda Docker üzerinde aşağıdakilerden yararlanabilir:
 
--   Yaşam döngüsü ana bilgisayarda çalışan tüm kapsayıcılar hakkında telemetri — başlatma, durdurma ve benzeri.
+- Yaşam döngüsü ana bilgisayarda çalışan tüm kapsayıcılar hakkında telemetri — başlatma, durdurma ve benzeri.
 
--   Tüm kapsayıcıları için performans sayaçları: CPU, bellek, ağ kullanımı ve daha fazlası.
+- Tüm kapsayıcıları için performans sayaçları: CPU, bellek, ağ kullanımı ve daha fazlası.
 
--   Ayrıca yüklediyseniz [Application Insights SDK'sı](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) kapsayıcılarda çalıştırılan uygulamalar, bu uygulamaların tüm telemetri kapsayıcı ve ana makine tanımlayan ek özelliklere sahip. Birden fazla ana çalışan bir uygulamanın örneğine sahipseniz, bu nedenle, örneğin, kolayca uygulama telemetrinizi konağa göre filtrelemek mümkün olacaktır.
+- Ayrıca yüklediyseniz [Application Insights SDK'sı](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) kapsayıcılarda çalıştırılan uygulamalar, bu uygulamaların tüm telemetri kapsayıcı ve ana makine tanımlayan ek özelliklere sahip. Birden fazla ana çalışan bir uygulamanın örneğine sahipseniz, bu nedenle, örneğin, kolayca uygulama telemetrinizi konağa göre filtrelemek mümkün olacaktır.
 
 ### <a name="setting-up-application-insights-to-monitor-docker-applications-and-docker-hosts"></a>Docker uygulamaları ve Docker ana bilgisayarları izlemek için Application ınsights'ı ayarlama
 
 Application Insights kaynağı oluşturmak için aşağıdaki listede verilen makalelerdeki yönergeleri izleyin. Azure portalında gerekli komut sizin için oluşturur.
 
--   **Application ınsights'ta Docker uygulamalarını izleme:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+- **Application ınsights'ta Docker uygulamalarını izleme:** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-docker>
 
--   **Application Insights Docker görüntüsünü Docker Hub ve Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) ve <https://github.com/Microsoft/ApplicationInsights-Docker>
+- **Application Insights Docker görüntüsünü Docker Hub ve GitHub:** \
+  <https://hub.docker.com/r/microsoft/applicationinsights/> ve \
+  <https://github.com/Microsoft/ApplicationInsights-Docker>
 
--   **ASP.NET için Application ınsights'ı ayarlayın:**  
-[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+- **ASP.NET web uygulamaları ve ASP.NET Core için Application ınsights'ı ayarlayın:** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-asp-net>
 
--   **Web sayfaları için Application Insights:**  
-<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
+- **Web sayfaları için Application Insights:**  
+  <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
-## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
+## <a name="security-backup-and-monitoring-services"></a>Güvenlik, yedekleme ve hizmetlerini izleme
 
-[Operations Management Suite](https://microsoft.com/oms) log analytics, otomasyon, backup ve site recovery sağlayan bir Basitleştirilmiş BT yönetimi çözümüdür. Temel [sorguları](https://blogs.technet.microsoft.com/msoms/2016/01/21/easy-microsoft-operations-management-suite-search-queries/) , Operations Management Suite içinde yükseltebilirsiniz [uyarılar](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-monitoring-alerts) ve düzeltme aracılığıyla [Azure Otomasyonu](https://docs.microsoft.com/azure/automation/). Ayrıca sorunsuz bir şekilde, tek bir cam bölmesinde görüntülemenizi sağlamak için mevcut yönetim çözümleri ile tümleşir. Operations Management Suite, yönetmek ve şirket içi koruma hem de bulut altyapısında yardımcı olur.
+Çok bileşenli uygulamalar ve altyapı iş gereksinimlerini desteklemek için üstteki dişli durumda olduklarından emin olmak için işlemesine gerek ayrıntıları birçok destek işlerini vardır ve böylece, bir şekilde durum mikro hizmetler erişim, daha karmaşık hale gelir üst düzey ve ayrıntılı görünümlerini işlem yapması gerekir.
 
-### <a name="operations-management-suitehttpsmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite'e](https://microsoft.com/oms) Docker kapsayıcı çözümü
+Azure, yönetmek ve hem bulut hem de şirket içi kaynaklar dört önemli yönlerini birleşik bir görünümünü sağlamak için geliştirme araçlarına sahiptir:
 
-Değerli hizmetleri, kendi sağlamanın yanı sıra Operations Management Suite kapsayıcı çözümü yönetebilir ve kapsayıcılar ve kapsayıcı konağında olduğu hakkında bilgi göstererek Docker ana bilgisayarları ve kapsayıcıları izleme, çalışan kapsayıcılar "veya" hatalı ve Docker daemon'ı ve kapsayıcı günlüklerini gönderilen *stdout* ve *stderr*. Ayrıca CPU, bellek, ağ ve depolama kapsayıcısı ve sorun giderme ve gürültülü komşu kapsayıcıları bulmanıza yardımcı olması için ana bilgisayarları gibi performans ölçümlerini gösterir.
+- **Güvenlik**. İle [Azure Güvenlik Merkezi](https://azure.microsoft.com/services/security-center/).
+  - Sanal makineler, uygulamalarınızı ve iş yüklerinin güvenliğini üzerinde tam görünürlük ve denetim alın.
+  - Güvenlik ilkelerinizin yönetimini merkezileştirin; mevcut işlemleri ve araçları tümleştirin.
+  - Gelişmiş analiz sayesinde gerçek tehditleri algılayın.
 
-![](./media/image2.png)
+- **Yedekleme**. İle [Azure yedekleme](https://azure.microsoft.com/services/backup/).
+  - Maliyetli iş kesintilerinden kaçının, uyumluluk hedeflerinizi karşılayın ve verilerinizi fidye yazılımlarına ve insan hatalarına karşı koruyun.
+  - Yedekleme verileriniz aktarımda ve bekleme sırasında şifrelenmiş tutun.
+  - Yetkisiz kullanımı önlemek için çok faktörlü kimlik doğrulamasını temel alan erişim emin olun.
 
-Şekil 6-2: Operations Management Suite tarafından gösterilen Docker kapsayıcıları hakkında bilgi
+- **İzleme**. İle [Azure izleme](https://azure.microsoft.com/solutions/monitoring/), [Log Analytics](https://azure.microsoft.com/services/log-analytics/), ve [Application Insights](https://azure.microsoft.com/services/application-insights/).
+  - Tam görünürlük durumunu ve performansını Azure iş yükleri, uygulamalar ve altyapı alın.
+  - Herhangi bir kaynaktan veri toplayın ve, sanal makineler, kapsayıcılar ve uygulamalarınızı zengin Öngörüler edinin.
+  - Etkileşimli sorgular ve tam metin aramasını kullanarak bilgileri bulun. 
+  - Makine öğrenimi algoritmaları içeren Gelişmiş analiz ile kök neden analizi gerçekleştirin.
 
-Application Insights ve Operations Management Suite izleme etkinlikleri odaklanın; Ancak, Application Insights daha uygulama içinde çalışan kendi SDK sayesinde uygulamaları kendilerini izlemeyi üzerinde odaklanır. Ancak, Operations Management Suite altyapı konakları etrafında çok daha odaklanan yanı sıra çok esnek veri odaklı arama/sorgu sistem sunarken uygun ölçekte günlükleri üzerinde ayrıntılı analiz sunar.
-
-Operations Management Suite bulut tabanlı bir hizmet olarak uygulandığından, çalışmaya hızlıca altyapı hizmetleri için çok az yatırım ile sağlayabilirsiniz. Yeni özellikler otomatik olarak devam eden bakım tasarruf sağlarsınız ve yükseltme maliyetlerinden.
-
-Operations Management Suite kapsayıcı çözümü kullanarak bunu yapabilirsiniz:
-
--   Tek bir merkezden yönetin ve Docker kapsayıcıları ölçekleyerek günlüklerinden milyonlarca ilişkilendirin
-
--   Tek bir konumda tüm kapsayıcı konakları hakkında bilgi
-
--   Kapsayıcıları olduğunuzu çalıştırmak, hangi görüntüyü çalıştırdıkları ve bunların nereye çalıştırdığınızdan
-
--   Kapsayıcı konaklarda sorunlara neden olabilir "gürültülü komşu" kapsayıcıları hızlı bir şekilde tanılayın
-
--   Eylemler için bir denetim kaydı kapsayıcılarında bakın
-
--   Görüntüleme ve Docker ana bilgisayarları için uzaktan iletişim olmadan merkezi günlükleri arama ile ilgili sorunları giderme
-
--   "Gürültülü komşu" ve bir ana bilgisayarda kullanan aşırı kaynaklar kapsayıcılar Bul
-
--   Merkezileştirilmiş CPU, bellek, depolama ve kapsayıcılar için ağ kullanım ve performans bilgilerini görüntüleyin
-
--   Oluşturma Docker kapsayıcılarını Azure Otomasyonu ile test
-
-Sorgu türü gibi çalıştırarak performans bilgileri görebilir performans, Şekil 6-3'te gösterildiği gibi =.
-
-![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
-
-Şekil 6-3: Docker ana bilgisayarları Operations Management Suite tarafından gösterilen performans ölçümleri
-
-Ayrıca Operations Management Suite'teki standart bir özellik olan sorguları kaydetme ve yardımcı olabilecek yararlı buldunuz ve sisteminizdeki eğilimleri sorguları tutun.
-
-**Daha fazla bilgi** kapsayıcı çözümü, yükleme ve Docker yapılandırma bilgileri bulmak için [Operations Management Suite](https://microsoft.com/oms)Git <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
+- **Şirket içi kaynaklara**. İle [tamamen tutarlı hibrit bulut](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
 >[Önceki](manage-production-docker-environments.md)

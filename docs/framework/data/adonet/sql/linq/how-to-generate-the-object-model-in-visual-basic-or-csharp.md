@@ -2,14 +2,14 @@
 title: "Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC#"
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 79b2656ec72e2b93592742ddd39e7bfe4dcd7c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510578"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974608"
 ---
-# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC# #
+# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Nasıl yapılır: Visual Basic veya C içinde nesne modeli oluşturma\#
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], programlama diliniz bir nesne modelinde bir ilişkisel veritabanına eşlendi. İki aracı bir Visual Basic otomatik olarak oluşturmak için kullanılabilir veya C# var olan bir veritabanının meta verilerden model.  
   
 -   Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nesne modeli oluşturmak için. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Oluşturmanıza yardımcı olmak için zengin kullanıcı arabirimi sağlayan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli. Daha fazla bilgi edinmek, [LINQ to SQL araçlarını Visual Studio'da](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).

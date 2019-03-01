@@ -9,19 +9,19 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269045dcfec14fafe878c2716490c93e79efe3d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498654"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978222"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
 Bir sabit değer kendisi yerine bir değişkenin değerini veya 3 sayı veya dize "Hello" gibi bir ifadenin sonucu olarak ifade bir değerdir. Bir değişmez değerin yerini alır ve bu değer bir değişken değerini değiştirebilir, programın boyunca saklar anlamlı bir ad bir sabittir.  
   
  Zaman [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) olduğu `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) olduğu `On`, tüm sabit bir türle açıkça bildirmelidir. Aşağıdaki örnekte, veri türü `MyByte` açıkça veri türü olarak bildirilmiş `Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
  Zaman `Option Infer` olduğu `On` veya `Option Strict` olduğu `Off`, bir veri türüyle belirtmeden bir sabit bildirebilirsiniz bir `As` yan tümcesi. Derleyici sabiti ifadesinin türünden türünü belirler. Varsayılan olarak sayısal tamsayı sabit değeri saçıldığı `Integer` veri türü. Kayan noktalı sayılar için varsayılan veri türü `Double`ve anahtar sözcükler `True` ve `False` belirtin bir `Boolean` sabit.  
   
@@ -39,11 +39,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  Önceki örnekte iş yapmak için ekleyebilir `D` karakter olarak temsil edilen neden değişmez değer türü bir `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
  Aşağıdaki örnek, türü, kapsayan karakter doğru kullanımını gösterir:  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
  Aşağıdaki tabloda gösterilen kapsayan karakterleri ve karakter türü Visual Basic'te kullanılabilir.  
   

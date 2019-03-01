@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640764"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976505"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boolean` sonucu. `And`, `Or`, `AndAlso`, `OrElse`, Ve `Xor` işleçleri *ikili* bunlar iki işlenenden tuttuğundan, while `Not` işleci *birli* tek bir işlenen aldığından. Bu işleçlerden bazıları, tam sayı değerleri üzerinde bit düzeyinde mantıksal işlemleri de yapabilirsiniz.  
@@ -34,7 +34,7 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
 ## <a name="unary-logical-operator"></a>Birli mantıksal işleç  
  [Not işleci](../../../../visual-basic/language-reference/operators/not-operator.md) mantıksal gerçekleştirir *olumsuzlama* üzerinde bir `Boolean` ifade. Bu mantıksal tersidir işlenenin verir. İfade değerlendirme sonucu `True`, ardından `Not` döndürür `False`; ifadenin değerlendirdiği `False`, ardından `Not` döndürür `True`. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>İkili mantıksal işleçler  
  [And işlecini](../../../../visual-basic/language-reference/operators/and-operator.md) mantıksal gerçekleştirir *birlikte* iki `Boolean` ifadeler. Her iki ifade sonucunu verirse `True`, ardından `And` döndürür `True`. En az bir ifade değerlendirme sonucu `False`, ardından `And` döndürür `False`.  
@@ -45,7 +45,7 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
   
  Aşağıdaki örnekte gösterilmiştir `And`, `Or`, ve `Xor` işleçleri.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>Kısa devre mantıksal işlemleri  
  [AndAlso işleci](../../../../visual-basic/language-reference/operators/andalso-operator.md) çok benzer `And` işleci, ayrıca mantıksal ve işlecini iki gerçekleştirdiği, `Boolean` ifadeler. İkisi arasındaki temel fark `AndAlso` sergiler *kısa devre* davranışı. İlk ifadesinde bir `AndAlso` ifadeyi hesaplar için `False`, sonra da nihai sonucu değiştirilemiyor çünkü ikinci ifade değerlendirilmez ve `AndAlso` döndürür `False`.  
@@ -57,18 +57,18 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
   
  Arasındaki fark aşağıdaki örnekte `And`, `Or`ve short-circuiting karşılıkları.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  Unutmayın önceki örnekte, bazı önemli kod içinde `checkIfValid()` çağrı kısa devre yapılma olduğunda çalışmaz. İlk `If` deyim aramaları `checkIfValid()` olsa bile `12 > 45` döndürür `False`, çünkü `And` değil kısa devre oluşturur. İkinci `If` deyimi çağırmaz `checkIfValid()`, çünkü zaman `12 > 45` döndürür `False`, `AndAlso` short-circuits ikinci ifade. Üçüncü `If` deyim aramaları `checkIfValid()` olsa bile `12 < 45` döndürür `True`, çünkü `Or` değil kısa devre oluşturur. Dördüncü `If` deyimi çağırmaz `checkIfValid()`, çünkü zaman `12 < 45` döndürür `True`, `OrElse` short-circuits ikinci ifade.  
   
 ## <a name="bitwise-operations"></a>Bit düzeyinde işlemler  
  Bit düzeyinde işlemler (taban 2) ikili biçimde iki tamsayı değerlerini değerlendirin. Bunlar, karşılık gelen konumlarda BITS karşılaştırın ve karşılaştırma üzerine dayalı değerler atayın. Aşağıdaki örnekte gösterilmiştir `And` işleci.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  Yukarıdaki örnekte ayarlar `x` 1. Bu, aşağıdaki nedenlerden dolayı gerçekleşir:  
   

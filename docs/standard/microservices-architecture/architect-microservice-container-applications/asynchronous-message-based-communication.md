@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148905"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969368"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -77,7 +77,7 @@ Atomik olarak özgün mikro hizmet durumunda dayanıklı kendi ilgili tümleşti
 
 - Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Tam kullanarak [olay kaynağını belirleme](https://msdn.microsoft.com/library/dn589792.aspx) deseni.
+- Tam kullanarak [olay kaynağını belirleme](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) deseni.
 
 - Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/): işlemsel veritabanı tablo olarak olay oluşturmak ve yayımlamak bir olay oluşturan bileşen temeli olacak bir ileti sırası.
 

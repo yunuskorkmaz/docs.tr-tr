@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513431"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971955"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngü sağlayabilir. Ancak, döngü paralel işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  
@@ -52,10 +52,10 @@ ms.locfileid: "54513431"
 >  Bunun için kendiniz bazı çağrıları ekleyerek test edebilirsiniz <xref:System.Console.WriteLine%2A> sorgularınızı içinde. Bu yöntem belgeleri örneklerde tanıtım amacıyla kullanılsa da, paralel Döngülerde sürece kullanmayın gerekli.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>İş parçacığı benzeşimini sorunlarından haberdar olmalı  
- Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Bu, örneğin, yalnızca kullanıcı Arabirimi iş parçacığında iş zamanlamak için iş parçacığı Zamanlayıcısı yapılandırmadığınız sürece, paralel bir döngüden liste denetiminden güncelleştiremezsiniz anlamına gelir. Daha fazla bilgi için [nasıl yapılır: Kullanıcı Arabirimi (UI) iş parçacığında iş](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Bu, örneğin, yalnızca kullanıcı Arabirimi iş parçacığında iş zamanlamak için iş parçacığı Zamanlayıcısı yapılandırmadığınız sürece, paralel bir döngüden liste denetiminden güncelleştiremezsiniz anlamına gelir. Daha fazla bilgi için [eşitleme bağlamı belirtme](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Varyans Parallel.Invoke tarafından çağrılan bekleyen kullanırken dikkatli olun  
- Bazı durumlarda, görev paralel kitaplığı, o anda yürütülen iş parçacığında görevin üzerinde çalıştığı anlamına gelir. bir görev satır içi olur. (Daha fazla bilgi için [görev planlayıcılar](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Bu performans iyileştirmesi, bazı durumlarda kilitlenme neden olabilir. Örneğin, iki görevi aynı temsilci bir olay meydana geldiğinde, sinyalleri, kod ve sinyal başka bir görev bekler çalıştırabilirsiniz. Satır içine alınmış üzerinde ikinci görev ise ilk ve ilk olarak aynı iş parçacığı bir bekleme durumuna geçtiğinde, ikinci görev hiçbir zaman kendi olay sinyal mümkün olacaktır. Böyle etkinin önlemek için bir zaman aşımı bekleme işlemi belirtebilirsiniz veya kullanımı açık bir iş parçacığı oluşturucular bir görevin sağlamaya yardımcı olmak için diğer engelleyemez.  
+ Bazı durumlarda, görev paralel kitaplığı, o anda yürütülen iş parçacığında görevin üzerinde çalıştığı anlamına gelir. bir görev satır içi olur. (Daha fazla bilgi için [görev planlayıcılar](xref:System.Threading.Tasks.TaskScheduler).) Bu performans iyileştirmesi, bazı durumlarda kilitlenme neden olabilir. Örneğin, iki görevi aynı temsilci bir olay meydana geldiğinde, sinyalleri, kod ve sinyal başka bir görev bekler çalıştırabilirsiniz. Satır içine alınmış üzerinde ikinci görev ise ilk ve ilk olarak aynı iş parçacığı bir bekleme durumuna geçtiğinde, ikinci görev hiçbir zaman kendi olay sinyal mümkün olacaktır. Böyle etkinin önlemek için bir zaman aşımı bekleme işlemi belirtebilirsiniz veya kullanımı açık bir iş parçacığı oluşturucular bir görevin sağlamaya yardımcı olmak için diğer engelleyemez.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Değil varsayılır, ForEach, yinelemeleri için ve ForAll her zaman Paralel yürütme  
  Bu tek tek yinelemelerde göz önünde bulundurmanız önemlidir bir <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> veya <xref:System.Linq.ParallelEnumerable.ForAll%2A> döngü Mayıs ancak paralel olarak yürütmek izniniz yok. Bu nedenle, yinelemelerin Paralel yürütme ya da yineleme herhangi bir sırayla yürütülmesi doğruluğu bağlıdır herhangi bir kod yazmadan kaçınmanız gerekir. Örneğin, bu kodu kilitlenme olasılığı bulunur:  

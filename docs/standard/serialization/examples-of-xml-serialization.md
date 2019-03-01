@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204814"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974373"
 ---
 # <a name="examples-of-xml-serialization"></a>XML serileştirme örnekleri
 XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, gösterildiği gibi ortak alanlar ve özellikler, yalnızca oluşan bir sınıf serileştirebiliyorsa [giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md). Aşağıdaki kod örnekleri, XML serileştirme için belirli bir XML Şeması (XSD) belge uyan bir XML akışı oluşturmak için nasıl kullanılacağını dahil olmak üzere çeşitli Gelişmiş senaryolar adresi.  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Karmaşık bir nesnenin döndüren bir alan içeren bir sınıf seri hale getirilmedi  
- Bir özellik veya alan (örneğin, bir dizi veya sınıf örneği), karmaşık bir nesne döndürür, [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) bir öğe iç içe geçmiş ana XML belgesi içindeki dönüştürür. Örneğin, aşağıdaki kod örneğinde ilk sınıf saniye sınıfının bir örneğini döndürür.  
+ Bir özellik veya alan (örneğin, bir dizi veya bir sınıf örneği), karmaşık bir nesne döndürür, <xref:System.Xml.Serialization.XmlSerializer> bir öğe için iç içe geçmiş ana XML belgesi içindeki dönüştürür. Örneğin, aşağıdaki kod örneğinde ilk sınıf saniye sınıfının bir örneğini döndürür.  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -361,9 +361,11 @@ public class Employee {
   
  Bu örnekte, bir sınıf adlı `PurchaseOrder` serileştirilmiş ve ardından seri durumdan. İkinci adında bir sınıf `Address` ortak alan adlı de dahil olduğundan `ShipTo` ayarlanmalıdır bir `Address`. Benzer şekilde, bir `OrderedItem` çünkü sınıfı dahil, bir dizi `OrderedItem` nesneleri ayarlanmalıdır `OrderedItems` alan. Son olarak, adlı bir sınıf `Test` serileştirir ve sınıflar çıkarır kodu içerir.  
   
- `CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. Yöntem aynı zamanda bir örneğini oluşturur <xref:System.Xml.Serialization.XmlSerializer> seri hale getirmek ve seri halinden dağıtmak için kullanılan sınıfı `PurchaseOrder`. Kod oluşturucuya seri hale sınıf türü başarılı not edin. Kod ayrıca oluşturur bir `FileStream` XML akışı bir XML belgesine yazmak için kullanılır.  
+ 
+  `CreatePO` Yöntemi oluşturur `PurchaseOrder`, `Address`, ve `OrderedItem` sınıf nesneleri ve ortak alan değerlerini ayarlar. Yöntem aynı zamanda bir örneğini oluşturur <xref:System.Xml.Serialization.XmlSerializer> seri hale getirmek ve seri halinden dağıtmak için kullanılan sınıfı `PurchaseOrder`. Kod oluşturucuya seri hale sınıf türü başarılı not edin. Kod ayrıca oluşturur bir `FileStream` XML akışı bir XML belgesine yazmak için kullanılır.  
   
- `ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. Olduğu gibi `CreatePo` yöntemi, size gereken ilk oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer>, oluşturucuya seri durumdan için sınıf türünü geçirerek. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.  
+ 
+  `ReadPo` Yöntemi biraz basittir. Yalnızca seri durumdan çıkarılacak nesne oluşturur ve değerlerine okur. Olduğu gibi `CreatePo` yöntemi, size gereken ilk oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer>, oluşturucuya seri durumdan için sınıf türünü geçirerek. Ayrıca, bir <xref:System.IO.FileStream> XML belgesi okumak için gereklidir. Nesneleri seri durumdan çıkarılacak çağrısı <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemiyle <xref:System.IO.FileStream> bağımsız değişken olarak. Seri durumdan çıkarılmış nesne türü için bir nesne değişkeni dönüştürülmelidir `PurchaseOrder`. Kodu daha sonra seri durumdan çıkarılmış değerlerini okur `PurchaseOrder`. Gerçek XML görmek için oluşturulan PO.xml dosya ayrıca okuyabilirsiniz Not çıktı.  
   
 ```vb  
 Imports System  
@@ -767,6 +769,6 @@ public class Test
 - [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [XML Serileştirmeyi Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer sınıfını](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [XmlSerializer sınıfını](xref:System.Xml.Serialization.XmlSerializer)
 - [Nasıl yapılır: Bir nesneyi serileştirmek](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

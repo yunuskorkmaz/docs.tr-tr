@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552040"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969381"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic'de Karşılaştırma İşleçleri
 Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `Boolean` değerleri arasındaki ilişkiyi gösteren bir değer. Sayısal değerler için dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri karşılaştırmak için işleci vardır. Üç tür işleç tüm burada ele alınmıştır.  
@@ -61,17 +61,17 @@ Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `B
 ## <a name="comparing-objects"></a>Nesneleri karşılaştırma  
  Visual Basic ile iki nesne başvurusu değişkenini karşılaştırır [işleci olan](../../../../visual-basic/language-reference/operators/is-operator.md) ve [IsNot işleci](../../../../visual-basic/language-reference/operators/isnot-operator.md). Bu işleçler birini iki başvuru değişkeni aynı nesne örneğine başvuruyorsa belirlemek için kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  Önceki örnekte `x Is y` değerlendiren `True`, her iki değişken aynı örneğine bakın. Bu sonuç aşağıdaki örnek ile karşılaştırın.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  Önceki örnekte `x Is y` değerlendiren `False`, değişkenler aynı türde nesnelere atıfta olsa da, bunlar türü farklı örneklere bakın.  
   
  İki nesnenin aynı örneğine işaret eden değil için test etmek istediğiniz zaman `IsNot` işleci bakımından biçimsiz birleşimi önlemenize olanak tanır `Not` ve `Is`. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  Önceki örnekte `If a IsNot b` eşdeğerdir `If Not a Is b`.  
   
@@ -82,7 +82,7 @@ Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `B
   
  Zaman `typename` bir arabirim türü belirtir sonra `TypeOf`... `Is` ifade döndürür `True` nesne arabirimi uyguluyorsa. Zaman `typename` ifade döndürür sonra bir sınıf türüdür `True` nesnenin belirtilen sınıfın veya belirtilen sınıfından türetilen bir sınıfın bir örneği ise. Aşağıdaki örnek bunu göstermektedir.  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  Önceki örnekte `TypeOf x Is Control` ifadeyi hesaplar için `True` çünkü türünü `x` olduğu `Button`, işlevinden devralan `Control`.  
   

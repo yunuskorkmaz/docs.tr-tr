@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: e84baf2513f6eb96ad1819b995b765a66ad5c263
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7ff65867f9f81118cad30852c439f8b3491bf1aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222330"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969732"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World--İlk programınız (C# Programlama Kılavuzu)
 
@@ -42,7 +42,7 @@ Tanıtım kavramlarına daha fazla örnek için bkz: [Visual C# ve Visual Basic 
 
 6. Program.cs içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]
+     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
 
 7. Projeyi çalıştırmak için F5 tuşuna basın. Bir çizgi içeren bir komut istemi penceresi görünür `Hello World!`
 
@@ -52,11 +52,11 @@ Ardından, bu programın önemli bölümleri incelenir.
 
 İlk satır bir açıklama içerir. Karakterleri `//` satırın geri kalanını açıklamaya Dönüştür.
 
-[!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]
+ [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
 Metin bloğu arasında kapsayan tarafından da yorum yapabilecek `/*` ve `*/` karakter. Bu, aşağıdaki örnekte gösterilir.
 
-[!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]
+ [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
 ## <a name="main-method"></a>Main yöntemi
 
@@ -66,19 +66,19 @@ Bir C# konsol uygulaması içermelidir bir `Main` yöntemi, Denetim'ın başlar 
 
 - Geri dönebilirsiniz `void`.
 
-     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]
+     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
 - Bu, ayrıca bir tamsayı döndürebilir.
 
-     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]
+     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
 - Dönüş türleri her ikisiyle bağımsız değişken alabilir.
 
-     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]
+     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
      -veya-
 
-     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]
+     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 Parametresi `Main` yöntemi `args`, olan bir `string` program başlatmak için kullanılan komut satırı bağımsız değişkenleri içeren bir dizi. Farklı C++'da dizi yürütülebilir (exe) dosyanın adını içermez.
 
@@ -90,9 +90,9 @@ Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında d
 
 C# programları genellikle .NET Framework'ün çalışma zamanı kitaplığı tarafından sağlanan giriş/çıkış hizmetlerini kullanır. Deyim `System.Console.WriteLine("Hello World!");` kullanan <xref:System.Console.WriteLine%2A> yöntemi. Bu çıkış yöntemlerinden biridir <xref:System.Console> Çalışma Zamanı Kitaplığı'nda sınıfı. Yeni bir satır tarafından izlenen standart çıktı akışında kendi dize parametresini görüntüler. Diğer <xref:System.Console> yöntemleri farklı giriş ve çıkış işlemleri için kullanılabilir. Eklerseniz `using System;` yönerge programın başında, doğrudan kullanabilirsiniz <xref:System> sınıflarını ve yöntemlerini tamamen nitelendirmeden. Örneğin, çağırabilirsiniz `Console.WriteLine` yerine `System.Console.WriteLine`:
 
-[!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]
+ [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-[!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]
+ [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 Giriş/Çıkış yöntemleri hakkında daha fazla bilgi için bkz. <xref:System.IO>.
 

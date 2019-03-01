@@ -6,17 +6,17 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 67cc9e85d249365a7b4b7636c99766087314622d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5f960b9f043cc886e5b5ac0307ed807c1602f43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596870"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971768"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Nasıl yapılır: Özellik adları ve türleri (Visual Basic) anonim türde bildirimlerden çıkarma
 Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekanizma sağlar. Tüm özelliklerin türleri algılanır. Aşağıdaki örnekte, türlerini `Name` ve `Price` doğrudan bunları başlatmak için kullanılan değerlerden algılanır.  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
  Anonim türler, özellik adları ve türlerini diğer kaynaklardan da çıkarabilir. Aşağıdaki bölümlerde, çıkarım mümkün olduğu durumlarda ve nerede durumlara örnek olarak listesini sağlar.  
   
@@ -26,19 +26,19 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
 -   Değişken adları. Anonim tür `anonProduct` iki özelliği vardır `productName` ve `productPrice`. Bu özgün değişkenlerin veri türlerini olacaktır `String` ve `Double`sırasıyla.  
   
-     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
 -   Özellik veya alan adlarından diğer nesne. Örneğin, bir `car` nesnesinin bir `CarClass` içeren tür `Name` ve `ID` özellikleri. Yeni bir anonim tür örneği oluşturmak için `car1`, ile `Name` ve `ID` değerlerle başlatılan özellikleri `car` nesnesi, aşağıdakileri yazın:  
   
-     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
      Uzun anonim türü tanımlayan bir kod satırına önceki bildirime eşdeğerdir `car2`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_4.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
 -   XML üye adları.  
   
-     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      Sonuç türü `anon` bir özelliğe sahip `Book`, türü <xref:System.Collections.IEnumerable>, (XElement).  
   
@@ -50,7 +50,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      Değişken `anon2` aşağıdaki kodda bir özellik, adlandırılmış bir karakter içeren bir anonim türdür `First`. Bu kodu bir harf "E", işlev tarafından döndürülen harf görüntüler <xref:System.Linq.Enumerable.First%2A>.  
   
-     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]  
   
 ## <a name="inference-failures"></a>Çıkarım hataları  
   
@@ -78,7 +78,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      Hata, ifadenin sonucu bir özellik adına atayarak çözülebilir.  
   
-     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_7.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
 -   Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Geri bildirimleri önceki örneklerde başvuran, her ikisi de listelenemiyor `product.Name` ve `car1.Name` aynı anonim tür özellikleri. Bunların her biri için çıkarsanan tanımlayıcı olacağından budur `Name`.  
   
@@ -88,7 +88,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      Değerlerin benzersiz özellik adlarını atayarak sorun çözülebilir.  
   
-     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_8.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]  
   
      (Büyük ve küçük harfler arasında değişiklik) iki ad ayrı yapmayın durumunda değişiklikleri unutmayın.  
   
@@ -106,7 +106,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      Bu örnekte, özelliklerini bildirilen sırasını ters çevirerek sorunu düzeltebilirsiniz.  
   
-     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
 -   Anonim türün bir özellik adı bir üyesinin adıyla aynı olduğu <xref:System.Object>. Örneğin, aşağıdaki bildirimi nedeniyle başarısız `Equals` bir yöntemidir <xref:System.Object>.  
   
@@ -118,7 +118,7 @@ Anonim türler, doğrudan özellikleri veri türlerini belirtmek için bir mekan
   
      Özellik adını değiştirerek sorunu düzeltebilirsiniz:  
   
-     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

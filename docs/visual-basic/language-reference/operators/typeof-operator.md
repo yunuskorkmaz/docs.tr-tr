@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596741"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965065"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf İşleci (Visual Basic)
 Bir veri türü için bir nesne başvuru değişkenini karşılaştırır.  
@@ -58,7 +58,7 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `TypeOf`... `Is` ifadeler iki tür uyumluluğu test etmek için çeşitli veri türleri ile başvuru değişkenleri nesne.  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
  Değişken `refInteger` bir çalışma zamanı türü `Integer`. İle uyumlu `Integer` bilgisayardı `Double`. Değişken `refForm` bir çalışma zamanı türü <xref:System.Windows.Forms.Form>. İle uyumlu <xref:System.Windows.Forms.Form> ile kendi türü olduğu için <xref:System.Windows.Forms.Control> çünkü <xref:System.Windows.Forms.Form> devraldığı <xref:System.Windows.Forms.Control>ile <xref:System.ComponentModel.IComponent> çünkü <xref:System.Windows.Forms.Form> devralan <xref:System.ComponentModel.Component>, uygulayan<xref:System.ComponentModel.IComponent>. Ancak, `refForm` ile uyumlu olmayan <xref:System.Windows.Forms.Label>.  
   

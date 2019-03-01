@@ -1,17 +1,11 @@
 ---
-title: Dizeleri - C# Programlama Kılavuzu
+title: 'Dizeleri - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, strings
-- strings [C#]
+  - 'C# language, strings'
+  - 'strings [C#]'
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236368"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -31,22 +25,22 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
 ## <a name="immutability-of-string-objects"></a>Dize nesnesi değiştirilemezlik  
  Dize nesneler *değişmez*: oluşturulduktan sonra bunlarda değişiklik yapılamaz. Tüm <xref:System.String> yöntemleri ve bir dize değiştirmek için görüntülenen C# işleçleri gerçekten sonuçları döndürür içinde yeni bir dize nesnesi. Aşağıdaki örnekte, zaman içeriğini `s1` ve `s2` birleştirilmiş tek bir dize oluşturmak için iki özgün değiştirilmemiş dizelerdir. `+=` İşleci birleşik içeriği içeren yeni bir dize oluşturur. Yeni nesne değişkenine atanır `s1`ve atandı özgün nesneye `s1` başka bir değişken buna bir başvuru bulunduğundan, çöp toplama için yayımlanır.  
   
- [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
  Bir dize "değişiklik" yeni bir dize oluşturma gerçekten olduğundan, dizeleri başvuruları oluşturduğunuzda dikkatli kullanmanız gerekir. Bir dize başvuru oluşturun ve ardından orijinal dizeyi "değiştirme", başvuru dize değiştirildiğinde oluşturan yeni bir nesne yerine özgün nesneye işaret edecek şekilde devam eder. Aşağıdaki kod bu davranış gösterir:  
   
- [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
  Arama gibi değişiklikler temel alır ve özgün dize işlemleri yerine yeni dizeler oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Normal ve Verbatim dize değişmez değerleri  
  Normal dize değişmez değerleri kullanarak aşağıdaki örnekte gösterildiği gibi C# tarafından sağlanan bir kaçış karakterleri katıştırmanız gerekir:  
   
- [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
  Dizesi metnini ters eğik çizgi karakterleri, örneğin dosya yolları içerdiğinde harfi harfine dizeler kolaylık ve daha iyi okunabilirlik için kullanın. Harfi harfine dizeler dize metnin bir parçası olarak yeni satır karakterleri korumak için çok satırlı dize başlatmak için kullanılabilir. Verbatim dizesi içinde bir tırnak işareti eklemek için çift tırnak işaretleri kullanın. Aşağıdaki örnek, bazı yaygın kullanımları harfi harfine dizeler için gösterir:  
   
- [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
 ## <a name="string-escape-sequences"></a>Dize kaçış dizileri  
   
@@ -131,7 +125,7 @@ string s = String.Empty;
 |[Nasıl yapılır: Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dize içeriklerini değiştirme teknikleri gösterir.|  
 |[Nasıl yapılır: Dizeleri karşılaştırma](../../how-to/compare-strings.md)|Dizeler belirli karşılaştırmalar kültüre ve sıralı gerçekleştirmek nasıl gösterir.|  
 |[Nasıl yapılır: Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)|Bir alana birden çok dizeyi birleştirme için çeşitli yollar gösterir.|
-|[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma ](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını örneklendiren kod örnekleri içeren `String.Split` dizelerini ayrıştırmak için yöntemi.|  
+|[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını örneklendiren kod örnekleri içeren `String.Split` dizelerini ayrıştırmak için yöntemi.|  
 |[Nasıl yapılır: Dizeleri arama](../../how-to/search-strings.md)|Dizelerde arama belirli bir metin veya düzenleri için kullanmayı açıklar.|  
 |[Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi ayrıştırma işlemi gösterilmektedir.|  
 |[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Biçim dizelerine bir sözdizimindeki sağlayan dize ilişkilendirme özelliğini açıklar.|

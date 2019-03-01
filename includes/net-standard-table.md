@@ -7,9 +7,6 @@
 | Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 |
 | Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 |
 | Evrensel Windows Platformu | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          |
-| Windows                    | 8.0    | 8.0    | 8.1   |       |       |                    |                    |                     |
-| Windows Phone              | 8.1    | 8.1    | 8.1   |       |       |                    |                    |                     |
-| Windows Phone Silverlight  | 8.0    |        |       |       |       |                    |                    |                     |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              |
 
 <sup>1 .NET Framework için listelenen sürümleri, .NET Core 2.0 SDK'sını ve Araçları'nın sonraki sürümleri için geçerlidir. Eski sürümleri ve üzeri için .NET standart 1.5 farklı bir eşlemeyle kullanılır. Yapabilecekleriniz [Visual Studio 2015 için .NET Core araçları için araç kullanımı indir](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) , Visual Studio 2017'ye yükseltemezsiniz.</sup>

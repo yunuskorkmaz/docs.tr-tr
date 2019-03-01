@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724820"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965922"
 ---
 # <a name="value-comparisons-visual-basic"></a>Değer Karşılaştırmaları (Visual Basic)
 Karşılaştırma işleçleri, sayısal değişkenlerin değerleri karşılaştırma ifadeleri oluşturmak için kullanılabilir. Bu ifadeler dönüş bir `Boolean` değerine göre karşılaştırma doğru olmasına göre ya da yanlış. Böyle bir ifade örnekleri aşağıdaki gibidir.  
@@ -34,15 +34,15 @@ Karşılaştırma işleçleri, sayısal değişkenlerin değerleri karşılaşt�
   
  Değerleri karşılaştırma ifadeleri en yaygın olarak kullanılır `If...Then` yapılarını aşağıdaki örnekte olduğu gibi.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=` İşaretidir bir atama işleci yanı sıra bir karşılaştırma işleci. Aşağıdaki örnekte gösterildiği gibi soldaki değerin sağdaki değerine eşit olup olmadığını bir karşılaştırma işleci kullanıldığında, değerlendirir.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  Karşılaştırma ifadesindeki her yerde kullanabilirsiniz bir `Boolean` değerdir gerekli, olduğu gibi bir `If`, `While`, `Loop`, veya `ElseIf` deyimi, atama veya bir değere geçirerek bir `Boolean` değişkeni. Aşağıdaki örnekte, karşılaştırma ifadesi tarafından döndürülen değer atanmış bir `Boolean` değişkeni.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

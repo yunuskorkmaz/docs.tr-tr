@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1268982eb841327d72ce195992f8c4dcad4440a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612157"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966183"
 ---
 # <a name="namespace-statement"></a>Namespace Deyimi
 Bir ad alanının adını bildirir ve bu ad alanı içinde derlenecek bildirimi takip eden kaynak koda neden olur.  
@@ -78,17 +78,17 @@ End Namespace
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir diğerinde iç içe iki ad bildirir.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, tek bir satırda birden çok iç içe geçmiş ad alanları bildirir ve önceki örneğe eşdeğerdir.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, önceki örneklerde tanımlanan sınıfı erişir.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek yeni bir genel liste sınıf çatısında önizlememiz tanımlar ve bu gruba ekler <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı.  

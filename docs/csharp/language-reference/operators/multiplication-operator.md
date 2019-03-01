@@ -1,43 +1,47 @@
 ---
 title: '* Operator - C# başvurusu'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333739"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977350"
 ---
 # <a name="-operator-c-reference"></a>* işleci (C# Başvurusu)
 
-Çarpma işleci (`*`), işlenenlerinin çarpımını hesaplar. Tüm sayısal türler, çarpma işleçleri önceden tanımlanmış.
+`*` İşleci iki biçimde desteklenir: Birli işaretçi yöneltme işleci veya bir ikili çarpma işleci.
 
-`*` Okuma ve yazma için bir işaretçi sağlar başvuru işleci de görür.
+## <a name="pointer-indirection-operator"></a>İşaretçi yöneltme işleci
 
-## <a name="remarks"></a>Açıklamalar
+Birli kullanın `*` işleci bir işlenen bir işaretçi türünün işaret ettiği değişken elde edilir. Daha fazla bilgi için [nasıl yapılır: işaretçi değişkeninin değerini edinme](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).
 
-`*` İşleci işaretçi türleri bildirme ve işaretçi başvuru kaldırma için de kullanılır. Bu işleci yalnızca güvenli bağlamlarda kullanımı tarafından gösterilen kullanılabilir [güvenli olmayan](../keywords/unsafe.md) anahtar sözcüğü ve gerektiren [/ unsafe](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği.  Başvuru işleci yöneltme işleci de denir.
+İşaretçi yöneltme işleci `*` gerektirir [güvenli](../keywords/unsafe.md) bağlamı.
 
-Kullanıcı tanımlı türler ikili aşırı yükleme `*` işleci (bkz [işleci](../keywords/operator.md)). İkili İşleç aşırı karşılık gelen atama işleci, varsa, aynı zamanda örtük olarak aşırı yüklenmiş olur.
+## <a name="multiplication-operator"></a>Çarpma işleci
 
-## <a name="example"></a>Örnek
+Sayısal türlerin `*` işleci işlenenleri çarpımını hesaplar:
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>Örnek
+## <a name="operator-overloadability"></a>İşleç overloadability
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) bir ikili `*` işleci. Bir ikili olduğunda `*` işleci aşırı yüklenmiş, [çarpma atama işleci](multiplication-assignment-operator.md) `*=` aynı zamanda örtük olarak aşırı yüklenmiş olan.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için [işaretçi yöneltmesi](~/_csharplang/spec/unsafe-code.md#pointer-indirection) ve [çarpma işleci](~/_csharplang/spec/expressions.md#multiplication-operator) bölümlerini [ C# dil belirtimi](../language-specification/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [Güvenli Olmayan Kod ve İşaretçiler](../../programming-guide/unsafe-code-pointers/index.md)
 - [C# İşleçleri](index.md)
+- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)

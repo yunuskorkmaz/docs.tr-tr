@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525033"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981406"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
 İki sayıyı böler ve yalnızca kalanı döndürür.  
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Mod` işleci iki sayı bölme ve yalnızca kalanı döndürür. Ya da bir kayan noktalı sayı olan, kalan temsil eden bir kayan noktalı sayı sonucudur.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, kayan nokta işlenenler kesinlik eksikliği olası gösterir. İlk ifade, işlenenin olduğu `Double`, ve 0.2 sonsuz yinelenen bir ikili Kesir 0.20000000000000001 depolanan değerine sahip. İkinci ifadede, değişmez değer türü karakteri `D` iki işlenen de zorlar `Decimal`, ve 0.2 kesin bir gösterimi.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

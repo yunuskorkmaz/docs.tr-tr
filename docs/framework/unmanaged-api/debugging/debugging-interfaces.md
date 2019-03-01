@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa4e6cd4e99540030d3a9e151da4bbe711d973a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219834"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981614"
 ---
 # <a name="debugging-interfaces"></a>Hata Ayıklama Arabirimleri
 Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın hata ayıklamasını işleyen yönetilmeyen arabirimler açıklanmaktadır.  
@@ -46,10 +46,10 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebug arabirimi](icordebug-interface.md)\
  Geliştiricilerin CLR ortamında uygulama hatalarını ayıklamalarına olanak tanıyan yöntemler sağlar.  
   
- [Icordebugappdomain arabirimi1](icordebugappdomain-interface.md)\
+ [Icordebugappdomain arabirimi](icordebugappdomain-interface.md)\
  Uygulama etki alanlarındaki hataları ayıklamak için yöntemler sağlar.  
   
- [Icordebugappdomain2 arabirimi1](icordebugappdomain2-interface.md)\
+ [Icordebugappdomain2 arabirimi](icordebugappdomain2-interface.md)\
  Diziler, işaretçiler, işlev işaretçileri ve ByRef türleriyle çalışmak için yöntemler sağlar. Bu arabirim uzantısıdır `ICorDebugAppDomain` arabirimi.  
   
  [Icordebugappdomain3 arabirimi](icordebugappdomain3-interface.md)\
@@ -58,52 +58,52 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugappdomain4 arabirimi](icordebugappdomain4-interface.md)\
  Mantıksal olarak genişletir [Icordebugappdomain](icordebugappdomain-interface.md) COM çağrılabilir sarmalayıcısı yönetilen bir nesneye almak için arabirim.  
   
- [Icordebugappdomainenum arabirimi1](icordebugappdomainenum-interface.md)\
+ [Icordebugappdomainenum arabirimi](icordebugappdomainenum-interface.md)\
  Belirtilen sayıda döndüren bir yöntem sağlar `ICorDebugAppDomain` sonraki konumdan başlayarak değerleri.  
   
- [Icordebugarrayvalue arabirimi1](icordebugarrayvalue-interface.md)\
+ [Icordebugarrayvalue arabirimi](icordebugarrayvalue-interface.md)\
  Öğesinin `ICorDebugHeapValue` temsil eden tek boyutlu veya çok boyutlu bir dizi.  
   
- [Icordebugassembly arabirimi1](icordebugassembly-interface.md)\
+ [Icordebugassembly arabirimi](icordebugassembly-interface.md)\
  Bir derlemeyi temsil eder.  
   
- [Icordebugassembly2 arabirimi1](icordebugassembly2-interface.md)\
+ [Icordebugassembly2 arabirimi](icordebugassembly2-interface.md)\
  Bir derlemeyi temsil eder. Bu arabirim uzantısıdır `ICorDebugAssembly` arabirimi.  
   
  [Icordebugassembly3 arabirimi](icordebugassembly3-interface.md)\
  Mantıksal olarak genişletir [Icordebugassembly](icordebugassembly-interface.md) kapsayıcı derlemeleri ve bunların içerdiği derlemeleri için destek sağlamak için arabirim. **Yalnızca .NET yerel kullanılabilir.**  
   
- [Icordebugassemblyenum arabirimi1](icordebugassemblyenum-interface.md)\
+ [Icordebugassemblyenum arabirimi](icordebugassemblyenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugAssembly` dizileri.  
   
  [Icordebugblockingobjectenum arabirimi](icordebugblockingobjectenum-interface.md)\
  Bir listesi için bir numaralandırıcı sağlar [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapıları.  
   
- [Icordebugboxvalue arabirimi1](icordebugboxvalue-interface.md)\
+ [Icordebugboxvalue arabirimi](icordebugboxvalue-interface.md)\
  Öğesinin `ICorDebugHeapValue` paketlenmiş değer sınıf nesnesini temsil eden.  
   
- [Icordebugbreakpoint arabirimi1](icordebugbreakpoint-interface.md)\
+ [Icordebugbreakpoint arabirimi](icordebugbreakpoint-interface.md)\
  Bir işlevdeki bir kesme noktasını veya bir değerdeki bir izleme noktasını temsil eder.  
   
- [Icordebugbreakpointenum arabirimi1](icordebugbreakpointenum-interface.md)\
+ [Icordebugbreakpointenum arabirimi](icordebugbreakpointenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugBreakpoint` dizileri.  
   
- [Icordebugchain arabirimi1](icordebugchain-interface.md)\
+ [Icordebugchain arabirimi](icordebugchain-interface.md)\
  Fiziksel veya mantıksal bir çağrı yığınının bir kesimini temsil eder.  
   
- [Icordebugchainenum arabirimi1](icordebugchainenum-interface.md)\
+ [Icordebugchainenum arabirimi](icordebugchainenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugChain` dizileri.  
   
- [Icordebugclass arabirimi1](icordebugclass-interface.md)\
+ [Icordebugclass arabirimi](icordebugclass-interface.md)\
  Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek bir türü temsil eder. Tür genelse, `ICorDebugClass` örneklenmemiş genel türü temsil eder.  
   
- [Icordebugclass2 arabirimi1](icordebugclass2-interface.md)\
+ [Icordebugclass2 arabirimi](icordebugclass2-interface.md)\
  Genel bir sınıf veya türündeki bir yöntem parametresi olan bir sınıfı temsil eden <xref:System.Type>. Bu arabirim genişletir `ICorDebugClass`.  
   
- [Icordebugcode arabirimi1](icordebugcode-interface1.md)\
+ [Icordebugcode arabirimi](icordebugcode-interface1.md)\
  Microsoft ara dili (MSIL) kodunun veya yerel kodun bir kesimini temsil eder.  
   
- [Icordebugcode2 arabirimi1](icordebugcode2-interface.md)\
+ [Icordebugcode2 arabirimi](icordebugcode2-interface.md)\
  Özelliklerini genişleten yöntemler sağlar `ICorDebugCode`.  
   
  [Icordebugcode3 arabirimi](icordebugcode3-interface.md)\
@@ -112,16 +112,16 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugcode4 arabirimi](icordebugcode4-interface.md)\
  Bir işlevdeki bağımsız değişkenler ve yerel değişkenler numaralandırmak bir hata ayıklayıcı sağlayan bir yöntem sağlar.  
   
- [Icordebugcodeenum arabirimi1](icordebugcodeenum-interface.md)\
+ [Icordebugcodeenum arabirimi](icordebugcodeenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugCode` dizileri.  
   
  [Icordebugcomobjectvalue arabirimi](icordebugcomobjectvalue-interface.md)\
  Önbelleğe alınmış arabirim nesnelerini almak için yöntemler sağlar.  
   
- [Icordebugcontext arabirimi1](icordebugcontext-interface.md)\
+ [Icordebugcontext arabirimi](icordebugcontext-interface.md)\
  Bir bağlam nesnesini temsil eder. Bu arabirim henüz uygulanmamış.  
   
- [Icordebugcontroller arabirimi1](icordebugcontroller-interface.md)\
+ [Icordebugcontroller arabirimi](icordebugcontroller-interface.md)\
  Bir kapsamı temsil eder bir <xref:System.Diagnostics.Process> veya <xref:System.AppDomain>, hangi kod yürütme bağlamının denetlenebileceği.  
   
  [Icordebugdatatarget arabirimi](icordebugdatatarget-interface.md)\
@@ -139,19 +139,19 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugeditandcontinueerrorınfo arabirimi](icordebugeditandcontinueerrorinfo-interface.md)\
  Kullanımdan kalktı. Bu arayüzü kullanmayın.  
   
- [Icordebugeditandcontinuesnapshot arabirimi1](icordebugeditandcontinuesnapshot-interface.md)\
+ [Icordebugeditandcontinuesnapshot arabirimi](icordebugeditandcontinuesnapshot-interface.md)\
  Kullanımdan kalktı. Bu arayüzü kullanmayın.  
   
- [Icordebugenum arabirimi1](icordebugenum-interface1.md)\
+ [Icordebugenum arabirimi](icordebugenum-interface1.md)\
  Numaralandırıcıların hatalarını ayıklamak için soyut temel arayüz işlevini görür.  
   
- [Icordebugerrorınfoenum arabirimi1](icordebugerrorinfoenum-interface.md)\
+ [Icordebugerrorınfoenum arabirimi](icordebugerrorinfoenum-interface.md)\
  Kullanımdan kalktı. Bu arayüzü kullanmayın.  
   
- [Icordebugeval arabirimi1](icordebugeval-interface.md)\
+ [Icordebugeval arabirimi](icordebugeval-interface.md)\
  Hata ayıklayıcının, hatası ayıklanan kod bağlamında kod yürütmesine olanak tanıyan yöntemler sağlar.  
   
- [Icordebugeval2 arabirimi1](icordebugeval2-interface.md)\
+ [Icordebugeval2 arabirimi](icordebugeval2-interface.md)\
  Genişletir `ICorDebugEval` genel türler için destek sağlamak için.  
   
  [Icordebugexceptiondebugevent arabirimi](icordebugexceptiondebugevent-interface.md)\
@@ -163,34 +163,34 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugexceptionobjectvalue arabirimi](icordebugexceptionobjectvalue-interface.md)\
  Genişletir [Icordebugobjectvalue](icordebugobjectvalue-interface.md) bir yönetilen özel durum nesnesinden yığın izleme bilgisi sağlamak için arabirim.  
   
- [Icordebugframe arabirimi1](icordebugframe-interface.md)\
+ [Icordebugframe arabirimi](icordebugframe-interface.md)\
  Geçerli yığındaki bir çerçeveyi temsil eder.  
   
- [Icordebugframeenum arabirimi1](icordebugframeenum-interface.md)\
+ [Icordebugframeenum arabirimi](icordebugframeenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugFrame` dizileri.  
   
- [ICorDebugFunction arabirimi1](icordebugfunction-interface1.md)\
+ [ICorDebugFunction arabirimi](icordebugfunction-interface1.md)\
  Yönetilen bir işlevi veya yöntemi temsil eder.  
   
- [Icordebugfunction2 arabirimi1](icordebugfunction2-interface.md)\
+ [Icordebugfunction2 arabirimi](icordebugfunction2-interface.md)\
  Mantıksal olarak genişletir `ICorDebugFunction` yalnızca kendi kodum adım adım hata ayıklama için destek sağlamak için.  
   
  [Icordebugfunction3 arabirimi](icordebugfunction3-interface.md)\
  Mantıksal olarak genişletir [ICorDebugFunction](icordebugfunction-interface1.md) ReJIT istekten koda erişim sağlamak için arabirim.  
   
- [Icordebugfunctionbreakpoint arabirimi1](icordebugfunctionbreakpoint-interface.md)\
+ [Icordebugfunctionbreakpoint arabirimi](icordebugfunctionbreakpoint-interface.md)\
  Genişletir `ICorDebugBreakpoint` işlevlerdeki kesme noktalarını desteklemek için.  
   
  [Icordebuggcreferenceenum arabirimi](icordebuggcreferenceenum-interface.md)\
  Çöp toplama işlemi yapılacak nesneler için bir numaralandırıcı sağlar.  
   
- [Icordebuggenericvalue arabirimi1](icordebuggenericvalue-interface.md)\
+ [Icordebuggenericvalue arabirimi](icordebuggenericvalue-interface.md)\
  Öğesinin `ICorDebugValue` tüm değerlere uygulanır. Bu arabirim, değer için Alma ve Ayarlama yöntemlerini sağlar.  
   
  [Icordebugguidtotypeenum arabirimi](icordebugguidtotypeenum-interface.md)\
  Bunlara karşılık gelen eşleyen nesne için bir numaralandırıcı sağlar `ICorDebugType` nesneleri.  
   
- [Icordebughandlevalue arabirimi1](icordebughandlevalue-interface.md)\
+ [Icordebughandlevalue arabirimi](icordebughandlevalue-interface.md)\
  Öğesinin `ICorDebugReferenceValue` için hata ayıklayıcı çöp toplama işlemi için bir tanıtıcı oluşturduğu bir başvuru değeri temsil eder.  
   
  [Icordebugheapenum arabirimi](icordebugheapenum-interface.md)\
@@ -199,10 +199,10 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugheapsegmentenum arabirimi](icordebugheapsegmentenum-interface.md)\
  Yönetilen yığının bellek bölgeleri için bir numaralandırıcı sağlar.  
   
- [Icordebugheapvalue arabirimi1](icordebugheapvalue-interface.md)\
+ [Icordebugheapvalue arabirimi](icordebugheapvalue-interface.md)\
  Öğesinin `ICorDebugValue` CLR çöp toplayıcısı tarafından toplanmış bir nesneyi temsil eder.  
   
- [Icordebugheapvalue2 arabirimi1](icordebugheapvalue2-interface1.md)\
+ [Icordebugheapvalue2 arabirimi](icordebugheapvalue2-interface1.md)\
  ' In bir uzantısı `ICorDebugHeapValue` , çalışma zamanı işleçlerine ilişkin destek sağlar.  
   
  [Icordebugheapvalue3 arabirimi](icordebugheapvalue3-interface.md)\
@@ -214,10 +214,10 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugılcode2 arabirimi](icordebugilcode2-interface.md)\
  Mantıksal olarak genişletir [Icordebugılcode](icordebugilcode-interface.md) yönelik bir işlevin yerel değişken imzası belirtecini döndürür ve bir profil oluşturucunun Araçlı Ara dil (IL) map yöntemleri sağlamak için arabirimi kaydırır IL özgün yöntemi kaydırır.  
   
- [Icordebugılframe arabirimi1](icordebugilframe-interface.md)\
+ [Icordebugılframe arabirimi](icordebugilframe-interface.md)\
  MSIL kodunun bir yığın çerçevesini temsil eder.  
   
- [Icordebugılframe2 arabirimi1](icordebugilframe2-interface.md)\
+ [Icordebugılframe2 arabirimi](icordebugilframe2-interface.md)\
  Öğesinin mantıksal uzantısı `ICorDebugILFrame`.  
   
  [Icordebugılframe3 arabirimi](icordebugilframe3-interface.md)\
@@ -229,7 +229,7 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugınstancefieldsymbol arabirimi](icordebuginstancefieldsymbol-interface.md)\
  Bir örnek alanıyla hata ayıklama sembolü bilgilerini temsil eder. **Yalnızca .NET yerel kullanılabilir.**  
   
- [Icordebugınternalframe arabirimi1](icordebuginternalframe-interface.md)\
+ [Icordebugınternalframe arabirimi](icordebuginternalframe-interface.md)\
  Hata ayıklayıcı için çerçeve türlerini tanımlar.  
   
  [Icordebugınternalframe2 arabirimi](icordebuginternalframe2-interface.md)\
@@ -259,46 +259,46 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugmetadatalocator arabirimi](icordebugmetadatalocator-interface.md)\
  Hata ayıklayıcıya meta veri bilgileri sağlar.  
   
- [Icordebugmodule arabirimi1](icordebugmodule-interface.md)\
+ [Icordebugmodule arabirimi](icordebugmodule-interface.md)\
  Yürütülebilir bir dosya veya bir dinamik bağlantı kitaplığı (DLL) olan bir CLR modülünü temsil eder.  
   
- [Icordebugmodule2 arabirimi1](icordebugmodule2-interface.md)\
+ [Icordebugmodule2 arabirimi](icordebugmodule2-interface.md)\
  Bir mantıksal uzantısı olarak işlev görür `ICorDebugModule`.  
   
  [Icordebugmodule3 arabirimi](icordebugmodule3-interface.md)\
  Dinamik modül için simge okuyucu oluşturur.  
   
- [Icordebugmodulebreakpoint arabirimi1](icordebugmodulebreakpoint-interface.md)\
+ [Icordebugmodulebreakpoint arabirimi](icordebugmodulebreakpoint-interface.md)\
  Genişletir `ICorDebugBreakpoint` belirli modüllere erişim sağlamak için.  
   
  [Icordebugmoduledebugevent arabirimi](icordebugmoduledebugevent-interface.md)\
  Genişletir [Icordebugdebugevent](icordebugdebugevent-interface.md) Modül düzeyinde olaylar desteklemek için arabirim. **Yalnızca .NET yerel kullanılabilir.**  
   
- [Icordebugmoduleenum arabirimi1](icordebugmoduleenum-interface.md)\
+ [Icordebugmoduleenum arabirimi](icordebugmoduleenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugModule` dizileri.  
   
  [Icordebugmutabledatatarget arabirimi](icordebugmutabledatatarget-interface.md)\
  Genişletir [Icordebugdatatarget](icordebugdatatarget-interface.md) değişebilir veri hedefleri desteklemek için arabirim.  
   
- [Icordebugnativeframe arabirimi1](icordebugnativeframe-interface.md)\
+ [Icordebugnativeframe arabirimi](icordebugnativeframe-interface.md)\
  Öğesinin özelleşmiş uygulaması `ICorDebugFrame` yerel çerçeveler için kullanılır.  
   
  [Icordebugnativeframe2 arabirimi](icordebugnativeframe2-interface.md)\
  Alt ve üst çerçeve ilişkilerini sınayan yöntemler sağlar.  
   
- [Icordebugobjectenum arabirimi1](icordebugobjectenum-interface.md)\
+ [Icordebugobjectenum arabirimi](icordebugobjectenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve bunların göreli sanal adreslerine (RVA) göre nesne dizilerini numaralandırır.  
   
- [Icordebugobjectvalue arabirimi1](icordebugobjectvalue-interface.md)\
+ [Icordebugobjectvalue arabirimi](icordebugobjectvalue-interface.md)\
  Öğesinin `ICorDebugValue` temsil eden bir nesne içeren bir değer.  
   
- [Icordebugobjectvalue2 arabirimi1](icordebugobjectvalue2-interface.md)\
+ [Icordebugobjectvalue2 arabirimi](icordebugobjectvalue2-interface.md)\
  Genişletir `ICorDebugObjectValue` devralma ve geçersiz kılmaları desteklemek için.  
   
- [Icordebugprocess arabirimi1](icordebugprocess-interface.md)\
+ [Icordebugprocess arabirimi](icordebugprocess-interface.md)\
  Yönetilen bir kodu yürüten bir işlemi temsil eder.  
   
- [Icordebugprocess2 arabirimi1](icordebugprocess2-interface1.md)\
+ [Icordebugprocess2 arabirimi](icordebugprocess2-interface1.md)\
  Öğesinin mantıksal uzantısı `ICorDebugProcess`.  
   
  [Icordebugprocess3 arabirimi](icordebugprocess3-interface.md)\
@@ -319,10 +319,10 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugprocess8 arabirimi](icordebugprocess8-interface.md)\
  Mantıksal olarak genişletir [Icordebugprocess](icordebugprocess-interface.md) etkinleştirme veya devre dışı belirli türlerdeki arabirimi [Icordebugmanagedcallback2](icordebugmanagedcallback2-interface.md) özel durum geri aramalarını.  
   
- [Icordebugprocessenum arabirimi1](icordebugprocessenum-interface.md)\
+ [Icordebugprocessenum arabirimi](icordebugprocessenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugProcess` dizileri.  
   
- [Icordebugreferencevalue arabirimi1](icordebugreferencevalue-interface.md)\
+ [Icordebugreferencevalue arabirimi](icordebugreferencevalue-interface.md)\
  Öğesinin `ICorDebugValue` başvuru türlerini destekler.  
   
  [Icordebugregisterset arabirimi](icordebugregisterset-interface.md)\
@@ -346,16 +346,16 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugstaticfieldsymbol arabirimi](icordebugstaticfieldsymbol-interface.md)\
  Statik bir alan için hata ayıklama bilgilerini temsil eder. **Yalnızca .NET yerel kullanılabilir.**  
   
- [ICorDebugStepper arabirimi1](icordebugstepper-interface.md)\
+ [ICorDebugStepper arabirimi](icordebugstepper-interface.md)\
  Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı temsil eder, bir komutun çıkarılması ve tamamlanması arasında bir tanımlayıcı görevi görür ve bir adımı iptal etmek için bir yol sağlar.  
   
- [Icordebugstepper2 arabirimi1](icordebugstepper2-interface1.md)\
+ [Icordebugstepper2 arabirimi](icordebugstepper2-interface1.md)\
  Yalnızca Benim Kodum (JMC) hata ayıklaması için destek sağlar.  
   
- [Icordebugstepperenum arabirimi1](icordebugstepperenum-interface.md)\
+ [Icordebugstepperenum arabirimi](icordebugstepperenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugStepper` dizileri.  
   
- [Icordebugstringvalue arabirimi1](icordebugstringvalue-interface.md)\
+ [Icordebugstringvalue arabirimi](icordebugstringvalue-interface.md)\
  Öğesinin `ICorDebugHeapValue` dize değerleri için geçerlidir.  
   
  [Icordebugsymbolprovider arabirimi](icordebugsymbolprovider-interface.md)\
@@ -364,10 +364,10 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugsymbolprovider2 arabirimi](icordebugsymbolprovider2-interface.md)\
  Mantıksal olarak genişletir [Icordebugsymbolprovider](icordebugsymbolprovider-interface.md) ek hata ayıklama bilgilerini almak için arabirim. **Yalnızca .NET yerel kullanılabilir.**  
   
- [Icordebugthread arabirimi1](icordebugthread-interface.md)\
+ [Icordebugthread arabirimi](icordebugthread-interface.md)\
  Bir işlemdeki bir iş parçacığını temsil eder. Yaşam süresi bir `ICorDebugThread` örneğidir ömrü, temsil ettiği iş parçacığı ile aynı.  
   
- [Icordebugthread2 arabirimi1](icordebugthread2-interface.md)\
+ [Icordebugthread2 arabirimi](icordebugthread2-interface.md)\
  Bir mantıksal uzantısı olarak işlev görür `ICorDebugThread`.  
   
  [Icordebugthread3 arabirimi](icordebugthread3-interface.md)\
@@ -376,16 +376,16 @@ Bu bölümde, ortak dil çalışma zamanında (CLR) çalışan bir programın ha
  [Icordebugthread4 arabirimi](icordebugthread4-interface.md)\
  İş parçacığı engelleme bilgileri sağlar.  
   
- [Icordebugthreadenum arabirimi1](icordebugthreadenum-interface1.md)\
+ [Icordebugthreadenum arabirimi](icordebugthreadenum-interface1.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugThread` dizileri.  
   
- [Icordebugtype arabirimi1](icordebugtype-interface.md)\
+ [Icordebugtype arabirimi](icordebugtype-interface.md)\
  Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek bir türü temsil eder. Tür genelse, `ICorDebugType` örneklenmiş genel türü temsil eder.  
   
  [Icordebugtype2 arabirimi](icordebugtype2-interface.md)\
  Genişletir [Icordebugtype](icordebugtype-interface.md) türü tanımlayıcısı bir temel türü veya karmaşık türü (kullanıcı tanımlı) almak için arabirim.  
   
- [Icordebugtypeenum arabirimi1](icordebugtypeenum-interface.md)\
+ [Icordebugtypeenum arabirimi](icordebugtypeenum-interface.md)\
  Implements `ICorDebugEnum` yöntemleri ve numaralandırır `ICorDebugType` dizileri.  
   
  [Icordebugunmanagedcallback arabirimi](icordebugunmanagedcallback-interface.md)\

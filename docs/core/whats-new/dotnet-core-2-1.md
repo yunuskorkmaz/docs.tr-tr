@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066358"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975218"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -131,7 +131,7 @@ Düzeltme eki sürümü alma İleri bu ayarı bağımsızdır ve tüm olası iki
 
 Farklı bir sürümü aracılığıyla belirtilmediği sürece .NET Core 2.0 SDK'sını kullanarak kendi içindeki uygulamaları .NET Core 2.0.0 çalışma zamanı ile yayımlanan `RuntimeFrameworkVersion` özelliği. Bu yeni davranış artık kendi içinde bir uygulama için daha yüksek bir çalışma zamanı sürümünü seçmek için bu özelliği ayarlayın gerekir. İleriye dönük en kolay yaklaşım .NET Core 2.1 SDK (v 2.1.300) her zaman yayımlamaktır.
 
-Daha fazla bilgi için [müstakil azure'daki çalışma zamanı, ileri sarma](../deploying/runtime-patch-selection.md).
+Daha fazla bilgi için [müstakil dağıtım çalışma zamanı, ileri sarma](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Windows Uyumluluk Paketi
 
 .NET Framework mevcut koddan .NET Core için bağlantı noktası, kullanabileceğiniz [Windows Uyumluluk Paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). ' De .NET Core bulunandan daha fazla API 20.000 erişim sağlar. Bu API'ler türler <xref:System.Drawing?displayProperty=nameWithType> ad alanı, <xref:System.Diagnostics.EventLog> sınıf, WMI, performans sayaçları, Windows Hizmetleri ve Windows kayıt defteri türleri ve üyeleri.

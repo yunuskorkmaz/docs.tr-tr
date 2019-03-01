@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500622"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973502"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Nasıl yapılır: Bir LINQ Sorgu sonucunu belirli bir türü (Visual Basic) döndürme
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır. Varsayılan olarak, LINQ sorguları anonim bir tür nesnelerin bir listesini döndürür. Sorgu kullanarak belirli bir türün bir liste döndürme belirtebilirsiniz `Select` yan tümcesi.  
@@ -63,7 +63,7 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
 3.  Sonra `End Class` deyimine Form1 sınıfı oluşturmak için aşağıdaki kodu bir `CustomerInfo` Bu örnek için sorgu sonuçlarını tutmak için türü.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
 4.  Tasarımcı tablolar için O/R Tasarımcısı eklendiğinde, eklenen bir <xref:System.Data.Linq.DataContext> projenize nesne. Bu nesne bu tablolara erişen ve ayrı nesneler ve Koleksiyonlar her tablo için erişmek için gereken kodu içerir. <xref:System.Data.Linq.DataContext> Nesne projeniz için .dbml dosyanızın adına bağlı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlı `northwindDataContext`.  
   
@@ -71,7 +71,7 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
      İçinde `Load` olay Form1 sınıfın veri Bağlamınızı özellikleri olarak gösterilen tablolarını sorgulamak için aşağıdaki kodu ekleyin. `Select` Sorgu yan tümcesinde yeni bir oluşturur `CustomerInfo` sorgu sonucunun her öğe için anonim bir tür yerine türü.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
 5.  Projenizi çalıştırma ve sonuçları görüntülemek için F5 tuşuna basın.  
   

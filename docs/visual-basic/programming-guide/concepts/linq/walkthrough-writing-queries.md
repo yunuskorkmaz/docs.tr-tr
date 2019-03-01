@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666585"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971292"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek yol: Visual Basic'de sorgu yazma
 Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde. İzlenecek yol, sorgu Öğrenci nesnelerin listesini oluşturma, sorgularının nasıl çalıştırılacağını ve bunları değiştirmek nasıl gösterir. Sorguları nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özelliklerini bir araya getirin.  
@@ -56,11 +56,11 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 1.  Bir yerde bulmanızı `Main` şu şekilde işaretlenmiş projenin yöntemi:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Aşağıdaki kodu kopyalayın ve yapıştırın.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Üzerine fare işaretçisini `studentQuery` derleyici tarafından atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 1.  Aşağıdaki `For Each` projenizi sorguda aşağıdaki döngü.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Fare işaretçisini döngü denetim değişkeni `studentRecord` veri türünü görmek için. Türünü `studentRecord` olmasını çıkarılan `Student`, çünkü `studentQuery` koleksiyonunu döndürür `Student` örnekleri.  
   
@@ -102,7 +102,7 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 1.  Sorgu ifadesi içinde yerel tanımlayıcı tanıtmak için bu bölümdeki kod ekleyin. Yerel tanımlayıcı bir ara sonucunu tutacaktır. Aşağıdaki örnekte, `name` dizilerin bir bitiştirmesi olan Öğrenci tutan bir tanımlayıcı ilk ve son adları. Aksi takdirde birden çok kez hesaplanan bir ifadenin sonuçlarını depolayarak performansını artırabilir veya yerel tanımlayıcı kolaylık sağlamak için kullanılabilir.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
@@ -110,7 +110,7 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
 1.  Sorguya ekleyin ve `For Each` öğeleri farklı kaynaktaki öğelerinden bir dizi üretir bir sorgu oluşturmak için bu bölümdeki döngü. Aşağıdaki örnekte, bir kaynak koleksiyonudur `Student` nesneleri, ancak her bir nesnenin yalnızca bir üye döndürülür: Soyadı olan Garcia Öğrenciler adı. Çünkü `currentStudent.First` bir dize veri türü tarafından döndürülen dizinin `studentQuery3` olduğu `IEnumerable(Of String)`, bir dize sırası. Önceki örneklerde olduğu gibi bir veri atamasını türü `studentQuery3` yerel tür çıkarımı kullanarak belirlemek derleyicinin bırakılır.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Üzerine fare işaretçisini `studentQuery3` atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabilece
   
      Aşağıdaki örnek, boyut sayısı 1 ile 10, akademik derece sırasına göre akademik derece arasındadır seniors ve adını döndüren sorgu oluşturur. Bu örnekte, türü `studentQuery4` çünkü anlaşılmalıdır `Select` yan tümcesi, anonim bir türün örneğini döndürür ve anonim bir tür kullanılabilir adı yok.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 ## <a name="additional-examples"></a>Ek Örnekler  
  Temelleri anladığınıza göre gücü ve esnekliği göstermek için ek örnekler listesi aşağıda verilmiştir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular. Her örneğin ne işe yaradığını kısa bir açıklaması tarafından gelmelidir. Fare işaretçisini çıkarsanan tür görmek her bir sorgu için sorgu sonucu değişkenine üzerine bırakın. Kullanım bir `For Each` döngü, istediğiniz sonuçları vermeyebilir.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Ek Bilgiler  
  Sorgularla çalışma temel kavramları hakkında bilgi sahibi olduktan sonra belgeler ve örnekler için belirli türünü okumak hazır olursunuz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı:  

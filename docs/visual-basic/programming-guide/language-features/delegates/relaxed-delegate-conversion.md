@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: e2838b6473b8c00927073a530b4b49870fcfa9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96941754f17326893437cdcf83c588880e010cc0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600393"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979520"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Gevşek Temsilci Dönüşümü (Visual Basic)
 Gevşek temsilci dönüşümü bile bunların imzalarını aynı olmadığında abonelerimizin ve işlevleri temsilci veya işleyicileri için atamanızı sağlar. Bu nedenle, temsilciler bağlama zaten için yöntem çağrılarına izin verilen bağlama ile tutarlı olur.  
@@ -21,32 +21,32 @@ Gevşek temsilci dönüşümü bile bunların imzalarını aynı olmadığında 
   
 -   Bir genişletme dönüşümü her temsilcinin parametre veri türünden atanan işlevin karşılık gelen parametrenin veri türü için mevcut olmalıdır veya `Sub`. Aşağıdaki örnekte, temsilci `Del1` bir parametreye sahip bir `Integer`. Parametre `m` içinde atanan lambda ifadeleri var olan bir genişletme dönüşümü bir veri türüne sahip olmalıdır `Integer`, gibi `Long` veya `Double`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
-     [!code-vb[VbVbalrRelaxedDelegates#2](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
      Daraltma dönüştürmeleri, yalnızca verilen `Option Strict` ayarlanır `Off`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#8](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
 -   Atanan işlevin dönüş türünden ters yönde genişletme dönüştürmesi olmalıdır veya `Sub` temsilcinin dönüş türü. Aşağıdaki örneklerde, her atanmış bir lambda ifadesinin gövdesi için widens bir veri türü değerlendirilmelidir `Integer` çünkü dönüş türü `del1` olduğu `Integer`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#3](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
  Varsa `Option Strict` ayarlanır `Off`, kısıtlama genişletme her iki yönde de kaldırılır.  
   
- [!code-vb[VbVbalrRelaxedDelegates#4](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>Atlama parametre özellikleri  
  Gevşek temsilciler de tamamen atanan yöntemindeki parametre özellikleri atlamak izin ver:  
   
- [!code-vb[VbVbalrRelaxedDelegates#5](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#6](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#6)]  
   
  Bazı parametreler belirtin ve diğerleri atlamak olduğunu unutmayın.  
   
- [!code-vb[VbVbalrRelaxedDelegates#15](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
  Parametreleri atlarsanız olanağı, burada birkaç karmaşık parametresi söz konusu olan bir olay işleyicisi tanımlama gibi bir durumda yararlıdır. Bazı olay işleyicilerine bağımsız değişkenleri kullanılmaz. Bunun yerine, işleyici üretileceği olayı kaydedilir ve bağımsız değişkenler yoksayar denetim durumunu doğrudan erişir. Gevşek temsilciler belirsizlikleri sonuç olduğunda bu tür bildirimleri bağımsız atlamak sağlar. Aşağıdaki örnekte, tam olarak belirtilen yöntem `OnClick` şeklinde yeniden yazılabilir `RelaxedOnClick`.  
   
@@ -65,22 +65,22 @@ End Sub
   
  Aşağıdaki örnekte, İşlevler `f1`, `f2`, `f3`, ve `f4` tüm atanabilir `Del1`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#7](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#7)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#9](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
  Aşağıdaki örnek yalnızca geçerli olduğunda, `Option Strict` ayarlanır `Off`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#14](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Bırakma işlevi döndürür  
  Gevşek temsilci dönüşümü bir işleve atamanızı sağlar bir `Sub` temsilci, etkili bir şekilde işlev dönüş değeri yoksayılıyor. Ancak, atanamaz bir `Sub` için bir işlev temsilcisi. Aşağıdaki örnekte, işlevin adresini `doubler` atandığı `Sub` temsilci `Del3`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#10](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#11](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Lambda İfadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

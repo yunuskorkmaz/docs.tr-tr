@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730743"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981276"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitleri tarafından temsil edilen sayısal değerleri hesaplama ilgili alışık olduğunuz aritmetik işlemleri çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenden tek bit düzeyinde işlem ve bunların bit düzenleri sola veya sağa kaydırma bit kaydırma işleçleri şunlardır.  
@@ -26,29 +26,29 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
 ## <a name="arithmetic-operations"></a>Aritmetik işlemler  
  İki değer ile birlikte bir ifadede ekleyebileceğiniz [+ işleci](../../../../visual-basic/language-reference/operators/addition-operator.md), ya da başka birinden çıkarma [-işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), aşağıdaki örnekte de gösterildiği gibi.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  Değilleme de kullanır [-işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), ancak yalnızca bir işlenen, aşağıdaki örnek gösterir.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  Çarpma ve bölme kullanım [* işleci](../../../../visual-basic/language-reference/operators/multiplication-operator.md) ve [/ işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), sırasıyla aşağıdaki örnekte de gösterildiği gibi.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  Üs kullanır [^ işleci](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), aşağıdaki örnekte de gösterildiği gibi.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  Tamsayı bölme yazımının kullanarak [\ işleci (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Sayının tamsayı bölme döndürür, diğer bir deyişle, sayısını temsil eden tamsayı bölen bir hatırlatıcı göz önüne alarak olmadan bölünen bölebilirsiniz. Bölen hem de Tamsayı türünde olması gerekir (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, ve `ULong`) için bu işleci. Diğer tüm türlerin bir integral türe önce dönüştürülmelidir. Aşağıdaki örnek, Tamsayı bölme gösterir.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  Modulus aritmetik kullanarak gerçekleştirilir [Mod işleci](../../../../visual-basic/language-reference/operators/mod-operator.md). Bu işleç kalanı bölen bölünen bölme işleminden sayısı bir tamsayı döndürür. Bölen hem bölünen integral türleri ise, döndürülen değer tam sayı. Bölen ve bölünen kayan nokta türleri ise, döndürülen değer aynı zamanda kayan nokta. Aşağıdaki örnek, bu davranış gösterir.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Denenen sıfıra bölme  
  Sıfıra bölme, söz konusu veri türlerine bağlı olarak farklı sonuçlar sahiptir. İntegral bulunduğu (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] oluşturur bir <xref:System.DivideByZeroException> özel durum. Bölme işlemleri, `Decimal` veya `Single` veri türü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ayrıca oluşturur bir <xref:System.DivideByZeroException> özel durum.  
@@ -80,7 +80,7 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
   
  Aşağıdaki örnek kaydırır bir `Integer` sağa ve sola değeri.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  Aritmetik kaydırmalar hiçbir zaman taşması özel durumları oluşturur.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580505"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975400"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: (Visual Basic) olay bildirme ve oluşturma
 Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı gösteren `Widget`. Adımları tamamladıktan sonra Yardımcısı konuyu okumak isteyebilirsiniz [izlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), olaylarından kullanmak nasıl `Widget` uygulamada durum bilgilerini sağlamak için nesneleri.  
@@ -46,7 +46,7 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
   
 -   Kullanım `Event` bir olayı bildirmek için anahtar sözcüğü `Widget` sınıfı. Bir olay olabilir Not `ByVal` ve `ByRef` bağımsız olarak `Widget`'s `PercentDone` olay gösterir:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  Çağrı nesnesi aldığında bir `PercentDone` olay `Percent` tamamlanmış görev yüzdesi bağımsız değişken içeriyor. `Cancel` Bağımsız değişkeni ayarlanabilir `True` olayı başlatan yöntem iptal etmek için.  
   
@@ -59,11 +59,11 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
   
 1.  Erişimini basitleştirmek için `Timer` Bu sınıf tarafından kullanılan özellik Ekle bir `Imports` sınıfı modülünüzde bildirimler bölümünü üstüne deyimi yukarıda `Class Widget` deyimi.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  Aşağıdaki kodu ekleyin `Widget` sınıfı:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  Uygulamanızı çağırdığında `LongTask` yöntemi `Widget` sınıfı harekete geçirirse `PercentDone` olay her `MinimumInterval` saniye. Olay döndürüldüğünde `LongTask` denetler `Cancel` bağımsız değişken ayarlanmıştır `True`.  
   

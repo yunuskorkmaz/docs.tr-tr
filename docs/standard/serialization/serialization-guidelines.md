@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe593e9c132f4fc151983d6c4dc04bd13627120
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690897"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978416"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -87,7 +87,8 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 6.  DÜŞÜNÜN uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> türü farklı sürümleri arasında gidiş dönüşü izin vermek için arabirim.  
   
-     Seri hale getirici gidiş dönüşü sırasında hiçbir veri kaybı olduğundan emin olmak arabirim sağlar. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> Özelliği olan geçerli sürümü için bilinmeyen tür, gelecekteki sürümüne tüm verileri depolar. Geçerli sürüm daha sonra serileştirilmiş ve gelecekteki bir sürümüne seri durumdan, ek verileri seri hale getirilmiş akış kullanılabilir **ExtensionData** özellik değeri.  
+     Seri hale getirici gidiş dönüşü sırasında hiçbir veri kaybı olduğundan emin olmak arabirim sağlar. 
+  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> Özelliği olan geçerli sürümü için bilinmeyen tür, gelecekteki sürümüne tüm verileri depolar. Geçerli sürüm daha sonra serileştirilmiş ve gelecekteki bir sürümüne seri durumdan, ek verileri seri hale getirilmiş akış kullanılabilir **ExtensionData** özellik değeri.  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -144,6 +145,6 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
 - [Veri Anlaşması Seri Hale Getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [İkili Serileştirme](binary-serialization.md)
-- [Uzak nesneleri](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [.NET uzaktan iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)
 - [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

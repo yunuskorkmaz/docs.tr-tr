@@ -5,17 +5,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 16a8c1c9534e121c24289fbbfff14485b0338f63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743952"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978533"
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları Kullanma (C# Programlama Kılavuzu)
 `struct` Türü basit nesneler gibi temsil etmek için uygun olan `Point`, `Rectangle`, ve `Color`. Temsil eden bir noktası olarak yalnızca olarak uygun olmasına rağmen bir [sınıfı](../../../csharp/language-reference/keywords/class.md) ile [Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), [yapı](../../../csharp/language-reference/keywords/struct.md) bazı senaryolarda daha verimli olabilir. Örneğin, bir dizi 1000 bildirirseniz `Point` nesneler, ek bellek ayırır her nesneye başvuran; bu durumda, yapı daha ucuz olabilir. Çünkü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] adlı bir nesne içeren <xref:System.Drawing.Point>, yapı Bu örnekte bunun yerine "Coords" adlı.  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  Bu yapı için bir varsayılan (parametresiz) kurucu tanımlamak için bir hatadır. Bu da bir yapı gövdesi bir örnek alanı başlatmak için bir hatadır. Harici olarak erişilebilen Yapı üyeleri yalnızca parametreli bir kurucu, örtük, varsayılan oluşturucu kullanarak başlatabilirsiniz bir [nesne Başlatıcı](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), veya struct bildirildikten sonra tarafından ayrı ayrı üyeleri erişme. Herhangi bir özel ya da aksi takdirde erişilemez üye, özel olarak oluşturucular kullanılmasını gerektirir.
   
@@ -37,9 +37,9 @@ ms.locfileid: "54743952"
  Bu örnek gösterir `struct` hem varsayılan hem de parametreli oluşturucuları kullanarak başlatma.  
   
 ### <a name="code"></a>Kod  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
+ [!code-csharp[csProgGuideObjects#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#2)]  
   
 ## <a name="example-2"></a>Örnek 2  
   
@@ -47,9 +47,9 @@ ms.locfileid: "54743952"
  Bu örnekte, yapılar için benzersiz bir özellik gösterilmektedir. Kullanmadan bir Coords nesnesi oluşturur `new` işleci. Word değiştirirseniz `struct` sözcüğünün `class`, program derlenmez.  
   
 ### <a name="code"></a>Kod  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
+ [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

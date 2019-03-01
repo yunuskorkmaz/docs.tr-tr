@@ -5,17 +5,17 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 32f434d9813b08254b72b713ec2f9a1bc9d1b06d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7269f925b3fc78eea04249984697899b1997c3fb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725018"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976713"
 ---
 # <a name="nested-types-c-programming-guide"></a>İç içe Geçmiş Türler (C# Programlama Kılavuzu)
 İçinde tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) iç içe geçmiş bir tür olarak adlandırılır. Örneğin:  
   
-[!code-csharp[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
+ [!code-csharp[csProgGuideObjects#68](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#68)]  
   
 Dış türün bir sınıf veya yapı olup olmadığına bakılmaksızın, iç içe geçmiş türler varsayılan olarak [özel](../../../csharp/language-reference/keywords/private.md); yalnızca kendi kapsayan türden erişilebilir. Önceki örnekte, `Nested` sınıfı, dış türler için erişilemiyor. 
 
@@ -29,17 +29,17 @@ Ayrıca belirtebileceğiniz bir [erişim değiştiricisi](../../language-referen
   
 Aşağıdaki örnekte `Nested` sınıfı genel:
   
-[!code-csharp[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+ [!code-csharp[csProgGuideObjects#69](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#69)]  
   
  İç içe geçmiş ya da iç, tür, kapsayıcı veya dış türe erişim sağlayabilir. Kapsayan türe erişmek için bir bağımsız değişken olarak iç içe türün oluşturucuya geçirin. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
+ [!code-csharp[csProgGuideObjects#70](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#70)]  
   
  İç içe türü, kapsadığı tür için erişilebilir olan üyelerin tümüne erişebilir. Bu devralınan tüm korumalı Üyeler dahil olmak üzere kapsanan türün özel ve korumalı üyelerine erişebilir.  
   
  Önceki bildirimde, sınıfın tam adını `Nested` olduğu `Container.Nested`. Bu gibi iç içe geçmiş sınıfın yeni bir örneğini oluşturmak için kullanılan ad.  
   
- [!code-csharp[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
+ [!code-csharp[csProgGuideObjects#71](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#71)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648553"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972007"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Yordam Sorunlarını Giderme (Visual Basic)
 Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -41,7 +41,7 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  **Doğru yaklaşım:** Döndürülecek bir dizi öğelerini değiştirebilmesi için dahili bir dizi yerel bir değişken tanımlayın. Aşağıdaki örnek, hata olmadan derler.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Bağımsız değişken değil değiştirilen yordam çağrısı tarafından  
  Bir yordam çağıran koddaki bağımsız değişken arka plandaki bir programlama öğesi değiştirmeye izin vermek istiyorsanız, başvuruya göre geçmesi gerekir. Ancak geçirdiğiniz değere göre olsa bile bir yordam bir başvuru türü bağımsız değişkeni öğelerine erişebilirsiniz.  
@@ -52,13 +52,13 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  Aşağıdaki örnek, bir dizi değişkenini değere göre alabilir ve çalışan iki yordamı alt öğelerde tanımlar. Yordam `increase` yalnızca her öğeye ekler. Yordam `replace` yeni bir dizi parametresine atar `a()` ve sonra her öğeye ekler. Ancak, yakaladığından çağıran koddaki temel alınan dizi değişkeni etkilemez çünkü `a()` bildirildiği `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  Aşağıdaki örnek çağrılar `increase` ve `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  İlk `MsgBox` çağrı görüntüler "increase(n) sonra: 11, 21, 31, 41". Çünkü `n` bir başvuru türüdür `increase` kendisine geçirilen olsa bile, bu grubun üyeleri değiştirebilirsiniz `ByVal`.  
   
@@ -66,7 +66,7 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  **Doğru yaklaşım:** Temel alınan değişken öğenin kendisini değiştirebilmesi için başvuruya göre geçirin. Aşağıdaki örnek, değişiklik bildiriminde gösterir. `replace` çağıran koddaki başka bir dizi yerine kendisine sağlayan.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>Aşırı tanımlamak oluşturulamıyor  
  Bir yordamı aşırı yüklenmiş bir sürümünü tanımlamak istiyorsanız, aynı ada ancak farklı bir imza kullanmanız gerekir. Derleyici, aynı imzaya sahip bir aşırı bildirimden ayırt edilemiyor, bir hata oluşturur.  
@@ -108,9 +108,9 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  Aşağıdaki örnekte, aşırı yükleme çözümleme işlemi gösterilmektedir.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  İlk çağrıda nedeniyle derleyici ilk aşırı yükleme ortadan ilk bağımsız değişken türünü (`Short`) daraltır karşılık gelen parametre türüne (`Byte`). Çünkü ikinci aşırı yükleme her bağımsız değişken türü, daha sonra üçüncü aşırı yükleme ortadan kaldırır (`Short` ve `Single`) üçüncü aşırı yükleme türüne karşılık gelen widens (`Integer` ve `Single`). İsteğe bağlı olarak derleyici arama için kullanır, böylece daha az genişletme, ikinci aşırı yükleme gerektirir.  
   
@@ -118,7 +118,7 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
   
  **Doğru yaklaşım:** Belirsizlik olmadan aşırı yüklenmiş bir yordamı çağırma yapabilmek için kullanmak [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) parametre türleri için bağımsız değişken veri türleri eşleştirmek için. Aşağıdaki örnek, bir çağrı gösterir `z` , ikinci aşırı yükleme çözünürlüğü zorlar.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>İsteğe bağlı bir çözümleme ve ParamArray bağımsız değişkenleri, aşırı yükleme  
  Son parametre bildirilen dışında aynı imzaya bir yordamın iki aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) birinde ve [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) diğerinde derleyici Bu yordam çağrısı çözümler en yakın eşleşme göre. Daha fazla bilgi için [aşırı yükleme çözünürlüğü](./overload-resolution.md).  

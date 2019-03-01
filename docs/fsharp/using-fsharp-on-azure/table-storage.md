@@ -3,14 +3,14 @@ title: Azure tablo depolama kullanmaya başlamaF#
 description: Azure tablo depolama veya Azure Cosmos DB kullanarak bulutta yapılandırılmış veri Store.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152079"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966014"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlamaF# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve F kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlama\#
 
 Azure tablo depolama bulutta yapılandırılmış NoSQL verileri depolayan bir hizmettir. Tablo depolama, şemasız tasarım ile anahtar/öznitelik deposudur. Table storage şemasız olduğu için ihtiyaçları, uygulama geliştikçe verilerinizi uyarlamak da kolaylaşır. Verilere erişim hızlı ve uygun maliyetli her türden uygulamalar için. Tablo depolama genellikle maliyetini önemli ölçüde benzer veri hacimleri için geleneksel SQL'e daha düşüktür.
 

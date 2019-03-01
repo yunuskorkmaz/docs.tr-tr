@@ -6,30 +6,30 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: b31eb8bfc5a933cc374528c9a4d7b97ad72a7412
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2ee0c2a38ffeef3d2d0b339b98e48c25227d96c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604244"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973268"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
 Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bildirebilirsiniz:  
   
- [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
+ [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
  Bu dizinin öğeleri içeren `array[0]` için `array[4]`. [Yeni](../../../csharp/language-reference/keywords/new.md) işleci dizi oluşturmak ve varsayılan değerlerine dizi öğelerini başlatmak için kullanılır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
   
  Dize öğesi depolayan bir dizi aynı şekilde bildirilebilir. Örneğin:  
   
- [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
+ [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
 ## <a name="array-initialization"></a>Dizi başlatma
 
  Bildirimi, bağlı bir diziyi başlatmaya mümkündür, bu durumda uzunluğu tanımlayıcısı gerekli değildir çünkü zaten başlatma listedeki öğelerin sayısı tarafından sağlanır. Örneğin:  
   
- [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
+ [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
  Dize dizisi aynı şekilde başlatılabilir. Bir dize dizisi bildirimi her dizi öğesi günün bir adı nerede başlatılır verilmiştir:  
   
@@ -37,11 +37,11 @@ Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bil
   
  Bir dizi bildirimi üzerine başlattığınızda, aşağıdaki kısayolları kullanabilirsiniz:  
   
- [!code-csharp[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
  Bir dizi değişkeni başlatma olmadan belirtmek mümkündür, ancak kullanmalısınız `new` Bu değişken için bir dizi atadığınızda işleci. Örneğin:  
   
- [!code-csharp[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
+ [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
  C# 3.0, örtük olarak yazılan diziler tanıtır. Daha fazla bilgi için [örtük olarak yazılan diziler](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
@@ -49,7 +49,7 @@ Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bil
 
  Aşağıdaki dizi bildirimi göz önünde bulundurun:  
   
- [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
+ [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
   
  Bu ifade sonucu bağlıdır `SomeType` bir değer türü veya bir başvuru türü. Bir değer türü ise, her biri türüne sahip bir dizi 10 öğelerin deyimi oluşturur `SomeType`. Varsa `SomeType` bir başvuru türüdür deyimi her biri için bir null başvuru başlatılır 10 öğe, bir dizi oluşturur.  
   

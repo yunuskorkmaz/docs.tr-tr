@@ -10,17 +10,17 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 24df3a78487cf054a2682b3fbdf8d78b37c4ea6b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219449"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979456"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
 [Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak, özellik veya dizin oluşturucu ait oldukları aynı görünürlük veya erişim düzeyini bu erişimcilerine sahip. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  
   
- [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
  Bu örnekte, bir özelliğin çağırılır `Name` tanımlayan bir `get` ve `set` erişimcisi. `get` Erişimci özelliğin kendisine erişilebilirlik düzeyi alır `public` bu durumda, while `set` erişimci açıkça kısıtlanan uygulayarak [korumalı](../../../csharp/language-reference/keywords/protected.md) erişim değiştiricisi erişimci kendisi.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "56219449"
 ## <a name="access-modifiers-on-overriding-accessors"></a>Erişimciler geçersiz kılma üzerinde erişim değiştiricileri  
  Bir özellik veya dizin oluşturucu geçersiz kıldığınızda, geçersiz kılınan erişimcileri geçersiz kılma koda erişilebilir olması gerekir. Ayrıca, hem özellik/dizin oluşturucu ve onun erişimcilerinin erişilebilirliği, karşılık gelen geçersiz kılınan özelliğin/dizin oluşturucu ve onun erişimcilerinin eşleşmesi gerekir. Örneğin:  
   
- [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
 ## <a name="implementing-interfaces"></a>Arabirimleri uygulama  
  Bir arabirim uygulamak için bir erişimci kullandığınızda, bir erişim değiştiricisidir erişimci olmayabilir. Ancak, bir erişimci gibi kullanarak arabirim uygular, `get`, aşağıdaki örnekte olduğu gibi bir erişim değiştiricisidir diğer erişimcisi olabilir:  
   
- [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Erişimcisinin erişilebilirlik etki alanı  
  Erişimci üzerinde bir erişim değiştiricisidir kullanırsanız [erişilebilirlik etki alanı](../../../csharp/language-reference/keywords/accessibility-domain.md) erişimcisine bu değiştirici tarafından belirlenir.  
@@ -55,7 +55,7 @@ ms.locfileid: "56219449"
   
  Bu örnek ayrıca gösteren bir kısıtlayıcı erişim değiştiricisi gibi `private` veya `protected`, `set` erişimcisine `Name` özelliğinde `DerivedClass` erişimciye erişimi engeller ve atadığınız bir hata oluşturur .  
   
- [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
 ## <a name="comments"></a>Açıklamalar  
  Bildirimi değiştirirseniz dikkat `new private string Id` tarafından `new public string Id`, çıkış alırsınız:  

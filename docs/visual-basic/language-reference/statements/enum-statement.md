@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: f1086fdc26f1909e751617b78e0cd31f2a8b1b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656667"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965702"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum Deyimi (Visual Basic)
 Bir sabit listesi bildirir ve üyelerinin değerlerini tanımlar.  
@@ -139,37 +139,37 @@ End Enum
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek nasıl kullanılacağını gösterir `Enum` deyimi. Üye olarak adlandırılır Not `EggSizeEnum.Medium`, olarak değil `Medium`.  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte yöntemi dışında `Egg` sınıfı. Bu nedenle, `EggSizeEnum` olarak tam olarak `Egg.EggSizeEnum`.  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Enum` ilgili bir kümesini tanımlamak için deyimi adlı sabit değerler. Bu durumda, bir veritabanı için veri girişi formları tasarlama tercih edebileceğiniz renkleri değerlerdir.  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, pozitif ve negatif sayıları içeren değerleri gösterir.  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, bir `As` yan tümcesini belirtmek için kullanılır `datatype` bir numaralandırma.  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bit düzeyinde bir numaralandırma kullanma işlemini gösterir. Bit düzeyinde bir sabit listesi örneğini birden çok değer atanabilir. `Enum` Bildirimi içeren <xref:System.FlagsAttribute> özniteliği sabit listesi flags bir dizi ele alınıp alınamayacağını belirtir.  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir sabit listesi yinelenir. Kullandığı <xref:System.Enum.GetNames%2A> sabit listesinden alınmış üye adlarının dizisini almak için yöntemi ve <xref:System.Enum.GetValues%2A> üye değerler dizisini almak için.  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Enum>

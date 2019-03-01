@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722027"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976882"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te dosya taşıma
 `My.Computer.FileSystem.MoveFile` Yöntemi, bir dosyayı başka bir klasöre taşımak için kullanılabilir. Hedef yapı mevcut değilse oluşturulur.  
@@ -18,13 +18,13 @@ ms.locfileid: "54722027"
   
 -   Kullanım `MoveFile` yöntemi hem kaynak dosya hem de hedef dosya için konum ve dosya adı belirterek bu dosyayı taşır. Bu örnek adlı dosyayı taşır `test.txt` gelen `TestDir1` için `TestDir2`. Kaynak dosya adı ile aynı olmasına rağmen hedef dosya adı belirtilir.  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>Dosya taşıma ve yeniden adlandırmak için  
   
 -   Kullanım `MoveFile` yöntemi kaynak dosya adı ve konumu, hedef konum ve hedef konumda yeni bir ad belirterek bu dosyayı taşır. Bu örnek adlı dosyayı taşır `test.txt` gelen `TestDir1` için `TestDir2` ve yeniden adlandırsa `nexttest.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  

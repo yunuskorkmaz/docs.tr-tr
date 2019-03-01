@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 448ca9d52d820029464b75a616dc032a7cc41f59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576362"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979653"
 ---
 # <a name="-operator-visual-basic"></a>+ İşleci (Visual Basic)
 İki sayı ekleyen veya sayısal bir ifadenin pozitif değerini döndürür. Ayrıca iki dize ifadeleri birleştirmek için kullanılabilir.  
@@ -88,23 +88,23 @@ expression1 + expression2
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `+` numaralarını eklemek için işleci. İşlenenler, her ikisi de sayısal olduğunda, Visual Basic aritmetik sonucu hesaplar. Aritmetik sonucu iki işlenenden toplamını temsil eder.  
   
- [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
  Ayrıca `+` dizeyi birleştirmek için işleci. Visual Basic bunları işlenen her iki dize olursa art arda ekler. Birleştirme sonucu art arda iki işlenenden biri içeriğini oluşan tek bir dize temsil eder.  
   
  İşlenen karma türde ise, sonuç ayarına bağlıdır [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md). Sonuç aşağıdaki örnekte, `Option Strict` olduğu `On`.  
   
- [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
  Sonuç aşağıdaki örnekte, `Option Strict` olduğu `Off`.  
   
- [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
+ [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
  Belirsizliği ortadan kaldırmak için kullanmanız `&` yerine işleci `+` birleştirme için.  
   

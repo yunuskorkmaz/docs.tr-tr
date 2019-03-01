@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574319"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976531"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
 A *genel yordam*ayrıca adlı bir *genel yöntem*, en az bir tür parametreyle tanımlanan bir yordam olduğunu. Bu, çağıran kodu yordam çağrıları her zaman veri türleri, gereksinimleri ile uyumlu hale getirmenizi sağlar.  
@@ -29,7 +29,7 @@ A *genel yordam*ayrıca adlı bir *genel yöntem*, en az bir tür parametreyle t
 ## <a name="type-inference"></a>Tür Çıkarma  
  Herhangi bir tür bağımsız değişkeni sağlamadan genel bir yordam çağırabilir. Bu şekilde çağırırsanız derleyici yordamın türü bağımsız değişkenler için uygun veri türlerini belirlemek çalışır. Bu adlandırılır *anlam çıkarma*. Aşağıdaki kod bir çağrı gösterir, derleyicinin tür geçmelidir algılar `String` tür parametresi için `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
  Derleyici, tür bağımsız değişkenlerini çağrınızın bağlamından çıkarsanamaz. bir hata bildirir. Bu tür bir hataya olası nedenlerinden biri, bir dizi derece uyuşmazlığı olmasıdır. Örneğin, bir tür parametresi bir dizi olarak normal parametresini tanımlama varsayalım. Genel bir yordamı çağırma sağlayan bir dizi farklı boyut sayısına (sayı) boyut uyuşmazlığı tür çıkarımı başarısız olmasına neden olur. Aşağıdaki kod bir çağrı gösterir, tek boyutlu dizi bekliyor bir yordam için iki boyutlu bir dizi geçirilir.  
   
@@ -53,14 +53,14 @@ End Sub
  Aşağıdaki örnek, genel tanımlar `Function` yordamı belirli bir öğenin bir dizide bulunacak. Bu, bir tür parametresi tanımlar ve parametre listesinde iki parametre oluşturmak için kullanır.  
   
 ### <a name="code"></a>Kod  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Açıklamalar  
  Yukarıdaki örnekte karşılaştırma gerektirir `searchValue` her öğeye karşı `searchArray`. Bu yeteneği sağlamak için bu tür parametresi kısıtlaması uygular `T` uygulamak için <xref:System.IComparable%601> arabirimi. Kod <xref:System.IComparable%601.CompareTo%2A> yöntemi yerine `=` işleci, bir tür bağımsız değişkeni için sağlanan garanti olduğundan `T` destekler `=` işleci.  
   
  Test edebilirsiniz `findElement` aşağıdaki kodla yordamı.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
  Önceki çağrılar `MsgBox` sırasıyla "0", "1" ve "-1" görüntüler.  
   

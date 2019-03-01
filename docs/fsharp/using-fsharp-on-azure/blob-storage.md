@@ -3,14 +3,14 @@ title: Azure Blob Depolama kullanmaya başlamaF#
 description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664997"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981913"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Azure Blob Depolama kullanmaya başlamaF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolamayı kullanmaya başlama\#
 
 Azure Blob Depolama, yapılandırılmamış verileri nesne/BLOB olarak bulutta depolayan bir hizmettir. BLOB Depolama, herhangi bir türde metin veya belge, medya dosyası veya uygulama Yükleyici gibi ikili veri depolayabilir. BLOB storage ayrıca nesne depolama olarak adlandırılır.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 283c1c59d4bfa73f12ee0c9b772bf71c15a3b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e83029b7b5fd635ff08e608760b6c64c7945da0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676711"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965936"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te ikili dosyalara yazma
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Yöntemi veri bir ikili dosyaya yazar. Varsa `append` parametresi `True`, dosyaya veri ekler; Aksi takdirde dosyasındaki verilerin üzerine yazılır.  
@@ -22,7 +22,7 @@ ms.locfileid: "54676711"
   
 -   Kullanım `WriteAllBytes` dosya yolu ve adı ile yazılacak baytları sağlama yöntemi. Bu örnek veri dizisi ekler `CustomerData` adlı dosyaya `CollectedData.dat`.  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir durum oluşturabilir:  

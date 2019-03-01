@@ -1,5 +1,5 @@
 ---
-title: Icordebugthread2 arabirimi1
+title: ICorDebugThread2 Arabirimi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3826bfd16d3cf7534a6e920c516987908547b419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e162c114de013eed160a515dbc92fef47ea3327
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716158"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980509"
 ---
-# <a name="icordebugthread2-interface1"></a>Icordebugthread2 arabirimi1
+# <a name="icordebugthread2-interface"></a>ICorDebugThread2 Arabirimi
 Icordebugthread arabirimi mantıksal uzantısı olarak görev yapar.  
   
 ## <a name="methods"></a>Yöntemler  

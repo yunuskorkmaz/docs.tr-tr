@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: d309e4fb09bc0b8af87422bc84427528deb29e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710321"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968770"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmalar (Visual Basic) bildirme
 Numaralandırma ile oluşturma `Enum` bir sınıf veya modül bildirimleri bölümünde bildirimi. Bir yöntem içinde bir listelemeyi bildiremezsiniz. Uygun erişim düzeyini belirtmek için kullanın `Private`, `Protected`, `Friend`, veya `Public`.  
@@ -26,21 +26,21 @@ Numaralandırma ile oluşturma `Enum` bir sınıf veya modül bildirimleri böl�
   
 1.  Kod erişim düzeyi içeren bir bildirimi yazma `Enum` anahtar sözcüğü ve her biri farklı bir bildirir geçerli bir ad, aşağıdaki örneklerde gösterildiği gibi `Enum`.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
 2.  Sabitleri sabit listesi tanımlayın. Varsayılan olarak, bir listedeki ilk sabit değerine ayarlanır `0`, ve sonraki sabit bir değer bir önceki sabiti fazlasını başlatılır. Örneğin, aşağıdaki sabit `Days`, adlı bir sabit içeriyor `Sunday` değerle `0`, adlı bir sabit `Monday` değerle `1`, adlı bir sabit `Tuesday` değeriyle`2`ve benzeri.  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
 3.  Değerleri bir numaralandırma sabitlerini için bir atama ifadesi kullanarak açıkça atayabilirsiniz. Negatif sayılar dahil olmak üzere, herhangi bir tamsayı değeri atayabilirsiniz. Örneğin, sıfırdan küçük değerleri hata koşullarını göstermek için sabitleriyle isteyebilirsiniz. Aşağıdaki listedeki sabiti `Invalid` değeri açıkça atanan `–1`ve sabit `Sunday` değeri atanır `0`. Listedeki ilk sabit olduğundan `Saturday` değerine de başlatılır `0`. Değerini `Monday` olduğu `1` (bir değerinden daha fazla `Sunday`); değerini `Tuesday` olduğu `2`ve benzeri.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Açık bir tür olarak bir numaralandırmayı bildirmek için  
   
 -   Sabit listesi türünü kullanarak belirtin `As` yan tümcesi, aşağıdaki örnekte gösterildiği gibi.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5262d62d32ad3f79c4f4e2c4d9f862dbce3727
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517675"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976895"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
@@ -57,11 +57,11 @@ Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdn
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Bir .NET Framework sınıf örneklerini oluşturma  
  Genellikle, örneğini oluşturduğunuz bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kullanarak `New` deyimi ile bir sınıf adı. Birlikte çalışma derlemesi tarafından temsil edilen bir COM sınıfı sahip olduğu kullandığınız bir `New` deyimi bir arabirime sahip. COM sınıfı ile kullanmadığınız sürece bir `Inherits` deyimi, bir sınıf yaptığınız gibi arabirimini kullanabilirsiniz. Aşağıdaki kod nasıl oluşturulacağını gösterir. bir `Command` Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru sahip olan bir projeyi nesnesinde:  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
  Ancak, COM sınıfı türetilmiş bir sınıf için temel olarak kullanıyorsanız, aşağıdaki kodda gösterildiği gibi bir COM sınıfı temsil eden birlikte çalışma sınıfı kullanmanız gerekir:  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
 >  Birlikte çalışma bütünleştirilmiş kodları COM sınıfları temsil eden arabirimler örtük olarak uygulayın. Kullanılacak denememelisiniz `Implements` deyimi bu arabirimleri ya da hata uygulamak için neden olur.  
@@ -81,19 +81,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Visual Basic .NET, kendi yöntemlerini kullanabilmeniz için önce her zaman COM nesnelerinin örneklerini oluşturmanızı gerektirir. Visual Basic'te bu yöntemi kullanmak için istenen sınıfının bir değişken bildirmek ve nesne nesne değişkenine atamak için new anahtar sözcüğünü kullanın. `Shared` Anahtar sözcüğü emin olmak istediğiniz zaman kullanılabilir sınıf, yalnızca bir örneği oluşturulur.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Olay işleyicileri işlenmeyen hatalar  
  Birlikte çalışma yaygın sorunlardan biri, COM nesneleri tarafından oluşturulan olayları işleyen olay işleyicileri hataları içerir. Özellikle kullanarak hataları kontrol sürece bu tür hatalar yoksayılır `On Error` veya `Try...Catch...Finally` deyimleri. Örneğin, aşağıdaki örnekte Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru içeren bir Visual Basic .NET projesi arasındadır.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
  Bu örnekte, beklendiği gibi bir hata oluşturur. Ancak, aynı örnek olmadan çalışırsanız `Try...Catch...Finally` gibi kullandıysanız bloğu hata yoksayıldı `OnError Resume Next` deyimi. Hata işleme olmadan, sıfıra bölünme sessizce başarısız olur. Bu tür hatalar hiçbir zaman işlenmeyen özel durum hatalarına yükseltmek için özel durum olayları COM nesnelerini işlemek olay işleyicileri'ndeki işleme biçimi kullanmak önemlidir.  
   
 ### <a name="understanding-com-interop-errors"></a>COM birlikte çalışma hatalarını anlama  
  Hata işleme olmadan, birlikte çalışma çağrıları, genellikle az bilgi sağlayan hatalar oluşturur. Mümkün olduğunda ortaya çıkan sorunlar hakkında daha fazla bilgi sağlamak için yapılandırılmış hata işleme kullanın. Uygulamaların hatalarını ayıklarken bu özellikle yararlı olabilir. Örneğin:  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
  Özel durum nesnesi içeriğini inceleyerek, hata açıklaması ve HRESULT COM hatalarını kaynağı gibi daha fazla bilgi bulabilirsiniz.  
   
@@ -113,11 +113,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Çağrılan yordama erişiminiz varsa kullanarak bu hatayı önleyebilirsiniz `ByVal` kabul parametreleri bildirmek için anahtar sözcüğü `ReadOnly` özellikleri. Örneğin:  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
  Çağrılan yordam için kaynak koduna erişim yoksa özelliğini çağıran yordama ayraç fazladan bir dizi ekleyerek değere göre geçirilecek şekilde zorlayabilirsiniz. Örneğin, Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru içeren bir proje kullanabilirsiniz:  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Kullanıma sunan birlikte çalışma derlemeleri dağıtma  
  COM arabirimleri kullanıma derlemeleri dağıtma bazı benzersiz zorluklar teşkil etmektedir. Olası bir sorunu gibi ayrı uygulamalar aynı COM derlemesine başvuru oluşur. Bu durum, bir derlemenin yeni bir sürümü yüklü olduğundan ve başka bir uygulama derleme eski sürümünü kullanmaya devam yaygındır. Bir DLL paylaşan bir derlemeyi kaldırmak, yanlışlıkla, kullanılamayan diğer derlemeler için zorlaştırabilir.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499767"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970083"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama
 <xref:System.Collections.Generic.IEnumerable%601> Arabirimi, aynı anda bir öğe değerlerini bir dizi döndüren sınıflar tarafından uygulanır. Aynı anda bir öğe ile çalışmak için eksiksiz veri Seti yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Uygulayan sınıflar `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorguları.  
@@ -45,17 +45,17 @@ ms.locfileid: "54499767"
 
 2. Sonra satırında `Public Class StreamReaderEnumerable`, aşağıdaki komutu yazın ve ENTER tuşuna basın.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#1](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_1.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
    Visual Basic sınıf tarafından gerekli üyeleri ile otomatik olarak doldurur `IEnumerable(Of String)` arabirimi.
   
 3. Numaralandırılabilir bu sınıfı aynı anda bir metin dosyası bir satırından satırları oku. Bir dosya yolu giriş parametresi olarak alan bir Genel oluşturucu kullanıma sunmak için sınıfa aşağıdaki kodu ekleyin.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#2](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_2.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
 4. Uygulamanıza <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemi `IEnumerable(Of String)` arabirimi yeni bir örneğini döndürür `StreamReaderEnumerator` sınıfı. Uygulamasını `GetEnumerator` yöntemi `IEnumerable` arabirimi yapılabilir `Private`yalnızca üyelerinin kullanıma sunmak sahip olduğunuz için `IEnumerable(Of String)` arabirimi. Visual Basic için oluşturulan kodu değiştirme `GetEnumerator` aşağıdaki kodla yöntemleri.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#3](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_3.vb)]  
+     [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
 **IEnumerator uygulamak için kod ekleyin**
 
@@ -63,35 +63,35 @@ ms.locfileid: "54499767"
 
 2. Sonra satırında `Public Class StreamReaderEnumerator`, aşağıdaki komutu yazın ve ENTER tuşuna basın.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#4](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_4.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
    Visual Basic sınıf tarafından gerekli üyeleri ile otomatik olarak doldurur `IEnumerator(Of String)` arabirimi.
 
 3. Numaralandırıcı sınıfı metin dosyasını açıp ' % s'dosya g/ç satırları dosyasından okumak için gerçekleştirir. Bir dosya yolu giriş parametresi olarak alan bir Genel oluşturucu kullanımına sunun ve metin dosyası okuma için sınıfa aşağıdaki kodu ekleyin.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#5](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_5.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
 4. `Current` Özellikleri hem de `IEnumerator(Of String)` ve `IEnumerator` arabirimleri metin dosyasından geçerli öğeyi iade bir `String`. Uygulamasını `Current` özelliği `IEnumerator` arabirimi yapılabilir `Private`yalnızca üyelerinin kullanıma sunmak sahip olduğunuz için `IEnumerator(Of String)` arabirimi. Visual Basic için oluşturulan kodu değiştirme `Current` aşağıdaki kodla özellikleri.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#6](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_6.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
 5. `MoveNext` Yöntemi `IEnumerator` arabirimi metin dosyasındaki bir sonraki öğeye gider ve tarafından döndürülen değerin güncelleştirmeleri `Current` özelliği. Okumak için daha fazla öğe varsa `MoveNext` yöntemi döndürür `False`; Aksi takdirde `MoveNext` yöntemi döndürür `True`. Aşağıdaki kodu ekleyin `MoveNext` yöntemi.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#7](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_7.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
 6. `Reset` Yöntemi `IEnumerator` arabirimi metin dosyası başlangıcına işaret edecek şekilde yineleyici yönlendirir ve geçerli öğe değerini temizler. Aşağıdaki kodu ekleyin `Reset` yöntemi.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#8](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_8.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
 7. `Dispose` Yöntemi `IEnumerator` arabirimi garanti yineleyici edildiğinde önce tüm yönetilmeyen kaynaklar serbest bırakılır. Tarafından kullanılan dosya tanıtıcısı `StreamReader` nesne yönetilmeyen bir kaynağı ve yineleyici örneği yok önce kapatılması gerekir. Visual Basic için oluşturulan kodu değiştirme `Dispose` yöntemini aşağıdaki kod ile.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#9](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_9.vb)] 
+     [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
 ## <a name="using-the-sample-iterator"></a>Örnek yineleyici kullanma
 
  Numaralandırılabilir bir sınıf uygulayan bir nesne gerektiren denetim yapıları birlikte kodunuzda kullanabileceğiniz `IEnumerable`, gibi bir `For Next` döngü veya LINQ sorgusu. Aşağıdaki örnekte gösterildiği `StreamReaderEnumerable` bir LINQ Sorgu.  
   
- [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
+ [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

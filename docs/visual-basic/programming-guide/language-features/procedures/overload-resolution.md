@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 734cc521fe2e8b7af5ca594ced8c3a0a22603af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525956"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966235"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yordam çağrısı karşılaştığında derleyici çağırmak için aşırı yüklemeleri, karar vermeniz gerekir. Bunu aşağıdaki adımları uygulayarak yapar:  
@@ -41,9 +41,9 @@ Aşırı yüklenmiş sürümleri arasında çözümleme
   
  Aşağıdaki örnekte, bu aşırı yükleme çözünürlüğü işlemi gösterilmektedir.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  İlk çağrıda nedeniyle derleyici ilk aşırı yükleme ortadan ilk bağımsız değişken türünü (`Short`) daraltır karşılık gelen parametre türüne (`Byte`). Çünkü ikinci aşırı yükleme her bağımsız değişken türü, daha sonra üçüncü aşırı yükleme ortadan kaldırır (`Short` ve `Single`) üçüncü aşırı yükleme türüne karşılık gelen widens (`Integer` ve `Single`). İsteğe bağlı olarak derleyici arama için kullanır, böylece daha az genişletme, ikinci aşırı yükleme gerektirir.  
   

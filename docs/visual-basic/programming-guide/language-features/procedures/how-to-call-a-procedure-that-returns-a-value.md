@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525462"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974464"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam çağırma
 A `Function` yordamın çağrıldığı koda bir değer döndürür. Bu adı ve bağımsız değişkenler dahil ederek işlecin sağ tarafındaki Atama ifadesinin veya bir ifade ya da çağırırsınız.  
@@ -42,7 +42,7 @@ A `Function` yordamın çağrıldığı koda bir değer döndürür. Bu adı ve 
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeninin değerini almak için. İlk satırı çağrıları `Environ` satır içinde bir ifade ve ikinci bir atama ifadesinde çağırır. `Environ` değişken adı, tek bir bağımsız değişken olarak alır. Çağrıldığı koda değişken değerini döndürür.  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İşlev Yordamları](./function-procedures.md)

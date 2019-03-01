@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: a52900f36ee20e827518598a97c7b7f867bd0d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfedda6dba7f21efa8e808e85869e6f96710e11b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586832"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965884"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit Deyimi (Visual Basic)
 Bir dosyadaki tüm değişkenleri açık bildirimini zorlar ya da örtük değişkenler bildirimleri sağlar.  
@@ -62,9 +62,9 @@ Option Explicit { On | Off }
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Option Explicit` tüm değişkenleri açık bildirimini zorlamak için deyimi. Bildirilmemiş bir değişken kullanılmaya çalışılıyor derleme zamanında bir hataya neden olur.  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)

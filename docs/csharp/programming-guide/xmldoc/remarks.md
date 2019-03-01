@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: b290315cd9c36281c110bbf0c6246468a1a899b2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3e6625c55a6f5c29fb55bff2eb87959f3237652e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259169"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975863"
 ---
 # <a name="remarks-c-programming-guide"></a>\<REMARKS > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,7 +33,7 @@ ms.locfileid: "55259169"
  Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideDocComments#9](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/remarks_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

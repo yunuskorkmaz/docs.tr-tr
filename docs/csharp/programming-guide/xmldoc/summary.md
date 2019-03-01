@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: c4f05e80fff386a5b0628c01605784c32d7ddaf5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12898d5cd10d9ecca4ec0fd1f7d06be0761b57b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261327"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978559"
 ---
 # <a name="summary-c-programming-guide"></a>\<Özet > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ ms.locfileid: "55261327"
  Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
  Önceki örnekte, aşağıdaki XML dosyası oluşturur.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "55261327"
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek nasıl yapılacağını gösteren bir `cref` genel bir tür referansı.  
   
- [!code-csharp[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
  Önceki örnekte, aşağıdaki XML dosyası oluşturur.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 84ac75ef35e42f50d0540ab362220117e00e02e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a65d09c6449a14dbb74d80247afa18a6f3a601d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496224"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969953"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verilerini içermiyor doğrudan; verilerine bir başvuru içeriyor. Değere göre bir başvuru türü parametresi geçirdiğinizde, bir sınıf üyesinin değerini gibi başvurulan nesnenin ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştiremezsiniz; Örneğin, aynı başvuru için yeni bir sınıf bellek ayırmak ve sahip yöntemi dışında kalıcı hale getirmek için kullanamazsınız. Parametresini kullanarak bunu yapmak için geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
@@ -19,21 +19,21 @@ Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywor
 ## <a name="passing-reference-types-by-value"></a>Değere göre geçirme başvuru türleri  
  Aşağıdaki örnek, bir başvuru türü parametre geçirerek gösterir `arr`, bir yönteme değeriyle `Change`. Parametresi bir başvuru olduğundan `arr`, dizi öğelerinin değerlerini değiştirmek mümkündür. Ancak, parametre yalnızca farklı bir bellek konumuna yeniden denemesi yöntem içinde çalışır ve özgün değişken etkilemez `arr`.  
   
- [!code-csharp[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
  Yukarıdaki örnekte, dizinin `arr`, bir başvuru türü olduğu yöntemine geçirilir `ref` parametresi. Böyle bir durumda kopyasını başvurunun işaret ettiği için `arr`, yönteme iletilir. Bu durumda olan bir dizi öğe içeriklerinin Değiştir yönteminin mümkündür çıktı gösterir `1` için `888`. Ancak, kullanarak yeni bir bölümü bellek ayırma [yeni](../../../csharp/language-reference/keywords/new.md) işleci içinde `Change` değişkeni hale getirdiğini `pArray` yeni bir dizi başvuru. Bu nedenle, orijinal diziyi etkilemez sonra değişiklikleri `arr`, içinde oluşturulan `Main`. Bu örnekte, biri içinde iki diziler aslında, oluşturulan `Main` ve bir iç `Change` yöntemi.  
   
 ## <a name="passing-reference-types-by-reference"></a>Başvuruya göre geçirme başvuru türleri  
  Aşağıdaki örnek dışında önceki örnekle aynıdır `ref` anahtar sözcüğü çağrısı ve yöntem üst bilgisi eklenir. Yönteminde gerçekleşecek herhangi bir değişiklik, çağıran program özgün değişkeninde etkiler.  
   
- [!code-csharp[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideParameters#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#8)]  
   
  Yöntem içinde gerçekleşen tüm değişiklikler özgün dizide etkileyen `Main`. Özgün dizinin kullanarak aslında, bırakılan `new` işleci. Bu nedenle, arama sonra `Change` herhangi yöntemi başvurusu `arr` oluşturulur beş öğeli dizinin işaret `Change` yöntemi.  
   
 ## <a name="swapping-two-strings"></a>İki dizeyi değiştirme  
  Dizeleri değiştirme, başvuruya göre başvuru türü parametreleri geçirme, iyi bir örnektir. Örnekte, iki dizeyi `str1` ve `str2`, içinde başlatılan `Main` geçirilir `SwapStrings` yöntemi değiştiren parametreleri olarak `ref` anahtar sözcüğü. İki dizenin içine ve yöntemi içinde takas `Main` de.  
   
- [!code-csharp[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideParameters#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#9)]  
   
  Bu örnekte, çağıran program değişkenlerinde etkilemek için başvuruya göre geçirilen parametreler gerekir. Kaldırırsanız `ref` yöntem üst bilgisi ve yöntem çağrısının anahtar sözcüğü, hiçbir değişiklik çağıran program yerinde götürür.  
   

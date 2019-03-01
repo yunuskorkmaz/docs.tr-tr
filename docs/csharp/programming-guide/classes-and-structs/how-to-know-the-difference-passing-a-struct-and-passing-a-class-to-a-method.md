@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9664a3e5b5a68ae44bb129c9c550011683c81f16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981303"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Nasıl yapılır: Yapı geçirme ile Metoda sınıf başvurusu geçirme arasındaki farkı bilme (C# Programlama Kılavuzu)
 Aşağıdaki örnek nasıl geçirme gösterir bir [yapı](../../../csharp/language-reference/keywords/struct.md) bir yönteme geçirme'dan farklı bir [sınıfı](../../../csharp/language-reference/keywords/class.md) örneğinin bir yönteme. Örnekte, iki bağımsız değişkenler (yapı ve sınıf örneği) değere göre geçirilir ve her iki yöntem bağımsız değişkeninin bir alanın değerini değiştirin. Yapı başarılı olduğunda ne iletilen bir sınıfın örneğini geçirdiğinizde ne geçirilen gelen değiştiğinden ancak sonuçları iki yöntemden biriyle aynı değildir.  
@@ -24,7 +24,7 @@ Aşağıdaki örnek nasıl geçirme gösterir bir [yapı](../../../csharp/langua
  Aşağıdaki örnek çıktı, fark gösterilmiştir. Değerini `willIChange` alanı sınıf örneğinin yöntemine çağrı tarafından değiştirildiğinde `ClassTaker` sınıf örneğinin belirtilen alanı bulmak için parametreyi yöntemi adresini kullandığı için. `willIChange` Yöntemi çağrılırken yapıda alanına, yöntemine çağrı değiştirilmemiş `StructTaker` bağımsız değişkenin değerini struct'ın kendisi adresini değil bir kopyasını bir kopya olduğundan. `StructTaker` kopyalama ve kopyalama kayboluyor ne zaman değişiklikleri çağrısı `StructTaker` tamamlandı.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+ [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

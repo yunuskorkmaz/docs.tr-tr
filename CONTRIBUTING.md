@@ -107,7 +107,7 @@ Konu başlığınız örnek bağlantılarını da içerir. GitHub üzerinde örn
 
 Daha fazla bilgi için [örnekleri Benioku](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>C# Etkileşimli deneyim #
+## <a name="the-c-interactive-experience"></a>C# Etkileşimli deneyim
 
 Kod örnekleri kısa C# kullanabilirsiniz `csharp-interactive` belirtmek için dil etiketi bir C# tarayıcıda çalışan bir örnek. (Satır içi kod örnekleri kullan `csharp-interactive` kaynak, içerdiği parçacıkları kullanmak için etiketi `code-csharp-interactive` etiketi.) Bu kod örnekleri, makaledeki bir kod ve bir çıkış penceresinde görüntüler. Çıkış penceresi kullanıcı örneği çalıştırıldıktan sonra gelen etkileşimli kod yürütme herhangi bir çıkış görüntüler. 
 

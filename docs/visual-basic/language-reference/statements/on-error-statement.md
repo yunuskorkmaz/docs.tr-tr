@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654896"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976492"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 Bir hata işleme yordamını etkinleştirir ve bir yordam içinde yordam konumunu belirtir. Ayrıca bir hata işleme yordamını devre dışı bırakmak için kullanılabilir.  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Throw Deyimi  
  İle ortaya çıkan hata `Err.Raise` yöntemi kümeleri `Exception` özelliği yeni oluşturulan bir örneğine <xref:System.Exception> sınıfı. Türetilmiş bir özel durum türleri, özel durumlar yükseltme desteklemek için bir `Throw` dilde deyimi desteklenir. Bu, özel durum örneği harekete geçirilmesine tek bir parametre alır. Aşağıdaki örnek, bu özellikleri desteği var olan özel durum işleme ile nasıl kullanılacağını gösterir:  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  Dikkat `On Error GoTo` deyimi, özel durum sınıfı bağımsız olarak tüm hataları yakalar.  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Hata işleme kodu hata oluşmadığında çalıştırmasını engellemek için yerleştirin bir `Exit Sub`, `Exit Function`, veya `Exit Property` deyiminden hemen önce aşağıdaki parçası olduğu gibi hata işleme yordamını:  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  Burada, aşağıdaki hata işleme kod `Exit Sub` deyimi ve önündeki `End Sub` yordamı akıştan ayırmak için deyimi. Bir yordamda hata işleme kodu herhangi bir yere yerleştirebilirsiniz.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Diğer nesnelerin erişen bir nesne oluşturursanız, geri geçirmek işlenmemiş hataları işlemeye çalışmanız gerekir. Hata kodları eşlerseniz yükleyemezsiniz `Err.Number` hataları ve sonra geçişi birine nesnenizin çağırana geri. Hata kodunuza ekleyerek, hata belirtmelidir `VbObjectError` sabit. Hata kodunuzu 1052 ise, örneğin, gibi atayabilirsiniz:  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  Windows dinamik bağlantı kitaplıklarını (DLL'ler) çağrı sırasında sistem hataları, özel durumlar harekete geçirmeyin ve Visual Basic hata yakalama ile yakalanan. DLL işlevleri çağırma, başarı veya başarısızlık (API belirtimlerini) göre her dönüş değerini denetlemeniz gerekir ve değeri bir hata olması durumunda iade `Err` nesnenin `LastDLLError` özelliği.  

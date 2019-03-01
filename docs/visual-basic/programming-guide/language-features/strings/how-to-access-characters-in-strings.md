@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618928"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967561"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Dizelerdeki karakterlere erişim
 Bu örnek nasıl kullanılacağını gösterir <xref:System.String.Chars%2A> belirtilen konumda bir dizedeki karakter erişmek için özelliği.  
@@ -18,7 +18,7 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.String.Chars%2A> bel
 ## <a name="example"></a>Örnek  
  Bazen, dize ve bu karakterleri, dize içindeki konumunu karakterler hakkında veriler kullanışlıdır. Bir dizenin karakter dizisi olarak düşünebilirsiniz (`Char` örnekleri); belirli bir karakterin bu karakter dizinini başvurarak alabilirsiniz <xref:System.String.Chars%2A> özelliği.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
  `index` Parametresinin <xref:System.String.Chars%2A> özelliği sıfır tabanlı.  
   

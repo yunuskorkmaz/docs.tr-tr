@@ -2,12 +2,12 @@
 title: XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: aa8671146c241c2867c373aacf3cd12f12aaeb1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a0d69ce79a1dbe3e0bd56fd858013447f227fc9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743562"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972098"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML serileştiricisi Oluşturma Aracı (Sgen.exe)
 XML seri hale getirici oluşturucunun bir XML serileştirme derleme türleri için başlangıç performansını artırmak için belirtilen derlemesinde oluşturur bir <xref:System.Xml.Serialization.XmlSerializer> zaman serileştiren veya belirtilen türden nesneler seri durumdan çıkarır.  
@@ -58,5 +58,4 @@ sgen Data.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [XML Web Hizmetleri genel bakış](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

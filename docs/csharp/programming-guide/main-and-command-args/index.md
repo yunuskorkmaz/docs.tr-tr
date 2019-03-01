@@ -20,7 +20,7 @@ ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 
  Yalnızca bir C# programında bir giriş noktası olabilir. Birden fazla sınıf varsa bir `Main` yöntemi programınızla birlikte derleme gerekir **/main** belirtmek için derleyici seçeneği `Main` giriş noktası olarak kullanmak için yöntemi. Daha fazla bilgi için [/Main (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).
 
- [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
 ## <a name="overview"></a>Genel Bakış
 

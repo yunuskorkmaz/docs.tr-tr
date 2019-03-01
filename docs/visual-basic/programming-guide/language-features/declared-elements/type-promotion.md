@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722042"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969199"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
 Modül içindeki bir programlama öğesi bildirdiğinizde, Visual Basic modülü içeren ad alanı kapsamında yükseltir. Bu olarak bilinir *türü promosyon*.  
   
  Aşağıdaki örnek, bir modül iskelet tanımını ve bu modül iki üyeleri gösterir.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  İçinde `projModule`, programlama Modül düzeyinde bildirilen öğeler için yükseltilen `projNamespace`. Önceki örnekte `basicEnum` ve `innerClass` yükseltilir, ancak `numberSub` Modül düzeyinde bildirilmediğinden değildir.  
   
 ## <a name="effect-of-type-promotion"></a>Tür promosyonu etkisi  
  Tür promosyonu etkisini nitelik dize modül adını içerecek şekilde gerekmeyen ' dir. Aşağıdaki örnek önceki örnekte iki yordam çağrıları yapar.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  Önceki örnekte, ilk çağrı, tam nitelenmiş dizeleri kullanır. Ancak, bu tür yükseltme nedeniyle gerekli değildir. İkinci çağrı da erişir modülün üyeleri dahil etmeden `projModule` nitelik Dizelerdeki.  
   
 ## <a name="defeat-of-type-promotion"></a>Tür yükseltme zorluğunu  
  Tür yükseltme, ad alanı aynı ada sahip bir üye modülü üye olarak zaten varsa, bu modül üyenin engellenmediğinden. Aşağıdaki örnek, bir numaralandırma ve aynı ad alanı içinde bir modül bir çatı tanımı gösterilmektedir.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  Önceki örnekte, Visual Basic sınıf düzeyine yükseltilemiyor `abc` için `thisNameSpace` zaten var olduğundan ad alanı düzeyinde aynı ada sahip bir sabit listesi. Erişim için `abcSub`, tam nitelenmiş dize kullanmalısınız `thisNamespace.thisModule.abc.abcSub`. Ancak, sınıf `xyz` hala yükseltilir ve erişebileceğiniz `xyzSub` kısa nitelik dize ile `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ Modül içindeki bir programlama öğesi bildirdiğinizde, Visual Basic modülü
   
  **Sonuçları.** Tür promosyonu kısmi tanımı, zorluğunu, beklenmeyen sonuçlar ve hatta derleyici hataları neden olabilir. Aşağıdaki örnek, bir sınıfın biri içinde bir modül olan iskelet kısmi tanımları gösterir.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  Önceki örnekte, geliştiricinin iki kısmi tanımlarını birleştirmek için derleyici beklenebilir `sampleClass`. Ancak, derleyici kısmi tanım içinde promosyon düşünmez `sampleModule`. Sonuç olarak, iki ayrı ve farklı sınıflar derlemek çalışır, hem adlandırılmış `sampleClass` ancak farklı nitelik yolları.  
   

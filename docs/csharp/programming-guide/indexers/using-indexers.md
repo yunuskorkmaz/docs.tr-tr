@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74e4375464cc515a281922cb1d5b5b0d1dd1954
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601941"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969415"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Dizin oluşturucular (C# programlama Kılavuzu) kullanma
 
@@ -53,7 +53,7 @@ Aşağıdaki örnek, bir dizi özel alanı bildirmek gösterilmektedir `temps`ve
   
  Bir oluşturucunun erişim, örneğin, içinde çalışırken dikkat bir `Console.Write` deyimi [alma](../../../csharp/language-reference/keywords/get.md) erişimci çağrılır. Bu nedenle, hiçbir `get` erişimci yoksa, bir derleme zamanı hatası oluşur.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Diğer değerleri kullanarak dizin oluşturma
 

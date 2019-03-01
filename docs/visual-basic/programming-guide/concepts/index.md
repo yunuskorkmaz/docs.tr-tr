@@ -1,16 +1,16 @@
 ---
-title: Programlama Kavramları (Visual Basic)
-ms.date: 07/20/2015
+title: Programlama Kavramları - Visual Basic
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>Programlama Kavramları (Visual Basic)
+
 Bu bölümde, Visual Basic Dil programlama kavramları açıklanmıştır.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
+## <a name="in-this-section"></a>Bu bölümde  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET derlemeleri](../../../standard/assembly/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
 |[Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Zaman uyumsuz çözümleri kullanarak yazma açıklar [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükleri. Bir kılavuz içerir.|  
 |[Öznitelikler genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Öğe türleri, alanları, yöntemleri ve özellikleri gibi öznitelikleri kullanarak programlama hakkında ek bilgi sağlamak nasıl ele alınmaktadır.|  
 |[Arayan bilgileri (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Bir yöntemin arayanı hakkında bilgi edinmek nasıl açıklar. Bu bilgiler, dosya yolu ve kaynak kodunun satır numarasını ve arayanın üye adı içerir.|  
@@ -23,8 +23,9 @@ Bu bölümde, Visual Basic Dil programlama kavramları açıklanmıştır.
 |[Yansıma (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türün bir örneğini oluşturma, bağlama türü var olan bir nesneye veya türü mevcut bir nesneden elde ve kendi yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişmek için nasıl kullanılacağını açıklar.|
 |[Seri hale getirme (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|İkili, XML, temel kavramları açıklar ve SOAP serileştirme.|  
   
-## <a name="related-sections"></a>İlgili Bölümler  
+## <a name="related-sections"></a>İlgili bölümler  
   
 |||  
 |---|---|  
+|[.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
 |[Performans İpuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek birtakım temel kuralları açıklar.|

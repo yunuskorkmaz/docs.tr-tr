@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585623"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973034"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
 Bu konu, kısa bir giriş sağlar. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri Visual Basic'te ve bazı sorguda gerçekleştirdiğiniz işlemleri tipik türleri. Daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -34,7 +34,7 @@ Bu konu, kısa bir giriş sağlar. [!INCLUDE[vbteclinqext](~/includes/vbteclinqe
 ## <a name="specifying-the-data-source-from"></a>Veri Kaynağını (Kimden) Belirtme  
  İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, ilk adımıdır sorgulamak istediğiniz veri kaynağını belirtmek için. Bu nedenle, `From` yan tümcesinin sorgudaki her zaman gelen ilk. Sorgu işleçleri seçin ve kaynak türüne göre sonuç şekli.  
   
- [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
+ [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
  `From` Yan tümcesi veri kaynağını belirtir `customers`ve *aralık değişkeni*, `cust`. Aralık değişkeni bir döngü yineleme değişkeni gibi bir sorgu ifadesinde gerçek yineleme gerçekleşir dışında aynıdır. Ne zaman sorgu yürütüldüğünde, genellikle kullanarak bir `For Each` aralık değişkeni döngü, hizmet art arda gelen her öğe için başvuru olarak `customers`. Derleyicinin türü çıkarsayabilir `cust`, açıkça belirtmeniz gerekmez. Olmadan açık yazım ve yazılan sorgularının örnekleri için bkz: [(Visual Basic) sorgu işlemlerinde tür ilişkileri](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
@@ -43,7 +43,7 @@ Bu konu, kısa bir giriş sağlar. [!INCLUDE[vbteclinqext](~/includes/vbteclinqe
 ## <a name="filtering-data-where"></a>Veri Filtreleme (Yeri)  
  Muhtemelen en sık kullanılan sorgu işlemi formunda bir Boolean ifadesinin filtre uygulanıyor. Sorgu, ardından ifade true olduğu öğeleri döndürür. A `Where` yan tümcesi filtreleme işlemleri için kullanılır. Filtre hangi öğelerin elde edilen sırayla eklemek için veri kaynağı belirtir. Aşağıdaki örnekte, Londra'daki bir adresi olan müşterilerin dahil edilir.  
   
- [!code-vb[VbLINQBasicOps#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_2.vb)]  
+ [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
  Mantıksal işleçler gibi kullanabileceğiniz `And` ve `Or` filtre ifadelerinde birleştirmek için bir `Where` yan tümcesi. Örneğin, yalnızca Londra'dan olan ve Devon adı olan müşteriler döndürmek için aşağıdaki kodu kullanın:  
   
@@ -62,7 +62,7 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="ordering-data-order-by"></a>Veri Sıralama (Sıralama Ölçütü)  
  Genellikle, döndürülen veriler belirli bir sıralamaya sıralamak uygundur. `Order By` Yan tümcesi neden öğeleri belirtilen bir alan veya alanlar üzerinde sıralanacak döndürülen dizideki. Örneğin, aşağıdaki sorguyu göre sonuçları sıralayan `Name` özelliği. Çünkü `Name` bir dizedir, döndürülen veriler, a-z alfabetik olarak sıralanır.  
   
- [!code-vb[VbLINQBasicOps#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_3.vb)]  
+ [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
  Sonuçları Z'den A'ya, ters sırada sıralamak için kullanmak `Order By...Descending` yan tümcesi. Varsayılan değer `Ascending` ne zaman `Ascending` ya da `Descending` belirtilir.  
   
@@ -73,11 +73,11 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Tam oluşan bir koleksiyonu almak için `Customer` nesneleri, aralık değişkeni seçin:  
   
- [!code-vb[VbLINQBasicOps#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_4.vb)]  
+ [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
  Varsa bir `Customer` örneği birçok alan, bir büyük nesnesi olan ve almak istediğiniz tüm adı, seçebileceğiniz `cust.Name`, aşağıdaki örnekte gösterildiği gibi. Yerel tür çıkarımı tanır bu sonuç türü koleksiyonundan değiştirir `Customer` dizelerden oluşan bir koleksiyon nesneleri.  
   
- [!code-vb[VbLINQBasicOps#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_5.vb)]  
+ [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
  Veri kaynağından birden çok alan seçmek için iki seçeneğiniz vardır:  
   
@@ -91,30 +91,30 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 -   Adlandırılmış tür sonucuna dahil, oluşturma ve başlatma türün örneklerinin istediğiniz belirli alanları içeren tanımlama `Select` yan tümcesi. Yalnızca bireysel sonuçları döndürülen koleksiyon dışında kullanmanız gerekiyorsa veya yöntem çağrılarını parametreler olarak geçirileceğini gerekiyorsa bu seçeneği kullanın. Türünü `londonCusts5` IEnumerable (Of NamePhone) aşağıdaki örnekte olduğu.  
   
-     [!code-vb[VbLINQBasicOps#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_7.vb)]  
+     [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
-     [!code-vb[VbLINQBasicOps#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_8.vb)]  
+     [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
  Nasıl kullanılacağı hakkında daha fazla bilgi için `Select` yan tümcesine Visual Basic'te bakın [Select tümcesi](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
 ## <a name="joining-data-join-and-group-join"></a>Veri Katma (Katma ve Grup Katma)  
  Birden fazla veri kaynağında birleştirebilirsiniz `From` çeşitli şekillerde yan tümcesi. Örneğin, aşağıdaki kod, iki veri kaynağı kullanır ve sonuçta ikisinin özelliklerinden örtük olarak birleştirir. Sorgu son adları bir harfle başlayan Öğrenciler seçer.  
   
- [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
+ [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
 >  Oluşturulan Öğrenciler listesiyle birlikte bu kodu çalıştırmak [nasıl yapılır: Öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` Anahtar sözcüğü, eşdeğer bir `INNER JOIN` SQL. Bu, iki koleksiyon öğeleri arasında eşleşen anahtar değerlere göre iki koleksiyon birleştirir. Sorgu anahtar değerlerini eşleşen koleksiyon öğelerinin bir kısmını veya tamamını döndürür. Örneğin, aşağıdaki kod önceki örtük birleştirme eylemini çoğaltır.  
   
- [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
+ [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
  `Group Join` Tıpkı koleksiyonları tek bir hiyerarşik koleksiyon halinde birleştirir bir `LEFT JOIN` SQL. Daha fazla bilgi için [JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md) ve [Group JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Verileri Gruplandırma (Gruplandırma Ölçütü)  
  Ekleyebileceğiniz bir `Group By` yan tümcesi bir sorgu sonucunu öğelerin bir veya daha fazla alanlara göre öğeleri gruplandırmak için. Örneğin, aşağıdaki kod Öğrenciler sınıfı yıla göre gruplandırır.  
   
- [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
+ [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
  Oluşturulan Öğrenciler listesini kullanarak bu kodu çalıştırırsanız [nasıl yapılır: Bir öğe listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), çıkışı `For Each` deyimidir:  
   
@@ -148,7 +148,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Aşağıdaki kodda gösterilen değişim sınıfı yıllar sıralar ve ardından Öğrenciler her yıl içinde soyadına göre sıralar.  
   
- [!code-vb[VbLINQBasicOps#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_12.vb)]  
+ [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
  Hakkında daha fazla bilgi için `Group By`, bkz: [Group yan tümcesi tarafından](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   

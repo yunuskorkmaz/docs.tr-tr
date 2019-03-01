@@ -2,14 +2,14 @@
 title: C# 1 varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613863"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979716"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# dilinde varsayılan ad alanlarının kapsamı
+# <a name="scope-of-default-namespaces-in-c"></a>C dilinde varsayılan ad alanlarının kapsamı\#
 XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir. Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.  
   
  XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.  

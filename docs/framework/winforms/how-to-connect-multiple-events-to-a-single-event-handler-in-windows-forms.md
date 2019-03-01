@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 527e2c594f236f94ce23e4fd21238b8605af308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502449"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967873"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama
 Uygulama tasarımınızı, bunu tek olay işleyicisine birden fazla olaylar için kullanın veya sahip birden çok olayı aynı yordamı gerçekleştirmek için gerekli bulabilirsiniz. Örneğin, genellikle bir güçlü zaman-bir menü komutu, bunlar aynı işlevselliği göstermek, form üzerindeki bir düğme gibi aynı olay yükseltmek için koruyucu olur. Özellikler penceresinde olayların görünümünü kullanarak bunu yapabilirsiniz C# veya bu adı kullanıyor `Handles` anahtar sözcüğü ve **sınıf adı** ve **yöntem adı** Visual Basic Kod Düzenleyicisi'nde açılır kutuları.  
@@ -46,7 +46,7 @@ Uygulama tasarımınızı, bunu tek olay işleyicisine birden fazla olaylar içi
   
 6.  Uygun kodu olay işleyicisine ekleyin.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Bir tek olay işleyicisine birden fazla olay bağlama içinC#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>C'de tek olay işleyicisine birden fazla olay bağlama için\#
   
 1.  Bir olay işleyicisi bağlanmak istediğiniz denetimi seçin.  
   

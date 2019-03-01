@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: d9a227f60edf142832ab41e3ea99f33c53a42229
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748316"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973047"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
 Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ekle** komutunu **proje** menüsü. Başvuruları Visual Basic'te tür kitaplıkları, ancak daha fazla bilgi içeren gibi olan derlemeler için işaret edebilir.  
@@ -36,15 +36,15 @@ Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ek
 ## <a name="using-aliases-with-the-imports-statement"></a>Imports deyimi ile diğer adların kullanımı  
  `Imports` Deyimi kolaylaştırır, sınıfların erişim yöntemlerine açıkça tam olarak nitelenmiş adlar başvuru türüne gereksinimini ortadan kaldırarak. Diğer adlar, daha kolay adı bir ad alanının yalnızca bir bölümü atamak sağlar. Örneğin, satır başı/birden çok satırda görüntülenecek metni tek bir parçasını neden dizisi satır besleme parçası olan <xref:Microsoft.VisualBasic.ControlChars> modülünde <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. Bu sabit bir diğer ad olmadan bir programda kullanmak için aşağıdaki kod yazmanız gerekir:  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
  `Imports` deyimleri her zaman takip herhangi ilk satırı olmalıdır `Option` Modül içindeki deyimler. Aşağıdaki kod parçası, içeri aktarma ve diğer ad atamak gösterilmektedir <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> Modülü:  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
  Bu ad gelecekte başvurular önemli ölçüde daha kısa olabilir:  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
  Varsa bir `Imports` deyimi bir diğer ad içermez, içeri aktarılan ad alanı içinde tanımlanan öğeler, nitelik olmadan bir modülde kullanılabilir. Diğer ad belirtilmezse, bu Niteleyici olarak bu ad alanı içinde yer alan adları için kullanılmalıdır.  
   
@@ -53,6 +53,6 @@ Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ek
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
 - [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [.NET derlemeleri](../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
 - [Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

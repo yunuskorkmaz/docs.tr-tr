@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: c2af3864ef19dbf835397968af0913cd62994305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494437"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977545"
 ---
 # <a name="or-operator-visual-basic"></a>Or İşleci (Visual Basic)
 İkisini de bir mantıksal veya işlecini gerçekleştirir `Boolean` deyimlerde ya da bir iki sayısal ifadeye bit tabanlı veya işlecini.  
@@ -77,14 +77,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Or` kapsamlı mantıksal veya işlecini iki ifadelerini gerçekleştirmek için işleci. Sonuç bir `Boolean` gösteren bir değer iki ifadeden birini olup olmadığını `True`.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
  Yukarıdaki örnekte sonuçlarını üretir `True`, `True`, ve `False`sırasıyla.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Or` kapsamlı mantıksal veya işlecini bireysel iki sayısal ifadeye bit üzerinde gerçekleştirmek için işleci. Sonuç deseninde bit işlenenler karşılık gelen bitleri ya da ayarlanmış ise 1 olarak ayarlanır.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
  Yukarıdaki örnekte sırasıyla 10, 14 ve 14, sonuçlar üretir.  
   

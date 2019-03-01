@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e5d31df7d507c16b5a84bd1816f12f384e9dab
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667108"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972969"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te aynı dizinde dosya kopyası oluşturma
 Kullanım `My.Computer.FileSystem.CopyFile` dosyaları kopyalamak için yöntemi. Parametreleri, mevcut dosyaların üzerine yaz, dosyayı yeniden adlandırın, işlemin ilerlemesini Göster ve kullanıcı işlemi iptal olanak tanır.  
@@ -23,13 +23,13 @@ Kullanım `My.Computer.FileSystem.CopyFile` dosyaları kopyalamak için yöntemi
   
 -   Kullanım `CopyFile` yöntemi, hedef dosya ve konumu belirtin. Aşağıdaki örnek, bir kopyasını oluşturur. `test.txt` adlı `test2.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Varolan dosyaların üzerine aynı klasörde bir dosyanın bir kopyasını oluşturmak için  
   
 -   Kullanım `CopyFile` konumu ve hedef dosya sağlayan ve ayarı yöntemi `overwrite` için `True`. Aşağıdaki örnek, bir kopyasını oluşturur. `test.txt` adlı `test2.txt` ve var olan dosyalar bu adla üzerine yazar.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar, bir özel durum oluşturulmasına neden:  

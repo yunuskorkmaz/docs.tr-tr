@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553743"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974152"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olaylarını işleme (Visual Basic)
 Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: Olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
@@ -25,7 +25,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 1.  Aşağıdaki kodda yerleştirin `Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
      `WithEvents` Anahtar sözcüğü belirtir değişkeni `mWidget` nesnenin olayları işlemek için kullanılır. Nesne türünün, nesnenin oluşturulacağı sınıfının adı sağlayarak belirtin.  
   
@@ -47,13 +47,13 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 3.  Aşağıdaki kodu ekleyin `mWidget_PercentDone` olay işleyicisi:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Her `PercentDone` olayı, olay yordamı, tamamlanma yüzdesini görüntüler bir `Label` denetimi. `DoEvents` Yöntemi çizilecek, etiket sağlar ve ayrıca kullanıcı tıklayın fırsatı sunar **iptal** düğmesi.  
   
 4.  İçin aşağıdaki kodu ekleyin `Button2_Click` olay işleyicisi:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
  Kullanıcı tıklarsa **iptal** düğmeye `LongTask` çalıştırıldığı `Button2_Click` olay yürütülür hemen sonra `DoEvents` deyimi gerçekleşmesi olay işleme sağlar. Sınıf düzeyi değişkenleri `mblnCancel` ayarlanır `True`ve `mWidget_PercentDone` olay ardından bunu test eder ve ayarlar `ByRef Cancel` bağımsız değişkeni `True`.  
   
@@ -70,7 +70,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 3.  İçin aşağıdaki kodu ekleyin `Form1_Load` oluşturmak için olay yordamı `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
  Bu kod yürütüldüğünde, Visual Basic oluşturur bir `Widget` nesnesini ve ilişkili olay yordamları olaylarına bağlanır `mWidget`. Buradan işaret, zaman `Widget` başlatır, `PercentDone` olay `mWidget_PercentDone` olay yordamı yürütülür.  
   
@@ -78,7 +78,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 -   Aşağıdaki kodu ekleyin `Button1_Click` olay işleyicisi:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
  Önce `LongTask` yöntemi çağrıldığında, tamamlanma görüntüler başlatılmalıdır etiket ve sınıf düzeyi `Boolean` yöntemi iptal ayarlanmalıdır için bayrak `False`.  
   
@@ -107,7 +107,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 -   Aşağıdaki kod satırını ekleyin `Button1_Click` yazan satırı hemen önceki yordamı `mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
  Yukarıdaki kod yeni bir oluşturur `Widget` düğmesine tıklandığında her zaman. Hemen sonra `LongTask` yöntemi tamamlandığında, başvuru `Widget` yayımlandığı ve `Widget` yok.  
   

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 8ad664f5b689a2305afc17f4b480fdc445d64e25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adbaf22e5a9e5ac826a341cc8c602085db04dd46
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583472"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965494"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 C# ' ta program çalışma zamanında hatalarını program aracılığıyla özel durumlar adlı bir mekanizmayı kullanarak yayılır. Özel durumlar hatayla karşılaştığında kod tarafından oluşturulur ve hatayı düzeltmek kodu tarafından yakalanan. Özel durumlar, .NET Framework ortak dil çalışma zamanı (CLR) veya bir program kodunda atılabilir. Bir özel durum sonra kadar çağrı yığınına yayan bir `catch` özel durum bildirimi bulundu. Yakalanmayan Özel durumların bir iletişim kutusu görüntüler sistem tarafından sağlanan bir genel özel durum işleyicisi tarafından işlenir.  
   
  Özel durumlar türetilmiş sınıflar tarafından temsil edilir <xref:System.Exception>. Bu sınıf, özel durumun türünü tanımlar ve özel durumun ayrıntılarını sahip özellikler içerir. Bir özel durum içeren bir özel durum türetilmiş sınıfın bir örneği oluşturma, isteğe bağlı olarak özel durumun özelliklerini yapılandırmak ve nesne kullanarak özel durum atma `throw` anahtar sözcüğü. Örneğin:  
   
- [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#1)]  
   
  Bir özel durum oluştuktan sonra çalışma zamanı içinde olup olmadığını görmek için geçerli deyim denetler. bir `try` blok. Bunu varsa, `catch` ilişkili blokları `try` blok istisnayı yakalamak mümkündür olup olmadığını görmek için denetlenir. `Catch` Bloklar, genellikle özel durum türlerini belirtin; varsa türünü `catch` bloğu özel durum ya da bir temel sınıf özel durumun, aynı türde `catch` blok yöntemi işleyebilir. Örneğin:  
   
- [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#2)]  
   
  Bir özel durum deyimi içinde değilse, bir `try` blok veya `try` kendisini kapsayan bir blok eşleşen yok `catch` blok, çalışma zamanı denetimleri için yöntemi çağrılırken bir `try` deyimi ve `catch` engeller. Çalışma zamanı için bir uyumlu arama çağrı yığınına devam `catch` blok. Sonra `catch` bloğu bulundu ve yürütüldü, Denetim, bundan sonra sonraki deyime geçirilir `catch` blok.  
   
@@ -32,7 +32,7 @@ C# ' ta program çalışma zamanında hatalarını program aracılığıyla öze
   
  Önce `catch` bloğu yürütülür için çalışma zamanı denetimleri `finally` engeller. `Finally` blokları etkinleştirme durdurulan kalabilir herhangi bir belirsiz durumu temizlemek Programcı `try` bloğu veya Çöp için beklemenize gerek kalmadan herhangi bir dış kaynağa (örneğin, grafik tanıtıcıları, veritabanı bağlantıları veya dosya akışları) serbest bırakmak için nesneleri sonlandırmak için toplayıcı çalışma zamanında. Örneğin:  
   
- [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#4)]  
   
  Varsa `WriteByte()` ikinci kod özel durum oluşturdu `try` , dosyayı yeniden dener blok başarısız olurdu `file.Close()` çağrılmaz, dosyanın kilitli kalır. Çünkü `finally` blokları, bir özel durum olsa bile, yürütülen `finally` blok önceki örnekte dosyanın doğru şekilde kapatılması sağlar ve kaçının bir hata yardımcı olur.  
   

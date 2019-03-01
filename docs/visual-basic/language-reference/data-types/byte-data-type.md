@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519794"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977532"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8-bit (1-bayt) tamsayıları tutar.
@@ -62,7 +62,7 @@ Dim number As Byte = &H_6A
 
  Aşağıdaki örnekte, `b` olduğu bir `Byte` değişkeni. Deyimlerini değişkenin aralık ve bit düzeyinde kaydırma işleçleri, uygulamayı gösterir.
 
-[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

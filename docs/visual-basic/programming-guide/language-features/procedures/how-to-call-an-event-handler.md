@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717980"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973528"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Nasıl yapılır: Visual Basic olay işleyicisi çağırma
 Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sınırına aşıldı —, tanınır bazı programı bileşeni için kod yazabilirsiniz ve yanıtlayın. Bir *olay işleyicisi* bir olaya yanıt vermek için yazdığınız kodu.  
@@ -36,7 +36,7 @@ Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sını
   
      Aşağıdaki örnek, bir olayı tanımlar ve `WithEvents` olayı yükselten sınıf başvuran değişkeni. Olay işleme `Sub` yordamı kullanan bir `Handles` yan sınıfı ve bunu işleyen olayı belirtin.  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler kullanarak bir olay işleyicisi çağırmak için  
   
@@ -48,7 +48,7 @@ Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sını
   
      Aşağıdaki örnekte tanımlayan bir `Sub` işlemek için yordamı <xref:System.Windows.Forms.Form.Closing> formun olay. Ardından kullanır [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ilişkilendirilecek `catchClose` yordamı için bir olay işleyicisi olarak <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      Yürüterek bir olaydan bir olay işleyicisi ilişkilendirmesi [RemoveHandler deyimi](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   

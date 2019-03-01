@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648212"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980457"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: (Visual Basic) COM nesnelerinde kalıtım uygulama
 Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in önceki sürümlerinde oluşturulan COM nesnelerini sınıfları. Özellikler ve yöntemler COM nesnelerden devralınan sınıf geçersiz kılınan gibi özellikleri olarak aşırı ve herhangi bir taban sınıf yöntemlerini geçersiz kılınmış veya aşırı yüklenmiş. COM nesneleri içinden devralma derlemeniz istemediğiniz var olan bir sınıf kitaplığı olduğunda yararlıdır.  
@@ -94,15 +94,15 @@ Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in ön
   
 6.  Üstüne aşağıdaki kodu ekleyin `MathClass` COM sınıfından devralmak için.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
 7.  Aşağıdaki kodu ekleyerek temel sınıfının ortak yöntemi aşırı `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
 8.  Aşağıdaki kodu ekleyerek devralınan sınıf genişletmek `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
  Yeni bir sınıf COM nesnesi içinde temel sınıfın özelliklerini devralır, bir yöntem yüklemeleri ve sınıf genişletmek için yeni bir yöntem tanımlar.  
   
@@ -112,7 +112,7 @@ Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in ön
   
 2.  Düğmenin içinde `Click` olay işleyici yordamı, bir örneğini oluşturmak için aşağıdaki kodu ekleyin `MathClass` ve aşırı yüklenmiş yöntemler çağırabilirsiniz:  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
 3.  F5 tuşuna basarak projeyi çalıştırın.  
   

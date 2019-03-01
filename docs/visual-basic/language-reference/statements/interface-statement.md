@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532769"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970538"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
 Bir arabirimin adını bildirir ve arabirimi oluşturan üyelerin tanımlarını sunmaktadır.  
@@ -95,7 +95,7 @@ End Interface
   
      Bir sınıf örneği bir değişkene atarsanız, üyelerine erişim düzeyini değişkeninin veri türü temel alınan arabirimi veya uygulama sınıfı olmasına göre değişebilir. Aşağıdaki örnek bunu göstermektedir.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      Sınıf üyeleri aracılığıyla erişiyorsanız `varAsInterface`, ortak erişime sahip oldukları tüm. Ancak, üyeleri aracılığıyla erişiyorsanız `varAsClass`, `Sub` yordamı `doSomething` özel erişimi vardır.  
   
@@ -108,7 +108,7 @@ End Interface
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte `Interface` adlı bir arabirim tanımlamak için deyimi `thisInterface`, hangi uygulanmalı ile bir `Property` deyimi ve `Function` deyimi.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  Unutmayın `Property` ve `Function` deyimleri ile biten bloklarını tanıtır değil `End Property` ve `End Function` arabiriminden. Arabirim üyeleri yalnızca imzalarını tanımlar. Tam `Property` ve `Function` bloklarını uygulayan bir sınıf içinde görünen `thisInterface`.  
   
