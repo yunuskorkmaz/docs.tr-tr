@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710358"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977064"
 ---
-# <a name="is-c-reference"></a>is (C# Başvurusu) #
+# <a name="is-c-reference"></a>is (C# Başvurusu)
 
 Bir nesne belirli bir tür ile uyumlu olan veya bir ifade belirli bir desene göre testleri (C# 7. 0'dan itibaren) denetler.
 
-## <a name="testing-for-type-compatibility"></a>Tür uyumluluğu için test etme ##
+## <a name="testing-for-type-compatibility"></a>Tür uyumluluğu için test etme
 
 `is` Anahtar sözcüğü, çalışma zamanında tür uyumluluğu değerlendirilir. Bir ifadenin sonucu bir belirtilen türe dönüştürülebilir ya da bir nesne örneği olup olmadığını belirler. Söz dizimine sahiptir
 
@@ -56,7 +56,7 @@ Aşağıdaki örnek, gösterir `is` ifadeyi hesaplar için `true` her biri bu d�
 
 C# 7.0 ile başlayarak, deseni ile eşleşen kullanabilirsiniz [türü deseni](#type) kullanan daha kısa kodu yazmak için `is` deyimi.
 
-## <a name="pattern-matching-with-is"></a>İle desen eşleştirme `is` ##
+## <a name="pattern-matching-with-is"></a>İle desen eşleştirme `is`
 
 C# 7.0 ile başlayan `is` ve [geçiş](../../../csharp/language-reference/keywords/switch.md) ifadeleri desen eşleştirme desteği. `is` Anahtar sözcüğü aşağıdaki düzenini destekler:
 
@@ -104,7 +104,7 @@ Desen eşleştirme olmadan eşdeğer kod, bir açık tür dönüştürme içeren
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Sabit desen ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Sabit desen
 
 Sabit desen ile eşleşen deseni gerçekleştirirken `is` belirtilen sabit bir ifade eşit olup olmadığını test eder. C# 6 ve önceki sürümleri, sabit desen tarafından desteklenen [geçiş](switch.md) deyimi. C# 7.0 ile başlayarak, tarafından desteklenir mi `is` deyimi de. Kendi sözdizimi aşağıdaki gibidir:
 

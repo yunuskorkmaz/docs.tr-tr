@@ -7,27 +7,27 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55a39bb311d4f0a71f111db4975abf317d63d479
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732528"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979677"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Anonim Yöntemler (C# Programlama Kılavuzu)
 C# ' ın sürümlerinde 2.0, tek yolu bildirmek için önce bir [temsilci](../../../csharp/language-reference/keywords/delegate.md) kullanılmasıydır [yöntemleri adlı](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). Anonim yöntemler C# 2.0 kullanılmaya ve C# 3.0 ve sonraki sürümlerinde, lambda ifadeleri anonim yöntemler satır içi kod yazmak için tercih edilen yol geçersiz kılar. Ancak, bu konudaki anonim yöntemler hakkında bilgi, lambda ifadeleri için de geçerlidir. Anonim bir yöntem lambda ifadelerinde bulunamadı işlevselliği sağlayan bir durum yoktur. Anonim yöntemler parametre listesini atlamak etkinleştirin. Bu, anonim bir yöntem imzaları çeşitli temsilcilere dönüştürülebilir anlamına gelir. Bu, lambda ifadeleri ile mümkün değildir. Özellikle, lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Anonim yöntemler oluşturmak bir kod bloğu bir temsilcinin parametre olarak geçmesine aslında bir yoludur. İki örnek aşağıda verilmiştir:  
   
- [!code-csharp[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#6)]  
   
- [!code-csharp[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#5)]  
   
  Anonim yöntemler kullanarak, ek yükü ayrı bir yöntem oluşturmak olmadığı için temsilciler örnekleme kodlama azaltın.  
   
  Örneğin, bir kod bloğu bir Temsilcinizin yerine bir yöntem oluşturmak zorunda kalmadan bir durumda kullanışlı olabilir belirtme gereksiz bir ek yük görünebilir. Yeni bir iş parçacığı başlatıldığında, iyi bir örnek olacaktır. Bu sınıf, bir iş parçacığı oluşturur ve ayrıca ek bir yöntem için temsilci oluşturmak zorunda kalmadan iş parçacığı yürütülen kod içerir.  
   
- [!code-csharp[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#7)]  
   
 ## <a name="remarks"></a>Açıklamalar  
  Anonim bir yöntem parametrelerini kapsamı *yöntem bloğu anonim*.  
@@ -36,7 +36,7 @@ C# ' ın sürümlerinde 2.0, tek yolu bildirmek için önce bir [temsilci](../..
   
  Yerel değişkenleri ve parametreleri içeren bir anonim yöntem bildiriminde kapsamı adlı *dış* anonim yöntemin değişkenleri. Örneğin, aşağıdaki kod kesimi içinde `n` dış bir değişkendir:  
   
- [!code-csharp[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#8)]  
   
  Bir dış değişkenine başvuru `n` olduğu söylenir *yakalanan* temsilci oluşturulduğunda. Anonim yöntemler başvuran temsilcileri çöp toplama işlemi için uygun olana kadar yerel değişkenler farklı olarak, yakalanan bir değişkenin ömrü genişletir.  
   
