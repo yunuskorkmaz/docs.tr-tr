@@ -2,16 +2,11 @@
 title: WCF Veri Hizmetleri 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Astoria
-- WCF Data Services, getting started
+  - Astoria
+  - 'WCF Data Services, getting started'
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 6fd81a6bd4449cc0ef11b68320f366368d5edb7e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092494"
 ---
+
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 
 WCF Veri Hizmetleri (eski adıyla "ADO.NET Data Services" da bilinir) kullanan hizmetler oluşturmanıza olanak tanıyan .NET Framework'ün bir bileşenidir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanır ve [ temsili durum aktarımı (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar. Veri erişim ve GET, PUT, POST ve DELETE, standart HTTP fiillerini kullanarak değiştirildi. OData varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynakları ilişkilendirmeleri ilgili varlık kümeleri olarak kullanıma sunmak için.
@@ -28,111 +23,111 @@ Alanlarınızı bağlı olarak aşağıdaki konulardan birindeki WCF Data Servic
 
 Hemen istediğiniz...
 
--   [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
--   [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [Windows Phone geliştirme için Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=214535)
+- [Windows Phone geliştirme için Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=214535)
 
 Yalnızca bazı kod göster...
 
--   [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [Nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
--   [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
 
 OData hakkında daha fazla bilgi edinmek istiyorsanız...
 
- -   [Teknik İnceleme: OData ile tanışın](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Teknik İnceleme: OData ile tanışın](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [Açık Veri Protokolü Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Açık Veri Protokolü Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)
 
--   [OData: SDK'SI](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK'SI](https://go.microsoft.com/fwlink/?LinkID=185248)
 
--   [OData: Sık sorulan sorular](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData: Sık sorulan sorular](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Bazı videoları izlemek istediğiniz...
 
--   [WCF Veri Hizmetleri için Başlangıç Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=220864)
+- [WCF Veri Hizmetleri için Başlangıç Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=220864)
 
--   [Geliştirici videoları WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=220861)
+- [Geliştirici videoları WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=220861)
 
--   [OData: Geliştiricilerin Web sitesi](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData: Geliştiricilerin Web sitesi](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Uçtan uca örnekler görmek istiyorsanız...
 
--   [WCF Veri Hizmetleri belgeleri örnekleri MSDN Örnekler Galerisi](https://go.microsoft.com/fwlink/?LinkID=220865)
+- [WCF Veri Hizmetleri belgeleri örnekleri MSDN Örnekler Galerisi](https://go.microsoft.com/fwlink/?LinkID=220865)
 
--   [MSDN Örnekler Galerisi örnekleri diğer WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=220866)
+- [MSDN Örnekler Galerisi örnekleri diğer WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=220866)
 
--   [OData: SDK'SI](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK'SI](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 Bu Visual Studio ile nasıl tümleştirilir?
 
--   [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
 
--   [Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+- [Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
--   [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
 
 İle neler yapabilirim?
 
--   [Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+- [Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
--   [Teknik İnceleme: OData ile tanışın](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Teknik İnceleme: OData ile tanışın](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
+- [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
 
 Silverlight kullanmak istediğiniz...
 
--   [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
+- [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
 
--   [Silverlight ile çalışmaya başlama](https://go.microsoft.com/fwlink/?LinkId=148366)
+- [Silverlight ile çalışmaya başlama](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 LINQ kullanmak istediğiniz...
 
--   [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 
--   [LINQ Konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+- [LINQ Konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
 
--   [Nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Nasıl yapılır: Veri Hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
 Yine de bazı ek bilgiler ihtiyacım...
 
--   [WCF Veri Hizmetleri ekibi blogu](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [WCF Veri Hizmetleri ekibi blogu](https://go.microsoft.com/fwlink/?LinkID=150511)
 
--   [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
 
--   [WCF Veri Hizmetleri Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=220868)
+- [WCF Veri Hizmetleri Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=220868)
 
--   [Açık Veri Protokolü Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Açık Veri Protokolü Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
- [Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+[Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
- WCF veri hizmetlerinde kullanılabilen işlevler ve özellikler hakkında genel bir bakış sağlar.
+WCF veri hizmetlerinde kullanılabilen işlevler ve özellikler hakkında genel bir bakış sağlar.
 
- [WCF Veri Hizmetleri 5.0 yenilikler nelerdir?](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[WCF Veri Hizmetleri 5.0 yenilikler nelerdir?](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
- WCF Veri Hizmetleri ve yeni OData özellikleri için destek yeni işlevler açıklanmaktadır.
+WCF Veri Hizmetleri ve yeni OData özellikleri için destek yeni işlevler açıklanmaktadır.
 
- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+[Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
- Kullanıma sunma ve WCF veri hizmetlerini kullanarak OData akışları kullanma açıklar.
+Kullanıma sunma ve WCF veri hizmetlerini kullanarak OData akışları kullanma açıklar.
 
- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+[WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 
- Oluşturma ve OData akışları kullanıma sunan bir veri hizmeti yapılandırma açıklanır.
+Oluşturma ve OData akışları kullanıma sunan bir veri hizmeti yapılandırma açıklanır.
 
- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+[WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 
- Bir .NET Framework istemci uygulamasından OData akışları kullanmak için istemci kitaplıkları kullanmayı açıklar.
+Bir .NET Framework istemci uygulamasından OData akışları kullanmak için istemci kitaplıkları kullanmayı açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3391281ceeda031f6178f5909204624f3d6bb3dc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973567"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201501"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
@@ -24,7 +24,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
   
  Sınıfların örneklerini kullanılarak oluşturulan [new işleci](../../../csharp/language-reference/keywords/new-operator.md). Aşağıdaki örnekte, `Person` türüdür ve `person1` ve `person 2` örnekleri ya da nesnelerin türü.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  Yapılar değer türleri olduğundan, bir değişken bir yapı nesnesinin tüm nesnesinin bir kopyasını tutar. Yapılar örneği de oluşturulabilir kullanarak `new` işleci, ancak bu zorunlu değildir, aşağıdaki örnekte gösterildiği gibi:  
   

@@ -4,12 +4,12 @@ description: .NET Core CLI araçları ile .NET Core kitaplıkları oluşturmayı
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169371"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212072"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar arası araçlarla kitaplıkları ile geliştirme
 
@@ -58,9 +58,9 @@ Bu sürümü .NET standart, çekme en yeni API'ler için erişim ve daha fazla .
     ```
 
 2. .NET Standard'ın daha düşük veya üzeri bir sürüm değeri değiştirerek kullanabilirsiniz `TargetFramework` proje dosyanızın düğümü.
-    
+
     .NET standard sürümleri geriye dönük olarak uyumludur. Bu anlamına `netstandard1.0` kitaplıkları çalıştıracağınız `netstandard1.1` platformları ve daha yüksek. Ancak, hiçbir ileriye dönük bir uyumluluk yoktur - daha düşük bir .NET Standard platformları daha yüksek olanları başvuramaz. Diğer bir deyişle `netstandard1.0` kitaplıkları olamaz başvuru hedefleyen kitaplıkları `netstandard1.1` veya üzeri. API ve platform desteğiyle gereksinimleriniz için doğru karışımını standart sürümü seçin. Öneririz `netstandard1.4` şimdilik.
-    
+
 3. .NET Framework sürüm 4.0 hedeflemek istiyorsanız veya aşağıdaki veya kullanılabilir bir API kullanmak istediğiniz .NET Framework ancak .NET Standard (örneğin, `System.Drawing`), aşağıdaki bölümleri okuyun ve öğrenin multitarget nasıl.
 
 ## <a name="how-to-target-the-net-framework"></a>.NET Framework'ü hedefleyen nasıl
@@ -131,7 +131,7 @@ Proje dosyanız şöyle görünebilir:
 Burada üç önemli değişiklikler fark edeceksiniz:
 
 1. `TargetFramework` Düğümü tarafından değiştirilmiştir `TargetFrameworks`, ve üç Tfm'ler içindeki ifade edilir.
-1. Var olan bir `<ItemGroup>` düğümü için `net40 ` hedef bir .NET Framework başvuru çekmek.
+1. Var olan bir `<ItemGroup>` düğümü için `net40` hedef bir .NET Framework başvuru çekmek.
 1. Var olan bir `<ItemGroup>` düğümü için `net45` iki .NET Framework başvurularını çekme hedef.
 
 Derleme Sistemi kullanılan aşağıdaki önişlemci sembolleri farkında `#if` yönergeleri:
@@ -256,7 +256,7 @@ Platformlar arasında test edebilmek önemlidir. Kullanabilirsiniz [xUnit](https
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Bu xUnit çalıştığını yürüterek doğrulama `dotnet test` komutu. MSTest kullanmayı seçerseniz, MSTest konsol Çalıştırıcısı yerine çalıştırmalısınız.
-    
+
 Ve İşte bu kadar! Artık kitaplığınızı komut satırı araçlarını kullanarak tüm platformlarda test edebilirsiniz. Artık her şeyi sahip olduğunuza göre teste devam etmek için ayarlama, kitaplığınıza test çok basittir:
 
 1. Kitaplığınıza değişiklikler yapın.
@@ -321,7 +321,7 @@ Bu, yukarıdaki üç projeleri ve bunları birbirine bağlayan bir çözüm dosy
 Bir proje başvurusu için en iyi yolu, bir proje başvurusu eklemek için .NET Core CLI kullanmaktır. Gelen **AwesomeLibrary.CSharp** ve **AwesomeLibrary.FSharp** proje dizinleri, aşağıdaki komutu çalıştırabilirsiniz:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Her ikisi için proje dosyaları **AwesomeLibrary.CSharp** ve **AwesomeLibrary.FSharp** artık başvuru olacak **AwesomeLibrary.Core** olarak bir `ProjectReference` hedef.  Proje dosyalarını incelemek ve bunları aşağıdaki görmeye doğrulayabilirsiniz:

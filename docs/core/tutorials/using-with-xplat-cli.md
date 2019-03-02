@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605961"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212176"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
 
@@ -30,13 +30,13 @@ Yapabilecekleriniz [görüntülemek veya örnek kodu indirdikten](https://github
 Bir komut istemi açın ve adlı bir klasör oluşturun *Hello*. Oluşturduğunuz klasöre gidin ve aşağıdaki komutu yazın:
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 Hızlı bir kılavuz inceleyelim:
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) güncel bir oluşturur `Hello.csproj` bir konsol uygulaması oluşturmak gerekli bağımlılıkları olan proje dosyası.  Ayrıca oluşturur bir `Program.cs`, uygulamanın giriş noktasını içeren temel bir dosya.
 
@@ -59,12 +59,12 @@ Hızlı bir kılavuz inceleyelim:
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` çağrıları [ `dotnet restore` ](../tools/dotnet-restore.md) örtük olarak. `dotnet restore` içine yapılan çağrılar [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında tanımlanan bağımlılıkları indirir (veya bunları makinenizde önbellekten Dallarınızla) ve Yazar *obj/project.assets.json* için gerekli olan dosya derleme ve örneği çalıştırın. 
-   
+   `dotnet new` çağrıları [ `dotnet restore` ](../tools/dotnet-restore.md) örtük olarak. `dotnet restore` içine yapılan çağrılar [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında tanımlanan bağımlılıkları indirir (veya bunları makinenizde önbellekten Dallarınızla) ve Yazar *obj/project.assets.json* için gerekli olan dosya derleme ve örneği çalıştırın.
+
    > [!IMPORTANT]
    > SDK'sının bir .NET Core 1.x sürümü kullanıyorsanız, çağırmanız gerekir `dotnet restore` arama sonra kendiniz `dotnet new`.
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri oluşturulan derleme ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
 
@@ -74,6 +74,7 @@ Hızlı bir kılavuz inceleyelim:
     ```
 
     Alternatif olarak, aynı zamanda yürütebilirsiniz [ `dotnet build` ](../tools/dotnet-build.md) konsol uygulamaları derleme çalıştırmadan Kodu derlemek için. İle çalıştırılabilir bir DLL dosyası olarak derlenmiş bir uygulama sonuçlanır `dotnet bin\Debug\netcoreapp2.1\Hello.dll` Windows üzerinde (kullanın `/` Windows olmayan sistemler için). Bu konuda daha sonra göreceğiniz üzere uygulamaya bağımsız değişkenler de belirtebilirsiniz.
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!

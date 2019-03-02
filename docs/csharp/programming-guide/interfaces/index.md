@@ -33,7 +33,7 @@ Bir sınıf veya yapı, arabirim uygular, bir uygulama sınıfın veya yapının
   
 Aşağıdaki örnek bir uygulamasını gösterir <xref:System.IEquatable%601> arabirimi. Uygulayan sınıfa `Car`, bir uygulamasını sağlamalıdır <xref:System.IEquatable%601.Equals%2A> yöntemi.  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 Özellikler ve dizin oluşturucular bir sınıfın özellik veya arabirim içinde tanımlanmış bir dizin oluşturucu için ek erişimcileri tanımlayabilirsiniz. Örneğin, bir arabirimi olan bir özelliği bildirme bir [alma](../../language-reference/keywords/get.md) erişimcisi. Arabirimi uygulayan bir sınıf her ikisi de aynı özellik bildirebilirsiniz bir `get` ve [ayarlamak](../../language-reference/keywords/set.md) erişimcisi. Ancak, özellik veya dizin oluşturucu açık uygulama kullanıyorsa, erişimcileri eşleşmesi gerekir. Açık uygulama hakkında daha fazla bilgi için bkz: [açık arabirim uygulaması](explicit-interface-implementation.md) ve [arabirimi özellikleri](../classes-and-structs/interface-properties.md).  
 

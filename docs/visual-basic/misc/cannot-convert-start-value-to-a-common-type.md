@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-ms.openlocfilehash: 49ec2dca53243227f06a589ccf647adf62372c30
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 198207e14a0468a47c01d1a53d38cdf149bb31a5
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272038"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203249"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>Başlangıç değeri türü dönüştürülemiyor '\<type1 >', değeri sınırlamak '\<type2 >' ve değeri '\<type3 >' ortak bir türe
 Belirtilen `For...Next` denetim değerleri farklı türlere sahip ve ortak bir türe dönüştürülemediğinden bu nedenle geçerli değil.  
@@ -19,5 +19,5 @@ Belirtilen `For...Next` denetim değerleri farklı türlere sahip ve ortak bir t
 1.  Bir veya daha fazla değer türünü, tümü ortak bir türe dönüştürülebilir şekilde değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Basic'te .NET değişiklikleri hata ayıklama](https://msdn.microsoft.com/library/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)
+
 - [For...Next Deyimi](../../visual-basic/language-reference/statements/for-next-statement.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - read-only indexers [C#]
 - accessors [C#]
 - properties [C#], read-only
-- asymmetric accessor accesibility [C#]
+- asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 24df3a78487cf054a2682b3fbdf8d78b37c4ea6b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979456"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203710"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
 [Alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) bölümlerini özelliğin veya dizin oluşturucu çağrılır *erişimcileri*. Varsayılan olarak, özellik veya dizin oluşturucu ait oldukları aynı görünürlük veya erişim düzeyini bu erişimcilerine sahip. Daha fazla bilgi için [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). Ancak, bazen bu erişimcileri birine erişimi kısıtlamak yararlıdır. Genellikle, bu erişilebilirliğini kısıtlama içerir `set` tutma sırasında erişimci `get` erişimci genel olarak erişilebilir. Örneğin:  

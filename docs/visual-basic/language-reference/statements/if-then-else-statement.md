@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: ceca58b2d69d72e079a9f2e2791f7f586c459167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeffdc842730a1be8160cd8db8e4c2aa849e94cc
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743653"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201735"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else Deyimi (Visual Basic)
 İfadenin değerine bağlı olarak bir deyim grubunu koşullu yürütür.  
@@ -104,7 +104,7 @@ Bu makalede kullanımlarını gösteren birkaç örnek içeren `If`... `Then`...
  
  Çok satırlı söz diziminin kullanılması aşağıdaki örnekte `If`... `Then`... `Else` deyimi.  
   
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
+ [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
 ## <a name="nested-syntax-example"></a>İç içe geçmiş sözdizimi örneği
 
@@ -112,13 +112,13 @@ Bu makalede kullanımlarını gösteren birkaç örnek içeren `If`... `Then`...
 
  Aşağıdaki örnek içeren iç içe geçmiş `If`... `Then`... `Else` deyimleri.  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb?highlight=14,15,17,19,20,21,23,25,26,28)]
+ [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
 ## <a name="single-line-syntax-example"></a>Tek satırlı sözdizimi örneği
   
 <a name="single-line"></a> Aşağıdaki örnek, tek satırlı söz dizimi kullanımını gösterir.  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
+ [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>

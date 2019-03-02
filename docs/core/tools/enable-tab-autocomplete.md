@@ -4,12 +4,12 @@ description: Bu makalede, PowerShell, Bash ve zsh için .NET Core CLI için sekm
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029612"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203343"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
 
@@ -17,7 +17,7 @@ ms.locfileid: "54029612"
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-Bir kez Kurulum, sekme tamamlama için .NET Core CLI yazarak tetiklenir bir `dotnet ` komut kabuğu'nda ve ardından SEKME tuşuna basmak. Geçerli komut satırı gönderilen `dotnet complete` komut ve sonuçları, kabuk tarafından işlenir. Sonuçları sekme tamamlama etkinleştirmeden bir şey doğrudan göndererek test edebilirsiniz `dotnet complete` komutu. Örneğin:
+Bir kez Kurulum, sekme tamamlama için .NET Core CLI yazarak tetiklenir bir `dotnet` komut kabuğu'nda ve ardından SEKME tuşuna basarak. Geçerli komut satırı gönderilen `dotnet complete` komut ve sonuçları, kabuk tarafından işlenir. Sonuçları sekme tamamlama etkinleştirmeden bir şey doğrudan göndererek test edebilirsiniz `dotnet complete` komutu. Örneğin:
 
 ```
 > dotnet complete "dotnet a"
@@ -78,7 +78,7 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>zsh
+## <a name="zsh"></a>Zsh
 
 Sekme tamamlama eklemek için **zsh** Kabuk için .NET Core CLI, aşağıdaki kodu ekleyin, `.zshrc` dosyası:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 1ca40b59552c320e9bb2978869fb4a89d44ecb40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: be488b262764480b519e291727a21830d7a18e8f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976921"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201436"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, giriş ve yeni bir çıkış dizisi oluşturmak için birçok şekilde değiştirme gibi bir kaynak sırası kullanabilirsiniz. Öğeleri sıralama ve gruplandırma değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak belki de en güçlü özelliğidir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulardır yeni türleri oluşturma olanağı. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
@@ -37,7 +37,7 @@ ms.locfileid: "56976921"
   
  Aşağıdaki örnek sorgu gösterir:  
   
- [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#8)]  
   
  Daha fazla bilgi için [JOIN yan tümcesi](../../../../csharp/language-reference/keywords/join-clause.md) ve [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56976921"
 ## <a name="transforming-in-memory-objects-into-xml"></a>Bellek İçi Nesneleri XML'e dönüştürme  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bellek içi veri yapıları, SQL veritabanları arasında verileri dönüştürmek kolaylaştırır [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri ve XML akışlarını veya belgeler. Aşağıdaki örnek, nesneleri bir bellek içi veri yapısı XML öğeleri dönüştürür.  
   
- [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
  Kod aşağıdaki XML çıktıyı üretir:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "56976921"
 > [!NOTE]
 >  Sorgu başka bir etki alanına çevrilir, sorgu ifadelerinde yöntem çağırma desteklenmiyor. Örneğin, bir normal C# tuto metodu nelze vyvolat [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server için hiçbir bağlam olduğundan. Ancak, eşleştirme yöntemleri için saklı yordamlar ve bu çağırın. Daha fazla bilgi için [saklı yordamlar](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
- [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

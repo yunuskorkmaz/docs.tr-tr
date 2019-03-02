@@ -1,14 +1,9 @@
 ---
-title: Nasıl yapılır makaleleri (C# Kılavuzu)
-description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
+title: 'Nasıl yapılır makaleleri (C# Kılavuzu)'
+description: 'Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu'
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260197"
 ---
+
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
 C# Kılavuzu bölümünü nasıl sık sorulan sorulara hızlı yanıtlar bulabilirsiniz. Bazı durumlarda, makaleler birden çok bölümlerinde listelenen. Birden çok arama yolunu bulmayı kolaylaştırmak istedik. 
@@ -113,7 +108,7 @@ LINQ Sorgu LINQ Sorgu ifade deseninin destekleyen herhangi bir veri kaynağı i�
 - [Bir veri kaynağının öğeleri sıralama](../programming-guide/concepts/linq/how-to-sort-elements.md).
 - [Birden çok anahtarda öğeleri sıralama](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
 - [Bir projeksiyon türünü denetleme](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
-- [Bir kaynak dizisi içindeki bir değerin oluşum sayısı](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
+- [Bir kaynak dizisi içindeki bir değerin yinelemeleri Say](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
 - [Ara değerleri hesaplama](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
 - [Birden çok kaynaktan veri birleştirme](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [İki sıranın arasında ayarlanmış farkı bulma](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).

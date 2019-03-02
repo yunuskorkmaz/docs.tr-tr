@@ -3,12 +3,12 @@ title: Anlam Analizi ile çalışmaya başlama
 description: Bu öğretici, .NET derleyici SDK'sını kullanarak anlam Analizi ile çalışmaya genel bir bakış sağlar.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484624"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202580"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlam Analizi ile çalışmaya başlama
 
@@ -117,7 +117,7 @@ Bu öğreticiyi tamamlamak için tüm genel yöntemleri bildirilen üzerinde bir
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Bu kaynak dizisi biçimlendiriciyi özellikleri ve alanları da dahil olmak üzere tüm üyeleri kullanarak süzün <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> Bul öğeleri yönteme <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> nesneler:
+Bu kaynak dizisi biçimlendiriciyi özellikleri ve alanları da dahil olmak üzere tüm üyeleri kullanarak süzün <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> Bul öğeleri yönteme <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> nesneler:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
@@ -133,7 +133,7 @@ Ayrıca LINQ Sorgu söz dizimi kullanarak tam bir sorgu oluşturun ve sonra kons
 
 [!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
-Derleme ve programı çalıştırın. Aşağıdaki çıktıyı görmeniz gerekir:
+Programı derleyin ve çalıştırın. Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```
 Join

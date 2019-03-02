@@ -2,12 +2,12 @@
 title: Ayarlama işlemleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741888"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200768"
 ---
 # <a name="set-operations-visual-basic"></a>Ayarlama işlemleri (Visual Basic)
 LINQ ayarlama işlemleri varlığı veya yokluğu, eşdeğer öğelerin aynı veya farklı koleksiyonlar (veya kümeleri) temel alan bir sonuç kümesi oluşturan sorgu işlemleri bakın.  
@@ -48,7 +48,7 @@ LINQ ayarlama işlemleri varlığı veya yokluğu, eşdeğer öğelerin aynı ve
 ## <a name="query-expression-syntax-example"></a>Sorgu ifade sözdizimi örneği  
  Aşağıdaki örnekte `Distinct` benzersiz sayı tamsayılar listesinden döndürmek için bir LINQ sorgu yan tümcesi.  
   
- [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Linq>

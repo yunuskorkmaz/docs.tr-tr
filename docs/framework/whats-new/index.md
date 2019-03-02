@@ -1041,6 +1041,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi ayarla
 
 - Flowchart etkinlik Tasarımcısı veya diğer iş akışı etkinlik tasarımcıları tüm nesneleri, varsayılan konumlarda aksine ekli özellik değerlerini görüntüleyebilir.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 

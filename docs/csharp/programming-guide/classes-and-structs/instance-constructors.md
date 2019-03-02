@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 639a0db5bcc5c5b322618ed9119c582374447d34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c698ffc8d1bc68b2ebcbdf4578ab5926d4743516
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979976"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203476"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Örnek Oluşturucuları (C# Programlama Kılavuzu)
 Örnek oluşturucuları oluşturup kullandığınızda tüm örnek üye değişkenlerini başlatmak için kullanılan [yeni](../../../csharp/language-reference/keywords/new.md) ifade bir nesne oluşturmak için bir [sınıfı](../../../csharp/language-reference/keywords/class.md). Başlatmak için bir [statik](../../../csharp/language-reference/keywords/static.md) sınıf veya bir statik olmayan sınıf içinde statik değişkenler bir statik Oluşturucu tanımlamanız gerekir. Daha fazla bilgi için [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "56979976"
 ## <a name="example-1"></a>Örnek 1  
  Aşağıdaki örnek, iki sınıf oluşturucuları, bir bağımsız değişkenler olmadan ve iki bağımsız değişkeni ile tek bir sınıfı gösterir.  
   
- [!code-csharp[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]  
+ [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Örnek 2  
  Bu örnekte, sınıf `Person` durumda bir varsayılan oluşturucu otomatik olarak sağlanır ve alanları varsayılan değerlerine başlatılan hiçbir oluşturucu yok.  

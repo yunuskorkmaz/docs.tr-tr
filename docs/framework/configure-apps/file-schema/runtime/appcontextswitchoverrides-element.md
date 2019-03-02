@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966157"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203554"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -88,6 +88,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|SslStream TLS sunucu tarafı uyarıları devre dışı bırakır.|.NET framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Denetimleri olmadığını [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) ECMAScript V6 ve V8 standartlarına göre bazı denetim karakterleri serileştirir. Daha fazla bilgi için [azaltma: Denetim karakteri DataContractJsonSerializer ile seri hale getirme](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Denetimleri olmadığını <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> birden çok ayarlamaları veya yalnızca tek bir düzeltmesi için bir saat dilimi destekler. Varsa `true`, kullandığı <xref:System.TimeZoneInfo> serileştirmek için türü ve tarih ve saat verileri seri durumdan; Aksi takdirde kullanır <xref:System.TimeZone> birden çok ayarlama kuralları desteklemeyen türü.|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Denetimleri olmadığını <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> nesne seri hale getirme ve seri durumundan çıkarma sırasında daha büyük bir dizi boyutu kullanır. Bu anahtar kümesine `true` performans serileştirme ve seri durumundan çıkarma türlerine göre büyük nesne grafikler gibi geliştirmek için <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Denetimleri olmadığını <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Oluşturucu, yeni nesnenin ayarlar <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> özelliği ile var olan bir nesne başvurusu. Daha fazla bilgi için [azaltma: Claimsıdentity Oluşturucusu](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Denetimleri olmadığını yeniden denemesi bir <xref:System.Security.Cryptography.AesCryptoServiceProvider> şifre çözücü oluşturur bir <xref:System.Security.Cryptography.CryptographicException>. Daha fazla bilgi için [AesCryptoServiceProvider şifre çözücü yeniden kullanılabilir bir dönüştürme sağlar](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Denetimleri olmadığını değerini [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliği bir [IntPtr](xref:System.IntPtr) pencere bellek konumunu temsil işlemek veya bir pencere tutucu (HWND) olup. Daha fazla bilgi için [azaltma: HWND CspParameters.ParentWindowHandle bekliyor](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET framework 4.7|   

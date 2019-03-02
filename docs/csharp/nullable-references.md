@@ -2,12 +2,12 @@
 title: Null başvuru türleri
 description: Bu makalede eklenen boş değer atanabilir başvuru türleri, genel bir bakış sağlanmaktadır C# 8. Özellik null başvuru özel durumlar, yeni ve mevcut projeler için karşı güvenliği nasıl sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: f08e000edc29ed76c6539c27db005182396bfb5a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443165"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203279"
 ---
 # <a name="nullable-reference-types"></a>Null başvuru türleri
 
@@ -41,7 +41,7 @@ Derleyici statik analiz, null olmayan değer için boş değer atanabilir bir ba
 name!.Length;
 ```
 
-Bu işleci hakkında ayrıntıları edinebilirsiniz [Taslak null başvuru türleri](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md#the-null-forgiving-operator) github'da belirtimi teklifi.
+Bu işleci hakkında ayrıntıları edinebilirsiniz [Taslak null başvuru türleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) github'da belirtimi teklifi.
 
 ## <a name="nullability-of-types"></a>Null değer alabilme durumunun türleri
 
@@ -122,6 +122,6 @@ Bir değişkenin veya ifadenin başvuru her derleyici uyarıları oluşturur. bi
 
 ## <a name="learn-more"></a>Daha fazla bilgi edinin
 
-- [Taslak null başvuru belirtimi](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md)
+- [Taslak null başvuru belirtimi](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Boş değer atanabilir başvuruları öğreticiye giriş](tutorials/nullable-reference-types.md)
 - [Var olan bir geçiş için boş değer atanabilir başvuruları kod tabanı](tutorials/upgrade-to-nullable-references.md)

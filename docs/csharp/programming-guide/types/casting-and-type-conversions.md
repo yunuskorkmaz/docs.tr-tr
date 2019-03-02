@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: c697dbb36da7d3300803fe78ba6a9f82ba6b686c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981783"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201124"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
 
@@ -40,7 +40,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 
  Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/keywords/long.md) (64-bit tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/keywords/int.md) (32-bit tamsayı) depolayabilir. Aşağıdaki örnekte, derleyici değeri örtük olarak dönüştürür `num` türüne sağ taraftaki `long` giderek önce `bigNum`.  
   
- [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
  Tüm örtük sayısal dönüşümler tam bir listesi için bkz. [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -81,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 
  Bazı başvuru türü dönüşümleri, derleyici bir tür dönüştürme geçerli olup olmayacağını belirlenemiyor. Çalışma zamanında başarısız için doğru derleyen bir dönüştürme işlemi mümkündür. Aşağıdaki örnekte gösterildiği gibi çalışma zamanında başarısız neden olacak bir tür cast bir <xref:System.InvalidCastException> oluşturulması için.  
   
- [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
  C# sağlar [olduğu](../../../csharp/language-reference/keywords/is.md) ve [olarak](../../../csharp/language-reference/keywords/as.md) işleçleri, atama gerçekleştirmeden önce uyumluluğu test etmek sağlamak için. Daha fazla bilgi için [nasıl yapılır: Desen eşleştirme, kullanarak güvenli bir şekilde atama olarak ve is işleçlerini](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   

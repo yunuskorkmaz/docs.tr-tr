@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: f6e85a4dfdf562c0a479b19224e11e919da8716d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980366"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201172"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli metot bağımsız değişkenleri belirtme yürütülecek deyimler neden olur. C# içinde yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve programı başlatıldığında ortak dil çalışma zamanı tarafından (CLR) çağrılır.  
@@ -37,7 +37,7 @@ Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağı
 ## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri vs. Arguments  
  Yöntem tanımını adlarını ve türlerini, gerekli olan herhangi bir parametre belirtir. Kod çağrıları metodu çağrılırken, her parametresi için bağımsız değişken olarak adlandırılan somut değerleri sağlar. Bağımsız değişken parametre türü ile uyumlu olması gerekir ancak çağıran kod içinde kullanılan bir bağımsız değişken adı (varsa) aynı adlı bir parametre olarak yönteminde tanımlanmış olması gerekmez. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Başvuru vs geçirerek. Değere göre geçirme  
  Varsayılan olarak, bir değer türü bir yönteme geçildiğinde bir kopyasını nesne yerine geçirilir. Bu nedenle, değişiklikleri bağımsız değişkene, çağırma yöntemi özgün kopyası üzerinde etkisi yoktur. Ref anahtar sözcüğü kullanılarak başvuruya göre bir değer türü geçirebilirsiniz. Daha fazla bilgi için [değer türü parametrelerini geçirme](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Yerleşik türlerin listesi için bkz. [değer türleri tablosu](../../../csharp/language-reference/keywords/value-types-table.md).  

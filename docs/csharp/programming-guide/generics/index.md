@@ -1,22 +1,16 @@
 ---
-title: Genel türler - C# Programlama Kılavuzu
+title: 'Genel türler - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, generics
-- generics [C#]
+  - 'C# language, generics'
+  - 'generics [C#]'
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 662b388dd9c279969ed777e443df42784e20d4c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677205"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 Genel türler, C# dili ve ortak dil çalışma zamanı (CLR) 2.0 sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıfları ve sınıf ya da yöntem bildirildi ve istemci kodu sayesinde örneği kadar bir veya daha fazla tür belirtimi erteleme yöntemlere mümkün hale tür parametrelerinin kavramı tanıtır. Örneğin, bir genel tür parametre T kullanarak diğer istemci kodu çalışma zamanı atamaları veya kutulama işlemleri riskini ve maliyet olmaksızın burada gösterildiği gibi kullanabileceğiniz tek bir sınıf yazabilirsiniz:  
   
- [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]  
   
 ## <a name="generics-overview"></a>Genel türlere genel bakış  
   

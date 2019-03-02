@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694977"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202606"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>(C# programlama Kılavuzu) tür parametrelerindeki kısıtlamalar
 
-Kısıtlamaları, derleyici bir tür bağımsız değişkeni olmalıdır özellikleri hakkında bilgilendirin. Herhangi bir kısıtlama tür bağımsız değişkeni, herhangi bir tür olabilir. Derleyici, yalnızca üyelerinin varsayabilirsiniz <xref:System.Object?displayPropety=nameWithType>, üstün temel sınıf için herhangi bir .NET türü. Daha fazla bilgi için [kısıtlamaları neden kullanılmalı](#why-use-constraints). İstemci kodu, sınıf kısıtlaması tarafından izin verilmeyen bir türü kullanarak örneği oluşturmak çalışırsa, sonucu bir derleme zamanı hatasıdır. Kısıtlamaları kullanılarak belirtilir `where` bağlamsal anahtar sözcük. Aşağıdaki tabloda, yedi kısıtlamalar türleri listelenmektedir:
+Kısıtlamaları, derleyici bir tür bağımsız değişkeni olmalıdır özellikleri hakkında bilgilendirin. Herhangi bir kısıtlama tür bağımsız değişkeni, herhangi bir tür olabilir. Derleyici, yalnızca üyelerinin varsayabilirsiniz <xref:System.Object?displayProperty=nameWithType>, üstün temel sınıf için herhangi bir .NET türü. Daha fazla bilgi için [kısıtlamaları neden kullanılmalı](#why-use-constraints). İstemci kodu, sınıf kısıtlaması tarafından izin verilmeyen bir türü kullanarak örneği oluşturmak çalışırsa, sonucu bir derleme zamanı hatasıdır. Kısıtlamaları kullanılarak belirtilir `where` bağlamsal anahtar sözcük. Aşağıdaki tabloda, yedi kısıtlamalar türleri listelenmektedir:
 
 |Kısıtlama|Açıklama|
 |----------------|-----------------|

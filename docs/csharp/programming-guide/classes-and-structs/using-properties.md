@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: e368c9399aee94888252953752f5be00352c8c98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981523"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200396"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler, alanlar ve yöntemler hem yönlerini birleştirin. Bir alan için bir özelliği bir nesnenin kullanıcıya görünen özelliğine erişmek, aynı sözdizimini gerektirir. Temsil eden bir veya iki kod blokları için uygulayan bir sınıfın özelliğidir bir [alma](../../../csharp/language-reference/keywords/get.md) erişimci veya [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğu için `get` erişimci özelliği okunduğunda yürütülür; kod engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütülür. Bir özellik olmadan bir `set` erişimci salt okunur kabul edilir. Bir özellik olmadan bir `get` salt yazılır erişimci kabul edilir. Her iki erişimcisi olan okuma-yazma özelliğidir.  
@@ -76,7 +76,7 @@ ms.locfileid: "56981523"
 ## <a name="example"></a>Örnek  
  Bu örnek, örnek, statik ve salt okunur özelliklerini gösterir. Bunu klavyeden artışlarla çalışan adını kabul eder `NumberOfEmployees` 1 ve görüntüler çalışan adı ve numarası.  
   
- [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
+ [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, türetilmiş sınıf içinde aynı ada sahip başka bir özellik tarafından gizlenen bir taban sınıftaki bir özelliğe erişmek nasıl gösterir.  

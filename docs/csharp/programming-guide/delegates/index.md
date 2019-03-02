@@ -1,24 +1,18 @@
 ---
-title: Temsilciler - C# Programlama Kılavuzu
+title: 'Temsilciler - C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675380"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli bir parametre listesi olan yöntemlere başvuruları temsil eden bir tür ve dönüş türü. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  
   
  Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır. Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Özel bir yöntem oluşturabilirsiniz ve bir pencere denetimi gibi bir sınıf, belirli bir olay olduğunda yönteminizi çağırabilir. Aşağıdaki örnek, bir temsilci bildirimini gösterir:  
   
- [!code-csharp[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#20)]  
   
  Temsilci türüyle eşleşen herhangi bir erişilebilir sınıf veya yapıdan alınan herhangi bir yöntem temsilciye atanabilir. Yöntem, statik veya örnek bir yöntem olabilir. Bu, yöntem çağrılarını programatik olarak değiştirmeyi ve varolan sınıflara yeni kod eklemeyi olanaklı kılar.  
   

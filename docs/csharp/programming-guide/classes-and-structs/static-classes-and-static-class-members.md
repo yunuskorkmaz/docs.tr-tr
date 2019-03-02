@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 2c2840d934a3535c3799033413742c9dd81244fe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975998"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202411"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, temel bir statik olmayan sınıf ile aynı, ancak bir fark vardır: bir statik sınıfın örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıf türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, bir statik sınıf üyeleri sınıf adı'ı kullanarak erişir. Örneğin, bir statik sınıflar varsa adlı `UtilityClass` adlı genel statik bir yöntemi olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
@@ -59,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>Örnek  
  Sıcaklık Fahrenhayt için Santigrat ve Fahrenhayt derece için dönüştürme iki yöntem içeren bir statik sınıfın bir örnek aşağıda verilmiştir:  
   
- [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Statik Üyeler  
  Statik olmayan sınıf statik yöntemler, alanlar, özellikler veya olaylar içerebilir. Hatta sınıfının hiçbir örneği oluşturulduğunda statik üye sınıfta çağrılabilir. Statik üye sınıfı adı, örnek adını her zaman erişilebilir. Statik bir üyenin yalnızca bir kopyasını mevcut sınıfının kaç tane bağımsız olarak oluşturulur. Statik yöntemler ve Özellikler statik olmayan alanlar ve olaylar, içeren türlerine erişemez ve açıkça bir yöntem parametresi geçirilir sürece herhangi bir nesnenin bir örnek değişkeni erişemez.  

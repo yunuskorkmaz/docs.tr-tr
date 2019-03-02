@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540617"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212527"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
-Bir hizmetin *uç noktası kimlik*oluşturulan Web Hizmetleri Açıklama Dili (WSDL) hizmetinden bir değerdir. Herhangi bir istemciye yayılır. Bu değer, hizmet kimlik doğrulaması için kullanılır. İstemci bir uç nokta için bir iletişim başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik değeri uç nokta kimlik doğrulama işlemi döndürdü gerçek değerle karşılaştırır. Eşleşiyorlarsa istemci beklenen hizmet uç noktası başvurduğunu sağlanmıştır. Bu olarak karşı koruma işlev *kimlik avı* bir istemcinin kötü amaçlı bir hizmeti tarafından barındırılan bir uç noktaya yönlendirilmesini engelleyerek.  
+Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (WSDL) hizmetinden bir değerdir. Herhangi bir istemciye yayılır. Bu değer, hizmet kimlik doğrulaması için kullanılır. İstemci bir uç nokta için bir iletişim başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik değeri uç nokta kimlik doğrulama işlemi döndürdü gerçek değerle karşılaştırır. Eşleşiyorlarsa istemci beklenen hizmet uç noktası başvurduğunu sağlanmıştır. Bu olarak karşı koruma işlev *kimlik avı* bir istemcinin kötü amaçlı bir hizmeti tarafından barındırılan bir uç noktaya yönlendirilmesini engelleyerek.  
   
  Kimlik ayarı gösteren örnek bir uygulama için bkz. [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Uç noktaları ve uç nokta adresleri hakkında daha fazla bilgi için bkz: [adresleri](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   

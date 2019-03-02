@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968033"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203447"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonim Türleri (Visual Basic)
 Visual Basic nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan oluşturmanıza olanak sağlayan anonim türler destekler. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Kullanılabilir adı yok, doğrudan devralan sınıf <xref:System.Object>ve nesneyi bildirirken belirttiğiniz özellikleri içeriyor. Veri türünün adı belirtilmediğinden bu şeklinde adlandırılan bir *anonim tür*.  
@@ -81,7 +81,7 @@ Visual Basic nesne veri türü için bir sınıf tanımı yazmaya gerek kalmadan
 ### <a name="read-only-values"></a>Salt okunur değerleri  
  Anahtar özelliklerin değerlerini değiştirilemez. Örneğin, `prod8` önceki örnekte, `Name` ve `Price` alanlar `read-only`, ancak `OnHand` değiştirilebilir.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Sorgu ifadeleri anonim türleri  
  Sorgu ifadeleri, her zaman anonim türler oluşturulmasını gerektirmez. Mümkün olduğunda, bunlar mevcut türü sütun verileri tutmak için kullanın. Bu durum, sorgu, veri kaynağından veya her kaydın yalnızca bir alan ya da tüm kayıtları döndürür. oluşur. Aşağıdaki kod örnekleri, `customers` nesneleri koleksiyonudur bir `Customer` sınıfı. Sınıf çok sayıda özelliğe sahiptir ve herhangi bir sırada sorgu sonucundaki birini veya birkaçını içerebilir. İlk iki örneklerde sorgular adlandırılmış türler öğelerini seçin. çünkü hiçbir anonim türler gereklidir:  

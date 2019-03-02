@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: c816b9e5e2ed24f60962797428d4b28033068885
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978637"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202744"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Adlandırılmış bağımsız değişkenler* bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirli bir parametre için bir bağımsız değişken belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenlere* bazı parametrelerin bağımsız değişkenleri atlamak sağlar. Her iki tekniği, yöntemleri, Dizinleyicileri, Oluşturucular ve temsilciler ile kullanılabilir.  
@@ -61,7 +61,7 @@ ms.locfileid: "56978637"
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, bazı bulunmakla birlikte, bu bölümdeki örnekler uygular.  
   
- [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
   
 ## <a name="optional-arguments"></a>İsteğe bağlı bağımsız değişkenler  
  Yöntemi, oluşturucu, dizin oluşturucu veya temsilci tanımı parametreleri gerekli veya isteğe bağlı belirtebilirsiniz. Tüm çağrıların tüm gerekli parametrelerin bağımsız değişkenleri belirtmeniz gerekir, ancak isteğe bağlı parametrelerin bağımsız değişkenleri atlayabilirsiniz.  

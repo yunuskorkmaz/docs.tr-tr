@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244784"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211903"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Microsoft XML seri hale getirici oluşturucunun üzerinde .NET Core kullanma
 
@@ -34,8 +34,8 @@ Bu öğreticiyi tamamlamak için:
 
 > [!TIP]
 > Bir kod Düzenleyicisi'ni yüklemeniz gerekir? Deneyin [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Microsoft XML seri hale getirici oluşturucunun bir .NET Core konsol uygulamasında kullanma 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Microsoft XML seri hale getirici oluşturucunun bir .NET Core konsol uygulamasında kullanma
 
 Aşağıdaki yönergeler, XML seri hale getirici oluşturucunun bir .NET Core konsol uygulamasında kullanmayı gösterir.
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Uygulamam projesinde Microsoft.XmlSerializer.Generator paketine bir başvuru ekleyin
 
-Kullanım [ `dotnet add package` ](../tools//dotnet-add-package.md) projenize başvuru eklemek için komutu. 
+Kullanım [ `dotnet add package` ](../tools//dotnet-add-package.md) projenize başvuru eklemek için komutu.
 
 Tür:
 
@@ -107,7 +107,7 @@ Yine de içinde *MyApp* aracılığıyla uygulamayı çalıştırın, klasör [ 
 Konsol pencerenizde aşağıdaki komutu yazın:
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > Komutlar ve uygulamanızı çalıştırmak için Bu öğreticide gösterilen adımlar yalnızca geliştirme zamanı sırasında kullanılır. Uygulamanızı dağıtmak hazır olduğunuzda, farklı bir göz atın [dağıtım stratejilerini](../deploying/index.md) .NET Core uygulamaları için ve [ `dotnet publish` ](../tools/dotnet-publish.md) komutu.
 
-Her şeyi başarılı olursa, adında bir derleme *MyApp.XmlSerializers.dll* çıktı klasöründe oluşturulur. 
+Her şeyi başarılı olursa, adında bir derleme *MyApp.XmlSerializers.dll* çıktı klasöründe oluşturulur.
 
 Tebrikler! yalnızca gerekir:
 > [!div class="checklist"]

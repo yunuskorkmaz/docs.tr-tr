@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 71f404fd0881a1da761d3f53daac03805a01f18f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970759"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203116"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  
@@ -48,7 +48,7 @@ Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliğ
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir sınıfta (başvuru türü) değer eşitliği uygulamak gösterilmektedir.  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  Sınıflar (başvuru türleri) üzerinde hem de varsayılan uygulamasını <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemleri değeri eşitlik kontrolüne başvuru bir eşitlik karşılaştırması gerçekleştirir. Bir uygulayan sanal yöntemi geçersiz kıldığında, amacı, değer eşitliği anlamları vermektir.  
   

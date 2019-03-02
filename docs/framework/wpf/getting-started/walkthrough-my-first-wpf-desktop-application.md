@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748381"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212384"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 
@@ -205,9 +205,9 @@ Bu bölümde, uygulamaya iki sayfaları ve görüntü ekleyeceksiniz.
 
 10. Adlandırılmış resim ekleme *watermark.png* projeye. Kendi görüntünüzü oluşturma,'nden örnek kodu dosyasını kopyalayın veya bunu [burada](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).
 
-   1. Proje düğümüne sağ tıklayıp **Ekle** > **var olan öğe**, veya basın **Shift**+**Alt** + **A**.
+    1. Proje düğümüne sağ tıklayıp **Ekle** > **var olan öğe**, veya basın **Shift**+**Alt** + **A**.
 
-   2. İçinde **varolan öğeyi Ekle** iletişim kutusunu kullanın ve ardından istediğiniz görüntü dosyasına Gözat **Ekle**.
+    2. İçinde **varolan öğeyi Ekle** iletişim kutusunu kullanın ve ardından istediğiniz görüntü dosyasına Gözat **Ekle**.
 
 ## <a name="build-and-run-the-application"></a>Uygulaması derleme ve çalıştırma
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: adf5884c759d4dd4267dba732d8b9f39c63cd320
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973398"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202450"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme
 Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu listeler ve bir dizinde metin dosyaları inceler, küçük bir uygulamanın nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya öznitelikleri ve içeriğindeki birinci satırın uygulama sağlar. Bir günlük dosyasına yazmak için bir seçenek yoktur.  
@@ -152,7 +152,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem kullanarak tam örnek  
  Tam bir örnek aşağıda verilmiştir.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>System.IO kullanarak tam örnek  
  Aşağıdaki eşdeğer sınıflardan örnekte <xref:System.IO> kullanmak yerine ad alanı `My.Computer.FileSystem` nesneleri.  

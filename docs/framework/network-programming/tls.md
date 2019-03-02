@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 6aa05aab5bbd012c31dc31be38c0b3eaea13dd27
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966196"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212540"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -237,7 +237,7 @@ Kayıt defteri, istemci ve/veya sunucu uygulamanızı görüşür protokolleri �
 
 İle başlayan `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` kayıt defteri anahtarı. Bu anahtarı tüm alt kümesinde oluşturabilirsiniz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1`, ve `TLS 1.2`. Her bu alt altında alt oluşturabilirsiniz `Client` ve/veya `Server`. Altında `Client` ve `Server`, DWORD değerlerini oluşturabilirsiniz `DisabledByDefault` (0 veya 1) ve `Enabled` (0 veya 0xFFFFFFFF).
 
-## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO bayrağı
+## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO bayrağı
 
 Bu etkinleştirildiğinde (varsayılan olarak, tarafından bir `AppContext` geçiş, veya Windows kayıt defteri), .NET Framework kullanan `SCH_USE_STRONG_CRYPTO` TLS güvenlik protokolü, uygulamanız istediğinde, bayrak. `SCH_USE_STRONG_CRYPTO` Bayrağı ile varsayılan olarak, etkinleştirilebilir `AppContext` geçiş, veya kayıt defteri ile. İşletim sistemi bayrak geçirir `Schannel`bilinen zayıf şifreleme algoritmalarına devre dışı bırakmak için yönlendirmek için paketleri ve aksi takdirde daha iyi birlikte çalışabilirlik için etkinleştirilebilir TLS/SSL protokolü sürümlerini şifre. Daha fazla bilgi için bkz.:
 

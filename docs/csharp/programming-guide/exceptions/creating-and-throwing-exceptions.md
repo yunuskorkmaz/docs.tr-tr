@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 1bfefccb32152cdb1aa1fdb156fbbd875c352218
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970928"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202697"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar programı çalıştırılırken bir hata oluştu belirtmek için kullanılır. Bir hata açıklayan özel durum nesneleri oluşturulur ve ardından *durum* ile [throw](../../../csharp/language-reference/keywords/throw.md) anahtar sözcüğü. Çalışma zamanı sonra en uyumlu özel durum işleyicisi arar.  
@@ -58,7 +58,7 @@ ms.locfileid: "56970928"
 ## <a name="defining-exception-classes"></a>Özel durum sınıfları tanımlama  
  Programlar throw önceden tanımlanmış özel durum sınıfı <xref:System> (daha önce belirtilenler dışında), ad alanı veya kendi özel durum sınıfları türeterek oluşturma <xref:System.Exception>. En az dört oluşturucuları türetilmiş sınıfları tanımlamanız gerekir: bir varsayılan oluşturucu, ileti özelliği ayarlayan, diğeri her ikisi de ayarlayan <xref:System.Exception.Message%2A> ve <xref:System.Exception.InnerException%2A> özellikleri. Dördüncü Oluşturucu, özel durum seri hale getirmek için kullanılır. Yeni özel durum sınıfları seri hale getirilebilir olması. Örneğin:  
   
- [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
  Sağladıkları veriler özel durumu çözümlemek için yararlı olduğunda özel durum sınıfı için yeni özellikler yalnızca eklenmesi gerekir. Yeni özellikler türetilen özel durum sınıfına eklenirse `ToString()` ek bilgi döndürmek için geçersiz kılınmalıdır.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 6150074df9b921b4eb62169951122f5718e4f13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969966"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203395"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -28,7 +28,7 @@ ms.locfileid: "56969966"
   
  İlk olarak, adlı temel bir sınıf oluşturun `Shape`ve gibi türetilmiş sınıflar `Rectangle`, `Circle`, ve `Triangle`. Vermek `Shape` sınıfı olarak adlandırılan sanal bir yöntemi `Draw`, geçersiz kılma belirli çizmek için her bir türetilmiş sınıf içinde şekil, bir sınıfı temsil eder. Oluşturma bir `List<Shape>` nesnesi ve bir daire, üçgen ve dikdörtgen ekleyin. Çizim yüzeyini güncelleştirmek için bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) listesi ve arama yinelemek için döngü `Draw` yöntemi her `Shape` listesinde nesne. Listedeki her nesne bir türü sahip olsa da `Shape`, çağrılacak çalışma zamanı tür (her türetilmiş bir sınıf yöntemi geçersiz kılınan sürümü).  
   
- [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
  Kullanıcı tanımlı türler dahil olmak üzere tüm türleri devralınacak C# içinde her tür çok biçimli olduğundan <xref:System.Object>.  
   

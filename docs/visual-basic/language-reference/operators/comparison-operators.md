@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628064"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200994"
 ---
 # <a name="comparison-operators-visual-basic"></a>Karşılaştırma İşleçleri (Visual Basic)
 Visual Basic içinde tanımlanan Karşılaştırma işleçleri şunlardır:  
@@ -146,7 +146,7 @@ result = string Like pattern
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, çeşitli kullanımları ifadeleri karşılaştırmak için kullanılan ilişkisel karşılaştırma işleçlerini gösterir. İlişkisel Karşılaştırma işleçleri dönüş bir `Boolean` belirtilen ifadenin değerlendirdiği olup olmadığını gösteren bir sonuç `True`. Uyguladığınızda `>` ve `<` işleçleri için dizeleri Karşılaştırma yapıldığında dizelerin normal alfabetik sıralama düzenini kullanarak. Bu sırada, yerel ayara bağlı olabilir. Sıralama büyük küçük harfe duyarlı olup olmamasına bağlıdır [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) ayarı.  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  Önceki örnekte, ilk karşılaştırma döndürür `False` ve kalan karşılaştırmalar dönüş `True`.  
   

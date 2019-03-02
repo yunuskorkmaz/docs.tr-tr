@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: adbaf22e5a9e5ac826a341cc8c602085db04dd46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965494"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203723"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 C# ' ta program çalışma zamanında hatalarını program aracılığıyla özel durumlar adlı bir mekanizmayı kullanarak yayılır. Özel durumlar hatayla karşılaştığında kod tarafından oluşturulur ve hatayı düzeltmek kodu tarafından yakalanan. Özel durumlar, .NET Framework ortak dil çalışma zamanı (CLR) veya bir program kodunda atılabilir. Bir özel durum sonra kadar çağrı yığınına yayan bir `catch` özel durum bildirimi bulundu. Yakalanmayan Özel durumların bir iletişim kutusu görüntüler sistem tarafından sağlanan bir genel özel durum işleyicisi tarafından işlenir.  
@@ -28,7 +28,7 @@ C# ' ta program çalışma zamanında hatalarını program aracılığıyla öze
   
  A `try` deyimi birden fazla içerebilir `catch` blok. İlk `catch` özel durumu işleyebilecek deyimi yürütülür; tüm aşağıdaki `catch` deyimleri uyumlu olsalar bile yok sayılır. Bu nedenle, catch blokları her zaman sıralı en belirli (veya en çok türetilen) az. Örneğin:  
   
- [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#3)]  
   
  Önce `catch` bloğu yürütülür için çalışma zamanı denetimleri `finally` engeller. `Finally` blokları etkinleştirme durdurulan kalabilir herhangi bir belirsiz durumu temizlemek Programcı `try` bloğu veya Çöp için beklemenize gerek kalmadan herhangi bir dış kaynağa (örneğin, grafik tanıtıcıları, veritabanı bağlantıları veya dosya akışları) serbest bırakmak için nesneleri sonlandırmak için toplayıcı çalışma zamanında. Örneğin:  
   

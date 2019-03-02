@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977506"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201683"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
 Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`). Bu simge, metni yok saymak için Visual Basic derleyiciye veya *yorum*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
@@ -60,7 +60,7 @@ Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`
 >  Metinle koyarak kodunuza açıklama ekleyebilirsiniz `REM` anahtar sözcüğü. Ancak, `'` sembol ve **yorum**/**açıklamayı Kaldır** düğmeleri daha kolay ve daha az alan ve bellek gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XML açıklamalarıyla kodunuzu belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Temel Küçümsemeyin - XML açıklamalarıyla kodunuzu belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

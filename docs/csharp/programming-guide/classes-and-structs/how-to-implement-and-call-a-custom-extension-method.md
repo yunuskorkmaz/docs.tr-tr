@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 1bac65ec5aef2846b2b310a65ffbefd5433e93bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652226"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203434"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Nasıl yapılır: Uygulama ve özel uzantı metodu çağırma (C# Programlama Kılavuzu)
 Bu konu, kendi herhangi bir .NET türü için genişletme yöntemlerini gösterilmektedir. İstemci kodu, uzantı yöntemlerinizi kullanabilir, bunları içeren DLL bir başvuru eklemeyi ve ekleyerek bir [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergesi uzantı yöntemlerin tanımlandığı ad alanı belirtir.  
@@ -34,7 +34,7 @@ Bu konu, kendi herhangi bir .NET türü için genişletme yöntemlerini gösteri
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte adlı bir uzantı yöntemini uygulayan `WordCount` içinde `CustomExtensions.StringExtension` sınıfı. Yöntemin işlediği <xref:System.String> ilk yöntem parametresi olarak belirtilen sınıf. `CustomExtensions` Ad alanı uygulama ad alanına aktarılır ve yöntem içinde çağrılır `Main` yöntemi.  
   
- [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu kodu çalıştırmak için kopyalayın ve Visual Studio'da oluşturulan bir Visual C# konsol uygulaması projesi yapıştırın. Varsayılan olarak, bu proje 3.5 sürümünü hedefleyen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], ve bir System.Core.dll başvurusu vardır ve bir `using` System.Linq yönergesi. Projeden bir veya daha fazla bu gereksinimleri eksikse, bunları el ile ekleyebilirsiniz.  

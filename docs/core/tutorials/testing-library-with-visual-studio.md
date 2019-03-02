@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362697"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201332"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığını test etme
 
@@ -163,7 +163,7 @@ Test çalıştırmanızın herhangi bir hata vardı, ancak test yöntemi başar�
 
    ![Test Gezgini penceresi olan False onaylama işlemi hatası gösteriliyor](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Eklemiş olduğunuz koddan kaldırın (`"Error", `) ve testi yeniden çalıştırın. Testler başarılı.
+1. 1. adımda yaptığınız değişikliği geri almak ve "Error" dizesini kaldırın. Testi yeniden çalıştırın ve testlerin başarılı.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Kitaplık sürümünü test etme
 

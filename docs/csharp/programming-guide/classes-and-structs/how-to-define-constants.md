@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: cf57589df2eb375f34d175939a7f685a4abf59a2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a85e7728512922be38658c07314229c26b2461fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975426"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201475"
 ---
 # <a name="how-to-define-constants-in-c"></a>Nasıl yapılır: C sabitleri tanımlama\#
 Alanlar, değerleri kümesine derleme zamanı ve hiçbir zaman değiştirilebilir sabittir. Özel değerler için sayısal değişmez değerleri ("Sihirli sayı") yerine anlamlı adlar sağlamak için sabitleri kullanın.  
@@ -23,7 +23,7 @@ Alanlar, değerleri kümesine derleme zamanı ve hiçbir zaman değiştirilebili
  Tamsayı olmayan sabitleri tanımlamak için adlı tek bir statik sınıf içinde gruplamak için bir yaklaşım ise `Constants`. Bu sınıfı adıyla sabitlere yapılan tüm başvurular başında, aşağıdaki örnekte gösterildiği gibi gerektirir.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
+ [!code-csharp[csProgGuideObjects#89](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#89)]  
   
  Sınıf adı niteleyici kullanımını yardımcı olur ve sabit diğer sabittir ve değiştirilemez anladığınızdan emin olun.  
   

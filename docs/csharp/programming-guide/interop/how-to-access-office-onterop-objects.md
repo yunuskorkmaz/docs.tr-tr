@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: d646a73cc8616821372c5a0078b595291829ac27
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970200"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203541"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  
@@ -78,7 +78,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
      Yöntemi <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> belirli bir şablon belirtmek için isteğe bağlı parametresi vardır. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak sağlar. Aşağıdaki kodda, hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
 2.  Sonuna aşağıdaki kodu ekleyin `DisplayInExcel`. Kodu çalışma sayfasının ilk satırın ilk iki sütuna değerler ekler.  
   
@@ -118,11 +118,11 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
      `PasteSpecial` Yöntemi Pano içeriğini ekler. Yöntemi, tümü isteğe bağlı olan yedi başvuru parametresi vardır. Aşağıdaki kod iki tanesi bağımsız değişkenleri belirtir: `Link`, Pano içeriğini kaynağını bir bağlantı oluşturmak için ve `DisplayAsIcon`, bağlantı, simge olarak görüntüler. İçinde [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], adlandırılmış bağımsız değişkenler için bu iki kullanın ve diğerlerini atlayın. Bu başvuru parametreleri olsa da, kullanın gerekmez `ref` anahtar sözcüğü veya değişkenlerinin bağımsız değişken olarak gönderin. Değerleri doğrudan gönderebilirsiniz. İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ve önceki sürümlerinde, bir değişken bağımsız değişken her başvuru parametresi için gönderme gerekir.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
      İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] veya önceki sürümleri, aşağıdaki şekilde dilinin daha karmaşık kod gereklidir.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
 2.  Sonunda aşağıdaki ifadeyi ekleyin `Main`.  
   
@@ -171,7 +171,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, tam bir örnek gösterir.  
   
- [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

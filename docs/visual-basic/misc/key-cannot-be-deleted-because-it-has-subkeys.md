@@ -2,12 +2,12 @@
 title: Alt anahtarlara sahip olduğundan anahtar silinemiyor
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-ms.openlocfilehash: eebed82e1080a6c0d6e41cf1f5e24da707b58743
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f01ad653978ca6e7493d2da878cc289556c522d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683196"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200071"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Alt anahtarlara sahip olduğundan anahtar silinemiyor
 Alt anahtarları olduğundan anahtar silinemiyor.  
@@ -19,5 +19,4 @@ Alt anahtarları olduğundan anahtar silinemiyor.
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - [Nasıl yapılır: Bir kayıt defteri anahtarını silme](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
-- [My (Visual Basic) kullanarak kayıt defterine yazma ve okuma](https://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)
-- [Sorun giderme: (Visual Basic) kayıt defteri düzenleme](https://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)
+- [Okuma ve yazma (Visual Basic) kayıt defteri](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

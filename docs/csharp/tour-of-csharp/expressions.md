@@ -3,12 +3,12 @@ title: C#İfadeleri - Turu C# dil
 description: ifadeleri ve işlenenleri işleçleri olan yapı taşları C# dil
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154940"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212098"
 ---
 # <a name="expressions"></a>İfadeler
 
@@ -91,6 +91,6 @@ Aşağıdaki özetler C#'s işleçlerini, en düşük yüksekten öncelik sıras
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`: Anonim işlevi (lambda ifadesi)
 
->[!div class="step-by-step"]
->[Önceki](types-and-variables.md)
->[İleri](statements.md)
+> [!div class="step-by-step"]
+> [Önceki](types-and-variables.md)
+> [İleri](statements.md)

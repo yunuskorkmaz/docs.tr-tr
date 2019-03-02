@@ -1,16 +1,16 @@
 ---
-title: 'Öğretici: ilk Çözümleyicisi ve kod düzeltmenizi yazın'
+title: 'Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın'
 description: Bu öğretici bir çözümleyici oluşturmak için adım adım yönergeler sağlar ve kod düzeltmesi .NET derleyici SDK'sı (Roslyn API'leri) kullanarak.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398004"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201904"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk Çözümleyicisi ve kod düzeltmenizi yazın
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın
 
 .NET derleyici Platformu SDK'sı, özel uyarıları, hedef C# veya Visual Basic kodunu oluşturmak için ihtiyacınız olan araçları sağlar. **Çözümleyicisi** , kural ihlalleri algılar kodunu içerir. **Kod düzeltme** ihlali düzelten kodu içerir. Uygulamanız kuralları kodlama stili için adlandırma kuralları ve daha fazla bilgi için kod yapısını her şey olabilir. .NET derleyici platformu, geliştiricilerin kod yazma ve tüm Visual Studio kullanıcı Arabirimi özellikleri kodu düzeltmek için analiz çalıştırmak için framework sunar: dalgalı çizgiler Visual Studio hata oluşturma "ampule" listesinde doldurma Düzenleyicisi'nde gösteriliyor öneriler ve önerilen düzeltmeleri zengin önizlemesi gösteriliyor.
 
@@ -282,7 +282,7 @@ Ardından, değiştirin `TestMethod2` bir tanılama oluşturulur sağlar. Bu tes
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,

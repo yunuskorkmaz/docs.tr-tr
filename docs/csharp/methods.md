@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617206"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202684"
 ---
-# <a name="methods"></a>Yöntemler #
+# <a name="methods"></a>Yöntemler
 
 Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli metot bağımsız değişkenleri belirtme yürütülecek deyimler neden olur. C# içinde yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. `Main` Yöntemi her C# uygulaması için giriş noktasıdır ve programı başlatıldığında ortak dil çalışma zamanı tarafından (CLR) çağrılır.
 
@@ -36,7 +36,8 @@ Bu konu aşağıdaki bölümleri içermektedir:
 - [Yineleyiciler](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>Yöntem imzaları ##
+
+## <a name="method-signatures"></a>Yöntem imzaları
 
 Yöntem içinde bildirilen bir `class` veya `struct` belirterek:
 
@@ -58,7 +59,8 @@ Aşağıdaki örnek adlı bir sınıf tanımlar `Motorcycle` , beş yöntemleri 
 Unutmayın `Motorcycle` sınıfı içeren bir aşırı yüklenmiş yöntem `Drive`. İki yöntem aynı ada sahip, ancak kendi parametre türlerine göre ayırt edilebilir.
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>Yöntem çağırma ##
+
+## <a name="method-invocation"></a>Yöntem çağırma
 
 Yöntem ya da olabilir *örneği* veya *statik*. Bir örnek yöntemi çağrılırken bir nesne örneği oluşturun ve bu nesnede yöntemi çağrısı gerektirir; bir örnek yöntemi, bu örneği ve verileri üzerinde çalışır. Statik bir yöntemi, yöntemin ait olduğu tür adını başvurarak Çağır; statik yöntemler çalışan örnek veriler üzerinde çalıştırmayın. Bir nesne örneği aracılığıyla statik bir yöntemi çağırmak çalışırken, bir derleyici hatası oluşturur.
 
@@ -80,8 +82,9 @@ Hem konumsal bağımsız değişkenleri kullanarak bir yöntemi çağırabilir v
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>Devralınan ve geçersiz kılınan yöntemleri ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>Devralınan ve geçersiz kılınan yöntemleri
 
 Açık bir tür içinde tanımlanan üyeler ek olarak, bir tür temel sınıflarının içinde tanımlanan üyelerini devralır. Yönetilen tür sistemindeki tüm türleri doğrudan veya dolaylı olarak devralınacak beri <xref:System.Object> sınıfı, tüm türleri devralır, bu grubun üyeleri gibi <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, ve <xref:System.Object.ToString>. Aşağıdaki örnekte tanımlayan bir `Person` sınıfı, iki `Person` nesneleri ve çağıran `Person.Equals` iki nesnenin eşit olup olmadığını belirlemek için yöntemi. `Equals` Yöntemi, ancak tanımlı değil `Person` sınıfı; öğesinden devralındı <xref:System.Object>.
 
@@ -92,12 +95,14 @@ Türleri kullanarak devralınan üyeleri kılabilir `override` anahtar sözcüğ
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>Parametreleri geçirme ##
+
+## <a name="passing-parameters"></a>Parametreleri geçirme
 
 C# türlerinde değerleri *değer türleri* veya *başvuru türleri*. Yerleşik türlerin listesi için bkz. [türler ve değişkenler](./tour-of-csharp/types-and-variables.md). Varsayılan olarak, hem değer türleri ve başvuru türleri için bir yöntem değere göre geçirilir.
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>Parametrelerin değere göre geçirme ###
+
+### <a name="passing-parameters-by-value"></a>Parametrelerin değere göre geçirme
 
 Bir değer türü değere göre bir yönteme geçildiğinde, nesnenin kendisi yerine nesnesinin bir kopyasını yöntemine geçirilir. Bu nedenle, Denetim çağırana döndürüldüğünde çağrılan yöntem nesnesinde yapılan özgün nesne üzerinde etkisi yoktur.
 
@@ -112,7 +117,8 @@ Aşağıdaki örnekte adlı (bir başvuru türü olan) bir sınıf tanımlar `Sa
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>Parametreleri başvuruya göre geçirme ###
+
+### <a name="passing-parameters-by-reference"></a>Parametreleri başvuruya göre geçirme
 
 Yöntemde bir bağımsız değişkeninin değerini değiştirme ve denetimi çağıran Metoda döndürür, bu değişikliği yansıtacak şekilde istediğiniz istediğinizde başvuruya göre bir parametre geçirin. Başvuruya göre bir parametre geçirmek için kullandığınız [ `ref` ](language-reference/keywords/ref.md) veya [ `out` ](language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Başvuruya göre kopyalama kaçının ancak yine de kullanarak değişiklikleri önlemek için de bir değer geçirebilirsiniz [ `in` ](language-reference/keywords/in-parameter-modifier.md) anahtar sözcüğü.
 
@@ -127,7 +133,8 @@ Ref parametreleri kullanan bir ortak desen, değişkenlerin değerleri değişti
 Bir başvuru türü parametre geçirerek, ayrı ayrı öğeler veya alanlar yerine başvuru değeri değiştirmenize izin verir.
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>Parametre dizileri ###
+
+### <a name="parameter-arrays"></a>Parametre dizileri
 
 Bazı durumlarda, yönteminize tam sayı bağımsız değişkenleri belirtme gereksinimi sınırlayıcıdır. Kullanarak `params` anahtar sözcüğü, bir parametre dizisi bir parametredir, değişken sayıda bağımsız değişkenle çağrılması yönteminizi izin belirtmek için. Parametresi ile etiketlenmiş `params` anahtar sözcüğü, bir dizi türü olmalıdır ve yöntemin parametre listesindeki son parametre olmalıdır.
 
@@ -142,7 +149,8 @@ Aşağıdaki örnek adlı bir yöntem tanımlar `DoStringOperation` kendi ilk pa
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>İsteğe bağlı parametreler ve bağımsız değişkenler ##
+
+## <a name="optional-parameters-and-arguments"></a>İsteğe bağlı parametreler ve bağımsız değişkenler
 
 Parametreleri gerekli veya isteğe bağlı bir yöntem tanımını belirtebilirsiniz. Varsayılan olarak, gerekli parametrelerdir. İsteğe bağlı parametreler parametrenin varsayılan değeri yöntem tanımında dahil ederek belirtilir. Yöntem çağrıldığında, isteğe bağlı bir parametre için hiçbir bağımsız değişken sağlanmazsa, bunun yerine varsayılan değeri kullanılır.
 
@@ -172,8 +180,9 @@ Aşağıdaki örnek çağrıları `ExampleMethod` üç kez yöntemi.  İlk iki y
 - Birden fazla aday bulunursa, tercih edilen dönüştürmeler için aşırı yükleme çözünürlüğü kuralları açıkça belirtilen bağımsız değişkenler için uygulanır. İsteğe bağlı parametreler için atlanmış bağımsız değişkenler yoksayılır.
 - İki adayları eşit derecede iyi olmasını materyali çağrıda atlanıp bağımsız değişkenler için isteğe bağlı parametrelere sahip olmayan bir aday için tercih gider. Bu aşırı yükleme çözünürlüğü içinde genel bir tercih daha az parametrelere sahip adayları için bir sonuç olur.
 
- <a name="return"></a>
- ## <a name="return-values"></a>Döndürülen değerler ##
+<a name="return"></a>
+
+## <a name="return-values"></a>Döndürülen değerler
 
 Yöntemler, çağırana bir değer döndürebilir. Dönüş türü (önce yöntem adını listelenen) değilse `void`, yöntem kullanarak değer döndürebilir `return` anahtar sözcüğü. With deyimi `return` anahtar sözcüğü bir değişken, sabit ya da dönüş türüyle eşleşen bir ifade tarafından izlenen, metodu çağırana değeri döndürecektir. Yöntemleriyle void olmayan dönüş türü kullanmak için gerekli `return` bir değer döndürmek için anahtar sözcüğü. `return` Anahtar sözcüğü de yöntemin yürütülmesini durdurur.
 
@@ -229,8 +238,9 @@ Bir yöntem bir dizi bağımsız değişken olarak geçirilir ve tek tek öğele
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>Genişletme yöntemleri ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>Genişletme yöntemleri
 
 Normalde, var olan bir türü için bir yöntem eklemek için iki yolu vardır:
 
@@ -242,7 +252,8 @@ Genişletme yöntemleri "bir yöntem var olan bir türe türü değiştirme ya d
 Daha fazla bilgi için [genişletme yöntemleri](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
-## <a name="async-methods"></a>Zaman uyumsuz yöntemler ##
+
+## <a name="async-methods"></a>Zaman uyumsuz yöntemler
 
 Zaman uyumsuz özelliğini kullanarak, açık geri çağırmaları kullanarak veya kodunuzun birden çok yöntemlerde veya lambda ifadelerinde el ile bölme olmadan zaman uyumsuz yöntemler çağırabilirsiniz.
 
@@ -262,7 +273,8 @@ Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [içinde](language-reference/
  Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve Await ile zaman uyumsuz programlama](async.md), [zaman uyumsuz programlarda akış kontrolü](programming-guide/concepts/async/control-flow-in-async-programs.md), ve [Async Return Types](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>İfade gövdeli üyeler ##
+
+## <a name="expression-bodied-members"></a>İfade gövdeli üyeler
 
 Yalnızca hemen bir ifade sonucunu döndürür veya Yöntemin gövdesi tek bir deyimde olan yöntem tanımlarını yaygındır.  Kullanarak bu yöntemleri tanımlamak için bir söz dizimi kısayolu yok `=>`:
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 Yöntem döndürüyorsa `void` veya zaman uyumsuz bir yöntem, yöntem gövdesini bir deyim ifadesi (aynı lambdalar gibi) olması gerekir.  Özellikler ve dizin oluşturucular için salt okunur olmalıdır ve kullanmanızı `get` erişimci anahtar sözcüğü.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Yineleyiciler ##
+
+## <a name="iterators"></a>Yineleyiciler
 
 Bir yineleyici listesini veya bir dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici [yield return](language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir `yield return` çağıran dizideki sonraki öğeye isteyebilmesi deyimine ulaşıldığında, geçerli konumu hatırlanır.
 
@@ -286,7 +299,7 @@ Dönüş türü bir yineleyicinin olabilir <xref:System.Collections.IEnumerable>
 
 Daha fazla bilgi için [yineleyiciler](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Ayrıca bkz. ##
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Erişim Değiştiricileri](language-reference/keywords/access-modifiers.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

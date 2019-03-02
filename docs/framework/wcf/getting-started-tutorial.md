@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332253"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200890"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konular, hızlı Etkilenme programlama deneyimi Windows Communication Foundation (WCF) için size yöneliktir. Bu konu başlığının altındaki listenin sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, WCF hizmeti ve istemci uygulamaları oluşturmak için gerekli adımlar tanıtıcı bir anlayış verir. Her biri bir veya daha fazla hizmet işlemlerini kullanıma sunan bir veya daha fazla uç noktaları, bir hizmet sunar. *Uç nokta* Hizmetin nerede hizmet bulunabilir, adres nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.
@@ -33,7 +33,7 @@ Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz:
 
  [Nasıl yapılır: Bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlayan eklendiğinde, bir hizmet sınıfı ile uygulanmalıdır.
+ Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlandıktan sonra bir hizmet sınıfı ile uygulanmalıdır.
 
  [Nasıl yapılır: Temel hizmet barındırma ve çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

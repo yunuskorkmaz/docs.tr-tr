@@ -4,12 +4,12 @@ description: Azure Event Grid, güvenilir olay teslimi ve çok büyük ölçekte
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145909"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212189"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -124,13 +124,13 @@ Bu bölümde, Azure işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Uygulamanızı sunucusuz Azure işlevleri ile buluta taşıyın](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure Event Grid olay şeması](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Azure işlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions)
 * [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
 * [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-* [Azure hizmet veri yolu](https://docs.microsoft.com/azure/service-bus-messaging)
+* [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
 * [Azure Tablo Depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 * [1.x ve 2.x'i karşılaştırma işlevleri](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 * [Azure şirket içi veri ağ geçidi ile şirket içi veri kaynaklarına bağlanma](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)

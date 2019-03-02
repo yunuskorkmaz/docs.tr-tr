@@ -4,16 +4,16 @@ description: Dotnet testi komutu .NET core'da seçmeli birim testlerini çalış
 author: smadala
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239949"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201423"
 ---
 # <a name="running-selective-unit-tests"></a>Seçmeli birim testleri çalıştırma
 
-İle `dotnet test` komutu'de .NET Core, seçmeli testleri çalıştırmak için bir filtre ifadesi kullanabilirsiniz. Bu makalede, test çalışması filtrelemek gösterilmektedir. Aşağıdaki örneklerde `dotnet test`. Kullanıyorsanız `vstest.console.exe`, değiştirin `--filter ` ile `--testcasefilter:`.
+İle `dotnet test` komutu'de .NET Core, seçmeli testleri çalıştırmak için bir filtre ifadesi kullanabilirsiniz. Bu makalede, test çalışması filtrelemek gösterilmektedir. Aşağıdaki örneklerde `dotnet test`. Kullanıyorsanız `vstest.console.exe`, değiştirin `--filter` ile `--testcasefilter:`.
 
 ## <a name="mstest"></a>MSTest
 

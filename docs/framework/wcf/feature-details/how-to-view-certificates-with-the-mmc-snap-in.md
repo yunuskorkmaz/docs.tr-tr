@@ -1,61 +1,86 @@
 ---
 title: 'Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521588"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200292"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
-Ortak bir kimlik bilgisi türünü X.509 sertifikasıdır. Güvenli Hizmetleri veya istemciler oluştururken, bir sertifika yöntemleri kullanarak istemci veya hizmet kimlik bilgisi olarak kullanılabilir belirtebilirsiniz <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Yöntemi, sertifikanın depolandığı deponun ve sertifikasını ararken kullanmak için bir değer gibi çeşitli parametreler gerektirir. Aşağıdaki yordam bir bilgisayarda uygun bir sertifika bulmak için depoları incelemek nasıl gösterir. Sertifika parmak izi bulma örneği için bkz: [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+Güvenli istemci veya hizmet oluştururken kullanabileceğiniz bir [sertifika](working-with-certificates.md) kimlik bilgisi olarak. Örneğin, ortak bir kimlik bilgisi türü ile oluşturduğunuz X.509 sertifikası olan <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> yöntemi. 
+
+Microsoft Yönetim Konsolu (MMC) ile Windows sistemlerinde inceleyebilirsiniz sertifika depolarını üç farklı türü vardır:
+
+- Yerel bilgisayar: Yerel cihaz ve cihazdaki tüm kullanıcılar için küresel deposudur.
+
+- Geçerli kullanıcı: Cihazdaki geçerli kullanıcı hesabı için yerel deposudur.
+
+- Hizmet hesabı: Belirli bir hizmete cihazdaki yerel deposudur.
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>Sertifikalar MMC ek bileşeninde görüntülemek için  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC ek bileşeninde sertifikaları görüntüle 
+
+Aşağıdaki yordam, uygun bir sertifika bulmak için yerel cihazınıza depoları incelemek nasıl göstermektedir: 
   
-1.  Bir komut istemi penceresi açın.  
+1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *mmc*. 
+
+    MMC açılır. 
   
-2.  Tür `mmc` ve ENTER tuşuna basın. Yerel makine deposuna sertifikaları görüntülemek için yönetici rolünde olması gerektiğini unutmayın.  
+2. Gelen **dosya** menüsünde **Ekle/Kaldır ek bileşen içinde**. 
+    
+    **Ek bileşenler Ekle / Kaldır** penceresi görüntülenir.
   
-3.  Üzerinde **dosya** menüsünde tıklatın **Ekle/Kaldır ek bileşen içinde**.  
+3. Gelen **kullanılabilir ek bileşenler** listesinde **sertifikaları**, ardından **Ekle**.  
+
+    ![Sertifika ek bileşenini Ekle](./media/mmc-add-certificate-snap-in.png)
   
-4.  **Ekle**'yi tıklatın.  
+4. İçinde **Sertifikalar ek bileşenini** penceresinde **bilgisayar hesabı**ve ardından **sonraki**. 
   
-5.  İçinde **tek başına ek eklentisi** iletişim kutusunda **sertifikaları**.  
+    İsteğe bağlı olarak seçebileceğiniz **kullanıcı hesabım** geçerli kullanıcı için ya da **hizmet hesabı** belirli bir hizmet için. 
+
+    > [!NOTE]
+    > Bir yöneticinin Cihazınızda siz değilseniz, yalnızca kullanıcı hesabınız için sertifikaları yönetebilir.
   
-6.  **Ekle**'yi tıklatın.  
+5. İçinde **Bilgisayar Seç** penceresinde bırakın **yerel bilgisayar** seçili ve ardından **son**.  
   
-7.  İçinde **Sertifikalar ek bileşenini** iletişim kutusunda **bilgisayar hesabı** tıklatıp **sonraki**. İsteğe bağlı olarak seçebileceğiniz **My kullanıcı hesabı** veya **hizmet hesabı**. Bilgisayarın Yönetici değilseniz, yalnızca kullanıcı hesabınız için sertifikaları yönetebilir.  
+6. İçinde **Ekle veya Kaldır ek bileşenini** penceresinde **Tamam**.  
   
-8.  İçinde **Bilgisayar Seç** iletişim kutusu, tıklayın **son**.  
+    ![Sertifika ek bileşenini Ekle](./media/mmc-certificate-snap-in-selected.png)
+
+7. İsteğe bağlı: Gelen **dosya** menüsünde **Kaydet** veya **Kaydet** daha sonra kullanmak için MMC konsolu dosyasını kaydetmek için.  
+
+8. MMC ek bileşeninde, sertifikaları görüntülemek için seçin **konsol kökü** sol bölmede genişletin **sertifikalar (yerel bilgisayar)**.
+
+    Her sertifika türünün dizinlerinin listesi görüntülenir. Her sertifika dizinden görüntülemek, dışarı aktarma, alma ve sertifikalarını silin.
   
-9. İçinde **tek başına ek eklentisi** iletişim kutusu, tıklayın **Kapat**.  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>Sertifika Yöneticisi Aracı ile sertifikaları görüntüleme
+
+Da görüntüleyebilir, dışarı aktarma almak ve Sertifika Yöneticisi aracı kullanarak sertifikaları silin.
+
+### <a name="to-view-certificates-for-the-local-device"></a>Yerel cihaz sertifikalarını görüntülemek için
+
+1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *certlm.msc*. 
+
+    Sertifika Yöneticisi Aracı için yerel cihaz görünür. 
   
-10. Üzerinde **Ekle/Kaldır ek bileşenini** iletişim kutusu, tıklayın **Tamam**.  
+2. Sertifikalarınızı, altında görüntülemek için **sertifikalar - yerel bilgisayar** sol bölmede, görüntülemek istediğiniz sertifika türü için dizine genişletin.
+
+### <a name="to-view-certificates-for-the-current-user"></a>Geçerli kullanıcının sertifikalarını görüntülemek için
+
+1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *certmgr.msc*. 
+
+    Geçerli kullanıcı için Sertifika Yöneticisi Aracı görünür. 
   
-11. İçinde **konsol kökü** penceresinde tıklayın **sertifikalar (yerel bilgisayar)** sertifikayı görüntülemek için bilgisayar için depolar.  
-  
-12. İsteğe bağlı. Hesabınız için sertifikaları görüntülemek için 3-6 adımlarını yineleyin. Yerne 7. adımda **bilgisayar hesabı**, tıklayın **My kullanıcı hesabı** 8-10 adımları yineleyin.  
-  
-13. İsteğe bağlı. Üzerinde **dosya** menüsünde tıklatın **Kaydet** veya **Kaydet**. Daha sonra yeniden kullanmak için konsol dosyayı kaydedin.  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>Internet Explorer ile sertifikaları görüntüleme  
- Da görüntüleyebilir, dışarı aktarma almak ve Internet Explorer'ı kullanarak sertifikaları silin.  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>Internet Explorer ile sertifikaları görüntülemek için  
-  
-1.  Internet Explorer'ı tıklatın **Araçları**, ardından **Internet Seçenekleri** görüntülenecek **Internet Seçenekleri** iletişim kutusu.  
-  
-2.  Tıklayın **içerik** sekmesi.  
-  
-3.  Altında **sertifikaları**, tıklayın **sertifikaları**.  
-  
-4.  Herhangi bir sertifika ayrıntılarını görüntülemek için sertifikayı seçin ve tıklayın **görünümü**.  
+2. Sertifikalarınızı, altında görüntülemek için **Sertifikalar - Geçerli kullanıcı** sol bölmede, görüntülemek istediğiniz sertifika türü için dizine genişletin.
+
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Sertifikalarla çalışma](working-with-certificates.md)
+- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Nasıl yapılır: Bir sertifikanın parmak izini alma](how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -15,7 +15,7 @@ C# dil özel durum özelliklerin help işleme ile bir program çalışırken olu
   
  Bu örnekte, bir yöntem sıfıra bölme için test ve hata yakalar. Özel durum işleme olmadan, bu program ile sonlanırdı bir **DivideByZeroException işlenmemiş** hata.  
   
- [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
 ## <a name="exceptions-overview"></a>Özel durumlar genel bakış  
  Özel durumlar aşağıdaki özelliklere sahiptir:  

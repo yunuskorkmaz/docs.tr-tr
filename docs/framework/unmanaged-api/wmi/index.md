@@ -4,12 +4,6 @@ description: .NET Framework özetler yönetilmeyen API için WMI ve performans s
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069517"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Yönetim Araçları (WMI) ve performans sayaçları (yönetilmeyen API Başvurusu)
 
@@ -50,7 +44,7 @@ API aşağıdaki işlevleri içerir:
 | [GetPropertyHandle işlevi](getpropertyhandle.md) | Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür. |
 | [GetPropertyOrigin işlevi](getpropertyorigin.md) | Bir özellik içinde bildirildiği sınıf belirler. |
 | [GetPropertyQualifierSet işlevi](getpropertyqualifierset.md) | Belirli bir özellik için ayarlanmış niteleyicisi alır.  |
-| [GetQualifierSet işlevi](getqualifierset.md) | Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır. |
+| [GetQualifierSet function](getqualifierset.md) | Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır. |
 | [InheritsFrom işlevi](inheritsfrom.md) | Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler. |
 | [Initialize işlevi](initialize.md) | WMI başlatma gerçekleştirir. |
 | [Next işlevi](next.md) | Bir listedeki sonraki özelliği alır. | 
@@ -63,7 +57,7 @@ API aşağıdaki işlevleri içerir:
 | [QualifierSet_Delete işlevi](qualifierset-delete.md) | Belirtilen bir niteleyici adıyla siler.  |
 | [QualifierSet_EndEnumeration işlevi](qualifierset-endenumeration.md) | Bir çağrı ile başlamış numaralandırma sonlandırır `QualifierSet_BeginEnumeration` işlevi. |
 | [QualifierSet_Get işlevi](qualifierset-get.md) | Belirtilen adlandırılmış niteleyicisi alır.  |
-| [QualifierSet_GetNames işlevi](qualifierset-getnames.md) | Tüm niteleyicileri veya geçerli nesne ya da özellik kullanılabilir belirtilen niteleyicileri adlarını alır. |
+| [QualifierSet_GetNames function](qualifierset-getnames.md) | Tüm niteleyicileri veya geçerli nesne ya da özellik kullanılabilir belirtilen niteleyicileri adlarını alır. |
 | [QualifierSet_Next işlevi](qualifierset-next.md) | Bir çağrı ile başlatılan bir listedeki sonraki niteleyicisi alır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi. |
 | [QualifierSet_Put işlevi](qualifierset-put.md) | Değer ve adlandırılmış niteleyicisi yazar. |
 | [ResetSecurity işlevi](resetsecurity.md) | Sağlanan kimliğe bürünme belirteci için geçerli iş parçacığı atar. |
@@ -73,5 +67,6 @@ API aşağıdaki işlevleri içerir:
 | [VerifyClient işlevi](verifyclientkey.md) | İstemci anahtarı doğru güvenlik sahip olmasını sağlar. |
 | [WritePropertyValue işlevi](writepropertyvalue.md) | Belirtilen sayıda baytı bir özellik tanımlayıcısı tarafından tanımlanan bir özellik yazar. |
 
- ## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
+
 [Yönetilmeyen API Başvurusu](../index.md) 

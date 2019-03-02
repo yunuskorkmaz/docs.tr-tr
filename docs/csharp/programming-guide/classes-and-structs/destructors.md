@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652173"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202892"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
 Sonlandırıcılar (de denir **yok ediciler**) çöp toplayıcısı tarafından toplanmış bir sınıf örneği, tüm gerekli son temizleme gerçekleştirmek için kullanılır.  
@@ -31,7 +31,7 @@ Sonlandırıcılar (de denir **yok ediciler**) çöp toplayıcısı tarafından 
   
  Örneğin, bir sonlandırıcı için bildirimi aşağıdaki gibidir `Car` sınıfı.
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 Bir Sonlandırıcı, aşağıdaki örnekte gösterildiği gibi bir ifade gövdesi tanımı da uygulanabilir.
 
@@ -81,7 +81,7 @@ protected override void Finalize()
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir devralma zincirini olun üç sınıf oluşturur. Sınıf `First` temel sınıf `Second` türetilir `First`, ve `Third` türetilir `Second`. Üç sonlandırıcılar vardır. İçinde `Main`, en çok türetilen sınıfın bir örneği oluşturulur. Program çalıştığında sonlandırıcılar üç sınıfları için otomatik olarak ve sırasıyla en çok türetilen en az türetilen için gelen çağrılır, dikkat edin.  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 

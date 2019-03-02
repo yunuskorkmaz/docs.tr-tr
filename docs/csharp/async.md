@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612133"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212215"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -20,7 +20,7 @@ C# kolayca geri çağırmaları juggle veya faaliyetler destekleyen bir kitaplı
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Zaman uyumsuz Model temel genel bakış
 
-Zaman uyumsuz programlamanın temel `Task` ve `Task<T>` zaman uyumsuz işlemler model nesneleri.  Tarafından desteklenen `async` ve `await` anahtar sözcükleri.  Çoğu durumda modeli oldukça basittir: 
+Zaman uyumsuz programlamanın temel `Task` ve `Task<T>` zaman uyumsuz işlemler model nesneleri.  Tarafından desteklenen `async` ve `await` anahtar sözcükleri.  Çoğu durumda modeli oldukça basittir:
 
 Ben/O-bağlama kodunu, `await` döndüren bir işlem bir `Task` veya `Task<T>` içine bir `async` yöntemi.
 
@@ -87,11 +87,11 @@ Teorik olarak-yazmaya için bu uygulamasıdır [faaliyetler Promise modelinin](h
 
 ## <a name="key-pieces-to-understand"></a>Temel Parçalar aşağıda anlamanın
 
-*   Zaman uyumsuz kod, ı/O-bağlı hem de CPU bağımlı kod ancak farklı her senaryo için kullanılabilir.
-*   Zaman uyumsuz kod `Task<T>` ve `Task`, model çalışma arka planda yapılması için kullanılan yapıları olduğu.
+* Zaman uyumsuz kod, ı/O-bağlı hem de CPU bağımlı kod ancak farklı her senaryo için kullanılabilir.
+* Zaman uyumsuz kod `Task<T>` ve `Task`, model çalışma arka planda yapılması için kullanılan yapıları olduğu.
 * `async` Anahtar sözcüğü bir yöntem kullanmanıza olanak tanıyan bir zaman uyumsuz yönteme bırakır `await` gövdesinde anahtar sözcüğü.
-*   Zaman `await` anahtar sözcüğü uygulanırsa, çağıran yöntem askıya alır ve beklenen görev tamamlanana kadar denetim çağırana geri verir.
-*   `await` yalnızca zaman uyumsuz bir yöntem içinde kullanılabilir.
+* Zaman `await` anahtar sözcüğü uygulanırsa, çağıran yöntem askıya alır ve beklenen görev tamamlanana kadar denetim çağırana geri verir.
+* `await` yalnızca zaman uyumsuz bir yöntem içinde kullanılabilir.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>CPU bağımlı ve ben/O-bağlı iş tanıması
 
@@ -106,7 +106,7 @@ Herhangi bir kod yazmadan önce istemelisiniz iki sorular şunlardır:
 2. Kodunuzu çok pahalı bir hesaplama gerçekleştiren?
 
     "Evet" yanıtlanmış sonra iş **CPU bağımlı**.
-    
+
 Sahip olduğunuz iş ise **miyim/O-bağlı**, kullanın `async` ve `await` *olmadan* `Task.Run`.  *Barındırmamalıdır* görev paralel Kitaplığı'nı kullanın.  Bunun nedeni açıklandığı [zaman uyumsuz derinliği makaledeki](../standard/async-in-depth.md).
 
 Sahip olduğunuz iş ise **CPU bağımlı** ve yanıtlama hakkında kullanım verdiğiniz `async` ve `await` ancak başka bir iş parçacığında iş devre dışı üretme *ile* `Task.Run`.  İş eşzamanlılığı ve paralelliği için uygun değilse, ayrıca kullanmayı düşünmeniz gerekir [görev paralel Kitaplığı](../standard/parallel-programming/task-parallel-library-tpl.md).
@@ -185,12 +185,12 @@ public async Task<User> GetUserAsync(int userId)
 public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
-    
+
     foreach (int userId in userIds)
     {
         getUserTasks.Add(GetUserAsync(userId));
     }
-    
+
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -212,33 +212,34 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
 Bu daha az kod olsa da, LINQ ile zaman uyumsuz kod kullanırken dikkatli olun.  LINQ (lazy) ertelenmiş yürütme kullandığından, zaman uyumsuz çağrılar yapmasını hemen gerçekleşmez bir `foreach()` çağrısı ile yinelemek için oluşturulan sıralı zorla sürece döngü `.ToList()` veya `.ToArray()`.
 
 ## <a name="important-info-and-advice"></a>Önemli bilgiler ve öneriler
 
 Zaman uyumsuz programlama oldukça basit olsa da, bazı ayrıntılar olduğu beklemeyen davranışı önlemek akılda tutulması gereken vardır.
 
-*  `async` **yöntemleri olması gerekir bir** `await` **gövde anahtar sözcük veya hiçbir zaman verecek!**
+* `async` **yöntemleri olması gerekir bir** `await` **gövde anahtar sözcük veya hiçbir zaman verecek!**
 
 Bu, göz önünde bulundurmanız önemlidir.  Varsa `await` gövdesinde kullanılmayan bir `async` yöntemi, bir uyarı üretir C# Derleyici olacaktır, ancak kod olacak derleyin ve normal bir yöntemi gibi çalıştırın.  Zaman uyumsuz yöntemi için C# Derleyici tarafından oluşturulan Durum makinesi herhangi bir şey yerine getirmeye olabilir değil olarak bu de son derece verimli olacaktır.
 
-*   **"Async" soneki yazdığınız her zaman uyumsuz yöntem adı eklemeniz gerekir.**
+* **"Async" soneki yazdığınız her zaman uyumsuz yöntem adı eklemeniz gerekir.**
 
 . NET'te zaman uyumlu ve zaman uyumsuz yöntemleri daha kolay ayırt etmek için kullanılan kuraldır. Açıkça (örneğin, olay işleyicileri veya web denetleyici yöntemleri) kod tarafından çağrılan olmayan bazı yöntemler mutlaka geçerli değildir unutmayın. Bunlar açıkça kodunuz tarafından çağrılır değil, kendi adlandırma hakkında açık olan önemli değildir.
 
-*   `async void` **yalnızca olay işleyicileri için kullanılmalıdır.**
+* `async void` **yalnızca olay işleyicileri için kullanılmalıdır.**
 
 `async void` olaylar, dönüş türleri olmadığı için çalışması zaman uyumsuz olay işleyicileri izin vermek için tek yolu (Bu nedenle yapılamıyor kullanım `Task` ve `Task<T>`). Başka bir kullanımını `async void` DOKUNUN model izlemez ve gibi kullanmak zor olabilir:
 
-  *   Oluşturulan özel durumlar bir `async void` yöntemi bu yöntemi dışında yakalandı olamaz.
-  *   `async void` yöntemleri test etmek çok zordur.
-  *   `async void` çağırana zaman uyumsuz olarak bekleniyor olmayan yöntemleri hatalı yan etkilere neden olabilir.
+* Oluşturulan özel durumlar bir `async void` yöntemi bu yöntemi dışında yakalandı olamaz.
+* `async void` yöntemleri test etmek çok zordur.
+* `async void` çağırana zaman uyumsuz olarak bekleniyor olmayan yöntemleri hatalı yan etkilere neden olabilir.
 
-*   **Zaman uyumsuz lambda ifadeleri LINQ ifadelerinde kullanırken dikkatli bir şekilde tread**
+* **Zaman uyumsuz lambda ifadeleri LINQ ifadelerinde kullanırken dikkatli bir şekilde tread**
 
 Lambda ifadeleri LINQ ertelenmiş yürütme kullanın, anlamı kod zaman kendisine beklediğiniz olmayan bir zaman yürütme bitiş. Bu görevleri engelleme giriş kolayca bir kilitlenmeyle doğru yazılmaz neden olabilir. Ayrıca, bu gibi zaman uyumsuz kod iç içe Ayrıca, daha zor kod yürütme ile ilgili nedeni zorlaştırabilir. Zaman uyumsuz ve LINQ güçlü ancak dikkatli bir şekilde ve mümkün olduğunca NET bir şekilde birlikte kullanılmalıdır.
 
-*   **Görevleri bekler engelleyici olmayan bir şekilde kod yazın**
+* **Görevleri bekler engelleyici olmayan bir şekilde kod yazın**
 
 Geçerli iş parçacığı engelleme beklenecek bir yol bir görevin tamamlanmasını Kilitlenmeler ve bağlam engellenen iş parçacıkları neden olabilir ve önemli ölçüde daha karmaşık hata işleme gerektirebilir. Aşağıdaki tabloda engelleyici olmayan bir yolla görevlerde bekleyen ile uğraşmak konusunda rehberlik sağlar:
 
@@ -249,16 +250,16 @@ Geçerli iş parçacığı engelleme beklenecek bir yol bir görevin tamamlanmas
 | `await Task.WhenAll` | `Task.WaitAll` | Tüm görevlerin tamamlanması bekleniyor |
 | `await Task.Delay` | `Thread.Sleep` | Bir süre için bekleniyor |
 
-*   **Durum bilgisi olan küçük kod yazma**
+* **Durum bilgisi olan küçük kod yazma**
 
 Genel nesnelerin veya belirli yöntemleri yürütme durumunu bağlı değilsiniz. Bunun yerine, yalnızca yöntemlerinin dönüş değerlerine bağlıdır. Neden?
 
-  *   Kod nedeni hakkında daha kolay olacaktır.
-  *   Kodu test etmek daha kolay olacaktır.
-  *   Zaman uyumsuz ve eş zamanlı kod karıştırma kadar basittir.
-  *   Yarış durumları genellikle tamamen önlenebilir.
-  *   Dönüş değerlerine bağlı olarak, denetleyici zaman uyumsuz kodu basitleştirir.
-  *   (Ekstra) gerçekten de bağımlılık ekleme ile çalışır.
+  * Kod nedeni hakkında daha kolay olacaktır.
+  * Kodu test etmek daha kolay olacaktır.
+  * Zaman uyumsuz ve eş zamanlı kod karıştırma kadar basittir.
+  * Yarış durumları genellikle tamamen önlenebilir.
+  * Dönüş değerlerine bağlı olarak, denetleyici zaman uyumsuz kodu basitleştirir.
+  * (Ekstra) gerçekten de bağımlılık ekleme ile çalışır.
 
 Önerilen bir hedef tam veya neredeyse eksiksiz elde etmektir [başvuru saydamlık](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) kodunuzda. Bunun yapılması, son derece tahmin edilebilir, sınanabilir ve sürdürülebilir bir kod temeli neden olur.
 

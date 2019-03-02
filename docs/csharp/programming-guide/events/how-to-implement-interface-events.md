@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540292"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200279"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl yapılır: Arabirim olaylarını uygulama (C# Programlama Kılavuzu)
 Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilirsiniz bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmiştir. Herhangi bir arabirim yöntemi veya özelliği uygularken temelde aynı kurallardır.  
@@ -56,7 +56,7 @@ Aşağıdaki örnek, sınıfınıza iki veya daha fazla arabirimlerinden devral�
   
 Kendi erişimcileri sağlayarak, iki olay sınıfınızın aynı olay tarafından ya da farklı olaylar tarafından temsil edilen belirtebilirsiniz. Örneğin, farklı zamanlarda arabirimi belirtimlerine göre olaylar harekete Geçirilmemesi gereken, ayrı bir uygulama ile Sınıfınız içinde her olay ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneleri hangi belirleme `OnDraw` olay alacağı şekli başvuru ya da atayarak bir `IShape` veya bir `IDrawingObject`.  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

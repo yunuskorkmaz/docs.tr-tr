@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607023"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202359"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -35,7 +35,7 @@ Sınıf devralma
   
  Aşağıdaki örnek nasıl önceki resimde gösterilen ilişkileri C# dilinde ifade edildiğini gösterir. Örnek ayrıca gösterir nasıl `WorkItem` sanal yöntemini geçersiz kılan <xref:System.Object.ToString%2A?displayProperty=nameWithType>ve nasıl `ChangeRequest` sınıfından devralan `WorkItem` yöntemi.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Soyut ve sanal yöntemleri  
  Ne zaman bir taban sınıfı yöntemi olarak bildirir [sanal](../../../csharp/language-reference/keywords/virtual.md), türetilmiş sınıf [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) kendi uygulaması ile yöntemi. Bir temel sınıf üyesi olarak bildirirse [soyut](../../../csharp/language-reference/keywords/abstract.md), doğrudan bu sınıftan devralınan tüm soyut olmayan sınıf içinde yöntemi geçersiz kılınmalıdır. Türetilmiş bir sınıf kendisi ise soyut, soyut üye uygulamadan devralır. Soyut ve sanal çok biçimlilik, temel nesne yönelimli programlama, ikinci birincil özelliği olduğu üyeleridir. Daha fazla bilgi için [çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

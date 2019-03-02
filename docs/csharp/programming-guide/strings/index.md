@@ -16,7 +16,7 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
 ## <a name="declaring-and-initializing-strings"></a>Bildirme ve başlatma dizeleri  
  Bildirebilir ve aşağıdaki örnekte gösterildiği gibi çeşitli şekillerde dizeleri Başlat:  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  Seçeneğini kullanmaz Not [yeni](../../../csharp/language-reference/keywords/new-operator.md) işleci, bir dizi karakter dizesiyle başlatma dışında bir dize nesnesi oluşturmak için.  
   
@@ -84,16 +84,16 @@ Biçimlendirme .NET türleri hakkında daha fazla bilgi için bkz. [NET'teki bi�
 ## <a name="substrings"></a>Alt dizeler  
  Bir alt dizenin bir dizede bulunan bir karakter dizisidir. Kullanım <xref:System.String.Substring%2A> özgün dizeye bir bölümünden yeni bir dize oluşturmak için yöntemi. Kullanarak bir alt dizenin bir veya daha çok tekrarı için arama yapabilirsiniz <xref:System.String.IndexOf%2A> yöntemi. Kullanım <xref:System.String.Replace%2A> yöntemi belirtilen bir alt dizenin tüm oluşumlarını yeni bir dize ile değiştirin. Gibi <xref:System.String.Substring%2A> yöntemi <xref:System.String.Replace%2A> gerçekten yeni bir dize döndürür ve özgün dizeye değiştirmez. Daha fazla bilgi için [nasıl yapılır: dizeleri arama](../../how-to/search-strings.md) ve [nasıl yapılır: Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md).  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>Karakterlerin tek tek erişme  
  Aşağıdaki örnekte olduğu gibi tek karakterleri salt okunur erişim kazanmak için bir dizin değeri ile dizi gösterimini kullanın:  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  Varsa <xref:System.String> yöntemi bir dizedeki karakterlerin tek tek değiştirmek zorunda olan işlevleri sağlamaz kullanabileceğiniz bir <xref:System.Text.StringBuilder> tek karakter "yerinde" değiştirmek için nesne ve ardından kullanarak sonuçlarını depolamak için yeni bir dize oluşturma <xref:System.Text.StringBuilder> yöntemleri. Aşağıdaki örnekte, orijinal dizeyi belirli bir şekilde değiştirin ve sonra sonuçları gelecekte kullanım için depolamak varsayın:  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Null dizeler ve boş dizeler  
  Boş bir dize örneği olan bir <xref:System.String?displayProperty=nameWithType> sıfır karakter içeren nesne. Boş dizeler genellikle boş metin alanını temsil etmek için çeşitli programlama senaryolarında kullanılır. Geçerli olduğundan boş dizeleri yöntemleri çağırabilir <xref:System.String?displayProperty=nameWithType> nesneleri. Boş dizeler gibi başlatılır:  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  Bunun aksine, boş bir dize örneğine başvurmayan bir <xref:System.String?displayProperty=nameWithType> nesnesi ve her türlü girişim neden boş bir dize üzerinde bir yöntemi çağırmak için bir <xref:System.NullReferenceException>. Ancak, diğer dizelerle null dizeler birleştirme ve karşılaştırma işlemleri kullanabilirsiniz. Aşağıdaki örnekler, boş bir dize için bir başvuru yapar ve bir özel durum oluşturulmasına neden olmaz, bazı durumlarda gösterir:  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>StringBuilder kullanarak dize hızlı oluşturmak için  
  . NET'te dize işlemleri, son derece iyileştirilmiştir ve çoğu durumda performansı önemli ölçüde etkilemez. Ancak, yüzlerce veya binlerce kez yürütülen sıkı döngüler gibi bazı senaryolarda, dize işlemlerinin performansını etkileyebilir. <xref:System.Text.StringBuilder> Programınızı birçok dize işlemeleri uyguluyorsa, daha iyi performans sunan bir dize arabelleğine sınıfı oluşturur. <xref:System.Text.StringBuilder> Dize de tanır karakterlerin tek tek bir şey yeniden atamak için yerleşik dize veri türünü desteklemiyor. Bu kod, örneğin, bir dizenin içeriği yeni bir dize oluşturmadan değiştirir:  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  Bu örnekte, bir <xref:System.Text.StringBuilder> nesnesi, bir dize, sayısal türlerin kümesinden oluşturmak için kullanılır:  
   

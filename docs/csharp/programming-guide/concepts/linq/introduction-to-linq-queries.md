@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 73b7f8b8460e4cdfad5e1dbc669447ec6fe01b8f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969511"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201670"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
@@ -28,7 +28,7 @@ A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genelli
   
  Aşağıdaki örnek, bir sorgu işleminin üç bölümü kaynak kodunda nasıl ifade edildiğini gösterir. Örnek bir tamsayı dizisi kolaylık sağlamak için veri kaynağı olarak kullanır; Ancak, aynı kavramlar diğer veri kaynakları için de geçerlidir. Bu örnekte, bu konunun geri kalan aşamalarında adlandırılır.  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  Aşağıda tam bir sorgu işlemi gösterilmektedir. İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgunun yürütülmesi sorgunun kendisinden farklıdır, diğer bir deyişle, veriler yalnızca bir sorgu değişkeni oluşturarak almış olmazsınız.  
   
