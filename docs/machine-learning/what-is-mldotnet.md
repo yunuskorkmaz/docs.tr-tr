@@ -4,13 +4,13 @@ description: ML.NET, özel yapay ZEKA çözümleri oluşturmanıza ve bunları .
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "53131575"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250968"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET ve Machine Learning temel bilgileri nasıl anlıyorum nedir?
 

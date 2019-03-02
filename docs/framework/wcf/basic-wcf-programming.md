@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261797"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251085"
 ---
 # <a name="basic-wcf-programming"></a>Temel WCF Programlama
 Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya yönelik temel bilgiler sunar.  
@@ -32,7 +32,7 @@ Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya y�
  Barındırma hizmetleri uygulamada temellerini açıklar.  
   
  [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
- Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını işlemek ve yapı, yapılandırma ve bir WCF istemcisi barındırmak nasıl açıklar.  
+ Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını ele ve yapı, yapılandırma ve bir WCF istemcisi barındırmak nasıl açıklar.  
   
  [Genişletilebilirliğe Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Özel çözümler oluşturmak için WCF genişletileceğini açıklar.  

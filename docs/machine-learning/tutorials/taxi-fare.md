@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092546"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251098"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme
 
@@ -307,11 +307,11 @@ Modeli zip dosyasından yükleme istiyoruz beri kaydettik, oluşturacağız `Fil
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.PredictionEngine%602> Öğesinden döndürülen bir sarmalayıcı olan `CreatePredictionEngine` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionEngine` ilk satırı olarak `Predict` yöntemi:
+Sırada `model` olduğu bir `transformer` gereksinimi, tek tek örnekleri tahminler elde etmek için çok yaygın bir üretim senaryosu, çok sayıda veri satırı üzerinde çalışır. <xref:Microsoft.ML.PredictionEngine%602> Öğesinden döndürülen bir sarmalayıcı olan `CreatePredictionEngine` yöntemi. Oluşturmak için aşağıdaki kodu ekleyelim `PredictionEngine` sonraki satırı olarak `TestSinglePrediction` yöntemi:
 
 [!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-Bu öğretici, bu sınıf içinde bir test seyahat kullanır. Daha sonra modeli denemek için diğer senaryolar ekleyebilirsiniz. Eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleme `Predict` bir örneğini oluşturarak yöntemi `TaxiTrip`:
+Bu öğretici, bu sınıf içinde bir test seyahat kullanır. Daha sonra modeli denemek için diğer senaryolar ekleyebilirsiniz. Eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleme `TestSinglePrediction` bir örneğini oluşturarak yöntemi `TaxiTrip`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
@@ -319,7 +319,7 @@ Bu öğretici, bu sınıf içinde bir test seyahat kullanır. Daha sonra modeli 
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
-Belirtilen seyahat, tahmin edilen taksi görüntülemek için aşağıdaki kodu ekleyin. `Main` yöntemi:
+Belirtilen seyahat, tahmin edilen taksi görüntülemek için aşağıdaki kodu ekleyin. `TestSinglePrediction` yöntemi:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 

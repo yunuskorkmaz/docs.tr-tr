@@ -2,21 +2,13 @@
 title: .NET makine öğrenimi nasıl yapılır kılavuzlarından - ML.NET
 description: Özel yapay ZEKA çözümleri oluşturma ve Machine Learning .NET uygulamalarınızı tümleştirmeye yardımcı olmak üzere belirli görevlerin nasıl yapılacağını öğrenin.
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235195"
+ms.date: 03/01/2019
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET makine öğrenimi nasıl yapılır kılavuzlarından - ML.NET
 
 ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleler bulmayı kolaylaştırmak için birden çok bölümlerinde listelenen.
 
-## <a name="prepare-data"></a>Verileri hazırlama
-
-### <a name="load-data"></a>Veri yükleme
+## <a name="load-the-data"></a>Verileri yükleme
 
 * [Machine learning hizmetinin işlem için bir CSV dosyasından çok sütunlu veri yükleyin.](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +16,11 @@ ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtların
 
 * [Machine learning hizmetinin işlem için bir metin dosyasından veri yükleyin.](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>Verileri hazırlama
+
 * [Eğitim verileri ile veri işlemeye kullanılacak normalizers ön işleme.](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>Modeli eğitme
+## <a name="train-the-model"></a>Modeli eğitme
 
 * [Bir metin dosyasına olmayan veriler ile machine learning modeli eğitin.](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +28,7 @@ ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtların
 
 * [ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitin.](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>Model kalitesi değerlendir
+### <a name="evaluate-the-model-quality"></a>Model kalitesi değerlendir
 
 * [Model kalitesini değerlendirmek için ölçümleri hesaplayın.](verify-model-quality-ml-net.md)
 

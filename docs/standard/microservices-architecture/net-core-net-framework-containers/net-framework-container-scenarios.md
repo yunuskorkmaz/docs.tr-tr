@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479912"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251020"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>.NET Framework Docker kapsayıcıları için ne zaman
 
@@ -23,7 +23,7 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core geçişi g
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core için üçüncü taraf .NET kitaplıkları veya kullanılabilir değil NuGet paketlerini kullanma
 
-Üçüncü taraf kitaplıklar hızla benimsemenin [.NET Standard](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kod sağlar. .NET Standard kitaplığı 2.0 ve API yüzeyi ötesinde uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve de .NET Core 2.x uygulamaları doğrudan mevcut .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Üçüncü taraf kitaplıklar hızla benimsemenin [.NET Standard](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kod sağlar. .NET Standard kitaplığı 2.0 ve API yüzeyi ötesinde uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve de .NET Core 2.x uygulamaları doğrudan mevcut .NET Framework kitaplıkları başvurabilir (bkz [.NET Framework 4.6.1 .NET Standard 2.0 destekleyen](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
 Ayrıca, [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md) Windows üzerinde .NET Standard 2.0 için kullanılabilir bir API yüzeyi genişletmek için Kas 2017 tarihinde yayınlanmıştır. Bu paketi .NET Standard için çoğu mevcut kodu yeniden derlemeden sağlayan 2.x ile Windows üzerinde çalıştırmak için çok az kayıpla veya hiç değişiklik.
 
