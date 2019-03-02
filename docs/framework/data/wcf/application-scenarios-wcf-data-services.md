@@ -5,87 +5,89 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f0334f23a1b2bd454377d2f5b93e70495e693043
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093300"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212228"
 ---
-# <a name="application-scenarios-wcf-data-services"></a><span data-ttu-id="0ff6f-102">Uygulama senaryoları (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="0ff6f-102">Application Scenarios (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] <span data-ttu-id="0ff6f-103">gösterme ve veri olarak kullanmak için bir dizi temel senaryoları destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-103">supports a core set of scenarios for exposing and consuming data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="0ff6f-104">Bu konuda, bu senaryolar için ilgili konuları işaret eder.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-104">This topic points you to the topics relevant to these scenarios.</span></span>  
-  
- <span data-ttu-id="0ff6f-105">İlişkisel verileri veritabanı açığa bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-105">Expose relational data from a database as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
- -   [<span data-ttu-id="0ff6f-106">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="0ff6f-106">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-107">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-107">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-108">Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı kullanarak veri hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-108">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
-  
- <span data-ttu-id="0ff6f-109">Rastgele CLR veri sınıfları olarak kullanıma sunma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-109">Expose arbitrary CLR data classes as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
- -   [<span data-ttu-id="0ff6f-110">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-110">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-111">Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-111">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-112">Veri Hizmetleri Sağlayıcıları</span><span class="sxs-lookup"><span data-stu-id="0ff6f-112">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
-  
- <span data-ttu-id="0ff6f-113">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir .NET Framework tabanlı istemci uygulamasında akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-113">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a .NET Framework-based client application.</span></span>  
- -   [<span data-ttu-id="0ff6f-114">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="0ff6f-114">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-115">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-115">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-116">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="0ff6f-116">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
-  
- <span data-ttu-id="0ff6f-117">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Silverlight tabanlı istemci uygulamasında akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-117">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a Silverlight-based client application.</span></span>  
- -   <span data-ttu-id="0ff6f-118">[WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span><span class="sxs-lookup"><span data-stu-id="0ff6f-118">[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span></span>  
-  
--   [<span data-ttu-id="0ff6f-119">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="0ff6f-119">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
-  
--   <span data-ttu-id="0ff6f-120">[Nasıl yapılır: Veri hizmeti verileri (Silverlight istemcisi) denetimlere bağlama](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))</span><span class="sxs-lookup"><span data-stu-id="0ff6f-120">[How to: Bind Data Service Data to Controls (Silverlight Client)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))</span></span>  
-  
- <span data-ttu-id="0ff6f-121">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] AJAX tabanlı istemci uygulamada akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-121">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in an AJAX-based client application.</span></span>  
- -   [<span data-ttu-id="0ff6f-122">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-122">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-123">OData: URI kuralları</span><span class="sxs-lookup"><span data-stu-id="0ff6f-123">OData: URI Conventions</span></span>](https://go.microsoft.com/fwlink/?LinkId=185564)  
-  
--   [<span data-ttu-id="0ff6f-124">OData: JavaScript nesne gösterimi (JSON) biçimi</span><span class="sxs-lookup"><span data-stu-id="0ff6f-124">OData: JavaScript Object Notation (JSON) Format</span></span>](https://go.microsoft.com/fwlink/?LinkId=185790)  
-  
- <span data-ttu-id="0ff6f-125">Kullanan bir uçtan uca veri çözümü oluşturma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci ile sunucu arasında veri aktarmak için.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-125">Create an end-to-end data solution that uses [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] to transfer data between client and server.</span></span>  
- -   [<span data-ttu-id="0ff6f-126">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="0ff6f-126">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-127">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-127">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-128">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="0ff6f-128">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
-  
- <span data-ttu-id="0ff6f-129">Kullandığı .NET Framework tabanlı istemci uygulaması oluşturma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa zaman uyumsuz olarak istemci gecikme sorunlarını önlemek için.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-129">Create a .NET Framework-based client application that consumes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed asynchronously to avoid latency issues on the client.</span></span>  
- -   [<span data-ttu-id="0ff6f-130">Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme</span><span class="sxs-lookup"><span data-stu-id="0ff6f-130">How to: Execute Asynchronous Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-131">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="0ff6f-131">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
-  
--   <span data-ttu-id="0ff6f-132">[WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span><span class="sxs-lookup"><span data-stu-id="0ff6f-132">[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span></span>  
-  
- <span data-ttu-id="0ff6f-133">Kullanımına sunun ve tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişilen ve bir akış olarak değiştirilen bir ikili büyük nesne ile akış.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-133">Expose and consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed with a binary large object that is accessed and changed as a stream.</span></span>  
- -   [<span data-ttu-id="0ff6f-134">Akış Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="0ff6f-134">Streaming Provider</span></span>](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-135">İkili Verilerle Çalışma</span><span class="sxs-lookup"><span data-stu-id="0ff6f-135">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
-  
- <span data-ttu-id="0ff6f-136">Bağlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] denetimlere bir Windows Presentation Framework (WPF) uygulamasındaki akışları.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-136">Bind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds to controls in a Windows Presentation Framework (WPF) application.</span></span>  
- -   [<span data-ttu-id="0ff6f-137">Veriyi Denetimlere Bağlama</span><span class="sxs-lookup"><span data-stu-id="0ff6f-137">Binding Data to Controls</span></span>](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-138">Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama</span><span class="sxs-lookup"><span data-stu-id="0ff6f-138">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-139">Nasıl yapılır: Bir proje veri kaynağı kullanarak veri bağlama</span><span class="sxs-lookup"><span data-stu-id="0ff6f-139">How to: Bind Data Using a Project Data Source</span></span>](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
-  
- <span data-ttu-id="0ff6f-140">Veri doğrulama ve rol tabanlı filtreleme sorguları gerçekleştirmek için veri hizmetine gelen iletileri uğratabilir.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-140">Intercept incoming messages to the data service to perform data validation and role-based filtering of queries.</span></span>  
- -   [<span data-ttu-id="0ff6f-141">Nasıl yapılır: Veri hizmeti iletilerini müdahale</span><span class="sxs-lookup"><span data-stu-id="0ff6f-141">How to: Intercept Data Service Messages</span></span>](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-142">Durdurucular</span><span class="sxs-lookup"><span data-stu-id="0ff6f-142">Interceptors</span></span>](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
-  
- <span data-ttu-id="0ff6f-143">Özel hizmet davranışları etkinleştirmek için bir veri Hizmeti uç noktaları oluşturun.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-143">Create endpoints on a data service to enable custom service behaviors.</span></span>  
- -   [<span data-ttu-id="0ff6f-144">Nasıl yapılır: Hizmet işlemi tanımlama</span><span class="sxs-lookup"><span data-stu-id="0ff6f-144">How to: Define a Service Operation</span></span>](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
-  
--   [<span data-ttu-id="0ff6f-145">Hizmet İşlemleri</span><span class="sxs-lookup"><span data-stu-id="0ff6f-145">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="0ff6f-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ff6f-146">See also</span></span>
-- [<span data-ttu-id="0ff6f-147">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="0ff6f-147">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
-- [<span data-ttu-id="0ff6f-148">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="0ff6f-148">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+# <a name="application-scenarios-wcf-data-services"></a><span data-ttu-id="3e180-102">Uygulama senaryoları (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="3e180-102">Application Scenarios (WCF Data Services)</span></span>
+
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] <span data-ttu-id="3e180-103">gösterme ve veri olarak kullanmak için bir dizi temel senaryoları destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.</span><span class="sxs-lookup"><span data-stu-id="3e180-103">supports a core set of scenarios for exposing and consuming data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="3e180-104">Bu konuda, bu senaryolar için ilgili konuları işaret eder.</span><span class="sxs-lookup"><span data-stu-id="3e180-104">This topic points you to the topics relevant to these scenarios.</span></span>
+
+<span data-ttu-id="3e180-105">İlişkisel verileri veritabanı açığa bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-105">Expose relational data from a database as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>
+- [<span data-ttu-id="3e180-106">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="3e180-106">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-107">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="3e180-107">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-108">Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı kullanarak veri hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="3e180-108">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
+
+<span data-ttu-id="3e180-109">Rastgele CLR veri sınıfları olarak kullanıma sunma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-109">Expose arbitrary CLR data classes as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>
+- [<span data-ttu-id="3e180-110">Verilerinizi Hizmet Olarak Kullanıma Sunma</span><span class="sxs-lookup"><span data-stu-id="3e180-110">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-111">Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="3e180-111">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-112">Veri Hizmetleri Sağlayıcıları</span><span class="sxs-lookup"><span data-stu-id="3e180-112">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+
+<span data-ttu-id="3e180-113">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir .NET Framework tabanlı istemci uygulamasında akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-113">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a .NET Framework-based client application.</span></span>
+- [<span data-ttu-id="3e180-114">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="3e180-114">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-115">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="3e180-115">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-116">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="3e180-116">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+<span data-ttu-id="3e180-117">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Silverlight tabanlı istemci uygulamasında akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-117">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a Silverlight-based client application.</span></span>
+- <span data-ttu-id="3e180-118">[WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span><span class="sxs-lookup"><span data-stu-id="3e180-118">[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span></span>
+
+- [<span data-ttu-id="3e180-119">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="3e180-119">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
+
+- <span data-ttu-id="3e180-120">[Nasıl yapılır: Veri hizmeti verileri (Silverlight istemcisi) denetimlere bağlama](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))</span><span class="sxs-lookup"><span data-stu-id="3e180-120">[How to: Bind Data Service Data to Controls (Silverlight Client)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))</span></span>
+
+<span data-ttu-id="3e180-121">Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] AJAX tabanlı istemci uygulamada akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-121">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in an AJAX-based client application.</span></span>
+- [<span data-ttu-id="3e180-122">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="3e180-122">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-123">OData: URI kuralları</span><span class="sxs-lookup"><span data-stu-id="3e180-123">OData: URI Conventions</span></span>](https://go.microsoft.com/fwlink/?LinkId=185564)
+
+- [<span data-ttu-id="3e180-124">OData: JavaScript nesne gösterimi (JSON) biçimi</span><span class="sxs-lookup"><span data-stu-id="3e180-124">OData: JavaScript Object Notation (JSON) Format</span></span>](https://go.microsoft.com/fwlink/?LinkId=185790)
+
+<span data-ttu-id="3e180-125">Kullanan bir uçtan uca veri çözümü oluşturma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci ile sunucu arasında veri aktarmak için.</span><span class="sxs-lookup"><span data-stu-id="3e180-125">Create an end-to-end data solution that uses [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] to transfer data between client and server.</span></span>
+- [<span data-ttu-id="3e180-126">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="3e180-126">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-127">İstemci Uygulamasında Veri Hizmeti Kullanma</span><span class="sxs-lookup"><span data-stu-id="3e180-127">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-128">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="3e180-128">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+<span data-ttu-id="3e180-129">Kullandığı .NET Framework tabanlı istemci uygulaması oluşturma bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa zaman uyumsuz olarak istemci gecikme sorunlarını önlemek için.</span><span class="sxs-lookup"><span data-stu-id="3e180-129">Create a .NET Framework-based client application that consumes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed asynchronously to avoid latency issues on the client.</span></span>
+- [<span data-ttu-id="3e180-130">Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme</span><span class="sxs-lookup"><span data-stu-id="3e180-130">How to: Execute Asynchronous Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-131">Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="3e180-131">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
+
+- <span data-ttu-id="3e180-132">[WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span><span class="sxs-lookup"><span data-stu-id="3e180-132">[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))</span></span>
+
+<span data-ttu-id="3e180-133">Kullanımına sunun ve tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişilen ve bir akış olarak değiştirilen bir ikili büyük nesne ile akış.</span><span class="sxs-lookup"><span data-stu-id="3e180-133">Expose and consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed with a binary large object that is accessed and changed as a stream.</span></span>
+- [<span data-ttu-id="3e180-134">Akış Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="3e180-134">Streaming Provider</span></span>](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-135">İkili Verilerle Çalışma</span><span class="sxs-lookup"><span data-stu-id="3e180-135">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+
+<span data-ttu-id="3e180-136">Bağlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] denetimlere bir Windows Presentation Framework (WPF) uygulamasındaki akışları.</span><span class="sxs-lookup"><span data-stu-id="3e180-136">Bind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds to controls in a Windows Presentation Framework (WPF) application.</span></span>
+- [<span data-ttu-id="3e180-137">Veriyi Denetimlere Bağlama</span><span class="sxs-lookup"><span data-stu-id="3e180-137">Binding Data to Controls</span></span>](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-138">Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama</span><span class="sxs-lookup"><span data-stu-id="3e180-138">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-139">Nasıl yapılır: Bir proje veri kaynağı kullanarak veri bağlama</span><span class="sxs-lookup"><span data-stu-id="3e180-139">How to: Bind Data Using a Project Data Source</span></span>](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)
+
+<span data-ttu-id="3e180-140">Veri doğrulama ve rol tabanlı filtreleme sorguları gerçekleştirmek için veri hizmetine gelen iletileri uğratabilir.</span><span class="sxs-lookup"><span data-stu-id="3e180-140">Intercept incoming messages to the data service to perform data validation and role-based filtering of queries.</span></span>
+- [<span data-ttu-id="3e180-141">Nasıl yapılır: Veri hizmeti iletilerini müdahale</span><span class="sxs-lookup"><span data-stu-id="3e180-141">How to: Intercept Data Service Messages</span></span>](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-142">Durdurucular</span><span class="sxs-lookup"><span data-stu-id="3e180-142">Interceptors</span></span>](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+
+<span data-ttu-id="3e180-143">Özel hizmet davranışları etkinleştirmek için bir veri Hizmeti uç noktaları oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3e180-143">Create endpoints on a data service to enable custom service behaviors.</span></span>
+- [<span data-ttu-id="3e180-144">Nasıl yapılır: Hizmet işlemi tanımlama</span><span class="sxs-lookup"><span data-stu-id="3e180-144">How to: Define a Service Operation</span></span>](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+
+- [<span data-ttu-id="3e180-145">Hizmet İşlemleri</span><span class="sxs-lookup"><span data-stu-id="3e180-145">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+
+## <a name="see-also"></a><span data-ttu-id="3e180-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3e180-146">See also</span></span>
+
+- [<span data-ttu-id="3e180-147">Hızlı başlangıç</span><span class="sxs-lookup"><span data-stu-id="3e180-147">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [<span data-ttu-id="3e180-148">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="3e180-148">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
