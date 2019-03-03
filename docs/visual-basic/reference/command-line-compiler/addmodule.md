@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 3e5c94cce8b16649854050855800ac1bf2fc6572
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a6d367f4b09de600bb744aa2abed0da2c93aa0b
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580583"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202372"
 ---
 # <a name="-addmodule"></a>-addmodule
 Derleyicinin tüm kullanılabilir belirtilen dosyalar, şu anda derlemekte olduğunuz projeye kullandırmasına bilgileri yazın.  
@@ -41,11 +41,11 @@ Derleyicinin tüm kullanılabilir belirtilen dosyalar, şu anda derlemekte oldu�
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, bir modül oluşturur.  
   
- [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
  Aşağıdaki kod modülün türleri içeri aktarır.  
   
- [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
  Çalıştırdığınızda `t1`, bu çıkışları `802`.  
   

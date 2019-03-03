@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704660"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203632"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic'de Erişim Düzeyleri
 *Erişim düzeyi* bildirilen bir öğenin erişim olanağı kapsamını, başka bir deyişle, hangi kod dosyayı okuma veya yazma izni yoktur. Bu, yalnızca öğenin kendisinin nasıl bildirdiğiniz tarafından aynı zamanda öğenin kapsayıcı erişim düzeyine göre belirlenir. Bir kapsayıcı öğe erişemiyor kod herhangi birini kendi içerilen öğelerin erişemez, bile olarak bildirilen `Public`. Örneğin, bir `Public` değişkeninde bir `Private` yapısı erişilebilir değil, ancak yapı içeren bir sınıf içinde o sınıf dışında.  
@@ -101,8 +101,9 @@ Kullanılacak `Private Protected` erişim değiştiricisi, Visual Basic (*.vbpro
 
 Daha fazla bilgi için [Visual Basic dil sürümü ayarını](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Erişim Değiştiricileri  
- Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Aşağıdaki tabloda, erişim değiştiricileri karşılaştırır.  
+## <a name="access-modifiers"></a>Erişim Değiştiricileri  
+
+Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Aşağıdaki tabloda, erişim değiştiricileri karşılaştırır.  
   
 |Erişim değiştiricisi|Verilen erişim düzeyi|Öğeleri bu erişim düzeyiyle bildirebilirsiniz.|Bu değiştirici, içinde kullanabileceğiniz bildirimi bağlamı|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 0d324cadee556552098710310cce7f192b9b4d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975166"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200643"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Oluşturucular sınıf veya yapının aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatılamıyor.  
   
  Aşağıdaki örnekte, bir sınıf adlı `Taxi` basit bir oluşturucu kullanılarak tanımlanır. Bu sınıf ile Örneklendirilmiş [yeni](../../../csharp/language-reference/keywords/new.md) işleci. `Taxi` Oluşturucusu tarafından çağrıldığında `new` işleci bellek hemen sonra yeni nesne için ayrılır.  
   
- [!code-csharp[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
  Herhangi bir parametre alan bir oluşturucu olarak adlandırılan bir *varsayılan oluşturucu*. Varsayılan Oluşturucu çağrılır kullanarak bir nesne örneği her `new` işleci ve herhangi bir bağımsız değişken için sağlanan `new`. Daha fazla bilgi için [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -70,9 +70,9 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Bir temel sınıf oluşturucusu kullanarak açıkça çağrılmaz, türetilmiş bir sınıf içinde `base` anahtar sözcüğü, varsayılan oluşturucusu varsa, çağrıldığında örtük olarak. Bu aşağıdaki Oluşturucusu bildirimleri etkili bir şekilde aynı anlamına gelir:  
   
- [!code-csharp[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
+ [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
- [!code-csharp[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
+ [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
  Bir temel sınıf varsayılan bir oluşturucu sağlamaz, türetilen sınıfın temel oluşturucu için açık çağrı kullanarak yapmalısınız `base`.  
   

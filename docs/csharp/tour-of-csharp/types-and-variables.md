@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583959"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212007"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -71,7 +71,7 @@ Bu özetler C#ait sayısal türler.
     - `double` : 64 bit aralığı 5.0 × 10'dan<sup>-324</sup> 1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
 * Ondalık
     - `decimal` : 128 bit aralığı olan en az-7.9 × 10<sup>-28</sup> 7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
-    
+
 C# programları kullanım *tür bildirimleri* yeni türler oluşturmak için. Bir tür bildirimi, adı ve yeni türün üyeleri belirtir. Beş C#'s türleri kategorilerini kullanıcı tanımlanabilir: Sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 
 A `class` veri üyelerine (alanları) ve işlev üyeleri (yöntemler, özellikler ve diğerleri) içeren bir veri yapısı türü tanımlar. Sınıf türleri tek devralma ve çok biçimlilik, yapabildiği türetilmiş sınıfları genişletmek ve temel sınıflar specialize mekanizmaları destekler.
@@ -115,6 +115,6 @@ Birkaç türü vardır, *değişkenleri* C# ' ta alanlar, dizi öğeleri, yerel 
 * Temsilci türü
     - A `null` başvurusu veya bir örneğini uyumlu temsilci türü başvurusu
 
->[!div class="step-by-step"]
->[Önceki](program-structure.md)
->[İleri](expressions.md)
+> [!div class="step-by-step"]
+> [Önceki](program-structure.md)
+> [İleri](expressions.md)
