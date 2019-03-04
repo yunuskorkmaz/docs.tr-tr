@@ -1,5 +1,5 @@
 ---
-title: 'Normal İfade Örneği: HREF Tarama'
+title: 'Normal ifade örneği: Href tarama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582846"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975972"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Normal ifade örneği: Href tarama
 Aşağıdaki örnek, bir Giriş dizesinin arar ve görüntüler veya href = "..." değerleri ve konumlarına dize.  
   
 ## <a name="the-regex-object"></a>Regex Nesnesi  
@@ -44,7 +44,7 @@ Aşağıdaki örnek, bir Giriş dizesinin arar ve görüntüler veya href = "...
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
 |`=`|Eşittir işareti eşleyin.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Aşağıdakilerden birini bir yakalanan gruba sonucu atamadan eşleşmesi:<br /> <ul><li><p>Tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti tarafından izlenen dışındaki herhangi bir karakter sıfır veya daha çok tekrarı ardından. Adlı grubu `1` Bu düzende dahildir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grubu `1` Bu düzende dahildir.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Aşağıdakilerden birini bir yakalanan gruba sonucu atamadan eşleşmesi:<br /> <ul><li><p>Tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti, tırnak işareti veya kesme işareti tarafından izlenen dışındaki herhangi bir karakter sıfır veya daha çok tekrarı ardından. Adlı grubu `1` Bu düzende dahildir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grubu `1` Bu düzende dahildir.</p></li></ul>|  
 |`(?<1>[^"']*)`|Adlandırılmış yakalama grubu için tırnak işareti veya kesme işareti dışındaki herhangi bir karakterin sıfır veya daha çok tekrarı atama `1`.|  
 |`(?<1>\S+)`|Adlandırılmış yakalama grubu için bir veya daha fazla boşluk olmayan karakterle atama `1`.|  
   
