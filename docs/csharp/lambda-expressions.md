@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183140"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212358"
 ---
-# <a name="lambda-expressions"></a>Lambda ifadeleri #
+# <a name="lambda-expressions"></a>Lambda ifadeleri
 
 A *lambda ifadesi* (bir ifadeyi veya deyim bloğunu) bir nesne olarak işlem kod bloğudur. Yöntemi için bağımsız değişken olarak geçirilebilir ve yöntem çağrıları tarafından da döndürülebilir. Lambda ifadeleri için yaygın olarak kullanılır:
 
@@ -32,7 +32,7 @@ Veya doğrudan bir yöntemi bağımsız değişken geçirin:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>İfade lambdaları ##
+## <a name="expression-lambdas"></a>Expression lambdas
 
  Bir lambda ifadesi işlecin sağ tarafındaki bir ifadeyle = > işleci çağrıldığında bir *lambda ifadesi*. İfade lambdaları oluşumunu oluşturulurken sıkça kullanılır [ifade ağaçları](expression-trees.md). Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
 
@@ -54,7 +54,7 @@ Normalde, derleyici tür çıkarımı, parametre türleri belirlemede kullanır.
 
 Önceki örnekte bir lambda ifadesi gövdesinin yöntem çağrısından oluşabileceğini unutmayın. .NET Framework dışında değerlendirilen ifade ağaçları oluşturuyorsanız, ancak gibi SQL Server veya Entity Framework (EF), yöntem bağlamı dışında anlamlı olabileceği yöntem çağrıları lambda ifadelerinde kullanmadığınızdan .NET uygulaması. Bu durumda yöntem çağrılarını kullanmayı seçerseniz, bunları çağrıları başarıyla çözümlenip yöntemi kapsamlı emin olmak için test etmeyi unutmayın.
 
-## <a name="statement-lambdas"></a>Deyim lambdaları ##
+## <a name="statement-lambdas"></a>Deyim lambdaları
 
 Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:
 
@@ -68,7 +68,7 @@ Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, 
 
 Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kullanılamaz.
 
-## <a name="async-lambdas"></a>Zaman uyumsuz lambdalar ##
+## <a name="async-lambdas"></a>Async lambdas
 
 İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](language-reference/keywords/async.md) ve [await](language-reference/keywords/await.md) anahtar sözcükleri. Örneğin, örnek çağıran bir `ShowSquares` yöntemi zaman uyumsuz olarak yürütür.
 
@@ -76,7 +76,7 @@ Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kull
 
 Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlama ile zaman uyumsuz ve await](programming-guide/concepts/async/index.md).
 
-## <a name="lambda-expressions-and-tuples"></a>Lambda ifadeleri ve diziler ##
+## <a name="lambda-expressions-and-tuples"></a>Lambda ifadeleri ve diziler
 
 C# 7.0 ile başlayarak, C# dili diziler için yerleşik destek sağlar. Bir lambda ifadesi bağımsız değişkeni olarak bir tanımlama grubu sağlayabilir ve, lambda ifadesi, ayrıca bir demet döndürebilir. Bazı durumlarda, tanımlama grubu bileşenleri türlerini belirlemek için tür çıkarımı C# derleyicisini kullanır.
 
@@ -90,7 +90,7 @@ Normalde, bir kayıt düzeni alanlarını olarak da adlandırılır `Item1`, `It
 
 C# ' de tanımlama gruplarına yönelik destek hakkında daha fazla bilgi için bkz. [C# demet türleri](tuples.md).
 
-## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile lambda ifadeleri ##
+## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile lambda ifadeleri
 
 LINQ to Objects'in, diğer uygulamalar arasında olması, türü giriş parametresi, <xref:System.Func%601> Genel temsilci ailesinden olan. Bu Temsilciler, tür parametreleri sayısı ve girdi parametrelerinin türünü ve temsilcinin dönüş türünü tanımlamak için kullanın. `Func` Temsilciler, kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadelerin Kapsüllenmesi için son çok yararlı olur. Örneğin, düşünün <xref:System.Func%601> temsilci, söz dizimi şu şekildedir:
 
@@ -118,7 +118,7 @@ Aşağıdaki örnek, birden fazla giriş parametrelerini paranteze tarafından b
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Lambda ifadeleri içinde tür çıkarımı ##
+## <a name="type-inference-in-lambda-expressions"></a>Lambda ifadeleri içinde tür çıkarımı
 
 Lambda ifadeleri yazarken, genellikle C# dil Belirtimi'nde açıklanan derleyici lambda gövdesine, parametre türleri ve diğer etkenlere göre türü belirleyebilir giriş parametreleri için bir tür belirtmeniz gerekmez. Standart sorgu işleçlerinin çoğunda ilk giriş kaynak dizisindeki öğelerin türüdür. Sorguluyorsanız bir `IEnumerable<Customer>`, giriş değişkeni olması sorguluyorsanız bir `Customer` nesne erişim yöntemleri ve özellikleri iznine sahip olduğunuz anlamına gelir:
 
@@ -134,7 +134,7 @@ Lambdalar için tür çıkarımı için genel kurallar şunlardır:
 
 Ortak tür sisteminin "lambda ifadesi" için iç kavramı olmadığından kendi içlerindeki lambda ifadelerinin türü olmadığını unutmayın. Ancak bazen bir lambda ifadesinin "türünden" resmi olmayan bir şekilde bahsetmek daha kolaydır. Bu gibi durumlarda, tür temsilci türüne başvuruyor. veya <xref:System.Linq.Expressions.Expression> , lambda ifadesinin dönüştürüldüğü yazın.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda İfadelerinde Değişken Kapsamı ##
+## <a name="variable-scope-in-lambda-expressions"></a>Lambda İfadelerinde Değişken Kapsamı
 
 Lambdalar başvurabilir *dış değişkenlere* (bkz [anonim yöntemler](programming-guide/statements-expressions-operators/anonymous-methods.md)), lambda işlevini tanımlayan yöntemin kapsamındaki ya da lambda ifadesini içeren türün kapsamındaki. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir.
 
@@ -152,7 +152,7 @@ Lambdalar başvurabilir *dış değişkenlere* (bkz [anonim yöntemler](programm
 
 - Bir lambda ifadesi içeremez bir `goto` deyimi `break` deyimi veya `continue` varsa atlama bildiriminin hedefi blok dışındaysa lambda işlevi içinde deyimi. Ayrıca, hedef, blok içinde ise lambda işlev bloğu dışında bir deyim olması bir hatadır.
 
-## <a name="see-also"></a>Ayrıca bkz. ##
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ (dil ile tümleşik sorgu)](../standard/using-linq.md)
 - [Anonim yöntemler](programming-guide/statements-expressions-operators/anonymous-methods.md)

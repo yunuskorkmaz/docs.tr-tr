@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727761"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203408"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -126,7 +126,7 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
 
    Beklediğiniz `searchWord` "Jack" döndürür iki örneği ile `inputString` "Jack jack" geçirildi `GetWordCount`. Tıklayarak testi yeniden çalıştırın **çalıştırmak testlerini** düğmesine **birim testleri** paneli veya **yeniden çalıştırılan testleri** düğmesine **Test sonuçları** paneli ekranın alt kısmında. Test başarılı olur. "(Büyük/küçük harf yoksayar) Jack jack" dizesinde "Jack" iki örneği vardır ve test olaydır `true`.
 
-   ![Visual Studio Mac test geçişi görüntülemek için](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Test geçişi görünen Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
 1. Tek tek dönüş değerleri ile test etme bir `Fact` birim testi ile neler yapabileceğinizi sadece başlangıç. Başka bir güçlü teknik değerlerden tek seferde kullanarak test etmenize olanak bir `Theory`. Aşağıdaki yöntemi ekleyin, `TextUtils_GetWordCountShould` sınıfı. Bu yöntem ekledikten sonra sınıfında iki yöntem vardır:
 

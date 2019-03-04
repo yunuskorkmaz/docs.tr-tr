@@ -3,12 +3,12 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 35d9cf89d8ba2ddb673554a76eb33ae59b178b42
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245687"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203463"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
@@ -129,7 +129,7 @@ Değer türleri Yöntem imzasında aşağıdaki değiştiriciler hiçbirini beli
 
 Ekleme `in` başvuruya göre bağımsız değişken geçirin ve gereksiz şekilde kopyalamama olanağı, başvuruya göre bağımsız değişkenleri geçirmek için tasarım amacınızla bildirmek üzere değiştiricisi. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmek istemediğiniz.
 
-Bu yöntem genellikle daha büyük bir salt okunur değer türleri için performansı geliştirir <xref:System.IntPtr.Size?displayProperty=nameWithType>. Basit türleri için (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` ve `bool`, ve `enum` türleri), tüm olası performans artışı minimial. Aslında, performans geçişi tarafından başvuru türleri için küçük kullanarak düşebilir <xref:System.IntPtr.Size?displayProperty=nameWithType>.
+Bu yöntem genellikle daha büyük bir salt okunur değer türleri için performansı geliştirir <xref:System.IntPtr.Size?displayProperty=nameWithType>. Basit türleri için (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` ve `bool`, ve `enum` türleri), tüm olası performans artışı düşüktür. Aslında, performans geçişi tarafından başvuru türleri için küçük kullanarak düşebilir <xref:System.IntPtr.Size?displayProperty=nameWithType>.
 
 Aşağıdaki kod örneği, 3B alanda iki nokta arasındaki uzaklığı hesaplar bir yöntemin gösterir.
 
