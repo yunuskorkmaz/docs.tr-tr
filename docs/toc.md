@@ -33,6 +33,7 @@
 ## [Özel durumları işleme ve atma](standard/exceptions/)
 ## [.NET’te bütünleştirilmiş kodlar](standard/assembly/index.md)
 ### [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly/file-format.md)
+### [Nasıl yapılır: .NET Core’da Bütünleştirilmiş Kodu Kaldırabilme Özelliğini Kullanma ve Sorun Giderme](standard/assembly/unloadability-howto.md)
 ## [Atık Toplama](standard/garbage-collection/)
 ## [Genel Türler](standard/generics.md)
 ## [Temsilciler ve lambda ifadeleri](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [C# Turu](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## C# yenilikleri
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 - Önizleme 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
