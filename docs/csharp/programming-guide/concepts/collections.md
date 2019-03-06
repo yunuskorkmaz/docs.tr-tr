@@ -2,12 +2,12 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675419"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373445"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Yineleyiciler  
+## <a name="iterators"></a>Yineleyiciler  
  Bir *yineleyici* bir koleksiyon üzerinde özel yineleme yapmak için kullanılır. Bir yineleyiciyi bir yöntem olabilir veya bir `get` erişimcisi. Yineleyici bir [yield return](../../../csharp/language-reference/keywords/yield.md) deyimini her öğesini birer birer koleksiyonunun bir döndürür.  
   
  Kullanarak bir yineleyici çağırabilirsiniz bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi. Her bir yinelemesini `foreach` döngü yineleyiciyi çağırır. Olduğunda bir `yield return` yineleyicisi deyimine ulaşıldığında, bir ifade döndürülür ve kodun geçerli konumu korunur. Yürütme, yineleyicinin bir sonraki açışınızda bu konumdan başlatılır.  

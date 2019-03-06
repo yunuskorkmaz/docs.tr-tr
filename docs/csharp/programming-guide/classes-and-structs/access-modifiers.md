@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977571"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378058"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
@@ -44,7 +44,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka kodda
   
  Türetilmiş sınıflar temel türleri değerinden daha büyük düzeyde erişilebilirlik sahip olamaz. Diğer bir deyişle, bir ortak sınıf olamaz `B` iç bir sınıftan türetilen `A`. Bu izin verilirse, bu duruma getirme yarayıp `A` genel, çünkü tüm korumalı veya iç üyeleri `A` türetilmiş sınıftan erişilebilir.  
   
- Belirli etkinleştirmek ınternalsvisibletoattribute özniteliğini kullanarak tarafından iç türlerine erişmek için diğer derlemeler. Daha fazla bilgi için [arkadaş derlemeleri](../concepts/assemblies-gac/friend-assemblies.md).  
+ Belirli etkinleştirmek ınternalsvisibletoattribute özniteliğini kullanarak tarafından iç türlerine erişmek için diğer derlemeler. Daha fazla bilgi için [arkadaş derlemeleri](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üyesi erişilebilirliği  
  Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim altı tür ile bildirilebilir. Yapı üyeleri, yapılar devralımı desteklemez çünkü korumalı olarak bildirilemez.  

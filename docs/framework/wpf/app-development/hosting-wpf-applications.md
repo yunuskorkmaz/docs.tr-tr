@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546897"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352276"
 ---
 # <a name="hosting-wpf-applications"></a>WPF Uygulamaları Barındırma
-WPF XAML tarayıcısı uygulamaları (XBAP'ler), bir Web sunucusuna dağıtılır ve tarayıcıda başlatılan zengin istemci uygulamalarıdır. WPF Konağı (PresentationHost.exe), kabuk ve XBAP ve XAML dosyaları için MIME işleyici olarak kaydedilir. Bu nedenle, bir XBAP başlatıldığında WPF konağı başlatmak için Internet Explorer bilir. Firefox kullanıcıları Firefox yanı sıra konak için XBAP etkinleştirmek Firefox eklentiler yükleyebilirsiniz. Bir XBAP diğer tarayıcılar veya tek başına uygulamaları barındırma API'leri sağlanan yerel tarayıcı WPF tarafından kullanarak barındırılabilir.  
+WPF XAML tarayıcı uygulamaları (XBAP), bir Web sunucusuna dağıtılabilir ve bir tarayıcıda çalışmaya zengin istemci uygulamalardır. WPF Konağı (PresentationHost.exe) kabuk ve XBAP ve XAML dosyaları için MIME işleyici olarak kayıtlı. Bu nedenle, bir XBAP başlatıldığında WPF konağı başlatmak için Internet Explorer bilir. Firefox kullanıcılar da konağı XBAP'ler için Firefox etkinleştirme Firefox eklentileri yükleyebilir. Bir XBAP diğer tarayıcılar veya tek başına uygulamalar barındırma API'leri sağlanan yerel tarayıcı tarafından WPF kullanarak barındırılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF XAML Tarayıcı Uygulamalarına Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-   [WPF Konağı (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [Destek API'leri Barındıran Yerel WPF Tarayıcısı](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+ [WPF XAML Tarayıcı Uygulamalarına Genel Bakış](wpf-xaml-browser-applications-overview.md)  
+   [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md)  
+  [.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri](firefox-add-ons-to-support-net-application-deployment.md)  
+  [Destek API'leri Barındıran Yerel WPF Tarayıcısı](native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF’de Windows](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Uygulama Yönetimine Genel Bakış](application-management-overview.md)  
+  [WPF’de Windows](windows-in-wpf-applications.md)  
+  [Gezintiye Genel Bakış](navigation-overview.md)  
+  [Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)

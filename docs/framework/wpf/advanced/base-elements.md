@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539471"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359620"
 ---
 # <a name="base-elements"></a>Temel Öğeler
-Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>--WPF programlamasında kullanılabilen ortak öğe işlevlerinin önemli yüzdesi uygulayın. Bu dört sınıfları için bu SDK'de temel öğe sınıfları olarak adlandırılır.  
+Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>--önemli bir WPF programlamada mevcut olan genel öğesi işlevselliğini uygular. Bu dört sınıflar için bu SDK'yı temel öğe sınıflar olarak değerlendirilirler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [Temel Öğelere Genel Bakış](base-elements-overview.md)  
+ [Freezable Nesnelerine Genel Bakış](freezable-objects-overview.md)  
+ [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](alignment-margins-and-padding-overview.md)  
+ [Nasıl Yapılır Konuları](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.UIElement>  
@@ -32,12 +32,12 @@ Dört anahtar sınıfı--<xref:System.Windows.UIElement>, <xref:System.Windows.C
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF Mimarisi](wpf-architecture.md)  
+  [WPF'de XAML](xaml-in-wpf.md)  
+  [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
+  [Özellikler](properties-wpf.md)  
+  [Olaylar](events-wpf.md)  
+  [Giriş](input-wpf.md)  
+  [Kaynaklar](resources-wpf.md)  
+  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [İş Parçacığı Modeli](threading-model.md)

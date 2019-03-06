@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ControlTemplates [WPF], finding elements
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
-ms.openlocfilehash: a93ec700bc0782439f98aed48f7094a50a3c0ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6609d70a6b863f16533aac81ffce4daf171bcf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364511"
 ---
 # <a name="how-to-find-controltemplate-generated-elements"></a>Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma
 Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xref:System.Windows.Controls.ControlTemplate>.  
@@ -21,15 +21,15 @@ Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xre
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, basit bir oluşturan bir stil gösterir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Button> sınıfı:  
   
- [!code-xaml[FindGeneratedItems#CT](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#ct)]  
+ [!code-xaml[FindGeneratedItems#CT](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#ct)]  
   
  Şablon uygulandıktan sonra şablon içinde bir öğeyi bulmak için çağırabilirsiniz <xref:System.Windows.FrameworkTemplate.FindName%2A> yöntemi <xref:System.Windows.Controls.Control.Template%2A>. Aşağıdaki örnekte gerçek genişlik değerini gösteren bir ileti kutusu oluşturur <xref:System.Windows.Controls.Grid> denetim şablonu içinde:  
   
- [!code-csharp[FindGeneratedItems#CTFindElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#ctfindelement)]
- [!code-vb[FindGeneratedItems#CTFindElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
+ [!code-csharp[FindGeneratedItems#CTFindElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#ctfindelement)]
+ [!code-vb[FindGeneratedItems#CTFindElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [DataTemplate ile Oluşturulan Öğeleri Bulma](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [WPF XAML Ad Kapsamları](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)
-- [WPF İçinde Ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [DataTemplate ile Oluşturulan Öğeleri Bulma](../data/how-to-find-datatemplate-generated-elements.md)
+- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [WPF XAML Ad Kapsamları](../advanced/wpf-xaml-namescopes.md)
+- [WPF İçinde Ağaçlar](../advanced/trees-in-wpf.md)

@@ -113,7 +113,7 @@ string s = String.Empty;
   
  Bu örnekte, bir <xref:System.Text.StringBuilder> nesnesi, bir dize, sayısal türlerin kümesinden oluşturmak için kullanılır:  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Dizeleri, genişletme yöntemleri ve LINQ  
  Çünkü <xref:System.String> yazın uygular <xref:System.Collections.Generic.IEnumerable%601>, tanımlanan genişletme yöntemleri kullanabilirsiniz <xref:System.Linq.Enumerable> dizelerde sınıfı. Görsel dağınıklığını önlemek için bu yöntemleri için IntelliSense edilmeyen <xref:System.String> türü, ancak kullanılabilir ancak yine de. Ayrıca [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde dizeler. Daha fazla bilgi için [LINQ ve dizeler](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  

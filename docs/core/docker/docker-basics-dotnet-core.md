@@ -4,12 +4,12 @@ description: Bu öğreticide, temel bir .NET Core uygulaması oluşturma ve Dock
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372925"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Nasıl bir .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -159,7 +159,7 @@ WORKDIR /app
 COPY *.csproj ./
 ```
 
-[ **ÇALIŞTIRMA** ](https://docs.docker.com/engine/reference/builder/#run) yönerge tüm komutları geçerli görüntünün üzerindeki yeni bir katmanda yürütür ve sonuçları işleyin. Sonuçta elde edilen işlenmiş görüntü, Dockerfile'da bir sonraki adım için kullanılır. Çalıştırılmakta olan **dotnet restore** C# proje dosyası gerekli bağımlılıkları almak için. 
+[ **ÇALIŞTIRMA** ](https://docs.docker.com/engine/reference/builder/#run) yönerge tüm komutları geçerli görüntünün üzerindeki yeni bir katmanda yürütür ve sonuçları işleyin. Sonuçta elde edilen işlenmiş görüntü, Dockerfile'da bir sonraki adım için kullanılır. Çalıştırılmakta olan **dotnet restore** C# proje dosyası gerekli bağımlılıkları almak için.
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Gerçekleştirebileceğiniz bazı sonraki adımlar şunlardır:
 * [Azure Hızlı Başlangıç için docker](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Uygulamanızı Azure için Docker](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Azure aboneliğiniz yoksa [hemen kaydolun](https://azure.microsoft.com/free/?b=16.48) 30 günlük ücretsiz hesabı ve get 200 ABD Doları değerinde Azure kredisi, out Azure Hizmetleri, herhangi bir birleşimini denemek için.
 
 ## <a name="docker-images-used-in-this-sample"></a>Bu örnekte kullanılan docker görüntüleri

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967379"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371417"
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
 Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlemede yalnızca erişilebileceğini belirtir.  
@@ -35,7 +35,7 @@ Bir veya daha fazla bildirilmiş programlama öğesine, bildirimi içeren derlem
  Bir karşılaştırması `Friend` ve diğer erişim değiştiricilerine bkz [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Başka bir derlemenin tüm türleri ve üyeleri olarak işaretlenmiş erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`. Daha fazla bilgi için [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+>  Başka bir derlemenin tüm türleri ve üyeleri olarak işaretlenmiş erişmesine izin veren bir arkadaş derleme olduğunu belirtebilirsiniz `Friend`. Daha fazla bilgi için [arkadaş derlemeleri](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki sınıf kullandığı `Friend` diğer programlama öğelerinin belirli üyelere erişmek için aynı bütünleştirilmiş kod içinde değiştiricisi.  

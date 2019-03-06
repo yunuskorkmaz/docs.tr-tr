@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 1b3e0409c438fc5a6b69fea19cd55cbeb72d74b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d99528dcfbf2229b57e81f9dedc5bc0aa50c5b75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589990"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375234"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox Nasıl Yapılır Konuları
 Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren örnekler <xref:System.Windows.Controls.TextBox> denetimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çok Satırlı TextBox Denetimi Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [TextBox İçindeki Metin Değiştirildiğinde Algılama](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [TextBox'tan Satır Koleksiyonu Alma](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [TextBox Denetimini Salt Okunur Yapma](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [Metin Seçimi Alma](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [TextBox Denetiminde Odak Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [TextBox Denetiminin Metin İçeriğini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [TextBox ile Özel Bağlam Menüsü Kullanma](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [Açılır Menü ile Yazım Denetimi Kullanma](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [TextBox'a Filigran Ekleme](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [Çok Satırlı TextBox Denetimi Oluşturma](how-to-create-a-multiline-textbox-control.md)  
+ [TextBox İçindeki Metin Değiştirildiğinde Algılama](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [TextBox'tan Satır Koleksiyonu Alma](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [TextBox Denetimini Salt Okunur Yapma](how-to-make-a-textbox-control-read-only.md)  
+ [TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [Metin Seçimi Alma](how-to-retrieve-a-text-selection.md)  
+ [TextBox Denetiminde Odak Ayarlama](how-to-set-focus-in-a-textbox-control.md)  
+ [TextBox Denetiminin Metin İçeriğini Ayarlama](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [TextBox ile Özel Bağlam Menüsü Kullanma](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [Açılır Menü ile Yazım Denetimi Kullanma](how-to-use-spell-checking-with-a-context-menu.md)  
+ [TextBox'a Filigran Ekleme](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.TextBox>  
@@ -43,4 +43,4 @@ Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini göste
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [TextBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+- [TextBox Stilleri ve Şablonları](textbox-styles-and-templates.md)

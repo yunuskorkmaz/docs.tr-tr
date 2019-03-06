@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351636"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Nasıl yapılır: Animasyon için Süre Ayarlama
 A <xref:System.Windows.Media.Animation.Timeline> zaman bir segmentini ve kesiminin uzunluğu çizelgesinin tarafından belirlenir temsil <xref:System.Windows.Duration>. Olduğunda bir <xref:System.Windows.Media.Animation.Timeline> geçerlilik süresinin, yürütmeyi durdurur. Varsa <xref:System.Windows.Media.Animation.Timeline> alt öğe zaman çizelgeleri varsa bunlar da yürütmeyi durdurur. Bir animasyon, söz konusu olduğunda <xref:System.Windows.Duration> animasyon bitiş değeri başlangıç değerinden geçişin ne kadar alacağını belirtir.  
@@ -21,8 +21,8 @@ A <xref:System.Windows.Media.Animation.Timeline> zaman bir segmentini ve kesimin
  Aşağıdaki örnekte, genişlik, yükseklik ve dolgu rengi içinde bir <xref:System.Windows.Shapes.Rectangle> bir animasyon görünür. Süreleri, animasyon efektleri algılanan animasyonun hızını denetleme ve alt öğe zaman çizelgelerini süresi kapsayıcı zaman çizelgesinin süresiyle geçersiz kılma dahil olmak üzere sonuçta animasyon ve kapsayıcı zaman çizelgesi üzerinde ayarlanır.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Duration>
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animasyona Genel bakış](animation-overview.md)

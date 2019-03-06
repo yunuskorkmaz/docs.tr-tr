@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695731"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369298"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
 Bir numaralandırıcı geri numaralandırma başlangıç durumuna sıfırlar.  
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`  
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr` [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+`ptr`\
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in] Bayrakları veya açıklanan değerler Bitsel bir birleşimi [açıklamalar](#remarks) numaralandırmada özellikleri denetleyen bölümü.
 
 ## <a name="return-value"></a>Dönüş değeri
@@ -105,4 +106,5 @@ Sabit  |Değer  |Açıklama  |
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

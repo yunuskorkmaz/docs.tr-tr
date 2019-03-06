@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576856"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375577"
 ---
 # <a name="controls-by-category"></a>Kategoriye Göre Denetimler
 Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kategoride gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım düzenlerini veya işlevselliğine sahip olduğunu görmenize yardımcı olarak senaryonuz için uygun denetimi seçmek için kullanılabilir.  
@@ -178,4 +178,4 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Denetim Kitaplığı](../../../../docs/framework/wpf/controls/control-library.md)
+- [Denetim Kitaplığı](control-library.md)

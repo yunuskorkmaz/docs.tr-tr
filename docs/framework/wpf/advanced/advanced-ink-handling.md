@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539036"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367884"
 ---
 # <a name="advanced-ink-handling"></a>Gelişmiş Mürekkep İşleme
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Birlikte <xref:System.Windows.Controls.InkCanvas>, ve toplama ve mürekkep görüntüleme hemen başlatmak için uygulamanızda koyabilir bir öğedir. Ancak, varsa <xref:System.Windows.Controls.InkCanvas> denetim Denetim yeterli düzeyini sağlamaz, kendi mürekkep koleksiyonu kullanarak ve mürekkep işleme sınıflarınızı özelleştirerek daha yüksek düzeyde denetim sağlayabilirsiniz <xref:System.Windows.Input.StylusPlugIns>.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Birlikte <xref:System.Windows.Controls.InkCanvas>, ve hemen mürekkebi toplama ve görüntülemeye başlamak için uygulamanıza koyabilir bir öğedir. Ancak, varsa <xref:System.Windows.Controls.InkCanvas> denetim yeterince iyi bir denetim düzeyi sağlamaz, kendi mürekkep koleksiyonu ve mürekkep işleme sınıfları kullanarak özelleştirerek, daha yüksek düzeyde denetim koruyabilirsiniz <xref:System.Windows.Input.StylusPlugIns>.  
   
- <xref:System.Windows.Input.StylusPlugIns> Sınıfları üzerinde alt düzey denetim uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dinamik olarak mürekkep işleme. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranışı uygulamak ve en iyi performans için Kalem aygıtından gelen veri akışı için bir mekanizma sağlar. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, yani, dinamik olarak işleme mürekkep verileri gerçek zamanlı özelleştirmenize olanak tanır <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dijital mürekkep çizer hemen olarak <xref:System.Windows.Input.StylusPoint> veri oluşturulur, "kalem akış için" görünmesi aygıt.  
+ <xref:System.Windows.Input.StylusPlugIns> Sınıfları üzerinde alt düzey denetim uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dinamik olarak mürekkebi işleme. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranış uygulayan ve en iyi performans için ekran kalemi aygıttan gelen veri akışını uygulamak için bir mekanizma sağlar. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, yani, gerçek zamanlı işleme mürekkep verisi dinamik olarak özelleştirmenizi sağlar <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dijital mürekkep çizer hemen olarak <xref:System.Windows.Input.StylusPoint> üretilen veri, "flow kaleminden için" görünecek şekilde cihaz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özel İşleme Mürekkebi](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Ekran Kaleminden Gelen Girişi Önleme](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Mürekkep Giriş Denetimi Oluşturma](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Mürekkep İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Özel İşleme Mürekkebi](custom-rendering-ink.md)  
+  [Ekran Kaleminden Gelen Girişi Önleme](intercepting-input-from-the-stylus.md)  
+  [Mürekkep Giriş Denetimi Oluşturma](creating-an-ink-input-control.md)  
+  [Mürekkep İş Parçacığı Modeli](the-ink-threading-model.md)

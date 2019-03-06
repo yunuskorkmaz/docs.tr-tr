@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367615"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -96,7 +96,7 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
   
      Bu sınıf devraldığı <xref:System.Windows.WeakEventManager> sınıfı.  
   
-     [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
+     [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
 2.  Değiştirin `SomeEventWeakEventManager` kendi adıyla adı.  
   
@@ -133,5 +133,5 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)

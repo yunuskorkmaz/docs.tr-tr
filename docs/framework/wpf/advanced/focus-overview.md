@@ -8,17 +8,17 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 0a9aabdb4ddb508e9d53523192db27708c5b7713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369922"
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişini alır öğeye başvuruyor ve odaklı bir odak kapsam içindeki öğeye mantıksal Odaklanıldığında başvurur.  Bu kavramlar, bu genel bakışta ayrıntılı ele alınmıştır.  Bu kavramlar farkını anlama, birden çok bölgede odak burada elde edilebilir sahip karmaşık uygulamalar oluşturmak için önemlidir.  
   
- Odak yönetimine katılan başlıca sınıflardır <xref:System.Windows.Input.Keyboard> sınıfı <xref:System.Windows.Input.FocusManager> sınıfı ve temel öğe sınıfları, gibi <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md).  
+ Odak yönetimine katılan başlıca sınıflardır <xref:System.Windows.Input.Keyboard> sınıfı <xref:System.Windows.Input.FocusManager> sınıfı ve temel öğe sınıfları, gibi <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](base-elements-overview.md).  
   
  <xref:System.Windows.Input.Keyboard> Sınıfı öncelikle klavye odağı ile ilgili ve <xref:System.Windows.Input.FocusManager> öncelikle mantıksal odak ile ilgili olan ancak bu mutlak bir ayrım değildir.  Klavye girintisine sahip bir öğe mantıksal odağı da gerekir, ancak mantıksal odağı olan bir öğeyi klavye odağı sahip değil.  Kullandığınızda bu açıktır <xref:System.Windows.Input.Keyboard> klavye odağı olan öğe ayarlanacak sınıfı ayrıca öğede mantıksal Odaklanıldığında ayarlar.  
   
@@ -34,8 +34,8 @@ ms.locfileid: "54582159"
   
  Aşağıdaki örnekte <xref:System.Windows.Input.Keyboard.Focus%2A> klavye odağı ayarlamak için yöntemi bir <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
   
  <xref:System.Windows.UIElement.IsKeyboardFocused%2A> Temel öğe sınıfları özelliği, öğe klavye girintisine sahip olup olmadığını belirten bir değer alır.  <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> Temel öğe sınıfları özelliği, öğe veya görsel alt öğelerinden biri klavye girintisine sahip olup olmadığını belirten bir değer alır.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "54582159"
   
  Aşağıdaki örnekte bir <xref:System.Windows.Controls.StackPanel> ayarlayarak bir odak kapsama <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> ekli özellik.  
   
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
   
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
  <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> Odak kapsamını belirtilen öğeyi döndürür.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54582159"
   
  Aşağıdaki örnek, odağı kapsamında odaklanan öğeyi ayarlar ve odak kapsamın odaklanılan öğeyi alır.  
   
- [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
- [!code-vb[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+ [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
   
 <a name="Keyboard_Navigation"></a>   
 ## <a name="keyboard-navigation"></a>Klavye ile gezinme  
@@ -77,10 +77,10 @@ ms.locfileid: "54582159"
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Menu> çeşitli <xref:System.Windows.Controls.MenuItem> nesneleri.  <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A> Ekli özelliği <xref:System.Windows.Input.KeyboardNavigationMode.Cycle> üzerinde <xref:System.Windows.Controls.Menu>.  Odağı tab tuşuyla içinde değiştirildiğinde <xref:System.Windows.Controls.Menu>, odağı her öğeyi Taşı ve son öğe ulaşıldığında odak ilk öğeye döndürür.  
   
- [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
+ [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
   
- [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
- [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
+ [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
+ [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Odak gezinme  
@@ -90,30 +90,30 @@ ms.locfileid: "54582159"
   
  Aşağıdaki örnekte <xref:System.Windows.FrameworkElement.MoveFocus%2A> odaklanan öğeyi değiştirmek için.  
   
- [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
- [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
+ [!code-csharp[focussample#FocusSampleMoveFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
+ [!code-vb[focussample#FocusSampleMoveFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
  <xref:System.Windows.FrameworkElement.PredictFocus%2A> Odak değiştirilmesi gerekiyorsa odak alacak bir nesne döndürür.  Şu anda yalnızca <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, ve <xref:System.Windows.Input.FocusNavigationDirection.Right> tarafından desteklenen <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>Odak olayları  
- Klavye odağı ile ilgili olaylar <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> ve <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Ekli olaylar tanımlanır olayları <xref:System.Windows.Input.Keyboard> sınıfı, ancak temel öğe sınıflarda eşdeğer yönlendirilmiş olaylar olarak daha kolay erişilebilir.  Olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Klavye odağı ile ilgili olaylar <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> ve <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Ekli olaylar tanımlanır olayları <xref:System.Windows.Input.Keyboard> sınıfı, ancak temel öğe sınıflarda eşdeğer yönlendirilmiş olaylar olarak daha kolay erişilebilir.  Olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
  <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> öğe klavye odağı aldığında oluşur.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> öğe, klavye odağından çıktığında oluşur.  Varsa <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> olay veya <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> olayı işlenir ve <xref:System.Windows.RoutedEventArgs.Handled%2A> ayarlanır `true`, odağı değişmez.  
   
  Aşağıdaki örnek iliştirir <xref:System.Windows.UIElement.GotKeyboardFocus> ve <xref:System.Windows.UIElement.LostKeyboardFocus> olay işleyicileri için bir <xref:System.Windows.Controls.TextBox>.  
   
- [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
+ [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
   
  Zaman <xref:System.Windows.Controls.TextBox> klavye odağını aldığında <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.Controls.TextBox> değiştirilir <xref:System.Windows.Media.Brushes.LightBlue%2A>.  
   
- [!code-csharp[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
- [!code-vb[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
   
  Zaman <xref:System.Windows.Controls.TextBox> klavye odağından <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.Controls.TextBox> beyaz olarak değiştirilir.  
   
- [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
- [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
  Mantıksal odak ile ilgili olaylar <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus>.  Bu olaylar üzerinde tanımlanan <xref:System.Windows.Input.FocusManager> ekli olaylar olarak ancak <xref:System.Windows.Input.FocusManager> CLR olay sarmalayıcıları kullanıma sunmuyor.  <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement> daha rahat bu olayları gösterir.  
   
@@ -121,5 +121,5 @@ ms.locfileid: "54582159"
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Girişe Genel Bakış](input-overview.md)
+- [Temel Öğelere Genel Bakış](base-elements-overview.md)

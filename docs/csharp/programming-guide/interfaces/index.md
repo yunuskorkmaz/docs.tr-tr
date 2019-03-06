@@ -62,7 +62,7 @@ Bir arabirim, aşağıdaki özelliklere sahiptir:
  [Nasıl yapılır: İki arabirimin üyelerini açıkça uygulama](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Devralma ile arabirimin üyelerini açıkça uygulama ilişkin bir örnek sağlar.  
   
-##  <a name="BKMK_RelatedSections"></a> İlgili bölümler
+## <a name="BKMK_RelatedSections"></a> İlgili bölümler
 
 - [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  

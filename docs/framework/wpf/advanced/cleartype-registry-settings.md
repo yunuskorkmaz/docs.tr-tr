@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ffc21ca3eed979e9b7cd419f63729d8520a54a5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369727"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -18,7 +18,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir görüntü cihazı kullanmak için metin işleme uygulamaları [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] okuma deneyimi sağlamak için özellikleri. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknolojisi tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , dizüstü ekranları, Pocket PC ekranları ve düz panel izleyiciler gibi mevcut LCD'ler (Sıvı Crystal gösterir), metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranın tek dikey renk Şerit öğelerine erişerek çalışır. Daha fazla bilgi için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bkz: [ClearType genel bakışı](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir görüntü cihazı kullanmak için metin işleme uygulamaları [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] okuma deneyimi sağlamak için özellikleri. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknolojisi tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , dizüstü ekranları, Pocket PC ekranları ve düz panel izleyiciler gibi mevcut LCD'ler (Sıvı Crystal gösterir), metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranın tek dikey renk Şerit öğelerine erişerek çalışır. Daha fazla bilgi için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bkz: [ClearType genel bakışı](cleartype-overview.md).  
   
  İle işlenen metin [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] çeşitli görüntü cihazlarında görüntülendiğinde önemli ölçüde farklı görünebilir. Örneğin, az sayıda izleyiciler uygulamak renk Şerit öğeleri mavi yeşil, kırmızı sırayla yerine daha yaygın kırmızı, yeşil, mavi ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) sırası.  
   
@@ -57,7 +57,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `ClearTypeLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde Kayıt Defteri Düzenleyicisi'ayarı için gösterir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzeyi.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları olan ve olmayan ya da iki moddan birini metin işleme [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Ne zaman metin işlenen olmadan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], onu gri tonlamalı işleme olarak adlandırılır.  
@@ -75,7 +75,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `GammaLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde gama düzeyi için Kayıt Defteri Düzenleyicisi'ni ayarı gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Piksel yapısı  
@@ -99,7 +99,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `PixelStructure` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde, Kayıt Defteri Düzenleyicisi'ni ayarı piksel yapısının gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Metin Karşıtlık düzeyi  
@@ -112,8 +112,8 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `TextContrastLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde, metin Karşıtlık düzeyi için Kayıt Defteri Düzenleyicisi'ni ayarı gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClearType Genel Bakışı](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [ClearType Genel Bakışı](cleartype-overview.md)
 - [ClearType düzgünleştirme](/windows/desktop/gdi/cleartype-antialiasing)

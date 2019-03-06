@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371950"
 ---
 # <a name="expander"></a>Genişletici
-Bir <xref:System.Windows.Controls.Expander> kullanıcının başlığı görüntülemesine ve diğer ayrıntıları görmek için veya bir başlık en çok bir bölümü daraltmak için bu başlığı genişletin izin verir.  
+Bir <xref:System.Windows.Controls.Expander> bir başlığı görüntüleme ve diğer ayrıntıları görmek için veya bir bölümü bir başlık en fazla daraltmak için bu üstbilgiyi Genişlet açmasına olanak sağlar.  
   
- Aşağıdaki çizimde bu denetimin kendi genişletilmiş konumunda bir örnek sağlar.  
+ Aşağıdaki çizim, bu denetimin genişletilmiş konumuna bir örnek sağlar.  
   
- ![Genişletici örneği](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Genişletici örneği](./media/expanderexample.JPG "ExpanderExample")  
 Genişletici denetimi  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Genişleticiye Genel Bakış](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Genişleticiye Genel Bakış](expander-overview.md)  
+ [Nasıl Yapılır Konuları](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Expander>  

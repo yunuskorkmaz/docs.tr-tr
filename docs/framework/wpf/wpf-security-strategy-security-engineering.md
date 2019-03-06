@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: bddb9bb2cf9a601ce7796d17483c1ab8fa6d7aa1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836597"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378965"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem inisiyatifiyle önemli bir öğesidir [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Güvenli kod dağıtımını kolaylaştırmak için standart mühendislik süreçlerine ile birlikte kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization measurability ve ek yapı ile en iyi birleştiren on aşamadan oluşan dahil olmak üzere:  
@@ -87,11 +87,11 @@ Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microso
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Kritik kod Yönetimi  
- İçin [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] işaretleme ve izleme ayrıcalıklara yükseltir güvenlik açısından kritik kod için .NET Framework desteği kullanarak, bir güvenlik korumalı oluşturur (bkz **güvenlik açısından kritik Metodoloji** içinde [WPF Güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Bu tür kod kalitesi yüksek güvenlik gereksinimleri, güvenlik açısından kritik kodu verildiğinde, ek bir kaynak yönetim denetim ve güvenlik denetim düzeyi alır. Yaklaşık 5 %10 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] gözden geçirme ekibi tarafından gözden geçirilir güvenlik açısından kritik kod oluşur. Kaynak kodu ve iade etme işlemi, güvenlik açısından kritik kodu izleme ve kritik her varlık (yani kritik kod içeren bir yöntem), oturum durumu devre dışı eşleme tarafından yönetilir. Oturum durumu devre dışı bir veya daha fazla Gözden Geçiren adlarını içerir. Her günlük derlemesi [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kritik kod için onaylanmamış değişiklikleri denetlemek için önceki yapıları karşılaştırır. Bir mühendis kritik kod gözden geçirme ekibinin onayı olmadan değiştirirse, tanımlanır ve hemen düzeltildi. Bu işlem üzerinden scrutiny özellikle yüksek bir düzeyde Bakım ve uygulama tanır [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] korumalı alan kodu.  
+ İçin [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] işaretleme ve izleme ayrıcalıklara yükseltir güvenlik açısından kritik kod için .NET Framework desteği kullanarak, bir güvenlik korumalı oluşturur (bkz **güvenlik açısından kritik Metodoloji** içinde [WPF Güvenlik stratejisi - Platform güvenliği](wpf-security-strategy-platform-security.md)). Bu tür kod kalitesi yüksek güvenlik gereksinimleri, güvenlik açısından kritik kodu verildiğinde, ek bir kaynak yönetim denetim ve güvenlik denetim düzeyi alır. Yaklaşık 5 %10 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] gözden geçirme ekibi tarafından gözden geçirilir güvenlik açısından kritik kod oluşur. Kaynak kodu ve iade etme işlemi, güvenlik açısından kritik kodu izleme ve kritik her varlık (yani kritik kod içeren bir yöntem), oturum durumu devre dışı eşleme tarafından yönetilir. Oturum durumu devre dışı bir veya daha fazla Gözden Geçiren adlarını içerir. Her günlük derlemesi [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kritik kod için onaylanmamış değişiklikleri denetlemek için önceki yapıları karşılaştırır. Bir mühendis kritik kod gözden geçirme ekibinin onayı olmadan değiştirirse, tanımlanır ve hemen düzeltildi. Bu işlem üzerinden scrutiny özellikle yüksek bir düzeyde Bakım ve uygulama tanır [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] korumalı alan kodu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik](../../../docs/framework/wpf/security-wpf.md)
-- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [Güvenlik](security-wpf.md)
+- [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
+- [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
 - [Güvenilir bilgi işlem](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [.NET içinde güvenlik](../../standard/security/index.md)

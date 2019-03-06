@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353068"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
   
- ![WPF güvenlik çizim](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![WPF güvenlik çizim](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  Bu konunun geri kalanı ilgili bu katmanların her özellikleri anlatılmaktadır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özellikle.  
   
@@ -140,14 +140,14 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Aşağıdaki şekil, bölgeleri, izin kümeleri, izinleri ve kaynakları arasındaki ilişkiyi gösterir.  
   
- ![CAS izin kümeleri](../../../docs/framework/wpf/media/caspermissionsets.png "CASPermissionSets")  
+ ![CAS izin kümeleri](./media/caspermissionsets.png "CASPermissionSets")  
   
  Bu kısıtlamalar bölge güvenlik sanal uygulama eşit herhangi biri Internet, kod bir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] bir sistem kitaplığından alır dahil olmak üzere [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Bu kodun her bit kilitli, hatta sağlar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ne yazık ki, yürütmek için bir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] Internet bölgesi güvenlik korumalı alanı tarafından etkinleştirilmiş daha fazla izin gerektirir işlevi yürütmek için gereken.  
   
  Göz önünde bir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] içeren şu sayfaya uygulaması:  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Bunu yürüttüğünüzden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], arka plandaki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu çağırmak için kullanılabilir olandan daha fazla işlevsellik yürütmek [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]de dahil olmak üzere:  
   
@@ -165,8 +165,8 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Bunu kullanarak yapar **Assert** iznin yöntemi. Aşağıdaki kod bunu göstermektedir.  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  **Assert** aslında gerektirdiği sınırsız izinleri engeller [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Internet kısıtlı bölge izinlerini [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
   
@@ -182,7 +182,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
 ### <a name="security-critical-methodology"></a>Güvenlik açısından kritik yöntemi  
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Internet bölgesi korumalı etkinleştirmek için izinleri kullanan kodu [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] uygulamaları yüksek olası derecede güvenlik denetimi ve denetim için tutulmalıdır. Bu gereksinim kolaylaştırmak için .NET Framework ayrıcalık yükseltir kodu yönetmek için yeni destek sağlar. Özellikle, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] ayrıcalık yükseltir kodunu tanımlayın ve kendisiyle işaretlemek sağlayan <xref:System.Security.SecurityCriticalAttribute>; herhangi bir kod ile işaretlenmemiş <xref:System.Security.SecurityCriticalAttribute> olur *saydam* bu yöntemi kullanarak. Buna karşılık, yönetilen ile işaretlenmemiş koddan <xref:System.Security.SecurityCriticalAttribute> yükseltme yaptığınıza ayrıcalığı engellenir.  
   
- Güvenlik açısından kritik metodolojiyi organizasyonunu sağlar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ayrıcalık uygulamasına yükseltir kod *güvenlik açısından kritik çekirdek*, saydam olan geri kalanı ile. Güvenlik açısından kritik kodu yalıtma sağlayan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] mühendislik ekibi, güvenlik açısından kritik çekirdeği sunmayan standart güvenlik uygulamaları hakkında ek güvenlik analizi ve kaynak denetim odak (bkz [WPF güvenlik stratejisi -Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)).  
+ Güvenlik açısından kritik metodolojiyi organizasyonunu sağlar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ayrıcalık uygulamasına yükseltir kod *güvenlik açısından kritik çekirdek*, saydam olan geri kalanı ile. Güvenlik açısından kritik kodu yalıtma sağlayan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] mühendislik ekibi, güvenlik açısından kritik çekirdeği sunmayan standart güvenlik uygulamaları hakkında ek güvenlik analizi ve kaynak denetim odak (bkz [WPF güvenlik stratejisi -Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)).  
   
  .NET Framework genişletmek için güvenilen bir kod izin verdiğini unutmayın [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] Internet bölgesi sandbox ile işaretlenmiş yönetilen derlemeler yazmak geliştiriciler tarafından <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ve kullanıcının Genel Derleme Önbelleği (GAC) dağıtılır. Internet'ten kötü amaçlı kod dahil olmak üzere bu bütünleştirilmiş kod çağırmak herhangi bir kod verdiğinden APTCA ile bir derlemeyi işaretlemek bir yüksek oranda gizli güvenlik işlemdir. Kullanıcılar bu yazılımı yüklenecek sırayla güven seçmeniz gerekir ve bunu yaparken son derece dikkatli olun ve en iyi kullanılmalıdır.  
   
@@ -210,7 +210,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
-- [Güvenlik](../../../docs/framework/wpf/security-wpf.md)
-- [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Kod erişimi güvenliği](../misc/code-access-security.md)
+- [Güvenlik](security-wpf.md)
+- [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
+- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623878"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367953"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Performansı iyileştirme: Düzen ve Tasarım
 Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen hesaplama ve nesne başvurularını doğrulama gereksiz yük oluşturarak uygulama performansını etkileyebilir. Nesneleri, oluşumunu özellikle, çalışma zamanında uygulamanızın performans özelliklerine etkileyebilir.  
@@ -49,7 +49,7 @@ Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winc
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Mümkün olduğunda en verimli panelini kullanın  
  Düzen işleminin doğrudan, düzen davranışını karmaşıklığı <xref:System.Windows.Controls.Panel>-türetilmiş öğeleri kullanırsınız. Örneğin, bir <xref:System.Windows.Controls.Grid> veya <xref:System.Windows.Controls.StackPanel> denetimi çok daha fazla işlevsellik sağlayan bir <xref:System.Windows.Controls.Canvas> denetimi. Bu işlev daha büyük bir artış fiyat performans maliyetleri daha büyük bir artış olur. Ancak, İşlevler gerekmiyorsa, bir <xref:System.Windows.Controls.Grid> denetimi sağlar, kullanmanız gerektiğini daha az maliyetli alternatifleri gibi bir <xref:System.Windows.Controls.Canvas> veya özel bir paneli.  
   
- Daha fazla bilgi için [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Daha fazla bilgi için [panellere genel bakış](../controls/panels-overview.md).  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>Bir RenderTransform değiştirmek yerine güncelleştir  
  Güncelleştirme olabilir bir <xref:System.Windows.Media.Transform> değeri olarak değiştirmek yerine bir <xref:System.Windows.UIElement.RenderTransform%2A> özelliği. Bu, özellikle animasyon içeren senaryolarda geçerlidir. Mevcut bir güncelleştirerek <xref:System.Windows.Media.Transform>, gereksiz Düzen hesaplamasını başlatma kaçının.  
@@ -64,19 +64,19 @@ Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winc
   
  Aşağıdaki kod örneği, ağaç yukarıdan aşağı oluşturma işlemini gösterir.  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- Mantıksal ağacı hakkında daha fazla bilgi için bkz. [WPF içinde ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ Mantıksal ağacı hakkında daha fazla bilgi için bkz. [WPF içinde ağaçlar](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
+- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
+- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Metin](optimizing-performance-text.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
+- [Düzen](layout.md)

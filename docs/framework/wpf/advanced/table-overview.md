@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 0888bc213be6b8037d0574bb5f9ac76e7651491a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379022"
 ---
 # <a name="table-overview"></a>Tabloya Genel Bakış
 <xref:System.Windows.Documents.Table> ızgara tabanlı akış belge içeriği sunumunu destekleyen bir blok düzeyinde öğesidir. Bu öğenin esnekliğini çok kullanışlı hale getirir, ancak aynı zamanda, anlamak ve doğru bir şekilde kullanmak için daha karmaşık hale getirir.  
@@ -44,7 +44,7 @@ ms.locfileid: "54745369"
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Nasıl tablo farklı sonra kılavuz var mı?  
- <xref:System.Windows.Documents.Table> ve <xref:System.Windows.Controls.Grid> bazı ortak işlevselliği paylaşır, ancak her farklı senaryolar için idealdir. A <xref:System.Windows.Documents.Table> akış içeriği içinde kullanmak için tasarlanmıştır (bkz [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md) akış içeriği hakkında daha fazla bilgi için). Kılavuzlar formları içinde kullanılan en iyi (temel olarak her yerde dışında içerik akışı). İçinde bir <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> destekleyen akış içerik davranışları sayfalandırma ve sütun yeniden akış içerik seçimi gibi bir <xref:System.Windows.Controls.Grid> desteklemez. A <xref:System.Windows.Controls.Grid> diğer yandan en iyi dışında kullanılan bir <xref:System.Windows.Documents.FlowDocument> dahil olmak üzere birçok nedenden dolayı <xref:System.Windows.Controls.Grid> öğeleri satır ve sütun dizinini temel alarak ekler <xref:System.Windows.Documents.Table> desteklemez. <xref:System.Windows.Controls.Grid> Öğesi alt içeriğin tek bir "hücre." mevcut birden fazla öğe izin vererek, katman sağlar. <xref:System.Windows.Documents.Table> katmanlama desteklemez. Alt öğeleri bir <xref:System.Windows.Controls.Grid> "hücre" sınırlarının alanını göre mutlak konumlandırılmalıdır. <xref:System.Windows.Documents.Table> Bu özelliği desteklemez. Son olarak, bir <xref:System.Windows.Controls.Grid> daha az kaynak gerektirir bir <xref:System.Windows.Documents.Table> şekilde kullanmayı bir <xref:System.Windows.Controls.Grid> performansını artırmak için.  
+ <xref:System.Windows.Documents.Table> ve <xref:System.Windows.Controls.Grid> bazı ortak işlevselliği paylaşır, ancak her farklı senaryolar için idealdir. A <xref:System.Windows.Documents.Table> akış içeriği içinde kullanmak için tasarlanmıştır (bkz [akış belgesine genel bakış](flow-document-overview.md) akış içeriği hakkında daha fazla bilgi için). Kılavuzlar formları içinde kullanılan en iyi (temel olarak her yerde dışında içerik akışı). İçinde bir <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> destekleyen akış içerik davranışları sayfalandırma ve sütun yeniden akış içerik seçimi gibi bir <xref:System.Windows.Controls.Grid> desteklemez. A <xref:System.Windows.Controls.Grid> diğer yandan en iyi dışında kullanılan bir <xref:System.Windows.Documents.FlowDocument> dahil olmak üzere birçok nedenden dolayı <xref:System.Windows.Controls.Grid> öğeleri satır ve sütun dizinini temel alarak ekler <xref:System.Windows.Documents.Table> desteklemez. <xref:System.Windows.Controls.Grid> Öğesi alt içeriğin tek bir "hücre." mevcut birden fazla öğe izin vererek, katman sağlar. <xref:System.Windows.Documents.Table> katmanlama desteklemez. Alt öğeleri bir <xref:System.Windows.Controls.Grid> "hücre" sınırlarının alanını göre mutlak konumlandırılmalıdır. <xref:System.Windows.Documents.Table> Bu özelliği desteklemez. Son olarak, bir <xref:System.Windows.Controls.Grid> daha az kaynak gerektirir bir <xref:System.Windows.Documents.Table> şekilde kullanmayı bir <xref:System.Windows.Controls.Grid> performansını artırmak için.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Temel tablo yapısı  
@@ -61,18 +61,18 @@ ms.locfileid: "54745369"
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell> öğe metin içeriği doğrudan barındıramazsınız. Akış için kapsama kuralları hakkında daha fazla bilgi için gibi içerik öğeler <xref:System.Windows.Documents.TableCell>, bkz: [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell> öğe metin içeriği doğrudan barındıramazsınız. Akış için kapsama kuralları hakkında daha fazla bilgi için gibi içerik öğeler <xref:System.Windows.Documents.TableCell>, bkz: [akış belgesine genel bakış](flow-document-overview.md).  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.Table> benzer <xref:System.Windows.Controls.Grid> öğe ancak daha fazla özellik içerir ve bu nedenle büyük kaynağı ek yükü gerektirir.  
   
  Aşağıdaki örnek, bir basit 2x3lük tabloyla tanımlar [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
- [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
  Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran: Temel tabloyu işleme](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ ![Ekran: Temel tabloyu işleme](./media/basictablerrender.png "BasicTablerRender")  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Tablo kapsama  
@@ -98,11 +98,11 @@ ms.locfileid: "54745369"
   
  Aşağıdaki örnekte [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] stil uygulanmış üstbilgi ve altbilgi satırları içeren bir tablo tanımlamak için.  
   
- [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
  Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran: Tablo satır grupları](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")  
+ ![Ekran: Tablo satır grupları](./media/table-rowgroups.png "Table_RowGroups")  
   
 <a name="rendering_precedence"></a>   
 ### <a name="background-rendering-precedence"></a>Arka plan işleme önceliği  
@@ -120,11 +120,11 @@ ms.locfileid: "54745369"
   
  Bir tablo içinde bu öğelerin her biri için arka plan renkleri tanımlar aşağıdaki örneği inceleyin.  
   
- [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
  Aşağıdaki şekil, bu örneğin (yalnızca gösteren arka plan renkleri) nasıl işlediğini gösterir.  
   
- ![Ekran: Tablo z&#45;sipariş](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
+ ![Ekran: Tablo z&#45;sipariş](./media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>Satırları veya sütunları yayma  
@@ -132,11 +132,11 @@ ms.locfileid: "54745369"
   
  Aşağıdaki örnekte, üç sütun, kapsayan bir hücre göz önünde bulundurun.  
   
- [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
  Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
   
- ![Ekran: Üç sütunu yayılan hücre](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")  
+ ![Ekran: Üç sütunu yayılan hücre](./media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
 ## <a name="building-a-table-with-code"></a>Kod içeren bir tablo oluşturma  
@@ -144,39 +144,39 @@ ms.locfileid: "54745369"
   
  İlk olarak, bir <xref:System.Windows.Documents.FlowDocument> oluşturulan konağa <xref:System.Windows.Documents.Table>ve yeni bir <xref:System.Windows.Documents.Table> oluşturulur ve içeriği için eklenen <xref:System.Windows.Documents.FlowDocument>.  
   
- [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
- [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
+ [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
+ [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
  Ardından, altı <xref:System.Windows.Documents.TableColumn> nesnelerinin oluşturulduğu ve tablonun eklenen <xref:System.Windows.Documents.Table.Columns%2A> bazı biçimlendirme uygulanmış olan koleksiyonu.  
   
 > [!NOTE]
 >  Unutmayın tablo <xref:System.Windows.Documents.Table.Columns%2A> koleksiyonun kullandığı standart sıfır tabanlı dizin.  
   
- [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
- [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
+ [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
+ [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
  Ardından, bir başlık satırı oluşturulur ve bazı biçimlendirme uygulanmış tablosuna eklenir.  Tablodaki tüm altı sütunu kapsayan tek bir hücre içermesi için başlık satırı gerçekleşir.  
   
- [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
- [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
+ [!code-csharp[TableSnippets#_TableAddTitleRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
+ [!code-vb[TableSnippets#_TableAddTitleRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
  Ardından, bir üst bilgi satırı oluşturulur ve tabloya eklenen ve üst bilgi satırı hücrelerde oluşturulur ve içeriği ile doldurulur.  
   
- [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
- [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
+ [!code-csharp[TableSnippets#_TableAddHeaderRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
+ [!code-vb[TableSnippets#_TableAddHeaderRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
  Ardından, veriler için bir satır oluşturulur ve tabloya eklenen ve bu satırı hücrelerde oluşturulur ve içerikle doldurulur.  Bu satırı oluşturma üst bilgi satırı biraz farklı biçimlendirme uygulanmış oluşturmak için benzer.  
   
- [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
- [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
+ [!code-csharp[TableSnippets#_TableAddDataRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
+ [!code-vb[TableSnippets#_TableAddDataRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
  Son olarak, bir alt bilgi satırı oluşturulan, eklenen biçimlendirilmiş ve.  Başlık satırı gibi tüm altı sütun kapsayan tek bir hücre alt bilgi içerir.  
   
- [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
- [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
+ [!code-csharp[TableSnippets#_TableAddFooterRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
+ [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [XAML ile Tablo Tanımlama](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Akış İçeriği Öğelerini Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+- [Akış Belgesine Genel Bakış](flow-document-overview.md)
+- [XAML ile Tablo Tanımlama](how-to-define-a-table-with-xaml.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [Akış İçeriği Öğelerini Kullanma](how-to-use-flow-content-elements.md)

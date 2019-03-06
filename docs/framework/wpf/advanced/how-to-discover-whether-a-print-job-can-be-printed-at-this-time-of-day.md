@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2abb9939917d4fc10a345b6199e2eb67054bf0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352743"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan bakım farklı bir sıra yoktur. Sıra diğer bölümler için 17: 00 sonra kullanılamaz olarak ayarlanması, ayrıcalıklı bölümün sırası olarak ayarlanması sırada her kullanılabilir zaman.  
@@ -47,9 +47,9 @@ Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün
   
  Saatlerinde bildirirken <xref:System.DateTime.ToShortTimeString%2A> yöntemi olarak da adlandırılır çünkü bu yöntem, yıl, ay ve gün çıktısından bastırır. Belirli bir yıl, ay ve gün için yazdırma sırası ya da bir yazdırma işi kullanılabilirliğini kısıtlayamazsınız.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
- [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
- [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
+ [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
+ [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
  İki overloads biri **ReportAvailabilityAtThisTime** yöntemi yalnızca bunların geçirilen türler hariç aynıdır <xref:System.Printing.PrintQueue> sürümü aşağıda sunulur.  
   
@@ -64,19 +64,19 @@ Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün
   
  Ancak, bu iki özellik olmayan <xref:System.DateTime> nesneleri. Bunlar <xref:System.Int32>zamanı dakika sonra UTC gece sayıda ifade s. Biz dönüştürmek zorunda bizim <xref:System.DateTime> dakika sonra gece yarısına nesne. Tamamlandığında, yöntemi yalnızca "şimdi olmadığını" görmek için "kadar" false "şimdi ise" sentinel arasında iki kez değildir ve sentinel döndürür kümeleri kez sıranın başlangıç arasında denetler.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
- [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
- [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
+ [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
+ [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
  **TimeConverter.ConvertToLocalHumanReadableTime** yöntemi (aşağıdaki kod örneğinde gösterilen) tartışma kısa, bu nedenle, Microsoft .NET Framework ile sunulan tüm yöntemleri kullanamaz. Çift dönüştürme görevi yöntemi vardır: dakika sonra gece yarısı ifade eden bir tamsayı olması gerekir ve bir kullanıcı tarafından okunabilen saate dönüştürün ve bu yerel saate dönüştürmeniz gerekir. Bu ilk oluşturarak gerçekleştirir bir <xref:System.DateTime> ve sonra kullanan gece yarısı olarak ayarlıdır nesne <xref:System.DateTime.AddMinutes%2A> yöntemine iletilmiş dakika eklemek için yöntemi. Bu yeni bir döndürür <xref:System.DateTime> metoduna geçirildi özgün zamanı ifade. <xref:System.DateTime.ToLocalTime%2A> Yöntemi sonra yerel saat olarak bu dönüştürür.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
- [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
- [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
+ [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
+ [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](printing-overview.md)

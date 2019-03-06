@@ -11,12 +11,12 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 62b0f46e710180ef53fba086bdfed9e7cf45be9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610610"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351430"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Nasıl yapılır: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplandırma
 Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını gösterir. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Görünümler işlevleri gruplandırma, sıralama, filtreleme ve geçerli öğenin kavram izin verir.  
@@ -26,20 +26,20 @@ Bu örnek, bir veri toplama bir görünümün nasıl oluşturulacağını göste
   
  Aşağıdaki örnek Şehir adına göre sıralanır ve durumlarına göre gruplandırılan veri koleksiyonunu bir görünümünü oluşturur.  
   
- [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
+ [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
  Görünüm, ardından aşağıdaki örnekteki gibi bir bağlama kaynağı olabilir:  
   
- [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
+ [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
  Tanımlanan XML veri bağlama için bir <xref:System.Windows.Data.XmlDataProvider> kaynak ile XML adın önüne bir @ sembolü.  
   
- [!code-xaml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
+ [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
- [!code-xaml[CollectionViewSource#Attribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
+ [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Data.CollectionViewSource>
-- [Veri Koleksiyonunun Varsayılan Görünümünü Alma](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Veri Koleksiyonunun Varsayılan Görünümünü Alma](how-to-get-the-default-view-of-a-data-collection.md)
+- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

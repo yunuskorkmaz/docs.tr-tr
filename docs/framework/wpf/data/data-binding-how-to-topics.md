@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360582"
 ---
 # <a name="data-binding-how-to-topics"></a>Veri Bağlama ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, veri bağlama ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde veri kaynaklarının çeşitli veri öğeleri bağlamak için nasıl kullanılacağını açıklar.  
+Bu bölümdeki konularda, ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde veri kaynakları çeşitli veri öğeleri bağlamak için veri bağlama kullanmayı açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Basit bir Bağlama Oluşturma](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [Bağlama Kaynağı Belirtme](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [Bağlama Yönünü Belirtme](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [Sabit Listesine Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [İki Denetimin Özelliklerini Bağlama](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [Bağlama Doğrulaması Uygulama](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [CompositeCollection Uygulama](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [Bağımlı Veri Dönüştürme](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [Kod İçinde Bağlama Oluşturma](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [Veri Koleksiyonunun Varsayılan Görünümünü Alma](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [Veri CollectionView İçindeki Nesneler Aracılığıyla Gezinme](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [Görünümde Veri Filtreleme](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Görünümde Verileri Sıralama](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Bağımlı Öğeler Listesine Göre Değer Üretme](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [Özellik Değişikliği Bildirimi Uygulama](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [ObservableCollection Oluşturma ve Bağlama](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [PriorityBinding Uygulama](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [XML Ad Alanlarını Kullanarak Veri Bağlama](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [ADO.NET Veri Kaynağına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [Bir Yönteme Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [Bağlama Güncelleştirmeleri Bildirimini Ayarlama](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [Bağlamaları Temizleme](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [DataTemplate ile Oluşturulan Öğeleri Bulma](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Web Hizmetine Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [LINQ Sorgusunun Sonuçlarına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Basit bir Bağlama Oluşturma](how-to-create-a-simple-binding.md)  
+ [Bağlama Kaynağı Belirtme](how-to-specify-the-binding-source.md)  
+ [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](how-to-make-data-available-for-binding-in-xaml.md)  
+ [TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [Bağlama Yönünü Belirtme](how-to-specify-the-direction-of-the-binding.md)  
+ [Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Sabit Listesine Bağlama](how-to-bind-to-an-enumeration.md)  
+ [İki Denetimin Özelliklerini Bağlama](how-to-bind-the-properties-of-two-controls.md)  
+ [Bağlama Doğrulaması Uygulama](how-to-implement-binding-validation.md)  
+ [Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama](how-to-implement-validation-logic-on-custom-objects.md)  
+ [Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [CompositeCollection Uygulama](how-to-implement-a-compositecollection.md)  
+ [Bağımlı Veri Dönüştürme](how-to-convert-bound-data.md)  
+ [Kod İçinde Bağlama Oluşturma](how-to-create-a-binding-in-code.md)  
+ [Veri Koleksiyonunun Varsayılan Görünümünü Alma](how-to-get-the-default-view-of-a-data-collection.md)  
+ [Veri CollectionView İçindeki Nesneler Aracılığıyla Gezinme](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [Görünümde Veri Filtreleme](how-to-filter-data-in-a-view.md)  
+ [Görünümde Verileri Sıralama](how-to-sort-data-in-a-view.md)  
+ [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Bağımlı Öğeler Listesine Göre Değer Üretme](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [Özellik Değişikliği Bildirimi Uygulama](how-to-implement-property-change-notification.md)  
+ [ObservableCollection Oluşturma ve Bağlama](how-to-create-and-bind-to-an-observablecollection.md)  
+ [PriorityBinding Uygulama](how-to-implement-prioritybinding.md)  
+ [XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [XML Ad Alanlarını Kullanarak Veri Bağlama](how-to-use-xml-namespaces-in-data-binding.md)  
+ [ADO.NET Veri Kaynağına Bağlama](how-to-bind-to-an-ado-net-data-source.md)  
+ [Bir Yönteme Bağlama](how-to-bind-to-a-method.md)  
+ [Bağlama Güncelleştirmeleri Bildirimini Ayarlama](how-to-set-up-notification-of-binding-updates.md)  
+ [Bağlamaları Temizleme](how-to-clear-bindings.md)  
+ [DataTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-datatemplate-generated-elements.md)  
+ [Web Hizmetine Bağlama](how-to-bind-to-a-web-service.md)  
+ [LINQ Sorgusunun Sonuçlarına Bağlama](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ Bu bölümdeki konular, veri bağlama ortak dil çalışma zamanı (CLR) nesnele
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Veri Bağlama](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [Veri Bağlama](data-binding-wpf.md)  
   
- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)

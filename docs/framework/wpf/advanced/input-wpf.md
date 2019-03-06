@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350754"
 ---
 # <a name="input-wpf"></a>Giriş (WPF)
-Windows Presentation Foundation (WPF) giriş çeşitli türleri için destek içerir. Bu giriş, metin, dokunma, fare, komutları, odak, dokunma, sürükle ve bırak ve dijital mürekkep içerir. Bu bölümde, WPF içinde girmek için ilgili konular açıklanmaktadır.  
+Windows Presentation Foundation (WPF), birden fazla giriş için destek içerir. Bu giriş, metin, dokunma, fare, komutları, odağı, dokunma, sürükle ve bırak ve dijital mürekkep içerir. Bu bölümde, WPF içinde girişi için ilgili konuları açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Dijital Mürekkep](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Girişe Genel Bakış](input-overview.md)  
+ [Komut Vermeye Genel Bakış](commanding-overview.md)  
+ [Odağa Genel Bakış](focus-overview.md)  
+ [Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [İzlenecek yol: İlk dokunmatik uygulamanızı oluşturma](walkthrough-creating-your-first-touch-application.md)  
+ [Nasıl Yapılır Konuları](input-and-commands-how-to-topics.md)  
+ [Dijital Mürekkep](digital-ink.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) giriş çeşitli türleri için destek iç
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
-  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Denetimler](../controls/index.md)  
+  [Olaylar](events-wpf.md)

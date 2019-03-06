@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746667"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374875"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request yöntemi
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>Parametreler
 
-`reqCode` [in] İstek gönderilmesine izin türü.
+`reqCode`\
+[in] İstek gönderilmesine izin türü.
 
-`inBufferSize` [in] geçirilmesi giriş arabellek boyutu.
+`inBufferSize`\
+[in] geçirilmesi giriş arabellek boyutu.
 
-`inBuffer` [size_is(inBufferSize)] İstekte gönderilmek üzere ham verileri arabellek işaretçisi.
+`inBuffer`\
+[size_is(inBufferSize)] İstekte gönderilmek üzere ham verileri arabellek işaretçisi.
 
-`outBufferSize` [in] Çıkış arabelleği boyutu.
+`outBufferSize`\
+[in] Çıkış arabelleği boyutu.
 
-`outBuffer` [out, size_is(outBufferSize)] İstek yanıt depolamak için kullanılan arabellek işaretçisi.
+`outBuffer`\
+[out, size_is(outBufferSize)] İstek yanıt depolamak için kullanılan arabellek işaretçisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -61,5 +66,5 @@ Sağlanan yöntem parçasıdır `IXCLRDataModule` arabirim ve sanal yöntem tabl
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)

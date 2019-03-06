@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527646"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358528"
 ---
 # <a name="custom-animations-overview"></a>Özel Animasyonlara Genel Bakış
 Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistem özel anahtar çerçeveler, animasyon sınıfları oluşturarak veya onu atlamak için çerçeve başına geri çağırma kullanarak.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için farklı türdeki tarafından sağlanan animasyonları tanımanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha fazla bilgi için bkz: u animasyonlarına genel bakış [anahtar-çerçeve animasyonlara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)ve [yol animasyonlarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Bu konuda anlamak için farklı türdeki tarafından sağlanan animasyonları tanımanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha fazla bilgi için bkz: u animasyonlarına genel bakış [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md)ve [yol animasyonlarına genel bakış](path-animations-overview.md).  
   
- Animasyon sınıfları <xref:System.Windows.Freezable> sınıfı olmanız gerekir aşina <xref:System.Windows.Freezable> nesneleri ve devralınacak nasıl <xref:System.Windows.Freezable>. Daha fazla bilgi için [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Animasyon sınıfları <xref:System.Windows.Freezable> sınıfı olmanız gerekir aşina <xref:System.Windows.Freezable> nesneleri ve devralınacak nasıl <xref:System.Windows.Freezable>. Daha fazla bilgi için [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Animasyon sistemini genişletme  
@@ -45,7 +45,7 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Özel bir anahtar kare oluşturma  
- Bir özel anahtar çerçeve sınıfı oluşturmak, animasyon sistemini genişletmek için kolay bir yoludur. Farklı ilişkilendirme yöntemi için bir anahtar çerçeve animasyonu istediğinizde bu yaklaşımı kullanın.  Bölümünde anlatıldığı gibi [anahtar-çerçeve animasyonlara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), çıkış değerleri oluşturmak için anahtar çerçeve nesneleri anahtar çerçeve animasyonu kullanır. Her bir ana kare nesne üç işlevleri gerçekleştirir:  
+ Bir özel anahtar çerçeve sınıfı oluşturmak, animasyon sistemini genişletmek için kolay bir yoludur. Farklı ilişkilendirme yöntemi için bir anahtar çerçeve animasyonu istediğinizde bu yaklaşımı kullanın.  Bölümünde anlatıldığı gibi [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md), çıkış değerleri oluşturmak için anahtar çerçeve nesneleri anahtar çerçeve animasyonu kullanır. Her bir ana kare nesne üç işlevleri gerçekleştirir:  
   
 -   Kullanarak bir hedef değer belirtir, <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliği.  
   
@@ -57,7 +57,7 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
   
  Öğesinden türetilen  *\<türü >* ana kare soyut sınıf ve InterpolateValueCore yöntemini uygulayın. Anahtar çerçevesi'nin geçerli değeri InterpolateValueCore yöntemini döndürür. İki parametre alır: değeri önceki anahtar çerçeve ve 0 ile 1 arasında bir ilerleme değeri. Anahtar çerçeve başladığına ve anahtar çerçeve tamamladığını ve ile belirtilen değer döndürmelidir 1 değerini gösterir 0 ilerlemesini gösterir, <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliği.  
   
- Çünkü  *\<türü >* ana kare sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) daha fazla bilgi için.  
+ Çünkü  *\<türü >* ana kare sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
   
  Kendi özel oluşturduktan sonra  *\<türü >* ana kare animasyon kullanabileceğiniz ile  *\<türü >* AnimationUsingKeyFrames türü için.  
   
@@ -72,7 +72,7 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
   
  Öğesinden türetilen bir  *\<türü >* animasyon sınıfı ve GetCurrentValueCore yöntemini uygulayın. GetCurrentValueCore yöntemi animasyon geçerli değerini döndürür. Üç parametreleri alır: önerilen bir başlangıç değeri, önerilen bir bitiş değeri ve bir <xref:System.Windows.Media.Animation.AnimationClock>, animasyonun ilerleme durumunu belirlemek için kullanın.  
   
- Çünkü  *\<türü >* AnimationBase sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) daha fazla bilgi için.  
+ Çünkü  *\<türü >* AnimationBase sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
   
  Daha fazla bilgi için GetCurrentValueCore yöntemi belgelerine bakın  *\<türü >* animasyon uygulamak istediğiniz türe ilişkin AnimationBase sınıfı. Bir örnek için bkz [özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Belirtmek için bu özelliği geçersiz kılma <xref:System.Type> animasyonunuzu çıktısı üretir.  
   
- Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) daha fazla bilgi için.  
+ Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
   
  Önerilen paradigma (tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları) iki devralma düzeyleri kullanmaktır:  
   
@@ -126,10 +126,10 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Yol Animasyonlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)
+- [Freezable Nesnelerine Genel Bakış](../advanced/freezable-objects-overview.md)
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)
+- [Yol Animasyonlarına Genel Bakış](path-animations-overview.md)
+- [Animasyona Genel bakış](animation-overview.md)
+- [Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)
 - [Özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981)

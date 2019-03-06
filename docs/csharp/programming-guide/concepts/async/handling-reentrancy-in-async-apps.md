@@ -2,12 +2,12 @@
 title: (C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9c00a857fd75a44a00781e43b94623f101c7d352
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f5435dd482a20e1aa5a6e0b93d6222025b05518
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620444"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359269"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
@@ -29,7 +29,7 @@ Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tama
 > [!NOTE]
 >  Yeni bilgisayarınızda yüklü veya örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
-##  <a name="BKMK_RecognizingReentrancy"></a> Yeniden giriş tanıma  
+## <a name="BKMK_RecognizingReentrancy"></a> Yeniden giriş tanıma  
  Bu konudaki örnekte, kullanıcıların seçim bir **Başlat** Web sitesi dizilerini indiren ve indirilen bayt toplam sayısını hesaplayan zaman uyumsuz bir uygulamayı başlatmak için düğme. Zaman uyumlu bir sürümünü örneğin aynı şekilde bakılmaksızın İlk seferden sonra UI iş parçacığı bu olayları Uygulama çalışmayı sonlandırıncaya kadar yok sayar. çünkü, kaç kez bir kullanıcı düğmeyi yanıtlamayı ister. Zaman uyumsuz bir uygulamada, ancak kullanıcı Arabirimi iş parçacığı yanıtlamaya devam eder ve zaman uyumsuz işlem tamamlanmadan önce yeniden.  
   
  Aşağıdaki örnek, beklenen gösterir. Kullanıcı seçtiğinde çıkış **Başlat** düğmesini yalnızca bir defa. İndirilen Web sitelerinin bir listesiyle boyutunu bayt cinsinden her site görünür. Toplam bayt sayısı sonda görünür.  
@@ -86,7 +86,7 @@ TOTAL bytes returned:  890591
   
  Bu konunun sonuna kadar giderek bu çıkışı üreten kodu gözden geçirebilirsiniz. Çözümü yerel bilgisayarınıza indirip WebsiteDownload projeyi daha sonra çalışan veya kendi projenizi oluşturmak için bu konunun sonunda kodu kullanarak kodla denemeler yapabilirsiniz. Daha fazla bilgi ve yönergeler için bkz. [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample).  
   
-##  <a name="BKMK_HandlingReentrancy"></a> Yeniden girişi işleme  
+## <a name="BKMK_HandlingReentrancy"></a> Yeniden girişi işleme  
  Yolu, uygulamanızı yapmak için istediğinize bağlı olarak çeşitli yollardan yeniden işleyebilirsiniz. Bu konu aşağıdaki örnekleri sunar:  
   
 -   [Başlat düğmesini devre dışı bırak](#BKMK_DisableTheStartButton)  
@@ -101,7 +101,7 @@ TOTAL bytes returned:  890591
   
      Tüm istenen işlemlerin zaman uyumsuz olarak çalışır, ancak çıktı görünümünü koordine edecek her işlemin sonuçları birlikte ve sıralı görünür izin verir.  
   
-###  <a name="BKMK_DisableTheStartButton"></a> Başlat düğmesini devre dışı bırak  
+### <a name="BKMK_DisableTheStartButton"></a> Başlat düğmesini devre dışı bırak  
  Engelleyebilirsiniz **Başlat** en üstündeki düğmesini devre dışı bırakarak işlem çalışırken `StartButton_Click` olay işleyicisi. İçinden düğmeyi ardından etkinleştirebileceğiniz bir `finally` böylece kullanıcılar uygulamayı yeniden çalıştırabilir işlem tamamlandığında engelleyin.  
   
  Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Proje adı disablestartbutton.  
@@ -133,7 +133,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Değişikliklerin bir sonucu olarak düğme yanıt vermiyor ancak `AccessTheWebAsync` işlem reentered şekilde Web siteleri yüklüyor.  
   
-###  <a name="BKMK_CancelAndRestart"></a> İptal edip işlemi yeniden başlatın  
+### <a name="BKMK_CancelAndRestart"></a> İptal edip işlemi yeniden başlatın  
  Devre dışı bırakmak yerine **Başlat** düğmesini kullanabilirsiniz düğmeyi etkin tutabilirsiniz ancak, kullanıcı yeniden bu düğmeyi seçerse, zaten çalışıyor ve en son başlatılan işlemin devam izin işlemi iptal edin.  
   
  İptal işlemleri hakkında daha fazla bilgi için bkz. [Fine-Tuning Async uygulamanızda (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
@@ -293,7 +293,7 @@ TOTAL bytes returned:  890591
   
  Kısmi listelerini ortadan kaldırmak için ilk kod satırı açıklamadan çıkarın `StartButton_Click` kullanıcı her zaman metin kutusunu temizlemek için işlemi yeniden başlatır.  
   
-###  <a name="BKMK_RunMultipleOperations"></a> Birden çok işlemi çalıştırın ve çıktıyı sıraya alın  
+### <a name="BKMK_RunMultipleOperations"></a> Birden çok işlemi çalıştırın ve çıktıyı sıraya alın  
  Başka bir zaman uyumsuz işlemi kullanıcı her zaman uygulama başlatır, bu üçüncü örnek en karmaşık örnektir **Başlat** düğmesi ve tüm işlemler tamamlanmak üzere çalıştığı. Listeden Web siteleri tüm istenen işlemler zaman uyumsuz olarak yükleyin, ancak çıkış işlemlerden çıktılar ardışık olarak sunulur. Diğer bir deyişle, gerçek indirme etkinliği, deki çıkışın gösterdiği gibi aralanmıştır [yeniden giriş tanıma](#BKMK_RecognizingReentrancy) gösterir, ancak her grup için sonuçların listesi ayrı ayrı sunulur.  
   
  İşlemleri genel paylaşım <xref:System.Threading.Tasks.Task>, `pendingWork`, görüntüleme işlemi için bir ağ geçidi olarak görev gören.  
@@ -534,13 +534,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      Bir grubu girdikten sonra `StartButton_Click`, işlemi işlemi girinceye kadar await ifadesini tamamlamaz değil `FinishOneGroupAsync`. Bu nedenle, başka bir işlem sırasında kod kesiminin denetimi elde edebilirsiniz.  
   
-##  <a name="BKMD_SettingUpTheExample"></a> Gözden geçirme ve örnek uygulamayı çalıştırma  
+## <a name="BKMD_SettingUpTheExample"></a> Gözden geçirme ve örnek uygulamayı çalıştırma  
  Örnek uygulamayı daha iyi anlamak için indirin, kendiniz derleyebilir veya uygulamayı gerçekleştirmeden, bu konunun sonunda kodu gözden geçirin.  
   
 > [!NOTE]
 >  Bir veya daha yeni bilgisayarınızda yüklü örneği Windows Presentation Foundation (WPF) masaüstü uygulaması olarak çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 olmalıdır.  
   
-###  <a name="BKMK_DownloadingTheApp"></a> Uygulamayı karşıdan yükleme  
+### <a name="BKMK_DownloadingTheApp"></a> Uygulamayı karşıdan yükleme  
   
 1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
@@ -554,7 +554,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 6.  Oluşturun ve projeyi çalıştırmak için CTRL + F5 tuşlarını seçin.  
   
-###  <a name="BKMK_BuildingTheApp"></a> Uygulama oluşturma  
+### <a name="BKMK_BuildingTheApp"></a> Uygulama oluşturma  
  Aşağıdaki bölümde, örnek bir WPF uygulaması olarak oluşturmak için kod sağlar.  
   
 ##### <a name="to-build-a-wpf-app"></a>Bir WPF uygulaması derlemek için  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Win32 code [WPF], visual objects in
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-ms.openlocfilehash: 37b3a2ec51e6bab0fad583b00472c64fb96d3fd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68241d679b0f788423b09badfa549a660da0d106
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704569"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377315"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Öğretici: Win32 uygulamasında görsel nesneler barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir eklemek daha etkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanıza işlevsellik yerine, kodu yeniden yazın. Destek sağlamak üzere [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik alt sistemlerin aynı anda bir uygulamada kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesneleri barındırmak için bir mekanizma sağlar bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi.  
@@ -25,7 +25,7 @@ ms.locfileid: "54704569"
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu öğretici hem de temel bir bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). Giriş konulu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama, çok sayıda kitaplardan herhangi birine konuyla ilgili özellikle bkz *Windows programlama* Charles Petzold ile.  
+ Bu öğretici hem de temel bir bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md). Giriş konulu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama, çok sayıda kitaplardan herhangi birine konuyla ilgili özellikle bkz *Windows programlama* Charles Petzold ile.  
   
 > [!NOTE]
 >  Bu öğreticide ilişkili örnekteki kod örnekleri içerir. Ancak, okunabilirlik için tam örnek kod içermez. Tam örnek kod için bkz: [Win32 birlikte çalışması örnek ile isabet sınaması](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -36,8 +36,8 @@ ms.locfileid: "54704569"
   
  Aşağıdaki örnek oluşturmak için kod gösterir <xref:System.Windows.Interop.HwndSource> nesnesinin [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] görsel nesneler için kapsayıcı penceresi. Pencere stili, konumu ve diğer parametreler için ayarlanacak [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde kullanım <xref:System.Windows.Interop.HwndSourceParameters> nesne.  
   
- [!code-csharp[VisualsHitTesting#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#101)]
- [!code-vb[VisualsHitTesting#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#101)]  
+ [!code-csharp[VisualsHitTesting#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#101)]
+ [!code-vb[VisualsHitTesting#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#101)]  
   
 > [!NOTE]
 >  Değerini <xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A> WS_EX_TRANSPARENT için özelliği ayarlanamaz. Konak buna [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi saydam olamaz. Bu nedenle, arka plan rengi konağının [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi aynı arka plan rengine ilişkin ana pencerelere olarak ayarlanır.  
@@ -51,8 +51,8 @@ ms.locfileid: "54704569"
 > [!NOTE]
 >  <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Özelliği <xref:System.Windows.Interop.HwndSource> nesne konağa eklenen ilk görsel nesne kümesine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Kök görsel nesneyi görsel nesne ağacının en üst düğümü tanımlar. Ana bilgisayara eklenmiş sonraki tüm görsel nesneler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi, alt nesne olarak eklenir.  
   
- [!code-csharp[VisualsHitTesting#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#100)]
- [!code-vb[VisualsHitTesting#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#100)]  
+ [!code-csharp[VisualsHitTesting#100](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#100)]
+ [!code-vb[VisualsHitTesting#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#100)]  
   
 <a name="implementing_the_win32_message_filter"></a>   
 ## <a name="implementing-the-win32-message-filter"></a>Win32 İleti Filtresi Uygulama  
@@ -60,24 +60,24 @@ ms.locfileid: "54704569"
   
  <xref:System.Windows.Interop.HwndSource> Üst görsel nesneler için sağladığınız pencere ileti filtre yordamı başvurmalıdır olarak tanımladığınız nesne. Oluştururken <xref:System.Windows.Interop.HwndSource> nesne, ayarlama <xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A> pencere yordamını başvurmak için özellik.  
   
- [!code-csharp[VisualsHitTesting#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#102)]
- [!code-vb[VisualsHitTesting#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#102)]  
+ [!code-csharp[VisualsHitTesting#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#102)]
+ [!code-vb[VisualsHitTesting#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#102)]  
   
  Aşağıdaki örnek, sol ve sağ fare düğmesi iletilerini işlemek için kod gösterir. Fare koordinat değeri isabet konumu değerinde bulunan `lParam` parametresi.  
   
- [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
- [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
+ [!code-csharp[VisualsHitTesting#103](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
+ [!code-vb[VisualsHitTesting#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
 <a name="processing_the_win32_messages"></a>   
 ## <a name="processing-the-win32-messages"></a>Win32 iletilerini işleme  
  Aşağıdaki örnek kodda isabet sınaması ana bilgisayarda yer alan visual nesne hiyerarşisini karşı nasıl gerçekleştirildiğini gösterir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi. Bir noktayı kullanarak görsel bir nesnenin geometrisini içinde olup olmadığını belirleyebilir <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> kök görsel nesnesi ve isabet sınaması için koordinat değeri belirtmek için yöntemi. Bu durumda, kök görsel nesne değeri <xref:System.Windows.Interop.HwndSource.RootVisual%2A> özelliği <xref:System.Windows.Interop.HwndSource> nesne.  
   
- [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
- [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
+ [!code-csharp[VisualsHitTesting#104](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
+ [!code-vb[VisualsHitTesting#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- İsabet sınaması karşı görsel nesneler üzerinde daha fazla bilgi için bkz. [isabet testi görsel katmandaki](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
+ İsabet sınaması karşı görsel nesneler üzerinde daha fazla bilgi için bkz. [isabet testi görsel katmandaki](hit-testing-in-the-visual-layer.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Interop.HwndSource>
 - [İsabet testi ile Win32 birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Görsel Katmanda Tıklama Testi](hit-testing-in-the-visual-layer.md)

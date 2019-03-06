@@ -2,53 +2,58 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 1e8ce41a27bd328c861f2f376a89c57bcd035389
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281300"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366467"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching >
-Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir alma işlemleri.  
-  
- \<system.ServiceModel>  
-\<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
-\<transactedBatching >  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```xml  
+
+Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir alma işlemleri.
+
+\<sistemi. ServiceModel > \
+\<davranışlar > \
+\<endpointBehaviors>\
+\<davranış > \
+\<transactedBatching >
+
+## <a name="syntax"></a>Sözdizimi
+
+```xml
 <transactedBatching maxBatchSize="Integer" />
-```  
-  
-## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
-  
-### <a name="attributes"></a>Öznitelikler  
-  
-|Öznitelik|Açıklama|  
-|---------------|-----------------|  
-|`maxBatchSize`|En fazla sayısını belirten bir tamsayı gruplanabilecek operations birlikte tek bir işlemle alırsınız. Varsayılan değer 0'dır.|  
-  
-### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
-  
-### <a name="parent-elements"></a>Üst Öğeler  
-  
-|Öğe|Açıklama|  
-|-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
-  
-## <a name="remarks"></a>Açıklamalar  
- Birkaç batch girişimleri toplu işlem ile yapılandırılmış bir taşıma işlemlerini tek bir işleme alırsınız. Bunu, bir işlem oluşturmak ve bunu yapmadan görece yüksek maliyeti yaparak her alma işlemi engellenir.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir hizmet yapılandırma dosyasında işlenen toplu işleme davranışını eklemek gösterilmektedir.  
-  
-```xml  
+```
+
+## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
+
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
+
+### <a name="attributes"></a>Öznitelikler
+
+|Öznitelik|Açıklama|
+|---------------|-----------------|
+|`maxBatchSize`|En fazla sayısını belirten bir tamsayı gruplanabilecek operations birlikte tek bir işlemle alırsınız. Varsayılan değer 0'dır.|
+
+### <a name="child-elements"></a>Alt Öğeler
+
+Yok.
+
+### <a name="parent-elements"></a>Üst Öğeler
+
+|Öğe|Açıklama|
+|-------------|-----------------|
+|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|
+
+## <a name="remarks"></a>Açıklamalar
+
+Birkaç batch girişimleri toplu işlem ile yapılandırılmış bir taşıma işlemlerini tek bir işleme alırsınız. Bunu, bir işlem oluşturmak ve bunu yapmadan görece yüksek maliyeti yaparak her alma işlemi engellenir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, bir hizmet yapılandırma dosyasında işlenen toplu işleme davranışını eklemek gösterilmektedir.
+
+```xml
 <system.serviceModel>
   <services>
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"
@@ -62,7 +67,7 @@ Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir al
       <endpoint address="net.msmq://localhost/private/ServiceModelSamples"
                 binding="netMsmqBinding"
                 contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />
-      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->
+      <!-- the mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex -->
       <endpoint address="mex"
                 binding="mexHttpBinding"
                 contract="IMetadataExchange" />
@@ -81,8 +86,9 @@ Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir al
     </serviceBehaviors>
   </behaviors>
 </system.serviceModel>
-```  
-  
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

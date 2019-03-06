@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368226"
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) içerik görsel efektler uygulamak için geliştirici çizilir. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> veya Bulanıklaştırma efektini görüntü ya da bir düğme.  
@@ -47,11 +47,11 @@ Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) i�
   
  Aşağıdaki örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Effects.BitmapEffect> içinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
+ [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
   
  Aşağıdaki örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Effects.BitmapEffect> kod.  
   
- [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
+ [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
   
 > [!NOTE]
 >  Olduğunda bir <xref:System.Windows.Media.Effects.BitmapEffect> gibi bir düzen kapsayıcısı için uygulanan <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.Controls.Canvas>, öğenin veya visual tüm alt öğeleri dahil olmak üzere, görsel ağaçta değişiklik etkisi uygulanır.  
@@ -65,7 +65,7 @@ Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) i�
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
 - [WPF yönetilmeyen bit eşlem etkisi](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
-- [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [Güvenlik](../../../../docs/framework/wpf/security-wpf.md)
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Görüntülemeye Genel Bakış](imaging-overview.md)
+- [Güvenlik](../security-wpf.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

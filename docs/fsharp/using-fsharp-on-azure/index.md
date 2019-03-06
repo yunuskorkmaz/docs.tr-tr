@@ -4,6 +4,7 @@ description: 'Azure Hizmetleri ile kullanarakF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
 F#Bulut programlama için mükemmel bir dildir ve web uygulamaları, bulut Hizmetleri, bulutta barındırılan mikro hizmetler, yazmak için sık kullanılan ve ölçeklenebilir veri işleme için.
@@ -87,7 +88,7 @@ Azure Notification Hubs ile kullanılabilir F# iki yolla:
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Web kancaları F ile azure'da uygulama\#
 
-A [Web kancası](https://en.wikipedia.org/wiki/Webhook) olan bir web isteği aracılığıyla tetiklenen bir geri çağırma. Web kancaları, sinyal olayları için GitHub gibi siteleri tarafından kullanılır. 
+A [Web kancası](https://en.wikipedia.org/wiki/Webhook) olan bir web isteği aracılığıyla tetiklenen bir geri çağırma. Web kancaları, sinyal olayları için GitHub gibi siteleri tarafından kullanılır.
 
 Web kancaları uygulanabilir F# ve azure'da barındırılan bir [Azure işlevinde F# bağlama Web kancası ile](/azure/azure-functions/functions-bindings-http-webhook).
 
@@ -109,7 +110,7 @@ Azure sanal makineler programlı olarak dağıtılabilir ve yönetilen engelle F
 
 Benzer şekilde, diğer Azure kaynakları da dağıtılabilir ve yönetilen engelle F# aynı bileşenleri kullanarak komut dosyaları. Örneğin, depolama hesapları oluşturabilir, Azure bulut Hizmetleri dağıtma, Azure Cosmos DB örnekleri oluşturmak ve Azure bildirim hub'larından programlı olarak yönetmek F# betikler.
 
-Kullanarak F# dağıtmak ve kaynakları yönetmek için betikleri genellikle gerekli değildir. Örneğin, Azure kaynaklarını parametreleştirilebilir JSON şablonu açıklamaları alanından dağıtılan directy olabilir. Bkz: [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) örnekleri gibi [Azure hızlı başlangıç şablonları](https://azure.microsoft.com/resources/templates/).
+Kullanarak F# dağıtmak ve kaynakları yönetmek için betikleri genellikle gerekli değildir. Örneğin, Azure kaynaklarını parametreli olabilir, doğrudan JSON şablonu alınan açıklamaları, dağıtılabilir. Bkz: [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) örnekleri gibi [Azure hızlı başlangıç şablonları](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Diğer kaynaklar
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360985"
 ---
 # <a name="fonts-wpf"></a>Yazı Tipleri (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin kullanarak zengin sunumu için destek içerir [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. Bir örnek paketinin [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri ile birlikte [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Uygulamalarla Yazı Tiplerini Paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [Örnek OpenType Yazı Tipi Paketi](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [OpenType Yazı Tipi Özellikleri](opentype-font-features.md)  
+ [Uygulamalarla Yazı Tiplerini Paketleme](packaging-fonts-with-applications.md)  
+ [Örnek OpenType Yazı Tipi Paketi](sample-opentype-font-pack.md)  
+ [Nasıl Yapılır Konuları](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [WPF'de Tipografi](typography-in-wpf.md)

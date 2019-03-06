@@ -8,21 +8,21 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367472"
 ---
 # <a name="drag-and-drop"></a>Sürükleme ve Bırakma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok esnek sürükleme ve her ikisi de içindeki verilerin bırakarak destekleyen bırakma altyapısını sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları yanı sıra diğer [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] uygulamalar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son derece esnek sürükleyin ve sürükleme ve bırakma öğesinde hem de veri destekleyen bırakma altyapı sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların yanı sıra diğer [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] uygulamalar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sürükleme ve Bırakmaya Genel Bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [Veri ve Veri Nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Sürükleme ve Bırakmaya Genel Bakış](drag-and-drop-overview.md)  
+ [Veri ve Veri Nesneleri](data-and-data-objects.md)  
+ [İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Nasıl Yapılır Konuları](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.DataFormat>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573942"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375395"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable Özniteliği
 Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirme dosyasında karşılaşılan ad alanı öneklerini tarafından dikkate bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci. `mc:Ignorable` Özniteliği işaretleme uyumluluk destekler ve özel ad alanı eşlemesi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sürüm oluşturma.  
@@ -59,7 +59,7 @@ Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] b
   
  Uyguluyorsanız bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci, işlemci uygulamanız gerekir değil yükseltmek ayrıştırma veya herhangi bir öğe veya olarak tanımlanan bir ön eke göre koşullu öznitelik için tür çözümlemesi hataları işleme `mc:Ignorable`. Ancak, işlemci uygulamanız hala yüklenemiyor veya daha önce verilen bir alt öğe örneği gibi işlenmesi başarısız olan bir öğenin ikincil sonucunda oluşan özel durumlar oluşturabilir.  
   
- Varsayılan olarak, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci yoksayılan öğe içindeki içeriği yoksayar. Ancak, ek bir öznitelik belirtebilirsiniz [mc: ProcessContent özniteliği](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), devam eden işlemi sonraki kullanılabilir üst öğe tarafından yok sayıldı öğe içindeki içeriğinin gerektirecek şekilde.  
+ Varsayılan olarak, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci yoksayılan öğe içindeki içeriği yoksayar. Ancak, ek bir öznitelik belirtebilirsiniz [mc: ProcessContent özniteliği](mc-processcontent-attribute.md), devam eden işlemi sonraki kullanılabilir üst öğe tarafından yok sayıldı öğe içindeki içeriğinin gerektirecek şekilde.  
   
  Birden çok ön ek bir veya daha fazla boşluk karakterlerini ayırıcı olarak örneğin kullanarak özniteliği belirtilebilir: `mc:Ignorable="ignore1 ignore2"`.  
 
@@ -67,6 +67,6 @@ Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] b
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze Özniteliği](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [PresentationOptions:Freeze Özniteliği](presentationoptions-freeze-attribute.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)

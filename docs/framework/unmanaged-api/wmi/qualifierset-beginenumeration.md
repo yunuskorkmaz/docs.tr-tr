@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f663434d3e3d44dc0c406e71592651493bd8f8dc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375421"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration işlevi
-Bir nesnenin niteleyicileri numaralandırması sabit başlangıcına sıfırlar.  
+
+Bir nesnenin niteleyicileri numaralandırması sabit başlangıcına sıfırlar.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT QualifierSet_BeginEnumeration (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`   
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr`   
+`ptr`\
 [in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
-`lFlags`   
+`lFlags`\
 [in] Bayrakları veya açıklanan değerler Bitsel bir birleşimi [açıklamalar](#remarks) numaralandırmada içerecek şekilde niteleyicileri belirten bölüm.
 
 ## <a name="return-value"></a>Dönüş değeri
@@ -59,27 +60,29 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |`WBEM_E_UNEXPECTED` | 0x8004101d | İkinci çağrı `QualifierSet_BeginEnumeration` bir çağrı göndermelisiniz olmadan yapılan [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırma başlatmak yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) yöntemi.
 
 Tüm nesne üzerindeki niteleyiciler numaralandırmak için bu yöntem ilk çağırmadan önce çağrılmalıdır [QualifierSet_Next](qualifierset-next.md). Niteleyiciler numaralandırılan siparişi için belirli bir numaralandırma sabit olması sağlanır.
 
-Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişken tanımlanmış *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.   
+Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişken tanımlanmış *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |  | 0 | Tüm niteleyicileri adlarını döndürür. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür. <br/> Bir özellik için: Yalnızca (geçersiz kılmaları dahil) özelliğine belirli niteleyicileri ve olmayan sınıf tanımından yayılan niteleyicileri döndürür. <br/> Bir örneği için: Yalnızca örnek özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: Yalnızca niteleyicileri, türetilmiş sınıf beiong belirli döndürür.
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür. <br/> Bir özellik için: Yalnızca (geçersiz kılmaları dahil) özelliğine belirli niteleyicileri ve olmayan sınıf tanımından yayılan niteleyicileri döndürür. <br/> Bir örneği için: Yalnızca örnek özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: Elde sınıf niteleyicileri yalnızca belirli döndürür.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır. <br/> Bir özellik için: Bu özellik yalnızca niteleyicileri yayılan dön sınıf tanımı ve özelliğinden olanlar. <br/> Bir örneği için: Sınıf tanımı dönüş niteleyicileri yalnızca yayılır. <br/> Bir sınıf için: Return bu niteleyici adları yalnızca üst sınıflardan devralınır. |
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

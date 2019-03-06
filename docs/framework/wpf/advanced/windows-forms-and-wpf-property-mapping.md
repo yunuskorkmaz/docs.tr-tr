@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493709"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358567"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms ve WPF Özelliğini Eşleme
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teknolojileri sahip iki özelliği, benzer ancak farklı modeli. *Özellik eşleme* iki mimariler arasında birlikte çalışabilirliği destekler ve aşağıdaki özellikleri sağlar:  
@@ -49,7 +49,7 @@ ms.locfileid: "54493709"
   
  Kapsayıcı öğeler üzerinde iliştirilmiş özellikler tarafından tam olarak desteklenmektedir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi.  
   
- Daha fazla bilgi için [izlenecek yol: WindowsFormsHost Öğesi kullanarak özellikleri eşleme](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Daha fazla bilgi için [izlenecek yol: WindowsFormsHost Öğesi kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Üst özellikleri için güncelleştirmeler  
  Çoğu üst özelliklerde yapılan değişiklikler, barındırılan alt denetimin bildirimleri neden. Aşağıdaki liste değerleri değiştiğinde bildirim neden olmaz özellikleri açıklar.  
@@ -117,7 +117,7 @@ ms.locfileid: "54493709"
   
  <xref:System.Windows.Forms.Integration.ElementHost> Denetimi varsayılan çevirir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] özelliklerine kendi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğerleri aşağıdaki çeviri tablosunu kullanarak.  
   
- Daha fazla bilgi için [izlenecek yol: ElementHost denetimini kullanarak özellikleri eşleme](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Daha fazla bilgi için [izlenecek yol: ElementHost denetimini kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Windows Forms barındırma|Windows Presentation Foundation|Birlikte çalışabilirlik davranışı|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "54493709"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [WPF ve Windows Forms Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [İzlenecek yol: WindowsFormsHost Öğesi kullanarak özellikleri eşleme](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [İzlenecek yol: ElementHost denetimini kullanarak özellikleri eşleme](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)
+- [WPF ve Windows Forms Birlikte Çalışması](wpf-and-windows-forms-interoperation.md)
+- [İzlenecek yol: WindowsFormsHost Öğesi kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [İzlenecek yol: ElementHost denetimini kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-elementhost-control.md)

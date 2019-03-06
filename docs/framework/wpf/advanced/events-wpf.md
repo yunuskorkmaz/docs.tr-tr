@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542593"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361219"
 ---
 # <a name="events-wpf"></a>Olaylar (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bir uygulamanın öğe ağacındaki çeşitli dinleyiciler üzerinde mevcut işleyicileri çağırabileceği yönlendirilmiş olaylar tanıtır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Açık öğe ağacında bir uygulamanın çeşitli dinleyicisi mevcut işleyiciler çağırabilirsiniz yönlendirilmiş olaylar tanıtır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [İliştirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Nesne Yaşam Süresi Olayları](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Önizleme Olayları](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Özellik Değiştirme Olayları](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic ve WPF Olay İşleme](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Zayıf Olay Desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)  
+ [İliştirilmiş Olaylara Genel Bakış](attached-events-overview.md)  
+ [Nesne Yaşam Süresi Olayları](object-lifetime-events.md)  
+ [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)  
+ [Önizleme Olayları](preview-events.md)  
+ [Özellik Değiştirme Olayları](property-change-events.md)  
+ [Visual Basic ve WPF Olay İşleme](visual-basic-and-wpf-event-handling.md)  
+ [Zayıf Olay Desenleri](weak-event-patterns.md)  
+ [Nasıl Yapılır Konuları](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542593"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF Mimarisi](wpf-architecture.md)  
+  [WPF'de XAML](xaml-in-wpf.md)  
+  [Temel Öğeler](base-elements.md)  
+  [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
+  [Özellikler](properties-wpf.md)  
+  [Giriş](input-wpf.md)  
+  [Kaynaklar](resources-wpf.md)  
+  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [WPF İçerik Modeli](../controls/wpf-content-model.md)  
+  [İş Parçacığı Modeli](threading-model.md)

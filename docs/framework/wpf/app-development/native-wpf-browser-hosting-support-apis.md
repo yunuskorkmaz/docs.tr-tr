@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863741"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361193"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Destek API'leri Barındıran Yerel WPF Tarayıcısı
 Barındırılmasını [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] uygulamalarının Web tarayıcılarında dışında WPF konağı kayıtlı olan etkin belge sunucusu (DocObject olarak da bilinir) barındırılması. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] etkinleştirebilir doğrudan ve etkin bir belge ile tümleştirin. XBAP ve gevşek XAML belgeleri Mozilla tarayıcılarda barındırmak için [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] benzer bir barındırma ortamı sağlayan NPAPI eklentisi sağlar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] etkin belge sunucusu olarak [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] yapar. Ancak, diğer tarayıcılarda XBAP'ler ve XAML barındırmak için pratik en kolay yolu belgeleri ve tek başına uygulamalar Internet Explorer Web tarayıcı denetimi. Web tarayıcı denetimi karmaşık etkin belge sunucusu barındırma ortamı sağlar, ancak özelleştirmek ve bu ortamda genişletmek ve geçerli etkin belgeyi nesne ile doğrudan iletişim kurmak kendi konak sağlar.  
@@ -32,5 +32,5 @@ enum PresentationHostCommands {
  PHCMDID_TABINTO SHIFT tuşunun durumunu bağlı olarak, içeriği ilk veya son odaklanabilir öğesine odak geçiş bildirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+ [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
+ [IWpfHostSupport](iwpfhostsupport.md)

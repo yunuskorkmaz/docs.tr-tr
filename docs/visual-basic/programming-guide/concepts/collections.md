@@ -2,12 +2,12 @@
 title: Koleksiyonlar (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 7fdafce071a77f344eb58e17c4be9d4f204e118d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359360"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.  
@@ -227,7 +227,7 @@ End Class
  <xref:System.Collections.Specialized> Ad alanı yalnızca dize koleksiyonları ve bağlantılı liste ve melez sözlükler gibi özelleştirilmiş ve türü kesin belirlenmiş koleksiyon sınıfları sağlar.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Visual Basic Collection sınıfı  
+### <a name="visual-basic-collection-class"></a>Visual Basic Collection sınıfı  
  Visual Basic kullanabileceğiniz <xref:Microsoft.VisualBasic.Collection> erişimi öğesi sayısal dizin kullanarak koleksiyon veya bir sınıf `String` anahtarı. Bir koleksiyon nesnesi ile veya bir anahtar belirtmeden öğe ekleyebilirsiniz. Bir anahtar olmadan bir öğe eklerseniz, erişmek için sayısal dizinini kullanmanız gerekir.  
   
  Visual Basic `Collection` sınıf türü olarak tüm öğelerini depolar `Object`, herhangi bir veri türünde bir öğe ekleyebilirsiniz. Eklenen uygunsuz veri türleriyle yoktur.  
@@ -337,7 +337,7 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma  
+## <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma  
  LINQ (dil ile tümleşik sorgu) koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve Gruplama yetenekler sağlar. Daha fazla bilgi için [Visual Basic'te lınq'e Başlarken](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Aşağıdaki örnek, bir genel LINQ sorgusu çalıştırır `List`. LINQ sorgusu sonuçları içeren farklı bir koleksiyon döndürür.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Yineleyiciler  
+## <a name="iterators"></a>Yineleyiciler  
  Bir *yineleyici* bir koleksiyon üzerinde özel yineleme yapmak için kullanılır. Bir yineleyiciyi bir yöntem olabilir veya bir `get` erişimcisi. Yineleyici bir [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) deyimini her öğesini birer birer koleksiyonunun bir döndürür.  
   
  Kullanarak bir yineleyici çağırabilirsiniz bir [her biri için... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimi. Her bir yinelemesini `For Each` döngü yineleyiciyi çağırır. Olduğunda bir `Yield` yineleyicisi deyimine ulaşıldığında, bir ifade döndürülür ve kodun geçerli konumu korunur. Yürütme, yineleyicinin bir sonraki açışınızda bu konumdan başlatılır.  

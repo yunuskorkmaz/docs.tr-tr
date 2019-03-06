@@ -5,13 +5,8 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154339"
 ---
+
 # <a name="the-roslyn-based-analyzers"></a>Roslyn Çözümleyicilerini tabanlı
 
 Roslyn tabanlı Çözümleyicileri, sorunları bulup düzeltme Öner projenizin kaynak kodunu analiz etmek için .NET derleyici SDK'sı (Roslyn API'leri) kullanın. Farklı Çözümleyicileri sorunları, güvenlik konuları API'sini uyumluluk hataları neden olabilecek uygulamalar arasında değişen farklı sınıflardaki arayın.
@@ -27,12 +22,12 @@ Roslyn tabanlı Çözümleyicileri hataları, uyarıları ve sorunun önem derec
 Roslyn tabanlı Çözümleyicileri NuGet paketleri olarak projenize yükleyin. Yapılandırılmış Çözümleyicileri ve her Çözümleyicisi ayarları geri ve bu proje için tüm geliştirici makinesinde çalıştırın.
 
 > [!NOTE]
-> Roslyn tabanlı Çözümleyicileri için kullanıcı deneyimi, kod analiz kitaplıklarını FxCop ve güvenlik analizi araçları daha eski sürümleri gibi çok farklıdır.  Roslyn tabanlı Çözümleyicileri açıkça çalıştırmanız gerekmez. Visual Studio'da "Çözümle" menüsünde "Kod analizini Çalıştır" menü öğelerini kullanmasına gerek yoktur. Roslyn tabanlı Çözümleyicileri, siz çalıştığınız sırada kopyalanmamasına çalıştırın. 
+> Roslyn tabanlı Çözümleyicileri için kullanıcı deneyimi, kod analiz kitaplıklarını FxCop ve güvenlik analizi araçları daha eski sürümleri gibi çok farklıdır.  Roslyn tabanlı Çözümleyicileri açıkça çalıştırmanız gerekmez. Visual Studio'da "Çözümle" menüsünde "Kod analizini Çalıştır" menü öğelerini kullanmasına gerek yoktur. Roslyn tabanlı Çözümleyicileri, siz çalıştığınız sırada zaman uyumsuz olarak çalışır.
 
 ## <a name="more-information-on-specific-analyzers"></a>Özel çözümleyiciler hakkında daha fazla bilgi
 
 Bu bölümde aşağıdaki Çözümleyicileri ele alınmaktadır:
 
-* [API Çözümleyicisi](api-analyzer.md): Bu çözümleyici inceler, kodunuz için olası uyumluluk riskleri veya kullanımdan kaldırılan API'leri kullanır.    
+* [API Çözümleyicisi](api-analyzer.md): Bu çözümleyici inceler, kodunuz için olası uyumluluk riskleri veya kullanımdan kaldırılan API'leri kullanır.
 * [Framework Çözümleyicisi](framework-analyzer.md): Bu Çözümleyici, .NET Framework uygulamaları için yönergelerine uyduğundan emin olmak için kodunuzu inceler. Bu kurallar, çeşitli güvenlik tabanlı önerileri içerir.
-* [.NET portability Analyzer](portability-analyzer.md): Bu çözümleyici ne kadar iş uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere ile uyumlu hale getirmek için gerekli olduğunu görmek için kodunuzu inceler. 
+* [.NET portability Analyzer](portability-analyzer.md): Bu çözümleyici ne kadar iş uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere ile uyumlu hale getirmek için gerekli olduğunu görmek için kodunuzu inceler.

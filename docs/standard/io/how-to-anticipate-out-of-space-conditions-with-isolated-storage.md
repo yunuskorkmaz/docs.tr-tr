@@ -9,7 +9,7 @@ dev_langs:
 helpviewer_keywords:
 - data stores, quotas
 - isolated storage, quotas
-- quanitity of isolated storage used
+- quantity of isolated storage used
 - limit on isolated storage used
 - stores, quotas
 - stores, out of space conditions
@@ -24,27 +24,29 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf5144cb1abd3a916d2b5afc361c8c96a221d47e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372301"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Nasıl yapılır: Dolu yalıtılmış depolama ile alan çıkış koşullarını öngörme
-Yalıtılmış depolama kullanan kodu je omezeno tarafından bir [kota](../../../docs/standard/io/isolated-storage.md#quotas) veri bölümünde yalıtılmış depolama dosyalarının ve dizinleri mevcut en büyük boyutu belirtir. Kota güvenlik ilkesi tarafından tanımlanır ve yöneticiler tarafından yapılandırılabilir. Veri yazma çalıştığınızda boyutu aşıldı izin verilen en fazla, bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durum oluştu ve işlem başarısız olur. Bu uygulama, veri depolama alanı dolu olduğundan istekleri reddetmek neden olabilecek kötü amaçlı hizmet reddi saldırılarını önlemeye yardımcı olur.  
-  
- Belirtilen yazma girişimi, bu nedenle, başarısız olma olasılığı yüksek olup olmadığını belirlemenize yardımcı olmak üzere <xref:System.IO.IsolatedStorage.IsolatedStorage> sınıfı üç salt okunur özellikler sağlar: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, ve <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Bu özellikler, deposuna yazma olması deposunun boyutu izin verilen maksimum neden olup olmadığını belirlemek için kullanabilirsiniz. Yalıtılmış Depolama etkilenebileceğini eşzamanlı olarak erişilebilir; Bu nedenle, kalan depolama miktarını işlem, depolama alanını bir depoya yazmak için deneyin zamanına göre tüketilebilecek. Ancak, deponun en büyük boyutu kullanılabilir depolama alanı üst sınırına ulaşılmak üzere olup olmadığını belirlemenize yardımcı olması için kullanabilirsiniz.  
-  
- <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Özelliği düzgün şekilde çalışması için derlemeden kanıt bağlıdır. Bu nedenle, bu özellik yalnızca almalıdır <xref:System.IO.IsolatedStorage.IsolatedStorageFile> kullanılarak oluşturulan nesneleri <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, veya <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemi. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> diğer herhangi bir yolla oluşturulan nesneleri (örneğin, öğesinden döndürülen nesneleri <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemi) doğru bir maksimum boyut döndürmez.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bir yalıtılmış depolama alır, birkaç dosya oluşturur ve alır <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> özelliği. Kalan alanı bayt olarak bildirilir.  
-  
- [!code-cpp[Conceptual.IsolatedStorage#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source7.cpp#8)]
- [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
- [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
-  
+
+Yalıtılmış depolama kullanan kodu je omezeno tarafından bir [kota](../../../docs/standard/io/isolated-storage.md#quotas) veri bölümünde yalıtılmış depolama dosyalarının ve dizinleri mevcut en büyük boyutu belirtir. Kota güvenlik ilkesi tarafından tanımlanır ve yöneticiler tarafından yapılandırılabilir. Veri yazma çalıştığınızda boyutu aşıldı izin verilen en fazla, bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durum oluştu ve işlem başarısız olur. Bu uygulama, veri depolama alanı dolu olduğundan istekleri reddetmek neden olabilecek kötü amaçlı hizmet reddi saldırılarını önlemeye yardımcı olur.
+
+Belirtilen yazma girişimi, bu nedenle, başarısız olma olasılığı yüksek olup olmadığını belirlemenize yardımcı olmak üzere <xref:System.IO.IsolatedStorage.IsolatedStorage> sınıfı üç salt okunur özellikler sağlar: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, ve <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Bu özellikler, deposuna yazma olması deposunun boyutu izin verilen maksimum neden olup olmadığını belirlemek için kullanabilirsiniz. Yalıtılmış Depolama etkilenebileceğini eşzamanlı olarak erişilebilir; Bu nedenle, kalan depolama miktarını işlem, depolama alanını bir depoya yazmak için deneyin zamanına göre tüketilebilecek. Ancak, deponun en büyük boyutu kullanılabilir depolama alanı üst sınırına ulaşılmak üzere olup olmadığını belirlemenize yardımcı olması için kullanabilirsiniz.
+
+<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Özelliği düzgün şekilde çalışması için derlemeden kanıt bağlıdır. Bu nedenle, bu özellik yalnızca almalıdır <xref:System.IO.IsolatedStorage.IsolatedStorageFile> kullanılarak oluşturulan nesneleri <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, veya <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemi. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> diğer herhangi bir yolla oluşturulan nesneleri (örneğin, öğesinden döndürülen nesneleri <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemi) doğru bir maksimum boyut döndürmez.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod örneği bir yalıtılmış depolama alır, birkaç dosya oluşturur ve alır <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> özelliği. Kalan alanı bayt olarak bildirilir.
+
+[!code-cpp[Conceptual.IsolatedStorage#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source7.cpp#8)]
+[!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
+[!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
