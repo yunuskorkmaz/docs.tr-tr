@@ -7,30 +7,30 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352392"
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="44fec-102">Giriş ve Komutlar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="44fec-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="44fec-103">Bu bölümdeki konularda, Windows Presentation Foundation (WPF) giriş ve komut verme altyapısının kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="44fec-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="808b4-102">Giriş ve Komutlar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="808b4-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="808b4-103">Bu bölümdeki konularda, Windows Presentation Foundation (WPF) giriş ve komut verme altyapı kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="808b4-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="44fec-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="44fec-104">In This Section</span></span>  
- [<span data-ttu-id="44fec-105">Komutu Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="44fec-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="44fec-106">İmleç Türünü Değiştirme</span><span class="sxs-lookup"><span data-stu-id="44fec-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="44fec-107">Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="44fec-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="44fec-108">Denetime FocusVisualStyle Uygulama</span><span class="sxs-lookup"><span data-stu-id="44fec-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="44fec-109">Enter Tuşuna Basıldığında Algılama</span><span class="sxs-lookup"><span data-stu-id="44fec-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="44fec-110">Olayları Kullanarak Geçiş Efekti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="44fec-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="44fec-111">Fare İşaretçisini İzleyen Bir Nesne Oluşturma</span><span class="sxs-lookup"><span data-stu-id="44fec-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="44fec-112">RoutedCommand Oluşturma</span><span class="sxs-lookup"><span data-stu-id="44fec-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="44fec-113">ICommandSource Uygulama</span><span class="sxs-lookup"><span data-stu-id="44fec-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="44fec-114">Komut Desteği Olmadan Denetime Komut Bağlama</span><span class="sxs-lookup"><span data-stu-id="44fec-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="44fec-115">Komut Destekli Denetime Komut Bağlama</span><span class="sxs-lookup"><span data-stu-id="44fec-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="808b4-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="808b4-104">In This Section</span></span>  
+ [<span data-ttu-id="808b4-105">Komutu Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="808b4-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
+ [<span data-ttu-id="808b4-106">İmleç Türünü Değiştirme</span><span class="sxs-lookup"><span data-stu-id="808b4-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="808b4-107">Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="808b4-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="808b4-108">Denetime FocusVisualStyle Uygulama</span><span class="sxs-lookup"><span data-stu-id="808b4-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="808b4-109">Enter Tuşuna Basıldığında Algılama</span><span class="sxs-lookup"><span data-stu-id="808b4-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="808b4-110">Olayları Kullanarak Geçiş Efekti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="808b4-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="808b4-111">Fare İşaretçisini İzleyen Bir Nesne Oluşturma</span><span class="sxs-lookup"><span data-stu-id="808b4-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="808b4-112">RoutedCommand Oluşturma</span><span class="sxs-lookup"><span data-stu-id="808b4-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="808b4-113">ICommandSource Uygulama</span><span class="sxs-lookup"><span data-stu-id="808b4-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="808b4-114">Komut Desteği Olmadan Denetime Komut Bağlama</span><span class="sxs-lookup"><span data-stu-id="808b4-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="808b4-115">Komut Destekli Denetime Komut Bağlama</span><span class="sxs-lookup"><span data-stu-id="808b4-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="44fec-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="44fec-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="808b4-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="808b4-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -45,4 +45,4 @@ ms.locfileid: "33544294"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="44fec-117">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="44fec-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="808b4-117">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="808b4-117">Related Sections</span></span>

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378924"
 ---
-# <a name="adorners"></a><span data-ttu-id="461ea-102">Donatıcılar</span><span class="sxs-lookup"><span data-stu-id="461ea-102">Adorners</span></span>
-<span data-ttu-id="461ea-103">Bu bölümde donatıcılar hakkında bilgi sağlar ve [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="461ea-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
+# <a name="adorners"></a><span data-ttu-id="1ec2f-102">Donatıcılar</span><span class="sxs-lookup"><span data-stu-id="1ec2f-102">Adorners</span></span>
+<span data-ttu-id="1ec2f-103">Bu bölümde donatıcılar hakkında bilgi sağlar ve [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner çerçevesi.</span><span class="sxs-lookup"><span data-stu-id="1ec2f-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="461ea-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="461ea-104">In This Section</span></span>  
- [<span data-ttu-id="461ea-105">Donatıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="461ea-105">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [<span data-ttu-id="461ea-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="461ea-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1ec2f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="1ec2f-104">In This Section</span></span>  
+ [<span data-ttu-id="1ec2f-105">Donatıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1ec2f-105">Adorners Overview</span></span>](adorners-overview.md)  
+ [<span data-ttu-id="1ec2f-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="1ec2f-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="461ea-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="461ea-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1ec2f-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="1ec2f-107">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -31,4 +31,4 @@ ms.locfileid: "33551771"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="461ea-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="461ea-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="1ec2f-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="1ec2f-108">Related Sections</span></span>

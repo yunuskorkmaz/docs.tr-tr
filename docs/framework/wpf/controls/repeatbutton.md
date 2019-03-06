@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555016"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367160"
 ---
-# <a name="repeatbutton"></a><span data-ttu-id="25aba-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="25aba-102">RepeatButton</span></span>
-<span data-ttu-id="25aba-103"><xref:System.Windows.Controls.Primitives.RepeatButton> Benzer bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="25aba-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="25aba-104">Ancak, <xref:System.Windows.Controls.Primitives.RepeatButton> ne zaman denetim öğeleri sağlar ve nasıl <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="25aba-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
+# <a name="repeatbutton"></a><span data-ttu-id="b7d8f-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="b7d8f-102">RepeatButton</span></span>
+<span data-ttu-id="b7d8f-103"><xref:System.Windows.Controls.Primitives.RepeatButton> Benzer bir <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="b7d8f-104">Ancak, <xref:System.Windows.Controls.Primitives.RepeatButton> aşırı denetim öğeleri sağlar ve nasıl <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı oluşur.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
   
- <span data-ttu-id="25aba-105">Aşağıdaki grafikte üç durumlu düğme denetimi, varsayılan, PointerFocused ve basılı örneği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="25aba-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="25aba-106">İlk düğme varsayılan durumunu gösterir. <xref:System.Windows.Controls.Primitives.RepeatButton>.</span><span class="sxs-lookup"><span data-stu-id="25aba-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="25aba-107">İkinci odak verilerek fare işaretçisini düğmesinin üzerine geldiğinde düğmenin görünümünü nasıl değiştiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="25aba-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="25aba-108">Son düğme görünümünü gösterir <xref:System.Windows.Controls.Primitives.RepeatButton> kullanıcı denetimini ele fare düğmesini bastığında.</span><span class="sxs-lookup"><span data-stu-id="25aba-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
+ <span data-ttu-id="b7d8f-105">Aşağıdaki grafik bir düğme denetimi, varsayılan, PointerFocused ve basılı üç durumdan bir örnek gösterir.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="b7d8f-106">İlk düğmede varsayılan durumu <xref:System.Windows.Controls.Primitives.RepeatButton>.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="b7d8f-107">İkinci odak verilerek fare işaretçisi düğmenin üzerine geldiğinde düğmenin görünümünü nasıl değiştiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="b7d8f-108">Görünümü son düğmede <xref:System.Windows.Controls.Primitives.RepeatButton> kullanıcının denetimin üzerine fare düğmesine bastığında.</span><span class="sxs-lookup"><span data-stu-id="b7d8f-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
   
- <span data-ttu-id="25aba-109">![Düğme durumları yineleyin](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="25aba-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
-<span data-ttu-id="25aba-110">Tipik RepeatButton</span><span class="sxs-lookup"><span data-stu-id="25aba-110">Typical RepeatButton</span></span>  
+ <span data-ttu-id="b7d8f-109">![Düğme durumları yineleyin](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="b7d8f-109">![Repeat button states](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
+<span data-ttu-id="b7d8f-110">Tipik RepeatButton</span><span class="sxs-lookup"><span data-stu-id="b7d8f-110">Typical RepeatButton</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="25aba-111">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="25aba-111">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b7d8f-111">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b7d8f-111">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="25aba-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="25aba-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b7d8f-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b7d8f-112">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="25aba-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="25aba-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b7d8f-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b7d8f-113">Related Sections</span></span>

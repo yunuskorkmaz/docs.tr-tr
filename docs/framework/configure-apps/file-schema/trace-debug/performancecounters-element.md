@@ -6,55 +6,60 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
 helpviewer_keywords:
 - performanceCounters element
-- <perfomanceCounters> element
+- <performanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-ms.openlocfilehash: e893b0cedcfcce2ca17d0c02c5e3e30f4221ff6f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6144bcbda69b2ba799e87c3e7fa2118fbe4d9bf6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357085"
 ---
-# <a name="performancecounters-element"></a><span data-ttu-id="e8c15-102">\<performanceCounters > öğesi</span><span class="sxs-lookup"><span data-stu-id="e8c15-102">\<performanceCounters> Element</span></span>
-<span data-ttu-id="e8c15-103">Performans sayaçlarını birer paylaşılan genel bellek boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e8c15-103">Specifies the size of the global memory shared by performance counters.</span></span>  
-  
- <span data-ttu-id="e8c15-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="e8c15-104">\<configuration></span></span>  
-<span data-ttu-id="e8c15-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="e8c15-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="e8c15-106">\<performanceCounters ></span><span class="sxs-lookup"><span data-stu-id="e8c15-106">\<performanceCounters></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="e8c15-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e8c15-107">Syntax</span></span>  
-  
-```xml  
-<performanceCounters filemappingsize="524288" />  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="e8c15-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c15-108">Attributes and Elements</span></span>  
- <span data-ttu-id="e8c15-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e8c15-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="e8c15-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="e8c15-110">Attributes</span></span>  
-  
-|<span data-ttu-id="e8c15-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="e8c15-111">Attribute</span></span>|<span data-ttu-id="e8c15-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e8c15-112">Description</span></span>|  
-|---------------|-----------------|  
-|<span data-ttu-id="e8c15-113">filemappingsize</span><span class="sxs-lookup"><span data-stu-id="e8c15-113">filemappingsize</span></span>|<span data-ttu-id="e8c15-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="e8c15-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="e8c15-115">Genel performans sayaçlarını birer paylaşılan belleğin bayt cinsinden boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e8c15-115">Specifies the size, in bytes, of the global memory shared by performance counters.</span></span> <span data-ttu-id="e8c15-116">524288 varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="e8c15-116">The default is 524288.</span></span>|  
-  
-### <a name="child-elements"></a><span data-ttu-id="e8c15-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c15-117">Child Elements</span></span>  
- <span data-ttu-id="e8c15-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="e8c15-118">None.</span></span>  
-  
-### <a name="parent-elements"></a><span data-ttu-id="e8c15-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c15-119">Parent Elements</span></span>  
-  
-|<span data-ttu-id="e8c15-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="e8c15-120">Element</span></span>|<span data-ttu-id="e8c15-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e8c15-121">Description</span></span>|  
-|-------------|-----------------|  
-|`Configuration`|<span data-ttu-id="e8c15-122">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="e8c15-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="e8c15-123">ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e8c15-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="e8c15-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e8c15-124">Remarks</span></span>  
- <span data-ttu-id="e8c15-125">Performans sayaçları, performans verilerini yayınlamak için bellek eşlemeli dosya veya paylaşılan belleği'ni kullanın.</span><span class="sxs-lookup"><span data-stu-id="e8c15-125">Performance counters use a memory mapped file, or shared memory, to publish performance data.</span></span>  <span data-ttu-id="e8c15-126">Tek seferde kaç tane kullanılabilir paylaşılan bellek boyutunu belirler.</span><span class="sxs-lookup"><span data-stu-id="e8c15-126">The size of the shared memory determines how many instances can be used at once.</span></span>  <span data-ttu-id="e8c15-127">Paylaşılan bellek iki tür vardır: Genel paylaşılan bellek ve ayrı bir paylaşılan bellek.</span><span class="sxs-lookup"><span data-stu-id="e8c15-127">There are two types of shared memory: global shared memory and separate shared memory.</span></span>  <span data-ttu-id="e8c15-128">Genel paylaşılan bellek, .NET Framework sürümleri 1.0 veya 1.1 ile tüm performans sayacı kategorileri tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e8c15-128">The global shared memory is used by all performance counter categories installed with the .NET Framework versions 1.0 or 1.1.</span></span>  <span data-ttu-id="e8c15-129">.NET Framework sürüm 2.0 yüklü performans sayacı kategorileri ayrı paylaşılan bellek, her performans sayacı kategorisinin, kendi belleğe sahip kullanın.</span><span class="sxs-lookup"><span data-stu-id="e8c15-129">Performance counter categories installed with the .NET Framework version 2.0 use separate shared memory, with each performance counter category having its own memory.</span></span>  
-  
- <span data-ttu-id="e8c15-130">Yalnızca bir yapılandırma dosyası ile genel paylaşılan bellek boyutunu ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e8c15-130">The size of global shared memory can be set only with a configuration file.</span></span>  <span data-ttu-id="e8c15-131">Varsayılan boyutu 524.288 bEvet en büyük boyutu 33,554,432 bayt ve en düşük boyut 32.768 bayttır.</span><span class="sxs-lookup"><span data-stu-id="e8c15-131">The default size is 524,288 byes, the maximum size is 33,554,432 bytes, and the minimum size is 32,768 bytes.</span></span>  <span data-ttu-id="e8c15-132">Genel paylaşılan bellek tüm işlemleri ve kategorileri tarafından paylaşılan olduğundan, ilk oluşturan boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e8c15-132">Since the global shared memory is shared by all processes and categories, the first creator specifies the size.</span></span>  <span data-ttu-id="e8c15-133">Uygulama yapılandırma dosyanızda boyutu tanımlarsanız, uygulamanızı yürütmek performans sayaçları neden olan ilk uygulama ise, boyutu yalnızca kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e8c15-133">If you define the size in your application configuration file, that size is only used if your application is the first application that causes the performance counters to execute.</span></span>  <span data-ttu-id="e8c15-134">Bu nedenle doğru konumu belirlemek için `filemappingsize` Machine.config dosyasının bir değerdir.</span><span class="sxs-lookup"><span data-stu-id="e8c15-134">Therefore the correct location to specify the `filemappingsize` value is the Machine.config file.</span></span>  <span data-ttu-id="e8c15-135">Çok sayıda performans sayacı örneklerinin farklı adlara sahip oluşturduysanız genel paylaşılan bellek bitti bireysel performans sayaçlarını birer, sonuç genel paylaşılan bellek bellekte bırakılamıyor.</span><span class="sxs-lookup"><span data-stu-id="e8c15-135">Memory in the global shared memory cannot be released by individual performance counters, so eventually global shared memory is exhausted if a large number of performance counter instances with different names are created.</span></span>  
-  
- <span data-ttu-id="e8c15-136">Ayrı bir paylaşılan bellek boyutu için kayıt defteri DWORD FileMappingSize değerinde anahtar HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvuruluyor yapılandırma dosyasındaki genel paylaşılan bellek için belirtilen değer ilk olarak, arkasından.</span><span class="sxs-lookup"><span data-stu-id="e8c15-136">For the size of separate shared memory, the DWORD FileMappingSize value in the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<category name>* \Performance is referenced first, followed by the value specified for the global shared memory in the configuration file.</span></span> <span data-ttu-id="e8c15-137">FileMappingSize değeri yok sonra ayrı bir paylaşılan bellek boyutu için bir dördüncü ayarlanır (1/4) yapılandırma dosyasındaki genel ayarı.</span><span class="sxs-lookup"><span data-stu-id="e8c15-137">If the FileMappingSize value does not exist, then the separate shared memory size is set to one fourth (1/4) the global setting in the configuration file.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e8c15-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e8c15-138">See also</span></span>
+# <a name="performancecounters-element"></a><span data-ttu-id="2a761-102">\<performanceCounters > öğesi</span><span class="sxs-lookup"><span data-stu-id="2a761-102">\<performanceCounters> Element</span></span>
+
+<span data-ttu-id="2a761-103">Performans sayaçlarını birer paylaşılan genel bellek boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="2a761-103">Specifies the size of the global memory shared by performance counters.</span></span>
+
+ <span data-ttu-id="2a761-104">\<Yapılandırma > \\</span><span class="sxs-lookup"><span data-stu-id="2a761-104">\<configuration>\\</span></span>
+<span data-ttu-id="2a761-105">\<System.Diagnostics > \\</span><span class="sxs-lookup"><span data-stu-id="2a761-105">\<system.diagnostics>\\</span></span>
+<span data-ttu-id="2a761-106">\<performanceCounters ></span><span class="sxs-lookup"><span data-stu-id="2a761-106">\<performanceCounters></span></span>
+
+## <a name="syntax"></a><span data-ttu-id="2a761-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2a761-107">Syntax</span></span>
+
+```xml
+<performanceCounters filemappingsize="524288" />
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="2a761-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="2a761-108">Attributes and Elements</span></span>
+
+<span data-ttu-id="2a761-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2a761-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="2a761-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="2a761-110">Attributes</span></span>
+
+|<span data-ttu-id="2a761-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="2a761-111">Attribute</span></span>|<span data-ttu-id="2a761-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2a761-112">Description</span></span>|
+|---------------|-----------------|
+|<span data-ttu-id="2a761-113">filemappingsize</span><span class="sxs-lookup"><span data-stu-id="2a761-113">filemappingsize</span></span>|<span data-ttu-id="2a761-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="2a761-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="2a761-115">Genel performans sayaçlarını birer paylaşılan belleğin bayt cinsinden boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="2a761-115">Specifies the size, in bytes, of the global memory shared by performance counters.</span></span> <span data-ttu-id="2a761-116">524288 varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="2a761-116">The default is 524288.</span></span>|
+
+### <a name="child-elements"></a><span data-ttu-id="2a761-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="2a761-117">Child Elements</span></span>
+
+<span data-ttu-id="2a761-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="2a761-118">None.</span></span>
+
+### <a name="parent-elements"></a><span data-ttu-id="2a761-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="2a761-119">Parent Elements</span></span>
+
+|<span data-ttu-id="2a761-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="2a761-120">Element</span></span>|<span data-ttu-id="2a761-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2a761-121">Description</span></span>|
+|-------------|-----------------|
+|`Configuration`|<span data-ttu-id="2a761-122">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="2a761-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`system.diagnostics`|<span data-ttu-id="2a761-123">ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="2a761-123">Specifies the root element for the ASP.NET configuration section.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="2a761-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2a761-124">Remarks</span></span>
+
+<span data-ttu-id="2a761-125">Performans sayaçları, performans verilerini yayınlamak için bellek eşlemeli dosya veya paylaşılan belleği'ni kullanın.</span><span class="sxs-lookup"><span data-stu-id="2a761-125">Performance counters use a memory mapped file, or shared memory, to publish performance data.</span></span>  <span data-ttu-id="2a761-126">Tek seferde kaç tane kullanılabilir paylaşılan bellek boyutunu belirler.</span><span class="sxs-lookup"><span data-stu-id="2a761-126">The size of the shared memory determines how many instances can be used at once.</span></span>  <span data-ttu-id="2a761-127">Paylaşılan bellek iki tür vardır: Genel paylaşılan bellek ve ayrı bir paylaşılan bellek.</span><span class="sxs-lookup"><span data-stu-id="2a761-127">There are two types of shared memory: global shared memory and separate shared memory.</span></span>  <span data-ttu-id="2a761-128">Genel paylaşılan bellek, .NET Framework sürümleri 1.0 veya 1.1 ile tüm performans sayacı kategorileri tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2a761-128">The global shared memory is used by all performance counter categories installed with the .NET Framework versions 1.0 or 1.1.</span></span>  <span data-ttu-id="2a761-129">.NET Framework sürüm 2.0 yüklü performans sayacı kategorileri ayrı paylaşılan bellek, her performans sayacı kategorisinin, kendi belleğe sahip kullanın.</span><span class="sxs-lookup"><span data-stu-id="2a761-129">Performance counter categories installed with the .NET Framework version 2.0 use separate shared memory, with each performance counter category having its own memory.</span></span>
+
+<span data-ttu-id="2a761-130">Yalnızca bir yapılandırma dosyası ile genel paylaşılan bellek boyutunu ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2a761-130">The size of global shared memory can be set only with a configuration file.</span></span>  <span data-ttu-id="2a761-131">Varsayılan boyutu 524.288 bEvet en büyük boyutu 33,554,432 bayt ve en düşük boyut 32.768 bayttır.</span><span class="sxs-lookup"><span data-stu-id="2a761-131">The default size is 524,288 byes, the maximum size is 33,554,432 bytes, and the minimum size is 32,768 bytes.</span></span>  <span data-ttu-id="2a761-132">Genel paylaşılan bellek tüm işlemleri ve kategorileri tarafından paylaşılan olduğundan, ilk oluşturan boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="2a761-132">Since the global shared memory is shared by all processes and categories, the first creator specifies the size.</span></span>  <span data-ttu-id="2a761-133">Uygulama yapılandırma dosyanızda boyutu tanımlarsanız, uygulamanızı yürütmek performans sayaçları neden olan ilk uygulama ise, boyutu yalnızca kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2a761-133">If you define the size in your application configuration file, that size is only used if your application is the first application that causes the performance counters to execute.</span></span>  <span data-ttu-id="2a761-134">Bu nedenle doğru konumu belirlemek için `filemappingsize` Machine.config dosyasının bir değerdir.</span><span class="sxs-lookup"><span data-stu-id="2a761-134">Therefore the correct location to specify the `filemappingsize` value is the Machine.config file.</span></span>  <span data-ttu-id="2a761-135">Çok sayıda performans sayacı örneklerinin farklı adlara sahip oluşturduysanız genel paylaşılan bellek bitti bireysel performans sayaçlarını birer, sonuç genel paylaşılan bellek bellekte bırakılamıyor.</span><span class="sxs-lookup"><span data-stu-id="2a761-135">Memory in the global shared memory cannot be released by individual performance counters, so eventually global shared memory is exhausted if a large number of performance counter instances with different names are created.</span></span>
+
+<span data-ttu-id="2a761-136">Ayrı bir paylaşılan bellek boyutu için kayıt defteri DWORD FileMappingSize değerinde anahtar HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvuruluyor yapılandırma dosyasındaki genel paylaşılan bellek için belirtilen değer ilk olarak, arkasından.</span><span class="sxs-lookup"><span data-stu-id="2a761-136">For the size of separate shared memory, the DWORD FileMappingSize value in the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<category name>* \Performance is referenced first, followed by the value specified for the global shared memory in the configuration file.</span></span> <span data-ttu-id="2a761-137">FileMappingSize değeri yok sonra ayrı bir paylaşılan bellek boyutu için bir dördüncü ayarlanır (1/4) yapılandırma dosyasındaki genel ayarı.</span><span class="sxs-lookup"><span data-stu-id="2a761-137">If the FileMappingSize value does not exist, then the separate shared memory size is set to one fourth (1/4) the global setting in the configuration file.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2a761-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a761-138">See also</span></span>
+
 - <xref:System.Diagnostics.PerformanceCounter>
 - <xref:System.Diagnostics.PerformanceCounterCategory>
 - <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
