@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ToolTip control [WPF], how-to topics
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
-ms.openlocfilehash: d00085d3aec5e7337162f9e9d073653b6356c625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552863"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377787"
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="fb71d-102">ToolTip Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="fb71d-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="fb71d-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="fb71d-103">In This Section</span></span>  
- [<span data-ttu-id="fb71d-104">Araç İpucu Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="fb71d-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="fb71d-105">BetweenShowDelay Özelliğini Kullanma</span><span class="sxs-lookup"><span data-stu-id="fb71d-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="87541-102">ToolTip Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="87541-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="87541-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="87541-103">In This Section</span></span>  
+ [<span data-ttu-id="87541-104">Araç İpucu Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="87541-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="87541-105">BetweenShowDelay Özelliğini Kullanma</span><span class="sxs-lookup"><span data-stu-id="87541-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="fb71d-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="fb71d-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="87541-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="87541-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="fb71d-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="fb71d-107">Related Sections</span></span>  
- [<span data-ttu-id="fb71d-108">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="fb71d-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="87541-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="87541-107">Related Sections</span></span>  
+ [<span data-ttu-id="87541-108">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="87541-108">Popup Overview</span></span>](popup-overview.md)  
   
- [<span data-ttu-id="fb71d-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="fb71d-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [<span data-ttu-id="87541-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="87541-109">How-to Topics</span></span>](popup-how-to-topics.md)

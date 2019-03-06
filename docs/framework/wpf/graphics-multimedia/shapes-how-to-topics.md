@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620233"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358073"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="f122d-102">Şekiller ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f122d-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="f122d-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Shapes.Shape> ekrana temel şekiller çizmek için nesneleri.</span><span class="sxs-lookup"><span data-stu-id="f122d-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="69674-102">Şekiller ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="69674-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="69674-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Shapes.Shape> ekrana temel şekiller çizmek için nesneleri.</span><span class="sxs-lookup"><span data-stu-id="69674-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f122d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f122d-104">In This Section</span></span>  
- [<span data-ttu-id="f122d-105">Çokgen Öğe Kullanarak Kapalı Şekil Çizme</span><span class="sxs-lookup"><span data-stu-id="f122d-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="f122d-106">Elips veya Daire Çizme</span><span class="sxs-lookup"><span data-stu-id="f122d-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="f122d-107">Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="f122d-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="f122d-108">Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="f122d-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="f122d-109">Dikdörtgen Çizme</span><span class="sxs-lookup"><span data-stu-id="f122d-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="f122d-110">Satır veya Segment Sonunda Uç Değiştirme</span><span class="sxs-lookup"><span data-stu-id="f122d-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="69674-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="69674-104">In This Section</span></span>  
+ [<span data-ttu-id="69674-105">Çokgen Öğe Kullanarak Kapalı Şekil Çizme</span><span class="sxs-lookup"><span data-stu-id="69674-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="69674-106">Elips veya Daire Çizme</span><span class="sxs-lookup"><span data-stu-id="69674-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="69674-107">Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="69674-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
+ [<span data-ttu-id="69674-108">Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="69674-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="69674-109">Dikdörtgen Çizme</span><span class="sxs-lookup"><span data-stu-id="69674-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="69674-110">Satır veya Segment Sonunda Uç Değiştirme</span><span class="sxs-lookup"><span data-stu-id="69674-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f122d-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f122d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69674-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="69674-111">See also</span></span>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="f122d-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="f122d-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="69674-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="69674-112">Graphics and Multimedia</span></span>](index.md)

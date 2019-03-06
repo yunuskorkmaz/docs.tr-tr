@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371339"
 ---
-# <a name="progressbar"></a><span data-ttu-id="d5697-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="d5697-102">ProgressBar</span></span>
-<span data-ttu-id="d5697-103">A <xref:System.Windows.Controls.ProgressBar> bir işlemin ilerlemesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="d5697-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="d5697-104"><xref:System.Windows.Controls.ProgressBar> Bir işlem ilerledikçe sistem vurgulama rengiyle doldurulan bir pencere denetim oluşur.</span><span class="sxs-lookup"><span data-stu-id="d5697-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
+# <a name="progressbar"></a><span data-ttu-id="354fd-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="354fd-102">ProgressBar</span></span>
+<span data-ttu-id="354fd-103">A <xref:System.Windows.Controls.ProgressBar> bir işlemin ilerlemesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="354fd-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="354fd-104"><xref:System.Windows.Controls.ProgressBar> Sistem vurgulama rengiyle işlem ilerledikçe doldurulan bir pencere denetimi oluşur.</span><span class="sxs-lookup"><span data-stu-id="354fd-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
   
- <span data-ttu-id="d5697-105">Aşağıdaki çizimde gösterilmektedir <xref:System.Windows.Controls.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="d5697-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
+ <span data-ttu-id="354fd-105">Aşağıdaki çizimde gösterilmektedir <xref:System.Windows.Controls.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="354fd-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
   
- <span data-ttu-id="d5697-106">![İlerleme çubuğu](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="d5697-106">![Progress bar](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
+ <span data-ttu-id="354fd-106">![İlerleme çubuğu](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="354fd-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d5697-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d5697-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="354fd-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="354fd-107">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d5697-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d5697-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="354fd-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="354fd-108">Reference</span></span>  
  <xref:System.Windows.Controls.ProgressBar>  
   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
-## <a name="related-sections"></a><span data-ttu-id="d5697-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d5697-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="354fd-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="354fd-109">Related Sections</span></span>

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8638b56e8a6430b1a7cec371f133063a0c57692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689317"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368984"
 ---
-# <a name="printdialog"></a><span data-ttu-id="535bb-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="535bb-102">PrintDialog</span></span>
-<span data-ttu-id="535bb-103"><xref:System.Windows.Controls.PrintDialog> Denetimi otomatik olarak yapılandırır bir standart yazdırma iletişim kutusu oluşturmak için kullanılan bir <xref:System.Printing.PrintTicket> ve <xref:System.Printing.PrintQueue> göre kullanıcı girişi.</span><span class="sxs-lookup"><span data-stu-id="535bb-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
+# <a name="printdialog"></a><span data-ttu-id="30293-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="30293-102">PrintDialog</span></span>
+<span data-ttu-id="30293-103"><xref:System.Windows.Controls.PrintDialog> Denetimi otomatik olarak yapılandırır bir standart yazdırma iletişim kutusu oluşturmak için kullanılan bir <xref:System.Printing.PrintTicket> ve <xref:System.Printing.PrintQueue> göre kullanıcı girişi.</span><span class="sxs-lookup"><span data-stu-id="30293-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="535bb-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="535bb-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="30293-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="30293-104">Reference</span></span>  
  <xref:System.Windows.Controls.PrintDialog>  
   
  <xref:System.Printing.PrintTicket>  
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a><span data-ttu-id="535bb-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="535bb-105">See also</span></span>
-- [<span data-ttu-id="535bb-106">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="535bb-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [<span data-ttu-id="535bb-107">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="535bb-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="30293-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="30293-105">See also</span></span>
+- [<span data-ttu-id="30293-106">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="30293-106">Printing Overview</span></span>](../advanced/printing-overview.md)
+- [<span data-ttu-id="30293-107">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="30293-107">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

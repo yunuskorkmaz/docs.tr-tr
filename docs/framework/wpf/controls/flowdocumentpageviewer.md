@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366575"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="2e41c-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="2e41c-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="2e41c-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik.</span><span class="sxs-lookup"><span data-stu-id="2e41c-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="2e41c-104">İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kaydırma Görüntüleyicisi'nde içerik.</span><span class="sxs-lookup"><span data-stu-id="2e41c-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="c474a-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="c474a-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="c474a-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik.</span><span class="sxs-lookup"><span data-stu-id="c474a-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="c474a-104">İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kaydırma Görüntüleyicisi'nde içerik.</span><span class="sxs-lookup"><span data-stu-id="c474a-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e41c-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2e41c-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c474a-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c474a-105">See also</span></span>
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="2e41c-106">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2e41c-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [<span data-ttu-id="2e41c-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2e41c-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="2e41c-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="2e41c-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="c474a-106">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c474a-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="c474a-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c474a-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="c474a-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="c474a-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

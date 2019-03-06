@@ -9,21 +9,21 @@ helpviewer_keywords:
 - camera position [WPF], animating in 3-D scenes
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
-ms.openlocfilehash: 18941f32de02b6e281df6c2c54c6c666dae63197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459b668c134e31afe295dd311094ac9cf84d884a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564178"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374030"
 ---
-# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="640ff-102">Nasıl yapılır: 3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="640ff-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
-<span data-ttu-id="640ff-103">Aşağıdaki örnek, bir kamera konumuna animasyon ekleme ve 3B Sahne işaret eden yönüne animasyon ekleme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="640ff-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="640ff-104">Bu kullanılarak yapılır <xref:System.Windows.Media.Animation.Point3DAnimation> ve <xref:System.Windows.Media.Animation.Vector3DAnimation> animasyon uygulamak için <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> ve <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> özellikleri sırasıyla <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="640ff-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="640ff-105">Bunun gibi bir animasyon, bir olaya yanıt olarak izleyicisinin görünüm değiştirmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="640ff-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
+# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="84aa6-102">Nasıl yapılır: 3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="84aa6-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
+<span data-ttu-id="84aa6-103">Aşağıdaki örnek, bir kamera konumuna animasyon ekleme ve 3B Sahne işaret eden yönüne animasyon ekleme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="84aa6-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="84aa6-104">Bu kullanılarak yapılır <xref:System.Windows.Media.Animation.Point3DAnimation> ve <xref:System.Windows.Media.Animation.Vector3DAnimation> animasyon uygulamak için <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> ve <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> özellikleri sırasıyla <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="84aa6-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="84aa6-105">Bunun gibi bir animasyon, bir olaya yanıt olarak izleyicisinin görünüm değiştirmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="84aa6-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="640ff-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="640ff-106">Example</span></span>  
- [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="84aa6-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="84aa6-106">Example</span></span>  
+ [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="640ff-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="640ff-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84aa6-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84aa6-107">See also</span></span>
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
-- [<span data-ttu-id="640ff-108">Anahtar Çerçeveler Kullanarak Kamera Konumuna ve Yönüne Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="640ff-108">Animate Camera Position and Direction Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [<span data-ttu-id="640ff-109">3B Grafiklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="640ff-109">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [<span data-ttu-id="84aa6-108">Anahtar Çerçeveler Kullanarak Kamera Konumuna ve Yönüne Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="84aa6-108">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)
+- [<span data-ttu-id="84aa6-109">3B Grafiklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="84aa6-109">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)

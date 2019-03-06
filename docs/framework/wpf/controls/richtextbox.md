@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374550"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="7aa34-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="7aa34-102">RichTextBox</span></span>
-<span data-ttu-id="7aa34-103"><xref:System.Windows.Controls.RichTextBox> Kes ve Yapıştır, zengin belge sunumu ve içerik seçimi gibi özellikleri için yerleşik destek ile düzenleme denetimi öğe tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7aa34-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="32c73-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="32c73-102">RichTextBox</span></span>
+<span data-ttu-id="32c73-103"><xref:System.Windows.Controls.RichTextBox> Kes ve Yapıştır, zengin belge sunumu ve içerik seçimi gibi özellikleri için yerleşik destek ile düzenleme denetimi öğe tanımlar.</span><span class="sxs-lookup"><span data-stu-id="32c73-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7aa34-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7aa34-104">In This Section</span></span>  
- [<span data-ttu-id="7aa34-105">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7aa34-105">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [<span data-ttu-id="7aa34-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7aa34-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="32c73-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="32c73-104">In This Section</span></span>  
+ [<span data-ttu-id="32c73-105">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="32c73-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
+ [<span data-ttu-id="32c73-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="32c73-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7aa34-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7aa34-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32c73-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="32c73-107">See also</span></span>
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="7aa34-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="7aa34-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="7aa34-109">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7aa34-109">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="32c73-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="32c73-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="32c73-109">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="32c73-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

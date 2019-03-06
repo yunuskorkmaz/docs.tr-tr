@@ -8,26 +8,26 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366731"
 ---
-# <a name="brushes"></a><span data-ttu-id="e813d-102">Fırçalar</span><span class="sxs-lookup"><span data-stu-id="e813d-102">Brushes</span></span>
-<span data-ttu-id="e813d-103">Aşağıdaki konular nasıl kullanılacağı açıklanmıştır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] "ekran içeriğini boyamak için" Fırçalar</span><span class="sxs-lookup"><span data-stu-id="e813d-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
+# <a name="brushes"></a><span data-ttu-id="23bbd-102">Fırçalar</span><span class="sxs-lookup"><span data-stu-id="23bbd-102">Brushes</span></span>
+<span data-ttu-id="23bbd-103">Aşağıdaki konular nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] "ekran içeriğini boyamak için" Fırçalar</span><span class="sxs-lookup"><span data-stu-id="23bbd-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e813d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e813d-104">In This Section</span></span>  
- [<span data-ttu-id="e813d-105">WPF Fırçalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [<span data-ttu-id="e813d-106">Fırça Dönüşümüne Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [<span data-ttu-id="e813d-107">Opaklık Maskelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [<span data-ttu-id="e813d-108">Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [<span data-ttu-id="e813d-109">Görüntüler, Çizimler ve Görsellerle Boyama</span><span class="sxs-lookup"><span data-stu-id="e813d-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [<span data-ttu-id="e813d-110">TileBrush’a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [<span data-ttu-id="e813d-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e813d-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="23bbd-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="23bbd-104">In This Section</span></span>  
+ [<span data-ttu-id="23bbd-105">WPF Fırçalarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-105">WPF Brushes Overview</span></span>](wpf-brushes-overview.md)  
+ [<span data-ttu-id="23bbd-106">Fırça Dönüşümüne Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-106">Brush Transformation Overview</span></span>](brush-transformation-overview.md)  
+ [<span data-ttu-id="23bbd-107">Opaklık Maskelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-107">Opacity Masks Overview</span></span>](opacity-masks-overview.md)  
+ [<span data-ttu-id="23bbd-108">Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-108">Painting with Solid Colors and Gradients Overview</span></span>](painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="23bbd-109">Görüntüler, Çizimler ve Görsellerle Boyama</span><span class="sxs-lookup"><span data-stu-id="23bbd-109">Painting with Images, Drawings, and Visuals</span></span>](painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="23bbd-110">TileBrush’a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-110">TileBrush Overview</span></span>](tilebrush-overview.md)  
+ [<span data-ttu-id="23bbd-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="23bbd-111">How-to Topics</span></span>](brushes-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e813d-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e813d-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="23bbd-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="23bbd-112">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -40,7 +40,7 @@ ms.locfileid: "33557270"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="e813d-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="e813d-113">Related Sections</span></span>  
- [<span data-ttu-id="e813d-114">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="e813d-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="23bbd-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="23bbd-113">Related Sections</span></span>  
+ [<span data-ttu-id="23bbd-114">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="23bbd-114">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="e813d-115">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e813d-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="23bbd-115">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="23bbd-115">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

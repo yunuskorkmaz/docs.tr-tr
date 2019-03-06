@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671986"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367134"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="6eea6-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6eea6-102">ScrollViewer</span></span>
-<span data-ttu-id="6eea6-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6eea6-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="1c8c2-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1c8c2-102">ScrollViewer</span></span>
+<span data-ttu-id="1c8c2-103"><xref:System.Windows.Controls.ScrollViewer> Denetimi gibi içerik kaydırılan yatay veya dikey olarak kaydırılabilir bir bölgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="1c8c2-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6eea6-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6eea6-104">In This Section</span></span>  
- [<span data-ttu-id="6eea6-105">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6eea6-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="6eea6-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6eea6-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1c8c2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="1c8c2-104">In This Section</span></span>  
+ [<span data-ttu-id="1c8c2-105">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1c8c2-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="1c8c2-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="1c8c2-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="6eea6-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6eea6-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1c8c2-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="1c8c2-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="6eea6-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6eea6-108">See also</span></span>
-- [<span data-ttu-id="6eea6-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6eea6-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="6eea6-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="6eea6-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="1c8c2-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c8c2-108">See also</span></span>
+- [<span data-ttu-id="1c8c2-109">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1c8c2-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="1c8c2-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="1c8c2-110">Layout</span></span>](../advanced/layout.md)
