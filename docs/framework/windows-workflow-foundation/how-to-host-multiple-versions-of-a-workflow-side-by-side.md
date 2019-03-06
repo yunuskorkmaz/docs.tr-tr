@@ -1,119 +1,79 @@
 ---
-title: 'Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma'
+title: 'Nasıl yapılır: Birden çok sürümünü bir iş akışı yan yana barındırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181626"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366716"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="70b39-102">Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma</span><span class="sxs-lookup"><span data-stu-id="70b39-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
-<span data-ttu-id="70b39-103">`WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="70b39-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="70b39-104">Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar.</span><span class="sxs-lookup"><span data-stu-id="70b39-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="70b39-105">Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.</span><span class="sxs-lookup"><span data-stu-id="70b39-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="7ddb3-102">Nasıl yapılır: Birden çok sürümünü bir iş akışı yan yana barındırma</span><span class="sxs-lookup"><span data-stu-id="7ddb3-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
+<span data-ttu-id="7ddb3-103">`WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="7ddb3-104">Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="7ddb3-105">Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="70b39-106">Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="70b39-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="7ddb3-106">Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="7ddb3-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="70b39-107">Bu konuda</span><span class="sxs-lookup"><span data-stu-id="70b39-107">In this topic</span></span>  
- <span data-ttu-id="70b39-108">Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir.</span><span class="sxs-lookup"><span data-stu-id="70b39-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="70b39-109">Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="70b39-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="7ddb3-107">Bu konuda</span><span class="sxs-lookup"><span data-stu-id="7ddb3-107">In this topic</span></span>  
+ <span data-ttu-id="7ddb3-108">Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-108">In this step of the tutorial, the `WriteLine` activities in the workflow are modified to provide additional information, and a new `WriteLine` activity is added.</span></span> <span data-ttu-id="7ddb3-109">Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-109">A copy of the original workflow assembly is stored, and the host application is updated so that it can run both the original and the updated workflows at the same time.</span></span>  
   
--   [<span data-ttu-id="70b39-110">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="70b39-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [<span data-ttu-id="7ddb3-110">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-110">To make a copy of the NumberGuessWorkflowActivities project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [<span data-ttu-id="70b39-111">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="70b39-111">To update the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [<span data-ttu-id="7ddb3-111">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-111">To update the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [<span data-ttu-id="70b39-112">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-112">To update the StateMachine workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [<span data-ttu-id="7ddb3-112">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-112">To update the StateMachine workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [<span data-ttu-id="70b39-113">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-113">To update the Flowchart workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [<span data-ttu-id="7ddb3-113">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-113">To update the Flowchart workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [<span data-ttu-id="70b39-114">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-114">To update the Sequential workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [<span data-ttu-id="7ddb3-114">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-114">To update the Sequential workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [<span data-ttu-id="70b39-115">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="70b39-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="7ddb3-115">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-115">To update WorkflowVersionMap to include the previous workflow versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [<span data-ttu-id="70b39-116">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="70b39-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="7ddb3-116">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  <span data-ttu-id="70b39-117">Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma.</span><span class="sxs-lookup"><span data-stu-id="70b39-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="70b39-118">Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="70b39-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+>  <span data-ttu-id="7ddb3-117">Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-117">Before following the steps in this topic, run the application, start several workflows of each type, and making one or two guesses for each one.</span></span> <span data-ttu-id="7ddb3-118">Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="7ddb3-118">These persisted workflows are used in this step and the following step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="70b39-119">Başlarken Öğreticisi her adımda, önceki adımları bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="70b39-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="70b39-120">Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="70b39-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="7ddb3-119">Başlarken Öğreticisi her adımda, önceki adımları bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="7ddb3-120">Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="7ddb3-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-###  <a name="BKMK_BackupCopy"></a> <span data-ttu-id="70b39-121">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="70b39-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+### <a name="BKMK_BackupCopy"></a> <span data-ttu-id="7ddb3-121">NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
-1.  <span data-ttu-id="70b39-122">Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="70b39-122">Open the **WF45GettingStartedTutorial** solution in Visual Studio 2012 if it is not open.</span></span>  
+1.  <span data-ttu-id="7ddb3-122">Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-122">Open the **WF45GettingStartedTutorial** solution in Visual Studio 2012 if it is not open.</span></span>  
   
-2.  <span data-ttu-id="70b39-123">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="70b39-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
+2.  <span data-ttu-id="7ddb3-123">Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-123">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  <span data-ttu-id="70b39-124">Kapat **WF45GettingStartedTutorial** çözüm.</span><span class="sxs-lookup"><span data-stu-id="70b39-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
+3.  <span data-ttu-id="7ddb3-124">Kapat **WF45GettingStartedTutorial** çözüm.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-124">Close the **WF45GettingStartedTutorial** solution.</span></span>  
   
-4.  <span data-ttu-id="70b39-125">Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="70b39-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
+4.  <span data-ttu-id="7ddb3-125">Windows Gezgini'ni açın ve öğretici çözüm dosyası ve proje klasörleri bulunduğu klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-125">Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.</span></span>  
   
-5.  <span data-ttu-id="70b39-126">Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="70b39-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="70b39-127">Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="70b39-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
+5.  <span data-ttu-id="7ddb3-126">Adlı yeni bir klasör oluşturun **PreviousVersions** aynı klasörde **NumberGuessWorkflowHost** ve **NumberGuessWorkflowActivities**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-126">Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**.</span></span> <span data-ttu-id="7ddb3-127">Bu klasör, sonraki öğretici adımlarda kullanılan iş akışları farklı sürümlerini içeren derlemeler kapsamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-127">This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.</span></span>  
   
-6.  <span data-ttu-id="70b39-128">Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak).</span><span class="sxs-lookup"><span data-stu-id="70b39-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="70b39-129">Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.</span><span class="sxs-lookup"><span data-stu-id="70b39-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
+6.  <span data-ttu-id="7ddb3-128">Gidin **NumberGuessWorkflowActivities\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak).</span><span class="sxs-lookup"><span data-stu-id="7ddb3-128">Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="7ddb3-129">Kopyalama **NumberGuessWorkflowActivities.dll** yapıştırın **PreviousVersions** klasör.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-129">Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.</span></span>  
   
-7.  <span data-ttu-id="70b39-130">Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="70b39-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
+7.  <span data-ttu-id="7ddb3-130">Yeniden adlandırma **NumberGuessWorkflowActivities.dll** içinde **PreviousVersions** klasörüne **NumberGuessWorkflowActivities_v1.dll**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-130">Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="70b39-131">Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="70b39-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="70b39-132">Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="70b39-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>
+    >  <span data-ttu-id="7ddb3-131">Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-131">The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows.</span></span> <span data-ttu-id="7ddb3-132">Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-132">Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.</span></span>
 
-8.  <span data-ttu-id="70b39-133">Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör.</span><span class="sxs-lookup"><span data-stu-id="70b39-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="70b39-134">Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="70b39-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
+8.  <span data-ttu-id="7ddb3-133">Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-133">Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder.</span></span> <span data-ttu-id="7ddb3-134">Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span><span class="sxs-lookup"><span data-stu-id="7ddb3-134">This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).</span></span>
 
-9. <span data-ttu-id="70b39-135">Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="70b39-135">Re-open the **WF45GettingStartedTutorial** solution in Visual Studio 2012.</span></span>
+9. <span data-ttu-id="7ddb3-135">Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-135">Re-open the **WF45GettingStartedTutorial** solution in Visual Studio 2012.</span></span>
 
-###  <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="70b39-136">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="70b39-136">To update the workflows</span></span>
- <span data-ttu-id="70b39-137">Bu bölümde, iş akışı tanımları güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="70b39-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="70b39-138">İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.</span><span class="sxs-lookup"><span data-stu-id="70b39-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>
+### <a name="BKMK_UpdateWorkflows"></a> <span data-ttu-id="7ddb3-136">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-136">To update the workflows</span></span>
+ <span data-ttu-id="7ddb3-137">Bu bölümde, iş akışı tanımları güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="7ddb3-138">İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>
 
-####  <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="70b39-139">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-139">To update the StateMachine workflow</span></span>
+#### <a name="BKMK_UpdateStateMachine"></a> <span data-ttu-id="7ddb3-139">Durum makinesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-139">To update the StateMachine workflow</span></span>
 
-1.  <span data-ttu-id="70b39-140">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="70b39-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>
+1.  <span data-ttu-id="7ddb3-140">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="70b39-141">Çift **yanlış tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="70b39-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>
+2.  <span data-ttu-id="7ddb3-141">Çift **yanlış tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-141">Double-click the **Guess Incorrect** transition on the state machine.</span></span>
 
-3.  <span data-ttu-id="70b39-142">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
-
-    ```vb
-    Guess & " is too low."
-    ```
-
-    ```csharp
-    Guess + " is too low."
-    ```
-
-4.  <span data-ttu-id="70b39-143">Güncelleştirme `Text` en sağ `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>
-
-    ```vb
-    Guess & " is too high."
-    ```
-
-    ```csharp
-    Guess + " is too high."
-    ```
-
-5.  <span data-ttu-id="70b39-144">İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="70b39-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>
-
-6.  <span data-ttu-id="70b39-145">Çift **doğru tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="70b39-145">Double-click the **Guess Correct** transition on the state machine.</span></span>
-
-7.  <span data-ttu-id="70b39-146">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bırakın **Buraya Bırak eylem etkinliği** etiketi geçiş.</span><span class="sxs-lookup"><span data-stu-id="70b39-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>
-
-8.  <span data-ttu-id="70b39-147">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="70b39-147">Type the following expression into the `Text` property box.</span></span>
-
-    ```vb
-    Guess & " is correct. You guessed it in " & Turns & " turns."
-    ```
-
-    ```csharp
-    Guess + " is correct. You guessed it in " + Turns + " turns."
-    ```
-
-####  <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="70b39-148">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-148">To update the Flowchart workflow</span></span>
-
-1.  <span data-ttu-id="70b39-149">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="70b39-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>
-
-2.  <span data-ttu-id="70b39-150">Güncelleştirme `Text` en sol `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>
+3.  <span data-ttu-id="7ddb3-142">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-142">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
 
     ```vb
     Guess & " is too low."
@@ -123,7 +83,7 @@ ms.locfileid: "50181626"
     Guess + " is too low."
     ```
 
-3.  <span data-ttu-id="70b39-151">Güncelleştirme `Text` en sağ `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>
+4.  <span data-ttu-id="7ddb3-143">Güncelleştirme `Text` en sağ `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-143">Update the `Text` of the right-most `WriteLine` in the `If` activity.</span></span>
 
     ```vb
     Guess & " is too high."
@@ -133,9 +93,13 @@ ms.locfileid: "50181626"
     Guess + " is too high."
     ```
 
-4.  <span data-ttu-id="70b39-152">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip bırakma noktasına `True` eylemi üstteki `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="70b39-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="70b39-153">`WriteLine` Etkinliği için akış eklenir ve bağlantılı `True` eylemi `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="70b39-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>
+5.  <span data-ttu-id="7ddb3-144">İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-144">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>
 
-5.  <span data-ttu-id="70b39-154">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="70b39-154">Type the following expression into the `Text` property box.</span></span>
+6.  <span data-ttu-id="7ddb3-145">Çift **doğru tahmin** durum makinesinin geçişi.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-145">Double-click the **Guess Correct** transition on the state machine.</span></span>
+
+7.  <span data-ttu-id="7ddb3-146">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bırakın **Buraya Bırak eylem etkinliği** etiketi geçiş.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-146">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the **Drop Action activity here** label of the transition.</span></span>
+
+8.  <span data-ttu-id="7ddb3-147">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-147">Type the following expression into the `Text` property box.</span></span>
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -145,11 +109,11 @@ ms.locfileid: "50181626"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="70b39-155">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="70b39-155">To update the Sequential workflow</span></span>
+#### <a name="BKMK_UpdateFlowchart"></a> <span data-ttu-id="7ddb3-148">Akış Çizelgesi iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-148">To update the Flowchart workflow</span></span>
 
-1.  <span data-ttu-id="70b39-156">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="70b39-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>
+1.  <span data-ttu-id="7ddb3-149">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="70b39-157">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+2.  <span data-ttu-id="7ddb3-150">Güncelleştirme `Text` en sol `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-150">Update the `Text` of the left-most `WriteLine` activity.</span></span>
 
     ```vb
     Guess & " is too low."
@@ -159,7 +123,7 @@ ms.locfileid: "50181626"
     Guess + " is too low."
     ```
 
-3.  <span data-ttu-id="70b39-158">Güncelleştirme `Text` en sağ `WriteLine` etkinliğinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>
+3.  <span data-ttu-id="7ddb3-151">Güncelleştirme `Text` en sağ `WriteLine` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-151">Update the `Text` of the right-most `WriteLine` activity.</span></span>
 
     ```vb
     Guess & " is too high."
@@ -169,9 +133,9 @@ ms.locfileid: "50181626"
     Guess + " is too high."
     ```
 
-4.  <span data-ttu-id="70b39-159">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bundan sonra açılan **DoWhile** etkinlik böylece  **WriteLine** kök son etkinlik olduğu `Sequence` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="70b39-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>
+4.  <span data-ttu-id="7ddb3-152">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip bırakma noktasına `True` eylemi üstteki `FlowDecision` .</span><span class="sxs-lookup"><span data-stu-id="7ddb3-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it on the drop point of the `True` action of the topmost `FlowDecision`.</span></span> <span data-ttu-id="7ddb3-153">`WriteLine` Etkinliği için akış eklenir ve bağlantılı `True` eylemi `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-153">The `WriteLine` activity is added to the flowchart and linked to the `True` action of the `FlowDecision`.</span></span>
 
-5.  <span data-ttu-id="70b39-160">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="70b39-160">Type the following expression into the `Text` property box.</span></span>
+5.  <span data-ttu-id="7ddb3-154">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-154">Type the following expression into the `Text` property box.</span></span>
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -181,11 +145,47 @@ ms.locfileid: "50181626"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="70b39-161">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="70b39-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>
+#### <a name="BKMK_UpdateSequential"></a> <span data-ttu-id="7ddb3-155">Sıralı iş akışını güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="7ddb3-155">To update the Sequential workflow</span></span>
 
-1.  <span data-ttu-id="70b39-162">Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** açmak için proje.</span><span class="sxs-lookup"><span data-stu-id="70b39-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+1.  <span data-ttu-id="7ddb3-156">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>
 
-2.  <span data-ttu-id="70b39-163">Aşağıdaki `using` (veya `Imports`) diğer dosyasının en `using` (veya `Imports`) ifadeleri.</span><span class="sxs-lookup"><span data-stu-id="70b39-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>
+2.  <span data-ttu-id="7ddb3-157">Güncelleştirme `Text` en sol `WriteLine` içinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-157">Update the `Text` of the left-most `WriteLine` in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too low."
+    ```
+
+    ```csharp
+    Guess + " is too low."
+    ```
+
+3.  <span data-ttu-id="7ddb3-158">Güncelleştirme `Text` en sağ `WriteLine` etkinliğinde `If` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-158">Update the `Text` of the right-most `WriteLine` activity in the `If` activity.</span></span>
+
+    ```vb
+    Guess & " is too high."
+    ```
+
+    ```csharp
+    Guess + " is too high."
+    ```
+
+4.  <span data-ttu-id="7ddb3-159">Sürükleme bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve bundan sonra açılan **DoWhile** etkinlik böylece  **WriteLine** kök son etkinlik olduğu `Sequence` etkinlik.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-159">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it after the **DoWhile** activity so that the **WriteLine** is the final activity in the root `Sequence` activity.</span></span>
+
+5.  <span data-ttu-id="7ddb3-160">İçine aşağıdaki ifadeyi yazın `Text` özellik kutusu.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-160">Type the following expression into the `Text` property box.</span></span>
+
+    ```vb
+    Guess & " is correct. You guessed it in " & Turns & " turns."
+    ```
+
+    ```csharp
+    Guess + " is correct. You guessed it in " + Turns + " turns."
+    ```
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="7ddb3-161">Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>
+
+1.  <span data-ttu-id="7ddb3-162">Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** açmak için proje.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+2.  <span data-ttu-id="7ddb3-163">Aşağıdaki `using` (veya `Imports`) diğer dosyasının en `using` (veya `Imports`) ifadeleri.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-163">Add the following `using` (or `Imports`) statements to the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Reflection
@@ -197,7 +197,7 @@ ms.locfileid: "50181626"
     using System.IO;
     ```
 
-3.  <span data-ttu-id="70b39-164">Üç mevcut iş akışı kimlik bildirimlerine hemen altına üç yeni iş akışı kimliklerini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="70b39-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="70b39-165">Bu yeni `v1` kimlikleri kullanılabilir iş akışı güncelleştirmeleri yapılmadan önce başlatılan iş akışları için doğru iş akışı tanımı belirtin.</span><span class="sxs-lookup"><span data-stu-id="70b39-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>
+3.  <span data-ttu-id="7ddb3-164">Üç mevcut iş akışı kimlik bildirimlerine hemen altına üç yeni iş akışı kimliklerini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-164">Add three new workflow identities just below the three existing workflow identity declarations.</span></span> <span data-ttu-id="7ddb3-165">Bu yeni `v1` kimlikleri kullanılabilir iş akışı güncelleştirmeleri yapılmadan önce başlatılan iş akışları için doğru iş akışı tanımı belirtin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-165">These new `v1` workflow identities will be used provide the correct workflow definition to workflows started before the updates were made.</span></span>
 
     ```vb
     'Current version identities.
@@ -223,7 +223,7 @@ ms.locfileid: "50181626"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v1;
     ```
 
-4.  <span data-ttu-id="70b39-166">İçinde `WorkflowVersionMap` oluşturucusu, güncelleştirme `Version` üç geçerli iş akışı kimlikleri özelliği `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="70b39-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>
+4.  <span data-ttu-id="7ddb3-166">İçinde `WorkflowVersionMap` oluşturucusu, güncelleştirme `Version` üç geçerli iş akışı kimlikleri özelliği `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-166">In the `WorkflowVersionMap` constructor, update the `Version` property of the three current workflow identities to `2.0.0.0`.</span></span>
 
     ```vb
     'Add the current workflow version identities.
@@ -278,9 +278,9 @@ ms.locfileid: "50181626"
     map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
     ```
 
-     <span data-ttu-id="70b39-167">İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.</span><span class="sxs-lookup"><span data-stu-id="70b39-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>
+     <span data-ttu-id="7ddb3-167">İş akışları sözlüğüne geçerli sürümleri kullanan iş akışı tanımları başlatan kodu güncelleştirilmesi gerekmez, projenizde başvurulan geçerli sürümleri, kodu ekler.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-167">The code in that adds the current versions of the workflows to the dictionary uses the current versions that are referenced in the project, so the code that initializes the workflow definitions does not need to be updated.</span></span>
 
-5.  <span data-ttu-id="70b39-168">Aşağıdaki kod oluşturucuda geçerli sürümler sözlüğe ekler koddan sonra ekleyin.</span><span class="sxs-lookup"><span data-stu-id="70b39-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>
+5.  <span data-ttu-id="7ddb3-168">Aşağıdaki kod oluşturucuda geçerli sürümler sözlüğe ekler koddan sonra ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-168">Add the following code in the constructor just after the code that adds the current versions to the dictionary.</span></span>
 
     ```vb
     'Initialize the previous workflow version identities.
@@ -324,9 +324,9 @@ ms.locfileid: "50181626"
     };
     ```
 
-     <span data-ttu-id="70b39-169">Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="70b39-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>
+     <span data-ttu-id="7ddb3-169">Bu iş akışı kimlikleri, karşılık gelen iş akışı tanımları ilk sürümleri ile ilişkilidir.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-169">These workflow identities are associated with the initial versions of the corresponding workflow definitions.</span></span>
 
-6.  <span data-ttu-id="70b39-170">Ardından, iş akışı tanımları'nin ilk sürümünden içeren derlemeyi yüklemek ve oluşturun ve karşılık gelen iş akışı tanımları sözlüğüne ekleyin.</span><span class="sxs-lookup"><span data-stu-id="70b39-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>
+6.  <span data-ttu-id="7ddb3-170">Ardından, iş akışı tanımları'nin ilk sürümünden içeren derlemeyi yüklemek ve oluşturun ve karşılık gelen iş akışı tanımları sözlüğüne ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-170">Next, load the assembly that contains the initial version of the workflow definitions, and create and add the corresponding workflow definitions to the dictionary.</span></span>
 
     ```vb
     'Add the previous version workflow identities to the dictionary along with
@@ -366,7 +366,7 @@ ms.locfileid: "50181626"
         v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     <span data-ttu-id="70b39-171">Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="70b39-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>
+     <span data-ttu-id="7ddb3-171">Aşağıdaki örnek, tam listesi için güncelleştirilmiş `WorkflowVersionMap` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-171">The following example is the complete listing for the updated `WorkflowVersionMap` class.</span></span>
 
     ```vb
     Public Module WorkflowVersionMap
@@ -549,42 +549,42 @@ ms.locfileid: "50181626"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="70b39-172">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="70b39-172">To build and run the application</span></span>
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="7ddb3-172">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7ddb3-172">To build and run the application</span></span>
 
-1.  <span data-ttu-id="70b39-173">Uygulamayı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="70b39-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>
+1.  <span data-ttu-id="7ddb3-173">Uygulamayı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>
 
-2.  <span data-ttu-id="70b39-174">Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**.</span><span class="sxs-lookup"><span data-stu-id="70b39-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="70b39-175">İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="70b39-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="70b39-176">Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin.</span><span class="sxs-lookup"><span data-stu-id="70b39-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="70b39-177">Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="70b39-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>
+2.  <span data-ttu-id="7ddb3-174">Tıklayarak yeni bir iş akışının başlatılacağı **yeni oyun**.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-174">Start a new workflow by clicking **New Game**.</span></span> <span data-ttu-id="7ddb3-175">İş akışı sürümü altında durum penceresi görüntülenir ve güncelleştirilmiş sürümü ilişkili yansıtır `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-175">The version of the workflow is displayed under the status window and reflects the updated version from the associated `WorkflowIdentity`.</span></span> <span data-ttu-id="7ddb3-176">Not `InstanceId` tamamlandığında, iş akışı için izleme dosyayı görüntülemek ve oyun tamamlanana kadar tahmin girin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-176">Make a note of the `InstanceId` so you can view the tracking file for the workflow when it completes, and then enter guesses until the game is complete.</span></span> <span data-ttu-id="7ddb3-177">Kullanıcının tahmin güncelleştirmeleri temel durum penceresinde görüntülenen bilgileri nasıl görüntüleneceğini unutmayın `WriteLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-177">Note how the user's guess is displayed in the information displayed in the status window based on the updates to the `WriteLine` activities.</span></span>
 
- <span data-ttu-id="70b39-178">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="70b39-178">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="70b39-179">**5 çok yüksektir.**</span><span class="sxs-lookup"><span data-stu-id="70b39-179">**5 is too high.**</span></span>  
-<span data-ttu-id="70b39-180">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="70b39-180">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="70b39-181">**3 çok yüksektir.**</span><span class="sxs-lookup"><span data-stu-id="70b39-181">**3 is too high.**</span></span>  
-<span data-ttu-id="70b39-182">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="70b39-182">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="70b39-183">**1 çok düşüktür.**</span><span class="sxs-lookup"><span data-stu-id="70b39-183">**1 is too low.**</span></span>  
-<span data-ttu-id="70b39-184">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="70b39-184">**Please enter a number between 1 and 10**</span></span>  
-<span data-ttu-id="70b39-185">**Tebrikler, sayı 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="70b39-185">**Congratulations, you guessed the number in 4 turns.**</span></span>  
+ <span data-ttu-id="7ddb3-178">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-178">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="7ddb3-179">**5 çok yüksektir.**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-179">**5 is too high.**</span></span>  
+<span data-ttu-id="7ddb3-180">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-180">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="7ddb3-181">**3 çok yüksektir.**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-181">**3 is too high.**</span></span>  
+<span data-ttu-id="7ddb3-182">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-182">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="7ddb3-183">**1 çok düşüktür.**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-183">**1 is too low.**</span></span>  
+<span data-ttu-id="7ddb3-184">**Lütfen 1 ile 10 arasında bir sayı girin**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-184">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="7ddb3-185">**Tebrikler, sayı 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-185">**Congratulations, you guessed the number in 4 turns.**</span></span>  
 
     > [!NOTE]
-    >  <span data-ttu-id="70b39-186">Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil.</span><span class="sxs-lookup"><span data-stu-id="70b39-186">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="70b39-187">Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici.</span><span class="sxs-lookup"><span data-stu-id="70b39-187">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="70b39-188">İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="70b39-188">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="70b39-189">Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici.</span><span class="sxs-lookup"><span data-stu-id="70b39-189">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="70b39-190">İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="70b39-190">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>
+    >  <span data-ttu-id="7ddb3-186">Güncelleştirilmiş metinden `WriteLine` etkinlikleri görüntülenir, son çıktısını `WriteLine` bu konudaki eklendi etkinlik değil.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-186">The updated text from the `WriteLine` activities is displayed, but the output of the final `WriteLine` activity that was added in this topic is not.</span></span> <span data-ttu-id="7ddb3-187">Durum penceresi tarafından güncelleştirildiğinden olan `PersistableIdle` işleyici.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-187">That is because the status window is updated by the `PersistableIdle` handler.</span></span> <span data-ttu-id="7ddb3-188">İş akışı tamamlandıktan ve son etkinlikten sonra boşta geçmez, çünkü `PersistableIdle` işleyici çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-188">Because the workflow completes and does not go idle after the final activity, the `PersistableIdle` handler is not called.</span></span> <span data-ttu-id="7ddb3-189">Ancak, durum penceresi tarafından benzer bir ileti görüntülenir `Completed` işleyici.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-189">However, a similar message is displayed in the status window by the `Completed` handler.</span></span> <span data-ttu-id="7ddb3-190">İçin isterseniz, kod eklenemedi `Completed` ından cümleler ayıklamak için işleyici `StringWriter` ve durum penceresi için görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-190">If desired, code could be added to the `Completed` handler to extract the text from the `StringWriter` and display it to the status window.</span></span>
 
-3.  <span data-ttu-id="70b39-191">Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak) karşılık gelen Not Defteri'ni kullanarak izleme dosyasını açın Tamamlanan iş akışı için.</span><span class="sxs-lookup"><span data-stu-id="70b39-191">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="70b39-192">Not yapmadıysanız `InstanceId`, doğru izleme dosyası kullanarak tanımlayabilirsiniz **değiştirilme tarihi** Windows Explorer'da bilgileri.</span><span class="sxs-lookup"><span data-stu-id="70b39-192">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>
+3.  <span data-ttu-id="7ddb3-191">Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak) karşılık gelen Not Defteri'ni kullanarak izleme dosyasını açın Tamamlanan iş akışı için.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-191">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="7ddb3-192">Not yapmadıysanız `InstanceId`, doğru izleme dosyası kullanarak tanımlayabilirsiniz **değiştirilme tarihi** Windows Explorer'da bilgileri.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-192">If you did not make a note of the `InstanceId`, you can identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span>
 
- <span data-ttu-id="70b39-193">**Lütfen 1 ile 10 arasında bir sayı girin**
+ <span data-ttu-id="7ddb3-193">**Lütfen 1 ile 10 arasında bir sayı girin**
 **5 çok yüksek.** 
  **Lütfen 1 ile 10 arasında bir sayı girin**
 **3, çok yüksek.** 
  **Lütfen 1 ile 10 arasında bir sayı girin**
 **1. çok düşük.** 
  **Lütfen 1 ile 10 arasında bir sayı girin**
-**2 doğru. Bu 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="70b39-193">**Please enter a number between 1 and 10**
+**2 doğru. Bu 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="7ddb3-193">**Please enter a number between 1 and 10**
 **5 is too high.**
 **Please enter a number between 1 and 10**
 **3 is too high.**
 **Please enter a number between 1 and 10**
 **1 is too low.**
 **Please enter a number between 1 and 10**
-**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="70b39-194">Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.</span><span class="sxs-lookup"><span data-stu-id="70b39-194">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>
+**2 is correct. You guessed it in 4 turns.**</span></span>      <span data-ttu-id="7ddb3-194">Güncelleştirilmiş `WriteLine` çıkış çıktısını dahil olmak üzere izleme dosyası içinde yer alan `WriteLine` bu konudaki eklendi.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-194">The updated `WriteLine` output is contained within the tracking file, including the output of the `WriteLine` that was added in this topic.</span></span>
 
-4.  <span data-ttu-id="70b39-195">Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin.</span><span class="sxs-lookup"><span data-stu-id="70b39-195">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="70b39-196">Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="70b39-196">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="70b39-197">Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez.</span><span class="sxs-lookup"><span data-stu-id="70b39-197">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="70b39-198">Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.</span><span class="sxs-lookup"><span data-stu-id="70b39-198">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>
+4.  <span data-ttu-id="7ddb3-195">Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-195">Switch back to the number guessing application and select one of the workflows that was started before the updates were made.</span></span> <span data-ttu-id="7ddb3-196">Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-196">You can identify the version of the currently selected workflow by looking at the version information that is displayed below the status window.</span></span> <span data-ttu-id="7ddb3-197">Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-197">Enter some guesses and note that the status updates match the `WriteLine` activity output from the previous version, and do not include the user's guess.</span></span> <span data-ttu-id="7ddb3-198">Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-198">That is because these workflows are using the previous workflow definition that does not have the `WriteLine` updates.</span></span>
 
-     <span data-ttu-id="70b39-199">Sonraki adımda [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri şekilde güncelleştirilir `v2` örnekleri.</span><span class="sxs-lookup"><span data-stu-id="70b39-199">In the next step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>
+     <span data-ttu-id="7ddb3-199">Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.</span><span class="sxs-lookup"><span data-stu-id="7ddb3-199">In the next step, [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), the running `v1` workflow instances are updated so they contain the new functionality as the `v2` instances.</span></span>

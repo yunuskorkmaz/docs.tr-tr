@@ -7,28 +7,28 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555795"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370767"
 ---
-# <a name="menu"></a><span data-ttu-id="10094-102">Menü</span><span class="sxs-lookup"><span data-stu-id="10094-102">Menu</span></span>
-<span data-ttu-id="10094-103">A <xref:System.Windows.Controls.Menu> komutlar veya olay işleyicileri ile ilişkili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir.</span><span class="sxs-lookup"><span data-stu-id="10094-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="10094-104">Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="10094-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="10094-105">Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağrılacak bir `Click` olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="10094-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="10094-106">A <xref:System.Windows.Controls.MenuItem> birden çok da sahip olabilirsiniz <xref:System.Windows.Controls.MenuItem> öğeler bir alt oluşturan alt olarak.</span><span class="sxs-lookup"><span data-stu-id="10094-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
+# <a name="menu"></a><span data-ttu-id="da256-102">Menü</span><span class="sxs-lookup"><span data-stu-id="da256-102">Menu</span></span>
+<span data-ttu-id="da256-103">A <xref:System.Windows.Controls.Menu> komutları veya olay işleyicileri ile ilgili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir.</span><span class="sxs-lookup"><span data-stu-id="da256-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="da256-104">Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="da256-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="da256-105">Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağırma bir `Click` olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="da256-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="da256-106">A <xref:System.Windows.Controls.MenuItem> birden çok bulundurabilirsiniz <xref:System.Windows.Controls.MenuItem> oluşturan bir alt menüye alt öğeleri.</span><span class="sxs-lookup"><span data-stu-id="da256-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
   
- <span data-ttu-id="10094-107">Aşağıdaki çizimde bir menü denetimi üç farklı durumlarını gösterir.</span><span class="sxs-lookup"><span data-stu-id="10094-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="10094-108">Fare işaretçisi gibi hiçbir cihaz üzerinde dinleniyor varsayılan durumu olduğunda <xref:System.Windows.Controls.Menu>.</span><span class="sxs-lookup"><span data-stu-id="10094-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="10094-109">Fare işaretçisini üzerine getirildiğinde odak durumu oluşur <xref:System.Windows.Controls.Menu> ve basılı durum oluşursa üzerinden fare düğmesini tıklatıldığında <xref:System.Windows.Controls.Menu>.</span><span class="sxs-lookup"><span data-stu-id="10094-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
+ <span data-ttu-id="da256-107">Aşağıdaki çizimde, bir menü denetimi üç farklı durumlarını gösterir.</span><span class="sxs-lookup"><span data-stu-id="da256-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="da256-108">Fare işaretçisi gibi cihaz üzerinde dinleniyor olduğunda varsayılan durumdur <xref:System.Windows.Controls.Menu>.</span><span class="sxs-lookup"><span data-stu-id="da256-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="da256-109">Odak durumu fareyi üzerine getirildiğinde gerçekleşir <xref:System.Windows.Controls.Menu> ve basılı durumu üzerinde bir fare düğmesine tıklandığında oluşuyor <xref:System.Windows.Controls.Menu>.</span><span class="sxs-lookup"><span data-stu-id="da256-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
   
- <span data-ttu-id="10094-110">![Menu durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="10094-110">![Menu states](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
-<span data-ttu-id="10094-111">Farklı durumlardaki menüler</span><span class="sxs-lookup"><span data-stu-id="10094-111">Menus in different states</span></span>  
+ <span data-ttu-id="da256-110">![Menü durumları](./media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="da256-110">![Menu states](./media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
+<span data-ttu-id="da256-111">Farklı durumlarda menüleri</span><span class="sxs-lookup"><span data-stu-id="da256-111">Menus in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="10094-112">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="10094-112">In This Section</span></span>  
- [<span data-ttu-id="10094-113">Menüye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="10094-113">Menu Overview</span></span>](../../../../docs/framework/wpf/controls/menu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="da256-112">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="da256-112">In This Section</span></span>  
+ [<span data-ttu-id="da256-113">Menüye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="da256-113">Menu Overview</span></span>](menu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="10094-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="10094-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="da256-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="da256-114">Reference</span></span>  
  <xref:System.Windows.Controls.Menu>  
   <xref:System.Windows.Controls.MenuItem>  
   <xref:System.Windows.Controls.Primitives.MenuBase>  
   <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="10094-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="10094-115">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="da256-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="da256-115">Related Sections</span></span>

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372210"
 ---
-# <a name="resources-wpf"></a><span data-ttu-id="2b87e-102">Kaynaklar (WPF)</span><span class="sxs-lookup"><span data-stu-id="2b87e-102">Resources (WPF)</span></span>
-<span data-ttu-id="2b87e-103">Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="2b87e-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="2b87e-104">WPF farklı türdeki kaynakların destekler.</span><span class="sxs-lookup"><span data-stu-id="2b87e-104">WPF supports different types of resources.</span></span> <span data-ttu-id="2b87e-105">Bu kaynaklar temelde iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları.</span><span class="sxs-lookup"><span data-stu-id="2b87e-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="2b87e-106">Fırçalar ve stiller XAML kaynakları örneklerindendir.</span><span class="sxs-lookup"><span data-stu-id="2b87e-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="2b87e-107">Kaynak veri dosyaları bir uygulama gerekiyor yapılamayan veri dosyalarıdır.</span><span class="sxs-lookup"><span data-stu-id="2b87e-107">Resource data files are non-executable data files that an application needs.</span></span>  
+# <a name="resources-wpf"></a><span data-ttu-id="2354d-102">Kaynaklar (WPF)</span><span class="sxs-lookup"><span data-stu-id="2354d-102">Resources (WPF)</span></span>
+<span data-ttu-id="2354d-103">Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir.</span><span class="sxs-lookup"><span data-stu-id="2354d-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="2354d-104">WPF, farklı türdeki kaynakların destekler.</span><span class="sxs-lookup"><span data-stu-id="2354d-104">WPF supports different types of resources.</span></span> <span data-ttu-id="2354d-105">Bu kaynaklar öncelikle iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları.</span><span class="sxs-lookup"><span data-stu-id="2354d-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="2354d-106">XAML kaynakları Fırçalar ve stilleri verilebilir.</span><span class="sxs-lookup"><span data-stu-id="2354d-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="2354d-107">Kaynak veri dosyaları uygulamanın gereken yürütülebilir olmayan veri dosyalarıdır.</span><span class="sxs-lookup"><span data-stu-id="2354d-107">Resource data files are non-executable data files that an application needs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2b87e-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2b87e-108">In This Section</span></span>  
- [<span data-ttu-id="2b87e-109">XAML Kaynakları</span><span class="sxs-lookup"><span data-stu-id="2b87e-109">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [<span data-ttu-id="2b87e-110">WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları</span><span class="sxs-lookup"><span data-stu-id="2b87e-110">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [<span data-ttu-id="2b87e-111">WPF İçinde URI'leri Paketleme</span><span class="sxs-lookup"><span data-stu-id="2b87e-111">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2354d-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2354d-108">In This Section</span></span>  
+ [<span data-ttu-id="2354d-109">XAML Kaynakları</span><span class="sxs-lookup"><span data-stu-id="2354d-109">XAML Resources</span></span>](xaml-resources.md)  
+ [<span data-ttu-id="2354d-110">WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları</span><span class="sxs-lookup"><span data-stu-id="2354d-110">WPF Application Resource, Content, and Data Files</span></span>](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="2354d-111">WPF İçinde URI'leri Paketleme</span><span class="sxs-lookup"><span data-stu-id="2354d-111">Pack URIs in WPF</span></span>](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a><span data-ttu-id="2b87e-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2b87e-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2354d-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2354d-112">Reference</span></span>  
  <xref:System.Windows.ResourceDictionary>  
   
- [<span data-ttu-id="2b87e-113">StaticResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="2b87e-113">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="2354d-113">StaticResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="2354d-113">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
   
- [<span data-ttu-id="2b87e-114">DynamicResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="2b87e-114">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [<span data-ttu-id="2354d-114">DynamicResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="2354d-114">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
   
- [<span data-ttu-id="2b87e-115">x:Key Yönergesi</span><span class="sxs-lookup"><span data-stu-id="2b87e-115">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="2354d-115">x:Key Yönergesi</span><span class="sxs-lookup"><span data-stu-id="2354d-115">x:Key Directive</span></span>](../../xaml-services/x-key-directive.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="2b87e-116">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2b87e-116">Related Sections</span></span>  
- [<span data-ttu-id="2b87e-117">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="2b87e-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="2354d-116">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2354d-116">Related Sections</span></span>  
+ [<span data-ttu-id="2354d-117">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="2354d-117">XAML in WPF</span></span>](xaml-in-wpf.md)

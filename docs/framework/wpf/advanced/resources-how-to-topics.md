@@ -7,25 +7,25 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546171"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356254"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="b25d1-102">Kaynaklar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b25d1-102">Resources How-to Topics</span></span>
-<span data-ttu-id="b25d1-103">Bu bölümdeki konular, Windows Presentation Foundation (WPF) kaynaklarının nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b25d1-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="5f935-102">Kaynaklar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5f935-102">Resources How-to Topics</span></span>
+<span data-ttu-id="5f935-103">Bu bölümdeki konularda, Windows Presentation Foundation (WPF) kaynaklarının nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5f935-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b25d1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b25d1-104">In This Section</span></span>  
- [<span data-ttu-id="b25d1-105">Kaynağı Tanımlama ve Kaynağa Başvurma</span><span class="sxs-lookup"><span data-stu-id="b25d1-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="b25d1-106">Uygulama Kaynaklarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="b25d1-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="b25d1-107">SystemFonts Kullanma</span><span class="sxs-lookup"><span data-stu-id="b25d1-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="b25d1-108">Sistem Yazı Tipleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="b25d1-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="b25d1-109">SystemParameters Kullanma</span><span class="sxs-lookup"><span data-stu-id="b25d1-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="b25d1-110">Sistem Parametreleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="b25d1-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5f935-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5f935-104">In This Section</span></span>  
+ [<span data-ttu-id="5f935-105">Kaynağı Tanımlama ve Kaynağa Başvurma</span><span class="sxs-lookup"><span data-stu-id="5f935-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="5f935-106">Uygulama Kaynaklarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f935-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="5f935-107">SystemFonts Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f935-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="5f935-108">Sistem Yazı Tipleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f935-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="5f935-109">SystemParameters Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f935-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="5f935-110">Sistem Parametreleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f935-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="b25d1-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b25d1-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5f935-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="5f935-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "33546171"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="b25d1-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b25d1-112">Related Sections</span></span>  
- [<span data-ttu-id="b25d1-113">XAML Kaynakları</span><span class="sxs-lookup"><span data-stu-id="b25d1-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="5f935-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="5f935-112">Related Sections</span></span>  
+ [<span data-ttu-id="5f935-113">XAML Kaynakları</span><span class="sxs-lookup"><span data-stu-id="5f935-113">XAML Resources</span></span>](xaml-resources.md)

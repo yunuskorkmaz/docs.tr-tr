@@ -7,22 +7,22 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351274"
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="845c1-102">StackPanel Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="845c1-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="845c1-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.StackPanel> içeriği yatay veya dikey olarak yığmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="845c1-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="da79c-102">StackPanel Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="da79c-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="da79c-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.StackPanel> yatay veya dikey olarak içerik yığın için öğesi.</span><span class="sxs-lookup"><span data-stu-id="da79c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="845c1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="845c1-104">In This Section</span></span>  
- [<span data-ttu-id="845c1-105">StackPanel ve DockPanel Arasında Seçim Yapma</span><span class="sxs-lookup"><span data-stu-id="845c1-105">Choose Between StackPanel and DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="845c1-106">StackPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="845c1-106">Create a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="845c1-107">StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama</span><span class="sxs-lookup"><span data-stu-id="845c1-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="da79c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="da79c-104">In This Section</span></span>  
+ [<span data-ttu-id="da79c-105">StackPanel ve DockPanel Arasında Seçim Yapma</span><span class="sxs-lookup"><span data-stu-id="da79c-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="da79c-106">StackPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="da79c-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="da79c-107">StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama</span><span class="sxs-lookup"><span data-stu-id="da79c-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="845c1-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="845c1-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="da79c-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="da79c-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33555126"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="845c1-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="845c1-109">Related Sections</span></span>  
- [<span data-ttu-id="845c1-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="845c1-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="da79c-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="da79c-109">Related Sections</span></span>  
+ [<span data-ttu-id="da79c-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="da79c-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="845c1-111">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="845c1-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="da79c-111">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="da79c-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="845c1-112">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="845c1-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="da79c-112">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="da79c-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

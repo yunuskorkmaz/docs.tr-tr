@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553280"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351059"
 ---
-# <a name="canvas"></a><span data-ttu-id="436d7-102">Tuval</span><span class="sxs-lookup"><span data-stu-id="436d7-102">Canvas</span></span>
-<span data-ttu-id="436d7-103"><xref:System.Windows.Controls.Canvas> alt öğelerin mutlak konumlandırılmasını etkinleştiren bir düzen denetimidir.</span><span class="sxs-lookup"><span data-stu-id="436d7-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="03c5f-102">Tuval</span><span class="sxs-lookup"><span data-stu-id="03c5f-102">Canvas</span></span>
+<span data-ttu-id="03c5f-103"><xref:System.Windows.Controls.Canvas> mutlak alt öğelerini konumlandırma sağlayan bir düzen denetimidir.</span><span class="sxs-lookup"><span data-stu-id="03c5f-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="436d7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="436d7-104">In This Section</span></span>  
- [<span data-ttu-id="436d7-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="436d7-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="03c5f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="03c5f-104">In This Section</span></span>  
+ [<span data-ttu-id="03c5f-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="03c5f-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="436d7-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="436d7-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="03c5f-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="03c5f-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553280"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="436d7-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="436d7-107">Related Sections</span></span>  
- [<span data-ttu-id="436d7-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="436d7-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="03c5f-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="03c5f-107">Related Sections</span></span>  
+ [<span data-ttu-id="03c5f-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="03c5f-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="436d7-109">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="436d7-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="03c5f-109">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="03c5f-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="436d7-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="436d7-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="03c5f-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="03c5f-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 6d37cda057ea1e7ca6761363857a2647da37afee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372887"
 ---
-# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="b5ab3-102">Nasıl yapılır: Veriye ListBox Bağlama</span><span class="sxs-lookup"><span data-stu-id="b5ab3-102">How to: Bind a ListBox to Data</span></span>
-<span data-ttu-id="b5ab3-103">Bir uygulama geliştiricisi oluşturabilirsiniz <xref:System.Windows.Controls.ListBox> her içeriğini belirtmeden denetimleri <xref:System.Windows.Controls.ListBoxItem> ayrı olarak.</span><span class="sxs-lookup"><span data-stu-id="b5ab3-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="b5ab3-104">Veri bağlama, tek tek öğelerine veri bağlamak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b5ab3-104">You can use data binding to bind data to the individual items.</span></span>  
+# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="add46-102">Nasıl yapılır: Veriye ListBox Bağlama</span><span class="sxs-lookup"><span data-stu-id="add46-102">How to: Bind a ListBox to Data</span></span>
+<span data-ttu-id="add46-103">Bir uygulama geliştiricisi oluşturabilirsiniz <xref:System.Windows.Controls.ListBox> her içeriğini belirtmeden denetimleri <xref:System.Windows.Controls.ListBoxItem> ayrı olarak.</span><span class="sxs-lookup"><span data-stu-id="add46-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="add46-104">Veri bağlama, tek tek öğelerine veri bağlamak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="add46-104">You can use data binding to bind data to the individual items.</span></span>  
   
- <span data-ttu-id="b5ab3-105">Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.ListBox> , doldurur <xref:System.Windows.Controls.ListBoxItem> adlı bir veri kaynağına veri bağlama göre öğeleri *renkleri*.</span><span class="sxs-lookup"><span data-stu-id="b5ab3-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="b5ab3-106">Bu durumda kullanmak için gerekli değil <xref:System.Windows.Controls.ListBoxItem> her öğenin içeriğini belirtmek için etiketler.</span><span class="sxs-lookup"><span data-stu-id="b5ab3-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
+ <span data-ttu-id="add46-105">Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.ListBox> , doldurur <xref:System.Windows.Controls.ListBoxItem> adlı bir veri kaynağına veri bağlama göre öğeleri *renkleri*.</span><span class="sxs-lookup"><span data-stu-id="add46-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="add46-106">Bu durumda kullanmak için gerekli değil <xref:System.Windows.Controls.ListBoxItem> her öğenin içeriğini belirtmek için etiketler.</span><span class="sxs-lookup"><span data-stu-id="add46-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b5ab3-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="b5ab3-107">Example</span></span>  
- [!code-xaml[ListBoxEvent#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
-[!code-xaml[ListBoxEvent#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
+## <a name="example"></a><span data-ttu-id="add46-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="add46-107">Example</span></span>  
+ [!code-xaml[ListBoxEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
+[!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="b5ab3-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5ab3-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="add46-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="add46-108">See also</span></span>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
-- [<span data-ttu-id="b5ab3-109">Denetimler</span><span class="sxs-lookup"><span data-stu-id="b5ab3-109">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [<span data-ttu-id="add46-109">Denetimler</span><span class="sxs-lookup"><span data-stu-id="add46-109">Controls</span></span>](../advanced/optimizing-performance-controls.md)
