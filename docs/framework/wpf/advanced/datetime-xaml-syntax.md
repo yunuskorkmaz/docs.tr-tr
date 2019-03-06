@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: c443451a0fd9fffec97377efc611e0ccfe534f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606731"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365691"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
 Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullandığınız özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kod çalışma zamanında belirttiğiniz olsa da, XAML içinde bir başlangıç tarihi veya saati belirtebilirsiniz. WPF XAML ayrıştırıcı ayrıştırılmasını işler <xref:System.DateTime> yerleşik bir XAML metni söz dizimini kullanarak değerleri. Bu konunun ayrıntılarını açıklar <xref:System.DateTime> XAML metni söz dizimi.  
@@ -75,4 +75,4 @@ Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.W
  Daha önce belirtildiği gibi bir <xref:System.DateTime> XAML içinde kabul edilebilir bir dize belirtilmesi için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu, resmileştirilmiş diğer biçimlere içerir (örneğin <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) ve belirli bir HTTP'dir değil biçimleri <xref:System.Globalization.DateTimeFormatInfo> formu. Örneğin, form `YYYY/mm/dd` kabul edilebilir için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu konu, çalışan ve bunun yerine standart bir yöntem olarak kısa tarih deseni önerir tüm olası biçimleri açıklamak denemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: b1f3889803ba681542349443276041d312293bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626881"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360956"
 ---
 # <a name="menu-overview"></a>Menüye Genel Bakış
 <xref:System.Windows.Controls.Menu> Sınıfı komutlara ve olay işleyicilerine hiyerarşik sırayla ilişkili öğeleri düzenlemenize olanak sağlar. Her <xref:System.Windows.Controls.Menu> öğesi içeren bir koleksiyon, <xref:System.Windows.Controls.MenuItem> öğeleri.  
@@ -24,10 +24,10 @@ ms.locfileid: "54626881"
 ## <a name="creating-menus"></a>Menüler oluşturma  
  Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Menu> içindeki metni düzenlemek için bir <xref:System.Windows.Controls.TextBox>. <xref:System.Windows.Controls.Menu> İçeren <xref:System.Windows.Controls.MenuItem> nesneleri kullanan <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, ve <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> özellikleri ve <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, ve <xref:System.Windows.Controls.MenuItem.Click> olayları.  
   
- [!code-xaml[MenuItemCommandsAndEvents#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+ [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
   
- [!code-csharp[MenuItemCommandsAndEvents#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
- [!code-vb[MenuItemCommandsAndEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="menus_with_shortcutkeys"></a>   
 ## <a name="menuitems-with-keyboard-shortcuts"></a>Klavye kısayolları ile MenuItems  
@@ -37,15 +37,15 @@ ms.locfileid: "54626881"
 ### <a name="inputgesturetext"></a>InputGestureText  
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> klavye kısayolu metni atamak için özellik <xref:System.Windows.Controls.MenuItem> kontrol eder. Bu, yalnızca klavye kısayol menü öğesi yerleştirir.  Komutu ile ilişkilendirmez <xref:System.Windows.Controls.MenuItem>. Uygulamanın eylemi gerçekleştirmek için kullanıcının girişi işlemesi gerekir.  
   
- [!code-xaml[MenuEvent#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
+ [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
 ### <a name="command"></a>Komut  
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.MenuItem.Command%2A> ilişkilendirilecek özellik **açık** ve **Kaydet** ile komutları <xref:System.Windows.Controls.MenuItem> kontrol eder. Komut özelliği yalnızca bir komutla ilişkilendirmek bir <xref:System.Windows.Controls.MenuItem>, ancak aynı zamanda bir kısayol olarak kullanmak için giriş ilişkilendirmekle sağlar.  
   
- [!code-xaml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
+ [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- <xref:System.Windows.Controls.MenuItem> Sınıfı de sahip bir <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> komutu oluştuğu olan öğeyi belirten özelliği. Varsa <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ayarlanmazsa komutu klavye girintisine sahip öğeyi alır. Komutlar hakkında daha fazla bilgi için bkz. [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+ <xref:System.Windows.Controls.MenuItem> Sınıfı de sahip bir <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> komutu oluştuğu olan öğeyi belirten özelliği. Varsa <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ayarlanmazsa komutu klavye girintisine sahip öğeyi alır. Komutlar hakkında daha fazla bilgi için bkz. [komut vermeye genel genel bakış](../advanced/commanding-overview.md).  
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>Menü stil  
@@ -53,11 +53,11 @@ ms.locfileid: "54626881"
   
  İlk örnek kod tanımlayan bir <xref:System.Windows.Style> adlı `Simple` , geçerli sistem ayarlarını, stili kullanma işlemini gösterir. Kod rengini atar `MenuHighlightBrush` menünün arka plan rengi olarak ve `MenuTextBrush` menünün ön plan rengi. Fırçalar atamak için kaynak anahtarlarını kullandığına dikkat edin.  
   
- [!code-xaml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
+ [!code-xaml[MenuStylesSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
  Aşağıdaki örnek kullanımları <xref:System.Windows.Trigger> görünümünü değiştirebilmek için öğeleri bir <xref:System.Windows.Controls.MenuItem> gerçekleşen olaylara yanıt olarak <xref:System.Windows.Controls.Menu>. Fareyi taşıdığınızda <xref:System.Windows.Controls.Menu>, ön plan rengini ve menü öğeleri yazı tipi özelliklerini değiştirin.  
   
- [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
+ [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)

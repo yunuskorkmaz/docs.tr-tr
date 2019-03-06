@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352392"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Giriş ve Komutlar ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konularda, Windows Presentation Foundation (WPF) giriş ve komut verme altyapısının kullanılacağını açıklar.  
+Bu bölümdeki konularda, Windows Presentation Foundation (WPF) giriş ve komut verme altyapı kullanmayı açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Komutu Etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [İmleç Türünü Değiştirme](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [Denetime FocusVisualStyle Uygulama](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Enter Tuşuna Basıldığında Algılama](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [Olayları Kullanarak Geçiş Efekti Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [Fare İşaretçisini İzleyen Bir Nesne Oluşturma](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [RoutedCommand Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Komut Desteği Olmadan Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [Komut Destekli Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [Komutu Etkinleştirme](how-to-enable-a-command.md)  
+ [İmleç Türünü Değiştirme](how-to-change-the-cursor-type.md)  
+ [Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [Denetime FocusVisualStyle Uygulama](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Enter Tuşuna Basıldığında Algılama](how-to-detect-when-the-enter-key-pressed.md)  
+ [Olayları Kullanarak Geçiş Efekti Oluşturma](how-to-create-a-rollover-effect-using-events.md)  
+ [Fare İşaretçisini İzleyen Bir Nesne Oluşturma](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [RoutedCommand Oluşturma](how-to-create-a-routedcommand.md)  
+ [ICommandSource Uygulama](how-to-implement-icommandsource.md)  
+ [Komut Desteği Olmadan Denetime Komut Bağlama](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [Komut Destekli Denetime Komut Bağlama](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.UIElement>  

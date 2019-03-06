@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365847"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746568"
   
 -   **İletişim**: Eklentileri izin vererek ve birbirleriyle yöntemlerini çağırmaya ve veri geçirme yalıtım sınırlarının arasında iletişim için uygulamaları barındırın.  
   
--   **Ömür Yönetimi**: Yükleme ve temiz, tahmin edilebilir bir biçimde uygulama etki alanları ve işlemleri kaldırma (bkz [uygulama etki alanları](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Ömür Yönetimi**: Yükleme ve temiz, tahmin edilebilir bir biçimde uygulama etki alanları ve işlemleri kaldırma (bkz [uygulama etki alanları](../../app-domains/application-domains.md)).  
   
 -   **Sürüm oluşturma**: Ya da yeni sürümlerini oluşturulduğunda konak uygulamalar ve eklentiler hala iletişim kurabildiğinden emin olma.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746568"
   
 6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
- UI döndüren eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ UI döndüren eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Bir kullanıcı arabirimi eklentisi olan  
@@ -148,7 +148,7 @@ ms.locfileid: "56746568"
   
 6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
- UI olan eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ UI olan eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Eklenti birden çok UI döndüren  
@@ -219,7 +219,7 @@ ms.locfileid: "56746568"
   
 -   Konak uygulama tarafında WPF tüketen <xref:System.Windows.Interop.HwndSource> türetildiği bir iç WPF sınıf olarak <xref:System.Windows.Interop.HwndHost> ve <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> konak uygulama.  
   
- <xref:System.Windows.Interop.HwndHost> pencere tanıtıcısı, WPF kullanıcı arabirimleri ile tanımlanan kullanıcı arabirimlerini görüntülemek için var. Daha fazla bilgi için [WPF ve Win32 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> pencere tanıtıcısı, WPF kullanıcı arabirimleri ile tanımlanan kullanıcı arabirimlerini görüntülemek için var. Daha fazla bilgi için [WPF ve Win32 birlikte çalışması](../advanced/wpf-and-win32-interoperation.md).  
   
  Özet olarak, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> bir eklentiyi bir ana bilgisayar uygulamasına Burada, saklanmış olduğu tarafından geçirilecek bir WPF UI için Pencere işleyicisi izin vermek için mevcut bir <xref:System.Windows.Interop.HwndHost> ve konak uygulamanın kullanıcı Arabiriminde görüntülenir.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746568"
   
 -   Bir konak uygulamasından görüntülenen eklenti kullanıcı arabirimleri konak uygulamanın kırpma davranışını dikkate almaz.  
   
--   Kavramını *hava sahası* birlikte çalışabilirlik senaryolarında de eklentiler için geçerlidir (bkz [teknoloji bölgelerine genel bakış](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   Kavramını *hava sahası* birlikte çalışabilirlik senaryolarında de eklentiler için geçerlidir (bkz [teknoloji bölgelerine genel bakış](../advanced/technology-regions-overview.md)).  
   
 -   Kaynağın devralmayı, veri bağlama ve komut vermeye genel, eklenti otomatik olarak kullanılabilir değil gibi bir konak uygulamanın UI Hizmetleri kullanıcı arabirimleri. Eklenti, bu hizmetleri sağlamak üzere işlem hattı güncelleştirmeniz gerekiyor.  
   
--   Eklentinin kullanıcı Arabirimi döndürülemez, ölçeği, dengesiz veya aksi halde bir dönüştürme tarafından etkilenen (bkz [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Eklentinin kullanıcı Arabirimi döndürülemez, ölçeği, dengesiz veya aksi halde bir dönüştürme tarafından etkilenen (bkz [dönüştüren genel bakış](../graphics-multimedia/transforms-overview.md)).  
   
 -   İçerik işlemlerinden çizerek işlenen eklenti kullanıcı arabirimi içinde <xref:System.Drawing> ad alanı, alfa karıştırma içerebilir. Ancak, hem eklenti kullanıcı Arabirimi hem de ana bilgisayar uygulaması içerdiği UI % 100 donuk olmalıdır; diğer bir deyişle, `Opacity` hem de özelliği 1 olarak ayarlanması gerekir.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746568"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Performansı iyileştirme  
- Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak, her uygulama için gereken çeşitli .NET Framework derlemeleri tüm uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, .NET Framework uygulamaları zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak, her uygulama için gereken çeşitli .NET Framework derlemeleri tüm uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, .NET Framework uygulamaları zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.LoaderOptimizationAttribute>
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Uygulama Etki Alanları](../../../../docs/framework/app-domains/application-domains.md)
+- [Uygulama Etki Alanları](../../app-domains/application-domains.md)
 - [.NET framework uzaktan iletişimi genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Nasıl Yapılır Konuları](how-to-topics.md)

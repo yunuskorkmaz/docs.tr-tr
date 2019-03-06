@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 53cc58b3e30b91e8694a8090f3cc85cf0b3c0af6
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372730"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] açmadan dosyaları bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
@@ -43,8 +43,8 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
   
  Örneğin et bulunduğu `static` **BatchXPSPrinterçPrintXPS** yöntemi. Bir yazdırma sunucusunu ve kuyruk oluşturduktan sonra yöntemi içeren bir dizin için kullanıcıdan [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosyaları. Dizinin var olup olmadığını ve varlığından destek alan doğrulama sonra \*.xps dosyaları içinde yöntem her bir dosya yazdırma sırasını ekler. Örneği geçiriyoruz şekilde yazıcı XPSDrv olmayan, olduğunu varsayar `false` son parametresi için <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi. Bu nedenle, yöntem doğrulayacaktır [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması diline dönüştürülecek denemeden önce dosyayı işaretlemede. Doğrulama başarısız olursa bir özel durum oluşturulur. Örnek kod özel durumu yakalar, bu hakkında kullanıcıya bildirim ve sonraki işlemek için Git [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosya.  
   
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
  XPSDrv yazıcısı kullandığınız sonra son parametre ayarlayabileceğiniz `true`. Bu durumda, bu yana [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması dili, yöntem, doğrulamadan veya başka bir sayfa açıklaması dili dönüştürme, yazıcıya dosya gönderir. Tasarım zamanında XPSDrv yazıcısı uygulamayı kullanarak emin değilseniz, okumak için uygulamayı değiştirebilirsiniz <xref:System.Printing.PrintQueue.IsXpsDevice%2A> özelliği ve dal bulgulara göre.  
   

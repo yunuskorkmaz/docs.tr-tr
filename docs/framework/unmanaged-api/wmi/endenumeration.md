@@ -16,35 +16,35 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f80503277d6a5d748dffa7783a19c6353b2e7f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351404"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration işlevi
-Bir çağrı ile başlatılan bir numaralandırma sırasını sonlandırıyor [BeginEnumeration işlevi](beginenumeration.md).  
+
+Bir çağrı ile başlatılan bir numaralandırma sırasını sonlandırıyor [BeginEnumeration işlevi](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT EndEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`  
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr`  
+`ptr`\
 [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
-
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -54,19 +54,21 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemi.
 
-Bir çağrı `EndEnumeration` işlevi gerekli değildir, ancak numaralandırma ile ilişkili kaynakları serbest nedeniyle önerilir. Ancak, resoruces otomatik olarak sonraki numaralandırma başlattığınızda veya nesne serbest serbest bırakılır.
+Bir çağrı `EndEnumeration` işlevi gerekli değildir, ancak numaralandırma ile ilişkili kaynakları serbest nedeniyle önerilir. Ancak, kaynakları otomatik olarak sonraki numaralandırma başlattığınızda veya nesne serbest serbest bırakılır.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

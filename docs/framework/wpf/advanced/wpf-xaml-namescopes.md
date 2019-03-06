@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366757"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML Ad Kapsamları
 XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler var. XAML namescope adlarında bir nesne ağacında nesnelerin XAML tanımlı adlarını ve örnek eşdeğerlerine arasındaki ilişkileri kurmak için kullanılabilir. Genellikle, XAML ad kapsamları içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod, bir XAML uygulaması için tek tek XAML sayfa yükleme kökleri olduğunda oluşturulur. XAML ad kapsamları programlama nesnesi tarafından tanımlanan <xref:System.Windows.Markup.INameScope> arabirim ve ayrıca pratik bir sınıf tarafından uygulanan <xref:System.Windows.NameScope>.  
@@ -36,7 +36,7 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
 ### <a name="adding-objects-to-runtime-object-trees"></a>Çalışma zamanı nesne ağaçları nesneler ekleme  
  XAML ayrıştırılır şu WPF XAML namescope oluşturup tanımlı zaman içinde bir ana temsil eder. Bir nesne için bir noktada bir nesne ağacının o ağaç üretilen XAML ayrıştırıldığında küpte sonra zaman içinde eklerseniz bir `Name` veya `x:Name` değeri yeni bir nesne üzerinde bir XAML namescope bilgileri otomatik olarak güncelleştirilmez. XAML yüklendikten sonra bir WPF XAML namescope bir nesne için bir ad eklemek için uygun uygulama çağrı <xref:System.Windows.Markup.INameScope.RegisterName%2A> XAML namescope tanımlayan nesne olduğu genellikle XAML sayfası kök. Ad kayıtlı değilse, eklenen nesne adına göre yöntemleri gibi başvurulamaz <xref:System.Windows.FrameworkElement.FindName%2A>, ve animasyon hedeflemek için bu adı kullanamazsınız.  
   
- Olduğunu, en yaygın bir senaryodur uygulama geliştiricileri için <xref:System.Windows.FrameworkElement.RegisterName%2A> adları geçerli sayfayı kökünde XAML namescope kaydedilecek. <xref:System.Windows.FrameworkElement.RegisterName%2A> Bu hedef nesneler için animasyon film şeritleri için önemli bir senaryo parçasıdır. Daha fazla bilgi için [görsel taslaklara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Olduğunu, en yaygın bir senaryodur uygulama geliştiricileri için <xref:System.Windows.FrameworkElement.RegisterName%2A> adları geçerli sayfayı kökünde XAML namescope kaydedilecek. <xref:System.Windows.FrameworkElement.RegisterName%2A> Bu hedef nesneler için animasyon film şeritleri için önemli bir senaryo parçasıdır. Daha fazla bilgi için [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md).  
   
  Eğer <xref:System.Windows.FrameworkElement.RegisterName%2A> adında gibi XAML namescope tanımlayan nesnesi başka bir nesne üzerinde adı hala çağrı nesnesi içinde tutulan XAML namescope kayıtlı <xref:System.Windows.FrameworkElement.RegisterName%2A> tanımlayan nesne XAML namescope üzerinde.  
   
@@ -49,7 +49,7 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
   
  Nesne olarak sağlanmışsa `dependencyObject` için <xref:System.Windows.NameScope.SetNameScope%2A> değil bir <xref:System.Windows.Markup.INameScope> uygulaması <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>çağırarak <xref:System.Windows.FrameworkElement.RegisterName%2A> tüm alt öğeleri hiçbir etkisi olmaz. Yeni XAML namescope açıkça oluşturmak başarısız olursa, ardından için çağırdığı <xref:System.Windows.FrameworkElement.RegisterName%2A> bir özel durum oluşturacak.  
   
- Kodda XAML namescope API'leri kullanarak bir örnek için bkz: [ad kapsamı tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md).  
+ Kodda XAML namescope API'leri kullanarak bir örnek için bkz: [ad kapsamı tanımlama](../graphics-multimedia/how-to-define-a-name-scope.md).  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>XAML ad kapsamları stilleri ve şablonları  
@@ -57,7 +57,7 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
   
  Aşağıdaki örnek göz önünde bulundurun:  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  Burada, aynı şablonu için iki farklı düğmeler uygulanır. Şablonları ayrık XAML ad kapsamları, yoksa `TheBorder` ad şablonunda kullanılan bir ad çakışması XAML namescope neden. Şablon her örneğinin kendi XAML namescope bulunduğundan bu örnekte, adı tam olarak bir her örneklenen şablonun XAML namescope içerecektir.  
   
@@ -97,5 +97,5 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name Yönergesi](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name Yönergesi](../../xaml-services/x-name-directive.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 3284b11939b6f0bb921a4cfeb7fd0d4172b46f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df3a201eaae4ddcf2e5d5aac3de6e0d5013947c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663563"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353406"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak Kamera Konumuna ve Yönüne Animasyon Ekleme
 Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> animasyon ekleme için kullanılan bir <xref:System.Windows.Media.Media3D.PerspectiveCamera> 3B görünümde. Ayrıca, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3B görünümde kamera işaret eden yönüne animasyon uygulamak için kullanılır. Bu animasyonları her ikisi de, animasyon efektleri bir dizi oluşturmak birkaç anahtar çerçeveleri kullanın:  
@@ -26,8 +26,8 @@ Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Point3DAnimationUsin
 3.  <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> ve <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> bağlı olarak değerler arasında değişken bir geçiş oluşturmak için kullanılan <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> özelliği. Aşağıdaki örnekte, animasyon başlar yavaş ama zaman diliminin sonuna doğru katlanarak hızlandırır.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)

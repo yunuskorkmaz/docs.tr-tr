@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355083"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Görsel Katmanda Tıklama Testi
 Bu konu, isabet testi işlevi görsel katman tarafından sağlanan genel bir bakış sağlar. İsabet sınaması desteği sayesinde geometri veya nokta değerinin işlenmiş içeriği içinde olup olmadığını belirlemek bir <xref:System.Windows.Media.Visual>, birden çok nesne seçmek için seçim dikdörtgeninin gibi kullanıcı arabirimi davranışı uygulamak etmenize imkan sağlar.  
@@ -41,7 +41,7 @@ Bu konu, isabet testi işlevi görsel katman tarafından sağlanan genel bir bak
   
  Aşağıdaki çizim bir dikdörtgen olmayan nesnenin bölge ve onun sınırlayıcı dikdörtgeni arasındaki ilişkiyi gösterir.  
   
- ![Geçerli isabet sınaması bölge diyagramı](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
+ ![Geçerli isabet sınaması bölge diyagramı](./media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")  
 Geçerli isabet sınaması bölge diyagramı  
   
 <a name="hit_testing_and_z-order"></a>   
@@ -50,7 +50,7 @@ Geçerli isabet sınaması bölge diyagramı
   
  Aşağıdaki çizimde, kare ve üçgen nesneler üzerinde daire nesnedir. Yalnızca en üst z düzenini değeri olan visual nesne ilgileniyorsanız, döndürülecek görsel isabet sınaması sabit ayarlayabilirsiniz <xref:System.Windows.Media.HitTestResultBehavior.Stop> gelen <xref:System.Windows.Media.HitTestResultCallback> isabet sınaması geçişi ilk öğeden sonra durdurmak için.  
   
- ![Z diyagramı&#45;görsel ağacı sırasını](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Z diyagramı&#45;görsel ağacı sırasını](./media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Z düzenini görsel ağacın diyagramı  
   
  Tüm görsel nesneler belirli bir nokta veya geometri altında listeleme istiyorsanız, iade <xref:System.Windows.Media.HitTestResultBehavior.Continue> gelen <xref:System.Windows.Media.HitTestResultCallback>. Bu tamamen engellediği bile test diğer nesneler, görsel nesneler için isabet anlamına gelir. Örnek kod ' % s'bölümünde "Kullanarak bir isabet sınaması geri aramalarını" daha fazla bilgi için bkz.  
@@ -69,13 +69,13 @@ Z düzenini görsel ağacın diyagramı
   
  Aşağıdaki kod, fare olay işleyicilerini ayarlama işlemi gösterilmektedir bir <xref:System.Windows.UIElement> için kullanılan olaylarını yakalamak için kullanılan nesne isabet sınaması.  
   
- [!code-csharp[HitTestingOverview#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
- [!code-vb[HitTestingOverview#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
+ [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
   
 ### <a name="how-the-visual-tree-affects-hit-testing"></a>Görsel ağacı nasıl etkilediğini tıklama testi  
  Hangi nesnelerin nesneleri isabet sınaması numaralandırma sırasında döndürülür görsel ağaç başlangıç noktasını belirler. İsabet sınaması istediğiniz birden fazla nesneniz varsa, ilgilendiğiniz tüm nesnelerin ortak üst görsel ağaç başlangıç noktası olarak kullanılan visual nesne olmalıdır. Örneğin, düğme öğesi test etme ve aşağıdaki diyagramda görsel çizimi isabet ilginizi, başlangıç noktası görsel ağaçta üst aynı hem ayarlamak gerekir. Bu durumda, tuval düğme öğesi hem görsel çizim ortak üst öğedir.  
   
- ![Bir görsel ağacı hiyerarşi diyagramı](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
+ ![Bir görsel ağacı hiyerarşi diyagramı](./media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
 Bir görsel ağacı hiyerarşi diyagramı  
   
 > [!NOTE]
@@ -87,41 +87,41 @@ Bir görsel ağacı hiyerarşi diyagramı
   
  Sonuçları numaralandırma sırasında isabet testi, görsel ağacı değiştiren herhangi bir işlem gerçekleştirmemelisiniz. Ekleme veya bu denetlenirken bir nesne görsel ağaç'tan kaldırma beklenmeyen davranışlara neden olabilir. Sonra görsel ağacı güvenli bir şekilde değiştirebilirsiniz <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi döndürür. Bir veri yapısı gibi sağlamak isteyebilirsiniz bir <xref:System.Collections.ArrayList>isabet testi sonuçlarını numaralandırma sırasında değerlerini depolamak için.  
   
- [!code-csharp[HitTestingOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
- [!code-vb[HitTestingOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
+ [!code-csharp[HitTestingOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[HitTestingOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
   
  İsabet sınaması geri çağırma yöntemi, belirli bir görsel nesneyi görsel ağaç'üzerinde bir isabet sınaması tanımlandığında gerçekleştirdiğiniz eylemleri tanımlar. Eylemleri gerçekleştirdikten sonra dönüş bir <xref:System.Windows.Media.HitTestResultBehavior> herhangi bir görsel nesneler listelenmeye devam edilip edilmeyeceğini belirleyen bir değer.  
   
- [!code-csharp[HitTestingOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
- [!code-vb[HitTestingOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
   
 > [!NOTE]
 >  Z sırasına göre İsabet görsel nesnelerinin numaralandırması sırasıdır. Görsel nesneyi z düzenini en üst düzeyinde numaralandırılan ilk nesnedir. Numaralandırılan diğer görsel nesneler daha alt z düzenini düzeyindedir. Bu sabit listesi sırası için işleme sırası görsellerin karşılık gelir.  
   
  Görsel nesneler sabit listesi isabet sınaması geri çağırma işlevi herhangi bir zamanda döndürerek durdurabilirsiniz <xref:System.Windows.Media.HitTestResultBehavior.Stop>.  
   
- [!code-csharp[HitTestingOverview#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
- [!code-vb[HitTestingOverview#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
+ [!code-csharp[HitTestingOverview#103](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[HitTestingOverview#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
   
 <a name="using_a_hit_test_filter_callback"></a>   
 ## <a name="using-a-hit-test-filter-callback"></a>Bir isabet sınaması filtre geri araması kullanma  
  İsabet testi sonuçları geçirilen nesneleri kısıtlamak için isteğe bağlı bir isabet sınaması bir filtre kullanabilirsiniz. Bu, isabet testi sonuçlarınızı işlemede ilgilendiğiniz değil görsel ağacı parçalarını yok saymasını sağlar. Bir isabet sınaması filtre uygulamak için bir isabet sınaması filtre geri çağırma işlevi tanımlayın ve çağırdığınızda parametre değeri olarak geçirin. <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi.  
   
- [!code-csharp[HitTestingOverview#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
- [!code-vb[HitTestingOverview#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
+ [!code-csharp[HitTestingOverview#104](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
+ [!code-vb[HitTestingOverview#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
   
  İsteğe bağlı bir isabet sınaması filtre geri çağırma işlevi sağlamak istemiyorsanız, başarılı bir `null` için parametre olarak değer <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi.  
   
- [!code-csharp[HitTestingOverview#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
- [!code-vb[HitTestingOverview#105](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
+ [!code-csharp[HitTestingOverview#105](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
+ [!code-vb[HitTestingOverview#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
   
- ![İsabet testi filtresini kullanarak görsel ağacı temizleme](../../../../docs/framework/wpf/graphics-multimedia/media/filteredvisualtree-01.png "FilteredVisualTree_01")  
+ ![İsabet testi filtresini kullanarak görsel ağacı temizleme](./media/filteredvisualtree-01.png "FilteredVisualTree_01")  
 Görsel ağacı temizleme  
   
  İsabet testi filtre geri çağırma işlevi işlenmiş içeriği belirttiğiniz koordinatları içeren tüm Görsellere sıralamanızı sağlar. Ancak, bazı dalların, isabet test sonuçları geri çağırma işlevinizde işlemede ilgilendiğiniz değil görsel ağacı yoksay isteyebilirsiniz. İsabet testi filtre geri çağırma işlevi dönüş değeri, ne tür görsel nesneler numaralandırmasını eylemi gerçekleştirmesi gerektiğini belirler. Örneğin, dönüş değeri, <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>, geçerli visual nesne ve alt öğelerindeki isabet testi sonuçları numaralandırmasından kaldırabilirsiniz. Bu, isabet test sonuçları geri çağırma işlevine bu nesneler, listedeki görmeyeceğiniz anlamına gelir. Görsel ağacı nesnelerin temizleme isabet testi sonuçlarını numaralandırma geçişi sırasında işleme miktarını azaltır. Aşağıdaki kod örneğinde, filtre etiketleri ve bunların alt öğeleri atlar ve diğer her şey isabet testleri.  
   
- [!code-csharp[HitTestingOverview#106](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
- [!code-vb[HitTestingOverview#106](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
+ [!code-csharp[HitTestingOverview#106](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
+ [!code-vb[HitTestingOverview#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
   
 > [!NOTE]
 >  İsabet testi filtre geri araması bazen burada isabet sınaması geri aramalarını çağrılmaz durumlarda çağrılır.  
@@ -130,13 +130,13 @@ Görsel ağacı temizleme
 ## <a name="overriding-default-hit-testing"></a>Varsayılan geçersiz kılma tıklama testi  
  Görsel bir nesnenin varsayılan isabet sınama desteğini geçersiz kılarak geçersiz kılın <xref:System.Windows.Media.Visual.HitTestCore%2A> yöntemi. Bunun anlamı çağırdığınızda <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi, geçersiz kılınan uygulamanıza <xref:System.Windows.Media.Visual.HitTestCore%2A> çağrılır. İsabet sınaması görsel nesnenin sınırlayıcı dikdörtgenini içinde düştüğünde görsel nesne dışında işlenmiş içeriği koordinat olsa bile, geçersiz kılınan yöntemi çağrılır.  
   
- [!code-csharp[HitTestingOverview#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
- [!code-vb[HitTestingOverview#107](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
+ [!code-csharp[HitTestingOverview#107](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
+ [!code-vb[HitTestingOverview#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
   
  İsabet sınaması dikdörtgen hem bir görsel nesneyi işlenmiş içeriği istediğiniz zaman zamanlar olabilir. Kullanarak `PointHitTestParameters` parametre değeri, geçersiz kılınan <xref:System.Windows.Media.Visual.HitTestCore%2A> yöntemi temel yöntemin parametre olarak <xref:System.Windows.Media.Visual.HitTestCore%2A>, görsel bir nesnenin sınırlayıcı dikdörtgenini isabet üzerinde temel eylemleri gerçekleştirin ve sonra ikinci bir isabet sınaması gerçekleştirin görsel nesnesinin içerik çizilir.  
   
- [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
- [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
+ [!code-csharp[HitTestingOverview#108](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
+ [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
@@ -146,5 +146,5 @@ Görsel ağacı temizleme
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [İsabet sınaması örneği kullanan tıklama testi](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [İsabet testi ile Win32 birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Görselde Tıklama Testi Geometrisi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
-- [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+- [Görselde Tıklama Testi Geometrisi](how-to-hit-test-geometry-in-a-visual.md)
+- [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](how-to-hit-test-using-a-win32-host-container.md)

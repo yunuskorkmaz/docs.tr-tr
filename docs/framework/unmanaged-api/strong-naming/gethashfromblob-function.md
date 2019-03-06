@@ -16,59 +16,63 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d9e7b52c9061a1a7b470f9d4abf735e605087dc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352080"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob İşlevi
-Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.  
-  
- Bu işlev kullanım dışı bırakıldı. Kullanım [ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) yöntemi yerine.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-HRESULT GetHashFromBlob (  
-    [in]  BYTE    *pbBlob,  
-    [in]  DWORD   cchBlob,  
-    [in, out] unsigned int   *piHashAlg,  
-    [out] BYTE    *pbHash,  
-    [in]  DWORD   cchHash,  
-    [out] DWORD   *pchHash  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `pbBlob`  
- [in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.  
-  
- `cchBlob`  
- [in] Uzunluğu, bayt cinsinden bellek bloğu.  
-  
- `piHashAlg`  
- [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.  
-  
- `pbHash`  
- [out] Döndürülen karma arabellek.  
-  
- `cchHash`  
- [in] İstenen en büyük boyutunu `pbHash`.  
-  
- `pchHash`  
- [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
-  
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** StrongName.h  
-  
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.
+
+Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) yöntemi yerine.
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
+HRESULT GetHashFromBlob (
+    [in]  BYTE    *pbBlob,
+    [in]  DWORD   cchBlob,
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE    *pbHash,
+    [in]  DWORD   cchHash,
+    [out] DWORD   *pchHash
+);
+```
+
+## <a name="parameters"></a>Parametreler
+
+`pbBlob`\
+[in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.
+
+`cchBlob`\
+[in] Uzunluğu, bayt cinsinden bellek bloğu.
+
+`piHashAlg`\
+[out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.
+
+`pbHash`\
+[out] Döndürülen karma arabellek.
+
+`cchHash`\
+[in] İstenen en büyük boyutunu `pbHash`.
+
+`pchHash`\
+[out] Döndürülen bayt cinsinden boyutu `pbHash`.
+
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** StrongName.h
+
+**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
-- [GetHashFromBlob Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [GetHashFromBlob Yöntemi](../hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

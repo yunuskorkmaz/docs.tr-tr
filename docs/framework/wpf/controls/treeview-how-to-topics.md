@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357761"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.TreeView> hiyerarşik yapıda bilgileri görüntülemek için denetim.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.TreeView> hiyerarşik bir yapıda bilgilerini görüntülemek için denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Basit veya Karmaşık TreeViews Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [SelectedValue, SelectedValuePath ve SelectedItem Kullanma](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [TreeView'ın Performansını Artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [TreeView İçinde TreeViewItem Bulma](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Basit veya Karmaşık TreeViews Oluşturma](how-to-create-simple-or-complex-treeviews.md)  
+  [SelectedValue, SelectedValuePath ve SelectedItem Kullanma](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [TreeView'ın Performansını Artırma](how-to-improve-the-performance-of-a-treeview.md)  
+  [TreeView İçinde TreeViewItem Bulma](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.TreeView>  

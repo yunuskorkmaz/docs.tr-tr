@@ -2,15 +2,9 @@
 title: Visual Basic ile Uygulama Geliştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic, developing applications
-- applications [Visual Basic]
+  - 'Visual Basic, developing applications'
+  - 'applications [Visual Basic]'
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625626"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic ile Uygulama Geliştirme
 Bu bölüm, Visual Basic dili için kavramsal belgelerde kapsar.  
@@ -27,9 +21,6 @@ Bu bölüm, Visual Basic dili için kavramsal belgelerde kapsar.
   
  [Oluşturma ve Visual Basic bileşenleri kullanma](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Terim tanımlar *bileşen* ve nasıl ve ne zaman anlatılmaktadır bileşenler oluşturmak için.  
-  
- [Yazdırma ve Raporlama](../../visual-basic/developing-apps/printing/index.md)  
- Genel bakış ve yazdırma ve Raporlama ile ilgili ilgili belgelere bağlantılar sağlar.  
   
  [Windows Forms Uygulaması Temelleri](../../visual-basic/developing-apps/windows-forms/index.md)  
  Visual Studio kullanarak Windows Forms uygulamaları oluşturma hakkında bilgi sağlar.  

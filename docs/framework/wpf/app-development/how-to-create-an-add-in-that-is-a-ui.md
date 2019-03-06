@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366393"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama tarafından barındırılan WPF) olan bir eklenti oluşturma işlemi gösterilmektedir.  
@@ -27,7 +27,7 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
 -   Bilgi işlem hattı, eklenti ve konak geliştirme gibi .NET Framework eklenti modeli, sahibi. Bu kavramları alışkın değilseniz bkz [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattı, bir eklenti ve ana bilgisayar uygulamasına uygulanışı gösteren bir öğretici için bkz [izlenecek yol: Genişletilebilir uygulama oluşturma](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   .NET Framework eklenti modeli WPF uzantılarını bilgi. Bkz: [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   .NET Framework eklenti modeli WPF uzantılarını bilgi. Bkz: [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Örnek  
  Bir WPF UI olan eklenti oluşturmak için her işlem hattı segment, eklenti ve ana bilgisayar uygulaması için özel kod gerektirir.  
@@ -37,13 +37,13 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
 ## <a name="implementing-the-contract-pipeline-segment"></a>Sözleşme ardışık düzen segmentini uygulama  
  Sözleşme eklenti için bir eklentiyi bir UI olduğunda uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>. Örnekte, `IWPFAddInContract` uygulayan <xref:System.AddIn.Contract.INativeHandleContract>aşağıdaki kodda gösterildiği gibi.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Eklenti görünümü işlem hattı segmentini uygulama  
  Eklenti öğesinin uygulandığından <xref:System.Windows.FrameworkElement> türü, eklenti görünümü gerekir ayrıca alt <xref:System.Windows.FrameworkElement>. Aşağıdaki kod olarak uygulanan sözleşme, eklenti görünümü gösterir `WPFAddInView` sınıfı.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  Eklenti görünümü burada türetilir <xref:System.Windows.Controls.UserControl>. Sonuç olarak, eklentinin kullanıcı Arabirimi de türetilmesi <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Ekleme tarafı bağdaştırıcısı işlem hattı segmentini uygulama  
  Sözleşme olsa da bir <xref:System.AddIn.Contract.INativeHandleContract>, eklentinin bir <xref:System.Windows.FrameworkElement> (eklenti görünümü işlem hattı segment tarafından belirtildiği gibi). Bu nedenle, <xref:System.Windows.FrameworkElement> dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce. Bu iş tarafından Ekle tarafı bağdaştırıcısı çağrılarak gerçekleştirilir <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>aşağıdaki kodda gösterildiği gibi.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- İçinde bir eklenti döndüğü UI olan eklenti modeli (bkz [bir eklenti döndürür bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), eklenti bağdaştırıcısı dönüştürülen <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Ayrıca bir yöntemi çağırmak için kod yazmak için uygulamanız gereken ancak bu modelde, çağrılmalıdır. Geçersiz kılarak bunu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ve çağıran kodu uygulama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , çağıran kod <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> bekliyor bir <xref:System.AddIn.Contract.INativeHandleContract>. Bu durumda arayan bir sonraki alt bölümünde ele alınmıştır konak tarafı bağdaştırıcı olacaktır.  
+ İçinde bir eklenti döndüğü UI olan eklenti modeli (bkz [bir eklenti döndürür bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-returns-a-ui.md)), eklenti bağdaştırıcısı dönüştürülen <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Ayrıca bir yöntemi çağırmak için kod yazmak için uygulamanız gereken ancak bu modelde, çağrılmalıdır. Geçersiz kılarak bunu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ve çağıran kodu uygulama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , çağıran kod <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> bekliyor bir <xref:System.AddIn.Contract.INativeHandleContract>. Bu durumda arayan bir sonraki alt bölümünde ele alınmıştır konak tarafı bağdaştırıcı olacaktır.  
   
 > [!NOTE]
->  Geçersiz kılmanız gerekir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> konak uygulama kullanıcı Arabirimi arasında sekmeyle gitmeyi etkinleştirme ve kullanıcı Arabirimi eklentisi için bu modeli. Daha fazla bilgi için "WPF eklentisi sınırlamaları" konusuna bakın. [WPF eklentileri genel bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Geçersiz kılmanız gerekir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> konak uygulama kullanıcı Arabirimi arasında sekmeyle gitmeyi etkinleştirme ve kullanıcı Arabirimi eklentisi için bu modeli. Daha fazla bilgi için "WPF eklentisi sınırlamaları" konusuna bakın. [WPF eklentileri genel bakış](wpf-add-ins-overview.md).  
   
  Türetilen bir arabirim Ekle tarafı bağdaştırıcısı uyguladığından <xref:System.AddIn.Contract.INativeHandleContract>, uygulamanız gereken <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, ancak bu yoksayılır olduğunda <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> geçersiz kılındı.  
   
@@ -106,4 +106,4 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md)

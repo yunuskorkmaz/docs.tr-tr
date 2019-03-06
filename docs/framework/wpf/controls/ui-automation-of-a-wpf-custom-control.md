@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523707"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358333"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] istemciler, platformlar ve altyapıları çeşitli kullanıcı arabirimleri başlatılmayabilir veya incelemek için kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Kalite güvencesi (test) kod hem kullanıcı arabirimi öğeleri incelenir ve diğer koddan onlarla kullanıcı etkileşiminin benzetimini ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] erişilebilirlik tüm platformlarda bakın.  
@@ -54,8 +54,8 @@ ms.locfileid: "54523707"
 ### <a name="override-getpattern"></a>GetPattern geçersiz kıl  
  Otomasyon eşleri basitleştirmek bazı sunucu-tarafı uygulaması yönlerini [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcılar, ancak özel denetim Otomasyon eşleri gerekir hala işleme düzeni arabirimleri. WPF olmayan sağlayıcıları gibi arabirimlerde uygulamaları sağlayarak eşleri denetim düzenleri desteği <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> ad gibi <xref:System.Windows.Automation.Provider.IInvokeProvider>. Denetim düzeni arabirimleri eş veya başka bir nesne tarafından uygulanabilir. Eşin uygulaması <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> belirtilen deseni destekleyen bir nesne döndürür. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] kod çağrıları <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yöntemi ve belirten bir <xref:System.Windows.Automation.Peers.PatternInterface> numaralandırma değeri. Kılacağınızı <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> belirtilen desenle uygulayan nesnenin döndürmelidir. Denetim özel bir uygulama bir desenin sahip değilse temel türün uygulamasını çağırabilirsiniz <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> düzeni için bu denetim türü desteklenmiyorsa, uygulama veya null alınacak. Örneğin, özel bir NumericUpDown denetimi bir aralıkta bir değer ayarlanabilir şekilde kendi [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] eş uygulamak <xref:System.Windows.Automation.Provider.IRangeValueProvider> arabirimi. Aşağıdaki örnekte gösterildiği nasıl eşin <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yöntemi geçersiz kılınmıştır yanıt vermek için bir <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> değeri.  
   
- [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
- [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
+ [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
+ [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
  A <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yöntemi bir alt öğe bir desen sağlayıcısı olarak belirtebilirsiniz. Aşağıdaki kodda gösterildiği nasıl <xref:System.Windows.Controls.ItemsControl> aktarımları deseni işleme eş bilgisayara, iç kaydırma <xref:System.Windows.Controls.ScrollViewer> denetimi.  
   
@@ -106,8 +106,8 @@ End Class
 ### <a name="override-core-methods"></a>"Çekirdek" yöntemleri geçersiz kılın  
  Otomasyon kodunuzu, genel eş sınıfı yöntemleri çağırarak denetiminiz hakkındaki bilgileri alır. Denetim hakkında bilgi sağlamak için temel Otomasyon eş sınıfı tarafından sağlanan, Denetim uygulamanız farklıdır, adı "Çekirdek" ile biten her yöntemi yok sayın. En az denetiminiz uygulamalıdır <xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A> ve <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> yöntemleri, aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-csharp[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
- [!code-vb[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
+ [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
+ [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
  Uygulamanıza <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> döndürerek denetiminiz açıklar bir <xref:System.Windows.Automation.ControlType> değeri. İade edebilirsiniz ancak <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>, doğru bir şekilde denetiminiz tanımlıyorsa daha ayrıntılı denetim türlerinden birini döndürmelidir. Dönüş değeri <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType> uygulamak sağlayıcı için fazladan iş gerektirir [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)], ve [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] istemci ürünleri denetim yapısı, klavye etkileşim ve olası denetim desenlerini tahmin oluşturulamıyor.  
   
@@ -151,10 +151,10 @@ End Class
 ### <a name="raise-events"></a>Olay  
  Otomasyon istemcileri Otomasyon olaylarına abone olabilirsiniz. Özel denetimler çağırarak durumunu denetlemek için değişiklikleri rapor gerekir <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> yöntemi. Benzer şekilde, bir özellik değeri değiştiğinde, çağrı <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> yöntemi. Aşağıdaki kod, denetim kodu içinde eş nesnesinden alın ve olay oluşturmak için bir yöntem çağırmak nasıl gösterir. Bir iyileştirme kodu, bu olay türü için bir dinleyici olup olmadığını belirler. Olayı dinleyicilerini olduğunda, gereksiz yükünü ortadan kaldırır ve denetimin yanıt verebilir durumda kalmasına yardımcı olur.  
   
- [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
- [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
+ [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
+ [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonuna Genel Bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI Otomasyonuna Genel Bakış](../../ui-automation/ui-automation-overview.md)
 - [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../ui-automation/server-side-ui-automation-provider-implementation.md)

@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366640"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Blessıwbemservicesobject işlevi
-Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesne.   
-  
+Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesne. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -39,24 +39,27 @@ HRESULT BlessIWbemServicesObject (
    [in] DWORD impLevel, 
    [in] DWORD authnLevel
 );
-```  
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] WMI hizmet nesnesine bir işaretçi.
 
-`strUser`  
+`strUser`\
 [in] Kullanıcı adı.
 
-`strPassword`  
+`strPassword`\
 [in] İlişkili parolayı `strUser`.
 
-`strAuthority` [in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
+`strAuthority`\
+[in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
-`impLevel` [in] Kimliğe bürünme düzeyi.
+`impLevel`\
+[in] Kimliğe bürünme düzeyi.
 
-`authnLevel` [in] Yetkilendirme düzeyi.
+`authnLevel`\
+[in] Yetkilendirme düzeyi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -70,12 +73,14 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Wınerr
 | `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek yeterli bellek yok. | 
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Üst bilgi:** WMINet_Utils.idl
+
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 653137c0707c2b7ee51f6bdac6bb2501f1845e1a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 7dcac523ad105f074df11cdd74126536a60497b0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350707"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Nasıl yapılır: ThicknessConverter Nesnesi Kullanma
 ## <a name="example"></a>Örnek  
@@ -23,8 +23,8 @@ ms.locfileid: "56747349"
   
  Bu örnek çalışmaz.  
   
- [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ThicknessConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Thickness>
@@ -32,4 +32,4 @@ ms.locfileid: "56747349"
 - <xref:System.Windows.Controls.Border>
 - [Nasıl yapılır: Margin özelliği değiştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
 - [Nasıl yapılır: Bir ListBoxItem yeni bir veri türüne dönüştürün](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Panellere Genel Bakış](../controls/panels-overview.md)

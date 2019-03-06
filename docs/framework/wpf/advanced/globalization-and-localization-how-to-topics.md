@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544478"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369155"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Genelleştirme ve Yerelleştirme ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliştirmek açıklar.  
+Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliştirmek nasıl açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir Uygulamayı Yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [Düğme Oluşturmak için Otomatik Düzeni Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Otomatik Düzen için Kılavuz Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [Bir Uygulamayı Yerelleştirme](how-to-localize-an-application.md)  
+ [Düğme Oluşturmak için Otomatik Düzeni Kullanma](how-to-use-automatic-layout-to-create-a-button.md)  
+ [Otomatik Düzen için Kılavuz Kullanma](how-to-use-a-grid-for-automatic-layout.md)  
+ [Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliş
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML'de xml:lang İşleme](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML'de xml:lang İşleme](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555905"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358918"
 ---
 # <a name="textblock"></a>TextBlock
-<xref:System.Windows.Controls.TextBlock> Denetimi için esnek metin desteği sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Öğe öncelikle basic doğru hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryoları.  
+<xref:System.Windows.Controls.TextBlock> Denetim sağlayan esnek metin desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Öğe, öncelikli olarak doğru temel hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryolar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TextBlock Genel Bakış](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [TextBlock Genel Bakış](textblock-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'deki Belgeler](../advanced/documents-in-wpf.md)  
   
- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Akış Belgesine Genel Bakış](../advanced/flow-document-overview.md)

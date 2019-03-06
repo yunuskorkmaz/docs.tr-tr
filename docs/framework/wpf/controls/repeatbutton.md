@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555016"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367160"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-<xref:System.Windows.Controls.Primitives.RepeatButton> Benzer bir <xref:System.Windows.Controls.Button>. Ancak, <xref:System.Windows.Controls.Primitives.RepeatButton> ne zaman denetim öğeleri sağlar ve nasıl <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı oluşur.  
+<xref:System.Windows.Controls.Primitives.RepeatButton> Benzer bir <xref:System.Windows.Controls.Button>. Ancak, <xref:System.Windows.Controls.Primitives.RepeatButton> aşırı denetim öğeleri sağlar ve nasıl <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı oluşur.  
   
- Aşağıdaki grafikte üç durumlu düğme denetimi, varsayılan, PointerFocused ve basılı örneği gösterilmektedir. İlk düğme varsayılan durumunu gösterir. <xref:System.Windows.Controls.Primitives.RepeatButton>. İkinci odak verilerek fare işaretçisini düğmesinin üzerine geldiğinde düğmenin görünümünü nasıl değiştiğini gösterir. Son düğme görünümünü gösterir <xref:System.Windows.Controls.Primitives.RepeatButton> kullanıcı denetimini ele fare düğmesini bastığında.  
+ Aşağıdaki grafik bir düğme denetimi, varsayılan, PointerFocused ve basılı üç durumdan bir örnek gösterir. İlk düğmede varsayılan durumu <xref:System.Windows.Controls.Primitives.RepeatButton>. İkinci odak verilerek fare işaretçisi düğmenin üzerine geldiğinde düğmenin görünümünü nasıl değiştiğini gösterir. Görünümü son düğmede <xref:System.Windows.Controls.Primitives.RepeatButton> kullanıcının denetimin üzerine fare düğmesine bastığında.  
   
- ![Düğme durumları yineleyin](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+ ![Düğme durumları yineleyin](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 Tipik RepeatButton  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

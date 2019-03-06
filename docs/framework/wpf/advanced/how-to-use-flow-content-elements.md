@@ -5,15 +5,15 @@ helpviewer_keywords:
 - flow content elements [WPF]
 - documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
-ms.openlocfilehash: 146a785ef4f6da650144ed6fc47633670304bde6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df591304736adf1725b2b4235149bd426fe15216
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544137"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368118"
 ---
 # <a name="how-to-use-flow-content-elements"></a>Nasıl yapılır: Akış İçeriği Öğelerini Kullanma
-Aşağıdaki örnek, çeşitli içerik akışı öğeleri ve ilişkili öznitelikleri için bildirim kullanımını gösterir.  Gösterilen öğeler ve öznitelikler şunları içerir:  
+Aşağıdaki örnek, çeşitli akış içeriği öğelerini ve ilişkili öznitelikleri için bildirim kullanımını gösterir.  Gösterilen öğeler ve öznitelikler içerir:  
   
 -   <xref:System.Windows.Documents.Bold> öğesi  
   
@@ -37,9 +37,9 @@ Aşağıdaki örnek, çeşitli içerik akışı öğeleri ve ilişkili özniteli
   
 -   <xref:System.Windows.Documents.Span> öğesi  
   
--   <xref:System.Windows.Documents.Typography.Variants%2A> öznitelik (simgeyi ve alt simge)  
+-   <xref:System.Windows.Documents.Typography.Variants%2A> öznitelik (üst simge ve alt simge)  
   
 -   <xref:System.Windows.Documents.Underline> öğesi  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]
+ [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

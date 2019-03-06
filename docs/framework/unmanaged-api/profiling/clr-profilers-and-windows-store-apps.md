@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188826"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358554"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows Store uygulamaları
 
@@ -126,7 +126,7 @@ Genellikle, bir masaüstü uygulamasında Profiler kullanıcı Arabirimi, Profil
 
 Kullanabileceğiniz <xref:Windows.Management.Deployment.PackageManager> bu liste oluşturmak için sınıf. `PackageManager` Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta ise *yalnızca* Masaüstü uygulamaları için kullanılabilir.
 
-Aşağıdaki kod örneği C# yses içinde bir masaüstü uygulaması olarak yazılan kuramsal bir Profiler arabiriminden `PackageManager` Windows uygulamaların bir listesini oluşturmak için:
+Aşağıdaki kod örneğinde kullanıcı arabiriminden bir kuramsal Profiler içinde bir masaüstü uygulaması olarak yazılan C# kullanan `PackageManager` Windows uygulamaların bir listesini oluşturmak için:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Aşağıdaki kod parçacığı göz önünde bulundurun:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Birkaç öğeleri doğru hale getirmek için ihtiyacınız vardır:
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Bu nedenle böyle bir şey isteyeceksiniz:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Bu sonuçları anlamak için CLR Profil oluşturma API'si tarafından tanımland
 
 İlgili noktadır çağrılara Profiler DLL'nin birinin uygulaması dışında yapılır olsa bile, Profil Oluşturucu tarafından oluşturulan iş parçacığı üzerinde yapılan çağrılar her zaman zaman uyumlu olarak kabul edilir [Icorprofilercallback](icorprofilercallback-interface.md) yöntemleri. En az kullanılan durum olması. CLR, çağrınız nedeniyle, yönetilen bir iş parçacığı profil oluşturucunun iş parçacığı etkinleştirdiyse göre [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md), iş parçacığı, profil oluşturucunun iş parçacığı artık kabul edilir. Bu nedenle, CLR iş parçacığı için zaman uyumlu olarak niteliği taşır daha katı bir tanım uygular — yani çağrı kaynaklanan gerekir Profiler DLL'nin biri içinde [Icorprofilercallback](icorprofilercallback-interface.md) zaman uyumlu olarak nitelemek için yöntemleri.
 
-Bu uygulamada ne demektir? Çoğu [Icorprofilerınfo](icorprofilerinfo-interface.md) yöntemleri yalnızca zaman uyumlu olarak çağrılması güvenlidir ve hemen Aksi takdirde başarısız olur. Profiler DLL dosyanızı yeniden kullanır, bu nedenle, [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) tipik profiler oluşturulan iş parçacığı üzerinde yapılan diğer çağrılar için iş parçacığı (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [Requestrejıt](icorprofilerinfo4-requestrejit-method.md), veya [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), sorun yaşıyorsanız oluşturacağız. Hatta bir güvenli zaman uyumsuz işlev gibi [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yönetilen iş parçacığı tarafından çağrıldığında özel kurallara sahiptir. (Blog gönderisine bakın [Profiler yığın: temel ve sonraki süreci desteleyen](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazla bilgi için.)
+Bu uygulamada ne demektir? Çoğu [Icorprofilerınfo](icorprofilerinfo-interface.md) yöntemleri yalnızca zaman uyumlu olarak çağrılması güvenlidir ve hemen Aksi takdirde başarısız olur. Profiler DLL dosyanızı yeniden kullanır, bu nedenle, [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) tipik profiler oluşturulan iş parçacığı üzerinde yapılan diğer çağrılar için iş parçacığı (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [Requestrejıt](icorprofilerinfo4-requestrejit-method.md), veya [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), sorun yaşıyorsanız oluşturacağız. Hatta bir güvenli zaman uyumsuz işlev gibi [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yönetilen iş parçacığı tarafından çağrıldığında özel kurallara sahiptir. (Blog gönderisine bakın [Profiler yığın: Temel bilgileri ve sonraki süreci desteleyen](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazla bilgi için.)
 
 Bu nedenle, herhangi bir iş parçacığı oluşturur, Profiler DLL'yi çağrılacak öneririz [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) kullanılmalıdır *yalnızca* GC'ler tetikler ve ardından GC geri çağırmalarına yanıt amacıyla. Örnekleme veya ayırma yığını gibi diğer görevleri gerçekleştirmek için profil oluşturma API uygulamasına çağırmalıdır değil.
 

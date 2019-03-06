@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149789"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355040"
 ---
 # <a name="how-to-create-a-complex-grid"></a>Karmaşık kılavuz oluşturma
 
@@ -24,11 +24,11 @@ Aşağıdaki örnek sekiz satırları ve sütunları sekiz kullanarak tanımlar 
 
 Dikey gradyanlar örnekte <xref:System.Windows.Shapes.Shape.Fill%2A> görsel sunumunu ve Takvim okunabilirliğini geliştirmek için satırlar ve sütunlar. Biçimlendirilmiş <xref:System.Windows.Controls.TextBlock> öğeleri tarih ve haftanın günlerini temsil eder. <xref:System.Windows.Controls.TextBlock> öğeleri kesinlikle yerleştirilir hücreleri içinde kullanarak <xref:System.Windows.FrameworkElement.Margin%2A> özelliği ve uygulama için bir stil içinde tanımlanan alignment özellikleri.
 
-[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+[!code-xaml[GridComplex#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
 
 Aşağıdaki görüntüde, sonuç olarak oluşan denetimi, özelleştirilebilir bir takvim gösterilmektedir:
 
-![Sonuç olarak oluşan denetimi, ekran görüntüsü](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+![Sonuç olarak oluşan denetimi, ekran görüntüsü](././media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

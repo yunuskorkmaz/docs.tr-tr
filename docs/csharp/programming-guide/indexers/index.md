@@ -48,7 +48,7 @@ C# 7.0, hem get ile başlayan ve set erişimcisi olabilir uygulanan bir ifade g�
   
 -   Dizin oluşturucular birden fazla biçimsel parametre, örneğin, iki boyutlu bir dizi erişirken olabilir.  
   
-##  <a name="BKMK_RelatedSections"></a> İlgili bölümler  
+## <a name="BKMK_RelatedSections"></a> İlgili bölümler  
   
 -   [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542606"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351092"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request yöntemi
 
@@ -36,9 +36,10 @@ HRESULT Request(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`pDataModule` [in] Çekirdek veri modülü için bir işaretçi.
+`pDataModule`\
+[in] Çekirdek veri modülü için bir işaretçi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -56,5 +57,5 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [DacpGetModuleAddress arabirimi](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)
+- [Hata Ayıklama](index.md)
+- [DacpGetModuleAddress arabirimi](dacpgetmoduleaddress-structure.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608868"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356734"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar
 Direct3D9 içeriği kullanarak barındırabilirsiniz <xref:System.Windows.Interop.D3DImage> sınıfı. Direct3D9 içeriği barındırma, uygulamanızın performansını etkileyebilir. Bu konu, bir Windows Presentation Foundation (WPF) uygulamasındaki Direct3D9 içeriği barındırma, performansı iyileştirmek için en iyi uygulamaları açıklar. Bu en iyi uygulamaları nasıl kullanılacağını dahil <xref:System.Windows.Interop.D3DImage> ve en iyi uygulamalar, Windows XP, Windows Vista'yı kullanırken ve çoklu monitör görüntüler.  
   
 > [!NOTE]
->  Bu en iyi uygulamaları gösteren kod örnekleri için bkz: [WPF ve Direct3D9 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Bu en iyi uygulamaları gösteren kod örnekleri için bkz: [WPF ve Direct3D9 birlikte çalışması](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>D3DImage tedbirli şekilde kullanın  
  Direct3D9 içeriği barındırılan bir <xref:System.Windows.Interop.D3DImage> örneği olarak saf bir Direct3D uygulaması hızlı işleme yok. Surface kopyalama ve komut arabelleğini boşaltma pahalı bir işlem olabilir. Sayısı arttıkça <xref:System.Windows.Interop.D3DImage> örnekleri arttıkça, daha fazla bir temizlemeye gerçekleşir ve performansı düşürür. Bu nedenle, kullanmalısınız <xref:System.Windows.Interop.D3DImage> gerektiğinde.  
@@ -47,7 +47,7 @@ Direct3D9 içeriği kullanarak barındırabilirsiniz <xref:System.Windows.Intero
 ## <a name="best-practices-for-multi-monitor-displays"></a>Çoklu monitör görüntüler için en iyi uygulamalar  
  Birden çok ekrana sahip bir bilgisayar kullanıyorsanız, daha önce açıklandığı gibi en iyi uygulamaları izlemelisiniz. Ayrıca bazı ek performans değerlendirmeleri bir çoklu monitör yapılandırması vardır.  
   
- Geri arabelleği oluşturduğunuzda, belirli bir aygıt ve bağdaştırıcı oluşturulur, ancak WPF ön arabellek herhangi bir bağdaştırıcı görüntülenebilir. Ön arabellek güncelleştirmek için bağdaştırıcıları kopyalama çok pahalı olabilir. Windows Vista'da WDDM çoklu ekran kartları ve ile kullanmak üzere yapılandırılmış bir `IDirect3DDevice9Ex` cihaz, ön arabellek farklı bir bağdaştırıcı ama yine de aynı ekran kartı üzerinde ise, performans cezası yoktur. Ancak Windows XP ve birden çok ekran kartı ile XDDM, yapıldığında önemli bir performans cezası ön arabellek geri arabellekten farklı bir bağdaştırıcı görüntülenir. Daha fazla bilgi için [WPF ve Direct3D9 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ Geri arabelleği oluşturduğunuzda, belirli bir aygıt ve bağdaştırıcı oluşturulur, ancak WPF ön arabellek herhangi bir bağdaştırıcı görüntülenebilir. Ön arabellek güncelleştirmek için bağdaştırıcıları kopyalama çok pahalı olabilir. Windows Vista'da WDDM çoklu ekran kartları ve ile kullanmak üzere yapılandırılmış bir `IDirect3DDevice9Ex` cihaz, ön arabellek farklı bir bağdaştırıcı ama yine de aynı ekran kartı üzerinde ise, performans cezası yoktur. Ancak Windows XP ve birden çok ekran kartı ile XDDM, yapıldığında önemli bir performans cezası ön arabellek geri arabellekten farklı bir bağdaştırıcı görüntülenir. Daha fazla bilgi için [WPF ve Direct3D9 birlikte çalışması](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Performans özeti  
  Aşağıdaki tabloda, işletim sistemi, piksel biçimi ve yüzey kilitlenebilirliğinin işlevi olarak ön buffer güncelleştirmesi performansını gösterir. Geri arabelleği ve ön arabellek aynı bağdaştırıcıda olarak kabul edilir. Bağdaştırıcı yapılandırmasına bağlı olarak donanım güncellemesi yazılım güncelleştirmelerini genellikle çok daha hızlıdır.  
@@ -61,6 +61,6 @@ Direct3D9 içeriği kullanarak barındırabilirsiniz <xref:System.Windows.Intero
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF ve Direct3D9 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF ve Direct3D9 Birlikte Çalışması](wpf-and-direct3d9-interoperation.md)
+- [İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)

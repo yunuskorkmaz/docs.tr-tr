@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697042"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361362"
 ---
 # <a name="transformations-how-to-topics"></a>Dönüşümler ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, farklı nesnelere dönüştürmeleri açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [Nesneye Birden Çok Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [Bir Öğenin Yerinde Dönmesini Sağlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [Nesne Döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [Öğe Ölçeklendirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [Bir Öğeyi Eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [Bir Öğeyi Çevirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [Nesneye Birden Çok Dönüşüm Uygulama](how-to-apply-multiple-transforms-to-an-object.md)  
+ [Bir Öğenin Yerinde Dönmesini Sağlama](how-to-make-an-element-spin-in-place.md)  
+ [Nesne Döndürme](how-to-rotate-an-object.md)  
+ [Öğe Ölçeklendirme](how-to-scale-an-element.md)  
+ [Bir Öğeyi Eğme](how-to-skew-an-element.md)  
+ [Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [Bir Öğeyi Çevirme](how-to-translate-an-element.md)  
+ [Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.Transform>
-- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
+- [Grafikler ve Multimedya](index.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
+- [Düzen](../advanced/layout.md)

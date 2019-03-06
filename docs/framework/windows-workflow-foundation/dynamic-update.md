@@ -2,12 +2,12 @@
 title: Dinamik güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 63d780852f7deea8263f3c232ec9cc43b48a0526
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353705"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için iş akışı için bir mekanizma sağlar. Bu, bir hata düzeltmesi, yeni gereksinimleri uygulamak için veya beklenmeyen değişiklikleri uyum sağlamak için olabilir. Bu konuda sunulan dinamik güncelleştirme işlevlerine genel bakış sağlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -28,7 +28,7 @@ Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı
   
  Bu konu, yeni bir etkinlik için derlenmiş Xaml iş akışı kalıcı bir örneğini ekleme dinamik güncelleştirme işlemine genel bakış sağlar.  
   
-###  <a name="Prepare"></a> Dinamik güncelleştirme iş akışı tanımı hazırlama  
+### <a name="Prepare"></a> Dinamik güncelleştirme iş akışı tanımı hazırlama  
  Dinamik güncelleştirme işleminin ilk adımı, istenen iş akışı tanım güncelleştirmesi için hazırlama sağlamaktır. Bu çağrılarak gerçekleştirilir <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> yöntemi ve değiştirmek için iş akışı tanımında geçirme. Bu yöntem, doğrulama ve iş akışı ağacında, tüm genel etkinlikleri ve bunlar daha sonra değiştirilen iş akışı tanımıyla karşılaştırılabilir şekilde etiketlenmesi gereken değişkenleri gibi nesneleri tanımlamak için size yol gösterir. Bu tamamlandığında iş akışı ağaç kopyalanabilir ve orijinal iş akışının tanımına bağlı. Güncelleştirme eşlemesi oluşturulduğunda, iş akışı tanımının güncelleştirilmiş sürümü özgün iş akışı tanımı ile karşılaştırılır ve güncelleştirme eşlemesi temel farklar üzerinde oluşturulur.  
   
  Dinamik güncelleştirme, yüklenemeyen içine bir Xaml iş akışı hazırlamak için bir <xref:System.Activities.ActivityBuilder>, ardından <xref:System.Activities.ActivityBuilder> yöntemlere geçirilen <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
@@ -59,7 +59,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  Bu konuda eşlik eden örnek kodu indirmek için bkz [dinamik güncelleştirme örnek kodu](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a> İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin  
+### <a name="Update"></a> İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin  
  İş akışı tanımını güncelleştirmek için hazırlandıktan sonra istenen bir değişiklik yapılamaz. Ekleme veya etkinlikleri kaldırabileceğiniz, Ekle, taşıyın veya genel değişkenleri Sil, ekleyin veya bağımsız değişkenlerini kaldırın ve etkinlik temsilcileri imzası için değişiklik. Çalışan etkinlik kaldıramaz veya çalışan bir temsilcinin imzasını değiştirin. Kodu kullanarak bu değişiklikler yapılması veya yeniden barındırılan iş akışı Tasarımcısı'nda. Aşağıdaki örnekte, özel bir `VerifyAppraisal` etkinlik gövdesini oluşturan yapar dizisi eklenen `MortgageWorkflow` önceki örnekte.  
   
 ```csharp  
@@ -77,7 +77,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> Güncelleştirme eşlemesi oluşturma  
+### <a name="Create"></a> Güncelleştirme eşlemesi oluşturma  
  Güncelleştirme için hazırlanan iş akışı tanımı değiştirildi sonra güncelleştirme eşleme oluşturulabilir. Bir dinamik güncelleştirme eşlemesi oluşturmak için <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> yöntemi çağrılır. Bu döndürür bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> çalışma zamanı gerekir böylece onu yüklenebilir ve yeni iş akışı tanımıyla sürdürüldü kalıcı iş akışı örneği değiştirmek için bilgileri içerir. Aşağıdaki örnekte, dinamik bir harita oluşturulur için değiştirilmiş `MortgageWorkflow` önceki örnekte tanımı.  
   
 ```csharp  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir  
+### <a name="Apply"></a> Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir  
  Güncelleştirme eşlemesi uygulama oluşturduktan sonra herhangi bir zamanda gerçekleştirilebilir. Hemen kullanmaya yapılabilir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> tarafından döndürülen örnek <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, ya da daha sonra güncelleştirme haritanın kaydedilen bir kopya kullanılarak yapılabilir. Bir iş akışı örneği güncelleştirmek için içine yüklemek bir <xref:System.Activities.WorkflowApplicationInstance> kullanarak <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Ardından, oluşturun bir <xref:System.Activities.WorkflowApplication> güncelleştirilmiş iş akışı tanımı ve istenen kullanarak <xref:System.Activities.WorkflowIdentity>. Bu <xref:System.Activities.WorkflowIdentity> özgün iş akışı kalıcı hale getirmek için kullanılan ve genellikle kalıcı örneği değiştirilmiş yansıtmak için hesaptan farklı olabilir. Bir kez <xref:System.Activities.WorkflowApplication> olan oluşturulan aşırı yüklemesini kullanarak yüklendiği <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> almayan bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>ve ardından bir çağrı ile kaldırıldığında <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. Bu dinamik güncelleştirme uygulanır ve güncelleştirilmiş iş akışı örneğinin devam ettirir.  
   
 ```csharp  

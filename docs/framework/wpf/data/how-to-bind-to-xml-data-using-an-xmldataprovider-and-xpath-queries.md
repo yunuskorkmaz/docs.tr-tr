@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 2d2b9e4dd817562a6b4de15edc51b428c397f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509330"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371352"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verileri kullanarak bir <xref:System.Windows.Data.XmlDataProvider>.  
@@ -24,13 +24,13 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
 > [!NOTE]
 >  Kök düğümü [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilere sahip bir **xmlns** ayarlar özniteliği [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ad alanı boş bir dize. Bu XPath sorguları içinde satır içi bir veri adası uygulamak için bir zorunluluktur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası. Bu satır içi durumda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ve veri adası, böylece devralan <xref:System.Windows> ad alanı. Bu nedenle, ad alanı boş XPath sorguları tarafından nitelendirilen tutmak için ayarlamanız gerekir <xref:System.Windows> sorgular misdirect ad alanı.  
   
- [!code-xaml[XMLDataSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
+ [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Bu örnekte gösterildiği gibi nitelik söz dizimindeki aynı bağlama bildirimi oluşturmak için özel karakterleri düzgün kaçışını yapmanız gerekir. Daha fazla bilgi için [XML karakter varlıkları ve XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md).  
+ Bu örnekte gösterildiği gibi nitelik söz dizimindeki aynı bağlama bildirimi oluşturmak için özel karakterleri düzgün kaçışını yapmanız gerekir. Daha fazla bilgi için [XML karakter varlıkları ve XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  <xref:System.Windows.Controls.ListBox> Bu örneği çalıştırdığınızda aşağıdaki öğeleri gösterir. Bunlar *başlık*s tüm öğelerin altında *Books* ile ya da bir *hisse senedi* değerini "*kullanıma*" veya *numarası* değeri 3 veya daha büyük veya eşittir 8. Dikkat hiçbir *CD* çünkü öğeleri döndürülür <xref:System.Windows.Data.XmlDataProvider.XPath%2A> değerinin ayarlanmış <xref:System.Windows.Data.XmlDataProvider> gösterir, yalnızca *Books* öğeleri ortaya (aslında bir filtre ayarlayarak).  
   
- ![XPath örnek](../../../../docs/framework/wpf/data/media/xpathexample.PNG "XPathExample")  
+ ![XPath örnek](./media/xpathexample.PNG "XPathExample")  
   
  Bu örnekte, bir kitap adları görüntülenir, çünkü <xref:System.Windows.Data.Binding.XPath%2A> , <xref:System.Windows.Controls.TextBlock> bağlama <xref:System.Windows.DataTemplate> ayarlanmış "*başlık*". Gibi bir özniteliğin değerini görüntülemek istiyorsanız *ISBN*, ayarlarsınız <xref:System.Windows.Data.Binding.XPath%2A> değerini "`@ISBN`".  
   
@@ -46,11 +46,11 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
   
  Çalıştırdığınızda bir **XPath** döndürür, sorgu bir <xref:System.Xml.XmlNode> veya XmlNodes listesi. <xref:System.Xml.XmlNode> olan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kullanabileceğiniz anlamına gelir, nesne <xref:System.Windows.Data.Binding.Path%2A> özelliğine bağlamak için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Önceki örnek yeniden göz önünde bulundurun. Örneğin geri kalanı aynı kalır ve değiştirirseniz <xref:System.Windows.Controls.TextBlock> aşağıdaki bağlama, döndürülen XmlNodes içinde adlarını görürsünüz <xref:System.Windows.Controls.ListBox>. Bu durumda, döndürülen tüm düğümlerin adıdır "*kitap*".  
   
- [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
+ [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
  Bazı uygulamalarda katıştırma [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] kaynağı içindeki bir veri adası olarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verilerin tam içeriği, derleme zamanında bilinen gerekir çünkü sayfa kullanışsız olabilir. Bu nedenle, dış veri alma [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dosya da desteklenir, aşağıdaki örnekte olduğu gibi:  
   
- [!code-xaml[XMLDataSource2#XmlFileExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
+ [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
  Varsa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veriler uzak yer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dosyası tanımlarsınız erişim verilere uygun bir atayarak [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] için <xref:System.Windows.Data.XmlDataProvider.Source%2A> özniteliğini aşağıdaki gibi:  
   
@@ -60,8 +60,8 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Data.ObjectDataProvider>
-- [XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Bağlama Kaynaklarına Genel Bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)
+- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

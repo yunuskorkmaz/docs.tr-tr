@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360205"
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
 <xref:System.Windows.Controls.GridView> Görünüm modu görüntüleme modlarına ilişkin biridir bir <xref:System.Windows.Controls.ListView> denetimi. <xref:System.Windows.Controls.GridView> Siz ve kullanıcılarınız genellikle etkileşimli sütun üst bilgilerini düğmeleri kullanan bir tablo öğesi koleksiyonları görüntülemek sınıf ve bunun destekleyici sınıfları etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını açıklar.  
@@ -29,19 +29,19 @@ ms.locfileid: "54578539"
   
  **ListView içeriğini GridView Görünüm**  
   
- ![ListView biçimlendirilmiş](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![ListView biçimlendirilmiş](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> sütunları olarak temsil edilir <xref:System.Windows.Controls.GridViewColumn> kendi içeriğinin boyutunu otomatik olarak nesneleri. İsteğe bağlı olarak, açıkça ayarlayabilirsiniz bir <xref:System.Windows.Controls.GridViewColumn> belirli bir genişliğe. Kavrayıcının sütun başlıkları arasında sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca dinamik olarak ekleyebilir, Kaldır, Değiştir ve bu işlev yerleşik olarak bulunur çünkü sütunları yeniden Sırala <xref:System.Windows.Controls.GridView>. Ancak, <xref:System.Windows.Controls.GridView> görüntülediği verileri doğrudan güncelleştirilemiyor.  
   
  Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.GridView> , çalışan verilerini görüntüler. Bu örnekte, <xref:System.Windows.Controls.ListView> tanımlar `EmployeeInfoDataSource` olarak <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Özellik tanımlarını <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> bağlama <xref:System.Windows.Controls.GridViewColumn> içerik `EmployeeInfoDataSource` veri kategorileri.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  Aşağıdaki resimde, önceki örneğin oluşturduğu tabloda gösterilmiştir.  
   
  **Bir ItemsSource verileri görüntüleyen GridView**  
   
- ![ListView GridView çıktıyla](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView GridView çıktıyla](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView düzenini ve stili  
@@ -55,7 +55,7 @@ ms.locfileid: "54578539"
   
  Bir sütunda içeriği hizalaması belirtmek için bir <xref:System.Windows.Controls.GridView>, tanımlayan bir <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>. Kullanmayın <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> ve <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> özelliklerini <xref:System.Windows.Controls.ListView> kullanılarak görüntülenen içerik bir <xref:System.Windows.Controls.GridView>.  
   
- Sütun başlıkları için şablon ve stil özelliklerini belirtmek için kullanın <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, ve <xref:System.Windows.Controls.GridViewColumnHeader> sınıfları. Daha fazla bilgi için [GridView sütun üstbilgi stil ve şablonlarına genel bakış](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ Sütun başlıkları için şablon ve stil özelliklerini belirtmek için kullanın <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, ve <xref:System.Windows.Controls.GridViewColumnHeader> sınıfları. Daha fazla bilgi için [GridView sütun üstbilgi stil ve şablonlarına genel bakış](gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>GridView görsel öğe ekleme  
@@ -65,7 +65,7 @@ ms.locfileid: "54578539"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>GridView içinde satırları stillendirme  
- Kullanım <xref:System.Windows.Controls.GridViewRowPresenter> ve <xref:System.Windows.Controls.GridViewHeaderRowPresenter> sınıfları biçimlendirmek ve satırları görüntülemek için bir <xref:System.Windows.Controls.GridView>. Stil satırlara ilişkin bir örnek için bir <xref:System.Windows.Controls.GridView> modunda görüntülemek için bkz: [GridView ListView olmasını uygular içinde bir satıra stil](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
+ Kullanım <xref:System.Windows.Controls.GridViewRowPresenter> ve <xref:System.Windows.Controls.GridViewHeaderRowPresenter> sınıfları biçimlendirmek ve satırları görüntülemek için bir <xref:System.Windows.Controls.GridView>. Stil satırlara ilişkin bir örnek için bir <xref:System.Windows.Controls.GridView> modunda görüntülemek için bkz: [GridView ListView olmasını uygular içinde bir satıra stil](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>ItemContainerStyle kullandığınızda hizalama sorunları  
@@ -83,7 +83,7 @@ ms.locfileid: "54578539"
   
      Kullanıcılar sütunları yeniden Sırala bir <xref:System.Windows.Controls.GridView> sütun başlığı üzerindeyken farenin sol düğmesine basarak ve ardından bu sütunu yeni bir konuma sürükleyerek. Kullanıcının sütun üst bilgisine sürüklerken, kayan bir üst bilgi sürümü sütun eklemek istediğiniz yeri gösteren düz bir siyah çizgi yanı sıra görüntülenir.  
   
-     Kayan bir üst bilgi sürümü için varsayılan stili değiştirmek istiyorsanız, belirtin. bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.GridViewColumnHeader> yazın olduğunda tetiklenen <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> özelliği <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Daha fazla bilgi için [bir Sürüklenen GridView sütun başlığı için stil oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
+     Kayan bir üst bilgi sürümü için varsayılan stili değiştirmek istiyorsanız, belirtin. bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.GridViewColumnHeader> yazın olduğunda tetiklenen <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> özelliği <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Daha fazla bilgi için [bir Sürüklenen GridView sütun başlığı için stil oluşturma](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 -   **İçeriği bir sütunu yeniden boyutlandır.**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578539"
   
      Kullanıcılar, bir veya daha fazla öğe seçebilir bir <xref:System.Windows.Controls.GridView>.  
   
-     Değiştirmek istiyorsanız <xref:System.Windows.Style> seçili bir öğe bkz: [bir ListView seçili öğelere stil için Tetikleyicileri kullanma](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
+     Değiştirmek istiyorsanız <xref:System.Windows.Style> seçili bir öğe bkz: [bir ListView seçili öğelere stil için Tetikleyicileri kullanma](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
 -   **İlk ekranda görünür değil içeriği görüntülemek için kaydırın.**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578539"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>Diğer özel görünümleri edinme  
- <xref:System.Windows.Controls.GridView> Sınıfından türetilen sınıf <xref:System.Windows.Controls.ViewBase> soyut sınıfını, olası görüntüleme modlarına ilişkin yalnızca biri <xref:System.Windows.Controls.ListView> sınıfı. İçin diğer özel görünümler oluşturabileceğiniz <xref:System.Windows.Controls.ListView> türetilen <xref:System.Windows.Controls.ViewBase> sınıfı. Özel Görünüm modu örneği için bkz: [bir ListView için özel görünüm modu oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ <xref:System.Windows.Controls.GridView> Sınıfından türetilen sınıf <xref:System.Windows.Controls.ViewBase> soyut sınıfını, olası görüntüleme modlarına ilişkin yalnızca biri <xref:System.Windows.Controls.ListView> sınıfı. İçin diğer özel görünümler oluşturabileceğiniz <xref:System.Windows.Controls.ListView> türetilen <xref:System.Windows.Controls.ViewBase> sınıfı. Özel Görünüm modu örneği için bkz: [bir ListView için özel görünüm modu oluşturma](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>GridView destekleyen sınıfları  
@@ -136,6 +136,6 @@ ms.locfileid: "54578539"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Üst Bilgiye Tıklandığında GridView Sütununu Sıralama](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView Genel Bakış](listview-overview.md)
+- [Üst Bilgiye Tıklandığında GridView Sütununu Sıralama](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [Nasıl Yapılır Konuları](listview-how-to-topics.md)

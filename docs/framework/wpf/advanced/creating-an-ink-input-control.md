@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378073"
 ---
 # <a name="creating-an-ink-input-control"></a>Mürekkep Giriş Denetimi Oluşturma
 Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabilir. Mürekkep "tablet kaleminden flow" ve sonra mürekkep görüntülemek için eklenir, denetime tablet kalem yoluyla panodan yapıştırılan veya bir dosyasından yüklenen görünmesine neden olan bir kullanıcı bir fırça çizer gibi diğer bir deyişle, mürekkebi işler. Mürekkep dinamik olarak işlemek için Denetim kullanmalısınız bir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Mürekkep statik olarak işlemek için ekran kalemi olay yöntemleri geçersiz kılmanız gerekir (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, ve <xref:System.Windows.UIElement.OnStylusUp%2A>) toplamak için <xref:System.Windows.Input.StylusPoint> veri vuruş oluşturmak ve bunları Ekle bir <xref:System.Windows.Controls.InkPresenter> (denetim üzerinde mürekkep işleyen).  
@@ -42,30 +42,30 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
   
 1.  Öğesinden bir sınıf türetin <xref:System.Windows.Controls.Control> veya sınıflardan birini türetilen <xref:System.Windows.Controls.Control>, gibi <xref:System.Windows.Controls.Label>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
-    [!code-csharp[AdvancedInkTopicsSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
-    [!code-csharp[AdvancedInkTopicsSamples#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
+     [!code-csharp[AdvancedInkTopicsSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
+    [!code-csharp[AdvancedInkTopicsSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
+    [!code-csharp[AdvancedInkTopicsSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
   
 2.  Ekleme bir <xref:System.Windows.Controls.InkPresenter> sınıfı ve kümesi <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini yeni <xref:System.Windows.Controls.InkPresenter>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
+     [!code-csharp[AdvancedInkTopicsSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
   
 3.  Ekleme <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> , <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> için <xref:System.Windows.Controls.InkPresenter> çağırarak <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> yöntemi ve ekleme <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> için <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonu. Böylece <xref:System.Windows.Controls.InkPresenter> denetiminiz tarafından ekran kalemi noktası veriler toplanırken mürekkep görüntülenecek.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
-    [!code-csharp[AdvancedInkTopicsSamples#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
+     [!code-csharp[AdvancedInkTopicsSamples#17](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
+    [!code-csharp[AdvancedInkTopicsSamples#18](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
 4.  Geçersiz kılma <xref:System.Windows.UIElement.OnStylusDown%2A> yöntemi.  Bu yöntemde, ekran kalemi çağrısıyla yakalama <xref:System.Windows.Input.Stylus.Capture%2A>. Ekran kalemi yakalayarak denetiminiz almaya devam edecektir <xref:System.Windows.UIElement.StylusMove> ve <xref:System.Windows.UIElement.StylusUp> olayları ekran kalemi denetimin sınırları dışına olsa bile. Bu kesinlikle zorunlu ancak neredeyse her zaman iyi bir kullanıcı deneyimi için istenen değil. Yeni bir <xref:System.Windows.Input.StylusPointCollection> toplamak üzere <xref:System.Windows.Input.StylusPoint> veri. Son olarak, ilk ekleme <xref:System.Windows.Input.StylusPoint> veri <xref:System.Windows.Input.StylusPointCollection>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
+     [!code-csharp[AdvancedInkTopicsSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
 5.  Geçersiz kılma <xref:System.Windows.UIElement.OnStylusMove%2A> yöntemi ve ekleme <xref:System.Windows.Input.StylusPoint> veri <xref:System.Windows.Input.StylusPointCollection> daha önce oluşturduğunuz bir nesne.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
+     [!code-csharp[AdvancedInkTopicsSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
   
 6.  Geçersiz kılma <xref:System.Windows.UIElement.OnStylusUp%2A> yöntemi ve yeni bir <xref:System.Windows.Ink.Stroke> ile <xref:System.Windows.Input.StylusPointCollection> veri. Yeni Ekle <xref:System.Windows.Ink.Stroke> için oluşturduğunuz <xref:System.Windows.Controls.InkPresenter.Strokes%2A> koleksiyonunu <xref:System.Windows.Controls.InkPresenter> kalemini bırakın.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
+     [!code-csharp[AdvancedInkTopicsSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
 ## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Nasıl yapılır: Denetiminiz fare girişi kabul etmek etkinleştirin  
@@ -73,22 +73,22 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
   
 1.  Geçersiz kılma <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> ve yeni bir <xref:System.Windows.Input.StylusPointCollection> olay gerçekleştiğinde farenin konumunun almak ve oluşturmak bir <xref:System.Windows.Input.StylusPoint> noktası verileri kullanarak ve ekleme <xref:System.Windows.Input.StylusPoint> için <xref:System.Windows.Input.StylusPointCollection>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
+     [!code-csharp[AdvancedInkTopicsSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
 2.  Geçersiz kılma <xref:System.Windows.UIElement.OnMouseMove%2A> yöntemi. Olay gerçekleştiğinde farenin konumunun almak ve oluşturmak bir <xref:System.Windows.Input.StylusPoint> noktası verileri kullanarak.  Ekleme <xref:System.Windows.Input.StylusPoint> için <xref:System.Windows.Input.StylusPointCollection> daha önce oluşturduğunuz bir nesne.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
+     [!code-csharp[AdvancedInkTopicsSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
 3.  Geçersiz kılma <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> yöntemi.  Yeni bir <xref:System.Windows.Ink.Stroke> ile <xref:System.Windows.Input.StylusPointCollection> verileri ve yeni Ekle <xref:System.Windows.Ink.Stroke> için oluşturduğunuz <xref:System.Windows.Controls.InkPresenter.Strokes%2A> koleksiyonunu <xref:System.Windows.Controls.InkPresenter>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
+     [!code-csharp[AdvancedInkTopicsSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   
 <a name="PuttingItTogether"></a>   
 ## <a name="putting-it-together"></a>Hepsini birleştirme  
  Aşağıdaki örnek kullanıcı fare ya da bir kalem kullandığında, Mürekkep toplayan özel bir denetimdir.  
   
- [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
-[!code-csharp[AdvancedInkTopicsSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
+ [!code-csharp[AdvancedInkTopicsSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
+[!code-csharp[AdvancedInkTopicsSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
   
 <a name="UsingAdditionalPluginsAndDynamicRenderers"></a>   
 ## <a name="using-additional-plug-ins-and-dynamicrenderers"></a>Ek Eklentiler ve DynamicRenderers Kullanma  
@@ -99,5 +99,5 @@ Statik olarak mürekkebi işler ve özel bir denetim, dinamik olarak oluşturabi
  Ekran kalemi olay yöntemleri geçersiz kılarak mürekkebi işler ve toplar bir denetim oluşturabilirsiniz. Kendi denetiminizi oluşturarak kendi türetme <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve bunları içine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, dijital mürekkep ile kodlamalardaki neredeyse herhangi bir davranış uygulayabilirsiniz. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak üretilir, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş ve ekranında uygulamanız için uygun şekilde işleyin. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> veri mürekkep koleksiyonu ve uygulamanız için en iyi performans ile işleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)
 - [Erişim ve kalem girişi düzenleme](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

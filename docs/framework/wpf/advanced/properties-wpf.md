@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745579"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352613"
 ---
 # <a name="properties-wpf"></a>Özellikler (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlar bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetleri genellikle WPF özellik sistemi adlandırılır. Tarafından desteklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [Çerçeve Özelliği Meta Verileri](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Salt Okunur Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [Özellik Değeri Devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [DependencyObjects için Güvenli Oluşturucu Desenleri](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [Koleksiyon Türü Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Ekli Özelliklere Genel Bakış](attached-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
+- [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
+- [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](dependency-property-callbacks-and-validation.md)
+- [Çerçeve Özelliği Meta Verileri](framework-property-metadata.md)
+- [Bağımlılık Özelliği Değer Önceliği](dependency-property-value-precedence.md)
+- [Salt Okunur Bağımlılık Özellikleri](read-only-dependency-properties.md)
+- [Özellik Değeri Devralma](property-value-inheritance.md)
+- [Bağımlılık Özelliği Güvenliği](dependency-property-security.md)
+- [DependencyObjects için Güvenli Oluşturucu Desenleri](safe-constructor-patterns-for-dependencyobjects.md)
+- [Koleksiyon Türü Bağımlılık Özellikleri](collection-type-dependency-properties.md)
+- [XAML Yükleme ve Bağımlılık Özellikleri](xaml-loading-and-dependency-properties.md)
+- [Nasıl Yapılır Konuları](properties-how-to-topics.md)
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +45,12 @@ ms.locfileid: "56745579"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF Mimarisi](wpf-architecture.md)  
+  [WPF'de XAML](xaml-in-wpf.md)  
+  [Temel Öğeler](base-elements.md)  
+  [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
+  [Olaylar](events-wpf.md)  
+  [Giriş](input-wpf.md)  
+  [Kaynaklar](resources-wpf.md)  
+  [WPF İçerik Modeli](../controls/wpf-content-model.md)  
+  [İş Parçacığı Modeli](threading-model.md)

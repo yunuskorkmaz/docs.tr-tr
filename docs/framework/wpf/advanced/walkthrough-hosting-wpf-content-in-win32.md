@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725603"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363169"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir eklemek daha etkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özgün kodunuzu yeniden yazma yerine uygulamanızın işlevselliği. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırma için basit bir mekanizma sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi.  
@@ -22,7 +22,7 @@ ms.locfileid: "54725603"
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu öğretici hem de temel bir bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [Başlarken](../../../../docs/framework/wpf/getting-started/index.md). Giriş konulu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama, herhangi bir konu çok sayıda kitaplar özellikle başvurmalısınız *Windows programlama* Charles Petzold ile.  
+ Bu öğretici hem de temel bir bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [Başlarken](../getting-started/index.md). Giriş konulu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama, herhangi bir konu çok sayıda kitaplar özellikle başvurmalısınız *Windows programlama* Charles Petzold ile.  
   
  Bu öğreticide eşlik eden örnek uygulandığından [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], Bu öğretici kullanımını bilindiğini varsayar [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programa [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] yönetilen kod programlama anlayarak artı. Konusunda [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] yararlı ancak temel değildir.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54725603"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iş parçacığı modeli tek iş parçacıklı grup (STA) kullanır. İle düzgün çalışması için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik kodu ayarlamanız gerekir uygulamanın iş parçacığı modeli STA için giriş noktası bir özniteliği uygulayarak.
 
- [!code-cpp[Win32HostingWPFPage#WinMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
+ [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>WPF içeriği barındırma
@@ -120,14 +120,14 @@ ms.locfileid: "54725603"
 
  Kod barındırmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik için bir işleyici içinde gerçekleştirilir [WM_CREATE](/windows/desktop/winmsg/wm-create) ana penceresinde bildirim.
 
- [!code-cpp[Win32HostingWPFPage#WMCreate](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
+ [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
  `GetHwnd` Yöntemi boyut ve konum bilgileri artı üst pencere tanıtıcısı alır ve döndürür barındırılan pencere tanıtıcısı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği.
 
 > [!NOTE]
 >  Kullanamazsınız bir `#using` yönergesi `System::Windows::Interop` ad alanı. Bunun yapılması, bir ad çakışması arasında oluşturur <xref:System.Windows.Interop.MSG> bu ad alanındaki yapısı ve MSG yapısı winuser.h içinde bildirilmiş. Bunun yerine, bu ad alanı içeriğine erişmek için tam adlarını kullanmanız gerekir.
 
- [!code-cpp[Win32HostingWPFPage#GetHwnd](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
+ [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
  Barındıramaz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] doğrudan uygulama penceresi içeriği. Bunun yerine, ilk oluşturmak bir <xref:System.Windows.Interop.HwndSource> kaydırılacak nesne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu nesne temelde barındırmak için tasarlanmış bir penceresi olan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Barındırabileceğiniz <xref:System.Windows.Interop.HwndSource> nesne alt öğesi olarak oluşturarak ana penceresinde bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamanızın bir parçası olan bir pencere. <xref:System.Windows.Interop.HwndSource> Oluşturucu parametresi oluşturduğunuzda için CreateWindow geçip geçmeyeceğini çok aynı olan bilgileri içeren bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] alt penceresi.
 
@@ -145,7 +145,7 @@ ms.locfileid: "54725603"
 
  Bu sorunu en basit çözüme statik alanları erişmesi gereken herhangi bir yönetilen nesne başvurularını tutmak için bir dizi içeren bir yönetilen sınıf uygulamaktır. Örnek kullanır `WPFPageHost` başvuru için sınıf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik yanı sıra, Başlangıç değerlerini bir dizi özelliklerini daha sonra kullanıcı tarafından değiştirilebilir. Bu üstbilgisinde tanımlanır.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageHost](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageHost](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
 
  İkinci bölümü `GetHwnd` işlevi sırasında daha sonra kullanmak için bu alanları için değerler atar `myPage` hala kapsamdadır.
 
@@ -155,7 +155,7 @@ ms.locfileid: "54725603"
 
  Yukarıda belirtildiği gibi kullanıcı tıkladığında herhangi bir düğmeyi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik harekete geçirirse bir `OnButtonClicked` olay. Uygulama, bu bildirimleri almak için bu olaya bir işleyici ekler. Varsa **Tamam** düğmeye tıkladı, kullanıcı bilgileri işleyicisini alır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve statik denetim kümesi içinde görüntüler.
 
- [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
  Bir özel olay bağımsız değişkeni nesnesinden işleyici alır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik `MyPageEventArgs`. Nesnenin `IsOK` özelliği `true` varsa **Tamam** düğmeye tıkladı, ve `false` varsa **iptal** düğmeye tıkladı.
 
@@ -163,7 +163,7 @@ ms.locfileid: "54725603"
 
  Uygulama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] arka plan rengini değiştirmek kullanıcının olanak tanıyan radyo düğmeleri takımına [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ve birden çok yazı tipi ilgili özellikler. Aşağıdaki örnek, uygulamanın pencere yordamını (WndProc) kitabından ve kendi ileti, işleme farklı iletileri, arka plan rengini de dahil olmak üzere çeşitli özelliklerini ayarlar. Diğer benzer ve gösterilmez. Tam örnek ayrıntıları ve bağlam için bkz.
 
- [!code-cpp[Win32HostingWPFPage#WMCommandToBG](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
+ [!code-cpp[Win32HostingWPFPage#WMCommandToBG](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
 
  Arka plan rengini ayarlamak için bir başvuru almak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği (`hostedPage`) öğesinden `WPFPageHost` ve uygun rengi ile arka plan rengi özelliğini ayarlayın. Örnek üç renk seçeneklerini kullanır: açık yeşil ya da Açık Somon, özgün rengi. Statik alan olarak depolanan özgün arka plan rengi `WPFPageHost` sınıfı. Diğer iki ayarlamak için yeni oluşturduğunuz <xref:System.Windows.Media.SolidColorBrush> nesnesi ve bir statik renkleri değerinden Oluşturucu geçirin <xref:System.Windows.Media.Colors> nesne.
 
@@ -186,23 +186,23 @@ ms.locfileid: "54725603"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik oluşturucu gerekli alan genişliğini ve yüksekliğini ve boyutları <xref:System.Windows.Controls.Grid> uygun şekilde. Bir dizi oluşturarak ardından temel düzenini tanımlar <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> nesneleri ve bunlara ekleme <xref:System.Windows.Controls.Grid> temel nesne <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> ve <xref:System.Windows.Controls.Grid.RowDefinitions%2A> koleksiyonları, sırasıyla. Bu hücre içeriğini tarafından belirlenen boyutlarla beş satırdan ve yedi sütundan oluşan bir kılavuz tanımlar.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
  Ardından, oluşturucu ekler [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerine <xref:System.Windows.Controls.Grid>. Başlık metni olan ilk öğedir bir <xref:System.Windows.Controls.Label> ızgaranın ilk satırda ortalanır denetimi.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
  Sonraki satırda adında <xref:System.Windows.Controls.Label> denetimi ve onun ilişkili <xref:System.Windows.Controls.TextBox> denetimi. Aynı kod her etiket/textbox çifti için kullanıldığından, özel yöntemler bir çift yerleştirilir ve beş etiket/textbox çiftleri için kullanılan. Yöntemleri uygun oluşturma denetimi ve arama <xref:System.Windows.Controls.Grid> sınıfı statik <xref:System.Windows.Controls.Grid.SetColumn%2A> ve <xref:System.Windows.Controls.Grid.SetRow%2A> yöntemleri uygun hücresinde denetimlerini yerleştirin. Denetimin oluşturulduktan sonra örnek çağırır <xref:System.Windows.Controls.UIElementCollection.Add%2A> metodunda <xref:System.Windows.Controls.Panel.Children%2A> özelliği <xref:System.Windows.Controls.Grid> kılavuza denetimi eklemek için. Kalan etiket/textbox çifti eklemek için kod benzer. Ayrıntılar için örnek koda bakın.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 
  İki yöntemden biriyle uygulaması aşağıdaki gibidir:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
 
  Son olarak, örnek ekler **Tamam** ve **iptal** düğme ve bir olay işleyici ekler, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayları.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>Ana pencereyi veriyor
@@ -210,11 +210,11 @@ ms.locfileid: "54725603"
 
  Olay bildirimi WPFPage.h:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
 
  <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Olay işleyicisinde WPFPage.cpp:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>WPF özelliklerini ayarlama
@@ -222,13 +222,13 @@ ms.locfileid: "54725603"
 
  WPFPage.h:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
 
  WPFPage.cpp:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)

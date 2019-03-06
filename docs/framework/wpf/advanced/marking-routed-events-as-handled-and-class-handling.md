@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595116"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378854"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işaretleyebilirsiniz. Olay işleme rotayı verimli kısaltır. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. İşleyicisi sınıfı sınıfın bir örneği üzerinde herhangi bir örnek işleyici önce çağrılan bir işleyici ile bir sınıf düzeyinde belirli gönderilmiş bir olayı işleme fırsatına sahiptir.  
@@ -31,7 +31,7 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu başlığı altında tanıtılan kavramları üzerinde elaborates [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Bu konu başlığı altında tanıtılan kavramları üzerinde elaborates [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Ne zaman olayları işlenmiş olarak işaretleme  
@@ -47,7 +47,7 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
   
  Tünel oluşturma ve tırmanma yönlendirilmiş olaylar arasındaki bağlantıyı herhangi nasıl verilen iç uygulaması tarafından gerçekleştirilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıf kendi bildirilen yönlendirilmiş olaylar oluşturur ve bu giriş eşleştirilmiş yönlendirilmiş olayları geçerlidir. Ancak bu sınıf düzeyi uygulama mevcut değilse, tünel gönderilmiş bir olayı adlandırma şeması paylaşan tırmanma gönderilmiş bir olayı arasındaki bağlantı yoktur: tür uygulaması olmadan bunlar tamamen ayrı iki yönlendirilmiş olaylar olacaktır ve olmaması Olay verileri dizisi veya paylaşımı oluşturulur.  
   
- Özel bir sınıf içinde tünel/Kabarcık giriş yönlendirilmiş olay çifti gerçekleştirme hakkında daha fazla bilgi için bkz. [özel yönlendirilmiş olay oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Özel bir sınıf içinde tünel/Kabarcık giriş yönlendirilmiş olay çifti gerçekleştirme hakkında daha fazla bilgi için bkz. [özel yönlendirilmiş olay oluşturma](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Sınıf işleyicileri ve örnek işleyicileri  
@@ -100,6 +100,6 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.EventManager>
-- [Önizleme Olayları](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Özel Yönlendirilmiş Olay Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Önizleme Olayları](preview-events.md)
+- [Özel Yönlendirilmiş Olay Oluşturma](how-to-create-a-custom-routed-event.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)

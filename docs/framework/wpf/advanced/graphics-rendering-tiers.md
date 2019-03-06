@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748589"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357527"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı bir grafik donanım özelliği ve çalıştıran bir cihaz için performans düzeyi tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
@@ -107,7 +107,7 @@ ms.locfileid: "56748589"
 |**Video sürücüsü gerekli tarih ayarı**|Sistem Kasım 2004'ten önce yayımlanan sürücüler için donanım hızlandırmasını devre dışı bırakır olup olmadığını belirtir.|  
 |**Başvuru tarayıcısını seçeneğini kullanın**|Belirtir olup olmadığını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyiciye kullanmanız gerekir.|  
   
- Bu ayarları dosyasına nasıl başvurulacağı bildiği bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi. Daha fazla bilgi için [grafik işleme kayıt defteri ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Bu ayarları dosyasına nasıl başvurulacağı bildiği bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi. Daha fazla bilgi için [grafik işleme kayıt defteri ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF Performans profil oluşturma araçları  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Performans profili oluşturma, uygulamanızın çalışma zamanı davranışını çözümlemenize ve türde uygulayabilirsiniz performans iyileştirmelerini belirlemenize olanak tanıyan araçlar sağlar. Aşağıdaki tabloda bulunan araçları profil oluşturma performans listeler [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] WPF Performans Suite aracı:  
@@ -126,13 +126,13 @@ ms.locfileid: "56748589"
   
  Çalıştırdığınızda [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Tanılama aracı, ana pencereyi görüntülemek ve tanılamanızı sağlayan bir sekme kümesi içeren [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-ilgili bilgileri. Örneğin, **sistem** sekme bilgisayarınız hakkında sistem bilgisi sağlar ve sürümünü belirten [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] bilgisayarınızda yüklü.  
   
- ![Screenhot: DirectX Tanılama Aracı](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenhot: DirectX Tanılama Aracı](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX Tanılama Aracı ana penceresi  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [WPF Performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Grafik İşleme Kayıt Defteri Ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Grafik İşleme Kayıt Defteri Ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)

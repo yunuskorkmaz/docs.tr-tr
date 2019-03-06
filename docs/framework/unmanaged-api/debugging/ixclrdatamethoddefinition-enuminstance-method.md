@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0fbb246f8c4bf791dd705aedf8eab6ef8bfeae56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dacf76582916ad50f51ae7c8818b496f31f9553e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680276"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353120"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance yöntemi
 
@@ -37,11 +37,13 @@ HRESULT EnumInstance(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`handle` [out içinde] Örnekleri numaralandırma tanıtıcısı.
+`handle`\
+[out içinde] Örnekleri numaralandırma tanıtıcısı.
 
-`instance` [out] Numaralandırılmış örneği.
+`instance`\
+[out] Numaralandırılmış örneği.
 
 ## <a name="remarks"></a>Açıklamalar
 

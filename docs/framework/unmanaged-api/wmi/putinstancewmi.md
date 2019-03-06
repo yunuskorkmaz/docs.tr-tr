@@ -16,49 +16,50 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 19f657fd76f73c4016824511079e6f037bc3bc53
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359386"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi işlevi
-Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır. 
+
+Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT PutInstanceWmi (
    [in] IWbemClassObject*    pInst,
    [in] long                 lFlags,
    [in] IWbemContext*        pCtx,
    [out] IWbemCallResult**   ppCallResult
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`pInst`    
-[in] Writen olmasını örneğine bir işaretçi.
+`pInst`\
+[in] Yazılacak örneğine bir işaretçi.
 
-`lFlags`   
-[in] Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda: 
+`lFlags`\
+[in] Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlanırsa, WMI ile ilgili tüm niteleyicileri depolamaz, **Amended** çeşidi. <br> Aksi durumda, küme bu nesne yerelleştirilmez ve tüm niteleyicileri storedwith başladığınız varsayılır Bu örneği. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlanırsa, WMI ile ilgili tüm niteleyicileri depolamaz, **Amended** çeşidi. <br> Aksi durumda kümesi, bu nesne yerelleştirilmez ve bu örneği ile depolanan tüm niteleyicileri varsayılır. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Olmayan mevcut veya zaten varsa üzerine örneği oluşturun. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1. | Örnek güncelleştirin. Örnek çağrı başarılı olması mevcut olması gerekir. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Örneği oluşturun. Örneği zaten varsa başarısız olur. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. |
 
-`pCtx`  
-[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen sınıfları sağlayan sağlayıcı tarafından kullanılan bir örnek. 
+`pCtx`\
+[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen sınıfları sağlayan sağlayıcı tarafından kullanılan bir örnek.
 
-`ppCallResult`  
+`ppCallResult`\
 [out] Varsa `null`, bu parametre kullanılmaz. Varsa `lFlags` içeren `WBEM_FLAG_RETURN_IMMEDIATELY`, işlev ile hemen döndürür. `WBEM_S_NO_ERROR`. `ppCallResult` Parametre bir işaretçi yeni bir alan [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) nesne.
 
 ## <a name="return-value"></a>Dönüş değeri
@@ -79,15 +80,15 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durdu ve yeniden başlatılıyor. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu. |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) yöntemi.
 
-`PutInstanceWmi` İşlev örnekleri oluşturma ve güncelleştirme yalnızca mevcut sınıfların örneklerini destekler.  Bağlı olarak nasıl `pCtx` parametresi olarak ayarlanmışsa, bazı veya tüm özelliklerini örneğinin güncelleştirilir. 
+`PutInstanceWmi` İşlev örnekleri oluşturma ve güncelleştirme yalnızca mevcut sınıfların örneklerini destekler.  Bağlı olarak nasıl `pCtx` parametresi olarak ayarlanmışsa, bazı veya tüm özelliklerini örneğinin güncelleştirilir.
 
 Ne zaman örneği tarafından işaret edilen `pInst` bir alt sınıfı için Windows Yönetim alt sınıfın türetildiği sınıfların için sorumlu tüm sağlayıcıları çağrıları ait. Tüm bu sağlayıcıları için özgün başarılı olması gerektiği `PutInstanceWmi` başarılı olması için istek. Hiyerarşideki en üst sınıf destekleyen sağlayıcı önce çağrılır. Arama sırası üstteki sınıfının alt ile devam eder ve sağlayıcı işaret ettiği örneğine sahip olan sınıf için Windows Yönetim ulaşana kadar üstten alta geçer `pInst`.
-Windows yönetimi sağlayıcıları herhangi bir alt sınıfı örneğinin çağırmaz. 
+Windows yönetimi sağlayıcıları herhangi bir alt sınıfı örneğinin çağırmaz.
 
 Bir sınıf hiyerarşisine ait bir örnek uygulamanın güncelleştirmeniz gerektiğinde `pInst` parametresi değiştirilecek özellikleri içeren örneğine işaret etmelidir. Diğer bir deyişle, ait bir hedef örneği göz önünde bulundurun **Sınıfb**. **Sınıfb** örneği türetilir **Türetilme**, ve **Türetilme** özelliği tanımlar **PropA**. Bir uygulama değerinde bir değişiklik isteyip istemediği **PropA** içinde **Sınıfb** örneği, onu ayarlamanız gerekir `pInst` örneği yerine bu örneği **Türetilme** .
 
@@ -95,12 +96,14 @@ Bir sınıf hiyerarşisine ait bir örnek uygulamanın güncelleştirmeniz gerek
 
 İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

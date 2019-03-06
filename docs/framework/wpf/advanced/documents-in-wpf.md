@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517740"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361375"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok çeşitli daha kolay erişilebilen ve önceki nesil içinde salt okunur olacak şekilde tasarlanan yüksek kaliteli içeriğinin oluşturulmasını belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
@@ -27,7 +27,7 @@ ms.locfileid: "54517740"
   
  Sabit belgeleri kesin bir gerektiren uygulamalar için hedeflenen [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] sunum, kullanılan görüntülemek ya da yazıcı donanımı bağımsız. Sabit belgeler için genel kullanımlar masaüstü yayıncılık ve sözcük işlem özgün sayfa tasarımı kıldığı kritik olduğu form düzenini içerir. Yerleşimi işleminin bir parçası olarak sabit bir belge görünen veya yazdırma cihazı kullanımda bağımsız olarak, içerik öğeleri kesin konumsal yerleşimini korur. 4800 DPI phototypesetter çıkışı olduğunda bunu 600 DPI lazer yazıcı için çıkış, örneğin, 96 DPI ekranda görüntülenen bir sabit belge sayfası tam olarak aynı görünür. Sayfa düzeni, belge kalitesini yeteneklerini her cihaz için en üst düzeye çıkarır ancak her durumda aynı kalır.  
   
- Buna karşılık olarak akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır ve Okuma Kolaylığı birincil belge tüketimi senaryo olduğunda en iyi şekilde kullanılır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Bir Web sayfası bir basit bir akış belgesi burada sayfa içeriği dinamik olarak geçerli penceresine sığacak şekilde biçimlendirilir örneğidir. Akış belgeleri görüntüleme ve çalışma zamanı ortamı tabanlı kullanıcı deneyimini okuma iyileştirin. Örneğin, aynı akışı belge, yüksek çözünürlüklü 19-inch ekran veya küçük 2x3lük inç PDA ekranında en iyi okunabilirlik için dinamik olarak biçimlendirilmektedir. Ayrıca, akış belge özelliklerini görüntüleme okunabilirlik ve boyutunu ve yazı tipleri görünümünü değiştirme özelliği en iyi duruma modları, arama da dahil olmak üzere yerleşik bir dizi mevcuttur.  Bkz: [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md) çizimler, örnekler ve akış belgeleri hakkında ayrıntılı bilgi için.  
+ Buna karşılık olarak akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır ve Okuma Kolaylığı birincil belge tüketimi senaryo olduğunda en iyi şekilde kullanılır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Bir Web sayfası bir basit bir akış belgesi burada sayfa içeriği dinamik olarak geçerli penceresine sığacak şekilde biçimlendirilir örneğidir. Akış belgeleri görüntüleme ve çalışma zamanı ortamı tabanlı kullanıcı deneyimini okuma iyileştirin. Örneğin, aynı akışı belge, yüksek çözünürlüklü 19-inch ekran veya küçük 2x3lük inç PDA ekranında en iyi okunabilirlik için dinamik olarak biçimlendirilmektedir. Ayrıca, akış belge özelliklerini görüntüleme okunabilirlik ve boyutunu ve yazı tipleri görünümünü değiştirme özelliği en iyi duruma modları, arama da dahil olmak üzere yerleşik bir dizi mevcuttur.  Bkz: [akış belgesine genel bakış](flow-document-overview.md) çizimler, örnekler ve akış belgeleri hakkında ayrıntılı bilgi için.  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Belge denetimleri ve metin düzeni  
@@ -40,7 +40,7 @@ ms.locfileid: "54517740"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Akış belge denetimleri  
- **Not:** Akış belge özellikleri ve bunların nasıl oluşturulacağı hakkında daha ayrıntılı bilgi için bkz: [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ **Not:** Akış belge özellikleri ve bunların nasıl oluşturulacağı hakkında daha ayrıntılı bilgi için bkz: [akış belgesine genel bakış](flow-document-overview.md).  
   
  Akış belgenin içerik görünümü, üç denetim tarafından desteklenir: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54517740"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Kullanıcı arabiriminde metin  
- Metin belgeleri eklemenin yanı sıra, metin açıkça forms gibi uygulama kullanıcı Arabirimi kullanılabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metnin çizmek için birden fazla denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikler ve sınırlamalar vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için [TextBlock genel bakışı](../../../../docs/framework/wpf/controls/textblock-overview.md).  
+ Metin belgeleri eklemenin yanı sıra, metin açıkça forms gibi uygulama kullanıcı Arabirimi kullanılabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metnin çizmek için birden fazla denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikler ve sınırlamalar vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için [TextBlock genel bakışı](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Belge paketleme  
@@ -142,7 +142,7 @@ ms.locfileid: "54517740"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Metin](optimizing-performance-text.md)
+- [Akış Belgesine Genel Bakış](flow-document-overview.md)
+- [Yazdırmaya Genel Bakış](printing-overview.md)
+- [Belge Serileştirme ve Depolama](document-serialization-and-storage.md)

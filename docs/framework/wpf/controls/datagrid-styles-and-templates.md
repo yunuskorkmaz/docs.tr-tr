@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685444"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366081"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.DataGrid> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.DataGrid> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datagrid-parts"></a>DataGrid bölümleri  
  Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi.  
@@ -28,7 +28,7 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.D
   
  Oluştururken bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.DataGrid>, şablonunuzu içerebilir bir <xref:System.Windows.Controls.ItemsPresenter> içinde bir <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Her öğe görüntüler <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> denetimi içinde kaydırma sağlar).  Varsa <xref:System.Windows.Controls.ItemsPresenter> doğrudan alt öğesi değil <xref:System.Windows.Controls.ScrollViewer>, size gereken <xref:System.Windows.Controls.ItemsPresenter> adı `ItemsPresenter`.  
   
- İçin varsayılan şablonu <xref:System.Windows.Controls.DataGrid> içeren bir <xref:System.Windows.Controls.ScrollViewer> denetimi. Tarafından tanımlanan bölümleri hakkında daha fazla bilgi için <xref:System.Windows.Controls.ScrollViewer>, bkz: [ScrollViewer stilleri ve şablonları](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ İçin varsayılan şablonu <xref:System.Windows.Controls.DataGrid> içeren bir <xref:System.Windows.Controls.ScrollViewer> denetimi. Tarafından tanımlanan bölümleri hakkında daha fazla bilgi için <xref:System.Windows.Controls.ScrollViewer>, bkz: [ScrollViewer stilleri ve şablonları](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>DataGrid durumları  
  Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.DataGrid> denetimi.  
@@ -161,18 +161,18 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.D
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate Örneği  
  Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.DataGrid> denetimi ve ilişkili türleri.  
   
- [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
  Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)
+- [Denetim Özelleştirme](control-customization.md)
+- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)

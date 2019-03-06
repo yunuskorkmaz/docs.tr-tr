@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
-ms.openlocfilehash: 0793e1b500449b2da0442e306aba9deb8e719a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355759"
 ---
 # <a name="digital-ink-overviews"></a>Dijital Mürekkebe Genel Bakış
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Mürekkep ile Çalışmaya Başlama](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [Mürekkep Toplama](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [El Yazısı Tanıma](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [Mürekkep Depolama](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye Karşı COM](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [Mürekkep ile Çalışmaya Başlama](getting-started-with-ink.md)  
+  [Mürekkep Toplama](collecting-ink.md)  
+  [El Yazısı Tanıma](handwriting-recognition.md)  
+  [Mürekkep Depolama](storing-ink.md)  
+  [Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye karşı COM](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)

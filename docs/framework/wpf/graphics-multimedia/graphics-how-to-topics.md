@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358801"
 ---
 # <a name="graphics-how-to-topics"></a>Grafikler ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular, grafik işlevlerini nasıl kullanacağınız gösterilmektedir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir Dikdörtgene Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [PointAnimation Kullanarak bir Nesnenin Konumuna Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [Dönüşüm Noktaları ve Vektörleri](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [Cam Çerçeveyi WPF Uygulamasında Genişletme](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Nasıl yapılır: Bir öğeyi önbelleğe alarak işleme performansını artırma](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Nasıl yapılır: Önbelleğe alınan öğeyi fırça olarak kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Bir Dikdörtgene Animasyon Ekleme](how-to-animate-a-rectangle.md)  
+ [PointAnimation Kullanarak bir Nesnenin Konumuna Animasyon Ekleme](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Dönüşüm Noktaları ve Vektörleri](how-to-transform-points-and-vectors.md)  
+ [Cam Çerçeveyi WPF Uygulamasında Genişletme](extend-glass-frame-into-a-wpf-application.md)  
+ [Nasıl yapılır: Bir öğeyi önbelleğe alarak işleme performansını artırma](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Nasıl yapılır: Önbelleğe alınan öğeyi fırça olarak kullanma](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ Aşağıdaki konular, grafik işlevlerini nasıl kullanacağınız gösterilmekt
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafikler ve Multimedya](index.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

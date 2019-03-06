@@ -2,26 +2,27 @@
 title: İşlem Gerçekleştirilmiş MSMQ Bağlama
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 9574320478741f71c7c98d7e21a24c80a31b72a2
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066057"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359891"
 ---
 # <a name="transacted-msmq-binding"></a>İşlem Gerçekleştirilmiş MSMQ Bağlama
+
 Bu örnek, Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirme gösterir.
 
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
 
- Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci, bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.
+Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci, bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.
 
- İşlem, ileti göndermek ve almak için kullanıldığında, aslında iki ayrı işlem vardır. İstemci bir işlem kapsamı iletileri gönderdiğinde istemcinin ve istemci Kuyruk yöneticisi yerel bir işlemdir. Hizmet işlem kapsamı içindeki iletileri aldığında, hizmet ve alıcı Kuyruk yöneticisi yerel bir işlemdir. İstemciyi ve hizmeti aynı işlemde katılan değil olduğunu unutmamak çok önemlidir; Bunun yerine, farklı işlem işlemlerini (örneğin göndermek ve almak gibi) ile birlikte kuyruğa gerçekleştirirken kullandıkları.
+İşlem, ileti göndermek ve almak için kullanıldığında, aslında iki ayrı işlem vardır. İstemci bir işlem kapsamı iletileri gönderdiğinde istemcinin ve istemci Kuyruk yöneticisi yerel bir işlemdir. Hizmet işlem kapsamı içindeki iletileri aldığında, hizmet ve alıcı Kuyruk yöneticisi yerel bir işlemdir. İstemciyi ve hizmeti aynı işlemde katılan değil olduğunu unutmamak çok önemlidir; Bunun yerine, farklı işlem işlemlerini (örneğin göndermek ve almak gibi) ile birlikte kuyruğa gerçekleştirirken kullandıkları.
 
- Bu örnekte, istemci bir işlem kapsamında hizmetten toplu iletiler gönderir. Kuyruğa gönderilen iletiler, ardından hizmeti tarafından tanımlanan işlem kapsamında hizmeti tarafından alınır.
+Bu örnekte, istemci bir işlem kapsamında hizmetten toplu iletiler gönderir. Kuyruğa gönderilen iletiler, ardından hizmeti tarafından tanımlanan işlem kapsamında hizmeti tarafından alınır.
 
- Hizmet sözleşme `IOrderProcessor`aşağıdaki örnek kodda gösterildiği gibi. Kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti arabirimi tanımlar.
+Hizmet sözleşme `IOrderProcessor`aşağıdaki örnek kodda gösterildiği gibi. Kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti arabirimi tanımlar.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -32,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
- Hizmet davranışı ile bir işlem davranışını tanımlar `TransactionScopeRequired` kümesine `true`. Bu, kuyruktan ileti almak için kullanılan aynı işlem kapsamı yöntemi tarafından erişilen tüm kaynak yöneticileri tarafından kullanılmasını sağlar. Ayrıca, yöntem bir özel durum oluşturursa, kuyruğa ileti döndürülür garanti eder. Bu işlemi davranışı ayar olmadan sıraya alınan bir kanal iletiyi kuyruktan okumak için bir işlem oluşturur ve işlem başarısız olursa, ileti kaybolur şekilde gönderme önce otomatik olarak işlemeleri. İletiyi sıradan okumak için aşağıdaki kodda gösterildiği gibi kullanılan işlem listeleme hizmet işlemleri için en yaygın senaryodur bakın.
+Hizmet davranışı ile bir işlem davranışını tanımlar `TransactionScopeRequired` kümesine `true`. Bu, kuyruktan ileti almak için kullanılan aynı işlem kapsamı yöntemi tarafından erişilen tüm kaynak yöneticileri tarafından kullanılmasını sağlar. Ayrıca, yöntem bir özel durum oluşturursa, kuyruğa ileti döndürülür garanti eder. Bu işlemi davranışı ayar olmadan sıraya alınan bir kanal iletiyi kuyruktan okumak için bir işlem oluşturur ve işlem başarısız olursa, ileti kaybolur şekilde gönderme önce otomatik olarak işlemeleri. İletiyi sıradan okumak için aşağıdaki kodda gösterildiği gibi kullanılan işlem listeleme hizmet işlemleri için en yaygın senaryodur bakın.
 
 ```csharp
  // This service class that implements the service contract.
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- Kendi kendine barındırılan bir hizmettir. MSMQ taşıma kullanırken, kullanılan kuyruk önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmet sıranın varlığını denetleyin ve henüz yoksa bir kuyruk oluşturmak için kod içerir. Kuyruk adı yapılandırma dosyasından okunur. Tarafından kullanılan taban adresini [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti oluşturmak için.
+Kendi kendine barındırılan bir hizmettir. MSMQ taşıma kullanırken, kullanılan kuyruk önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmet sıranın varlığını denetleyin ve henüz yoksa bir kuyruk oluşturmak için kod içerir. Kuyruk adı yapılandırma dosyasından okunur. Tarafından kullanılan taban adresini [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti oluşturmak için.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,7 +81,7 @@ public static void Main()
 }
 ```
 
- MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.
+MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.
 
 ```xml
 <appSettings>
@@ -89,9 +90,9 @@ public static void Main()
 ```
 
 > [!NOTE]
->  Kuyruk adı bir nokta (.) yolundaki ters eğik çizgi ayırıcılar ve yerel bilgisayar için bir kuyruk kullanma oluştururken kullandığı <xref:System.Messaging>. Windows Communication Foundation (WCF) uç noktası net.msmq şeması ile kuyruk adresini kullanır, "localhost" yerel bilgisayarı belirtmek için kullanır ve kendi yolunda eğik kullanır.
+> Kuyruk adı bir nokta (.) yolundaki ters eğik çizgi ayırıcılar ve yerel bilgisayar için bir kuyruk kullanma oluştururken kullandığı <xref:System.Messaging>. Windows Communication Foundation (WCF) uç noktası net.msmq şeması ile kuyruk adresini kullanır, "localhost" yerel bilgisayarı belirtmek için kullanır ve kendi yolunda eğik kullanır.
 
- İstemci işlem kapsamı oluşturur. Kuyruk ile iletişimi, burada tüm iletileri kuyruğa gönderilir ya da hiçbiri iletilerin kuyruğa gönderilen bir atomik birim olarak kabul edilmesi bu neden işlemin kapsamı içinde gerçekleşir. İşlem çağırarak kararlıdır <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamı üzerinde.
+İstemci işlem kapsamı oluşturur. Kuyruk ile iletişimi, burada tüm iletileri kuyruğa gönderilir ya da hiçbiri iletilerin kuyruğa gönderilen bir atomik birim olarak kabul edilmesi bu neden işlemin kapsamı içinde gerçekleşir. İşlem çağırarak kararlıdır <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamı üzerinde.
 
 ```csharp
 // Create a client.
@@ -133,15 +134,15 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();
 ```
 
- İşlem çalıştığını doğrulamak için aşağıdaki örnek kodda gösterildiği gibi işlem kapsamı açıklama satırı yaparak istemci değiştirmek, çözümü yeniden oluşturun ve istemcisini çalıştıran.
+İşlem çalıştığını doğrulamak için aşağıdaki örnek kodda gösterildiği gibi işlem kapsamı açıklama satırı yaparak istemci değiştirmek, çözümü yeniden oluşturun ve istemcisini çalıştıran.
 
 ```csharp
 //scope.Complete();
 ```
 
- İşlem tamamlanmış sayılmaz olduğundan, iletileri kuyruğa gönderilmez.
+İşlem tamamlanmış sayılmaz olduğundan, iletileri kuyruğa gönderilmez.
 
- Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. İstemcisini çalıştıran da kapatın ve ardından hizmeti başlatın ve hala iletileri alır.
+Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. İstemcisini çalıştıran da kapatın ve ardından hizmeti başlatın ve hala iletileri alır.
 
 ```
 The service is ready.
@@ -158,29 +159,29 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
+2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
 
-    1.  Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
 
-    2.  Genişletin **özellikleri** sekmesi.
+    2. Genişletin **özellikleri** sekmesi.
 
-    3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
 
-    4.  Denetleme **işlem** kutusu.
+    4. Denetleme **işlem** kutusu.
 
-    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
 
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, aktarım güvenliği etkin. MSMQ taşıma güvenlik için iki ilgili özellik <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. MSMQ imzalama özelliği ve kimlik doğrulaması sağlamak için bir etki alanının parçası olması gerekir ve MSMQ Active Directory Tümleştirme seçeneği yüklenmelidir. Bu ölçütleri karşılamayan bir bilgisayarda bu örneği çalıştırmak, bir hata alırsınız.
+Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, aktarım güvenliği etkin. MSMQ taşıma güvenlik için iki ilgili özellik <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. MSMQ imzalama özelliği ve kimlik doğrulaması sağlamak için bir etki alanının parçası olması gerekir ve MSMQ Active Directory Tümleştirme seçeneği yüklenmelidir. Bu ölçütleri karşılamayan bir bilgisayarda bu örneği çalıştırmak, bir hata alırsınız.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örnek, bir çalışma grubuna veya Active Directory Tümleştirmesi olmadan alanına katılmış bir bilgisayarda çalıştırmak için
 
-1.  Bilgisayarınız bir etki alanının parçası değil veya yüklü Active Directory Tümleştirmesi yok, aktarım güvenliği devre dışı kimlik doğrulama modu ve koruma düzeyi ayarlayarak kapatma `None` aşağıdaki örnek yapılandırma kodda gösterildiği gibi.
+1. Bilgisayarınız bir etki alanının parçası değil veya yüklü Active Directory Tümleştirmesi yok, aktarım güvenliği devre dışı kimlik doğrulama modu ve koruma düzeyi ayarlayarak kapatma `None` aşağıdaki örnek yapılandırma kodda gösterildiği gibi.
 
     ```xml
     <system.serviceModel>
@@ -198,7 +199,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
               binding="netMsmqBinding"
               bindingConfiguration="Binding1"
            contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />
-          <!-- The mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex. -->
+          <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->
           <endpoint address="mex"
                     binding="mexHttpBinding"
                     contract="IMetadataExchange" />
@@ -224,18 +225,16 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
       </system.serviceModel>
     ```
 
-2.  Örneği çalıştırmadan önce yapılandırma hem sunucu hem de istemci değiştirdiğinizden emin olun.
+2. Örneği çalıştırmadan önce yapılandırma hem sunucu hem de istemci değiştirdiğinizden emin olun.
 
     > [!NOTE]
-    >  Ayarı `security mode` için `None` ayarlamakla eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.
+    > Ayarı `security mode` için `None` ayarlamakla eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
-  
-## <a name="see-also"></a>Ayrıca bkz.
+> Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

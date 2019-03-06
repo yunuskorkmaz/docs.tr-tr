@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683624"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364428"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
 Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerlerini içerir.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Okuma ve bu dosyanın açılması gerektiğini belirten bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.|  
 |`ofTakeOwnership`|Bellek yapılan bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ve meta verileri tarafından serbest bırakılacak.|  
 |`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofNoTransform`|Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için [altındaki Seçenekler .NET ve Windows çalışma zamanı ile](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için [Windows çalışma zamanı ve CLR - altındaki Seçenekler .NET ve Windows çalışma zamanı ile](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|İç kullanım için ayrılmıştır.|  
 |`ofReserved2`|İç kullanım için ayrılmıştır.|  
 |`ofReserved`|İç kullanım için ayrılmıştır.|  

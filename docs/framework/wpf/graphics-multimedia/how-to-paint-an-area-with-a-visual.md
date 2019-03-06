@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: 2fa5e11ffceac6563ec3fcc7ec8df84e5857da2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b63b4be5e1f916648677150ffb558445ffa72c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661483"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363078"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Nasıl yapılır: Görsel ile bir Alanı Boyama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.VisualBrush> sınıfı ile bir alanı boyama bir <xref:System.Windows.Media.Visual>.  
@@ -22,14 +22,14 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Visual
  Aşağıdaki örnekte, birkaç denetim ve bir panelin bir dikdörtgen arka planı olarak kullanılır.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Media.VisualBrush> ve diğer örnekler [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) genel bakış.  
+ Hakkında daha fazla bilgi için <xref:System.Windows.Media.VisualBrush> ve diğer örnekler [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md) genel bakış.  
   
  Bu kod örneği için sağlanan daha büyük bir örneğin parçasıdır <xref:System.Windows.Media.VisualBrush> sınıfı. Tam bir örnek için bkz. [büyütüldüğünü](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
