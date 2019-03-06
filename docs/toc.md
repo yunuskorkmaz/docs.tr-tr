@@ -505,15 +505,6 @@
 ### [Verilere Erişme](visual-basic/developing-apps/accessing-data.md)
 ### [Bileşen Oluşturma ve Kullanma](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Yazdırma ve Raporlama](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm Bileşeni](visual-basic/developing-apps/printing/printform-component.md)
-#### [Nasıl yapılır: Kaydırılabilir Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [Nasıl yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [Nasıl yapılır: Formun İstemci Alanını Yazdırma](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [Nasıl yapılır: PrintForm Bileşenini Kullanarak Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [PrintForm Denetimlerine Başvuruda Bulunan Uygulamaları Dağıtma](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Visual Studio Uygulamalarına Yazdırılabilir Raporlar Ekleme](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Windows Forms Uygulaması Temelleri](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme](visual-basic/developing-apps/customizing-extending-my/index.md)
