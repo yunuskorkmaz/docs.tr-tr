@@ -7,25 +7,25 @@ helpviewer_keywords:
 - element tree [WPF]
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
-ms.openlocfilehash: df643dbbf1c873841f035dcfd2c0cf11878e2e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543380"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372444"
 ---
-# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="5f284-102">Öğe Ağacı ve Serileştirme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5f284-102">Element Tree and Serialization How-to Topics</span></span>
-<span data-ttu-id="5f284-103">Bu bölümdeki konular, WPF öğe ağacının nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5f284-103">The topics in this section describe how to use the WPF element tree.</span></span>  
+# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="2486e-102">Öğe Ağacı ve Serileştirme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2486e-102">Element Tree and Serialization How-to Topics</span></span>
+<span data-ttu-id="2486e-103">Bu bölümdeki konular, WPF öğesi ağacının nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="2486e-103">The topics in this section describe how to use the WPF element tree.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5f284-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5f284-104">In This Section</span></span>  
- [<span data-ttu-id="5f284-105">Öğeyi Adına Göre Bulma</span><span class="sxs-lookup"><span data-stu-id="5f284-105">Find an Element by Its Name</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [<span data-ttu-id="5f284-106">Mantıksal Ağacı Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="5f284-106">Override the Logical Tree</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2486e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2486e-104">In This Section</span></span>  
+ [<span data-ttu-id="2486e-105">Öğeyi Adına Göre Bulma</span><span class="sxs-lookup"><span data-stu-id="2486e-105">Find an Element by Its Name</span></span>](how-to-find-an-element-by-its-name.md)  
+ [<span data-ttu-id="2486e-106">Mantıksal Ağacı Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="2486e-106">Override the Logical Tree</span></span>](how-to-override-the-logical-tree.md)  
   
-## <a name="reference"></a><span data-ttu-id="5f284-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="5f284-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2486e-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2486e-107">Reference</span></span>  
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
  <xref:System.Windows.Markup>  
   
-## <a name="related-sections"></a><span data-ttu-id="5f284-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="5f284-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2486e-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2486e-108">Related Sections</span></span>

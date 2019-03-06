@@ -7,22 +7,22 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355559"
 ---
-# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="3a210-102">DockPanel Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3a210-102">DockPanel How-to Topics</span></span>
-<span data-ttu-id="3a210-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.DockPanel> öğesinin alt öğeleri düzen kapsayıcı kenarı boyunca konumlandırmak için.</span><span class="sxs-lookup"><span data-stu-id="3a210-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
+# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="6d110-102">DockPanel Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6d110-102">DockPanel How-to Topics</span></span>
+<span data-ttu-id="6d110-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.DockPanel> bir düzen kapsayıcısı kenarında alt öğeleri konumlandırmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="6d110-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a210-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3a210-104">In This Section</span></span>  
- [<span data-ttu-id="3a210-105">Yerleştirme Değerini Alma veya Ayarlama</span><span class="sxs-lookup"><span data-stu-id="3a210-105">Get or Set a Dock Value</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [<span data-ttu-id="3a210-106">DockPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3a210-106">Create a DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [<span data-ttu-id="3a210-107">DockPanel Öğesini Kullanarak Boşluğu Bölümleme</span><span class="sxs-lookup"><span data-stu-id="3a210-107">Partition Space by Using the DockPanel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6d110-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6d110-104">In This Section</span></span>  
+ [<span data-ttu-id="6d110-105">Yerleştirme Değerini Alma veya Ayarlama</span><span class="sxs-lookup"><span data-stu-id="6d110-105">Get or Set a Dock Value</span></span>](how-to-get-or-set-a-dock-value.md)  
+ [<span data-ttu-id="6d110-106">DockPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="6d110-106">Create a DockPanel</span></span>](how-to-create-a-dockpanel.md)  
+ [<span data-ttu-id="6d110-107">DockPanel Öğesini Kullanarak Boşluğu Bölümleme</span><span class="sxs-lookup"><span data-stu-id="6d110-107">Partition Space by Using the DockPanel Element</span></span>](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="3a210-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3a210-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6d110-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6d110-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33550660"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="3a210-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3a210-109">Related Sections</span></span>  
- [<span data-ttu-id="3a210-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="3a210-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="6d110-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6d110-109">Related Sections</span></span>  
+ [<span data-ttu-id="6d110-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="6d110-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="3a210-111">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="3a210-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="6d110-111">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="6d110-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="3a210-112">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a210-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="6d110-112">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6d110-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

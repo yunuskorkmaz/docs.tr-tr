@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365275"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="d6ace-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="d6ace-102">RadioButton</span></span>
-<span data-ttu-id="d6ace-103"><xref:System.Windows.Controls.RadioButton> denetimleri genellikle çeşitli seçenekler arasından tek bir seçim kullanıcılara sunmak için birlikte gruplandırılır; bir seferde yalnızca bir düğmesi seçilebilir.</span><span class="sxs-lookup"><span data-stu-id="d6ace-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="add83-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="add83-102">RadioButton</span></span>
+<span data-ttu-id="add83-103"><xref:System.Windows.Controls.RadioButton> denetimleri genellikle birçok seçenek arasından tek bir seçim kullanıcılara sunmak için birlikte gruplandırılır; aynı anda yalnızca bir düğmesini seçilebilir.</span><span class="sxs-lookup"><span data-stu-id="add83-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="d6ace-104">Aşağıdaki çizimde bir örneği gösterilmektedir bir <xref:System.Windows.Controls.RadioButton> denetim.</span><span class="sxs-lookup"><span data-stu-id="d6ace-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="add83-104">Örnek olarak aşağıdaki çizimde bir <xref:System.Windows.Controls.RadioButton> denetimi.</span><span class="sxs-lookup"><span data-stu-id="add83-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="d6ace-105">![Radyo düğmesi durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="d6ace-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="d6ace-106">Tipik RadioButton</span><span class="sxs-lookup"><span data-stu-id="d6ace-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="add83-105">![Radyo düğmesi durumları](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="add83-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="add83-106">Tipik Ortala radyo düğmesi</span><span class="sxs-lookup"><span data-stu-id="add83-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d6ace-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d6ace-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="add83-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="add83-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="d6ace-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d6ace-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="add83-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="add83-108">Related Sections</span></span>

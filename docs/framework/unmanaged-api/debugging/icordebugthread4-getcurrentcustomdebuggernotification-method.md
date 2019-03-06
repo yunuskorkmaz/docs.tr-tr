@@ -17,41 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643bfd9f17474241a9291734eb52910f97f9ad2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f5fc34c4dbde5a5ae04ad95ad5d960e1ceadcd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495649"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363673"
 ---
-# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="83734-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu</span><span class="sxs-lookup"><span data-stu-id="83734-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
-<span data-ttu-id="83734-103">Geçerli alır [Icordebugmanagedcallback3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="83734-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="83734-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83734-104">Syntax</span></span>  
-  
-```  
-HRESULT GetCurrentCustomDebuggerNotification(  
-    [out] ICorDebugValue **ppNotificationObject  
-    );  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="83734-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="83734-105">Parameters</span></span>  
- `ppNOtificationObject`  
- <span data-ttu-id="83734-106">[out] Geçerli bir işaretçi `ICorDebugManagedCallback3::CustomNotification` nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="83734-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="83734-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="83734-107">Remarks</span></span>  
- <span data-ttu-id="83734-108">Değerini `ppNotificationObject` yöntemi içinden çağrılmazsa null bir `ICorDebugManagedCallback3::CustomNotification` geri arama veya geçerli hiçbir bildirim nesne varsa.</span><span class="sxs-lookup"><span data-stu-id="83734-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="83734-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="83734-109">Requirements</span></span>  
- <span data-ttu-id="83734-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83734-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="83734-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83734-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="83734-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83734-112">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="83734-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83734-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="83734-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83734-114">See also</span></span>
-- [<span data-ttu-id="83734-115">ICorDebugThread4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83734-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [<span data-ttu-id="83734-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="83734-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="83734-117">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="83734-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="ac1d8-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu</span><span class="sxs-lookup"><span data-stu-id="ac1d8-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
+
+<span data-ttu-id="ac1d8-103">Geçerli alır [Icordebugmanagedcallback3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="ac1d8-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="ac1d8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac1d8-104">Syntax</span></span>
+
+```cpp
+HRESULT GetCurrentCustomDebuggerNotification(
+    [out] ICorDebugValue **ppNotificationObject
+    );
+```
+
+## <a name="parameters"></a><span data-ttu-id="ac1d8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac1d8-105">Parameters</span></span>
+
+`ppNotificationObject`\
+<span data-ttu-id="ac1d8-106">[out] Geçerli bir işaretçi `ICorDebugManagedCallback3::CustomNotification` nesne geçerli iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="ac1d8-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="ac1d8-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ac1d8-107">Remarks</span></span>
+
+<span data-ttu-id="ac1d8-108">Değerini `ppNotificationObject` yöntemi içinden çağrılmazsa null bir `ICorDebugManagedCallback3::CustomNotification` geri arama veya geçerli hiçbir bildirim nesne varsa.</span><span class="sxs-lookup"><span data-stu-id="ac1d8-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="ac1d8-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac1d8-109">Requirements</span></span>
+
+<span data-ttu-id="ac1d8-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac1d8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="ac1d8-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac1d8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="ac1d8-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac1d8-112">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="ac1d8-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac1d8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ac1d8-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac1d8-114">See also</span></span>
+- [<span data-ttu-id="ac1d8-115">ICorDebugThread4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac1d8-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="ac1d8-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ac1d8-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ac1d8-117">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="ac1d8-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

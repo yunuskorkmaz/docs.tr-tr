@@ -8,36 +8,36 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355811"
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="4dc6b-102">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="4dc6b-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="4dc6b-103">WPF programlama öğeleri ağaç ilişki birbirlerine çeşit genellikle bulunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4dc6b-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="4dc6b-104">Örneğin, UI XAML'de oluşturulan bir uygulama nesne ağacı olarak kavramsallaştırılabileceği.</span><span class="sxs-lookup"><span data-stu-id="4dc6b-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="4dc6b-105">Öğe ağacı iki ayrı henüz bazen paralel ağaçlara daha ayrılabilir: mantıksal ağacının ve görsel ağaç.</span><span class="sxs-lookup"><span data-stu-id="4dc6b-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="4dc6b-106">WPF içinde serileştirme içerir bu durumu iki kaydetme ağaçları uygulama durumu ve potansiyel olarak XAML bir dosyaya yazma yanı sıra.</span><span class="sxs-lookup"><span data-stu-id="4dc6b-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="97541-102">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="97541-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="97541-103">WPF programlama öğeleri genellikle birbirine ağacı ilişki çeşit yok.</span><span class="sxs-lookup"><span data-stu-id="97541-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="97541-104">Örneğin, kullanıcı Arabirimi XAML içinde oluşturulan bir uygulama bir nesne ağacının kavramsallaştırılabilinir.</span><span class="sxs-lookup"><span data-stu-id="97541-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="97541-105">Öğe ağacı iki ayrık henüz bazen paralel ağaçlara daha da ayrılabilir: mantıksal ağacı ve görsel ağaç.</span><span class="sxs-lookup"><span data-stu-id="97541-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="97541-106">Serileştirme ' WPF'de içeren iki bu durumunu kaydetme ağaçları yanı sıra uygulama durumunu ve potansiyel olarak XAML bir dosyaya yazma.</span><span class="sxs-lookup"><span data-stu-id="97541-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4dc6b-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4dc6b-107">In This Section</span></span>  
- [<span data-ttu-id="4dc6b-108">WPF İçinde Ağaçlar</span><span class="sxs-lookup"><span data-stu-id="4dc6b-108">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [<span data-ttu-id="4dc6b-109">XamlWriter.Save'in Serileştirme Sınırlamaları</span><span class="sxs-lookup"><span data-stu-id="4dc6b-109">Serialization Limitations of XamlWriter.Save</span></span>](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="4dc6b-110">Nesne Ağacında Olmayan Nesne Öğelerini Başlatma</span><span class="sxs-lookup"><span data-stu-id="4dc6b-110">Initialization for Object Elements Not in an Object Tree</span></span>](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="4dc6b-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4dc6b-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="97541-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="97541-107">In This Section</span></span>  
+ [<span data-ttu-id="97541-108">WPF İçinde Ağaçlar</span><span class="sxs-lookup"><span data-stu-id="97541-108">Trees in WPF</span></span>](trees-in-wpf.md)  
+ [<span data-ttu-id="97541-109">XamlWriter.Save'in Serileştirme Sınırlamaları</span><span class="sxs-lookup"><span data-stu-id="97541-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="97541-110">Nesne Ağacında Olmayan Nesne Öğelerini Başlatma</span><span class="sxs-lookup"><span data-stu-id="97541-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="97541-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="97541-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4dc6b-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="4dc6b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="97541-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="97541-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="4dc6b-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="4dc6b-113">Related Sections</span></span>  
- [<span data-ttu-id="4dc6b-114">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="4dc6b-114">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="4dc6b-115">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="4dc6b-115">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="4dc6b-116">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="4dc6b-116">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="4dc6b-117">Özellikler</span><span class="sxs-lookup"><span data-stu-id="4dc6b-117">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="4dc6b-118">Olaylar</span><span class="sxs-lookup"><span data-stu-id="4dc6b-118">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="4dc6b-119">Giriş</span><span class="sxs-lookup"><span data-stu-id="4dc6b-119">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="4dc6b-120">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="4dc6b-120">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="4dc6b-121">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="4dc6b-121">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="4dc6b-122">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="4dc6b-122">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="97541-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="97541-113">Related Sections</span></span>  
+ [<span data-ttu-id="97541-114">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="97541-114">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="97541-115">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="97541-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="97541-116">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="97541-116">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="97541-117">Özellikler</span><span class="sxs-lookup"><span data-stu-id="97541-117">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="97541-118">Olaylar</span><span class="sxs-lookup"><span data-stu-id="97541-118">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="97541-119">Giriş</span><span class="sxs-lookup"><span data-stu-id="97541-119">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="97541-120">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="97541-120">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="97541-121">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="97541-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="97541-122">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="97541-122">Threading Model</span></span>](threading-model.md)

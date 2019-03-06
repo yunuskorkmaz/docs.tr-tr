@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555435"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361934"
 ---
-# <a name="toolbar"></a><span data-ttu-id="432c9-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="432c9-102">ToolBar</span></span>
-<span data-ttu-id="432c9-103"><xref:System.Windows.Controls.ToolBar> Denetimi komutları veya genellikle kendi işlevleriyle ilgili denetimleri bir grup için bir kapsayıcıdır.</span><span class="sxs-lookup"><span data-stu-id="432c9-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="61ec7-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="61ec7-102">ToolBar</span></span>
+<span data-ttu-id="61ec7-103"><xref:System.Windows.Controls.ToolBar> Denetimi, genellikle kendi işlevleriyle ilgili komutlar veya denetimler grubu için bir kapsayıcıdır.</span><span class="sxs-lookup"><span data-stu-id="61ec7-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="432c9-104">Aşağıdaki çizimler yatay ve dikey Göster <xref:System.Windows.Controls.ToolBar> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="432c9-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="61ec7-104">Aşağıdaki çizimler yatay ve dikey Göster <xref:System.Windows.Controls.ToolBar> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="61ec7-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="432c9-105">![Yatay araç](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="432c9-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="432c9-106">Yatay araç çubuğu</span><span class="sxs-lookup"><span data-stu-id="432c9-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="61ec7-105">![Yatay araç](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="61ec7-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="61ec7-106">Yatay araç çubuğu</span><span class="sxs-lookup"><span data-stu-id="61ec7-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="432c9-107">![Dikey araç](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="432c9-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="432c9-108">Dikey araç çubuğu</span><span class="sxs-lookup"><span data-stu-id="432c9-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="61ec7-107">![Dikey araç](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="61ec7-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="61ec7-108">Dikey araç çubuğu</span><span class="sxs-lookup"><span data-stu-id="61ec7-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="432c9-109">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="432c9-109">In This Section</span></span>  
- [<span data-ttu-id="432c9-110">Araç Çubuğuna Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="432c9-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="432c9-111">Araç Çubuğundaki Stil Denetimleri</span><span class="sxs-lookup"><span data-stu-id="432c9-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="61ec7-109">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="61ec7-109">In This Section</span></span>  
+ [<span data-ttu-id="61ec7-110">Araç Çubuğuna Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="61ec7-110">ToolBar Overview</span></span>](toolbar-overview.md)  
+  [<span data-ttu-id="61ec7-111">Araç Çubuğundaki Stil Denetimleri</span><span class="sxs-lookup"><span data-stu-id="61ec7-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="432c9-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="432c9-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="61ec7-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="61ec7-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="432c9-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="432c9-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="61ec7-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="61ec7-113">Related Sections</span></span>

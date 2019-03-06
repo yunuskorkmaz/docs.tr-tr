@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371820"
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="6c760-102">WPF XAML Uzantıları</span><span class="sxs-lookup"><span data-stu-id="6c760-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="6c760-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6c760-103">In This Section</span></span>  
- [<span data-ttu-id="6c760-104">İşaretleme Uzantısı Bağlama</span><span class="sxs-lookup"><span data-stu-id="6c760-104">Binding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [<span data-ttu-id="6c760-105">ColorConvertedBitmap İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-105">ColorConvertedBitmap Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="6c760-106">ComponentResourceKey İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-106">ComponentResourceKey Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="6c760-107">DynamicResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-107">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="6c760-108">RelativeSource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-108">RelativeSource MarkupExtension</span></span>](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [<span data-ttu-id="6c760-109">StaticResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-109">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [<span data-ttu-id="6c760-110">TemplateBinding İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-110">TemplateBinding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [<span data-ttu-id="6c760-111">ThemeDictionary İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="6c760-111">ThemeDictionary Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [<span data-ttu-id="6c760-112">PropertyPath XAML Söz Dizimi</span><span class="sxs-lookup"><span data-stu-id="6c760-112">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="6c760-113">PresentationOptions:Freeze Özniteliği</span><span class="sxs-lookup"><span data-stu-id="6c760-113">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="b6d95-102">WPF XAML Uzantıları</span><span class="sxs-lookup"><span data-stu-id="b6d95-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="b6d95-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b6d95-103">In This Section</span></span>  
+ [<span data-ttu-id="b6d95-104">İşaretleme Uzantısı Bağlama</span><span class="sxs-lookup"><span data-stu-id="b6d95-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
+  [<span data-ttu-id="b6d95-105">ColorConvertedBitmap İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="b6d95-106">ComponentResourceKey İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="b6d95-107">DynamicResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="b6d95-108">RelativeSource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
+  [<span data-ttu-id="b6d95-109">StaticResource İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+  [<span data-ttu-id="b6d95-110">TemplateBinding İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
+  [<span data-ttu-id="b6d95-111">ThemeDictionary İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="b6d95-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
+  [<span data-ttu-id="b6d95-112">PropertyPath XAML Söz Dizimi</span><span class="sxs-lookup"><span data-stu-id="b6d95-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="b6d95-113">PresentationOptions:Freeze Özniteliği</span><span class="sxs-lookup"><span data-stu-id="b6d95-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)

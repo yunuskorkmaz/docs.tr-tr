@@ -8,25 +8,25 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550130"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354641"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="7c83f-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="7c83f-102">ContextMenu</span></span>
-<span data-ttu-id="7c83f-103"><xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimi bağlamına özgü.</span><span class="sxs-lookup"><span data-stu-id="7c83f-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="7c83f-104">Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] farenin sağ düğmesiyle veya klavyenin menü düğmesi aracılığıyla.</span><span class="sxs-lookup"><span data-stu-id="7c83f-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="6938c-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="6938c-102">ContextMenu</span></span>
+<span data-ttu-id="6938c-103"><xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimin, bağlamına özgü.</span><span class="sxs-lookup"><span data-stu-id="6938c-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="6938c-104">Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] sağ fare düğmesine veya aracılığıyla klavyenin menüsü düğmesi.</span><span class="sxs-lookup"><span data-stu-id="6938c-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="7c83f-105">Aşağıdaki şekilde gösterilmiştir bir <xref:System.Windows.Controls.ContextMenu> iki farklı durumlardaki: varsayılan durumu ve açık durumda.</span><span class="sxs-lookup"><span data-stu-id="7c83f-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="7c83f-106">Varsayılan durumda denetim daraltılmış durumdadır.</span><span class="sxs-lookup"><span data-stu-id="7c83f-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="7c83f-107">Ana menü farenin sağ düğmesiyle basıldığında denetim genişletir ve menü öğelerini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="7c83f-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="6938c-105">Aşağıdaki şekilde gösterilmiştir bir <xref:System.Windows.Controls.ContextMenu> iki farklı durumlarda: varsayılan durumu ve açık duruma.</span><span class="sxs-lookup"><span data-stu-id="6938c-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="6938c-106">Denetimin varsayılan durumda, daraltılmış.</span><span class="sxs-lookup"><span data-stu-id="6938c-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="6938c-107">Ana menü sağ fare düğmesine basıldığında, Denetim genişletir ve menü öğeleri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6938c-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="7c83f-108">![ContextMenu durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="7c83f-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="7c83f-109">Farklı Durumlardaki ContextMenu</span><span class="sxs-lookup"><span data-stu-id="7c83f-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="6938c-108">![ContextMenu durumları](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="6938c-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="6938c-109">ContextMenu farklı durumlarda</span><span class="sxs-lookup"><span data-stu-id="6938c-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7c83f-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7c83f-110">In This Section</span></span>  
- [<span data-ttu-id="7c83f-111">ContextMenu Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7c83f-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6938c-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6938c-110">In This Section</span></span>  
+ [<span data-ttu-id="6938c-111">ContextMenu Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6938c-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="7c83f-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="7c83f-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6938c-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6938c-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="7c83f-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="7c83f-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="6938c-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6938c-113">Related Sections</span></span>
