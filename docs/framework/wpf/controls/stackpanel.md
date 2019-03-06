@@ -8,20 +8,20 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361241"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="018ed-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="018ed-102">StackPanel</span></span>
-<span data-ttu-id="018ed-103"><xref:System.Windows.Controls.StackPanel> Öğe, alt öğelerini yatay veya dikey olarak yığmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="018ed-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="cc568-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="cc568-102">StackPanel</span></span>
+<span data-ttu-id="cc568-103"><xref:System.Windows.Controls.StackPanel> Öğesi alt öğeleri yatay veya dikey yığın için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cc568-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="018ed-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="018ed-104">In This Section</span></span>  
- [<span data-ttu-id="018ed-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="018ed-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cc568-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="cc568-104">In This Section</span></span>  
+ [<span data-ttu-id="cc568-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="cc568-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="018ed-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="018ed-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cc568-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="cc568-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553747"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="018ed-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="018ed-107">Related Sections</span></span>  
- [<span data-ttu-id="018ed-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="018ed-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="cc568-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="cc568-107">Related Sections</span></span>  
+ [<span data-ttu-id="cc568-108">Düzen</span><span class="sxs-lookup"><span data-stu-id="cc568-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="018ed-109">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="018ed-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="cc568-109">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="cc568-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="018ed-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="018ed-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="cc568-110">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="cc568-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

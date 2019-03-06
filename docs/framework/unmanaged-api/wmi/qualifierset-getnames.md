@@ -16,72 +16,76 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555108"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365951"
 ---
-# <a name="qualifiersetgetnames-function"></a><span data-ttu-id="9bd45-103">QualifierSet_GetNames function</span><span class="sxs-lookup"><span data-stu-id="9bd45-103">QualifierSet_GetNames function</span></span>
-<span data-ttu-id="9bd45-104">Tüm niteleyicileri veya geçerli nesne ya da özellik mevcut olan bazı niteleyicileri adlarını alır.</span><span class="sxs-lookup"><span data-stu-id="9bd45-104">Retrieves the names of all the qualifiers or of certain qualifiers that are available from the current object or property.</span></span> 
+# <a name="qualifiersetgetnames-function"></a><span data-ttu-id="779cc-103">QualifierSet_GetNames function</span><span class="sxs-lookup"><span data-stu-id="779cc-103">QualifierSet_GetNames function</span></span>
+
+<span data-ttu-id="779cc-104">Tüm niteleyicileri veya geçerli nesne ya da özellik mevcut olan bazı niteleyicileri adlarını alır.</span><span class="sxs-lookup"><span data-stu-id="779cc-104">Retrieves the names of all the qualifiers or of certain qualifiers that are available from the current object or property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a><span data-ttu-id="9bd45-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9bd45-105">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="779cc-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="779cc-105">Syntax</span></span>
+
+```cpp
 HRESULT QualifierSet_GetNames (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags,
    [out] SAFEARRAY (BSTR)**  pstrNames
-); 
-```  
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="9bd45-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9bd45-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="779cc-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="779cc-106">Parameters</span></span>
 
-`vFunc`   
-<span data-ttu-id="9bd45-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="9bd45-107">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="779cc-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="779cc-107">[in] This parameter is unused.</span></span>
 
-`ptr`   
-<span data-ttu-id="9bd45-108">[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.</span><span class="sxs-lookup"><span data-stu-id="9bd45-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+`ptr`\
+<span data-ttu-id="779cc-108">[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.</span><span class="sxs-lookup"><span data-stu-id="779cc-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
-`lFlags`   
-<span data-ttu-id="9bd45-109">[in] Aşağıdaki bayrakları veya numaralandırmada dahil etmek için hangi adlarını belirten değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="9bd45-109">[in] One of the following flags or values that specifies which names to include in the enumeration.</span></span>
+`lFlags`\
+<span data-ttu-id="779cc-109">[in] Aşağıdaki bayrakları veya numaralandırmada dahil etmek için hangi adlarını belirten değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="779cc-109">[in] One of the following flags or values that specifies which names to include in the enumeration.</span></span>
 
-|<span data-ttu-id="9bd45-110">Sabit</span><span class="sxs-lookup"><span data-stu-id="9bd45-110">Constant</span></span>  |<span data-ttu-id="9bd45-111">Değer</span><span class="sxs-lookup"><span data-stu-id="9bd45-111">Value</span></span>  |<span data-ttu-id="9bd45-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9bd45-112">Description</span></span>  |
+|<span data-ttu-id="779cc-110">Sabit</span><span class="sxs-lookup"><span data-stu-id="779cc-110">Constant</span></span>  |<span data-ttu-id="779cc-111">Değer</span><span class="sxs-lookup"><span data-stu-id="779cc-111">Value</span></span>  |<span data-ttu-id="779cc-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="779cc-112">Description</span></span>  |
 |---------|---------|---------|
-|  | <span data-ttu-id="9bd45-113">0</span><span class="sxs-lookup"><span data-stu-id="9bd45-113">0</span></span> | <span data-ttu-id="9bd45-114">Tüm niteleyicileri adlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="9bd45-114">Return the names of all qualifiers.</span></span> |
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="9bd45-115">0x10</span><span class="sxs-lookup"><span data-stu-id="9bd45-115">0x10</span></span> | <span data-ttu-id="9bd45-116">Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür.</span><span class="sxs-lookup"><span data-stu-id="9bd45-116">Return only the names of qualifiers specific to the current property or object.</span></span> <br/> <span data-ttu-id="9bd45-117">Bir özellik için: Yalnızca (geçersiz kılmaları dahil) özelliğine belirli niteleyicileri ve olmayan sınıf tanımından yayılan niteleyicileri döndürür.</span><span class="sxs-lookup"><span data-stu-id="9bd45-117">For a property: Return only the qualifiers specific to the property (including overrides), and not those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="9bd45-118">Bir örneği için: Yalnızca örnek özgü niteleyicisi adlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="9bd45-118">For an instance: Return only instance-specific qualifier names.</span></span> <br/> <span data-ttu-id="9bd45-119">Bir sınıf için: Yalnızca niteleyicileri, türetilmiş sınıf beiong belirli döndürür.</span><span class="sxs-lookup"><span data-stu-id="9bd45-119">For a class: Return only qualifiers specific to the class beiong derived.</span></span>
-|`WBEM_FLAG_PROPAGATED_ONLY` | <span data-ttu-id="9bd45-120">0x20</span><span class="sxs-lookup"><span data-stu-id="9bd45-120">0x20</span></span> | <span data-ttu-id="9bd45-121">Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır.</span><span class="sxs-lookup"><span data-stu-id="9bd45-121">Return only the names of qualifiers propagated from another object.</span></span> <br/> <span data-ttu-id="9bd45-122">Bir özellik için: Bu özellik yalnızca niteleyicileri yayılan dön sınıf tanımı ve özelliğinden olanlar.</span><span class="sxs-lookup"><span data-stu-id="9bd45-122">For a property: Return only the qualifiers propagated to this property from the class definition, and not those from the property itself.</span></span> <br/> <span data-ttu-id="9bd45-123">Bir örneği için: Sınıf tanımı dönüş niteleyicileri yalnızca yayılır.</span><span class="sxs-lookup"><span data-stu-id="9bd45-123">For an instance: Return only those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="9bd45-124">Bir sınıf için: Return bu niteleyici adları yalnızca üst sınıflardan devralınır.</span><span class="sxs-lookup"><span data-stu-id="9bd45-124">For a class: Return only those qualifier names inherited from the parent classes.</span></span> |
+|  | <span data-ttu-id="779cc-113">0</span><span class="sxs-lookup"><span data-stu-id="779cc-113">0</span></span> | <span data-ttu-id="779cc-114">Tüm niteleyicileri adlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="779cc-114">Return the names of all qualifiers.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="779cc-115">0x10</span><span class="sxs-lookup"><span data-stu-id="779cc-115">0x10</span></span> | <span data-ttu-id="779cc-116">Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür.</span><span class="sxs-lookup"><span data-stu-id="779cc-116">Return only the names of qualifiers specific to the current property or object.</span></span> <br/> <span data-ttu-id="779cc-117">Bir özellik için: Yalnızca (geçersiz kılmaları dahil) özelliğine belirli niteleyicileri ve olmayan sınıf tanımından yayılan niteleyicileri döndürür.</span><span class="sxs-lookup"><span data-stu-id="779cc-117">For a property: Return only the qualifiers specific to the property (including overrides), and not those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="779cc-118">Bir örneği için: Yalnızca örnek özgü niteleyicisi adlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="779cc-118">For an instance: Return only instance-specific qualifier names.</span></span> <br/> <span data-ttu-id="779cc-119">Bir sınıf için: Elde sınıf niteleyicileri yalnızca belirli döndürür.</span><span class="sxs-lookup"><span data-stu-id="779cc-119">For a class: Return only qualifiers specific to the class being derived.</span></span>
+|`WBEM_FLAG_PROPAGATED_ONLY` | <span data-ttu-id="779cc-120">0x20</span><span class="sxs-lookup"><span data-stu-id="779cc-120">0x20</span></span> | <span data-ttu-id="779cc-121">Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır.</span><span class="sxs-lookup"><span data-stu-id="779cc-121">Return only the names of qualifiers propagated from another object.</span></span> <br/> <span data-ttu-id="779cc-122">Bir özellik için: Bu özellik yalnızca niteleyicileri yayılan dön sınıf tanımı ve özelliğinden olanlar.</span><span class="sxs-lookup"><span data-stu-id="779cc-122">For a property: Return only the qualifiers propagated to this property from the class definition, and not those from the property itself.</span></span> <br/> <span data-ttu-id="779cc-123">Bir örneği için: Sınıf tanımı dönüş niteleyicileri yalnızca yayılır.</span><span class="sxs-lookup"><span data-stu-id="779cc-123">For an instance: Return only those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="779cc-124">Bir sınıf için: Return bu niteleyici adları yalnızca üst sınıflardan devralınır.</span><span class="sxs-lookup"><span data-stu-id="779cc-124">For a class: Return only those qualifier names inherited from the parent classes.</span></span> |
 
-<span data-ttu-id="9bd45-125">`pstrNames` [out] Yeni bir `SAFEARRAY` , istenen adlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="9bd45-125">`pstrNames` [out] A new `SAFEARRAY` that contains the requested names.</span></span> <span data-ttu-id="9bd45-126">Dizi öğeleri 0 olabilir.</span><span class="sxs-lookup"><span data-stu-id="9bd45-126">The array can have 0 elements.</span></span> <span data-ttu-id="9bd45-127">Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.</span><span class="sxs-lookup"><span data-stu-id="9bd45-127">If an error occurs, a new `SAFEARRAY` is not returned.</span></span>
+`pstrNames`\
+<span data-ttu-id="779cc-125">[out] Yeni bir `SAFEARRAY` , istenen adlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="779cc-125">[out] A new `SAFEARRAY` that contains the requested names.</span></span> <span data-ttu-id="779cc-126">Dizi öğeleri 0 olabilir.</span><span class="sxs-lookup"><span data-stu-id="779cc-126">The array can have 0 elements.</span></span> <span data-ttu-id="779cc-127">Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.</span><span class="sxs-lookup"><span data-stu-id="779cc-127">If an error occurs, a new `SAFEARRAY` is not returned.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="9bd45-128">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="9bd45-128">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="779cc-128">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="779cc-128">Return value</span></span>
 
-<span data-ttu-id="9bd45-129">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="9bd45-129">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="779cc-129">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="779cc-129">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="9bd45-130">Sabit</span><span class="sxs-lookup"><span data-stu-id="9bd45-130">Constant</span></span>  |<span data-ttu-id="9bd45-131">Değer</span><span class="sxs-lookup"><span data-stu-id="9bd45-131">Value</span></span>  |<span data-ttu-id="9bd45-132">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9bd45-132">Description</span></span>  |
+|<span data-ttu-id="779cc-130">Sabit</span><span class="sxs-lookup"><span data-stu-id="779cc-130">Constant</span></span>  |<span data-ttu-id="779cc-131">Değer</span><span class="sxs-lookup"><span data-stu-id="779cc-131">Value</span></span>  |<span data-ttu-id="779cc-132">Açıklama</span><span class="sxs-lookup"><span data-stu-id="779cc-132">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="9bd45-133">0x80041008</span><span class="sxs-lookup"><span data-stu-id="9bd45-133">0x80041008</span></span> | <span data-ttu-id="9bd45-134">Bir parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="9bd45-134">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="9bd45-135">0x80041006</span><span class="sxs-lookup"><span data-stu-id="9bd45-135">0x80041006</span></span> | <span data-ttu-id="9bd45-136">Yeni bir numaralandırma başlatmak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="9bd45-136">Not enough memory is available to begin a new enumeration.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="9bd45-137">0</span><span class="sxs-lookup"><span data-stu-id="9bd45-137">0</span></span> | <span data-ttu-id="9bd45-138">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="9bd45-138">The function call was successful.</span></span>  |
-  
-## <a name="remarks"></a><span data-ttu-id="9bd45-139">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9bd45-139">Remarks</span></span>
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="779cc-133">0x80041008</span><span class="sxs-lookup"><span data-stu-id="779cc-133">0x80041008</span></span> | <span data-ttu-id="779cc-134">Bir parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="779cc-134">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="779cc-135">0x80041006</span><span class="sxs-lookup"><span data-stu-id="779cc-135">0x80041006</span></span> | <span data-ttu-id="779cc-136">Yeni bir numaralandırma başlatmak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="779cc-136">Not enough memory is available to begin a new enumeration.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="779cc-137">0</span><span class="sxs-lookup"><span data-stu-id="779cc-137">0</span></span> | <span data-ttu-id="779cc-138">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="779cc-138">The function call was successful.</span></span>  |
 
-<span data-ttu-id="9bd45-140">Bu işlev bir çağrı sarılır [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9bd45-140">This function wraps a call to the [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="779cc-139">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="779cc-139">Remarks</span></span>
 
-<span data-ttu-id="9bd45-141">Siz niteleyicisi adları aldıktan sonra her niteleyicisi adına göre çağırarak erişebilirsiniz [QualifierSet_Get](qualifierset-get.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="9bd45-141">Once you've retrieved the qualifier names, you can access each qualifier by name by calling the [QualifierSet_Get](qualifierset-get.md) function.</span></span> 
+<span data-ttu-id="779cc-140">Bu işlev bir çağrı sarılır [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="779cc-140">This function wraps a call to the [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) method.</span></span>
 
-<span data-ttu-id="9bd45-142">Sıfır niteleyicileri olması belirli bir nesne için bir hata değil dizelerde sayısını `pstrNames` işlevi döndürür olsa bile getirisini 0 olabilir `WBEM_S_NO_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="9bd45-142">It is not an error for a given object to have zero qualifiers, so the number of strings in `pstrNames` on return can be 0, even though the function returns `WBEM_S_NO_ERROR`.</span></span>
+<span data-ttu-id="779cc-141">Siz niteleyicisi adları aldıktan sonra her niteleyicisi adına göre çağırarak erişebilirsiniz [QualifierSet_Get](qualifierset-get.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="779cc-141">Once you've retrieved the qualifier names, you can access each qualifier by name by calling the [QualifierSet_Get](qualifierset-get.md) function.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="9bd45-143">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9bd45-143">Requirements</span></span>  
- <span data-ttu-id="9bd45-144">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9bd45-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="9bd45-145">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="9bd45-145">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="9bd45-146">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9bd45-146">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9bd45-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9bd45-147">See also</span></span>
-- [<span data-ttu-id="9bd45-148">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="9bd45-148">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="779cc-142">Sıfır niteleyicileri olması belirli bir nesne için bir hata değil dizelerde sayısını `pstrNames` işlevi döndürür olsa bile getirisini 0 olabilir `WBEM_S_NO_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="779cc-142">It is not an error for a given object to have zero qualifiers, so the number of strings in `pstrNames` on return can be 0, even though the function returns `WBEM_S_NO_ERROR`.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="779cc-143">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="779cc-143">Requirements</span></span>
+
+<span data-ttu-id="779cc-144">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="779cc-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="779cc-145">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="779cc-145">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="779cc-146">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="779cc-146">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="779cc-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="779cc-147">See also</span></span>
+
+- [<span data-ttu-id="779cc-148">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="779cc-148">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
