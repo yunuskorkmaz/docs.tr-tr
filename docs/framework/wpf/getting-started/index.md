@@ -14,13 +14,13 @@ Windows Presentation Foundation (WPF) masaüstü istemci uygulamalar oluşturan 
   
 |||  
 |-|-|  
-|Hemen istediğiniz...|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|  
+|Hemen istediğiniz...|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](walkthrough-my-first-wpf-desktop-application.md)|  
 |Uygulama kullanıcı Arabirimi nasıl tasarlayacağınızı?|[Visual Studio'da XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|.NET yeni misiniz?|[.NET Framework'ün genel bakış](../../get-started/overview.md)<br /><br /> [.NET framework uygulama temelleri](../../../../docs/standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|WPF hakkında daha fazla bilgi...|[Visual Studio’da WPF’ye Giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [Denetimler](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
-|Windows Forms Geliştirici misiniz?|[Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF ve Windows Forms Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
+|.NET yeni misiniz?|[.NET Framework'ün genel bakış](../../get-started/overview.md)<br /><br /> [.NET framework uygulama temelleri](../../../standard/application-essentials.md)<br /><br /> [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|WPF hakkında daha fazla bilgi...|[Visual Studio’da WPF’ye Giriş](introduction-to-wpf-in-vs.md)<br /><br /> [XAML'ye Genel Bakış (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Denetimler](../controls/index.md)<br /><br /> [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)|  
+|Windows Forms Geliştirici misiniz?|[Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF ve Windows Forms Birlikte Çalışması](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sınıf Kitaplığı](../../../../docs/framework/wpf/class-library-wpf.md)
-- [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)
+- [Sınıf Kitaplığı](../class-library-wpf.md)
+- [Uygulama Geliştirme](../app-development/index.md)
 - [.NET framework Geliştirici Merkezi](https://www.microsoft.com/net)

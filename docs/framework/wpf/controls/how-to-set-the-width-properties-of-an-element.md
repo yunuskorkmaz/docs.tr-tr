@@ -8,12 +8,12 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: 739b041d8ca89abb9bd1934abb997d1154f08c95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8fdc7c6659eb33f948741145c0b2e100bb133e4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673991"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376851"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>Nasıl yapılır: Öğenin Genişlik Özelliklerini Ayarlama
 ## <a name="example"></a>Örnek  
@@ -23,13 +23,13 @@ ms.locfileid: "54673991"
   
  Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnekler çizmek bir <xref:System.Windows.Shapes.Rectangle> öğesi (`rect1`) bir alt öğesi olarak <xref:System.Windows.Controls.Canvas>. Genişlik özelliklerini değiştirmek bir <xref:System.Windows.Shapes.Rectangle> bir dizi kullanarak <xref:System.Windows.Controls.ListBox> özellik değerlerini temsil eden öğeler <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, ve <xref:System.Windows.FrameworkElement.Width%2A>. Bu şekilde, her bir özellik önceliğini görsel olarak görüntülenir.  
   
- [!code-xaml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
-[!code-xaml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
+ [!code-xaml[WidthMinWidthMaxWidth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
+[!code-xaml[WidthMinWidthMaxWidth#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
   
  Aşağıdaki arka plan kod örnekleri olaylarını işlemek, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> olayını başlatır. Özel yöntemler girişten alır <xref:System.Windows.Controls.ListBox>, değer olarak ayrıştırır bir <xref:System.Double>ve belirtilen genişlik ilgili özellik için değer geçerlidir. Genişlik değerleri de bir dizeye dönüştürülür ve çeşitli yazılan <xref:System.Windows.Controls.TextBlock> öğeleri (söz konusu öğelerin tanımı içinde seçili XAML gösterilmez).  
   
- [!code-csharp[WidthMinWidthMaxWidth#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
- [!code-vb[WidthMinWidthMaxWidth#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[WidthMinWidthMaxWidth#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[WidthMinWidthMaxWidth#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
  Tam bir örnek için bkz. [genişlik özelliklerini karşılaştırma örneği](https://go.microsoft.com/fwlink/?LinkID=160050).  
   
@@ -40,6 +40,6 @@ ms.locfileid: "54673991"
 - <xref:System.Windows.FrameworkElement.MaxWidth%2A>
 - <xref:System.Windows.FrameworkElement.MinWidth%2A>
 - <xref:System.Windows.FrameworkElement.Width%2A>
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Öğenin Yükseklik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)
+- [Panellere Genel Bakış](panels-overview.md)
+- [Öğenin Yükseklik Özelliklerini Ayarlama](how-to-set-the-height-properties-of-an-element.md)
 - [Genişlik özelliklerini karşılaştırma örneği](https://go.microsoft.com/fwlink/?LinkID=160050)

@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362909"
 ---
 # <a name="xaml-in-wpf"></a>WPF'de XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] programlama bildirim temelli bir uygulama için bir biçimlendirme dilidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML işlemci uygulamasında uygular ve XAML dil desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Türleri, XAML temsili yedekleme gerekli tür sağlayabilirler şekilde uygulanır. Genel olarak, çoğu oluşturabilirsiniz, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı Arabirimi XAML biçimlendirmede.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Arka Plan Kod ve WPF İçindeki XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [WPF XAML Ad Kapsamları](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [Satır İçi Stil ve Şablonları](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [Boşluk XAML içinde işleme](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverters ve XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XML Karakter Varlıkları ve XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XAML Ad Alanı (x:) Dil Özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML Uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [İşaretleme Uyumluluğu (mc:) Dil Özellikleri](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)  
+ [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)  
+ [Arka Plan Kod ve WPF İçindeki XAML](code-behind-and-xaml-in-wpf.md)  
+ [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)  
+ [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [WPF XAML Ad Kapsamları](wpf-xaml-namescopes.md)  
+ [Satır İçi Stil ve Şablonları](inline-styles-and-templates.md)  
+ [Boşluk XAML içinde işleme](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverters ve XAML](typeconverters-and-xaml.md)  
+ [XML Karakter Varlıkları ve XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML Uzantıları](wpf-xaml-extensions.md)  
+ [İşaretleme uyumluluğu (mc:) Dil özellikleri](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF Mimarisi](wpf-architecture.md)  
+  [Temel Öğeler](base-elements.md)  
+  [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
+  [Özellikler](properties-wpf.md)  
+  [Olaylar](events-wpf.md)  
+  [Giriş](input-wpf.md)  
+  [Kaynaklar](resources-wpf.md)  
+  [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)  
+  [İş Parçacığı Modeli](threading-model.md)

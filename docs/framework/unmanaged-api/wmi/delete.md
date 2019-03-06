@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367149"
 ---
 # <a name="delete-function"></a>İşlevi Sil
+
 Belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımını siler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT Delete (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszName 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszName
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`  
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr`  
+`ptr`\
 [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
-`wszName`  
+`wszName`\
 [in] Silmek için özellik adı. `wszName` Geçerli bir işaretçi olmalıdır `LPCWSTR`.
 
 ## <a name="return-value"></a>Dönüş değeri
@@ -57,24 +58,26 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Özelliği silinemiyor. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` geçersizdir. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` geçersizdir. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik yok. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Özellik, bir taban sınıftan devralınır. |
 | `WBEM_E_SYSTEM_PROPERTY` | | Bir sistem özelliği özelliğidir. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | İşlevi, geçerli sınıf için bir geçersiz kılma varsayılan değer silindi. Bu özelliğin üst sınıftaki varsayılan değeri reactiviated olmuştur. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | İşlevi, geçerli sınıf için bir geçersiz kılma varsayılan değer silindi. Bu özelliğin üst sınıftaki varsayılan değeri yeniden etkinleştirildi. |
 
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) yöntemi.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

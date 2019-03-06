@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542343"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373549"
 ---
 # <a name="flow-content"></a>Akış İçeriği
-Akış içeriği öğeleri akış içeriği, barındırma için uygun oluşturmak için yapı taşları sağlayan bir <xref:System.Windows.Documents.FlowDocument>.  
+Akış içeriği öğelerini akış içeriği, barındırma için uygun oluşturmak için yapı taşlarını sağlar bir <xref:System.Windows.Documents.FlowDocument>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [TextElement İçerik Modeline Genel Bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Akış Belgesine Genel Bakış](flow-document-overview.md)  
+ [TextElement İçerik Modeline Genel Bakış](textelement-content-model-overview.md)  
+ [Tabloya Genel Bakış](table-overview.md)  
+ [Nasıl Yapılır Konuları](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ Akış içeriği öğeleri akış içeriği, barındırma için uygun oluşturma
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF'deki Belgeler](documents-in-wpf.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: 886956b03bd3e17360283cee1bc0e4db1d2a4731
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374147"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Nasıl yapılır: Bileşik Çizim Oluşturma
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.DrawingGroup> birden çok birleştirerek karmaşık çizimleri oluşturmak için <xref:System.Windows.Media.Drawing> tek bir bileşik çizim nesneleri.  
@@ -19,27 +19,27 @@ Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.D
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte bir <xref:System.Windows.Media.DrawingGroup> bileşik çizim oluşturma <xref:System.Windows.Media.GeometryDrawing> ve <xref:System.Windows.Media.ImageDrawing> nesneleri. Bu örneğin oluşturduğu çıktı aşağıda gösterilmiştir.  
   
- ![Birden çok çizimler DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.jpg "graphicsmm_simple")  
+ ![Birden çok çizimler DrawingGroup](./media/graphicsmm-simple.jpg "graphicsmm_simple")  
 DrawingGroup kullanılarak oluşturulan bir bileşik çizim  
   
  Çizim sınırları gösteren gri kenarlık unutmayın.  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
- [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
  Kullanabileceğiniz bir <xref:System.Windows.Media.DrawingGroup> uygulamak için bir <xref:System.Windows.Media.DrawingGroup.Transform%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A> ayarını <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, veya <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> içerdiği çizimler için. Çünkü bir <xref:System.Windows.Media.DrawingGroup> aynı zamanda bir <xref:System.Windows.Media.Drawing>, diğer içerebilir <xref:System.Windows.Media.DrawingGroup> nesneleri.  
   
  Ek kullanması hariç, aşağıdaki örnek önceki örneğe benzer <xref:System.Windows.Media.DrawingGroup> bit eşlem efektleri ve geçirgenlik maskesi bazı çizimlerde uygulamak için nesne. Bu örneğin oluşturduğu çıktı aşağıda gösterilmiştir.  
   
- ![Birden çok çizimler DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-multiple.jpg "graphicsmm_multiple")  
+ ![Birden çok çizimler DrawingGroup](./media/graphicsmm-multiple.jpg "graphicsmm_multiple")  
 Bileşik çizim sahip birden fazla DrawingGroup nesneleri  
   
  Çizim sınırları gösteren gri kenarlık unutmayın.  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmmultipledrawinggroupsexample)]
- [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmmultipledrawinggroupsexample)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmmultipledrawinggroupsexample)]
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmmultipledrawinggroupsexample)]  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](drawing-objects-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
@@ -48,4 +48,4 @@ Bileşik çizim sahip birden fazla DrawingGroup nesneleri
 - <xref:System.Windows.Media.DrawingGroup.Opacity%2A>
 - <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>
 - <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>
-- [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)

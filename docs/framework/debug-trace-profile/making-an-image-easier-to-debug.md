@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362025"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Görüntü .NET hata ayıklamayı kolaylaştırma
 
@@ -34,7 +34,7 @@ Bazı durumlarda, böylece makine ürettiği kodu hata ayıklama daha kolaydır,
 
 Örneğin, derleme, hata ayıklamak istiyorsanız adlı *MyApp.exe*, adlı bir metin dosyasını oluşturup *MyApp.ini*, aynı klasörde *MyApp.exe*, içeren Bu üç satırı:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ Bir perakende derleme için derleyiciler herhangi ayarlamamanız **DebuggableAtt
 **DebuggableAttribute** aynı anda tüm bir derleme, derleme içindeki tek tek modülleri için geçerlidir. Geliştirme araçları gerekir bu nedenle ekleme özel öznitelikler için bütünleştirilmiş kod meta veri belirteci, bir derleme zaten oluşturuldu, veya sınıfa çağrılır, **System.Runtime.CompilerServices.AssemblyAttributesGoHere**. ALink Aracı'nı sonra bunlar yükseltir **DebuggableAttribute** her modül öznitelikleri derlemeye bunlar bir bir parçası haline gelir. Bir çakışma varsa, ALINK işlemi başarısız olur.
 
 > [!NOTE]
-> Microsoft Visual C++ derleyicisi sürümünde .NET Framework 1.0 ekler **DebuggableAttribute** olduğunda **/CLR** ve **/zi** derleyici seçenekleri belirtilir. Sürümünde .NET Framework 1.1, veya eklemelisiniz **DebugabbleAttribute** el ile kod veya kullanım, **assemblydebug** bağlayıcı seçeneği.
+> Microsoft Visual C++ derleyicisi sürümünde .NET Framework 1.0 ekler **DebuggableAttribute** olduğunda **/CLR** ve **/zi** derleyici seçenekleri belirtilir. Sürümünde .NET Framework 1.1, veya eklemelisiniz **DebuggableAttribute** el ile kod veya kullanım, **assemblydebug** bağlayıcı seçeneği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

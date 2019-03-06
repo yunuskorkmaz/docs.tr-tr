@@ -50,10 +50,9 @@ Derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı v
 
  - [.NET bütünleştirilmiş kodu dosya biçimi](file-format.md)
  - [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Arkadaş derlemeler (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Arkadaş derlemeler (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Arkadaş Bütünleştirilmiş Kodları](friend-assemblies.md)  
  - [Nasıl yapılır: Yükleme ve yüklemelerini kaldırma derlemeleri (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Nasıl yapılır: Yük derlemeleri ve yüklemelerini kaldırma (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
- - [Nasıl yapılır: Kullanımı ve hata ayıklama derlemesi Unloadability .NET core'da](unloadability-howto.md)
+ - [Nasıl yapılır: .NET Core’da Bütünleştirilmiş Kodu Kaldırabilme Özelliğini Kullanma ve Sorun Giderme](unloadability-howto.md)
  - [Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [Nasıl yapılır: Bir dosyanın bir derleme (Visual Basic) olup olmadığını belirleme](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  

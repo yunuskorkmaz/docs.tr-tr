@@ -14,70 +14,72 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738623"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374563"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma
-Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.  
-  
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Bir işaretsiz türe almayan bir Windows işlevi çağırma  
-  
-1.  Kullanım bir [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) hangi kitaplığı işlevi tutar, bu kitaplıkta adı nedir, kendi çağrı sırası nedir ve nasıl çağırırken dizeleri dönüştürmek Visual Basic söylemek için.  
-  
-2.  İçinde `Declare` deyimi, kullanım `UInteger`, `ULong`, `UShort`, veya `Byte` uygun şekilde her bir parametreye bir işaretsiz türe sahip.  
-  
-3.  Windows işlev adlarını ve değerlerini kullanır sabitlerin bulmak için arama için belgelerine bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.  
-  
-4.  Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As UInteger`.  
-  
-5.  İşlevi, normal bir şekilde çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, işaretsiz tamsayı bağımsız değişken alır.  
-  
-    ```  
-    Public Class windowsMessage  
-        Private Declare Auto Function mb Lib "user32.dll" Alias "MessageBox" (  
-            ByVal hWnd As Integer,   
-            ByVal lpText As String,   
-            ByVal lpCaption As String,   
-            ByVal uType As UInteger) As Integer  
-        Private Const MB_OK As UInteger = 0  
-        Private Const MB_ICONEXCLAMATION As UInteger = &H30  
-        Private Const IDOK As UInteger = 1  
-        Private Const IDCLOSE As UInteger = 8  
-        Private Const c As UInteger = MB_OK Or MB_ICONEXCLAMATION  
-        Public Function messageThroughWindows() As String  
-            Dim r As Integer = mb(0, "Click OK if you see this!",   
-                "Windows API call", c)  
-            Dim s As String = "Windows API MessageBox returned " &  
-                 CStr(r)& vbCrLf & "(IDOK = " & CStr(IDOK) &  
-                 ", IDCLOSE = " & CStr(IDCLOSE) & ")"  
-            Return s  
-        End Function  
-    End Class  
-    ```  
-  
-     İşlevi test edebilirsiniz `messageThroughWindows` aşağıdaki kod ile.  
-  
-    ```  
-    Public Sub consumeWindowsMessage()  
-        Dim w As New windowsMessage  
-        w.messageThroughWindows()  
-    End Sub  
-    ```  
-  
+
+Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.
+
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Bir işaretsiz türe almayan bir Windows işlevi çağırma
+
+1. Kullanım bir [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) hangi kitaplığı işlevi tutar, bu kitaplıkta adı nedir, kendi çağrı sırası nedir ve nasıl çağırırken dizeleri dönüştürmek Visual Basic söylemek için.
+
+2. İçinde `Declare` deyimi, kullanım `UInteger`, `ULong`, `UShort`, veya `Byte` uygun şekilde her bir parametreye bir işaretsiz türe sahip.
+
+3. Windows işlev adlarını ve değerlerini kullanır sabitlerin bulmak için arama için belgelerine bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.
+
+4. Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As UInteger`.
+
+5. İşlevi, normal bir şekilde çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, işaretsiz tamsayı bağımsız değişken alır.
+
+    ```vb
+    Public Class windowsMessage
+        Private Declare Auto Function mb Lib "user32.dll" Alias "MessageBox" (
+            ByVal hWnd As Integer,
+            ByVal lpText As String,
+            ByVal lpCaption As String,
+            ByVal uType As UInteger) As Integer
+        Private Const MB_OK As UInteger = 0
+        Private Const MB_ICONEXCLAMATION As UInteger = &H30
+        Private Const IDOK As UInteger = 1
+        Private Const IDCLOSE As UInteger = 8
+        Private Const c As UInteger = MB_OK Or MB_ICONEXCLAMATION
+        Public Function messageThroughWindows() As String
+            Dim r As Integer = mb(0, "Click OK if you see this!",
+                "Windows API call", c)
+            Dim s As String = "Windows API MessageBox returned " &
+                 CStr(r)& vbCrLf & "(IDOK = " & CStr(IDOK) &
+                 ", IDCLOSE = " & CStr(IDCLOSE) & ")"
+            Return s
+        End Function
+    End Class
+    ```
+
+     İşlevi test edebilirsiniz `messageThroughWindows` aşağıdaki kod ile.
+
+    ```vb
+    Public Sub consumeWindowsMessage()
+        Dim w As New windowsMessage
+        w.messageThroughWindows()
+    End Sub
+    ```
+
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir bileşen kullanamıyor. Bu nedenle, bunları kullanır.  
-  
+    > `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir bileşen kullanamıyor. Bu nedenle, bunları kullanır.
+
     > [!IMPORTANT]
-    >  Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod çağırmak, olası güvenlik risklerini kodunuza kullanıma sunar.  
-  
+    > Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod çağırmak, olası güvenlik risklerini kodunuza kullanıma sunar.
+
     > [!IMPORTANT]
-    >  Windows API çağırmak, kısmi güven durumlarında yürütme şeklinizi etkileyebilecek olan yönetilmeyen kod iznini gerektirir. Daha fazla bilgi için <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).  
-  
+    > Windows API çağırmak, kısmi güven durumlarında yürütme şeklinizi etkileyebilecek olan yönetilmeyen kod iznini gerektirir. Daha fazla bilgi için <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
 - [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)

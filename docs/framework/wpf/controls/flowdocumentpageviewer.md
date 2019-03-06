@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366575"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik. İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kaydırma Görüntüleyicisi'nde içerik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Documents.FlowDocument>
-- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Akış Belgesine Genel Bakış](../advanced/flow-document-overview.md)
+- [Nasıl Yapılır Konuları](../advanced/flow-content-elements-how-to-topics.md)
+- [WPF'deki Belgeler](../advanced/documents-in-wpf.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371404"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı iyileştirme: 2B Grafikleri ve Görüntüleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok sayıda 2B grafikleri ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konu, bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
@@ -49,7 +49,7 @@ ms.locfileid: "54630820"
   
  Bu yana <xref:System.Windows.Shapes.Shape> nesneleri türetilen <xref:System.Windows.FrameworkElement> sınıfı, bunları kullanarak uygulamanızı önemli ölçüde daha fazla bellek tüketimi ekleyebilirsiniz. Sizin gerçekten ihtiyacınız yoksa <xref:System.Windows.FrameworkElement> Grafik içeriğiniz için özellikleri göz önünde bulundurun hafifletilmiş kullanarak <xref:System.Windows.Media.Drawing> nesneleri.  
   
- Daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](../graphics-multimedia/drawing-objects-overview.md).  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry nesneleri  
@@ -57,13 +57,13 @@ ms.locfileid: "54630820"
   
  Aşağıdaki örnek, bir üçgen oluşturmak için öznitelik sözdizimi kullanır. <xref:System.Windows.Media.StreamGeometry> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- Daha fazla bilgi için <xref:System.Windows.Media.StreamGeometry> nesneleri bkz [StreamGeometry kullanarak şekil oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
+ Daha fazla bilgi için <xref:System.Windows.Media.StreamGeometry> nesneleri bkz [StreamGeometry kullanarak şekil oluşturma](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>DrawingVisual nesneleri  
- <xref:System.Windows.Media.DrawingVisual> Şekilleri, görüntü veya metin işlemek için kullanılan sınıfı çizim basit bir nesnedir. Bu sınıf, performansını artırır, düzen veya olay işleme sağlamadığı basit olarak değerlendirilir. Bu nedenle, çizimleri, arka plan ve küçük resim için idealdir. Daha fazla bilgi için [DrawingVisual nesnelerini kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
+ <xref:System.Windows.Media.DrawingVisual> Şekilleri, görüntü veya metin işlemek için kullanılan sınıfı çizim basit bir nesnedir. Bu sınıf, performansını artırır, düzen veya olay işleme sağlamadığı basit olarak değerlendirilir. Bu nedenle, çizimleri, arka plan ve küçük resim için idealdir. Daha fazla bilgi için [DrawingVisual nesnelerini kullanma](../graphics-multimedia/using-drawingvisual-objects.md).  
   
 <a name="Images"></a>   
 ## <a name="images"></a>Görüntüler  
@@ -77,15 +77,15 @@ ms.locfileid: "54630820"
   
 -   Mümkünse, gibi birden çok görüntülerini bir film şeridi oluşan tek bir görüntüye görüntüleri birleştirin.  
   
--   Daha fazla bilgi için [Imaging genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+-   Daha fazla bilgi için [Imaging genel bakış](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Herhangi bir bit eşlem ölçeğini animasyon ekleme, örnekleme algoritması varsayılan yüksek kaliteli görüntü, bazen etkili şekilde animasyonların titremesine neden kare oranı azalmasına neden için yeterli sistem kaynaklarına kullanabilir. Ayarlayarak <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> özelliği <xref:System.Windows.Media.RenderOptions> nesnesini <xref:System.Windows.Media.BitmapScalingMode.LowQuality> bir bit eşlem olduğunda daha yumuşak bir animasyon oluşturabilirsiniz. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> modu söyler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kalite açısından iyileştirilmiş algoritmasını kullanarak görüntüleri işlerken hızı için iyileştirilmiş bir algoritmaya geçiş yapmak için işleme altyapısı.  
   
  Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Media.BitmapScalingMode> için bir resim nesnesi.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlenmiş içeriği önbelleğe almaz <xref:System.Windows.Media.TileBrush> gibi nesneleri <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush>. Statik senaryolarda burada içeriği ne kullanımını <xref:System.Windows.Media.TileBrush> içinde Sahne değiştirme, video belleği korur olduğundan bu mantıklıdır. Çok mantıklı yapmaz bir <xref:System.Windows.Media.TileBrush> statik içeriği ile bir statik olmayan şekilde kullanılır — Örneğin, bir statik <xref:System.Windows.Media.DrawingBrush> veya <xref:System.Windows.Media.VisualBrush> dönen bir 3B nesnenin yüzeyine eşlendi. Varsayılan davranışını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tamamını yeniden içeriğini işlemek için <xref:System.Windows.Media.DrawingBrush> veya <xref:System.Windows.Media.VisualBrush> her karede olsa bile içeriği işlemektir.  
@@ -96,17 +96,17 @@ ms.locfileid: "54630820"
   
  Aşağıdaki örnek için önbelleğe alma ipucu seçeneğinin nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.DrawingBrush>.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
+- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Metin](optimizing-performance-text.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
+- [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)

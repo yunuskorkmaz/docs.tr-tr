@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517597"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376123"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Nasıl yapılır: ObservableCollection Oluşturma ve Bağlama
 Bu örnekte, oluşturma ve türeyen bir koleksiyona bağlama işlemi gösterilmektedir <xref:System.Collections.ObjectModel.ObservableCollection%601> bildirimleri öğeleri eklendiğinde veya kaldırıldığında sağlayan bir koleksiyon sınıf olan sınıf.  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Koleksiyon, başka şekilde bağlama için kullanılabilir hale getirebilirsiniz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] açıklandığı gibi nesneleri [olun veri kullanılabilir için XAML bağlamasında](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md). Örneğin, koleksiyon içinde oluşturabileceğiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve burada gösterildiği gibi bir kaynak olarak koleksiyonu belirtin:  
+ Koleksiyon, başka şekilde bağlama için kullanılabilir hale getirebilirsiniz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] açıklandığı gibi nesneleri [olun veri kullanılabilir için XAML bağlamasında](how-to-make-data-available-for-binding-in-xaml.md). Örneğin, koleksiyon içinde oluşturabileceğiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve burada gösterildiği gibi bir kaynak olarak koleksiyonu belirtin:  
   
 ```xaml  
 <Window  
@@ -136,13 +136,13 @@ End Class
  Tanımı `NameItemTemplate` burada gösterilmez.  
   
 > [!NOTE]
->  Koleksiyonunuzdaki nesneleri açıklanan gereksinimleri karşılaması gerekir [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md). Kullanıyorsanız özellikle <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> (örneğin, istediğiniz, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak özelliklerini dinamik olarak değiştirdiğinizde güncelleştirmek için), uygun özellik değiştirildi bildirim mekanizması gibiuygulamalıdır<xref:System.ComponentModel.INotifyPropertyChanged>arabirimi.  
+>  Koleksiyonunuzdaki nesneleri açıklanan gereksinimleri karşılaması gerekir [bağlama kaynaklarına genel bakış](binding-sources-overview.md). Kullanıyorsanız özellikle <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> (örneğin, istediğiniz, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak özelliklerini dinamik olarak değiştirdiğinizde güncelleştirmek için), uygun özellik değiştirildi bildirim mekanizması gibiuygulamalıdır<xref:System.ComponentModel.INotifyPropertyChanged>arabirimi.  
   
- Daha fazla bilgi için bkz koleksiyonları bölümüne bağlama [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Daha fazla bilgi için bkz koleksiyonları bölümüne bağlama [Data Binding Overview](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görünümde Verileri Sıralama](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [Görünümde Veri Filtreleme](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Görünümde Verileri Sıralama](how-to-sort-data-in-a-view.md)
+- [Görünümde Veri Filtreleme](how-to-filter-data-in-a-view.md)
+- [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372081"
 ---
 # <a name="styles-and-templates"></a>Stilleri ve Şablonları
-Windows Presentation Foundation (WPF) stil ve şablon bir uygulama, belge veya kullanıcı arabirimini (UI) Tasarımcısı görsel olarak ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve film şeritleri) ve için bir paketi bakın kendi ürün için özel bir görünüm üzerinde standart hale getirme.  
+Bir paket için bir uygulama, belge veya kullanıcı arabirimi (UI) Tasarımcısı görsel açıdan ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) ve Windows Presentation Foundation (WPF) stil ve şablon oluşturma bakın Ürün için özel bir görünüm üzerinde standart hale getirin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Stil ve Şablon Oluşturma](styling-and-templating.md)  
+  [Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Windows Presentation Foundation (WPF) stil ve şablon bir uygulama, belge veya k
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Gelişmiş](../../../../docs/framework/wpf/advanced/index.md)  
-  [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Gelişmiş](../advanced/index.md)  
+  [Denetim Özelleştirme](control-customization.md)  
+  [Grafikler ve Multimedya](../graphics-multimedia/index.md)

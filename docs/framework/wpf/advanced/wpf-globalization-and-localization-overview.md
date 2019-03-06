@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364430"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -18,7 +18,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  Genelleştirme ve yerelleştirme, bu genel bakış sunar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Genelleştirme, birden fazla konumda gerçekleştirmek uygulamaların geliştirilmesini ve Tasarım ' dir. Örneğin, kullanıcılar farklı kültürler için yerelleştirilmiş kullanıcı arabirimleri ve bölgesel verileri Genelleştirme destekler. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Otomatik Düzen, uydu derlemeleri ve yerelleştirilmiş öznitelikleri gibi ve yorum genelleştirilmiş tasarım özellikleri sağlar.
   
- Uygulama kaynaklarını çevirisi uygulamanın desteklediği özel kültürler için yerelleştirilmiş sürüm yerelleştirmesidir. Yerelleştirme zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], API'leri kullanmak <xref:System.Windows.Markup.Localizer> ad alanı. Bu API'leri güç [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016) komut satırı aracı. Derleme ve LocBaml kullanma hakkında daha fazla bilgi için bkz: [bir uygulamayı yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).
+ Uygulama kaynaklarını çevirisi uygulamanın desteklediği özel kültürler için yerelleştirilmiş sürüm yerelleştirmesidir. Yerelleştirme zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], API'leri kullanmak <xref:System.Windows.Markup.Localizer> ad alanı. Bu API'leri güç [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016) komut satırı aracı. Derleme ve LocBaml kullanma hakkında daha fazla bilgi için bkz: [bir uygulamayı yerelleştirme](how-to-localize-an-application.md).
   
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Genelleştirme ve yerelleştirme ' WPF'de için en iyi uygulamalar
 
@@ -42,7 +42,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
 -   Etkinleştirme <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> üzerinde <xref:System.Windows.Controls.TextBlock> kırpma önlemek için.
   
--   Ayarlama `xml:lang` özniteliği. Bu öznitelik, kültür, belirli bir öğeyi ve onun alt öğeleri açıklar. Bu özelliğin değeri çeşitli özellikleri davranışını değiştiren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Örneğin, heceleme, yazım denetimi, numarası değiştirme, karmaşık kod şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. Bkz: [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) ayarı hakkında daha fazla bilgi için [XML: lang işleme XAML içinde](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
+-   Ayarlama `xml:lang` özniteliği. Bu öznitelik, kültür, belirli bir öğeyi ve onun alt öğeleri açıklar. Bu özelliğin değeri çeşitli özellikleri davranışını değiştiren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Örneğin, heceleme, yazım denetimi, numarası değiştirme, karmaşık kod şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. Bkz: [WPF için genelleştirme](globalization-for-wpf.md) ayarı hakkında daha fazla bilgi için [XML: lang işleme XAML içinde](../../xaml-services/xml-lang-handling-in-xaml.md).  
   
 -   Farklı diller için kullanılan yazı tipi daha iyi denetim elde etmek için özelleştirilmiş bir bileşik yazı oluşturun. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\\Fonts dizininizdeki GlobalUserInterface.composite yazı kullanır.  
   
@@ -56,7 +56,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
 -   Yerelleştirme açıklamalarını çevirmenler için ek bağlam sağlamak için kullanın.  
   
--   Yerelleştirme öznitelikleri seçerek atlama yerine yerelleştirme denetlemek için kullanmak <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> öğelerde özellikleri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md) daha fazla bilgi için.  
+-   Yerelleştirme öznitelikleri seçerek atlama yerine yerelleştirme denetlemek için kullanmak <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> öğelerde özellikleri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md) daha fazla bilgi için.  
   
 -   Kullanım `msbuild -t:updateuid` ve `-t:checkuid` ekleyin ve denetlemek için <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerinde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Kullanım <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> geliştirme ve yerelleştirme değişiklikleri izlemek için özellikler. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Özellikler yeni geliştirme değişiklikler yerelleştirmek yardımcı olur. El ile eklerseniz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özelliklerine bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], genellikle sıkıcı ve daha az doğru görevdir.  
   
@@ -94,9 +94,9 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  Aşağıdaki grafikte, XAML bir BAML formu temel alan bir yerelleştirme tipik iş akışı gösterilmektedir. Bu diyagram, geliştirici bir uygulama İngilizce olarak yazar. varsayar. Geliştirici oluşturur ve WPF uygulaması globalizes. Projede Geliştirici ayarlar dosyası `<UICulture>en-US</UICulture>` derleme üzerinde dil nötr ana derleme bir uydu ile oluşturulan. tüm yerelleştirilebilir kaynakları içeren resources.dll. Alternatif olarak, WPF yerelleştirme API ana derleme ayıklama desteklediğinden bir kaynak dili ana derlemede tutun. Derleme işleminden sonra XAML derlenmiş BAML. Duyarlıymış nötr MyDialog.exe.resources.dll İngilizce konuşan müşteriye sevk.  
   
- ![Yerelleştirme iş akışı](../../../../docs/framework/wpf/advanced/media/localizationworkflow.png "LocalizationWorkflow")  
+ ![Yerelleştirme iş akışı](./media/localizationworkflow.png "LocalizationWorkflow")  
   
- ![İş akışı yerelleştirilmemiş](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![İş akışı yerelleştirilmemiş](./media/localizationworkflow2.png "LocalizationWorkflow2")  
   
 ## <a name="examples-of-wpf-localization"></a>WPF yerelleştirme örnekleri
 
@@ -108,11 +108,11 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **İngilizce:**  
   
- ![Çalıştır iletişim kutusu](../../../../docs/framework/wpf/advanced/media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![Çalıştır iletişim kutusu](./media/rundialogenglish.PNG "RunDialogEnglish")  
   
  **Almanca:**  
   
- ![Almanca Çalıştır iletişim kutusu](../../../../docs/framework/wpf/advanced/media/rundialoggerman.PNG "RunDialogGerman")  
+ ![Almanca Çalıştır iletişim kutusu](./media/rundialoggerman.PNG "RunDialogGerman")  
   
  **Bir genel çalıştırma iletişim kutusu tasarlama**  
   
@@ -136,19 +136,19 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Kullanarak yapılandırılmış <xref:System.Windows.Controls.Grid> otomatik düzen yararlanarak için faydalı bir denetim denetimi içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. İletişim kutusunda üç satır ve beş sütunlar halinde bölme unutmayın. Satır ve sütun tanımları birinin değil, sabit bir boyutu vardır; Bu nedenle, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] her hücreye konumlandırılmış öğeler bir artış uyum sağlamak ve yerelleştirme sırasında boyutunu azaltır.  
   
- [!code-xaml[GlobalizationRunDialog#GridColumnDef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef)]  
+ [!code-xaml[GlobalizationRunDialog#GridColumnDef](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef)]  
   
  İlk iki sütun burada **açık:** etiket ve <xref:System.Windows.Controls.ComboBox> yerleştirilir yüzde 10 kullanmak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] toplam genişlik.  
   
- [!code-xaml[GlobalizationRunDialog#GridColumnDef2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef2)]  
+ [!code-xaml[GlobalizationRunDialog#GridColumnDef2](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef2)]  
   
  Paylaşılan boyutlandırma özelliği kullanır, örneğin Not <xref:System.Windows.Controls.Grid>. Son üç sütun bu kendileri aynı yerleştirerek yararlanmak <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Bu, bir özellik adından beklediğiniz gibi aynı boyutta paylaşmak sütunları sağlar. Bu nedenle uzun dize "Durchsuchen..." "Gözat..." yerelleştirileceği, tüm düğmeler küçük bir "Tamam" düğmesini ve orantısız büyük bir "Durchsuchen..." düğmesi yerine genişlik büyütün.  
   
- **XML: lang**
+ **Xml:lang**
   
  `Xml:lang="en-US"`  
   
- Bildirim [XML: lang işleme XAML içinde](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) kök öğe yerleştirilen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Bu özellik, kültür, belirli bir öğeyi ve alt öğeleri açıklar. Bu değer çeşitli özellikler tarafından kullanılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve yerelleştirme sırasında uygun şekilde değiştirilmelidir. Bu değer, hangi dil sözlüğü heceleme ve yazım denetimi sözcükler kullanın değiştirir. Ayrıca, rakam ve yazı tipi geri dönüş sistemi kullanılacak yazı tipini nasıl seçtiği görüntülenmesini etkiler. Son olarak, şekilde sayılar görüntülenir özelliğini etkiler ve karmaşık betiklerde yazılmış şekilde metinleri şeklinde. "En-US" varsayılan değerdir.  
+ Bildirim [XML: lang işleme XAML içinde](../../xaml-services/xml-lang-handling-in-xaml.md) kök öğe yerleştirilen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Bu özellik, kültür, belirli bir öğeyi ve alt öğeleri açıklar. Bu değer çeşitli özellikler tarafından kullanılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve yerelleştirme sırasında uygun şekilde değiştirilmelidir. Bu değer, hangi dil sözlüğü heceleme ve yazım denetimi sözcükler kullanın değiştirir. Ayrıca, rakam ve yazı tipi geri dönüş sistemi kullanılacak yazı tipini nasıl seçtiği görüntülenmesini etkiler. Son olarak, şekilde sayılar görüntülenir özelliğini etkiler ve karmaşık betiklerde yazılmış şekilde metinleri şeklinde. "En-US" varsayılan değerdir.  
   
  **Uydu kaynak derlemesi oluşturma**  
   
@@ -172,7 +172,7 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **Parse**  
   
- Uygulamayı oluşturduktan sonra ilk adımı, yerelleştirme yerelleştirilebilir kaynakları uydu derlemesinin dışında ayrıştırılıyor. Bu konunun amacı doğrultusunda, şurada bulunabilir örnek LocBaml aracı kullanma [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016). LocBaml yalnızca uygun bir yerelleştirme aracı yerelleştirme işleminizi oluşturmaya başlamanıza yardımcı olmak için gereken bir örnek araç olduğunu unutmayın. LocBaml, kullanarak ayrıştırmak için aşağıdakileri çalıştırın: **LocBaml/RunDialog.resources.dll ayrıştırma/out:** "RunDialog.resources.dll.CSV" dosyası oluşturmak için.  
+ Uygulamayı oluşturduktan sonra ilk adımı, yerelleştirme yerelleştirilebilir kaynakları uydu derlemesinin dışında ayrıştırılıyor. Bu konunun amacı doğrultusunda, şurada bulunabilir örnek LocBaml aracı kullanma [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016). LocBaml yalnızca uygun bir yerelleştirme aracı yerelleştirme işleminizi oluşturmaya başlamanıza yardımcı olmak için gereken bir örnek araç olduğunu unutmayın. LocBaml kullanarak ayrıştırmak için aşağıdaki komutu çalıştırın: **LocBaml/RunDialog.resources.dll ayrıştırma/out:** "RunDialog.resources.dll.CSV" dosyası oluşturmak için.  
   
  **Yerelleştirme**  
   
@@ -226,11 +226,11 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **İngilizce:**  
   
- ![İngilizce sayfayı](../../../../docs/framework/wpf/advanced/media/englishhomepage.jpg "EnglishHomepage")  
+ ![İngilizce sayfayı](./media/englishhomepage.jpg "EnglishHomepage")  
   
  **Arapça:**  
   
- ![Arapça sayfa](../../../../docs/framework/wpf/advanced/media/arabichomepage.jpg "ArabicHomepage")  
+ ![Arapça sayfa](./media/arabichomepage.jpg "ArabicHomepage")  
   
 ### <a name="designing-a-global-microsoft-homepage"></a>Genel bir Microsoft giriş tasarlama  
  Bu sahte ayarlama, Microsoft web sitesi RightToLeft diller için sağlanan Genelleştirme özellikleri gösterilmiştir Arabistan. İbranice ve Arapça gibi dillerde mevcuttur sağdan sola okuma düzeni kadar düzenini [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle düzenlenmelidir İngilizce gibi sağdan sola diller olacaktır oldukça farklı. Sağdan sola dil ya da tam tersi bir soldan sağa dili yerelleştirme oldukça zor olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu tür yerelleştirmeler çok daha kolay hale getirmek için tasarlanmıştır.  
@@ -239,7 +239,7 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  *Homepage.XAML:*  
   
- [!code-xaml[GlobalizationHomepage#Homepage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#homepage)]  
+ [!code-xaml[GlobalizationHomepage#Homepage](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#homepage)]  
   
  Bildirim <xref:System.Windows.FrameworkElement.FlowDirection%2A> özellikte <xref:System.Windows.Controls.Page>. Bu özellik için değiştirme <xref:System.Windows.FlowDirection.RightToLeft> değiştirecek <xref:System.Windows.FrameworkElement.FlowDirection%2A> , <xref:System.Windows.Controls.Page> ve onun alt öğeleri böylece bu düzenini [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Arapça bir kullanıcı beklediğiniz gibi sağdan sola olmasını çevrilmiş. Bir geçersiz kılma kalıtım davranışını açık bir belirterek <xref:System.Windows.FrameworkElement.FlowDirection%2A> herhangi bir öğede. <xref:System.Windows.FrameworkElement.FlowDirection%2A> Özelliği kullanılabilir herhangi <xref:System.Windows.FrameworkElement> veya belge ilgili öğe ve bir örtük değerini <xref:System.Windows.FlowDirection.LeftToRight>.  
   
@@ -247,11 +247,11 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **FlowDirection="LeftToRight"**  
   
- ![Akış soldan sağa](../../../../docs/framework/wpf/advanced/media/lefttoright.PNG "LeftToRight")  
+ ![Akış soldan sağa](./media/lefttoright.PNG "LeftToRight")  
   
  **FlowDirection="RightToLeft"**  
   
- ![Sağdan sola akış](../../../../docs/framework/wpf/advanced/media/righttoleft.PNG "RightToLeft")  
+ ![Sağdan sola akış](./media/righttoleft.PNG "RightToLeft")  
   
  **Sabit boyutlar paneller ve denetimler için kullanmaktan kaçının**  
   
@@ -261,9 +261,9 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  Burada içerik belirsiz ve çevirme zor olabilir, birçok durumlar vardır. Geliştirici ve tasarımcı yerelleştiriciler yerelleştirme açıklamalarını aracılığıyla ek bağlam ve açıklama sağlamak için özelliğine sahiptir. Örneğin aşağıdaki Localization.Comments karakter kullanımını açıklar '&#124;'.  
   
- [!code-xaml[GlobalizationHomepage#LocalizationComment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]  
+ [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]  
   
- Bu açıklamayı LocBaml aracı söz konusu olduğunda TextBlock_1'ın içeriği ile ilişkilendirilir (bkz [bir uygulamayı yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)), çıkış .csv dosyasına TextBlock_1 satırın 6 sütunda görülebilir:  
+ Bu açıklamayı LocBaml aracı söz konusu olduğunda TextBlock_1'ın içeriği ile ilişkilendirilir (bkz [bir uygulamayı yerelleştirme](how-to-localize-an-application.md)), çıkış .csv dosyasına TextBlock_1 satırın 6 sütunda görülebilir:  
   
 |Kaynak anahtarı|Kategori|Okunabilir|Değiştirilebilir|Yorum|Değer|  
 |-|-|-|-|-|-|  
@@ -271,17 +271,17 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  İçerik veya özelliği aşağıdaki sözdizimini kullanarak herhangi bir öğenin açıklamaları yerleştirilebilir:  
   
- [!code-xaml[GlobalizationHomepage#LocalizationCommentsProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcommentsprop)]  
+ [!code-xaml[GlobalizationHomepage#LocalizationCommentsProp](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcommentsprop)]  
   
  **Yerelleştirme öznitelikleri**  
   
  Genellikle geliştirici veya yerelleştirme Yöneticisi'ne yerelleştiriciler okuyun ve değiştirebileceği denetim gerekiyor. Örneğin, şirketinizin veya yasal ifadesi adı çevrilemedi yerelleştiriciye istemeyebilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Okunabilirlik, Modifiability'e göre ve bir öğenin içerik ya da, yerelleştirme aracı kilitlemek, gizleme veya öğeleri sıralamak için kullanabileceğiniz özellik kategorisi ayarlamanıza olanak sağlayan öznitelikleri sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Localization.Attributes%2A>. LocBaml aracı, bu örnek amacı doğrultusunda, bu öznitelik değerleri, yalnızca çıkarır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tüm bu öznitelikler için varsayılan değerleri denetiminiz olsa da, can geçersiz. Örneğin, aşağıdaki örnekte varsayılan Yerelleştirme öznitelikleri için geçersiz kılmaları `TextBlock_1` ve okunabilir olması için içeriği için yerelleştiriciler ancak değiştirilemeyen ayarlar.  
   
- [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
+ [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   
  Okunabilirlik ve Modifiability'e göre öznitelikleri ek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ortak kullanıcı Arabirimi kategorileri numaralandırmasını sağlar (<xref:System.Windows.LocalizationCategory>) daha fazla bağlam yerelleştiriciler vermek için kullanılabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Platformu denetimleri için varsayılan kategorileri kılınabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de:  
   
- [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
+ [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  Varsayılan Yerelleştirme öznitelikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlar kodda, böylece doğru özel denetimler için doğru varsayılan değerleri ayarlayabilirsiniz ayrıca kılınabilir. Örneğin:  
 
@@ -293,7 +293,7 @@ public class CorporateLogo : TextBlock
 }
 ``` 
  
- Örnek öznitelikleri kümesi başına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodda özel denetimler üzerinde ayarlanan değerlerle öncelikli. Öznitelikleri ve Yorumlar hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+ Örnek öznitelikleri kümesi başına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodda özel denetimler üzerinde ayarlanan değerlerle öncelikli. Öznitelikleri ve Yorumlar hakkında daha fazla bilgi için bkz. [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
  **Yazı tipi geri dönüşü ve bileşik yazı tipleri**  
   

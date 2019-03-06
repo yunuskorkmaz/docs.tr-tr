@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007372"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375330"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a genel bakış
 
@@ -45,10 +45,10 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir ToolStrip Oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir ToolStrip oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Özel denetimler oluşturma|[Nasıl yapılır: UserControl sınıfından devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Verileri görüntüleme ve düzenleme
  Birçok uygulama, verileri bir veritabanından, XML dosyası, XML Web hizmeti veya başka bir veri kaynağı görüntülemeniz gerekir. Windows Forms adlı esnek bir denetim sağlar <xref:System.Windows.Forms.DataGridView> kendi hücrenin her veri parçası kapladığı bir tablo gibi veri geleneksel bir satır ve sütun biçiminde, görüntüleme için denetimi. Kullanırken <xref:System.Windows.Forms.DataGridView>, tek tek hücrelerin görünüşünü özelleştirme, rastgele satırları kilitlemek ve sütunlardaki yerleştirin ve karmaşık denetimlerin yanı sıra başka özellikler hücreleri içine görüntülemek.
@@ -65,10 +65,10 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
-|Uygulama ayarlarını kullanma|[Nasıl yapılır: Uygulama Ayarları Oluşturma](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Veri Kaynakları penceresini kullanma|[Visual Studio'da verilere Windows Forms denetimleri bağlama](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
+|Uygulama ayarlarını kullanma|[Nasıl yapılır: Uygulama ayarları oluşturma](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma
 
@@ -98,7 +98,7 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta grafik yazdırma](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.

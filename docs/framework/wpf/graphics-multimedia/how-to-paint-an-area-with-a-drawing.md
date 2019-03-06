@@ -9,37 +9,37 @@ helpviewer_keywords:
 - painting [WPF], with drawings
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
-ms.openlocfilehash: 222aa3fbb72ebaf15be3ed7f9804936e7e1187e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371569"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Nasıl yapılır: Çizim ile bir Alanı Boyama
-Bu örnek, bir alanı çizim ile boyamak gösterilmektedir. Bir alanı çizim ile boyamak için kullandığınız bir <xref:System.Windows.Media.DrawingBrush> ve bir veya daha fazla <xref:System.Windows.Media.Drawing> nesneleri.   Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.DrawingBrush> iki elips çizimi sahip bir nesne boyamak için.  
+Bu örnek, bir çizim ile bir alanı boyama gösterilmektedir. Çizim ile bir alanı boyama için kullandığınız bir <xref:System.Windows.Media.DrawingBrush> ve bir veya daha fazla <xref:System.Windows.Media.Drawing> nesneleri.   Aşağıdaki örnekte bir <xref:System.Windows.Media.DrawingBrush> iki elips çizim ile bir nesneyi boyamak için.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
+ [!code-xaml[drawingbrush_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
- [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
- [!code-vb[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/DrawingBrushExample.vb#drawingbrushexamplewholepage)]  
+ [!code-csharp[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
+ [!code-vb[drawingbrush_procedural_snip#DrawingBrushExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/DrawingBrushExample.vb#drawingbrushexamplewholepage)]  
   
- Aşağıdaki çizimde, örneğin çıktısını gösterir.  
+ Örnekteki çıktı aşağıda gösterilmiştir.  
   
- ![DrawingBrush çıktı](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")  
+ ![DrawingBrush ' çıkış](./media/graphicsmm-drawingbrush-simple.png "graphicsmm_drawingbrush_simple")  
   
- (De açıklanan sebeplerden dolayı şeklin ortası beyaz [bileşik şeklin dolgu kontrol](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md).)  
+ (Açıklanan sebeplerden dolayı şeklin Orta beyaz [bileşik şeklin dolgusunu denetleme](how-to-control-the-fill-of-a-composite-shape.md).)  
   
- Ayarlayarak bir <xref:System.Windows.Media.DrawingBrush> nesnenin <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.TileMode%2A> özellikleri, yinelenen bir desen oluşturabilirsiniz. Aşağıdaki örnekte, iki elips Çizimden oluşturulan bir desen ile nesneyi boyar.  
+ Ayarlayarak bir <xref:System.Windows.Media.DrawingBrush> nesnenin <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.TileMode%2A> özellikleri, yinelenen bir desen oluşturabilirsiniz. Aşağıdaki örnek, bir nesne iki elips Çizimden oluşturulan bir desen ile boyar.  
   
- [!code-xaml[drawingbrush_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/TiledDrawingBrushExample.xaml#tileddrawingbrushexamplewholepage)]  
+ [!code-xaml[drawingbrush_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_snip/CS/TiledDrawingBrushExample.xaml#tileddrawingbrushexamplewholepage)]  
   
- [!code-csharp[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/TiledDrawingBrushExample.cs#tileddrawingbrushexamplewholepage)]
- [!code-vb[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/TiledDrawingBrushExample.vb#tileddrawingbrushexamplewholepage)]  
+ [!code-csharp[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/drawingbrush_procedural_snip/CSharp/TiledDrawingBrushExample.cs#tileddrawingbrushexamplewholepage)]
+ [!code-vb[drawingbrush_procedural_snip#TiledDrawingBrushExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/drawingbrush_procedural_snip/VisualBasic/TiledDrawingBrushExample.vb#tileddrawingbrushexamplewholepage)]  
   
- Aşağıdaki çizimde döşeli gösterir <xref:System.Windows.Media.DrawingBrush> çıktı.  
+ Aşağıdaki çizim döşenmiş gösterir <xref:System.Windows.Media.DrawingBrush> çıktı.  
   
- ![Döşenir DrawingBrush çıkışı](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
+ ![Döşeli DrawingBrush çıkışı](./media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
   
- Çizim fırçaları hakkında daha fazla bilgi için bkz: [görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md). Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelere genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).
+ Çizim fırçaları hakkında daha fazla bilgi için bkz. [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md). Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](drawing-objects-overview.md).

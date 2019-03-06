@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835271"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352427"
 ---
 # <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
 İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sağlar. Bu ürün veya belirli bir özellik alanı öğrenmeye başlayın için iyi bir yer sağlar.  
@@ -31,20 +31,20 @@ ms.locfileid: "56835271"
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Birçok ortak WPF denetimleri, Düzen ve veri bağlama gibi özelliklerini kullanarak bir WPF uygulaması oluşturmayı gösterir.|  
-|[XAML Kullanarak bir Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Bir animasyonlu düğme oluşturma işlemi gösterilmektedir.|  
-|[Microsoft Expression Blend Kullanarak Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend kullanarak özelleştirilmiş bir düğme oluşturma işlemi gösterilmektedir.|  
-|[İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Bir SQL Server veritabanından veri almak ve bu verileri görüntülemek nasıl gösterir bir <xref:System.Windows.Controls.DataGrid> denetimi.|  
+|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](walkthrough-my-first-wpf-desktop-application.md)|Birçok ortak WPF denetimleri, Düzen ve veri bağlama gibi özelliklerini kullanarak bir WPF uygulaması oluşturmayı gösterir.|  
+|[XAML Kullanarak bir Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-xaml.md)|Bir animasyonlu düğme oluşturma işlemi gösterilmektedir.|  
+|[Microsoft Expression Blend Kullanarak Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend kullanarak özelleştirilmiş bir düğme oluşturma işlemi gösterilmektedir.|  
+|[İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Bir SQL Server veritabanından veri almak ve bu verileri görüntülemek nasıl gösterir bir <xref:System.Windows.Controls.DataGrid> denetimi.|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Geçiş ve WPF birlikte çalışabilirlik  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: WPF'de Windows Forms denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Bir Windows Forms barındırmak nasıl gösterir <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF uygulamasında denetimi.|  
-|[İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms veri girişi bileşik denetimini barındırmak nasıl gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.|  
-|[İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|WPF veri girişi bileşik denetimini Windows Forms uygulamasında barındırmak nasıl gösterir.|  
-|[İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Windows Forms denetimlerinde karma uygulamayı düzenlemek için WPF düzen özelliklerini nasıl yapılacağı açıklanır.|  
-|[İzlenecek yol: Karma uygulamalarda veriye bağlama](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veri bağlama hem Windows Forms ve WPF denetimleri içeren karma uygulamalarda nasıl yapılacağı açıklanır.|  
+|[İzlenecek yol: WPF'de Windows Forms denetimini barındırma](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Bir Windows Forms barındırmak nasıl gösterir <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF uygulamasında denetimi.|  
+|[İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms veri girişi bileşik denetimini barındırmak nasıl gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.|  
+|[İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|WPF veri girişi bileşik denetimini Windows Forms uygulamasında barındırmak nasıl gösterir.|  
+|[İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Windows Forms denetimlerinde karma uygulamayı düzenlemek için WPF düzen özelliklerini nasıl yapılacağı açıklanır.|  
+|[İzlenecek yol: Karma uygulamalarda veriye bağlama](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veri bağlama hem Windows Forms ve WPF denetimleri içeren karma uygulamalarda nasıl yapılacağı açıklanır.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   

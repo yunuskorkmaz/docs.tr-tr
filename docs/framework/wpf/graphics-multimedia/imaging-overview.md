@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615078"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379479"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] geliştiricilerin görüntülemek, dönüştürme ve görüntü biçimlendirme sağlar.  
@@ -66,35 +66,35 @@ Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-
   
  Aşağıdaki örnek, gösterir nasıl bir <xref:System.Windows.Media.Imaging.BitmapFrame> içinden oluşturulan bir <xref:System.Windows.Media.Imaging.BitmapSource> ve daha sonra eklenen bir [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] görüntü.  
   
- [!code-csharp[BitmapFrameExample#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
- [!code-vb[BitmapFrameExample#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
+ [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
+ [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Görüntü biçimlerinin kodunu çözme  
  Görüntü kodu çözme sistem tarafından kullanılabilecek bir görüntü verileri için bir görüntü biçimi çevrilmesidir. Görüntü verileri işleme, görüntüleme ya da farklı bir biçimde kodlamak için sonra kullanılabilir. Kod çözücü seçim resim biçimine bağlıdır. Belirli bir kod çözücü belirtilmediği sürece codec seçimi otomatik olarak gerçekleşir. Örneklerde [görüntüleme görüntüleri ' WPF'de](#_displayingimages) bölüm göstermek otomatik kod çözme. Yönetilmeyen kullanılarak geliştirilmiş bir özel biçim kod çözücüleri [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] arabirimleri ve sistemi ile otomatik olarak kayıtlı kod çözücü seçimine katılır. Böylece, otomatik olarak görüntülenecek özel biçimler [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
  Aşağıdaki örnek kodu çözülecek bir bit eşlem kod çözücü kullanımını gösterir. bir [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] Resmi Biçimlendir.  
   
- [!code-cpp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
- [!code-csharp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
- [!code-vb[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
+ [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ### <a name="image-format-encoding"></a>Görüntü biçimi kodlama  
  Görüntü kodlama belirli bir resim biçimine görüntü verilerini çevrilmesidir. Kodlanmış resim verileri, ardından yeni resim dosyaları oluşturmak için kullanılabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Yukarıda açıklanan görüntü biçimleri için Kodlayıcıları sağlar.  
   
  Aşağıdaki örnek, bir kodlayıcı, yeni oluşturulan bir bit eşlem görüntüsüne kaydetmek için kullanımını gösterir.  
   
- [!code-cpp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
- [!code-csharp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
- [!code-vb[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
+ [!code-csharp[BmpBitmapDecoderEncoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BmpBitmapDecoderEncoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>WPF içinde görüntüleri görüntüleme  
  Bir Windows Presentation Foundation (WPF) uygulamasında bir görüntüyü birkaç yolu vardır. Kullanarak görüntüleri görüntülenebilir bir <xref:System.Windows.Controls.Image> denetimi, bir görsel kullanarak boyanan bir <xref:System.Windows.Media.ImageBrush>, veya kullanılarak çizilen bir <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Görüntü denetimi kullanma  
- <xref:System.Windows.Controls.Image> çerçeve öğesi ve uygulamalarda resimleri görüntülemek için birincil yolu değildir. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> iki yolu; öznitelik sözdizimi veya özellik sözdizimi kullanılabilir. Aşağıdaki örnek, öznitelik söz dizimi hem özellik etiketi sözdizimi kullanarak 200 piksel bir görüntüsünü işlemek nasıl gösterir. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> çerçeve öğesi ve uygulamalarda resimleri görüntülemek için birincil yolu değildir. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> iki yolu; öznitelik sözdizimi veya özellik sözdizimi kullanılabilir. Aşağıdaki örnek, öznitelik söz dizimi hem özellik etiketi sözdizimi kullanarak 200 piksel bir görüntüsünü işlemek nasıl gösterir. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md).  
   
- [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  Çok sayıda örnek bir <xref:System.Windows.Media.Imaging.BitmapImage> bir görüntü dosyasına başvurmak için nesne. <xref:System.Windows.Media.Imaging.BitmapImage> özelleştirilmiş <xref:System.Windows.Media.Imaging.BitmapSource> için iyileştirilmiş [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yükleniyor ve resimleri görüntülemek için kolay bir yoludur <xref:System.Windows.Controls.Image.Source%2A> , bir <xref:System.Windows.Controls.Image> denetimi.  
   
@@ -103,32 +103,32 @@ Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-
 > [!NOTE]
 >  <xref:System.Windows.Media.Imaging.BitmapImage> uygulayan <xref:System.ComponentModel.ISupportInitialize> başlatma birden çok özellikleri en iyi duruma getirme arabirimi. Özellik değişiklikleri yalnızca nesnesini başlatma sırasında ortaya çıkabilir. Çağrı <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> başlatmanın başladı sinyal ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> başlatmanın tamamlandığını göstermek için. Başlatıldıktan sonra özellik değişiklikleri göz ardı edilir.  
   
- [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
- [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Döndürme, dönüştürülmesi ve bu görüntüleri kırpma  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Görüntü özelliklerini kullanarak dönüştürmek kullanıcıların sağlayan <xref:System.Windows.Media.Imaging.BitmapImage> veya ek kullanarak <xref:System.Windows.Media.Imaging.BitmapSource> gibi nesneleri <xref:System.Windows.Media.Imaging.CroppedBitmap> veya <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Bu görüntü dönüşümleri ölçeğini veya görüntü döndürme, görüntü piksel biçimini değiştirme veya görüntü kırpma.  
   
  Görüntü döndürme kullanılarak gerçekleştirilir <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> özelliği <xref:System.Windows.Media.Imaging.BitmapImage>. Döndürme yalnızca 90 derece artışlarla yapılabilir. Aşağıdaki örnekte, bir görüntü 90 derece döndürülür.  
   
- [!code-xaml[ImageElementExample#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+ [!code-xaml[ImageElementExample#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
- [!code-csharp[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
- [!code-vb[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
+ [!code-csharp[ImageElementExample#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
+ [!code-vb[ImageElementExample#TransformedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
   
  Gri tonlamalı yapıldığı gibi görüntüyü bir farklı piksel biçimine dönüştürme kullanarak <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Aşağıdaki örneklerde, bir görüntü için dönüştürülür <xref:System.Windows.Media.PixelFormats.Gray4%2A>.  
   
- [!code-xaml[ImageElementExample_snip#ConvertedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
+ [!code-xaml[ImageElementExample_snip#ConvertedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
   
- [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
- [!code-vb[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
+ [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
+ [!code-vb[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
   
  Ya da görüntü kırpma için <xref:System.Windows.UIElement.Clip%2A> özelliği <xref:System.Windows.Controls.Image> veya <xref:System.Windows.Media.Imaging.CroppedBitmap> kullanılabilir. Henüz genellikle, bir görüntünün bir kısmını görüntülemek istiyorsanız <xref:System.Windows.UIElement.Clip%2A> kullanılmalıdır. Kodlama ve bir kırpılan resim kaydetmek gerekiyorsa <xref:System.Windows.Media.Imaging.CroppedBitmap> kullanılmalıdır. Aşağıdaki örnekte, küçük resim özelliği kullanarak bir resim kırpılmış bir <xref:System.Windows.Media.EllipseGeometry>.  
   
- [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
+ [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
   
- [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
- [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
+ [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
+ [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
   
 #### <a name="stretching-images"></a>Görüntüleri uzatma  
  <xref:System.Windows.Controls.Image.Stretch%2A> Özellik denetler görüntü kapsayıcısının dolduracak şekilde nasıl genişletilir. <xref:System.Windows.Controls.Image.Stretch%2A> Özelliği tarafından tanımlanan aşağıdaki değerleri kabul eder <xref:System.Windows.Media.Stretch> sabit listesi:  
@@ -145,22 +145,22 @@ Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-
   
  Aşağıdaki görüntüde, örneğin çıktısında gösterildiği ve farklı etkisini gösterir <xref:System.Windows.Controls.Image.Stretch%2A> ayarları görüntüye uygulanır.  
   
- ![TileBrush Esnetme ayarları farklı](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![TileBrush Esnetme ayarları farklı](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 Farklı esnetme ayarları  
   
- [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
+ [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
   
 ### <a name="painting-with-images"></a>Görüntülerle boyama  
  Görüntüleri görüntülenebilir bir uygulamada boyama tarafından bir <xref:System.Windows.Media.Brush>. Fırçalar boyama etkinleştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] basit, düz renk düzenleri ve görüntü karmaşık kümelerine nesneleri. Görüntülerle boyama için kullanmak bir <xref:System.Windows.Media.ImageBrush>. Bir <xref:System.Windows.Media.ImageBrush> bir tür <xref:System.Windows.Media.TileBrush> bir bit eşlem görüntüsü olarak tanımlayan içeriği. Bir <xref:System.Windows.Media.ImageBrush> tarafından belirtilen tek bir görüntü görüntüler, <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özelliği. Etkinleştirme, bozulmayı önlemek ve desenleri ve diğer efektler üretmek nasıl resim, hizalı ve döşendiğini uzatılacağını denetleyebilirsiniz. İle gerçekleştirilebilir bazı efektler aşağıdaki çizimde bir <xref:System.Windows.Media.ImageBrush>.  
   
- ![ImageBrush çıkış örnekler](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush çıkış örnekler](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Şekiller, denetimleri, metin ve görüntü Fırçalar doldurmak için  
   
  Aşağıdaki örnek bir görüntü kullanarak bir düğmenin arka plan boyama yapmayı gösteren bir <xref:System.Windows.Media.ImageBrush>.  
   
- [!code-xaml[UsingImageBrush#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
+ [!code-xaml[UsingImageBrush#4](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
   
- Hakkında ek bilgi için <xref:System.Windows.Media.ImageBrush> ve boyama görüntüleri görmek [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Hakkında ek bilgi için <xref:System.Windows.Media.ImageBrush> ve boyama görüntüleri görmek [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
   
 <a name="_metadata"></a>   
 ## <a name="image-metadata"></a>Resim meta verileri  
@@ -170,15 +170,15 @@ Farklı esnetme ayarları
   
  Meta verileri okuma işlemini basitleştirmek için <xref:System.Windows.Media.Imaging.BitmapMetadata> gibi kolayca erişilebilecek adlandırılmış özellikleri sağlayan <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, ve <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Bu özelliklerin birçoğu ayrıca meta veri yazma için kullanılabilir. Meta veri okumak için ek destek, meta verileri sorgu okuyucu tarafından sağlanır. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Yöntemi gibi bir dize sorgusuna sağlayarak bir meta veri sorgu okuyucu almak için kullanılır *"/ app1 EXIF /"*. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> depolanan metin almak için kullanılan *"/ metin/açıklama"* konumu.  
   
- [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
- [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
- [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+ [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[BitmapMetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
  Meta veri yazma için bir meta veri sorgu yazıcı kullanılır. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Sorgu yazıcısını alır ve istenen değere ayarlar. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> depolanan metin yazmak için kullanılan *"/ metin/açıklama"* konumu.  
   
- [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
- [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
- [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+ [!code-cpp[BitmapMetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[BitmapMetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[BitmapMetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Codec genişletilebilirliği  
@@ -194,5 +194,5 @@ Farklı esnetme ayarları
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>
 - <xref:System.Windows.Media.Imaging.BitmapMetadata>
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Win32 Codec örneği](https://go.microsoft.com/fwlink/?LinkID=160052)

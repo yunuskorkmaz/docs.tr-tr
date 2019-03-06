@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580791"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376864"
 ---
 # <a name="visual-layer-programming"></a>Görsel Katman Programlama
 <xref:System.Windows.Media.Visual> Nesnedir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olan birincil rolü, işleme desteği sağlamak için nesne. Kullanıcı arabirimi denetimleri, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve bunların işleme verileri kalıcı hale getirmeniz için kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [DrawingVisual Nesnelerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Öğretici: Win32 uygulamasında görsel nesneler barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [Görsel Katmanda Tıklama Testi](hit-testing-in-the-visual-layer.md)  
+ [DrawingVisual Nesnelerini Kullanma](using-drawingvisual-objects.md)  
+ [Öğretici: Win32 uygulamasında görsel nesneler barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Nasıl Yapılır Konuları](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
+- [Grafikler ve Multimedya](index.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ec3c7a15627cf423d27221b870286009a8f7606f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371638"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
-<a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı hasarı önlemek için kritik sistem kaynaklarına doğrudan erişimini sınırlı olmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dilleri önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda tutulan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir kümesi için uygun olmalıdır. Bu kısıtlamalar uygulamak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem de bağımlı [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda tutulan uygulamalar Internet bölgesine istek [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet veya yerel bilgisayarda başlatılan fark etmeksizin izin kümesi. Şey tam izinler kümesini değerinden ile çalışan uygulamalar kısmi güven ile çalıştırılması söylenir.  
+<a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı hasarı önlemek için kritik sistem kaynaklarına doğrudan erişimini sınırlı olmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dilleri önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda tutulan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir kümesi için uygun olmalıdır. Bu kısıtlamalar uygulamak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem de bağımlı [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda tutulan uygulamalar Internet bölgesine istek [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet veya yerel bilgisayarda başlatılan fark etmeksizin izin kümesi. Şey tam izinler kümesini değerinden ile çalışan uygulamalar kısmi güven ile çalıştırılması söylenir.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] çok çeşitli kadar işlevselliği mümkün olduğunca güvenli bir şekilde kısmi güvende ve birlikte kullanılabileceğini emin olmak için destek sağlayan [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], kısmi güven programlama için ek destek sağlar.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54534802"
   
  Bu tabloda yer almaktadır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yüksek bir düzeyde özellikleri. Daha ayrıntılı bilgi edinmek için [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] her üye tarafından gerekli olan izinleri belgeleri [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ayrıca, aşağıdaki özellikleri kısmi güven yürütme, özel durumlar dahil olmak üzere ilgili bilgileri daha ayrıntılı.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](./advanced/xaml-overview-wpf.md)).  
   
 -   Açılan pencereler (bkz <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Sürükleme ve bırakma (bkz [sürükle ve bırak genel bakış](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).  
+-   Sürükleme ve bırakma (bkz [sürükle ve bırak genel bakış](./advanced/drag-and-drop-overview.md)).  
   
 -   Pano (bkz <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
@@ -95,10 +95,10 @@ ms.locfileid: "54534802"
 ### <a name="detecting-permissions-using-cas"></a>CA'ları kullanarak izinleri algılama  
  Bazı durumlarda, iki tek başına uygulamalar tarafından kullanılmak üzere kitaplık derlemeleri, paylaşılan kod için mümkündür ve [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Bu durumlarda, kod uygulamanın ödül kazanmış bir izin kümesi izin verdiğinden daha fazla izin gerektirebilecek işlevi yürütebilir. Microsoft .NET Framework güvenliği kullanarak belirli bir izni sahip olup olmadığını, uygulamanızın algılayabilir. Özellikle, belirli bir izni çağırarak sahip olup olmadığını sınayabilirsiniz <xref:System.Security.CodeAccessPermission.Demand%2A> istenen izin örneğinde yöntemi. Bu, yerel diskteki bir dosya kaydetme olanağı sahip olup olmadığı için bu sorguları koduna sahip aşağıdaki örnekte gösterilmiştir:  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
  Bir uygulama çağrısı istenen izni yoksa <xref:System.Security.CodeAccessPermission.Demand%2A> bir güvenlik özel durum oluşturur. Aksi takdirde, izin verildi. `IsPermissionGranted` Bu davranış kapsüller ve döndürür `true` veya `false` uygun şekilde.  
   
@@ -106,14 +106,14 @@ ms.locfileid: "54534802"
 ### <a name="graceful-degradation-of-functionality"></a>Normal performansında işlevi  
  Kod ne yapması gereken iznine sahip olup olmadığını algılayabilmeniz için farklı bölgelerden yürütülebilir kod ilginçtir. Bölgesi olan tek şey, algılanırken mümkünse kullanıcı için alternatif sağlayacak kadar iyidir. Örneğin, bir tam güven uygulaması, genellikle kullanıcıların dosyaları kısmen güvenilen uygulamada yalnızca yalıtılmış depolamada dosya oluşturabilirsiniz, ancak istedikleri her yerde oluşturmasına olanak tanır. Bir dosya oluşturmak için kod tam güven (tek başına) uygulamaları ve kısmi güven uygulamaları (tarayıcı tarafından barındırılan) tarafından paylaşılan bir derleme var ve kullanıcıların dosyaları oluşturmak her iki uygulama istediğiniz, paylaşılan kod olup olmadığını algılanmalıdır bir dosyanın uygun konumda oluşturmadan önce kısmi veya tam güvende çalıştırma. Aşağıdaki kod, her ikisi de gösterir.  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
  Çoğu durumda, kısmi güven alternatif bulamadı olmalıdır.  
   
- Bir intranet gibi denetimli bir ortamda özel bir yönetilen çerçeve içine temel istemci arasında yüklenebilir [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Bu kitaplıklar, tam güven gerektiren kod yürütebilir ve yalnızca kısmi güven kullanarak izin verilen uygulamalar başvurulan <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (daha fazla bilgi için [güvenlik](../../../docs/framework/wpf/security-wpf.md) ve [WPF Güvenliği Stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).  
+ Bir intranet gibi denetimli bir ortamda özel bir yönetilen çerçeve içine temel istemci arasında yüklenebilir [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Bu kitaplıklar, tam güven gerektiren kod yürütebilir ve yalnızca kısmi güven kullanarak izin verilen uygulamalar başvurulan <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (daha fazla bilgi için [güvenlik](security-wpf.md) ve [WPF Güvenliği Stratejisi - Platform güvenliği](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Tarayıcı konak algılama  
@@ -151,19 +151,19 @@ ms.locfileid: "54534802"
 > [!NOTE]
 >  Kes ve Yapıştır yalnızca izin verilir kısmi güvende kullanıcı tarafından başlatılan olduğunda.  
   
- İzinleri artırmanız gerekiyorsa, ClickOnce Uygulama bildirimi ve proje ayarları değiştirmeniz gerekir. Daha fazla bilgi için [WPF XAML tarayıcı uygulamalarına genel bakış](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md). Aşağıdaki belgeler de yararlı olabilir.  
+ İzinleri artırmanız gerekiyorsa, ClickOnce Uygulama bildirimi ve proje ayarları değiştirmeniz gerekir. Daha fazla bilgi için [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md). Aşağıdaki belgeler de yararlı olabilir.  
   
--   [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+-   [Mage.exe (bildirim üretme ve düzenleme aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+-   [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
 -   [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications).  
   
  Varsa, [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] tam güven gerektirir istenen izinleri artırmak için kullandığınız araçları kullanabilirsiniz. Ancak bir [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] yüklü ve yerel bilgisayardan, intranet veya güvenilen veya izin verilen siteler tarayıcının listelenen bir URL'den başlatılan yalnızca tam güven alırsınız. İntranet veya güvenilen sitesinden uygulama yüklü değilse, kullanıcı yükseltilmiş izinler göndermeyeceğinizi standart ClickOnce istemi alırsınız. Kullanıcı yüklemeyi iptal devam etmek seçebilirsiniz.  
   
- Alternatif olarak, herhangi bir güvenlik bölgesi dağıtımından tam güven için ClickOnce dağıtımı güvenilen modelini kullanabilirsiniz. Daha fazla bilgi için [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) ve [güvenlik](../../../docs/framework/wpf/security-wpf.md).  
+ Alternatif olarak, herhangi bir güvenlik bölgesi dağıtımından tam güven için ClickOnce dağıtımı güvenilen modelini kullanabilirsiniz. Daha fazla bilgi için [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) ve [güvenlik](security-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik](../../../docs/framework/wpf/security-wpf.md)
-- [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Güvenlik](security-wpf.md)
+- [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
+- [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

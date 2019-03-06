@@ -2,18 +2,18 @@
 title: Toplu kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708980"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372808"
 ---
 # <a name="aggregate-canonical-functions"></a>Toplu kurallı İşlevler
 
 Toplamlar, örneğin, tek bir değer giriş değerlerini bir dizi azaltan ifadelerdir. Toplamlar normalde seçin ifadesinin GROUP BY yan tümcesi ile birlikte kullanılır ve burada kullanılabilirler üzerindeki kısıtlamalar vardır.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Entity SQL Aggegate kurallı İşlevler
+## <a name="aggregate-entity-sql-canonical-functions"></a>Entity SQL toplu kurallı İşlevler
 
 Entity SQL toplu kurallı işlevler şunlardır:
 
@@ -31,7 +31,7 @@ Türünü `expression`, veya `null` tüm giriş değerlerini varsa `null` değer
 
 **Örnek**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ Bir `Int64`.
 
 **Örnek**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count (deyim) 
+### <a name="countexpression"></a>Count (deyim)
 
 Null ve yinelenen değerleri dahil olmak üzere toplam boyutunu döndürür.
 
@@ -185,7 +185,7 @@ A `Double`, veya `null` tüm giriş değerlerini varsa `null` değerleri.
 **Örnek**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir. Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -206,7 +206,7 @@ Grup tabanlı toplamalar GROUP BY yan tümcesi tarafından tanımlanan bir grup 
 Aşağıdaki örnek, her ürün için sıralı ortalama miktarı hesaplar:
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Grup tabanlı toplama içinde ifadeler, WHERE yan tümcesi ifade görünür olur ad çözümlemesi kapsamında değerlendirilir.
 
-Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup tabanlı toplamalar BÜTÜN belirtebilirsiniz veya ayrı değiştiricisi. AYRI değiştiricisi belirtilmemişse, toplama hesaplanan önce yinelenenleri birleşik giriş koleksiyondan ortadan kalkar. Tüm değiştirici belirtilirse (veya herhangi bir değiştiricisi belirtilmişse), hiçbir yinelenen eleme gerçekleştirilir.  
+Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup tabanlı toplamalar BÜTÜN belirtebilirsiniz veya ayrı değiştiricisi. AYRI değiştiricisi belirtilmemişse, toplama hesaplanan önce yinelenenleri birleşik giriş koleksiyondan ortadan kalkar. Tüm değiştirici belirtilirse (veya herhangi bir değiştiricisi belirtilmişse), hiçbir yinelenen eleme gerçekleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499320"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375850"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:System.Windows.Freezable> uygulama performansını iyileştirmeye yardımcı olabilecek özel özellikleri sağlayan nesne. Freezable nesneleri Fırçalar, kalemler, dönüştürmeleri, geometri ve animasyonları örneklerindendir.  
@@ -31,8 +31,8 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
   
  Örneğin, oluşturduğunuz düşünün bir <xref:System.Windows.Media.SolidColorBrush> fırça ve düğmenin arka plan boyama için kullanın.  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
  Düğme işlendiğinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik alt sistemi piksel bir düğmenin görünümünü oluşturmak için bir grup boyamak için sağlanan bilgileri kullanır. Tek renk Fırçası düğme nasıl boyanacağını açıklamak için kullanılan olsa da, tek renk Fırçası gerçekten boyama yapmaz. Grafik sistem düğme ve fırça için hızlı, düşük düzey nesneleri oluşturur ve gerçekten ekrandaki nesnelere olur.  
   
@@ -43,8 +43,8 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
 > [!NOTE]
 >  Dondurulmuş her Freezable nesne. Üretilmesini önlemek için bir <xref:System.InvalidOperationException>, Freezable nesnenin değerini kontrol edin <xref:System.Windows.Freezable.CanFreeze%2A> özelliği, bu dondurma çalışmadan önce dondurulmuş olup olmadığını belirlemek için.  
   
- [!code-csharp[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
- [!code-vb[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
+ [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
+ [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
  Freezable değiştirmek, artık ihtiyacınız olduğunda dondurmayı performans avantajlar sağlar. Bu örnekte fırça dondurmak için olsaydı, değişiklikleri izlemek artık grafik sistemi gerekir. Fırça değişmez bildiğinden grafik sistemi diğer iyileştirmeler de yapabilirsiniz.  
   
@@ -55,8 +55,8 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
 ## <a name="using-freezables"></a>Freezable'ı kullanma  
  Bir çözülmüş kullanarak freezable başka türde bir nesne gibi kullanmaktır. Aşağıdaki örnekte, rengi bir <xref:System.Windows.Media.SolidColorBrush> düğmenin arka boyamak için kullanılan sonra sarı kırmızı değiştirilir. Grafik sistemi düğmeyi sarı kırmızı ekranın bir sonraki yenilenmesinde otomatik olarak değiştirmek için arka planda çalışır.  
   
- [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
- [!code-vb[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
+ [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
+ [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
 ### <a name="freezing-a-freezable"></a>Freezable dondurma  
  Yapmak için bir <xref:System.Windows.Freezable> değiştirilemeyen, arama, <xref:System.Windows.Freezable.Freeze%2A> yöntemi. Freezable nesneleri içeren bir nesne dondurma, bu nesneler de dondurulmuş. Örneğin, dondurma, bir <xref:System.Windows.Media.PathGeometry>, rakamları ve içerdiği kesimleri çok dondurulmuş olması.  
@@ -65,7 +65,7 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
   
 -   Animasyonlu veya veri ilişkili özellikleri.  
   
--   Dinamik bir kaynak tarafından ayarlanan özellikler var. (Bkz [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md) dinamik kaynaklar hakkında daha fazla bilgi için.)  
+-   Dinamik bir kaynak tarafından ayarlanan özellikler var. (Bkz [XAML kaynakları](xaml-resources.md) dinamik kaynaklar hakkında daha fazla bilgi için.)  
   
 -   İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
   
@@ -73,22 +73,22 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
   
  Freezable'nın arama sonra <xref:System.Windows.Freezable.Freeze%2A> yöntemi, artık değiştirilebilir. Dondurulmuş değiştirmeye nesne neden bir <xref:System.InvalidOperationException> oluşturulması için. Şu fırçanın dondurulmuş olup sonra değiştirme girişimi nedeniyle, aşağıdaki kod bir özel durum oluşturur.  
   
- [!code-csharp[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
- [!code-vb[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
+ [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
+ [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
  Bu özel durum önlemek için kullanabileceğiniz <xref:System.Windows.Freezable.IsFrozen%2A> belirlemek için yöntemi olup olmadığını bir <xref:System.Windows.Freezable> dondurulmuş.  
   
- [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
- [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
+ [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
+ [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
  Önceki kod örneğinde bir dondurulmuş nesnesini kullanarak değiştirilebilir bir kopyası yapılır <xref:System.Windows.Freezable.Clone%2A> yöntemi. Sonraki bölümde, kopyalamayı daha ayrıntılı olarak açıklanır.  
   
- **Not** çünkü dondurulmuş freezable hareketlendirilemeyebilir, animasyon sistemi değiştirilebilir klonlar, otomatik olarak oluşturacak dondurulmuş <xref:System.Windows.Freezable> nesnelerinin kendileri ile animasyon çalıştığınızda bir <xref:System.Windows.Media.Animation.Storyboard>. Kopyalayarak ek yükü nedeniyle performans ortadan kaldırmak için animasyon eklemek istiyorsanız, çözülmüş bir nesne bırakın. Görsel Taslaklar ile animasyon ekleme hakkında daha fazla bilgi için bkz. [görsel taslaklara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ **Not** çünkü dondurulmuş freezable hareketlendirilemeyebilir, animasyon sistemi değiştirilebilir klonlar, otomatik olarak oluşturacak dondurulmuş <xref:System.Windows.Freezable> nesnelerinin kendileri ile animasyon çalıştığınızda bir <xref:System.Windows.Media.Animation.Storyboard>. Kopyalayarak ek yükü nedeniyle performans ortadan kaldırmak için animasyon eklemek istiyorsanız, çözülmüş bir nesne bırakın. Görsel Taslaklar ile animasyon ekleme hakkında daha fazla bilgi için bkz. [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md).  
   
 ### <a name="freezing-from-markup"></a>Biçimlendirmeden dondurma  
  Dondurmak için bir <xref:System.Windows.Freezable> nesne kullandığınız biçimlendirme içinde bildirilen `PresentationOptions:Freeze` özniteliği. Aşağıdaki örnekte, bir <xref:System.Windows.Media.SolidColorBrush> sayfa kaynağı bildirildi ve donmuş. Ardından, bir düğmenin arka planı ayarlamak için kullanılır.  
   
- [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+ [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
  Kullanılacak `Freeze` özniteliği, sunum seçenekleri ad alanına eşleme gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` Bu ad alanı eşlemesi için önerilen ön eki şöyledir:  
   
@@ -96,22 +96,22 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:Sys
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- Bu öznitelik tüm XAML okuyucular tanınmadığı kullanmanız önerilir [mc: Ignorable özniteliği](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) işaretlemek için `Presentation:Freeze` olarak Ignorable özniteliği:  
+ Bu öznitelik tüm XAML okuyucular tanınmadığı kullanmanız önerilir [mc: Ignorable özniteliği](mc-ignorable-attribute.md) işaretlemek için `Presentation:Freeze` olarak Ignorable özniteliği:  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- Daha fazla bilgi için [mc: Ignorable özniteliği](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) sayfası.  
+ Daha fazla bilgi için [mc: Ignorable özniteliği](mc-ignorable-attribute.md) sayfası.  
   
 ### <a name="unfreezing-a-freezable"></a>"Freezable'ı"Dondurmama"  
  Bir kez dondurulmuş, bir <xref:System.Windows.Freezable> hiçbir zaman değiştirilebilir veya çözülmüş; ancak kullanarak çözülmüş bir kopya oluşturabilirsiniz <xref:System.Windows.Freezable.Clone%2A> veya <xref:System.Windows.Freezable.CloneCurrentValue%2A> yöntemi.  
   
  Aşağıdaki örnekte, düğmenin arka plan fırça ile ayarlanır ve bu fırça ardından dondurulmuş. Fırça kullanarak çözülmüş bir kopya yapılmadı <xref:System.Windows.Freezable.Clone%2A> yöntemi. Kopya değiştirilebilir ve düğmenin arka plan sarı kırmızı ile değiştirmek için kullanılır.  
   
- [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
- [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
+ [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
+ [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
 >  Kullandığınız kopya yönteminden bağımsız olarak, animasyonları hiçbir zaman yeni kopyalanan <xref:System.Windows.Freezable>.  
@@ -130,7 +130,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Kolay kopyalama: Freezable sınıfı ayrıntılı kopyaları oluşturan çeşitli yöntemler zaten uygulamıştır.  
   
- A <xref:System.Windows.Freezable> bir tür <xref:System.Windows.DependencyObject>ve bu nedenle bağımlılık özelliği sistem kullanır. Sınıf özelliklerinin bağımlılık özellikleri olması gerekmez, ancak bağımlılık özellikleri kullanmak zorunda yazma çünkü kod miktarını azaltır <xref:System.Windows.Freezable> sınıfı aklınızda bağımlılık özellikleriyle tasarlanmıştır. Bağımlılık özelliği sistemi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ A <xref:System.Windows.Freezable> bir tür <xref:System.Windows.DependencyObject>ve bu nedenle bağımlılık özelliği sistem kullanır. Sınıf özelliklerinin bağımlılık özellikleri olması gerekmez, ancak bağımlılık özellikleri kullanmak zorunda yazma çünkü kod miktarını azaltır <xref:System.Windows.Freezable> sınıfı aklınızda bağımlılık özellikleriyle tasarlanmıştır. Bağımlılık özelliği sistemi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
  Her <xref:System.Windows.Freezable> öğesinin alt sınıfı geçersiz kılması gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi. Sınıfınız için onunla ilişkili tüm verileri bağımlılık özellikleri kullanıyorsa, işiniz bitmiştir.  
   
@@ -164,5 +164,5 @@ mc:Ignorable="PresentationOptions"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Freezable>
 - [Özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981)
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

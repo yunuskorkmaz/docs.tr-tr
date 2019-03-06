@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375356"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik etkileyen kayıt defteri ayarları oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -50,7 +50,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  **Donanım hızlandırma seçeneği devre dışı** hata ayıklama ve test amaçlı donanım hızlandırmasını devre dışı bırakmak sağlar. Bir uygulamada işleme yapıların gördüğünüzde, donanım hızlandırmasını devre dışı bırakmak deneyin. Yapıt kaybolursa, sorun, bir video sürücüsü ile olabilir.  
   
- **Donanım hızlandırma seçeneği devre dışı** 0 veya 1 bir DWORD değeri. 1 değeri, donanım hızlandırmasını devre dışı bırakır. Sistem donanım hızlandırma gereksinimleri karşılaması koşuluyla 0 değerini donanım hızlandırmasını sağlar; Daha fazla bilgi için [grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ **Donanım hızlandırma seçeneği devre dışı** 0 veya 1 bir DWORD değeri. 1 değeri, donanım hızlandırmasını devre dışı bırakır. Sistem donanım hızlandırma gereksinimleri karşılaması koşuluyla 0 değerini donanım hızlandırmasını sağlar; Daha fazla bilgi için [grafik işleme katmanları](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Çoklu örneklem en yüksek değer  
@@ -98,5 +98,5 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
  **Başvuru tarayıcısını seçeneği kullanma** bir DWORD değeri alır. 0 değeri, görüntüleyiciye kullanılmadığını gösterir. Diğer bir sıfır olmayan bir değer zorlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyiciye kullanılacak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Grafik İşleme Katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafik İşleme Katmanları](../advanced/graphics-rendering-tiers.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

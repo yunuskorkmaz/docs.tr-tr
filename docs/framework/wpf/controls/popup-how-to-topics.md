@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553721"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362532"
 ---
 # <a name="popup-how-to-topics"></a>Açılan Pencere ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Primitives.Popup> geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için denetim.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Primitives.Popup> içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntülemek için denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Açılan Pencereye Animasyon Ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [Özel Açılan Pencere Konumu Belirtme](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [Açılan Pencereye Animasyon Ekleme](how-to-animate-a-popup.md)  
+ [Özel Açılan Pencere Konumu Belirtme](how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Açılan Pencereye Genel Bakış](popup-overview.md)

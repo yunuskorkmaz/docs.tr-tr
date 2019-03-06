@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576466"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363936"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Bağımlılık Özelliği Geri Aramaları ve Doğrulama
 Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde çağrılan geri çağırmaları gibi özellik güvenlikle ilgili özellikler için diğer özel uygulamaları kullanarak ve geçersiz kılma bağımlılık özellikleri oluşturmayı açıklar olası değer belirleme etkileri dışında. Bu konuda Ayrıca bu teknikler kullanılarak varsayılan özellik sistemi davranışlarını genişletme uygun olduğu senaryolar açıklanmaktadır.  
@@ -25,14 +25,14 @@ Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde 
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) bağlamı için.  
+ Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](dependency-property-metadata.md) bağlamı için.  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Doğrulama geri çağırmaları  
  İlk kez kaydederken bir bağımlılık özelliği için doğrulama geri çağırmaları atanabilir. Doğrulama geri çağırma özelliği meta verileri bir parçası değildir; doğrudan bir girdisi olduğunu <xref:System.Windows.DependencyProperty.Register%2A> yöntemi. Bu nedenle, bir bağımlılık özelliği için bir doğrulama geri çağırma oluşturulduktan sonra yeni bir uygulama tarafından değiştirilemiyor.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Bir nesne değeri sağlanan şekilde geri çağırmaları uygulanır. Döndürmeleri `true` ; özelliği için belirtilen değer geçerliyse Aksi takdirde, döndürmeleri `false`. Geri çağırmaları içinde tür denetimi normalde yapılmazsa bu nedenle özellik türü başına doğru türde özellik sistemi ile kayıtlı olduğundan varsayılır. Geri çağırmaları farklı işlemler çeşitli özellik sistemi tarafından kullanılır. Çağırarak bu programlı değişiklik, varsayılan değere göre ilk türü başlatma içerir <xref:System.Windows.DependencyObject.SetValue%2A>, ya da yeni varsayılan değer sağlanan meta verileri geçersiz kılma girişiminde bulunur. Doğrulama geri çağırma bu işlemlerden herhangi biri tarafından çağrılır ve döndürür, `false`, sonra da bir özel durum oluşturulur. Uygulama yazarları bu özel durumları işlemeye hazırlıklı olmalıdır. Genel bir doğrulama geri çağırmaları kullanımını numaralandırma değerlerinin doğrulama veya sıfır olmalıdır ölçümleri özellik kümeleri kullanırken, tamsayı veya double değerleri sınırlamak veya büyük.  
   
@@ -40,8 +40,8 @@ Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde 
   
  Basit doğrulama geri çağırma senaryosu için örnek kod aşağıda verilmiştir:, doğrulama olarak belirlenmiş bir özellik <xref:System.Double> ilkel olmayan <xref:System.Double.PositiveInfinity> veya <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Coerce değeri geri aramaları ve özellik değişti olayları  
@@ -51,18 +51,18 @@ Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde 
   
  Bu ilişkiyi gösteren üç bağımlılık özellikleri yalnızca biri için çok kısa bir örnek kod aşağıda verilmiştir. Örnekte gösterildiği nasıl `CurrentReading` Min/Maks/geçerli özelliğini ayarlayın, ilgili * özellikleri okunurken kaydedilir. Önceki bölümde gösterildiği gibi doğrulamayı kullanır.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Özellik değişti geri çağırma geçerli, açıkça bu diğer özellikler için kayıtlı coerce değeri geri aramaları çağırarak bağımlı diğer özellikleri değişiklik iletmek için kullanılır:  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  Coerce değeri geri çağırma geçerli özellikle büyük olasılıkla bağlı olduğu ve gerekirse, geçerli değer olacak şekilde zorlar özelliklerin değerlerini denetler:  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  Özelliklerin varsayılan değerlerini zorlanır değil. Özellik değerinin varsayılan değere eşit bir özellik değeri, varsayılan başlangıç hala varsa veya diğer değerler ile temizlenmesi ile ortaya çıkabilecek <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde 
  Özellik sistemi tüm işler <xref:System.Windows.CoerceValueCallback> değerini döndüren <xref:System.Windows.DependencyProperty.UnsetValue> bir özel durum olarak. Bu özel durum olarak sonuçlanan özellik değişikliğini anlamına <xref:System.Windows.CoerceValueCallback> çağrılan özellik sistemi tarafından reddedilmesi ve özellik sistemi özelliği önceki değerini yerine bildirmesi. Bu mekanizma, zaman uyumsuz olarak başlatılan bir özellik değişiklikleri geçerli nesne durumu için hala geçerli olduğunu kontrol edin ve aksi takdirde değişiklikleri bastırmak için yararlı olabilir. Özelliğin hangi bileşenin bağlı olarak değer belirleme için bildirilen değer sorumlu olduğu bir değer seçerek gizleyebilirsiniz, başka bir olası senaryodur. Bunu yapmak için kullanabileceğiniz <xref:System.Windows.DependencyProperty> geri çağırma ve özellik tanımlayıcısı için giriş olarak geçirilen <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>ve ardından <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

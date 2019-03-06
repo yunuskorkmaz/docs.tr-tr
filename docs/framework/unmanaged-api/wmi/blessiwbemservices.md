@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716084"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354615"
 ---
 # <a name="blessiwbemservices-function"></a>Blessıwbemservices işlevi
 Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfı.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>Parametreler
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Bir işaretçi [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesi için izinleri gereklidir.
 
-`strUser`  
+`strUser`\
 [in] Kullanıcı adı.
 
-`strPassword`  
+`strPassword`\
 [in] İlişkili parolayı `strUser`.
 
-`strAuthority` [in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
+`strAuthority`\
+[in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
-`impLevel` [in] Kimliğe bürünme düzeyi.
+`impLevel`\
+[in] Kimliğe bürünme düzeyi.
 
-`authnLevel` [in] Yetkilendirme düzeyi.
+`authnLevel`\
+[in] Yetkilendirme düzeyi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -71,6 +74,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Wınerr
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Üst bilgi:** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Wınerr
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

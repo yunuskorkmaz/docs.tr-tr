@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-ms.openlocfilehash: 6294a52d5914b52d191b564330f904e6a865c283
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6b4ad4a588aab93f5445cda962af890bfcd41c14
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745204"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377670"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Nasıl yapılır: GroupBox Şablonu Tanımlama
 Bu örnek için bir şablonun nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.GroupBox> denetimi.  
@@ -18,7 +18,7 @@ Bu örnek için bir şablonun nasıl oluşturulacağını gösterir. bir <xref:S
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.Controls.GroupBox> denetim şablonu kullanarak bir <xref:System.Windows.Controls.Grid> denetim düzeni için. Şablonu kullanan bir <xref:System.Windows.Controls.BorderGapMaskConverter> kenarlığını tanımlamak için <xref:System.Windows.Controls.GroupBox> kenarlık getirmeyecek böylece <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> içeriği.  
   
- [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
+ [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.GroupBox>

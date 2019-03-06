@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 505f4d6998b54f5b3af7613184d2cbac90cb8548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656472"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358827"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Nasıl yapılır: Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Internet bölgesi izinleri kümesi için kısıtlı bir kısmi güven güvenliği korumalı alan içinde çalıştırın. Bu izin kümesi, Web hizmeti çağrıları yalnızca şu adreste bulunabilir Hizmetleri Web sınırlar [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kaynak uygulamanın siteyi. Olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hataları ayıklanmakta Visual Studio 2005'ten yine de bu Web hizmeti olarak başvuruları aynı kaynak siteyi sahip olmadığı kabul edilir. Bu neden güvenlik özel durumlarını ne zaman yükseltilecek [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmetini çağırmak çalışır. Ancak, bir Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje, aynı kaynak siteyi çağırdığı hata ayıklama sırasında Web hizmeti olarak olması benzetimini yapmak için yapılandırılabilir. Böylece [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] güvenli bir şekilde güvenlik özel durumları neden olmadan Web hizmetini çağırmak için.
@@ -63,4 +63,4 @@ ms.locfileid: "54656472"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Konağı (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+- [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550117"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379750"
 ---
 # <a name="navigation-how-to-topics"></a>Gezinti ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki konular nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinti.  
+Aşağıdaki konular nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinme.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sayfa İşlevi Çağırma](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [Sayfa İşlevinin Dönüş Değerini Alma](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [Sayfa İşlevinden Geri Dönme](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+ [Sayfa İşlevi Çağırma](how-to-call-a-page-function.md)  
+  [Sayfa İşlevinin Dönüş Değerini Alma](how-to-get-the-return-value-of-a-page-function.md)  
+  [Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [Sayfa İşlevinden Geri Dönme](how-to-return-from-a-page-function.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Gezintiye Genel Bakış](navigation-overview.md)  
   
- [Yapılandırılmış Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [Yapılandırılmış Gezintiye Genel Bakış](structured-navigation-overview.md)

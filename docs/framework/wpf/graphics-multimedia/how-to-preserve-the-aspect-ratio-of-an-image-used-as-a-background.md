@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698329"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353952"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Nasıl yapılır: Arka Plan Olarak Kullanılan bir Görüntünün En Boy Oranını Koruma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği bir <xref:System.Windows.Media.ImageBrush> görüntünün en boy oranını korumak için.  
@@ -23,17 +23,17 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.TileBr
 ## <a name="example"></a>Örnek  
  Aşağıdaki iki örnekte <xref:System.Windows.Media.ImageBrush> iki dikdörtgenler boyamak için nesneleri. Her dikdörtgenin 300 x 150 piksel olan ve her 300 x 300 piksel resim içerir. <xref:System.Windows.Media.TileBrush.Stretch%2A> İlk fırça özelliği <xref:System.Windows.Media.Stretch.Uniform>ve <xref:System.Windows.Media.TileBrush.Stretch%2A> ikinci fırça özelliği <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
+ [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
  Sahip olan ilk fırçanın çıktısı aşağıdaki çizimde bir <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarıyla <xref:System.Windows.Media.Stretch.Uniform>.  
   
- ![Tekdüzen uzatma ile ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
+ ![Tekdüzen uzatma ile ImageBrush](./media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
   
  Bir sonraki çizimde sahip ikinci bir fırça çıktısını gösterir bir <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarıyla <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- ![UniformToFill uzatma ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
+ ![UniformToFill uzatma ImageBrush](./media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
   
- Unutmayın <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği aynı şekilde davrandığını diğer <xref:System.Windows.Media.TileBrush> nesnelerini, diğer bir deyişle, için <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush>. Hakkında daha fazla bilgi için <xref:System.Windows.Media.ImageBrush> ve diğer <xref:System.Windows.Media.TileBrush> nesneleri bkz [görüntüler, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Unutmayın <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği aynı şekilde davrandığını diğer <xref:System.Windows.Media.TileBrush> nesnelerini, diğer bir deyişle, için <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush>. Hakkında daha fazla bilgi için <xref:System.Windows.Media.ImageBrush> ve diğer <xref:System.Windows.Media.TileBrush> nesneleri bkz [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
   
  Ayrıca, ancak unutmayın <xref:System.Windows.Media.TileBrush.Stretch%2A> özellik görünür belirtmek için nasıl <xref:System.Windows.Media.TileBrush> içeriği uzatılır, çıkış alana uyacak şekilde, bu gerçekte belirtir nasıl <xref:System.Windows.Media.TileBrush> içerik kendi taban döşemesi dolduracak şekilde uzatır. Daha fazla bilgi için bkz. <xref:System.Windows.Media.TileBrush>.  
   
@@ -41,4 +41,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.TileBr
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.TileBrush>
-- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)

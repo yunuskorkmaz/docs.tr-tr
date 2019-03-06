@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 186b5cce7a3ab4924097a1212df9945b7e945367
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369078"
 ---
 # <a name="net-assembly-file-format"></a>.NET bütünleştirilmiş kodu dosya biçimi
 
@@ -19,7 +19,7 @@ ms.locfileid: "56748765"
 
 > Her bir CLI bileşeni bildirimleri, uygulamaları ve söz konusu bileşen için belirli başvuruları için meta verileri taşır. Bu nedenle, bileşen özgü meta veriler bileşen meta verileri adlandırılır ve sonuçta elde edilen bileşen – ECMA-335 I.9.1, bileşenler ve derlemelerin kendiliğinden açıklayıcı olmasını kabul edilir.
 
-Biçim tam olarak belirtilen ve olarak standartlaştırılmış [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Tüm .NET derleyiciler ve çalışma zamanları şu biçimi kullanın. Belgelenmiş ve sık güncelleştirilmiş bir ikili biçimi varlığı birlikte çalışabilirliği için önemli bir avantajı (tartışmaya bir gereksinim) kaldırıldı. Biçim, 2005'te genel türler ve işlemci mimarisi uyum sağlamak için (.NET 2.0) son substantive şekilde güncelleştirildi.
+Biçim tam olarak belirtilen ve olarak standartlaştırılmış [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Tüm .NET derleyiciler ve çalışma zamanları şu biçimi kullanın. Belgelenmiş ve sık güncelleştirilmiş bir ikili biçimi varlığı birlikte çalışabilirlik için önemli bir avantajı (tartışmaya bir gereksinim) kaldırıldı. Biçim, 2005'te genel türler ve işlemci mimarisi uyum sağlamak için (.NET 2.0) son substantive şekilde güncelleştirildi.
 
 CPU ve işletim sistemi belirsiz biçimindedir. Birçok yongaları ve CPU'yu hedef .NET uygulamaları bir parçası olarak kullanıldı. Biçim Windows miras olsa da tüm işletim sistemlerinde implementable. Tartışmasız en önemli dilediği işletim sistemi birlikte çalışabilirlik için çoğu değerleri endian biçiminde depolanır. Bu makine işaretçi boyutu (örneğin, 32-bit, 64-bit) için belirli bir benzeşim gerekli değildir.
 

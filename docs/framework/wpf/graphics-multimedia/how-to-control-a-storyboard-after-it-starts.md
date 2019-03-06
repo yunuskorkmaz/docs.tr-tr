@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98eba600f64c8b656e3597b429cc69766f398f7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570154"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361063"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Nasıl yapılır: Görsel taslağı başladıktan sonra denetleme
-Bu örnek kod denetimine kullanmayı gösterir bir <xref:System.Windows.Media.Animation.Storyboard> başlatıldıktan sonra. İçinde bir film şeridini denetlemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullanın <xref:System.Windows.Trigger> ve <xref:System.Windows.TriggerAction> nesneleri; Örneğin, bkz [bir film şeridini denetlemek için olay tetikleyicilerini](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+Bu örnek kod denetimine kullanmayı gösterir bir <xref:System.Windows.Media.Animation.Storyboard> başlatıldıktan sonra. İçinde bir film şeridini denetlemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullanın <xref:System.Windows.Trigger> ve <xref:System.Windows.TriggerAction> nesneleri; Örneğin, bkz [bir film şeridini denetlemek için olay tetikleyicilerini](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
  Görsel taslağı'nı başlatmak için kullandığınız kendi <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi şeridinin animasyonları özelliklerine animasyon ve görsel taslak başlar dağıtır.  
   
@@ -37,11 +37,11 @@ Bu örnek kod denetimine kullanmayı gösterir bir <xref:System.Windows.Media.An
   
  Aşağıdaki örnekte, birkaç film şeridi yöntemi, etkileşimli bir film şeridini denetlemek için kullanılır.  
   
- **Not:** Tetikleyicilerle kullanma film şeridini denetlemek için bir örnek görmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [bir film şeridini denetlemek için olay tetikleyicileri kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ **Not:** Tetikleyicilerle kullanma film şeridini denetlemek için bir örnek görmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [bir film şeridini denetlemek için olay tetikleyicileri kullanma](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
- [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
+ [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+- [Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

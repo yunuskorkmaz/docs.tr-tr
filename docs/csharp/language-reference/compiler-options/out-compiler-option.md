@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725746"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362363"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
 **-Out** seçeneği, çıkış dosyasının adını belirtir.  
@@ -45,7 +45,7 @@ ms.locfileid: "54725746"
   
  Bir derlemenin bir parçası oluşturulan bağladığımız modüllerin de derlemede üretilen herhangi bir derleme ile ilişkili dosyaları haline gelir. Kullanım [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) ilişkili dosyaları görmek için derleme bildirimi görüntülemek için.  
   
- -Out derleyici seçeneği, bir arkadaş derleme hedefi bir exe sırayla gereklidir. Daha fazla bilgi için [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ -Out derleyici seçeneği, bir arkadaş derleme hedefi bir exe sırayla gereklidir. Daha fazla bilgi için [arkadaş derlemeleri](../../../standard/assembly/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
-- [Arkadaş Bütünleştirilmiş Kodları](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend-assemblies.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

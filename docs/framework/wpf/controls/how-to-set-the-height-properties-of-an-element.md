@@ -8,12 +8,12 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: be3235d4bf7b5e108420b5ed030157067cacdb8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 608f74afd95ce03b3ecf71819c2181a9728b25af
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356303"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>Nasıl yapılır: Öğenin Yükseklik Özelliklerini Ayarlama
 ## <a name="example"></a>Örnek  
@@ -23,13 +23,13 @@ ms.locfileid: "54637061"
   
  Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnekler çizmek bir <xref:System.Windows.Shapes.Rectangle> öğesi (`rect1`) bir alt öğesi olarak <xref:System.Windows.Controls.Canvas>. Yükseklik özelliklerini değiştirmek bir <xref:System.Windows.Shapes.Rectangle> bir dizi kullanarak <xref:System.Windows.Controls.ListBox> özellik değerlerini temsil eden öğeler <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, ve <xref:System.Windows.FrameworkElement.Height%2A>. Bu şekilde, her bir özellik önceliğini görsel olarak görüntülenir.  
   
- [!code-xaml[HeightMinHeightMaxHeight#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
-[!code-xaml[HeightMinHeightMaxHeight#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HeightMinHeightMaxHeight#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
+[!code-xaml[HeightMinHeightMaxHeight#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
   
  Aşağıdaki arka plan kod örnekleri olaylarını işlemek, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> olayını başlatır. Her işleyici girişini alır <xref:System.Windows.Controls.ListBox>, değer olarak ayrıştırır bir <xref:System.Double>ve belirtilen yükseklik ilgili özellik için değer geçerlidir. Yükseklik değerleri de bir dizeye dönüştürülür ve çeşitli yazılan <xref:System.Windows.Controls.TextBlock> öğeleri (söz konusu öğelerin tanımı içinde seçili XAML gösterilmez).  
   
- [!code-csharp[HeightMinHeightMaxHeight#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
- [!code-vb[HeightMinHeightMaxHeight#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
  Tam bir örnek için bkz. [yükseklik özellikleri örneği](https://go.microsoft.com/fwlink/?LinkID=159993).  
   
@@ -40,6 +40,6 @@ ms.locfileid: "54637061"
 - <xref:System.Windows.FrameworkElement.MaxHeight%2A>
 - <xref:System.Windows.FrameworkElement.MinHeight%2A>
 - <xref:System.Windows.FrameworkElement.Height%2A>
-- [Öğenin Genişlik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Öğenin Genişlik Özelliklerini Ayarlama](how-to-set-the-width-properties-of-an-element.md)
+- [Panellere Genel Bakış](panels-overview.md)
 - [Yükseklik özellikleri örneği](https://go.microsoft.com/fwlink/?LinkID=159993)

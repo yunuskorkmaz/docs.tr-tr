@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546380"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354433"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Akış İçerik Öğeleri ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, çeşitli içerik akışı öğelerini ve ilgili özellikleri kullanarak ortak görevlerin nasıl gerçekleştirileceğini açıklar.  
+Bu bölümdeki konular, çeşitli akış içeriği öğelerini ve ilgili özellikleri kullanılarak yaygın görevlerin nasıl gerçekleştirileceğini açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Paragraflar Arasındaki Aralığı Ayarlama](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [Program Aracılığıyla Tablo Oluşturma](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [İçeriğin FlowDirection'ını Program Aracılığıyla Değiştirme](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [TextWrapping Özelliğini Program Aracılığıyla Değiştirme](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [XAML ile Tablo Tanımlama](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [Metnin Tipografisini Değiştirme](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [Metin Kırpmayı Etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [Metne Program Aracılığıyla Öğe Ekleme](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Akış İçeriği Öğelerini Satır İçlerinin Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Akış İçeriği Öğelerini Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [FlowDocument Sütun Ayırıcı Öznitelikleri Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [Paragraflar Arasındaki Aralığı Ayarlama](how-to-adjust-spacing-between-paragraphs.md)  
+ [Program Aracılığıyla Tablo Oluşturma](how-to-build-a-table-programmatically.md)  
+ [İçeriğin FlowDirection'ını Program Aracılığıyla Değiştirme](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [TextWrapping Özelliğini Program Aracılığıyla Değiştirme](how-to-change-the-textwrapping-property-programmatically.md)  
+ [XAML ile Tablo Tanımlama](how-to-define-a-table-with-xaml.md)  
+ [Metnin Tipografisini Değiştirme](how-to-alter-the-typography-of-text.md)  
+ [Metin Kırpmayı Etkinleştirme](how-to-enable-text-trimming.md)  
+ [Metne Program Aracılığıyla Öğe Ekleme](how-to-insert-an-element-into-text-programmatically.md)  
+ [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Akış İçeriği Öğelerini Satır İçlerinin Özelliği ile Düzenleme](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [FlowDocument'ı Blokların Özelliği ile Düzenleme](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Akış İçeriği Öğelerini Kullanma](how-to-use-flow-content-elements.md)  
+ [FlowDocument Sütun Ayırıcı Öznitelikleri Kullanma](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ Bu bölümdeki konular, çeşitli içerik akışı öğelerini ve ilgili özelli
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF'deki Belgeler](documents-in-wpf.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371339"
 ---
 # <a name="progressbar"></a>ProgressBar
-A <xref:System.Windows.Controls.ProgressBar> bir işlemin ilerlemesini gösterir. <xref:System.Windows.Controls.ProgressBar> Bir işlem ilerledikçe sistem vurgulama rengiyle doldurulan bir pencere denetim oluşur.  
+A <xref:System.Windows.Controls.ProgressBar> bir işlemin ilerlemesini gösterir. <xref:System.Windows.Controls.ProgressBar> Sistem vurgulama rengiyle işlem ilerledikçe doldurulan bir pencere denetimi oluşur.  
   
  Aşağıdaki çizimde gösterilmektedir <xref:System.Windows.Controls.ProgressBar>.  
   
- ![İlerleme çubuğu](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![İlerleme çubuğu](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

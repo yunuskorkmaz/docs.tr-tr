@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740144"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370052"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Nasıl yapılır: GridSplitter ile Satırları Yeniden Boyutlandırma
 Bu örnek, yatay kullanmayı gösterir. <xref:System.Windows.Controls.GridSplitter> iki satır arasındaki boşluğu yeniden dağıtmak için bir <xref:System.Windows.Controls.Grid> boyutlarını değiştirmeden <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ Bu örnek, yatay kullanmayı gösterir. <xref:System.Windows.Controls.GridSplitt
   
  Aşağıdaki örnek, bir yatay tanımlamak gösterilmektedir <xref:System.Windows.Controls.GridSplitter> bitişik satır göre yeniden boyutlandırır.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- A <xref:System.Windows.Controls.GridSplitter> kendi satır kaplayabilir değil diğer denetimleri tarafından görünmeyebilir <xref:System.Windows.Controls.Grid>. Bu sorunu önlemek hakkında daha fazla bilgi için bkz. [bir GridSplitter'ın görünür olduğundan emin olun](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ A <xref:System.Windows.Controls.GridSplitter> kendi satır kaplayabilir değil diğer denetimleri tarafından görünmeyebilir <xref:System.Windows.Controls.Grid>. Bu sorunu önlemek hakkında daha fazla bilgi için bkz. [bir GridSplitter'ın görünür olduğundan emin olun](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Bir satır kaplayan bir GridSplitter'ın oluşturma**  
   
@@ -33,9 +33,9 @@ Bu örnek, yatay kullanmayı gösterir. <xref:System.Windows.Controls.GridSplitt
   
  Aşağıdaki örnek, bir yatay tanımlamak gösterilmektedir <xref:System.Windows.Controls.GridSplitter> bir satır kaplayan ve her iki tarafında satırları yeniden boyutlandırır.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.GridSplitter>
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Nasıl Yapılır Konuları](gridsplitter-how-to-topics.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662627"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374576"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress yöntemi
 
@@ -40,11 +40,14 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ### <a name="parameters"></a>Parametreler
 
-`address` [in] İlk yöntem örneği adresi.
+`address`\
+[in] İlk yöntem örneği adresi.
 
-`appDomain` [in] AppDomain yöntemi örnekleri.
+`appDomain`\
+[in] AppDomain yöntemi örnekleri.
 
-`handle` [out] Yöntem örnekleri numaralandırma tanıtıcısı.
+`handle`\
+[out] Yöntem örnekleri numaralandırma tanıtıcısı.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -59,6 +62,6 @@ Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tab
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLRDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)

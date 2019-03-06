@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6bbf6aea1a98b7e1497101ea6a6121525f1c87f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352960"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF ve Windows Forms Birlikte Çalışması
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama arabirimleri oluşturmak için iki farklı mimari sunar. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Ad alanı, birlikte çalışabilirlik senaryoları etkinleştiren sınıflar sağlar. Birlikte çalışabilirlik özelliklerini uygulayan iki anahtar sınıf <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost>. Bu konuda, birlikte çalışabilirlik hangi senaryolar desteklenir ve hangi senaryolar desteklenmez açıklanmaktadır.  
@@ -60,7 +60,7 @@ ms.locfileid: "54732030"
 ### <a name="ambient-properties"></a>Ortam özellikleri  
  Bazı ortam özelliklerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetiminiz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] eşdeğerleri. Bu ortam özellikleri yayılır barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetler ve bulunan genel özellik olarak kullanıma <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Denetimi çevirir her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çevresel özelliğe kendi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] eşdeğer.  
   
- Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Davranış  
  Aşağıdaki tabloda birlikte çalışabilirlik davranışını tanımlar.  
@@ -103,7 +103,7 @@ ms.locfileid: "54732030"
 ### <a name="ambient-properties"></a>Ortam özellikleri  
  Bazı ortam özelliklerini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminiz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğerleri. Bu ortam özellikleri yayılır barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetler ve bulunan genel özellik olarak kullanıma <xref:System.Windows.Forms.Integration.ElementHost> denetimi. <xref:System.Windows.Forms.Integration.ElementHost> Denetimi çevirir her [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] çevresel özelliğe kendi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşdeğer.  
   
- Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Davranış  
  Aşağıdaki tabloda birlikte çalışabilirlik davranışını tanımlar.  
@@ -120,7 +120,7 @@ ms.locfileid: "54732030"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: WPF'de Windows Forms denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [İzlenecek yol: WPF'de Windows Forms denetimini barındırma](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)

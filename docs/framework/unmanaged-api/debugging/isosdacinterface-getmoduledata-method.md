@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 80b15f076dfe7a7bbbe7e28d9d68f01255e47202
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369961"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData yöntemi
 
@@ -39,9 +39,11 @@ HRESULT GetModuleData(
 
 ### <a name="parameters"></a>Parametreler
 
-`moduleAddr` [in] Modül için daha fazla bilgi almak için adresi.
+`moduleAddr`\
+[in] Modül için daha fazla bilgi almak için adresi.
 
-`data` [out] [DacpModuleData yapısı](dacpmoduledata-structure.md) yüklenen bir modülün bilgilerini tutacak.
+`data`\
+[out] [DacpModuleData yapısı](dacpmoduledata-structure.md) yüklenen bir modülün bilgilerini tutacak.
 
 
 ## <a name="remarks"></a>Açıklamalar
@@ -57,5 +59,5 @@ Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tab
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface arabirimi](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Hata Ayıklama](index.md)
+- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)

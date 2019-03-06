@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364443"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Nasıl yapılır: Komut Destekli Denetime Komut Bağlama
 Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> komutu desteği de yerleşik.  Komutları için birden çok kaynaktan eksiksiz bir örnek için bkz. [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
@@ -31,11 +31,11 @@ Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windo
   
  A <xref:System.Windows.Controls.MenuItem> oluşturulur ve <xref:System.Windows.Controls.MenuItem.Command%2A> özelliği <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutu.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> Açıkça ayarlanmazsa <xref:System.Windows.Controls.TextBox> nesne.  Zaman <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ayarlı değil, hedef komut için klavye girintisine sahip olan öğe.  Klavye girintisine sahip olan öğe desteklemiyorsa <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutunu ya da şu anda (Pano boş olduğundan, örneğin) Yapıştır komut yürütülemiyor sonra <xref:System.Windows.Controls.MenuItem> gri.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Komut Desteği Olmadan Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Komut Vermeye Genel Bakış](commanding-overview.md)
+- [Komut Desteği Olmadan Denetime Komut Bağlama](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

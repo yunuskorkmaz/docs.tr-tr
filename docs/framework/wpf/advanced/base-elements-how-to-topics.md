@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540468"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370949"
 ---
 # <a name="base-elements-how-to-topics"></a>Temel Öğeler ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını açıklamaktadır: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  
+Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını açıklar: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Saydam veya Yarı Saydam UIElement Oluşturma](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [FrameworkElement Boyutuna Animasyon Ekleme](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Freezable'ın Dondurulmuş Olup Olmadığını Belirleme](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Yüklü Bir Olayı İşleme](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [Öğeler ve Denetimlerin Kenar Boşluklarını Ayarlama](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Freezable'ı Salt Okunur Yapma](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [UIElement'i Yatay veya Dikey Olarak Çevirme](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [ThicknessConverter Nesnesi Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [ContextMenuOpening Olayını İşleme](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [Saydam veya Yarı Saydam UIElement Oluşturma](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [FrameworkElement Boyutuna Animasyon Ekleme](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Freezable'ın Dondurulmuş Olup Olmadığını Belirleme](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Yüklü Bir Olayı İşleme](how-to-handle-a-loaded-event.md)  
+ [Öğeler ve Denetimlerin Kenar Boşluklarını Ayarlama](how-to-set-margins-of-elements-and-controls.md)  
+ [Freezable'ı Salt Okunur Yapma](how-to-make-a-freezable-read-only.md)  
+ [Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [UIElement'i Yatay veya Dikey Olarak Çevirme](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [ThicknessConverter Nesnesi Kullanma](how-to-use-a-thicknessconverter-object.md)  
+ [ContextMenuOpening Olayını İşleme](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını a�
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [Temel Öğeler](base-elements.md)

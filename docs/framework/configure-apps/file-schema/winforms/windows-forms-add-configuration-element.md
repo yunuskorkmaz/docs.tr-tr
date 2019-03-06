@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371378"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -63,9 +63,9 @@ Yok.
 
 ## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Açıklamalar
 
-.NET Framework 4.7 ile başlayan `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi .NET Framework'ün en son sürümlerde eklenen özelliklerden yararlanmak için Windows Forms uygulamaları yapılandırmanıza imkan sağlar. 
+.NET Framework 4.7 ile başlayan `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi .NET Framework'ün en son sürümlerde eklenen özelliklerden yararlanmak için Windows Forms uygulamaları yapılandırmanıza imkan sağlar.
 
-`<System.Windows.Forms.ApplicationConfigurationSection>` Öğesi bir veya daha fazla alt eklemenizi sağlayan `<add>` öğeleri, her biri belirli yapılandırma ayarını tanımlar.  
+`<System.Windows.Forms.ApplicationConfigurationSection>` Öğesi bir veya daha fazla alt eklemenizi sağlayan `<add>` öğeleri, her biri belirli yapılandırma ayarını tanımlar.
 
 Windows Forms yüksek DPI desteği genel bakış için bkz. [Windows Forms'ta yüksek DPI desteği](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
 
@@ -75,7 +75,7 @@ Windows Forms yüksek DPI desteği genel bakış için bkz. [Windows Forms'ta y�
 
 - Bir Windows Forms uygulaması başlatıldıktan sonra kullanıcı DPI veya ölçek faktörü değişiklik dinamik DPI senaryolar için destek.
 
-- Gibi ölçeklendirme ve düzen çok sayıda Windows Forms denetimleri <xref:System.Windows.Forms.MonthCalendar> denetimi ve <xref:System.Windows.Forms.CheckedListBox> denetimi. 
+- Gibi ölçeklendirme ve düzen çok sayıda Windows Forms denetimleri <xref:System.Windows.Forms.MonthCalendar> denetimi ve <xref:System.Windows.Forms.CheckedListBox> denetimi.
 
 Yüksek DPI tanıma, bir katılım özelliğidir; Varsayılan olarak, değerini `DpiAwareness` olduğu `false`. Bu anahtar için değerini ayarlayarak Windows Forms desteği için DPI tanıma seçebilirsiniz `PerMonitorV2` uygulama yapılandırma dosyasında. DPI tanıma etkinleştirilirse DPI özellikleri tek tek de etkinleştirilir. Bu güncelleştirmeler şunlardır:
 
@@ -83,11 +83,11 @@ Yüksek DPI tanıma, bir katılım özelliğidir; Varsayılan olarak, değerini 
 
 - Denetlenen dinamik DPI desteği `EnableWindowsFormsHighDpiAutoResizing` anahtarı.
 
-- Tek denetimini ölçeklendirme, tarafından denetlenen geçişli `Form.DisableSinglePassControlScaling` kişi için <xref:System.Windows.Forms.Form> göre denetimleri `AnchorLayout.DisableSinglePassControlScaling` bağlantılı denetimleri için ve göre anahtar `MonthCalendar.DisableSinglePassControlScaling` anahtarını <xref:System.Windows.Forms.MonthCalendar> denetimi 
+- Tek denetimini ölçeklendirme, tarafından denetlenen geçişli `Form.DisableSinglePassControlScaling` kişi için <xref:System.Windows.Forms.Form> göre denetimleri `AnchorLayout.DisableSinglePassControlScaling` bağlantılı denetimleri için ve göre anahtar `MonthCalendar.DisableSinglePassControlScaling` anahtarını <xref:System.Windows.Forms.MonthCalendar> denetimi
 
-- Denetlenen yüksek DPI ölçeklendirme ve Düzen iyileştirmeler `CheckListBox.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.CheckedListBox> göre denetimi `DataGridView.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.DataGridView> denetimi ve `Toolstrip.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.ToolStrip> denetimi.  
+- Denetlenen yüksek DPI ölçeklendirme ve Düzen iyileştirmeler `CheckListBox.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.CheckedListBox> göre denetimi `DataGridView.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.DataGridView> denetimi ve `Toolstrip.DisableHighDpiImprovements` için anahtar <xref:System.Windows.Forms.ToolStrip> denetimi.
 
-Ayarlayarak sağlanan tek varsayılan kabul etme ayarı `DpiAwareness` için `PerMonitorV2` genellikle yeni bir Windows Forms uygulamaları için yeterlidir. Ancak, uygulama yapılandırma dosyasına karşılık gelen anahtar ekleyerek dışında ayrı yüksek DPI geliştirmeleri ardından seçebilirsiniz. Örneğin, dinamik DPI desteği hariç tüm yeni DPI featuers yararlanmak için uygulama yapılandırma dosyasına aşağıdaki eklersiniz:
+Ayarlayarak sağlanan tek varsayılan kabul etme ayarı `DpiAwareness` için `PerMonitorV2` genellikle yeni bir Windows Forms uygulamaları için yeterlidir. Ancak, uygulama yapılandırma dosyasına karşılık gelen anahtar ekleyerek dışında ayrı yüksek DPI geliştirmeleri ardından seçebilirsiniz. Örneğin, dinamik DPI desteği hariç tüm yeni DPI özelliklerden yararlanmak için uygulama yapılandırma dosyasına aşağıdaki eklersiniz:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -99,14 +99,14 @@ Ayarlayarak sağlanan tek varsayılan kabul etme ayarı `DpiAwareness` için `Pe
 Genellikle, programlı olarak işlemek seçtiğiniz çünkü belirli bir özellik dışında tercih et.
 
 Windows Forms uygulamalarındaki yüksek DPI desteği alma Avantajı hakkında daha fazla bilgi için bkz. [Windows Forms'ta yüksek DPI desteği](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
- 
+
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-.NET Framework 4.7 ile başlayarak, Windows Forms denetimleri DPI ölçeklendirme değişiklikler ilgili olayların sayısını artırabilir. Bunlar <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, ve <xref:System.Windows.Forms.Form.DpiChanged> olayları. Değerini `DisableDpiChangedMessageHandling` anahtarı bu olayları bir Windows Forms uygulamasında oluşturup oluşturmadığını belirler. 
+.NET Framework 4.7 ile başlayarak, Windows Forms denetimleri DPI ölçeklendirme değişiklikler ilgili olayların sayısını artırabilir. Bunlar <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, ve <xref:System.Windows.Forms.Form.DpiChanged> olayları. Değerini `DisableDpiChangedMessageHandling` anahtarı bu olayları bir Windows Forms uygulamasında oluşturup oluşturmadığını belirler.
 
 ### <a name="single-pass-scaling"></a>Tek geçişli ölçeklendirme
 
-Bunlar artırıldıkça tek veya çoklu geçiş ölçeklendirme kullanıcı arabiriminin yanıt verebilirliği ve kullanıcı arabirimi öğeleri görünümünü etkiler. .NET Framework 4.7 ile başlayarak, Windows Forms tek parola ölçeklendirme kullanır. Önceki .NET Framework sürümlerinde, ölçeklendirme, gerekli birden ölçeklendirilmesi bazı denetimler neden birden çok geçer gerçekleştirildi. Uygulamanız eski davranışa bağlıysa tek geçişli ölçeklendirme yalnızca devre dışı gerekir.  
+Bunlar artırıldıkça tek veya çoklu geçiş ölçeklendirme kullanıcı arabiriminin yanıt verebilirliği ve kullanıcı arabirimi öğeleri görünümünü etkiler. .NET Framework 4.7 ile başlayarak, Windows Forms tek parola ölçeklendirme kullanır. Önceki .NET Framework sürümlerinde, ölçeklendirme, gerekli birden ölçeklendirilmesi bazı denetimler neden birden çok geçer gerçekleştirildi. Uygulamanız eski davranışa bağlıysa tek geçişli ölçeklendirme yalnızca devre dışı gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562602"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377053"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klavye odağı aldığında, bir denetimin görünümünü değiştirmek için iki paralel mekanizmaları sağlar. Gibi özellikler için özellik ayarlayıcılarına kullanılacak ilk mekanizmadır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. Değeri olarak ayrı bir stil sağlamak için ikinci mekanizmadır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özelliği; "odak görsel stili" denetimi, üstünde denetimi veya diğer kullanıcı Arabirimi görsel ağacını değiştirmek yerine çizen donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562602"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Odak görsel stili davranışı  
- Yalnızca odak eylemi klavye tarafından başlatıldığı zaman, odak görsel stilleri işlevi görür. Fare eylemi veya programlama odak değişiklik görsel stilleri odak modunu devre dışı bırakır. Odak Modu arasındaki farklılıklar hakkında daha fazla bilgi için bkz. [odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Yalnızca odak eylemi klavye tarafından başlatıldığı zaman, odak görsel stilleri işlevi görür. Fare eylemi veya programlama odak değişiklik görsel stilleri odak modunu devre dışı bırakır. Odak Modu arasındaki farklılıklar hakkında daha fazla bilgi için bkz. [odağa genel bakış](focus-overview.md).  
   
  Denetimlerin temaları temayı tüm denetimlerde odak görsel stili olur bir varsayılan odak görsel stili davranışını içerir. Bu tema stili statik anahtar değeri tarafından tanımlanan <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Uygulama düzeyinde kendi odak görsel stili bildirdiğinizde, bu varsayılan stili davranışı temalardan değiştirin. Tüm tema tanımlarsanız, alternatif olarak, ardından bu anahtarı tüm tema için varsayılan davranışı stil tanımlamak için kullanmanız gerekir.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562602"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Odak görsel stili kullanımına alternatifler  
  Odak görsel stili kullanarak yalnızca tek denetimleri stillendirme olduğundan veya büyük denetim şablonu denetime istediğinden değil uygun olduğu durumlarda, vardır diğer birçok erişilebilir özellikler ve görsel olarak oluşturabilirsiniz teknikleri Odak değişikliklere yanıt davranışı.  
   
- Tetikleyiciler ve ayarlayıcılar olay ayarlayıcılar ele alınmıştır ayrıntılı olarak [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md). Yönlendirilmiş olay işleme ele alınmıştır [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Tetikleyiciler ve ayarlayıcılar olay ayarlayıcılar ele alınmıştır ayrıntılı olarak [stil ve şablon oluşturma](../controls/styling-and-templating.md). Yönlendirilmiş olay işleme ele alınmıştır [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Klavye odağı özellikle ilgileniyorsanız <xref:System.Windows.UIElement.IsKeyboardFocused%2A> bağımlılık özelliği için bir özellik kullanılabilir <xref:System.Windows.Trigger>. Bir stil veya şablon içinde bir özellik tetikleyicisi, özellikle çok tek bir denetim için ve hangi görsel olarak diğer denetimlerin klavye odağı davranışı eşleşmeyebilir bir klavye odağı davranışını tanımlamak için daha uygun bir tekniktir.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562602"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
+- [Odağa Genel Bakış](focus-overview.md)
+- [Girişe Genel Bakış](input-overview.md)

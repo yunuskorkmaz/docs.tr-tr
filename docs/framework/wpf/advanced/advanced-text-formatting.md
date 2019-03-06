@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368239"
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlar ve genel metin sunu öğelerini kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Genişletilebilir metin biçimlendirme metin sunum, metin Depolama Yönetimi, çalıştırma metin biçimlendirme yönetim ve katıştırılmış nesne yönetimi gibi her yönüyle denetlemek için altyapı sağlar.  
@@ -28,7 +28,7 @@ Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda, daha yüksek düzeyiyle ilgili bilgi sahibi olduğunuz varsayılır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] metin sunu için kullanılır. Çoğu kullanıcı senaryoları Gelişmiş metin biçimlendirme gerektirmez [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bu konuda tartışılan. Giriş için farklı bir metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ Bu konuda, daha yüksek düzeyiyle ilgili bilgi sahibi olduğunuz varsayılır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] metin sunu için kullanılır. Çoğu kullanıcı senaryoları Gelişmiş metin biçimlendirme gerektirmez [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bu konuda tartışılan. Giriş için farklı bir metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: [WPF'deki Belgeler](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme  
@@ -42,15 +42,15 @@ Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#
   
  Geleneksel bir metin aksine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> metin düzeni istemcisi kümesi geri çağırma yöntemleri ile etkileşime geçer. Bu yöntemleri uygulaması sağlamak için istemcinin gerektirir <xref:System.Windows.Media.TextFormatting.TextSource> sınıfı. Aşağıdaki diyagram, istemci uygulama arasındaki metin düzeni etkileşimi gösterir ve <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Metin düzeni istemcisi ve TextFormatter diyagramı](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
+ ![Metin düzeni istemcisi ve TextFormatter diyagramı](./media/textformatter01.png "TextFormatter01")  
 Uygulama TextFormatter arasındaki etkileşimi  
   
  Biçimlendirilmiş metin satırlarını metin Mağazası'ndan almak için kullanılan metin biçimlendirici uygulaması olduğu <xref:System.Windows.Media.TextFormatting.TextSource>. Bu ilk metin biçimlendirici örneğini kullanarak oluşturarak yapılır <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> yöntemi. Bu yöntem, metin biçimlendirici örneği oluşturur ve maksimum satır yüksekliğini ve genişliğini değerlerini ayarlar. Metin biçimlendirici örneği oluşturulduktan hemen sonra satır oluşturma işlemini çağırarak başlatıldığında <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> yöntemi. <xref:System.Windows.Media.TextFormatting.TextFormatter> geri metin ve biçimlendirme metin sıralarında parametrelerini almak için metin kaynağına oluşturan bir satır çağırır.  
   
  Aşağıdaki örnekte, bir metin deposu biçimlendirme işlemi gösterilmektedir. <xref:System.Windows.Media.TextFormatting.TextFormatter> Metin satırlarını metin Mağazası'ndan almak ve sonra metin satırı halinde çizim biçimlendirmek için kullanılan nesne <xref:System.Windows.Media.DrawingContext>.  
   
- [!code-csharp[TextFormatterExample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
- [!code-vb[TextFormatterExample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
+ [!code-csharp[TextFormatterExample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[TextFormatterExample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
 ## <a name="implementing-the-client-text-store"></a>İstemci metin Store uygulama  
@@ -84,8 +84,8 @@ Uygulama TextFormatter arasındaki etkileşimi
   
  Aşağıdaki örnek, gösterir bir <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> yöntemi. Bu metin deposu döndürür <xref:System.Windows.Media.TextFormatting.TextRun> metin biçimlendirici işleme nesneleri.  
   
- [!code-csharp[TextFormatterExample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
- [!code-vb[TextFormatterExample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
+ [!code-csharp[TextFormatterExample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
+ [!code-vb[TextFormatterExample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
 >  Bu örnekte, aynı metin özellikleri tüm metnin metin deposu sağlar. Gelişmiş metin depoları uygulamak için kendi gerekir, farklı özelliklere sahip karakterlerin tek tek izin vermek için yönetim yayılır.  
@@ -95,5 +95,5 @@ Uygulama TextFormatter arasındaki etkileşimi
  <xref:System.Windows.Media.TextFormatting.TextRun> metin mağaza tarafından sağlanan özellikleri kullanarak nesneleri biçimlendirilir. İki tür içinde bu özellikleri gelen <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> ve <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> Paragraf kapsamlı özellikler gibi işleme <xref:System.Windows.TextAlignment> ve <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> Her metin ön plan fırça gibi bir paragraf içinde çalıştırmak için farklı özellikleri <xref:System.Windows.Media.Typeface>ve yazı tipi boyutu. Özel Paragraf ve özel metin özelliği türler uygulamak için uygulamanızı öğesinden türetilen sınıflar oluşturma <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> ve <xref:System.Windows.Media.TextFormatting.TextRunProperties> sırasıyla.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF'de Tipografi](typography-in-wpf.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)

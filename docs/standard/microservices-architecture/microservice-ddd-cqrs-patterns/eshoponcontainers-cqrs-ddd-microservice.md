@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362714"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 
@@ -41,7 +41,7 @@ Farklı sınırlanmış Bağlamlar (İBH) farklı desenleri kullanılacaktır. B
 
 Yalnızca bir uygulama mimari: Sistem veya uçtan uca uygulama mimarisi (örneğin, mikro hizmetler Mimarisi) tasarlarken. Ancak, her bir sınırlanmış bağlam veya mikro hizmet, uygulama içinde tasarımını kendi ödün ve iç tasarım kararları bir mimari desenleri düzeyinde yansıtır. Aynı mimari desenleri CQRS veya DDD gibi her yerde uygulamak çalışmayın.
 
-####  <a name="additional-resources"></a>Ek kaynaklar
+### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Martin Fowler. CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

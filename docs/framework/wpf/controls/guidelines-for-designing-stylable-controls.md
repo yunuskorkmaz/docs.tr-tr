@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545036"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352990"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Stillenebilir Denetimleri Tasarlama Yönergeleri
 Bu belgede bir kolayca Stillenebilir olmasını düşündüğünüz bir denetim tasarlarken dikkate alınması gereken en iyi yöntemler ve şablonu özetler. Biz bu en iyi deneme yanılma çok fazla dizi tema denetim stilleri yerleşik çalışırken gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetim kümesi. Başarılı bir stil stilini olduğu kadar bir işlev bir iyi tasarlanmış bir nesne modelinin olduğunu öğrendik. Bu belgenin hedef kitlesi denetim, stil yazarı yazarıdır.  
@@ -27,7 +27,7 @@ Bu belgede bir kolayca Stillenebilir olmasını düşündüğünüz bir denetim 
   
 -   Veri şablonları.  
   
- Stil ve şablon için bir giriş için bkz [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Stil ve şablon için bir giriş için bkz [stil ve şablon oluşturma](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Başlamadan önce: Denetiminizi anlama  
@@ -119,5 +119,5 @@ Bu belgede bir kolayca Stillenebilir olmasını düşündüğünüz bir denetim 
 -   **Tema stilleri tüm temalar arasında tutarlı "layout" semantiklere sahip gerekmez**. Örneğin, varsayılan stil denetimi tüm Temalar da aynı boyut miktarını kaplayabilir veya bir denetim kenar boşluklarını aynı içerik sahip olacağını garanti garanti gerekmez / tüm temalar arasında doldurma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Denetim Yazımına Genel Bakış](control-authoring-overview.md)

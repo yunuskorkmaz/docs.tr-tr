@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375252"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem kapsamı kullanarak örtük işlem uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşime gerek kalmadan bir işlemde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. İşlem kapsamı seçebilir ve ortam işlem otomatik olarak yönetir. Kendi kullanım kolaylığı ve verimliliği nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> sınıfı bir işlem uygulama geliştirirken.  
@@ -41,7 +41,7 @@ ms.locfileid: "54645853"
 ## <a name="rolling-back-a-transaction"></a>Bir işlemi geri alınıyor  
  Bir işlem geri almak istiyorsanız, değil, çağırmalıdır <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamında yöntemi. Örneğin, kapsam içinde bir özel durum. İçinde yer aldığı işlem geri alınacaktır.  
   
-##  <a name="ManageTxFlow"></a> İşlem akışı TransactionScopeOption kullanarak yönetme  
+## <a name="ManageTxFlow"></a> İşlem akışı TransactionScopeOption kullanarak yönetme  
  İşlem kapsamı kullanan bir yöntem çağrılarak iç içe geçirilemez bir <xref:System.Transactions.TransactionScope> gelen kendi kapsamı kullanan bir yöntem içinde olarak değil durumuyla `RootMethod` aşağıdaki örnekte, yöntemi  
   
 ```csharp  

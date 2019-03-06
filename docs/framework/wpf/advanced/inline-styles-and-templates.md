@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373393"
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Style> nesneleri ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıflarını) öğesinin görsel görünümüne kaynakları tanımlamak için bir yol kullanılabilmesi için birden çok kez. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri ele <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman mevcut stilleri ve şablonları kaynak başvuruları yerine satır içi yenilerini tanımlayın.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496923"
   
  Genellikle yalnızca ilgili konumda stil veya şablonu kullanmak istiyorsanız bile, bir stil veya şablon satır içi ayarlamak için bir neden yoktur. Bir stil veya şablon sürebilir öğelerin çoğu, bir içerik özelliğine ve içerik modeli de destekler. Hangi mantıksal ağaç yalnızca kullanıyorsanız, stil veya şablon ile bir kez oluşturun, yalnızca doğrudan biçimlendirmede eşdeğer alt öğeleri, içerik özelliğini doldurmak daha kolay olacaktır. Bu stil ve şablon mekanizmalarını birlikte atlar.  
   
- Etkin nesneyi döndürmek biçimlendirme uzantıları tarafından diğer sözdizimleri da stilleri ve şablonları için mümkündür. Olası senaryolar sahip olan iki uzantı şunlardır [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>.  
+ Etkin nesneyi döndürmek biçimlendirme uzantıları tarafından diğer sözdizimleri da stilleri ve şablonları için mümkündür. Olası senaryolar sahip olan iki uzantı şunlardır [TemplateBinding](templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

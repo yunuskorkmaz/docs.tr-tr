@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693762"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369935"
 ---
 # <a name="expander-overview"></a>Genişleticiye Genel Bakış
 Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst bilgi içeren genişletilebilir bir alanda içerik sağlamak için bir yol sağlar.  
@@ -23,7 +23,7 @@ Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst b
 ## <a name="creating-a-simple-expander"></a>Basit bir Genişletici Oluşturma  
  Aşağıdaki örnek, basit bir oluşturma işlemi gösterilmektedir <xref:System.Windows.Controls.Expander> denetimi. Bu örnekte bir <xref:System.Windows.Controls.Expander> önceki çizim gibi görünüyor.  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A> Ve <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> , bir <xref:System.Windows.Controls.Expander> karmaşık içerik gibi de içerebilen <xref:System.Windows.Controls.RadioButton> ve <xref:System.Windows.Controls.Image> nesneleri.  
   
@@ -45,15 +45,15 @@ Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst b
   
  **ScrollViewer içinde Genişleticisi**  
   
- ![Kaydırma çubuğu ile genişletici](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Kaydırma çubuğu ile genişletici](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  Yerleştirdiğinizde bir <xref:System.Windows.Controls.Expander> denetimine bir <xref:System.Windows.Controls.ScrollViewer>ayarlayın <xref:System.Windows.Controls.ScrollViewer> boyut hangi yönde karşılık gelen özellik <xref:System.Windows.Controls.Expander> içeriği açılır boyutuna <xref:System.Windows.Controls.Expander> içerik alanı. Örneğin ayarlarsanız, <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.Expander> için <xref:System.Windows.Controls.ExpandDirection.Down> (içerik alanı açılır) ayarlama <xref:System.Windows.FrameworkElement.Height%2A> özelliği <xref:System.Windows.Controls.ScrollViewer> içerik alanı gerekli yüksekliğe denetimi. Yükseklik boyutu içeriğin kendisi, bunun yerine ayarlarsanız <xref:System.Windows.Controls.ScrollViewer> Bu ayar tanımıyor ve bu nedenle, kaydırılabilir içeriği sağlamaz.  
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.Expander> karmaşık içerik olan ve içeren denetimini bir <xref:System.Windows.Controls.ScrollViewer> denetimi. Bu örnekte bir <xref:System.Windows.Controls.Expander> bu bölümün başında çizim gibi olmasıdır.  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>Hizalama özelliklerini kullanma  
@@ -62,4 +62,4 @@ Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst b
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Nasıl Yapılır Konuları](expander-how-to-topics.md)

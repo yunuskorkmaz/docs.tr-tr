@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492579"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356487"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme cihazı) bir veya birden çok nesne seçmek için bu nesneleri sürükleyerek üzerinden bazı istenen bırakma hedefi kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve onları bırakma.  
@@ -50,7 +50,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Kopyalama ve yapıştırma işleminde, sistem panosuna geçici olarak aktarılan verileri depolamak için kullanılır; bir Sürükle ve bırak işleminde bir <xref:System.Windows.DataObject> verileri depolamak için kullanılır. Kavramsal olarak, bir veri nesnesi, bir veya daha fazla çiftlerinden oluşan bir <xref:System.Object> gerçek veriler ve karşılık gelen bir veri biçimi tanımlayıcısı içeriyor.  
   
- Statik çağırarak bir Sürükle ve bırak işlemi sürükleme kaynağı başlatır <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> yöntemi ve aktarılan veriler için geçirme. <xref:System.Windows.DragDrop.DoDragDrop%2A> Yöntemi otomatik olarak verileri kaydırma bir <xref:System.Windows.DataObject> gerekirse. Veri biçimi üzerinde daha fazla denetim için verileri kaydırılabilir bir <xref:System.Windows.DataObject> öğesine iletmeden önce <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi verilerden ayıklanmasına sorumludur <xref:System.Windows.DataObject>. Veri nesneleri ile çalışma hakkında daha fazla bilgi için bkz. [veri ve veri nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Statik çağırarak bir Sürükle ve bırak işlemi sürükleme kaynağı başlatır <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> yöntemi ve aktarılan veriler için geçirme. <xref:System.Windows.DragDrop.DoDragDrop%2A> Yöntemi otomatik olarak verileri kaydırma bir <xref:System.Windows.DataObject> gerekirse. Veri biçimi üzerinde daha fazla denetim için verileri kaydırılabilir bir <xref:System.Windows.DataObject> öğesine iletmeden önce <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi verilerden ayıklanmasına sorumludur <xref:System.Windows.DataObject>. Veri nesneleri ile çalışma hakkında daha fazla bilgi için bkz. [veri ve veri nesneleri](data-and-data-objects.md).  
   
  Kaynak ve hedef bir Sürükle ve bırak işleminin kullanıcı Arabirimi öğelerini olan; Ancak, gerçekte genellikle aktarıldığı veri görsel bir temsili yok. Sürüklenen, gibi Windows Gezgini'nde dosyaları sürüklendiğinde oluşur verilerin görsel bir temsili sağlamak için kod yazabilirsiniz. Varsayılan olarak, geri bildirim kullanıcıya sürükle ve bırak işlemi gibi veri olacak etkisini göstermek için imleç değiştirerek verileri taşınamaz veya kopyalanamaz sağlanır.  
   
@@ -63,7 +63,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Sürükle ve bırak olayları  
- Sürükle ve bırak işlemleri, olay odaklı modeli destekler.  Sürükleme kaynağı hem de bırakma hedefi sürükle ve bırak işlemleri işlemek için standart bir etkinlik kümesi kullanın.  Aşağıdaki tablolarda, standart sürükle ve bırak olayları özetlenmektedir. Ekli olaylar üzerinde bunlar <xref:System.Windows.DragDrop> sınıfı. Ekli olaylar hakkında daha fazla bilgi için bkz. [iliştirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Sürükle ve bırak işlemleri, olay odaklı modeli destekler.  Sürükleme kaynağı hem de bırakma hedefi sürükle ve bırak işlemleri işlemek için standart bir etkinlik kümesi kullanın.  Aşağıdaki tablolarda, standart sürükle ve bırak olayları özetlenmektedir. Ekli olaylar üzerinde bunlar <xref:System.Windows.DragDrop> sınıfı. Ekli olaylar hakkında daha fazla bilgi için bkz. [iliştirilmiş olaylara genel bakış](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Sürükleme kaynağı olayları  
   
@@ -87,7 +87,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Tünel sürümünü <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Tünel sürümünü <xref:System.Windows.DragDrop.Drop>.|  
   
- Sürükle ve bırak olayları işlemek için bir nesnenin örneklerini eklemek için yukarıdaki tablolarda listelenen olayları için işleyiciler. Üzerinde sanal karşılık gelen Sınıf düzeyinde sürükle ve bırak olayları işlemek için geçersiz kılma * olay ve\*PreviewEvent yöntemleri. Daha fazla bilgi için [sınıfı işleme yönlendirilmiş olay denetim temel sınıfları tarafından](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Sürükle ve bırak olayları işlemek için bir nesnenin örneklerini eklemek için yukarıdaki tablolarda listelenen olayları için işleyiciler. Üzerinde sanal karşılık gelen Sınıf düzeyinde sürükle ve bırak olayları işlemek için geçersiz kılma * olay ve\*PreviewEvent yöntemleri. Daha fazla bilgi için [sınıfı işleme yönlendirilmiş olay denetim temel sınıfları tarafından](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Sürükle ve bırak uygulama  
@@ -123,9 +123,9 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Sürükle ve bırak örnek  
- Bu bölümde, sürükle ve bırak için uygulanacak açıklar bir <xref:System.Windows.Shapes.Ellipse> öğesi. <xref:System.Windows.Shapes.Ellipse> Sürükleme kaynağı hem de bir bırakma hedefi. Elips'ın dize gösterimini aktarılan verileri olduğu <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği. Aşağıdaki XAML gösterildiği <xref:System.Windows.Shapes.Ellipse> öğesini ve bunu işleyen sürükle ve bırak ilgili olaylar. Sürükle ve bırak uygulama konusunda tam adımlar için bkz: [izlenecek yol: Etkinleştirme sürükle ve bırak kullanıcı denetiminde](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ Bu bölümde, sürükle ve bırak için uygulanacak açıklar bir <xref:System.Windows.Shapes.Ellipse> öğesi. <xref:System.Windows.Shapes.Ellipse> Sürükleme kaynağı hem de bir bırakma hedefi. Elips'ın dize gösterimini aktarılan verileri olduğu <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği. Aşağıdaki XAML gösterildiği <xref:System.Windows.Shapes.Ellipse> öğesini ve bunu işleyen sürükle ve bırak ilgili olaylar. Sürükle ve bırak uygulama konusunda tam adımlar için bkz: [izlenecek yol: Etkinleştirme sürükle ve bırak kullanıcı denetiminde](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Bir sürükleme kaynağı olarak bir öğeyi etkinleştirme  
  Bir sürükleme kaynağı olan bir nesne için sorumludur:  
@@ -142,8 +142,8 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Bir sürükleme ne zaman gerçekleştiğini belirlemek için uygulamanızı ve başlatma sürükle ve bırak işlemi çağırarak sorumluluğundadır <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bu ne zaman genellikle bir <xref:System.Windows.UIElement.MouseMove> olay öğenin fare düğmesini basılı durumdayken sürüklenmesi için gerçekleşir. Aşağıdaki örnek, bir Sürükle ve bırak işlemi başlatmak gösterilmektedir <xref:System.Windows.UIElement.MouseMove> olay işleyicisinde bir <xref:System.Windows.Shapes.Ellipse> sürükleme kaynağı yapmak için öğesi. Elips'ın dize gösterimini aktarılan verileri olduğu <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  İçine <xref:System.Windows.UIElement.MouseMove> olay işleyicisi, çağrı <xref:System.Windows.DragDrop.DoDragDrop%2A> sürükle ve bırak işlemi başlatmak için yöntem. <xref:System.Windows.DragDrop.DoDragDrop%2A> Yöntemi üç parametreleri alır:  
   
@@ -153,7 +153,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
 -   `allowedEffects` -Biri <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi izin verilen etkilerini belirten numaralandırma değerlerinden.  
   
- Herhangi bir seri hale getirilebilir nesne geçirilebilir `data` parametresi. Varsa, verileri önceden sarmalanmamış bir <xref:System.Windows.DataObject>, bunu otomatik olarak yeni bir sarmalanır <xref:System.Windows.DataObject>. Birden çok veri öğelerini geçirmek için oluşturmalısınız <xref:System.Windows.DataObject> kendiniz ve geçirin <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Daha fazla bilgi için [veri ve veri nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Herhangi bir seri hale getirilebilir nesne geçirilebilir `data` parametresi. Varsa, verileri önceden sarmalanmamış bir <xref:System.Windows.DataObject>, bunu otomatik olarak yeni bir sarmalanır <xref:System.Windows.DataObject>. Birden çok veri öğelerini geçirmek için oluşturmalısınız <xref:System.Windows.DataObject> kendiniz ve geçirin <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Daha fazla bilgi için [veri ve veri nesneleri](data-and-data-objects.md).  
   
  `allowedEffects` Parametresi ne bırakma hedefi, aktarılan verileri ile yapmak sürükleme kaynağı sağlayacak belirtmek için kullanılır. Bir sürükleme kaynağı ortak değerleri <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move>, ve <xref:System.Windows.DragDropEffects.All>.  
   
@@ -192,32 +192,32 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.DragDrop.DragEnter> için olay işleyicisi bir <xref:System.Windows.Shapes.Ellipse> öğesi. Bu kod, geçerli kaydederek sürükle ve bırak işlemi etkilerini önizleme <xref:System.Windows.Shapes.Shape.Fill%2A> fırça. Ardından kullanır <xref:System.Windows.DataObject.GetDataPresent%2A> denetlenecek yöntemi olup olmadığını <xref:System.Windows.DataObject> elipsin sürüklenen dönüştürülebilir dize verileri içeren bir <xref:System.Windows.Media.Brush>. Bu nedenle, verileri kullanarak ayıklanan, <xref:System.Windows.DataObject.GetData%2A> yöntemi. Ardından dönüştürülür bir <xref:System.Windows.Media.Brush> ve üç nokta için uygulanır. Değişikliği de geri <xref:System.Windows.DragDrop.DragLeave> olay işleyicisi. Veriler için döndürülemezse bir <xref:System.Windows.Media.Brush>, hiçbir eylem gerçekleştirilmedi.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  <xref:System.Windows.DragDrop.DragOver> Olay verileri bırakma hedefi üzerinde sürekli olarak sürüklediğiniz sırada gerçekleşir. Bu olay ile eşleştirilmiş <xref:System.Windows.DragDrop.GiveFeedback> sürükleme kaynağı olayı. İçinde <xref:System.Windows.DragDrop.DragOver> olay işleyicisi, genellikle kullandığınız <xref:System.Windows.DataObject.GetDataPresent%2A> ve <xref:System.Windows.DataObject.GetData%2A> aktarılan verileri bırakma hedefi işleyebilen bir biçimde olup olmadığını denetlemek için yöntemleri. Ayrıca, tüm değiştirici tuşları, hangi kullanıcının bir kopyalama veya taşıma eylemi düşünüyor olmadığını genellikle gösterecektir basıldığında olup olmadığını kontrol edebilirsiniz. Bu denetimleri yapıldıktan sonra ayarladığınız <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> source özelliği sürükleme bildirmek için veri bırakma hangi etkisi olmaz. Bu bilgileri sürükleme kaynağı alır <xref:System.Windows.DragDrop.GiveFeedback> event args ve kullanıcıya geri bildirim sağlamak için uygun bir imleç ayarlayabilirsiniz.  
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.DragDrop.DragOver> için olay işleyicisi bir <xref:System.Windows.Shapes.Ellipse> öğesi. Bu kod olup olmadığını denetler. <xref:System.Windows.DataObject> elipsin sürüklenen dönüştürülebilir dize verileri içeren bir <xref:System.Windows.Media.Brush>. Bu nedenle, bunu ayarlarsa <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> özelliğini <xref:System.Windows.DragDropEffects.Copy>. Bu veriler için üç nokta kopyalanabilir için sürükleme kaynağı belirtir. Veriler için döndürülemezse bir <xref:System.Windows.Media.Brush>, <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.DragDropEffects.None>. Bu işlem için sürükleme kaynağı elips verileri geçerli bırakma hedefi değil gösterir.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  <xref:System.Windows.DragDrop.DragLeave> Olay verileri hedefin sınırları dışında bırakılan olmadan sürüklendiğinde oluşur. Yaptığınız herhangi bir şeyi geri almak için bu olayı işleyin <xref:System.Windows.DragDrop.DragEnter> olay işleyicisi.  
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.DragDrop.DragLeave> için olay işleyicisi bir <xref:System.Windows.Shapes.Ellipse> öğesi. Bu kod önizlemeyi gerçekleştirilen alır <xref:System.Windows.DragDrop.DragEnter> kaydedilen uygulayarak olay işleyicisi <xref:System.Windows.Media.Brush> elipsin için.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  <xref:System.Windows.DragDrop.Drop> Olay verileri bırakma hedefi üzerinde bırakıldığında gerçekleşir; varsayılan olarak, bu fare düğmesi bırakıldığında gerçekleşir. İçinde <xref:System.Windows.DragDrop.Drop> olay işleyicisi, kullandığınız <xref:System.Windows.DataObject.GetData%2A> aktarılan verilerin ayıklanacağı yöntemi <xref:System.Windows.DataObject> ve uygulamanızın gerektirdiği herhangi bir veri işlemi gerçekleştirin. <xref:System.Windows.DragDrop.Drop> Olayı, sürükle ve bırak işlemi sonlandırır.  
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.DragDrop.Drop> için olay işleyicisi bir <xref:System.Windows.Shapes.Ellipse> öğesi. Bu kod, sürükle ve bırak işlemi etkilerini uygular ve kodda benzer <xref:System.Windows.DragDrop.DragEnter> olay işleyicisi. Olup olmadığını denetler <xref:System.Windows.DataObject> elipsin sürüklenen dönüştürülebilir dize verileri içeren bir <xref:System.Windows.Media.Brush>. Bu durumda, <xref:System.Windows.Media.Brush> elipsin için uygulanır. Veriler için döndürülemezse bir <xref:System.Windows.Media.Brush>, hiçbir eylem gerçekleştirilmedi.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Clipboard>
-- [İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Sürükleme ve Bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Nasıl Yapılır Konuları](drag-and-drop-how-to-topics.md)
+- [Sürükleme ve Bırakma](drag-and-drop.md)

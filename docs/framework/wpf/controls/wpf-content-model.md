@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 751cbcc3a3b70f0937a8fe84c0fad5d8771a32ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718162"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373104"
 ---
 # <a name="wpf-content-model"></a>WPF İçerik Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] birçok denetimleri ve farklı içerik türlerini görüntülemek için birincil amacı olan denetim-like türleri sağlayan bir sunu platformudur. Hangi denetimi kullanmak için veya türetmek için hangi denetimi belirlemek için belirli bir denetimi en iyi görüntüleyebilirsiniz nesne türlerini anlamanız gerekir.  
@@ -40,7 +40,7 @@ ms.locfileid: "54718162"
   
  Bu sınıflardan devralmasına denetimleri, aynı içerik türünü içerir ve içerik aynı şekilde davranma. Aşağıdaki çizimde, bir görüntü içeren her bir içerik modeli ve bazı metin bir denetimi gösterir.  
   
- ![Düğme, Grup, Listbax, TreeViewItem](../../../../docs/framework/wpf/controls/media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Düğme, Grup, Listbax, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Tek bir rasgele nesne içeren denetimler  
  <xref:System.Windows.Controls.ContentControl> Sınıfı, rastgele içeriği tek bir parçasını içerir. İçerik özelliği olan <xref:System.Windows.Controls.ContentControl.Content%2A>. Aşağıdaki denetimler devralınacak <xref:System.Windows.Controls.ContentControl> ve kendi içerik modelini kullanın:  
@@ -87,7 +87,7 @@ ms.locfileid: "54718162"
   
  Aşağıdaki resimde dört düğme gösterilmektedir <xref:System.Windows.Controls.ContentControl.Content%2A> bir dize olarak ayarlanmış bir <xref:System.DateTime> nesnesi bir <xref:System.Windows.Shapes.Rectangle>ve <xref:System.Windows.Controls.Panel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>.  
   
- ![Dört düğme](../../../../docs/framework/wpf/controls/media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
+ ![Dört düğme](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
 İçerik türleri farklı olan dört düğme  
   
  Ayarlama örneği için <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bkz <xref:System.Windows.Controls.ContentControl>.  
@@ -105,7 +105,7 @@ ms.locfileid: "54718162"
   
  Aşağıdaki iki resimde <xref:System.Windows.Controls.TabItem> nesneleri. İlk <xref:System.Windows.Controls.TabItem> sahip <xref:System.Windows.UIElement> olarak nesneleri <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Ayarlanmış bir <xref:System.Windows.Controls.StackPanel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Ayarlanmış bir <xref:System.Windows.Controls.StackPanel> içeren bir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Controls.Label>. İkinci <xref:System.Windows.Controls.TabItem> cinsinden bir dize olan <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve <xref:System.Windows.Controls.TextBlock> içinde <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
+ ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
 Farklı üst bilgi özelliği kullanan TabControl  
   
  Nasıl oluşturulacağına dair bir örnek <xref:System.Windows.Controls.TabItem> nesneleri bkz <xref:System.Windows.Controls.HeaderedContentControl>.  
@@ -147,7 +147,7 @@ Farklı üst bilgi özelliği kullanan TabControl
   
 -   A <xref:System.Windows.Controls.Panel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>.  
   
- ![Dört tür içerikle ListBox](../../../../docs/framework/wpf/controls/media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
+ ![Dört tür içerikle ListBox](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
 Birden çok nesne içeren bir liste kutusu  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Üst bilgi ve rastgele nesnelerinin bir koleksiyonunu içeren denetimler  
@@ -189,7 +189,7 @@ Birden çok nesne içeren bir liste kutusu
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Daha fazla bilgi için [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Daha fazla bilgi için [panellere genel bakış](panels-overview.md).  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>UIElement'i görünümünü etkileyen sınıfları  
@@ -215,12 +215,12 @@ Birden çok nesne içeren bir liste kutusu
   
  Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.TextBox> olan (ile donatılmış) bir <xref:System.Windows.Controls.Border> çevresinde.  
   
- ![TextBox siyah kenarlığa sahip](../../../../docs/framework/wpf/controls/media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
+ ![TextBox siyah kenarlığa sahip](./media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
 Bir kenarlığa sahip bir TextBlock  
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>UIElement'i hakkında görsel geri bildirim sağlayan sınıflar  
- <xref:System.Windows.Documents.Adorner> Sınıfı, bir kullanıcı için görsel ipuçları sağlar. Örneğin, bir <xref:System.Windows.Documents.Adorner> işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için. <xref:System.Windows.Documents.Adorner> Sınıf kendi donatıcıları oluşturabilmesi bir çerçeve sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanan tüm donatıcıları sağlamaz. Daha fazla bilgi için [Donatıcılara Genel Bakış](../../../../docs/framework/wpf/controls/adorners-overview.md).  
+ <xref:System.Windows.Documents.Adorner> Sınıfı, bir kullanıcı için görsel ipuçları sağlar. Örneğin, bir <xref:System.Windows.Documents.Adorner> işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için. <xref:System.Windows.Documents.Adorner> Sınıf kendi donatıcıları oluşturabilmesi bir çerçeve sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanan tüm donatıcıları sağlamaz. Daha fazla bilgi için [Donatıcılara Genel Bakış](adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Kullanıcıların metin girmesine olanak tanıyan sınıflar  
@@ -250,7 +250,7 @@ Bir kenarlığa sahip bir TextBlock
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Metninizi biçimlendirmek sınıfları  
- <xref:System.Windows.Documents.TextElement> ve ilişkili sınıflarının metni biçimlendirmek izin verir. <xref:System.Windows.Documents.TextElement> nesneler içerir ve metni biçimlendirebilir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri. İki birincil türlerini <xref:System.Windows.Documents.TextElement> nesneler <xref:System.Windows.Documents.Block> öğeleri ve <xref:System.Windows.Documents.Inline> öğeleri. A <xref:System.Windows.Documents.Block> öğesi, paragraf ya da liste gibi bir metin bloğu temsil eder. Bir <xref:System.Windows.Documents.Inline> öğesi bir blok içinde metnin bir bölümünü temsil eder. Birçok <xref:System.Windows.Documents.Inline> sınıfları için bunlar uygulandığı metin biçimlendirme belirtin. Her <xref:System.Windows.Documents.TextElement> kendi içerik modeli vardır. Daha fazla bilgi için [TextElement içerik modeline genel bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> ve ilişkili sınıflarının metni biçimlendirmek izin verir. <xref:System.Windows.Documents.TextElement> nesneler içerir ve metni biçimlendirebilir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri. İki birincil türlerini <xref:System.Windows.Documents.TextElement> nesneler <xref:System.Windows.Documents.Block> öğeleri ve <xref:System.Windows.Documents.Inline> öğeleri. A <xref:System.Windows.Documents.Block> öğesi, paragraf ya da liste gibi bir metin bloğu temsil eder. Bir <xref:System.Windows.Documents.Inline> öğesi bir blok içinde metnin bir bölümünü temsil eder. Birçok <xref:System.Windows.Documents.Inline> sınıfları için bunlar uygulandığı metin biçimlendirme belirtin. Her <xref:System.Windows.Documents.TextElement> kendi içerik modeli vardır. Daha fazla bilgi için [TextElement içerik modeline genel bakış](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Gelişmiş](../../../../docs/framework/wpf/advanced/index.md)
+- [Gelişmiş](../advanced/index.md)

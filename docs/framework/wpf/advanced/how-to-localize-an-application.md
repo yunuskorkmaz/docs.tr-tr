@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725553"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374121"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşturulacağını açıklar.  
@@ -30,7 +30,7 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="requirements"></a>Gereksinimler  
  Bu tartışma kursunda kullanacağınız [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], komut satırından çalışan bir derleyici olduğu.  
   
- Ayrıca, bir proje dosyasını kullanmak için yönlendirilirsiniz. Nasıl kullanılacağı hakkında yönergeler için [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] ve proje dosyaları, bkz: [derleme ve dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ Ayrıca, bir proje dosyasını kullanmak için yönlendirilirsiniz. Nasıl kullanılacağı hakkında yönergeler için [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] ve proje dosyaları, bkz: [derleme ve dağıtma](../app-development/building-and-deploying-wpf-applications.md).  
   
  Bu konudaki tüm örnekler en-US (İngilizce-ABD) kültürü kullanır. Bu örneklerin adımları, farklı bir dil yüklemeden çalışmanıza olanak sağlar.  
   
@@ -137,13 +137,13 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
    2.  **Kaynak anahtarı**. Yerelleştirilmiş kaynak tanımlayıcısı.  
   
-   3.  **Kategori**. Değer türü. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Kategori**. Değer türü. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   4.  **Okunabilirlik**. Olup değeri bir yerelleştiriciye tarafından okunabilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Okunabilirlik**. Olup değeri bir yerelleştiriciye tarafından okunabilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   5.  **Modifiability'e göre**. Olup değeri bir yerelleştiriciye tarafından değiştirilebilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Modifiability'e göre**. Olup değeri bir yerelleştiriciye tarafından değiştirilebilir. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
-   6.  **Açıklamalar**. Ek açıklama değeri nasıl yerelleştirilmiş belirlemeye yardımcı olması için değeri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Açıklamalar**. Ek açıklama değeri nasıl yerelleştirilmiş belirlemeye yardımcı olması için değeri. Bkz: [Yerelleştirme öznitelikleri ve Yorumlar](localization-attributes-and-comments.md).  
   
    7.  **Değer**. İstenen kültüre Çevrilecek metin değeri.  
   
@@ -192,9 +192,9 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
     -   Uygulamanızda, App.xaml.cs için aşağıdaki kodu ekleyin:  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml kullanmaya yönelik bazı ipuçları  
@@ -210,5 +210,5 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
  Artık LocBaml aracı kullanmak nasıl temel bir anlayışa sahipsiniz.  Uıd'leri içeren bir dosya olmak. LocBaml aracı kullanarak, yerelleştirilebilir içerik ayıklamak için dosyayı ayrıştırılacak erişebileceğinizi ve içerik çevrilebilir sonra üretmeden olmalıdır bir. resources.dll dosyasını çevrilen içeriğin birleştirir. Bu konu, her olası ayrıntı içermez, ancak artık uygulamalarınızı yerelleştirme için LocBaml kullanmak için gerekli bilgi vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [WPF için Genelleştirme](globalization-for-wpf.md)
+- [Otomatik Düzen Kullanımına Genel Bakış](use-automatic-layout-overview.md)

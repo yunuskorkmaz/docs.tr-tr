@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538880"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355616"
 ---
 # <a name="digital-ink-how-to-topics"></a>Dijital Mürekkep ile İlgili Nasıl Yapılır Konuları
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özel Denetimden Mürekkep Seçme](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [Mürekkep Verisine Özel Veri Ekleme](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [Özel Denetim Üzerinde Mürekkep Silme](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [Uygulama Hareketlerini Tanıma](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [Sürükle ve Bırak Mürekkebi](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [InkCanvas'a Veri Bağlama](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [Çözümleme İpuçları ile Mürekkep Çözümleme](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [Mürekkep Döndürme](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [Özel Denetimden Mürekkep Seçme](how-to-select-ink-from-a-custom-control.md)  
+  [Mürekkep Verisine Özel Veri Ekleme](how-to-add-custom-data-to-ink-data.md)  
+  [Özel Denetim Üzerinde Mürekkep Silme](how-to-erase-ink-on-a-custom-control.md)  
+  [Uygulama Hareketlerini Tanıma](how-to-recognize-application-gestures.md)  
+  [Sürükle ve Bırak Mürekkebi](how-to-drag-and-drop-ink.md)  
+  [InkCanvas'a Veri Bağlama](how-to-data-bind-to-an-inkcanvas.md)  
+  [Çözümleme İpuçları ile Mürekkep Çözümleme](how-to-analyze-ink-with-analysis-hints.md)  
+  [Mürekkep Döndürme](how-to-rotate-ink.md)  
+  [WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma](disable-the-realtimestylus-for-wpf-applications.md)

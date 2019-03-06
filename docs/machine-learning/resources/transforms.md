@@ -4,12 +4,12 @@ description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri ke�
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415357"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355421"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Machine learning veri dönüşümleri - ML.NET
 
@@ -25,7 +25,7 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Grupları bir skaler sütuna bitişik grubu kimliğini temel alan bir vektör değerleri |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Vektör sütunlara satır, ters grubu dönüşümünün dizileri grupları kaldırın. |
 
-## <a name="conversions"></a>Dönüşümler 
+## <a name="conversions"></a>Dönüşümler
 
 | Dönüştürme | Tanım |
 | --- | --- |
@@ -36,7 +36,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Bir anahtarı bir vektör sütununa dönüştürür. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Bu türe dönüştürülüp değişiklikler temel alınan sütun türü sağlandı. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Dönüştürür (sözcükler, sayılar, vb.) bir sözlükte dizini oluşturmak için değerleri girin. |
-
 
 ## <a name="deep-learning"></a>Derin öğrenme
 
@@ -49,17 +48,17 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Kaldırır, tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) stopword karşılaştırarak durdurma sözcükleri listesini belirttiniz.| 
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları aynı görüntüyü gri tona gösterimi için dönüştürür.|
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Kaldırır, tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) stopword karşılaştırarak durdurma sözcükleri listesini belirttiniz.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları aynı görüntünün bir gri tonlamalı gösterimine dönüştürür.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Bir veya daha fazla ReadOnlyMemory sütunları alır ve bunları bir ImageType yükler. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları bir vektör temsiline dönüştürür.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları sağlanan yükseklik ve genişlik için yeniden boyutlandırır.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA, görünmeyen Dirichlet ayırma durumu resim uyarlamasını uygular.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Belirtilen model dosyasından özel dönüşümler yükler. Seri hale getirilmiş bir zinciri veya farklı (ancak yine de uyumlu) veri görünümüne önceden eğitilmiş bir dönüştürme uygulamak için 'tek tek seçme' dönüştürmeler sağlar. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Bir paketi sayısı, anahtarların belirli bir vektör içindeki ngrams (uzunluğu 1-n ardışık değerleri dizisi) üretir. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Parçalanmış metin (ReadOnlyMemory vektörü) koleksiyonu veya anahtarlarının vektörleri sayısal özellik vektör kapatır. Özellik vektör ngrams (uzunluğu 1-n ardışık belirteçleri - sözcükleri veya anahtarlarının - dizileri) sayısı ' dir. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Koleksiyona karmayı kullanarak sayısal özellik vektör parçalanmış metin (ReadOnlyMemory vektörü) kapatır. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Bir paketi sayısı, anahtarların belirli bir vektör içindeki ngrams (uzunluğu 1-n ardışık değerleri dizisi) üretir. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Parçalanmış metin (ReadOnlyMemory vektörü) koleksiyonu veya anahtarlarının vektörleri sayısal özellik vektör kapatır. Özellik vektör ngrams (uzunluğu 1-n ardışık belirteçleri - sözcükleri veya anahtarlarının - dizileri) sayısı ' dir. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Koleksiyona karmayı kullanarak sayısal özellik vektör parçalanmış metin (ReadOnlyMemory vektörü) kapatır. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Kategorik değer göstergesi dizi kategorileri sözlüğü verileri temel alan yapı ve dizi dizini olarak sözlükte kimliğini kullanarak dönüştürür. |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Projeksiyon üzerinde düşük sıra alt özellik vektör hesaplar. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Giriş dizesi puanlamak için bir yaklaşım kullanan modeli kullanır. |
@@ -73,7 +72,7 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained kullanmak için [AlexNet](https://en.wikipedia.org/wiki/AlexNet) modeli. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained kullanmak için [AlexNet](https://en.wikipedia.org/wiki/AlexNet) modeli. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained ResNet18 modelini kullanmak için. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> pretrained ResNet50model kullanılacak. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained ResNet101 modelini kullanmak için. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
@@ -116,7 +115,7 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Önyükleme örnekleme Poisson örnekleme kullanarak yaklaştırır. |
 | <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Rastgele Fourier özellik oluşturur. |
 | <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Simgeleştirici karakter odaklı burada metin bir karakter dizisi olarak değerlendirilir. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Ağırlıklar tanımlamaya yardımcı olmak için Simplfies iyileştirme. |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Ağırlıklar tanımlamaya yardımcı olması için en iyi duruma getirme basitleştirir. |
 
 ## <a name="row-filters"></a>Satır filtreleri
 

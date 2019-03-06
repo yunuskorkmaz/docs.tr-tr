@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646246"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365574"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF mürekkep ile çalışmaya başlama
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF), dijital mürekkep uygulamanıza eklemeniz
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Hızlı Başlangıç
 
@@ -42,7 +42,7 @@ Mürekkep destekleyen bir WPF uygulaması oluşturmak için:
 
 3. Tür `<InkCanvas/>` arasında `<Grid>` etiketler.
 
-   ![InkCanvas etiketi ile XAML Tasarımcısı](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![InkCanvas etiketi ile XAML Tasarımcısı](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. Tuşuna **F5** uygulamanızda hata ayıklayıcıyı başlatmak için.
 
@@ -70,7 +70,7 @@ Bazı WPF özelliklerinden ele alalım. Her şey açılış ve kapanış arasın
 
 Bu XAML arka plan gradyan fırçası Mürekkep yüzeyiniz oluşturur.
 
-![WPF uygulaması yüzeyini mürekkep üzerinde Gradyan renklerini](media/getting-started-with-ink/gradient-colors.png)
+![WPF uygulaması yüzeyini mürekkep üzerinde Gradyan renklerini](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>XAML arkasındaki kod ekleyin
 
@@ -78,12 +78,12 @@ XAML kullanıcı arabirimi tasarlamak çok kolay hale karşın, olayları işlem
 
 1. Ayarlama `MouseRightButtonUp` , XAML işleyicisinde:
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. İçinde **Çözüm Gezgini**MainWindow.XAML'yi genişletin ve (MainWindow.xaml.cs veya MainWindow.xaml.vb) arka plan kod dosyasını açın. Aşağıdaki olay işleyicisini ekleyin:
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. Uygulamayı çalıştırın. Bazı mürekkep ekleyebilir ve ardından fareyle sağ tıklayın ya da tuşuna basın ve basılı eşdeğer bir ekran kalemi ile gerçekleştirin.
 
@@ -99,18 +99,18 @@ Yordam kodundan tüm WPF özelliklerine erişebilirsiniz. Tüm XAML kullanmayan 
 
 1. Program.cs veya Program.vb dosyaya aşağıdaki kodu yapıştırın:
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. Sağ tıklayarak PresentationCore PresentationFramework ve WindowsBase derlemelere başvurular ekleyin **başvuruları** içinde **Çözüm Gezgini** seçip **BaşvuruEkle**.
 
-   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](media/getting-started-with-ink/references.png)
+   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](./media/getting-started-with-ink/references.png)
 
 1. Tuşlarına basarak uygulamayı derleyin **F5**.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dijital Mürekkep](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [Mürekkep Toplama](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [El Yazısı Tanıma](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [Mürekkep Depolama](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [Dijital Mürekkep](digital-ink.md)
+- [Mürekkep Toplama](collecting-ink.md)
+- [El Yazısı Tanıma](handwriting-recognition.md)
+- [Mürekkep Depolama](storing-ink.md)

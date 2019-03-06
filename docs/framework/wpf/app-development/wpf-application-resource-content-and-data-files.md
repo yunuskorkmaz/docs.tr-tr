@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 3fed7127624714e67121c388e70b8b833d88d772
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379204"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veriler içeren dosyaları bağımlıdır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses. Windows Presentation Foundation (WPF), yapılandırma, belirlemekten ve bu tür bir uygulama verileri dosyaları olarak adlandırılan veri dosyalarını kullanarak özel destek sunar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
@@ -35,7 +35,7 @@ ms.locfileid: "56746542"
   
  Kaynak dosyalar ve içerik dosyalarını, derleme zamanında bilinen dosyaları bu üç tür arasında olmak için önemli bir ayrım olduğundan; bir derleme, bunların açık bilgisine sahiptir. Kaynak dosyaları sitesi için ancak, bir derleme bunları olanağıyla, olabilir veya bir paketi aracılığıyla örtük bilgiye [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru; İkincisi, durum başvurulan site kaynak dosyasının gerçekten var olduğunu garanti yoktur.  
   
- Windows Presentation Foundation (WPF) uygulaması veri dosyalara başvurmak için paketi kullanır [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ayrıntılı olarak açıklanan düzeni [paketi URI ' WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Windows Presentation Foundation (WPF) uygulaması veri dosyalara başvurmak için paketi kullanır [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ayrıntılı olarak açıklanan düzeni [paketi URI ' WPF'de](pack-uris-in-wpf.md)).  
   
  Bu konuda, yapılandırma ve uygulama verileri dosyaları kullanma açıklar.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "56746542"
   
 -   Uygulama dağıtım karmaşıklığı bağımlılıklar sayısını azaltarak basitleştirmek isteyebilirsiniz.  
   
--   Uygulama verileri dosyanızı yerelleştirilebilir olması gerekir (bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).  
+-   Uygulama verileri dosyanızı yerelleştirilebilir olması gerekir (bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
->  Bu bölümde açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [uygulama kaynakları yönetme (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
+>  Bu bölümde açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [XAML kaynakları](../advanced/xaml-resources.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [uygulama kaynakları yönetme (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Kaynak dosyalarını yapılandırma  
  İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], kaynak dosya yer aldığı bir dosya, bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak bir `Resource` öğesi.  
@@ -78,24 +78,24 @@ ms.locfileid: "56746542"
   
  Örneğin, aşağıdaki kod nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetResourceStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> kaynak dosya ve içeriği olarak ayarlanmış bir <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
  Çağrılırken <xref:System.Windows.Application.GetResourceStream%2A> e erişmenizi <xref:System.IO.Stream>, ek iş, kendisiyle ayarlayacağınız özelliği türüne dönüştürme yapılması gerekir. Bunun yerine, sağlayabilirsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] açma ve dönüştürme ilgileniriz <xref:System.IO.Stream> tarafından kaynak dosyası kod kullanarak bir tür özelliği doğrudan yükleniyor.  
   
  Aşağıdaki örnek nasıl yükleneceğini gösterir. bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) kullanılarak kod.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
   
  Aşağıdaki örnek, biçimlendirme, önceki örnekte bulunan eşdeğer.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Kaynak dosyaları olarak uygulama kod dosyaları  
  Özel kümesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] paketi kullanarak uygulama kodunu dosyaları başvurulabilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]windows, sayfalar, akış belgeleri ve kaynak sözlükleri dahil. Örneğin, ayarlayabilirsiniz <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> özellik paketi ile [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pencere veya bir uygulaması başladığında yüklenmesini istediğiniz sayfa başvuruyor.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
  Olduğunda bunu yapabilirsiniz bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası dahil bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak bir `Page` öğesi.  
   
@@ -158,19 +158,19 @@ ms.locfileid: "56746542"
   
  Örneğin, aşağıdaki kod nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetContentStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> içerik dosyasını ve içeriği olarak ayarlanmış bir <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
  Çağrılırken <xref:System.Windows.Application.GetContentStream%2A> e erişmenizi <xref:System.IO.Stream>, ek iş, kendisiyle ayarlayacağınız özelliği türüne dönüştürme yapılması gerekir. Bunun yerine, sağlayabilirsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] açma ve dönüştürme ilgileniriz <xref:System.IO.Stream> tarafından kaynak dosyası kod kullanarak bir tür özelliği doğrudan yükleniyor.  
   
  Aşağıdaki örnek nasıl yükleneceğini gösterir. bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) kullanılarak kod.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
   
  Aşağıdaki örnek, biçimlendirme, önceki örnekte bulunan eşdeğer.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>Kaynak dosyaları sitesi  
@@ -186,7 +186,7 @@ ms.locfileid: "56746542"
   
  Bu tür kullanarak geleneksel dosyaları yüklemek mümkündür [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzenleri, file:/// ve http:// düzeni gibi.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
  Ancak file:/// ve http:// düzeni uygulamanızın tam güven gerektirir. Uygulamanız bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] Internet veya intranet başlatıldı ve yalnızca bu konumlardan başlatılan uygulamalar için gevşek dosyalar kaynak (uygulamanın sitesinden yalnızca yüklenebilir izin verilen izinler kümesini ister Konum başlatın). Bu tür dosyalar olarak bilinir *kaynak siteyi* dosyaları.  
   
@@ -220,23 +220,23 @@ ms.locfileid: "56746542"
   
  Örneğin, aşağıdaki kod nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetRemoteStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> kaynak siteyi içeriği olarak ayarlayın ve dosya bir <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
  Çağrılırken <xref:System.Windows.Application.GetRemoteStream%2A> e erişmenizi <xref:System.IO.Stream>, ek iş, kendisiyle ayarlayacağınız özelliği türüne dönüştürme yapılması gerekir. Bunun yerine, sağlayabilirsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] açma ve dönüştürme ilgileniriz <xref:System.IO.Stream> tarafından kaynak dosyası kod kullanarak bir tür özelliği doğrudan yükleniyor.  
   
  Aşağıdaki örnek nasıl yükleneceğini gösterir. bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) kullanılarak kod.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
   
  Aşağıdaki örnek, biçimlendirme, önceki örnekte bulunan eşdeğer.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
   
 <a name="Rebuilding_after_Changing_Build_Type"></a>   
 ## <a name="rebuilding-after-changing-build-type"></a>Yapı türü değiştirildikten sonra yeniden oluşturma  
  Uygulama veri dosyası derleme türü değiştirdikten sonra bu değişikliklerin uygulandığından emin olmak için uygulamanın tamamını yeniden derlemek gerekir. Yalnızca uygulama oluşturuyorsanız, değişiklikler uygulanmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF İçinde URI'leri Paketleme](pack-uris-in-wpf.md)

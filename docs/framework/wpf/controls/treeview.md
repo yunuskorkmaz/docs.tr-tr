@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556259"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355122"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView> Denetim bilgileri hiyerarşik yapıda daraltılabilir düğümleri kullanarak görüntüler.  
+<xref:System.Windows.Controls.TreeView> Denetim bilgilerini hiyerarşik bir yapıda daraltılabilir düğümleri kullanarak görüntüler.  
   
- Aşağıdaki çizimde, örneğidir bir <xref:System.Windows.Controls.TreeView> iç içe geçmiş denetim <xref:System.Windows.Controls.TreeViewItem> kontrol eder.  
+ Aşağıdaki çizim, örneğidir bir <xref:System.Windows.Controls.TreeView> iç içe geçmiş denetim <xref:System.Windows.Controls.TreeViewItem> kontrol eder.  
   
- ![TreeView çizimi](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![TreeView çizim](./media/treeviewillustration.JPG "TreeViewIllustration")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TreeView Genel Bakış](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [TreeView Genel Bakış](treeview-overview.md)  
+ [Nasıl Yapılır Konuları](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)  
+  [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)

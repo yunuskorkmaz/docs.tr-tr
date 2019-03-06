@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555784"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375200"
 ---
 # <a name="data-binding-wpf"></a>Veri Bağlama (WPF)
-Windows Presentation Foundation (WPF) veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Öğeleri veri kaynakları ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde çeşitli veriye bağlı olabilir.  
+Windows Presentation Foundation (WPF) veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde veri kaynakları çeşitli veri öğeleri bağlanabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama Kaynaklarına Genel Bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Veri Bağlamaya Genel Bakış](data-binding-overview.md)  
+ [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](data-templating-overview.md)  
+ [Bağlama Bildirimlerine Genel Bakış](binding-declarations-overview.md)  
+ [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Windows Presentation Foundation (WPF) veri bağlama sunmak ve veri ile etkileşi
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Sürükleme ve Bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Sürükleme ve Bırakma](../advanced/drag-and-drop.md)  
   
- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)  
   
- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

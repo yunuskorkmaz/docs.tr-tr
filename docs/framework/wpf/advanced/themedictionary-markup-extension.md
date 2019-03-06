@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 659af630f697d7f2742bc71006241c4bded842c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364807"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary Biçimlendirme Uzantısı
 Özel denetim yazarlar veya üçüncü taraf denetimleri temaya özgü kaynak sözlükleri bir denetime stil içinde kullanmak için yüklenecek tümleşen uygulamaları için bir yol sağlar.  
@@ -38,7 +38,7 @@ ms.locfileid: "54718929"
   
 |||  
 |-|-|  
-|`assemblyUri`|[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Tema bilgileri içeren derleme. Genellikle, bir paketi büyük paketinde bir derlemeye başvuran bir URI budur. Derleme kaynakları ve paketi URI'ler dağıtım sorunlarını basitleştirir. Daha fazla bilgi için [paketi URI ' WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).|  
+|`assemblyUri`|[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Tema bilgileri içeren derleme. Genellikle, bir paketi büyük paketinde bir derlemeye başvuran bir URI budur. Derleme kaynakları ve paketi URI'ler dağıtım sorunlarını basitleştirir. Daha fazla bilgi için [paketi URI ' WPF'de](../app-development/pack-uris-in-wpf.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu uzantı yalnızca bir özel özellik değerini doldurmak için tasarlanmıştır: bir değer <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.  
@@ -61,10 +61,10 @@ ms.locfileid: "54718929"
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanır <xref:System.Windows.ThemeDictionaryExtension> sınıfı.  
   
- `ThemeDictionary` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ThemeDictionary` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../app-development/wpf-application-resource-content-and-data-files.md)
