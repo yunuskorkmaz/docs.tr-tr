@@ -4,16 +4,16 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 70f725712d52ad055ff69046096da10b8edfb67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376396"
 ---
 # <a name="private-protected-visual-basic"></a>Özel korumalı (Visual Basic)
 
-`Private Protected` Anahtar sözcüğü bir üye erişim değiştiricisi oluşur. A `Private Protected` üye olduğu tüm üyelerini içeren sınıfındaki yanı sıra içeren sınıfından türetilen türler tarafından erişilebilir, ancak yalnızca içeren, derlemesi içinde bulunan. 
+`Private Protected` Anahtar sözcüğü bir üye erişim değiştiricisi oluşur. A `Private Protected` üye olduğu tüm üyelerini içeren sınıfındaki yanı sıra içeren sınıfından türetilen türler tarafından erişilebilir, ancak yalnızca içeren, derlemesi içinde bulunan.
 
 Belirtebileceğiniz `Private Protected` yalnızca; sınıfların üyeleri üzerinde uygulayamazsınız `Private Protected` bir yapının üyelerine yapıları devraldığından.
 
@@ -39,33 +39,33 @@ Daha fazla bilgi için [Visual Basic dil sürümü ayarını](../../language-ref
 - **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilirsiniz. Kod, bir taban sınıftan türetilen ve aynı bütünleştirilmiş kodda yer alan herhangi bir sınıf içinde tüm erişebilir `Private Protected` öğeleri temel sınıf. Ancak, kod bir taban sınıftan türetilen ve farklı bir derlemede yer alan herhangi bir sınıf içinde temel sınıf erişemez `Private Protected` öğeleri.
 
 - **Erişim değiştiricileri.** Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Erişim değiştiricileri bir karşılaştırması için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
-  
- `Private Protected` Bu bağlamda değiştirici kullanılabilir:  
-  
- [Sınıf bildirimi](../../../visual-basic/language-reference/statements/class-statement.md) iç içe geçmiş bir sınıfı  
-  
- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md) temsilcisi, bir sınıf içinde iç içe geçmiş  
-  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md) bir eumeration bir sınıf içinde iç içe geçmiş 
-  
- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [İnterface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md) bir arabiriminin, bir sınıf içinde iç içe geçmiş 
-  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Yapı bildirimi](../../../visual-basic/language-reference/statements/structure-statement.md) yapısını, bir sınıf içinde iç içe geçmiş 
-  
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+`Private Protected` Bu bağlamda değiştirici kullanılabilir:
+
+- [Sınıf bildirimi](../../../visual-basic/language-reference/statements/class-statement.md) iç içe geçmiş bir sınıfı
+
+- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md) temsilcisi, bir sınıf içinde iç içe geçmiş
+
+- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md) sabit listesi, bir sınıf içinde iç içe geçmiş
+
+- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [İnterface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md) bir arabiriminin, bir sınıf içinde iç içe geçmiş
+
+- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Yapı bildirimi](../../../visual-basic/language-reference/statements/structure-statement.md) yapısını, bir sınıf içinde iç içe geçmiş
+
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

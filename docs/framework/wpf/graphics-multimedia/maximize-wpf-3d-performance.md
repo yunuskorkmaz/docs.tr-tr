@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508667"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364014"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3B Performansını En Üst Düzeye Çıkarma
 Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B denetimleri oluşturmak ve uygulamalarınızda 3B eklemek için performans iyileştirme göz önünde bulundurmanız önemlidir. Bu konu, 3B sınıfları ve bunları kullanırken performans iyileştirme önerileri yanı sıra, uygulamanız için performans etkilerinin sahip özellikler listesini sağlar.  
   
- Bu konuda, Gelişmiş bir anlayış varsayılır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B özellikleri. Öneriler bu belgedeki "işleme Katman 2" için geçerlidir; kabaca piksel gölgelendirici sürüm 2.0 ve köşe gölgelendirici sürüm 2. 0'ı destekleyen donanım tanımlanmış. Daha fazla ayrıntı için [grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Bu konuda, Gelişmiş bir anlayış varsayılır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B özellikleri. Öneriler bu belgedeki "işleme Katman 2" için geçerlidir; kabaca piksel gölgelendirici sürüm 2.0 ve köşe gölgelendirici sürüm 2. 0'ı destekleyen donanım tanımlanmış. Daha fazla ayrıntı için [grafik işleme katmanları](../advanced/graphics-rendering-tiers.md).  
   
 ## <a name="performance-impact-high"></a>Performans etkisi: Yüksek  
   
@@ -60,4 +60,4 @@ Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Büyük koleksiyonlar oluşturma süresini en aza indirmek için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], MeshGeometry3D'ın gibi <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, ve <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, koleksiyonları değeri popülasyon önce önceden boyutu. Mümkünse, diziler veya listeleri gibi koleksiyonlar oluşturucular önceden doldurulmuş veri yapıları geçirin.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)

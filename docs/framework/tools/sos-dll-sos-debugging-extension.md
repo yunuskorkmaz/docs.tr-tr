@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6f2d001c6513211cf15993285e3564f7613402
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356903"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS hata ayıklama uzantısı)
 
@@ -33,7 +33,7 @@ SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) o
 |**BPMD** [**- nofuturemodule**] [\<*modül adı*> \<*yöntem adı*>] [**- md**   < `MethodDesc`>] **-liste** **-clear** \< *bekleyen kesme noktası numarası* >  **- clearall**|Belirtilen modül içinde belirtilen yöntemde bir kesme noktası oluşturur.<br /><br /> Belirtilen modül ve yöntem yüklenmediyse, bu komut, modülün yüklendiğine ve bir kesme noktası oluşturmadan önce tam zamanında (JIT) derlediğine ilişkin bir bildirim bekler.<br /><br /> Bekleyen kesme noktaları listesini kullanarak yönetebileceğiniz **-liste**, **-clear**, ve **- clearall** seçenekleri:<br /><br /> **-Liste** seçeneği tüm bekleyen kesme noktalarının bir listesini oluşturur. Bir bekleyen kesme noktasının sıfır olmayan bir modül kimliği varsa, o kesme noktası o belirli modüldeki bir işleve özeldir. Bekleyen kesme noktasının modül kimliği sıfırsa, o kesme noktası henüz yüklenmeyen modüller için geçerli olur.<br /><br /> Kullanım **-clear** veya **- clearall** bekleyen kesme noktalarını listeden kaldırmak için seçeneği.|
 |**CLRStack** [**-a**] [**-l**] [**-p**] [**- n**]|Yalnızca bir yönetilen kodların bir yığın izlemesini sağlar.<br /><br /> **-P** seçeneği yönetilen işleve bağımsız değişkenleri gösterir.<br /><br /> **-L** seçeneği bir çerçeve yerel değişkenlerle ilgili bilgileri gösterir. Yerel adlara ilişkin çıkış biçimi, bu nedenle SOS hata ayıklama uzantısı yerel adları alamadığından \< *yerel adres* >  **=** \< *değer*>.<br /><br /> **-A**(Tümü) seçeneği için bir kısayoldur **-l** ve **-p** birleştirilmiş.<br /><br /> **-N** seçeneği, kaynak dosya adları ve satır numaralarının görüntüsünü devre dışı bırakır. Hata ayıklayıcı için SYMOPT_LOAD_LINES seçeneği belirtildiyse, SOS yönetilen her çerçeve için simgelere bakar ve başarılı olursa, ilgili dosya adını ve satır numarasını görüntüler. **- N** (satır numarası yok) parametresi, bu davranışı devre dışı bırakmak için belirtilebilir.<br /><br /> SOS Hata Ayıklama Uzantısı, x64 ve IA-64 tabanlı platformlarda geçiş çerçevelerini görüntülemez.|
 |**COMState**|Her iş parçacığı için COM grubu modelini listeler ve `Context` varsa işaretçisi.|
-|**DumpArray** [**-başlangıç** \< *startIndex*>] [**-uzunluk** \<*uzunluğu*>] [**-Ayrıntılar**] [**- nofields**] \<*dizi nesnesi adresi*><br /><br /> veya<br /><br /> **DA** [**-başlangıç** \< *startIndex*>] [**-uzunluğu** \< *uzunluğu*>] [**-ayrıntı**] [**- nofields**] *dizi nesnesi adresi*>|Bir dizi nesnesinin öğelerini inceler.<br /><br /> **-Başlangıç** seçeneği, öğelerin görüntüleneceği başlangıç dizinini belirtir.<br /><br /> **-Uzunluğu** seçeneği kaç öğenin gösterileceğini belirtir.<br /><br /> **-Ayrıntılar** seçeneği kullanarak öğe ayrıntılarını görüntüler **DumpObj** ve **DumpVC** biçimleri.<br /><br /> **- Nofields** seçeneği, dizilerin görüntülenmesini önler. Bu seçenek yalnızca, **-ayrıntı** seçeneği belirtildi.|
+|**DumpArray** [**-başlangıç** \< *startIndex*>] [**-uzunluk** \<*uzunluğu*>] [**-Ayrıntılar**] [**- nofields**] \<*dizi nesnesi adresi*><br /><br /> -veya-<br /><br /> **DA** [**-başlangıç** \< *startIndex*>] [**-uzunluğu** \< *uzunluğu*>] [**-ayrıntı**] [**- nofields**] *dizi nesnesi adresi*>|Bir dizi nesnesinin öğelerini inceler.<br /><br /> **-Başlangıç** seçeneği, öğelerin görüntüleneceği başlangıç dizinini belirtir.<br /><br /> **-Uzunluğu** seçeneği kaç öğenin gösterileceğini belirtir.<br /><br /> **-Ayrıntılar** seçeneği kullanarak öğe ayrıntılarını görüntüler **DumpObj** ve **DumpVC** biçimleri.<br /><br /> **- Nofields** seçeneği, dizilerin görüntülenmesini önler. Bu seçenek yalnızca, **-ayrıntı** seçeneği belirtildi.|
 |**DumpAssembly** \< *derleme adresi*>|Bir derlemeyle ilgili bilgileri görüntüler.<br /><br /> **DumpAssembly** komutu, varsa birden çok modülü listeler.<br /><br /> Kullanarak bir derleme adresi alabilirsiniz **DumpDomain** komutu.|
 |**DumpClass** \< *EEClass adresi*>|İlgili bilgileri görüntüler `EEClass` yapısı türü ile ilişkili.<br /><br /> **DumpClass** komutu statik alan değerlerini görüntüler, fakat statik olmayan alan değerlerini görüntülemez.<br /><br /> Kullanım **Eeclass**, **DumpObj**, **Name2EE**, veya **name2ee** almak için komutu bir `EEClass` yapı adresi.|
 |**DumpDomain** [\<*etki alanı adresi*>]|Her numaralandırır <xref:System.Reflection.Assembly> diğer bir deyişle nesne belirtilen içinde yüklenen <xref:System.AppDomain> nesnesi adresi.  Hiçbir parametre olmadan çağrıldığında **DumpDomain** komut tüm listeler <xref:System.AppDomain> bir işlemde nesneleri.|
@@ -44,12 +44,12 @@ SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) o
 |**Eeclass** [**-MD**] \< *MethodTable adresi*>|Belirtilen bir adresteki bir yöntem tablosuyla ilgili bilgileri görüntüler. Belirtme **-MD** seçeneği nesneyle birlikte tanımlanan tüm yöntemlerin listesini görüntüler.<br /><br /> Her bir yönetilen nesne bir yöntem tablosu işaretçisi içerir.|
 |**DumpMethodSig** \< *sigaddr*><*moduleadd*`r`>|İlgili bilgileri görüntüler bir `MethodSig` belirtilen adreste yapısı.|
 |**DumpModule** [**- mt**] \< *modülü adresi*>|Belirtilen adresteki bir modülle ilgili bilgileri görüntüler. **- Mt** seçeneği bir modülde tanımlanan türleri ve modül tarafından başvurulan türleri görüntüler<br /><br /> Kullanabileceğiniz **DumpDomain** veya **DumpAssembly** bir modülün adresini almak için komutu.|
-|**DumpObj** [**- nofields**] \< *nesnesi adresi*><br /><br /> veya<br /><br /> **YAPMAK** \<*nesne adresi*>|Belirtilen adresteki bir nesneyle ilgili bilgileri görüntüler. **DumpObj** komutu alanları görüntüler `EEClass` yapı bilgilerini, yöntem tablosunu ve nesnenin boyutu.<br /><br /> Kullanabileceğiniz **DumpStackObjects** bir nesnenin adresini almak için komutu.<br /><br /> Çalıştırabileceğiniz Not **DumpObj** türünde alanlar üzerinde komutunu `CLASS` onlarda nesne olduğu için.<br /><br /> `-` **Nofields** seçeneği alanları nesnenin görüntülenmesini önler, dize gibi nesneler için kullanışlıdır.|
+|**DumpObj** [**- nofields**] \< *nesnesi adresi*><br /><br /> -veya-<br /><br /> **YAPMAK** \<*nesne adresi*>|Belirtilen adresteki bir nesneyle ilgili bilgileri görüntüler. **DumpObj** komutu alanları görüntüler `EEClass` yapı bilgilerini, yöntem tablosunu ve nesnenin boyutu.<br /><br /> Kullanabileceğiniz **DumpStackObjects** bir nesnenin adresini almak için komutu.<br /><br /> Çalıştırabileceğiniz Not **DumpObj** türünde alanlar üzerinde komutunu `CLASS` onlarda nesne olduğu için.<br /><br /> `-` **Nofields** seçeneği alanları nesnenin görüntülenmesini önler, dize gibi nesneler için kullanışlıdır.|
 |**DumpRuntimeTypes**|Çöp toplayıcı yığınındaki çalışma zamanı türü nesneleri görüntüler ve ilişkili tür adlarını ve yöntem tablolarını listeler.|
 |**DumpStack** [**- EE**] [**- n**] [`top` *yığın* [`bottom` *Yığ*`k`]]|Bir yığın izleme görüntüler.<br /><br /> **- EE** seçeneğini neden **DumpStack** komutunun yalnızca yönetilen işlevleri. Kullanım `top` ve `bottom` x86 üzerinde görüntülenen yığın karelerini sınırlamak için parametreleri platformlar.<br /><br /> **-N** seçeneği, kaynak dosya adları ve satır numaralarının görüntüsünü devre dışı bırakır. Hata ayıklayıcı için SYMOPT_LOAD_LINES seçeneği belirtildiyse, SOS yönetilen her çerçeve için simgelere bakar ve başarılı olursa, ilgili dosya adını ve satır numarasını görüntüler. **- N** (satır numarası yok) parametresi, bu davranışı devre dışı bırakmak için belirtilebilir.<br /><br /> X86 ve x64 platformlarında **DumpStack** komutu bir ayrıntılı yığın izleme oluşturur.<br /><br /> IA-64 tabanlı platformlarda **DumpStack** komutunu taklit eder, hata ayıklayıcı'nın **K** komutu. `top` Ve `bottom` parametreleri IA-64 tabanlı platformlarda yoksayılır.|
 |**DumpSig** \< *sigaddr*> \<*moduleaddr*>|İlgili bilgileri görüntüler bir `Sig` belirtilen adreste yapısı.|
 |**DumpSigElem** \< *sigaddr*> \<*moduleaddr*>|Bir imza nesnesinin tek bir öğesini görüntüler. Çoğu durumda, kullanmanız gereken **DumpSig** bireysel imza nesnelerine aramak için. Ancak, bir imza bir şekilde bozulduysa, kullanabileceğiniz **DumpSigElem** geçerli bölümlerini okumak için.|
-|**DumpStackObjects** [**-doğrulayın**] [`top` *yığın* [`bottom` *yığın*]]<br /><br /> veya<br /><br /> **DSO** [**-doğrulayın**] [`top` *yığın* [`bottom` *yığın*]]|Geçerli yığının sınırları içinde bulunan tüm yönetilen nesneleri görüntüler.<br /><br /> **-Doğrulayın** seçeneği statik olmayan her doğrulama `CLASS` , bir nesne alanının alan.<br /><br /> Kullanım **k** gibi yığın izleme komutlarıyla birlikte komut **K** komut ve **CLRStack** yerel değişkenlerin değerleri belirlemek için komut ve Parametreler.|
+|**DumpStackObjects** [**-doğrulayın**] [`top` *yığın* [`bottom` *yığın*]]<br /><br /> -veya-<br /><br /> **DSO** [**-doğrulayın**] [`top` *yığın* [`bottom` *yığın*]]|Geçerli yığının sınırları içinde bulunan tüm yönetilen nesneleri görüntüler.<br /><br /> **-Doğrulayın** seçeneği statik olmayan her doğrulama `CLASS` , bir nesne alanının alan.<br /><br /> Kullanım **k** gibi yığın izleme komutlarıyla birlikte komut **K** komut ve **CLRStack** yerel değişkenlerin değerleri belirlemek için komut ve Parametreler.|
 |**DumpVC** \< *MethodTable adresi*> \<*adresi*>|Belirtilen adresteki bir değer sınıfının alanlarıyla ilgili bilgileri görüntüler.<br /><br /> **MethodTable** parametresi verir **DumpVC** alanları doğru olarak yorumlamasına komutu. Değer sınıfları, ilk alanları olarak bir yöntem tablosuna sahip değildir.|
 |**EEHeap** [**-gc**] [**-loader**]|İç CLR veri yapıları tarafından tüketilen işlem belleğiyle ilgili bilgileri görüntüler.<br /><br /> **-Gc** ve **-loader** seçenekleri, bu komutun çöp Toplayıcıya veya yükleyici veri yapılarına çıkışını sınırlandırır.<br /><br /> Çöp toplayıcıya ilişkin bilgiler, yönetilen yığındaki her bir segmentin aralıklarını listeler.  İşaretçi tarafından verilen bir segment aralığı içinde kalırsa **-gc**, işaretçi bir nesne işaretçisidir.|
 |**EEStack** [**-kısa**] [**- EE**]|Çalıştırmaları **DumpStack** komutunu işlemdeki tüm iş parçacıkları.<br /><br /> **- EE** seçeneği doğrudan geçirilen **DumpStack** komutu. **-Kısa** parametresi çıkışı aşağıdaki türden iş parçacıklarıyla sınırlandırır:<br /><br /> Kilit almış olan iş parçacıkları.<br /><br /> Çöp toplamaya olanak tanımak için durdurulmuş iş parçacıkları.<br /><br /> Yönetilen kodda bulunan iş parçacıkları.|
@@ -58,11 +58,11 @@ SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) o
 |**SSS**|Sık sorulan soruları görüntüler.|
 |**FinalizeQueue** [**-ayrıntı**] &#124; [**- allReady**] [**-kısa**]|Sonlandırma için kaydolan tüm nesneleri görüntüler.<br /><br /> **-Ayrıntı** seçeneği görüntüler hakkında ek bilgi `SyncBlocks` temizlenmesi gereken ve tüm `RuntimeCallableWrappers` (RCW) syncblocks. Bu veri yapılarının her ikisi de, çalıştığı zaman sonlandırıcı tarafından ön belleğe kaydedilir.<br /><br /> `-allReady` Seçeneği olup, bu nedenle çöp toplama zaten işaretlenmiş veya sonraki çöp toplamadan işaretlenecek bakılmaksızın, sonlandırma için hazır olan tüm nesneleri görüntüler. "Sonlandırma için hazır" listesinde olan nesneler, artık köklü olmayan sonlandırılabilir nesnelerdir. Sonlandırılabilir kuyruklarda bulunan tüm nesnelerin hala köklü olduğunu doğruladığından, bu seçenek çok pahalı olabilir.<br /><br /> `-short` Seçeneği her nesnenin adresine çıkışı sınırlandırır. İle birlikte kullanıldığında **- allReady**, artık köklü olmayan bir Sonlandırıcısı olan tüm nesneleri numaralandırır. Bağımsız olarak kullanılırsa, sonlandırılabilir ve "sonlandırmaya hazır" kuyruklardaki tüm nesneleri listeler.|
 |**FindAppDomain** \< *nesnesi adresi*>|Belirtilen adresteki bir nesnenin uygulama etki alanını belirler.|
-|**FindRoots** **-gen** \< *N*> &#124; **-gen any** &#124; \< *nesnesi adresi*>|Belirtilen oluşturmanın sonraki toplamasında, hata ayıklayıcının hatası ayıklanan öğeyi yarıda kesmesine neden olur. Kesme oluşur oluşmaz, etki sıfırlanır. Sonraki toplamayı kesmek için, komutu tekrar vermeniz gerekir. *\<Nesnesi adresi >* bu komutun formu tarafından neden olunan sonra kullanılır **-gen** veya **-gen any** oluştu. O anda hata ayıklanan için doğru durumda olduğundan. **FindRoots** geçerli nesneler için köklerin tanımlamak için oluşturmalardan.|
+|**FindRoots** **-gen** \< *N*> &#124; **-gen any** &#124; \< *nesnesi adresi*>|Belirtilen oluşturmanın sonraki toplamasında, hata ayıklayıcının hatası ayıklanan öğeyi yarıda kesmesine neden olur. Kesme oluşur oluşmaz, etki sıfırlanır. Sonraki toplamayı kesmek için, komutu tekrar vermeniz gerekir.  *\<Nesnesi adresi >* bu komutun formu tarafından neden olunan sonra kullanılır **-gen** veya **-gen any** oluştu. O anda hata ayıklanan için doğru durumda olduğundan. **FindRoots** geçerli nesneler için köklerin tanımlamak için oluşturmalardan.|
 |**GCHandles** [**- perdomain**]|İşlemdeki çöp toplayıcı tanıtıcılarıyla ilgili istatistikleri görüntüler.<br /><br /> **- Perdomain** seçeneği, istatistikleri uygulama etki alanına göre düzenler.<br /><br /> Kullanım **GCHandles** çöp toplayıcı tanıtıcı sızıntılarının neden olduğu bellek sızıntılarını bulmak için komutu. Örneğin, kesin olarak belirlenmiş bir çöp toplayıcı tanıtıcısı hala onu işaret ettiği için kod büyük bir diziyi tuttuğunda, bir bellek sızıntısı olur ve tanıtıcı onu serbest bırakmadan atılır.|
 |**GCHandleLeaks**|Kesin olarak belirlenmiş ve iliştirilmiş çöp toplayıcı tanıtıcılarına yapılan başvurular için bellekte arama yapar ve sonuçları görüntüler. Bir tanıtıcı bulunursa **GCHandleLeaks** komutu başvurunun adresini görüntüler. Bellekte bir tanıtıcı bulunmazsa, bu komut bir bildirim görüntüler.|
 |**Gcınfo** \< *MethodDesc adresi*>\<*kod adresi*>|Kayıt defterlerinin ve yığın konumlarının yönetilen nesneleri ne zaman içerdiğini gösteren verileri görüntüler. Bir çöp toplama olursa, onları yeni nesne işaretçisi değerleriyle güncelleştirebilmesi için, toplayıcı nesnelere yapılan başvuruların konumlarını bilmelidir.|
-|**GCRoot** [**- nostacks**] \< *nesnesi adresi*>|Belirtilen adresteki bir nesneye yapılan başvurularla (veya köklerle) ilgili bilgi görüntüler.<br /><br /> **GCRoot** komut inceler yönetilen yığını ve tanıtıcı tablosunu diğer tanıtıcılar için nesneleri ve yığındaki tanıtıcılar. Sonra, her bir yığında nesne işaretçileri aranır ve sonlandırıcı kuyruğunda da arama yapılır.<br /><br /> Bu komut, bir yığın kökünün geçerli veya atılmış olduğunu belirlemez. Kullanma **CLRStack** ve **U** yerel veya bağımsız değişken değeri yığın kökünün hala kullanılıp kullanılmadığını belirlemek için ait olduğu çerçeveyi ayrıştırmak için komutları.<br /><br /> **- Nostacks** seçeneği, aramayı çöp toplayıcı tanıtıcılarıyla ve aranabilir nesnelerle kısıtlar kısıtlar.|
+|**GCRoot** [**- nostacks**] \< *nesnesi adresi*>|Belirtilen adresteki bir nesneye yapılan başvurularla (veya köklerle) ilgili bilgi görüntüler.<br /><br /> **GCRoot** komut inceler yönetilen yığını ve tanıtıcı tablosunu diğer tanıtıcılar için nesneleri ve yığındaki tanıtıcılar. Sonra, her bir yığında nesne işaretçileri aranır ve sonlandırıcı kuyruğunda da arama yapılır.<br /><br /> Bu komut, bir yığın kökünün geçerli veya atılmış olduğunu belirlemez. Kullanma **CLRStack** ve **U** yerel veya bağımsız değişken değeri yığın kökünün hala kullanılıp kullanılmadığını belirlemek için ait olduğu çerçeveyi ayrıştırmak için komutları.<br /><br /> **- Nostacks** seçeneği, aramayı çöp toplayıcı tanıtıcılarıyla ve erişilebilir nesneleri için kısıtlar.|
 |**GCWhere***\<nesnesi adresi >*|Geçirilen bağımsız değişkenin çöp toplama yığınındaki konumu ve büyüklüğü görüntüler. Bağımsız değişken yönetilen yığında yer aldığında, fakat geçerli bir nesne adresi olmadığında, büyüklük 0 (sıfır) olarak görüntülenir.|
 |**Yardım** [\<*komut*>] [`faq`]|Parametre belirtilmediğinde kullanılabilir olan tüm komutları görüntüler veya belirli komutla ilgili ayrıntılı yardım bilgilerini görüntüler.<br /><br /> `faq` Parametresi sık sorulan soruların yanıtlarını görüntüler.|
 |**HeapStat** [**- inclUnrooted** &#124; **-IU**]|Her bir yığın için oluşturma büyüklüğünü ve her bir yığındaki her bir oluşturmada bulunan toplam boş alanı görüntüler. Varsa**inclUnrooted** seçeneği belirtilmemişse, rapor artık kökü olmayan çöp toplama yığınındaki yönetilen nesnelerle ilgili bilgiler içerir.|
@@ -74,15 +74,15 @@ SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) o
 |**IP2MD** \< *kod adresi*>|Görüntüler `MethodDesc` JIT derlemeli kod içinde belirtilen adreste yapısı.|
 |`ListNearObj` (`lno`) *< obj_address >*|Belirtilen adresten önceki ve sonraki nesneleri görüntüler. Komut, yönetilen bir nesnenin (geçerli bir yöntem tablosuna dayalı olarak) ve bağımsız değişken adresini izleyen nesnenin geçerli bir başlangıcı gibi görünen çöp toplama yığınında adresi arar.|
 |**MinidumpMode** [**0**] [**1**]|Bir mini döküm kullanırken, güvenli olmayan komutların çalışmasını önler.<br /><br /> Geçirmek **0** bu özelliği devre dışı bırakmak veya **1** bu özelliği etkinleştirmek için. Varsayılan olarak, **MinidumpMode** değeri ayarı **0**.<br /><br /> Oluşturulan Mini dökümler **.dump /m** komutu veya **.dump** komut CLR özel sınırlı veriler içerir ve SOS komutlarının yalnızca bir kısmı düzgün çalıştırmanıza olanak tanır. Gerekli bellek alanları eşleşmediğinden veya kısmen eşleştiğinden, bazı komutlar beklenmeyen hatalarla başarısız olabilir. Bu seçenek, mini dökümlere karşı güvenli olmayan komutları çalıştırmaktan sizi korur.|
-|**Name2EE** \< *modül adı*> \<*tür veya yöntem adı*><br /><br /> veya<br /><br /> **Name2EE** \< *modül adı*>**!** \< *tür veya yöntem adı*>|Görüntüler `MethodTable` yapısı ve `EEClass` belirtilen tür veya yöntemin belirtilen modüldeki yapısı.<br /><br /> Belirtilen modülün işlemde yüklenmesi gerekir.<br /><br /> Uygun tür adını almak için kullanarak modüle gözatın [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). De geçirebilirsiniz `*` modül olarak tüm arama için ad yüklü yönetilen modülleri. *Modül adı* parametresi ayrıca olabilir bir modül için hata ayıklayıcı'nın adı gibi `mscorlib` veya `image00400000`.<br /><br /> Bu komut Windows hata ayıklayıcı sözdizimini destekler <`module`>`!`<`type`>. Tür, tam olarak nitelenmiş olmalıdır.|
+|**Name2EE** \< *modül adı*> \<*tür veya yöntem adı*><br /><br /> -veya-<br /><br /> **Name2EE** \< *modül adı*>**!** \< *tür veya yöntem adı*>|Görüntüler `MethodTable` yapısı ve `EEClass` belirtilen tür veya yöntemin belirtilen modüldeki yapısı.<br /><br /> Belirtilen modülün işlemde yüklenmesi gerekir.<br /><br /> Uygun tür adını almak için kullanarak modüle gözatın [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). De geçirebilirsiniz `*` modül olarak tüm arama için ad yüklü yönetilen modülleri. *Modül adı* parametresi ayrıca olabilir bir modül için hata ayıklayıcı'nın adı gibi `mscorlib` veya `image00400000`.<br /><br /> Bu komut Windows hata ayıklayıcı sözdizimini destekler <`module`>`!`<`type`>. Tür, tam olarak nitelenmiş olmalıdır.|
 |**ObjSize** [\<*nesnesi adresi*>] &#124; [**-toplama**] [**-stat**]|Belirtilen nesnenin boyutunu görüntüler. Herhangi bir parametre belirtmezseniz, **ObjSize** komutu yönetilen iş parçacıklarında bulunan tüm nesnelerin boyutunu görüntüler, işlemdeki tüm çöp toplayıcı tanıtıcılarını görüntüler ve bu tanıtıcıların işaret ettiği tüm nesnelerin boyutunu toplar. **ObjSize** komut üst ek olarak tüm alt nesnelerin büyüklüğünü içerir.<br /><br /> **-Toplama** seçeneği ile birlikte kullanılabilir **-stat** bağımsız değişkeni, hala köklü olan türlerin ayrıntılı bir görünüm elde edin. Kullanarak **! dumpheap-stat** ve **! objsize-toplama - stat**, hangi nesnelerin artık köklü olmayan ve çeşitli bellek sorunlarını tanılamak belirleyebilirsiniz.|
-|**PrintException** [**-iç içe geçmiş**] [**-satırları**] [\<*özel durum nesnesi adresi*>]<br /><br /> veya<br /><br /> **PE** [**-iç içe geçmiş**] [\<*özel durum nesnesi adresi*>]|Görüntüler ve türetilen herhangi bir nesnenin alanlarını biçimleri <xref:System.Exception> belirtilen adreste sınıfı. Bir Adres belirtmezseniz **PrintException** komutu, geçerli iş parçacığında oluşturulan en son özel durumu görüntüler.<br /><br /> **-İç içe geçmiş** seçeneği iç içe geçmiş özel durum nesneleri hakkındaki ayrıntıları görüntüler.<br /><br /> **-Satırları** seçeneği varsa kaynak bilgilerini görüntüler.<br /><br /> Bu komut biçimlendirmek ve görüntülemek için kullanabileceğiniz `_stackTrace` bir ikili dizi olan alan.|
+|**PrintException** [**-iç içe geçmiş**] [**-satırları**] [\<*özel durum nesnesi adresi*>]<br /><br /> -veya-<br /><br /> **PE** [**-iç içe geçmiş**] [\<*özel durum nesnesi adresi*>]|Görüntüler ve türetilen herhangi bir nesnenin alanlarını biçimleri <xref:System.Exception> belirtilen adreste sınıfı. Bir Adres belirtmezseniz **PrintException** komutu, geçerli iş parçacığında oluşturulan en son özel durumu görüntüler.<br /><br /> **-İç içe geçmiş** seçeneği iç içe geçmiş özel durum nesneleri hakkındaki ayrıntıları görüntüler.<br /><br /> **-Satırları** seçeneği varsa kaynak bilgilerini görüntüler.<br /><br /> Bu komut biçimlendirmek ve görüntülemek için kullanabileceğiniz `_stackTrace` bir ikili dizi olan alan.|
 |**ProcInfo** [**- env**] [**-zaman**] [**-bellek**]|İşlem, çekirdek CPU süresi ve bellek kullanımı istatistikleri için ortam değişkenlerini görüntüler.|
 |**RCWCleanupList** \< *RCWCleanupList adresi*>|Belirtilen adreste temizlenmeyi bekleyen çalışma zamanı çağrılabilir sarmalayıcılarının listesini görüntüler.|
 |**SaveModule** \< *temel adres*> \<*dosya adı*>|Belirtilen adreste belleğe yüklenen bir görüntüyü belirtilen dosyaya yazar.|
 |**SOSFlush**|Bir iç SOS önbelleğini temizler.|
-|**StopOnException** [**-türetilmiş**] [**-oluşturma** &#124; **-create2**] \< *özel durum* >  \< *Sözde kayıt numarası*>|Belirtilen özel durum oluştuğunda hata ayıklayıcının durmasına, fakat diğer özel durumlar oluştuğunda çalışmaya devam etmesine neden olur.<br /><br /> **-Türetilmiş** seçeneği belirtilen özel durum ve belirtilen özel durumdan türetilen her bir özel durumu yakalar.|
-|**SyncBlk** [**-tüm** &#124; \< *syncblk numarası*>]|Belirtilen görüntüler `SyncBlock` yapısını veya tüm `SyncBlock` yapıları.  Herhangi bir bağımsız değişken geçirmezseniz **SyncBlk** komutunu görüntüler `SyncBlock` bir iş parçacığının sahip olduğu nesnelere karşılık gelen yapısı.<br /><br /> A `SyncBlock` yapısı her nesne için oluşturulması gerekmeyen fazladan bilgiler için bir kapsayıcıdır. COM birlikte çalışabilirlik verilerini, karma kodları ve güvenli iş parçacığı işlemlerine ilişkin kilitleme bilgilerini tutabilir.|
+|**StopOnException** [**-derived**] [**-create** &#124; **-create2**] \<*Exception*> \<*Pseudo-register number*>|Belirtilen özel durum oluştuğunda hata ayıklayıcının durmasına, fakat diğer özel durumlar oluştuğunda çalışmaya devam etmesine neden olur.<br /><br /> **-Türetilmiş** seçeneği belirtilen özel durum ve belirtilen özel durumdan türetilen her bir özel durumu yakalar.|
+|**SyncBlk** [**-all** &#124; \<*syncblk number*>]|Belirtilen görüntüler `SyncBlock` yapısını veya tüm `SyncBlock` yapıları.  Herhangi bir bağımsız değişken geçirmezseniz **SyncBlk** komutunu görüntüler `SyncBlock` bir iş parçacığının sahip olduğu nesnelere karşılık gelen yapısı.<br /><br /> A `SyncBlock` yapısı her nesne için oluşturulması gerekmeyen fazladan bilgiler için bir kapsayıcıdır. COM birlikte çalışabilirlik verilerini, karma kodları ve güvenli iş parçacığı işlemlerine ilişkin kilitleme bilgilerini tutabilir.|
 |**İş parçacığı havuzu**|Kuyruktaki iş isteklerinin sayısı, derleme bağlantı noktası iş parçacıklarının sayısı ve zamanlayıcıların sayısı dahil, yönetilen iş parçacığı havuzuyla ilgili bilgileri görüntüler.|
 |**Name2ee** \< *modül adı*> \<*belirteci*>|Belirtilen meta veri içinde belirtilen modüldeki belirteci kapatır bir `MethodTable` yapısı veya `MethodDesc` yapısı.<br /><br /> Geçirebilirsiniz `*` ne o belirteç tüm yüklü yönetilen modülde eşlendiği bulmak modül adı parametresi için. Bir modül için hata ayıklayıcı'nın adı gibi geçirebilirsiniz `mscorlib` veya `image00400000`.|
 |**İş parçacığı** [**-canlı**] [**-özel**]|İşlemdeki tüm yönetilen iş parçacıklarını görüntüler.<br /><br /> **İş parçacıkları** komut hata ayıklayıcı hızlı yazma Kimliğini, CLR iş parçacığı Kimliğini ve işletim sistemi iş parçacığı kimliğini görüntüler  Ayrıca, **iş parçacıkları** komut bir iş parçacığının yürütülmekte uygulama etki alanını gösteren bir etki alanı sütununu, COM grubu modunu görüntüleyen bir APT sütununu ve son görüntüleyen bir özel durum sütununu görüntüler özel durum iş parçacığında oluşturuldu.<br /><br /> **-Canlı** seçeneği bir canlı iş parçacığıyla ilişkili iş parçacıklarını görüntüler.<br /><br /> **-Özel** seçeneği CLR tarafından oluşturulan tüm özel iş parçacıklarını görüntüler. Özel iş parçacıkları, çöp toplama iş parçacıklarını (eşzamanlı ve sunucu çöp toplamada), hata ayıklayıcı yardımcı iş, sonlandırıcı iş parçacıklarını dahil <xref:System.AppDomain> iş parçacıkları ve iş parçacığı havuzu Zamanlayıcı iş parçacıklarını kaldırın.|
@@ -126,79 +126,79 @@ Aşağıdaki komut, adresindeki bir dizinin içeriğini görüntüler `00ad28d0`
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
- Aşağıdaki komut, adresindeki bir derlemenin içeriğini görüntüler `1ca248`.
+Aşağıdaki komut, adresindeki bir derlemenin içeriğini görüntüler `1ca248`.
 
 ```
 !dumpassembly 1ca248
 ```
 
- Aşağıdaki komut, çöp toplayıcı yığınıyla ilgili bilgileri görüntüler.
+Aşağıdaki komut, çöp toplayıcı yığınıyla ilgili bilgileri görüntüler.
 
 ```
 !dumpheap
 ```
 
- Aşağıdaki komut, bellek içi yük günlüğünün içeriğini, geçerli dizindeki StressLog.txt adlı bir dosyaya (varsayılan) yazar.
+Aşağıdaki komut, bellek içi yük günlüğünün içeriğini, geçerli dizindeki StressLog.txt adlı bir dosyaya (varsayılan) yazar.
 
 ```
 !DumpLog
 ```
 
- Aşağıdaki komut görüntüler `MethodDesc` yapısı adresten `902f40`.
+Aşağıdaki komut görüntüler `MethodDesc` yapısı adresten `902f40`.
 
 ```
 !dumpmd 902f40
 ```
 
- Aşağıdaki komut, adresindeki bir modülle ilgili bilgileri görüntüler `1caa50`.
+Aşağıdaki komut, adresindeki bir modülle ilgili bilgileri görüntüler `1caa50`.
 
 ```
 !dumpmodule 1caa50
 ```
 
- Aşağıdaki komut, adresindeki bir nesneyle ilgili bilgileri görüntüler `a79d40`.
+Aşağıdaki komut, adresindeki bir nesneyle ilgili bilgileri görüntüler `a79d40`.
 
 ```
 !DumpObj a79d40
 ```
 
- Aşağıdaki komut bir değer sınıfının alanlarını görüntüler `00a79d9c` adresindeki yöntem tablosunu kullanarak `0090320c`.
+Aşağıdaki komut bir değer sınıfının alanlarını görüntüler `00a79d9c` adresindeki yöntem tablosunu kullanarak `0090320c`.
 
 ```
 !DumpVC 0090320c 00a79d9c
 ```
 
- Aşağıdaki komut, çöp toplayıcı tarafından kullanılan işlem belleğini görüntüler.
+Aşağıdaki komut, çöp toplayıcı tarafından kullanılan işlem belleğini görüntüler.
 
 ```
 !eeheap -gc
 ```
 
- Aşağıdaki komut, sonlandırma için zamanlanan tüm nesneleri görüntüler.
+Aşağıdaki komut, sonlandırma için zamanlanan tüm nesneleri görüntüler.
 
 ```
 !finalizequeue
 ```
 
- Aşağıdaki komutu adresteki bir nesneye uygulama etki alanını belirler `00a79d98`.
+Aşağıdaki komutu adresteki bir nesneye uygulama etki alanını belirler `00a79d98`.
 
 ```
 !findappdomain 00a79d98
 ```
 
- Aşağıdaki komut, geçerli işlemdeki tüm çöp toplayıcı tanıtıcılarını görüntüler.
+Aşağıdaki komut, geçerli işlemdeki tüm çöp toplayıcı tanıtıcılarını görüntüler.
 
 ```
 !gcinfo 5b68dbb8
 ```
 
- Aşağıdaki komut görüntüler `MethodTable` ve `EEClass` için yapıları `Main` sınıfında yöntemi `MainClass` modülünde `unittest.exe`.
+Aşağıdaki komut görüntüler `MethodTable` ve `EEClass` için yapıları `Main` sınıfında yöntemi `MainClass` modülünde `unittest.exe`.
 
 ```
 !name2ee unittest.exe MainClass.Main
 ```
 
- Aşağıdaki komut, adresindeki meta veri belirteciyle ilgili bilgileri görüntüler `02000003` modülünde `unittest.exe`.
+Aşağıdaki komut, adresindeki meta veri belirteciyle ilgili bilgileri görüntüler `02000003` modülünde `unittest.exe`.
 
 ```
 !token2ee unittest.exe 02000003

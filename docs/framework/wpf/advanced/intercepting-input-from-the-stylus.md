@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667046"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374316"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimari üzerinde alt düzey denetimi uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranış uygulayan ve en iyi performans için ekran kalemi aygıttan gelen veri akışını uygulamak için bir mekanizma sağlar.  
@@ -47,10 +47,10 @@ ms.locfileid: "54667046"
   
  Aşağıdaki örnek değiştirerek iğne girişi kısıtlayan bir eklenti gösterir <xref:System.Windows.Input.StylusPoint.X%2A> ve <xref:System.Windows.Input.StylusPoint.Y%2A> değerler <xref:System.Windows.Input.StylusPoint> verilerin geldiği <xref:System.Windows.Input.Stylus> cihaz.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
-[!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
+[!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Eklentinizin InkCanvas'a ekleme  
@@ -58,18 +58,18 @@ ms.locfileid: "54667046"
   
  Aşağıdaki örnek bir özel gösterir <xref:System.Windows.Controls.InkCanvas> , mürekkep filtreler.  
   
- [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
+ [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
  Eklerseniz bir `FilterInkCanvas` çalışma ve uygulama, kullanıcı bir fırça tamamlandıktan sonra mürekkep bir bölgeye kadar kısıtlı olmadığını görürsünüz. Bunun nedeni, <xref:System.Windows.Controls.InkCanvas> sahip bir <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> özelliğinin bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ve zaten bir üye <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonu. Özel <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> eklediğiniz <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonu alır <xref:System.Windows.Input.StylusPoint> sonra verileri <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> verileri alır. Sonuç olarak, <xref:System.Windows.Input.StylusPoint> veri filtrelenmez kadar kullanıcı kalemi vuruşu sonlandırmak için kaldırıncaya sonra. Kullanıcı bunu çizer gibi mürekkep filtrelemek için eklemelisiniz `FilterPlugin` önce <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
  Aşağıdaki C# kodu özel bir gösterir <xref:System.Windows.Controls.InkCanvas> çizildiğinde mürekkep filtrelere.  
   
- [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
+ [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>Sonuç  
  Kendi türetme tarafından <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve ekleyerek <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> koleksiyonları, dijital mürekkep davranışını büyük ölçüde geliştirebilirsiniz. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak üretilir, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> veri, uygulamanız için mürekkep toplama ve işleme en iyi performans ile uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)
 - [Erişim ve kalem girişi düzenleme](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

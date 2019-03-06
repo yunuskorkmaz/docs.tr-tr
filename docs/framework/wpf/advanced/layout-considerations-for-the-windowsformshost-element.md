@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625633"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366549"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -30,9 +30,9 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
   
 |Düzen özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Otomatik boyutlandırma|Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kendilerini içeriklerini düzgün görüntülenmesi için denetimleri yeniden boyutlandırma. Daha fazla bilgi için [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
+|Otomatik boyutlandırma|Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kendilerini içeriklerini düzgün görüntülenmesi için denetimleri yeniden boyutlandırma. Daha fazla bilgi için [AutoSize özelliğine genel bakış](../../winforms/controls/autosize-property-overview.md).|  
 |Sabitleme ve yerleştirme|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri konumlandırma ve boyutlandırma üst kapsayıcı tabanlı destekler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Otomatik ölçeklendirme|Kapsayıcı denetimleri, kendileri ve alt öğelerini çıktı cihazına veya piksel cinsinden varsayılan kapsayıcı yazı tipi boyutu çözünürlüğüne göre yeniden boyutlandırın. Daha fazla bilgi için [Windows Forms'ta otomatik ölçeklendirme](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
+|Otomatik ölçeklendirme|Kapsayıcı denetimleri, kendileri ve alt öğelerini çıktı cihazına veya piksel cinsinden varsayılan kapsayıcı yazı tipi boyutu çözünürlüğüne göre yeniden boyutlandırın. Daha fazla bilgi için [Windows Forms'ta otomatik ölçeklendirme](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Düzen kapsayıcıları|<xref:System.Windows.Forms.FlowLayoutPanel> Ve <xref:System.Windows.Forms.TableLayoutPanel> denetimleri, alt denetimlerini düzenlemek ve kendilerini içeriklerine göre boyutu.|  
   
 ## <a name="layout-limitations"></a>Düzen sınırlamaları  
@@ -73,7 +73,7 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
 |taşma|Zaman <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi dönüştürür gelen `double` değerler `int` değerleri taşma mümkündür. Daha büyük olan değerleri <xref:System.Int32.MaxValue> ayarlandığından <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Düzen ilgili Özellikler  
- Düzen davranışını denetleyen özellikler [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri tarafından uygun şekilde eşlendi <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi. Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Düzen davranışını denetleyen özellikler [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri tarafından uygun şekilde eşlendi <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi. Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>Düzen değişiklikleri barındırılan denetim  
  Düzen değişiklikleri barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetim yayılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen güncelleştirmeleri tetiklemek için. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimden düzen değişiklikleri neden olduğunu sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çalıştırmak için yerleşim altyapısı.  
@@ -101,7 +101,7 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
+- [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

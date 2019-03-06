@@ -2,18 +2,13 @@
 title: Visual Basic'de Diziler
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149906"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 
 Bir dizi terimiyle gösterilen değerler kümesidir *öğeleri*, mantıksal olarak ilgili arasındaki ilişki. Örneğin, bir dizi, dilbilgisi okulundaki her sınıfta Öğrenciler sayısının oluşabilir; dizinin her öğesi tek bir sınıf Öğrenci sayısıdır. Benzer şekilde, bir sınıf için bir öğrenci derece, bir dizi oluşabilir; dizinin her öğesi, bir tek sınıf hizmetidir.
@@ -87,7 +82,7 @@ Bir dizinin boyutu, çeşitli yollarla tanımlayabilirsiniz:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Var olan bir dizi varsa, boyutunu kullanarak tanımlayabilirsiniz [ `Redim` ](../../../language-reference/statements/redim-statement.md) deyimi. Belirtebilirsiniz `Redim` deyimi bir dizideki değerleri koruyabilir veya boş dizi oluşturmasını belirtebilirsiniz. Aşağıdaki örnek, farklı kullanımlarını gösterir `Redim` mevcut dizinin boyutunu değiştirmek için deyimi.
+Var olan bir dizi varsa, boyutunu kullanarak tanımlayabilirsiniz [ `ReDim` ](../../../language-reference/statements/redim-statement.md) deyimi. Belirtebilirsiniz `ReDim` deyimi bir dizideki değerleri koruyabilir veya boş dizi oluşturmasını belirtebilirsiniz. Aşağıdaki örnek, farklı kullanımlarını gösterir `ReDim` mevcut dizinin boyutunu değiştirmek için deyimi.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Aşağıdaki örnek, her öğesi Günlerden oluşan olan bir dizi ay kullanır. 
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Önceki örnekte değerlerini bir öğeye göre temelinde düzensiz dizi kullanarak atar bir `For...Next` döngü. İç içe geçmiş dizi değişmez değerleri kullanarak basit bir dizi öğelerine değerleri de atayabilirsiniz. Ancak, kullanma girişimi iç içe geçmiş dizi değişmez değerleri (örneğin, ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) derleyici hatası oluşturur [BC30568](../../../,,/../misc/bc30568.md). Hatayı düzeltmek için iç diziyi parantez içine alın. Parantezler değerlendirilecek dizi değişmez değer ifadesinin değerlendirilmesini ve aşağıdaki örnekte gösterildiği gibi dış dizi değişmez değeri, sonuçta elde edilen değerleri kullanılır.
+Önceki örnekte değerlerini bir öğeye göre temelinde düzensiz dizi kullanarak atar bir `For...Next` döngü. İç içe geçmiş dizi değişmez değerleri kullanarak basit bir dizi öğelerine değerleri de atayabilirsiniz. Ancak, kullanma girişimi iç içe geçmiş dizi değişmez değerleri (örneğin, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) derleyici hatası oluşturur [BC30568](../../../,,/../misc/bc30568.md). Hatayı düzeltmek için iç diziyi parantez içine alın. Parantezler değerlendirilecek dizi değişmez değer ifadesinin değerlendirilmesini ve aşağıdaki örnekte gösterildiği gibi dış dizi değişmez değeri, sonuçta elde edilen değerleri kullanılır.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Ayrıca, bir sayı dizisi tek büyük bir diziye birleştirebilirsiniz. Bunu yap
 > [!NOTE]
 > Bu bölümde, bir dize dizisi, tek bir dize olarak katılma açıklanmamıştır. Dize dizisi birleştirme hakkında daha fazla bilgi için bkz: <xref:System.String.Join%2A?displayProperty=nameWithType> yöntemi.
 
-Her dizinin öğeleri yeni bir diziye kopyalamadan önce böylece yeni bir dizi accompodate için yeterince büyük dizi başlattıysanız ilk sağlamalıdır. Bunu iki yoldan biriyle yapabilirsiniz:
+Yeni bir diziye her dizinin öğeleri kopyalamadan önce böylece yeni bir dizi tutabilecek kadar büyük dizi başlattıysanız ilk sağlamalıdır. Bunu iki yoldan biriyle yapabilirsiniz:
 
 - Kullanım [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) deyimini yeni öğeleri eklemeden önce bir dizi dinamik olarak genişletin. En kolay yöntemi budur ancak büyük diziler kopyalarken aşırı bellek kullanımı ve performans düşüşü ile sonuçlanabilir.
 - Yeni büyük dizisi için gerekli öğelerin toplam sayısını hesaplama ve her kaynak dizinin öğeleri ekleyin.
@@ -299,9 +294,9 @@ Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonları](../../conc
 |Terim|Tanım|
 |----------|----------------|
 |[Visual Basic'de dizi boyutları](../../language-features/arrays/array-dimensions.md)|Boyut sayısı ve boyutları açıklar.|
-|[Nasıl Yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin doldurmak açıklar.|
-|[Nasıl Yapılır: Visual Basic'te dizi Sırala](../../language-features/arrays/how-to-sort-an-array.md)|Bir dizinin öğeleri alfabetik olarak sıralamak gösterilmektedir.|
-|[Nasıl Yapılır: Bir diziyi başka diziye atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Bir dizi başka bir dizi değişkenine atamak için adımları ve kuralları açıklar.|
+|[Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../language-features/arrays/how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin doldurmak açıklar.|
+|[Nasıl yapılır: Visual Basic'te dizi Sırala](../../language-features/arrays/how-to-sort-an-array.md)|Bir dizinin öğeleri alfabetik olarak sıralamak gösterilmektedir.|
+|[Nasıl yapılır: Bir diziyi başka diziye atama](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Bir dizi başka bir dizi değişkenine atamak için adımları ve kuralları açıklar.|
 |[Dizilerle İlgili Sorun Giderme](../../language-features/arrays/troubleshooting-arrays.md)|Dizilerle çalışırken ortaya çıkan bazı ortak sorunları açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

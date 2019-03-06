@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: 904d5a3404b693c383731eda01e9e43b2d5126fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355070"
 ---
 # <a name="how-to-enable-a-command"></a>Nasıl yapılır: Komutu Etkinleştirme
-Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Örnek nasıl ilişkilendirildiğini gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Button>, oluşturun bir <xref:System.Windows.Input.CommandBinding>ve uygulama olay işleyicileri oluşturma <xref:System.Windows.Input.RoutedCommand>.  Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Örnek nasıl ilişkilendirildiğini gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Button>, oluşturun bir <xref:System.Windows.Input.CommandBinding>ve uygulama olay işleyicileri oluşturma <xref:System.Windows.Input.RoutedCommand>.  Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](commanding-overview.md).  
   
 ## <a name="example"></a>Örnek  
  Kodun ilk bölümünü oluşturur [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], oluşan ve bir <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.StackPanel>, oluşturur bir <xref:System.Windows.Input.CommandBinding> komut işleyicileri ile ilişkilendirir <xref:System.Windows.Input.RoutedCommand>.  
@@ -27,17 +27,17 @@ Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[
   
  Olmadan <xref:System.Windows.Input.CommandBinding> hiçbir komut mantığı çağırmak için yalnızca bir mekanizma yoktur.  Zaman <xref:System.Windows.Controls.Button> tıklandığında <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> sonrasında komut hedefi üzerinde yükseltilmiş <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.  Bu olayları aranırken öğesi ağacı gezme bir <xref:System.Windows.Input.CommandBinding> bu komuta için.  Bu, çünkü hatalarının ayıklanabileceğini belirtmekte yarar <xref:System.Windows.RoutedEvent> tüneli ve kabarcık öğe ağacında aracılığıyla, dikkatli olmalıdır alınması nerede <xref:System.Windows.Input.CommandBinding> konur.   Varsa <xref:System.Windows.Input.CommandBinding> komut hedefi üzerinde rotası değil başka bir düğüme veya bir eşdüzey açıktır <xref:System.Windows.RoutedEvent>, <xref:System.Windows.Input.CommandBinding> erişilemeyecektir.  
   
- [!code-xaml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
+ [!code-xaml[EnableCloseCommand#CloseCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
   
- [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
- [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
+ [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
   
  Kod uygular, bir sonraki bölümüne <xref:System.Windows.Input.CommandManager.Executed> ve <xref:System.Windows.Input.CommandBinding.CanExecute> olay işleyicileri.  
   
  <xref:System.Windows.Input.CommandManager.Executed> İşleyici açık dosyayı kapatmak için bir yöntem çağırır.  <xref:System.Windows.Input.CommandBinding.CanExecute> İşleyici, bir dosya açık olup olmadığını belirlemek için bir yöntem çağırır.  Bir dosya açıksa <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> ayarlanır `true`; Aksi takdirde ayarlanmış `false`.  
   
- [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
- [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
+ [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Komut Vermeye Genel Bakış](commanding-overview.md)

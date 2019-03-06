@@ -7,64 +7,64 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: 0bdd636af78ddfce22c28edc3dd4523654d07611
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5d69a1743941a235b3a1fda38023b11b3f26809
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746017"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354017"
 ---
 # <a name="control-library"></a>Denetim Kitaplığı
 Windows Presentation Foundation (WPF) denetim kitaplığı, Windows Presentation Foundation (alfabetik olarak listelenen WPF tarafından), sağlanan denetimleri hakkında bilgi içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kenarlık](../../../../docs/framework/wpf/controls/border.md)  
- [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [Düğme](../../../../docs/framework/wpf/controls/button.md)  
- [Takvim](../../../../docs/framework/wpf/controls/calendar.md)  
- [Tuval](../../../../docs/framework/wpf/controls/canvas.md)  
- [CheckBox](../../../../docs/framework/wpf/controls/checkbox.md)  
- [ComboBox](../../../../docs/framework/wpf/controls/combobox.md)  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
- [DatePicker](../../../../docs/framework/wpf/controls/datepicker.md)  
- [DockPanel](../../../../docs/framework/wpf/controls/dockpanel.md)  
- [DocumentViewer](../../../../docs/framework/wpf/controls/documentviewer.md)  
- [Genişletici](../../../../docs/framework/wpf/controls/expander.md)  
- [FlowDocumentPageViewer](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
- [FlowDocumentReader](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
- [FlowDocumentScrollViewer](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
- [Çerçeve](../../../../docs/framework/wpf/controls/frame.md)  
- [Kılavuz](../../../../docs/framework/wpf/controls/grid.md)  
- [GridSplitter](../../../../docs/framework/wpf/controls/gridsplitter.md)  
- [GroupBox](../../../../docs/framework/wpf/controls/groupbox.md)  
- [Görüntü](../../../../docs/framework/wpf/controls/image.md)  
- [Etiket](../../../../docs/framework/wpf/controls/label.md)  
- [ListBox](../../../../docs/framework/wpf/controls/listbox.md)  
- [ListView](../../../../docs/framework/wpf/controls/listview.md)  
- [Menü](../../../../docs/framework/wpf/controls/menu.md)  
- [Panel](../../../../docs/framework/wpf/controls/panel.md)  
- [PasswordBox](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [Açılan Pencere](../../../../docs/framework/wpf/controls/popup.md)  
- [ProgressBar](../../../../docs/framework/wpf/controls/progressbar.md)  
- [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
- [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
- [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [ScrollBar](../../../../docs/framework/wpf/controls/scrollbar.md)  
- [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [Ayıraç](../../../../docs/framework/wpf/controls/separator.md)  
- [Kaydırıcı](../../../../docs/framework/wpf/controls/slider.md)  
- [StackPanel](../../../../docs/framework/wpf/controls/stackpanel.md)  
- [StatusBar](../../../../docs/framework/wpf/controls/statusbar.md)  
- [TabControl](../../../../docs/framework/wpf/controls/tabcontrol.md)  
- [TextBlock](../../../../docs/framework/wpf/controls/textblock.md)  
- [TextBox](../../../../docs/framework/wpf/controls/textbox.md)  
- [Araç Çubuğu](../../../../docs/framework/wpf/controls/toolbar.md)  
- [Araç İpucu](../../../../docs/framework/wpf/controls/tooltip.md)  
- [TreeView](../../../../docs/framework/wpf/controls/treeview.md)  
- [WrapPanel](../../../../docs/framework/wpf/controls/wrappanel.md)  
- [Viewbox](../../../../docs/framework/wpf/controls/viewbox.md)  
+ [Kenarlık](border.md)  
+ [BulletDecorator](bulletdecorator.md)  
+ [Düğme](button.md)  
+ [Takvim](calendar.md)  
+ [Tuval](canvas.md)  
+ [CheckBox](checkbox.md)  
+ [ComboBox](combobox.md)  
+ [ContextMenu](contextmenu.md)  
+ [DataGrid](datagrid.md)  
+ [DatePicker](datepicker.md)  
+ [DockPanel](dockpanel.md)  
+ [DocumentViewer](documentviewer.md)  
+ [Genişletici](expander.md)  
+ [FlowDocumentPageViewer](flowdocumentpageviewer.md)  
+ [FlowDocumentReader](flowdocumentreader.md)  
+ [FlowDocumentScrollViewer](flowdocumentscrollviewer.md)  
+ [Çerçeve](frame.md)  
+ [Kılavuz](grid.md)  
+ [GridSplitter](gridsplitter.md)  
+ [GroupBox](groupbox.md)  
+ [Görüntü](image.md)  
+ [Etiket](label.md)  
+ [ListBox](listbox.md)  
+ [ListView](listview.md)  
+ [Menü](menu.md)  
+ [Panel](panel.md)  
+ [PasswordBox](passwordbox.md)  
+ [Açılan Pencere](popup.md)  
+ [ProgressBar](progressbar.md)  
+ [PrintDialog](printdialog.md)  
+ [RadioButton](radiobutton.md)  
+ [RepeatButton](repeatbutton.md)  
+ [RichTextBox](richtextbox.md)  
+ [ScrollBar](scrollbar.md)  
+ [ScrollViewer](scrollviewer.md)  
+ [Ayıraç](separator.md)  
+ [Kaydırıcı](slider.md)  
+ [StackPanel](stackpanel.md)  
+ [StatusBar](statusbar.md)  
+ [TabControl](tabcontrol.md)  
+ [TextBlock](textblock.md)  
+ [TextBox](textbox.md)  
+ [Araç Çubuğu](toolbar.md)  
+ [Araç İpucu](tooltip.md)  
+ [TreeView](treeview.md)  
+ [WrapPanel](wrappanel.md)  
+ [Viewbox](viewbox.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls>  
@@ -72,8 +72,8 @@ Windows Presentation Foundation (WPF) denetim kitaplığı, Windows Presentation
  <xref:System.Windows.Controls.Primitives>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Denetim Özelleştirme](control-customization.md)  
   
- [Kategoriye Göre Denetimler](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [Kategoriye Göre Denetimler](controls-by-category.md)  
   
- [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [WPF İçerik Modeli](wpf-content-model.md)

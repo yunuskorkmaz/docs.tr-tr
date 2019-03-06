@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352002"
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatılan çeşitli olaylara yanıt olarak bir değişiklik bir özelliğinin değerini tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen gönderilmiş bir olay ve bazı durumlarda standart [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişiklikleri genellikle ise bazı özellik değişiklikleri daha uygun bir öğe ağacı ile yönlendirilen çünkü olayının tanımı senaryoya bağlı olarak değişir. yalnızca birisi ağdır burada özelliği değiştirilmiş nesne.  
@@ -33,7 +33,7 @@ ms.locfileid: "54524006"
   
  Eski bir değer ve yeni bir değer içerdiğinden, bu olay işleyicisi için özellik değeri bir doğrulayıcı kullanmak daha cazip olabilir. Ancak, çoğu özellik değişti olayları tasarım amacınıza değildir. Genellikle, değerleri ve böylece kodunuzun diğer mantıksal alanlarında bu değerleri üzerinde işlem yapabileceğiniz, ancak gerçekte olay işleyicisi içindeki değerlerin değiştirilmesi önerilmez sağlanır ve işleyicinizi nasıl uygulandığını bağlı olarak yanlışlıkla özyineleme neden olabilir .  
   
- Özel bağımlılık özelliği, özelliği veya örnekleme kodunu tanımlandığı türetilmiş bir sınıf ile çalışıyorsanız, içinde yerleşik olan özellik değişiklikleri izlemek için bir çok daha iyi bir mekanizma yoktur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi: özellik sistemi geri çağırmaları <xref:System.Windows.CoerceValueCallback> ve <xref:System.Windows.PropertyChangedCallback>. Nasıl kullanabileceğiniz hakkında daha fazla ayrıntı için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] doğrulama ve zorlama, özellik sistemi bkz [bağımlılık özelliği geri aramaları ve doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) ve [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Özel bağımlılık özelliği, özelliği veya örnekleme kodunu tanımlandığı türetilmiş bir sınıf ile çalışıyorsanız, içinde yerleşik olan özellik değişiklikleri izlemek için bir çok daha iyi bir mekanizma yoktur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi: özellik sistemi geri çağırmaları <xref:System.Windows.CoerceValueCallback> ve <xref:System.Windows.PropertyChangedCallback>. Nasıl kullanabileceğiniz hakkında daha fazla ayrıntı için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] doğrulama ve zorlama, özellik sistemi bkz [bağımlılık özelliği geri aramaları ve doğrulama](dependency-property-callbacks-and-validation.md) ve [özel bağımlılık özellikleri](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged olayları  
  Özellik değişti olayını senaryonun parçası olan türleri başka bir çiftinin <xref:System.Windows.DependencyPropertyChangedEventArgs> ve <xref:System.Windows.DependencyPropertyChangedEventHandler>. Bu özellik değişiklikleri olayları yönlendirilmeyen; Standart oldukları [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olayları. <xref:System.Windows.DependencyPropertyChangedEventArgs> Raporlama türü tarafından türetilmemiştir çünkü bir olağan dışı bir olay verisi <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> yapısı, bir sınıf.  
@@ -59,8 +59,8 @@ ms.locfileid: "54524006"
   
  Özellik tetikleyicileri aynı öğede başka bir özellik durumunu temel senaryolar için burada bir veya daha fazla görünüm özelliklerini değiştirmeniz gerekir, genellikle uygundur.  
   
- Özellik tetikleyicileri hakkında daha fazla bilgi için bkz: [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Özellik tetikleyicileri hakkında daha fazla bilgi için bkz: [stil ve şablon oluşturma](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)

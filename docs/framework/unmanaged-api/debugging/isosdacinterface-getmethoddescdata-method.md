@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352600"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData yöntemi
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`methodDesc` [in] MethodDesc adresi.
+`methodDesc`\
+[in] MethodDesc adresi.
 
-`ip` [in] Yöntem IP adresi.
+`ip`\
+[in] Yöntem IP adresi.
 
-`data` [out] İç API'lerinden döndürülen MethodDesc ile ilişkili veriler.
+`data`\
+[out] İç API'lerinden döndürülen MethodDesc ile ilişkili veriler.
 
-`cRevertedRejitVersions` [out] Geri döndürülen rejit sürüm sayısı.
+`cRevertedRejitVersions`\
+[out] Geri döndürülen rejit sürüm sayısı.
 
-`rgRevertedRejitData` [out] İç API'lerinden döndürülen şekilde geri döndürülen rejit sürümleriyle ilişkili veriler.
+`rgRevertedRejitData`\
+[out] İç API'lerinden döndürülen şekilde geri döndürülen rejit sürümleriyle ilişkili veriler.
 
-`pcNeededRevertedRejitData` [out] Geri döndürülen ReJit sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.
+`pcNeededRevertedRejitData`\
+[out] Geri döndürülen ReJit sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -68,5 +74,5 @@ Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tab
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface arabirimi](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Hata Ayıklama](index.md)
+- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548436"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354901"
 ---
 # <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
 Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağımlılık özelliği uygulama öğrenmek için önerilen desenler sağlar.  
@@ -32,20 +32,20 @@ Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağı
   
  Aşağıdaki örnek göz önünde bulundurun. Aşağıdaki bölümde örneğin bir sınıf tanımını gösterir `Aquarium`. Sınıfı koleksiyon türü bağımlılık özelliğini tanımlar `AquariumObjects`, genel kullanan <xref:System.Collections.Generic.List%601> tür bir <xref:System.Windows.FrameworkElement> tür kısıtlaması. İçinde <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> çağrısı bağımlılık özelliği meta verileri için yeni bir genel varsayılan değer kurar <xref:System.Collections.Generic.List%601>.  
   
- [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
- [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
  Ancak, kod gösterildiği çıktığınız ise, tüm örnekleri için tek bir liste varsayılan değeri paylaşılır `Aquarium`. İki ayrı nasıl ekleneceğini göstermek için tasarlanmıştır aşağıdaki test kodu çalıştırdıysanız `Aquarium` örnekler ve farklı tek `Fish` her biri için şaşırtıcı bir sonuç görmeniz:  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
  Bir sayısına sahip her bir koleksiyon yerine, her bir koleksiyon iki sayısını var! Bunun nedeni, her `Aquarium` eklenen kendi `Fish` varsayılan değer koleksiyonu için bir tek oluşturucu çağrısı meta verilerinde kullanmasından ve bu nedenle tüm örnekleri arasında paylaşılır. Bu neredeyse hiçbir zaman, istediğiniz durumdur.  
   
  Bu sorunu düzeltmek için sınıf oluşturucu çağrısının parçası olarak benzersiz bir örnek için koleksiyon bağımlılık özelliği değeri sıfırlamanız gerekir. Özellik salt okunur bağımlılık özelliği olduğundan, kullandığınız <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> yöntemi kullanarak ayarlamak için <xref:System.Windows.DependencyPropertyKey> olan yalnızca sınıfın içinden erişilebilir.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  Şimdi beklenen sonuçları görmeniz aynı kodu yeniden test çalıştırdıysanız, burada her `Aquarium` kendi benzersiz koleksiyonu desteklenmez.  
   
@@ -58,8 +58,8 @@ Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.FreezableCollection%601>
-- [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
+- [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)

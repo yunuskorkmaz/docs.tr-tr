@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: 40d883f3d3e1d504c8757c31325aa72a03da37e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544517"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361674"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Nasıl yapılır: Mürekkep Verisine Özel Veri Ekleme
-Özel veri mürekkep mürekkep seri hale getirilmiş biçimi (ISF) olarak kaydedildiğinde, kaydedilecek mürekkep ekleyebilirsiniz.  Özel verileri kaydedebilirsiniz <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, veya <xref:System.Windows.Ink.Stroke>.  Özel verileri üç nesnelerde kaydetmek için verileri kaydetmek için en iyi yere karar olanağı sağlar.  Üç tüm sınıflar benzer yöntemler depolamak ve özel verilere erişmek için kullanır.  
+Mürekkep mürekkep seri hale getirilmiş biçimi (ISF) kaydedildiğinde, kaydedilecek mürekkep özel veri ekleyebilirsiniz.  Özel verileri kaydedebilirsiniz <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, veya <xref:System.Windows.Ink.Stroke>.  Üç nesneler üzerinde özel veri kaydedebilme verileri kaydetmek için en iyi yeri karar verme olanağı sağlar.  Üç özel verilere erişmek ve depolamak için benzer yöntemler kullanın.  
   
  Özel verileri olarak yalnızca şu türleri kaydedilebilir:  
   
@@ -72,12 +72,12 @@ ms.locfileid: "33544517"
 -   <xref:System.UInt64>[]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek ekleme ve özel verilerin alınacağı gösterilmektedir bir <xref:System.Windows.Ink.StrokeCollection>.  
+ Aşağıdaki örnek, ekleme ve özel verilerin alınacağı gösterilmiştir bir <xref:System.Windows.Ink.StrokeCollection>.  
   
- [!code-csharp[HowToAddCustomDataToInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
+ [!code-csharp[HowToAddCustomDataToInk#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
   
- Aşağıdaki örnek, görüntüleyen bir uygulama oluşturur. bir <xref:System.Windows.Controls.InkCanvas> ve iki düğme.  Düğme `switchAuthor`, iki kalemin iki farklı yazar tarafından kullanılmasına izin verir.  Düğme `changePenColors` üzerindeki her vuruşun rengini değiştirir <xref:System.Windows.Controls.InkCanvas> göre yazar.  İki uygulama tanımlar <xref:System.Windows.Ink.DrawingAttributes> nesneleri ve hangi yazar u çizdiğini gösteren her biri için özel bir özellik ekler <xref:System.Windows.Ink.Stroke>.  Kullanıcı tıkladığında `changePenColors`, uygulama özel özellik değerini göre vuruşun görünümünü değiştirir.  
+ Aşağıdaki örnek, görüntüleyen bir uygulama oluşturur. bir <xref:System.Windows.Controls.InkCanvas> ve iki düğme.  Düğme `switchAuthor`, iki farklı yazar tarafından kullanılmak üzere iki kalemler sağlar.  Düğme `changePenColors` her vuruş rengi değiştirir <xref:System.Windows.Controls.InkCanvas> göre yazar.  İki uygulama tanımlar <xref:System.Windows.Ink.DrawingAttributes> nesneleri ve hangi yazar u çizdiğini gösteren her biri için özel bir özellik ekler <xref:System.Windows.Ink.Stroke>.  Kullanıcı tıkladığında `changePenColors`, uygulama özel özellik değerini göre stroke'un görünümü değiştirir.  
   
- [!code-xaml[HowToAddCustomDataToInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HowToAddCustomDataToInk#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
   
- [!code-csharp[HowToAddCustomDataToInk#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]
+ [!code-csharp[HowToAddCustomDataToInk#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]

@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: oluşturma ve uzun süre çalışan iş akışı'
+title: 'Nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 2c3368bc73d54f2848cad3c1086b1d9733205d2b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4ca19b8f9c0fad17c012bffbdd95917a4d4e47bd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048697"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356870"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: oluşturma ve uzun süre çalışan iş akışı
-Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek ve boşta iş akışları bir veritabanına kaldırın çalışma zamanının becerisidir. Adımları [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma ilişkin temel bilgileri gösterilmektedir. Örnekler, başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve sürdürme yer işaretleri gösterilen. İş akışı kalıcılığı etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana bilgisayarı gereklidir başlatma ve birden çok iş akışı örnekleri sürdürme destekler. Öğreticide bu adım, bir Windows form konağı başlatılıyor ve sürdürme birden çok iş akışı örnekleri, iş akışı kalıcılığı destekler ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma işlemi gösterilmektedir sonraki öğretici adımlarda gösterilmiştir.  
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı
+Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek ve boşta iş akışları bir veritabanına kaldırın çalışma zamanının becerisidir. Adımları [nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma ilişkin temel bilgileri gösterilmektedir. Örnekler, başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve sürdürme yer işaretleri gösterilen. İş akışı kalıcılığı etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana bilgisayarı gereklidir başlatma ve birden çok iş akışı örnekleri sürdürme destekler. Öğreticide bu adım, bir Windows form konağı başlatılıyor ve sürdürme birden çok iş akışı örnekleri, iş akışı kalıcılığı destekler ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma işlemi gösterilmektedir sonraki öğretici adımlarda gösterilmiştir.  
   
 > [!NOTE]
->  Bu öğretici adımı ve sonraki adımları, tüm üç iş akışı türlerinden kullanın [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md). Üç tür tamamlanmadıysa yer alan adımları tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Bu öğretici adımı ve sonraki adımları, tüm üç iş akışı türlerinden kullanın [nasıl yapılır: Bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md). Üç tür tamamlanmadıysa yer alan adımları tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 > [!NOTE]
 >  Tamamlanmış bir sürümünü indirin veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -43,7 +43,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
 -   [Derleme ve uygulamayı çalıştırmak için](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CreatePersistenceDatabase"></a> Kalıcılık veritabanı oluşturmak için  
+### <a name="BKMK_CreatePersistenceDatabase"></a> Kalıcılık veritabanı oluşturmak için  
   
 1.  SQL Server Management Studio'yu açın ve yerel, örneğin sunucuya **. \SQLEXPRESS**. Sağ **veritabanları** düğümü seçin ve yerel sunucu **yeni veritabanı**. Yeni bir veritabanı adı **WF45GettingStartedTutorial**, diğer tüm değerleri kabul edin ve seçin **Tamam**.  
   
@@ -65,7 +65,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     > [!WARNING]
     >  Doğru sırayla önceki iki adımı gerçekleştirmek önemlidir. Sorguları sıralamaya yürütülür, hataları ortaya çıkar ve Kalıcılık veritabanı düzgün yapılandırılmamış.  
   
-###  <a name="BKMK_AddReference"></a> DurableInstancing derlemelere başvuru eklemek için  
+### <a name="BKMK_AddReference"></a> DurableInstancing derlemelere başvuru eklemek için  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** seçip **Başvuru Ekle**.  
   
@@ -73,7 +73,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
 3.  Yanında onay **System.Activities.durableınstancing** ve **System.Runtime.DurableInstancing** gelen **arama sonuçları** listesinde ve tıklayın**Tamam**.  
   
-###  <a name="BKMK_CreateForm"></a> İş akışı ana form oluşturma  
+### <a name="BKMK_CreateForm"></a> İş akışı ana form oluşturma  
   
 > [!NOTE]
 >  Bu yordamdaki adımları eklemek ve form el ile yapılandırmak nasıl açıklar. İsterseniz, Öğretici için çözüm dosyalarını indirin ve tamamlanmış formun projeye ekleyin. Öğretici dosyaları indirmek için bkz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976). Dosyaları indirdikten sonra sağ **NumberGuessWorkflowHost** ve **Başvuru Ekle**. Bir başvuru ekleyin **System.Windows.Forms** ve **System.Drawing**. Yeni bir formdan eklerseniz bu başvuruları otomatik olarak eklenen **Ekle**, **yeni öğe** menüsünde, ancak bir form içeri aktarılırken el ile eklenmelidir. Başvuruları eklendikten sonra sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **var olan öğe**. Gözat `Form` seçin proje dosyaları klasöründe **WorkflowHostForm.cs** (veya **WorkflowHostForm.vb**), tıklatıp **Ekle**. Formu almak seçtiğiniz sonra sonraki bölüm için aşağı, atlayabilirsiniz [formun yardımcı yöntemler ve özellikler eklemek için](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
@@ -92,28 +92,28 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
 4.  Forma sırayla aşağıdaki denetimleri belirtilen ve configure the properties yönergelerine uygun olarak ekleyin.  
   
-    |Denetim|Özellik: değer|  
+    |Denetim|Özellik: Değer|  
     |-------------|---------------------|  
     |**Düğme**|Ad: NewGame<br /><br /> Konum: 13, 13<br /><br /> Boyut: 75, 23<br /><br /> Metin: Yeni bir oyun|  
-    |**Etiket**|Konum: 94, 18<br /><br /> Metin: 1 arasında bir sayı tahmin|  
+    |**Etiket**|Konum: 94, 18<br /><br /> Metin: Tahmin için 1 arasında bir sayı|  
     |**ComboBox**|Ad: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: 10, 100, 1000<br /><br /> Konum: 228, 12<br /><br /> Boyut: 143, 21|  
     |**Etiket**|Konum: 13, 43<br /><br /> Metin: İş akışı türü|  
-    |**ComboBox**|Ad: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeleri: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Konum: 94, 40<br /><br /> Boyut: 277, 21|  
+    |**ComboBox**|Ad: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Konum: 94, 40<br /><br /> Boyut: 277, 21|  
     |**Etiket**|Ad: WorkflowVersion<br /><br /> Konum: 13, 362<br /><br /> Metin: İş akışı sürümü|  
-    |**GroupBox**|Konum: 13, 67<br /><br /> Boyut: 358, 287<br /><br /> Metin: oyunu|  
+    |**GroupBox**|Konum: 13, 67<br /><br /> Boyut: 358, 287<br /><br /> Metin: Oyun|  
   
     > [!NOTE]
     >  Aşağıdaki denetimler eklerken, bunları GroupBox yerleştirin.  
   
-    |Denetim|Özellik: değer|  
+    |Denetim|Özellik: Değer|  
     |-------------|---------------------|  
     |**Etiket**|Konum: 7, 20<br /><br /> Metin: İş akışı örnek kimliği|  
     |**ComboBox**|Ad: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Konum: 121, 17<br /><br /> Boyut: 227, 21|  
-    |**Etiket**|Konum: 7, 47<br /><br /> Metin: tahmin|  
-    |**TextBox**|Ad: tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|  
+    |**Etiket**|Konum: 7, 47<br /><br /> Metin: Tahmin|  
+    |**TextBox**|Ad: Tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|  
     |**Düğme**|Ad: EnterGuess<br /><br /> Konum: 121, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Tahmin girin|  
     |**Düğme**|Ad: QuitGame<br /><br /> Konum: 274, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Çık|  
-    |**TextBox**|Ad: WorkflowStatus<br /><br /> Konum: 10, 73<br /><br /> Çok satırlı: True<br /><br /> Salt okunur: True<br /><br /> Kaydırma çubukları: dikey<br /><br /> Boyut: 338, 208 numaralı satırları|  
+    |**TextBox**|Ad: Sinyal gönderen<br /><br /> Konum: 10, 73<br /><br /> Çok satırlı: Doğru<br /><br /> Salt okunur: Doğru<br /><br /> Kaydırma çubukları: Dikey<br /><br /> Boyut: 338, 208|  
   
 5.  Ayarlama **AcceptButton** özellik formun **EnterGuess**.  
   
@@ -121,7 +121,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
  ![WF45 Çalışmaya başlama Öğreticisi iş akışı ana formu](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
-###  <a name="BKMK_AddHelperMethods"></a> Formun yardımcı yöntemler ve özellikler eklemek için  
+### <a name="BKMK_AddHelperMethods"></a> Formun yardımcı yöntemler ve özellikler eklemek için  
  Bu bölümdeki adımlarda, özellikler ve yardımcı yöntemler çalıştıran ve sayı tahmin iş akışları sürdürme desteklemek için kullanıcı Arabirimi formun yapılandırma formu sınıfına ekleyin.  
   
 1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
@@ -422,7 +422,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     }  
     ```  
   
-###  <a name="BKMK_ConfigureWorkflowApplication"></a> Örnek deposu, iş akışı yaşam döngüsü işleyicileri ve Uzantıları'nı yapılandırmak için  
+### <a name="BKMK_ConfigureWorkflowApplication"></a> Örnek deposu, iş akışı yaşam döngüsü işleyicileri ve Uzantıları'nı yapılandırmak için  
   
 1.  Ekleme bir `ConfigureWorkflowApplication` form sınıfı için yöntemi.  
   
@@ -691,7 +691,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     }  
     ```  
   
-###  <a name="BKMK_WorkflowVersionMap"></a> Başlangıç ve birden çok iş akışı türlerini sürdürme etkinleştirmek için  
+### <a name="BKMK_WorkflowVersionMap"></a> Başlangıç ve birden çok iş akışı türlerini sürdürme etkinleştirmek için  
  Bir iş akışı örneği sürdürmek için ana iş akışı tanımı sağlaması gerekir. Bu öğreticide üç iş akışı türü vardır ve bu tür birden çok sürümünü sonraki öğretici adımlarını sunar. `WorkflowIdentity` tanımlama bilgilerini kalıcı iş akışı örneği ile ilişkilendirmek bir ana bilgisayar uygulaması için bir yol sağlar. Bu bölümdeki adımları kalıcı iş akışı örneği iş akışı kimlikten karşılık gelen iş akışı tanımı için eşleme ile yardımcı olmak için yardımcı program sınıfı oluşturmak nasıl ekleyebileceğiniz gösterilmektedir. Hakkında daha fazla bilgi için `WorkflowIdentity` ve sürüm oluşturma, bkz: [Workflowıdentity kullanma ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `WorkflowVersionMap` içine **adı** kutusuna ve tıklatın **Ekle**.  
@@ -808,7 +808,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
      `WorkflowVersionMap` Bu öğreticide üç iş akışı tanımları eşleyen üç iş akışı kimlikleri içeriyor ve iş akışları başlatıldığında ve devam aşağıdaki bölümlerde kullanılır.  
   
-###  <a name="BKMK_StartWorkflow"></a> Yeni bir iş akışını başlatmak için  
+### <a name="BKMK_StartWorkflow"></a> Yeni bir iş akışını başlatmak için  
   
 1.  Ekleme bir `Click` işleyicisi `NewGame`. Bu işleyiciyi eklemek için geçiş **Tasarım görünümü** form ve çift `NewGame`. A `NewGame_Click` işleyicisi eklenir ve görünüm formu için kod görünümüne geçer. Kullanıcı bu düğmeyi tıkladığında, yeni bir iş akışı başlatılır.  
   
@@ -1003,7 +1003,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     }  
     ```  
   
-###  <a name="BKMK_ResumeWorkflow"></a> Bir iş akışını sürdürmek için  
+### <a name="BKMK_ResumeWorkflow"></a> Bir iş akışını sürdürmek için  
   
 1.  Ekleme bir `Click` işleyicisi `EnterGuess`. Bu işleyiciyi eklemek için geçiş **Tasarım görünümü** form ve çift `EnterGuess`. Bir iş akışı kullanıcı bu düğmeyi tıkladığında sürdürülür.  
   
@@ -1219,7 +1219,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     }  
     ```  
   
-###  <a name="BKMK_TerminateWorkflow"></a> Bir iş akışı sonlandırılmak üzere  
+### <a name="BKMK_TerminateWorkflow"></a> Bir iş akışı sonlandırılmak üzere  
   
 1.  Ekleme bir `Click` işleyicisi `QuitGame`. Bu işleyiciyi eklemek için geçiş **Tasarım görünümü** form ve çift `QuitGame`. Seçili durumdaki iş akışı kullanıcı bu düğmeyi tıkladığında sonlandırılır.  
   
@@ -1293,7 +1293,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için  
+### <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için  
   
 1.  Çift **Program.cs** (veya **Module1.vb**) içinde **Çözüm Gezgini** seçerek kodu görüntüleyin.  
   
@@ -1307,7 +1307,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     using System.Windows.Forms;  
     ```  
   
-3.  Kaldırın veya koddan barındıran mevcut iş akışı açıklama [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), aşağıdaki kod ile değiştirin.  
+3.  Kaldırın veya koddan barındıran mevcut iş akışı açıklama [nasıl yapılır: İş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), aşağıdaki kod ile değiştirin.  
   
     ```vb  
     Sub Main()  
@@ -1334,4 +1334,4 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
 8.  Farklı iş akışı türü ve numarası aralıkları kullanarak çeşitli iş akışlarını başlatmak, bazı tahminler girin ve gelen seçerek iş akışları arasında geçiş **iş akışı örnek kimliğini** listesi.  
   
-     Yeni bir iş akışına geçiş yaptığınızda, önceki tahminler ve iş akışı ilerlemesini durumu penceresinde görüntülenmez olduğunu unutmayın. Değil yakalanan olduğundan ve herhangi bir kaydedilmiş durum kullanılamıyor nedeni. Öğreticinin sonraki adımda [nasıl yapılır: bir özel izleme Katılımcısı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), bu bilgileri kaydeden bir özel izleme Katılımcısı oluşturma.
+     Yeni bir iş akışına geçiş yaptığınızda, önceki tahminler ve iş akışı ilerlemesini durumu penceresinde görüntülenmez olduğunu unutmayın. Değil yakalanan olduğundan ve herhangi bir kaydedilmiş durum kullanılamıyor nedeni. Öğreticinin sonraki adımda [nasıl yapılır: Özel İzleme Katılımcısı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), bu bilgileri kaydeden bir özel izleme Katılımcısı oluşturma.

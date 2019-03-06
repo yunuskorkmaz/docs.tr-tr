@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356916"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabiriminde içeriği genellikle bir bilgisayar ekranının ekran alandan daha büyük. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin gezinmeye olanak sağlamak için kolay bir yol sağlar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve çeşitli kullanım örnekleri sağlar.  
@@ -38,33 +38,33 @@ Bir kullanıcı arabiriminde içeriği genellikle bir bilgisayar ekranının ekr
   
  Aşağıdaki kod örneği bir örneğini nasıl gösterir <xref:System.Windows.Controls.Primitives.IScrollInfo> için bir <xref:System.Windows.Controls.StackPanel> ve içerik kaydırma yöntemlerini kullanma (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> ve <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) arabirim tarafından tanımlanan.  
   
- [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
- [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>Tanımlama ve bir ScrollViewer öğesi kullanma  
  Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.ScrollViewer> bazı metinleri ve bir dikdörtgen içeren bir pencere içinde. <xref:System.Windows.Controls.Primitives.ScrollBar> yalnızca gerekli olduklarında öğeleri görünür. Penceresini yeniden boyutlandırdığınızda <xref:System.Windows.Controls.Primitives.ScrollBar> öğeleri görünür ve, güncelleştirilmiş değerleri nedeniyle kaybolmasını <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> ve <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> özellikleri.  
   
- [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
- [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
- [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
+ [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
+ [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
+ [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
 ## <a name="styling-a-scrollviewer"></a>ScrollViewer stil oluşturma  
- Windows Presentation Foundation'da tüm denetimler gibi <xref:System.Windows.Controls.ScrollViewer> denetimin varsayılan işleme davranışını değiştirmek üzere biçimlendirilebilir. Denetim stili hakkında ek bilgi için bkz. [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Windows Presentation Foundation'da tüm denetimler gibi <xref:System.Windows.Controls.ScrollViewer> denetimin varsayılan işleme davranışını değiştirmek üzere biçimlendirilebilir. Denetim stili hakkında ek bilgi için bkz. [stil ve şablon oluşturma](styling-and-templating.md).  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>Kullanılabilir belgeler  
  Belge içeriği için kaydırma alternatif sayfalandırma destekleyen bir belge kapsayıcı seçmektir. <xref:System.Windows.Documents.FlowDocument> bir görüntüleme denetimine gibi barındırılması için tasarlanmıştır ve belgeler için <xref:System.Windows.Controls.FlowDocumentPageViewer>, barındırılmak kaydırmayı önleme birden çok sayfa. <xref:System.Windows.Controls.DocumentViewer> bir çözüm sağlar <xref:System.Windows.Documents.FixedDocument> görüntüleme alanının dışındaki içeriği görüntülemek için geleneksel kaydırma kullanan içerik.  
   
- Belge biçimleri ve sunum seçenekleri hakkında ek bilgi için bkz. [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ Belge biçimleri ve sunum seçenekleri hakkında ek bilgi için bkz. [WPF'deki Belgeler](../advanced/documents-in-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - [Nasıl yapılır: Kaydırma Görüntüleyicisi oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
-- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [WPF'deki Belgeler](../advanced/documents-in-wpf.md)
+- [ScrollBar Stilleri ve Şablonları](scrollbar-styles-and-templates.md)
+- [Denetimler](../advanced/optimizing-performance-controls.md)

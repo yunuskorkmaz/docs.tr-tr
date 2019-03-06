@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359399"
 ---
 # <a name="canvas-how-to-topics"></a>Tuval ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Canvas> öğesinin alt öğeleri konumlandırmak için.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Canvas> alt öğeleri konumlandırmak için öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Tuval İçeriği Çevresinde Kenarlığı Kaydırma](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Tuval Konumlandırma Özelliklerini Alma veya Ayarlama](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Tuval Oluşturma ve Kullanma](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Parmak Kullanarak Tuvali Yeniden Boyutlandırma](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Tuval İçeriği Çevresinde Kenarlığı Kaydırma](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Tuval Konumlandırma Özelliklerini Alma veya Ayarlama](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Tuval Oluşturma ve Kullanma](how-to-create-and-use-a-canvas.md)  
+ [Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Parmak Kullanarak Tuvali Yeniden Boyutlandırma](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Düzen](../advanced/layout.md)  
   
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](scrollviewer-overview.md)

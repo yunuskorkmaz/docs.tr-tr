@@ -28,25 +28,25 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5cc7c54b78e291c25f1eda62942545acbb893091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373120"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar windows aracılığıyla etkileşim. Birincil amacı bir pencere, verileri görselleştiren ve verilerle etkileşimde bulunmak kullanıcıların sağlayan konak içerik sağlamaktır. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve yönetme windows tek başına uygulamalarda temellerini kapsayan önce.  
   
 > [!NOTE]
->  Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi uygulamaları [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları, kendi windows sağlamadığınızdan. Windows tarafından sağlanan bunun yerine barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Bkz: [WPF XAML tarayıcı uygulamalarına genel bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi uygulamaları [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları, kendi windows sağlamadığınızdan. Windows tarafından sağlanan bunun yerine barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Bkz: [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
   
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Pencere sınıfı  
  Aşağıdaki şekilde, pencerenin oluşturan parçaları gösterilmektedir.  
   
- ![Pencere öğeleri](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Pencere öğeleri](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
  Bir pencere iki alana ayrılır: istemci alanını ve istemci dışı alan.  
   
@@ -82,16 +82,16 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Genel olarak, ancak pencerenin görünümünü kullanılarak uygulanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme ve davranışını gerçekleştirilen arka plan, kod kullanarak aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
  Etkinleştirmek için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme dosyasının ve birlikte çalışması için arka plan kod dosyası, aşağıdakiler gereklidir:  
   
 -   Biçimlendirme içinde `Window` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturulmamasını [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] oluşturmak için bir `partial` türetilen sınıf <xref:System.Windows.Window> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu eklenmesini gerektiren bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] için ad alanı bildirimi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Oluşturulan `partial` sınıfının Implements `InitializeComponent` olaylarını kaydetmek ve işaretlemede uygulanan özellikleri ayarlamak için çağrılan yöntem.  
   
--   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` biçimlendirme ve bu öznitelikte türetilmesi gereken <xref:System.Windows.Window>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` biçimlendirme ve bu öznitelikte türetilmesi gereken <xref:System.Windows.Window>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
 -   Arka plan, kod içinde <xref:System.Windows.Window> sınıfı çağıran bir oluşturucu uygulanmalı `InitializeComponent` yöntemi. `InitializeComponent` uygulanan tarafından işaretleme dosyasının üretilmiş `partial` olaylarını kaydetmek ve biçimlendirme içinde tanımlanan özelliklerini ayarlamak için sınıf.  
   
@@ -100,10 +100,10 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bu yapılandırmayla yerinde penceresinde görünümünü tanımlama üzerinde odaklanabilirsiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme ve kod arkasında davranışını uygulama. Aşağıdaki örnek, uygulanan bir düğme içeren bir pencere gösterir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme ve düğme için bir olay işleyicisi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> kod arkasında uygulanan olayı.  
   
- [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild için bir pencere tanımını yapılandırma  
@@ -125,7 +125,7 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 </Project>  
 ```  
   
- Yapı hakkında bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları, [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+ Yapı hakkında bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları, [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Yaşam süresi  
@@ -136,9 +136,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ### <a name="opening-a-window"></a>Bir penceresini açma  
  Bir pencere açmak için önce aşağıdaki örnekte gösterildiği bir örneği, oluşturun.  
   
- [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
+ [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
- [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
+ [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
  Bu örnekte, `MarkupAndCodeBehindWindow` örneği uygulama başladığında gerçekleştiği zaman <xref:System.Windows.Application.Startup> olayı oluşturulur.  
   
@@ -146,18 +146,18 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Pencere, son olarak çağırarak açılırsa <xref:System.Windows.Window.Show%2A> yöntemi; sonuç aşağıdaki şekilde gösterilir.  
   
- ![Bir pencere açılır Window.Show çağrısıyla](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Bir pencere açılır Window.Show çağrısıyla](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
  Çağırarak açılan bir pencere <xref:System.Windows.Window.Show%2A> uygulama kullanıcıların diğer windows aynı uygulama etkinleştirmesine izin veren bir modunda çalıştığı anlamına gelir bir geçici pencere.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A> iletişim kutuları gibi Windows kalıcı olarak açmak için çağrılır. Bkz: [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) daha fazla bilgi için.  
+>  <xref:System.Windows.Window.ShowDialog%2A> iletişim kutuları gibi Windows kalıcı olarak açmak için çağrılır. Bkz: [iletişim kutularına genel bakış](dialog-boxes-overview.md) daha fazla bilgi için.  
   
  Zaman <xref:System.Windows.Window.Show%2A> olan kullanıcı girişi almasına izin veren altyapı kurabilmek için gösterilmeden önce çağırılır, bir pencere başlatma işini gerçekleştirir. Pencerenin başlatıldığında <xref:System.Windows.Window.SourceInitialized> olayı oluşturulur ve penceresi gösterilir.  
   
  Bir kısayol olarak <xref:System.Windows.Application.StartupUri%2A> bir uygulama başlatıldığında otomatik olarak açılır pencere ilk belirtmek için ayarlanabilir.  
   
- [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
  Uygulama başlatıldığında, değeri tarafından belirtilen pencere <xref:System.Windows.Application.StartupUri%2A> açıldığında modelessly; dahili olarak, pencerenin çağırarak açıldığında, <xref:System.Windows.Window.Show%2A> yöntemi.  
   
@@ -171,8 +171,8 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bazı windows bunları açılır penceresi ile bir ilişki gerektirir. Örneğin, bir [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] özelliği windows ve araç pencerelerini, normal davranış kendilerini oluşturan pencerenin kapsar, uygulamayı açmak. Ayrıca, gibi windows her zaman kapatın, en aza indirmek, en üst düzeye çıkarmak ve IPP penceresiyle oluşturuldukları geri yükleme. Bir pencere yaparak tür bir ilişkiye kurulabilir *kendi* başka bir ve ayarlayarak elde <xref:System.Windows.Window.Owner%2A> özelliği *penceresi ait* başvurusuyla *sahibi Pencere*. Bu, aşağıdaki örnekte gösterilir.  
   
- [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
- [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
  Sahipliği kurulduktan sonra:  
   
@@ -213,10 +213,10 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  İşlemek için yaygın nedenlerinden biri <xref:System.Windows.Window.Activated> ve <xref:System.Windows.Window.Deactivated> etkinleştirmek ve bir pencere etkin olduğunda, yalnızca çalıştırabilirsiniz işlevini devre dışı bırakın. Örneğin, bazı windows sabit kullanıcı girişini veya oyun ve video oynatıcılar dahil olmak üzere, dikkat gerektiren etkileşimli içeriği görüntüler. Aşağıdaki örnek, üstesinden nasıl gelineceğini gösterir basitleştirilmiş bir video oynatıcı <xref:System.Windows.Window.Activated> ve <xref:System.Windows.Window.Deactivated> bu davranışı uygulamak için.  
   
- [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
- [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
  Bir pencere devre dışı bırakıldığında diğer uygulama türleri arka planda kod yine de çalıştırabilir. Örneğin, bir posta istemcisi posta sunucusu kullanıcı diğer uygulamaları kullanırken yoklama devam edebilir. Ana pencereyi devre dışı durumdayken bunlar gibi uygulamalar genellikle farklı veya ek davranış sağlar. Posta program göre bu gelen kutunuza yeni posta öğe ekleme ve bir bildirim simgesi sistem tepsisine ekleme anlamına gelebilir. Posta pencerenin inceleyerek belirlenen etkin değilken, bir bildirim simgesi yalnızca görüntülenmesi <xref:System.Windows.Window.IsActive%2A> özelliği.  
   
@@ -247,17 +247,17 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Yanıt olarak özel Bu mekanizmaların birini pencereyi kapatmak için çağırmak gereken <xref:System.Windows.Window.Close%2A> yöntemi. Aşağıdaki örnek seçerek bir pencereyi özelliği uygulayan **çıkış** üzerinde **dosya** menüsü.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
- [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
  Bir pencere kapandığında iki olaylar oluşur: <xref:System.Windows.Window.Closing> ve <xref:System.Windows.Window.Closed>.  
   
  <xref:System.Windows.Window.Closing> pencereyi kapatır ve hangi penceresi kapatma engellenebilir bir mekanizma sağlar önce oluşturulur. Pencerenin kapatılmasını engelleyecek yaygın nedenlerinden biri, pencere içeriğinin değiştirilen veri içeriyorsa, ' dir. Bu durumda <xref:System.Windows.Window.Closing> olay verileri olumsuz olup olmadığını ve bu durumda, kullanıcı verileri kaydetmeden pencereyi kapatma ya da devam mı, yoksa pencerenin kapatılmasını engelleyecek şekilde sormak belirlemek için işlenebilir. Aşağıdaki örnek, işleme önemli yönlerini gösterir <xref:System.Windows.Window.Closing>.  
   
- [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
- [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
+ [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
+ [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
  
   
  <xref:System.Windows.Window.Closing> Olay işleyicisine geçirilen bir <xref:System.ComponentModel.CancelEventArgs>, uygulayan `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> ayarlamak için özellik `true` pencere kapatılmasını engelleyecek.  
@@ -284,11 +284,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ### <a name="window-lifetime-events"></a>Pencere ömür olayları  
  Aşağıdaki çizimde, pencerenin yaşam süresi asıl olay dizisini gösterir.  
   
- ![Yaşam süresi](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Yaşam süresi](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
  Aşağıdaki çizimde asıl olayların sırası etkinleştirme gösterilen bir pencere ömrü gösterir (<xref:System.Windows.Window.ShowActivated%2A> ayarlanır `false` pencere gösterilmeden önce).  
   
- ![Yaşam süresi &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Yaşam süresi &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Pencere konumu  
@@ -308,7 +308,7 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ### <a name="topmost-windows-and-z-order"></a>En üstteki Windows ve Z düzeni  
  X ve y konumu, bir pencere ayrıca sahip olmanın yanı sıra diğer windows göre dikey konumunu belirler z boyutundaki bir konum vardır. Bu pencerenin z düzeni bilinir ve iki tür vardır: normal z düzenini ve en üst z düzeni. Pencerenin konumu *normal z düzenini* , şu anda etkin olup olmamasına göre belirlenir. Varsayılan olarak, bir pencere normal z düzeninde bulunur. Pencerenin konumu *üstteki z düzenini* Ayrıca, şu anda etkin olup olmamasına göre belirlenir. Ayrıca, en üst z düzeninde windows her zaman windows normal z düzeninde üstünde bulunur. Bir pencere ayarlayarak en üst z düzeninde bulunan kendi <xref:System.Windows.Window.Topmost%2A> özelliğini `true`.  
   
- [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
   
  Her z düzenini içinde şu andaki etkin pencere tüm diğer pencerelerin aynı z düzeninde görüntülenir.  
   
@@ -318,11 +318,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> pencere yaşam süresi boyunca olabilir ve aşağıdaki örnekte gösterildiği gibi yapılandırılmış genişlikleri aralığını yönetmek için kullanılır.  
   
- [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
   
  Pencere yüksekliği yönetilir <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.MaxHeight%2A>ve aşağıdaki örnekte gösterilen şekilde yapılandırılır.  
   
- [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
   
  Çeşitli genişliği değerlerini ve yükseklik değerleri aralığını belirtmek için herhangi bir ilgili boyut için belirtilen aralıkta olacak şekilde yeniden boyutlandırılabilir pencere yüksekliğini ve genişliğini mümkündür. Geçerli genişlik ve yükseklik algılamak için inceleyin <xref:System.Windows.FrameworkElement.ActualWidth%2A> ve <xref:System.Windows.FrameworkElement.ActualHeight%2A>sırasıyla.  
   
@@ -338,12 +338,12 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Aşağıdaki örnek bir pencere otomatik olarak ilk göründüğü içeriğini, dikey ve yatay olarak, uygun boyutları gösterir.  
   
- [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
   
  Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Window.SizeToContent%2A> kod nasıl bir içeriği sığdırmak için yeniden boyutlandırır belirtmek için bir özellik.
   
- [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
- [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
+ [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
 <a name="OrderOfPrecedence"></a>   
 ## <a name="order-of-precedence-for-sizing-properties"></a>Boyutlandırma özelliklerini için öncelik sırası  
@@ -392,7 +392,7 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Aşağıdaki örnek, açıldığında, tam ekran olarak gösterilen bir pencere oluşturma işlemi gösterilmektedir.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
   
  Genel olarak, ayarlamalısınız <xref:System.Windows.Window.WindowState%2A> bir pencerenin başlangıç durumunu yapılandırmak için. Yeniden boyutlandırılabilir penceresinde gösterilen sonra kullanıcılar simge durumuna küçült tuşuna basın, en üst düzeye çıkarmak ve pencere durumu değiştirmek için pencerenin başlık çubuğundaki düğmelere geri yükleme.  
   
@@ -419,7 +419,7 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Olduğu gibi <xref:System.Windows.Window.WindowStyle%2A>, yeniden boyutlandırma modunu pencerenin, büyük olasılıkla ondan ayarlarsınız, yani ömrü boyunca değişme olasılığı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
- [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
   
  Bir pencere ekranı olup olmadığını algılayan Not küçültülebilir ya da inceleyerek geri <xref:System.Windows.Window.WindowState%2A> özelliği.  
   
@@ -439,22 +439,22 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Bu pencere stilleri etkisini aşağıdaki şekilde gösterilmektedir.  
   
- ![Pencere stilleri](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Pencere stilleri](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
  Ayarlayabileceğiniz <xref:System.Windows.Window.WindowStyle%2A> kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme veya kod; bir pencere ömrü boyunca değişme olasılığı olduğu için büyük olasılıkla kullanarak yapılandıracağınız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Dikdörtgen olmayan pencere stili  
  Burada kenarlık stilleri, durumlar da vardır <xref:System.Windows.Window.WindowStyle%2A> sağlayan sahip olmanız yeterli değildir. Örneğin, benzer olmayan bir kenarlığa sahip bir uygulama oluşturmak isteyebilirsiniz [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] kullanır.  
   
  Örneğin, aşağıdaki şekilde gösterilen konuşma Kabarcık penceresi göz önünde bulundurun.  
   
- ![Dikdörtgen olmayan pencere](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Dikdörtgen olmayan pencere](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
  Bu tür bir pencerede ayarlayarak oluşturulabilir <xref:System.Windows.Window.WindowStyle%2A> özelliğini <xref:System.Windows.WindowStyle.None>ve özel'i kullanarak destekleyen <xref:System.Windows.Window> saydamlık için.  
   
- [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
   
  Bu değerlerin birleşimini, tamamen saydam işlemek için pencerenin bildirir. Bu durumda, pencerenin istemci olmayan alan Kenarlıklar (menüyü Kapat, Küçült, Ekranı Kapla ve geri düğmeleri ve benzeri) kullanılamaz. Sonuç olarak, size sağlamak kendi gerekir.  
   
@@ -462,11 +462,11 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 ### <a name="task-bar-presence"></a>Görev çubuğu durum  
  Varsayılan görünüm penceresinin aşağıdaki şekilde gösterilene benzer bir görev çubuğu düğmesinin içerir.  
   
- ![Bir görev çubuğu düğmesinin penceresiyle](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+ ![Bir görev çubuğu düğmesinin penceresiyle](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- İleti kutuları ve iletişim kutuları gibi bir görev çubuğu düğmesinin windows bazı türleri yok (bkz [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Bir pencere için görev çubuğu düğmesinin ayarlayarak gösterilip gösterilmeyeceğini denetleyen <xref:System.Windows.Window.ShowInTaskbar%2A> özelliği (`true` varsayılan olarak).  
+ İleti kutuları ve iletişim kutuları gibi bir görev çubuğu düğmesinin windows bazı türleri yok (bkz [iletişim kutularına genel bakış](dialog-boxes-overview.md)). Bir pencere için görev çubuğu düğmesinin ayarlayarak gösterilip gösterilmeyeceğini denetleyen <xref:System.Windows.Window.ShowInTaskbar%2A> özelliği (`true` varsayılan olarak).  
   
- [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
@@ -474,18 +474,18 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Ancak, bu Internet veya yerel intranet bölgesi kullanımından başlatılan uygulamalara izinler kümesini dışında kalan [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Sonuç olarak, kullanıcılar alır bir [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] güvenlik uyarısı ve uygulama tam güven için ayarlanmış izin yükseltmesine gerekir.  
   
- Ayrıca, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] windows veya iletişim kutularında, varsayılan olarak gösteremez. Tek başına uygulama güvenlik konuları hakkında bir tartışma için bkz. [WPF güvenlik stratejisi - Platform güvenliği](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Ayrıca, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] windows veya iletişim kutularında, varsayılan olarak gösteremez. Tek başına uygulama güvenlik konuları hakkında bir tartışma için bkz. [WPF güvenlik stratejisi - Platform güvenliği](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Diğer Windows türleri  
- <xref:System.Windows.Navigation.NavigationWindow> gezinilebilir içeriği barındırmak için tasarlanmış bir penceredir. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> gezinilebilir içeriği barındırmak için tasarlanmış bir penceredir. Daha fazla bilgi için [gezintiye genel bakış](navigation-overview.md)).  
   
- Genellikle bir işlev tamamlamak için bir kullanıcıdan bilgi toplamak için kullanılan bir windows iletişim kutularıdır. Örneğin, ne zaman bir kullanıcının istediği bir dosyayı açmaya **Dosya Aç** iletişim kutusu kullanıcıdan dosya adını almak için bir uygulama tarafından genellikle görüntülenir. Daha fazla bilgi için [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Genellikle bir işlev tamamlamak için bir kullanıcıdan bilgi toplamak için kullanılan bir windows iletişim kutularıdır. Örneğin, ne zaman bir kullanıcının istediği bir dosyayı açmaya **Dosya Aç** iletişim kutusu kullanıcıdan dosya adını almak için bir uygulama tarafından genellikle görüntülenir. Daha fazla bilgi için [iletişim kutularına genel bakış](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [İletişim Kutularına Genel Bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)
-- [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [İletişim Kutularına Genel Bakış](dialog-boxes-overview.md)
+- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)

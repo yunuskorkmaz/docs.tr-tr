@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 39aa2b9b97e9f683521193ad8e647c73bb4dd140
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353094"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API'si kullanarak mikro hizmet uygulama katmanı
 
@@ -38,15 +38,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -54,14 +54,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -283,11 +283,11 @@ public class CreateOrderCommand
 }
 ```
 
-Temel olarak, komut sınıfı, etki alanı model nesneleri kullanarak, bir iş işlemi gerçekleştirmek için gereken tüm verileri içerir. Bu nedenle, yalnızca salt okunur veri ve davranışı yok içeren veri yapılarını komutlardır. Amacı, komutun adını belirtir. C gibi birçok dilde\#komutları sınıf olarak temsil edilir ancak doğru nesne yönelimli gerçek anlamda sınıflarda değildir.
+Temel olarak, komut sınıfı, etki alanı model nesneleri kullanarak, bir iş işlemi gerçekleştirmek için gereken tüm verileri içerir. Bu nedenle, yalnızca salt okunur veri ve davranışı yok içeren veri yapılarını komutlardır. Amacı, komutun adını belirtir. Gibi birçok dilde C#komutları sınıf olarak temsil edilir ancak doğru nesne yönelimli gerçek anlamda sınıflarda değildir.
 
-Beklenen kullanım, doğrudan etki alanı modeli tarafından işlenen olduğu için ek bir özellik komutları, sabittir. Öngörülen kendi ömrü boyunca değişiklik gerekmez. Bir c\# sınıfı, tüm ayarlayıcılar ya da iç durum değişikliği diğer yöntemleri zorunluluğunu ortadan kaldırarak değiştirilemezlik gerçekleştirilebilir.
+Beklenen kullanım, doğrudan etki alanı modeli tarafından işlenen olduğu için ek bir özellik komutları, sabittir. Öngörülen kendi ömrü boyunca değişiklik gerekmez. İçinde bir C# sınıfı, tüm ayarlayıcılar ya da iç durum değişikliği diğer yöntemleri zorunluluğunu ortadan kaldırarak değiştirilemezlik gerçekleştirilebilir.
 
-Amaçladığınız ya da beklediğiniz komutları bir seri hale getirme deserializing sürecinden geçmeden, özelliklerini özel ayarlayıcı olmalıdır unutmayın ve `[DataMemeber]` (veya `[JsonProperty]`) özniteliği, aksi takdirde seri durumdan çıkarıcı için mümkün olmayacak gerekli değerlerle hedef nesne yeniden yapılandırma.
+Amaçladığınız ya da beklediğiniz komutları bir seri hale getirme deserializing sürecinden geçmeden, özelliklerini özel ayarlayıcı olmalıdır unutmayın ve `[DataMember]` (veya `[JsonProperty]`) özniteliği, aksi takdirde seri durumdan çıkarıcı için mümkün olmayacak gerekli değerlerle hedef nesne yeniden yapılandırma.
 
 Örneğin, bir sipariş oluşturmak için komut sınıfı oluşturmak istediğiniz siparişin veri açısından büyük olasılıkla benzer, ancak büyük olasılıkla aynı öznitelikleri gerekmez. Örneğin, sipariş henüz oluşturulmamış çünkü CreateOrderCommand bir sipariş kimliği yok.
 
@@ -315,7 +315,7 @@ Bazı geliştiriciler kendi UI istek nesneleri kendi komut Dto'lar ayrı hale ge
 
 Her komut için belirli bir komut işleyici sınıfı uygulamalıdır. Düzeni nasıl çalışır, ve burada komut nesnesi, etki alanı nesnelerini ve altyapı depo nesneleri kullanır. Komut işleyici aslında CQRS ve DDD açısından uygulama katmanı kalbidir. Ancak tüm etki alanı mantığı alan sınıfları içinde yer almalıdır; toplama kökleri (kök varlıklar) içinde alt varlıklar veya [etki alanı Hizmetleri](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ancak değildir komut işleyicisinin içerisinde olduğu uygulama öğesinden bir sınıf Katman.
 
-Komut işleyici sınıfı, bir önceki bölümde belirtilen tek Resposibility İlkesi (SRP) yapmanın bir yolu, güçlü bir atlama taşı sunar.
+Komut işleyici sınıfı, bir önceki bölümde belirtilen tek sorumluluk İlkesi (SRP) yapmanın bir yolu, güçlü bir atlama taşı sunar.
 
 Bir komut işleyici, bir komut alır ve bir sonuç kullanılan toplam alır. Sonuç başarılı yürütme komut veya özel bir durum olmalıdır. Bir özel durum söz konusu olduğunda sistem durumu değiştirilmeden olmalıdır.
 
@@ -348,15 +348,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -364,14 +364,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -480,7 +480,7 @@ Dünyası desen kullanmak için başka bir nedeni Jimmy Bogard tarafından bu k�
 ```csharp
 public class MyMicroserviceController : Controller
 {
-    public MyMicroserviceController(IMediator mediator, 
+    public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
     // ...
 ```
@@ -489,11 +489,11 @@ Dünyası temizleme ve akıllı bir Web API denetleyicisi Oluşturucusu sağlad�
 
 ```csharp
 [Route("new")]
-[HttpPost] 
-public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand 
-                                                               runOperationCommand) 
+[HttpPost]
+public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
+                                                               runOperationCommand)
 {
-    var commandResult = await _mediator.SendAsync(runOperationCommand); 
+    var commandResult = await _mediator.SendAsync(runOperationCommand);
 
     return commandResult ? (IActionResult)Ok() : (IActionResult)BadRequest();
 }
@@ -506,17 +506,17 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 Bununla birlikte, gönderme MediatR komutu aşağıdaki kodda gösterildiği gibi oldukça benzer eylemdir.
 
 ```csharp
-var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,     
-                                                eventMsg.UserId, eventMsg.City, 
+var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,
+                                                eventMsg.UserId, eventMsg.City,
                                                 eventMsg.Street, eventMsg.State,
                                                 eventMsg.Country, eventMsg.ZipCode,
-                                                eventMsg.CardNumber, 
-                                                eventMsg.CardHolderName, 
+                                                eventMsg.CardNumber,
+                                                eventMsg.CardHolderName,
                                                 eventMsg.CardExpiration,
-                                                eventMsg.CardSecurityNumber,  
+                                                eventMsg.CardSecurityNumber,
                                                 eventMsg.CardTypeId);
 
-var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand, 
+var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand,
                                                                         eventMsg.RequestId);
 result = await _mediator.Send(requestCreateOrder);
 ```
@@ -545,14 +545,14 @@ Ardından adlı IdentifiedCommand için CommandHandler [IdentifiedCommandHandler
 
 ```csharp
 // IdentifiedCommandHandler.cs
-public class IdentifiedCommandHandler<T, R> : 
+public class IdentifiedCommandHandler<T, R> :
                                    IAsyncRequestHandler<IdentifiedCommand<T, R>, R>
                                    where T : IRequest<R>
 {
     private readonly IMediator _mediator;
     private readonly IRequestManager _requestManager;
 
-    public IdentifiedCommandHandler(IMediator mediator, 
+    public IdentifiedCommandHandler(IMediator mediator,
                                     IRequestManager requestManager)
     {
         _mediator = mediator;
@@ -575,10 +575,10 @@ public class IdentifiedCommandHandler<T, R> :
         {
             await _requestManager.CreateRequestForCommandAsync<T>(message.Id);
 
-            // Send the embeded business command to mediator 
-            // so it runs its related CommandHandler 
+            // Send the embedded business command to mediator
+            // so it runs its related CommandHandler
             var result = await _mediator.Send(message.Command);
-                
+
             return result;
         }
     }
@@ -599,15 +599,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -616,10 +616,10 @@ public class CreateOrderCommandHandler
         // Add/Update the Buyer AggregateRoot
         var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,  
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -689,7 +689,7 @@ public class MediatorModule : Autofac.Module
                               typeof(CreateOrderCommand).GetTypeInfo().Assembly).
                                    AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
         // Other types registration
-        //...        
+        //...
         builder.RegisterGeneric(typeof(LoggingBehavior<,>)).
                                                    As(typeof(IPipelineBehavior<,>));
         builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).
@@ -701,7 +701,7 @@ public class MediatorModule : Autofac.Module
 Olduğunu [LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) sınıfı ve yürütülen komut işleyici değil başarılı olup hakkındaki bilgileri kaydeder aşağıdaki kodu olarak uygulanabilir.
 
 ```csharp
-public class LoggingBehavior<TRequest, TResponse> 
+public class LoggingBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
@@ -724,7 +724,7 @@ Bu davranış sınıfı uygulama tarafından ve işlem hattı (yukarıdaki Media
 Mikro hizmet, ikinci bir davranış temel doğrulamaları için de geçerlidir sıralama hizmetine [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) dayanan sınıfı [FluentValidation](https://github.com/JeremySkinner/FluentValidation) gösterildiği kitaplığı Aşağıdaki kodu:
 
 ```csharp
-public class ValidatorBehavior<TRequest, TResponse> 
+public class ValidatorBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly IValidator<TRequest>[] _validators;
@@ -767,12 +767,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         RuleFor(command => command.State).NotEmpty();
         RuleFor(command => command.Country).NotEmpty();
         RuleFor(command => command.ZipCode).NotEmpty();
-        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19); 
+        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19);
         RuleFor(command => command.CardHolderName).NotEmpty();
-        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date"); 
-        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3); 
+        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date");
+        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3);
         RuleFor(command => command.CardTypeId).NotEmpty();
-        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found"); 
+        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found");
     }
 
     private bool BeValidExpirationDate(DateTime dateTime)
@@ -835,6 +835,6 @@ Benzer şekilde, ek unsurları veya bunları işlerken komutları uygulamak iste
 - **Jeremy Skinner. FluentValidation.** GitHub deposu. \
   [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
->[!div class="step-by-step"]
->[Önceki](microservice-application-layer-web-api-design.md)
->[İleri](../implement-resilient-applications/index.md)
+> [!div class="step-by-step"]
+> [Önceki](microservice-application-layer-web-api-design.md)
+> [İleri](../implement-resilient-applications/index.md)
