@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537479"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353133"
 ---
-# <a name="digital-ink"></a><span data-ttu-id="698a9-102">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="698a9-102">Digital Ink</span></span>
-<span data-ttu-id="698a9-103">Bu bölümde dijital mürekkep kullanmayı açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="698a9-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="698a9-104">Geleneksel olarak yalnızca Tablet PC SDK içinde bulunan, dijital mürekkep çekirdek Windows Presentation Foundation kullanıma sunulmuştur.</span><span class="sxs-lookup"><span data-stu-id="698a9-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="698a9-105">Başka bir deyişle, Windows Presentation Foundation gücünü kullanarak şimdi tam özellikli Tablet PC uygulamalar geliştirebilir.</span><span class="sxs-lookup"><span data-stu-id="698a9-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="04467-102">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="04467-102">Digital Ink</span></span>
+<span data-ttu-id="04467-103">Bu bölümde, dijital mürekkebi kullanımı ele alınmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="04467-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="04467-104">Geleneksel olarak yalnızca Tablet PC SDK içinde bulunan, dijital mürekkep çekirdek Windows Presentation Foundation artık kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="04467-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="04467-105">Başka bir deyişle, Windows Presentation Foundation'ın gücünü kullanarak artık BB'yi Tablet PC uygulamaları geliştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="04467-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="698a9-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="698a9-106">In This Section</span></span>  
- [<span data-ttu-id="698a9-107">Genel Bakışlar</span><span class="sxs-lookup"><span data-stu-id="698a9-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [<span data-ttu-id="698a9-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="698a9-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="04467-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="04467-106">In This Section</span></span>  
+ [<span data-ttu-id="04467-107">Genel Bakışlar</span><span class="sxs-lookup"><span data-stu-id="04467-107">Overviews</span></span>](digital-ink-overviews.md)  
+  [<span data-ttu-id="04467-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="04467-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="698a9-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="698a9-109">Related Sections</span></span>  
- [<span data-ttu-id="698a9-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="698a9-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)
+## <a name="related-sections"></a><span data-ttu-id="04467-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="04467-109">Related Sections</span></span>  
+ [<span data-ttu-id="04467-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="04467-110">Windows Presentation Foundation</span></span>](../index.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359399"
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="aa158-102">Tuval ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="aa158-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="aa158-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Canvas> öğesinin alt öğeleri konumlandırmak için.</span><span class="sxs-lookup"><span data-stu-id="aa158-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="9074c-102">Tuval ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9074c-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="9074c-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Canvas> alt öğeleri konumlandırmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="9074c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aa158-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="aa158-104">In This Section</span></span>  
- [<span data-ttu-id="aa158-105">Tuval İçeriği Çevresinde Kenarlığı Kaydırma</span><span class="sxs-lookup"><span data-stu-id="aa158-105">Wrap a Border Around the Content of a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="aa158-106">Tuval Konumlandırma Özelliklerini Alma veya Ayarlama</span><span class="sxs-lookup"><span data-stu-id="aa158-106">Get or Set Canvas Positioning Properties</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="aa158-107">Tuval Oluşturma ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="aa158-107">Create and Use a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="aa158-108">Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="aa158-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="aa158-109">Parmak Kullanarak Tuvali Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="aa158-109">Resize a Canvas by Using a Thumb</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9074c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9074c-104">In This Section</span></span>  
+ [<span data-ttu-id="9074c-105">Tuval İçeriği Çevresinde Kenarlığı Kaydırma</span><span class="sxs-lookup"><span data-stu-id="9074c-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="9074c-106">Tuval Konumlandırma Özelliklerini Alma veya Ayarlama</span><span class="sxs-lookup"><span data-stu-id="9074c-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="9074c-107">Tuval Oluşturma ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="9074c-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="9074c-108">Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="9074c-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="9074c-109">Parmak Kullanarak Tuvali Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="9074c-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="aa158-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="aa158-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9074c-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9074c-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "33550959"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="aa158-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="aa158-111">Related Sections</span></span>  
- [<span data-ttu-id="aa158-112">Düzen</span><span class="sxs-lookup"><span data-stu-id="aa158-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="9074c-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="9074c-111">Related Sections</span></span>  
+ [<span data-ttu-id="9074c-112">Düzen</span><span class="sxs-lookup"><span data-stu-id="9074c-112">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="aa158-113">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="aa158-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="9074c-113">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="9074c-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="aa158-114">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="aa158-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="9074c-114">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9074c-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

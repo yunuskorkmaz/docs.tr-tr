@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352600"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="67b08-102">ISOSDacInterface::GetMethodDescData yöntemi</span><span class="sxs-lookup"><span data-stu-id="67b08-102">ISOSDacInterface::GetMethodDescData Method</span></span>
+# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="e2bc3-102">ISOSDacInterface::GetMethodDescData yöntemi</span><span class="sxs-lookup"><span data-stu-id="e2bc3-102">ISOSDacInterface::GetMethodDescData Method</span></span>
 
-<span data-ttu-id="67b08-103">Verileri için belirli MethodDesc işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="67b08-103">Gets the data for the given MethodDesc pointer.</span></span>
+<span data-ttu-id="e2bc3-103">Verileri için belirli MethodDesc işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-103">Gets the data for the given MethodDesc pointer.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="67b08-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="67b08-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e2bc3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e2bc3-104">Syntax</span></span>
 
 ```
 HRESULT GetMethodDescData(
@@ -41,32 +41,38 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a><span data-ttu-id="67b08-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="67b08-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="e2bc3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e2bc3-105">Parameters</span></span>
 
-<span data-ttu-id="67b08-106">`methodDesc` [in] MethodDesc adresi.</span><span class="sxs-lookup"><span data-stu-id="67b08-106">`methodDesc` [in] The address of the MethodDesc.</span></span>
+`methodDesc`\
+<span data-ttu-id="e2bc3-106">[in] MethodDesc adresi.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-106">[in] The address of the MethodDesc.</span></span>
 
-<span data-ttu-id="67b08-107">`ip` [in] Yöntem IP adresi.</span><span class="sxs-lookup"><span data-stu-id="67b08-107">`ip` [in] The IP address of the method.</span></span>
+`ip`\
+<span data-ttu-id="e2bc3-107">[in] Yöntem IP adresi.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-107">[in] The IP address of the method.</span></span>
 
-<span data-ttu-id="67b08-108">`data` [out] İç API'lerinden döndürülen MethodDesc ile ilişkili veriler.</span><span class="sxs-lookup"><span data-stu-id="67b08-108">`data` [out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
+`data`\
+<span data-ttu-id="e2bc3-108">[out] İç API'lerinden döndürülen MethodDesc ile ilişkili veriler.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-108">[out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
 
-<span data-ttu-id="67b08-109">`cRevertedRejitVersions` [out] Geri döndürülen rejit sürüm sayısı.</span><span class="sxs-lookup"><span data-stu-id="67b08-109">`cRevertedRejitVersions` [out] The number of reverted rejit versions.</span></span>
+`cRevertedRejitVersions`\
+<span data-ttu-id="e2bc3-109">[out] Geri döndürülen rejit sürüm sayısı.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-109">[out] The number of reverted rejit versions.</span></span>
 
-<span data-ttu-id="67b08-110">`rgRevertedRejitData` [out] İç API'lerinden döndürülen şekilde geri döndürülen rejit sürümleriyle ilişkili veriler.</span><span class="sxs-lookup"><span data-stu-id="67b08-110">`rgRevertedRejitData` [out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
+`rgRevertedRejitData`\
+<span data-ttu-id="e2bc3-110">[out] İç API'lerinden döndürülen şekilde geri döndürülen rejit sürümleriyle ilişkili veriler.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-110">[out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
 
-<span data-ttu-id="67b08-111">`pcNeededRevertedRejitData` [out] Geri döndürülen ReJit sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="67b08-111">`pcNeededRevertedRejitData` [out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
+`pcNeededRevertedRejitData`\
+<span data-ttu-id="e2bc3-111">[out] Geri döndürülen ReJit sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-111">[out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="67b08-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="67b08-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="e2bc3-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e2bc3-112">Remarks</span></span>
 
-<span data-ttu-id="67b08-113">Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tablosunu 20 yuvaya karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="67b08-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="67b08-114">Kullanmaya devam edebilmek için [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64-bit işaretsiz tamsayı tanımlanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="67b08-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
+<span data-ttu-id="e2bc3-113">Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tablosunu 20 yuvaya karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="e2bc3-114">Kullanmaya devam edebilmek için [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64-bit işaretsiz tamsayı tanımlanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="67b08-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="67b08-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e2bc3-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e2bc3-115">Requirements</span></span>
 
-<span data-ttu-id="67b08-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67b08-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="67b08-117">**Üst bilgi:** Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="67b08-117">**Header:** None</span></span>  
-<span data-ttu-id="67b08-118">**Kitaplığı:** Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="67b08-118">**Library:** None</span></span>  
-<span data-ttu-id="67b08-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="67b08-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="e2bc3-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2bc3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="e2bc3-117">**Üst bilgi:** Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="e2bc3-117">**Header:** None</span></span>  
+<span data-ttu-id="e2bc3-118">**Kitaplığı:** Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="e2bc3-118">**Library:** None</span></span>  
+<span data-ttu-id="e2bc3-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e2bc3-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="67b08-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67b08-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2bc3-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2bc3-120">See also</span></span>
 
-- [<span data-ttu-id="67b08-121">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="67b08-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="67b08-122">ISOSDacInterface arabirimi</span><span class="sxs-lookup"><span data-stu-id="67b08-122">ISOSDacInterface Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [<span data-ttu-id="e2bc3-121">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="e2bc3-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="e2bc3-122">ISOSDacInterface arabirimi</span><span class="sxs-lookup"><span data-stu-id="e2bc3-122">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)

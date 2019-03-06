@@ -8,21 +8,21 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554930"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367602"
 ---
-# <a name="panel"></a><span data-ttu-id="ad071-102">Panel</span><span class="sxs-lookup"><span data-stu-id="ad071-102">Panel</span></span>
-<span data-ttu-id="ad071-103"><xref:System.Windows.Controls.Panel> deki uygulama düzenini destekleyen tüm öğeler için temel sınıfı olan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ad071-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="panel"></a><span data-ttu-id="63881-102">Panel</span><span class="sxs-lookup"><span data-stu-id="63881-102">Panel</span></span>
+<span data-ttu-id="63881-103"><xref:System.Windows.Controls.Panel> uygulama düzenini destekleyen tüm öğeler için temel sınıf [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="63881-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad071-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ad071-104">In This Section</span></span>  
- [<span data-ttu-id="ad071-105">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ad071-105">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="ad071-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ad071-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="63881-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="63881-104">In This Section</span></span>  
+ [<span data-ttu-id="63881-105">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="63881-105">Panels Overview</span></span>](panels-overview.md)  
+ [<span data-ttu-id="63881-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="63881-106">How-to Topics</span></span>](panel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ad071-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ad071-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="63881-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="63881-107">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33554930"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="ad071-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ad071-108">Related Sections</span></span>  
- [<span data-ttu-id="ad071-109">Düzen</span><span class="sxs-lookup"><span data-stu-id="ad071-109">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="63881-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="63881-108">Related Sections</span></span>  
+ [<span data-ttu-id="63881-109">Düzen</span><span class="sxs-lookup"><span data-stu-id="63881-109">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="ad071-110">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="ad071-110">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="63881-110">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="63881-110">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="ad071-111">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ad071-111">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="63881-111">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="63881-111">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
