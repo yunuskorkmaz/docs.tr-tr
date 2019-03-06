@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96a00afc08f2c5593dad5a3a47ab46045ff6b0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365119"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
-Özelliklerini belirtir bir <xref:System.Windows.Data.RelativeSource> içinde kullanılacak bağlama kaynağı, bir [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), veya ayarlarken <xref:System.Windows.Data.Binding.RelativeSource%2A> özelliği bir <xref:System.Windows.Data.Binding> XAML içinde oluşturulmuş bir öğe.  
+Özelliklerini belirtir bir <xref:System.Windows.Data.RelativeSource> içinde kullanılacak bağlama kaynağı, bir [Binding Markup Extension](binding-markup-extension.md), veya ayarlarken <xref:System.Windows.Data.Binding.RelativeSource%2A> özelliği bir <xref:System.Windows.Data.Binding> XAML içinde oluşturulmuş bir öğe.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -61,11 +61,11 @@ ms.locfileid: "54559392"
 |`intLevel`|İçin isteğe bağlı `FindAncestor` modu. Öncül düzeyi (Mantıksal ağaçta üst yön doğrultusunda değerlendirilen.)|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `{RelativeSource TemplatedParent}` bağlama kullanımları, denetime ait kullanıcı ve denetim mantığının ayrımı daha büyük bir kavramı ele alan önemli bir tekniktir. Bu, şablon tanımı içinden şablonlu üst öğeye (şablonun uygulandığı çalışma zamanı nesnesi örneği) bağlanmaya olanak verir. Bu durum için [TemplateBinding Markup Extension](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) aslında şu bağlama ifadesi için bir toplu olduğu: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` veya `{RelativeSource TemplatedParent}` kullanımları, her ikisi de, bir şablon tanımlayan XAML içinde yalnızca ilgilidir. Daha fazla bilgi için [TemplateBinding işaretleme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+ `{RelativeSource TemplatedParent}` bağlama kullanımları, denetime ait kullanıcı ve denetim mantığının ayrımı daha büyük bir kavramı ele alan önemli bir tekniktir. Bu, şablon tanımı içinden şablonlu üst öğeye (şablonun uygulandığı çalışma zamanı nesnesi örneği) bağlanmaya olanak verir. Bu durum için [TemplateBinding Markup Extension](templatebinding-markup-extension.md) aslında şu bağlama ifadesi için bir toplu olduğu: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` veya `{RelativeSource TemplatedParent}` kullanımları, her ikisi de, bir şablon tanımlayan XAML içinde yalnızca ilgilidir. Daha fazla bilgi için [TemplateBinding işaretleme uzantısı](templatebinding-markup-extension.md)  
   
  `{RelativeSource FindAncestor}` esas olarak denetim şablonları veya öngörülebilir kendi kullanıcı Arabirimi bileşimlerinde, burada bir denetimi her zaman belirli bir üst öğe türünün görsel ağacında olması beklenen durumlarda kullanılır. Örneğin, bir öğeler denetiminin öğeleri kullanabilirsiniz `FindAncestor` öğelerin özelliklerine bağlanacağını kullanımları üst üst denetim. Veya bir şablonda denetim bileşiminin parçası olan öğeler kullanabileceğiniz `FindAncestor` , aynı bileşim yapısı içinde üst öğelere bağlar.  
   
- Nesne öğesi sözdizimi içinde `FindAncestor` ikinci nesne öğesi sözdizimi özellikle için kullanılan XAML sözdizimi bölümlerinde gösterilen modu `FindAncestor` modu. `FindAncestor` mod gerektirir bir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> değeri. Ayarlamalısınız <xref:System.Windows.Data.RelativeSource.AncestorType%2A> kullanarak bir özniteliği olarak bir [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Aranılacak türü referansı. <xref:System.Windows.Data.RelativeSource.AncestorType%2A> Değeri, bağlama isteği çalışma zamanında işlendiğinde kullanılır.  
+ Nesne öğesi sözdizimi içinde `FindAncestor` ikinci nesne öğesi sözdizimi özellikle için kullanılan XAML sözdizimi bölümlerinde gösterilen modu `FindAncestor` modu. `FindAncestor` mod gerektirir bir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> değeri. Ayarlamalısınız <xref:System.Windows.Data.RelativeSource.AncestorType%2A> kullanarak bir özniteliği olarak bir [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md) Aranılacak türü referansı. <xref:System.Windows.Data.RelativeSource.AncestorType%2A> Değeri, bağlama isteği çalışma zamanında işlendiğinde kullanılır.  
   
  İçin `FindAncestor` modu, isteğe bağlı özellik <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> durumlarda üst arama belirsizliğinin ortadan kaldırılmasını yardımcı olabilecek birden fazla üst öğe ağacında varolan bu türün büyük olasılıkla olduğu.  
   
@@ -99,17 +99,17 @@ ms.locfileid: "54559392"
     </ListBox.ItemTemplate>  
 ```  
   
- Bir kavram, burada kapsanmayan olarak veri bağlamasını açıklama bkz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Bir kavram, burada kapsanmayan olarak veri bağlamasını açıklama bkz [Data Binding Overview](../data/data-binding-overview.md).  
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemci uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanır <xref:System.Windows.Data.RelativeSource> sınıfı.  
   
- `RelativeSource` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter olarak bir XAML işlemcisinin bir işaretleme uzantısı özniteliği işlenmesi gerektiğini, kuralına göre kendi öznitelik sözdizimi. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `RelativeSource` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter olarak bir XAML işlemcisinin bir işaretleme uzantısı özniteliği işlenmesi gerektiğini, kuralına göre kendi öznitelik sözdizimi. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Data.Binding>
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Bağlama Bildirimlerine Genel Bakış](../data/binding-declarations-overview.md)
+- [x:Type İşaretleme Uzantısı](../../xaml-services/x-type-markup-extension.md)

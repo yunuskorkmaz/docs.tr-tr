@@ -2,26 +2,27 @@
 title: <transport> , <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 1c25ffd70ae83f14d5e596b1ee32d05abcc95184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372327"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<Aktarım >, \<wsHttpBinding >
-HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.  
-  
- \<system.serviceModel>  
-\<bağlamaları >  
-\<wsHttpBinding>  
-\<bağlama >  
-\<Güvenlik >  
-\<taşıma >  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```xml  
+
+HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.
+
+\<system.serviceModel > \
+\<bağlamaları > \
+\<wsHttpBinding > \
+\<bağlama > \
+\<Güvenlik > \
+\<taşıma >
+
+## <a name="syntax"></a>Sözdizimi
+
+```xml
 <wsHttpBinding>
   <binding>
     <security mode="None|Transport|TransportWithMessageCredential|TransportCredentialOnly">
@@ -32,60 +33,64 @@ HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.
                                   protectionScenario="TransportSelected|TrustedProxy">
           <customServiceNames>
           </customServiceNames>
-        </extendedProtecutionPolicy>
+        </extendedProtectionPolicy>
       </transport>
     </security>
   </binding>
 </wsHttpBinding>
-```  
-  
-## <a name="type"></a>Tür  
- <xref:System.ServiceModel.HttpTransportSecurity>  
-  
-## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
-  
-### <a name="attributes"></a>Öznitelikler  
-  
-|Öznitelik|Açıklama|  
-|---------------|-----------------|  
-|`clientCredentialType`|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Bir etki alanı Ara sunucusu istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi belirten bir dize. Varsayılan değer boş bir dizedir.<br /><br /> Bir kimlik doğrulaması bölgesi, kimlik doğrulaması yapan bir ana bilgisayar adı en az belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilirsiniz. Bir kullanıcı kimlik doğrulaması bölgesi, hangisinin birkaç olası kullanıcı adları ve parolalar kullanılabilir olmadığından emin olmak için sorgulayabilirsiniz.|  
-|`policyEnforcement`|Bu sabit listesi ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorlanmalıdır.<br /><br /> 1.  Hiçbir zaman – hiçbir zaman ilkenin uygulanıp (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke zorunlu tutulur.<br />3.  Her zaman – ilke her zaman uygulanmaz. Genişletilmiş Koruma desteklemeyen istemciler kimlik doğrulaması başarısız olur.|  
-  
-## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
-  
-|Değer|Açıklama|  
-|-----------|-----------------|  
-|`None`|Güvenlik devre dışı bırakıldı.|  
-|`Basic`|Temel kimlik doğrulaması kullanır.|  
-|`Digest`|Özet kimlik doğrulaması kullanır.|  
-|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
-|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
-|`Certificate`|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|  
-  
-## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
-  
-|Değer|Açıklama|  
-|-----------|-----------------|  
-|`None`|Güvenlik devre dışı bırakıldı.|  
-|`Basic`|Temel kimlik doğrulaması kullanır.|  
-|`Digest`|Özet kimlik doğrulaması kullanır.|  
-|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
-|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
-|`Certificate`|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|  
-  
-### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
-  
-### <a name="parent-elements"></a>Üst Öğeler  
-  
-|Öğe|Açıklama|  
-|-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Güvenlik özelliklerini gösteren [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
-  
+```
+
+## <a name="type"></a>Tür
+
+<xref:System.ServiceModel.HttpTransportSecurity>
+
+## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
+
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
+
+### <a name="attributes"></a>Öznitelikler
+
+|Öznitelik|Açıklama|
+|---------------|-----------------|
+|`clientCredentialType`|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.|
+|`proxyCredentialType`|Bir etki alanı Ara sunucusu istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.|
+|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi belirten bir dize. Varsayılan değer boş bir dizedir.<br /><br /> Bir kimlik doğrulaması bölgesi, kimlik doğrulaması yapan bir ana bilgisayar adı en az belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilirsiniz. Bir kullanıcı kimlik doğrulaması bölgesi, hangisinin birkaç olası kullanıcı adları ve parolalar kullanılabilir olmadığından emin olmak için sorgulayabilirsiniz.|
+|`policyEnforcement`|Bu sabit listesi ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorlanmalıdır.<br /><br /> 1.  Hiçbir zaman – hiçbir zaman ilkenin uygulanıp (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke zorunlu tutulur.<br />3.  Her zaman – ilke her zaman uygulanmaz. Genişletilmiş Koruma desteklemeyen istemciler kimlik doğrulaması başarısız olur.|
+
+## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği
+
+|Değer|Açıklama|
+|-----------|-----------------|
+|`None`|Güvenlik devre dışı bırakıldı.|
+|`Basic`|Temel kimlik doğrulaması kullanır.|
+|`Digest`|Özet kimlik doğrulaması kullanır.|
+|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|
+|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|
+|`Certificate`|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|
+
+## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği
+
+|Değer|Açıklama|
+|-----------|-----------------|
+|`None`|Güvenlik devre dışı bırakıldı.|
+|`Basic`|Temel kimlik doğrulaması kullanır.|
+|`Digest`|Özet kimlik doğrulaması kullanır.|
+|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|
+|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|
+|`Certificate`|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|
+
+### <a name="child-elements"></a>Alt Öğeler
+
+Yok.
+
+### <a name="parent-elements"></a>Üst Öğeler
+
+|Öğe|Açıklama|
+|-------------|-----------------|
+|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Güvenlik özelliklerini gösteren [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>

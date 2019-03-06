@@ -2,12 +2,12 @@
 title: Ortak öznitelikler (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375408"
 ---
 # <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
 Bu konuda, Visual Basic programlarında en çok kullanılan öznitelikler açıklanmaktadır.  
@@ -22,7 +22,7 @@ Bu konuda, Visual Basic programlarında en çok kullanılan öznitelikler açık
   
 -   [Visual Basic öznitelikleri](#VB)  
   
-##  <a name="Global"></a> Genel Öznitelikler  
+## <a name="Global"></a> Genel Öznitelikler  
  Çoğu öznitelik sınıfları veya yöntemleri gibi belirli dil öğelerini uygulanır; Ancak, bazı öznitelikler genel — bir tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği, böyle bir derleme içinde sürüm bilgileri ekleme için kullanılabilir:  
   
 ```vb  
@@ -74,7 +74,7 @@ Bu konuda, Visual Basic programlarında en çok kullanılan öznitelikler açık
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Bir derleme yapılandırmasını (örneğin, perakende veya hata ayıklama) belirten bir özel özniteliği için bir derleme bildirimi tanımlar.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Bir derleme bildirimi bir kolay varsayılan ad tanımlar|  
   
-##  <a name="Obsolete"></a> Geçersiz öznitelik  
+## <a name="Obsolete"></a> Geçersiz öznitelik  
  `Obsolete` Özniteliği bir program varlık, artık kullanılması olarak işaretler. Artık kullanılmıyor olarak işaretlendiğinden bir varlığın her kullanımdan sonra bir uyarı veya öznitelik nasıl yapılandırıldığına bağlı olarak, bir hata oluşturur. Örneğin:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` Özniteliği tek kullanımlık bir özniteliktir ve öznitelikleri izin veren herhangi bir varlık için uygulanabilir. `Obsolete` için bir diğer addır <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Conditional özniteliği  
+## <a name="Conditional"></a> Conditional özniteliği  
  `Conditional` Özniteliği bir yönteminin yürütülmesi bir ön işleme tanımlayıcısı bağımlı yapar. `Conditional` Özniteliği için bir diğer ad, <xref:System.Diagnostics.ConditionalAttribute>ve bir yöntem veya bir öznitelik sınıfı için uygulanabilir.  
   
  Bu örnekte, `Conditional` etkinleştirmek veya program özel tanılama bilgilerinin görüntülenmesini devre dışı bırakmak için bir yönteme uygulanır:  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Arayan bilgileri öznitelikleri  
+## <a name="CallerInfo"></a> Arayan bilgileri öznitelikleri  
  Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodu dosyasının yolu, satır numarası kaynak kodu ve arayanın üye adını alabilirsiniz.  
   
  Üye arayan bilgileri elde etmek için isteğe bağlı parametrelere uygulanan öznitelikler kullanın. İsteğe bağlı her parametre varsayılan bir değer belirtir. Aşağıdaki tabloda tanımlanan arayan bilgisi öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı:  
@@ -222,7 +222,7 @@ End Class
   
  Arayan bilgisi öznitelikleri hakkında daha fazla bilgi için bkz: [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Visual Basic öznitelikleri  
+## <a name="VB"></a> Visual Basic öznitelikleri  
  Aşağıdaki tabloda, Visual Basic özel özniteliklerini listeler.  
   
 |Öznitelik|Amaç|  

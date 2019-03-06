@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265356"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368174"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Sürüm 4.5'te Yenilikler
 <a name="introduction"></a> Bu konu, yeni ve geliştirilmiş özellikleri hakkında bilgi içerir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265356"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Bir olay zayıf bir başvuru oluşturmak için gelişmiş destek  
- Abonelere olayları içinde ek arabirimi uygulama olmadan katılabilir zayıf olay deseni uygulama artık daha kolay olmasıdır.  Genel <xref:System.Windows.WeakEventManager> sınıfı da zayıf olay deseni adanmış bir katılmak aboneleri sağlar <xref:System.Windows.WeakEventManager> için belirli bir olayı yok.  Daha fazla bilgi için [zayıf olay desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ Abonelere olayları içinde ek arabirimi uygulama olmadan katılabilir zayıf olay deseni uygulama artık daha kolay olmasıdır.  Genel <xref:System.Windows.WeakEventManager> sınıfı da zayıf olay deseni adanmış bir katılmak aboneleri sağlar <xref:System.Windows.WeakEventManager> için belirli bir olayı yok.  Daha fazla bilgi için [zayıf olay desenleri](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Dispatcher sınıfı için yeni yöntemler  
- Dispatcher sınıfı zaman uyumlu ve zaman uyumsuz işlemler için yeni yöntemleri tanımlar.  Zaman uyumlu <xref:System.Windows.Threading.Dispatcher.Invoke%2A> alan aşırı yüklemeler yöntemi tanımlayan bir <xref:System.Action> veya <xref:System.Func%601> parametresi. Yeni zaman uyumsuz yöntemin <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, ayrıca alır bir <xref:System.Action> veya <xref:System.Func%601> döndürür ve geri çağırma parametresi olarak bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> Ve <xref:System.Windows.Threading.DispatcherOperation%601> sınıfları tanımlayan bir <xref:System.Threading.Tasks.Task> özelliği.  Çağırdığınızda <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, kullanabileceğiniz `await` ya da anahtar sözcüğüyle <xref:System.Windows.Threading.DispatcherOperation> veya ilişkili <xref:System.Threading.Tasks.Task>. Zaman uyumlu olarak beklemesi gerekiyorsa <xref:System.Threading.Tasks.Task> tarafından döndürülen bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>, çağrı <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> genişletme yöntemi. Çağırma <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> işlemi çağırma iş parçacığı üzerinde sıraya alınan bir kilitlenmeyle neden olur. Kullanma hakkında daha fazla bilgi için bir <xref:System.Threading.Tasks.Task> zaman uyumsuz işlemleri gerçekleştirmek için bkz: [görev Paralelliği (görev paralel kitaplığı)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ Dispatcher sınıfı zaman uyumlu ve zaman uyumsuz işlemler için yeni yöntemleri tanımlar.  Zaman uyumlu <xref:System.Windows.Threading.Dispatcher.Invoke%2A> alan aşırı yüklemeler yöntemi tanımlayan bir <xref:System.Action> veya <xref:System.Func%601> parametresi. Yeni zaman uyumsuz yöntemin <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, ayrıca alır bir <xref:System.Action> veya <xref:System.Func%601> döndürür ve geri çağırma parametresi olarak bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> Ve <xref:System.Windows.Threading.DispatcherOperation%601> sınıfları tanımlayan bir <xref:System.Threading.Tasks.Task> özelliği.  Çağırdığınızda <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, kullanabileceğiniz `await` ya da anahtar sözcüğüyle <xref:System.Windows.Threading.DispatcherOperation> veya ilişkili <xref:System.Threading.Tasks.Task>. Zaman uyumlu olarak beklemesi gerekiyorsa <xref:System.Threading.Tasks.Task> tarafından döndürülen bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>, çağrı <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> genişletme yöntemi. Çağırma <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> işlemi çağırma iş parçacığı üzerinde sıraya alınan bir kilitlenmeyle neden olur. Kullanma hakkında daha fazla bilgi için bir <xref:System.Threading.Tasks.Task> zaman uyumsuz işlemleri gerçekleştirmek için bkz: [görev Paralelliği (görev paralel kitaplığı)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Olaylar için biçimlendirme uzantıları  
  WPF 4.5 olayları için biçimlendirme uzantıları destekler.  WPF olaylar için kullanılacak bir işaretleme uzantısı tanımlamaz, ancak üçüncü taraflara olayları ile kullanılabilecek bir işaretleme uzantısı oluşturma olanağına sahip olursunuz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework’teki Yenilikler](../../../../docs/framework/whats-new/index.md)
+- [.NET Framework’teki Yenilikler](../../whats-new/index.md)

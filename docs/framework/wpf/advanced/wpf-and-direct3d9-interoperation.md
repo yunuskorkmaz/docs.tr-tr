@@ -7,25 +7,25 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 9fd5cc270074a3a2845147bcad8baef8d1f8ba2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372691"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF ve Direct3D9 Birlikte Çalışması
 Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında içerebilir. Bu konuda, verimli bir şekilde WPF ile birlikte çalışır, böylece Direct3D9 içeriği oluşturma işlemini açıklar.  
   
 > [!NOTE]
->  WPF'de Direct3D9 içeriği kullanırken, ayrıca performans hakkında düşünmeniz gerekir. Performans için en iyi duruma getirme hakkında daha fazla bilgi için bkz. [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+>  WPF'de Direct3D9 içeriği kullanırken, ayrıca performans hakkında düşünmeniz gerekir. Performans için en iyi duruma getirme hakkında daha fazla bilgi için bkz. [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
 ## <a name="display-buffers"></a>Arabellekleri görüntüleme  
  <xref:System.Windows.Interop.D3DImage> Sınıfı olarak adlandırılan iki görüntü arabelleğini yöneten *arka arabellek* ve *ön arabellek*. Geri arabelleği Direct3D9 yüzeyiniz olur. Arka arabellek değişiklikleri kopyalanır ön arabelleğe çağırdığınızda <xref:System.Windows.Interop.D3DImage.Unlock%2A> yöntemi.  
   
  Geri arabelleği ve ön arabellek arasındaki ilişki aşağıda gösterilmiştir.  
   
- ![D3DImage görüntü arabellekleri](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")  
+ ![D3DImage görüntü arabellekleri](./media/d3dimage-buffers.png "D3DImage_buffers")  
   
 ## <a name="direct3d9-device-creation"></a>Direct3D9 cihaz oluşturma  
  Direct3D9 içeriğini işlemek için Direct3D9 cihaz oluşturmanız gerekir. Bir cihaz oluşturmak için kullanabileceğiniz iki Direct3D9 nesneler `IDirect3D9` ve `IDirect3D9Ex`. Oluşturmak için bu nesneleri kullanmaya `IDirect3DDevice9` ve `IDirect3DDevice9Ex` cihazlar, sırasıyla.  
@@ -39,14 +39,14 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
  Windows Vista veya sonraki bir işletim sistemi, kullanın `Direct3DCreate9Ex` Windows görüntü sürücü modeli (WDDM) kullanacak şekilde yapılandırılmış bir görüntü ile yöntemi. Kullanım `Direct3DCreate9` herhangi bir platformda yöntemi.  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>Kullanılabilirlik Direct3DCreate9Ex yöntemi  
- D3d9.dll sahip `Direct3DCreate9Ex` yöntemi yalnızca Windows Vista veya sonraki bir işletim sistemi. Windows XP işlevi doğrudan bağlantı varsa, uygulama yüklemesi başarısız olur. Belirlemek için olup olmadığını `Direct3DCreate9Ex` yöntemi desteklenir, DLL'yi ve proc adresine bakın. Aşağıdaki kod, test etmek gösterilmektedir `Direct3DCreate9Ex` yöntemi. Tam kod örneği için bkz: [izlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+ D3d9.dll sahip `Direct3DCreate9Ex` yöntemi yalnızca Windows Vista veya sonraki bir işletim sistemi. Windows XP işlevi doğrudan bağlantı varsa, uygulama yüklemesi başarısız olur. Belirlemek için olup olmadığını `Direct3DCreate9Ex` yöntemi desteklenir, DLL'yi ve proc adresine bakın. Aşağıdaki kod, test etmek gösterilmektedir `Direct3DCreate9Ex` yöntemi. Tam kod örneği için bkz: [izlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
 ### <a name="hwnd-creation"></a>HWND oluşturma  
  Bir cihaz oluşturmak için bir HWND gerekir. Genel olarak bir işlevsiz bir HWND Direct3D9 kullanmak için oluşturun. Aşağıdaki kod örneği işlevsiz bir HWND oluşturma işlemini gösterir.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
 ### <a name="present-parameters"></a>Mevcut Parametreler  
  Bir cihaz oluşturmak için de gerekir bir `D3DPRESENT_PARAMETERS` yapısı, ancak yalnızca birkaç parametre önemlidir. Bu parametreler, bellek Ayak izi en aza indirmek için seçilir.  
@@ -57,7 +57,7 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Aşağıdaki kod nasıl başlatılacağını gösterir `D3DPRESENT_PARAMETERS` yapısı.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
 ## <a name="creating-the-back-buffer-render-target"></a>Arka arabellek işleme hedefi oluşturma  
  Direct3D9 içeriği görüntülemek için bir <xref:System.Windows.Interop.D3DImage>, Direct3D9 surface oluşturup çağırarak atarsanız <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> yöntemi.  
@@ -67,14 +67,14 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Aşağıdaki kod örneği için Direct3D9 sistemdeki tüm bağdaştırıcılarını destekleyen nasıl kontrol edileceğini gösterir.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>Surface'ı oluşturma  
- Bir yüzeyi oluşturmadan önce cihaz özelliklerini hedef işletim sistemi iyi bir performans desteklediğini doğrulayın. Daha fazla bilgi için [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+ Bir yüzeyi oluşturmadan önce cihaz özelliklerini hedef işletim sistemi iyi bir performans desteklediğini doğrulayın. Daha fazla bilgi için [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
  Cihaz özellikleri doğrulandıktan sonra surface oluşturabilirsiniz. Aşağıdaki kod örneği, işleme hedefi oluşturma işlemini gösterir.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
  Windows Vista ve WDDM kullanmak üzere yapılandırılmış, sonraki işletim sistemlerinde işleme hedef dokusu oluşturmak ve düzeyi 0 yüzeyine geçirmek <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> yöntemi. Bu yaklaşım, Windows XP'de, çünkü kilitlenebilir işleme hedef dokusu oluşturulamıyor ve performansı düşecektir önerilmez.  
@@ -125,7 +125,7 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Aşağıdaki kod örneği, geçerli izlemenin nasıl gösterir.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
  İzleyici güncelleştirme olduğunda <xref:System.Windows.Interop.D3DImage> kapsayıcının boyutu ve konumu değiştiğinde veya güncelleştirme İzleyicisi'ni kullanarak bir `DispatcherTimer` saniyede bir birkaç kez güncelleştirir.  
   
@@ -149,6 +149,6 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Interop.D3DImage>
-- [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682962"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371677"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir dil bileşeni ve adlı olayın türünü tanımlayan bir *ekli olay*. Ekli olay kavramını belirli bir olay işleyicisi gerçekten tanımlar veya olay devralan bir öğe yerine rastgele bir öğe eklemenize olanak tanır. Bu durumda, ne potansiyel olarak olayı tetiklenmeden nesnesi veya örneği işleme hedef tanımlar veya aksi takdirde olay "sahip".  
@@ -26,7 +26,7 @@ ms.locfileid: "54682962"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda, okuduğunuz varsayılır [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md) ve [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Bu konuda, okuduğunuz varsayılır [yönlendirilmiş olaylara genel bakış](routed-events-overview.md) ve [XAML genel bakış (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Ekli olay söz dizimi  
@@ -36,7 +36,7 @@ ms.locfileid: "54682962"
   
  Örneğin, aşağıdaki gibidir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel bir işleyici ekleme söz dizimi `NeedsCleaning` ekli olay:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Not `aqua:` önek; ön eki Bu durumda özel bir eşlenen xmlns gelen özel olay ekli olay olduğu için gereklidir.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682962"
   
  Genel olarak, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olay çok farklı değil bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olay. Olay kaynağı nasıl ve ne bir sınıf üyesi tarafından sunulduğunu fark vardır (da etkileyen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleyici sözdizimi).  
   
- Ancak, daha önce belirtildiği gibi mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olaylar özellikle amaçlanmayan işlemede için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha sık amacı olayı, olay durumu genellikle kodda oluşturulur ve ayrıca sınıf ilgili üst sınıfta işleme kullanır birleştirme üst öğede bir durum rapor bileşik bir öğeyi etkinleştirmektir. Örneğin, içindeki öğelerin bir <xref:System.Windows.Controls.Primitives.Selector> ekli oluşturması beklenir <xref:System.Windows.Controls.Primitives.Selector.Selected> sınıfı olayı tarafından işlenir <xref:System.Windows.Controls.Primitives.Selector> sınıfı ve tarafından potansiyel olarak dönüştürülür <xref:System.Windows.Controls.Primitives.Selector> farklı gönderilmiş bir olay sınıfına <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Yönlendirilmiş olaylar ve sınıf işlemesi hakkında daha fazla bilgi için bkz. [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Ancak, daha önce belirtildiği gibi mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olaylar özellikle amaçlanmayan işlemede için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha sık amacı olayı, olay durumu genellikle kodda oluşturulur ve ayrıca sınıf ilgili üst sınıfta işleme kullanır birleştirme üst öğede bir durum rapor bileşik bir öğeyi etkinleştirmektir. Örneğin, içindeki öğelerin bir <xref:System.Windows.Controls.Primitives.Selector> ekli oluşturması beklenir <xref:System.Windows.Controls.Primitives.Selector.Selected> sınıfı olayı tarafından işlenir <xref:System.Windows.Controls.Primitives.Selector> sınıfı ve tarafından potansiyel olarak dönüştürülür <xref:System.Windows.Controls.Primitives.Selector> farklı gönderilmiş bir olay sınıfına <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Yönlendirilmiş olaylar ve sınıf işlemesi hakkında daha fazla bilgi için bkz. [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Yönlendirilmiş olaylar kendi ekli olaylar olarak tanımlama  
@@ -80,10 +80,10 @@ ms.locfileid: "54682962"
   
  Örneğin, aşağıdaki kod tanımlar `NeedsCleaning` sahip sınıf bir olayda bağlı `Aquarium`kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olay stratejisini gönderilmiş bir olay olarak ekli olay bildirme.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Ekli olay tanımlayıcı alanı oluşturmak için kullanılan yöntem Not <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, bağlı olmayan yönlendirilmiş olay kaydetmek için kullanılan gerçekten yöntem ile aynıdır. Tüm ekli olaylar ve yönlendirilmiş olaylar için merkezi bir iç deposuna kaydedilir. Bu olay deposu uygulaması içinde ele alınmıştır "olayları için bir arabirim olarak" kavramsal konuları etkinleştirir [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Ekli olay tanımlayıcı alanı oluşturmak için kullanılan yöntem Not <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, bağlı olmayan yönlendirilmiş olay kaydetmek için kullanılan gerçekten yöntem ile aynıdır. Tüm ekli olaylar ve yönlendirilmiş olaylar için merkezi bir iç deposuna kaydedilir. Bu olay deposu uygulaması içinde ele alınmıştır "olayları için bir arabirim olarak" kavramsal konuları etkinleştirir [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Bir WPF ekli olayı oluşturma  
@@ -92,6 +92,6 @@ ms.locfileid: "54682962"
  Ancak, temel bir özel ekli olay tanımlıyorsanız, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alma modelini ekli olayları üzerinde <xref:System.Windows.RoutedEvent>, kullanabilirsiniz <xref:System.Windows.UIElement.RaiseEvent%2A> herhangi bir ekli olay oluşturmak için <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>. (Veya ekli) gönderilmiş bir olay oluşturma, belirli bir öğe öğe ağacında olay kaynağı olarak bildirilmesini gerektirir; Bu kaynağı olarak bildirilen <xref:System.Windows.UIElement.RaiseEvent%2A> çağırıcı. Hangi öğe belirleme ağacında kaynak hizmetinizin sorumluluğundadır olarak bildirildi  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)
+- [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)

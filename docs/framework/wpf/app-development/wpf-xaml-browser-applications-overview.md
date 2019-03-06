@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747025"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370195"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -37,10 +37,10 @@ ms.locfileid: "56747025"
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma  
  Microsoft Visual Studio ile yeni bir XBAP projesi oluşturmak için en basit yoludur. Yeni bir proje oluştururken **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
- XBAP projesinin çalıştırdığınızda, tek başına bir pencereyi yerine bir tarayıcı penceresinde açılır. XBAP Visual Studio'dan hata ayıklaması yaparken uygulama Internet bölgesi izinle çalışır ve bu nedenle bu izinleri aşılırsa güvenlik özel durum oluşturur. Daha fazla bilgi için [güvenlik](../../../../docs/framework/wpf/security-wpf.md) ve [WPF kısmi güven güvenliği](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ XBAP projesinin çalıştırdığınızda, tek başına bir pencereyi yerine bir tarayıcı penceresinde açılır. XBAP Visual Studio'dan hata ayıklaması yaparken uygulama Internet bölgesi izinle çalışır ve bu nedenle bu izinleri aşılırsa güvenlik özel durum oluşturur. Daha fazla bilgi için [güvenlik](../security-wpf.md) ve [WPF kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Visual Studio ya da proje dosyaları hakkında daha fazla bilgi edinmek istiyorsanız ile geliştirmiyorsanız bkz [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Visual Studio ya da proje dosyaları hakkında daha fazla bilgi edinmek istiyorsanız ile geliştirmiyorsanız bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Bir XBAP dağıtma  
@@ -52,7 +52,7 @@ ms.locfileid: "56747025"
 |Uygulama bildirimi (.manifest)|Bu uygulama ile ilişkili meta verileri içerir ve bir .manifest uzantısına sahiptir.|  
 |Dağıtım bildirimi (.xbap)|Bu dosya, ClickOnce uygulamayı dağıtmak için kullanır ve .xbap uzantısı olan bilgileri içerir.|  
   
- XBAP'ler için bir Web sunucusu, örneğin dağıttığınız [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya sonraki sürümler. .NET Framework Web sunucusuna yüklemeniz gerekmez, ancak kaydetmek zorunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türlerini ve dosya adı uzantıları. Daha fazla bilgi için [yapılandırma IIS 5.0 ve IIS 6. 0'wpf uygulamalarını dağıtmak için](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ XBAP'ler için bir Web sunucusu, örneğin dağıttığınız [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya sonraki sürümler. .NET Framework Web sunucusuna yüklemeniz gerekmez, ancak kaydetmek zorunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türlerini ve dosya adı uzantıları. Daha fazla bilgi için [yapılandırma IIS 5.0 ve IIS 6. 0'wpf uygulamalarını dağıtmak için](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Bir XBAP dağıtımına hazırlanmak için .exe ve ilişkili bildirimler Web sunucusuna kopyalayın. .Xbap uzantılı dosya dağıtım bildirimini açmak için bir köprü içeren bir HTML sayfası oluşturun. Kullanıcı .xbap dosyasına bağlantıyı tıklattığında, ClickOnce, indirme ve uygulama başlatılırken mekanizması otomatik olarak işler. Aşağıdaki kod örneği, bir XBAP için işaret eden bir köprü içeren bir HTML sayfası gösterilir.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "56747025"
  Mage.exe -cc
  ```
   
- Bu komut, bir XBAP en son sürümünü başlatıldığını garanti eder. Uygulamanızı Visual Studio'da hata ayıklaması yaparken, bir XBAP en son sürümünü başlatılmalıdır. Genel olarak, her derleme ile dağıtım sürüm numaranızı güncelleştirmeniz gerekir. Görüntü hakkında daha fazla bilgi için bkz: [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+ Bu komut, bir XBAP en son sürümünü başlatıldığını garanti eder. Uygulamanızı Visual Studio'da hata ayıklaması yaparken, bir XBAP en son sürümünü başlatılmalıdır. Genel olarak, her derleme ile dağıtım sürüm numaranızı güncelleştirmeniz gerekir. Görüntü hakkında daha fazla bilgi için bkz: [Mage.exe (bildirim üretme ve düzenleme aracı)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Konak Web sayfası ile iletişim kurma  
  Uygulama bir HTML çerçeve içinde barındırıldığında, XBAP içeren Web sayfasını ile iletişim kurabilir. Alarak bunu <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliği <xref:System.Windows.Interop.BrowserInteropHelper>. Bu özellik için HTML pencereyi temsil eden bir komut dosyası nesnesi döndürür. Üzerinde özelliklerini, yöntemlerini ve olaylarını daha sonra erişebilirsiniz [pencere nesnesi](https://go.microsoft.com/fwlink/?LinkId=160274) normal nokta sözdizimini kullanarak. Betik yöntemleri ve genel değişkenler de erişebilirsiniz. Aşağıdaki örnek komut dosyası nesnesi alma ve tarayıcıyı kapatın gösterir.  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript kullanan Xbap'lerde hata ayıklama  
  Bir XBAP kullanıyorsa <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> nesne iletişim kurmak için HTML penceresiyle çalıştırmak ve Visual Studio'da uygulamada hata ayıklamak için belirtmeniz gereken iki ayar vardır. Uygulama erişimi gulamaya için olmalıdır ve uygulama XBAP içeren HTML sayfası ile başlamalıdır. Aşağıdaki adımlar bu iki ayar denetlemek nasıl açıklanmaktadır:  
@@ -127,11 +127,11 @@ ms.locfileid: "56747025"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP güvenlik konuları  
- XBAP'ler genellikle Internet bölgesi izin kümesi için kısıtlı bir kısmi güven güvenliği korumalı yürütün. Sonuç olarak, uygulamanızı Internet bölgesine desteklenen WPF öğeleri kümesini desteklemelidir veya uygulamanızın izinleri yükseltmesine gerekir. Daha fazla bilgi için [güvenlik](../../../../docs/framework/wpf/security-wpf.md).  
+ XBAP'ler genellikle Internet bölgesi izin kümesi için kısıtlı bir kısmi güven güvenliği korumalı yürütün. Sonuç olarak, uygulamanızı Internet bölgesine desteklenen WPF öğeleri kümesini desteklemelidir veya uygulamanızın izinleri yükseltmesine gerekir. Daha fazla bilgi için [güvenlik](../security-wpf.md).  
   
  Kullandığınızda, bir <xref:System.Windows.Controls.WebBrowser> uygulamanızın, WPF denetiminde dahili olarak yerel WebBrowser ActiveX denetimi oluşturur. Uygulamanızı Internet Explorer'ı çalıştıran bir kısmi güven XBAP olduğunda, Internet Explorer işlemi adanmış bir dizi ActiveX denetimi çalıştırır. Bu nedenle, aşağıdaki sınırlamalar geçerlidir:  
   
--   <xref:System.Windows.Controls.WebBrowser> Denetimi, güvenlik kısıtlamaları da dahil olmak üzere konak tarayıcıya benzer bir davranış sağlamalıdır. Bu güvenlik kısıtlamaları bazıları, Internet Explorer güvenlik ayarları denetlenebilir. Daha fazla bilgi için [güvenlik](../../../../docs/framework/wpf/security-wpf.md).  
+-   <xref:System.Windows.Controls.WebBrowser> Denetimi, güvenlik kısıtlamaları da dahil olmak üzere konak tarayıcıya benzer bir davranış sağlamalıdır. Bu güvenlik kısıtlamaları bazıları, Internet Explorer güvenlik ayarları denetlenebilir. Daha fazla bilgi için [güvenlik](../security-wpf.md).  
   
 -   Yüklenen etki alanları arası bir HTML sayfasında bir XBAP olduğunda, bir özel durum oluşturulur.  
   
@@ -187,5 +187,5 @@ ms.locfileid: "56747025"
  Ayrıca, geliştirilmiş eşzamanlılık ClickOnce yükleme sırasının en fazla on oranında başlangıç süresini artırır. ClickOnce yüklemeleri ve doğrulama sonra bildirimleri, uygulama yükleme başlar ve ilerleme çubuğu başlar güncelleştirilecek.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [WPF Uygulaması Dağıtma](deploying-a-wpf-application-wpf.md)

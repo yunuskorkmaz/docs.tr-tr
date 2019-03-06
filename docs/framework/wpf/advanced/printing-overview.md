@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 7e35fd1753f7136d7be1e2190b4bed5116e46aba
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370507"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricilerin yeni zengin bir yazdırma ve yazdırma sistemi yönetimi sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazı bu yazdırma sistemi geliştirmeler de oluşturma geliştiricilere sunulan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaların ve geliştiricilerin kullanarak yönetilmeyen kod. Bu yeni işlevselliği özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -31,7 +31,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
 ## <a name="about-xps"></a>XPS hakkında  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] bir elektronik belge biçimi, bir Biriktirme dosyası biçimi ve sayfa açıklaması dili içindir. Kullanan açık belge biçimi olan [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tarafından dijital belgeleri oluşturulan, paylaşılan, yazdırılır, görüntülediğiniz arşivlenmiş ve işlemini basitleştirir. Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], bkz: [XPS belgeleri](/windows/desktop/printdocs/documents).  
   
- Yazdırma için çeşitli teknikler [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tabanlı içerik kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla XPS dosyalarını yazdırma](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha faydalı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmeniz [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape). Windows Forms geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu, ancak bir karma GDI XPS yazdırma yolu yoksa desteği. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
+ Yazdırma için çeşitli teknikler [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tabanlı içerik kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla XPS dosyalarını yazdırma](how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha faydalı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmeniz [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape). Windows Forms geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu, ancak bir karma GDI XPS yazdırma yolu yoksa desteği. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS yazdırma yolu  
@@ -66,13 +66,13 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
   
  Aşağıdaki çizim yazdırma alt sistemi gösterir ve tarafından sağlanan bölümleri tanımlar [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri.  
   
- ![XPS yazdırma sistemi](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
+ ![XPS yazdırma sistemi](./media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Temel XPS yazdırma  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Her iki temel tanımlar ve Gelişmiş [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Kapsamlı gerektirmeyen bu uygulamaları özelleştirme ve tam erişim yazdırmak için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellik kümesi, temel yazdırma destek sunulmaktadır. En az yapılandırma gerektirir ve bir bilinen özellikleri bir yazdırma iletişim kutusu denetim temel yazdırma desteği kullanıma sunulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Birçok [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellikleri bu Basitleştirilmiş yazdırma model kullanılarak kullanılabilir.  
   
 #### <a name="printdialog"></a>PrintDialog  
- <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetim için tek giriş noktası sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırması ve [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] iş gönderme. Denetim oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz. [Yazdır iletişim kutusu çağırma](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetim için tek giriş noktası sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırması ve [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] iş gönderme. Denetim oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz. [Yazdır iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Gelişmiş XPS yazdırma  
  Eksiksiz erişmeye [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellikleri, Gelişmiş Yazdırma [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] kullanılmalıdır. İlgili birkaç [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] aşağıda daha ayrıntılı olarak açıklanmıştır. Tam bir listesi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularını.  
@@ -82,27 +82,27 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
   
  Aşağıdaki örnek nasıl sorgulanacağını gösterir <xref:System.Printing.PrintCapabilities> yazıcının oluşturup bir <xref:System.Printing.PrintTicket> kod kullanarak.  
   
- [!code-cpp[xpscreate#PrinterCapabilities](../../../../samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
- [!code-csharp[xpscreate#PrinterCapabilities](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
- [!code-vb[xpscreate#PrinterCapabilities](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+ [!code-cpp[xpscreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[xpscreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer ve PrintQueue  
  <xref:System.Printing.PrintServer> Sınıfı, bir ağ yazdırma sunucusu temsil eder ve <xref:System.Printing.PrintQueue> yazıcı ve onunla ilişkili çıkış iş kuyruğu sınıfı temsil eder. Birlikte, bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sunucunun yazdırma işlerinin Gelişmiş yönetime izin verecek. A <xref:System.Printing.PrintServer>, ya da ondan türetilen sınıflardan birini yönetmek için kullanılan bir <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Yöntemi yeni bir yazdırma işi kuyruğa eklemek için kullanılır.  
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Printing.LocalPrintServer> ve varsayılan erişim <xref:System.Printing.PrintQueue> kodu kullanarak.  
   
- [!code-csharp[xpsprint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[xpsprint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[xpsprint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
  Bir <xref:System.Windows.Xps.XpsDocumentWriter>, kendi çok ile <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemleri yazmak için kullanılan [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belgeler için bir <xref:System.Printing.PrintQueue>. Örneğin, <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> yöntemi kullanılır çıktıya bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belge ve <xref:System.Printing.PrintTicket> zaman uyumlu olarak. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> Yöntemi kullanılır çıktıya bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belge ve <xref:System.Printing.PrintTicket> zaman uyumsuz olarak.  
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Xps.XpsDocumentWriter> kod kullanarak.  
   
- [!code-csharp[XpsPrint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[XpsPrint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- <xref:System.Printing.PrintQueue.AddJob%2A> Yöntemleri de yazdırmak için yollar sağlar. Bkz: [program aracılığıyla XPS dosyalarını yazdırma](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Ayrıntılar için.  
+ <xref:System.Printing.PrintQueue.AddJob%2A> Yöntemleri de yazdırmak için yollar sağlar. Bkz: [program aracılığıyla XPS dosyalarını yazdırma](how-to-programmatically-print-xps-files.md). Ayrıntılar için.  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI yazdırma yolu  
@@ -142,8 +142,8 @@ Gerekli olmayan uygulamalar için [!INCLUDE[TLA2#tla_metro](../../../../includes
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Nasıl Yapılır Konuları](printing-how-to-topics.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
 - [XPS belgeleri](/windows/desktop/printdocs/documents)
-- [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Belge Serileştirme ve Depolama](document-serialization-and-storage.md)
 - [Microsoft XPS Belge dönüştürücü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

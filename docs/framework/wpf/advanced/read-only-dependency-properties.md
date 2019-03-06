@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568146"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379018"
 ---
 # <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
 Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve özel salt okunur bağımlılık özelliği oluşturmaya yönelik teknikleri dahil olmak üzere, salt okunur bağımlılık özellikleri açıklanmaktadır.  
@@ -19,7 +19,7 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) bağlamı için.  
+ Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](dependency-property-metadata.md) bağlamı için.  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>Varolan salt okunur bağımlılık özellikleri  
@@ -31,7 +31,7 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
 ## <a name="creating-custom-read-only-dependency-properties"></a>Özel salt okunur bağımlılık özellikleri oluşturma  
  Salt okunur bağımlılık özellikleri için birçok tipik bir bağımlılık özelliği senaryo neden çalışmaz ilgili yukarıdaki bölüme okuduğunuzdan emin olun. Ancak, uygun bir senaryoyu varsa, kendi salt okunur bağımlılık özelliği oluşturmak isteyebilirsiniz.  
   
- Salt okunur bağımlılık özelliği oluşturma işleminin açıklanan aynı mıdır [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) ve [bağımlılık özelliği uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) konuları. Üç önemli farklar vardır:  
+ Salt okunur bağımlılık özelliği oluşturma işleminin açıklanan aynı mıdır [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği uygulama](how-to-implement-a-dependency-property.md) konuları. Üç önemli farklar vardır:  
   
 -   Özelliğinizi aramanızı <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> yöntemi yerine normal <xref:System.Windows.DependencyProperty.Register%2A> özelliği kayıt için yöntemi.  
   
@@ -41,9 +41,9 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
   
  Herhangi bir özel alan veya değer yedeklediğiniz Elbette, salt okunur bağımlılık özelliği için istediğinize karar mantığı kullanarak tam olarak yazılabilir. Ancak, özelliği başlangıçta veya çalışma zamanı mantığının parçası olarak ayarlamak için en kolay yolu özellik sisteminin kullanmaktır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], özellik sistemi atlamak ve doğrudan özel yedekleme alanını ayarlamak yerine. Özellikle, bir imzası yok <xref:System.Windows.DependencyObject.SetValue%2A> türünde bir parametre kabul eden <xref:System.Windows.DependencyPropertyKey>. Nasıl ve nerede, bu değeri içinde uygulama mantığınızın programlanarak nasıl erişim ayarlamak isteyebilirsiniz etkiler <xref:System.Windows.DependencyPropertyKey> bağımlılık özelliği ilk kaydedildiğinde oluşturulur. Sınıf içindeki tüm bu mantığı işlemek, bunu özel bir duruma ya da derlemeyi diğer bölümlerinden ayarlanmış olması gerekiyorsa, bu iç ayarlayabilirsiniz. Bir yaklaşım ise çağrılacak <xref:System.Windows.DependencyObject.SetValue%2A> içinde saklanan özellik değerinin değiştirilmesi gereken bir sınıf örneğini bilgilendiren ilgili bir olayın olay işleyicisi sınıfı. Bağımlılık özellikleri eşleştirilmiş kullanarak birbirine bağlamak için başka bir yaklaşımdır <xref:System.Windows.PropertyChangedCallback> ve <xref:System.Windows.CoerceValueCallback> kayıt sırasında özelliklere meta veri parçası olarak geri çağırmalar.  
   
- Çünkü <xref:System.Windows.DependencyPropertyKey> özeldir ve dağıtılmadığı kodunuz dışında özellik sistemi tarafından salt okunur bağımlılık özelliği salt okunur bağımlılık özelliği iyi güvenlik ayarına sahip. Bir salt okunur bağımlılık özelliği için açık veya örtük olarak genel tanımlayıcı alan ve bu nedenle özelliği yaygın olarak ayarlanabilir. Daha fazla ayrıntı için bkz. [bağımlılık özelliği güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Çünkü <xref:System.Windows.DependencyPropertyKey> özeldir ve dağıtılmadığı kodunuz dışında özellik sistemi tarafından salt okunur bağımlılık özelliği salt okunur bağımlılık özelliği iyi güvenlik ayarına sahip. Bir salt okunur bağımlılık özelliği için açık veya örtük olarak genel tanımlayıcı alan ve bu nedenle özelliği yaygın olarak ayarlanabilir. Daha fazla ayrıntı için bkz. [bağımlılık özelliği güvenliği](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

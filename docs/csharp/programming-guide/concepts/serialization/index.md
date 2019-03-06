@@ -1,12 +1,6 @@
 ---
-title: Seri hale getirme (C#)
+title: 'Seri hale getirme (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858323"
 ---
 # <a name="serialization-c"></a>Seri hale getirme (C#)
 
@@ -68,12 +62,12 @@ Bir özel biçimde seri durumdan nesnenizin istiyorsanız özel bir oluşturucu 
 
 Tasarımcı serileştirme özel bir geliştirme araçları ile ilişkili nesne Kalıcılık türü içeren serileştirme biçimidir. Tasarımcı serileştirme bir nesne grafiğinin daha sonra nesne grafiğini kurtarmak için kullanılabilir bir kaynak dosyasına dönüştürme işlemidir. Bir kaynak dosyası, kod, biçimlendirme veya hatta SQL tablo bilgileri içerebilir.
 
-##  <a name="BKMK_RelatedTopics"></a> İlgili Konular ve örnekler  
-[İzlenecek yol: Visual Studio'da (C#) bir nesneyi kalıcı kılma](walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="BKMK_RelatedTopics"></a> İlgili Konular ve örnekler  
+[İzlenecek yol: Visual Studio'da bir nesneyi kalıcı kılma (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan sağlayan, örnekleri arasında kalıcı hale getirmek için serileştirme'nın nasıl kullanılabileceğini gösterir.
 
-[Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma](how-to-read-object-data-from-an-xml-file.md)  
+[Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Bir XML dosyası kullanmayı önceden yazılmış nesne verilerini okuma işlemini gösterir <xref:System.Xml.Serialization.XmlSerializer> sınıfı.
 
-[Nasıl yapılır: nesne verilerini bir XML dosyasına (C#) yazma](how-to-write-object-data-to-an-xml-file.md)  
+[Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Nesne öğesinden bir sınıf bir XML kullanarak dosyaya yazma işlemi gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer> sınıfı.

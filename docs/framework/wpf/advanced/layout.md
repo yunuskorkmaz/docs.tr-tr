@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738832"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369857"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,22 +41,22 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
  Aşağıdaki çizim basit bir düzen gösterir.  
   
- ![Tipik bir kılavuz, sınırlama kutusu yerleştirilmemiş. ](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Tipik bir kılavuz, sınırlama kutusu yerleştirilmemiş. ](./media/boundingbox1.png "boundingbox1")  
   
  Bu düzen aşağıdaki kullanarak ulaşılabilecek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Tek bir <xref:System.Windows.Controls.TextBlock> öğesi içinde barındırılan bir <xref:System.Windows.Controls.Grid>. Metnin sol üst köşesinin yalnızca ilk sütun, için ayrılan alanı doldururken <xref:System.Windows.Controls.TextBlock> gerçekten çok büyük. Herhangi bir sınırlama kutusu <xref:System.Windows.FrameworkElement> kullanılarak alınabilir <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi. Sınırlayıcı kutu için aşağıdaki çizimde <xref:System.Windows.Controls.TextBlock> öğesi.  
   
- ![TextBlock'ın sınırlama kutusu görünür. ](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![TextBlock'ın sınırlama kutusu görünür. ](./media/boundingbox2.png "boundingbox2")  
   
  Sarı bir dikdörtgen, için ayrılan alanı tarafından gösterilen şekilde <xref:System.Windows.Controls.TextBlock> öğedir göründüğü gerçekten çok büyük. Ek öğeler eklendikçe <xref:System.Windows.Controls.Grid>, bu ayırma daraltabilir veya eklenen öğelerin boyutunu ve türünü bağlı olarak genişletin.  
   
  Düzen yuvasını <xref:System.Windows.Controls.TextBlock> erişimcisine bir <xref:System.Windows.Shapes.Path> kullanarak <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi. Bu teknik, bir öğenin sınırlama kutusu görüntülemek için yararlı olabilir.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>Düzen sistemi  
@@ -122,7 +122,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
 -   Hangi özellik değeri değiştiğinde bir özyinelemeli güncelleştirme düzen sistemi tarafından zorlar dikkat edin.  
   
-     Bağımlılık özellikleri değerleri başlatılacak düzen sistemi neden olabilir, Genel Bayrak ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> yararlı ipuçları için hangi özelliğinin değeri değiştiğinde bir özyinelemeli zorlayacak güncelleştirme tarafından düzen sistemi sağlar. Genel olarak, bir öğenin sınırlayıcı kutusunun boyutunu etkileyen herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Bağımlılık özellikleri değerleri başlatılacak düzen sistemi neden olabilir, Genel Bayrak ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> yararlı ipuçları için hangi özelliğinin değeri değiştiğinde bir özyinelemeli zorlayacak güncelleştirme tarafından düzen sistemi sağlar. Genel olarak, bir öğenin sınırlayıcı kutusunun boyutunu etkileyen herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
 -   Mümkün olduğunda, kullanmak bir <xref:System.Windows.UIElement.RenderTransform%2A> yerine bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Yenilikler  
- Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Panellere Genel Bakış](../controls/panels-overview.md)
+- [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](alignment-margins-and-padding-overview.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)

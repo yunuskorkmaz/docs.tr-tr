@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326cf683c05eae342646efca962cfe9b87ccab79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705830"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364690"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
 Bu konu nasıl genişleteceğinizi gösterir [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cam çerçeveyi bir Windows Presentation Foundation (WPF) uygulamasının istemci alanına.  
@@ -28,7 +28,7 @@ Bu konu nasıl genişleteceğinizi gösterir [!INCLUDE[TLA#tla_winvista](../../.
   
  **Internet Explorer Adres çubuğuna arkasındaki genişletilmiş cam çerçeveyi ile.**  
   
- ![Cam çerçeveyi adres çubuğuna genişletilmiş IE7. ](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![Cam çerçeveyi adres çubuğuna genişletilmiş IE7. ](./media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
  Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama erişimi yönetilmeyen [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] gereklidir. Aşağıdaki kod örneği iki bir Platform Çağırma (PInvoke) yapmaz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] istemci alanına çerçeveyi genişletmek için gerekli. Bunların her biri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] adlı bir sınıfta bildirilen **NonClientRegionAPI**.  
   
@@ -147,7 +147,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  **Uygulamada bir**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**uygulama.**  
   
- ![Cam çerçeveyi WPF uygulamasına genişletilmiş. ](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![Cam çerçeveyi WPF uygulamasına genişletilmiş. ](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Masaüstü Pencere Yöneticisi'ne genel bakış](/windows/desktop/dwm/dwm-overview)

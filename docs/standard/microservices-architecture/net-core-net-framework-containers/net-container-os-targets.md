@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479873"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374914"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Hedef .NET kapsayıcıları ile hangi işletim sistemi
 
@@ -21,7 +21,7 @@ Linux için birden çok dağıtım paketlerini kullanılabilir ve (Debian gibi) 
 
 Şekil 3-1'de kullanılan .NET framework bağlı olarak olası işletim sistemi sürümünü görebilirsiniz.
 
-![Eski .NET Framework uygulamaları, sahip olduğunuz Windows Server Core hede için dağıtırken uyumlu eski uygulamaları ile IIS, daha büyük bir görüntü sahiptir. .NET Core uygulamaları dağıtırken, bulut için iyileştirilmiş, Kestrel kullanır ve daha küçük ve daha hızlı başlatılan Windows Nano sunucu, hedef alabilirsiniz. Ayrıca, Linux, Debian, Alpine ve diğer destekleyici hedefleyebilirsiniz. Ayrıca Kestrel kullanır ve daha küçük ve daha hızlı başlatılır.](./media/image1.png)
+![Windows Server Core hedeflemek için sahip olduğunuz eski .NET Framework uygulamaları dağıtırken uyumlu eski uygulamaları ile IIS, daha büyük bir görüntü sahiptir. .NET Core uygulamaları dağıtırken, bulut için iyileştirilmiş, Kestrel kullanır ve daha küçük ve daha hızlı başlatılan Windows Nano sunucu, hedef alabilirsiniz. Ayrıca, Linux, Debian, Alpine ve diğer destekleyici hedefleyebilirsiniz. Ayrıca Kestrel kullanır ve daha küçük ve daha hızlı başlatılır.](./media/image1.png)
 
 **Şekil 3-1.** Bağlı olarak .NET Framework sürümlerini hedeflemek için işletim sistemleri
 
@@ -57,6 +57,6 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, işletim sistemi ve sür�
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[Önceki](container-framework-choice-factors.md)
->[İleri](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [Önceki](container-framework-choice-factors.md)
+> [İleri](official-net-docker-images.md)

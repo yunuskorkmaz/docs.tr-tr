@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355559"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.DockPanel> öğesinin alt öğeleri düzen kapsayıcı kenarı boyunca konumlandırmak için.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.DockPanel> bir düzen kapsayıcısı kenarında alt öğeleri konumlandırmak için öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yerleştirme Değerini Alma veya Ayarlama](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [DockPanel Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [DockPanel Öğesini Kullanarak Boşluğu Bölümleme](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [Yerleştirme Değerini Alma veya Ayarlama](how-to-get-or-set-a-dock-value.md)  
+ [DockPanel Oluşturma](how-to-create-a-dockpanel.md)  
+ [DockPanel Öğesini Kullanarak Boşluğu Bölümleme](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Düzen](../advanced/layout.md)  
   
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](scrollviewer-overview.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 52b2fdaaefd16a49300641f44041b8352141385b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828559"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372457"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress yöntemi
 
@@ -36,9 +36,10 @@ HRESULT GetRepresentativeEntryAddress(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`addr` [out] Yöntemi için en iyi temsil yerel giriş noktasının adresi.
+`addr`\
+[out] Yöntemi için en iyi temsil yerel giriş noktasının adresi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -53,5 +54,5 @@ Sağlanan yöntem parçasıdır [ `IXCLRDataMethodInstance` arabirimi](ixclrdata
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataMethodInstance arabirimi](ixclrdatamethodinstance-interface.md)

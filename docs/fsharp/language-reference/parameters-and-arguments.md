@@ -2,12 +2,12 @@
 title: Parametreler ve Bağımsız Değişkenler
 description: Hakkında bilgi edinin F# parametreleri tanımlama ve İşlevler, yöntemler ve özellikler için bağımsız değişkenler geçirme için dil desteği.
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583504"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352289"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -135,17 +135,17 @@ Amacıyla C# ve Visual Basic birlikte çalışma özniteliklerini kullanabilirsi
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-Bu gibi durumlarda, yeni bir nesne aynı zamanda varsayılan parametre değeri olarak belirtebilirsiniz. Örneğin, `Foo` üyesi sahip isteğe bağlı `CanceallationToken` giriş olarak bunun yerine:
+Bu gibi durumlarda, yeni bir nesne aynı zamanda varsayılan parametre değeri olarak belirtebilirsiniz. Örneğin, `Foo` üyesi sahip isteğe bağlı `CancellationToken` giriş olarak bunun yerine:
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

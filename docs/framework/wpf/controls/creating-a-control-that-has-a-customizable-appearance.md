@@ -13,26 +13,26 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 171f9c4264825d1bdf0ba06e1e24b17eb8e8194f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb82921070cb5040cd279830bafd3d0e718d1374
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372717"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bir denetimin görünümünü özelleştirilebilir oluşturma olanağı sağlar. Örneğin, görünümünü değiştirebilirsiniz bir <xref:System.Windows.Controls.CheckBox> ötesinde hangi ayarı özellikleri yeni bir oluşturarak ne yapacağını <xref:System.Windows.Controls.ControlTemplate>. Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.CheckBox> varsayılan <xref:System.Windows.Controls.ControlTemplate> ve <xref:System.Windows.Controls.CheckBox> özel kullanan <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Varsayılan denetim şablonunu içeren bir onay kutusu. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Varsayılan denetim şablonunu içeren bir onay kutusu. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Varsayılan denetim şablonunu kullanan bir onay kutusu  
   
- ![Bir özel denetim şablonu ile bir onay kutusu. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![Bir özel denetim şablonu ile bir onay kutusu. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Bir özel denetim şablonunu kullanan bir onay kutusu  
   
  Bir denetimi oluşturduğunuzda, bölümler ve durumlar modeli izlerseniz, denetimin görünümünü özelleştirilebilir olacaktır. Bu modeli takip denetiminizin bu tür uygulamalarda özelleştirilebilir olacak Microsoft Expression Blend gibi tasarımcı araçları bölümler ve durumlar modeli destekler.  Bu konu, bölümler ve durumlar modeli ve kendi denetiminizi oluşturduğunuzda, onu izleyen nasıl açıklar. Bu konuda bir özel denetim örneği kullanan `NumericUpDown`, bu model felsefesini göstermek için.  `NumericUpDown` Denetimi, bir kullanıcı artırabilir veya azaltabilirsiniz denetimin düğmelerine tıklayarak bir sayısal bir değer görüntüler.  Aşağıdaki çizimde gösterildiği `NumericUpDown` bu konuda bahsedilen denetimi.  
   
- ![Özel NumericUpDown denetimi. ](../../../../docs/framework/wpf/controls/media/ndp-numericupdown.png "NDP_NumericUPDown")  
+ ![Özel NumericUpDown denetimi. ](./media/ndp-numericupdown.png "NDP_NumericUPDown")  
 Özel bir NumericUpDown denetimi  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
@@ -51,7 +51,7 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu, yeni bir oluşturulacağını bildiğinizi varsayar <xref:System.Windows.Controls.ControlTemplate> varolan bir denetim için bir denetim sözleşmesi öğelerde nelerdir ile ilgili bilgi sahibi olduğunuz ve içinde açıklanan kavramları öğrendikten [tarafından varolan denetimin görünümünü özelleştirme ControlTemplate oluşturarak](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Bu konu, yeni bir oluşturulacağını bildiğinizi varsayar <xref:System.Windows.Controls.ControlTemplate> varolan bir denetim için bir denetim sözleşmesi öğelerde nelerdir ile ilgili bilgi sahibi olduğunuz ve içinde açıklanan kavramları öğrendikten [tarafından varolan denetimin görünümünü özelleştirme ControlTemplate oluşturarak](customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Özelleştirilmiş görünümünü olan bir denetim oluşturmak için devralınan bir denetim oluşturma <xref:System.Windows.Controls.Control> sınıf ya da daha fazla alt sınıflarından birini <xref:System.Windows.Controls.UserControl>.  Devralınan bir denetim <xref:System.Windows.Controls.UserControl> hızla oluşturulabilen denetimidir, ancak kullanmaz bir <xref:System.Windows.Controls.ControlTemplate> ve görünümünü özelleştirebilirsiniz.  
@@ -70,20 +70,20 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
 <a name="defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate"></a>   
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>ControlTemplate içinde görsel yapı ve denetim görsel davranışını tanımlama  
- Bölümleri ve durumları modeli kullanarak özel denetiminizi oluşturduğunuzda, denetimin görsel yapı ve visual davranışını tanımlayın, <xref:System.Windows.Controls.ControlTemplate> yerine mantığı.  Bir denetimin görsel yapı bileşimi olur <xref:System.Windows.FrameworkElement> denetimi oluşturan nesneleri.  Görsel davranış, belirli bir durumda olduğunda denetimi görünür yoludur.   Oluşturma hakkında daha fazla bilgi için bir <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve denetim görsel davranışını belirleyen bkz [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Bölümleri ve durumları modeli kullanarak özel denetiminizi oluşturduğunuzda, denetimin görsel yapı ve visual davranışını tanımlayın, <xref:System.Windows.Controls.ControlTemplate> yerine mantığı.  Bir denetimin görsel yapı bileşimi olur <xref:System.Windows.FrameworkElement> denetimi oluşturan nesneleri.  Görsel davranış, belirli bir durumda olduğunda denetimi görünür yoludur.   Oluşturma hakkında daha fazla bilgi için bir <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve denetim görsel davranışını belirleyen bkz [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
  Örneğinde `NumericUpDown` denetimi, görsel yapı içeren iki <xref:System.Windows.Controls.Primitives.RepeatButton> denetimleri ve <xref:System.Windows.Controls.TextBlock>.  Kodunda bu denetimleri eklerseniz `NumericUpDown` kendi oluşturucusuna, örneğin denetim bu denetimleri konumlarını değiştirilemez olur.  Denetimin görsel yapı ve görsel davranışını kendi kodunda tanımlamak yerine kaynakta tanımlamalıdır <xref:System.Windows.Controls.ControlTemplate>.  Düğmeleri konumunu özelleştirmek için daha sonra bir uygulama geliştiricisi ve <xref:System.Windows.Controls.TextBlock> ve hangi davranış belirtin, `Value` negatif olduğundan <xref:System.Windows.Controls.ControlTemplate> değiştirilebilir.  
   
  Aşağıdaki örnek visual yapısını gösterir `NumericUpDown` içeren denetim bir <xref:System.Windows.Controls.Primitives.RepeatButton> artırmak için `Value`, <xref:System.Windows.Controls.Primitives.RepeatButton> azaltmak için `Value`ve <xref:System.Windows.Controls.TextBlock> görüntülenecek `Value`.  
   
- [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
+ [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Bir görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı bir yazı tipinde olduğunu.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> içinde kod zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive` ve `Negative` (denetimidir her zaman tam olarak iki birinde) birbirini dışlayan olan, örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetimi geçildiğinde içine `Negative` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızıya döner.  Denetim olduğunda `Positive` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> geri döndüğünde özgün değer.  Tanımlama <xref:System.Windows.VisualState> nesneler bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Bir görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı bir yazı tipinde olduğunu.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> içinde kod zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive` ve `Negative` (denetimidir her zaman tam olarak iki birinde) birbirini dışlayan olan, örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetimi geçildiğinde içine `Negative` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızıya döner.  Denetim olduğunda `Positive` durumu <xref:System.Windows.Controls.TextBlock.Foreground%2A> geri döndüğünde özgün değer.  Tanımlama <xref:System.Windows.VisualState> nesneler bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Ayarladığınızdan emin olun <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özellik kök <xref:System.Windows.FrameworkElement> , <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xaml[VSMCustomControl#ValueStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
+ [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
 <a name="using_parts_of_the_controltemplate_in_code"></a>   
 ## <a name="using-parts-of-the-controltemplate-in-code"></a>ControlTemplate içinde kod parçalarını kullanma  
@@ -108,13 +108,13 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Görsel yapısını tanımlayan örnekte `NumericUpDown` denetim <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.Primitives.RepeatButton> artıran `Value` sahip kendi `x:Name` özniteliğini `UpButton`.  Aşağıdaki örnekte adlı bir özelliği bildirir `UpButtonElement` temsil eden <xref:System.Windows.Controls.Primitives.RepeatButton> dosyasında bildirilen <xref:System.Windows.Controls.ControlTemplate>. `set` Erişimci ilk düğmenin abonelikten çıkma <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay varsa `UpDownElement` değil `null`özelliğini ait olarak ayarlar ve sonra abone <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. Ayrıca tanımlı, ancak burada diğer gösterilmeyen bir özelliği olan <xref:System.Windows.Controls.Primitives.RepeatButton>adlı `DownButtonElement`.  
   
- [!code-csharp[VSMCustomControl#UpButtonProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#upbuttonproperty)]
- [!code-vb[VSMCustomControl#UpButtonProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#upbuttonproperty)]  
+ [!code-csharp[VSMCustomControl#UpButtonProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#upbuttonproperty)]
+ [!code-vb[VSMCustomControl#UpButtonProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#upbuttonproperty)]  
   
  Aşağıdaki örnekte gösterildiği <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> için `NumericUpDown` denetimi.  Örnekte <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> almak için yöntemi <xref:System.Windows.FrameworkElement> nesnelerin <xref:System.Windows.Controls.ControlTemplate>.  Örnek karşı koruduğu bildirimi durumlara <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> bulur bir <xref:System.Windows.FrameworkElement> beklenen türde değil. Belirtilen ada sahip. Ayrıca belirtilen sahip öğeyi yoksaymak için en iyi uygulama olan `x:Name` ancak yanlış türde.  
   
- [!code-csharp[VSMCustomControl#ApplyTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
- [!code-vb[VSMCustomControl#ApplyTemplate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]  
+ [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
+ [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]  
   
  Önceki örneklerde gösterilen yöntemleri izleyerek, denetimin çalışmaya devam edeceğinden emin <xref:System.Windows.Controls.ControlTemplate> eksik bir <xref:System.Windows.FrameworkElement>.  
   
@@ -123,14 +123,14 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Aşağıdaki örnek gösteren önceki örnek yineler <xref:System.Windows.VisualState> karşılık gelen nesneleri `Positive` ve `Negative` durumları denetimi. <xref:System.Windows.Media.Animation.Storyboard> İçinde `Negative` <xref:System.Windows.VisualState> kapatır <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızı.   Zaman `NumericUpDown` denetimi `Negative` durumunda, film şeridi `Negative` durum başlar.  Ardından <xref:System.Windows.Media.Animation.Storyboard> içinde `Negative` denetim döndüğünde durakları durum `Positive` durumu.  `Positive` <xref:System.Windows.VisualState> İçermesi gerekmez bir <xref:System.Windows.Media.Animation.Storyboard> çünkü zaman <xref:System.Windows.Media.Animation.Storyboard> için `Negative` durdurur, <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün rengini döndürür.  
   
- [!code-xaml[VSMCustomControl#ValueStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
+ [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
  Unutmayın <xref:System.Windows.Controls.TextBlock> bir ad verilir ancak <xref:System.Windows.Controls.TextBlock> denetim sözleşmesi değil `NumericUpDown` denetimin mantığı asla başvurduğundan <xref:System.Windows.Controls.TextBlock>.  İçinde başvurulan öğeleri <xref:System.Windows.Controls.ControlTemplate> adlara sahip, ancak nedeni denetimi sözleşmesinin bir parçası olması gerekmez yeni <xref:System.Windows.Controls.ControlTemplate> için bu öğeye başvurmak denetim gerekmeyebilir.  Örneğin, birisi oluşturan yeni bir <xref:System.Windows.Controls.ControlTemplate> için `NumericUpDown` değil belirtmek isteyebilirsiniz `Value` değiştirerek negatiftir <xref:System.Windows.Controls.Control.Foreground%2A>.  Bu durumda, her iki kod ya da <xref:System.Windows.Controls.ControlTemplate> başvuruları <xref:System.Windows.Controls.TextBlock> ada göre.  
   
  Denetimin durumunu değiştirmek için denetim mantığının sorumludur. Aşağıdaki örnek, gösterir `NumericUpDown` denetim çağrıları <xref:System.Windows.VisualStateManager.GoToState%2A> yerleştirilmesini yöntemi `Positive` durumuna `Value` 0 veya daha büyük olduğu ve `Negative` durumuna `Value` 0'dan küçük.  
   
- [!code-csharp[VSMCustomControl#ValueStateChange](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
- [!code-vb[VSMCustomControl#ValueStateChange](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]  
+ [!code-csharp[VSMCustomControl#ValueStateChange](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
+ [!code-vb[VSMCustomControl#ValueStateChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]  
   
  <xref:System.Windows.VisualStateManager.GoToState%2A> Yöntemi uygun şekilde film şeridini durdurmak ve başlatmak için gerekli mantığı gerçekleştirir. Bir denetim çağırdığında <xref:System.Windows.VisualStateManager.GoToState%2A> kendi durumunu değiştirmek için <xref:System.Windows.VisualStateManager> şunları yapar:  
   
@@ -151,8 +151,8 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Tüm durumları güncelleştirmeleri tek bir yöntem çağrıları merkezileştirir <xref:System.Windows.VisualStateManager> ve kodunuzun yönetilebilir korur. Aşağıdaki örnekte gösterildiği `NumericUpDown` denetimin yardımcı yöntem `UpdateStates`. Zaman `Value` değerinden büyükse veya eşitse 0 <xref:System.Windows.Controls.Control> bulunduğu `Positive` durumu.  Zaman `Value` olan 0'dan küçük denetimin bulunduğu `Negative` durumu.  Zaman <xref:System.Windows.UIElement.IsFocused%2A> olduğu `true`, Denetim `Focused` durum; Aksi durumda `Unfocused` durumu.  Denetim çağırabilirsiniz `UpdateStates` durum değişiklikleri bağımsız olarak kendi durumunu değiştirmek ihtiyaç duyduğunda.  
   
- [!code-csharp[VSMCustomControl#UpdateStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#updatestates)]
- [!code-vb[VSMCustomControl#UpdateStates](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#updatestates)]  
+ [!code-csharp[VSMCustomControl#UpdateStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#updatestates)]
+ [!code-vb[VSMCustomControl#UpdateStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#updatestates)]  
   
  Bir durum adına geçirirseniz <xref:System.Windows.VisualStateManager.GoToState%2A> denetim bu durumda olduğunda <xref:System.Windows.VisualStateManager.GoToState%2A> hiçbir şey yapmaz, bu nedenle, denetimin geçerli durumunu denetlemek gerekmez.  Örneğin, varsa `Value` başka bir negatif sayı, film şeridi bir negatif sayıdan değişiklikleri `Negative` durumu kesintiye ve kullanıcı denetiminde bir değişikliği görmez.  
   
@@ -170,18 +170,18 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Denetimde durumunu güncelleştirmeniz gerekir <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> yöntemi böylece denetim doğru yerde görünür duruma <xref:System.Windows.Controls.ControlTemplate> uygulanır. Aşağıdaki örnek çağrıları `UpdateStates` içinde <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> denetim uygun durumda olduğundan emin olmak için.  Örneğin, oluşturduğunuz düşünün bir `NumericUpDown` denetlemek ve ardından kendi <xref:System.Windows.Controls.Control.Foreground%2A> yeşil ve `Value` -5.  Değil çağırırsanız `UpdateStates` olduğunda <xref:System.Windows.Controls.ControlTemplate> uygulanan `NumericUpDown` denetim, denetimin değil `Negative` durumu ve değeri yerine kırmızı yeşil.  Çağırmalısınız `UpdateStates` denetim yerleştirmek için `Negative` durumu.  
   
- [!code-csharp[VSMCustomControl#ApplyTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
- [!code-vb[VSMCustomControl#ApplyTemplate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]  
+ [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
+ [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]  
   
  Genellikle, bir özellik değiştiğinde bir denetim durumlarını güncelleştirmeniz gerekiyor. Aşağıdaki örnek, tüm gösterir `ValueChangedCallback` yöntemi. Çünkü `ValueChangedCallback` aldığında çağrılan `Value` değiştirir, yöntem çağrılarını `UpdateStates` durumunda `Value` negatif veya pozitif değiştirildi. Çağırmak için kabul edilebilir `UpdateStates` olduğunda `Value` değiştirir ancak bu durumda, Denetim durumlarını değişmez çünkü pozitif veya negatif kalır.  
   
- [!code-csharp[VSMCustomControl#EntireValueChangedCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#entirevaluechangedcallback)]
- [!code-vb[VSMCustomControl#EntireValueChangedCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#entirevaluechangedcallback)]  
+ [!code-csharp[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#entirevaluechangedcallback)]
+ [!code-vb[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#entirevaluechangedcallback)]  
   
  Bir olay meydana geldiğinde durumları güncelleştirmeniz gerekebilir. Aşağıdaki örnek, gösterir `NumericUpDown` çağrıları `UpdateStates` üzerinde <xref:System.Windows.Controls.Control> işlemek için <xref:System.Windows.UIElement.GotFocus> olay.  
   
- [!code-csharp[VSMCustomControl#OnGotFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#ongotfocus)]
- [!code-vb[VSMCustomControl#OnGotFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#ongotfocus)]  
+ [!code-csharp[VSMCustomControl#OnGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#ongotfocus)]
+ [!code-vb[VSMCustomControl#OnGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#ongotfocus)]  
   
  <xref:System.Windows.VisualStateManager> Denetiminizin durumlarını yönetmenize yardımcı olur. Kullanarak <xref:System.Windows.VisualStateManager>, Denetim doğru durum arasında geçiş emin olun.  İle çalışmak için bu bölümde açıklanan önerileri uygulayın, <xref:System.Windows.VisualStateManager>, okunabilir ve sürdürülebilir denetiminizin kodu kalır.  
   
@@ -223,20 +223,20 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Aşağıdaki örnek belirtir <xref:System.Windows.FrameworkElement> nesne ve durumlarını `NumericUpDown` denetimi.  
   
- [!code-csharp[VSMCustomControl#ControlContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controlcontract)]
- [!code-vb[VSMCustomControl#ControlContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controlcontract)]  
+ [!code-csharp[VSMCustomControl#ControlContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controlcontract)]
+ [!code-vb[VSMCustomControl#ControlContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controlcontract)]  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Tam Örnek  
  Aşağıdaki örnek, tüm <xref:System.Windows.Controls.ControlTemplate> için `NumericUpDown` denetimi.  
   
- [!code-xaml[VSMCustomControl#NUDTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]  
+ [!code-xaml[VSMCustomControl#NUDTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]  
   
  Aşağıdaki örnek, mantığını gösterir `NumericUpDown`.  
   
- [!code-csharp[VSMCustomControl#ControlLogic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
- [!code-vb[VSMCustomControl#ControlLogic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
+ [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
+ [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
-- [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+- [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](customizing-the-appearance-of-an-existing-control.md)
+- [Denetim Özelleştirme](control-customization.md)

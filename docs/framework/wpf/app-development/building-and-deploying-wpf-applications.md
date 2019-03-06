@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547147"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368057"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF Uygulamaları Oluşturma ve Dağıtma
-Derleme ve dağıtım modeli aşağıdakiler de dahil olmak üzere uygulamalar oluşturma ve yerel olarak ve Uzaktan dağıtma yeteneği sağlar:  
+Derleme ve dağıtım modeli aşağıdakiler dahil olmak üzere derleme ve yerel olarak veya uzaktan, uygulamaları dağıtma yeteneği sağlar:  
   
--   MSBuild: .NET Microsoft.Build.Tasks.Windows ad alanında bulunan sistem oluşturun.  
+-   MSBuild: .NET Microsoft.Build.Tasks.Windows ad alanında bulunan bir sistem oluşturun.  
   
 -   Kaynaklar: UI kaynakları ile çalışma.  
   
 -   ClickOnce dağıtımı: .NET yayımlama ve dağıtım sistemi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)  
+ [WPF Uygulaması Dağıtma](deploying-a-wpf-application-wpf.md)  
+ [Nasıl Yapılır Konuları](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  MSBuild  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF’de Windows](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [WPF XAML Tarayıcı Uygulamalarına Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [Uygulama Yönetimine Genel Bakış](application-management-overview.md)  
+  [WPF’de Windows](windows-in-wpf-applications.md)  
+  [Gezintiye Genel Bakış](navigation-overview.md)  
+  [WPF XAML Tarayıcı Uygulamalarına Genel Bakış](wpf-xaml-browser-applications-overview.md)  
+  [Barındırma](hosting-wpf-applications.md)

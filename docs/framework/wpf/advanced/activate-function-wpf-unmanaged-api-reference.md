@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6410b05a1b858a7b75c9bff3220d47505beabd7c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357280"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a>Activate işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -37,7 +37,7 @@ void Activate(
  Bir işaretçi içeren tek öğeli arabellek adresini bir işaretçiye bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ void Activate(
  **.NET framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Yönetilmeyen API Başvurusu](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF Yönetilmeyen API Başvurusu](wpf-unmanaged-api-reference.md)

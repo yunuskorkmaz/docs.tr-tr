@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550130"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354641"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimi bağlamına özgü. Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] farenin sağ düğmesiyle veya klavyenin menü düğmesi aracılığıyla.  
+<xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimin, bağlamına özgü. Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] sağ fare düğmesine veya aracılığıyla klavyenin menüsü düğmesi.  
   
- Aşağıdaki şekilde gösterilmiştir bir <xref:System.Windows.Controls.ContextMenu> iki farklı durumlardaki: varsayılan durumu ve açık durumda. Varsayılan durumda denetim daraltılmış durumdadır. Ana menü farenin sağ düğmesiyle basıldığında denetim genişletir ve menü öğelerini görüntüler.  
+ Aşağıdaki şekilde gösterilmiştir bir <xref:System.Windows.Controls.ContextMenu> iki farklı durumlarda: varsayılan durumu ve açık duruma. Denetimin varsayılan durumda, daraltılmış. Ana menü sağ fare düğmesine basıldığında, Denetim genişletir ve menü öğeleri görüntüler.  
   
- ![ContextMenu durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
-Farklı Durumlardaki ContextMenu  
+ ![ContextMenu durumları](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ContextMenu farklı durumlarda  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu Genel Bakış](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ContextMenu>  

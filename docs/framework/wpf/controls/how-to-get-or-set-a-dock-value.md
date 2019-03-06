@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Dock values [WPF], setting
 - Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
-ms.openlocfilehash: 847f8732e1807ab2541d42fe720aacbecb034154
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7825377146532a6660e1838fa25631b788afe035
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738514"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374533"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>Nasıl yapılır: Yerleştirme Değerini Alma veya Ayarlama
 Aşağıdaki örnek nasıl atanacağını gösterir bir <xref:System.Windows.Controls.Dock> nesnenin değeri. Örnekte <xref:System.Windows.Controls.DockPanel.GetDock%2A> ve <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemlerinin <xref:System.Windows.Controls.DockPanel>.  
@@ -21,11 +21,11 @@ Aşağıdaki örnek nasıl atanacağını gösterir bir <xref:System.Windows.Con
 ## <a name="example"></a>Örnek  
  Örnek örneği oluşturur <xref:System.Windows.Controls.TextBlock> öğesi `txt1`ve atar bir <xref:System.Windows.Controls.Dock> değerini `Top` kullanarak <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi <xref:System.Windows.Controls.DockPanel>. Ardından değerini ekler <xref:System.Windows.Controls.Dock> özelliğini <xref:System.Windows.Controls.TextBlock.Text%2A> , <xref:System.Windows.Controls.TextBlock> kullanarak öğesi <xref:System.Windows.Controls.DockPanel.GetDock%2A> yöntemi. Son olarak, örnek ekler <xref:System.Windows.Controls.TextBlock> üst öğeye <xref:System.Windows.Controls.DockPanel>, `dp1`.  
   
- [!code-csharp[DockPanelSetDock#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelSetDock/CSharp/DockPanel_SetDock.cs#1)]
- [!code-vb[DockPanelSetDock#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelSetDock/VisualBasic/DockPanel_SetDock.vb#1)]  
+ [!code-csharp[DockPanelSetDock#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelSetDock/CSharp/DockPanel_SetDock.cs#1)]
+ [!code-vb[DockPanelSetDock#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelSetDock/VisualBasic/DockPanel_SetDock.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.DockPanel>
 - <xref:System.Windows.Controls.DockPanel.GetDock%2A>
 - <xref:System.Windows.Controls.DockPanel.SetDock%2A>
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Panellere Genel Bakış](panels-overview.md)

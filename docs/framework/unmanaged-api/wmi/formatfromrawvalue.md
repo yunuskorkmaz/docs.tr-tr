@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546445"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369346"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue işlevi
-Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür.   
-  
+Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -39,14 +39,14 @@ int FormatFromRawValue (
    [in] PDH_RAW_COUNTER*        pRawValue2,
    [out] PDH_FMT_COUNTERVALUE*  pFmtValue
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`dwCounterType`  
+`dwCounterType`\
 [in] Sayaç türü. Sayaç türlerinin bir listesi için bkz. [WMI performansı sayaç türleri](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` dışında herhangi bir sayaç türü olabilir `PERF_LARGE_RAW_FRACTION` ve `PERF_LARGE_RAW_BASE`. 
 
-`dwFormat`  
+`dwFormat`\
 [in] Ham performans dönüştürülecek biçimi. Aşağıdaki değerlerden biri olabilir:
 
 |Sabit  |Değer  |Açıklama |
@@ -62,14 +62,16 @@ int FormatFromRawValue (
 | `PDH_FMT_NOSCALE` | 0x00001000 | Sayacın ölçekleme faktörü geçerli değildir. |
 | `PDH_FMT_1000` | 0x00002000 | Son değer 1000 ile çarpın. | 
 
-`pTimeBase`  
+`pTimeBase`\
 [in] Süresi Temeli, biçim dönüştürme için gerekirse bir işaretçi. Saat temel bilgileri, biçim dönüştürme için gerekli değildir, bu parametrenin değeri yok sayıldı.
 
-`pRawValue1` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ham performans değerini temsil eden yapısı.
+`pRawValue1`\ [in] için bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ham performans değerini temsil eden yapısı.
 
-`pRawValue2` [in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ikinci bir performans değeri temsil eden yapısı. İkinci bir ham performans değeri gerekli değilse bu parametre olmalıdır `null`.
+`pRawValue2`\
+[in] Bir işaretçi bir [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) ikinci bir performans değeri temsil eden yapısı. İkinci bir ham performans değeri gerekli değilse bu parametre olmalıdır `null`.
 
-`pFmtValue` [out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) biçimlendirilmiş bir performans değeri alan yapısı.
+`pFmtValue`\
+[out] Bir işaretçi bir [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) biçimlendirilmiş bir performans değeri alan yapısı.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -80,17 +82,19 @@ Aşağıdaki değerlerden bu işlev tarafından döndürülen:
 | `ERROR_SUCCESS` | 0 | İşlev çağrısı başarılı olur. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Gerekli bir bağımsız değişken eksik ya da yanlış biçimlendirilmiş. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Tanıtıcı geçerli bir PDH nesnesi değil. |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) işlevi.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Kitaplığı:** PerfCounter.dll  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Kitaplığı:** PerfCounter.dll
+
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

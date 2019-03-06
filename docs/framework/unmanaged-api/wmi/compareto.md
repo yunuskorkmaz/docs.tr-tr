@@ -16,43 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376240"
 ---
 # <a name="compareto-function"></a>CompareTo işlevi
-Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır.  
+
+Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sözdizimi  
-  
-```
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`  
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr`  
+`ptr`\
 [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
-`flags`  
+`flags`\
 [in] Karşılaştırma için dikkate alınması gereken nesne özellikleri belirten bayraklar Bitsel bir birleşimi. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
 
-`pCompareTo`  
-
-[in] Karşılaştırma için nesne. `pcompareTo` Geçerli bir olmalıdır [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örnek; olamaz `null`.
+`pCompareTo`\
+[in] Karşılaştırma için nesne. `pCompareTo` Geçerli bir olmalıdır [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örnek; olamaz `null`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -66,7 +66,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Nesneler farklı. |
 | `WBEM_S_SAME` | 0 | Nesneleri karşılaştırma bayraklarını tabanlı aynıdır. |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) yöntemi.
@@ -80,7 +80,7 @@ Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişken tanımlanmış *
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Özelliklerin varsayılan değerlerini yoksayın. Bu bayrağı yalnızca sınıfları bir karşılaştırması için geçerlidir. |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Niteleyici özelliği yoksayın. Bu bayrak hala niteleyicileri, dikkate ancak flavor farklılıklar yayma kuralları gibi yoksayar ve kısıtlamaları geçersiz kılar. |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | Dize değerleri karşılaştırma içinde çalışması yoksayar. Bu, hem dizeleri ve niteleyici değeri için geçerlidir. Özellik ve niteleyicisi adlarının karşılaştırma her zaman bu bayrağı ayarlanmış olduğundan bağımsız olarak büyük küçük harfe duyarlıdır. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Karşılaştırılan nesnelerin örneklerinin aynı sınıfın olduğunu varsayar. Sonuç olarak, bu bayrağı yalnızca örnekle ilgili bilgi karşılaştırır. Bu bayrak, performansı iyileştirmek için kullanın. Nesneleri aynı sınıfının emin değilseniz, sonuçlar tanımsızdır. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Karşılaştırılan nesnelerin aynı sınıf örnekleri olduğunu varsayar. Sonuç olarak, bu bayrağı yalnızca örnekle ilgili bilgi karşılaştırır. Bu bayrak, performansı iyileştirmek için kullanın. Nesneleri aynı sınıfının emin değilseniz, sonuçlar tanımsızdır. |
 
 Veya tek bir bileşik bayrağı şu şekilde belirtebilirsiniz:
 
@@ -88,12 +88,14 @@ Veya tek bir bileşik bayrağı şu şekilde belirtebilirsiniz:
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Karşılaştırma içindeki tüm özelliklerini göz önünde bulundurun. |
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

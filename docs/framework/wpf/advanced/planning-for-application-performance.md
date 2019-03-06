@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632120"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374433"
 ---
 # <a name="planning-for-application-performance"></a>Uygulama Performansını Planlama
 Ne kadar iyi performans stratejinizi geliştirmek başarım hedeflerinizi başarısını bağlıdır. Planlama herhangi bir ürün geliştirmeye ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  
@@ -33,12 +33,12 @@ Ne kadar iyi performans stratejinizi geliştirmek başarım hedeflerinizi başar
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri geniş yayılım özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Denetim şablonları stiller ve veri şablonları yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
+- [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Metin](optimizing-performance-text.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)

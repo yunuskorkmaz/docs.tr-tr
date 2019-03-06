@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671271"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379165"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
-Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışında](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak bu konuda yol belirtmek için kullanabileceğiniz güçlü ve karmaşık mini dil ayrıntılı olarak açıklanmaktadır. geometriler daha sıkı bir şekilde kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışında](shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](geometry-overview.md), ancak bu konuda yol belirtmek için kullanabileceğiniz güçlü ve karmaşık mini dil ayrıntılı olarak açıklanmaktadır. geometriler daha sıkı bir şekilde kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için temel özellikleriyle ilgili bilgi sahibi olmalısınız <xref:System.Windows.Media.Geometry> nesneleri. Daha fazla bilgi için [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Bu konuda anlamak için temel özellikleriyle ilgili bilgi sahibi olmalısınız <xref:System.Windows.Media.Geometry> nesneleri. Daha fazla bilgi için [geometrisi](geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ve PathFigureCollection Mini dilleri  
@@ -27,15 +27,15 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 -   Kullandığınız <xref:System.Windows.Media.StreamGeometry> türünün özelliğini ayarlarken mini dil <xref:System.Windows.Media.Geometry>, gibi <xref:System.Windows.UIElement.Clip%2A> özelliği bir <xref:System.Windows.UIElement> veya <xref:System.Windows.Shapes.Path.Data%2A> özelliği bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnek oluşturmak için öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.StreamGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
 -   Kullandığınız <xref:System.Windows.Media.PathFigureCollection> ayarlarken mini dil <xref:System.Windows.Media.PathGeometry.Figures%2A> özelliği bir <xref:System.Windows.Media.PathGeometry>. Aşağıdaki örnek oluşturmak için bir öznitelik sözdizimi kullanan bir <xref:System.Windows.Media.PathFigureCollection> için bir <xref:System.Windows.Media.PathGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
  Önceki örneklerde de görebileceğiniz gibi iki küçük dil oldukça benzerdir. Her zaman kullanmak mümkün mü bir <xref:System.Windows.Media.PathGeometry> kullanabileceğiniz herhangi bir durumda bir <xref:System.Windows.Media.StreamGeometry>; bu nedenle, hangisini kullanmalısınız? Kullanan bir <xref:System.Windows.Media.StreamGeometry> yolu; oluşturduktan sonra değiştirmek ihtiyacınız kalmadığında kullanmak bir <xref:System.Windows.Media.PathGeometry> yolun değişiklik yapmanız gerekiyorsa.  
   
- Arasındaki farklar hakkında daha fazla bilgi için <xref:System.Windows.Media.PathGeometry> ve <xref:System.Windows.Media.StreamGeometry> nesneleri bkz [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Arasındaki farklar hakkında daha fazla bilgi için <xref:System.Windows.Media.PathGeometry> ve <xref:System.Windows.Media.StreamGeometry> nesneleri bkz [geometrisi](geometry-overview.md).  
   
 ### <a name="a-note-about-white-space"></a>Boşluk hakkında bir Not  
  Kısaltma, tek bir boşluk, aşağıdaki sözdizimi bölümlerinde gösterilen, ancak tek bir boşluk gösterilen yerde birden çok boşluklar da kabul edilir.  
@@ -229,6 +229,6 @@ Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` b
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometriye Genel Bakış](geometry-overview.md)
+- [Nasıl Yapılır Konuları](geometries-how-to-topics.md)

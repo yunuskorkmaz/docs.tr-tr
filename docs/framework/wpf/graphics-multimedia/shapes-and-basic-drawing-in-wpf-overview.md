@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372743"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
 Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesneleri. A <xref:System.Windows.Shapes.Shape> bir tür <xref:System.Windows.UIElement> ekrana bir şekil çizme olanak sağlar. Kullanıcı Arabirimi öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri içinde kullanılabilir <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim.  
@@ -41,28 +41,28 @@ Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesn
   
  <xref:System.Windows.Shapes.Line> Sınıfı iki nokta arasında bir çizgi çizmek sağlar. Aşağıdaki örnek, satır koordinatları ve vuruş özelliklerini belirtmek için çeşitli yollar gösterir.  
   
- [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+ [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- [!code-cpp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
- [!code-csharp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
- [!code-vb[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
+ [!code-cpp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
+ [!code-csharp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
+ [!code-vb[shapesprocedural#ShapesProceduralLine](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
   
  Aşağıdaki görüntüde işlenen gösterilmektedir <xref:System.Windows.Shapes.Line>.  
   
- ![Çizim satırı](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-line2.gif "shape_ovw_line2")  
+ ![Çizim satırı](./media/shape-ovw-line2.gif "shape_ovw_line2")  
   
  Ancak <xref:System.Windows.Shapes.Line> sağlamasına bir <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği, bu ayarın hiçbir etkisi nedeniyle bir <xref:System.Windows.Shapes.Line> alanı vardır.  
   
  Başka bir ortak şekli <xref:System.Windows.Shapes.Ellipse>.  Oluşturma bir <xref:System.Windows.Shapes.Ellipse> şeklin tanımlayarak <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özellikleri. Bir daire çizmek için belirtin bir <xref:System.Windows.Shapes.Ellipse> olan <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerler eşit.  
   
- [!code-xaml[ShapeOverviews#ShapesOVW1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
+ [!code-xaml[ShapeOverviews#ShapesOVW1](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
   
- [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
- [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
+ [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
+ [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
   
  İşlenen bir örneği aşağıdaki resimde gösterilmektedir <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Elips çizim](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
+ ![Elips çizim](./media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
 <a name="paths"></a>   
 ## <a name="using-paths-and-geometries"></a>Yolları ve geometrileri kullanma  
@@ -76,13 +76,13 @@ Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesn
   
  Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Path> ikinci dereceden Bezier eğrisi çizmek için kullanılır.  
   
- [!code-xaml[geometrysample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
+ [!code-xaml[geometrysample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
  Aşağıdaki görüntüde, işlenen şekli gösterilmektedir.  
   
- ![Yol çizim](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path2.gif "shape_ovw_path2")  
+ ![Yol çizim](./media/shape-ovw-path2.gif "shape_ovw_path2")  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Media.PathGeometry> ve diğer <xref:System.Windows.Media.Geometry> sınıfları için bkz [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Hakkında daha fazla bilgi için <xref:System.Windows.Media.PathGeometry> ve diğer <xref:System.Windows.Media.Geometry> sınıfları için bkz [geometrisi](geometry-overview.md).  
   
 <a name="pathdatastring"></a>   
 ### <a name="xaml-abbreviated-syntax"></a>XAML söz dizimi olarak kısaltılır  
@@ -95,13 +95,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Aşağıdaki görüntüde bir işlenen gösterilmektedir <xref:System.Windows.Shapes.Path>.  
   
- ![Yol çizim](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
+ ![Yol çizim](./media/shape-ovw-path.PNG "shape_ovw_path")  
   
  <xref:System.Windows.Shapes.Path.Data%2A> Öznitelik dize başlar yolu için bir başlangıç noktası koordinat sistemi oluşturan M tarafından gösterilen "moveto" komutu ile <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path> Parametreler büyük/küçük harfe duyarlıdır. M büyük harf, geçerli bir yeni nokta için bir mutlak konumu belirtir. Bir küçük harf m göreli koordinatları belirtir. Bir üçüncü dereceden Bezier eğrisi başına (100,200) ilk parça olan ve (400,175) son iki çizilen kullanarak kontrol noktaları (100,25) ve (400,350). Bu kesimin C komutta belirtilir <xref:System.Windows.Shapes.Path.Data%2A> dize özniteliği. Yeniden Büyük Harf C mutlak bir yol belirtir; küçük harf c göreli bir yol gösterir.  
   
  Bir önceki alt yolun bitiş noktasından (400,175) yeni bir bitiş noktasına (280,175) çizgi belirten H mutlak yatay "lineto" komutu ile ikinci kesim başlar. Yatay "lineto" komutu olduğundan, belirtilen değeri olan bir *x*-koordine edin.  
   
- Tam yol sözdizimi için bkz. <xref:System.Windows.Shapes.Path.Data%2A> başvuru ve [PathGeometry kullanarak şekil oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  
+ Tam yol sözdizimi için bkz. <xref:System.Windows.Shapes.Path.Data%2A> başvuru ve [PathGeometry kullanarak şekil oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md).  
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>Şekilleri Boyama  
@@ -122,7 +122,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Aşağıdaki görüntüde işlenen gösterilmektedir <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Bir elips](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
+ ![Bir elips](./media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
   
  Alternatif olarak, açıkça oluşturmak için bir özellik öğesi sözdizimini kullanabilirsiniz bir <xref:System.Windows.Media.SolidColorBrush> şekli düz renk ile boyamak için kullanılan nesne.  
   
@@ -145,13 +145,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  İşlenen şekli aşağıda gösterilmiştir.  
   
- ![SolidColorBrush çizim](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
+ ![SolidColorBrush çizim](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- Bir şeklin vuruş veya gradyanlar, görüntüleri, desenleri ve daha fazlasıyla dolgu boyama de yapabilirsiniz. Daha fazla bilgi için [düz renkler ve gradyanlar genel bakış boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Bir şeklin vuruş veya gradyanlar, görüntüleri, desenleri ve daha fazlasıyla dolgu boyama de yapabilirsiniz. Daha fazla bilgi için [düz renkler ve gradyanlar genel bakış boyama](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>Esneyebilen şekiller  
- <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, Ve <xref:System.Windows.Shapes.Rectangle> tüm sınıflar bir <xref:System.Windows.Shapes.Shape.Stretch%2A> özelliği. Bu özellik belirler nasıl bir <xref:System.Windows.Shapes.Shape> nesnenin içeriğini (çizilecek Şekil) esnetilmiş doldurmak için <xref:System.Windows.Shapes.Shape> nesnenin düzen alanı. A <xref:System.Windows.Shapes.Shape> nesnenin Düzen yer alan miktarı <xref:System.Windows.Shapes.Shape> düzen sistemi tarafından sonlandırıldığından açık bir ayrılmış <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> ayarı nedeniyle veya kendi <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ayarları. Windows Presentation Foundation'da Düzen hakkında ek bilgi için bkz: [Düzen](../../../../docs/framework/wpf/advanced/layout.md) genel bakış.  
+ <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, Ve <xref:System.Windows.Shapes.Rectangle> tüm sınıflar bir <xref:System.Windows.Shapes.Shape.Stretch%2A> özelliği. Bu özellik belirler nasıl bir <xref:System.Windows.Shapes.Shape> nesnenin içeriğini (çizilecek Şekil) esnetilmiş doldurmak için <xref:System.Windows.Shapes.Shape> nesnenin düzen alanı. A <xref:System.Windows.Shapes.Shape> nesnenin Düzen yer alan miktarı <xref:System.Windows.Shapes.Shape> düzen sistemi tarafından sonlandırıldığından açık bir ayrılmış <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> ayarı nedeniyle veya kendi <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ayarları. Windows Presentation Foundation'da Düzen hakkında ek bilgi için bkz: [Düzen](../advanced/layout.md) genel bakış.  
   
  Uzat özelliği şu değerlerden birini alır:  
   
@@ -202,21 +202,21 @@ myPolygon.StrokeThickness = 2;
   
  Aşağıdaki örnekte, bir <xref:System.Windows.Media.RotateTransform> şeklin sol üst köşedeki (0,0) bir şekil 45 derece döndürmek için kullanılır.  
   
- [!code-xaml[transformssample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
+ [!code-xaml[transformssample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
   
  Sonraki örnekte, başka bir şekil 45 derece döndürülür, ancak bu kez noktası hakkında (25,50) döndürülür.  
   
- [!code-xaml[transformssample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
+ [!code-xaml[transformssample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
   
  Aşağıdaki çizimde, iki dönüşümler uygulanırken sonuçlarını gösterir.  
   
- ![farklı merkezi noktalarıyla 45 derece döndürme](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+ ![farklı merkezi noktalarıyla 45 derece döndürme](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
   
  Önceki örneklerde, her şekil nesnesi için tek bir dönüştürme uygulandı. Bir şekil (veya başka bir kullanıcı Arabirimi öğesi) birden çok dönüşüm uygulamak için bir <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
+- [Geometriye Genel Bakış](geometry-overview.md)
+- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Animasyona Genel bakış](animation-overview.md)

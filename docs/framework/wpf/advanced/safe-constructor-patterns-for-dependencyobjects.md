@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661288"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363988"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
 Genel olarak, sınıf oluşturucuları türetilmiş bir sınıf için temel oluşturucuları başlatma oluşturucular çağrılamayacağından sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmalıdır değil. Herhangi bir nesne bir eksik başlatma durumuna girmek sanal yapılabilir. Ancak, özellik sistemi çağırır ve geri çağırmaları dahili olarak, bağımlılık özelliği sisteminin bir parçası kullanıma sunar. Bir bağımlılık özelliği değer ile ayarı olarak basit bir işlem <xref:System.Windows.DependencyObject.SetValue%2A> çağrı potansiyel olarak içeren bir geri çağırma yere belirlenmesi. Bu nedenle, bağımlılık türünüz temel sınıf olarak kullanılırsa, sorunlu olabilecek bir oluşturucu gövdesi içinde özellik değerlerini ayarlarken dikkatli olmanız gerekir. Uygulama için belirli bir desene yoktur <xref:System.Windows.DependencyObject> Oluşturucular, burada belgelenmektedir bağımlılık özelliği durumlar ve devralınmış geri çağırmalar belirli sorunları önler.  
@@ -20,7 +20,7 @@ Genel olarak, sınıf oluşturucuları türetilmiş bir sınıf için temel olu�
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Özellik sistemi sanal yöntemleri  
- Sanal yöntemleri veya geri çağırmaları hesaplamaları sırasında adı verilir <xref:System.Windows.DependencyObject.SetValue%2A> bir bağımlılık özelliğinin değerini ayarlayan çağrı: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Bu sanal yöntemler veya geri çağırmaları her biri çeşitlikleri genişletme belirli bir amaca hizmet eder [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi ve bağımlılık özellikleri. Özellik değeri belirlemeyi özelleştirmek için bu sanalları kullanma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri aramaları ve doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ Sanal yöntemleri veya geri çağırmaları hesaplamaları sırasında adı verilir <xref:System.Windows.DependencyObject.SetValue%2A> bir bağımlılık özelliğinin değerini ayarlayan çağrı: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Bu sanal yöntemler veya geri çağırmaları her biri çeşitlikleri genişletme belirli bir amaca hizmet eder [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi ve bağımlılık özellikleri. Özellik değeri belirlemeyi özelleştirmek için bu sanalları kullanma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri aramaları ve doğrulama](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop Kural zorlama vs. Özellik sistemi Uygula  
  Yapı işleminizin bir parçası olarak Microsoft FXCop aracı kullanıyorsanız ve bu belirli ya da türetilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework sınıflarını temel oluşturucu, arama veya kendi bağımlılık özellikleri türetilen sınıflarda uygulamak, belirli bir karşılaşabileceğiniz FXCop kuralı ihlali. Bu ihlalin adı dize şöyledir:  
@@ -115,6 +115,6 @@ public MyClass : SomeBaseClass {
  Özellik ayarı kolaylık sağlamak için bir sarmalayıcı üretilmesini, ve değerleri ile ayarlanır bir özelliği ayarlıyorsanız bu aynı desenleri uygulamak <xref:System.Windows.DependencyObject.SetValue%2A>. Aramalarınız <xref:System.Windows.DependencyObject.SetValue%2A> Oluşturucu parametresi bu geçiş başlatma için de sınıfının varsayılan oluşturucusunu çağırmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Bağımlılık Özelliği Güvenliği](dependency-property-security.md)

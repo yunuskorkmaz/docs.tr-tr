@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369181"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>Nasıl yapılır: Bir Kılavuzun Alt Öğelerini Konumlandırma
 Bu örnek, get ve üzerinde tanımlanan yöntemlerini nasıl kullanılacağını gösterir. <xref:System.Windows.Controls.Grid> alt öğeleri konumlandırmak için.  
@@ -20,16 +20,16 @@ Bu örnek, get ve üzerinde tanımlanan yöntemlerini nasıl kullanılacağını
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir üst tanımlar <xref:System.Windows.Controls.Grid> öğesi (`grid1`) üç ve üç satır vardır. Bir alt <xref:System.Windows.Shapes.Rectangle> öğesi (`rect1`) eklenir <xref:System.Windows.Controls.Grid> sütun konumu sıfır satır konumunu sıfır. <xref:System.Windows.Controls.Button> öğeleri yeniden konumlandırmak için çağrılan yöntemi temsil <xref:System.Windows.Shapes.Rectangle> öğesiyle <xref:System.Windows.Controls.Grid>. İlgili yöntem, bir kullanıcı bir düğmeyi tıkladığında etkinleştirilir.  
   
- [!code-xaml[gridGetSetMethods](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml)]  
+ [!code-xaml[gridGetSetMethods](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml)]  
   
  Aşağıdaki arka plan kod örnek yöntemleri işler, düğmeyi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayları tetikleyebilir. Bu yöntem çağrıları örnek Yazar <xref:System.Windows.Controls.TextBlock> kullanımı ilgili öğeleri al yeni özellik değerlerinin dizeler olarak çıkış yöntemleri.  
   
- [!code-csharp[gridGetSetMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
- [!code-vb[gridGetSetMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[gridGetSetMethods#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[gridGetSetMethods#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
  Tamamlanmış sonucu geldi!
  
- ![bir WPF kullanıcı arabirimi iki sütunlu bir ekran görüntüsü gösterilmektedir, sağ tarafındaki 3 x 3 kılavuz ve sol kılavuza satırlar ve sütunlar arasında renkli bir dikdörtgen geçmek düğmelerini sahiptir](./media/grid-methods-sample.png) 
+ ![bir WPF kullanıcı arabirimi iki sütunlu bir ekran görüntüsü gösterilmektedir, sağ tarafındaki 3 x 3 kılavuz ve sol kılavuza satırlar ve sütunlar arasında renkli bir dikdörtgen geçmek düğmelerini sahiptir](././media/grid-methods-sample.png) 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.Grid>
-- [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Panellere Genel Bakış](panels-overview.md)

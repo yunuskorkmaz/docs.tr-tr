@@ -1,50 +1,46 @@
 ---
-title: TextBox Stilleri ve Şablonları
+title: Parmak Stilleri ve Şablonları
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ControlTemplate [WPF], TextBox
-- parts [WPF], TextBox
-- states [WPF], TextBox
-- styles [WPF], TextBox
-- templates [WPF], TextBox
-- TextBox [WPF], styles and templates
-ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 16f087051e438fa0dbe248c46b0ec555c07cc06c
+- states [WPF], Thumb
+- styles [WPF], Thumb
+- templates [WPF], Thumb
+- Thumb [WPF], styles and templates
+- ControlTemplate [WPF], Thumb
+- parts [WPF], Thumb
+ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
+ms.openlocfilehash: ffeec38cef04f49afc114a1946d88621063d700a
 ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367914"
+ms.locfileid: "57367641"
 ---
-# <a name="textbox-styles-and-templates"></a>TextBox Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.TextBox> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+# <a name="thumb-syles-and-templates"></a>Parmak Stilleri ve Şablonları
+Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.Thumb> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="textbox-parts"></a>Metin parçaları  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.TextBox> denetimi.  
+## <a name="thumb-parts"></a>Thumb bölümleri  
+ <xref:System.Windows.Controls.Primitives.Thumb> Denetim herhangi bir adlandırılmış bölümü yok.  
   
-|Bölümü|Tür|Açıklama|  
-|-|-|-|  
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|İçeren bir görsel öğe bir <xref:System.Windows.FrameworkElement>. Metnin <xref:System.Windows.Controls.TextBox> bu öğe görüntülenir.|  
-  
-## <a name="textbox-states"></a>Metin kutusuna durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.TextBox> denetimi.  
+## <a name="thumb-states"></a>Thumb durumları  
+ Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.Thumb> denetimi.  
   
 |VisualState adı|Visualstategroup'u adı|Açıklama|  
-|----------------------|---------------------------|-----------------|  
+|-|-|-|  
 |Normal|CommonStates|Varsayılan durumu.|  
 |Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Basılan|CommonStates|Denetime basıldığında.|  
 |Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|ReadOnly|CommonStates|Kullanıcının metni değiştiremezsiniz <xref:System.Windows.Controls.TextBox>.|  
 |Odaklanmış|FocusStates|Denetim odağa sahip.|  
 |Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
 |Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
   
-## <a name="textbox-controltemplate-example"></a>TextBox ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.TextBox> denetimi.  
+## <a name="thumb-controltemplate-example"></a>Thumb ControlTemplate Örneği  
+ Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Primitives.Thumb> denetimi.  
   
- [!code-xaml[ControlTemplateExamples#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
+ [!code-xaml[ControlTemplateExamples#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]  
   
  Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
   

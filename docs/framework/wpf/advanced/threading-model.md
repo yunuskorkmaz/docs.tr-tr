@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513661"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353042"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler, iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden fazla iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Çoklu iş parçacığı kullanan programları, karmaşık ve hata ayıklama zor olduğundan, bunlar çözümleri tek iş parçacıklı bulunduğunda kaçınılmalıdır.  
@@ -62,7 +62,7 @@ ms.locfileid: "54513661"
   
  Aşağıdaki örnek göz önünde bulundurun:  
   
- ![Asal sayıları ekran görüntüsü](../../../../docs/framework/wpf/advanced/media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Asal sayıları ekran görüntüsü](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
   
  Bu basit uygulama, üç, aramasını asal sayıları için yukarı doğru sayar. Kullanıcı tıkladığında **Başlat** arama düğmesini başlar. Program bir asal bulduğunda, kullanıcı arabirimi keşfi ile güncelleştirir. Herhangi bir noktada, kullanıcı arama durdurabilirsiniz.  
   
@@ -74,30 +74,30 @@ ms.locfileid: "54513661"
   
  İşlem süresi hesaplama ve olay işleme arasında bölmek için en iyi yolu, hesaplama yönetmektir <xref:System.Windows.Threading.Dispatcher>. Kullanarak <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> yöntemi, biz asal sayı denetimlerini zamanlayabilirsiniz aynı sıra [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gelen olayları çizilmiştir. Bizim örneğimizde, biz yalnızca bir tek asal sayı denetimi birer birer zamanlayın. Asal sayı onay tamamlandıktan sonra biz sonraki denetim hemen zamanlayın. Bu denetim yalnızca sonra bekleyen geçer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olayları işlenmiş.  
   
- ![Dağıtıcı sırası çizimi](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Dağıtıcı sırası çizimi](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] Bu mekanizma kullanılarak yazım denetimi gerçekleştirir. Yazım denetimi boşta kalma süresi'ni kullanarak arka planda gerçekleştirilir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Kod bir göz atalım.  
   
  Aşağıdaki örnek kullanıcı arabirimi oluşturan XAML gösterir.  
   
- [!code-xaml[ThreadingPrimeNumbers#ThreadingPrimeNumberXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml#threadingprimenumberxaml)]  
+ [!code-xaml[ThreadingPrimeNumbers#ThreadingPrimeNumberXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml#threadingprimenumberxaml)]  
   
  Aşağıdaki örnek, arka plan kod gösterir.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumbercodebehind)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumbercodebehind)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumbercodebehind)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumbercodebehind)]  
   
  Aşağıdaki örnekte olay işleyicisi <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberstartorstop)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberstartorstop)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberstartorstop)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberstartorstop)]  
   
  Üzerinde metnini güncelleştirme yanı sıra <xref:System.Windows.Controls.Button>, bu işleyici, ilk asal sayı onay zamanlama için bir temsilciye ekleyerek sorumludur <xref:System.Windows.Threading.Dispatcher> kuyruk. Bu olay işleyicisi, kendi iş tamamlandıktan sonra süre <xref:System.Windows.Threading.Dispatcher> yürütme için bu temsilciyi seçer.  
   
  Daha önce de belirttiğimiz gibi <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> olduğu <xref:System.Windows.Threading.Dispatcher> üye yürütme için bir temsilci zamanlamak için kullanılır. Bu durumda, Seçtiğimiz <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> öncelik. <xref:System.Windows.Threading.Dispatcher> İşlemek için önemli olay olduğunda bu temsilciyi çalıştırır. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yanıt verme hızını sayı denetlemekten daha önemlidir. Biz de numarası denetleniyor yordamı temsil eden yeni bir metot temsilcisi geçirin.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
  Bu yöntem, asal sonraki tek sayı olup olmadığını denetler. Asal ise, yöntem doğrudan güncelleştirmeleri `bigPrime` <xref:System.Windows.Controls.TextBlock> keşfi yansıtacak şekilde. Hesaplama bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştirilmekte olduğundan bunu yapabilirsiniz. Ki seçilen hesaplama için ayrı bir iş parçacığı kullanmak, size daha karmaşık bir eşitleme mekanizmasının kullanılması ve güncelleştirme yürütme gerekirdi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Biz bu durum sonraki kazandırabileceğinizi göstereceğiz.  
   
@@ -109,24 +109,24 @@ ms.locfileid: "54513661"
   
  Bu örnekte biz hava durumu tahminini alan bir uzak yordam çağrısı taklit. Bu çağrı yürütmek için ayrı iş parçacığı kullanıyoruz ve biz de bir güncelleştirme yöntemi zamanlama <xref:System.Windows.Threading.Dispatcher> , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tamamlandığında iş parçacığı.  
   
- ![Hava durumu, kullanıcı Arabirimi ekran görüntüsü](../../../../docs/framework/wpf/advanced/media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Hava durumu, kullanıcı Arabirimi ekran görüntüsü](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
   
- [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
- [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
+ [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
+ [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
   
  Not ayrıntıları bazıları aşağıda verilmiştir.  
   
 -   Düğme işleyicisi oluşturma  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
   
  Düğme tıklandığında, biz saat çizimi görüntülenir ve animasyon başlar. Düğmeyi devre dışı bırakın. Biz çağırma `FetchWeatherFromServer` yöntemi yeni bir iş parçacığı ve ardından size dönüş izin <xref:System.Windows.Threading.Dispatcher> hava durumu tahminini toplamak için beklerken olayları işlemek için.  
   
 -   Hava durumu getirilirken  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
   
  Basit bir anlatım gözetildiği, biz aslında ağ herhangi bir kodu bu örnekte gerekmez. Bunun yerine, biz dört saniye için uyku moduna yeni iş parçacığını koyarak ağ erişimi gecikmesini benzetimi. Zaman, özgün [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı hala çalıştığından ve olaylarına yanıt verme. Bu, size bir animasyonu çalışır ve simge durumuna küçült bırakmış olabilirsiniz göstermek ve en üst düzeye çıkarmak için düğmeler de çalışmaya devam.  
   
@@ -134,8 +134,8 @@ ms.locfileid: "54513661"
   
 -   Güncelleştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
   
  Zaman <xref:System.Windows.Threading.Dispatcher> içinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı zaman sahiptir, zamanlanmış çağrısı yürütür `UpdateUserInterface`. Bu yöntem, saat animasyonu durdurur ve hava durumu tanımlamak için bir görüntü seçer. Bu görüntü görüntüler ve "getirme tahmin" düğmesini geri yükler.  
   
@@ -151,20 +151,20 @@ ms.locfileid: "54513661"
   
  Aşağıdaki örnek kod gösterir.  
   
- [!code-xaml[ThreadingMultipleBrowsers#ThreadingMultiBrowserXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml#threadingmultibrowserxaml)]  
+ [!code-xaml[ThreadingMultipleBrowsers#ThreadingMultiBrowserXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml#threadingmultibrowserxaml)]  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsercodebehind)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsercodebehind)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsercodebehind)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsercodebehind)]  
   
  Bu kod aşağıdaki iş parçacığı bölümleri en ilginç bize bu bağlamda şunlardır:  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsernewwindow)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsernewwindow)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsernewwindow)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsernewwindow)]  
   
  Bu yöntem olduğunda çağrılır "Yeni Pencere" düğmesine tıklandığında. Bu, yeni bir iş parçacığı oluşturur ve zaman uyumsuz olarak başlatır.  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
  Bu yöntem, yeni iş parçacığı için başlangıç noktasıdır. Bu iş parçacığı denetimi altında yeni bir pencere oluştururuz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] otomatik olarak yeni bir oluşturur <xref:System.Windows.Threading.Dispatcher> yeni iş parçacığını yönetmek için. Biz penceresi işlevsel hale getirmek için yapmanız gereken tek şey başlatmak için <xref:System.Windows.Threading.Dispatcher>.  
   
@@ -172,10 +172,10 @@ ms.locfileid: "54513661"
 ## <a name="technical-details-and-stumbling-points"></a>Teknik Ayrıntılar ve bazı noktalar  
   
 ### <a name="writing-components-using-threading"></a>İş parçacığı kullanan bileşen yazma  
- Microsoft .NET Framework Geliştirici Kılavuzu için zaman uyumsuz davranış istemcilerine bir bileşeni nasıl ortaya koyabileceğiniz bir deseni açıklar (bkz [olay tabanlı zaman uyumsuz desene genel bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Örneği için paketlenecek istedik varsayalım `FetchWeatherFromServer` yeniden kullanılabilir bir bileşenin içine yöntemi. Standart Microsoft .NET Framework desenini, bunun aşağıdaki gibi görünür.  
+ Microsoft .NET Framework Geliştirici Kılavuzu için zaman uyumsuz davranış istemcilerine bir bileşeni nasıl ortaya koyabileceğiniz bir deseni açıklar (bkz [olay tabanlı zaman uyumsuz desene genel bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Örneği için paketlenecek istedik varsayalım `FetchWeatherFromServer` yeniden kullanılabilir bir bileşenin içine yöntemi. Standart Microsoft .NET Framework desenini, bunun aşağıdaki gibi görünür.  
   
- [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
- [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
+ [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
+ [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
  `GetWeatherAsync` bir arka plan iş parçacığı oluşturma gibi daha önce açıklanan olan tekniklerle biri zaman uyumsuz olarak yapması için çağıran iş parçacığını engellemeyen kullanırsınız.  
   
@@ -183,13 +183,13 @@ ms.locfileid: "54513661"
   
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> Sınıfı bu adresleri — basitleştirilmiş bir sürümünü olarak düşünebilirsiniz <xref:System.Windows.Threading.Dispatcher> diğer çalışan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] çerçeveleri de.  
   
- [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent2)]
- [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
+ [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent2)]
+ [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>İç içe pompalama  
  Bazen tamamen kilitlemek için uygun değil [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Düşünelim <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox.Show%2A> Kullanıcı Tamam düğmesine tıklayana kadar döndürmüyor. Ancak, bir ileti döngüsü etkileşimli olması gereken bir pencere oluşturur. Özgün uygulama penceresi şu kullanıcı için Tamam'a tıklayın beklerken, kullanıcı girişine yanıt vermiyor. Boyama iletileri işlemek ancak devam eder. Özgün penceresinde kendisi kapsamında ve ortaya çıktığı zaman yeniden çizer.  
   
- !["Tamam" düğmesini kullanarak MessageBox](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ !["Tamam" düğmesini kullanarak MessageBox](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
  Bazı iş parçacığı ileti kutusu penceresi sorumlu olması gerekir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti kutusu penceresi için yeni bir iş parçacığı oluşturabilirsiniz, ancak bu iş parçacığı özgün penceresinde devre dışı bırakılan öğeleri boyama veremeyebilir (karşılıklı dışlama önceki tartışmayı unutmayın). Bunun yerine, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç içe geçmiş ileti işleme sistemi kullanır. <xref:System.Windows.Threading.Dispatcher> Sınıfı olarak adlandırılan özel bir yöntem içerir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, ardından depoladığı uygulamanın geçerli yürütme noktasını yeni bir ileti döngüsü başlatır. İç içe geçmiş ileti döngüsü sona erdiğinde, sonra özgün yürütmeyi devam ettirir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> çağırın.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "54513661"
 ### <a name="stale-routed-events"></a>Eski yönlendirilmiş olaylar  
  Yönlendirilmiş olay sistemde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları oluştuğunda tüm ağaçları bildirir.  
   
- [!code-xaml[InputOvw#ThreadingArticleStaticRoutedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#threadingarticlestaticroutedevent)]  
+ [!code-xaml[InputOvw#ThreadingArticleStaticRoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#threadingarticlestaticroutedevent)]  
   
  Elips farenin sol düğmesine basıldığında `handler2` yürütülür. Sonra `handler2` bittiğinde, olay geçirildiğinde boyunca <xref:System.Windows.Controls.Canvas> kullanan nesne `handler1` işlemek için. Yalnızca böyle `handler2` mu açıkça işareti olay nesnesiyle işlenmiş olarak.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "54513661"
   
  Çoğu arabirimleri ile iş parçacığı güvenliği aklınızda almayan geliştiriciler varsayım altında çalıştığından, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiçbir zaman birden fazla iş parçacığı tarafından erişilebilir. Bu durumda, tek bir iş parçacığı beklenmeyen zamanlarda ortam değişiklikleri yapabilir, bu hatalı neden, efektler <xref:System.Windows.Threading.DispatcherObject> karşılıklı dışlama mekanizması çözmek gereken. Aşağıdaki sözde kod göz önünde bulundurun:  
   
- ![Yeniden giriş diyagram iş parçacığı](../../../../docs/framework/wpf/advanced/media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Yeniden giriş diyagram iş parçacığı](./media/threadingreentrancy.png "ThreadingReentrancy")  
   
  Çoğu zaman doğru şeyi olan, ancak bazı durumlarda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] burada beklenmeyen tür yeniden giriş gerçekten sorunlara neden olabilir. Bu nedenle, belirli bir anahtar zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çağrıları <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, hangi değişiklikleri kullanılacak iş parçacığı için kilit yönerge [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine yeniden giriş ücretsiz kilit [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] kilit.  
   

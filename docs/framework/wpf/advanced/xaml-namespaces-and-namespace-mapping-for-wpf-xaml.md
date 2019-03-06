@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366614"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığı ve sık WPF XAML dosyasının kök etiketi içinde bulunan iki XAML ad uzayı eşlemelerinden amacını açıklar. Ayrıca, kendi kod ve/veya ayrı derlemeler içinde tanımlanan öğeleri kullanmak için benzer eşlemeleri oluşturmak nasıl açıklar.  
@@ -40,7 +40,7 @@ Bu konuda daha fazla varlığı ve sık WPF XAML dosyasının kök etiketi için
   
  Bu bildirimler arasında ilişki olan `x:` önek eşleştirme XAML dil tanımının bir parçası olan yapı içlerini destekler ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML dil olarak kullanan ve bir sözlüğünü tanımlayan bir uygulaması, XAML için nesne. WPF sözlüğü kullanımları XAML yapı içleri kullanımlarından çok daha yaygın olarak olacağından, WPF sözlük varsayılan olarak eşleştirilir.  
   
- `x:` Ön eki kuralı proje şablonları tarafından izlenen XAML dili yapı içleri desteği için örnek kod ve dil özelliklerinin belgesi içinde [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. XAML ad alanı bile temel WPF uygulamaları için gereklidir, birçok yaygın olarak kullanılan özellikleri tanımlar. Örneğin, kısmi sınıf aracılığıyla bir XAML dosyasını bir arka plan kod birleştirmek için bu sınıf olarak adlandırmalısınız `x:Class` ilgili XAML dosyasının kök öğesindeki özniteliği. Veya, anahtarlı kaynaklar olması gerektiği kadar erişmek istediğiniz XAML sayfası içinde tanımlanmış herhangi bir öğe `x:Key` öznitelik öğe üzerinde söz konusu ayarlayın. Bunlar ve diğer yönleri XAML hakkında daha fazla bilgi için bkz. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) veya [içinde XAML söz dizimi ayrıntı](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ `x:` Ön eki kuralı proje şablonları tarafından izlenen XAML dili yapı içleri desteği için örnek kod ve dil özelliklerinin belgesi içinde [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. XAML ad alanı bile temel WPF uygulamaları için gereklidir, birçok yaygın olarak kullanılan özellikleri tanımlar. Örneğin, kısmi sınıf aracılığıyla bir XAML dosyasını bir arka plan kod birleştirmek için bu sınıf olarak adlandırmalısınız `x:Class` ilgili XAML dosyasının kök öğesindeki özniteliği. Veya, anahtarlı kaynaklar olması gerektiği kadar erişmek istediğiniz XAML sayfası içinde tanımlanmış herhangi bir öğe `x:Key` öznitelik öğe üzerinde söz konusu ayarlayın. Bunlar ve diğer yönleri XAML hakkında daha fazla bilgi için bkz. [XAML genel bakış (WPF)](xaml-overview-wpf.md) veya [içinde XAML söz dizimi ayrıntı](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Özel sınıflar ve derlemeleri eşleme  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] ön eki genellikle eşlenmiş bir tasarımcı ad alanı kullanan `d:`. WPF için daha yeni proje şablonları, XAML arasında değişim desteklemek için bu XAML ad alanı önceden harita [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] ve diğer tasarım ortamları. Bu tasarım XAML ad alanı arasında gidiş dönüş tasarımcıdaki XAML tabanlı UI tasarım durumunu için kullanılır. Ayrıca özellikleri gibi kullanılır `d:IsDataSource`, çalışma zamanı veri kaynakları bir tasarımcıda etkinleştirin.  
   
- Eşlenen başka bir önek görebileceğiniz `mc:`. `mc:` biçimlendirme uyumluluğu içindir ve mutlaka XAML özgü olmayan bir işaretleme uyumluluğu modeli kullanır. Bir ölçüde, yedekleme uygulamasının, diğer sınırları veya çerçeveleri arasında XAML alışverişi özellikleri kullanılabilir işaretleme uyumluluğu XAML şema bağlamları arasında çalışır, sınırlı modlarında tasarımcıları için uyumluluk sağlamak ve benzeri. Biçimlendirme uyumluluğu kavramları ve WPF birbirleriyle hakkında daha fazla bilgi için bkz. [işaretleme uyumluluğu (mc:) Dil özellikleri](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Eşlenen başka bir önek görebileceğiniz `mc:`. `mc:` biçimlendirme uyumluluğu içindir ve mutlaka XAML özgü olmayan bir işaretleme uyumluluğu modeli kullanır. Bir ölçüde, yedekleme uygulamasının, diğer sınırları veya çerçeveleri arasında XAML alışverişi özellikleri kullanılabilir işaretleme uyumluluğu XAML şema bağlamları arasında çalışır, sınırlı modlarında tasarımcıları için uyumluluk sağlamak ve benzeri. Biçimlendirme uyumluluğu kavramları ve WPF birbirleriyle hakkında daha fazla bilgi için bkz. [işaretleme uyumluluğu (mc:) Dil özellikleri](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF ve derleme yükleme  
  WPF için XAML şema içeriği hangi sırayla CLR tanımlı kavramını kullanır WPF uygulaması modelle tümleştirir <xref:System.AppDomain>. Aşağıdaki sırayı nasıl XAML şema içeriği derlemeler yüklemek ya da WPF kullanıma bağlı çalıştırma veya tasarım zamanı türlerini bulmak nasıl yorumlayacağını açıklayan <xref:System.AppDomain> ve diğer etkenlere bağlı.  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [XML ad alanları anlama](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556984"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367576"
 ---
 # <a name="tooltip"></a>ToolTip
-Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu zaman görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>.  
+Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde durakladığında görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>.  
   
- Aşağıdaki çizimde işaret eden bir fare işaretçisini gösterir **Kapat**<xref:System.Windows.Controls.Button>, kendi tanımlama, daha sonra görüntüler <xref:System.Windows.Controls.ToolTip>.  
+ Fare işaretçisi işaret eden aşağıdaki çizimde **Kapat**<xref:System.Windows.Controls.Button>, daha sonra kendi tanımlayan görüntüler <xref:System.Windows.Controls.ToolTip>.  
   
  Görüntülenen araç ipucu ile Kapat düğmesi  
   
- ![Araç İpucu ekran görüntüsü](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![Araç İpucu ekran](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Araç İpucuna Genel Bakış](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [Araç İpucuna Genel Bakış](tooltip-overview.md)  
+  [Nasıl Yapılır Konuları](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu 
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Açılan Pencereye Genel Bakış](popup-overview.md)  
+  [Nasıl Yapılır Konuları](popup-how-to-topics.md)

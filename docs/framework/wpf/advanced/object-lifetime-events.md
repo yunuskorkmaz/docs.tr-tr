@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371495"
 ---
 # <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları
 Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşamaları oluşturma, kullanma ve yok etme, bir nesnenin yaşam süresini belirtmek olayları.  
@@ -38,7 +38,7 @@ Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../include
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) konu. Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
+ Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md) konu. Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](xaml-overview-wpf.md)) ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları  
@@ -68,12 +68,12 @@ Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../include
 ## <a name="lifetime-events-application-model-elements"></a>Yaşam süresi olayları uygulama modeli öğeleri  
  Öğeleri aşağıdaki uygulama model öğeleri için ortak yaşam süresi olayları oluşturma: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>. Bu ortak ömür olayları, belirli bir amaç için uygun olan diğer olayları ile genişletin. Bunlar aşağıdaki konumlarda ayrıntılı ele alınmıştır:  
   
--   <xref:System.Windows.Application>: [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <xref:System.Windows.Application>: [Uygulama Yönetimine Genel Bakış](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [WPF Windows genel bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <xref:System.Windows.Window>: [WPF Windows genel bakış](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezintiye genel bakış](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Bağımlılık Özelliği Değer Önceliği](dependency-property-value-precedence.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567197"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373497"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap yöntemi
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>Parametreler
 
-`mapLen` [in] Sağlanan haritalar dizinin uzunluğu.
+`mapLen`\
+[in] Sağlanan haritalar dizinin uzunluğu.
 
-`mapNeeded` [out] Gereken yöntemini eşleme girişleri sayısı.
+`mapNeeded`\
+[out] Gereken yöntemini eşleme girişleri sayısı.
 
-`maps` [out, size_is(mapLen)] Eşleme girişleri depolamak için dizi.
+`maps`\
+[out, size_is(mapLen)] Eşleme girişleri depolamak için dizi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -59,5 +62,5 @@ Sağlanan yöntem parçasıdır `IXCLRDataMethodInstance` arabirim ve sanal yön
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataMethodInstance arabirimi](ixclrdatamethodinstance-interface.md)

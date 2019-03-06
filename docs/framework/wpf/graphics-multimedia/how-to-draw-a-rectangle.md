@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363754"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Nasıl yapılır: Dikdörtgen Çizme
 Bu örnek gösterir kullanarak bir dikdörtgen çizmek nasıl <xref:System.Windows.Shapes.Rectangle> öğesi.  
@@ -23,14 +23,14 @@ Bu örnek gösterir kullanarak bir dikdörtgen çizmek nasıl <xref:System.Windo
  Aşağıdaki örnekte, iki <xref:System.Windows.Shapes.Rectangle> öğeleri çizilmiştir bir <xref:System.Windows.Controls.Canvas>. İlk dikdörtgen sahip bir <xref:System.Windows.Media.Brushes.Blue%2A> iç. İkinci dikdörtgeni sahip bir <xref:System.Windows.Media.Brushes.Blue%2A> iç, bir <xref:System.Windows.Media.Brushes.Black%2A> yuvarlatılmış köşeler ve ana hat.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- Bu örnek kullansa da bir <xref:System.Windows.Controls.Canvas> dikdörtgenler içermek için dikdörtgen öğelerini (ve diğer tüm şekil öğelerine) ile kullanabilirsiniz <xref:System.Windows.Controls.Panel> veya <xref:System.Windows.Controls.Control> , metin olmayan içerikleri destekler. Aslında, dikdörtgenler kısımları için arka plan sağlamak için özellikle yararlıdır <xref:System.Windows.Controls.Grid> panelleri. Bir örnek için bkz. [tabloya genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ Bu örnek kullansa da bir <xref:System.Windows.Controls.Canvas> dikdörtgenler içermek için dikdörtgen öğelerini (ve diğer tüm şekil öğelerine) ile kullanabilirsiniz <xref:System.Windows.Controls.Panel> veya <xref:System.Windows.Controls.Control> , metin olmayan içerikleri destekler. Aslında, dikdörtgenler kısımları için arka plan sağlamak için özellikle yararlıdır <xref:System.Windows.Controls.Grid> panelleri. Bir örnek için bkz. [tabloya genel bakış](../advanced/table-overview.md).  
   
  Bu örnek, daha büyük bir örnek bir parçasıdır; tam bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Shapes.Rectangle>
 - [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Tabloya Genel Bakış](../advanced/table-overview.md)

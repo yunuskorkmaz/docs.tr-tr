@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748108"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356513"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
@@ -40,19 +40,19 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 |Görev|Yaklaşım|  
 |----------|--------------|  
 |Geçerli uygulamanın temsil eden bir nesne alma|Kullanım <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> özelliği.|  
-|Uygulama giriş ekranı ekleme|Bkz: [WPF uygulamasına giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).|  
+|Uygulama giriş ekranı ekleme|Bkz: [WPF uygulamasına giriş ekranı ekleme](how-to-add-a-splash-screen-to-a-wpf-application.md).|  
 |Uygulama başlatma|Kullanım <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> yöntemi.|  
 |Bir uygulamayı Durdur|Kullanım <xref:System.Windows.Application.Shutdown%2A> yöntemi <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> nesne.|  
 |Komut satırından bağımsız değişkenleri Al|Tanıtıcı <xref:System.Windows.Application.Startup?displayProperty=nameWithType> olay ve kullanım <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> özelliği. Bir örnek için bkz <xref:System.Windows.Application.Startup?displayProperty=nameWithType> olay.|  
 |GET ve set uygulama çıkış kodu|Ayarlama <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> özelliğinde <xref:System.Windows.Application.Exit?displayProperty=nameWithType> olay işleyicisi veya çağrı <xref:System.Windows.Application.Shutdown%2A> yöntemi ve bir tamsayı geçirin.|  
 |Algılama ve yanıtlama işlenmeyen özel durumlar|Tanıtıcı <xref:System.Windows.Application.DispatcherUnhandledException> olay.|  
 |Alma ve uygulama kapsamı kaynak ayarlama|Kullanım <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> özelliği.|  
-|Bir uygulama kapsamı kaynak sözlüğü kullanma|Bkz: [bir uygulama kapsamı kaynak sözlüğü kullanma](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md).|  
+|Bir uygulama kapsamı kaynak sözlüğü kullanma|Bkz: [bir uygulama kapsamı kaynak sözlüğü kullanma](how-to-use-an-application-scope-resource-dictionary.md).|  
 |Alma ve uygulama kapsamlı özelliklerini ayarlama|Kullanım <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> özelliği.|  
-|Uygulama durumunu Kaydet ve Al|Bkz: [koruma ve uygulama oturumları arasında uygulama kapsamı özelliklerini geri yükleme](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
-|Kod dışı veri dosyaları, kaynak dosyaları, içerik dosyalarını ve kaynak site dosyaları dahil olmak üzere yönetin.|Bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Windows'da tek başına uygulamaları yönetme|Bkz: [WPF Windows genel bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
-|İzleme ve gezinti yönetme|Bkz: [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
+|Uygulama durumunu Kaydet ve Al|Bkz: [koruma ve uygulama oturumları arasında uygulama kapsamı özelliklerini geri yükleme](persist-and-restore-application-scope-properties.md).|  
+|Kod dışı veri dosyaları, kaynak dosyaları, içerik dosyalarını ve kaynak site dosyaları dahil olmak üzere yönetin.|Bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](wpf-application-resource-content-and-data-files.md).|  
+|Windows'da tek başına uygulamaları yönetme|Bkz: [WPF Windows genel bakış](wpf-windows-overview.md).|  
+|İzleme ve gezinti yönetme|Bkz: [gezintiye genel bakış](navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>Uygulama tanımı  
@@ -63,16 +63,16 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Aşağıdaki örnek, biçimlendirme hem de arka plan kod kullanarak bir uygulama tanımı uygulamak gösterilmektedir:  
   
- [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
- [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
- [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
+ [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
+ [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
  İşaretleme dosyasının ve birlikte çalışması için arka plan kod dosyasında, aşağıdaki izin vermek için yapılması gerekir:  
   
 - Biçimlendirme içinde `Application` öğesi içermelidir `x:Class` özniteliği. Ne zaman uygulama oluşturulduğuna göre varlığını `x:Class` işaretlemede dosyası oluşturmak MSBuild neden olur. bir `partial` türetilen sınıf <xref:System.Windows.Application> ve tarafından belirtilen ada sahip `x:Class` özniteliği. Bu XAML şema için bir XML ad alanı bildirimi eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` öznitelik, biçimlendirmede ve öğesinden türetilmelidir <xref:System.Windows.Application>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Arka plan, kod sınıfı olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` öznitelik, biçimlendirmede ve öğesinden türetilmelidir <xref:System.Windows.Application>. Bu arka plan kod dosyası ile ilişkili olmasını sağlar `partial` uygulama oluşturulduğunda işaretleme dosyasının için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Yeni bir WPF uygulaması veya Visual Studio kullanarak WPF tarayıcı uygulaması projesi oluşturduğunuzda, uygulama tanımı varsayılan olarak dahil edilir ve biçimlendirme hem de arka plan kod kullanılarak tanımlanır.  
@@ -110,13 +110,13 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Aşağıdaki kod, bir başvuru almak gösterilmektedir <xref:System.Windows.Application> geçerli nesne <xref:System.AppDomain>.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
  <xref:System.Windows.Application.Current%2A> örneğine bir başvuru döndürür <xref:System.Windows.Application> sınıfı. Bir başvuru istiyorsanız, <xref:System.Windows.Application> türetilmiş sınıf değerini cast gerekir <xref:System.Windows.Application.Current%2A> özelliği, aşağıdaki örnekte gösterildiği gibi.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
  Değerini inceleyebilirsiniz <xref:System.Windows.Application.Current%2A> ömrünü herhangi bir noktada bir <xref:System.Windows.Application> nesne. Ancak, dikkatli olmanız gerekir. Sonra <xref:System.Windows.Application> sınıf örneği, bir dönemde durumunu <xref:System.Windows.Application> nesnesi tutarsız. Bu süre boyunca <xref:System.Windows.Application> uygulama altyapısı oluşturma, özellikleri ayarlama ve olayları kaydetme gibi tarafından kodunuzu çalıştırmak için gereken çeşitli başlatma görevleri gerçekleştirme. Kullanmayı denerseniz <xref:System.Windows.Application> nesne bu dönemde kodunuzu olabilir beklenmeyen sonuçlara, özellikle çeşitli bağımlı olması durumunda <xref:System.Windows.Application> ayarlanan özellikler.  
   
@@ -129,7 +129,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Giriş Ekranı  
- İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../../../../docs/framework/wpf/advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Uygulama başlatma  
@@ -144,35 +144,35 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="showing-a-user-interface"></a>Bir kullanıcı arabirimi gösterme  
  Çoğu tek başına Windows uygulamalarını bir <xref:System.Windows.Window> çalışmaya başladığında çalışıyor. <xref:System.Windows.Application.Startup> Olay işleyicisi, aşağıdaki kodda gösterildiği gibi bunu yapabilirsiniz, tek bir konumda olduğundan.  
   
- [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
- [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
- [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
+ [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
+ [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
 >  İlk <xref:System.Windows.Window> uygulama içinde tek başına bir örneği için varsayılan olarak ana uygulama penceresini olur. Bu <xref:System.Windows.Window> nesne tarafından başvurulan <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> özelliği. Değerini <xref:System.Windows.Application.MainWindow%2A> özelliği değiştirilebilir programlı olarak farklı bir pencere, ilk örneği <xref:System.Windows.Window> ana pencereyi olmalıdır.  
   
  Bir XBAP ilk kez başlatıldığında, büyük olasılıkla gider bir <xref:System.Windows.Controls.Page>. Bu aşağıdaki kod gösterilmektedir.  
   
- [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
- [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
- [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
+ [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
+ [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
  İşliyorsanız <xref:System.Windows.Application.Startup> yalnızca açmak için bir <xref:System.Windows.Window> veya gidin bir <xref:System.Windows.Controls.Page>, ayarlayabileceğiniz `StartupUri` işaretlemede yerine özniteliği.  
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Application.StartupUri%2A> açmak için bir tek başına uygulamasından bir <xref:System.Windows.Window>.  
   
- [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Application.StartupUri%2A> gitmek için bir XBAP gelen bir <xref:System.Windows.Controls.Page>.  
   
- [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  Bu işaretleme, önceki kod bir pencerede açmak için aynı etkiye sahiptir.  
   
 > [!NOTE]
->  Gezinti hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  Gezinti hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
   
  İşlemeniz gereken <xref:System.Windows.Application.Startup> olayı açmak için bir <xref:System.Windows.Window> varsayılan olmayan bir Oluşturucu kullanarak örneği oluşturmak ihtiyacınız özelliklerini ayarlayın veya onu göstermeden önce olaylara abone olması veya herhangi bir komut satırı bağımsız değişkeni işlemek için ihtiyacınız varsa, uygulama başlatıldığında sağlandı.  
   
@@ -184,14 +184,14 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Uygulama başlatma sırasında WPF işletim sisteminden komut satırı bağımsız değişkenleri alır ve bunları geçirmeden <xref:System.Windows.Application.Startup> aracılığıyla olay işleyicisi <xref:System.Windows.StartupEventArgs.Args%2A> özelliği <xref:System.Windows.StartupEventArgs> parametresi. Alabilir ve aşağıdaki gibi bir kod kullanarak komut satırı bağımsız değişkenleri depolayın.  
   
- [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
- [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
- [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+ [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
  Kod tutamaçları <xref:System.Windows.Application.Startup> denetlemek için olup olmadığını **/StartMinimized** komut satırı bağımsız değişkeni belirtildi; bu durumda, ana penceresi açılır. bir <xref:System.Windows.WindowState> , <xref:System.Windows.WindowState.Minimized>. Dikkat edin çünkü <xref:System.Windows.Window.WindowState%2A> özelliği ayarlanmalıdır programlı olarak ana <xref:System.Windows.Window> kodda açıkça açılması gerekir.  
   
- XBAP'ler almak ve ClickOnce dağıtımını kullanarak tasarlandıkça olduğundan işlem komut satırı bağımsız değişkenleri (bkz [bir WPF uygulamasını dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Ancak, almak ve bunları başlatmak için kullanılan URL sorgu dizesi parametreleri işlem.  
+ XBAP'ler almak ve ClickOnce dağıtımını kullanarak tasarlandıkça olduğundan işlem komut satırı bağımsız değişkenleri (bkz [bir WPF uygulamasını dağıtma](deploying-a-wpf-application-wpf.md)). Ancak, almak ve bunları başlatmak için kullanılan URL sorgu dizesi parametreleri işlem.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Uygulama etkinleştirme ve devre dışı bırakma  
@@ -213,10 +213,10 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Aşağıdaki kod nasıl işleneceğini gösterir <xref:System.Windows.Application.Activated> ve <xref:System.Windows.Application.Deactivated> olayları uygulama etkin olup olmadığını belirlemek için.  
   
- [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
- [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
- [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
  A <xref:System.Windows.Window> de etkin ve devre dışı bırakıldı. Bkz: <xref:System.Windows.Window.Activated?displayProperty=nameWithType> ve <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> daha fazla bilgi için.  
   
@@ -251,12 +251,12 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Varsayılan değer olan <xref:System.Windows.Application.ShutdownMode%2A> olduğu <xref:System.Windows.ShutdownMode.OnLastWindowClose>, uygulamanın son penceresinde kullanıcı tarafından kapatıldığında, bir uygulama otomatik olarak kapanır anlamına gelir. Ana pencere kapatıldığında, uygulamanızın kapatılmalıdır, ayarlarsanız ancak WPF otomatik olarak yapar <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Bu, aşağıdaki örnekte gösterilir.  
   
- [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  Uygulamaya özgü kapatma koşullar varsa, ayarladığınız <xref:System.Windows.Application.ShutdownMode%2A> için <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. Bu durumda, onu açıkça çağırarak bir uygulamayı kapatmak için sizin sorumluluğunuzdur <xref:System.Windows.Application.Shutdown%2A> yöntemi; Aksi halde, uygulamanız tüm pencereler kapatılırsa bile çalışmaya devam edecek. Unutmayın <xref:System.Windows.Application.Shutdown%2A> örtük olarak çağırılamaz zaman <xref:System.Windows.Application.ShutdownMode%2A> ya da <xref:System.Windows.ShutdownMode.OnLastWindowClose> veya <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> bir XBAP ayarlanabilir, ancak göz ardı edilir; Bunu bir tarayıcıda veya XBAP barındıran tarayıcı kapatıldığında çıkıldığında, bir XBAP her zaman kapatılır. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A> bir XBAP ayarlanabilir, ancak göz ardı edilir; Bunu bir tarayıcıda veya XBAP barındıran tarayıcı kapatıldığında çıkıldığında, bir XBAP her zaman kapatılır. Daha fazla bilgi için [gezintiye genel bakış](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Oturum sonlandırılıyor  
  Tarafından açıklanan kapatma koşulları <xref:System.Windows.Application.ShutdownMode%2A> özelliği uygulamaya özeldir. Bazı durumlarda, yine de bir uygulama sonucu olarak bir dış koşul kapatılabilir. Bir kullanıcı Windows oturumu şu eylemleri sona erdiğinde en yaygın dış durum meydana gelir:  
@@ -271,10 +271,10 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Windows oturumu sona erdiğinde algılamak için işleyebilirsiniz <xref:System.Windows.Application.SessionEnding> aşağıdaki örnekte gösterildiği gibi olay.  
   
- [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
- [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
- [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
+ [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
+ [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
  Bu örnekte, kodu inceler <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> nasıl Windows oturumu sona belirlemek için özellik. Kullanıcıya bir onay iletisi göstermek için bu değeri kullanır. Kullanıcı oturumunu sona erdirmek için istemezse, kod ayarlar <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> için `true` bitiş'den Windows oturumu önlemek için.  
   
@@ -289,7 +289,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- Tam bir örnek için bkz. [kalan ve geri yükleme uygulama kapsamı özellikleri arasında uygulama oturumları](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
+ Tam bir örnek için bkz. [kalan ve geri yükleme uygulama kapsamı özellikleri arasında uygulama oturumları](persist-and-restore-application-scope-properties.md).  
   
  <xref:System.Windows.Application.Exit> tek başına uygulamalar ve XBAP'ler tarafından işlenebilir. XBAP'ler için <xref:System.Windows.Application.Exit> , aşağıdaki koşullarda ortaya çıkar:  
   
@@ -311,8 +311,8 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
  Çıkış kodu değiştirmek için çağırabilirsiniz <xref:System.Windows.Application.Shutdown%28System.Int32%29> çıkış kodu olacak tamsayı bağımsız değişken kabul eden aşırı yükleme:  
   
- [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
- [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
+ [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
+ [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
  Çıkış kodu değerini algılamak ve değiştirmesini işleyerek <xref:System.Windows.Application.Exit> olay. <xref:System.Windows.Application.Exit> Olay işleyicisine geçirilen bir <xref:System.Windows.ExitEventArgs> çıkış kodu ile erişimi sağlayan <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> özelliği. Daha fazla bilgi için bkz. <xref:System.Windows.Application.Exit>.  
   
@@ -323,7 +323,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="unhandled-exceptions"></a>İşlenmeyen özel durumları  
  Bazen bir uygulama gibi beklenmeyen özel durum oluştuğunda aşağı altında anormal koşullar kapatın. Bu durumda, uygulama algılama ve özel durumu işlemek için kod olmayabilir. Bu özel durum işlenmemiş bir özel durum türüdür; Uygulama kapatılmadan hemen önce aşağıdaki şekilde gösterilen benzer bir bildirim görüntülenir.  
   
- ![İşlenmeyen özel durum bildirimini](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![İşlenmeyen özel durum bildirimini](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
   
  Kullanıcı deneyimi açısından daha iyi bir uygulamanın bazı veya tüm aşağıdakileri yaparak bu varsayılan davranışı önlemek:  
   
@@ -337,8 +337,8 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 [!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
-[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
-[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  <xref:System.Windows.Application.DispatcherUnhandledException> Olay işleyicisine geçirilen bir <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> durum da dahil olmak üzere işlenmeyen özel durumla ilgili bağlamsal bilgileri içeren bir parametre (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). Özel durumu işlemek nasıl belirlemek için bu bilgileri kullanabilirsiniz.  
   
@@ -350,17 +350,17 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="application-lifetime-events"></a>Uygulama yaşam süresi olayları  
  Tek başına uygulamalar ve XBAP'ler tam olarak aynı yaşam süresi yok. Aşağıdaki şekilde, bir tek başına uygulama kullanım ömrü içinde anahtar olayları gösterir ve bunlar yükseltilir dizisini gösterir.  
   
- ![Tek başına uygulama &#45; uygulama nesnesi olayları](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
+ ![Tek başına uygulama &#45; uygulama nesnesi olayları](./media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
  Benzer şekilde, aşağıdaki şekilde bir XBAP ömrünü anahtar olayları gösterir ve bunlar yükseltilir dizisini gösterir.  
   
- ![XBAP &#45; uygulama nesnesi olayları](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
+ ![XBAP &#45; uygulama nesnesi olayları](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Application>
-- [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
-- [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)
-- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
-- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF Windows'a Genel Bakış](wpf-windows-overview.md)
+- [Gezintiye Genel Bakış](navigation-overview.md)
+- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](wpf-application-resource-content-and-data-files.md)
+- [WPF İçinde URI'leri Paketleme](pack-uris-in-wpf.md)
 - [Uygulama modeli: Nasıl Yapılır Konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)
+- [Uygulama Geliştirme](index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353601"
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 Bu konu nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, zaman alıcı bir işlem bir kullanıcı Arabirimi yerelleştirmesi oluştu. Kullanıcı Arabirimi için uyarlandığı her bir dilin piksel piksel ayarlama gereklidir. Doğru tasarıma ve doğru kodlama standartları ile Bugün [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] yerelleştiriciler yeniden boyutlandırma ve yeniden konumlandırma yapmak için daha az olması oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamalar yazma yaklaşım otomatik düzen olarak adlandırılır ve kullanarak gerçekleştirilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarım.  
@@ -33,15 +33,15 @@ Bu konu nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıt�
 ## <a name="automatic-layout-and-controls"></a>Otomatik Düzen ve denetimler  
  Otomatik Düzen bir denetimin boyutunu otomatik olarak ayarlamasına olanak sağlar. Örneğin, bir denetimi, bir dizenin uzunluğunu uyum sağlayacak şekilde değiştirebilirsiniz. Bu özellik, dize çevrilecek yerelleştiriciler sağlar; Bunlar artık çevrilmiş metin sığdırmak için yeniden boyutlandırma gerekir. Aşağıdaki örnek, bir düğme ile İngilizce içeriği oluşturur.  
   
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  Örnekte, İspanyolca bir düğme oluşturmak için yapmanız gereken tek şey metni değiştirme. Örneğin,  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  Aşağıdaki grafikte, kod örnekleri çıktısını gösterir.  
   
- ![Farklı dillerde aynı düğmenin](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![Farklı dillerde aynı düğmenin](./media/globalizationbutton.png "GlobalizationButton")  
 Otomatik yeniden boyutlandırılabilir düğmesi  
   
 <a name="autolayout_coding"></a>   
@@ -54,13 +54,13 @@ Otomatik yeniden boyutlandırılabilir düğmesi
 
 - Kullanım <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, ve <xref:System.Windows.Controls.Grid> denetimleri konumlandırmak için.
 
-Çeşitli türlerde panolar hakkında bir tartışma için bkz. [panellere genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md).
+Çeşitli türlerde panolar hakkında bir tartışma için bkz. [panellere genel bakış](../controls/panels-overview.md).
 
 **Bir pencere için sabit bir boyuta ayarlı değil**
 
 - Kullanım <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Örneğin:
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
 **Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
@@ -92,22 +92,22 @@ Otomatik yeniden boyutlandırılabilir düğmesi
 ## <a name="automatic-layout-and-grids"></a>Otomatik Düzen ve Kılavuzlar  
  <xref:System.Windows.Controls.Grid> Öğeleri konumlandırmak bir geliştirici sağladığından öğesi, otomatik düzen için yararlıdır. A <xref:System.Windows.Controls.Grid> denetimidir kullanılabilir alan bir sütun ve satır düzenlemeyi kullanarak, kendi alt öğeleri arasında dağıtma özelliğine sahiptir. Kullanıcı Arabirimi öğeleri birden çok hücre yayılabilir ve Kılavuzlar Kılavuzlar içinde olması mümkündür. Kılavuzlar, oluşturmayı ve karmaşık UI konumlandırmayı etkinleştirmek için kullanışlıdır. Aşağıdaki örnek, bazı düğme ve metin konumlandırmak için bir kılavuz kullanmayı gösterir. Hücre genişliği ve yüksekliği ayarlandığından bildirimi <xref:System.Windows.GridUnitType.Auto>; bu nedenle, resim sığacak şekilde düğmesi bir görüntü içeren hücreye ayarlanır.  
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  Aşağıdaki grafikte önceki kod tarafından üretilen kılavuz gösterir.  
   
- ![Grid örneği](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Grid örneği](./media/glob-grid.png "glob_grid")  
 Kılavuz  
   
 <a name="autolay_grids_issharedsizescope"></a>   
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Otomatik Düzen ve Kılavuzlar IsSharedSizeScope özelliğini kullanma  
  A <xref:System.Windows.Controls.Grid> öğesi, içeriğin sığacağı şekilde ayarlama denetimler oluşturmak için yerelleştirilebilir uygulamalarda kullanışlıdır. Ancak, denetimlerin içeriği ne olursa olsun, belirli bir boyutu korumak için istediğiniz zaman zaman. Örneğin, "Tamam" varsa, "İptal" ve "düğmeleri İçeriği sığdırmak için büyük olasılıkla istemezsiniz düğmeleri göz at". Bu durumda <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> ekli özellik aynı boyutlandırma birden çok kılavuz öğesinin arasında paylaşmak için yararlıdır. Aşağıdaki örnek, sütun ve satır boyutlandırma birden çok arasında veri paylaşmayı gösterilmiştir <xref:System.Windows.Controls.Grid> öğeleri.  
   
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Not** tam kod örneği için bkz. [arasında boyutlandırma özelliklerini Kılavuzlar paylaşımı](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **Not** tam kod örneği için bkz. [arasında boyutlandırma özelliklerini Kılavuzlar paylaşımı](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Düğme Oluşturmak için Otomatik Düzeni Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Otomatik Düzen için Kılavuz Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [WPF için Genelleştirme](globalization-for-wpf.md)
+- [Düğme Oluşturmak için Otomatik Düzeni Kullanma](how-to-use-automatic-layout-to-create-a-button.md)
+- [Otomatik Düzen için Kılavuz Kullanma](how-to-use-a-grid-for-automatic-layout.md)

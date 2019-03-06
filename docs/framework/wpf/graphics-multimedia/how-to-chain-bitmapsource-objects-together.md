@@ -9,20 +9,20 @@ helpviewer_keywords:
 - graphics [WPF], chaining BitmapSource objects
 - chaining BitmapSource objects [WPF]
 ms.assetid: 32d88853-395b-4855-9685-51a482a3b421
-ms.openlocfilehash: 5c70b6ec132234959404203fb62567ddb0acf762
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 403a2a8683e65fd71df89befd59744ac3fe6200c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558871"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377527"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Nasıl yapılır: BitmapSource Nesnelerini Birbirlerine Bağlayarak Zincir Oluşturma
-Bu örnek bir görüntü kaynağı zincirleme tarafından çeşitli efektleri nasıl uygulayabileceğiniz birden çok gösterir <xref:System.Windows.Media.Imaging.BitmapSource> nesnelerin araya türetilmiş.  
+Bu örnek birden çok görüntü kaynağı için zincirleme tarafından etkileri çeşitli nasıl uygulayabileceğiniz gösterir <xref:System.Windows.Media.Imaging.BitmapSource> birlikte türetilmiş nesneler.  
   
- Aşağıdaki örnek, ters çevirmek ve kaynak görüntüsünün piksel biçimini değiştirmek için zincirleme kullanır.  
+ Aşağıdaki örnek, çevirme ve görüntü kaynağını piksel biçimini değiştirmek için zincirleme kullanır.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[ImagingSnippetGallery_snip#ChainedBitmapSourcesXamlExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/ChainedBitmapSourcesExample.xaml#chainedbitmapsourcesxamlexamplewholepage)]  
+ [!code-xaml[ImagingSnippetGallery_snip#ChainedBitmapSourcesXamlExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/ChainedBitmapSourcesExample.xaml#chainedbitmapsourcesxamlexamplewholepage)]  
   
- [!code-csharp[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/ChainedBitmapSourcesExample.cs#chainedbitmapsourcescodeexamplewholepage)]
- [!code-vb[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/ChainedBitmapSourcesExample.vb#chainedbitmapsourcescodeexamplewholepage)]
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/ChainedBitmapSourcesExample.cs#chainedbitmapsourcescodeexamplewholepage)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/ChainedBitmapSourcesExample.vb#chainedbitmapsourcescodeexamplewholepage)]

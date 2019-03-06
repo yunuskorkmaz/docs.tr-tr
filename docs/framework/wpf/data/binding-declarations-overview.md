@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363432"
 ---
 # <a name="binding-declarations-overview"></a>Bağlama Bildirimlerine Genel Bakış
 Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.  
@@ -26,9 +26,9 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda okumadan önce kavram ve biçimlendirme uzantısı kullanımı ile tanıdık önemlidir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Bu konuda okumadan önce kavram ve biçimlendirme uzantısı kullanımı ile tanıdık önemlidir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
   
- Bu konuda, veri bağlama kavramları kapsamaz. Veri bağlama kavramları hakkında bilgi için bkz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Bu konuda, veri bağlama kavramları kapsamaz. Veri bağlama kavramları hakkında bilgi için bkz [Data Binding Overview](data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>XAML bağlamasında bildirme  
@@ -40,9 +40,9 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
   
  Bağlama bildirimi dizeleri biçimlendirme içinde oluştururken, hedef nesnenin belirli bir bağımlılık özelliği için bağlanmalıdır. Aşağıdaki örnek nasıl bağlanacağını gösterir <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> bağlama uzantısı kullanarak, belirtme özelliği <xref:System.Windows.Data.Binding.Source%2A> ve <xref:System.Windows.Data.Binding.Path%2A> özellikleri.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Özelliklerinin çoğunu belirtebilirsiniz <xref:System.Windows.Data.Binding> bu şekilde sınıfı. Listesi hem de bağlama uzantıları hakkında daha fazla bilgi için <xref:System.Windows.Data.Binding> bağlama uzantısı kullanılarak ayarlanamaz özellikleri görmek [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) genel bakış.  
+ Özelliklerinin çoğunu belirtebilirsiniz <xref:System.Windows.Data.Binding> bu şekilde sınıfı. Listesi hem de bağlama uzantıları hakkında daha fazla bilgi için <xref:System.Windows.Data.Binding> bağlama uzantısı kullanılarak ayarlanamaz özellikleri görmek [Binding Markup Extension](../advanced/binding-markup-extension.md) genel bakış.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Nesne öğesi sözdizimi  
@@ -50,11 +50,11 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
   
  Nesne öğesi sözdizimi hem biçimlendirme uzantısı kullanımı örneği verilmiştir:  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  Örnek bağlar <xref:System.Windows.Controls.TextBlock.Foreground%2A> özelliğini uzantısı sözdizimi kullanarak bir bağlama bildirme. Bağlama bildirimi için <xref:System.Windows.Controls.TextBlock.Text%2A> özelliği nesne öğesi sözdizimi kullanır.  
   
- Farklı koşullar hakkında daha fazla bilgi için bkz. [içinde XAML söz dizimi ayrıntı](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Farklı koşullar hakkında daha fazla bilgi için bkz. [içinde XAML söz dizimi ayrıntı](../advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding ve PriorityBinding  
@@ -64,10 +64,10 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
 ## <a name="creating-a-binding-in-code"></a>Kod içinde bağlama oluşturma  
  Doğrudan özelliklerini ayarlamak için bir bağlama belirtmenin başka bir yolu olan bir <xref:System.Windows.Data.Binding> kod nesnesi. Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Data.Binding> nesne ve kodda özellikleri belirtin.  Bu örnekte, `TheConverter` uygulayan bir nesnedir <xref:System.Windows.Data.IValueConverter> arabirimi.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Dosyalar bağladığınız nesne ise bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> çağırabilirsiniz `SetBinding` yöntemi kullanmak yerine doğrudan nesneniz üzerinde <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Bir örnek için bkz. [kod içinde bağlama oluşturma](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Dosyalar bağladığınız nesne ise bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> çağırabilirsiniz `SetBinding` yöntemi kullanmak yerine doğrudan nesneniz üzerinde <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Bir örnek için bkz. [kod içinde bağlama oluşturma](how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Bağlama yolu sözdizimi  
@@ -119,14 +119,14 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
   
 -   Ayarlanmamış olması halinde <xref:System.Windows.Data.Binding.ConverterCulture%2A>, bağlama altyapısı kullanır `Language` bağlama hedef nesnenin özellik. XAML, bu "en-US" varsayılan olarak veya bir açıkça alındıysa değerin kök öğe (veya herhangi bir öğe) sayfasının devralır.  
   
--   Bağlama sürece zaten bir veri bağlamı (örneğin, bir üst öğeden gelen devralınan veri bağlamından) varsa ve seçtiğiniz öğe veya bu bağlam tarafından iade edilen koleksiyon daha fazla yolu değiştirilmesine gerek kalmadan bağlama için uygun olan bir bildirimi bağlama hiçbir yan tümceye sahip neden: `{Binding}` Bu genellikle bir bağlama verileri, burada bir koleksiyon bağlama gibi stil oluşturma için belirtilen yoludur. Daha fazla bilgi için bkz. "Tüm nesnelerin kaynak olarak kullanılan bir bağlama" bölümünde [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Bağlama sürece zaten bir veri bağlamı (örneğin, bir üst öğeden gelen devralınan veri bağlamından) varsa ve seçtiğiniz öğe veya bu bağlam tarafından iade edilen koleksiyon daha fazla yolu değiştirilmesine gerek kalmadan bağlama için uygun olan bir bildirimi bağlama hiçbir yan tümceye sahip neden: `{Binding}` Bu genellikle bir bağlama verileri, burada bir koleksiyon bağlama gibi stil oluşturma için belirtilen yoludur. Daha fazla bilgi için bkz. "Tüm nesnelerin kaynak olarak kullanılan bir bağlama" bölümünde [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
   
 -   Varsayılan <xref:System.Windows.Data.Binding.Mode%2A> arasında tek yönlü ve çift yönlü bağlı olduğu bağımlılık özelliği bağlı olarak değişir. Bağlama modu, açıkça bağlamanız istenen davranışı olduğundan emin olmak için her zaman bildirebilirsiniz. Genel, kullanıcı tarafından düzenlenebilen denetim özellikleri gibi <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ve <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, diğer özelliklerin çoğu tek yönlü bağlamalar ise iki yönlü bağlamaları için varsayılan.  
   
 -   Varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değeri arasında değişir <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> ve <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> ilişkili bağımlılık özelliği de bağlı olarak. Bağımlılık özelliklerinin çoğu için varsayılan değerdir <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, ancak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> özelliği varsayılan değerine sahip <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [PropertyPath XAML Söz Dizimi](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
+- [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)
+- [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
+- [PropertyPath XAML Söz Dizimi](../advanced/propertypath-xaml-syntax.md)

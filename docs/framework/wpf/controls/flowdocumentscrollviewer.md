@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 307c8e86ac6834631ba4086de5d7e27c0e32b87b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366718"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 <xref:System.Windows.Controls.FlowDocumentScrollViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> kaydırma kapsayıcısındaki içerik. İle Karşıtlık <xref:System.Windows.Controls.FlowDocumentPageViewer>, sayfa başına temelinde içeriği görüntüler.  
@@ -22,5 +22,5 @@ ms.locfileid: "54593998"
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Documents.FlowDocument>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF'deki Belgeler](../advanced/documents-in-wpf.md)
+- [Akış Belgesine Genel Bakış](../advanced/flow-document-overview.md)

@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709500"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379126"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)
 Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay ve sezgisel bir şekilde yazabilirsiniz. Zaman uyumlu kod gibi görünen zaman uyumsuz kod yazabilir ve zor geri çağırma işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar derleyici olanak tanır.  
@@ -47,7 +47,7 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
 ## <a name="prerequisites"></a>Önkoşullar  
  Bilgisayarınızda Visual Studio 2012 veya üzeri yüklenmelidir. Daha fazla bilgi için [Microsoft Web sitesi](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
-###  <a name="CreateWPFApp"></a> Bir WPF uygulaması oluşturmak için  
+### <a name="CreateWPFApp"></a> Bir WPF uygulaması oluşturmak için  
   
 1.  Visual Studio’yu çalıştırın.  
   
@@ -61,8 +61,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Yeni Proje görünür **Çözüm Gezgini**.  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> Basit bir WPF MainWindow tasarlamak için  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> Basit bir WPF MainWindow tasarlamak için  
   
 1.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
@@ -90,8 +90,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      WPF XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> Bir başvuru eklemek için  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> Bir başvuru eklemek için  
   
 1.  İçinde **Çözüm Gezgini**, projenizin adını vurgulayın.  
   
@@ -107,8 +107,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
 6.  Seçin **Tamam** iletişim kutusunu kapatmak için düğme.  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> Gerekli içeri aktarmaları deyimleri ekleme  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> Gerekli içeri aktarmaları deyimleri ekleme  
   
 1.  İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **kodu görüntüle**.  
   
@@ -120,8 +120,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> Zaman uyumlu bir uygulama oluşturmak için  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> Zaman uyumlu bir uygulama oluşturmak için  
   
 1.  Tasarım penceresinde, MainWindow.xaml **Başlat** oluşturmak için düğmeyi `startButton_Click` MainWindow.xaml.vb olay işleyicisi.  
   
@@ -221,8 +221,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> Zaman uyumlu bir çözümü test etmek için  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> Zaman uyumlu bir çözümü test etmek için  
   
 1.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
@@ -247,8 +247,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kaynaklara indirmek beklediği sırada bu süre boyunca, kullanıcı Arabirimi iş parçacığı engellenir. Sonuç olarak, taşıyamazsınız, en üst düzeye çıkarmak, en aza indirmek veya seçtiğiniz sonra bile görüntü penceresini kapatın **Başlat** düğmesi. Görüntülenecek bayt sayısını başlatana kadar bu çalışmaların başarısız. Bir Web sitesi yanıt vermediği takdirde başarısız hangi sitenin herhangi bir gösterge sahip olursunuz. Programı kapatmak ve bile beklemek istemiyorsanız zordur.  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için  
   
 1.  Zaman uyumlu çözüm için zaman uyumsuz bir çözümün dönüştürmek için başlatmak için en iyi yeri yer `GetURLContents` çünkü çağrıları <xref:System.Net.HttpWebRequest> yöntemi <xref:System.Net.HttpWebRequest.GetResponse%2A> ve <xref:System.IO.Stream> yöntemi <xref:System.IO.Stream.CopyTo%2A> uygulamaya web eriştiği olan . .NET Framework dönüştürme iki yöntem de zaman uyumsuz sürümlerini sağlanarak kolaylaştırır.  
   
@@ -329,8 +329,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Bu birkaç değişiklikle dönüştürülmesi `GetURLContents` zaman uyumsuz bir yöntem tamamlandıktan.  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için  
   
 1.  İçin önceki yordamdaki adımları yineleyin `SumPageSizes`. İlk olarak, araması olarak değiştirmelerine `GetURLContents` zaman uyumsuz bir çağrı için.  
   
@@ -369,8 +369,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Dönüştürme `SumPageSizes` için `SumPageSizesAsync` tamamlandı.  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için  
   
 1.  Olay işleyicisi, çağrılan yöntemden adını değiştirmek `SumPageSizes` için `SumPageSizesAsync`, zaten yapmadıysanız.  
   
@@ -415,8 +415,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Proje dönüştürülmesi için zaman uyumsuz zaman uyumlu işlenmesi tamamlanır.  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> Zaman uyumsuz bir çözümü test etmek için  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> Zaman uyumsuz bir çözümü test etmek için  
   
 1.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
@@ -426,8 +426,8 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
     -   En önemlisi de UI iş parçacığı yüklemeleri sırasında bloke değildir. Geçiş yapabilir veya web kaynakları indirilirken, penceresini yeniden boyutlandırdığınızda sayılan ve görüntülenir. Web sitelerinden birini ise yavaş veya yanıt vermiyor, işlem seçerek iptal edebilirsiniz **Kapat** düğmesine (sağ üst köşesinde kırmızı alanında x).  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> Bir .NET Framework yöntemi ile yöntem GetURLContentsAsync değiştirmek için  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> Bir .NET Framework yöntemi ile yöntem GetURLContentsAsync değiştirmek için  
   
 1.  .NET Framework 4.5 kullanabileceğiniz pek çok zaman uyumsuz yöntemler sağlar. Bunlardan biri <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, yalnızca bu kılavuz için ihtiyacınız olanları yapar. Bunu yerine `GetURLContentsAsync` bir önceki yordamda oluşturduğunuz yöntemi.  
   
@@ -452,7 +452,7 @@ Async ve await özelliklerini kullanarak zaman uyumsuz programları daha kolay v
   
      Bu sürümü, proje davranışını "zaman uyumsuz bir çözümü test etmek için" yordamı açıklanan davranışı eşleşen ancak sizden daha az çaba ile bile gerekir.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> Örnek  
+## <a name="BKMK_CompleteCodeExamples"></a> Örnek  
  Zaman uyumsuz kullanarak zaman uyumsuz bir çözüm eş zamanlı dönüştürme tam örneği aşağıdaki kodu içeren `GetURLContentsAsync` yazdığınız yöntemi. Bunu kesinlikle özgün, zaman uyumlu bir çözüm benzer olduğuna dikkat edin.  
   
 ```vb  

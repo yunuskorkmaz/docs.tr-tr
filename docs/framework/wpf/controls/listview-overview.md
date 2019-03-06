@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701553"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379152"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
@@ -29,31 +29,31 @@ ms.locfileid: "54701553"
   
  Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.GridView> için bir <xref:System.Windows.Controls.ListView> çalışan bilgilerini görüntüleyen denetim.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  Aşağıdaki çizim, önceki örneğin verinin nasıl göründüğünü gösterir.  
   
- ![ListView GridView çıktıyla](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView GridView çıktıyla](./media/listviewgridview.JPG "ListViewGridView")  
   
- Özel Görünüm modu öğesinden devralınan bir sınıf tanımlayarak oluşturabileceğiniz <xref:System.Windows.Controls.ViewBase> sınıfı. <xref:System.Windows.Controls.ViewBase> Sınıfı, bir özel görünüm oluşturmak için gereken altyapıyı sağlar. Özel Görünüm oluşturma hakkında daha fazla bilgi için bkz. [bir ListView için özel görünüm modu oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ Özel Görünüm modu öğesinden devralınan bir sınıf tanımlayarak oluşturabileceğiniz <xref:System.Windows.Controls.ViewBase> sınıfı. <xref:System.Windows.Controls.ViewBase> Sınıfı, bir özel görünüm oluşturmak için gereken altyapıyı sağlar. Özel Görünüm oluşturma hakkında daha fazla bilgi için bkz. [bir ListView için özel görünüm modu oluşturma](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="BindingDatatoaListView"></a>   
 ## <a name="binding-data-to-a-listview"></a>Bir ListView veri bağlama  
  Kullanım <xref:System.Windows.Controls.ItemsControl.Items%2A> ve <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özellikleri öğelerini belirtmek için bir <xref:System.Windows.Controls.ListView> denetimi. Aşağıdaki örnek kümeleri <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> çağrılan bir veri toplama özelliğini `EmployeeInfoDataSource`.  
   
- [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
  İçinde bir <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> nesneleri belirtilen veri alanları bağlayın. Aşağıdaki örnek bağlayan bir <xref:System.Windows.Controls.GridViewColumn> belirterek bir veri alanı nesnesine bir <xref:System.Windows.Data.Binding> için <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> özelliği.  
   
- [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
- [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-csharp[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
+ [!code-vb[ListViewCode#GridViewColumnProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
+ [!code-xaml[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
  Ayrıca belirtebileceğiniz bir <xref:System.Windows.Data.Binding> parçası olarak bir <xref:System.Windows.DataTemplate> bir sütundaki hücrelerinin stilini belirlemek için kullandığınız tanımı. Aşağıdaki örnekte, <xref:System.Windows.DataTemplate> ile tanımlanan bir <xref:System.Windows.ResourceKey> ayarlar <xref:System.Windows.Data.Binding> için bir <xref:System.Windows.Controls.GridViewColumn>. Bu örnekte tanımlamaz Not <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> Bunun yapılması, bu nedenle tarafından belirtilen bağlama geçersiz kılar çünkü <xref:System.Windows.DataTemplate>.  
   
- [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>GridView Uygulayan ListView bir stil uygulama  
@@ -65,7 +65,7 @@ ms.locfileid: "54701553"
   
  Hücrelerde arasında hizalama sorunları önlemek için bir <xref:System.Windows.Controls.GridView>, kullanmayın <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> özellikleri ayarlamak veya içindeki bir öğenin genişliğini etkiler içerik eklemek için bir <xref:System.Windows.Controls.ListView>. Ayarladığınızda gibi bir hizalama sorun ortaya çıkabilir <xref:System.Windows.FrameworkElement.Margin%2A> özelliğinde <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Özellikleri belirtin veya öğe genişliğini etkiler içeriği tanımlamak için bir <xref:System.Windows.Controls.GridView>, özelliklerini kullanmak <xref:System.Windows.Controls.GridView> sınıfı ve ilişkili sınıflarının gibi <xref:System.Windows.Controls.GridViewColumn>.  
   
- Nasıl kullanılacağı hakkında daha fazla bilgi için <xref:System.Windows.Controls.GridView> ve destekleyici sınıflarının [GridView genel bakışı](../../../../docs/framework/wpf/controls/gridview-overview.md).  
+ Nasıl kullanılacağı hakkında daha fazla bilgi için <xref:System.Windows.Controls.GridView> ve destekleyici sınıflarının [GridView genel bakışı](gridview-overview.md).  
   
  Tanımlarsanız bir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> için bir <xref:System.Windows.Controls.ListView> denetleyen ve ayrıca tanımlayan bir <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, eklemeniz gerekir bir <xref:System.Windows.Controls.ContentPresenter> sırayla stilde <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> düzgün çalışması için.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "54701553"
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
-- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [GridView Genel Bakış](gridview-overview.md)
+- [Nasıl Yapılır Konuları](listview-how-to-topics.md)
+- [Denetimler](../advanced/optimizing-performance-controls.md)

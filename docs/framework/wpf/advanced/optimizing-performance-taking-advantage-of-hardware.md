@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 5eb6fb8a7f65c19755a37239e36958daf33cc876
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374264"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı iyileştirme: Donanımdan Yararlanma
 Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki işlenen ardışık düzen, donanım ve yazılım vardır. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak için bu işleme ardışık düzenleri hakkında bilgi sağlar.  
@@ -52,15 +52,15 @@ Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincl
   
 -   **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
   
- Daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme katmanları bkz [grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme katmanları bkz [grafik işleme katmanları](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
+- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Metin](optimizing-performance-text.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)

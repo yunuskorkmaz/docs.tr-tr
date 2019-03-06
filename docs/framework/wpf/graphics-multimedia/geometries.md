@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363672"
 ---
 # <a name="geometries"></a>Geometriler
 <xref:System.Windows.Media.Geometry> işlemek için kullanılan, çok yönlü bir sınıf [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafik, isabet testi nesneleri ve kırpma bölgeleri tanımlayın  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)  
+ [Geometriye Genel Bakış](geometry-overview.md)  
+ [Nasıl Yapılır Konuları](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafikler ve Multimedya](index.md)

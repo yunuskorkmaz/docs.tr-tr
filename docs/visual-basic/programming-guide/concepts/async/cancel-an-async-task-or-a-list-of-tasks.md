@@ -2,12 +2,12 @@
 title: Zaman uyumsuz bir görev veya görevleri (Visual Basic) listesini iptal etme
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374459"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görev veya görevleri (Visual Basic) listesini iptal etme
 Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekleri izleyerek, Web sitelerinin bir listesiyle ya da bir Web sitesinin içeriklerini indiren bir uygulama için bir iptal düğmesi ekleyebilirsiniz.  
@@ -17,7 +17,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
 > [!NOTE]
 >  Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
-##  <a name="BKMK_CancelaTask"></a> Bir görevi iptal etme  
+## <a name="BKMK_CancelaTask"></a> Bir görevi iptal etme  
  İlk örnek ilişkilendirir **iptal** tek bir yükleme göreviyle düğmesi. Uygulama içeriği karşıdan yüklerken düğmeyi seçerseniz, karşıdan yükleme iptal edildi.  
   
 ### <a name="downloading-the-example"></a>Örneği indirme  
@@ -135,7 +135,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> Görev listesini iptal etme  
+## <a name="BKMK_CancelaListofTasks"></a> Görev listesini iptal etme  
  Aynı ilişkilendirerek birçok görevi iptal etmek için önceki örneği genişletebilirsiniz `CancellationTokenSource` her görev örneği. Seçerseniz **iptal** düğmesi, henüz tamamlanmamış tüm görevleri iptal.  
   
 ### <a name="downloading-the-example"></a>Örneği indirme  
@@ -247,7 +247,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> Tam örnekler  
+## <a name="BKMK_CompleteExamples"></a> Tam örnekler  
  Aşağıdaki bölümlerde her önceki örnek kodunu içerir. İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http>.  
   
  İçinden projeleri karşıdan yükleyebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  

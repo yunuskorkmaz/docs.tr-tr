@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: ff259dae06ef7347dd9fa3afbab68ae67e9146a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367992"
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
-Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilemez veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] söz dizimi. Genel kaynak kullanımı ve kaynaklardan daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından görmek [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilemez veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] söz dizimi. Genel kaynak kullanımı ve kaynaklardan daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından görmek [XAML kaynakları](xaml-resources.md).  
   
   
   
@@ -29,8 +29,8 @@ Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../..
   
  Anahtara göre bir kaynak bulur ve döndürülen değer olarak uygulanan bir özelliği ayarlamak için kullandığı bir kısa bir kod örneği verilmiştir bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi.  
   
- [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
- [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
+ [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
+ [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
   
  Bir kaynak başvurusu atamak için alternatif bir yöntem <xref:System.Windows.FrameworkElement.SetResourceReference%2A>. Bu yöntem iki parametre alır: kaynak tanımlayıcı ve anahtar için kaynak değeri atanmalıdır öğesi örneği üzerinde mevcut olan belirli bir bağımlılık özelliği için. İşlevsel olarak, bu yöntem aynıdır ve dönüş değerlerinin herhangi bir atama gerektirmeyen avantajı vardır.  
   
@@ -44,8 +44,8 @@ Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../..
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Nesneleri anahtar olarak kullanma  
- Çoğu kaynak kullanımları anahtarını kaynağının adını bir dize olacak şekilde ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri kasıtlı olmayan bir dize türü anahtarları belirtmek için kullanın, bunun yerine bu parametre bir nesnedir. Tarafından kullanılan bir nesne tarafından anahtarlanmış kaynağa sahip olma yeteneği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve Tema oluşturma desteği. Aksi takdirde stili olmayan bir denetim için varsayılan stil haline gelen tema stilleri her tarafından Anahtarlanan <xref:System.Type> uygulanması gereken denetimi. Türü tarafından Anahtarlanan her denetim türü varsayılan örneklerinde çalışan bir güvenilir arama mekanizmayı sağlar ve tür yansıma tarafından algılanır ve varsayılan stil türetilmiş tür sahip olsa da, türetilmiş sınıfların stil eklemek için kullanılır. Belirtebileceğiniz bir <xref:System.Type> içinde tanımlanan bir kaynak için anahtar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanarak [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Benzer uzantıları destekleyen diğer dize olmayan için anahtar kullanımları mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi özellikleri [ComponentResourceKey işaretleme uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+ Çoğu kaynak kullanımları anahtarını kaynağının adını bir dize olacak şekilde ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri kasıtlı olmayan bir dize türü anahtarları belirtmek için kullanın, bunun yerine bu parametre bir nesnedir. Tarafından kullanılan bir nesne tarafından anahtarlanmış kaynağa sahip olma yeteneği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve Tema oluşturma desteği. Aksi takdirde stili olmayan bir denetim için varsayılan stil haline gelen tema stilleri her tarafından Anahtarlanan <xref:System.Type> uygulanması gereken denetimi. Türü tarafından Anahtarlanan her denetim türü varsayılan örneklerinde çalışan bir güvenilir arama mekanizmayı sağlar ve tür yansıma tarafından algılanır ve varsayılan stil türetilmiş tür sahip olsa da, türetilmiş sınıfların stil eklemek için kullanılır. Belirtebileceğiniz bir <xref:System.Type> içinde tanımlanan bir kaynak için anahtar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanarak [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md). Benzer uzantıları destekleyen diğer dize olmayan için anahtar kullanımları mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi özellikleri [ComponentResourceKey işaretleme uzantısı](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML Kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML Kaynakları](xaml-resources.md)
+- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

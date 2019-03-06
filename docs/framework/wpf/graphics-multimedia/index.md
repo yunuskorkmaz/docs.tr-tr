@@ -2,22 +2,16 @@
 title: Grafikler ve Multimedya
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- media [WPF], features
-- video effects [WPF]
-- sound effects [WPF]
-- animation [WPF], features
-- graphics features [WPF]
-- transition effects [WPF]
+  - 'media [WPF], features'
+  - 'video effects [WPF]'
+  - 'sound effects [WPF]'
+  - 'animation [WPF], features'
+  - 'graphics features [WPF]'
+  - 'transition effects [WPF]'
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: f22fad330f9e67cd007bd968f1277f31f51b2b8e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304108"
 ---
 # <a name="graphics-and-multimedia"></a>Grafikler ve Multimedya
 <a name="introduction"></a>
@@ -50,12 +44,12 @@ ms.locfileid: "56304108"
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>Grafik ve oluşturma  
- WPF, yüksek kaliteli 2B grafikler için destek içerir. Fırçalar, geometri, resimler, şekiller ve dönüşümler işlevleri içerir. Daha fazla bilgi için [grafik](../../../../docs/framework/wpf/graphics-multimedia/graphics.md). Grafik öğelerin işlenmesi dayanır <xref:System.Windows.Media.Visual> sınıfı. Görsel nesneler ekranında yapısını görsel ağacını tarafından tanımlanır. Daha fazla bilgi için [WPF Grafik işlemeye genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ WPF, yüksek kaliteli 2B grafikler için destek içerir. Fırçalar, geometri, resimler, şekiller ve dönüşümler işlevleri içerir. Daha fazla bilgi için [grafik](graphics.md). Grafik öğelerin işlenmesi dayanır <xref:System.Windows.Media.Visual> sınıfı. Görsel nesneler ekranında yapısını görsel ağacını tarafından tanımlanır. Daha fazla bilgi için [WPF Grafik işlemeye genel bakış](wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>2B şekiller  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yaygın olarak kullanılan, vektör çizilmiş bir kitaplık sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] dikdörtgenler ve elipsler aşağıdaki çizimin gösterdiği gibi şekiller.  
   
- ![Elips ve dikdörtgen](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![Elips ve dikdörtgen](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
  Bu iç [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] şekilleri yalnızca şekil değil: Bunlar birçok klavye ve fare girişi içeren, en yaygın denetimlerden beklediğiniz özelliği uygulayan programlanabilir öğeleridir. Aşağıdaki örnek nasıl işleneceğini gösterir <xref:System.Windows.UIElement.MouseUp> tıklayarak harekete geçirilen olay bir <xref:System.Windows.Shapes.Ellipse> öğesi.  
   
@@ -89,39 +83,39 @@ End Class
   
  Önceki çıktı aşağıda gösterilmiştir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme ve arka plan kod.  
   
- ![Metin içeren bir pencere "elips tıkladığınız&#33;"](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Metin içeren bir pencere "elips tıkladığınız&#33;"](./media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- Daha fazla bilgi için [şekiller ve temel çizimlere WPF genel bakışında](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Tanıtıcı bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Daha fazla bilgi için [şekiller ve temel çizimlere WPF genel bakışında](shapes-and-basic-drawing-in-wpf-overview.md). Tanıtıcı bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ### <a name="2-d-geometries"></a>2B geometri  
  Zaman [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] şekiller [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar kullanabileceğiniz yeterli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] geometrileri ve kendi yolları için destek. Aşağıdaki çizimde, çizim Fırçası gibi şekiller, oluşturmak ve diğeri küçük resim için geometri nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] öğeleri.  
   
- ![Bir yol çeşitli kullanımları](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![Bir yol çeşitli kullanımları](./media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- Daha fazla bilgi için [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Tanıtıcı bir örnek için bkz. [geometri örneği](https://go.microsoft.com/fwlink/?LinkID=159989).  
+ Daha fazla bilgi için [geometrisi](geometry-overview.md). Tanıtıcı bir örnek için bkz. [geometri örneği](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>2B efektler  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir kitaplık sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] sınıflar etkileri çeşitli oluşturmak için kullanabilirsiniz. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] İşleme yeteneğini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] boyama olanak tanıyor [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gradyan, bit eşlemler, çizimler ve videoları; olan öğeler ve döndürme, kullanarak işlemek için ölçeklendirme ve eğriltme. Aşağıdaki resimde bir örnek kullanarak elde edebileceğiniz birçok etkileri verir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fırçalar.  
   
- ![Farklı fırçalar gösterimi](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![Farklı fırçalar gösterimi](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- Daha fazla bilgi için [WPF fırçalarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md). Tanıtıcı bir örnek için bkz. [Fırçalar örnek](https://go.microsoft.com/fwlink/?LinkID=159973).  
+ Daha fazla bilgi için [WPF fırçalarına genel bakış](wpf-brushes-overview.md). Tanıtıcı bir örnek için bkz. [Fırçalar örnek](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>3B işleme  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] takımına [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] tümleştirin işleme özellikleri [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafikler, destek [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] daha heyecan verici düzen oluşturmak için sırayla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirmesi. Spektrumun ucunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] işleme sayesinde [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] görüntüleri yüzeyleriyle [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] şekiller, aşağıdaki çizimde gösterilmektedir.  
   
- ![Visual3D örnek ekran görüntüsünde](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Visual3D örnek ekran görüntüsünde](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- Daha fazla bilgi için [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md). Tanıtıcı bir örnek için bkz. [3-b düz çizgi örneği](https://go.microsoft.com/fwlink/?LinkID=159964).  
+ Daha fazla bilgi için [3B Grafiklere Genel Bakış](3-d-graphics-overview.md). Tanıtıcı bir örnek için bkz. [3-b düz çizgi örneği](https://go.microsoft.com/fwlink/?LinkID=159964).  
   
 <a name="animation"></a>   
 ## <a name="animation"></a>Animasyon  
  Animasyon denetimleri ve büyütün, sallayın, çalıştırın ve Soluklaştır öğeleri yapmak için kullanın. ve ilgi çekici sayfa geçişleri ve daha fazlasını oluşturun. Çünkü [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] etkinleştirir, özelliklerin çoğu, yalnızca animasyon uygulamak için birçok animasyon [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nesnelerini de kullanabilirsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oluşturduğunuz özel nesneleri animasyon uygulamak için.  
   
- ![Animasyonlu bir küp görüntülerini](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![Animasyonlu bir küp görüntülerini](./media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- Daha fazla bilgi için [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Tanıtıcı bir örnek için bkz. [animasyon örnek Galerisi](https://go.microsoft.com/fwlink/?LinkID=159969).  
+ Daha fazla bilgi için [animasyona genel bakış](animation-overview.md). Tanıtıcı bir örnek için bkz. [animasyon örnek Galerisi](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 <a name="media"></a>   
 ## <a name="media"></a>Medya  
@@ -130,9 +124,9 @@ End Class
 ### <a name="images"></a>Görüntüler  
  Görüntüler, simgeler, arka plan ve hatta animasyonları parçalarını içeren çoğu uygulamalar çekirdek parçasıdır. Sık görüntüleri kullanmanız gerekir çünkü [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çeşitli yollarla onlarla çalışma olanağı sunar. Bu yollardan yalnızca biri aşağıda gösterilmiştir.  
   
- ![Stil örnek ekran görüntüsünde](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Stil örnek ekran görüntüsünde](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
- Daha fazla bilgi için [Imaging genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+ Daha fazla bilgi için [Imaging genel bakış](imaging-overview.md).  
   
 ### <a name="video-and-audio"></a>Video ve ses  
  Çekirdek özelliği, grafik yeteneklerini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] video ve ses içeren çoklu ortam ile çalışmak için yerel destek sağlar. Aşağıdaki örnek bir medya yürütücüsü bir uygulamaya nasıl ekleneceğini gösterir.  
@@ -143,16 +137,16 @@ End Class
   
  <xref:System.Windows.Controls.MediaElement> video ve ses çalabilir ve özel bir kolayca oluşturulmasını izin vermek için Genişletilebilir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
   
- Daha fazla bilgi için [multimedya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
+ Daha fazla bilgi için [multimedya genel bakış](multimedia-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
+- [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)
 - [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
 - [Multimedyaya Genel Bakış](multimedia-overview.md)

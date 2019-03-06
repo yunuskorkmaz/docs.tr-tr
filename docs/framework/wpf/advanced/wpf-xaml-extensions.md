@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371820"
 ---
 # <a name="wpf-xaml-extensions"></a>WPF XAML Uzantıları
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İşaretleme Uzantısı Bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [ColorConvertedBitmap İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [ComponentResourceKey İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [RelativeSource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [TemplateBinding İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [ThemeDictionary İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [PropertyPath XAML Söz Dizimi](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [PresentationOptions:Freeze Özniteliği](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [İşaretleme Uzantısı Bağlama](binding-markup-extension.md)  
+  [ColorConvertedBitmap İşaretleme Uzantısı](colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey İşaretleme Uzantısı](componentresourcekey-markup-extension.md)  
+  [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)  
+  [RelativeSource İşaretleme Uzantısı](relativesource-markupextension.md)  
+  [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)  
+  [TemplateBinding İşaretleme Uzantısı](templatebinding-markup-extension.md)  
+  [ThemeDictionary İşaretleme Uzantısı](themedictionary-markup-extension.md)  
+  [PropertyPath XAML Söz Dizimi](propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze Özniteliği](presentationoptions-freeze-attribute.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359256"
 ---
 # <a name="adorners-how-to-topics"></a>Donatıcılar ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner çerçevesi.  
+Aşağıdaki örnekler kullanarak, yaygın görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner çerçevesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Donatıcı Uygulama](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [Öğeye bir Donatıcı Bağlama](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [Panelin Alt Öğelerini Donatma](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [Öğeden Donatıcıyı Kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [Öğeden Tüm Donatıcıları Kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [Donatıcı Uygulama](how-to-implement-an-adorner.md)  
+ [Öğeye bir Donatıcı Bağlama](how-to-bind-an-adorner-to-an-element.md)  
+ [Panelin Alt Öğelerini Donatma](how-to-adorn-the-children-of-a-panel.md)  
+ [Öğeden Donatıcıyı Kaldırma](how-to-remove-an-adorner-from-an-element.md)  
+ [Öğeden Tüm Donatıcıları Kaldırma](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
