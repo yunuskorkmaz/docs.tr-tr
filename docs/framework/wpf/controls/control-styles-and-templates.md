@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079733"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373211"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetimin görünümünü ve yapısı değiştirerek değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimin. Bir denetimin görsel ağacın yalnızca bir kısmını değiştirmek için bir yolu yoktur; görsel ağacı ayarlamalısınız bir denetimin değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
@@ -34,38 +34,38 @@ Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Contr
 |Aero.NormalColor.xaml|Windows Vista işletim sistemindeki varsayılan tema.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Düğme Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Takvim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Genişletici Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Çerçeve Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Etiket Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Menü Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox stilleri ve şablonları](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton stilleri ve şablonları](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Kaydırıcı Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Parmak stilleri ve şablonları](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton stilleri ve şablonları](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Pencere Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Düğme Stilleri ve Şablonları](button-styles-and-templates.md)  
+ [Takvim Stilleri ve Şablonları](calendar-styles-and-templates.md)  
+ [CheckBox Stilleri ve Şablonları](checkbox-styles-and-templates.md)  
+ [ComboBox Stilleri ve Şablonları](combobox-styles-and-templates.md)  
+ [ContextMenu Stilleri ve Şablonları](contextmenu-styles-and-templates.md)  
+ [DataGrid Stilleri ve Şablonları](datagrid-styles-and-templates.md)  
+ [DatePicker Stilleri ve Şablonları](datepicker-styles-and-templates.md)  
+ [DocumentViewer Stilleri ve Şablonları](documentviewer-styles-and-templates.md)  
+ [Genişletici Stilleri ve Şablonları](expander-styles-and-templates.md)  
+ [Çerçeve Stilleri ve Şablonları](frame-styles-and-templates.md)  
+ [GroupBox Stilleri ve Şablonları](groupbox-styles-and-templates.md)  
+ [Etiket Stilleri ve Şablonları](label-styles-and-templates.md)  
+ [ListBox Stilleri ve Şablonları](listbox-styles-and-templates.md)  
+ [ListView Stilleri ve Şablonları](listview-styles-and-templates.md)  
+ [Menü Stilleri ve Şablonları](menu-styles-and-templates.md)  
+ [NavigationWindow Stilleri ve Şablonları](navigationwindow-styles-and-templates.md)  
+ [PasswordBox stilleri ve şablonları](passwordbox-syles-and-templates.md)  
+ [ProgressBar Stilleri ve Şablonları](progressbar-styles-and-templates.md)  
+ [RadioButton Stilleri ve Şablonları](radiobutton-styles-and-templates.md)  
+ [RepeatButton stilleri ve şablonları](repeatbutton-syles-and-templates.md)  
+ [ScrollBar Stilleri ve Şablonları](scrollbar-styles-and-templates.md)  
+ [ScrollViewer Stilleri ve Şablonları](scrollviewer-styles-and-templates.md)  
+ [Kaydırıcı Stilleri ve Şablonları](slider-styles-and-templates.md)  
+ [StatusBar Stilleri ve Şablonları](statusbar-styles-and-templates.md)  
+ [TabControl Stilleri ve Şablonları](tabcontrol-styles-and-templates.md)  
+ [TextBox Stilleri ve Şablonları](textbox-styles-and-templates.md)  
+ [Parmak stilleri ve şablonları](thumb-syles-and-templates.md)  
+ [ToggleButton stilleri ve şablonları](togglebutton-syles-and-templates.md)  
+ [ToolBar Stilleri ve Şablonları](toolbar-styles-and-templates.md)  
+ [ToolTip Stilleri ve Şablonları](tooltip-styles-and-templates.md)  
+ [TreeView Stilleri ve Şablonları](treeview-styles-and-templates.md)  
+ [Pencere Stilleri ve Şablonları](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Contr
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Denetim Yazımına Genel Bakış](control-authoring-overview.md)  
   
- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Stil ve Şablon Oluşturma](styling-and-templating.md)

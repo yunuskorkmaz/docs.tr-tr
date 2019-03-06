@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358476"
 ---
 # <a name="popup-overview"></a>Açılır Pencereye Genel Bakış
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi geçerli uygulama penceresi göre belirlenen bir öğe veya Ekran koordinatı üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.Primitives.Popup> denetlemek ve kullanımı hakkında bilgi sağlar.  
@@ -22,27 +22,27 @@ ms.locfileid: "54616815"
  A <xref:System.Windows.Controls.Primitives.Popup> denetim ekranda bir öğe veya göreli ayrı bir pencerede içeriğini görüntüler. Zaman <xref:System.Windows.Controls.Primitives.Popup> görünür durumda <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> özelliği `true`.  
   
 > [!NOTE]
->  A <xref:System.Windows.Controls.Primitives.Popup> kendi üst nesnenin üzerine fare işaretçisi hareket ettirildiğinde otomatik olarak açılmaz. İsterseniz bir <xref:System.Windows.Controls.Primitives.Popup> otomatik olarak açmak için <xref:System.Windows.Controls.ToolTip> veya <xref:System.Windows.Controls.ToolTipService> sınıfı. Daha fazla bilgi için [ToolTip genel bakışı](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+>  A <xref:System.Windows.Controls.Primitives.Popup> kendi üst nesnenin üzerine fare işaretçisi hareket ettirildiğinde otomatik olarak açılmaz. İsterseniz bir <xref:System.Windows.Controls.Primitives.Popup> otomatik olarak açmak için <xref:System.Windows.Controls.ToolTip> veya <xref:System.Windows.Controls.ToolTipService> sınıfı. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>Açılan pencere oluşturma  
  Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.Primitives.Popup> denetim alt öğesi olan bir <xref:System.Windows.Controls.Button> denetimi. Çünkü bir <xref:System.Windows.Controls.Button> yalnızca bir alt öğesi olabilir, bu örnek için metin yerleştirir <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.Primitives.Popup> denetimlerini bir <xref:System.Windows.Controls.StackPanel>. İçeriği <xref:System.Windows.Controls.Primitives.Popup> görünür bir <xref:System.Windows.Controls.TextBlock> yakın ilgili uygulama penceresi üzerinde gezinen ayrı bir pencerede metnini görüntüleyen denetimi <xref:System.Windows.Controls.Button> denetimi.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Açılan pencere uygulama denetimleri  
  Oluşturabileceğinizi <xref:System.Windows.Controls.Primitives.Popup> diğer denetimlere denetimleri. Aşağıdaki denetimler uygulamak <xref:System.Windows.Controls.Primitives.Popup> denetimi belirli kullanımlar için:  
   
--   <xref:System.Windows.Controls.ToolTip>. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](contextmenu-overview.md).  
   
 -   <xref:System.Windows.Controls.ComboBox>. Gösterilen veya gizlenen, kullanım olabilir bir açılan liste kutusu olan bir seçim denetim oluşturmak istiyorsanız <xref:System.Windows.Controls.ComboBox> denetimi.  
   
--   <xref:System.Windows.Controls.Expander>. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Açılan pencere davranışı ve görünümü  
@@ -74,13 +74,13 @@ ms.locfileid: "54616815"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Açılan pencerenin konumunu tanımlama  
- Popup ayarlayarak konumlandırabilirsiniz <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> özellikleri. Daha fazla bilgi için [açılan pencere yerleştirme davranışı](../../../../docs/framework/wpf/controls/popup-placement-behavior.md). Zaman <xref:System.Windows.Controls.Primitives.Popup> görüntülenen üst yeniden konumlandırıldığında varsa ekranda, kendisi yeniden konumlandırmıyor.  
+ Popup ayarlayarak konumlandırabilirsiniz <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> özellikleri. Daha fazla bilgi için [açılan pencere yerleştirme davranışı](popup-placement-behavior.md). Zaman <xref:System.Windows.Controls.Primitives.Popup> görüntülenen üst yeniden konumlandırıldığında varsa ekranda, kendisi yeniden konumlandırmıyor.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Açılan Pencere yerleştirme özelleştirme  
  Yerleşimini özelleştirebilirsiniz bir <xref:System.Windows.Controls.Primitives.Popup> denetimi için göreli koordinatları kümesini belirterek <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> istediğiniz <xref:System.Windows.Controls.Primitives.Popup> görüntülenecek.  
   
- Yerleştirme özelleştirmek için ayarlanmış <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliğini <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Ardından tanımlayan bir <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> için bir dizi olası yerleştirme noktası ve birincil eksenleri (tercih sırasına göre) döndüren bir temsilci <xref:System.Windows.Controls.Primitives.Popup>. En büyük bölümünü gösteren noktası <xref:System.Windows.Controls.Primitives.Popup> otomatik olarak seçilir. Bir örnek için bkz. [özel açılan pencerenin konumunu belirtme](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Yerleştirme özelleştirmek için ayarlanmış <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliğini <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Ardından tanımlayan bir <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> için bir dizi olası yerleştirme noktası ve birincil eksenleri (tercih sırasına göre) döndüren bir temsilci <xref:System.Windows.Controls.Primitives.Popup>. En büyük bölümünü gösteren noktası <xref:System.Windows.Controls.Primitives.Popup> otomatik olarak seçilir. Bir örnek için bkz. [özel açılan pencerenin konumunu belirtme](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Açılır ve görsel ağaç  
@@ -96,5 +96,5 @@ ms.locfileid: "54616815"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Nasıl Yapılır Konuları](popup-how-to-topics.md)
+- [Nasıl Yapılır Konuları](tooltip-how-to-topics.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: aa8d1a33fb415b986bc5e058f5d198c221f9f489
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493176"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352778"
 ---
 # <a name="multimedia-overview"></a>Multimedyaya Genel Bakış
 Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ses ve video kullanıcı deneyimini iyileştirmek için uygulamalarınızla tümleştirin olanak sağlar. Bu konuda multimedya özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -21,9 +21,9 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ## <a name="media-api"></a>Medya API  
  <xref:System.Windows.Controls.MediaElement> Ve <xref:System.Windows.Media.MediaPlayer> sınıfları, ses veya video içeriği sunmak için kullanılır. Bu sınıflar, etkileşimli olarak veya bir saat olarak denetlenebilir. Bu sınıfların kullanabilirsiniz [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] medya kayıttan yürütme için 10 denetimi. Hangi sınıfı kullanın, senaryoya bağlıdır.  
   
- <xref:System.Windows.Controls.MediaElement> olan bir <xref:System.Windows.UIElement> tarafından desteklenen [Düzen](../../../../docs/framework/wpf/advanced/layout.md) ve birçok içeriği olarak kullanılabilir. Ayrıca, kullanılabilir durumda [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yanı sıra kodu. <xref:System.Windows.Media.MediaPlayer>, diğer taraftan, için tasarlanmış <xref:System.Windows.Media.Drawing> nesneler ve Düzen dönülemiyor. Medya kullanarak yüklenen bir <xref:System.Windows.Media.MediaPlayer> kullanarak yalnızca sunulabilen bir <xref:System.Windows.Media.VideoDrawing> veya doğrudan etkileşim bir <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> XAML içinde kullanılamaz.  
+ <xref:System.Windows.Controls.MediaElement> olan bir <xref:System.Windows.UIElement> tarafından desteklenen [Düzen](../advanced/layout.md) ve birçok içeriği olarak kullanılabilir. Ayrıca, kullanılabilir durumda [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yanı sıra kodu. <xref:System.Windows.Media.MediaPlayer>, diğer taraftan, için tasarlanmış <xref:System.Windows.Media.Drawing> nesneler ve Düzen dönülemiyor. Medya kullanarak yüklenen bir <xref:System.Windows.Media.MediaPlayer> kullanarak yalnızca sunulabilen bir <xref:System.Windows.Media.VideoDrawing> veya doğrudan etkileşim bir <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> XAML içinde kullanılamaz.  
   
- Çizim nesneleri ve içeriği çizim hakkında daha fazla bilgi için bkz. [çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Çizim nesneleri ve içeriği çizim hakkında daha fazla bilgi için bkz. [çizim nesnelerine genel bakış](drawing-objects-overview.md).  
   
 > [!NOTE]
 >  Uygulamanız ile medya dağıtırken, bir medya dosyası proje kaynağı olarak kullanamazsınız. Proje dosyanızda, bunun yerine ortam türünü ayarlamalısınız `Content` ayarlayıp `CopyToOutputDirectory` için `PreserveNewest` veya `Always`.  
@@ -49,7 +49,7 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
   
  Bağımsız modda medya yürütmesini denetlemek için ortam nesnesinin denetim yöntemleri kullanılabilir. Kullanılabilir denetim yöntemleri <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, ve <xref:System.Windows.Controls.MediaElement.Stop%2A>. İçin <xref:System.Windows.Controls.MediaElement>, bu yöntemleri kullanarak etkileşimli denetim, yalnızca kullanılabilir olduğunda <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> ayarlanır <xref:System.Windows.Controls.MediaState.Manual>. Bu yöntemler, medya nesnesi saati modundayken kullanılamaz.  
   
- Bkz: [MediaElement (Yürüt, Duraklat, Durdur, birim ve hızı) denetimi](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) bağımsız mod ilişkin bir örnek.  
+ Bkz: [MediaElement (Yürüt, Duraklat, Durdur, birim ve hızı) denetimi](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) bağımsız mod ilişkin bir örnek.  
   
 ### <a name="clock-mode"></a>Saat modu  
  Saat modunda bir <xref:System.Windows.Media.MediaTimeline> sürücüleri medya kayıttan yürütme. Saat modu, aşağıdaki özelliklere sahiptir:  
@@ -62,15 +62,15 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
   
  Saat modunda medya kayıttan yürütmeyi denetlemek için <xref:System.Windows.Media.Animation.ClockController> denetim yöntemleri kullanılmalıdır. A <xref:System.Windows.Media.Animation.ClockController> öğesinden alınan <xref:System.Windows.Media.Animation.ClockController> özelliği <xref:System.Windows.Media.MediaClock>. Ya da denetim yöntemlerini kullanmayı denerseniz bir <xref:System.Windows.Controls.MediaElement> veya <xref:System.Windows.Media.MediaPlayer> saati modundayken, nesne bir <xref:System.InvalidOperationException> oluşturulur.  
   
- Bkz: [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) saatler ve zaman çizelgeleri hakkında daha fazla bilgi.  
+ Bkz: [animasyona genel bakış](animation-overview.md) saatler ve zaman çizelgeleri hakkında daha fazla bilgi.  
   
- Bkz: [görsel taslak kullanarak MediaElement'i denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md) saat modu örneği.  
+ Bkz: [görsel taslak kullanarak MediaElement'i denetleme](how-to-control-a-mediaelement-by-using-a-storyboard.md) saat modu örneği.  
   
 <a name="mediaelement"></a>   
 ## <a name="mediaelement-class"></a>MediaElement Class  
  Medya bir uygulamaya eklemek kadar basittir bir <xref:System.Windows.Controls.MediaElement> denetimini [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] uygulamanın ve sağlama bir <xref:System.Uri> dahil etmek istediğiniz ortam için. Tarafından desteklenen tüm medya türleri [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 desteklenir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Aşağıdaki örnek, bir basit kullanımını gösterir. <xref:System.Windows.Controls.MediaElement> içinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
  Bu örnekte, yüklendikten hemen sonra ortam otomatik olarak kayıttan yürütülür. Ortam yürütmeyi tamamladığında, ortam kapatılır ve yayın (video belleği dahil) tüm medya kaynaklardır. Varsayılan davranışı budur <xref:System.Windows.Controls.MediaElement> nesnesi ve tarafından denetlenen <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> ve <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> özellikleri.  
   
@@ -108,11 +108,11 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ### <a name="displaying-a-mediaplayer"></a>MediaPlayer görüntüleme  
  Teknik olarak, bir <xref:System.Windows.Media.MediaPlayer> fiziksel bir temsili olduğundan görüntülenemiyor. Ancak, bu ortama sunmak için kullanılabilir bir <xref:System.Windows.Media.Drawing> kullanarak <xref:System.Windows.Media.VideoDrawing> sınıfı. Aşağıdaki örnek kullanımını gösterir. bir <xref:System.Windows.Media.VideoDrawing> ortamı görüntülemek için.  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Bkz: [çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md) hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri.  
+ Bkz: [çizim nesnelerine genel bakış](drawing-objects-overview.md) hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.DrawingGroup>
-- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [Düzen](../advanced/layout.md)
+- [Nasıl Yapılır Konuları](audio-and-video-how-to-topics.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703685"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358944"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Performansı iyileştirme: Diğer öneriler
-<a name="introduction"></a> Bu konu başlığı altında ek olarak konularındaki tarafından kapsanan performans önerileri sağlar [WPF uygulama performansını en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) bölümü.  
+<a name="introduction"></a> Bu konu başlığı altında ek olarak konularındaki tarafından kapsanan performans önerileri sağlar [WPF uygulama performansını en iyi duruma getirme](optimizing-wpf-application-performance.md) bölümü.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703685"
 ## <a name="navigation-to-object"></a>Nesne gitme  
  <xref:System.Windows.Navigation.NavigationWindow> Nesne türetilir <xref:System.Windows.Window> ve içerik gezinti desteği ile öncelikli olarak toplayarak genişletir <xref:System.Windows.Navigation.NavigationService> ve günlük. İstemci alanının güncelleştirebilirsiniz <xref:System.Windows.Navigation.NavigationWindow> ya da belirterek bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] veya bir nesne. Aşağıdaki örnek, her iki yöntem de gösterir:  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  Her <xref:System.Windows.Navigation.NavigationWindow> nesnesi, pencerede kullanıcının Gezinti geçmişini kaydeden bir günlük sahiptir. Günlük amaçlarından kullanıcılar kendi adımları yeniden izlemesine izin vermektir.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703685"
   
  Bir nesneyi kullanmayı gittiğinizde günlük visual nesne ağacının tümünü depolar. Bu sayfayı yeniden ziyaret her seferinde, hemen oluşturulmadan gerek kalmadan anlamına gelir. Bu durumda, günlük depolama maliyeti yüksektir, ancak sayfa yeniden oluşturmak için zaman düşüktür.  
   
- Kullanırken <xref:System.Windows.Navigation.NavigationWindow> nesnesi, günlüğe kaydetme desteği, uygulamanızın performansını nasıl etkilediğini göz önünde bulundurmanız gerekir. Daha fazla bilgi için [gezintiye genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Kullanırken <xref:System.Windows.Navigation.NavigationWindow> nesnesi, günlüğe kaydetme desteği, uygulamanızın performansını nasıl etkilediğini göz önünde bulundurmanız gerekir. Daha fazla bilgi için [gezintiye genel bakış](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>İsabet sınaması 3B yüzeyler üzerinde  
@@ -73,12 +73,12 @@ ms.locfileid: "54703685"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yazı tipi önbellek hizmeti, yazı tipi verileri arasında paylaştığı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. İlk [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çalıştırdığınız uygulaması, hizmet zaten çalışmıyorsa bu hizmetini başlatır. Kullanıyorsanız [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], "Windows Presentation Foundation (WPF) yazı tipi önbellek 3.0.0.0" hizmet "El ile" (varsayılan) "Otomatik (Gecikmeli Başlatma)", ilk başlatma süresini azaltmak için ayarlayabileceğiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Metin](optimizing-performance-text.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)

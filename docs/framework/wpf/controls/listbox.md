@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551693"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362233"
 ---
 # <a name="listbox"></a>ListBox
-A <xref:System.Windows.Controls.ListBox> denetimi kullanıcılara seçilebilir öğelerin listesini sağlar.  
+A <xref:System.Windows.Controls.ListBox> seçilebilir öğe listesi kullanıcılara denetim sağlar.  
   
- Aşağıdaki şekilde tipik bir gösterilmektedir <xref:System.Windows.Controls.ListBox>.  
+ Aşağıdaki şekilde, tipik bir gösterilmektedir <xref:System.Windows.Controls.ListBox>.  
   
- ![ListBox ekran görüntüsü](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
-Tipik ListBox  
+ ![ListBox ekran](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+Tipik bir liste kutusu  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [Nasıl Yapılır Konuları](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ListBox>  

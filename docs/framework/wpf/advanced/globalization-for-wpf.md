@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377371"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu yazarken farkında olmanız gereken sorunların tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamalar. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.
@@ -47,7 +47,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Language özniteliği
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanan [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) öğenin dil özniteliğini temsil etmek için.  Yararlanmak için <xref:System.Globalization.CultureInfo> sınıfı dil özniteliği değeri tarafından önceden tanımlanmış kültür adlarının biri olması gerekir <xref:System.Globalization.CultureInfo>. [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) devralınabilir öğe ağacında (tarafından XML kuralları, bağımlılık özelliği devralma nedeniyle gerekmez) ve açıkça atanmamışsa varsayılan değeri boş bir dizedir.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanan [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) öğenin dil özniteliğini temsil etmek için.  Yararlanmak için <xref:System.Globalization.CultureInfo> sınıfı dil özniteliği değeri tarafından önceden tanımlanmış kültür adlarının biri olması gerekir <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) devralınabilir öğe ağacında (tarafından XML kuralları, bağımlılık özelliği devralma nedeniyle gerekmez) ve açıkça atanmamışsa varsayılan değeri boş bir dizedir.
 
  Language özniteliği diyalektler belirtmek için kullanışlıdır. Örneğin, Fransızca, farklı yazım denetimi, sözlük ve Söyleniş Fransa, Quebec, Belçika, ve İsviçre vardır. Ayrıca kod noktaları Çince, Japonca ve Korece paylaşmak [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ancak kavramsal şekiller farklıdır ve bunlar tamamen farklı yazı tipleri kullanın.
 
@@ -151,7 +151,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 ### <a name="localizable-user-interface"></a>Yerelleştirilebilir kullanıcı arabirimi
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlamak için kendi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellikleri ve mantığı kümesiyle nesnelerin bir hiyerarşisini belirlemek geliştiriciler sağlar. Birincil kullanım alanının [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geliştirmektir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] herhangi bir hiyerarşi belirtmek için uygulamalar, ancak kullanılabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri. Çoğu geliştirici [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulama belirtmek için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve C# gibi bir programlama dili için kullanıcı etkileşimi tepki vermek için kullanın.
 
- Bir kaynak açısından, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dile bağlı tanımlamak için tasarlanan dosya [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak öğesi ve bu nedenle, son dağıtım biçimi uluslararası dilleri desteklemek için yerelleştirilebilir olmalıdır. Çünkü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olayları birçok işleyemez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar bunu yapmak için kod blokları içerir. Daha fazla bilgi için [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Kod çıkarılır ve farklı ikili dosyalar derlenir, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya XAML BAML forma simgeleştirilmiş. XAML dosyaları, görüntüler ve diğer yönetilen kaynak nesne türlerini BAML formu katıştırıldığı diğer dillere yerelleştirilmesi, uydu kaynak derlemesi veya ana derleme yerelleştirme gerekli olmadığında.
+ Bir kaynak açısından, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dile bağlı tanımlamak için tasarlanan dosya [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak öğesi ve bu nedenle, son dağıtım biçimi uluslararası dilleri desteklemek için yerelleştirilebilir olmalıdır. Çünkü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olayları birçok işleyemez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar bunu yapmak için kod blokları içerir. Daha fazla bilgi için [XAML genel bakış (WPF)](xaml-overview-wpf.md). Kod çıkarılır ve farklı ikili dosyalar derlenir, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya XAML BAML forma simgeleştirilmiş. XAML dosyaları, görüntüler ve diğer yönetilen kaynak nesne türlerini BAML formu katıştırıldığı diğer dillere yerelleştirilmesi, uydu kaynak derlemesi veya ana derleme yerelleştirme gerekli olmadığında.
 
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları destekleyen tüm [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dize tabloları, görüntüler ve diğerleri dahil olmak üzere kaynakları.
@@ -167,7 +167,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
  Kullanılacak bir kaynak olarak uygulamanıza örneği bir <xref:System.Resources.ResourceManager> ve kullanmak istediğiniz kaynak yükleyin. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.
 
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>ClickOnce yerelleştirilmiş uygulamalarıyla kullanma
@@ -181,4 +181,4 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)

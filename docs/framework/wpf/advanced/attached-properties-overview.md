@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370130"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
@@ -20,7 +20,7 @@ Ekli özelliği, XAML tarafından tanımlanan bir kavramdır. Ekli özelliği he
 
 ## Önkoşulları <a name="prerequisites"></a>
 
-Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Bu konudaki örnekleri izlemek için ayrıca XAML anlamak ve WPF uygulamalarının nasıl yazılacağı bilmeniz.
+Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md). Bu konudaki örnekleri izlemek için ayrıca XAML anlamak ve WPF uygulamalarının nasıl yazılacağı bilmeniz.
 
 ## Neden ekli özelliklerini kullanma <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ XAML içinde ekli özellikler söz dizimini kullanarak ayarladığınız *Attach
 
 Nasıl ayarlanacağını gösteren bir örnek verilmiştir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> XAML içinde:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Kullanım için statik bir özellik biraz benzer olduğunu unutmayın; her zaman türü başvuru <xref:System.Windows.Controls.DockPanel> sahip olan ve ekli özellik kaydeder adıyla belirtilen herhangi bir örneğe başvuran yerine.
 
-Ayrıca, XAML içinde ekli özelliği biçimlendirme içinde ayarlanan bir öznitelik olduğundan, yalnızca ayarlama işlemi herhangi bir ilgisi yoktur. Stiller Tetikleyicileri gibi değerleri karşılaştırmak için bazı dolaylı mekanizmalar olmasına rağmen bir özelliği XAML içinde doğrudan alınamıyor (Ayrıntılar için bkz [stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+Ayrıca, XAML içinde ekli özelliği biçimlendirme içinde ayarlanan bir öznitelik olduğundan, yalnızca ayarlama işlemi herhangi bir ilgisi yoktur. Stiller Tetikleyicileri gibi değerleri karşılaştırmak için bazı dolaylı mekanizmalar olmasına rağmen bir özelliği XAML içinde doğrudan alınamıyor (Ayrıntılar için bkz [stil ve şablon oluşturma](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF uygulamasında ekli özellik
 
@@ -64,8 +64,8 @@ Ekli Özellikler ' WPF'de tipik gerekmez [!INCLUDE[TLA2#tla_clr](../../../../inc
 
 Aşağıdaki örnek kodda ekli özelliği nasıl ayarlayabileceğinizi gösterir. Bu örnekte, `myCheckBox` örneğidir <xref:System.Windows.Controls.CheckBox> sınıfı.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 XAML benzer durumda olmadığını `myCheckBox` zaten bir alt öğesi olarak eklenmemişse `myDockPanel` tarafından üçüncü kod satırının, Dördüncü satır kod bir özel durum oluşturmaz, ancak özellik değeri ile etkileşime değil bir <xref:System.Windows.Controls.DockPanel> üst ve bu nedenle hiçbir şey yapabilirsiniz. Yalnızca bir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> değer kümesi varlığı ile birleştirilmiş bir alt öğesi üzerinde bir <xref:System.Windows.Controls.DockPanel> üst öğenin işlenmiş uygulamada etkili bir davranışa neden olur. (Bu durumda, ekli özellik ayarlayın, sonra ağacına iliştirin. Veya ağaca iliştirip sonra ekli özellik ayarlayın. Herhangi bir eylem sırada aynı sonucu sağlar.)
 
@@ -73,7 +73,7 @@ XAML benzer durumda olmadığını `myCheckBox` zaten bir alt öğesi olarak ekl
 
 Özellik kaydı sırasında <xref:System.Windows.FrameworkPropertyMetadata> özelliği işleme, ölçüm ve benzeri etkileyip özelliğinin özelliklerini belirtmek için ayarlanır. Ekli özelliği için meta veriler üzerinde bir bağımlılık özelliği genellikle farklı değildir. İliştirilmiş özellik meta verileri geçersiz kılmada varsayılan bir değer belirtirseniz, değer'örtük ekli özelliği geçersiz kılma sınıfının örneklerini varsayılan değerini olur. Varsayılan değer sorguları eklenen bir özellik değeri için bazı işlem, özellikle bildirilir `Get` yöntemi erişimcisi bu özellik, burada belirttiğiniz değerin yanı sıra meta veriler için sınıfının bir örneğini belirtme ekli özelliği ayarlı değil Aksi takdirde.
 
-Özellik değeri kalıtımı özelliğini etkinleştirmek istiyorsanız, bağlı olmayan bir bağımlılık özellikleri yerine ekli özellikler kullanmanız gerekir. Ayrıntılar için bkz [özellik değeri kalıtımı](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Özellik değeri kalıtımı özelliğini etkinleştirmek istiyorsanız, bağlı olmayan bir bağımlılık özellikleri yerine ekli özellikler kullanmanız gerekir. Ayrıntılar için bkz [özellik değeri kalıtımı](property-value-inheritance.md).
 
 ## Özel ekli özellikler <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Bir özelliği tanımlayan sınıf dışındaki sınıflara yönelik mekanizmas�
 
 Ekli özelliği kullanarak başka bir senaryo sınıfınızın bir hizmeti temsil eder ve hizmet daha saydam bir şekilde tümleştirebilir sınıflar istediğiniz durumdur.
 
-Visual Studio WPF Tasarımcısı desteği gibi almak için başka bir senaryodur ancak **özellikleri** penceresi düzenleme. Daha fazla bilgi için [denetim yazmaya genel bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Visual Studio WPF Tasarımcısı desteği gibi almak için başka bir senaryodur ancak **özellikleri** penceresi düzenleme. Daha fazla bilgi için [denetim yazmaya genel bakış](../controls/control-authoring-overview.md).
 
 Özellik değeri kalıtımı kullanmak istiyorsanız önce bahsedildiği gibi ekli özelliği kaydetme.
 
@@ -118,8 +118,8 @@ Bildirerek, ekli özellik bir bağımlılık özelliği olarak tanımlayan bir `
 
 Aşağıdaki örnek, bağımlılık özelliği kayıt gösterir (kullanarak <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi), hem de **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri. Örnekte, ekli özellik addır `IsBubbleSource`. Bu nedenle, erişimcileri adlandırılmalıdır `GetIsBubbleSource` ve `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>İliştirilmiş özellik öznitelikleri
 
@@ -135,16 +135,16 @@ WPF tanımlar birkaç [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../incl
 
 ## Ekli özellikler hakkında daha fazla öğrenme <a name="more"></a>
 
--   Ekli özelliği oluşturma hakkında daha fazla bilgi için bkz. [iliştirilmiş özellik](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Ekli özelliği oluşturma hakkında daha fazla bilgi için bkz. [iliştirilmiş özellik](how-to-register-an-attached-property.md).
 
--   Daha fazla Gelişmiş bağımlılık özellikleri için kullanım senaryoları ve iliştirilmiş özellikler için bkz [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Daha fazla Gelişmiş bağımlılık özellikleri için kullanım senaryoları ve iliştirilmiş özellikler için bkz [özel bağımlılık özellikleri](custom-dependency-properties.md).
 
 -   Ayrıca bir özelliği ekli özelliği ve bağımlılık özelliği olarak kaydedebilirsiniz, ancak hala "sarmalayıcı" uygulamaları sunarsınız. Bu durumda, özellik, bu öğe üzerinde ayarlanabilir veya XAML aracılığıyla herhangi bir öğe üzerinde özellik sözdizimi bağlı. Bir özellik hem standart hem de bağlı kullanımlar için uygun bir senaryoyla örneğidir <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.DependencyProperty>
-- [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Ekli Özelliği Kaydetme](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [Ekli Özelliği Kaydetme](how-to-register-an-attached-property.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35973a2a3dea233468f91c6bd24851be088b84e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530317"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373848"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Nasıl yapılır: Bir Animasyonu Gelen, İçin ve Göre Kullanarak Denetleme
-"From/To/By" veya "Basit animasyon" iki hedef değer arasında bir geçiş oluşturur (bkz [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) giriş animasyon farklı türleri için). Temel animasyon hedef değerleri ayarlamak için kullanın, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri.  Aşağıdaki tabloda özetlenmiştir nasıl <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri bir arada kullanılabilir veya animasyonun hedef belirlemek için ayrı ayrı değerler.  
+"From/To/By" veya "Basit animasyon" iki hedef değer arasında bir geçiş oluşturur (bkz [animasyona genel bakış](animation-overview.md) giriş animasyon farklı türleri için). Temel animasyon hedef değerleri ayarlamak için kullanın, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri.  Aşağıdaki tabloda özetlenmiştir nasıl <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri bir arada kullanılabilir veya animasyonun hedef belirlemek için ayrı ayrı değerler.  
   
 |Belirtilen özellikleri|Sonuç davranış|  
 |--------------------------|------------------------|  
@@ -28,16 +28,16 @@ ms.locfileid: "54530317"
 > [!NOTE]
 >  Her ikisini birden ayarlamayın <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> aynı animasyon özelliği.  
   
- İkiden fazla hedef değerleri arasında animasyon ekleme ya da diğer ilişkilendirme yöntemlerini kullanmak için bir anahtar çerçeve animasyonu kullanın. Bkz: [anahtar-çerçeve animasyonlara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) daha fazla bilgi için.  
+ İkiden fazla hedef değerleri arasında animasyon ekleme ya da diğer ilişkilendirme yöntemlerini kullanmak için bir anahtar çerçeve animasyonu kullanın. Bkz: [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md) daha fazla bilgi için.  
   
- Tek bir özellik için birden çok animasyonlara uygulama hakkında daha fazla bilgi için bkz: [anahtar-çerçeve animasyonlara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+ Tek bir özellik için birden çok animasyonlara uygulama hakkında daha fazla bilgi için bkz: [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
   
  Aşağıdaki örnek, farklı ayar etkilerini gösterir <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> animasyonları özellikleri.  
   
 ## <a name="example"></a>Örnek  
- [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
+ [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Animasyona Genel bakış](animation-overview.md)
+- [Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)
 - [Gelen, için ve göre animasyon hedef değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)

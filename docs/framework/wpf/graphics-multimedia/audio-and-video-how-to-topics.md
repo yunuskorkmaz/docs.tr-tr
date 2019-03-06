@@ -7,23 +7,23 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363702"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Ses ve Video ile İlgili Nasıl yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> uygulamalarınızda ses ve video içeriğine tümleştirmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [Görsel Taslak Kullanarak MediaElement'i Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [Kullanıcı Olayı ile Medya Yürütme Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [Medya Yürütmesini Yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [Animasyonlarla Medya Yürütme](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [MediaElement Üzerinde Dönüşümler Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [Görsel Taslak Kullanarak MediaElement'i Denetleme](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [Kullanıcı Olayı ile Medya Yürütme Tetikleme](how-to-trigger-media-playback-with-a-user-event.md)  
+ [Medya Yürütmesini Yineleme](how-to-repeat-media-playback.md)  
+ [Animasyonlarla Medya Yürütme](how-to-play-media-with-animations.md)  
+ [MediaElement Üzerinde Dönüşümler Kullanma](how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.MediaElement>  
@@ -33,4 +33,4 @@ Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.C
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafikler ve Multimedya](index.md)

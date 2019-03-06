@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711804"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374680"
 ---
 # <a name="collect-ink"></a>Mürekkep toplama
 
-[Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) platform dijital mürekkep işlevselliğini önemli bir parçası toplar. Bu konu, Windows Presentation Foundation (WPF) mürekkep koleksiyonu için yöntemleri açıklar.
+[Windows Presentation Foundation](../index.md) platform dijital mürekkep işlevselliğini önemli bir parçası toplar. Bu konu, Windows Presentation Foundation (WPF) mürekkep koleksiyonu için yöntemleri açıklar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki örnekleri kullanmak için önce Visual Studio yüklemeniz gerekir ve [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. WPF uygulamaları yazmak nasıl de anlamanız gerekir. WPF ile çalışmaya başlama hakkında daha fazla bilgi için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örnekleri kullanmak için önce Visual Studio yüklemeniz gerekir ve [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. WPF uygulamaları yazmak nasıl de anlamanız gerekir. WPF ile çalışmaya başlama hakkında daha fazla bilgi için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>InkCanvas öğesi kullanma
 
@@ -34,15 +34,15 @@ Aşağıdaki örnekleri kullanmak için önce Visual Studio yüklemeniz gerekir 
 
 XAML kullanarak mürekkep koleksiyonunu ekleme gibi kolayca ayarlayabileceğiniz bir **InkCanvas** ağacınıza öğesi. Aşağıdaki örnek ekler bir <xref:System.Windows.Controls.InkCanvas> Visual Studio'da oluşturulan bir varsayılan WPF projesi:
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 **InkCanvas** öğesi mürekkep ek açıklama özellikleri neredeyse tüm XAML öğe türüne eklemenizi olası hale getirerek, alt öğelerini içerebilir. Örneğin, bir metin öğesine mürekkep özelliklerini eklemek için yalnızca bir alt öğesi kolaylaştırır bir <xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 Mürekkep ile görüntü işaretleme desteği eklemek oldukça kolaydır:
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>InkCollection Modları
 
@@ -58,8 +58,8 @@ Seçim modunu ayarlama ayarı olarak basit <xref:System.Windows.Controls.InkCanv
 
 Aşağıdaki kod düzenleme moduna değerine göre ayarlar bir <xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ Kullanım <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> mürekkep vuruş
 
 Aşağıdaki örnek, seçili vuruşların rengini kırmızı değiştirir:
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ Değiştirme yanı sıra <xref:System.Windows.Controls.InkCanvas.DefaultDrawingA
 
 Sonraki örnekte nasıl ayarlanacağı gösterilmektedir <xref:System.Windows.Ink.DrawingAttributes.Color%2A> özelliği. Bu kodu kullanmak için Visual Studio'da "HelloInkCanvas" adlı yeni bir WPF projesi oluşturun. Değiştirin *MainWindow.xaml* dosyasındaki kodu aşağıdaki kodla:
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 Ardından, aşağıdaki düğmeyi olay işleyicileri arka plan kod dosyasında, MainWindow sınıfının içine ekleyin:
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 Bu kodu kopyaladıktan sonra basın **F5** hata ayıklayıcıda programı çalıştırmak üzere Visual Studio'da.
 

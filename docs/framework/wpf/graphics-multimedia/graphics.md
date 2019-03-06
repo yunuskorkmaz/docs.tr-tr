@@ -7,26 +7,26 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662393"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361167"
 ---
 # <a name="graphics"></a>Grafikler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Entegre multimedya, vektör grafikleri, animasyon ve ilgi çekici kullanıcı arabirimleri ve içerik oluşturmak geliştiriciler için kolaylaştıran, içerik oluşturma desteği sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bit Eşlem Etkileri](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [Fırçalar](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [Çizimler](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [Geometriler](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [Görüntüler](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [Şekiller](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [Dönüşümler](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [Grafik İşleme Kayıt Defteri Ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Bit Eşlem Etkileri](bitmap-effects.md)  
+ [Fırçalar](brushes.md)  
+ [Çizimler](drawings.md)  
+ [Geometriler](geometries.md)  
+ [Görüntüler](images.md)  
+ [Şekiller](shapes.md)  
+ [Dönüşümler](transformations.md)  
+ [Grafik İşleme Kayıt Defteri Ayarları](graphics-rendering-registry-settings.md)  
+ [Nasıl Yapılır Konuları](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Shapes.Shape>
@@ -36,6 +36,6 @@ ms.locfileid: "54662393"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafikler ve Multimedya](index.md)
+- [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

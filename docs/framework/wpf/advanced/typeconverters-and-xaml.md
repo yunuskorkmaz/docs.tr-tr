@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748083"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352717"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı bir özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değeri olarak kullanılabilmesi için bir sınıfın örneklerini istiyorsanız uygulamak ihtiyacınız olabilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı veya her ikisini de.  
@@ -24,27 +24,22 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
  XAML işlemci bir öznitelik değeri işlemek için iki parça bilgi gerekir. Bilgi ilk parçasını ayarlanan özelliğin bir değer türüdür. XAML içinde işlenir ve bir öznitelik değeri tanımlayan herhangi bir dize olmalıdır sonuçta dönüştürülecek veya o türün değerine çözümlendi. Değer (örneğin, sayısal bir değer) XAML ayrıştırıcı tarafından anlaşılan basit bir tür ise, dize doğrudan dönüştürme denenir. Bir sabit listesi değeri ise, dize, numaralandırma, adlandırılmış bir sabit bir adı eşleşme olup olmadığını denetlemek için kullanılır. Değer ne ayrıştırıcı anlaşılan bir temel ya da bir numaralandırma sonra söz konusu türü ise sağlayabilir veya bir dönüştürülmüş dizesine dayalı bir değer türü örneği olmalıdır. Bu, bir tür dönüştürücüsü sınıfı belirterek gerçekleştirilir. Tür dönüştürücüsünü etkili bir şekilde kod içinde .NET kodda çağırır XAML senaryosu için hem de başka bir sınıf değerlerini sağlamak için bir yardımcı sınıftır.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>XAML içinde mevcut türü dönüştürme davranışını kullanarak  
- Temel XAML kavramları, aşinalık bağlı olarak, zaten türü dönüştürme davranışını temel uygulama XAML fark etmeden kullanıyor olabilir. Örneğin, WPF türünde bir değer alan özellikleri yüzlerce tanımlar <xref:System.Windows.Point>. A <xref:System.Windows.Point> iki boyutlu bir koordinat alanında bir koordinat açıklayan bir değerdir ve aslında iki önemli özellikleri vardır: <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A>. XAML içinde bir noktaya belirttiğinizde, (genellikle bir virgül) sınırlayıcı bir dize olarak arasında belirtmeden <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A> sağladığınız değerler. Örneğin: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`  
+ Temel XAML kavramları, aşinalık bağlı olarak, zaten türü dönüştürme davranışını temel uygulama XAML fark etmeden kullanıyor olabilir. Örneğin, WPF türünde bir değer alan özellikleri yüzlerce tanımlar <xref:System.Windows.Point>. A <xref:System.Windows.Point> iki boyutlu bir koordinat alanında bir koordinat açıklayan bir değerdir ve aslında iki önemli özellikleri vardır: <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A>. XAML içinde bir noktaya belirttiğinizde, (genellikle bir virgül) sınırlayıcı bir dize olarak arasında belirtmeden <xref:System.Windows.Point.X%2A> ve <xref:System.Windows.Point.Y%2A> sağladığınız değerler. Örneğin: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`  
   
  Bu basit tür bile <xref:System.Windows.Point> ve basit kullanımını XAML içinde bir tür dönüştürücüsü içerir. Bu durumda, sınıf, <xref:System.Windows.PointConverter>.  
   
  Tür dönüştürücü <xref:System.Windows.Point> Süren tüm özellikleri biçimlendirme kullanımları sınıf düzeyinde ölçeklendirerek tanımlanan <xref:System.Windows.Point>. Bir tür dönüştürücüsü Burada, aşağıdakiler gerekir. daha önce gösterilen aynı örneği için çok daha ayrıntılı biçimlendirmesini:  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  Tür dönüştürme dize veya daha ayrıntılı bir eşdeğer sözdizimi kullanmak için genellikle bir kodlama stili bir seçimdir. XAML araçları akışınız, değerlerin nasıl ayarlanacağı da etkileyebilir. Bazı XAML araçları gidiş dönüş Tasarımcı görünümleri ya da kendi seri hale getirme mekanizması için daha kolay olduğundan, en ayrıntılı form biçimlendirme yayma eğilimindedir.  
   
@@ -53,7 +48,7 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
 ### <a name="type-converters-and-markup-extensions"></a>Tür dönüştürücüleri ve İşaretleme uzantıları  
  İşaretleme uzantıları ve tür dönüştürücüleri XAML işlemci davranışı ve uygulanacak olan senaryoları açısından dikgen rolleri doldurun. Bağlam için işaretleme uzantısı kullanımları kullanılabilir olsa da, burada bir değerdir genellikle bir işaretleme uzantısı sağlar. özellikleri türü dönüştürme davranışını işaretleme uzantısı uygulamalarında işaretlenmemiştir. Diğer bir deyişle, bile bir işaretleme uzantısı bir metin dizesi olarak döndürür, `ProvideValue` çıkışı, belirli özellik ya da özellik değeri türü uygulanan olarak bu dize türü dönüştürme davranışını değil çağrılır, genellikle, bir işaretleme uzantısı amacı işlemidir bir dize ve ilgili herhangi bir tür dönüştürücüsü olmadan bir nesne döndürür.  
   
- İşaretleme uzantısı yerine bir tür dönüştürücüsü gerekli olduğu bir yaygın durum zaten var. bir nesneye bir başvuru sağlamaktır. En iyi durum bilgisi olmayan bir tür dönüştürücüsü yalnızca istenen olmayabilir yeni bir örneği oluşturabilir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ İşaretleme uzantısı yerine bir tür dönüştürücüsü gerekli olduğu bir yaygın durum zaten var. bir nesneye bir başvuru sağlamaktır. En iyi durum bilgisi olmayan bir tür dönüştürücüsü yalnızca istenen olmayabilir yeni bir örneği oluşturabilir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Yerel tür dönüştürücüleri  
  WPF ve .NET Framework uygulamasında XAML ayrıştırıcı, henüz genel temel olarak zorlayıcı olabilir türleri değil, yerel bir tür dönüştürme işleme sahip bazı türleri vardır. Böyle bir türü örneğidir <xref:System.DateTime>. Bunun nedeni, .NET Framework mimarisini nasıl çalıştığını temel alır: türü <xref:System.DateTime> mscorlib, .NET en temel kitaplığında tanımlanır. <xref:System.DateTime> bir bağımlılık tanıtan başka bir bütünleştirilmiş koddan gelen bir öznitelik ile öznitelikli izin verilmiyor (<xref:System.ComponentModel.TypeConverterAttribute> sisteminden alınmıştır) normal türü dönüştürücü bulma mekanizmasından'öznitelik atanıyor tarafından desteklenebilmesi için. Bunun yerine, XAML ayrıştırıcı gibi yerel işlenmesi gereken türlerinin bir listesi vardır ve bunlar true temelleri nasıl işlendiği için benzer şekilde işler. (Durumunda <xref:System.DateTime> bu bir çağrı içerir <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.ComponentModel.TypeConverter>
-- [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)

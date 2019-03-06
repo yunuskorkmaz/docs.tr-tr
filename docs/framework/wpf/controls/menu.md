@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555795"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370767"
 ---
 # <a name="menu"></a>Menü
-A <xref:System.Windows.Controls.Menu> komutlar veya olay işleyicileri ile ilişkili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir. Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder. Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağrılacak bir `Click` olay işleyicisi. A <xref:System.Windows.Controls.MenuItem> birden çok da sahip olabilirsiniz <xref:System.Windows.Controls.MenuItem> öğeler bir alt oluşturan alt olarak.  
+A <xref:System.Windows.Controls.Menu> komutları veya olay işleyicileri ile ilgili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir. Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder. Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağırma bir `Click` olay işleyicisi. A <xref:System.Windows.Controls.MenuItem> birden çok bulundurabilirsiniz <xref:System.Windows.Controls.MenuItem> oluşturan bir alt menüye alt öğeleri.  
   
- Aşağıdaki çizimde bir menü denetimi üç farklı durumlarını gösterir. Fare işaretçisi gibi hiçbir cihaz üzerinde dinleniyor varsayılan durumu olduğunda <xref:System.Windows.Controls.Menu>. Fare işaretçisini üzerine getirildiğinde odak durumu oluşur <xref:System.Windows.Controls.Menu> ve basılı durum oluşursa üzerinden fare düğmesini tıklatıldığında <xref:System.Windows.Controls.Menu>.  
+ Aşağıdaki çizimde, bir menü denetimi üç farklı durumlarını gösterir. Fare işaretçisi gibi cihaz üzerinde dinleniyor olduğunda varsayılan durumdur <xref:System.Windows.Controls.Menu>. Odak durumu fareyi üzerine getirildiğinde gerçekleşir <xref:System.Windows.Controls.Menu> ve basılı durumu üzerinde bir fare düğmesine tıklandığında oluşuyor <xref:System.Windows.Controls.Menu>.  
   
- ![Menu durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
-Farklı durumlardaki menüler  
+ ![Menü durumları](./media/ss-ctl-menu.gif "SS_CTL_menu")  
+Farklı durumlarda menüleri  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Menüye Genel Bakış](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Menüye Genel Bakış](menu-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Menu>  

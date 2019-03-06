@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e233503ec6a31b28134afbdaef229901b11fbaa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741697"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352782"
 ---
 # <a name="optimizing-performance-text"></a>Performansı iyileştirme: Metin
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak zengin metin içeriği sunumunu desteği içeren [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak, üç katmanda metin işleme ayırabilirsiniz:  
@@ -49,11 +49,11 @@ ms.locfileid: "54741697"
 -   Önceki sürümlerini istemciler dahil olmak üzere sabit biçimli belge gösterimi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer bilgi işlem cihazları.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çeşitli öğeler için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları için bkz: [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çeşitli öğeler için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları için bkz: [WPF'de tipografi](typography-in-wpf.md).  
   
  Aşağıdaki örnekler özelliklerini tanımlamak nasıl bir <xref:System.Windows.Documents.Glyphs> nesnesine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. <xref:System.Windows.Documents.Glyphs> Nesnesini çıktısını gösteren bir <xref:System.Windows.Media.GlyphRun> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Örneklerde Arial Courier yeni ve Times yeni Roman yazı tiplerinin yüklenir varsayılmaktadır **C:\WINDOWS\Fonts** yerel bilgisayarda klasör.  
   
- [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
 ### <a name="using-drawglyphrun"></a>DrawGlyphRun Kullanma  
  Özel denetiminiz varsa ve karakterleri işlemek, kullanmak istediğiniz <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> yöntemi.  
@@ -62,16 +62,16 @@ ms.locfileid: "54741697"
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>FormattedText nesnesi  
- <xref:System.Windows.Media.FormattedText> Nesne, metindeki her karakter ayrı ayrı biçimlendirilebilir, çok satırlı metin çizme olanak tanır. Daha fazla bilgi için [çizim biçimlendirilmiş metin](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md).  
+ <xref:System.Windows.Media.FormattedText> Nesne, metindeki her karakter ayrı ayrı biçimlendirilebilir, çok satırlı metin çizme olanak tanır. Daha fazla bilgi için [çizim biçimlendirilmiş metin](drawing-formatted-text.md).  
   
- Biçimlendirilmiş metin oluşturmak için arama <xref:System.Windows.Media.FormattedText.%23ctor%2A> oluşturmak için bir <xref:System.Windows.Media.FormattedText> nesne. İlk biçimlendirilmiş metin dizesi oluşturduktan sonra bir aralık stilleri biçimlendirme uygulayabilirsiniz. Uygulamanız kendi düzenini uygulamak isterse sonra <xref:System.Windows.Media.FormattedText> nesnedir gibi bir denetim kullanmaktan daha iyi bir seçenek <xref:System.Windows.Controls.TextBlock>. Daha fazla bilgi için <xref:System.Windows.Media.FormattedText> nesne, bkz: [çizim biçimlendirilmiş metin](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md) .  
+ Biçimlendirilmiş metin oluşturmak için arama <xref:System.Windows.Media.FormattedText.%23ctor%2A> oluşturmak için bir <xref:System.Windows.Media.FormattedText> nesne. İlk biçimlendirilmiş metin dizesi oluşturduktan sonra bir aralık stilleri biçimlendirme uygulayabilirsiniz. Uygulamanız kendi düzenini uygulamak isterse sonra <xref:System.Windows.Media.FormattedText> nesnedir gibi bir denetim kullanmaktan daha iyi bir seçenek <xref:System.Windows.Controls.TextBlock>. Daha fazla bilgi için <xref:System.Windows.Media.FormattedText> nesne, bkz: [çizim biçimlendirilmiş metin](drawing-formatted-text.md) .  
   
  <xref:System.Windows.Media.FormattedText> Nesnesi, alt düzey metin biçimlendirme yeteneği sağlar. Bir veya daha fazla karakterle birden çok biçimlendirme stil uygulayabilirsiniz. Örneğin, her ikisi de çağırabilirsiniz <xref:System.Windows.Media.FormattedText.SetFontSize%2A> ve <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> ilk beş karakterlerini biçimini değiştirmek için yöntem.  
   
  Aşağıdaki kod örneği oluşturur bir <xref:System.Windows.Media.FormattedText> nesne ve bunu işler.  
   
- [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument TextBlock ve etiket denetimleri  
@@ -80,21 +80,21 @@ ms.locfileid: "54741697"
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument performans birden fazla TextBlock veya etiket etkiler  
  Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. <xref:System.Windows.Documents.FlowDocument> Öğesi içeriği zengin sunumu yeniden akışkan olabilen belgeler için bir kapsayıcıdır ve bu nedenle, kullanarak daha büyük bir performans etkisi olur <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.Label> kontrol eder.  
   
- Daha fazla bilgi için <xref:System.Windows.Documents.FlowDocument>, bkz: [akış belgesine genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ Daha fazla bilgi için <xref:System.Windows.Documents.FlowDocument>, bkz: [akış belgesine genel bakış](flow-document-overview.md).  
   
 ### <a name="avoid-using-textblock-in-flowdocument"></a>FlowDocument içinde TextBlock kullanmaktan kaçının  
  <xref:System.Windows.Controls.TextBlock> Öğesi türetilen <xref:System.Windows.UIElement>. <xref:System.Windows.Documents.Run> Öğesi türetilen <xref:System.Windows.Documents.TextElement>, daha az masraflı olduğu bir <xref:System.Windows.UIElement>-türetilmiş bir nesneye. Mümkün olduğunda, kullanın <xref:System.Windows.Documents.Run> yerine <xref:System.Windows.Controls.TextBlock> içindeki metin içeriğini görüntülemek için bir <xref:System.Windows.Documents.FlowDocument>.  
   
  Aşağıdaki biçimlendirme örneği içinde metin içeriğini ayarlama iki yolunu gösterir bir <xref:System.Windows.Documents.FlowDocument>:  
   
- [!code-xaml[Performance#PerformanceSnippet13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
+ [!code-xaml[Performance#PerformanceSnippet13](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
   
 ### <a name="avoid-using-run-to-set-text-properties"></a>Metin özellikleri ayarlamak için Çalıştır'ı kullanarak kaçının  
  Genel olarak, kullanarak bir <xref:System.Windows.Documents.Run> içinde bir <xref:System.Windows.Controls.TextBlock> daha fazla performans açık bir kullanmadan daha yoğun olan <xref:System.Windows.Documents.Run> nesnesi. Kullanıyorsanız bir <xref:System.Windows.Documents.Run> metin özelliklerini ayarlamak için doğrudan bu özellikleri ayarlama <xref:System.Windows.Controls.TextBlock> yerine.  
   
  Aşağıdaki biçimlendirme örneği bu durumda, bir metin özelliğini ayarlayarak bu iki yolunu gösterir <xref:System.Windows.Controls.TextBlock.FontWeight%2A> özelliği:  
   
- [!code-xaml[Performance#PerformanceSnippet12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
+ [!code-xaml[Performance#PerformanceSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
   
  Aşağıdaki tablo 1000 görüntüleme maliyetini gösterir <xref:System.Windows.Controls.TextBlock> nesneleri ve açık bir olmadan <xref:System.Windows.Documents.Run>.  
   
@@ -124,21 +124,21 @@ ms.locfileid: "54741697"
   
  Aşağıdaki biçimlendirme örneği birden çok gösterir <xref:System.Windows.Controls.TextBlock> köprüleri görüntülemek için kullanılan öğeleri:  
   
- [!code-xaml[Performance#PerformanceSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
+ [!code-xaml[Performance#PerformanceSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
   
  Aşağıdaki biçimlendirme örneği kullanarak tek bir bu süre, köprüler görüntülemenin daha verimli bir şekilde gösteren <xref:System.Windows.Controls.TextBlock>:  
   
- [!code-xaml[Performance#PerformanceSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
+ [!code-xaml[Performance#PerformanceSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
   
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Köprüleri MouseEnter olay üzerinde yalnızca alt çizgiler gösteriliyor  
- A <xref:System.Windows.TextDecoration> nesne metni ekleyebileceğiniz görsel bir süsleme; ancak, örneklemek için yoğun performans olabilir. Kapsamlı kullanımını yaparsanız <xref:System.Windows.Documents.Hyperlink> öğeleri göz önünde bulundurun altçizgi gibi yalnızca bir olay tetiklendiğinde gösteren <xref:System.Windows.ContentElement.MouseEnter> olay. Daha fazla bilgi için [belirtin olmadığını köprünün altı çizilir](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ A <xref:System.Windows.TextDecoration> nesne metni ekleyebileceğiniz görsel bir süsleme; ancak, örneklemek için yoğun performans olabilir. Kapsamlı kullanımını yaparsanız <xref:System.Windows.Documents.Hyperlink> öğeleri göz önünde bulundurun altçizgi gibi yalnızca bir olay tetiklendiğinde gösteren <xref:System.Windows.ContentElement.MouseEnter> olay. Daha fazla bilgi için [belirtin olmadığını köprünün altı çizilir](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![TextDecorations görüntüleyen köprüler](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
+ ![TextDecorations görüntüleyen köprüler](./media/textdecoration03.png "TextDecoration03")  
 MouseEnter üzerinde köprü  
   
  Aşağıdaki biçimlendirme örnek gösterildiği bir <xref:System.Windows.Documents.Hyperlink> ve alt çizgi olmadan tanımlanan:  
   
- [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
  Aşağıdaki tablo performans maliyeti, 1000 görüntülemenin gösterir <xref:System.Windows.Documents.Hyperlink> öğeler ve alt çizgi olmadan.  
   
@@ -161,12 +161,12 @@ MouseEnter üzerinde köprü
  En iyi paragraf özelliği <xref:System.Windows.Documents.FlowDocument> nesne yerleştirir paragrafları böylece boşluk mümkün olduğunca eşit olarak dağıtılır. Varsayılan olarak, uygun paragraf özelliği devre dışıdır. Nesnenin ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> özelliğini `true`. Ancak, bu özellik etkinleştirildiğinde, uygulama performansını etkiler. Gerekmedikçe uygun paragraf özelliği kullanmayın önerilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
+- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
+- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
+- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Uygulama Kaynakları](optimizing-performance-application-resources.md)
+- [Veri Bağlama](optimizing-performance-data-binding.md)
+- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)

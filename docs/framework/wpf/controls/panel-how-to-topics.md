@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747924"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366250"
 ---
 # <a name="panel-how-to-topics"></a>Panel ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Panel> öğesi ve ilgili [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özel Panel Öğesi Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Panel OnRender Yöntemini Geçersiz Kılma](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [Öğenin Yükseklik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Öğenin Genişlik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Özel Panel Öğesi Oluşturma](how-to-create-a-custom-panel-element.md)  
+ [Panel OnRender Yöntemini Geçersiz Kılma](how-to-override-the-panel-onrender-method.md)  
+ [Öğenin Yükseklik Özelliklerini Ayarlama](how-to-set-the-height-properties-of-an-element.md)  
+ [Öğenin Genişlik Özelliklerini Ayarlama](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -39,8 +39,8 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Wind
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Düzen](../advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](scrollviewer-overview.md)

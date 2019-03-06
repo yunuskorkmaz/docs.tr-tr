@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 39fb0dcfe0110a0badcd552d711db40086d46fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377342"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
-<xref:System.Windows.Controls.Primitives.BulletDecorator> iki içerik özelliği vardır: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> ve <xref:System.Windows.Controls.Decorator.Child%2A>. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Özelliği tanımlar <xref:System.Windows.UIElement> madde işareti olarak kullanılacak. <xref:System.Windows.Controls.Decorator.Child%2A> Özelliği tanımlayan bir <xref:System.Windows.UIElement> madde işareti ile görsel olarak hizalar.  
+<xref:System.Windows.Controls.Primitives.BulletDecorator> İçerik iki özelliğe sahiptir: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> ve <xref:System.Windows.Controls.Decorator.Child%2A>. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Özelliği tanımlar <xref:System.Windows.UIElement> madde işareti olarak kullanılacak. <xref:System.Windows.Controls.Decorator.Child%2A> Özelliği tanımlayan bir <xref:System.Windows.UIElement> madde işareti ile görsel olarak hizalar.  
   
- Kullanan denetimler örnekleri aşağıda gösterilmiştir bir <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
+ Örnek olarak kullanan denetimler aşağıdaki çizimde bir <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
   
- ![3 BulletDecorators: onay kutusu, Ortala radyo düğmesi, metin kutusuna](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")  
+ ![3 BulletDecorators: Onay kutusu, Ortala radyo düğmesi, metin kutusu](./media/bulletdecorator.png "BulletDecorator")  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

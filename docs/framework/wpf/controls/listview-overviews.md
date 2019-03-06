@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551066"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370338"
 ---
 # <a name="listview-overviews"></a>ListView'a Genel Bakış
-Bu bölümdeki konular, nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.ListView> denetim.  
+Bu bölümdeki konular, nasıl kullanabileceğinizi gösteren bir <xref:System.Windows.Controls.ListView> denetimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [ListView Genel Bakış](listview-overview.md)  
+ [GridView Genel Bakış](gridview-overview.md)  
+ [GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ Bu bölümdeki konular, nasıl kullanılacağını gösteren bir <xref:System.Wi
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Nasıl Yapılır Konuları](listview-how-to-topics.md)

@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543461"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375187"
 ---
 # <a name="globalization-and-localization"></a>Genelleştirme ve Yerelleştirme
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Dünya çapında kullanılmaya hazır uygulamalar geliştirme için kapsamlı destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Yerelleştirme Öznitelikleri ve Yorumlar](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [WPF Genel Bakışında Çift Yönlü Özellikler](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)  
+ [WPF için Genelleştirme](globalization-for-wpf.md)  
+ [Otomatik Düzen Kullanımına Genel Bakış](use-automatic-layout-overview.md)  
+ [Yerelleştirme Öznitelikleri ve Yorumlar](localization-attributes-and-comments.md)  
+ [WPF Genel Bakışında Çift Yönlü Özellikler](bidirectional-features-in-wpf-overview.md)  
+ [Nasıl Yapılır Konuları](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "33543461"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML'de xml:lang İşleme](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML'de xml:lang İşleme](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler

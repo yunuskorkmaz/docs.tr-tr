@@ -16,51 +16,51 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625776"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369205"
 ---
 # <a name="put-function"></a>Put işlevi
+
 Adlandırılmış bir özelliği, yeni değere ayarlar.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT Put (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [in] VARIANT*          pVal,
    [in] CIMTYPE           vtType
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`  
+`vFunc`\
 [in] Bu parametre kullanılmaz.
 
-`ptr`  
+`ptr`\
 [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
-`wszName`  
+`wszName`\
 [in] Özelliğin adı. Bu parametre olamaz `null`.
 
-`lFlags`  
+`lFlags`\
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
-`pVal`   
-[in] Geçerli bir işaretçi `VARIANT` , yeni özellik değeri olur. Varsa `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`, özelliği `null`. 
+`pVal`\
+[in] Geçerli bir işaretçi `VARIANT` , yeni özellik değeri olur. Varsa `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`, özelliği `null`.
 
-`vtType`  
+`vtType`\
 [in] Türünü `VARIANT` işaret ettiği `pVal`. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
- 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -74,7 +74,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
 | `WBEM_E_TYPE_MISMATCH` | 0x80041005 | İçin örnek: Bildiren `pVal` işaret eden bir `VARIANT` özelliği için yanlış türde. <br/> Sınıf tanımları için: Özellik üst sınıfta zaten mevcut ve yeni bir COM tür eski bir COM türünden farklıdır. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu. |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) yöntemi.
@@ -85,20 +85,22 @@ Bu işlev her zaman geçerli özellik değeri ile yeni bir üzerine yazar. Varsa
 
 Kullanıcı özellikleri ile başlayamaz veya bitemez bir alt çizgi ("_") adları oluşturulamıyor. Bu, sistem sınıfları ve özellikleri için ayrılmıştır.
 
-Özelliği ayarlarsanız `Put` üst sınıfta exists işlevi, özelliğinin varsayılan değeri üst sınıfı türü Özellik türüyle eşleşmiyor sürece değiştirilir. Özelliği yok ve tür uyuşmazlığı değil, ceated özelliğidir.
+Özelliği ayarlarsanız `Put` üst sınıfta exists işlevi, özelliğinin varsayılan değeri üst sınıfı türü Özellik türüyle eşleşmiyor sürece değiştirilir. Özelliği yok ve tür uyuşmazlığı değil, bir özellik oluşturulur.
 
-Kullanım `vtType` yalnızca bir CIM sınıf tanımına yeni özellikler oluştururken, parametre ve `pVal` olduğu `null` veya işaret bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi, özelliğin CIM türü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType` temel alınan nesne örneği ise 0 olmalıdır (bile `Val` olan `null`) özelliğinin türü sabittir ve değiştirilemez.   
+Kullanım `vtType` yalnızca bir CIM sınıf tanımına yeni özellikler oluştururken, parametre ve `pVal` olduğu `null` veya işaret bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi, özelliğin CIM türü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType` temel alınan nesne örneği ise 0 olmalıdır (bile `Val` olan `null`) özelliğinin türü sabittir ve değiştirilemez.
 
 ## <a name="example"></a>Örnek
 
 Bir örnek için bkz. [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) yöntemi.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -4,12 +4,12 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363910"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklenti ile .NET Core uygulaması oluşturma
 
@@ -244,7 +244,7 @@ Neredeyse tüm eklentiler bir basit "Hello World" daha karmaşıktır ve birçok
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Örneğindeki diğer eklenti örnekleri
 
-`AssemblyDependencyResolver` Nesne yerel kitaplıkları NuGet paketlerinde yanı sıra yerelleştirilmiş yardımcı derlemeler de giderebilirsiniz. `UVPlugin` Ve `FrenchPlugin` bu senaryolar sırasıyla gösterilmektedir.
+Bu öğretici için tam kaynak kodunu bulunabilir [dotnet/samples deposuna](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Tamamlanan örnek diğer birkaç örnek verilmiştir `AssemblyDependencyResolver` davranışı. Örneğin, `AssemblyDependencyResolver` nesne NuGet paketlerinde yerelleştirilmiş yardımcı derlemeler yanı sıra yerel kitaplıkları da giderebilirsiniz. `UVPlugin` Ve `FrenchPlugin` örnek deposunda aşağıdaki senaryolar gösterilmektedir.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Nasıl bir NuGet paketi içinde tanımlanmış bir eklenti arabirimi derleme başvurusu
 

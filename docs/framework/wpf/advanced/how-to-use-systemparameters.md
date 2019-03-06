@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375161"
 ---
 # <a name="how-to-use-systemparameters"></a>Nasıl yapılır: SystemParameters Kullanma
 Bu örnek, erişme ve özelliklerini kullanma işlemi gösterilmektedir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için.  
@@ -24,16 +24,16 @@ Bu örnek, erişme ve özelliklerini kullanma işlemi gösterilmektedir <xref:Sy
   
  Aşağıdaki örnekte, erişme ve statik değerlerini kullanma işlemi gösterilmektedir <xref:System.Windows.SystemParameters> stil veya bir düğme özelleştirme. Bu biçimlendirme örneği uygulayarak bir düğme boyutları <xref:System.Windows.SystemParameters> değerleri.  
   
- [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
  Değerlerini kullanılacak <xref:System.Windows.SystemParameters> kod içinde statik başvuruları veya dinamik kaynak başvurularını kullanmanız gerekmez. Bunun yerine, değerlerini kullanmak <xref:System.Windows.SystemParameters> sınıfı. Anahtar olmayan özellikler statik özellik olarak, çalışma zamanı davranışını görünüşe göre tanımlanmasına rağmen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistem tarafından barındırılan olarak özellikleri yeniden değerlendir ve hesap için kullanıcı tarafından yapılan değişiklikleri sistem değerleri için düzgün biçimde değiştirilir. Aşağıdaki örnekte, genişlik ve yükseklik bir düğmeyi kullanarak ayarlamak gösterilmektedir <xref:System.Windows.SystemParameters> değerleri.  
   
- [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
- [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
+ [!code-csharp[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
+ [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.SystemParameters>
-- [Sistem Fırçası ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemFonts Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [Sistem Parametreleri Tuşlarını Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [Sistem Fırçası ile bir Alanı Boyama](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts Kullanma](how-to-use-systemfonts.md)
+- [Sistem Parametreleri Tuşlarını Kullanma](how-to-use-system-parameters-keys.md)
+- [Nasıl Yapılır Konuları](resources-how-to-topics.md)

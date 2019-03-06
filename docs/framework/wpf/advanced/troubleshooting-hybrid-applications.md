@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748706"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370104"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a> Bu konuda kullanan karma uygulamalar yazma olduğunda oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
@@ -35,7 +35,7 @@ ms.locfileid: "56748706"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Ölçeklendirme  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı ölçeklendirme modelleri vardır. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçeklendirme dönüştürmeleri için anlamlı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri, ama sıklıkla başkalarını değildir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini 0 çalışır, ancak aynı denetimi sıfır olmayan bir değere geri ölçeklendirme denerseniz, denetimin boyutu 0 olarak kalır. Daha fazla bilgi için [için WindowsFormsHost Öğesi düzeni etkenleri](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı ölçeklendirme modelleri vardır. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçeklendirme dönüştürmeleri için anlamlı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri, ama sıklıkla başkalarını değildir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini 0 çalışır, ancak aynı denetimi sıfır olmayan bir değere geri ölçeklendirme denerseniz, denetimin boyutu 0 olarak kalır. Daha fazla bilgi için [için WindowsFormsHost Öğesi düzeni etkenleri](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Bağdaştırıcı  
@@ -53,7 +53,7 @@ ms.locfileid: "56748706"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>Özellik eşleme  
- Farklı uygulamalar arasında köprü oluşturulacağını kapsamlı yorumlama bazı özellik eşlemeleri gerektirir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri. Özellik eşlemeleri yazı tiplerini, renkleri ve diğer özellikleri değişikliklere tepki vermek kodunuzu etkinleştirin. Genel olarak, özellik eşlemeleri için dinleyerek çalışır *özelliği*değişti olayları veya*özelliği*çağrıları ve alt denetim veya onun bağdaştırıcısı uygun özelliklerde ayarı değiştirildi. Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Farklı uygulamalar arasında köprü oluşturulacağını kapsamlı yorumlama bazı özellik eşlemeleri gerektirir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri. Özellik eşlemeleri yazı tiplerini, renkleri ve diğer özellikleri değişikliklere tepki vermek kodunuzu etkinleştirin. Genel olarak, özellik eşlemeleri için dinleyerek çalışır *özelliği*değişti olayları veya*özelliği*çağrıları ve alt denetim veya onun bağdaştırıcısı uygun özelliklerde ayarı değiştirildi. Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>Barındırılan içerik Düzenle ilgili özellikleri  
@@ -66,7 +66,7 @@ ms.locfileid: "56748706"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- Bu özellikler, doğrudan barındırılan içerik üzerinde ayarlı değil. Daha fazla bilgi için [için WindowsFormsHost Öğesi düzeni etkenleri](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ Bu özellikler, doğrudan barındırılan içerik üzerinde ayarlı değil. Daha fazla bilgi için [için WindowsFormsHost Öğesi düzeni etkenleri](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>Gezinti uygulamaları  
@@ -76,7 +76,7 @@ ms.locfileid: "56748706"
 ## <a name="message-loop-interoperation"></a>İleti döngüsü birlikte çalışabilirlik  
  İle çalışırken [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] beklendiği gibi ileti döngüleri, iletileri işlenmeyebilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> Yöntemi tarafından çağrılır <xref:System.Windows.Forms.Integration.WindowsFormsHost> Oluşturucusu. Bu yöntem bir ileti filtresi ekler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsü. Bu filtre çağırır <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> yöntemi, bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> ileti hedefi ve/ileti gönderileri çevirir.  
   
- Gösteriyorsa, bir <xref:System.Windows.Window> içinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ileti döngüsü ile <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, çağırmanızı sürece hiçbir şey yazamazsınız <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> yöntemi. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Yöntemi bir <xref:System.Windows.Window> ve ekler bir <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, anahtar ilgili iletileri, yeniden yönlendirmeler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsü. Daha fazla bilgi için [Windows Forms ve WPF birlikte çalışabilirlik giriş mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+ Gösteriyorsa, bir <xref:System.Windows.Window> içinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ileti döngüsü ile <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, çağırmanızı sürece hiçbir şey yazamazsınız <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> yöntemi. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Yöntemi bir <xref:System.Windows.Window> ve ekler bir <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, anahtar ilgili iletileri, yeniden yönlendirmeler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsü. Daha fazla bilgi için [Windows Forms ve WPF birlikte çalışabilirlik giriş mimarisi](windows-forms-and-wpf-interoperability-input-architecture.md).  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>Saydamlık ve katmanlama  
@@ -88,7 +88,7 @@ ms.locfileid: "56748706"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stillerin bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Şablonunda yöntemi çağrıldığında bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz ancak [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için erişmenizi sağlayacak [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Comctl32.dll sürüm 6.0 varsa denetimler için görsel stilleri. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> işleyiciler iş parçacığı üzerinde oluşturulmadan önce yöntemi. Daha fazla bilgi için [nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stillerin bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Şablonunda yöntemi çağrıldığında bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz ancak [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için erişmenizi sağlayacak [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Comctl32.dll sürüm 6.0 varsa denetimler için görsel stilleri. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> işleyiciler iş parçacığı üzerinde oluşturulmadan önce yöntemi. Daha fazla bilgi için [nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lisanslı Denetimler  
@@ -108,7 +108,7 @@ ms.locfileid: "56748706"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Obj klasörü silindiğinde tasarım zamanı hata listesi görünür.  
  Obj klasörü silinirse, tasarım zamanı hata listesi görüntülenir.  
   
- Kullanarak tasarlarken <xref:System.Windows.Forms.Integration.ElementHost>, Windows Form Tasarımcısı hata ayıklama veya sürüm klasöründeki projenizin obj klasörü içinde oluşturulan dosyaları kullanır. Bu dosyaları silerseniz, tasarım zamanı hata listesi görüntülenir. Bu sorunu gidermek için projenizi yeniden derleyin. Daha fazla bilgi için [Windows Forms tasarımcısında tasarım zamanı hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ Kullanarak tasarlarken <xref:System.Windows.Forms.Integration.ElementHost>, Windows Form Tasarımcısı hata ayıklama veya sürüm klasöründeki projenizin obj klasörü içinde oluşturulan dosyaları kullanır. Bu dosyaları silerseniz, tasarım zamanı hata listesi görüntülenir. Bu sorunu gidermek için projenizi yeniden derleyin. Daha fazla bilgi için [Windows Forms tasarımcısında tasarım zamanı hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost ve IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748706"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF Tasarımcısı'nda birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](layout-considerations-for-the-windowsformshost-element.md)
+- [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

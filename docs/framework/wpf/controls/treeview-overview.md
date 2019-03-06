@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 42e6601ecc65ec3534b82154bffc1076e10db665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369636"
 ---
 # <a name="treeview-overview"></a>TreeView Genel Bakışı
 <xref:System.Windows.Controls.TreeView> Denetimi daraltılabilir düğümleri kullanarak hiyerarşik bir yapıda bilgilerini görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TreeView> ve <xref:System.Windows.Controls.TreeViewItem> denetler ve kullanımlarının ilişkin basit örnekler sağlar.  
@@ -21,7 +21,7 @@ ms.locfileid: "54504294"
 ## <a name="what-is-a-treeview"></a>TreeView nedir?  
  <xref:System.Windows.Controls.TreeView> olan bir <xref:System.Windows.Controls.ItemsControl> öğelerini kullanarak katmandan <xref:System.Windows.Controls.TreeViewItem> kontrol eder. Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.TreeView>.  
   
- [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
+ [!code-xaml[TreeViewSnips#EmbeddedTVIs](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   
 <a name="Creating_a_TreeView"></a>   
 ## <a name="creating-a-treeview"></a>TreeView oluşturma  
@@ -31,7 +31,7 @@ ms.locfileid: "54504294"
   
  Belirtebilirsiniz bir <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> bir veri kaynağı ve ardından belirtin bir <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> ve <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> tanımlamak için <xref:System.Windows.Controls.TreeViewItem> içeriği.  
   
- Düzenini tanımlamak için bir <xref:System.Windows.Controls.TreeViewItem> denetimi de kullanabilirsiniz <xref:System.Windows.HierarchicalDataTemplate> nesneleri. Daha fazla bilgi ve örnek için bkz. [kullanım SelectedValue, SelectedValuePath ve SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md).  
+ Düzenini tanımlamak için bir <xref:System.Windows.Controls.TreeViewItem> denetimi de kullanabilirsiniz <xref:System.Windows.HierarchicalDataTemplate> nesneleri. Daha fazla bilgi ve örnek için bkz. [kullanım SelectedValue, SelectedValuePath ve SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md).  
   
  Bir öğe değilse bir <xref:System.Windows.Controls.TreeViewItem> denetimi, otomatik olarak içine alınır tarafından bir <xref:System.Windows.Controls.TreeViewItem> denetimi <xref:System.Windows.Controls.TreeView> denetim görüntülenir.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54504294"
   
  <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Özelliği <xref:System.Windows.Controls.TreeView> denetimi salt okunur bir özellik; bu nedenle açıkça bunu göremezsiniz. <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Özelliği ayarlanmışsa kullanıcı tıkladığında bir <xref:System.Windows.Controls.TreeViewItem> denetim veya <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> özelliği `true` üzerinde <xref:System.Windows.Controls.TreeViewItem> denetimi.  
   
- Kullanım <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> özelliği belirtmek için bir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> , bir <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. Daha fazla bilgi için [kullanım SelectedValue, SelectedValuePath ve SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md).  
+ Kullanım <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> özelliği belirtmek için bir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> , bir <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. Daha fazla bilgi için [kullanım SelectedValue, SelectedValuePath ve SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md).  
   
  Bir olay işleyicisi kaydedebileceğiniz <xref:System.Windows.Controls.TreeView.SelectedItemChanged> seçili belirlemek için olay <xref:System.Windows.Controls.TreeViewItem> değişiklikler. <xref:System.Windows.RoutedPropertyChangedEventArgs%601> İçin olay işleyicisi belirtir sağlanan olan <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>, önceki seçimi olduğu ve <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, geçerli seçimi olduğu. Her iki değer `null` uygulama veya kullanıcıya bir önceki ya da geçerli seçimi yapmamışsa.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54504294"
   
  Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.Controls.Control.Foreground%2A> ve <xref:System.Windows.Controls.Control.FontSize%2A> özellik değerleri için bir <xref:System.Windows.Controls.TreeViewItem> denetimi kullanarak bir <xref:System.Windows.FrameworkElement.Style%2A>.  
   
- [!code-xaml[TreeViewSimple#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
+ [!code-xaml[TreeViewSimple#8](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
   
 <a name="Adding_Images_and_oOther_Content_to_TreeView_Items"></a>   
 ## <a name="adding-images-and-other-content-to-treeview-items"></a>Görüntüleri ve diğer içerik TreeView öğeler ekleme  
@@ -67,14 +67,14 @@ ms.locfileid: "54504294"
   
  Aşağıdaki örnek nasıl tanımlanacağını gösterir <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> , bir <xref:System.Windows.Controls.TreeViewItem> olarak bir <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.TextBlock> hem de alınmış bir <xref:System.Windows.Controls.DockPanel> denetimi.  
   
- [!code-xaml[TreeViewSnips#TVIHeader](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
+ [!code-xaml[TreeViewSnips#TVIHeader](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
   
  Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.DataTemplate> içeren bir <xref:System.Windows.Controls.Image> ve <xref:System.Windows.Controls.TextBlock> içinde alınmış bir <xref:System.Windows.Controls.DockPanel> denetimi. Kullanabileceğiniz bir <xref:System.Windows.DataTemplate> ayarlanacak <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> veya <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> için bir <xref:System.Windows.Controls.TreeViewItem>.  
   
- [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
+ [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
-- [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+- [Nasıl Yapılır Konuları](treeview-how-to-topics.md)
+- [WPF İçerik Modeli](wpf-content-model.md)

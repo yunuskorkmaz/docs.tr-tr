@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma'
+title: 'Nasıl yapılır: Birden çok sürümünü bir iş akışı yan yana barındırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181626"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366716"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: birden çok sürümünü bir iş akışı yan yana barındırma
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: Birden çok sürümünü bir iş akışı yan yana barındırma
 `WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.
 
 > [!NOTE]
@@ -36,12 +36,12 @@ ms.locfileid: "50181626"
 -   [Derleme ve uygulamayı çalıştırmak için](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Başlarken Öğreticisi her adımda, önceki adımları bağlıdır. Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-###  <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için  
+### <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için  
   
 1.  Açık **WF45GettingStartedTutorial** çözüm açık değilse Visual Studio 2012.  
   
@@ -60,14 +60,14 @@ ms.locfileid: "50181626"
     > [!NOTE]
     >  Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir. Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.
 
-8.  Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör. Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör. Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.
 
-###  <a name="BKMK_UpdateWorkflows"></a> İş akışları güncelleştirmek için
+### <a name="BKMK_UpdateWorkflows"></a> İş akışları güncelleştirmek için
  Bu bölümde, iş akışı tanımları güncelleştirilir. İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.
 
-####  <a name="BKMK_UpdateStateMachine"></a> Durum makinesi iş akışını güncelleştirme
+#### <a name="BKMK_UpdateStateMachine"></a> Durum makinesi iş akışını güncelleştirme
 
 1.  İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **StateMachineNumberGuessWorkflow.xaml**.
 
@@ -109,7 +109,7 @@ ms.locfileid: "50181626"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateFlowchart"></a> Akış Çizelgesi iş akışını güncelleştirme
+#### <a name="BKMK_UpdateFlowchart"></a> Akış Çizelgesi iş akışını güncelleştirme
 
 1.  İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **FlowchartNumberGuessWorkflow.xaml**.
 
@@ -145,7 +145,7 @@ ms.locfileid: "50181626"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateSequential"></a> Sıralı iş akışını güncelleştirme
+#### <a name="BKMK_UpdateSequential"></a> Sıralı iş akışını güncelleştirme
 
 1.  İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** proje, çift **SequentialNumberGuessWorkflow.xaml**.
 
@@ -181,7 +181,7 @@ ms.locfileid: "50181626"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için
 
 1.  Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** açmak için proje.
 
@@ -549,7 +549,7 @@ ms.locfileid: "50181626"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için
+### <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için
 
 1.  Uygulamayı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşlarına basın.
 
@@ -580,4 +580,4 @@ ms.locfileid: "50181626"
 
 4.  Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin. Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz. Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez. Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.
 
-     Sonraki adımda [nasıl yapılır: çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri şekilde güncelleştirilir `v2` örnekleri.
+     Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.

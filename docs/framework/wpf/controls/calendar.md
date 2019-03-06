@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359412"
 ---
 # <a name="calendar"></a>Takvim
 Bir takvim görsel bir takvim görünümünü kullanarak bir tarih seçmek üzere bir kullanıcı etkinleştirir.  
@@ -19,7 +19,7 @@ Bir takvim görsel bir takvim görünümünü kullanarak bir tarih seçmek üzer
   
  Aşağıdaki iki resimde <xref:System.Windows.Controls.Calendar> seçimleri ve Kararma tarihleri biriyle ve görüntü olmadan denetler.  
   
- ![Takvim denetimlerinde](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Takvim denetimlerinde](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Takvim denetimleri  
   
  Aşağıdaki tabloda, genellikle ilişkilendirilmiş olan görevler hakkında bilgi sağlar <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ Takvim denetimleri
 |BOŞLUK veya ENTER|<xref:System.Windows.Controls.CalendarMode.Year> veya <xref:System.Windows.Controls.CalendarMode.Decade>|Anahtarları <xref:System.Windows.Controls.Calendar.DisplayMode%2A> için <xref:System.Windows.Controls.CalendarMode.Month> veya <xref:System.Windows.Controls.CalendarMode.Year> odaklanmış öğesi tarafından temsil edilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Denetimler](../../../../docs/framework/wpf/controls/index.md)
-- [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Denetimler](index.md)
+- [Stil ve Şablon Oluşturma](styling-and-templating.md)

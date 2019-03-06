@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377276"
 ---
 # <a name="checkbox"></a>CheckBox
-Kullanabileceğiniz bir <xref:System.Windows.Controls.CheckBox> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] uygulamanızın bir kullanıcı seçin veya temizleyin seçenekleri temsil eder. Tek bir onay kutusu kullanabilir veya iki veya daha fazla onay kutularını gruplandırabilirsiniz.  
+Kullanabileceğiniz bir <xref:System.Windows.Controls.CheckBox> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , uygulamanızın bir kullanıcı seçin veya temizleyin seçenekleri temsil eder. Tek bir onay kutusu kullanabilirsiniz ya da iki veya daha fazla onay kutusu gruplayabilirsiniz.  
   
  Aşağıdaki grafikte farklı durumlarını gösterir bir <xref:System.Windows.Controls.CheckBox>.  
   
- ![CheckBox durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
-Farklı durumlardaki onay kutusu denetimleri  
+ ![Onay kutusu durumları](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+Farklı durumlarda CheckBox Denetimleri  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.CheckBox>  

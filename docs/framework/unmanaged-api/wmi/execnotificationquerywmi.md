@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352886"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
-Olayları almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağırana döndürülen Numaralandırıcı olaylar için yoklama. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.  
+
+Olayları almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağırana döndürülen Numaralandırıcı olaylar için yoklama. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,46 +44,47 @@ HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametreler
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Windows Management tarafından desteklenen geçerli bir sorgu dili olan bir dize. WMI Sorgu Dili kısaltması "WQL" olmalıdır.
 
-`strQuery`  
+`strQuery`\
 [in] Sorgu metni. Bu parametre olamaz `null`.
 
-`lFlags`   
-[in] Bu işlevin davranışını etkileyen aşağıdaki iki bayrakların birleşimi. Bu değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda. 
+`lFlags`\
+[in] Bu işlevin davranışını etkileyen aşağıdaki iki bayrakların birleşimi. Bu değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.
 
 | Sabit | Değer  | Açıklama  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. Bu bayrak ayarlanmazsa, çağrı başarısız olur. Olayları sürekli olarak alınan kullanıcı döndürülen Numaralandırıcı yoklaması gerekir yani olmasıdır. Bu çağrı süresiz olarak engelleme, mümkün kılar. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev yalnızca iletme bir numaralandırıcı döndürür. Genellikle, yalnızca iletme numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılar daha az bellek kullanır, ancak çağrısına izin verme [kopya](clone.md). |
 
-`pCtx`  
-[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen olaylar sağlayarak sağlayıcı tarafından kullanılan bir örnek. 
+`pCtx`\
+[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen olaylar sağlayarak sağlayıcı tarafından kullanılan bir örnek.
 
-`ppEnum`  
+`ppEnum`\
 [out] Eğer hiç Hata oluşmazsa, işaretçi örnekleri sorgunun sonuç kümesinde almak çağırıcı veren numaralandırıcıyı alır. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
 
-`authLevel`  
+`authLevel`\
 [in] Yetkilendirme düzeyi.
 
-`impLevel` [in] Kimliğe bürünme düzeyi.
+`impLevel`\
+[in] Kimliğe bürünme düzeyi.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Bir işaretçi bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) geçerli ad alanını temsil eden nesne.
 
-`strUser`   
+`strUser`\
 [in] Kullanıcı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
-`strPassword`   
+`strPassword`\
 [in] Parola. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
-`strAuthority`   
+`strAuthority`\
 [in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
 ## <a name="return-value"></a>Dönüş değeri
@@ -96,7 +98,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Sorgu var olmayan bir sınıfı belirtiyor. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Çok fazla olay teslimini kesinlik istendi. Daha büyük bir yoklama toleransı belirtilmesi gerekir. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu requess Windows yönetimi daha fazla bilgi sağlayabilir. Bu `HRESULT` isteğinde bir ad alanındaki tüm nesneler yoklamak üzere Olay sorgusu sonuçları döndürülür. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu, Windows Yönetim sunabileceğinden daha fazla bilgi ister. Bu `HRESULT` isteğinde bir ad alanındaki tüm nesneler yoklamak üzere Olay sorgusu sonuçları döndürülür. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Sorgu söz dizimi hatası vardı. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | İstenen sorgu dili desteklenmiyor. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Sorgu çok daha karmaşıktır. |
@@ -105,7 +107,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Sorgu nelze analyzovat. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev bir çağrı sarılır [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) yöntemi.
@@ -116,12 +118,14 @@ Bununla ilgili sınırlamalar sayısını `AND` ve `OR` WQL sorguları kullanıl
 
 İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
 
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.idl  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.idl
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

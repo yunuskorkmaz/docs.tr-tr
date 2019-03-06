@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 7984d684987ef8acb172e8339f120c410f4885f3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362090"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
@@ -58,7 +58,7 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 >  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Daha fazla bilgi için [nasıl yapılır: LINQ ile ArrayList sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
-##  <a name="query"></a> Sorgu  
+## <a name="query"></a> Sorgu  
  Sorgu, hangi bilgilerin veri kaynağından veya kaynaklarından alınacağını belirtir. İsteğe bağlı olarak, bir sorgunun nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtir. Bir sorguyu sorgu değişkeninde depolanır ve sorgu ifadesiyle başlatılır. Sorguları yazmayı kolaylaştırmak için C# yeni sorgu sözdizimi tanıttı.  
   
  Önceki örnekte sorgu tamsayı dizisinden tüm çift sayıları döndürür. Sorgu ifadesi üç yan tümce içeriyor: `from`, `where` ve `select`. (SQL ile bilginiz varsa, yan tümcelerini sıralama sırasının SQL'deki gelen ters olduğunu fark etmiş.) `from` Yan tümcesi veri kaynağını belirtir `where` yan tümcesi filtreyi uygular ve `select` yan tümcesi ise döndürülen öğelerin türünü belirtir. Bunlar ve diğer sorgu yan tümceleri içinde ayrıntılı olarak ele alınmıştır [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md) bölümü. Şimdilik önemli nokta, olan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], sorgu değişkeninin kendisinin hiç eylem almaması ve veri döndürmemesidir. Yalnızca, sonraki noktada sorgu çalıştırıldığında sonuçları üretmek için gerekli olan bilgileri depolar. Sorguları Sahne arkasında nasıl oluşturulduğu hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  

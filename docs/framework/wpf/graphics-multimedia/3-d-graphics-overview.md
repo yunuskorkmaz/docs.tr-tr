@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 237c354d1a5207d4d038097f7e1348379c44382d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653261"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352873"
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevselliği [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çizme, dönüştürme ve biçimlendirme hem işlemsel koddaki 3B grafikler animasyon geliştiricilerin sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimler oluşturmak, karmaşık veri çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevselliği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  
@@ -29,7 +29,7 @@ ms.locfileid: "54653261"
 ## <a name="3-d-coordinate-space"></a>3B koordinat  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Koordinat sistemi için [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafik işleme alan (genellikle ekranın) sol üst köşesindeki içinde kaynak bulur. İçinde [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] sistem x eksenindeki değerler devam sağa ve aşağı doğru pozitif y değerleri devam pozitif.  İçinde [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] sağa pozitif x eksenindeki değerler ancak bunun yerine yukarı doğru devam ederek pozitif y ekseni değerler ve dışa doğru pozitif z değerleri ile koordinat sistemi, ancak kaynak işleme alan ortasında bulunur merkezinden Görüntüleyicisi doğru.  
   
- ![Koordinat sistemleri](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-1.png "CoordSystem-1")  
+ ![Koordinat sistemleri](./media/coordsystem-1.png "CoordSystem-1")  
 Geleneksel 2B ve 3B koordinat sistemini gösterimleri  
   
  Bu eksen tarafından tanımlanan başvuru çerçevesidir için alandır [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] nesneler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bu alandaki modelleri oluşturabilir ve ışıklar oluşturup bunları görüntülemek için kameralar gibi bu başvuru çerçevesidir ya da "dünya alanındaki," yerel dönüşümleri uyguladığınızda, oluşturduğunuz her model için referans çerçevesi ayırmak yararlıdır. Ayrıca, dünya alanındaki nesneleri tamamen farklı arayın veya hiç görünür olmaması, bağlı olarak, açık ve kamera ayarları, ancak kameranın konumu değiştirmez, dünya alanındaki nesnelerin konumunu unutmayın.  
@@ -42,18 +42,18 @@ Geleneksel 2B ve 3B koordinat sistemini gösterimleri
   
  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> Ve <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> özelliklerini <xref:System.Windows.Media.Media3D.ProjectionCamera> kameranın projeksiyon aralığını sınırlayan. Kamera sahnenin herhangi bir yerde bulunan olabileceğinden, aslında bir model içinde veya nesnelerin düzgün bir şekilde ayırt etmek zor hale çok bir model yakın konumlandırılan kamera için mümkündür.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> dışında olmayan nesneler çizileceğini kameradan en düşük bir uzaklık belirtmenizi sağlar.  Buna karşılık, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> tanınabilir olmasını çok uzakta nesneleri Sahne içinde eklenmeyecek sağlar nesneleri değil çizilen, kamera mesafe belirtmenize olanak tanır.  
   
- ![Kamera Kurulum](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem-6")  
+ ![Kamera Kurulum](./media/coordsystem-6.png "CoordSystem-6")  
 Kamera konumu  
   
  <xref:System.Windows.Media.Media3D.OrthographicCamera> bir orthogonal izdüşümü belirtir bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] model için bir [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] visual yüzeyi. Diğer kameralar gibi yönünü ve "yukarı" yönü görüntüleme, bir konumu belirtir. Farklı <xref:System.Windows.Media.Media3D.PerspectiveCamera>, ancak <xref:System.Windows.Media.Media3D.OrthographicCamera> perspektif foreshortening içermeyen bir projeksiyon açıklar. Diğer bir deyişle, <xref:System.Windows.Media.Media3D.OrthographicCamera> kenarlarının kenarlarının uyan bir noktada bir kamera olarak yerine paralel bir görüntüleme kutusunun açıklar. Aşağıdaki görüntüde kullanarak göründüğü haliyle aynı modelin gösterilmektedir <xref:System.Windows.Media.Media3D.PerspectiveCamera> ve <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
   
- ![Ortografik ve perspektif projeksiyon](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
+ ![Ortografik ve perspektif projeksiyon](./media/camera-projections4.png "Camera_projections4")  
 Perspektif ve Ortografik projeksiyonlar  
   
  Aşağıdaki kod, bazı tipik kamera ayarları gösterir.  
   
- [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
- [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
+ [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
+ [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
   
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>Model ve kafes temelleri  
@@ -64,7 +64,7 @@ Perspektif ve Ortografik projeksiyonlar
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sistemi şu anda sağlar <xref:System.Windows.Media.Media3D.MeshGeometry3D> sınıfı, tüm geometri belirtmenize olanak tanıyan; şu anda desteklemediği önceden tanımlanmış [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] temelleri Küreler ve üçüncü dereceden forms gibi. Oluşturmaya başlamak bir <xref:System.Windows.Media.Media3D.MeshGeometry3D> listesini üçgen köşelerin belirterek, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> özelliği. Her köşe olarak belirtilen bir <xref:System.Windows.Media.Media3D.Point3D>.  (İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bu özellik her köşe koordinatlarını temsil eden threes gruplandırılmış sayıdan oluşan bir liste olarak belirtin.) Geometrisini bağlı olarak, kafes birçok üçgenler, bazıları aynı köşelerini (köşe) paylaşmak oluşan. Kafes doğru bir şekilde çizmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hakkında köşeler hangi bu üçgen tarafından paylaşılır bilgilere gerek duyar. Üçgen dizin ile bir listesini belirterek bu bilgiyi sağlamak <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> özelliği. Bu liste, noktaları belirtilen sırada belirtir <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listesi bir üçgen belirler.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
   
  Önceki örnekte <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> küp şeklinde kafes tanımlamak için sekiz köşe listesi belirtir. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> Özelliği, üç dizin on iki gruplarının bir listesini belirtir.  Listedeki her bir sayının bir uzaklık başvurduğu <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listesi.  Örneğin, tarafından belirtilen ilk üç köşeler <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listesi olan (1,1,0) (0,1,0) ve (0,0,0). İlk üç tarafından belirtilen dizinleri <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> listesi: 0, 2 ve 1, ilk, üçüncü karşılık gelir ve ikinci noktaları <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listesi. Sonuç olarak, küp modelini yaptığı ilk üçgen (1,1,0) (0,1,0) için (0,0,0) için oluşan ve kalan on üçgenler benzer şekilde belirlenir.  
   
@@ -74,11 +74,11 @@ Perspektif ve Ortografik projeksiyonlar
   
  Aşağıdaki örnek, yordam kodunda bir yüz küp modeli oluşturma işlemi gösterilmektedir. Tek bir GeometryModel3D'olarak tüm küp çizebilirsiniz dikkat edin. Bu örnek, küpün yüzeyi ayrı dokular her yüz için daha sonra uygulamak için farklı bir model olarak çizer.  
   
- [!code-csharp[3doverview#3DOverview3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
- [!code-vb[3doverview#3DOverview3DN6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
+ [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
+ [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
   
- [!code-csharp[3doverview#3DOverview3DN7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
- [!code-vb[3doverview#3DOverview3DN7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
+ [!code-csharp[3doverview#3DOverview3DN7](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
+ [!code-vb[3doverview#3DOverview3DN7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
   
 <a name="materials"></a>   
 ## <a name="applying-materials-to-the-model"></a>Modele malzeme uygulama  
@@ -99,12 +99,12 @@ Perspektif ve Ortografik projeksiyonlar
   
  Aşağıdaki kod örnekleri renkten ve bir Çizim fırçaları olarak nasıl uygulanacağı Göster [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] modelleri.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
   
- [!code-xaml[3doverview#3DOverview3DN9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
+ [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
   
- [!code-csharp[3doverview#3DOverview3DN8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
- [!code-vb[3doverview#3DOverview3DN8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
+ [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
+ [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
   
 <a name="lights"></a>   
 ## <a name="illuminating-the-scene"></a>Sahne illuminating  
@@ -122,16 +122,16 @@ Perspektif ve Ortografik projeksiyonlar
   
  Işıklar, <xref:System.Windows.Media.Media3D.Model3D> nesnelerine dönüştürmek ve konumu, renk, yönü ve aralığı dahil olmak üzere açık özelliklerine animasyon uygulamak için.  
   
- [!code-xaml[hittest3d#HitTest3D3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
+ [!code-xaml[hittest3d#HitTest3D3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
   
- [!code-csharp[basic3d#Basic3D3DN11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
- [!code-vb[basic3d#Basic3D3DN11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
+ [!code-csharp[basic3d#Basic3D3DN11](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
+ [!code-vb[basic3d#Basic3D3DN11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
   
- [!code-csharp[basic3d#Basic3D3DN12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
- [!code-vb[basic3d#Basic3D3DN12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
+ [!code-csharp[basic3d#Basic3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
+ [!code-vb[basic3d#Basic3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
   
- [!code-csharp[basic3d#Basic3D3DN13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
- [!code-vb[basic3d#Basic3D3DN13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
+ [!code-csharp[basic3d#Basic3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
+ [!code-vb[basic3d#Basic3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
   
 <a name="transforms"></a>   
 ## <a name="transforming-models"></a>Modelleri dönüştürme  
@@ -139,27 +139,27 @@ Perspektif ve Ortografik projeksiyonlar
   
  Her model nesnesi olan bir <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> ile taşıyabilir, yeniden yönlendirmek veya model yeniden boyutlandırma özelliği.  Dönüşüm uyguladığınızda, etkili bir şekilde modelin tüm noktaları seçtiğiniz vektör veya dönüştürme işlemi tarafından belirtilen değeri tarafından uzaklığı. Diğer bir deyişle, koordinat içinde denetleyebildiğimiz modeli olan ("alanı model") tanımlanmış ancak modelin geometri koordinat sisteminde ("dünya alanı") tüm sahnenin oluşturan değerlerini değiştirmezsiniz.  
   
- Dönüşüm modelleri hakkında daha fazla bilgi için bkz. [3B Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md).  
+ Dönüşüm modelleri hakkında daha fazla bilgi için bkz. [3B Dönüşümlere Genel Bakış](3-d-transformations-overview.md).  
   
 <a name="animations"></a>   
 ## <a name="animating-models"></a>Modelleri animasyon ekleme  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Aynı zamanlama ve animasyon sisteme katılan uygulama [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafik. Diğer bir deyişle, 3B Görünümü animasyon eklemek gibi modellerinin özelliklerine animasyon ekleme. Temel özellikleri doğrudan oynatmak mümkün olduğu halde konumunu veya modelleri görünümünü değiştirme dönüşümleri animasyon uygulamak genellikle daha kolay olur. Dönüştürmeler uygulanabilir olduğundan <xref:System.Windows.Media.Media3D.Model3DGroup> nesneleri ayrı ayrı modeller yanı sıra, tek bir Model3DGroup alt ve alt nesnelerin bir grubu başka bir kümesini uygulamak olabilir. Ayrıca, sahnenin aydınlatma özelliklerini animasyon tarafından birçok görsel efektler elde edebilirsiniz. Son olarak, görünüm alanı ve kamera konumuna animasyon ekleme projeksiyon animasyon uygulamak seçebilirsiniz. Üzerinde arka plan bilgileri için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanlama ve animasyon sistemi bkz [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md), [görsel taslaklara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md), ve [Freezable nesnelerine genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)konuları.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Aynı zamanlama ve animasyon sisteme katılan uygulama [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafik. Diğer bir deyişle, 3B Görünümü animasyon eklemek gibi modellerinin özelliklerine animasyon ekleme. Temel özellikleri doğrudan oynatmak mümkün olduğu halde konumunu veya modelleri görünümünü değiştirme dönüşümleri animasyon uygulamak genellikle daha kolay olur. Dönüştürmeler uygulanabilir olduğundan <xref:System.Windows.Media.Media3D.Model3DGroup> nesneleri ayrı ayrı modeller yanı sıra, tek bir Model3DGroup alt ve alt nesnelerin bir grubu başka bir kümesini uygulamak olabilir. Ayrıca, sahnenin aydınlatma özelliklerini animasyon tarafından birçok görsel efektler elde edebilirsiniz. Son olarak, görünüm alanı ve kamera konumuna animasyon ekleme projeksiyon animasyon uygulamak seçebilirsiniz. Üzerinde arka plan bilgileri için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanlama ve animasyon sistemi bkz [animasyona genel bakış](animation-overview.md), [görsel taslaklara genel bakış](storyboards-overview.md), ve [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md)konuları.  
   
  İçinde bir nesneye animasyon ekleme için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bir zaman çizelgesi oluşturun (gerçekten bazı özellik değerinde bir değişiklik zaman içinde) bir animasyon tanımlayın ve animasyon uygulamak istediğiniz özelliğini belirtin. Çünkü bulunan tüm nesnelerin bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne olan alt <xref:System.Windows.Controls.Viewport3D>, sahneye uygulamak istediğiniz herhangi bir animasyon tarafından hedeflenen Viewport3D özelliklerinin özelliklerdir.  
   
  Bir model yerinde sallanmasına görünür yapmak istediğinizi varsayalım. Uygulama tercih edebileceğiniz bir <xref:System.Windows.Media.Media3D.RotateTransform3D> modeline ve bir vektör döndürme başka bir eksen animasyon ekleme. Aşağıdaki kod örneği bir TransformGroup modeliyle uygulanan dönüşümlerden birini olmasını RotateTransform3D varsayıldığında, dönüşümün Rotation3D Axis özelliği bir Vector3DAnimation uygulanması gösterilmektedir.  
   
- [!code-csharp[3doverview#3DOverview3DN1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
- [!code-vb[3doverview#3DOverview3DN1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
+ [!code-csharp[3doverview#3DOverview3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
+ [!code-vb[3doverview#3DOverview3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
   
- [!code-csharp[3doverview#3DOverview3DN3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
- [!code-vb[3doverview#3DOverview3DN3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
+ [!code-csharp[3doverview#3DOverview3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
+ [!code-vb[3doverview#3DOverview3DN3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
   
- [!code-csharp[3doverview#3DOverview3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
- [!code-vb[3doverview#3DOverview3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
+ [!code-csharp[3doverview#3DOverview3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
+ [!code-vb[3doverview#3DOverview3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
   
- [!code-csharp[3doverview#3DOverview3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
- [!code-vb[3doverview#3DOverview3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
+ [!code-csharp[3doverview#3DOverview3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
+ [!code-vb[3doverview#3DOverview3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
   
 <a name="animations1"></a>   
 ## <a name="add-3-d-content-to-the-window"></a>3B içerik için pencere Ekle  
@@ -167,15 +167,15 @@ Perspektif ve Ortografik projeksiyonlar
   
  Son olarak, ekleme <xref:System.Windows.Controls.Viewport3D> penceresine. Zaman <xref:System.Windows.Controls.Viewport3D> tuval gibi bir düzen öğenin içeriğini belirlerken Viewport3D boyutunu ayarlayarak dahildir, <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> özellikleri (devralınan <xref:System.Windows.FrameworkElement>).  
   
- [!code-xaml[hostingwpfusercontrolinwf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
+ [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [3B Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)
-- [WPF 3B Performansını En Üst Düzeye Çıkarma](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [3B Dönüşümlere Genel Bakış](3-d-transformations-overview.md)
+- [WPF 3B Performansını En Üst Düzeye Çıkarma](maximize-wpf-3d-performance.md)
+- [Nasıl Yapılır Konuları](3-d-graphics-how-to-topics.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)

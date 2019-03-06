@@ -5,19 +5,19 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355525"
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış
 Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline> nesneleri.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için temel animasyon özellikleri tanımanız gerekir. Daha fazla bilgi için [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Bu konuda anlamak için temel animasyon özellikleri tanımanız gerekir. Daha fazla bilgi için [animasyona genel bakış](animation-overview.md).  
   
 <a name="timelinetypes"></a>   
 ## <a name="timeline-types"></a>Zaman Çizelgesi türleri  
@@ -50,15 +50,15 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
  Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Media.Animation.DoubleAnimation> ile bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> beş saniye.  
   
- [!code-xaml[animation_ovws_snippet#AnimationWith5SecondDurationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#animationwith5seconddurationinline)]  
+ [!code-xaml[animation_ovws_snippet#AnimationWith5SecondDurationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#animationwith5seconddurationinline)]  
   
  Kapsayıcı zaman çizelgeleri gibi <xref:System.Windows.Media.Animation.Storyboard> ve <xref:System.Windows.Media.Animation.ParallelTimeline>, varsayılan süre olan <xref:System.Windows.Duration.Automatic%2A>, bunlar otomatik olarak sonlandırmak son alt öğe yürütme durdurulduğunda anlamına gelir. Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Media.Animation.Storyboard> olan <xref:System.Windows.Media.Animation.Timeline.Duration%2A> beş saniye olarak, tüm alt süresi uzunluğu çözümler <xref:System.Windows.Media.Animation.DoubleAnimation> tamamlamak için nesneleri.  
   
- [!code-xaml[animation_ovws_snippet#ContainerTimelineExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelineexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelineexampleinline)]  
   
  Ayarlayarak <xref:System.Windows.Media.Animation.Timeline.Duration%2A> için kapsayıcı zaman çizelgesinin bir <xref:System.Windows.Duration.TimeSpan%2A> değeri zorlayabilirsiniz uzun veya kısa alt <xref:System.Windows.Media.Animation.Timeline> nesneleri Yürüt. Ayarlarsanız <xref:System.Windows.Media.Animation.Timeline.Duration%2A> kapsayıcı çizelgesinin alt uzunluğundan daha küçük bir değere <xref:System.Windows.Media.Animation.Timeline> nesneleri, alt <xref:System.Windows.Media.Animation.Timeline> nesneleri Durdur kapsayıcı zaman çizelgesi yürütülürken yürütülüyor. Aşağıdaki örnek kümeleri <xref:System.Windows.Media.Animation.Timeline.Duration%2A> , <xref:System.Windows.Media.Animation.Storyboard> önceki örneklerle üç saniye. Sonuç olarak, ilk <xref:System.Windows.Media.Animation.DoubleAnimation> ilerlediğini üç zaman animasyonlu hedef dikdörtgenin genişliği ile 60 saniye sonra durur.  
   
- [!code-xaml[animation_ovws_snippet#ContainerTimelineWithShorterDurationExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelinewithshorterdurationexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineWithShorterDurationExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelinewithshorterdurationexampleinline)]  
   
 <a name="repeatinganimations"></a>   
 ### <a name="the-repeatbehavior-property"></a>RepeatBehavior özelliği  
@@ -66,39 +66,39 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
  Aşağıdaki örnekte <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini bir <xref:System.Windows.Media.Animation.DoubleAnimation> basit süresince iki kez bir yineleme sayısı belirterek Yürüt.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehavior2xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior2xexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior2xExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior2xexampleinline)]  
   
  Sonraki örnekte <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.DoubleAnimation> yarım basit süre için Yürüt.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehavior05xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior05xexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior05xExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior05xexampleinline)]  
   
  Ayarlarsanız <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliği bir <xref:System.Windows.Media.Animation.Timeline> için <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, <xref:System.Windows.Media.Animation.Timeline> etkileşimli olarak veya zamanlama sistemi tarafından durdurulana kadar yinelenir. Aşağıdaki örnekte <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.DoubleAnimation> süresiz olarak yürüt.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
   
- Ek bir örnek için bkz. [animasyonu yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md).  
+ Ek bir örnek için bkz. [animasyonu yineleme](how-to-repeat-an-animation.md).  
   
 <a name="autoreverseproperty"></a>   
 ### <a name="the-autoreverse-property"></a>AutoReverse özelliği  
  <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Özellik belirtir olup olmadığını bir <xref:System.Windows.Media.Animation.Timeline> iletme her yinelemenin sonunda yürütülüp yürütülmeyeceğini. Aşağıdaki örnekte ayarlar <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> özelliği bir <xref:System.Windows.Media.Animation.DoubleAnimation> için `true`; sonuç olarak, sıfırdan 100 ve 100'den sıfıra canlandırın. Bu, toplamda 10 saniye boyunca yürütür.  
   
- [!code-xaml[animation_ovws_snippet#TBAutoReverseExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverseexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverseexampleinline)]  
   
  Kullandığınızda, bir <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> belirtmek için değer <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> , bir <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> , söz konusu özellik <xref:System.Windows.Media.Animation.Timeline> olduğu `true`, tek bir yinelemeyi biri oluşur ileriye doğru yineleme tarafından izlenen bir geriye doğru yineleme.  Aşağıdaki örnek kümeleri <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> , <xref:System.Windows.Media.Animation.DoubleAnimation> önceki örnekte bir <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> iki. Sonuç olarak, <xref:System.Windows.Media.Animation.DoubleAnimation> 20 saniye oynar: beş saniye için geriye doğru beş saniyede 5 saniye tekrar iletmek için İleri ve geriye doğru beş saniye boyunca.  
   
- [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
   
- Bir kapsayıcı zaman çizelgesi alt varsa <xref:System.Windows.Media.Animation.Timeline> nesnelerini kapsayıcı zaman çizelgesi yaptığında, ters. Diğer örnekler için [belirtin olup olmadığını bir zaman çizelgesinin otomatik olarak ters çevrilip](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md).  
+ Bir kapsayıcı zaman çizelgesi alt varsa <xref:System.Windows.Media.Animation.Timeline> nesnelerini kapsayıcı zaman çizelgesi yaptığında, ters. Diğer örnekler için [belirtin olup olmadığını bir zaman çizelgesinin otomatik olarak ters çevrilip](how-to-specify-whether-a-timeline-automatically-reverses.md).  
   
 <a name="timelinebegin"></a>   
 ## <a name="the-begintime-property"></a>BeginTime özelliği  
- <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Özelliği bir zaman çizelgesi başladığında belirtmenize imkan tanır.  Zaman çizelgesinin başlayan, üst zaman çizelgesine göre olan. Zaman Çizelgesi üstü hemen sonra başlar sıfır saniye anlamına gelir başlama zamanı başlatır; bir uzaklık üst zaman çizelgesi oynatma başladığında ve alt çizelgesinin zaman arasında başka bir değer oluşturur. Örneğin, iki saniye başlama zamanı iki saniye süre üst sınırına ulaştığında yürütmeyi zaman çizelgesini başlatan anlamına gelir. Varsayılan olarak, tüm zaman çizelgeleri sıfır saniye başlama zamanı sahiptir. Zaman çizelgesinin da ayarlayabilir başlama zamanını `null`, engelleyen zaman çizelgesinin başlamasını. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], null kullanarak belirttiğiniz [x: Null işaretleme uzantısı](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Özelliği bir zaman çizelgesi başladığında belirtmenize imkan tanır.  Zaman çizelgesinin başlayan, üst zaman çizelgesine göre olan. Zaman Çizelgesi üstü hemen sonra başlar sıfır saniye anlamına gelir başlama zamanı başlatır; bir uzaklık üst zaman çizelgesi oynatma başladığında ve alt çizelgesinin zaman arasında başka bir değer oluşturur. Örneğin, iki saniye başlama zamanı iki saniye süre üst sınırına ulaştığında yürütmeyi zaman çizelgesini başlatan anlamına gelir. Varsayılan olarak, tüm zaman çizelgeleri sıfır saniye başlama zamanı sahiptir. Zaman çizelgesinin da ayarlayabilir başlama zamanını `null`, engelleyen zaman çizelgesinin başlamasını. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], null kullanarak belirttiğiniz [x: Null işaretleme uzantısı](../../xaml-services/x-null-markup-extension.md).  
   
  Başlangıç zamanı olmadığına dikkat edin uygulanan bir zaman çizelgesi yineler nedeniyle her zaman kendi <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> ayarı. Bir animasyonu oluşturmak için olsaydı bir <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> 10 saniye ve <xref:System.Windows.Media.Animation.RepeatBehavior> , <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, ilk kez ancak art arda gelen her yineleme için animasyon yürütülen önce 10 saniyelik gecikme olur. Ancak, animasyonun üst zaman çizelgesine yeniden başlatın veya yineleme için olsaydı, 10 saniyelik gecikme oluşacak.  
   
  <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Özelliği zaman çizelgeleri kademelendirme için yararlıdır. Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Media.Animation.Storyboard> olan iki alt <xref:System.Windows.Media.Animation.DoubleAnimation> nesneleri. İlk animasyon bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> beş saniye ve ikinci bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 3 saniye. Örnek <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> ikinci <xref:System.Windows.Media.Animation.DoubleAnimation> 5 saniye olarak başlayacak şekilde birinciden sonra yürütmeyi <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
   
- [!code-xaml[animation_ovws_snippet#TBBeginTimeExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbbegintimeexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBBeginTimeExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbbegintimeexampleinline)]  
   
 <a name="fillbehaviorproperty"></a>   
 ## <a name="the-fillbehavior-property"></a>FillBehavior özelliği  
@@ -110,7 +110,7 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
 -   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> İkinci özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> ayarlanır <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> ikinci <xref:System.Windows.Shapes.Rectangle> sonra 500 döner <xref:System.Windows.Media.Animation.DoubleAnimation> sona erer.  
   
- [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
+ [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
 <a name="speedproperties"></a>   
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Zaman çizelgesinin hızını denetleyen özellikler  
@@ -118,13 +118,13 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Zaman ilerledikçe için üst göre hızı belirtir bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; değerleri sıfır ve bir arasındaki yavaşlamasına bu. Belirten bir değeri, <xref:System.Windows.Media.Animation.Timeline> üst işlemleriyle aynı fiyat ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Kapsayıcı zaman çizelgesinin ayar tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Zamanlama Olaylarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Animasyona Genel bakış](animation-overview.md)
+- [Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)
+- [Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)
+- [Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)
 - [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)

@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826466"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359737"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
 Bu makalede, komut satırından .NET Core uygulamanızı nasıl yayımlayabilirsiniz gösterilmektedir. .NET core, uygulamalarınızı yayımlamak için üç yol sunar. Framework bağımlı dağıtım, yerel olarak yüklü .NET Core çalışma zamanı kullanan bir platformlar arası .dll dosyası oluşturur. Framework bağımlı yürütülebilir dosyayı yerel olarak yüklü .NET Core çalışma zamanı kullanan bir platforma özgü çalıştırılabilir dosyası oluşturur. Kendi içinde yürütülebilir, platforma özgü çalıştırılabilir dosyası oluşturur ve .NET Core çalışma zamanı yerel bir kopyasını içerir.
 
-Bu yayımlama modu genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md). 
+Bu yayımlama modu genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md).
 
 Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı örnekler nasıl uygulama yayımlanacağı gösterilmektedir. Hedef çerçeve ile belirttiğiniz `-f <TFM>` parametresi ya da proje dosyasını düzenleyerek. Daha fazla bilgi için [temelleri yayımlama](#publishing-basics).
 
@@ -33,8 +33,8 @@ Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı 
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
->[!IMPORTANT]
->\*SDK'sı sürüm 3.0 kullanırken, framework bağımlı yürütülebilir varsayılan yayımlama modu temel çalıştırırken budur `dotnet publish` komutu. Bu yalnızca projelerine hedefleyen yöneliktir **.NET Core 2.1** veya **.NET Core 3.0**.
+> [!IMPORTANT]
+> \*SDK'sı sürüm 3.0 kullanırken, framework bağımlı yürütülebilir varsayılan yayımlama modu temel çalıştırırken budur `dotnet publish` komutu. Bu yalnızca projelerine hedefleyen yöneliktir **.NET Core 2.1** veya **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Yayımlama temelleri
 
@@ -42,7 +42,7 @@ Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı 
 
 Birden fazla framework hedeflemek istiyorsanız, ayarlayabileceğiniz `<TargetFrameworks>` birden fazla noktalı virgülle ayrılmış TFM değer ayarlanamadı. İle altyapılarından birini yayımlayabilirsiniz `dotnet publish -f <TFM>` komutu. Örneğin, `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` çalıştırıp `dotnet publish -f netcoreapp2.1`, .NET Core 2.1'i hedefleyen bir ikili oluşturulur.
 
-Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ](../tools/dotnet-publish.md) komutu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme Yapılandırması** modu **hata ayıklama** ile değiştirmediyse `-c` parametresi. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` yayımlar `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ](../tools/dotnet-publish.md) komutu `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme Yapılandırması** modu **hata ayıklama** ile değiştirmediyse `-c` parametresi. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` yayımlar `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
 .NET Core SDK 3.0 kullanıyorsanız, varsayılan mod uygulamaları .NET Core sürümlerini hedefleyen 2.1 veya 2.2 3.0 framework bağımlı yürütülebilir dosya olduğu için yayımlayın.
 
@@ -50,7 +50,7 @@ Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ](../too
 
 ### <a name="native-dependencies"></a>Yerel bağımlılıkları
 
-Uygulamanızı yerel bağımlılıkları varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Win32 API kullanıyorsa, macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlar ve her platform için bir yürütülebilir dosya derlemek gerekir. 
+Uygulamanızı yerel bağımlılıkları varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Win32 API kullanıyorsa, macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlar ve her platform için bir yürütülebilir dosya derlemek gerekir.
 
 Göz önünde bulundurun, başvurulan kitaplık yerel bağımlılığı varsa, ayrıca, uygulamanızı her platformda çalışabilir. Ancak, sizin için gerekli yerel bağımlılıkları işlemek için platforma özgü sürümlerinde, başvuran bir NuGet paketi eklenmiştir mümkündür.
 
@@ -85,6 +85,7 @@ namespace apptest1
     }
 }
 ```
+
 ```vb
 Imports System
 
@@ -128,34 +129,30 @@ Bir FDE yayımlama bir uygulama, otomatik olarak yapar İleri en son .NET Core g
 
 Gerekir (.NET Core hariç geçerli platform hedeflediğinizde 3.x) ile aşağıdaki anahtarları kullanarak `dotnet publish` bir FDE yayımlamak için komutu:
 
-- `-r <RID>`  
-  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
-- `--self-contained false`  
-  Bu anahtar, yürütülebilir bir FDE olarak oluşturmak için .NET Core SDK'sı söyler.
+- `--self-contained false` Bu anahtar, yürütülebilir bir FDE olarak oluşturmak için .NET Core SDK'sı söyler.
 
 Herhangi bir zamanda kullandığınız `-r` anahtarı, çıkış klasörü yolu değişir: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
 Kullanırsanız [örnek uygulamayı](#sample-app)çalıştırın `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Bu komut aşağıdaki oluşturur çalıştırılabilir: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-> [!Note]
+> [!NOTE]
 > Etkinleştirerek dağıtımınızın toplam boyutunu azaltabilirsiniz **Genelleştirme sabit modu**. Bu mod, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanılabilir [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Hakkında daha fazla bilgi için **Genelleştirme sabit modu** ve etkinleştirmek için bkz [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 ## <a name="self-contained-deployment"></a>Kendi içinde dağıtım
 
-Kendi içinde bir dağıtım (SCD) yayımladığınızda, .NET Core SDK'sını bir platforma özgü yürütülebilir dosya oluşturur. Bir SCD yayımlama, uygulamanızı çalıştırmak için gerekli tüm .NET Core dosyaları içerir, ancak bunu içermez [yerel .NET Core bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Bu bağımlılıklar, uygulama çalışmadan önce sistemde bulunmalıdır. 
+Kendi içinde bir dağıtım (SCD) yayımladığınızda, .NET Core SDK'sını bir platforma özgü yürütülebilir dosya oluşturur. Bir SCD yayımlama, uygulamanızı çalıştırmak için gerekli tüm .NET Core dosyaları içerir, ancak bunu içermez [yerel .NET Core bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Bu bağımlılıklar, uygulama çalışmadan önce sistemde bulunmalıdır.
 
 Bir SCD yayımlama, en son kullanılabilir .NET Core güvenlik düzeltme eki sarma olmayan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanmak için .NET Core sürümü](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 Aşağıdaki anahtarlar ile kullanmalısınız `dotnet publish` bir SCD yayımlamak için komutu:
 
-- `-r <RID>`  
-  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
-- `--self-contained true`  
-  Bu anahtar, yürütülebilir bir SCD olarak oluşturmak için .NET Core SDK'sı söyler.
+- `--self-contained true` Bu anahtar, yürütülebilir bir SCD olarak oluşturmak için .NET Core SDK'sı söyler.
 
-> [!Note]
+> [!NOTE]
 > Etkinleştirerek dağıtımınızın toplam boyutunu azaltabilirsiniz **Genelleştirme sabit modu**. Bu mod, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanılabilir [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Hakkında daha fazla bilgi için **Genelleştirme sabit modu** ve etkinleştirmek için bkz [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 

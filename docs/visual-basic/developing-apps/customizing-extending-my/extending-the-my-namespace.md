@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361206"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic'te My Ad Alanını Genişletme
 `My` Visual Basic'de ad alanı özellikleri ve kolayca .NET Framework'ün gücünden yararlanmak sağlayan yöntemler sunar. `My` Ad alanı genellikle zor bir görev için tek bir kod satırının azaltma ortak programlama sorunlarını basitleştirir. Ayrıca, `My` davranışını özelleştirebilmeniz için ad alanı tam olarak Genişletilebilir `My` ve belirli bir uygulama gereksinimlerine uyum sağlamak için hiyerarşi için yeni hizmet ekleyin. Her ikisi de bu konu açıklar nasıl özelleştirileceğini mevcut üyeleri `My` ad alanı ve kendi özel sınıflar için ekleme `My` ad alanı.  
@@ -36,7 +36,7 @@ ms.locfileid: "56975387"
   
 -   [Paketleme ve hata ayıklama uzantıları](#packaging)  
   
-##  <a name="customizing"></a> My Namespace üyeleri varolan özelleştirme  
+## <a name="customizing"></a> My Namespace üyeleri varolan özelleştirme  
  `My` Ad alanında Visual Basic kullanıma sunan sık kullanılan uygulamanız, bilgisayarınız ve daha fazla bilgi. Nesnelerin tam listesi için `My` ad bkz [My başvuru](../../../visual-basic/language-reference/keywords/my-reference.md). Mevcut üyeleri özelleştirmeniz gerekebilir `My` ad alanı, daha iyi eşleşecek uygulamanızın ihtiyaçlarını. Bir nesnenin herhangi bir özelliği `My` salt okunur olmayan ad alanı, özel bir değere ayarlanabilir.  
   
  Örneğin, sık kullandığınız varsayılmıştır `My.User` uygulamanızı çalıştıran kullanıcının geçerli güvenlik bağlamına erişmek için nesne. Ancak şirketiniz özel kullanıcı nesnesindeki ek bilgi ve şirket içindeki kullanıcıları kapasitesini kullanıma sunmak için kullanır. Bu senaryoda, varsayılan değeri değiştirin `My.User.CurrentPrincipal` özelliğiyle aşağıdaki örnekte gösterildiği gibi kendi özel asıl nesne örneği.  
@@ -45,17 +45,17 @@ ms.locfileid: "56975387"
   
  Ayarı `CurrentPrincipal` özelliği `My.User` nesne, uygulamanın çalıştığı kimliği değiştirir. `My.User` Nesne, sırayla yeni belirtilen kullanıcı ile ilgili bilgi döndürür.  
   
-##  <a name="addingtoobjects"></a> My nesnelere üye ekleme  
+## <a name="addingtoobjects"></a> My nesnelere üye ekleme  
  Öğesinden döndürülen türleri `My.Application` ve `My.Computer` olarak tanımlanan `Partial` sınıfları. Bu nedenle, genişletebileceğiniz `My.Application` ve `My.Computer` oluşturarak nesneleri bir `Partial` adlı sınıfı `MyApplication` veya `MyComputer`. Sınıf olamaz bir `Private` sınıfı. Sınıf kapsamında belirtirseniz `My` ad alanı, özellikleri ve yöntemleri ile dahil edilecek ekleyebilirsiniz `My.Application` veya `My.Computer` nesneleri.  
   
  Örneğin, aşağıdaki örnekte adlı bir özellik ekler `DnsServerIPAddresses` için `My.Computer` nesne.  
   
  [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
-##  <a name="addingcustom"></a> Özel nesne eklemeyi My Namespace  
+## <a name="addingcustom"></a> Özel nesne eklemeyi My Namespace  
  Ancak `My` ad alanı, birçok genel programlama görevleri için çözümler sağlar, görevleri karşılaşabilirsiniz, `My` ad alanı adresi değil. Örneğin, uygulamanızın kullanıcı verileri için özel dizin hizmetleri erişebilir veya Visual Basic ile varsayılan olarak yüklü olmayan bütünleştirilmiş kodları uygulamanızın kullanabilir. Genişletebileceğiniz `My` ortamınıza özgü ortak görevler için özel çözümler dahil etmek için ad alanı. `My` Ad alanı kolayca uzatabilirsiniz büyüyen uygulama ihtiyaçlarınızı karşılamak için yeni üyeler eklemek için. Ayrıca, dağıtabilirsiniz, `My` Visual Basic şablonu olarak diğer geliştiriciler için ad alanı uzantıları.  
   
-###  <a name="addingtonamespace"></a> Üye ekleme My Namespace  
+### <a name="addingtonamespace"></a> Üye ekleme My Namespace  
  Çünkü `My` bir ad alanı diğer herhangi bir ad gibi üst düzey özellikleri için yalnızca bir modül ekleme ve belirterek ekleyebileceğiniz bir `Namespace` , `My`. Modülü ile Açıklama `HideModuleName` özniteliği aşağıdaki örnekte gösterildiği gibi. `HideModuleName` Öznitelik sağlar üyelerinin görüntülediğinde IntelliSense modül adı görüntülenmez `My` ad alanı.  
   
  [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
@@ -64,7 +64,7 @@ ms.locfileid: "56975387"
   
  [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
-##  <a name="addingevents"></a> Nesnelerim özel olaylar ekleme  
+## <a name="addingevents"></a> Nesnelerim özel olaylar ekleme  
  Kullanabileceğiniz `My.Application` için özel olaylar oluşturmak için nesne `My` genişleterek nesneleri `MyApplication` kısmi class içinde `My` ad alanı. Windows tabanlı projeler için çift tıklayabilirsiniz **Projem** düğümünde projeniz için **Çözüm Gezgini**. Visual Basic'te **Proje Tasarımcısı**, tıklayın `Application` sekmesine ve ardından `View Application Events` düğmesi. ApplicationEvents.vb adlı yeni bir dosya oluşturulur. Genişletmek için aşağıdaki kodu içeren `MyApplication` sınıfı.  
   
  [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
@@ -73,7 +73,7 @@ ms.locfileid: "56975387"
   
  [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
-##  <a name="design"></a> Tasarım yönergeleri  
+## <a name="design"></a> Tasarım yönergeleri  
  Uzantıları geliştirirken `My` ad alanı uzantısı bileşenlerinizi bakım maliyetlerini en aza indirmek için aşağıdaki yönergeleri kullanın.  
   
 -   **Uzantı mantığı içerir.** Dahil olan mantıksal `My` ad alanı uzantısı, gerekli işlevleri kullanıma sunmak için gereken kodu içermelidir `My` ad alanı. Uzantınızı kullanıcı projelerinde kod kaynağı olarak yer alacağı için uzantı bileşeninin yüksek bakım maliyeti doğurur ve mümkün olduğunda kaçınılmalıdır.  
@@ -82,7 +82,7 @@ ms.locfileid: "56975387"
   
 -   **Uzantı kodu yalıtın.** Tek bir dosyada kod yerleştirme uzantınızın Visual Studio öğe şablonu kolayca dağıtılabilir hale getirir. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Paketleme ve dağıtma uzantıları" konusuna bakın. Tüm yerleştirme `My` ad alanı uzantı kodu tek bir dosyada veya ayrı bir klasörde bir proje de bulmalarına yardımcı olacak `My` ad alanı uzantısı.  
   
-##  <a name="designing"></a> Sınıf kitaplıkları için tasarlama My  
+## <a name="designing"></a> Sınıf kitaplıkları için tasarlama My  
  Çoğu nesne modelleri ile olduğu gibi bazı tasarım desenleri çalışmak iyi `My` ad alanı ve diğerleri yapın. Bir uzantı tasarlarken `My` ad alanı, aşağıdaki ilkeleri göz önünde bulundurun:  
   
 -   **Durum bilgisi olmayan yöntemler.** Yöntemleri `My` ad alanı, belirli bir görev için eksiksiz bir çözüm sağlamalıdır. Yönteme geçirilen parametre değerleri belirli bir görevi tamamlamak için gereken tüm girişler sağladığından emin olun. Açık kaynak bağlantıları gibi önceki durum kullanan yöntemleri oluşturmaktan kaçının.  
@@ -95,7 +95,7 @@ ms.locfileid: "56975387"
   
  Bu yönergeler, sınıf kitaplıkları için genel bir tasarım ilkeleri kullanımını değil. Bunun yerine, Visual Basic kullanan geliştiriciler için optimize edilmiş önerileri olduklarını ve `My` ad alanı. Genel tasarım ilkeleri sınıf kitaplıkları oluşturmak için bkz: [çerçeve tasarım yönergeleri](../../../standard/design-guidelines/index.md).  
   
-##  <a name="packaging"></a> Paketleme ve hata ayıklama uzantıları  
+## <a name="packaging"></a> Paketleme ve hata ayıklama uzantıları  
  Ekleyebileceğiniz `My` ad alanı uzantıları Visual Studio Proje şablonu ya da uzantılarınızı paketleyebilir ve bunları Visual Studio öğesi şablon olarak dağıtabilirsiniz. Paketi, `My` ad alanı uzantıları Visual Studio öğe şablonu olarak Visual Basic tarafından sağlanan ek özelliklerden faydalanabilirsiniz. Bu özellikler, belirli bir derleme bir projeye başvuruda bulunduğunda, bir uzantı eklemeyi etkinleştirmek ya da açık olarak eklemek kullanıcıların, `My` kullanarak ad alanı uzantısı **My uzantılarını** sayfanın Visual Basic Proje Tasarımcısı.  
   
  Nasıl dağıtılacağı hakkındaki ayrıntılar için `My` ad alanı uzantılarını görmek [paketleme ve dağıtma özel My uzantılarını](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).  

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351274"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.StackPanel> içeriği yatay veya dikey olarak yığmak için öğesi.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.StackPanel> yatay veya dikey olarak içerik yığın için öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [StackPanel ve DockPanel Arasında Seçim Yapma](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [StackPanel Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [StackPanel ve DockPanel Arasında Seçim Yapma](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [StackPanel Oluşturma](how-to-create-a-stackpanel.md)  
+ [StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Düzen](../advanced/layout.md)  
   
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](scrollviewer-overview.md)

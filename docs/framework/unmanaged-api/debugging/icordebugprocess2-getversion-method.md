@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess2::GetVersion Metodu
+title: ICorDebugProcess2::GetVersion Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess2.GetVersion
@@ -10,43 +10,47 @@ api_type:
 f1_keywords:
 - ICorDebugProcess2::GetVersion
 helpviewer_keywords:
-- GetVersion method, ICorDebugProcess2 nterface [.NET Framework debugging]
+- GetVersion method, ICorDebugProcess2 interface [.NET Framework debugging]
 - ICorDebugProcess2::GetVersion method [.NET Framework debugging]
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1f850e85099a466c497a8fcc822bce9510f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416386"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361245"
 ---
-# <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion Metodu
-Bu işlemde çalışan ortak dil çalışma zamanı (CLR) sürüm numarasını alır.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-HRESULT GetVersion (  
-    [out] COR_VERSION     *version  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `version`  
- [out] Çalışma zamanı sürüm numarasını depolar cor_versıon yapısı için bir işaretçi.  
-  
-## <a name="remarks"></a>Açıklamalar  
- `GetVersion` Yöntemi, hiçbir çalışma zamanı işleminde yüklerse bir hata kodu döndürür.  
-  
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Başlık:** CorDebug.idl, CorDebug.h  
-  
- **Kitaplığı:** CorGuids.lib  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+# <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion Yöntemi
+
+Bu işlemde çalışan ortak dil çalışma zamanı (CLR) sürüm numarasını alır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
+HRESULT GetVersion (
+    [out] COR_VERSION     *version
+);
+```
+
+## <a name="parameters"></a>Parametreler
+
+`version`\
+[out] Çalışma zamanı sürüm numarasını depolayan bir cor_versıon yapısı işaretçisi.
+
+## <a name="remarks"></a>Açıklamalar
+
+`GetVersion` Yöntemi, hiçbir çalışma zamanı işleminde yüklerse bir hata kodu döndürür.
+
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** CorDebug.idl, CorDebug.h
+
+**Kitaplığı:** CorGuids.lib
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

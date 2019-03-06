@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376825"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
@@ -37,7 +37,7 @@ ms.locfileid: "54592594"
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>Giriş API'si
- Birincil Giriş [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] Etkilenme üzerinde temel öğe sınıfları bulundu: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md).  Bu sınıflar, tuş basışlarını, fare düğmesini, fare tekerleğini, fare hareketini, odak yönetim ve fare yakalama için ilgili giriş olayları için işlevsellik sağlar. Giriş yerleştirerek [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] temel öğelerde değerlendirmesini yerine tüm olayları bir hizmet olarak giriş, giriş mimarisi, bir'birden fazla kullanıcı arabiriminde belirli bir nesnenin tarafından sağlanmasına ve bir olay yönlendirme şeması yapabildiği desteklemek için giriş olayları sağlar. öğesi, bir giriş olayı işlemek için fırsatına sahiptir. Birçok giriş olayları, bir çift bunlarla ilişkilendirilmiş olayları vardır.  Örneğin, olay tuşunu ilişkili olduğu <xref:System.Windows.Input.Keyboard.KeyDown> ve <xref:System.Windows.Input.Keyboard.PreviewKeyDown> olayları.  Bu olaylar, nasıl bunlar hedef öğeye yönlendirilir farktır.  Önizleme olayları tünel öğesi ağaç kök öğeden hedef öğeye.  Tırmanma olayları Kabarcık ayarlama hedef öğesinden için kök öğe.  Olay yönlendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ilerleyen bölümlerinde bu genel bakış ve daha ayrıntılı anlatılan [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Birincil Giriş [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] Etkilenme üzerinde temel öğe sınıfları bulundu: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](base-elements-overview.md).  Bu sınıflar, tuş basışlarını, fare düğmesini, fare tekerleğini, fare hareketini, odak yönetim ve fare yakalama için ilgili giriş olayları için işlevsellik sağlar. Giriş yerleştirerek [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] temel öğelerde değerlendirmesini yerine tüm olayları bir hizmet olarak giriş, giriş mimarisi, bir'birden fazla kullanıcı arabiriminde belirli bir nesnenin tarafından sağlanmasına ve bir olay yönlendirme şeması yapabildiği desteklemek için giriş olayları sağlar. öğesi, bir giriş olayı işlemek için fırsatına sahiptir. Birçok giriş olayları, bir çift bunlarla ilişkilendirilmiş olayları vardır.  Örneğin, olay tuşunu ilişkili olduğu <xref:System.Windows.Input.Keyboard.KeyDown> ve <xref:System.Windows.Input.Keyboard.PreviewKeyDown> olayları.  Bu olaylar, nasıl bunlar hedef öğeye yönlendirilir farktır.  Önizleme olayları tünel öğesi ağaç kök öğeden hedef öğeye.  Tırmanma olayları Kabarcık ayarlama hedef öğesinden için kök öğe.  Olay yönlendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ilerleyen bölümlerinde bu genel bakış ve daha ayrıntılı anlatılan [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
 ### <a name="keyboard-and-mouse-classes"></a>Klavye ve fare sınıfları
  Giriş yanı sıra [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] temel öğe sınıflarda <xref:System.Windows.Input.Keyboard> sınıfı ve <xref:System.Windows.Input.Mouse> sınıfları sağlar ek [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] klavye ve fare girişi ile çalışmak için.
@@ -46,30 +46,30 @@ ms.locfileid: "54592594"
 
  Aşağıdaki örnekte <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> belirlemek için yöntemi bir <xref:System.Windows.Input.Key> aşağı durumdadır.
 
- [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
- [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
  Giriş örnekleri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] üzerinde <xref:System.Windows.Input.Mouse> sınıfı <xref:System.Windows.Input.Mouse.MiddleButton%2A>, orta fare düğmesi durumunu alır ve <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, fare işaretçisi öğenin alır şu anda biter.
 
  Aşağıdaki örnek belirler olmadığını <xref:System.Windows.Input.Mouse.LeftButton%2A> üzerinde fareyi bulunduğu <xref:System.Windows.Input.MouseButtonState.Pressed> durumu.
 
- [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
- [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
 
  <xref:System.Windows.Input.Mouse> Ve <xref:System.Windows.Input.Keyboard> sınıfları bu genel bakış içindeki daha ayrıntılı ele alınmıştır.
 
 ### <a name="stylus-input"></a>İğne girişi
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Destek için tümleşik olan <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Popüler tarafından yapılan bir kalem girişi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar kabul ekran kalemi fare fareyi kullanarak [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de kullanan bir model klavye ve fare benzer bir ekran kalemi cihaz soyutlamayı kullanıma sunar.  Ekran kalemi ilgili tüm [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] "Kalem" sözcüğünü içermelidir.
 
- Ekran kalemi fare davranıp çünkü yalnızca fare girişi destekleyen uygulamalar yine de bazı ekran kalemi destek düzeyini otomatik olarak edinebilirsiniz. Ekran kalemi bu tür bir şekilde kullanıldığında, uygulama uygun ekran kalemi olayı işlemek için fırsatı verilir ve daha sonra karşılık gelen bir fare olayını işler. Mürekkep giriş gibi daha üst düzey hizmetler buna Ayrıca ekran kalemi cihaz soyutlamayı olarak kullanılabilir.  Giriş olarak mürekkep hakkında daha fazla bilgi için bkz. [mürekkep ile çalışmaya başlama](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).
+ Ekran kalemi fare davranıp çünkü yalnızca fare girişi destekleyen uygulamalar yine de bazı ekran kalemi destek düzeyini otomatik olarak edinebilirsiniz. Ekran kalemi bu tür bir şekilde kullanıldığında, uygulama uygun ekran kalemi olayı işlemek için fırsatı verilir ve daha sonra karşılık gelen bir fare olayını işler. Mürekkep giriş gibi daha üst düzey hizmetler buna Ayrıca ekran kalemi cihaz soyutlamayı olarak kullanılabilir.  Giriş olarak mürekkep hakkında daha fazla bilgi için bkz. [mürekkep ile çalışmaya başlama](getting-started-with-ink.md).
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>Olay yönlendirme
- A <xref:System.Windows.FrameworkElement> öğe ağacındaki oluşturan kendi içerik modelinde, alt öğeleri olarak diğer öğelerini içerebilir.  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], üst öğenin alt öğelerini veya diğer alt öğeleri için olayları gönderdikten tarafından yönlendirilen giriş katılabilir. Bu denetimler daha küçük denetimleri dışında "Denetim bileşiminin" veya "birleştirme" olarak da bilinen bir işlem oluşturmak için kullanışlıdır Öğe ağacı ve öğe ağaçları olay yolları nasıl ilişki kuracağını hakkında daha fazla bilgi için bkz. [WPF içinde ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).
+ A <xref:System.Windows.FrameworkElement> öğe ağacındaki oluşturan kendi içerik modelinde, alt öğeleri olarak diğer öğelerini içerebilir.  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], üst öğenin alt öğelerini veya diğer alt öğeleri için olayları gönderdikten tarafından yönlendirilen giriş katılabilir. Bu denetimler daha küçük denetimleri dışında "Denetim bileşiminin" veya "birleştirme" olarak da bilinen bir işlem oluşturmak için kullanışlıdır Öğe ağacı ve öğe ağaçları olay yolları nasıl ilişki kuracağını hakkında daha fazla bilgi için bkz. [WPF içinde ağaçlar](trees-in-wpf.md).
 
- Olay yönlendirme birden çok öğe olayları iletme işlemi, böylelikle tarafından farklı bir öğe konağı kaynağı bir olaya (aracılığıyla işlemeyi) önemli bir yanıt sunmak belirli bir nesne veya yol boyunca öğesi seçebilirsiniz.  Yönlendirilmiş olaylar üç yönlendirme mekanizmaları birini kullanın: doğrudan, tırmanma ve tünel oluşturma.  Doğrudan yönlendirme, kaynak öğesi bildirim tek öğe ise ve olay için diğer öğeleri yönlendirilmez. Ancak, doğrudan yönlendirilmiş olay yalnızca standart'ın aksine yönlendirilmiş olaylar için mevcut olan bazı ek özellikler hala sunar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olayları. Tırmanma, ilk olay ardından kaynaklanan öğesi üst öğe ve benzeri bildirerek öğesi ağacı çalışır.  Tünel öğe ağacı kök dizininde başlar ve özgün kaynak öğesi ile biten aşağı çalışır.  Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Olay yönlendirme birden çok öğe olayları iletme işlemi, böylelikle tarafından farklı bir öğe konağı kaynağı bir olaya (aracılığıyla işlemeyi) önemli bir yanıt sunmak belirli bir nesne veya yol boyunca öğesi seçebilirsiniz.  Yönlendirilmiş olaylar üç yönlendirme mekanizmaları birini kullanın: doğrudan, tırmanma ve tünel oluşturma.  Doğrudan yönlendirme, kaynak öğesi bildirim tek öğe ise ve olay için diğer öğeleri yönlendirilmez. Ancak, doğrudan yönlendirilmiş olay yalnızca standart'ın aksine yönlendirilmiş olaylar için mevcut olan bazı ek özellikler hala sunar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olayları. Tırmanma, ilk olay ardından kaynaklanan öğesi üst öğe ve benzeri bildirerek öğesi ağacı çalışır.  Tünel öğe ağacı kök dizininde başlar ve özgün kaynak öğesi ile biten aşağı çalışır.  Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Giriş olayları, genellikle bir tünel olayı ve tırmanma olay oluşan çiftlerini gelir.  Tünel olayları "Önizleme" önekiyle tırmanma olaylardan ayırt edilir.  Örneğin, <xref:System.Windows.Input.Mouse.PreviewMouseMove> tünel fare hareketi olayını sürümüdür ve <xref:System.Windows.Input.Mouse.MouseMove> tırmanma bu olay sürümüdür. Bu olay öğe düzeyinde uygulanır ve belirli bir yeteneği değil bir kuralı eşleşmesidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi. Ayrıntılar için bkz WPF giriş olayları bölümünde [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Giriş olayları, genellikle bir tünel olayı ve tırmanma olay oluşan çiftlerini gelir.  Tünel olayları "Önizleme" önekiyle tırmanma olaylardan ayırt edilir.  Örneğin, <xref:System.Windows.Input.Mouse.PreviewMouseMove> tünel fare hareketi olayını sürümüdür ve <xref:System.Windows.Input.Mouse.MouseMove> tırmanma bu olay sürümüdür. Bu olay öğe düzeyinde uygulanır ve belirli bir yeteneği değil bir kuralı eşleşmesidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi. Ayrıntılar için bkz WPF giriş olayları bölümünde [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Giriş olaylarını işleme
@@ -82,33 +82,33 @@ ms.locfileid: "54592594"
 
  Örneğin ilk bölümünü oluşturur <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.Button> ve olay işleyicisi ekler <xref:System.Windows.UIElement.KeyDown>.
 
- [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
  İkinci bölüm kodda yazılır ve olay işleyicisini tanımlar.  Sol Ok tuşu basılı olduğunda ve <xref:System.Windows.Controls.Button> klavye odaklı, işleyici çalıştırır ve <xref:System.Windows.Controls.Control.Background%2A> rengini <xref:System.Windows.Controls.Button> değiştirilir.  Tuşuna basıldığında, ancak sol ok tuşu değil <xref:System.Windows.Controls.Control.Background%2A> rengini <xref:System.Windows.Controls.Button> başlangıç rengini değiştirilir.
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>Fare giriş olayını örneği
  Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> rengi bir <xref:System.Windows.Controls.Button> fare işaretçisi girdiğinde değiştirildiğinde <xref:System.Windows.Controls.Button>.  <xref:System.Windows.Controls.Control.Background%2A> Renk fare çıktığında geri <xref:System.Windows.Controls.Button>.
 
  Örneğin ilk bölümünü oluşturur <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.Button> denetlemek ve ekler için olay işleyicileri <xref:System.Windows.UIElement.MouseEnter> ve <xref:System.Windows.UIElement.MouseLeave> olayları <xref:System.Windows.Controls.Button>.
 
- [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
  İkinci bölümü Örneğin, kodda yazılır ve olay işleyicilerini tanımlar.  Fare girdiğinde <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Control.Background%2A> rengini <xref:System.Windows.Controls.Button> değiştirilir <xref:System.Windows.Media.Brushes.SlateGray%2A>.  Fare ayrıldığında <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Control.Background%2A> rengini <xref:System.Windows.Controls.Button> geri değiştirildiğinde <xref:System.Windows.Media.Brushes.AliceBlue%2A>.
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>Metin girişi
@@ -122,19 +122,19 @@ ms.locfileid: "54592594"
 
  İlk kesimi başladığınız kodun veya kullanıcı arabirimi oluşturur.
 
- [!code-xaml[InputOvw#Input_OvwTextInputXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
+ [!code-xaml[InputOvw#Input_OvwTextInputXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
 
- [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
 
  İkinci kod parçası, olay işleyicilerini içerir.
 
- [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
  Giriş olayları olay yol ayarlama Kabarcık çünkü <xref:System.Windows.Controls.StackPanel> bağımsız olarak hangi öğeye sahip klavye odağı giriş alır. <xref:System.Windows.Controls.TextBox> Denetim ilk bildirilir ve `OnTextInputKeyDown` işleyicisi yalnızca çağrılır <xref:System.Windows.Controls.TextBox> giriş işlemedi. Varsa <xref:System.Windows.UIElement.PreviewKeyDown> olayının yerine kullanıldığı <xref:System.Windows.UIElement.KeyDown> olay `OnTextInputKeyDown` işleyicisi önce çağrılır.
 
- Bu örnekte, iki kez işleme mantığı yazılır; bir kez CTRL + O ve yeniden düğmenin, olay'ı tıklatın. Bu, doğrudan giriş olaylarını işleme yerine komutları kullanarak basitleştirilebilir.  Bu genel bakış ve komutlar ele alınan [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ Bu örnekte, iki kez işleme mantığı yazılır; bir kez CTRL + O ve yeniden düğmenin, olay'ı tıklatın. Bu, doğrudan giriş olaylarını işleme yerine komutları kullanarak basitleştirilebilir.  Bu genel bakış ve komutlar ele alınan [komut vermeye genel genel bakış](commanding-overview.md).
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Dokunma ve düzenleme
@@ -210,11 +210,11 @@ ms.locfileid: "54592594"
 
 -   <xref:System.Windows.UIElement.LostTouchCapture>
 
- Klavye ve fare olayları gibi yönlendirilmiş olaylar touch olaylardır. İle başlayan olayları `Preview` olayları ve ile başlayan olayları tünel `Touch` tırmanma olaylardır. Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md). Bu olayları işlediğinizde, giriş, herhangi bir öğenin göreli konumunu çağırarak alabilirsiniz <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> veya <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> yöntemi.
+ Klavye ve fare olayları gibi yönlendirilmiş olaylar touch olaylardır. İle başlayan olayları `Preview` olayları ve ile başlayan olayları tünel `Touch` tırmanma olaylardır. Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](routed-events-overview.md). Bu olayları işlediğinizde, giriş, herhangi bir öğenin göreli konumunu çağırarak alabilirsiniz <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> veya <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> yöntemi.
 
  Dokunma olayları arasındaki etkileşimi anlamak için burada bir kullanıcı bir öğede bir parmak koyar, parmak öğesinde taşır ve ardından öğeden parmak kaldırıncaya senaryoyu göz önünde bulundurun. Aşağıdaki çizimde, tırmanma olayları (Tünel olayları kolaylık olması için göz ardı edilir) yürütülmesini gösterir.
 
- ![Dokunma olayları dizisi. ](../../../../docs/framework/wpf/advanced/media/ndp-touchevents.png "NDP_TouchEvents") dokunma olayları
+ ![Dokunma olayları dizisi. ](./media/ndp-touchevents.png "NDP_TouchEvents") dokunma olayları
 
  Önceki çizimde olayların sırası aşağıdaki listede açıklanmaktadır.
 
@@ -243,7 +243,7 @@ ms.locfileid: "54592594"
 
  İşlemeleri için yanıt nesnelere neden zaman için Eylemsizliği görünür nesne olabilir. Bu, nesnelerinizi fiziksel dünyaya benzetimini yapabilirsiniz. Örneğin, sabit gönderirseniz bir tablo arasında bir kitap gönderdiğinizde bu yayın yeterince kitap devam eder. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcının parmağınızı serbest sonra nesneyi düzenleme olayları yükselterek bu davranışını benzetmekte sağlar.
 
- Taşıma, yeniden boyutlandırma ve nesneyi döndürmek kullanıcının sağlayan bir uygulama oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: İlk dokunmatik uygulamanızı oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Taşıma, yeniden boyutlandırma ve nesneyi döndürmek kullanıcının sağlayan bir uygulama oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: İlk dokunmatik uygulamanızı oluşturma](walkthrough-creating-your-first-touch-application.md).
 
  <xref:System.Windows.UIElement> Aşağıdaki olayları düzenleme tanımlar.
 
@@ -266,7 +266,7 @@ ms.locfileid: "54592594"
 
  Aşağıdaki çizim, olayları düzenleme ve her olay hakkında önemli bilgiler yürütme yolunu gösterir.
 
- ![Olayları düzenleme dizisi. ](../../../../docs/framework/wpf/advanced/media/ndp-manipulationevents.png "NDP_ManipulationEvents") olayları düzenleme
+ ![Olayları düzenleme dizisi. ](./media/ndp-manipulationevents.png "NDP_ManipulationEvents") olayları düzenleme
 
  Önceki çizimde olayların sırası aşağıdaki listede açıklanmaktadır.
 
@@ -297,7 +297,7 @@ ms.locfileid: "54592594"
 ### <a name="the-relationship-between-touch-and-manipulation-events"></a>Dokunma ve olayları düzenleme arasındaki ilişki
  A <xref:System.Windows.UIElement> dokunma olayları her zaman alabilir. Zaman <xref:System.Windows.UIElement.IsManipulationEnabled%2A> özelliği `true`, <xref:System.Windows.UIElement> touch hem düzenleme olayları alabilirsiniz.  Varsa <xref:System.Windows.UIElement.TouchDown> olay işlenmez (diğer bir deyişle, <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliği `false`), işleme mantığı öğeye dokunma yakalar ve olayları düzenleme oluşturur. Varsa <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliği `true` içinde <xref:System.Windows.UIElement.TouchDown> olay işleme mantığı olayları düzenleme oluşturmaz. Dokunma olayları ve işleme olayları arasındaki ilişki aşağıda gösterilmiştir.
 
- ![Dokunma ve düzenleme olayları arasındaki ilişki](../../../../docs/framework/wpf/advanced/media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") dokunma ve düzenleme olayları
+ ![Dokunma ve düzenleme olayları arasındaki ilişki](./media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") dokunma ve düzenleme olayları
 
  Aşağıdaki listede, önceki resimde gösterilen dokunma ve düzenleme olayları arasındaki ilişkiyi açıklar.
 
@@ -322,10 +322,10 @@ ms.locfileid: "54592594"
 
  Aşağıdaki örnekte <xref:System.Windows.Input.Keyboard.Focus%2A> klavye odağı ayarlamak için bir <xref:System.Windows.Controls.Button>.  Bir uygulamada ilk odağı ayarlamak için önerilen konum <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.
 
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
 
- Klavye odağı hakkında daha fazla bilgi için bkz: [odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md).
+ Klavye odağı hakkında daha fazla bilgi için bkz: [odağa genel bakış](focus-overview.md).
 
 ### <a name="logical-focus"></a>Mantıksal odak
  Mantıksal odak başvurduğu <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> odak kapsamında.  Uygulamada mantıksal odağa sahip birden çok öğe olabilir, ancak ayrıca mantıksal Odaklanıldığında belirli odak kapsamına sahip bir öğe yalnızca olabilir.
@@ -336,10 +336,10 @@ ms.locfileid: "54592594"
 
  Aşağıdaki örnekte bir <xref:System.Windows.Controls.StackPanel> ayarlayarak bir odak kapsama <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> ekli özellik.
 
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
 
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
  Sınıflar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odak kapsamı varsayılan olarak hangilerinin <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, ve <xref:System.Windows.Controls.ContextMenu>.
 
@@ -347,7 +347,7 @@ ms.locfileid: "54592594"
 
  Odaklanan öğeyi odak kapsamında belirlemek için <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>. Odak kapsamı odaklanan öğeyi değiştirmek için kullanın <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>.
 
- Mantıksal odak hakkında daha fazla bilgi için bkz: [odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md).
+ Mantıksal odak hakkında daha fazla bilgi için bkz: [odağa genel bakış](focus-overview.md).
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>Fare konumu
@@ -355,7 +355,7 @@ ms.locfileid: "54592594"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Fare yakalama
- Fare cihazlarına özellikle fare yakalamayı bilinen bir kalıcı özellik tutun. Fare yakalama, bir Sürükle ve bırak işlemi başlatıldığında, böylece nominal ekrandaki ilgili diğer işlemleri fare işaretçisi konumunun mutlaka gerçekleşmez bir geçiş giriş durumunu korumak için kullanılır. Sürükleme sırasında sürükle ve fare yakalama sürüklemenin çıkış noktası tarafından açık tutulduğu sürece çoğu fareyi üzerine getirme ipuçları uygun hale getiren bırak, durduruluyor olmadan kullanıcı tıklayamazsınız. Giriş sistemi sunan [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fare yakalama durumunu belirleyebilir yanı [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , fare yakalamayı zorlamak için belirli bir öğe veya fare yakalama durumu temizleyin. Sürükle ve bırak işlemleri hakkında daha fazla bilgi için bkz. [sürükle ve bırak genel bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md).
+ Fare cihazlarına özellikle fare yakalamayı bilinen bir kalıcı özellik tutun. Fare yakalama, bir Sürükle ve bırak işlemi başlatıldığında, böylece nominal ekrandaki ilgili diğer işlemleri fare işaretçisi konumunun mutlaka gerçekleşmez bir geçiş giriş durumunu korumak için kullanılır. Sürükleme sırasında sürükle ve fare yakalama sürüklemenin çıkış noktası tarafından açık tutulduğu sürece çoğu fareyi üzerine getirme ipuçları uygun hale getiren bırak, durduruluyor olmadan kullanıcı tıklayamazsınız. Giriş sistemi sunan [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fare yakalama durumunu belirleyebilir yanı [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , fare yakalamayı zorlamak için belirli bir öğe veya fare yakalama durumu temizleyin. Sürükle ve bırak işlemleri hakkında daha fazla bilgi için bkz. [sürükle ve bırak genel bakış](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Komutlar
@@ -363,18 +363,18 @@ ms.locfileid: "54592594"
 
  <xref:System.Windows.Input.RoutedCommand> olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması <xref:System.Windows.Input.ICommand>.  Olduğunda bir <xref:System.Windows.Input.RoutedCommand> yürütüldüğünde, bir <xref:System.Windows.Input.CommandManager.PreviewExecuted> ve <xref:System.Windows.Input.CommandManager.Executed> olayı hangi tüneli ve kabarcık öğe ağacı üzerinden gibi diğer girişler komut hedefi üzerinde oluşturulur.  Bir komut hedefi ayarlanmazsa, klavye odaklı öğe komut hedefi olacaktır.  Komut gerçekleştiren mantıksal bağlı olduğu bir <xref:System.Windows.Input.CommandBinding>.  Olduğunda bir <xref:System.Windows.Input.CommandManager.Executed> olay ulaştığında bir <xref:System.Windows.Input.CommandBinding> o belirli komutla ilgili <xref:System.Windows.Input.ExecutedRoutedEventHandler> üzerinde <xref:System.Windows.Input.CommandBinding> çağrılır.  Bu işleyici, komutun eylemi gerçekleştirir.
 
- Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](commanding-overview.md).
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oluşan yaygın komutları içeren bir kitaplık sağlar <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, ve <xref:System.Windows.Documents.EditingCommands>, ya da kendi tanımlayabilirsiniz.
 
  Aşağıdaki örnek nasıl ayarlanacağını gösterir. bir <xref:System.Windows.Controls.MenuItem> tıklandığında böylece çağırma <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutunu <xref:System.Windows.Controls.TextBox>olduğunu varsayarak <xref:System.Windows.Controls.TextBox> klavye girintisine sahip.
 
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
 
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
 
- Komutlar hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ Komutlar hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [komut vermeye genel genel bakış](commanding-overview.md).
 
 <a name="the_input_system_and_base_elements"></a>
 ## <a name="the-input-system-and-base-elements"></a>Giriş sistemi ve temel öğeler
@@ -388,11 +388,11 @@ ms.locfileid: "54592594"
 ## <a name="whats-next"></a>Yenilikler
  Artık girişinde işlemek için çeşitli teknikler vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Giriş olayları ve tarafından kullanılan yönlendirilmiş olay mekanizmaları çeşitli türlerde geliştirilmiş bilginizin olması [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
- Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework öğeleri ve daha ayrıntılı olarak olay yönlendirme. Daha fazla bilgi için şu genel bakışlara bakın [komut vermeye genel genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md), [odağa genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md), [temel öğelere genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [WPFiçindeağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md), ve [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework öğeleri ve daha ayrıntılı olarak olay yönlendirme. Daha fazla bilgi için şu genel bakışlara bakın [komut vermeye genel genel bakış](commanding-overview.md), [odağa genel bakış](focus-overview.md), [temel öğelere genel bakış](base-elements-overview.md), [WPFiçindeağaçlar](trees-in-wpf.md), ve [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
-- [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Odağa Genel Bakış](focus-overview.md)
+- [Komut Vermeye Genel Bakış](commanding-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Temel Öğelere Genel Bakış](base-elements-overview.md)
+- [Özellikler](properties-wpf.md)

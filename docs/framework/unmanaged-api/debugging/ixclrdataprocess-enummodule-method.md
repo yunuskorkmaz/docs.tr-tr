@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0398d18f9568754231082d63b4c6a2c865d8c6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738137"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363312"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule yöntemi
 
@@ -37,11 +37,13 @@ HRESULT EnumModule(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`handle` [out içinde] Modülleri numaralandırma tanıtıcısı.
+`handle`\
+[out içinde] Modülleri numaralandırma tanıtıcısı.
 
-`mod` [out] Numaralandırılmış modülü.
+`mod`\
+[out] Numaralandırılmış modülü.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -56,7 +58,7 @@ Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve 25 sanal yöntem 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLRDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
-- [IXCLRDataProcess arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)

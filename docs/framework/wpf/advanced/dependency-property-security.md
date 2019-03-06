@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364820"
 ---
 # <a name="dependency-property-security"></a>Bağımlılık Özelliği Güvenliği
 Bağımlılık özellikleri genellikle ortak özellikleri olarak düşünülmelidir. Doğasını [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliği değer hakkında güvenlik Güvenceleri yapma yeteneğini engeller.  
@@ -27,7 +27,7 @@ Bağımlılık özellikleri genellikle ortak özellikleri olarak düşünülmeli
   
  Kendi bağımlılık özellikleri yazıyorsanız sarmalayıcıları bildirmelidir ve <xref:System.Windows.DependencyProperty> çağıranlar bu özelliği doğru erişim düzeyini hakkında bilgi (kendi deposu olması nedeniyle çağıranlar, genel üye olarak tanımlayıcı alanı bağımlılık özelliği olarak uygulanır).  
   
- Özel bağımlılık özelliği için salt okunur bağımlılık özelliği olarak özelliğinizi kaydedebilirsiniz ve bu başvuru bulundurmayan herkes tarafından ayarlanan bir özelliği önleme etkili bir yol sağlar <xref:System.Windows.DependencyPropertyKey> bu özellik için. Daha fazla bilgi için [salt okunur bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+ Özel bağımlılık özelliği için salt okunur bağımlılık özelliği olarak özelliğinizi kaydedebilirsiniz ve bu başvuru bulundurmayan herkes tarafından ayarlanan bir özelliği önleme etkili bir yol sağlar <xref:System.Windows.DependencyPropertyKey> bu özellik için. Daha fazla bilgi için [salt okunur bağımlılık özellikleri](read-only-dependency-properties.md).  
   
 > [!NOTE]
 >  Bildirme bir <xref:System.Windows.DependencyProperty> tanımlayıcı alan özel olmayan Yasak ve hemen sunulan özel bir sınıf ad alanı azaltmak için kısıtlanmamışsa kullanılabilir, ancak böyle bir özellik "olarak aynı anlamda'nın private" değerlendirilmemelidir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil tanımları, sonraki bölümde açıklanan nedenlerle bu erişim düzeyini tanımlayın.  
@@ -40,4 +40,4 @@ Bağımlılık özellikleri genellikle ortak özellikleri olarak düşünülmeli
  İsteğe bağlı olarak uygulayarak bir <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> ve özellik ayarlanmasını önlemek için bir istek başarısız doğrulama hatası bekleniyor yeterli güvenlik mekanizması değil. Set-değer geçersiz kılma zorlanan aracılığıyla <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> bu Arayanların uygulama etki alanı içinde çalışıyorsanız zararlı çağıranlar tarafından da bastırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

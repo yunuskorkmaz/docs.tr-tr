@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372210"
 ---
 # <a name="resources-wpf"></a>Kaynaklar (WPF)
-Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. WPF farklı türdeki kaynakların destekler. Bu kaynaklar temelde iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları. Fırçalar ve stiller XAML kaynakları örneklerindendir. Kaynak veri dosyaları bir uygulama gerekiyor yapılamayan veri dosyalarıdır.  
+Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. WPF, farklı türdeki kaynakların destekler. Bu kaynaklar öncelikle iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları. XAML kaynakları Fırçalar ve stilleri verilebilir. Kaynak veri dosyaları uygulamanın gereken yürütülebilir olmayan veri dosyalarıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XAML Kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [XAML Kaynakları](xaml-resources.md)  
+ [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [WPF İçinde URI'leri Paketleme](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)  
   
- [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)  
   
- [x:Key Yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key Yönergesi](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [WPF'de XAML](xaml-in-wpf.md)

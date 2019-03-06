@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355135"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, geç bağlamaya izin vermiyor ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  Üzerinde **derleme** sekmesinde, değer kümesi'nde **Option Strict** kutusu.  
   
-###  <a name="conditions"></a> IDE'de uyarı yapılandırmaları ayarlamak için  
+### <a name="conditions"></a> IDE'de uyarı yapılandırmaları ayarlamak için  
  Kullanırken [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları üzerinde ek denetim vardır. **Uyarı yapılandırmaları** bölümünü **derle sayfası** karşılık gelen bir derleme zamanı hatasına neden olan üç koşulları ayarlarına sahip olduğunda `Option Strict` açıktır. Bu ayarlar şunlardır:  
   
 -   **Örtük dönüştürme**  

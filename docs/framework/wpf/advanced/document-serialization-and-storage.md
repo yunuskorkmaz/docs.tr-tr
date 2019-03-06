@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630859"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379698"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler hem akış Gelişmiş belgelerini destekleyen gelişmiş özellikler ile güçlü 2B görüntüleme denetimleri, birleştirilmiş ve 3B grafik özellikleri .NET Framework uygulamaları, kalite ve kullanıcı deneyimi yepyeni bir düzeye taşıyın.  Esnek bir bellek içi temsili bir belgenin yönetebilmek .NET Framework'ün temel bir özelliği ve verimli bir şekilde kaydedin ve bir veri deposundan belge yükleme neredeyse her uygulamanın.  Bir belge bir dış veri deposuna iç bellek içi gösterimden dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposunun okuma ve orijinal bellek içi örnek yeniden ters işlemi seri durumundan çıkarma olarak adlandırılır.  
@@ -41,7 +41,7 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
     -   Özel çalışma zamanı ayarları ve seçenekleri için kullanıcı arabirimi desteği.  
   
 ### <a name="xps-print-path"></a>XPS yazdırma yolu  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu ayrıca çıktıda aracılığıyla belgeleri yazdırma için genişletilebilir bir mekanizma sağlar.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] hem bir belge dosyası biçimi görev yapar ve yerel yazdırma biriktiricisi biçimi [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeleri doğrudan gönderilebilir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcılara Ara biçime dönüştürme gereksinimi olmadan.  Bkz: [yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md) yazdırma yolu çıkış seçenekler ve özellikler hakkında daha fazla bilgi için.  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu ayrıca çıktıda aracılığıyla belgeleri yazdırma için genişletilebilir bir mekanizma sağlar.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] hem bir belge dosyası biçimi görev yapar ve yerel yazdırma biriktiricisi biçimi [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeleri doğrudan gönderilebilir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcılara Ara biçime dönüştürme gereksinimi olmadan.  Bkz: [yazdırma genel bakış](printing-overview.md) yazdırma yolu çıkış seçenekler ve özellikler hakkında daha fazla bilgi için.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Eklenti seri hale getiricileri genişletme  
@@ -54,11 +54,11 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
   
  Aşağıdaki örnekte kullanan bir uygulamayı <xref:System.Windows.Documents.Serialization.SerializerProvider> "PlugInFileFilter" özellik yöntemi.  PlugInFileFilter yüklü eklentiler numaralandırır ve kullanılabilir bir dosya seçenekleri içeren bir filtre dizesi oluşturur bir <xref:Microsoft.Win32.SaveFileDialog>.  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  Çıkış dosyası adı kullanıcı tarafından seçilen sonra aşağıdaki örnek, kullanımını gösterir. <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> belirli bir belge belirtilen bir biçimde depolamak için yöntemi.  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>Eklenti Serileştiricileri Yükleme  
@@ -77,6 +77,6 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](printing-overview.md)
 - [XML Kağıt Belirtimi: Genel Bakış](https://go.microsoft.com/fwlink?LinkID=106246)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353991"
 ---
 # <a name="slider"></a>Kaydırıcı
 <xref:System.Windows.Controls.Slider> Taşıyarak bir aralıktaki değerleri seçmenizi sağlar bir <xref:System.Windows.Controls.Primitives.Thumb> boyunca bir <xref:System.Windows.Controls.Primitives.Track>.  
   
- Yatay bir örneği aşağıda gösterilmiştir <xref:System.Windows.Controls.Slider> denetim.  
+ Yatay bir örneği aşağıda gösterilmiştir <xref:System.Windows.Controls.Slider> denetimi.  
   
- ![Değer çizgilerinin ile yatay kaydırıcı](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
+ ![Yatay çizgilerinin kaydırıcıyla](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kaydırıcı Üzerinde İşaretleri Özelleştirme](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+ [Kaydırıcı Üzerinde İşaretleri Özelleştirme](how-to-customize-the-ticks-on-a-slider.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Slider>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748472"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372184"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -24,14 +24,14 @@ Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.Fo
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
  <xref:System.Windows.Media.FormattedText> Nesne, metindeki her karakter ayrı ayrı biçimlendirilebilir, çok satırlı metin çizme olanak tanır. Aşağıdaki örnek, çeşitli biçimlerde uygulanmış olan metni gösterir.  
   
- ![FormattedText nesnesi kullanılarak görüntülenen metin](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")  
+ ![FormattedText nesnesi kullanılarak görüntülenen metin](./media/formattedtext01.jpg "FormattedText01")  
 FormattedText yöntemi kullanılarak görüntülenen metin  
   
 > [!NOTE]
 >  Geçiş bu geliştiriciler için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API'si, tabloda [Win32 geçiş](#win32_migration) bölümünde listeleri [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText bayraklar ve yaklaşık eşdeğeri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Biçimlendirilmiş metin kullanma nedenleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metnin çizmek için birden fazla denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikler ve sınırlamalar vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metnin çizmek için birden fazla denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikler ve sınırlamalar vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için [WPF'deki Belgeler](documents-in-wpf.md).  
   
  <xref:System.Windows.Media.FormattedText> Nesne sağlayan biçimlendirme özellikleri daha büyük metin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin denetimlerini ve metin dekoratif bir öğe olarak kullanmak istediğiniz durumlarda yararlı olabilir. Daha fazla bilgi için bkz. aşağıdaki bölümde [geometriye biçimlendirilmiş metin dönüştürme](#converting_formatted_text).  
   
@@ -42,54 +42,54 @@ FormattedText yöntemi kullanılarak görüntülenen metin
   
  Kullanım <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> metni belirli bir genişlikte kısıtlamak için özellik. Metnin belirtilen genişlik aşmamak için otomatik olarak kaydırılır. Kullanım <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> metni belirli bir yükseklikte kısıtlamak için özellik. "..." Belirtilen yüksekliğini aşıyor metin için üç nokta metni görüntüler.  
   
- ![FormattedText nesnesi kullanılarak görüntülenen metin](../../../../docs/framework/wpf/advanced/media/formattedtext02.png "FormattedText02")  
+ ![FormattedText nesnesi kullanılarak görüntülenen metin](./media/formattedtext02.png "FormattedText02")  
 Sözcük kaydırma ve üç nokta gösteren metin  
   
  Bir veya daha fazla karakterle birden çok biçimlendirme stil uygulayabilirsiniz. Örneğin, her ikisi de çağırabilirsiniz <xref:System.Windows.Media.FormattedText.SetFontSize%2A> ve <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> ilk beş karakterlerini biçimini değiştirmek için yöntem.  
   
  Aşağıdaki kod örneği oluşturur bir <xref:System.Windows.Media.FormattedText> nesne ve sonra birkaç biçimlendirme stili metinler için geçerlidir.  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 ### <a name="font-size-unit-of-measure"></a>Yazı tipi boyutu ölçü birimi  
  Diğer metin nesneleri ile [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları <xref:System.Windows.Media.FormattedText> nesne CİHAZDAN bağımsız piksel ölçü birimi olarak kullanır. Ancak, çoğu [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] uygulamaları ölçü birimi olarak noktalarını kullanır. Görüntü metni noktaları birimi kullanmak isterseniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları dönüştürmek için ihtiyacınız [!INCLUDE[TLA#tla_dipixel#plural](../../../../includes/tlasharptla-dipixelsharpplural-md.md)] noktalarına. Aşağıdaki kod örneği, bu dönüştürmeyi gerçekleştirecek gösterilmektedir.  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
   
 <a name="converting_formatted_text"></a>   
 ### <a name="converting-formatted-text-to-a-geometry"></a>Biçimlendirilmiş metin geometriye dönüştürme  
  Biçimlendirilmiş metin dönüştürebilirsiniz <xref:System.Windows.Media.Geometry> görsel metin ilginç diğer tür oluşturmanızı sağlayan nesneler. Örneğin, aşağıdakileri oluşturabilirsiniz bir <xref:System.Windows.Media.Geometry> nesne tabanlı bir metin dizesinin çerçevesinde.  
   
- ![Doğrusal gradyan fırçası kullanma metin anahat](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+ ![Doğrusal gradyan fırçası kullanma metin anahat](./media/outlinedtext02.jpg "OutlinedText02")  
 Metin anahat doğrusal gradyan fırçası kullanma  
   
  Aşağıdaki örnekler, ilgi çekici görsel efektler vuruş dolgu ve dönüştürülen metin vurgulama değiştirerek oluşturmanın birkaç yolu gösterilmektedir.  
   
- ![Metin doldurup için farklı renklerde](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
+ ![Metin doldurup için farklı renklerde](./media/outlinedtext03.jpg "OutlinedText03")  
 Fırça darbesi ve dolgu farklı renkleri ayarlama örneği  
   
- ![Resim fırçası uygulandığı metinle](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+ ![Resim fırçası uygulandığı metinle](./media/outlinedtext04.jpg "OutlinedText04")  
 Bir resim fırçası uygulandığı örneği  
   
- ![Resim fırçası uygulandığı metinle](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+ ![Resim fırçası uygulandığı metinle](./media/outlinedtext05.jpg "OutlinedText05")  
 Fırça darbesi ve vurgulamaya uygulanan bir resim fırçası örneği  
   
- Ne zaman metin dönüştürülür bir <xref:System.Windows.Media.Geometry> nesnesi, artık bir derlemesidir karakter — metin dizesindeki karakterlerin değiştiremezsiniz. Ancak, çizme ve İşaretleme dolgu özelliklerini değiştirerek Dönüştürülen metin görünümünü etkileyebilir. Fırça darbesi Dönüştürülen metin anahattına gösterir. Dolgu Dönüştürülen metin özetini içindeki alan ifade eder. Daha fazla bilgi için [özetlenen metin oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md).  
+ Ne zaman metin dönüştürülür bir <xref:System.Windows.Media.Geometry> nesnesi, artık bir derlemesidir karakter — metin dizesindeki karakterlerin değiştiremezsiniz. Ancak, çizme ve İşaretleme dolgu özelliklerini değiştirerek Dönüştürülen metin görünümünü etkileyebilir. Fırça darbesi Dönüştürülen metin anahattına gösterir. Dolgu Dönüştürülen metin özetini içindeki alan ifade eder. Daha fazla bilgi için [özetlenen metin oluşturma](how-to-create-outlined-text.md).  
   
  Biçimlendirilmiş metin de dönüştürebilirsiniz bir <xref:System.Windows.Media.PathGeometry> nesnesini ve nesne metni vurgulamak için kullanabilirsiniz. Örneğin, bir animasyonu uygulayabilirsiniz <xref:System.Windows.Media.PathGeometry> animasyon ana hat biçimlendirilmiş metnin izleyen nesnesi.  
   
  Aşağıdaki örnek, dönüştürülen biçimlendirilmiş metni gösterir. bir <xref:System.Windows.Media.PathGeometry> nesne. Animasyonlu bir elips işlenen metin vuruşlarının yolu izler.  
   
- ![Metin yolu geometri izleyen küre](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Metin yolu geometri izleyen küre](./media/textpathgeometry01.gif "TextPathGeometry01")  
 Metin yolu geometri izleyen küre  
   
  Daha fazla bilgi için [nasıl yapılır: Bir PathGeometry animasyon metnini oluşturmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Biçimlendirilmiş metin için ilgi çekici diğer kullanımlar için dönüştürüldükten sonra oluşturabilirsiniz bir <xref:System.Windows.Media.PathGeometry> nesne. Örneğin, içinde görüntülemek için video bölebilirsiniz.  
   
- ![Video görüntüleme metnin yol geometrisini](../../../../docs/framework/wpf/advanced/media/videotextdemo01.png "VideoTextDemo01")  
+ ![Video görüntüleme metnin yol geometrisini](./media/videotextdemo01.png "VideoTextDemo01")  
 Metnin yolu geometrisini video görüntüleme  
   
 <a name="win32_migration"></a>   
@@ -125,7 +125,7 @@ Metnin yolu geometrisini video görüntüleme
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Media.FormattedText>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [WPF'de Tipografi](typography-in-wpf.md)
+- [Anahatları Belirlenmiş Metin Oluşturma](how-to-create-outlined-text.md)
 - [Nasıl yapılır: Bir PathGeometry animasyon metnini oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

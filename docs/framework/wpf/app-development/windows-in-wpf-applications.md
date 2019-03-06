@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353861"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF Uygulamalarında Pencereler
-Kullanıcıların uygulamaları windows ile etkileşimde. Ana bilgisayar ve içeriği görüntülemek için bir pencere temel amacı budur. Pencerenin barındırdığı bağlı olduğunu veri türüne bir uygulama üzerinden, aşağıdakileri içeren medya, Genişletilebilir uygulama biçimlendirme dili (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kaydeder ve sistem bilgilerini çalıştığını içerik türü.  
+Kullanıcıların uygulamaları windows aracılığıyla etkileşim. Bir pencere temel amacı, içeriği görüntülemek ve sağlamaktır. Pencerenin barındırdığı bağlıdır veri türüne göre bir uygulama üzerinden, ortam, Extensible Application Markup Language (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kayıtları ve sistem bilgileri içerebilir çalıştığını içerik türü.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [İletişim Kutularına Genel Bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [WPF Windows'a Genel Bakış](wpf-windows-overview.md)  
+ [İletişim Kutularına Genel Bakış](dialog-boxes-overview.md)  
+ [Nasıl Yapılır Konuları](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ Kullanıcıların uygulamaları windows ile etkileşimde. Ana bilgisayar ve içe
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Uygulama Yönetimine Genel Bakış](application-management-overview.md)  
+  [Gezintiye Genel Bakış](navigation-overview.md)  
+  [Barındırma](hosting-wpf-applications.md)  
+  [Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)

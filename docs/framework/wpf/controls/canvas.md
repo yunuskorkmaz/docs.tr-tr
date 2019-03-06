@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553280"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351059"
 ---
 # <a name="canvas"></a>Tuval
-<xref:System.Windows.Controls.Canvas> alt öğelerin mutlak konumlandırılmasını etkinleştiren bir düzen denetimidir.  
+<xref:System.Windows.Controls.Canvas> mutlak alt öğelerini konumlandırma sağlayan bir düzen denetimidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Nasıl Yapılır Konuları](canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553280"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Düzen](../advanced/layout.md)  
   
- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](scrollviewer-overview.md)

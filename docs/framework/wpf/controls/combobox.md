@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747038"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374849"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Denetim seçeneklerin bir listesi kullanıcıların sayısını gösterir. Listede gösterilen ve denetim genişletir ve daraltır gizli. Varsayılan durumuna görüntüleme tek bir seçim listesi daraltılmıştır. Kullanıcı seçeneklerinin tam listesi görmek için bir düğmesine tıklar.  
   
  Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.ComboBox> farklı durumlarda.  
   
- ![Birleşik giriş kutuları varsayılan ve basılı durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Birleşik giriş kutuları varsayılan ve basılı durumları](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Daraltılabilir ve Genişletilebilir  
   
 ## <a name="reference"></a>Başvuru  

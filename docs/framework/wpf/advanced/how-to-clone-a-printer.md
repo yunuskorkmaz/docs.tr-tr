@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378836"
 ---
 # <a name="how-to-clone-a-printer"></a>Nasıl yapılır: Yazıcı Kopyalama
 Çoğu işletmenin belirli bir noktada aynı modelin birden çok yazıcılar satın alacak. Genellikle, bunların tümü neredeyse aynı yapılandırma ayarlarıyla yüklenir. Her yazıcı yükleme alabilir ve hataya açık alanlardır. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Ad alanı ve <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft .NET Framework ile sunulan sınıfı mevcut bir yazdırma kuyruğundan klonlanır ek yazdırma sıralarını herhangi bir sayıda anında yükleneceği mümkün kılar.  
@@ -52,8 +52,8 @@ ms.locfileid: "54677231"
   
  Bir örnek aşağıda verilmiştir.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ ms.locfileid: "54677231"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF'deki Belgeler](documents-in-wpf.md)
+- [Yazdırmaya Genel Bakış](printing-overview.md)

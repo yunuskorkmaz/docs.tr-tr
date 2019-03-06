@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363520"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesne destekleyen karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için söz dizimi <xref:System.Windows.PropertyPath> değerlerine türü. Bu konu belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri için uygulanan sözdizimi.  
@@ -28,7 +28,7 @@ ms.locfileid: "54648773"
 ## <a name="propertypath-for-objects-in-data-binding"></a>Veri bağlama nesneler için PropertyPath  
  Veri bağlama bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hedef değeri herhangi bir bağımlılık özelliği olarak bağlayabilirsiniz gerçekleştirilmesine özelliği. Ancak, bir bağımlılık özelliği gibi bir veri bağlama kaynağı olması gerekmez; Bu, geçerli veri sağlayıcısı tarafından tanınan herhangi bir özellik türü olabilir. Özellik yolları için kullanılan özellikle <xref:System.Windows.Data.ObjectDataProvider>, bağlama kaynaktan almak için kullanılan [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve özellikleri.  
   
- Bu veri bağlama Not [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] kullanmaz <xref:System.Windows.PropertyPath>kullanmaz çünkü <xref:System.Windows.Data.Binding.Path%2A> içinde <xref:System.Windows.Data.Binding>. Bunun yerine, kullandığınız <xref:System.Windows.Data.Binding.XPath%2A> ve geçerli bir XPath sözdizimi içine belirtin [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] veri. <xref:System.Windows.Data.Binding.XPath%2A> bir dize olarak da belirtilmiş, ancak burada belgelenmedi; bkz: [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Bu veri bağlama Not [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] kullanmaz <xref:System.Windows.PropertyPath>kullanmaz çünkü <xref:System.Windows.Data.Binding.Path%2A> içinde <xref:System.Windows.Data.Binding>. Bunun yerine, kullandığınız <xref:System.Windows.Data.Binding.XPath%2A> ve geçerli bir XPath sözdizimi içine belirtin [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] veri. <xref:System.Windows.Data.Binding.XPath%2A> bir dize olarak da belirtilmiş, ancak burada belgelenmedi; bkz: [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Veri bağlama özelliğini yolları anlamak için bir bağlama için tek bir özellik değerine hedefleyebilir veya listeleri veya koleksiyonları hedef özellikler için bunun yerine bağlayabilirsiniz anahtardır. Koleksiyonları bağlanıyorsanız, örneğin bağlama bir <xref:System.Windows.Controls.ListBox> , genişletir kaç veri öğelerini koleksiyonda yer alan bağlı olarak, ardından özellik yolunuzu başvurması gereken bireysel koleksiyon öğeleri, koleksiyon nesnesi. Veri bağlama altyapısı, veri bağlama hedefi türü için otomatik olarak doldurma gibi davranış kaynaklanan kaynağı olarak kullanılan koleksiyon eşleşecek bir <xref:System.Windows.Controls.ListBox> öğeleri dizi olan.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648773"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- / Bu sözdizimi hiyerarşik veri kaynağı nesnesi ve art arda gelen içeren bir hiyerarşiye birden çok adım içinde gezinmek için kullanılan / karakterleri desteklenir. Kendi görünümünün kullanıcı Arabirimi ile verileri eşitleyerek belirlenir geçerli kayıt işaretçisi konumunu, kaynak geçişi hesaplar. Hiyerarşik veri kaynağı nesneleri ve veri bağlama, geçerli kayıt işaretçisi kavramı ile bağlama hakkında daha fazla bilgi için bkz: [hiyerarşik veriler ile ana öğe-ayrıntı desenini kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) veya [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ / Bu sözdizimi hiyerarşik veri kaynağı nesnesi ve art arda gelen içeren bir hiyerarşiye birden çok adım içinde gezinmek için kullanılan / karakterleri desteklenir. Kendi görünümünün kullanıcı Arabirimi ile verileri eşitleyerek belirlenir geçerli kayıt işaretçisi konumunu, kaynak geçişi hesaplar. Hiyerarşik veri kaynağı nesneleri ve veri bağlama, geçerli kayıt işaretçisi kavramı ile bağlama hakkında daha fazla bilgi için bkz: [hiyerarşik veriler ile ana öğe-ayrıntı desenini kullanma](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) veya [Data Binding Overview](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  Yüzeysel olarak, bu sözdizimi benzer [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Gerçek bir [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] bağlama ifadesi bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri kaynağı olarak kullanılan değil bir <xref:System.Windows.Data.Binding.Path%2A> değer ve bunun yerine birbirini için kullanılması gereken <xref:System.Windows.Data.Binding.XPath%2A> özelliği.  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>Animasyonlara genel nesne özelliğini dikkate alınacak noktalar  
- Animasyon hakkında daha fazla bilgi için genel olarak, bkz [görsel taslaklara genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) ve [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Animasyon hakkında daha fazla bilgi için genel olarak, bkz [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md) ve [animasyona genel bakış](../graphics-multimedia/animation-overview.md).  
   
  Değer türü veya animasyon uygulanan bir özellik olmalıdır bir <xref:System.Windows.Freezable> türü veya basit bir tür. Yolun başlatan özellik belirtilen var olan bir bağımlılık özelliği adı çözülmesi gerekir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> türü.  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` bağımlılık özelliğinin değeri bir nesne üzerinde var olan ad `propertyName`. Diğer bir deyişle, `propertyName2` türü üzerinde bir bağımlılık özelliği olarak bulunmalıdır `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
- Dolaylı animasyonları hedefleme uygulanan stiller ve şablonlar nedeniyle gereklidir. Bir animasyon hedeflemek için gereken bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> hedef nesne ve, adı tarafından kurulur [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) veya <xref:System.Windows.FrameworkElement.Name%2A>. Bu adları yalnızca şablon ve stil öğeleri de adlara sahip olsa da, stil ve şablon namescope içinde geçerli değil. (Ad kapsamları ile uygulama biçimlendirme paylaşıyorsa, şablonlar ve stiller adları benzersiz silinemedi. "Stilleri ve şablonları tam anlamıyla örnekleri arasında paylaşılır ve yinelenen adlara neden olabilir.) Özellikler animasyon eklemek istediğiniz bir öğenin bir stil veya şablondan geliyorsa, bu nedenle, bir stil şablonundan değil bir adlandırılmış öğe örneğiyle başlatın ve sonra özellik gelmesi stil veya şablon görsel ağacında hedef için ihtiyacınız animasyon uygulamak istediğiniz.  
+ Dolaylı animasyonları hedefleme uygulanan stiller ve şablonlar nedeniyle gereklidir. Bir animasyon hedeflemek için gereken bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> hedef nesne ve, adı tarafından kurulur [x: Name](../../xaml-services/x-name-directive.md) veya <xref:System.Windows.FrameworkElement.Name%2A>. Bu adları yalnızca şablon ve stil öğeleri de adlara sahip olsa da, stil ve şablon namescope içinde geçerli değil. (Ad kapsamları ile uygulama biçimlendirme paylaşıyorsa, şablonlar ve stiller adları benzersiz silinemedi. "Stilleri ve şablonları tam anlamıyla örnekleri arasında paylaşılır ve yinelenen adlara neden olabilir.) Özellikler animasyon eklemek istediğiniz bir öğenin bir stil veya şablondan geliyorsa, bu nedenle, bir stil şablonundan değil bir adlandırılmış öğe örneğiyle başlatın ve sonra özellik gelmesi stil veya şablon görsel ağacında hedef için ihtiyacınız animasyon uygulamak istediğiniz.  
   
  Örneğin, <xref:System.Windows.Controls.Panel.Background%2A> özelliği bir <xref:System.Windows.Controls.Panel> bir tamamlandıktan <xref:System.Windows.Media.Brush> (aslında bir <xref:System.Windows.Media.SolidColorBrush>) bir tema şablondan gelen. Animasyon uygulamak için bir <xref:System.Windows.Media.Brush> tamamen var bir BrushAnimation olması gerekir (büyük olasılıkla her <xref:System.Windows.Media.Brush> türü) ve böyle bir türü vardır. Fırça animasyon uygulamak için bunun yerine belirli bir özelliklerine animasyon <xref:System.Windows.Media.Brush> türü. Alma ihtiyacınız <xref:System.Windows.Media.SolidColorBrush> için kendi <xref:System.Windows.Media.SolidColorBrush.Color%2A> uygulamak için bir <xref:System.Windows.Media.Animation.ColorAnimation> vardır. Bu örnek için özellik yol `Background.Color`.  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.PropertyPath>
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Görsel Taslaklara Genel Bakış](../graphics-multimedia/storyboards-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365054"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Nasıl yapılır: DataGrid denetiminde filtre verileri gruplandırma, sıralama ve
 
@@ -24,7 +24,7 @@ Genellikle verileri görüntülemek için yararlı bir <xref:System.Windows.Cont
 
 Bu örnekte, bir koleksiyonu `Task` nesneleri bağlı bir <xref:System.Windows.Data.CollectionViewSource>. <xref:System.Windows.Data.CollectionViewSource> Olarak kullanılan <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> için <xref:System.Windows.Controls.DataGrid>. Gruplandırma, sıralama ve filtreleme üzerinde gerçekleştirilir <xref:System.Windows.Data.CollectionViewSource> ve görüntülenen <xref:System.Windows.Controls.DataGrid> kullanıcı Arabirimi.
 
-![Gruplandırılmış veri kılavuzundaki](./media/wpf-datagridgroups.png "WPF_DataGridGroups") gruplandırılmış veri kılavuzundaki
+![Gruplandırılmış veri kılavuzundaki](././media/wpf-datagridgroups.png "WPF_DataGridGroups") gruplandırılmış veri kılavuzundaki
 
 ## <a name="using-a-collectionviewsource-as-an-itemssource"></a>Bir Collectionviewsource'a bir ItemsSource kullanma
 
@@ -42,9 +42,9 @@ Gruplandırma, sıralama ve filtre verileri için bir <xref:System.Windows.Contr
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML, koleksiyon sınıfı bir örneğini oluşturun ve ayarlayın [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md).
+2. XAML, koleksiyon sınıfı bir örneğini oluşturun ve ayarlayın [x: Key yönergesi](../../xaml-services/x-key-directive.md).
 
-3. XAML içinde bir örneğini oluşturmak <xref:System.Windows.Data.CollectionViewSource> sınıfı, Ayarla [x: Key yönergesi](../../../../docs/framework/xaml-services/x-key-directive.md)ve kümesi koleksiyon sınıfının örneği <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
+3. XAML içinde bir örneğini oluşturmak <xref:System.Windows.Data.CollectionViewSource> sınıfı, Ayarla [x: Key yönergesi](../../xaml-services/x-key-directive.md)ve kümesi koleksiyon sınıfının örneği <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360517"
 ---
 # <a name="animation-and-timing-system-overview"></a>Animasyon ve Zamanlama Sistemine Genel Bakış
 Bu konuda, zamanlama sistemi animasyon nasıl kullandığı açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline>, ve <xref:System.Windows.Media.Animation.Clock> özelliklerine animasyon uygulamak için sınıflar.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için kullanılacak erişebileceğinizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri bölümünde anlatıldığı gibi canlandırmak için animasyon [animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Bağımlılık özellikleri ile ilgili bilgi sahibi olmasını da sağlar; Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Bu konuda anlamak için kullanılacak erişebileceğinizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri bölümünde anlatıldığı gibi canlandırmak için animasyon [animasyona genel bakış](animation-overview.md). Bağımlılık özellikleri ile ilgili bilgi sahibi olmasını da sağlar; Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>Zaman çizelgeleri ve saatler  
- [Animasyona genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) nasıl açıklanan bir <xref:System.Windows.Media.Animation.Timeline> temsil zaman ve animasyon bir parçası olan bir tür <xref:System.Windows.Media.Animation.Timeline> , çıktı değerleri üretir. Tek başına bir <xref:System.Windows.Media.Animation.Timeline>, dışında bir şey yapmadı yalnızca zaman kesimini açıklar. Zaman çizelgesinin olan <xref:System.Windows.Media.Animation.Clock> asıl işi yapan bir nesne. Benzer şekilde, animasyon gerçekten özelliklerine animasyon değil: çıkış değerleri nasıl hesaplanacağını bir animasyon sınıfı açıklar, ancak bu <xref:System.Windows.Media.Animation.Clock> özellikleri için geçerlidir ve animasyon çıktısını animasyon için oluşturuldu.  
+ [Animasyona genel bakış](animation-overview.md) nasıl açıklanan bir <xref:System.Windows.Media.Animation.Timeline> temsil zaman ve animasyon bir parçası olan bir tür <xref:System.Windows.Media.Animation.Timeline> , çıktı değerleri üretir. Tek başına bir <xref:System.Windows.Media.Animation.Timeline>, dışında bir şey yapmadı yalnızca zaman kesimini açıklar. Zaman çizelgesinin olan <xref:System.Windows.Media.Animation.Clock> asıl işi yapan bir nesne. Benzer şekilde, animasyon gerçekten özelliklerine animasyon değil: çıkış değerleri nasıl hesaplanacağını bir animasyon sınıfı açıklar, ancak bu <xref:System.Windows.Media.Animation.Clock> özellikleri için geçerlidir ve animasyon çıktısını animasyon için oluşturuldu.  
   
  A <xref:System.Windows.Media.Animation.Clock> özel bir zamanlama ile ilgili çalışma zamanı durumu tutan nesne türüdür <xref:System.Windows.Media.Animation.Timeline>. Üç animasyon ve zamanlama sistemi için gerekli olan bit bilgi sağlar: <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, ve <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. A <xref:System.Windows.Media.Animation.Clock> tarafından açıklanan zamanlama davranışları kullanarak, geçerli zamanı, ilerleme ve durumu belirler, <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>ve benzeri.  
   
@@ -46,7 +46,7 @@ Bu konuda, zamanlama sistemi animasyon nasıl kullandığı açıklanmaktadır <
   
  Saat Yöneticisi arasındaki ilişki aşağıda gösterilmiştir ve <xref:System.Windows.Media.Animation.AnimationClock>ve bir animasyonlu bağımlılık özelliği.  
   
- ![Sistem bileşenleri zamanlama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![Sistem bileşenleri zamanlama](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 Bir özelliğe animasyon ekleme  
   
  Zaman Yöneticisi işaretlerini, süresini güncelleştirir. her <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> uygulama. Varsa <xref:System.Windows.Media.Animation.Clock> olduğu bir <xref:System.Windows.Media.Animation.AnimationClock>, kullandığı <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> yöntemi <xref:System.Windows.Media.Animation.AnimationTimeline> uygulamayı oluşturulduğu öğesinden geçerli çıkış değerini hesaplamak için. <xref:System.Windows.Media.Animation.AnimationClock> Sağlayan <xref:System.Windows.Media.Animation.AnimationTimeline> geçerli yerel saat, genellikle temel özellik değeri, bir giriş değeri ve varsayılan bir hedef değer. Animasyonlu değerini aldığınızda özelliğini kullanarak <xref:System.Windows.DependencyObject.GetValue%2A> , yöntemi veya CLR erişeni çıktısını alın, <xref:System.Windows.Media.Animation.AnimationClock>.  
@@ -54,13 +54,13 @@ Bir özelliğe animasyon ekleme
 #### <a name="clock-groups"></a>Saat grupları  
  Nasıl farklı türde vardır, önceki bölümde açıklanan <xref:System.Windows.Media.Animation.Clock> zaman çizelgeleri farklı türde nesneler. Saat Yöneticisi arasındaki ilişki aşağıdaki çizimde bir <xref:System.Windows.Media.Animation.ClockGroup>e <xref:System.Windows.Media.Animation.AnimationClock>ve bir animasyonlu bağımlılık özelliği. A <xref:System.Windows.Media.Animation.ClockGroup> gibi diğer zaman çizelgelerine grubunda zaman çizelgeleri için oluşturulan <xref:System.Windows.Media.Animation.Storyboard> animasyonları ve diğer zaman çizelgelerine gruplayan sınıfı.  
   
- ![Sistem bileşenleri zamanlama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![Sistem bileşenleri zamanlama](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 Bir ClockGroup  
   
 #### <a name="composition"></a>Oluşturma  
  Birden çok ilişkilendirmek mümkündür durumda tek bir özellik ile bir önceki çıkış değeri temel değer olarak saat her saati kullanır saatler. Aşağıdaki çizim üç gösterir <xref:System.Windows.Media.Animation.AnimationClock> nesneleri aynı özelliğe uygulanır. Clock1 için taban değerini animasyonlu özelliği, giriş olarak kullanan ve çıktı üretmek için kullanır. Clock2 Clock1, girdi olarak gelen çıkış alır ve çıktı üretmek için kullanır. Clock3 Clock2, girdi olarak gelen çıkış alır ve çıktı üretmek için kullanır. Birden çok saatleri aynı anda aynı özelliğe etkilediğinde, bunlar bir oluşturma zincirindeki olduğu söylenir.  
   
- ![Sistem bileşenleri zamanlama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![Sistem bileşenleri zamanlama](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Bir oluşum zinciri  
   
  Giriş ve çıkış arasında bir ilişki oluşturulur, ancak unutmayın <xref:System.Windows.Media.Animation.AnimationClock> nesneleri oluşturma zincirinde zamanlama davranışları etkilenmez; <xref:System.Windows.Media.Animation.Clock> nesneleri (dahil olmak üzere <xref:System.Windows.Media.Animation.AnimationClock> nesneleri), üst öğede hiyerarşik bağımlılığa sahip <xref:System.Windows.Media.Animation.Clock> nesneleri.  
@@ -74,7 +74,7 @@ Bir oluşum zinciri
   
  Olduğunda bir <xref:System.Windows.Media.Animation.Clock> bir durumdan diğerine geçer ve saat döngüleri arasında özgün durumuna geri döndürür (gelen değiştirme gibi <xref:System.Windows.Media.Animation.ClockState.Active> için <xref:System.Windows.Media.Animation.ClockState.Stopped> daha sonra tekrar <xref:System.Windows.Media.Animation.ClockState.Active>), ilişkili olay yine de gerçekleşir.  
   
- Zamanlama olayları hakkında daha fazla bilgi için bkz: [zamanlama olaylarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+ Zamanlama olayları hakkında daha fazla bilgi için bkz: [zamanlama olaylarına genel bakış](timing-events-overview.md).  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>Geçerli ve özelliklerinin temel değerleri  
@@ -83,6 +83,6 @@ Bir oluşum zinciri
  Bir özelliğe animasyon eklediğinizde <xref:System.Windows.Media.Animation.AnimationClock> özelliğin ayarlar *geçerli* değeri. CLR erişeni aracılığıyla özelliğin değerini alma veya <xref:System.Windows.DependencyObject.GetValue%2A> yöntem çıkışı döndürür <xref:System.Windows.Media.Animation.AnimationClock> olduğunda <xref:System.Windows.Media.Animation.AnimationClock> olduğu <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling>. Özelliğin taban değerini kullanarak alabilirsiniz <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Zamanlama Olaylarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Animasyona Genel bakış](animation-overview.md)
+- [Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)
+- [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md)

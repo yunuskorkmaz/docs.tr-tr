@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 120e2ecdf5869200fa9280ce3fc0a2a3a76c667f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748329"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379100"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunların dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework çeşitli dağıtım teknolojileri içerir. Dağıtım teknolojisi dağıtmak için kullanılan bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldığını sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
@@ -80,11 +80,11 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 ### <a name="deploying-markup-only-xaml-applications"></a>Yalnızca XAML uygulamaları dağıtma  
  Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları genellikle yayımlanır Web sunucularına gibi [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] sayfaları ve görüntülenebilir [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]. Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları, Internet bölgesi izin kümesi tarafından tanımlanan bir kısıtlama olmadan bir kısmi güven güvenliği korumalı alan içinde çalıştırın. Bu bir eşdeğer güvenlik sandbox sağlar [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]-tabanlı Web uygulamaları.  
   
- İçin güvenlik hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları, [güvenlik](../../../../docs/framework/wpf/security-wpf.md).  
+ İçin güvenlik hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları, [güvenlik](../security-wpf.md).  
   
  Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları yüklenebilir yerel dosya sistemine XCopy kullanarak veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Bu sayfaları kullanarak görüntülenebilir [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] ya da Windows Explorer.  
   
- XAML hakkında daha fazla bilgi için bkz: [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ XAML hakkında daha fazla bilgi için bkz: [XAML genel bakış (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML tarayıcı uygulamaları dağıtma  
@@ -97,7 +97,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
 -   *ApplicationName*. exe.manifest: Uygulama bildirimi.  
   
 > [!NOTE]
->  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz: [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz: [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
  Bu dosyalar üretilen olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] oluşturulmuştur. Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Yalnızca biçimlendirme gibi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kullanılarak görüntülenmesi ve genellikle bir Web sunucusuna yayımlanan [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
@@ -109,7 +109,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
  Varsayılan olarak, ClickOnce .deploy uzantısını uygulama dosyalarıyla yayımlar. Bu sorunlara neden olabilir, ancak devre dışı bırakılabilir. Daha fazla bilgi için [sunucu ve istemci yapılandırma sorunları ClickOnce Dağıtımları içinde](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Dağıtma hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], bkz: [WPF XAML tarayıcı uygulamalarına genel bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ Dağıtma hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], bkz: [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework2ü yükleme  
@@ -121,8 +121,8 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
  .NET framework otomatik algılamayı edinilebilir [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] olan istemciler [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya sonraki bir sürümü yüklü.  
   
- Daha fazla bilgi için [.NET Framework ve uygulamaları dağıtma](../../../../docs/framework/deployment/index.md).  
+ Daha fazla bilgi için [.NET Framework ve uygulamaları dağıtma](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [Güvenlik](../../../../docs/framework/wpf/security-wpf.md)
+- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)
+- [Güvenlik](../security-wpf.md)

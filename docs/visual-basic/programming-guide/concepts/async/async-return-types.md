@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352587"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 Zaman uyumsuz yöntemler üç olası dönüş türüne sahiptir: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic'te, void dönüş türü olarak yazılmış bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamı. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -17,7 +17,7 @@ Zaman uyumsuz yöntemler üç olası dönüş türüne sahiptir: <xref:System.Th
 > [!NOTE]
 >  Yeni bilgisayarınızda yüklü veya örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Görev(t) dönüş türü  
+## <a name="BKMK_TaskTReturnType"></a> Görev(t) dönüş türü  
  <xref:System.Threading.Tasks.Task%601> Dönüş türü içeren zaman uyumsuz yöntemi için kullanılan bir [dönüş](../../../../visual-basic/language-reference/statements/return-statement.md) işlenen türü içeren ifadesi `TResult`.  
   
  Aşağıdaki örnekte, `TaskOfT_MethodAsync` zaman uyumsuz yönteminde tamsayı döndüren bir return deyimi içerir. Bu nedenle, yöntem bildiriminde bir dönüş türü belirtmelisiniz `Task(Of Integer)`.  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> Görev dönüş türü  
+## <a name="BKMK_TaskReturnType"></a> Görev dönüş türü  
  Return deyimi içermeyen veya bir işleç genellikle döndürmeyen bir return deyimi içeren zaman uyumsuz yöntemlerin dönüş türüne sahip <xref:System.Threading.Tasks.Task>. Bu tür yöntemler olacaktır [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) eşzamanlı çalışacak biçimde yazılmışsa yordamları. Kullanıyorsanız bir `Task` dönüş türü için zaman uyumsuz yöntemi çağıran bir yöntemi kullanabilirsiniz bir `Await` çağrılan zaman uyumsuz yöntemi bitene kadar çağıranın tamamlanmasını bekletmek için işleci.  
   
  Aşağıdaki örnekte, zaman uyumsuz yöntem `Task_MethodAsync` bir return deyimi yok. Bu nedenle, dönüş türü belirttiğiniz `Task` sağlayan yöntem için `Task_MethodAsync` beklenmesini. Tanımı `Task` türü içermez bir `Result` dönüş değerini depolamak için özellik.  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Void dönüş türü  
+## <a name="BKMK_VoidReturnType"></a> Void dönüş türü  
  Birincil kullanım alanının `Sub` yordamları, olay işleyicileri olan (diğer dillerdeki void dönüş türü olarak adlandırılır) herhangi bir döndürme türü olduğu. Void dönüş void döndüren yöntemleri geçersiz kılmak için de kullanılabilir veya kategorilere ayrılabilir etkinlikleri gerçekleştiren yöntemler için olarak "Başlat ve unut." Ancak, döndürmelidir bir `Task` mümkün olduğunda, çünkü bir void döndüren zaman uyumsuz yöntem beklenemez. Tüm bu yöntemi çağıran kişi çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlanana kadar devam edebilir ve çağıran zaman uyumsuz yöntemin oluşturduğu özel durumları veya değerlerden bağımsız olmalıdır.  
   
  Void döndüren zaman uyumsuz yöntemi çağıran kişi yöntemden atılan özel durumları yakalayamaz ve böyle işlenmeyen özel durumların, uygulamanızın başarısız olmasına neden olabilecek. Döndüren zaman uyumsuz yöntemde özel durum oluşursa bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>, özel durum getirilen görevde depolanır ve görev beklenirken yeniden atılır. Bu nedenle, bir özel durum oluşturabilecek herhangi bir zaman uyumsuz yöntem dönüş türüne sahip olduğundan emin olun <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> ve yöntemine yönelik çağrılar beklediğinden.  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> Tam örnek  
+## <a name="BKMK_Example"></a> Tam örnek  
  Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnekleri içermektedir.  
   
  Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:  

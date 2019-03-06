@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379113"
 ---
 # <a name="application-startup-time"></a>Uygulama Başlangıç Zamanı
 Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve gerçek başlangıç süresini azaltmak için çeşitli teknikler açıklanır.  
@@ -24,7 +24,7 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
  Orta Gecikmeli Başlangıç sayfaları ana ortak dil çalışma zamanı (CLR) bileşenleri için birçok pahalı disk erişim süresi kaydeder bellekte zaten yüklenmiş olan oluşur. İkinci kez yürütüldüğünde bir yönetilen uygulama daha hızlı başlatılan nedeni budur.  
   
 ## <a name="implement-a-splash-screen"></a>Uygulama giriş ekranı  
- Kaçınılmaz durumlarda, uygulama başlatma ve ilk kullanıcı arabirimini görüntüleyen arasındaki gecikme, kullanarak algılanan başlangıç zamanını iyileştirme bir *giriş ekranı*. Bu yaklaşım, hemen bir resim görüntüler sonra kullanıcı uygulamayı başlatır. Uygulama ilk kullanıcı arabirimini görüntülemek hazır olduğunda, giriş ekranı belirerek. İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], kullanabileceğiniz <xref:System.Windows.SplashScreen> giriş ekranı uygulamak için sınıfı. Daha fazla bilgi için [WPF uygulamasına giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Kaçınılmaz durumlarda, uygulama başlatma ve ilk kullanıcı arabirimini görüntüleyen arasındaki gecikme, kullanarak algılanan başlangıç zamanını iyileştirme bir *giriş ekranı*. Bu yaklaşım, hemen bir resim görüntüler sonra kullanıcı uygulamayı başlatır. Uygulama ilk kullanıcı arabirimini görüntülemek hazır olduğunda, giriş ekranı belirerek. İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], kullanabileceğiniz <xref:System.Windows.SplashScreen> giriş ekranı uygulamak için sınıfı. Daha fazla bilgi için [WPF uygulamasına giriş ekranı ekleme](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Ayrıca, yerel Win32 grafikler kullanarak kendi giriş ekranı uygulayabilirsiniz. Önce uygulamanızı görüntüleyin <xref:System.Windows.Application.Run%2A> yöntemi çağrılır.  
   
@@ -53,7 +53,7 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
  Uygulama yapılandırması önleme göz önünde bulundurun. Örneğin, kayıt defteri girdileri veya basit bir INI dosyasını uygulama basit yapılandırma gereksinimleri ve katı başlangıç süresi amaçlarını varsa, daha hızlı bir başlangıç alternatif olabilir.  
   
 ## <a name="utilize-the-gac"></a>GAC kullanma  
- Bir derlemeyi Genel Derleme Önbelleği'ne (GAC) yüklü değilse, bilgisayar üzerinde o derleme için bir yerel görüntü varsa, karma doğrulaması tanımlayıcı adlı derlemelerin ve Ngen tarafından neden gecikmeler vardır. GAC'de kurulu tüm derlemeler için tanımlayıcı ad doğrulama atlandı. Daha fazla bilgi için [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Bir derlemeyi Genel Derleme Önbelleği'ne (GAC) yüklü değilse, bilgisayar üzerinde o derleme için bir yerel görüntü varsa, karma doğrulaması tanımlayıcı adlı derlemelerin ve Ngen tarafından neden gecikmeler vardır. GAC'de kurulu tüm derlemeler için tanımlayıcı ad doğrulama atlandı. Daha fazla bilgi için [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../tools/gacutil-exe-gac-tool.md).  
   
 ## <a name="use-ngenexe"></a>Ngen.exe kullanın  
  Uygulamanızda Native Image Generator (Ngen.exe) kullanmayı düşünün. Ngen.exe kullanarak, Ngen.exe ile oluşturulan yerel görüntü büyük olasılıkla MSIL görüntüsü daha büyük olduğu için daha fazla disk erişimi için CPU tüketimi alım-satım anlamına gelir.  
@@ -67,14 +67,14 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
 ### <a name="ngen-and-clickonce"></a>Ngen ve ClickOnce  
  Uygulamanızı dağıtmayı planladığınız yolu bir fark yükleme süresi de yapabilirsiniz. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] Ngen uygulaması dağıtımını desteklemez. Uygulamanız için Ngen.exe kullanmaya karar verirseniz, Windows Installer gibi başka bir dağıtım mekanizmasının kullanılması gerekir.  
   
- Daha fazla bilgi için [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Daha fazla bilgi için [Ngen.exe (yerel Görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Yeniden Temellendirme ve DLL adres çakışması  
  Ngen.exe kullanıyorsanız, yerel görüntüler belleğe yüklendiğinde yeniden Temellendirme oluşabileceğini unutmayın. Windows Yükleyici DLL zaten ayrılmış adres aralığı için tercih edilen temel adresinde yüklenmezse, zaman alıcı bir işlem, başka bir adreste yükler.  
   
  Tüm sayfaları özel modüller olup olmadığını denetlemek için sanal adres dökümü (Vadump.exe) aracını kullanabilirsiniz. Bu durumda, modülü farklı bir adres ReBase işlemi gerçekleştirildi. Bu nedenle, sayfalarını paylaşılamaz.  
   
- Temel adresini ayarlama hakkında daha fazla bilgi için bkz. [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Temel adresini ayarlama hakkında daha fazla bilgi için bkz. [Ngen.exe (yerel Görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Authenticode en iyi duruma getirme  
  Authenticode doğrulama başlangıç zamanına ekler. Authenticode imzalı derlemelerin sertifika yetkilisi (CA) ile doğrulanması gerekir. Geçerli sertifika iptal listeleri indirmek için birkaç kez ağa bağlamak isteyebilirsiniz, çünkü bu doğrulamayı zaman alıcı olabilir. Ayrıca, tam bir güvenilen kök yolu geçerli sertifika zinciri olduğundan emin olur. Derleme yüklenirken bu gecikme birkaç saniye çevirebilir.  
@@ -91,7 +91,7 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
 </configuration>  
 ```  
   
- Daha fazla bilgi için [ \<generatePublisherEvidence > öğe](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Daha fazla bilgi için [ \<generatePublisherEvidence > öğe](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Windows Vista performans karşılaştırın  
  Windows Vista Bellek yöneticisinde hızlı getirme adı verilen bir teknoloji var. Hızlı getirme, belirli bir kullanıcı için en iyi bellek içeriğini belirlemek için zaman içinde bellek kullanım desenlerini analiz eder. Her zaman bu içeriği korumak için sürekli olarak çalışır.  
@@ -127,6 +127,6 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [WPF Uygulamasına Giriş Ekranı Ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > öğe](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [WPF Uygulamasına Giriş Ekranı Ekleme](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence > öğe](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

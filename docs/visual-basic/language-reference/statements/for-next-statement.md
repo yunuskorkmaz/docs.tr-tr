@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202632"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370312"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 Belirtilen sayıda deyim grubunu yineler.  
@@ -125,7 +125,7 @@ Next [ counter ]
   
  Varsayılan değer olan `step` 1'dir.  
   
-###  <a name="BKMK_Counter"></a> Sayaç değişkeni  
+### <a name="BKMK_Counter"></a> Sayaç değişkeni  
  Aşağıdaki tablo belirtir olup olmadığını `counter` tüm kapsamlıdır yeni bir yerel değişken tanımlar `For…Next` döngü. Bu belirleme bağlıdır `datatype` var olup olmadığını ve `counter` zaten tanımlandı.  
   
 |Olan `datatype` var?|Olan `counter` zaten tanımlanmış?|Sonuç (olmadığını `counter` tüm kapsamlıdır yeni bir yerel değişken tanımlar `For...Next` döngüsü)|  

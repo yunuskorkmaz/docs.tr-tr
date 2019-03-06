@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634590"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362023"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu bir turu sağlar. Ana alt çoğunu kapsar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ve nasıl etkileşim kurduklarını açıklar. Bu ayrıca mimarları tarafından yapılan seçimleri bazıları ayrıntılı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -33,7 +33,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
   
  Ana bileşenleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki çizimde gösterilmiştir. Kırmızı (PresentationFramework PresentationCore ve milcore) diyagramın ana kod bölümlerini bölümleridir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Bu tek bir yönetilmeyen – milcore bileşendir. Milcore ile olan sıkı entegrasyonundan etkinleştirmek için yönetilmeyen kodda yazıldığı [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Tümünü Göster [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aracılığıyla gerçekleştirilir [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] altyapısı, etkili donanım ve yazılım işlemeye olanak tanır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bellek ve yürütmesi üzerinde ayrıntılı denetim de gereklidir. Milcore bileşim motoru son derece hassas ve gerekli birçok avantaj sunar performans olduğundan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] performans elde etmek için.  
   
- ![WPF, .NET Framework içindeki konumu. ](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![WPF, .NET Framework içindeki konumu. ](./media/wpf-architect1.PNG "wpf_architect1")  
   
  Yönetilen ve yönetilmeyen bölümleri arasındaki iletişimi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bu konunun ilerleyen bölümlerinde ele alınmıştır. Yönetilen bir programlama modeli geri kalanında, aşağıda açıklanmıştır.  
   
@@ -71,7 +71,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
   
  Programlamada [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], oluşturduğunuz <xref:System.Windows.Media.Visual> öğeleri ve dahili olarak kompozisyon ağacı bu Mesajlaşma protokolü üzerinden iletişim türetilen türler. Her <xref:System.Windows.Media.Visual> içinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] birini, yok veya birkaç bileşim düğümleri oluşturabilir.  
   
- ![Windows Presentation Foundation görsel ağaç. ](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation görsel ağaç. ](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  Burada – görsel ağacının tümünü fark için çok önemli bir mimari ayrıntı yoktur ve yönergeleri çizim önbelleğe alınır. Grafik koşullarında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tutulan işleme sistemi kullanır. Bu, sistemin kullanıcı kodu geri çağırmalarına üzerinde engelleme oluşturma sistemi olmadan yüksek yenileme hızı repaint sağlar. Bu durum, yanıt vermeyen bir uygulamanın görünümünü önlemeye yardımcı olur.  
   
@@ -149,6 +149,6 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Düzen](../../../../docs/framework/wpf/advanced/layout.md)
-- [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Düzen](layout.md)
+- [Animasyona Genel bakış](../graphics-multimedia/animation-overview.md)

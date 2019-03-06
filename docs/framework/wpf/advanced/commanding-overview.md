@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 5273850c9fec731c5f11e101d218532d06632263
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379087"
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a> Komut vermeye genel olan bir giriş mekanizmasında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cihaz girişi daha fazla anlam düzeyinde işleme giriş sağlar. Komut örneklerindendir **kopyalama**, **Kes**, ve **Yapıştır** operations birçok uygulama üzerinde bulunamadı.  
@@ -51,10 +51,10 @@ ms.locfileid: "56748433"
   
  Aşağıdaki örnek nasıl ayarlanacağını gösterir. bir <xref:System.Windows.Controls.MenuItem> tıklandığında böylece çağırma <xref:System.Windows.Input.ApplicationCommands.Paste%2A> komutunu bir <xref:System.Windows.Controls.TextBox>olduğunu varsayarak <xref:System.Windows.Controls.TextBox> klavye girintisine sahip.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Four_main_Concepts"></a>   
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF komut vermeye genel dört ana kavramlar  
@@ -74,7 +74,7 @@ ms.locfileid: "56748433"
 ### <a name="commands"></a>Komutlar  
  İçindeki komutlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulayarak oluşturulur <xref:System.Windows.Input.ICommand> arabirimi.  <xref:System.Windows.Input.ICommand> iki yöntem sunar <xref:System.Windows.Input.ICommand.Execute%2A>, ve <xref:System.Windows.Input.ICommand.CanExecute%2A>ve bir olay <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> komutu ile ilişkili olan eylemleri gerçekleştirir. <xref:System.Windows.Input.ICommand.CanExecute%2A> komutun geçerli komut hedefinde yürütülüp yürütülmeyeceğini belirler. <xref:System.Windows.Input.ICommand.CanExecuteChanged> komut verme işlemlerini merkezileştirir komut Yöneticisi oluşturuldu, ancak henüz komut bağlama tarafından yürütülen komutu geçersiz komut kaynağı bir değişiklik algılarsa ortaya çıkar.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulaması <xref:System.Windows.Input.ICommand> olduğu <xref:System.Windows.Input.RoutedCommand> sınıfı ve odak noktası, bu genel bakış.  
   
- Ana giriş kaynakları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fare, klavye, mürekkep ve yönlendirilmiş komutları.  Daha fazla aygıt odaklı girişlerini kullan bir <xref:System.Windows.RoutedEvent> Giriş bir olay gerçekleştiğinde bir uygulama sayfasındaki nesneleri bildirir.  A <xref:System.Windows.Input.RoutedCommand> farklı değildir.  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Ve <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> yöntemlerinin bir <xref:System.Windows.Input.RoutedCommand> komutu için uygulama mantığı içermez, ancak bunun yerine tünel yönlendirilmiş olay ve sahip bir nesne karşılaştıkları kadar öğe ağacı üzerinden Kabarcık bir <xref:System.Windows.Input.CommandBinding>.  <xref:System.Windows.Input.CommandBinding> Bu olayları için işleyiciler içerir ve komut gerçekleştiren işleyicileri.  Olay yönlendirme hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Ana giriş kaynakları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fare, klavye, mürekkep ve yönlendirilmiş komutları.  Daha fazla aygıt odaklı girişlerini kullan bir <xref:System.Windows.RoutedEvent> Giriş bir olay gerçekleştiğinde bir uygulama sayfasındaki nesneleri bildirir.  A <xref:System.Windows.Input.RoutedCommand> farklı değildir.  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Ve <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> yöntemlerinin bir <xref:System.Windows.Input.RoutedCommand> komutu için uygulama mantığı içermez, ancak bunun yerine tünel yönlendirilmiş olay ve sahip bir nesne karşılaştıkları kadar öğe ağacı üzerinden Kabarcık bir <xref:System.Windows.Input.CommandBinding>.  <xref:System.Windows.Input.CommandBinding> Bu olayları için işleyiciler içerir ve komut gerçekleştiren işleyicileri.  Olay yönlendirme hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Metodunda bir <xref:System.Windows.Input.RoutedCommand> başlatır <xref:System.Windows.Input.CommandManager.PreviewExecuted> ve <xref:System.Windows.Input.CommandManager.Executed> komut hedefi üzerinde olayları.  <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> Metodunda bir <xref:System.Windows.Input.RoutedCommand> başlatır <xref:System.Windows.Input.CommandManager.CanExecute> ve <xref:System.Windows.Input.CommandManager.PreviewCanExecute> komut hedefi üzerinde olayları.  Bu olayları tüneli ve kabarcık sahip olan bir nesne karşılaştıkları kadar öğe ağacı aracılığıyla bir <xref:System.Windows.Input.CommandBinding> bu komuta için.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "56748433"
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.MenuItem> içinde bir <xref:System.Windows.Controls.ContextMenu> komut kaynağı olarak <xref:System.Windows.Input.ApplicationCommands.Properties%2A> komutu.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
  Komut kaynak genellikle dinleyeceği <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged> olay.  Bu olay, komutun geçerli komut hedefi üzerinde yürütme yeteneği değişmiş olan komut kaynak bildirir.  Komut kaynak geçerli durumunu sorgulayabilirsiniz <xref:System.Windows.Input.RoutedCommand> kullanarak <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> yöntemi.  Komut yürütülemiyor komut kaynak sonra kendini devre dışı bırakabilirsiniz.  Bunun bir örneği bir <xref:System.Windows.Controls.MenuItem> kendisi grileştirmesi komut zaman yürütülemiyor.  
   
@@ -111,17 +111,17 @@ ms.locfileid: "56748433"
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Input.KeyBinding> arasında bir <xref:System.Windows.Input.KeyGesture> ve <xref:System.Windows.Input.RoutedCommand>.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
   
  Başka bir şekilde ilişkilendirmek için bir <xref:System.Windows.Input.InputGesture> için bir <xref:System.Windows.Input.RoutedCommand> eklemektir <xref:System.Windows.Input.InputGesture> için <xref:System.Windows.Input.InputGestureCollection> üzerinde <xref:System.Windows.Input.RoutedCommand>.  
   
  Aşağıdaki örnek nasıl ekleneceğini gösterir. bir <xref:System.Windows.Input.KeyGesture> için <xref:System.Windows.Input.InputGestureCollection> , bir <xref:System.Windows.Input.RoutedCommand>.  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
 <a name="Command_Binding"></a>   
 ### <a name="commandbinding"></a>CommandBinding  
@@ -133,18 +133,18 @@ ms.locfileid: "56748433"
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Input.CommandBinding> kök <xref:System.Windows.Window> bir uygulama.  <xref:System.Windows.Input.CommandBinding> İlişkilendirir <xref:System.Windows.Input.ApplicationCommands.Open%2A> komutunu <xref:System.Windows.Input.CommandManager.Executed> ve <xref:System.Windows.Input.CommandBinding.CanExecute> işleyicileri.  
   
- [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
  Ardından, <xref:System.Windows.Input.ExecutedRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> oluşturulur.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> Açılır bir <xref:System.Windows.MessageBox> komutu yürüttüğünü belirten bir dize görüntüler.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> Ayarlar <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> özelliğini `true`.  
   
- [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
- [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
+ [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
   
- [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
- [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
+ [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
   
  A <xref:System.Windows.Input.CommandBinding> kök gibi belirli bir nesneye iliştirilmiş <xref:System.Windows.Window> uygulama veya bir denetim.  Nesne, <xref:System.Windows.Input.CommandBinding> bağlama kapsamını tanımlar için eklenir.  Örneğin, bir <xref:System.Windows.Input.CommandBinding> bağlı komutu öğesinin üst öğesi için hedef tarafından erişilebilen <xref:System.Windows.Input.CommandBinding.Executed> olay, ancak bir <xref:System.Windows.Input.CommandBinding> ekli komut hedefinin için hedef ulaşılamıyor.  Bu şekilde doğrudan bir sonucu olan bir <xref:System.Windows.RoutedEvent> tüneller ve kabarcıklar nesnesinden olayını başlatır.  
   
@@ -158,10 +158,10 @@ ms.locfileid: "56748433"
   
  Aşağıdaki örnek, biçimlendirme ve arka plan kod komut hedefi açıkça ayarlamak gösterilmektedir.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Command_Manager"></a>   
 ### <a name="the-commandmanager"></a>The CommandManager  
@@ -188,8 +188,8 @@ ms.locfileid: "56748433"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
-- [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Girişe Genel Bakış](input-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [ICommandSource Uygulama](how-to-implement-icommandsource.md)
 - [Nasıl yapılır: MenuItem için bir komut ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

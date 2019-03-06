@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 215f6ff727b814e7e7d7c708c29a8c5221f5797f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4da322bf779e084f12529d0da6949ef6ada5cf3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575992"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379659"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Createıdispatchstaforwarder işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -39,7 +39,7 @@ HRESULT CreateIDispatchSTAForwarder(
  Adresine bir işaretçi bir `IDispatch` arabirimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -50,4 +50,4 @@ HRESULT CreateIDispatchSTAForwarder(
  **.NET framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Yönetilmeyen API Başvurusu](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF Yönetilmeyen API Başvurusu](wpf-unmanaged-api-reference.md)
