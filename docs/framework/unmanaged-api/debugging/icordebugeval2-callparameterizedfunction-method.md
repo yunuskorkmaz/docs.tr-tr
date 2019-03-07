@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416172"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487736"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction Yöntemi
-Oluşturucusu geçen bir sınıf içinde yuvalanmış belirtilen ICorDebugFunction çağrısı ayarlar <xref:System.Type> parametreleri veya can kendisini alın <xref:System.Type> parametreleri.  
+Bir çağrı, Oluşturucusu götüren bir sınıf içinde iç içe belirtilen ICorDebugFunction ayarlar <xref:System.Type> parametreleri veya can'ın kendisi <xref:System.Type> parametreleri.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,33 +39,33 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pFunction`  
  [in] Bir işaretçi bir `ICorDebugFunction` çağrılacak işlev temsil eden nesne.  
   
  `nTypeArgs`  
- [in] İşlev alır bağımsız değişken sayısı.  
+ [in] Alan işlev bağımsız değişken sayısı.  
   
  `ppTypeArgs`  
- [in] Her biri bir işlev bağımsız değişkeni temsil eden bir Icordebugtype bir nesneye işaret etmiyor dizisi işaretçisi.  
+ [in] Bir dizi işaretçileri, her biri bir işlev bağımsız değişkeni temsil eden bir Icordebugtype nesneye işaret eder.  
   
  `nArgs`  
- [in] Değerlerin sayısını işlevinde geçirildi.  
+ [in] Değerlerin sayısını işleve geçirildi.  
   
  `ppArgs`  
- [in] İşaretçileri, her biri bir değeri temsil eden bir Icordebugvalue bir nesneye işaret etmiyor dizisi işlevi bağımsız değişken geçirildi.  
+ [in] Her biri bir değeri temsil eden bir Icordebugvalue nesneye işaret eden bir işaretçiler dizisi, bir işlev bağımsız değişkeni geçirildi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CallParameterizedFunction` benzer [Icordebugeval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) işlev türü parametrelere sahip bir sınıf içinde olabilir ancak bu, kendisini tür parametreleri ya da her ikisini de alabilir. Tür bağımsız değişkenleri sınıfı ve ardından işlevi için önce verilmelidir.  
+ `CallParameterizedFunction` benzer [Icordebugeval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) işlevi tür parametreleri ile bir sınıf içinde olabilir dışında kendi tür parametreleri veya her ikisi de alabilir. Tür bağımsız değişkeni, ilk sınıf ve işlev için verilmelidir.  
   
- İşlev farklı uygulama etki alanında ise, bir geçiş meydana gelir. Ancak, tüm türü ve değeri bağımsız değişkenleri hedef uygulama etki alanında olmalıdır.  
+ İşlev, farklı uygulama etki alanında ise, bir geçiş meydana gelir. Ancak, tüm türü ve değeri bağımsız değişkenleri hedef uygulama etki alanında olmalıdır.  
   
- İşlev değerlendirmesi yalnızca sınırlı senaryolarda gerçekleştirilebilir. Varsa `CallParameterizedFunction` veya `ICorDebugEval::CallFunction` başarısız olduğunda, döndürülen HRESULT hata olası en genel nedeni gösterilir.  
+ İşlev değerlendirmesi yalnızca sınırlı sayıda senaryoda gerçekleştirilebilir. Varsa `CallParameterizedFunction` veya `ICorDebugEval::CallFunction` başarısız olursa, döndürülen HRESULT hata olası en genel nedenlerinden gösterecektir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

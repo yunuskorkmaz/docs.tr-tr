@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402476"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481566"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange Metodu
-Yığın kesiminin adres aralığı için bu zincirini alır.  
+Yığın kesiminin adres aralığı için bu zincir alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pStart`  
- [out] Bir işaretçi bir `CORDB_ADDRESS` yığın kesiminin başlangıç adresi değer.  
+ [out] Bir işaretçi bir `CORDB_ADDRESS` yığın kesimin başlangıç adresi olan değer.  
   
  `pEnd`  
- [out] Bir işaretçi bir `CORDB_ADDRESS` yığın kesiminin bitiş adresi değer.  
+ [out] Bir işaretçi bir `CORDB_ADDRESS` yığın kesiminin bitiş adresi olan değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sayısal aralığın yalnızca yığın çerçeve konumları bir karşılaştırması için anlamlıdır. Yığında gerçekte depolanan hakkında varsayımlar yapamazsınız.  
+ Sayısal Aralık yalnızca yığın çerçeve konumu bir karşılaştırması için anlamlı. Aslında yığın üzerinde depolanan hakkında varsayımlar yapamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

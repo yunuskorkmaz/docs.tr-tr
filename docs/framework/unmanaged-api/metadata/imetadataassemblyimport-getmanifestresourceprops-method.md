@@ -1,5 +1,5 @@
 ---
-title: IMetaDataAssemblyImport::GetManifestResourceProps Metodu
+title: IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataAssemblyImport.GetManifestResourceProps
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bad338777db2097ed72ce327f42fde0f0db58e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8786005921d671d873151a4f2e2f5a38d6df21c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501470"
 ---
-# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps Metodu
+# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi
 Belirtilen meta veri imzası bildirim kaynak özelliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,7 +41,7 @@ HRESULT GetManifestResourceProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `mdmr`  
  [in] Bir `mdManifestResource` özelliklerini alınacağı kaynak temsil eden belirteci.  
   

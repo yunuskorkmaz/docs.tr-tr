@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo::GetEventMask Metodu
+title: ICorProfilerInfo::GetEventMask Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo.GetEventMask
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4852df791b179f1a5ee130bd185be8527c14b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1051f42788b3c2a63780f43f5784b063ef23027
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541930"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483997"
 ---
-# <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask Metodu
+# <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask Yöntemi
 Profil Oluşturucu ortak dil çalışma zamanından (CLR) olay bildirimlerini almak istediği geçerli olay kategorileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetEventMask(
     [out] DWORD *pdwEvents);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwEvents`  
  [out] Olayların kategorilerini belirten bir 4 baytlık değeri için bir işaretçi. Farklı yetenek, davranış veya olay türü her bit denetler. BITS açıklanan [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) sabit listesi.  
   

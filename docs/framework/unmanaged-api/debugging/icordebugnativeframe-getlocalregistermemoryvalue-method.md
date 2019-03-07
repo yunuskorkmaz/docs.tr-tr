@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame::GetLocalRegisterMemoryValue Metodu
+title: ICorDebugNativeFrame::GetLocalRegisterMemoryValue Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame.GetLocalRegisterMemoryValue
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495240"
 ---
-# <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue Metodu
+# <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue Yöntemi
 Bir bağımsız değişken veya yerel değişken biri yüksek word ve Düşük word bellek konumunda depolanan ve kayıt, sırasıyla bu yerel çerçeve için belirtilen değeri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `highWordReg`  
  [in] "CorDebugRegister" numaralandırma değeri yüksek sözcüğünü içeren kayıt belirten bir değer.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066395"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492642"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -40,7 +40,7 @@ Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü ad
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  

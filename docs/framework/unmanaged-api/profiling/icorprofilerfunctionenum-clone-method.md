@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ded15608337d040ab58cb5be45deac4711668ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e30cc8ff320c1a4a9a69fb2a07427ef4c8a4149
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485375"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone Yöntemi
 Bu bir kopyasını bir arabirim işaretçisi alır [Icorprofilerfunctionenum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) arabirimi.  
@@ -33,7 +33,7 @@ Bu bir kopyasını bir arabirim işaretçisi alır [Icorprofilerfunctionenum](..
 HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppEnum`  
  [out] Sırayla bu kopyasını işaret eden bir arabirim işaretçisi için bir işaretçi [Icorprofilerfunctionenum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) arabirimi. Numaralandırıcı kopyasını, bu Numaralandırıcının listesinden kendi sıralaması durumu korur. Ancak, kopyanın ilk imleç konumu bu Numaralandırıcının geçerli imleç konumu aynıdır.  
   

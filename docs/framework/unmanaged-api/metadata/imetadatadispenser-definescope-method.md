@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f9cac2b59f783a81663af0c5eb148367d54e8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df46a3c6beed26e885e7dc13f97a7c68d2abcdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487986"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope Yöntemi
 Yeni meta verileri oluşturma bellekte yeni bir alan oluşturur.  
@@ -38,7 +38,7 @@ HRESULT DefineScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `rclsid`  
  [in] Oluşturulacak CLSID meta veri yapıları sürümü. Bu değer, .NET Framework sürüm 2.0 için CLSID_CorMetaDataRuntime olmalıdır.  
   

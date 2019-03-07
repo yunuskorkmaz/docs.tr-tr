@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 049f8e4d04498b70533134c01765af2d996d86dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 460d6781405b6042262d50e1aa79ee8c77f781a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489733"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod Yöntemi
 Yöntemi zaman uyumsuz bilgi olup olmadığını denetler.  
@@ -22,7 +22,7 @@ Yöntemi zaman uyumsuz bilgi olup olmadığını denetler.
 HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  

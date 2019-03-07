@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb651aa394022182b6730d57942199f570508436
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8e9e13c8acf4f60a7b43a9b4181bb03da8f0aa45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497021"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip Yöntemi
 İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [in] İmleç ilerlemek, öğe sayısı.  
   

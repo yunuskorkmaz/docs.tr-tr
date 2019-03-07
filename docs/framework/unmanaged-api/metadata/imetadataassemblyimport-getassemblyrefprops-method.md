@@ -1,5 +1,5 @@
 ---
-title: IMetaDataAssemblyImport::GetAssemblyRefProps Metodu
+title: IMetaDataAssemblyImport::GetAssemblyRefProps Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataAssemblyImport.GetAssemblyRefProps
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471f4837ff8aee725020f52c09a57d8f3652013c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730236"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489873"
 ---
-# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Metodu
+# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Yöntemi
 Belirtilen meta veri imzası olan derleme başvurusu için özellikler kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `mdar`  
  [in] `mdAssemblyRef` Derleme başvurusu özellikleri alınacağı temsil eden bir meta veri belirteci.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b107ceec5c9e88117e8ec1f6f94d60debfdf7201
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500063"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks Yöntemi
 Tüm yönetilen geri çağırmaları belirtilen iş parçacığı için sıraya alınmış olup olmadığını gösteren bir değer alır.  
@@ -36,7 +36,7 @@ HRESULT HasQueuedCallbacks (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pThread`  
  [in] İş parçacığını temsil eden bir "ICorDebugThread" nesne işaretçisi.  
   

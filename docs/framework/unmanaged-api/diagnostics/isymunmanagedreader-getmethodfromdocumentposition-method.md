@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedReader::GetMethodFromDocumentPosition Metodu
+title: ISymUnmanagedReader::GetMethodFromDocumentPosition Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedReader.GetMethodFromDocumentPosition
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebb1a13848b1c1336287413cdd7246da748ec864
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06ada4d4d34497cef15d693b285c780817653e71
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503965"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494082"
 ---
-# <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition Metodu
+# <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition Yöntemi
 Bir belge belirtilen konumda bir kesme noktası içeren yöntemi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetMethodFromDocumentPosition (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `document`  
  [in] Belirtilen belge.  
   

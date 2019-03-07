@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 216adebae8a498ef2f4263f46f8ccd7a20d9202f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622383"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471019"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# Başvurusu)
 `#pragma` Derleyici göründüğü dosyanın derleme için özel yönergeler sağlar. Yönergeleri, derleyici tarafından desteklenmesi gerekir. Diğer bir deyişle, kullanamazsınız `#pragma` özel ön işleme yönergeleri oluşturmak için. Aşağıdaki iki Microsoft C# derleyicisi destekleyen `#pragma` yönergeleri:  
@@ -27,7 +27,7 @@ ms.locfileid: "54622383"
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pragma-name`  
  Tanınan bir pragma adı.  
   

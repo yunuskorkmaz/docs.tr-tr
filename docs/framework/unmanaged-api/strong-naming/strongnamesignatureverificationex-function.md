@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3f9dbbdf7ff560f292fed327a2ca1dd26c29a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491899"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx İşlevi
 Sağlanan yol, derleme bildirimi tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
  [in] Taşınabilir yürütülebilir (.exe veya .dll) dosyası doğrulanması derleme yolu.  
   

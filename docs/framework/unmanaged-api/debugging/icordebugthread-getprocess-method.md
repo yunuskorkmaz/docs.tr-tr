@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread::GetProcess Metodu
+title: ICorDebugThread::GetProcess Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread.GetProcess
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41c7eeccad8b3f685c81e6afc23eaf19d862182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483634"
 ---
-# <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess Metodu
-Arabirim işaretçisi hangisinin bu Icordebugthread bir bölümü forms işleme alır.  
+# <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess Yöntemi
+Bir parçası olan bu Icordebugthread forms işlemi için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppProcess`  
- [out] İşlemi temsil eden bir Icordebugprocess arabirimi nesnesi adresini gösteren bir işaretçi.  
+ [out] İşlemi temsil eden bir Icordebugprocess arabirimi nesnesinin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

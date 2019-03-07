@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ffbd2bc3042f7e37e90dceeb28ec50b3c73cef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491977"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope Yöntemi
 Var olan ve disk üzerindeki bir dosya açılır ve meta verileri belleğe eşler.  
@@ -38,7 +38,7 @@ HRESULT OpenScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `szScope`  
  [in] Açılması için dosyanın adı. Dosyanın ortak dil çalışma zamanı (CLR) meta verileri içermelidir.  
   

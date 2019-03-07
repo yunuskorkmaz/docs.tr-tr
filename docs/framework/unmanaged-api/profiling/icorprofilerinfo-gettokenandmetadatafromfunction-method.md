@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0561f76c70da603d50b96ce5b5162efac4eff2de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb81972a7f52889d10a59cd5cd9ea0e8e1e3e571
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492887"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu
 Meta veri belirteci ve belirteç karşı belirtilen işlev için kullanılabilecek bir meta veri arabirimi örneği alır.  
@@ -37,7 +37,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `functionId`  
  [in] İşlevi için meta verileri arabirimi ve meta veri belirteci almak için kimliği.  
   

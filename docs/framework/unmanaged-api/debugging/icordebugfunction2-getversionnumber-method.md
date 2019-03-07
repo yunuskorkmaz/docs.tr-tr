@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction2::GetVersionNumber Metodu
+title: ICorDebugFunction2::GetVersionNumber Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction2.GetVersionNumber
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdd2151c4886959647de4f9e27a20a93ffc07429
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc9c2af62184c83857b82445941f6087a05c2c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420059"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497177"
 ---
-# <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber Metodu
+# <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber Yöntemi
 Bu işlev Düzenle ve devam et sürümünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,23 +35,23 @@ HRESULT GetVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pnVersion`  
- [out] Bu Icordebugfunction2 nesnesi tarafından temsil edilen işlevi sürüm sayısı bir tamsayı gösteren bir işaretçi.  
+ [out] Sürüm numarasını bu Icordebugfunction2 nesnesi tarafından temsil edilen işlev bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanı, her modül için bir hata ayıklama oturumu sırasında yapılmadığı düzenlemeleri sayısını izler. Bir işlevin sürüm numarası biridir işlevi sunulan düzenleme sayıdan fazla. İşlevin özgün sürüm 1 sürümüdür. Sayı, her seferinde bir modülü için artırılır [Icordebugmodule2::applychanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) üzerinde bu modül çağrılır. Bu nedenle, bir işlevin gövdesi birinci ve üçüncü çağrısında değiştirilmişse `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` sürüm 1, 2 veya 4 Bu işlevin, ancak sürüm 3 döndürebilir. (İşlev hiçbir sürüm 3 olması.)  
+ Çalışma zamanı, her modül için hata ayıklama oturumu sırasında meydana gelen düzenlemeleri sayısını izler. Bir işlev sürüm numarasını biridir işlevi sunulan düzenleme sayısından daha fazla. İşlevin özgün sürüm 1 sürümüdür. Sayı, her bir modül için artırılır [Icordebugmodule2::applychanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) üzerinde bu modül çağrılır. Bu nedenle, ilk ve üçüncü aramasında bir işlev gövdesini değiştirildiyse `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` sürüm 1, 2 veya 4: Bu işlev, ancak sürüm 3 döndürebilir. (İşlev sürüm 3 olması.)  
   
- Sürüm numarası, her modül için ayrı olarak izlenir. Modül 1 ve hiçbiri modülü 2 dört düzenlemeleri gerçekleştirirseniz, bu nedenle, sonraki düzenlemeniz modülü 1 sürüm numarası 6 olarak düzenlenen uygulamasında tüm işlevleri Modül 1 atar. Aynı rötuşları Modül 2 düzenlerseniz, Modül 2 işlevlerde 2 sürüm sayısını alır.  
+ Sürüm numarası, her modül için ayrı ayrı izlenir. Modül 1 ve 2 modül yok dört düzenlemeler yapabilirsiniz, bu nedenle, sonraki düzenlemeniz modülü 1 sürüm numarası 6 modülü 1 düzenlenen tüm işlevler için atar. Aynı dokunmalar Modül 2 düzenlerseniz, Modül 2 işlevleri sürüm numarası 2 olarak alırsınız.  
   
- Sürüm numarasını elde tarafından `GetVersionNumber` yöntemi tarafından edindiğiniz daha düşük [ICorDebugFunction::getcurrentversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
+ Sürüm numarası elde tarafından `GetVersionNumber` yöntemi tarafından alınan daha düşük [ICorDebugFunction::getcurrentversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
   
- [Icordebugcode::getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) yöntemi olarak aynı işlemi gerçekleştirir `ICorDebugFunction2::GetVersionNumber`.  
+ [Icordebugcode::getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) yöntemi olarak aynı işlemi yapar `ICorDebugFunction2::GetVersionNumber`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

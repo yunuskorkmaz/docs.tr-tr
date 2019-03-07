@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492445"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 
@@ -30,17 +30,17 @@ Komut satırına şunu yazın:
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|*AssemblyFile*|COM ile kaydettirilecek derleme.|
+|*assemblyFile*|COM ile kaydettirilecek derleme.|
 
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/ codebase**|Kayıt defterinde bir Kod Temeli girişi oluşturur. Kod Temeli girişi, genel derleme önbelleğinde yüklü olmayan bir derleme için dosya yolunu belirtir. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz. *AssemblyFile* ile belirttiğiniz bağımsız değişken **/ codebase** seçeneği olmalıdır bir [tanımlayıcı adlı derleme](../../../docs/framework/app-domains/strong-named-assemblies.md).|
 |**/ kayıtlı**|Bu aracın yalnızca zaten kayıtlı durumdaki tür kitaplıklarına başvuracağını belirtir.|
-|**/asmpath:Directory**|Derleme başvuruları içeren bir dizini belirtir. İle birlikte kullanılmalıdır **/regfile** seçeneği.|
+|**/asmpath:directory**|Derleme başvuruları içeren bir dizini belirtir. İle birlikte kullanılmalıdır **/regfile** seçeneği.|
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
 |**/ regfile** [**:** *regFile*]|Gerekli kayıt defteri girdilerini içeren derleme için belirtilen .reg dosyasını oluşturur. Bu seçeneği belirtmek kayıt defterini değiştirmez. Bu seçeneği kullanamazsınız **/u** veya **/TLB** seçenekleri.|
 |**/ silent** veya **/s**|Başarı iletilerinin görüntülenmesini bastırır.|

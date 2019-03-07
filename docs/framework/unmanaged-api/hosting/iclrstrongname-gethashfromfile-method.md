@@ -1,5 +1,5 @@
 ---
-title: ICLRStrongName::GetHashFromFile Metodu
+title: ICLRStrongName::GetHashFromFile Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICLRStrongName.GetHashFromFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1407bbcbb5bfa351a38f7627f2a89106c7d5136f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a619bf2a98b2140ab126745305a85f4e1fd05c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537666"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484296"
 ---
-# <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile Metodu
+# <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile Yöntemi
 Belirtilen dosyanın içeriğini bir karma oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `szFilePath`  
  [in] Karma değeri dosyanın adı.  
   

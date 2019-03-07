@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 626f313c41c85e08901648f429d99c829ba35e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89182739633984011aaab3d7900d376b6db5ef99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419006"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476210"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper Yöntemi
-Bu Icordebugthread etkin çerçevesi atlama izin veren bir ICorDebugStepper nesnesi oluşturur.  
+Bu Icordebugthread etkin çerçeveye Adımlama izin veren bir ICorDebugStepper nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppStepper`  
- [out] Adresine bir işaretçi bir `ICorDebugStepper` bu iş parçacığının etkin çerçevesi atlama izin veren nesnesi.  
+ [out] Adresine bir işaretçi bir `ICorDebugStepper` bu iş parçacığının etkin çerçeveye Adımlama sağlayan nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilmeyen kod etkin çerçeveyi olabilir.  
+ Yönetilmeyen kod etkin olabilir.  
   
- `ICorDebugStepper` Arabirimi, gerçek atlama gerçekleştirmek için kullanılmalıdır.  
+ `ICorDebugStepper` Arabirimi, gerçek Adımlama gerçekleştirmek için kullanılmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

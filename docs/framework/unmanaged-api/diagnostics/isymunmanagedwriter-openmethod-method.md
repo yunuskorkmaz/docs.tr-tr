@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a5e50327e74e0b893bd5f8e6f716827f2168e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499556"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod Yöntemi
 Hangi sembolün üretileceği bilgi yayılan bir yöntem açılır. Belirtilen yöntem geçerli yöntem dizi noktaları, parametreler ve sözcük kapsamları tanımlamak çağrılar için olur. Örtük bir sözcük kapsamı tüm yöntemi etrafında yoktur. Daha önce kapatılan bir yöntem yeniden açmayı, bu yöntem için önceden tanımlanmış semboller siler. Bir kerede yalnızca bir açık yöntemi olabilir.  
@@ -34,7 +34,7 @@ HRESULT OpenMethod(
     [in] mdMethodDef method);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `method`  
  [in] Meta veri belirteci açılması yöntemi.  
   

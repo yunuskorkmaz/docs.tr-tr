@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15addd0b35c43945f643386f8983fc14c9312bae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608095"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492341"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification Yöntemi
 Kod yürütmeyi ayıklanmakta olan uygulamada yönetilen hata ayıklama Yardımcısı (MDA) karşılaştı bildirim sağlar.  
@@ -37,7 +37,7 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pController`  
  [in] Bir işlem sunan Icordebugcontroller arabirimi veya MDA gerçekleştiği uygulama etki alanı için bir işaretçi.  
   

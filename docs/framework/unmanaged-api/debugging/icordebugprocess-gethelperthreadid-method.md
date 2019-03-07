@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess::GetHelperThreadID Metodu
+title: ICorDebugProcess::GetHelperThreadID Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess.GetHelperThreadID
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419074"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494226"
 ---
-# <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID Metodu
-Hata Ayıklayıcı'nın iç yardımcı iş parçacığı işletim sistemi (OS) iş parçacığı kimliği alır.  
+# <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID Yöntemi
+Hata Ayıklayıcı'nın iç yardımcı iş parçacığı işletim sistemi (OS) iş parçacığı Kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pThreadID`  
- [out] İşletim sistemi için bir işaretçi iş parçacığı Hata Ayıklayıcı'nın iç yardımcı iş parçacığı kimliği.  
+ [out] Bir işaretçi işletim sistemi iş parçacığı Hata Ayıklayıcı'nın iç Yardımcısı iş parçacığının kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilen ve yönetilmeyen hata ayıklama sırasında hata ayıklayıcı tarafından yerleştirilen bir kesme noktası değerse, iş parçacığı belirtilen kimliği ile çalışan kaldığından emin olmak için hata ayıklayıcı'nın sorumluluğundadır. Bir hata ayıklayıcısı da kullanıcının bu iş parçacığından Gizle isteyebilirsiniz. Hiçbir Yardımcısı iş parçacığı işleminde henüz varsa `GetHelperThreadID` yöntemi döndürür sıfır *`pThreadID`.  
+ Yönetilen ve yönetilmeyen hata ayıklama sırasında bu, hata ayıklayıcı tarafından yerleştirilen bir kesme noktasına denk gelir, belirtilen Kimliğe sahip bir iş parçacığı çalışan kalmasını sağlamak için hata ayıklayıcı'nın sorumluluğundadır. Bir hata ayıklayıcı ayrıca kullanıcıdan bu iş parçacığı gizlemek isteyebilirsiniz. Hiçbir yardımcı iş parçacığı henüz işlemde varsa `GetHelperThreadID` yöntemi sıfır döndürür *`pThreadID`.  
   
- Zaman içinde değişebilir olduğundan Yardımcısı iş parçacığı, iş parçacığı kimliği önbelleğe alamıyor. İş parçacığı kimliği her durdurma olay yeniden sorgulaması gerekir.  
+ Zaman içinde değişebilir olduğundan yardımcı iş parçacığının iş parçacığı kimliği önbelleğe alamıyor. İş parçacığı kimliği her durdurma etkinlikte yeniden sorgulaması gerekir.  
   
- Hata Ayıklayıcı'nın Yardımcısı iş parçacığı iş parçacığı kimliği üzerinde doğru her yönetilmeyen [Icordebugmanagedcallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) olay, böylece kendi Yardımcısı iş parçacığı iş parçacığı Kimliğini belirlemek ve kullanıcıdan gizlemek bir hata ayıklayıcısı sağlar. Bir yardımcı iş parçacığı yönetilmeyen sırasında tanımlanan bir iş parçacığı `ICorDebugManagedCallback::CreateThread` olay asla yönetilen kullanıcı kodu çalışmaz.  
+ Hata Ayıklayıcı'nın yardımcı iş parçacığının iş parçacığı kimliği doğru her yönetilmeyen [Icordebugmanagedcallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) olay, bu nedenle, yardımcı iş parçacığının iş parçacığı Kimliğini belirlemek ve kullanıcıdan gizlemek bir hata ayıklayıcı izin verme. Bir yardımcı iş parçacığı yönetilmeyen sırasında tanımlanan bir iş parçacığı `ICorDebugManagedCallback::CreateThread` olay asla yönetilen kullanıcı kodu çalıştırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl. CorDebug.h  
+ **Üst bilgi:** CorDebug.idl. CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

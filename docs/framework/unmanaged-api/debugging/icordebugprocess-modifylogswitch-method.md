@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488181"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch Yöntemi
-Belirtilen günlük anahtar önem derecesi ayarlar.  
+Belirtilen log anahtarı önem düzeyini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,20 +35,20 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pLogSwitchName`  
- [in] Log anahtarı adını belirten bir dize için bir işaretçi.  
+ [in] Log anahtarı adını belirten bir dize işaretçisi.  
   
  `lLevel`  
- [in] Belirtilen günlük anahtar için ayarlanacak önem düzeyi.  
+ [in] Belirtilen log anahtarı için ayarlanacak önem düzeyi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem yalnızca sonra geçerli [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma oluştu.  
+ Bu yöntem yalnızca geçerli [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma oluştu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

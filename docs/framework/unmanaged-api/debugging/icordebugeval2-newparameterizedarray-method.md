@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487709"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray Yöntemi
-Belirtilen öğe türü ve boyutları yeni bir dizi ayırır.  
+Belirtilen öğe türü ve boyut yeni bir dizi ayırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pElementType`  
- [in] Bir işaretçi Icordebugtype nesneye dizisinde depolanan öğenin türünü temsil eder.  
+ [in] Bir dizide depolanan öğenin türünü temsil eden bir Icordebugtype nesne işaretçisi.  
   
  `rank`  
- [in] Dizi boyutları sayısı. .NET Framework sürüm 2. 0'da, bu değerin 1 olması gerekir.  
+ [in] Dizinin boyut sayısı. .NET Framework sürüm 2. 0'da, bu değeri 1 olmalı.  
   
  `dims`  
- [in] Her boyutun dizisinin bayt cinsinden boyutu.  
+ [in] Dizinin her boyutunun bayt cinsinden boyutu.  
   
  `lowBounds`  
- [in] İsteğe bağlı. Dizinin her boyutu alt sınırı. Bu değer belirtilmezse, bir alt sınırı sıfır her boyut için kabul edilir.  
+ [in] İsteğe bağlı. Dizinin her boyutunun alt sınırı. Bu değer belirtilmezse, her boyut için alt sınırı sıfır varsayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizideki öğeler genel bir tür örneklerini olabilir. Dizi her zaman iş parçacığı çalışıyor uygulama etki alanında oluşturulur. .NET Framework 2. 0 değeri, `rank` 1 olmalıdır.  
+ Dizinin öğeleri, genel bir türün örneklerinin olabilir. Dizinin her zaman iş parçacığı şu anda çalıştığı uygulama etki alanında oluşturulur. .NET Framework 2.0, değerini `rank` 1 olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStringValue::GetLength Metodu
+title: ICorDebugStringValue::GetLength Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue.GetLength
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e62539304817432fcab8f3e0958e5a70b371b83d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b168673e76beddd8ae0479b8daae009c5f057b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494668"
 ---
-# <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength Metodu
+# <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength Yöntemi
 Bu Icordebugstringvalue tarafından başvurulan dizedeki karakter sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,14 +35,14 @@ HRESULT GetLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcchString`  
- [out] Bu tarafından başvurulan dize uzunluğu belirten bir değer için bir işaretçi `ICorDebugStringValue` nesnesi.  
+ [out] Bu tarafından başvurulan dize uzunluğunu belirten bir değer için bir işaretçi `ICorDebugStringValue` nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

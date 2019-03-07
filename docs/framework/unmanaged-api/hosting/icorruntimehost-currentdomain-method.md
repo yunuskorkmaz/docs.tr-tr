@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c62eba75759755f74e7b81393dced0d8433ba3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0230f2e313b6d84b2c249afb28f7c5fdf34fdd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479668"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain Yöntemi
 Türü bir arabirim işaretçisi alır <xref:System.AppDomain?displayProperty=nameWithType> geçerli iş parçacığı üzerinde yüklü etki alanı temsil eder.  
@@ -35,7 +35,7 @@ HRESULT CurrentDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pAppDomain`  
  [out] Türünde bir işaretçi <xref:System.AppDomain?displayProperty=nameWithType> temsil eden iş parçacığının geçerli uygulama etki alanı. Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` türünde bir işaretçi edinme <xref:System._AppDomain>.  
   

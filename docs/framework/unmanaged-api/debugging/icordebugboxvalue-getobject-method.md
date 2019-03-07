@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfc8800915009912716ec2ed9044a633a8ad0582
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c20eec52b0e4616af1b864bb58b6cbff44a720eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401751"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490378"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject Metodu
 Paketlenmiş değer alır.  
@@ -35,14 +35,14 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppObject`  
- [out] Paketlenmiş değer temsil eden Icordebugobjectvalue nesne adresini gösteren bir işaretçi.  
+ [out] Paketlenmiş değer temsil eden bir Icordebugobjectvalue nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: ExportTypeForwarder Metodu
+title: ExportTypeForwarder Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IALink.ExportTypeForwarder
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 737f4600d04a4fa443fbd5b422b26eff11178d82
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473545"
 ---
-# <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Metodu
+# <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Yöntemi
 Bir tür ileticisi verilen derleme türü tabloya ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT ExportTypeForwarder(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `tkAssemblyRef`  
  Tür ileticisi başvurduğu derlemesine başvuru.  
   

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496397"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName Özniteliği
-Bir Bileşen Nesne Modeli (COM) kitaplığı için yönetilen ad alanı adı belirten bir özel arabirim özniteliği tanımlar.  
+Bileşen Nesne Modeli (COM) kitaplığı için yönetilen ad alanı adını belirten bir özel arabirim özniteliği tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,9 +34,9 @@ Bir Bileşen Nesne Modeli (COM) kitaplığı için yönetilen ad alanı adı bel
 ]  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `value`  
- Kitaplık için yönetilen ad alanı adı.  
+ Kitaplığı yönetilen bir ad alanı adı.  
   
 ## <a name="definition"></a>Tanım  
  `GUID_ManagedName` içinde COR.h şu şekilde tanımlanır:  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel arabirim özniteliği bir nesne için meta veri türü Kitaplığı'nda tanımlar.  
+ Özel arabirim özniteliği tür kitaplığında bir nesne için meta verileri tanımlar.  
   
  Kullanım <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> özniteliğinden yönetilen adı alınamadı.  
   
- Daha fazla bilgi için bkz: [arabirim öznitelikleri](/cpp/windows/interface-attributes) Visual c++'ta başvuru belgelerini.  
+ Daha fazla bilgi için [arabirim öznitelikleri](/cpp/windows/interface-attributes) Visual c++'ta başvuru belgeleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir kitaplık tanımı kullanılarak gösterir `GUID_ManagedName` özniteliği.  
+ Aşağıdaki örnek, bir kitaplık tanımı kullanarak gösterir `GUID_ManagedName` özniteliği.  
   
 ```  
 [  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** Cor.h
+ **Üst bilgi:** COR.h

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f911d99470b9870f5c42d4170a4024123c10e7f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 973062e93e4964da0a21c14c17e0ce1960029ebd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511127"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489078"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect Yöntemi
 Geçerli çöp toplama durumundan bağımsız olarak verilen oluşturma için gerçekleşmesi için bir koleksiyon zorlar.  
@@ -35,7 +35,7 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `Generation`  
  [in] Çöp toplama gerçekleştirileceği oluşturma. Tüm nesiller çöp toplama yapılacaktır -1 değeri gösterir.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf0ba3938568524479e12b93ae8cebbcf52f909
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d23a0a489cfe13201b7798920feb3528db3b0709
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494616"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus Metodu
-Bu Icordebugfunction2 nesnesi tarafından temsil edilen işlevi kullanıcı kodu olarak işaretlenmiş olup olmadığını belirten bir değer alır.  
+Bu Icordebugfunction2 nesnesi tarafından temsil edilen işlevi kullanıcı kodu işaretlenmiş olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbIsJustMyCode`  
- [out] Boolean bir değer için bir işaretçi `true`, bu işlev kullanıcı kodu olarak işaretlenmiş; Aksi halde değer `false`.  
+ [out] Boolean bir değer için bir işaretçi `true`, bu işlev, kullanıcı kodu işaretlenmiş; Aksi takdirde, değeri `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlevi bu tarafından temsil edilen varsa `ICorDebugFunction2` hata ayıklaması yapılabilir olamaz, `pbIsJustMyCode` her zaman açık `false`.  
+ İşlev bu tarafından temsil edilen varsa `ICorDebugFunction2` ayıklanamıyor, `pbIsJustMyCode` her zaman `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

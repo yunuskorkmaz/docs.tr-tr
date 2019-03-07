@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d2d7f9b459e5a46793d44728a9fea269ca47887
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578832"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492393"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName Yöntemi
 TypeDef meta veriler için bir işaretçi için belirteç alır <xref:System.Type> belirtilen ada sahip.  
@@ -37,7 +37,7 @@ HRESULT FindTypeDefByName
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
  [in] TypeDef belirteci almak üzere tür adı.  
   

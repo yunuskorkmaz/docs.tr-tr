@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629481"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493381"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType Metodu
 Bu belgenin belge türünü alır.  
@@ -34,7 +34,7 @@ HRESULT GetDocumentType(
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pRetVal`  
  [out] Belge türü alan bir değişken işaretçisi.  
   

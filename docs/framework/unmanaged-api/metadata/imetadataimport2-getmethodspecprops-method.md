@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport2::GetMethodSpecProps Metodu
+title: IMetaDataImport2::GetMethodSpecProps Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport2.GetMethodSpecProps
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bca30e2079e6a41852aa953e43f8b2eba9487e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574020"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489091"
 ---
-# <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Metodu
+# <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Yöntemi
 Belirtilen MethodSpec tarafından başvurulan meta veri imzası belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetMethodSpecProps (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `mi`  
  [in] Örnekleme yönteminin temsil eden bir MethodSpec Neobsahuje belirteci.  
   

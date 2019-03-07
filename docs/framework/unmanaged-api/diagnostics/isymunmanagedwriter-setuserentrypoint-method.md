@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bd3d411ad6fe7f65d1eeb25754794704752009e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638693"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488363"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint Yöntemi
 Bu modülü için giriş noktası kullanıcı tanımlı bir yöntemini belirtir. Örneğin, bu giriş noktası, derleyicinin ürettiği saptamalar ana önce yerine kullanıcının ana yöntem olabilir.  
@@ -34,7 +34,7 @@ HRESULT SetUserEntryPoint(
     [in] mdMethodDef entryMethod);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `entryMethod`  
  [in] Kullanıcı girişini yöntemi için meta veri belirteci gelin.  
   

@@ -1,5 +1,5 @@
 ---
-title: IMetaDataConverter::GetMetaDataFromTypeLib Metodu
+title: IMetaDataConverter::GetMetaDataFromTypeLib Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataConverter.GetMetaDataFromTypeLib
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8d931b2f96045c53b895d7de5204e2d971b1c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561042"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479408"
 ---
-# <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib Metodu
+# <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib Yöntemi
 Bir arabirim işaretçisi alır bir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) belirtilen tarafından temsil edilen tür kitaplığını meta veri imzası temsil eden örneği `ITypeLib` örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pITL`  
  [in] İşaretçi bir `ITypeLib` tür kitaplığı temsil eden nesne.  
   

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492029"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule İşlevi
-Ortak dil çalışma zamanı (CLR) yolu bir hedef işlemde bir sürüm dizesi oluşturur.  
+Hedef işlemdeki ortak dil çalışma zamanı (CLR) yoldan bir sürüm dizesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,45 +41,45 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pidDebuggee`  
- [in] CLR hedef yüklendiği işlem tanıtıcısı.  
+ [in] Hedef CLR yüklendiği işlem tanımlayıcısı.  
   
  `szModuleName`  
- [in] İşlemde yüklü CLR hedef tam veya göreli yolu.  
+ [in] ' % S'hedef işlemde yüklü CLR tam veya göreli yolu.  
   
  `pBuffer`  
- [out] Hedef CLR sürüm dizesi depolamak için arabellek döndür.  
+ [out] Hedef CLR sürümü dizesi depolamak için dönüş arabelleği.  
   
  `cchBuffer`  
- [in] Boyutunu `pBuffer`.  
+ [in] Boyutu `pBuffer`.  
   
  `pdwLength`  
- [out] Tarafından döndürülen sürüm dizesi `pBuffer`.  
+ [out] Tarafından döndürülen sürüm dizesinin uzunluğunu `pBuffer`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Hedef CLR sürüm dizesi başarıyla döndürüldü `pBuffer`.  
+ Hedef CLR sürümü dizesi başarıyla döndürüldü `pBuffer`.  
   
  E_INVALIDARG  
  `szModuleName` olan null ya da `pBuffer` veya `cchBuffer` null. `pBuffer` ve `cchBuffer` her ikisi de null veya boş olmayan olmalıdır.  
   
  HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)  
- `pdwLength` Daha fazla `cchBuffer`. Her ikisi için null geçtiğinde, bu beklenen bir sonucu olabilir `pBuffer` ve `cchBuffer`ve gerekli arabellek boyutu kullanarak sorgulanan `pdwLength`.  
+ `pdwLength` büyüktür `cchBuffer`. Her ikisi için null geçtiğinde bu beklenen bir sonucu olabilir `pBuffer` ve `cchBuffer`ve gerekli arabellek boyutu kullanılarak sorgulanabilir `pdwLength`.  
   
  HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)  
- `szModuleName` Hedef işlemin geçerli bir CLR yoluna sahip değil.  
+ `szModuleName` Hedef işlemin içinde geçerli bir CLR yolu içermiyor.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
  `pidDebuggee` Geçerli bir işlem veya diğer hata başvurmuyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev tarafından tanımlanan bir CLR işlem kabul `pidDebuggee` tarafından belirtilen bir dize yol `szModuleName`. Sürüm dizesi arabellekte döndürülür, `pBuffer` işaret eder. Bu dize işlevi kullanıcıya donuk; diğer bir deyişle, sürüm dizesindeki iç hiçbir anlamı yoktur. Yalnızca bu işlev bağlamda kullanılır ve [Createdebuggingınterfacefromversion işlevi](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+ Bu işlev tarafından tanımlanan bir CLR işlemi kabul `pidDebuggee` ve tarafından belirtilen bir dize yol `szModuleName`. Sürüm dizesi arabellekteki döndürülür, `pBuffer` işaret eder. Bu dize işlevi kullanıcı için donuktur; diğer bir deyişle, sürüm dizesindeki iç anlamı yoktur. Bu işlev yalnızca bağlamında kullanılır ve [Createdebuggingınterfacefromversion işlevi](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
   
- Bu işlev iki kez çağrılmalıdır. İlk kez çağırdığınızda, her ikisi için null geçirmeniz `pBuffer` ve `cchBuffer`. Bunu yaptığınızda, gerekli arabellek boyutu `pBuffer` içinde döndürülen `pdwLength`. Ardından, ikinci kez işlevini çağırın ve arabellekte geçirin `pBuffer` ve boyutunda `cchBuffer`.  
+ Bu işlevin iki kez çağrılması. İlk kez çağırdığınızda, her ikisi için null değeri geçirmeye `pBuffer` ve `cchBuffer`. Bunu yaptığınızda, gerekli arabellek boyutu `pBuffer` içinde döndürülen `pdwLength`. Ardından, ikinci kez işlevini çağırın ve arabellekteki geçirin `pBuffer` ve boyutunda `cchBuffer`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** dbgshim.h  
   

@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport::GetTypeDefProps Metodu
+title: IMetaDataImport::GetTypeDefProps Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport.GetTypeDefProps
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4994dedcaac26f06f605532cc4579c78f4e8366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501350"
 ---
-# <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Metodu
+# <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Yöntemi
 Meta veri bilgilerini döndürür <xref:System.Type> belirtilen TypeDef belirteci tarafından temsil edilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,7 +40,7 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `td`  
  [in] TypeDef belirteç meta verileri için dönüş türü temsil eder.  
   

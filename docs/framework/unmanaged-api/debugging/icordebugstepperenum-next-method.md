@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494603"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next Yöntemi
-ICorDebugStepper örnekleri belirtilen sayıda geçerli konumdan başlayarak numaralandırması alır.  
+Geçerli konumunda başlayan bir numaralandırma ICorDebugStepper örneği belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugStepper` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugStepper` alınacak örnekleri.  
   
  `steppers`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugStepper` nesnesi.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugStepper` nesne.  
   
  `pceltFetched`  
- [out] İşaretçi sayısına `ICorDebugStepper` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] İşaretçi sayısına `ICorDebugStepper` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

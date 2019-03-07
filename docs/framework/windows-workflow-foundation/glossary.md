@@ -5,33 +5,34 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], glossary
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
-ms.openlocfilehash: 89a458e626098aec12ccb0680b11402dc8be44d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d9acab1161302937e240eb8ebb506ca9f1585c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482853"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 için Windows Workflow Foundation sözlüğü
-Aşağıdaki terimler Windows Workflow Foundation belgelerinde kullanılır.  
-  
-## <a name="terms"></a>Koşulları  
-  
-|Terim|Tanım|  
-|----------|----------------|  
-|etkinlik|Windows Workflow Foundation program davranışını birimidir. Tek etkinlikleri birlikte daha karmaşık etkinliklerine birleştirilebilir.|  
-|Etkinlik eylemi|İş akışı ve Etkinlik yürütme için geri çağırmalar için kullanılan bir veri yapısıdır.|  
-|Bağımsız değişken|Veri akışı içine ve dışına bir etkinlik tanımlar. Belirtilen yöne her bağımsız değişkenlere sahiptir: içinde çıkış veya giriş/çıkış. Bu giriş, çıkış ve giriş/çıkış parametreleri etkinliğin temsil eder.|  
-|Yer işareti|Hangi etkinlik durdurabilir ve sürdürülmesini beklemek noktası.|  
-|Maaş|Eylemler geri veya etkisini azaltmak için tasarlanmış bir grup önceden iş tamamlandı.|  
-|Bağıntı|İş akışı veya hizmet örneğine iletileri yönlendirmek için mekanizması.|  
-|ifade|Bir veya daha fazla bağımsız değişken alan bir yapı bağımsız değişkenler üzerinde bir işlemi gerçekleştirir ve tek bir değer döndürür. İfadeler bir etkinlik kullanılabilir herhangi bir yerde kullanılabilir.|  
-|Akış Çizelgesi|Simgeler olarak program bileşenleri temsil eden bir iyi bilinen modelleme standardı birlikte tek yönlü ok bağlı.  .NET Framework 4'te, iş akışları akış etkinliği kullanarak akış çizelgeleri modellenebilir.|  
-|uzun süre çalışan işlemi|Hemen döndürmüyor ve sistem yeniden başlatmalarını yayılabilir program yürütme birimidir.|  
-|kalıcılık|Böylece bellekten kaldırıldı veya bir sistem hatasından sonra kurtarılmış bir iş akışı veya hizmet durumu sağlam bir orta kaydediliyor.|  
-|Durum makinesi|Program bileşenleri tek tek durumları ile birlikte olay denetimli durumu geçişleri bağlı olarak temsil eden bir iyi bilinen modelleme standardı.  İş akışlarını kullanarak Durum makinesi etkinliğini Durum makineleri modellenebilir.|  
-|Madde|Ortak bir kimlik altında ilgili yer işaretleri grubunu temsil eder ve belirli yer işareti sürdürme geçerli değil veya geçerli dönüşebilir hakkında kararlar almak çalışma zamanı sağlar.|  
-|tür dönüştürücü|Veya daha fazla System.ComponentModel.TypeConverter için ve diğer türleri örneklerini CLR türünün dönüştürme örnekleri sağlayan türler türetilmiş bir CLR türü ile ilişkili olabilir. Tür converterr System.ComponentModel.TypeConverterAttribute özniteliğini kullanarak bir CLR türü ile ilişkilidir.  Bir TypeConverterAttribute doğrudan CLR türü veya bir özellik belirtilebilir. Bir özellik her zaman belirtilen tür dönüştürücüsünü özelliğin CLR türü üzerinde belirtilen tür dönüştürücüsünü daha önceliklidir.|  
-|değişken|Kaydedilen ve daha sonra erişilen bazı veri depolama temsil eder.|  
-|iş akışı|Tek bir aktivite veya ağaç etkinliklerin bir ana bilgisayar işlemi tarafından çağrılır.|  
+
+Windows Workflow Foundation belgelerinde aşağıdaki terimler kullanılır.
+
+## <a name="terms"></a>Koşulları
+
+|Terim|Tanım|
+|----------|----------------|
+|etkinlik|Windows Workflow Foundation program davranışı birimidir. Tek etkinlik, daha karmaşık etkinliklerine birlikte oluşabilir.|
+|Etkinlik eylemi|İş akışı ve Etkinlik yürütme için geri çağırmalar için kullanılan bir veri yapısı.|
+|Bağımsız değişken|Veri akışının içine ve dışına etkinlik tanımlar. Belirtilen yönde her bağımsız değişkenlere sahiptir:, çıkış veya daraltma veya genişletme. Bu giriş, çıkış ve giriş/çıkış parametreleri etkinliğin temsil eder.|
+|Yer işareti|Nokta, bir etkinlik duraklatabilir ve devam ettirilemedi bekleyin.|
+|Dengeleme|Eylemler geri almak veya etkisini azaltmak için tasarlanmış bir grup daha önce iş tamamlandı.|
+|Bağıntı|Yönlendirme iletileri bir iş akışı veya hizmet örneği için mekanizma.|
+|ifade|Bir veya daha fazla bağımsız değişken alan bir yapı, bağımsız bir işlemi gerçekleştirir ve tek bir değer döndürür. İfadeler bir etkinlik kullanılabilir her yerde kullanılabilir.|
+|Akış Çizelgesi|Simgeler olarak program bileşenleri temsil eden bir bilinen modelleme paradigma birlikte tek yönlü oklarla bağlı.  .NET Framework 4'te iş akışları, akış etkinliğini kullanarak akış çizelgeleri modellenebilir.|
+|uzun süre çalışan işlem|Sistem yeniden başlatmalarını kapsayabilir ve hemen döndürmeyen program yürütme birimidir.|
+|kalıcılık|Böylece bellekten kaldırılmış ya Kurtarılan bir sistem hatasından sonra bir iş akışı veya hizmet durumu sağlam bir orta kaydediliyor.|
+|Durum makinesi|Program bileşenleri tek tek durumları ile birlikte olay temelli durumu geçişleri bağlı olarak temsil eden bir bilinen modelleme standardı.  İş akışları StateMachine etkinlik kullanarak Durum makineleri modellenebilir.|
+|Madde temini|Ortak bir kimlik altında ilgili yer işaretlerinin bir grubu temsil eder ve belirli yer imi sürdürme geçerli veya geçerli olacağı hakkında kararlar almak çalışma zamanı sağlar.|
+|Tür dönüştürücü|Bir CLR türü ile ilişkili olabilir veya daha fazla System.ComponentModel.TypeConverter dönüştürme gelen diğer örnek türleri ve CLR türü örnekleri sağlayan türler türetilmiş. Bir tür dönüştürücüsü System.ComponentModel.TypeConverterAttribute özniteliğini kullanarak bir CLR türü ile ilişkilidir.  Doğrudan CLR türü veya özellik bir TypeConverterAttribute belirtilebilir. Her zaman bir özellikte belirtilen bir tür dönüştürücüsü özelliğin CLR türü belirtilen bir tür dönüştürücüsü daha önceliklidir.|
+|değişken|Depolama kaydedilir ve daha sonra erişilen bazı verilerin temsil eder.|
+|iş akışı|Tek bir etkinlik veya bir ana bilgisayar işlemi tarafından çağrılır etkinliklerinin ağaç.|
 |XAML|Genişletilebilir uygulama biçimlendirme dili|

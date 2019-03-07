@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477668"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -28,7 +28,7 @@ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalışt
 Mage [commands] [commandOptions]
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
 Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu komutlar tarafından desteklenen seçenekleri hakkında daha fazla bilgi için bkz. [New ve Update komut seçenekleri](#new-and-update-command-options) ve [oturum komut seçenekleri](#sign-command-options).
 
@@ -45,7 +45,7 @@ Aşağıdaki tablo tarafından desteklenen komutları gösterir *Mage.exe*. Bu k
 
 Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-New` ve `-Update` komutları:
 
-|Seçenekler|Varsayılan Değer|Uygulandığı öğe:|Açıklama|
+|Seçenekler|Varsayılan Değer|Uygulanan Öğe|Açıklama|
 |-------------|-------------------|----------------|-----------------|
 |**-bir,-algoritması**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
 |**-appc, - AppCodeBase** `manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
@@ -220,7 +220,7 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
-- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)
 - [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

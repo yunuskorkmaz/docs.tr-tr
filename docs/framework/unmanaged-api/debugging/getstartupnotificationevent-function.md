@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404316"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487336"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent İşlevi
-Sonra belirtilen hedef işleminde yüklenen tüm ortak dil çalışma zamanı (CLR) tarafından bildirim yapılan bir olay tanıtıcısı açar veya oluşturur.  
+Oluşturur veya üzerine belirtilen hedef işlemde yüklenmekte olan tüm ortak dil çalışma zamanı (CLR) tarafından sinyal bir olay işleyici açılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,30 +38,30 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `debuggeePID`  
- [in] CLR başlatma bildirimlerini almak üzere hedef işlemini işlem tanıtıcısı.  
+ [in] CLR başlatma bildirimlerini almak üzere hedef işlemin işlem tanımlayıcısı.  
   
  `phStartupEvent`  
- [out] Bir işaretçi bir CLR başlangıçta tarafından işaret işlenecek.  
+ [out] Başlangıçta bir CLR tarafından sinyal bir tanıtıcı bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
  Başlangıç bildirim olayı tanıtıcısını başarıyla aldı.  
   
  E_INVALIDARG  
- `phStartupEvent` null veya `debuggeePID` şu anda çalışan bir işlemin başvurmuyor.  
+ `phStartupEvent` null veya `debuggeePID` şu anda çalışan bir işleme başvurmuyor.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Başlangıç bildirim olayı tanıtıcısını elde edilemiyor.  
+ Başlangıç bildirim olay tanıtıcısı alınamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows işletim sisteminde `debuggeePID` eşlemeleri bir işletim sistemi için işlem tanıtıcısı.  
+ Windows işletim sisteminde `debuggeePID` eşlemeleri bir işletim sistemi için işlem tanımlayıcısı.  
   
- Olay herhangi önce yönetilen kod olay işareti CLR tarafından yürütülen verdi.  
+ Olay herhangi önce yönetilen kod olayın sinyal CLR tarafından yürütülen işaret bildirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** dbgshim.h  
   

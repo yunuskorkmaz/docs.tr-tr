@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e71696282a3c9e6d25793b583ee19f306e167b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572435"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486244"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback İşlevi
 Profil Oluşturucu yönetilen her çerçeve ve her bir çalıştırmanın yönetilmeyen çerçeveler hakkında tarafından başlatılan bir yığın ilerlemesi sırasında bilgileri yığında sağlar [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi.  
@@ -39,7 +39,7 @@ HRESULT __stdcall StackSnapshotCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `funcId`  
  [in] Bu değer sıfır ise, bu geri çağırma bir yönetilmeyen çerçeveler çalıştırma için olan; Aksi takdirde, yönetilen bir işlevin tanımlayıcısıdır ve bu geri çağırma için yönetilen bir çerçevedir.  
   

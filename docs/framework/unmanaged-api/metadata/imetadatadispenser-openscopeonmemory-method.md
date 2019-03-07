@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6233e5ecb479db43f35c9d95c42c66c02c81122f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8462f0d518307ad271c31e712b46c784c67974a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498490"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory Yöntemi
 Var olan meta veriler içeren belleği açılır. Diğer bir deyişle, bu yöntem, var olan verilere meta veri olarak kabul edilir bellek belirtilen bir alan açılır.  
@@ -39,7 +39,7 @@ HRESULT OpenScopeOnMemory (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pData`  
  [in] Bellek alanı başlangıç adresini belirten bir işaretçi.  
   

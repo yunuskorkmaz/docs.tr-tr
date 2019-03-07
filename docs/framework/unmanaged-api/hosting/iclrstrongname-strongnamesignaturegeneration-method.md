@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 703b2e90aebd61467063b9ac2d8068c1379e645b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95d7070d9f1185560346b9012af0900f82c92c18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493615"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration Yöntemi
 Tanımlayıcı ad imzası için belirtilen derlemeyi oluşturur.  
@@ -40,7 +40,7 @@ HRESULT StrongNameSignatureGeneration (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
  [in] Tanımlayıcı ad imzası oluşturulacak derleme bildirimi içeren dosyanın yolu.  
   

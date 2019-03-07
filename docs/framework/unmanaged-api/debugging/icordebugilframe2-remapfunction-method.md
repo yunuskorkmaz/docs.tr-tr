@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489819"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction Yöntemi
-Yeni Microsoft Ara dili (MSIL) uzaklık belirterek düzenlenen işlevi remaps  
+Yeni Microsoft Ara dili (MSIL) uzaklık belirterek düzenlenmiş bir işlevi yeniden eşlemesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,28 +35,28 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `newILOffset`  
- [in] Yönerge işaretçisi yerleştirilmelidir yığın çerçeve yeni MSIL uzaklığı. Bu değer bir dizi noktası olması gerekir.  
+ [in] Yönerge işaretçisi yerleştirilmesi gereken yığın çerçeve yeni MSIL uzaklığı. Bu değer bir dizi noktası olması gerekir.  
   
- Bu değer geçerliliği sağlamak yapanın sorumluluğundadır. Örneğin, MSIL uzaklık işlevi sınırların dışında kalan ise geçerli değil.  
+ Bu değerin geçerliliği sağlamak çağrı sahibinin sorumluluğundadır. Örneğin, MSIL uzaklığı işlevi sınırları dışında olması durumunda geçerli değil.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çerçevenin işlevi düzenlendiğinde hata ayıklayıcı çağırabilirsiniz `RemapFunction` yürütülmesi için en son sürümünü çerçeve işlevi değiştirilecek yöntemi. Kod yürütmeyi verilen MSIL uzaklığında başlar.  
+ Çerçevenin işlevi düzenlendiğini, hata ayıklayıcı çağırabilirsiniz `RemapFunction` yürütülmesi için en son sürümünü çerçeve işlevi takas etmek için yöntemi. Kod yürütme belirli MSIL uzaklığında başlar.  
   
 > [!NOTE]
->  Çağırma `RemapFunction`gibi çağırma [Icordebugılframe::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), iş parçacığı için yığın izlemesi oluşturma ile ilgili tüm hata ayıklama arabirimleri hemen geçersiz kılar. Bu arabirimleri dahil [Icordebugchain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), Icordebugılframe, Icordebugınternalframe ve Icordebugnativeframe.  
+>  Çağırma `RemapFunction`gibi çağırma [Icordebugılframe::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), bir iş parçacığı için yığın izlemesi oluşturma ile ilgili tüm hata ayıklama arabirimleri hemen geçersiz kılar. Bu arabirimler dahil [Icordebugchain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), Icordebugılframe Icordebugınternalframe ve Icordebugnativeframe.  
   
- `RemapFunction` Geçerli çerçevesi bağlamında yalnızca ve yalnızca aşağıdaki durumlarda birinde yöntemi çağrılabilir:  
+ `RemapFunction` Bağlamında geçerli çerçeve yalnızca ve yalnızca aşağıdaki durumlarda birinde yöntemi çağrılabilir:  
   
--   Alınmasından sonra bir [Icordebugmanagedcallback2::functionremapopportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) değil henüz devam ettirildi geri çağırma.  
+-   Giriş sonra bir [Icordebugmanagedcallback2::functionremapopportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) değil henüz devam ettirildi geri çağırma.  
   
--   Kod yürütmeyi nedeniyle durdurulurken bir [Icordebugmanagedcallback::editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) bu çerçevesi için olay.  
+-   Kod yürütme nedeniyle durdurulurken bir [Icordebugmanagedcallback::editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) bu çerçevesi için olay.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

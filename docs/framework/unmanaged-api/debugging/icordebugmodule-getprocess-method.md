@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: add7239feb1cf6dab0fabe12e178336921211190
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97cecd66462cf6a88012b13dec82dbf617891dd5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414212"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493849"
 ---
 # <a name="icordebugmodulegetprocess-method"></a>ICorDebugModule::GetProcess Metodu
-Bu modül içeren işlemini alır.  
+Bu modül içeren işlemi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppProcess`  
- [out] Bu modül içeren işlemi temsil eden Icordebugprocess nesne adresini gösteren bir işaretçi.  
+ [out] Bu modül içeren işlemini temsil eden bir Icordebugprocess nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

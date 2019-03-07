@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405149"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489559"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller Metodu
-Bu zincir adlı zinciri alır.  
+Bu zincir denir zinciri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppChain`  
- [out] Bir işaretçi adresine Icordebugchain nesnenin arama zinciri temsil eder.  
+ [out] Çağrı zincirini temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.  
   
- (Bu zincir veya hata ayıklayıcı çağrı yığını başlatılmış durumda olacaktır gibi) bu zincirini kendiliğinden çağrıldı, `ppChain` null olur.  
+ (Bu zincir veya hata ayıklayıcı çağrı yığınını başlatılmış durumda olurdu gibi) Bu zincir kendiliğinden çağrıldı, `ppChain` null olacaktır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Arama zinciri çağrı iş parçacıkları arasında sıralanmış farklı bir iş parçacığı üzerinde olabilir.  
+ Çağrı zincirinin çağrı iş parçacıkları arasında sıralanmış farklı bir iş parçacığı üzerinde olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

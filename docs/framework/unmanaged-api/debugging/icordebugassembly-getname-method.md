@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487804"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName Metodu
 Derlemenin adını alır bu `ICorDebugAssembly` örneğini temsil eder.  
@@ -37,23 +37,23 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutunu `szName` dizi.  
+ [in] Boyutu `szName` dizisi.  
   
  `pcchName`  
- [out] Gerçek adının uzunluğu belirten bir tamsayı gösteren bir işaretçi.  
+ [out] Gerçek uzunluk adını belirten bir tamsayı işaretçisi.  
   
  `szName`  
- [out] Adını depolar bir dizi.  
+ [out] Dizisi adını depolar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetName` Yöntemi derleme tam yolunu ve dosya adını döndürür.  
+ `GetName` Yöntemi derlemenin tam yolu ve dosya adını döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

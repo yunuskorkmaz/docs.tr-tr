@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453a30680b7fe938e975778a43282e6a29b86c7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 498dd5f8242b4db29d2bb292e01001f9240e6fc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716303"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481007"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage Yöntemi
 Belirtilen bellek adresinde derleme yansıma ikili gösterimini alır.  
@@ -38,7 +38,7 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbBase`  
  [in] Eşlenen derleme bildirimi bellek adresi.  
   

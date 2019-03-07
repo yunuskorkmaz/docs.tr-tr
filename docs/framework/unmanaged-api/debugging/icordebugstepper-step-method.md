@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444390622ca68244661b91dc85814b05556b12a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493030"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step Yöntemi
-Tek adım üzerinden içeren kendi iş parçacığı ve isteğe bağlı olarak, bu ICorDebugStepper neden olan tek atlama iş parçacığı denir işlevler üzerinden devam edin.  
+Bu ICorDebugStepper tek adımlı içeren kendi iş parçacığı aracılığıyla ve isteğe bağlı olarak için için neden olan tek Adımlama iş parçacığının içinden çağıran işlevler ile devam edin.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT Step (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `bStepIn`  
- [in] Kümesine `true` iş parçacığı içinde adlı bir işlev adımla için. Kümesine `false` işlevi Adımlama için.  
+ [in] Kümesine `true` için iş parçacığı içinde çağrılan bir işlevin içine Adımlama. Kümesine `false` işlevi Adımlama için.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı bu Adımlayıcı 's çerçevede sonraki yönetilen yönerge gerçekleştirdiğinde adım tamamlar. Varsa `Step` olan Adımlayıcı üzerinde olarak adlandırılan, yönetilen kod içinde değil, sonraki yönetilen kod yönerge iş parçacığı tarafından çalıştırıldığında adımın.  
+ Ortak dil çalışma zamanı bu adımlayıcıdaki 's çerçevede sonraki yönetilen yönergesi gerçekleştirdiğinde adımı tamamlar. Varsa `Step` olan Adımlayıcı üzerinde çağrılır, yönetilen kod içinde değil, sonraki yönetilen kod yönergesi tarafından iş parçacığı yürütüldüğünde adım tamamlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

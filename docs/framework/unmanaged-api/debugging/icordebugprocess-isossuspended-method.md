@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b65a621541f2b4a800f6b3708a6b257374c5866
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 039dc0d9befb038e643abc4e2524c133234f460b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492081"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended Yöntemi
-Belirtilen iş parçacığı bu işlem durdurma hata ayıklayıcı sonucunda askıya olup olmadığını belirten bir değer alır.  
+Bu işlem durdurulurken bir hata ayıklayıcı sonucu olarak belirtilen iş parçacığını askıya olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +35,22 @@ HRESULT IsOSSuspended(
     [out] BOOL  *pbSuspended);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `threadID`  
  [in] Söz konusu iş parçacığı kimliği.  
   
  `pbSuspended`  
- [out] Boolean bir değer için bir işaretçi `true` belirtilen iş parçacığı olması durumunda, aksi askıya alınmış *`pbSuspended` olan `false`.  
+ [out] Boolean bir değer için bir işaretçi `true` belirtilen iş parçacığı çağrıldıysa, aksi takdirde askıya alınmış *`pbSuspended` olduğu `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtilen iş parçacığı bu işlem durdurma hata ayıklayıcı sonucu olarak askıya alındı, belirtilen iş parçacığının Win32 askıya alma sayısı bir artırılır. Hata ayıklayıcı kullanıcı arabirimi (UI) işletim sistemini görüntülenirse, bu bilgileri dikkate almak isteyebilirsiniz (OS) askıya kullanıcı için iş parçacığı sayısı.  
+ Belirtilen iş parçacığı bu işlem durdurulurken bir hata ayıklayıcı sonucu olarak askıya alındı, belirtilen iş parçacığının Win32 askıya alma sayı bir artırılır. Hata ayıklayıcı kullanıcı arabirimi (UI) işletim sistemini görüntülerse bu bilgileri dikkate almak isteyebilirsiniz (OS) askıya alma, kullanıcı iş parçacığı sayısı.  
   
- `IsOSSuspended` Yöntemi yönetilmeyen hata ayıklama yalnızca bağlamında mantıklı hale getirir. Yönetilen hata ayıklama sırasında iş parçacıklarını işbirliği ile askıya alınmış yerine OS askıya alındı.  
+ `IsOSSuspended` Yöntemi yönetilmeyen hata ayıklama yalnızca bağlamında göre mantıklı. Yönetilen hata ayıklama sırasında iş parçacıklarını işbirliği ile askıya alınmış yerine işletim sistemi askıya alındı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

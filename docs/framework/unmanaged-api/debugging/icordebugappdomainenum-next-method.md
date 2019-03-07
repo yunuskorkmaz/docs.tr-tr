@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ca240f937e210846e6eb9a17abfe70a280b87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fefc933cc84fede1f3dea16d4b13e09801a96e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403562"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497359"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next Yöntemi
-Uygulama etki alanları belirtilen sayıda geçerli İmleç konumuna başlangıç koleksiyondan alır.  
+Koleksiyondan geçerli imleç konumdan başlayarak belirtilen sayıda uygulama etki alanları alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [in] Alınacak uygulama etki alanları sayısı.  
   
  `values`  
- [out] Her biri uygulama etki alanını temsil eden bir Icordebugappdomain nesneye işaret eden bir dizi işaretçisi.  
+ [out] Bir dizi işaretçileri, her biri, uygulama etki alanını temsil eden bir Icordebugappdomain nesneye işaret eder.  
   
  `pceltFetched`  
- [out] Uygulama etki alanları gerçekte döndürülen sayısı için bir işaretçi. Bu değer null ise `celt` biridir.  
+ [out] Gerçekte döndürülen uygulama etki alanı sayısı için bir işaretçi. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

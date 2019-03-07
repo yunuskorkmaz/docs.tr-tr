@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: c52e93bcf5771fe556730a1d7cf45b8f1c9432b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec215517cd667a6333137d0c7e51fe2ac58f5bcf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499839"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
 Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.  
@@ -23,7 +23,7 @@ Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları olu
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `"filename"`  
  İzleme gerektiren değişiklikleri veya güncelleştirmeleri için dosyanın adı.  
   
