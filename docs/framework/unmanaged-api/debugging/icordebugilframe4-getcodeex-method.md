@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame4::GetCodeEx Metodu
+title: ICorDebugILFrame4::GetCodeEx Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,14 +14,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5574b457925506f3178af7c636a834fad4fdd15e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7bee8c56d7b904bf881efb652a2517d151c31a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475777"
 ---
-# <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx Metodu
+# <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
  Bu yığın çerçevesi yürütülmekte olan kod için bir işaretçi alır.  
@@ -35,7 +35,7 @@ HRESULT GetCodeEx(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `flags`  
  [in] Bir [Ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) numaralandırma üyesi, profil oluşturucunun ReJIT istek tarafından tanımlanan Ara dil (IL) çerçevede içerilip içerilmeyeceğini belirtir.  
   

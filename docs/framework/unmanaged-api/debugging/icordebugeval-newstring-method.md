@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412236"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480188"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString Yöntemi
-Belirtilen içeriği ile yeni bir dize örneği ayırır.  
+Yeni bir dize örneği belirtilen içeriğiyle ayırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT NewString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `string`  
- [in] Dize için içerik işaretçi.  
+ [in] İçeriği dize işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dize, her zaman iş parçacığı şu anda yürütülmekte uygulama etki alanında oluşturulur.  
+ Dize, her zaman iş parçacığı gerçekleştirmektedir uygulama etki alanında oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

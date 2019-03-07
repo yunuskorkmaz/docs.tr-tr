@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread::GetActiveChain Metodu
+title: ICorDebugThread::GetActiveChain Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread.GetActiveChain
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417521"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483322"
 ---
-# <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain Metodu
-Arabirim işaretçisi etkin (en son) yığın zincire bu Icordebugthread nesnede alır.  
+# <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain Yöntemi
+Bir arabirim işaretçisini bu Icordebugthread nesne üzerinde etkin (en son) yığın zincirinin alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppChain`  
- [out] Bir işaretçi adresine Icordebugchain nesnenin yığın zinciri temsil eder.  
+ [out] Yığın zincirinin temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppChain` Parametredir hiçbir yığın zinciri şu anda etkin değilse null.  
+ `ppChain` Parametredir hiçbir yığın zincirinin şu anda etkin değilse null.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

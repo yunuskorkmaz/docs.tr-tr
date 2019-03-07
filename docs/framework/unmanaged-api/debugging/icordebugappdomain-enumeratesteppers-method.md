@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bf3aa6d883dffece6ba89d41005499cc6206906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d326c801ed17fa6fe79f9e464e64844d0016e572
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489370"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>ICorDebugAppDomain::EnumerateSteppers Yöntemi
-Bir numaralandırıcı uygulama etki alanı için tüm etkin adımlayıcıların alır.  
+Bir numaralandırıcı, uygulama etki alanı için tüm etkin adımlayıcıların alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT EnumerateSteppers (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppSteppers`  
- [out] Uygulama etki alanındaki tüm etkin adımlayıcıların Numaralandırıcı bir Icordebugstepperenum nesne adresini gösteren bir işaretçi.  
+ [out] Icordebugstepperenum nesnenin uygulama etki alanındaki tüm etkin adımlayıcıların için Numaralandırıcı adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

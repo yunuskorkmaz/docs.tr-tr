@@ -1,5 +1,5 @@
 ---
-title: ICorDebugArrayValue::GetElement Metodu
+title: ICorDebugArrayValue::GetElement Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugArrayValue.GetElement
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485310"
 ---
-# <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement Metodu
-Verilen dizi öğenin değerini alır.  
+# <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement Yöntemi
+Belirli bir dizi öğenin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +38,24 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cdim`  
- [in] Bu boyut sayısını `ICorDebugArrayValue` nesnesi.  
+ [in] Bu boyut sayısını `ICorDebugArrayValue` nesne.  
   
- Bu değer ayrıca boyutudur `indices` boyutuna boyutlarını sayıya eşit olduğundan dizi `ICorDebugArrayValue` nesnesi.  
+ Bu değer ayrıca boyutudur `indices` boyutuna boyutlarını sayısına eşit olduğundan dizi `ICorDebugArrayValue` nesne.  
   
  `indices`  
- [in] Bir dizi dizini değerleri, her biri bir boyut içindeki konumu belirtir `ICorDebugArrayValue` nesnesi.  
+ [in] Dizin değerlerini, her biri bir boyutu içinde bir konumu belirtir bir dizi `ICorDebugArrayValue` nesne.  
   
  Bu değer null olmamalıdır.  
   
  `ppValue`  
- [out] Bir işaretçi adresine Icordebugvalue nesnenin belirtilen öğenin değerini temsil eder.  
+ [out] Belirtilen öğenin değerini temsil eden bir Icordebugvalue nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

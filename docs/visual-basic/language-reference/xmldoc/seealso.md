@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 9f857be6d0bd46233a49c7d2ff0931670baa95a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dc205ee2bf85d4903037d4e8da529636f3dc388e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965312"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494746"
 ---
 # <a name="seealso-visual-basic"></a>\<SeeAlso > (Visual Basic)
 Ayrıca bkz. bölümünde görünen bağlantıyı belirtir.  
@@ -21,7 +21,7 @@ Ayrıca bkz. bölümünde görünen bağlantıyı belirtir.
 <seealso cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `member`  
  Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. başarılı olup olmadığını denetler ve `member` çıktı XML öğesi adı. `member` çift tırnak içinde yer almalıdır ("").  
   

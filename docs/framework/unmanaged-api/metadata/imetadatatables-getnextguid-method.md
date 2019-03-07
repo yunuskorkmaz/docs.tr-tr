@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e23026241a836bfa6cf6f186a47037370c174e61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 872f5a9eaa17a777cfbb14fea34cc80e0b7c04ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680944"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487492"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid Metodu
 Geçerli bir tablo sütununda sonraki GUID değeri dizinini alır.  
@@ -36,7 +36,7 @@ HRESULT GetNextGuid (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ixGuid`  
  [in] Bir GUID tablo sütunu dizin değeri.  
   

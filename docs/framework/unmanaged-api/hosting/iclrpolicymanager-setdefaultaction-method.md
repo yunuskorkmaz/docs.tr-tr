@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a8d0cb09e057d4bcc3c9713c5b16c22fa45c5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502d6298ec7046dcce2b413d6bfaa3ef27529e49
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602968"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484348"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction Yöntemi
 Ortak dil çalışma zamanı (CLR) belirtilen işlemi oluştuğunda gerçekleştirmesi gereken ilke eylemi belirtir.  
@@ -36,7 +36,7 @@ HRESULT SetDefaultAction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `operation`  
  [in] Aşağıdakilerden birini [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) hangi CLR davranışı özelleştirilebilir eylemini belirten değer.  
   

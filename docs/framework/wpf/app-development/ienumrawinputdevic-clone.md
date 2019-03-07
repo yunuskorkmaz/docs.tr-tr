@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: a4c5e7db813089d1dd138416ac54dd4be467b87b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485414"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 Aynı liste üzerinde yineleme yapmak için geçerli bir numaralandırıcı ile aynı duruma sahip başka bir ham giriş cihazının Numaralandırıcı oluşturur.  
@@ -20,7 +20,7 @@ Aynı liste üzerinde yineleme yapmak için geçerli bir numaralandırıcı ile 
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppenum`  
   
  [out] Alan çıkış değişkeninin adresi [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) arabirim işaretçisi. Yöntem başarısız olursa, bu çıkış değişkeninin değeri tanımsızdır.  

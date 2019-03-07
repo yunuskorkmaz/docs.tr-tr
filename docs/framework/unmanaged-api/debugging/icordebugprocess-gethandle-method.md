@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423448"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498092"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle Metodu
 İşlem için bir tanıtıcı alır.  
@@ -33,17 +33,17 @@ ms.locfileid: "33423448"
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `phProcessHandle`  
- [out] Bir işaretçi bir `HPROCESS` olan işlem için tanıtıcı.  
+ [out] Bir işaretçi bir `HPROCESS` yani işlem tanıtıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama arabirimi tarafından alınan tanıtıcı aittir. Hata ayıklayıcı tanıtıcı kullanmadan önce çoğaltmalıdır.  
+ Hata ayıklama arabirimi tarafından alınan tanıtıcı aittir. Hata ayıklayıcı tanıtıcı kullanmadan önce yinelenen.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

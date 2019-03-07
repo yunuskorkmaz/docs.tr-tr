@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5981e9a193f4ebfc88628f56cf865523c9b87c6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ebeaaa88f3c7320f38d33a9c027d5aa76bf9673
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744654"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495877"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted Yöntemi
 Profil Oluşturucu, bir modül boşaltılıyor bildirir.  
@@ -34,7 +34,7 @@ HRESULT ModuleUnloadStarted(
     [in] ModuleID moduleId);   
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleId`  
  [in] Boşaltılıyor modül kimliği.  
   

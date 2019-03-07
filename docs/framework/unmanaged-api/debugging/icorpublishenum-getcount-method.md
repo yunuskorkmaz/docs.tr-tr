@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4355300d302e51a777d11855a023c1b56bf04a86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c353edf9db0a7bc7ec0a25f712527dc3c9d8cc28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495324"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484660"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount Metodu
 Sabit listede öğe sayısını alır.  
@@ -35,7 +35,7 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcelt`  
  [out] Listedeki öğe sayısı için bir işaretçi.  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain2::GetArrayOrPointerType Metodu
+title: ICorDebugAppDomain2::GetArrayOrPointerType Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2.GetArrayOrPointerType
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484244"
 ---
-# <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType Metodu
-Belirtilen türe veya bir işaretçi veya belirtilen tür referansı dizisini alır.  
+# <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType Yöntemi
+Belirtilen tür veya işaretçi veya başvuru belirtilen türe dizisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `elementType`  
- [in] Temel alınan yerel tür (bir dizi, işaretçi veya başvuru) oluşturulacak belirtir CorElementType numaralandırması değeri.  
+ [in] Temel alınan yerel tür (bir dizi, işaretçi veya başvuru) oluşturulacak belirtir CorElementType sabit listesi değeri.  
   
  `nRank`  
- [in] Derecesini (diğer bir deyişle, Boyutlar sayısı) dizisi. Bu değer 0 olmalıdır `elementType` bir işaretçi veya başvuru türünü belirtir.  
+ [in] Boyut (diğer bir deyişle, boyut sayısı) dizisi. Bu değer, 0 olmalıdır `elementType` bir işaretçi veya başvuru türü belirtir.  
   
  `pTypeArg`  
- [in] İşaretçi Icordebugtype nesneye dizi türünü temsil eder, işaretçi veya başvuru oluşturulacak.  
+ [in] Bir dizi türünü temsil eden bir Icordebugtype nesne işaretçisi, işaretçi veya başvuru oluşturulacak.  
   
  `ppType`  
- [out] Adresine bir işaretçi bir `ICorDebugType` oluşturulan dizi, işaretçi türü veya reference temsil eden nesne türü.  
+ [out] Adresine bir işaretçi bir `ICorDebugType` oluşturulmuş dizi, işaretçi türü veya başvuru temsil eden bir nesne türü.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değeri *elementType* şunlardan biri olmalıdır:  
+ Değerini *elementType* aşağıdakilerden biri olmalıdır:  
   
 -   ELEMENT_TYPE_PTR  
   
@@ -63,9 +63,9 @@ HRESULT GetArrayOrPointerType (
  Varsa değerini *elementType* ELEMENT_TYPE_PTR veya ELEMENT_TYPE_BYREF, *nRank* sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364430"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492679"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -74,7 +74,7 @@ Yerelleştirme ne zaman bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 -   Derledikten sonra yerelleştirebilirsiniz.  
   
--   Böylece geliştirdiğiniz aynı anda yerelleştirebilirsiniz BAML formu XAML'ın eski bir sürümden BAML formu XAMLwith yerelleştirmeler'ın daha yeni bir sürümüne güncelleştirebilirsiniz.  
+-   Geliştirdiğiniz aynı anda yerelleştirebilirsiniz. böylece, XAML ile yerelleştirmeler BAML formu yeni bir sürümüne BAML formu XAML'ın eski bir sürümünü güncelleştirebilirsiniz.  
   
 -   XAML, BAML formu derlenmiş biçiminde olduğundan, özgün kaynak öğeleri ve anlamı derleme zamanında doğrulayabilirsiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

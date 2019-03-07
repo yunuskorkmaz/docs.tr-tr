@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acffd24ae9d5aad5f48058eec036f912ee016289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1af0f8f792c856c0b27b4d3d9ff557bcc5fce82
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415990"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500076"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken Metodu
-Meta veri simgesi tarafından belirtilen işlevi alır.  
+Metaveri belirteci tarafından belirtilen işlevi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ HRESULT GetFunctionFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `methodDef`  
- [in] A `mdMethodDef` işlev meta verileri başvuran meta veri simgesi.  
+ [in] A `mdMethodDef` işlevin meta veri başvuruları meta veri belirteci.  
   
  `ppFunction`  
- [out] Bir işaretçi adresine ICorDebugFunction arabirimi nesnesinin işlevini temsil eder.  
+ [out] İşlev temsil eden ICorDebugFunction arabirimi nesnesi adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFunctionFromToken` Yöntemi hatalı döndürürse CORDBG_E_FUNCTION_NOT_IL HRESULT değeri geçirilen `methodDef` bir Microsoft Ara dili (MSIL) yönteme başvurmuyor.  
+ `GetFunctionFromToken` Yöntemi değer iletilmezse CORDBG_E_FUNCTION_NOT_IL HRESULT döndürür `methodDef` bir Microsoft Ara dili (MSIL) yönteme başvurmuyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

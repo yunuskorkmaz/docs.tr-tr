@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413585"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498542"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle Yöntemi
-Belirtilen tür bu Icordebugheapvalue2 nesnesi tarafından temsil edilen yığın değer için bir tanıtıcı oluşturur.  
+Bu Icordebugheapvalue2 nesnesi tarafından temsil edilen yığın değeri için belirtilen türün bir tanıtıcı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `type`  
- [in] Oluşturulacak tanıtıcı türü belirtir CorDebugHandleType numaralandırması değeri.  
+ [in] Oluşturulacak tanıtıcı türü belirtir CorDebugHandleType sabit listesi değeri.  
   
  `ppHandle`  
- [out] Bir işaretçi adresine Icordebughandlevalue nesnenin Bu yığın değer için yeni tanıtıcısını temsil eder.  
+ [out] Bu yığın değer için yeni işleyici temsil eden Icordebughandlevalue nesnenin adresini bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanıtıcı yığın değeriyle ilişkili uygulama etki alanında oluşturulur ve uygulama etki alanı bellekten alırsa geçersiz hale gelecek.  
+ Tanıtıcı, yığın değeriyle ilişkili olan uygulama etki alanında oluşturulur ve uygulama etki alanı bellekten alırsa geçersiz hale gelir.  
   
- Bu işlev aynı yığın değeri için birden fazla çağrı birden çok işleyici oluşturur. Hata ayıklayıcı tanıtıcıları atık toplayıcı performansı etkilediğinden, aynı anda etkin olan tanıtıcıları (yaklaşık 256) görece küçük bir dizi kendisine sınırlamanız gerekir.  
+ Bu işlev için yığını değerin birden çok çağrı birden çok oluşturacaksınız. Tanıtıcıları çöp toplayıcı performansı etkilediğinden, hata ayıklayıcı kendisini tutamaçlarını (yaklaşık 256) aynı anda etkin olan görece daha az sayıda sınırlamanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

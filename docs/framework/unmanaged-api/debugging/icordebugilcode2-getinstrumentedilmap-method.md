@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILCode2::GetInstrumentedILMap Metodu
+title: ICorDebugILCode2::GetInstrumentedILMap Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,14 +14,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f2e481942586e1e5ea6364370ff1385db134dd3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475690"
 ---
-# <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap Metodu
+# <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
  Bir harita Bu örnek için özgün yöntemi IL uzaklık profil oluşturucu izleme eklenmiş Ara dil (IL) uzaklıklarını döndürür.  
@@ -36,7 +36,7 @@ HRESULT GetInstrumentedILMap(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  CMap  
  [in] Depolama kapasitesini `map` dizisi. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   

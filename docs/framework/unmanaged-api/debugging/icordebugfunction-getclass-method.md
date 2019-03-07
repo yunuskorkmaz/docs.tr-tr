@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction::GetClass Metodu
+title: ICorDebugFunction::GetClass Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction.GetClass
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 184e578efb549a1dc2e9ec1e30a29ff289b68719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea71e984be42e3b1a7b4b9fa6df878aca911c412
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411709"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501194"
 ---
-# <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass Metodu
-Bu işlev bir üyesidir sınıfı temsil eden bir Icordebugclass nesnesi alır.  
+# <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass Yöntemi
+Bu işlev bir üyesi, sınıfın temsil ettiği bir Icordebugclass nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetClass (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppClass`  
- [out] Bir işaretçi adresine `ICorDebugClass` bu işlev bir sınıf üyesi değilse sınıf veya null, temsil eden nesne.  
+ [out] Adresini bir işaretçiye `ICorDebugClass` bu işlev bir sınıfın üyesi değilse, sınıf veya null temsil eden nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

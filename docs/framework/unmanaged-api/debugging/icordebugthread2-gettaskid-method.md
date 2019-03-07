@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2::GetTaskID Metodu
+title: ICorDebugThread2::GetTaskID Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2.GetTaskID
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5690856b526bf0f7bc4527d04ae8044cda1f6e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 417f99c2b9fa7e77f8696c27cb3929c92956c08c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417872"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494655"
 ---
-# <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID Metodu
+# <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID Yöntemi
 Bu iş parçacığı üzerinde çalışan görev tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,17 +35,17 @@ HRESULT GetTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pTaskId`  
- [out] Bu Icordebugthread2 nesnesinin temsil ettiği iş parçacığı üzerinde çalışan görev tanımlayıcısı için bir işaretçi.  
+ [out] Bu Icordebugthread2 nesnesiyle temsil edilen iş parçacığı üzerinde çalışan görev tanımlayıcısı için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir görev, yalnızca iş parçacığı bir bağlantı ile ilişkili ise iş parçacığı üzerinde çalışıyor olabilir. `GetTaskID` döndürür sıfır `pTaskId` iş parçacığı bir bağlantıyla ilişkili değilse.  
+ Bir görev, yalnızca iş parçacığı bir bağlantı ile ilişkili ise iş parçacığı üzerinde çalışabilir. `GetTaskID` sıfır döndürür `pTaskId` iş parçacığı bir bağlantıyla ilişkili değilse.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

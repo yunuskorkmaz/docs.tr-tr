@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b85f8ffade19cee8f0703af823d91a6ea7bf50b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34e8bcdda30c890fc40bab206bc6757afc073177
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710241"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475209"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob Metodu
 Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbBlob`  
  [in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.  
   

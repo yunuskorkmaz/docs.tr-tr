@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492263"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
@@ -33,7 +33,7 @@ Komut satırına şunu yazın:
 al sources options
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
 Bir veya daha fazlasını belirtebilirsiniz `sources`.
 
@@ -105,7 +105,7 @@ Aşağıdaki tablo tarafından oluşturulan hataları listeler *Al.exe*.
 |al1012|'value' seçeneği 'seçeneği' için geçerli bir ayar değil<br /><br /> Bir komut satırı seçeneği için beklenmeyen bir değer geçirildi. Örneğin, için geçersiz bir değer belirtirseniz, bu hata oluşur. **/target** seçeneği.|
 |al1013|Tanınmayan komut satırı seçeneği: 'seçeneği'<br /><br /> Geçersiz bir komut satırı seçeneği belirtildi.|
 |al1014|Beklenmeyen bir başlatma hatası: 'açıklaması'<br /><br /> *Al.exe* COM başlatma hatası algılandı. Bu tarafından bellek yetersizliği neden olabilir, ancak sistem DLL dosyaları daha olası bir nedeni. Tüm otomasyon algılayan veya Microsoft Visual Studio gibi COM kullanan programı çalıştırırsanız benzer bir hata görürsünüz.<br /><br /> İşletim sistemini yeniden yükleyin.|
-|al1015|Dosya 'alinkui.dll' iletileri bulunamıyor<br /><br /> *Al.exe* gerektirir *Alinkui.dll*. Bu dosya, yolunda olduğundan emin olun. Gerekirse, ürün CD'SİNDEN kopyalayın.|
+|al1015|Dosya 'alinkui.dll' iletileri bulunamıyor<br /><br /> *Al.exe* requires *Alinkui.dll*. Bu dosya, yolunda olduğundan emin olun. Gerekirse, ürün CD'SİNDEN kopyalayın.|
 |al1016|Geçerli giriş dosyası belirtilmedi<br /><br /> *Al.exe* derleme bilgileri olmayan bir veya daha fazla giriş dosyaları gerektirir.|
 |al1017|Hedef dosya adı belirtildi<br /><br /> Gerekli **/out** hedef dosya adı eksik belirtme seçeneği.|
 |al1018|Gerekli 'dosya' dosyası yüklenemedi<br /><br /> Belirli bir DLL dosyaları yüklenemiyor. Visual Studio'yu yeniden yükleyin veya [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|

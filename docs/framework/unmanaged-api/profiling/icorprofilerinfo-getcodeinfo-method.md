@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo::GetCodeInfo Metodu
+title: ICorProfilerInfo::GetCodeInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo.GetCodeInfo
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5004de587f715a2f3958c36999e432d7d6e9f2fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e96a84f9dc96b2eb508034d5277902ff3f328c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632666"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490092"
 ---
-# <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo Metodu
+# <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo Yöntemi
 Belirtilen işlev kimlikle ilişkili yerel kod kapsamını alır  
   
  Bu yöntem artık kullanılmıyor. Kullanım [Icorprofilerınfo2::getcodeınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) yöntemi yerine.  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo(
     [out] ULONG      *pcSize);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `functionId`  
  [in] Yerel kod ilişkilendirildiği işlevi kimliği.  
   

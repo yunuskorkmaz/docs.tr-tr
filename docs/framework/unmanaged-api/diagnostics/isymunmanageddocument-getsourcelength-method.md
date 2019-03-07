@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedDocument::GetSourceLength Metodu
+title: ISymUnmanagedDocument::GetSourceLength Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedDocument.GetSourceLength
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edafb60e5b6f9b913e89f4785dc34a58bf390f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ab9f8077a4b2a9e97c321c6edbe629dc0de19d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500739"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Metodu
+# <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Yöntemi
 Katıştırılmış kaynak bayt cinsinden uzunluğunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetSourceLength(
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pRetVal`  
  [out] Uzunluğu, bayt cinsinden katıştırılmış kaynak gösteren bir değişken için bir işaretçi.  
   

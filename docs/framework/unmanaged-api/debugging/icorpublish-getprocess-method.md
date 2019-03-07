@@ -1,5 +1,5 @@
 ---
-title: ICorPublish::GetProcess Metodu
+title: ICorPublish::GetProcess Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorPublish.GetProcess
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c625aec5b4937ec232318e62a95a612b0e8a6cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc13ec58e1830e6fb5aab5ae50dfc7a983ffc9f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499686"
 ---
-# <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess Metodu
+# <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess Yöntemi
 Alır bir [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) belirtilen tanımlayıcıya sahip bir işlemi temsil eden örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetProcess(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pid`  
  [in] İşlem tanımlayıcısı.  
   

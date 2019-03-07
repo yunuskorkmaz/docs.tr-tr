@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489832"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next Yöntemi
-Icordebugchain örnekleri belirtilen sayıda geçerli konumdan başlayarak numaralandırması alır.  
+Geçerli konumunda başlayan bir numaralandırma Icordebugchain örneği belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugChain` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugChain` alınacak örnekleri.  
   
  `chains`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugChain` zinciri temsil eden nesne.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugChain` zinciri temsil eden nesne.  
   
  `pceltFetched`  
- [out] Sayısını gösteren bir işaretçi `ICorDebugChain` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] Bir işaretçi sayısına `ICorDebugChain` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

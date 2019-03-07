@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport::GetNativeCallConvFromSig Metodu
+title: IMetaDataImport::GetNativeCallConvFromSig Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport.GetNativeCallConvFromSig
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491073"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498022"
 ---
-# <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig Metodu
+# <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig Yöntemi
 Yerel bir belirtilen imza işaretçi tarafından temsil edilen yöntem için çağırma alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pvSig`  
  [in] Çağırma kuralının döndürmek için yöntemin meta veri imzası bir işaretçi.  
   

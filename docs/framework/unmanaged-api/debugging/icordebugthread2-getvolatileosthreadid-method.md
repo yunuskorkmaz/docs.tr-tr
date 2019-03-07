@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2::GetVolatileOSThreadID Metodu
+title: ICorDebugThread2::GetVolatileOSThreadID Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2.GetVolatileOSThreadID
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e6798c2574167ec1a013429b380d8fa6c878dad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9bf96371798b38bc392bc6bbd8f6fe8f97c7969
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416569"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501974"
 ---
-# <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID Metodu
+# <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID Yöntemi
 Bu Icordebugthread2 için işletim sistemi iş parçacığı tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,14 +35,14 @@ HRESULT GetVolatileOSThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwTid`  
- [out] Bu iş parçacığı işletim sistemi iş parçacığı tanımlayıcısı.  
+ [out] Bu iş parçacığı için işletim sistemi iş parçacığı tanımlayıcısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

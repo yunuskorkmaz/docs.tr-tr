@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: c4da322bf779e084f12529d0da6949ef6ada5cf3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1a19b7699c7a9e2b663149ea31bccb67189e68c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379659"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487830"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Createıdispatchstaforwarder işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -29,7 +29,7 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
   
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
  pDispatchDelegate  

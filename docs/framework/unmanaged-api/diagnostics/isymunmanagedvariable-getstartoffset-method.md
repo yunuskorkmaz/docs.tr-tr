@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedVariable::GetStartOffset Metodu
+title: ISymUnmanagedVariable::GetStartOffset Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedVariable.GetStartOffset
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543217"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474295"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset Metodu
+# <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset Yöntemi
 Bu değişkenin içinde üst başlangıç uzaklığını alır. Bu kapsam içinde yerel bir değişken ise, başlangıç uzaklığı kapsam için tanımlanan uzaklık içinde kalacak.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pRetVal`  
  [out] Bir işaretçi bir `ULONG32` , başlangıç uzaklığını alır.  
   

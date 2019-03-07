@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420560"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482866"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains Yöntemi
-Arabirim işaretçisi bu Icordebugthread nesnesindeki tüm yığın zincirleri içeren bir Icordebugchainenum Numaralandırıcı alır.  
+Bu Icordebugthread nesnesindeki tüm yığın zincirlerini içeren bir Icordebugchainenum Numaralandırıcı için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,27 +35,27 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppChains`  
- [out] Adresine bir işaretçi bir `ICorDebugChainEnum` tüm yığınının numaralandırması veren nesnesi zincir etkin (diğer bir deyişle, en son) zinciri başlayarak, bu iş parçacığında.  
+ [out] Adresine bir işaretçi bir `ICorDebugChainEnum` etkin (diğer bir deyişle, en son) halkasını başlayarak, bu iş parçacığındaki tüm yığın numaralandırma veren nesnesi zincir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın zinciri iş parçacığı için fiziksel çağrı yığını temsil eder. Aşağıdaki koşullarda bir yığın zinciri sınır oluşturun:  
+ Yığın zincirinin iş parçacığı için fiziksel çağrı yığınını temsil eder. Aşağıdaki durumlarda bir yığın zincirinin sınırı oluşturun:  
   
--   Yönetilmeyen veya yönetilen için yönetilmeyen geçişi.  
+-   Yönetilmeyen veya yönetilene geçiş.  
   
 -   Bir içerik anahtarı.  
   
--   Bir hata ayıklayıcı, kullanıcı iş parçacığı geçirme.  
+-   Bir hata ayıklayıcı, bir kullanıcı iş parçacığının geçirme.  
   
- Tamamen yönetilen kod tek bir içerik içinde çalışan iş parçacığı en basit durumda, bir bire yığını zincirlerini ve iş parçacıkları arasında yer alır.  
+ En basit durumda tek bir bağlamda yalnızca yönetilen kod çalıştıran iş parçacığı yığın zincirlerini ve iş parçacıkları arasında bire bir iletişimin sunulacaktır.  
   
- Tüm iş parçacıklarının fiziksel çağrı yığınları mantıksal çağrısı yığınlar halinde düzenlemek bir hata ayıklayıcısı isteyebilirsiniz. Bu iş parçacıkları zincirleri arayan/Aranan ilişkilerini sıralama ve bunları regrouping içerir.  
+ Bir hata ayıklayıcı, tüm iş parçacıklarının fiziksel çağrı yığınlarını mantıksal çağrı yığınlarını yeniden isteyebilirsiniz. Bu, tüm iş parçacıkları zincirleri çağıran/çağrılan ilişkilerine göre sıralama ve bunları regrouping içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

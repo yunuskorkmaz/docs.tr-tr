@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501466"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId Metodu
-Uygulama etki alanı benzersiz tanımlayıcısını alır.  
+Uygulama etki alanının benzersiz tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pId`  
- [out] Uygulama etki alanı benzersiz tanımlayıcısı.  
+ [out] Uygulama etki alanının benzersiz tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulama etki alanı içeren işlem içinde benzersiz tanımlayıcısıdır.  
+ Uygulama etki alanını içeren işlem içinde benzersiz tanımlayıcısıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

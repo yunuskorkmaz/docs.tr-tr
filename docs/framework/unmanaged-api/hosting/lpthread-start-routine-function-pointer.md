@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f111736f1a8115614cbeb13402f0ef75cf6038f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479330"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE İşlev İşaretçisi
 Bir iş parçacığının yürütülmeye başlandığını ana bilgisayara bildiren bir işleve işaret eder.  
@@ -36,7 +36,7 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `lpThreadParameter`  
  [in] Yürütmeyi başlattı kodu için bir işaretçi.  
   

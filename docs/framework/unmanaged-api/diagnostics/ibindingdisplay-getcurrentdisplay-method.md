@@ -1,5 +1,5 @@
 ---
-title: IBindingDisplay::GetCurrentDisplay Metodu
+title: IBindingDisplay::GetCurrentDisplay Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IBindingDisplay.GetCurrentDisplay
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 992626fb3fa085c85d61b9bdd25c985436e96aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f9cc44db9c93a8b018d0586bc1faeda7cfbc9bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550571"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498438"
 ---
-# <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay Metodu
+# <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay Yöntemi
 Geçerli bağlama görüntü bilgilerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `display`  
  [out, retval] Bağlama görünen bilgileri içeren bir SAFEARRAY'i işaretçisi.  
   

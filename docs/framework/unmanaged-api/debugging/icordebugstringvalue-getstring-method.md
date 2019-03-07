@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStringValue::GetString Metodu
+title: ICorDebugStringValue::GetString Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue.GetString
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d3df561a3b48a4b26426235455ef1a074512f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf62d8855b3f9de5629b9cfc6e0bcd0878a0d17
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417972"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489924"
 ---
-# <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString Metodu
+# <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString Yöntemi
 Bu Icordebugstringvalue tarafından başvurulan dize alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,20 +38,20 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchString`  
- [in] Boyutunu `szString` dizi.  
+ [in] Boyutu `szString` dizisi.  
   
  `pcchString`  
- [out] Döndürülen karakter sayısını gösteren bir işaretçi `szString` dizi.  
+ [out] Döndürülen karakter sayısı için bir işaretçi `szString` dizisi.  
   
  `szString`  
- [out] Alınan dize depolayan bir dizi.  
+ [out] Depolayan alınan dize dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

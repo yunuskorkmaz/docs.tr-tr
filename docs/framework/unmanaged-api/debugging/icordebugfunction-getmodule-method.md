@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction::GetModule Metodu
+title: ICorDebugFunction::GetModule Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction.GetModule
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef12634da477e72757e98e520b600ec1ee0f1b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cefe84c482df3b20b5939e031ad76647f295d3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484634"
 ---
-# <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule Metodu
-Bu işlevin tanımlı olduğu modülü alır.  
+# <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule Yöntemi
+Bu işlev tanımlandığı modül alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppModule`  
- [out] Bu işlevin tanımlı olduğu modülü temsil eden bir Icordebugmodule nesne adresini gösteren bir işaretçi.  
+ [out] Bu işlevin tanımlı olduğu modülü temsil eden bir Icordebugmodule nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

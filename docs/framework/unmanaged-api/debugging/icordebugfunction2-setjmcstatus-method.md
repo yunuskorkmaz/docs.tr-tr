@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501012"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus Yöntemi
-Sadece kendi kodumu bu Icordebugfunction2 tarafından temsil edilen işlevi işaretler atlama.  
+Yalnızca benim kodum bu Icordebugfunction2 tarafından temsil edilen işlevi işaretler Adımlama.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,24 +35,24 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `bIsJustMyCode`  
- [in] Kümesine `true` işlevi kullanıcı kodu; olarak işaretlemek için Aksi takdirde kümesine `false`.  
+ [in] Kümesine `true` işlevi kullanıcı kodu; olarak işaretlemek için Aksi takdirde, kümesine `false`.  
   
 ## <a name="return-values"></a>Dönüş Değerleri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |`S_OK`|İşlev başarıyla işaretlendi.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Hata ayıklaması yapılamıyor çünkü işlev kullanıcı kodu olarak işaretlenemez.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|İşlevi, hata ayıklaması yapamazsınız çünkü kullanıcı kodu işaretlenemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sadece kendi kodumu Adımlayıcı kullanıcı olmayan kod atlar. Kullanıcı kodu bir alt kümesini debuggable kodu olmalıdır.  
+ Yalnızca kendi kodum Adımlayıcı kullanıcı olmayan kod atlar. Kullanıcı kodu hata ayıklaması yapılabilir kod bir alt kümesi olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

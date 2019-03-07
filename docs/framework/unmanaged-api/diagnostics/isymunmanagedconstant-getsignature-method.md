@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedConstant::GetSignature Metodu
+title: ISymUnmanagedConstant::GetSignature Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedConstant.GetSignature
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86c64f7c56555619ead495e1e935e7bea86ac6ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb893f06a5e905b981a408887f1c6bf5718ea79a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498568"
 ---
-# <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature Metodu
+# <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature Yöntemi
 Sabit imzasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cSig`  
  [in] Arabellek uzunluğu, `pcSig` parametre işaret eder.  
   

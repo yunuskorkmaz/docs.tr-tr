@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: e7a829596d167e470790294f19e2d5b5aa86cfcf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 16b4e8d2d62c2930411bb61abd4d4b65ab7989fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972826"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487843"
 ---
 # <a name="example-c-programming-guide"></a>\<Örnek > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -23,7 +23,7 @@ ms.locfileid: "56972826"
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `description`  
  Kod örneği açıklaması.  
   

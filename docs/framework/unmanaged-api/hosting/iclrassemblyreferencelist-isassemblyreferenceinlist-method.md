@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499842"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList Yöntemi
 Sağlanan işaretçi listesinde bir derlemeye başvuran olup olmadığını gösteren bir değer alır.  
@@ -35,7 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pName`  
  [in] Derleme Aranmak üzere bir arabirim işaretçisi. Geçerli değerler türünü `IAssemblyName` veya `IReferenceIdentity`.  
   

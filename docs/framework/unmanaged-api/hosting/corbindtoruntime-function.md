@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d714e83eb0b75b31b08e7a356eb9ea699e1794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e15b1ab33dd6ab5e9cd9887000c0f91e0bd4a9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496657"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime İşlevi
 Ortak dil çalışma zamanı (CLR) bir işleme yüklemek için yöneilmeyen ana bilgisayarları etkinleştirir.  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pwszVersion`  
  [in] Yüklemek istediğiniz CLR sürümünü tanımlayan dize.  
   

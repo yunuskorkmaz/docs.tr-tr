@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport2::GetPEKind Metodu
+title: IMetaDataImport2::GetPEKind Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport2.GetPEKind
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ad18aaca1caef242832bbdae9a1094b2ef2d7be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d0ee533ec0ece308f87c170846ef102bd3a3b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478884"
 ---
-# <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind Metodu
+# <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind Yöntemi
 Alır dosya taşınabilir çalıştırılabilir (PE) kod yapısını tanımlayan bir değeri, geçerli meta veri kapsamda tanımlanan genellikle bir DLL veya EXE dosyasının.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetPEKind (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwPEKind`  
  [out] Bir işaretçi değerini [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE dosyası açıklayan sabit listesi.  
   

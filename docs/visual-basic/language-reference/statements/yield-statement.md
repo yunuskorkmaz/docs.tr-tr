@@ -8,12 +8,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: e417e13f1617f3ad8064c9e1b0eec835938b6200
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 15cfe48797066986f5c4679e85d5899230c516e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978927"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484959"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield Deyimi (Visual Basic)
 Bir koleksiyona sonraki öğeye gönderen bir `For Each...Next` deyimi.  
@@ -24,7 +24,7 @@ Bir koleksiyona sonraki öğeye gönderen bir `For Each...Next` deyimi.
 Yield expression  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
   
 |Terim|Tanım|  
 |---|---|  

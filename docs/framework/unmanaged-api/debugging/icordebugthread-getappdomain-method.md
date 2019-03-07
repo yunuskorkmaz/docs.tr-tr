@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread::GetAppDomain Metodu
+title: ICorDebugThread::GetAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread.GetAppDomain
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a37ee8367006975b0f8ee4fa638ae3d72f9486
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487757"
 ---
-# <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain Metodu
-Bu Icordebugthread şu anda yürütülmekte uygulama etki alanı için bir arabirim işaretçisi alır.  
+# <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain Yöntemi
+Bu Icordebugthread gerçekleştirmektedir uygulama etki alanı için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppAppDomain`  
- [out] Bu iş parçacığı şu anda yürütülmekte uygulama etki alanını temsil eden bir Icordebugappdomain nesnesi için bir işaretçi.  
+ [out] Bu iş parçacığı gerçekleştirmektedir uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

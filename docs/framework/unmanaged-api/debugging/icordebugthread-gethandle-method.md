@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread::GetHandle Metodu
+title: ICorDebugThread::GetHandle Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread.GetHandle
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484517"
 ---
-# <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle Metodu
-Geçerli işleme etkin bir kısmı bu Icordebugthread için alır.  
+# <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle Yöntemi
+Bu Icordebugthread etkin parçası için geçerli bir tanıtıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `phThreadHandle`  
- [out] Bu iş parçacığının etkin parçası tanıtıcısı bir HTHREAD gösteren bir işaretçi.  
+ [out] Bu iş parçacığının etkin bölümünün tanıtıcısı bir HTHREAD işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlemi yürütür ve iş parçacığı farklı bölümleri için farklı olarak tanıtıcı değişebilir.  
+ İşlemi yürütür ve iş parçacığı farklı kısımlarını farklı tanıtıcı değişebilir.  
   
- Bu işleyici hata ayıklama API'si tarafından sahiplenilmiş. Hata ayıklayıcı kullanmadan önce çoğaltmalıdır.  
+ Bu işleyici hata ayıklama API'si tarafından sahiplenilir. Hata ayıklayıcı kullanmadan önce çoğaltmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

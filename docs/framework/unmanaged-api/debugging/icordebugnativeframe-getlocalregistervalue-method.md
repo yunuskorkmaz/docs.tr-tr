@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame::GetLocalRegisterValue Metodu
+title: ICorDebugNativeFrame::GetLocalRegisterValue Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame.GetLocalRegisterValue
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9794a44bfb0bd1b4739689359832ba8500c6e2ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6512871bf9a5cb0219a470267d1be4ecd403b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478368"
 ---
-# <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue Metodu
+# <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue Yöntemi
 Bir bağımsız değişken veya yerel bu çerçeve için belirtilen kayıt defterinde depolanan yerel değişken değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetLocalRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `reg`  
  [in] "CorDebugRegister" numaralandırma değerini içeren kayıt belirten bir değer.  
   

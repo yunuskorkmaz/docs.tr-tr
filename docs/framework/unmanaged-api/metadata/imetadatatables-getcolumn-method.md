@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetColumn Metodu
+title: IMetaDataTables::GetColumn Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetColumn
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a88acf59043613bb216ffe84dfb1593bd6ebea00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c380d363830eb6b4c47110d50cdb4d08e4568d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499816"
 ---
-# <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Metodu
+# <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Yöntemi
 Belirtilen sütun ve satır tablodaki hücre bulunan değere bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetColumn (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ixTbl`  
  [in] Tablo dizini.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd80c598401d7c72b1b67445b474470ae14736cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e598c4f3a4f777cdb8a871cdc6ea56a080e3c9bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501915"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496917"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated Yöntemi
 Kod profil oluşturucu, çöp toplama tanıtıcı oluşturulduğunu bildirir.  
@@ -35,7 +35,7 @@ HRESULT HandleCreated(
     [in] ObjectID initialObjectId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `handleId`  
  [in] Çöp toplama işlemi için tanıtıcı kimliği.  
   

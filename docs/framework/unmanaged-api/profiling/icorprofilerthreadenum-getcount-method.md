@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerThreadEnum::GetCount Metodu
+title: ICorProfilerThreadEnum::GetCount Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerThreadEnum.GetCount
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c96c0a9819012c680a67a22d10d173c83d2f6da3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aaec45018261cd9318f65c26eec6ab89b437c3fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499010"
 ---
-# <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount Metodu
+# <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount Yöntemi
 Uygulama tarafından kullanılan iş parçacıklarının sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [out] Uygulama tarafından kullanılan iş parçacıklarının sayısı.  
   

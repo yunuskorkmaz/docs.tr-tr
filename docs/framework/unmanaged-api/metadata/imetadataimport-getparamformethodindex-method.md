@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport::GetParamForMethodIndex Metodu
+title: IMetaDataImport::GetParamForMethodIndex Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport.GetParamForMethodIndex
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7455d87caff86c57409f4bb016ec73c365a3d35d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740118"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487128"
 ---
-# <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex Metodu
+# <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex Yöntemi
 Belirtilen parametre tarafından belirtilen MethodDef belirteç temsil yöntemi temsil eden bir belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `md`  
  [in] Parametre belirtecini için döndürülecek yöntemi temsil eden bir belirteci.  
   

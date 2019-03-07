@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedScope2::GetConstants Metodu
+title: ISymUnmanagedScope2::GetConstants Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedScope2.GetConstants
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c343810db3d714367f84f5394c0251b9ade0e18e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643734"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487427"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants Metodu
+# <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants Yöntemi
 Bu kapsam içinde tanımlanan yerel sabitleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cConstants`  
  [in] Arabellek uzunluğu, `pcConstants` parametre işaret eder.  
   

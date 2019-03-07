@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712976"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476294"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile Yöntemi
 Şu anda bu yüklenen kod tabanı içeren bir kod tabanı dosyası oluşturur [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.  
@@ -35,7 +35,7 @@ ms.locfileid: "54712976"
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `GenerateCeeFile` parametre almaz.  
   
 ## <a name="requirements"></a>Gereksinimler  

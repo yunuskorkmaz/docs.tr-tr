@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd421d705a96778159cb80ad92d9ac654e88985f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479772"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP Metodu
-Yönerge işaretçisi değerini ve nasıl yönerge işaretçisi değerini edinilen açıklayan Bitsel bir birleşimi değeri alır.  
+Yönerge işaretçisi değerini ve nasıl yönerge işaretçisini değerini edinilen açıklayan bir karşılaştırmaya değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pnOffset`  
  [out] Yönerge işaretçisi değeri.  
   
  `pMappingResult`  
- [out] Yönerge işaretçisi değerini nasıl edinilen açıklamak CorDebugMappingResult numaralandırma değerlerinin Bitsel bir birleşimi için bir işaretçi.  
+ [out] Yönerge işaretçisinin değeri nasıl edinilen açıklayan CorDebugMappingResult numaralandırma değerlerinin Bitsel bir birleşimi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönerge işaretçisi işlevin Microsoft Ara dili (MSIL) koda yığın çerçeve uzaklık değeri. Yığın çerçevesi etkin değilse, bu yürütmek için sonraki yönerge adresidir. Yığın çerçevesi etkin değilse, bu yığın çerçevesi etkinleştirildiğinde yürütmek için sonraki yönerge adresidir.  
+ Yönerge işaretçisi işlev Microsoft Ara dili (MSIL) kodu yığın çerçeve uzaklık değeri. Yığın çerçevesinin etkin olursa, bu adresi yürütülecek sonraki yönergedir. Yığın çerçevesinin etkin değilse, bu yığın çerçevesinin yeniden etkinleştirildiğinde yürütülecek sonraki yönergeyi adresidir.  
   
- Bu çerçeve tam zamanında (JIT) derlenmiş çerçeve ise, yönerge işaretçisi değerini değeri yalnızca yaklaşık olabilir geriye doğru gerçek yerel yönerge işaretçi eşleme tarafından belirlenir.  
+ Bu çerçeve, just-ın-time (JIT) derlenmiş çerçeve ise, yönerge işaretçisini değerini değeri yalnızca yaklaşık olabilir geriye doğru gerçek yerel yönerge işaretçisinden eşleme tarafından belirlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

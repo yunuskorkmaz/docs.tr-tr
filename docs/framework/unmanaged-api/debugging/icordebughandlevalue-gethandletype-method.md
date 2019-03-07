@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHandleValue::GetHandleType Metodu
+title: ICorDebugHandleValue::GetHandleType Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHandleValue.GetHandleType
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475599"
 ---
-# <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType Metodu
-Bu Icordebughandlevalue nesnesi tarafından başvurulan tanıtıcı türünü belirten bir değer alır.  
+# <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType Yöntemi
+Bu Icordebughandlevalue nesne tarafından başvurulan tanıtıcı türü belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pType`  
- [out] Bu işleyici türünü gösterir CorDebugHandleType numaralandırması değerini gösteren bir işaretçi.  
+ [out] Bu tanıtıcı türü gösteren CorDebugHandleType sabit listesi değeri için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

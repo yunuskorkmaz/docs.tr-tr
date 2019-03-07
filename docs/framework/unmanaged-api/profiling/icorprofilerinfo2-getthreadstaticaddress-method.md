@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetThreadStaticAddress Metodu
+title: ICorProfilerInfo2::GetThreadStaticAddress Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetThreadStaticAddress
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3574d7e889481931f40dbfb3158ad523c7e5637e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf61d9b376afce525d18e6d3a7c3d8523872ebaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535001"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500947"
 ---
-# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress Metodu
+# <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress Yöntemi
 Belirtilen iş parçacığı kapsamında belirtilen statik iş parçacığı alanı adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetThreadStaticAddress(
     [out] void       **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `classId`  
  [in] İstenen iş parçacığı statik alanı içeren sınıf kimliği.  
   

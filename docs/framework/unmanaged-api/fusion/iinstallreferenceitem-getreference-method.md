@@ -1,5 +1,5 @@
 ---
-title: IInstallReferenceItem::GetReference Metodu
+title: IInstallReferenceItem::GetReference Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IInstallReferenceItem.GetReference
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85c3fb601cd013eff889e794e71512533f1b12ec
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484686"
 ---
-# <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference Metodu
+# <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference Yöntemi
 Bir işaretçi alır [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) bu tarafından temsil edilen yapısı [Iınstallreferenceıtem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetReference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppRefData`  
  [out] Döndürülen `FUSION_INSTALL_REFERENCE` işaretçi.  
   

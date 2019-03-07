@@ -2,12 +2,12 @@
 title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499296"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kullanıcılara test parametreleri giriş, hizmete girdi gönderme olanağı sağlar ve hizmet geri gönderir yanıtı görüntüleyin bir GUI araçtır. Bu test WCF hizmet konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
  Proxy sırasında hizmet yenileme desteği oluşturma, ikili derleme veya hizmet çağırma menü öğelerini devre dışı bırakıldı. Hizmet çağırma de devre dışı bırakılır.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Test istemcisi tarafından oluşturulan dosyalarının konumu  
- Varsayılan olarak, WCF Test İstemcisi depoları, istemci kodu ve yapılandırma dosyaları "%appdata%\Local\temp\Test istemci projeleri" klasöründe oluşturulur. Bu klasör, WCF Test İstemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF Test İstemcisi'nde değiştirilip değiştirilmediğini ve **her zaman yeniden yapılandırma, başlatma Hizmetleri** seçeneği devre dışıdır, değiştirilen dosya "Documents\Test istemci Projelerim" altındaki "Önbelleğe alınmış yapılandırma" klasörüne kopyalanır bir eşleme (meta veriler-adresini-için-dosya adı) olan XML dosyası olarak bir dizin.  
+ Varsayılan olarak, WCF Test İstemcisi depoları, istemci kodu ve yapılandırma dosyaları "%appdata%\Local\temp\Test istemci projeleri" klasöründe oluşturulur. Bu klasör, WCF Test İstemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF Test İstemcisi'nde değiştirilip değiştirilmediğini ve **her zaman yeniden yapılandırma, başlatma Hizmetleri** seçeneği devre dışıdır, değiştirilen dosya "Documents\Test istemci Projelerim" altındaki "CachedConfig" klasörüne kopyalanır bir eşleme (meta veriler-adresini-için-dosya adı) olan XML dosyası olarak bir dizin.  
   
  WCF Test istemcisi bir komut satırında kullanmak da başlatabilirsiniz `/ProjectPath` oluşturulan dosyalarını depolamak için yeni bir istenen yol belirtmek için geçiş ya da kullanmak `/RestoreProjectPath` varsayılan konuma geri yüklemek için anahtar. Söz dizimi aşağıdaki gibidir:  
   
