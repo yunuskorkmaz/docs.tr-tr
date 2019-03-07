@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e9f3b8271cb5e518b75ee129fe6ea2a1b7720d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 300baeb4184bbb73704563671ab907fafbdb5284
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472635"
 ---
-# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="63afc-102">ICorDebugManagedCallback2::CreateConnection Yöntemi</span><span class="sxs-lookup"><span data-stu-id="63afc-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
-<span data-ttu-id="63afc-103">Hata ayıklayıcı, yeni bir bağlantı oluşturulduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="63afc-103">Notifies the debugger that a new connection has been created.</span></span>  
+# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="a4a63-102">ICorDebugManagedCallback2::CreateConnection Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a4a63-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
+<span data-ttu-id="a4a63-103">Hata ayıklayıcı, yeni bir bağlantı oluşturulduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="a4a63-103">Notifies the debugger that a new connection has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63afc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="63afc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4a63-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a4a63-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateConnection (  
@@ -37,32 +37,32 @@ HRESULT CreateConnection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="63afc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="63afc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4a63-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a4a63-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="63afc-106">[in] Bağlantı oluşturulduğu işlemini temsil eden bir "ICorDebugProcess" nesneye bir işaretçi</span><span class="sxs-lookup"><span data-stu-id="63afc-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
+ <span data-ttu-id="a4a63-106">[in] Bağlantı oluşturulduğu işlemini temsil eden bir "ICorDebugProcess" nesneye bir işaretçi</span><span class="sxs-lookup"><span data-stu-id="a4a63-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="63afc-107">[in] Yeni bir bağlantı kimliği.</span><span class="sxs-lookup"><span data-stu-id="63afc-107">[in] The ID of the new connection.</span></span>  
+ <span data-ttu-id="a4a63-107">[in] Yeni bir bağlantı kimliği.</span><span class="sxs-lookup"><span data-stu-id="a4a63-107">[in] The ID of the new connection.</span></span>  
   
  `pConnName`  
- <span data-ttu-id="63afc-108">[in] Yeni bir bağlantı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="63afc-108">[in] A pointer to the name of the new connection.</span></span>  
+ <span data-ttu-id="a4a63-108">[in] Yeni bir bağlantı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a4a63-108">[in] A pointer to the name of the new connection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="63afc-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="63afc-109">Remarks</span></span>  
- <span data-ttu-id="63afc-110">A `CreateConnection` geri çağırma harekete aşağıdaki durumlarda birini:</span><span class="sxs-lookup"><span data-stu-id="63afc-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4a63-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a4a63-109">Remarks</span></span>  
+ <span data-ttu-id="a4a63-110">A `CreateConnection` geri çağırma harekete aşağıdaki durumlarda birini:</span><span class="sxs-lookup"><span data-stu-id="a4a63-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
   
--   <span data-ttu-id="63afc-111">Ne zaman bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirir.</span><span class="sxs-lookup"><span data-stu-id="63afc-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="63afc-112">Çalışma zamanı bu durumda, oluşturma ve gönderme bir `CreateConnection` olay ve [Icordebugmanagedcallback2::changeconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) işlemdeki her bağlantı için olay.</span><span class="sxs-lookup"><span data-stu-id="63afc-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
+-   <span data-ttu-id="a4a63-111">Ne zaman bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirir.</span><span class="sxs-lookup"><span data-stu-id="a4a63-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="a4a63-112">Çalışma zamanı bu durumda, oluşturma ve gönderme bir `CreateConnection` olay ve [Icordebugmanagedcallback2::changeconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) işlemdeki her bağlantı için olay.</span><span class="sxs-lookup"><span data-stu-id="a4a63-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
   
--   <span data-ttu-id="63afc-113">Bir konak çağırdığında [Iclrdebugmanager::beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) içinde [barındırma API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="63afc-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+-   <span data-ttu-id="a4a63-113">Bir konak çağırdığında [Iclrdebugmanager::beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) içinde [barındırma API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="a4a63-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63afc-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="63afc-114">Requirements</span></span>  
- <span data-ttu-id="63afc-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63afc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4a63-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a4a63-114">Requirements</span></span>  
+ <span data-ttu-id="a4a63-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4a63-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63afc-116">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="63afc-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a4a63-116">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a4a63-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="63afc-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63afc-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4a63-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4a63-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="63afc-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63afc-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4a63-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4a63-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63afc-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="63afc-119">See also</span></span>
-- [<span data-ttu-id="63afc-120">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="63afc-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="63afc-121">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="63afc-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a4a63-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a4a63-119">See also</span></span>
+- [<span data-ttu-id="a4a63-120">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a4a63-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="a4a63-121">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a4a63-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

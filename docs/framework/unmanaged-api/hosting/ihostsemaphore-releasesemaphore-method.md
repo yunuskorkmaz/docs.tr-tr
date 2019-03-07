@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580603bf04afe353aeb124a8c1e548d897033d23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ae78d7e5b91c0955a0be8e8d85f4421dfc1871
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474321"
 ---
-# <a name="ihostsemaphorereleasesemaphore-method"></a><span data-ttu-id="d0fe1-102">IHostSemaphore::ReleaseSemaphore Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-102">IHostSemaphore::ReleaseSemaphore Method</span></span>
-<span data-ttu-id="d0fe1-103">Geçerli sayısını artırır [Ihostsemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) örneği tarafından belirtilen süre.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-103">Increases the count of the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance by the specified amount.</span></span>  
+# <a name="ihostsemaphorereleasesemaphore-method"></a><span data-ttu-id="02011-102">IHostSemaphore::ReleaseSemaphore Yöntemi</span><span class="sxs-lookup"><span data-stu-id="02011-102">IHostSemaphore::ReleaseSemaphore Method</span></span>
+<span data-ttu-id="02011-103">Geçerli sayısını artırır [Ihostsemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) örneği tarafından belirtilen süre.</span><span class="sxs-lookup"><span data-stu-id="02011-103">Increases the count of the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance by the specified amount.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0fe1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02011-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="02011-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleaseSemaphore (  
@@ -36,39 +36,39 @@ HRESULT ReleaseSemaphore (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d0fe1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d0fe1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02011-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="02011-105">Parameters</span></span>  
  `lReleaseCount`  
- <span data-ttu-id="d0fe1-106">[in] Geçerli sayısını artırmak tutarı `IHostSemaphore` örneği.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-106">[in] The amount by which to increase the count of the current `IHostSemaphore` instance.</span></span> <span data-ttu-id="d0fe1-107">Bu miktar sıfırdan büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-107">This amount must be greater than zero.</span></span>  
+ <span data-ttu-id="02011-106">[in] Geçerli sayısını artırmak tutarı `IHostSemaphore` örneği.</span><span class="sxs-lookup"><span data-stu-id="02011-106">[in] The amount by which to increase the count of the current `IHostSemaphore` instance.</span></span> <span data-ttu-id="02011-107">Bu miktar sıfırdan büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="02011-107">This amount must be greater than zero.</span></span>  
   
  `lpPreviousCount`  
- <span data-ttu-id="d0fe1-108">[out] Önceki sayısı veya çağıranın önceki sayısı gerektirmiyorsa null bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-108">[out] A pointer to the previous count, or null if the caller does not require the previous count.</span></span>  
+ <span data-ttu-id="02011-108">[out] Önceki sayısı veya çağıranın önceki sayısı gerektirmiyorsa null bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="02011-108">[out] A pointer to the previous count, or null if the caller does not require the previous count.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d0fe1-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="d0fe1-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="02011-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="02011-109">Return Value</span></span>  
   
-|<span data-ttu-id="d0fe1-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d0fe1-110">HRESULT</span></span>|<span data-ttu-id="d0fe1-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d0fe1-111">Description</span></span>|  
+|<span data-ttu-id="02011-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="02011-110">HRESULT</span></span>|<span data-ttu-id="02011-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="02011-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d0fe1-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="d0fe1-112">S_OK</span></span>|<span data-ttu-id="d0fe1-113">`ReleaseSemaphore` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-113">`ReleaseSemaphore` returned successfully.</span></span>|  
-|<span data-ttu-id="d0fe1-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d0fe1-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d0fe1-115">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="d0fe1-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d0fe1-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d0fe1-117">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-117">The call timed out.</span></span>|  
-|<span data-ttu-id="d0fe1-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d0fe1-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d0fe1-119">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="d0fe1-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d0fe1-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d0fe1-121">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="d0fe1-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d0fe1-122">E_FAIL</span></span>|<span data-ttu-id="d0fe1-123">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d0fe1-124">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d0fe1-125">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="02011-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="02011-112">S_OK</span></span>|<span data-ttu-id="02011-113">`ReleaseSemaphore` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="02011-113">`ReleaseSemaphore` returned successfully.</span></span>|  
+|<span data-ttu-id="02011-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="02011-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="02011-115">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="02011-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="02011-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="02011-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="02011-117">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="02011-117">The call timed out.</span></span>|  
+|<span data-ttu-id="02011-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="02011-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="02011-119">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="02011-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="02011-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="02011-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="02011-121">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="02011-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="02011-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="02011-122">E_FAIL</span></span>|<span data-ttu-id="02011-123">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="02011-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="02011-124">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="02011-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="02011-125">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="02011-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d0fe1-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d0fe1-126">Remarks</span></span>  
- <span data-ttu-id="d0fe1-127">CLR genellikle çağrıları `ReleaseSemaphore` için 1 değerini geçirme, bir kaynağı kullanarak tamamlanmış ana bilgisayara bildirmek için `lReleaseCount` parametresi.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-127">The CLR typically calls `ReleaseSemaphore` to notify the host that it has finished using a resource, passing a value of 1 for the `lReleaseCount` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="02011-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="02011-126">Remarks</span></span>  
+ <span data-ttu-id="02011-127">CLR genellikle çağrıları `ReleaseSemaphore` için 1 değerini geçirme, bir kaynağı kullanarak tamamlanmış ana bilgisayara bildirmek için `lReleaseCount` parametresi.</span><span class="sxs-lookup"><span data-stu-id="02011-127">The CLR typically calls `ReleaseSemaphore` to notify the host that it has finished using a resource, passing a value of 1 for the `lReleaseCount` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0fe1-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d0fe1-128">Requirements</span></span>  
- <span data-ttu-id="d0fe1-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0fe1-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02011-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="02011-128">Requirements</span></span>  
+ <span data-ttu-id="02011-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02011-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0fe1-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d0fe1-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="02011-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="02011-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d0fe1-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="d0fe1-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="02011-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="02011-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d0fe1-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0fe1-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="02011-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02011-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0fe1-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d0fe1-133">See also</span></span>
-- [<span data-ttu-id="d0fe1-134">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="d0fe1-135">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-135">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="d0fe1-136">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-136">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="d0fe1-137">IHostSemaphore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-137">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="d0fe1-138">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0fe1-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="02011-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="02011-133">See also</span></span>
+- [<span data-ttu-id="02011-134">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="02011-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="02011-135">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="02011-135">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="02011-136">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="02011-136">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="02011-137">IHostSemaphore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="02011-137">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="02011-138">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="02011-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedENCUpdate::GetLocalVariableCount Metodu
+title: ISymUnmanagedENCUpdate::GetLocalVariableCount Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedENCUpdate.GetLocalVariableCount
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f068b4cae3832802ab53404d35a5a30673cd967d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a8a56d9655a2754c110c08517229a39011d82c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482463"
 ---
-# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="84d93-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Metodu</span><span class="sxs-lookup"><span data-stu-id="84d93-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
-<span data-ttu-id="84d93-103">Yerel değişken sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="84d93-103">Gets the number of local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="92e7b-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="92e7b-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
+<span data-ttu-id="92e7b-103">Yerel değişken sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="92e7b-103">Gets the number of local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84d93-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="84d93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92e7b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92e7b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariableCount(  
@@ -35,18 +35,18 @@ HRESULT GetLocalVariableCount(
     [out] ULONG        *pcLocals);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="84d93-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="84d93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92e7b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="92e7b-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="84d93-106">[in] Meta veri belirteci yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="84d93-106">[in] The metadata token of methods.</span></span>  
+ <span data-ttu-id="92e7b-106">[in] Meta veri belirteci yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="92e7b-106">[in] The metadata token of methods.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="84d93-107">[out] Bir işaretçi bir `ULONG32` karakter yerel değişken sayısını içerecek şekilde gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="84d93-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
+ <span data-ttu-id="92e7b-107">[out] Bir işaretçi bir `ULONG32` karakter yerel değişken sayısını içerecek şekilde gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="92e7b-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="84d93-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="84d93-108">Return Value</span></span>  
- <span data-ttu-id="84d93-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="84d93-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="92e7b-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="92e7b-108">Return Value</span></span>  
+ <span data-ttu-id="92e7b-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="92e7b-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84d93-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="84d93-110">Requirements</span></span>  
- <span data-ttu-id="84d93-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="84d93-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92e7b-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="92e7b-110">Requirements</span></span>  
+ <span data-ttu-id="92e7b-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="92e7b-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84d93-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84d93-112">See also</span></span>
-- [<span data-ttu-id="84d93-113">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="84d93-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="92e7b-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="92e7b-112">See also</span></span>
+- [<span data-ttu-id="92e7b-113">ISymUnmanagedENCUpdate Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92e7b-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

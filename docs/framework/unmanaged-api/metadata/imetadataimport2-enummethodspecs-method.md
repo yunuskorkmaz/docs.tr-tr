@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d660deb69e694a70a140b6d00c355442e3c5094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ad5ff05e4f7fe7fcfc06ff5fe096d47e8b3cbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468214"
 ---
-# <a name="imetadataimport2enummethodspecs-method"></a><span data-ttu-id="302db-102">IMetaDataImport2::EnumMethodSpecs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="302db-102">IMetaDataImport2::EnumMethodSpecs Method</span></span>
-<span data-ttu-id="302db-103">Bir numaralandırıcı MethodSpec Neobsahuje belirteçleri belirtilen MethodDef veya MemberRef ilişkili bir dizisi için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="302db-103">Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.</span></span>  
+# <a name="imetadataimport2enummethodspecs-method"></a><span data-ttu-id="69641-102">IMetaDataImport2::EnumMethodSpecs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="69641-102">IMetaDataImport2::EnumMethodSpecs Method</span></span>
+<span data-ttu-id="69641-103">Bir numaralandırıcı MethodSpec Neobsahuje belirteçleri belirtilen MethodDef veya MemberRef ilişkili bir dizisi için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="69641-103">Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="302db-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="302db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69641-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="69641-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodSpecs (  
@@ -39,38 +39,38 @@ HRESULT EnumMethodSpecs (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="302db-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="302db-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="69641-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="69641-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="302db-106">[out içinde] Numaralandırıcı için bir işaretçiye `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="302db-106">[in, out] A pointer to the enumerator for `rMethodSpecs`.</span></span>  
+ <span data-ttu-id="69641-106">[out içinde] Numaralandırıcı için bir işaretçiye `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="69641-106">[in, out] A pointer to the enumerator for `rMethodSpecs`.</span></span>  
   
  `tk`  
- <span data-ttu-id="302db-107">[in] Numaralandırılacak olan MethodSpec Neobsahuje belirteçler, yöntemi temsil eden MemberRef veya MethodDef belirteç.</span><span class="sxs-lookup"><span data-stu-id="302db-107">[in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated.</span></span> <span data-ttu-id="302db-108">Varsa değerini `tk` 0 (sıfır), kapsamdaki tüm MethodSpec Neobsahuje belirteçleri numaralandırılır.</span><span class="sxs-lookup"><span data-stu-id="302db-108">If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.</span></span>  
+ <span data-ttu-id="69641-107">[in] Numaralandırılacak olan MethodSpec Neobsahuje belirteçler, yöntemi temsil eden MemberRef veya MethodDef belirteç.</span><span class="sxs-lookup"><span data-stu-id="69641-107">[in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated.</span></span> <span data-ttu-id="69641-108">Varsa değerini `tk` 0 (sıfır), kapsamdaki tüm MethodSpec Neobsahuje belirteçleri numaralandırılır.</span><span class="sxs-lookup"><span data-stu-id="69641-108">If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.</span></span>  
   
  `rMethodSpecs`  
- <span data-ttu-id="302db-109">[out] Numaralandırılacak MethodSpec Neobsahuje belirteçleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="302db-109">[out] The array of MethodSpec tokens to enumerate.</span></span>  
+ <span data-ttu-id="69641-109">[out] Numaralandırılacak MethodSpec Neobsahuje belirteçleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="69641-109">[out] The array of MethodSpec tokens to enumerate.</span></span>  
   
  `cMax`  
- <span data-ttu-id="302db-110">[in] İstenen sayısı yerleştirmek için belirteçleri `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="302db-110">[in] The requested maximum number of tokens to place in `rMethodSpecs`.</span></span>  
+ <span data-ttu-id="69641-110">[in] İstenen sayısı yerleştirmek için belirteçleri `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="69641-110">[in] The requested maximum number of tokens to place in `rMethodSpecs`.</span></span>  
   
  `pcMethodSpecs`  
- <span data-ttu-id="302db-111">[out] Döndürülen belirteç sayısı yerleştirilen `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="302db-111">[out] The returned number of tokens placed in `rMethodSpecs`.</span></span>  
+ <span data-ttu-id="69641-111">[out] Döndürülen belirteç sayısı yerleştirilen `rMethodSpecs`.</span><span class="sxs-lookup"><span data-stu-id="69641-111">[out] The returned number of tokens placed in `rMethodSpecs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="302db-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="302db-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="69641-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="69641-112">Return Value</span></span>  
   
-|<span data-ttu-id="302db-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="302db-113">HRESULT</span></span>|<span data-ttu-id="302db-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="302db-114">Description</span></span>|  
+|<span data-ttu-id="69641-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="69641-113">HRESULT</span></span>|<span data-ttu-id="69641-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="69641-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="302db-115">`EnumMethodSpecs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="302db-115">`EnumMethodSpecs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="302db-116">`phEnum` üye öğe yok.</span><span class="sxs-lookup"><span data-stu-id="302db-116">`phEnum` has no member elements.</span></span> <span data-ttu-id="302db-117">Bu durumda, `pcMethodSpecs` 0 (sıfır) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="302db-117">In this case, `pcMethodSpecs` is set to 0 (zero).</span></span>|  
+|`S_OK`|<span data-ttu-id="69641-115">`EnumMethodSpecs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="69641-115">`EnumMethodSpecs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="69641-116">`phEnum` üye öğe yok.</span><span class="sxs-lookup"><span data-stu-id="69641-116">`phEnum` has no member elements.</span></span> <span data-ttu-id="69641-117">Bu durumda, `pcMethodSpecs` 0 (sıfır) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="69641-117">In this case, `pcMethodSpecs` is set to 0 (zero).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="302db-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="302db-118">Requirements</span></span>  
- <span data-ttu-id="302db-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="302db-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69641-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="69641-118">Requirements</span></span>  
+ <span data-ttu-id="69641-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69641-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="302db-120">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="302db-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="69641-120">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="69641-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="302db-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="302db-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="69641-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="69641-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="302db-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="302db-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="69641-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69641-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="302db-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="302db-123">See also</span></span>
-- [<span data-ttu-id="302db-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="302db-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="302db-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="302db-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="69641-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="69641-123">See also</span></span>
+- [<span data-ttu-id="69641-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="69641-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="69641-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="69641-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

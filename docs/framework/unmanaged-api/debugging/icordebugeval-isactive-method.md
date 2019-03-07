@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480058"
 ---
-# <a name="icordebugevalisactive-method"></a><span data-ttu-id="816c1-102">ICorDebugEval::IsActive Yöntemi</span><span class="sxs-lookup"><span data-stu-id="816c1-102">ICorDebugEval::IsActive Method</span></span>
-<span data-ttu-id="816c1-103">Bu Icordebugeval nesne şu anda yürütülmekte olup olmadığını belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="816c1-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
+# <a name="icordebugevalisactive-method"></a><span data-ttu-id="37f94-102">ICorDebugEval::IsActive Yöntemi</span><span class="sxs-lookup"><span data-stu-id="37f94-102">ICorDebugEval::IsActive Method</span></span>
+<span data-ttu-id="37f94-103">Bu Icordebugeval nesne yürütülmekte olmadığını belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="37f94-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="816c1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="816c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37f94-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="37f94-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -35,15 +35,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="816c1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="816c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37f94-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="37f94-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="816c1-106">[out] Bu değerlendirme etkin olup olmadığını belirten bir değer işaretçi.</span><span class="sxs-lookup"><span data-stu-id="816c1-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
+ <span data-ttu-id="37f94-106">[out] Bu değerlendirme etkin olup olmadığını gösteren bir değer işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="37f94-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="816c1-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="816c1-107">Requirements</span></span>  
- <span data-ttu-id="816c1-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="816c1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37f94-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="37f94-107">Requirements</span></span>  
+ <span data-ttu-id="37f94-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37f94-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="816c1-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="816c1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="37f94-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37f94-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="816c1-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="816c1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37f94-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37f94-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="816c1-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="816c1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="37f94-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37f94-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

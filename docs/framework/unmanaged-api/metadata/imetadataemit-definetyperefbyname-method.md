@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1725f637e5050afecd142be5574e4cb01517f909
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481595"
 ---
-# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="3d4d7-102">IMetaDataEmit::DefineTypeRefByName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3d4d7-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
-<span data-ttu-id="3d4d7-103">Bir meta veri geçerli kapsamı dışında olan Belirtilen kapsam içinde tanımlanan bir tür için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
+# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="412c9-102">IMetaDataEmit::DefineTypeRefByName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="412c9-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
+<span data-ttu-id="412c9-103">Bir meta veri geçerli kapsamı dışında olan Belirtilen kapsam içinde tanımlanan bir tür için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="412c9-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d4d7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d4d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="412c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="412c9-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineTypeRefByName (   
@@ -37,35 +37,35 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3d4d7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d4d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="412c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="412c9-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="3d4d7-106">[in] Çözüm kapsamını belirten belirteç.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="3d4d7-107">Aşağıdaki belirteç türlerini geçerlidir:</span><span class="sxs-lookup"><span data-stu-id="3d4d7-107">The following token types are valid:</span></span>  
+ <span data-ttu-id="412c9-106">[in] Çözüm kapsamını belirten belirteç.</span><span class="sxs-lookup"><span data-stu-id="412c9-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="412c9-107">Aşağıdaki belirteç türlerini geçerlidir:</span><span class="sxs-lookup"><span data-stu-id="412c9-107">The following token types are valid:</span></span>  
   
--   <span data-ttu-id="3d4d7-108">`mdModuleRef`, çağıran tanımlanır aynı bütünleştirilmiş kodda tür tanımlı ise.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
+-   <span data-ttu-id="412c9-108">`mdModuleRef`, çağıran tanımlanır aynı bütünleştirilmiş kodda tür tanımlı ise.</span><span class="sxs-lookup"><span data-stu-id="412c9-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="3d4d7-109">`mdAssemblyRef`, bir çağıranın tanımlanır dışındaki bir bütünleştirilmiş kodda tür tanımlı ise.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
+-   <span data-ttu-id="412c9-109">`mdAssemblyRef`, bir çağıranın tanımlanır dışındaki bir bütünleştirilmiş kodda tür tanımlı ise.</span><span class="sxs-lookup"><span data-stu-id="412c9-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="3d4d7-110">`mdTypeRef`, iç içe türü türü ise.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-110">`mdTypeRef`, if the type is a nested type.</span></span>  
+-   <span data-ttu-id="412c9-110">`mdTypeRef`, iç içe türü türü ise.</span><span class="sxs-lookup"><span data-stu-id="412c9-110">`mdTypeRef`, if the type is a nested type.</span></span>  
   
--   <span data-ttu-id="3d4d7-111">`mdModule`, türü çağıran tanımlanır aynı modülde tanımlandıysa.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
+-   <span data-ttu-id="412c9-111">`mdModule`, türü çağıran tanımlanır aynı modülde tanımlandıysa.</span><span class="sxs-lookup"><span data-stu-id="412c9-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="3d4d7-112">Türü genel olarak tanımlanmışsa null.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-112">Null, if the type is defined globally.</span></span>  
+-   <span data-ttu-id="412c9-112">Türü genel olarak tanımlanmışsa null.</span><span class="sxs-lookup"><span data-stu-id="412c9-112">Null, if the type is defined globally.</span></span>  
   
  `szName`  
- <span data-ttu-id="3d4d7-113">[in] Unicode hedef türünün adı.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-113">[in] The name of the target type in Unicode.</span></span>  
+ <span data-ttu-id="412c9-113">[in] Unicode hedef türünün adı.</span><span class="sxs-lookup"><span data-stu-id="412c9-113">[in] The name of the target type in Unicode.</span></span>  
   
  `ptr`  
- <span data-ttu-id="3d4d7-114">[out] Bir işaretçi `mdTypeRef` türüne atanan belirteci.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
+ <span data-ttu-id="412c9-114">[out] Bir işaretçi `mdTypeRef` türüne atanan belirteci.</span><span class="sxs-lookup"><span data-stu-id="412c9-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d4d7-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d4d7-115">Requirements</span></span>  
- <span data-ttu-id="3d4d7-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d4d7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="412c9-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="412c9-115">Requirements</span></span>  
+ <span data-ttu-id="412c9-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="412c9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d4d7-117">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="3d4d7-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="412c9-117">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="412c9-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3d4d7-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="3d4d7-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="412c9-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="412c9-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3d4d7-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d4d7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="412c9-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="412c9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d4d7-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d4d7-120">See also</span></span>
-- [<span data-ttu-id="3d4d7-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d4d7-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="3d4d7-122">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d4d7-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="412c9-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="412c9-120">See also</span></span>
+- [<span data-ttu-id="412c9-121">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="412c9-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="412c9-122">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="412c9-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

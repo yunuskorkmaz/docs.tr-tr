@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedReader::GetSymbolStoreFileName Metodu
+title: ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedReader.GetSymbolStoreFileName
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00eda9ddad65d6618f097a6ca48b5c7c0eba334
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705277"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481132"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="55e90-102">ISymUnmanagedReader::GetSymbolStoreFileName Metodu</span><span class="sxs-lookup"><span data-stu-id="55e90-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="55e90-103">Sembol deposundaki disk dosya adı sağlar.</span><span class="sxs-lookup"><span data-stu-id="55e90-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="56d86-102">ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="56d86-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+<span data-ttu-id="56d86-103">Sembol deposundaki disk dosya adı sağlar.</span><span class="sxs-lookup"><span data-stu-id="56d86-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55e90-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55e90-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56d86-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="56d86-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolStoreFileName (  
@@ -37,21 +37,21 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="55e90-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="55e90-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56d86-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="56d86-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="55e90-106">[in] Boyutu `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="55e90-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="56d86-106">[in] Boyutu `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="56d86-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="55e90-107">[out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.</span><span class="sxs-lookup"><span data-stu-id="55e90-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="56d86-107">[out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.</span><span class="sxs-lookup"><span data-stu-id="56d86-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="55e90-108">[out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="55e90-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="56d86-108">[out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="56d86-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="55e90-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="55e90-109">Return Value</span></span>  
- <span data-ttu-id="55e90-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="55e90-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="56d86-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="56d86-109">Return Value</span></span>  
+ <span data-ttu-id="56d86-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="56d86-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55e90-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="55e90-111">Requirements</span></span>  
- <span data-ttu-id="55e90-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="55e90-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56d86-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="56d86-111">Requirements</span></span>  
+ <span data-ttu-id="56d86-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="56d86-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55e90-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55e90-113">See also</span></span>
-- [<span data-ttu-id="55e90-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="55e90-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="56d86-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="56d86-113">See also</span></span>
+- [<span data-ttu-id="56d86-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="56d86-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

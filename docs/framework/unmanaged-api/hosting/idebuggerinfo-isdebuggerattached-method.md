@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d471ac13061cfb3a0320801445fb5c931718691
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aae7bc60abaedef8c3491a90eae01ebc02cff1ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469059"
 ---
-# <a name="idebuggerinfoisdebuggerattached-method"></a><span data-ttu-id="db324-102">IDebuggerInfo::IsDebuggerAttached Yöntemi</span><span class="sxs-lookup"><span data-stu-id="db324-102">IDebuggerInfo::IsDebuggerAttached Method</span></span>
-<span data-ttu-id="db324-103">Yönetilen hata ayıklayıcı bu işleme bağlı olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="db324-103">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>  
+# <a name="idebuggerinfoisdebuggerattached-method"></a><span data-ttu-id="09035-102">IDebuggerInfo::IsDebuggerAttached Yöntemi</span><span class="sxs-lookup"><span data-stu-id="09035-102">IDebuggerInfo::IsDebuggerAttached Method</span></span>
+<span data-ttu-id="09035-103">Yönetilen hata ayıklayıcı bu işleme bağlı olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="09035-103">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db324-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="db324-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09035-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="09035-104">Syntax</span></span>  
   
 ```  
 HRESULT IsDebuggerAttached (  
@@ -35,18 +35,18 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db324-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="db324-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09035-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="09035-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="db324-106">[out] Bir değer için bir işaretçi `true` yönetilen hata ayıklayıcı işleme bağlı; Aksi takdirde ise `false`.</span><span class="sxs-lookup"><span data-stu-id="db324-106">[out] A pointer to a value that is `true` if a managed debugger is attached to the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="09035-106">[out] Bir değer için bir işaretçi `true` yönetilen hata ayıklayıcı işleme bağlı; Aksi takdirde ise `false`.</span><span class="sxs-lookup"><span data-stu-id="09035-106">[out] A pointer to a value that is `true` if a managed debugger is attached to the process; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db324-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="db324-107">Requirements</span></span>  
- <span data-ttu-id="db324-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db324-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09035-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="09035-107">Requirements</span></span>  
+ <span data-ttu-id="09035-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09035-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db324-109">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db324-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="09035-109">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="09035-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="db324-110">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="db324-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="09035-110">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="09035-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="db324-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db324-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="09035-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09035-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db324-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="db324-112">See also</span></span>
-- [<span data-ttu-id="db324-113">IDebuggerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="db324-113">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="09035-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="09035-112">See also</span></span>
+- [<span data-ttu-id="09035-113">IDebuggerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="09035-113">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)

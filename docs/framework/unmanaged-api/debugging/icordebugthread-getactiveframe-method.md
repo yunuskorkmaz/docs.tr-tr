@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 051491173bbcef3d87d9a3dbe854eece46c49e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468786"
 ---
-# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="595e7-102">ICorDebugThread::GetActiveFrame Metodu</span><span class="sxs-lookup"><span data-stu-id="595e7-102">ICorDebugThread::GetActiveFrame Method</span></span>
-<span data-ttu-id="595e7-103">Arabirim işaretçisi etkin (en son) kareye bu Icordebugthread nesnede alır.</span><span class="sxs-lookup"><span data-stu-id="595e7-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="96097-102">ICorDebugThread::GetActiveFrame Metodu</span><span class="sxs-lookup"><span data-stu-id="96097-102">ICorDebugThread::GetActiveFrame Method</span></span>
+<span data-ttu-id="96097-103">Bir arabirim işaretçisini bu Icordebugthread nesne üzerinde etkin (en son) çerçeveyi alır.</span><span class="sxs-lookup"><span data-stu-id="96097-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="595e7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="595e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96097-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96097-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -35,18 +35,18 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="595e7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="595e7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96097-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="96097-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="595e7-106">[out] Bir çerçeve temsil eden bir Icordebugframe arabirimi nesnesi adresini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="595e7-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
+ <span data-ttu-id="96097-106">[out] Çerçeveyi temsil eden bir Icordebugframe arabirimi nesnesinin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="96097-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="595e7-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="595e7-107">Remarks</span></span>  
- <span data-ttu-id="595e7-108">`ppFrame` Parametredir hiçbir çerçevesi şu anda etkin değilse null.</span><span class="sxs-lookup"><span data-stu-id="595e7-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96097-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96097-107">Remarks</span></span>  
+ <span data-ttu-id="96097-108">`ppFrame` Parametredir çerçeve şu anda etkin değilse null.</span><span class="sxs-lookup"><span data-stu-id="96097-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="595e7-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="595e7-109">Requirements</span></span>  
- <span data-ttu-id="595e7-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="595e7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96097-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="96097-109">Requirements</span></span>  
+ <span data-ttu-id="96097-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96097-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="595e7-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="595e7-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96097-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96097-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="595e7-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="595e7-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96097-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96097-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="595e7-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="595e7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="96097-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96097-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

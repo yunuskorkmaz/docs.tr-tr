@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7c41e05ecf4e33f7ca711befdd90275452439df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e5d998bd85f1cc872acde74fdf954299a279c40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718864"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466277"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="177f3-102">IMetaDataImport::GetScopeProps Metodu</span><span class="sxs-lookup"><span data-stu-id="177f3-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="177f3-103">Geçerli meta veri kapsamdaki ad ve isteğe bağlı olarak derlemesi veya modülü sürüm tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="177f3-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="96479-102">IMetaDataImport::GetScopeProps Metodu</span><span class="sxs-lookup"><span data-stu-id="96479-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="96479-103">Geçerli meta veri kapsamdaki ad ve isteğe bağlı olarak derlemesi veya modülü sürüm tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="96479-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="177f3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="177f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96479-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96479-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScopeProps (  
@@ -38,31 +38,31 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="177f3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="177f3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96479-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="96479-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="177f3-106">[out] Derleme veya modül adı için bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="177f3-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="96479-106">[out] Derleme veya modül adı için bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="96479-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="177f3-107">[in] Geniş karakter cinsinden boyutu `szName`.</span><span class="sxs-lookup"><span data-stu-id="177f3-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="96479-107">[in] Geniş karakter cinsinden boyutu `szName`.</span><span class="sxs-lookup"><span data-stu-id="96479-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="177f3-108">[out] Döndürülen geniş karakter sayısını `szName`.</span><span class="sxs-lookup"><span data-stu-id="177f3-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="96479-108">[out] Döndürülen geniş karakter sayısını `szName`.</span><span class="sxs-lookup"><span data-stu-id="96479-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="177f3-109">[out, isteğe bağlı] Derleme veya Modül sürümü benzersiz olarak tanımlayan bir GUID için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="177f3-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="96479-109">[out, isteğe bağlı] Derleme veya Modül sürümü benzersiz olarak tanımlayan bir GUID için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="96479-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="177f3-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="177f3-110">Remarks</span></span>  
- <span data-ttu-id="177f3-111">[Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) yöntemi, bu özellikleri ayarlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="177f3-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96479-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96479-110">Remarks</span></span>  
+ <span data-ttu-id="96479-111">[Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) yöntemi, bu özellikleri ayarlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="96479-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="177f3-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="177f3-112">Requirements</span></span>  
- <span data-ttu-id="177f3-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="177f3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96479-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="96479-112">Requirements</span></span>  
+ <span data-ttu-id="96479-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96479-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="177f3-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="177f3-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="96479-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="96479-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="177f3-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="177f3-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="96479-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="96479-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="177f3-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="177f3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96479-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96479-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="177f3-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="177f3-117">See also</span></span>
-- [<span data-ttu-id="177f3-118">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="177f3-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="177f3-119">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="177f3-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="96479-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96479-117">See also</span></span>
+- [<span data-ttu-id="96479-118">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="96479-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="96479-119">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="96479-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

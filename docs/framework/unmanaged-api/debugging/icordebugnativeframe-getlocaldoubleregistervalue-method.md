@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame::GetLocalDoubleRegisterValue Metodu
+title: ICorDebugNativeFrame::GetLocalDoubleRegisterValue Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame.GetLocalDoubleRegisterValue
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71930460c5db77950efdaaba3cead8c49697a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 573949f50135ddf29ac9aa88bf4d1dd480001219
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471712"
 ---
-# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="17cd1-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Metodu</span><span class="sxs-lookup"><span data-stu-id="17cd1-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
-<span data-ttu-id="17cd1-103">Bir bağımsız değişken veya yerel bu çerçeve için iki belirtilen kaydeder depolanan yerel değişken değerini alır.</span><span class="sxs-lookup"><span data-stu-id="17cd1-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="7e0a1-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7e0a1-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
+<span data-ttu-id="7e0a1-103">Bir bağımsız değişken veya yerel bu çerçeve için iki belirtilen kaydeder depolanan yerel değişken değerini alır.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17cd1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="17cd1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e0a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7e0a1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalDoubleRegisterValue (  
@@ -39,33 +39,33 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="17cd1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="17cd1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e0a1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7e0a1-105">Parameters</span></span>  
  `highWordReg`  
- <span data-ttu-id="17cd1-106">[in] "CorDebugRegister" numaralandırma değeri yüksek sözcüğünü içeren kayıt belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="17cd1-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
+ <span data-ttu-id="7e0a1-106">[in] "CorDebugRegister" numaralandırma değeri yüksek sözcüğünü içeren kayıt belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
   
  `lowWordReg`  
- <span data-ttu-id="17cd1-107">[in] Değerini `CorDebugRegister` değerinin düşük sözcüğünü içeren kayıt belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="17cd1-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="7e0a1-107">[in] Değerini `CorDebugRegister` değerinin düşük sözcüğünü içeren kayıt belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-107">[in] A value of the `CorDebugRegister` enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="17cd1-108">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="17cd1-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="7e0a1-108">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="17cd1-109">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="17cd1-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="7e0a1-109">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="17cd1-110">[out] Belirtilen kayıtlara depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="17cd1-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
+ <span data-ttu-id="7e0a1-110">[out] Belirtilen kayıtlara depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified registers.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="17cd1-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="17cd1-111">Remarks</span></span>  
- <span data-ttu-id="17cd1-112">`GetLocalDoubleRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.</span><span class="sxs-lookup"><span data-stu-id="17cd1-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e0a1-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7e0a1-111">Remarks</span></span>  
+ <span data-ttu-id="7e0a1-112">`GetLocalDoubleRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-112">The `GetLocalDoubleRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17cd1-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="17cd1-113">Requirements</span></span>  
- <span data-ttu-id="17cd1-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17cd1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e0a1-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7e0a1-113">Requirements</span></span>  
+ <span data-ttu-id="7e0a1-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e0a1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17cd1-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17cd1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7e0a1-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e0a1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="17cd1-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17cd1-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e0a1-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e0a1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17cd1-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17cd1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7e0a1-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e0a1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17cd1-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="17cd1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e0a1-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7e0a1-118">See also</span></span>
 

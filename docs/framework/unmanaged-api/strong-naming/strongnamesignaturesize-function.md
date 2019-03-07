@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495227"
 ---
-# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="14eb7-102">StrongNameSignatureSize İşlevi</span><span class="sxs-lookup"><span data-stu-id="14eb7-102">StrongNameSignatureSize Function</span></span>
-<span data-ttu-id="14eb7-103">Tanımlayıcı ad imzası boyutunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="14eb7-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="14eb7-104">`StrongNameSignatureSize` genellikle derleyiciler tarafından gecikmeli imzalanmış bir derlemeyi oluştururken dosyasında ayırmak için ne kadar alan belirlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="14eb7-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="e293a-102">StrongNameSignatureSize İşlevi</span><span class="sxs-lookup"><span data-stu-id="e293a-102">StrongNameSignatureSize Function</span></span>
+<span data-ttu-id="e293a-103">Tanımlayıcı ad imzası boyutunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="e293a-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="e293a-104">`StrongNameSignatureSize` genellikle derleyiciler tarafından gecikmeli imzalanmış bir derlemeyi oluştururken dosyasında ayırmak için ne kadar alan belirlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e293a-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
- <span data-ttu-id="14eb7-105">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="14eb7-105">This function has been deprecated.</span></span> <span data-ttu-id="14eb7-106">Kullanım [Iclrstrongname::strongnamesignaturesize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="14eb7-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
+ <span data-ttu-id="e293a-105">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="e293a-105">This function has been deprecated.</span></span> <span data-ttu-id="e293a-106">Kullanım [Iclrstrongname::strongnamesignaturesize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="e293a-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14eb7-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="14eb7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e293a-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e293a-107">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureSize (   
@@ -38,31 +38,31 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="14eb7-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="14eb7-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e293a-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e293a-108">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="14eb7-109">[in] Türünden bir yapıyı [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) tanımlayıcı ad imzası oluşturmak için kullanılan anahtar çiftinden ortak kısmını içerir.</span><span class="sxs-lookup"><span data-stu-id="14eb7-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="e293a-109">[in] Türünden bir yapıyı [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) tanımlayıcı ad imzası oluşturmak için kullanılan anahtar çiftinden ortak kısmını içerir.</span><span class="sxs-lookup"><span data-stu-id="e293a-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="14eb7-110">[in] Bayt cinsinden boyutu, `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="14eb7-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="e293a-110">[in] Bayt cinsinden boyutu, `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="e293a-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="14eb7-111">[in] Tanımlayıcı ad imzası depolamak için gereken bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="14eb7-111">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="e293a-111">[in] Tanımlayıcı ad imzası depolamak için gereken bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="e293a-111">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="14eb7-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="14eb7-112">Return Value</span></span>  
- <span data-ttu-id="14eb7-113">`true` başarıyla tamamlandığında; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="14eb7-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e293a-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e293a-112">Return Value</span></span>  
+ <span data-ttu-id="e293a-113">`true` başarıyla tamamlandığında; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="e293a-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="14eb7-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="14eb7-114">Remarks</span></span>  
- <span data-ttu-id="14eb7-115">Varsa `StrongNameSignatureSize` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.</span><span class="sxs-lookup"><span data-stu-id="14eb7-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e293a-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e293a-114">Remarks</span></span>  
+ <span data-ttu-id="e293a-115">Varsa `StrongNameSignatureSize` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.</span><span class="sxs-lookup"><span data-stu-id="e293a-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14eb7-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="14eb7-116">Requirements</span></span>  
- <span data-ttu-id="14eb7-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14eb7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e293a-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e293a-116">Requirements</span></span>  
+ <span data-ttu-id="e293a-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e293a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14eb7-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="14eb7-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="e293a-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="e293a-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="14eb7-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="14eb7-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e293a-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e293a-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="14eb7-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14eb7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e293a-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e293a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14eb7-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="14eb7-121">See also</span></span>
-- [<span data-ttu-id="14eb7-122">StrongNameSignatureSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="14eb7-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
-- [<span data-ttu-id="14eb7-123">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="14eb7-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e293a-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e293a-121">See also</span></span>
+- [<span data-ttu-id="e293a-122">StrongNameSignatureSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e293a-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
+- [<span data-ttu-id="e293a-123">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e293a-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
