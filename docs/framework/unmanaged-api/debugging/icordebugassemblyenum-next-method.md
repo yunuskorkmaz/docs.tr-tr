@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493121"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next Yöntemi
-Geçerli İmleç konumuna başlangıç koleksiyondan derlemeleri belirtilen sayısını alır.  
+Koleksiyondan geçerli imleç konumundan başlayarak belirtilen sayıda derlemeleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [in] Alınacak derlemeleri sayısı.  
   
  `values`  
- [out] Her biri bir derlemeyi temsil eden bir Icordebugassembly bir nesneye işaret etmiyor dizisi işaretçisi.  
+ [out] Bir dizi işaretçileri, her biri bir derlemeyi temsil eden bir Icordebugassembly nesneye işaret eder.  
   
  `pceltFetched`  
- [out] Gerçekte döndürülen derlemeleri sayısı için bir işaretçi. Bu değer null ise `celt` biridir.  
+ [out] Gerçekte döndürülen derlemeleri sayısı için bir işaretçi. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

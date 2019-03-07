@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17673fb3684747f42556caef4ea54db050eef56e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db84a45668fd4f4f1690290a96e26add05b1785e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696193"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496345"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree Yöntemi
 Karşılık gelen Win32 işlevini için mantıksal bir sarmalayıcı olarak görev yapar. Win32 uygulaması `VirtualFree` sürümleri, kaydeder, veya serbest bırakır ve çağıran işlemin sanal adres alanı içinde sayfalar bölgesini kaydeder.  
@@ -37,7 +37,7 @@ HRESULT VirtualFree (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `lpAddress`  
  [in] Serbest bırakılacak sanal bellek sayfalarının taban adresi işaretçisi.  
   

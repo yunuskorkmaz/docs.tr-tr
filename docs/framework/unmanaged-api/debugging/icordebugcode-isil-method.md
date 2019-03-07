@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78f246f90e7e3b7c9fff984092a0b5eefcba5a13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496172"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478069"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL Yöntemi
 Bu "Icordebugcode" Microsoft Ara dilini (MSIL) derlenen kod temsil edip etmediğini belirten bir değer alır.  
@@ -35,7 +35,7 @@ HRESULT IsIL (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbIL`  
  [out] `true` bu `ICorDebugCode` MSIL olarak derlenmiş; Aksi takdirde kodunun temsil ettiği `false`.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a966c1827f868c51b0a4dce93e9f536e8ae0e51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d127aa1cfa8784f51fcff4eaa774361a2cbbdbc9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503027"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads Yöntemi
 En az sayıda konak paylaştırmak iş parçacıkları için g/ç tamamlama ayarlar.  
@@ -35,7 +35,7 @@ HRESULT SetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwMinIoCompletionThreads`  
  [in] Konak oluşturmalısınız g/ç Tamamlama iş parçacıklarını en küçük sayısı.  
   

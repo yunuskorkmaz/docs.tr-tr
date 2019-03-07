@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5157c62f2719a9d62608750cd122561807197494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8012d669cabc1bb589dcfe66bdf2e9b83dc5cb2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502455"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic Yöntemi
 Bu modül dinamik olup olmadığını belirten bir değer alır.  
@@ -35,17 +35,17 @@ HRESULT IsDynamic(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pDynamic`  
- [out] `true` bu modül, dinamik Aksi takdirde `false`.  
+ [out] `true` bu modül dinamik; Aksi takdirde ise `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinamik bir modül, yeni sınıflar ekleyebilirsiniz ve modül bile yüklendikten sonra varolan sınıfları silin. [Icordebugmanagedcallback::loadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ve [Icordebugmanagedcallback::unloadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) geri aramalar bildirmek hata ayıklayıcı bir sınıf zaman eklenmiş veya silinmiş.  
+ Dinamik modül, yeni sınıflar ekleyebilirsiniz ve modül yüklendikten sonra mevcut sınıfları silin. [Icordebugmanagedcallback::loadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ve [Icordebugmanagedcallback::unloadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) geri çağırmaları bildirmek hata ayıklayıcı bir sınıf, eklenmiş veya silinmiş.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

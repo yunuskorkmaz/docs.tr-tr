@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f956ed33e0a168dca0c0e5de92d38ba32db3fb05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703464"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498958"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress Metodu
 Bu arabirim ile ilişkili ortak dil çalışma zamanı (CLR) dışarı aktarılan belirtilen işlevin adresini alır.  
@@ -37,7 +37,7 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pszProcName`  
  [in] Dışarı aktarılan işlevin adı.  
   

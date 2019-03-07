@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction::GetToken Metodu
+title: ICorDebugFunction::GetToken Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction.GetToken
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acfb8910df6e20bf55ed33fdbb9b1c30d22f4684
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e56c8eba49260eba9e3e0ca7e9ab4c7cfcd3261f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471946"
 ---
-# <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken Metodu
-Meta verileri bu işlev için belirteç alır.  
+# <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken Yöntemi
+Meta veriler, bu işlev için belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pMethodDef`  
- [out] Bir işaretçi bir `mdMethodDef` bu işlev için meta veriler başvuran belirteci.  
+ [out] Bir işaretçi bir `mdMethodDef` bu işlevi için meta veriler başvuran belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

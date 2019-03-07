@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43a895446e0070476bde3d15d332f010265176e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5848a14a20b63ffbf806bb56886b75360323b698
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515043"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496189"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles Yöntemi
 Geçerli derleme bildiriminde atıf yapılan dosyaları listeler.  
@@ -38,7 +38,7 @@ HRESULT EnumFiles (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `phEnum`  
  [out içinde] Numaralandırıcı bir işaretçi. Bu, bu yöntemin ilk çağrı için null bir değer olmalıdır.  
   

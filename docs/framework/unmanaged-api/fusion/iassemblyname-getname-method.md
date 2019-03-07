@@ -1,5 +1,5 @@
 ---
-title: IAssemblyName::GetName Metodu
+title: IAssemblyName::GetName Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IAssemblyName.GetName
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0b465d0e15fadde48c2278aa367632bda3f9ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640881"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473843"
 ---
-# <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName Metodu
+# <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName Yöntemi
 Basit, şifrelenmemiş bu başvurduğu derlemenin adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `lpcwBuffer`  
  [out içinde] Boyutu `pwzName` null Sonlandırıcı karakter geniş karakterler dahil olmak üzere.  
   

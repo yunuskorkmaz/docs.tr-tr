@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetBlobHeapSize Metodu
+title: IMetaDataTables::GetBlobHeapSize Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetBlobHeapSize
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72624eb1d1d43eecb5052ebceec38b1bc32750ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746006"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474351"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize Metodu
+# <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize Yöntemi
 İkili büyük nesne (BLOB) yığını bayt cinsinden boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcbBlobs`  
  [out] BLOB yığın bayt cinsinden boyutu için bir işaretçi.  
   

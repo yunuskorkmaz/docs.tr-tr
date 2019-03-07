@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c61cc12e438c0786b6e093b8bb1ea288a42e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a27ea95ca78f7db8f67ec2a13f02767e67619e97
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488064"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged Yöntemi
-Yönetilen kod bu zincirini çalışır durumda olup olmadığını belirten bir değer alır.  
+Bu zincir yönetilen kod çalışır durumda olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pManaged`  
- [out] `true` bu zincirini yönetilen kod; çalışıyorsa, aksi takdirde `false`.  
+ [out] `true` Bu zincir yönetilen kod; çalışıyorsa Aksi takdirde, `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

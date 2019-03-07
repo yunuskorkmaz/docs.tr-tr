@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0412089fee27e556c2f9230e9b34de3391b9bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9576f568ef1f6da3eef812abb9674aa0d81dfb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402567"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496384"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached Yöntemi
-Hata ayıklayıcı uygulama etki alanına bağlı olup olmadığını belirten bir değer alır.  
+Hata ayıklayıcı uygulama etki alanına bağlı olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT IsAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbAttached`  
- [out] `true` hata ayıklayıcısı ekli uygulama etki alanı için; Aksi takdirde ise `false`.  
+ [out] `true` hata ayıklayıcı ise, uygulama etki alanına bağlı; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı uygulama etki alanına ekler kadar Icordebugcontroller yöntemleri kullanılamaz.  
+ Icordebugcontroller yöntemleri, hata ayıklayıcı uygulama etki alanına ekler kadar kullanılamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

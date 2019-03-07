@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59ec4d9f39362f563312a9ed75bb1ab5cede799d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730041"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484036"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi
 Sağlama bilgilerini ayarlar.  
@@ -36,15 +36,15 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ [in] Algoritma tanımlayıcısını temsil eden GUID.  
   
  `checkSumSize`  
  [in] A `ULONG32` bayt cinsinden boyutunu belirten `checkSum` arabellek.  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ [in] Sağlama toplamı bilgileri depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  

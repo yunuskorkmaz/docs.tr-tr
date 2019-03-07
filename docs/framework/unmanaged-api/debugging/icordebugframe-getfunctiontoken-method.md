@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413991"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497567"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken Metodu
-Bu yığın çerçevesi ile ilişkili kodunu içerir işlevi için meta veri belirtecini alır.  
+Bu yığın çerçevesiyle ilgili kodu içeren işlevi için meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pToken`  
  [out] Bir işaretçi bir `mdMethodDef` işlevi için meta veriler başvuran belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

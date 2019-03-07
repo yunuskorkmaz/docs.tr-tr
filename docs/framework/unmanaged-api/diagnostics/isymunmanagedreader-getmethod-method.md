@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedReader::GetMethod Metodu
+title: ISymUnmanagedReader::GetMethod Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedReader.GetMethod
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: deb5d7aa24cf750a9584ef2aa32d10816ec12f57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 031e51919d9abd7092756cc42fb35dcc0592758c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614412"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503054"
 ---
-# <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod Metodu
+# <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod Yöntemi
 Token metody verilen sembol okuyucu yöntemi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetMethod (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `token`  
  [in] Token metody  
   

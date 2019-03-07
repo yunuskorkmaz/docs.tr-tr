@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetTableIndex Metodu
+title: IMetaDataTables::GetTableIndex Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetTableIndex
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de857f251bd03b4b2d3fabf458275251440a2113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5300174b071fee257f5db85aeb763e11668971a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741801"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497034"
 ---
-# <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex Metodu
+# <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex Yöntemi
 Belirtilen belirteç tarafından başvurulan tablo için dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetTableIndex (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `token`  
  [in] Tabloya başvuran belirteç.  
   

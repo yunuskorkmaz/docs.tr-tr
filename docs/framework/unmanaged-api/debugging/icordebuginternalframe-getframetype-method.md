@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame::GetFrameType Metodu
+title: ICorDebugInternalFrame::GetFrameType Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame.GetFrameType
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414131"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493043"
 ---
-# <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType Metodu
-Bu dahili çerçeve türünü alır.  
+# <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType Yöntemi
+Bu iç çerçeve türünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetFrameType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pType`  
- [out] Bu tarafından temsil edilen iç çerçeve türünü gösterir Cordebugınternalframetype numaralandırması değerini gösteren bir işaretçi `ICorDebugInternalFrame` nesnesi.  
+ [out] Bu tarafından temsil edilen iç çerçeve türünü belirten Cordebugınternalframetype sabit bir değere bir işaretçi `ICorDebugInternalFrame` nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İç çerçeve türü hiçbir zaman STUBFRAME_NONE olmaz. Hata ayıklayıcıları düzgün biçimde tanınmayan iç çerçeve türleri yok saymanız gerekir.  
+ İç çerçeve türü hiçbir zaman STUBFRAME_NONE olmaz. Düzgün bir şekilde hata ayıklayıcıları tanınmayan iç çerçeve türleri yok saymanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496969"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext Yöntemi
-Verilen iş parçacığı bağlamının bu işlemde ayarlar.  
+Bu işlemde belirli iş parçacığı bağlamını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,29 +37,29 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `threadID`  
- [in] Bağlam ayarlanacağı için iş parçacığı kimliği.  
+ [in] Hangi bağlamını ayarlamak iş parçacığı kimliği.  
   
  `contextSize`  
- [in] Boyutunu `context` dizi.  
+ [in] Boyutu `context` dizisi.  
   
  `context`  
- [in] İş parçacığının içeriğini açıklayan bir bayt dizisi.  
+ [in] İş parçacığı bağlamı açıklayan bir bayt dizisi.  
   
- Bağlam parçacığının çalıştırdığından işlemci mimarisini belirtir.  
+ Bağlam, iş parçacığının yürütülmekte olan işlemci mimarisini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı Win32 yerine bu yöntemi çağırmanız gerekir `SetThreadContext` iş parçacığı içinde onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabileceğinden, işlev. Bu yöntem yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır. Kullanım [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) yönetilen kodda iş parçacığı için. Hiçbir zaman bir bant dışı (OOB) hata ayıklama olayı sırasında bir iş parçacığı bağlamı değiştirmek gerekir.  
+ Hata ayıklayıcı Win32 yerine bu yöntemi çağırmanız gerekir `SetThreadContext` iş parçacığı, onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabileceğinden, işlev. Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır. Kullanım [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) yönetilen kodda iş parçacığı için. Hiçbir zaman bir bant dışı (OOB) hata ayıklama olayı sırasında bir iş parçacığı bağlamı değiştirmek gerekir.  
   
- Geçirilen verileri geçerli platform için bir bağlam yapısı olmalıdır.  
+ Geçirilen veriler, geçerli platform için bir bağlam yapısı olması gerekir.  
   
- Bu yöntem, yanlış kullandıysanız çalışma zamanı bozabilir.  
+ Bu yöntem, çalışma zamanı yanlış kullandıysanız bozabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

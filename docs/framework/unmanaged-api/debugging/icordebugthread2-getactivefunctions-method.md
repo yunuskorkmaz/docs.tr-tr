@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489936"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions Metodu
-Etkin işlevi hakkında bilgi her bu iş parçacığının çerçeveleri alır.  
+Bu bu iş parçacığının çerçevede etkin işlevi hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +38,27 @@ HRESULT GetActiveFunctions (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cFunctions`  
- [in] Boyutunu `pFunctions` dizi.  
+ [in] Boyutu `pFunctions` dizisi.  
   
  `pcFunctions`  
- [out] Döndürülen nesne sayısı için bir işaretçi `pFunctions` dizi. Döndürülen nesne sayısı yığında yönetilen çerçeveler sayısına eşit olur.  
+ [out] Döndürülen nesne sayısı için bir işaretçi `pFunctions` dizisi. Döndürülen nesne sayısını yığın üzerinde yönetilen çerçeve sayısı eşit olacaktır.  
   
  `pFunctions`  
- [içinde out] Her biri bu iş parçacığının çerçeveleri etkin işlevleri hakkında bilgi içeren bir dizi cor_actıve_functıon nesneleri.  
+ [out içinde] Bir dizi cor_actıve_functıon nesnelerin her biri bu iş parçacığının çerçeveler etkin işlevler hakkında bilgiler içerir.  
   
- İlk öğe yaprak çerçeve ve yığın kökünde vb. geri için kullanılır.  
+ İlk öğeyi yaprak çerçeve ve yığın kökünün vb. geri için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `pFunctions` giriş, null `GetActiveFunctions` yalnızca olduğundan yığınındaki işlevler sayısını döndürür. Diğer bir deyişle, `pFunctions` giriş, null `GetActiveFunctions` bir değer döndürür yalnızca `pcFunctions`.  
+ Varsa `pFunctions` girişte, null `GetActiveFunctions` yalnızca yığında olan işlev sayısını döndürür. Diğer bir deyişle, `pFunctions` girişte, null `GetActiveFunctions` bir değer döndürür. yalnızca `pcFunctions`.  
   
- `GetActiveFunctions` Yöntemi bir iyileştirme yığın izlemesi çerçevelere gelen aynı bilgi alma yöneliktir ve yalnızca Icordebugılframe nesne için tam yığın izlemesinde beklendiğinden çerçevelerini içerir.  
+ `GetActiveFunctions` Yöntemi bir iyileştirme bir yığın izlemesi çerçevelerde aynı bilgileri almaya oluşturulmuştur ve yalnızca bir Icordebugılframe nesne için tam bir yığın izlemeyle uygulamanızda zorunda kalacaktır çerçevelerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType::GetFirstTypeParameter Metodu
+title: ICorDebugType::GetFirstTypeParameter Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType.GetFirstTypeParameter
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d6754d7a8224249582df56ab674932f065f581d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d872e4a65c0556dddac468336e6a42dd7d7923c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421677"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477655"
 ---
-# <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter Metodu
-Arabirim işaretçisi ilk temsil eden bir Icordebugtype alır <xref:System.Type> bu tarafından temsil edilen türünde parametresi `ICorDebugType`.  
+# <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter Yöntemi
+İlk temsil eden bir Icordebugtype bir arabirim işaretçisi alır <xref:System.Type> bu tarafından temsil edilen bir türün parametresinin `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetFirstTypeParameter (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `value`  
  [out] Adresine bir işaretçi bir `ICorDebugType` ilk parametre temsil eden nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFirstTypeParameter` Burada türüyle ilgili ek bilgileri, en fazla içerir durumda bir tür parametresi çağrılabilir. Tür bir ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR, ise özel olarak, belirtilen şekilde kullanılabilmesi için [Icordebugtype::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) yöntemi.  
+ `GetFirstTypeParameter` Burada türü hakkında ek bilgiler, en fazla içerir durumda bir tür parametresi çağrılabilir. Tür ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF veya ELEMENT_TYPE_PTR, ise özellikle tarafından belirtildiği şekilde kullanılabilmesi için [Icordebugtype::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

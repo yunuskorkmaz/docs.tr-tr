@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54e2648765d896c189cc2deb5590a0a2a9b3f410
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476495"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences Yöntemi
 Bir işlemde atık olarak toplanmış olacak olan tüm nesneler için bir numaralandırıcı alır.  
@@ -36,7 +36,7 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `enumerateWeakReferences`  
  [in] Zayıf başvurular da sıralanması olup olmadığını gösteren bir Boole değeri. Varsa `enumerateWeakReferences` olduğu `true`, `ppEnum` Numaralandırıcı güçlü atıflar hem zayıf başvurular içerir. Varsa `enumerateWeakReferences` olduğu `false`, numaralandırıcı yalnızca tanımlayıcı başvuruları içerir.  
   

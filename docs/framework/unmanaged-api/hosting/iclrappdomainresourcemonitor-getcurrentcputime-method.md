@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63f5687787a9b0cdb30790b7e80e4160cdf413f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e468f10c1c07425f7ecb3589bd114d12180554
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737250"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502599"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime Metodu
 Geçerli uygulama etki alanında, uygulama etki alanı oluşturulmasından bu yana yürütülürken tüm iş parçacıkları tarafından kullanılmış olan toplam işlemci zamanı alır.  
@@ -34,7 +34,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
                           [out] ULONGLONG* pMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwAppDomainId`  
  [in] İstenen uygulama etki alanı kimliği.  
   

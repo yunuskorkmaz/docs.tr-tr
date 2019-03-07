@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 8964b34d94daf18e078e515b65588f5273c76199
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 61b0b018b3d06a2307aa280a748b7d07c5fa7915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496072"
 ---
 # <a name="list-visual-basic"></a>\<Liste > (Visual Basic)
 Bir listeyi veya tabloyu tanımlar.  
@@ -38,7 +38,7 @@ Bir listeyi veya tabloyu tanımlar.
 </list>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `type`  
  Liste türü. "Bullet" bir madde işaretli liste, numaralandırılmış liste veya iki sütunlu bir tablo için "Tablo" için "number" olmalıdır.  
   

@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedWriter::GetDebugInfo Metodu
+title: ISymUnmanagedWriter::GetDebugInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedWriter.GetDebugInfo
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce74b043db67fa1086724dd76001935f9c1c0498
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470958"
 ---
-# <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo Metodu
+# <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo Yöntemi
 Hata ayıklama dizin girdisi taşınabilir yürütülebilir (PE) dosya üst bilgisinde yazmak bir derleyici için gerekli bilgileri döndürür. Sembol yazıcı dışındaki tüm alanları doldurur `TimeDateStamp` ve `PointerToRawData`. (Derleyici bu iki alan uygun şekilde ayarlamaktan sorumludur.)  
   
  Bir derleyici bu yöntemi çağırın, PE dosyasının işlem veri blobunu yayma, Ayarla `PointerToRawData` yayılan bir veri noktası ve IMAGE_DEBUG_DIRECTORY PE dosyasına yazmak için IMAGE_DEBUG_DIRECTORY alanındaki. Derleyici ayrıca ayarlamanız gerekir `TimeDateStamp` eşit alan `TimeDateStamp` PE dosyasının oluşturulmasını.  
@@ -40,7 +40,7 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pIDD`  
  [out içinde] Sembol yazıcı dolduracak bir IMAGE_DEBUG_DIRECTORY işaretçisi.  
   

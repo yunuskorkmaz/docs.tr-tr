@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain::GetObject Metodu
+title: ICorDebugAppDomain::GetObject Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain.GetObject
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f528bcef7d06b503b1ee9d7bd4a61d3d3e9672
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ca9792df69f859e20f1d9e40754d1cec138945d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406526"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480032"
 ---
-# <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject Metodu
+# <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject Yöntemi
 Ortak dil çalışma zamanı (CLR) uygulama etki alanı için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,20 +35,20 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppObject`  
- [out] CLR uygulama etki alanını temsil eden bir Icordebugvalue arabirimi nesnesi adresini gösteren bir işaretçi.  
+ [out] CLR uygulama etki alanını temsil eden bir Icordebugvalue arabirimi nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yönetilen varsa <xref:System.AppDomain?displayProperty=nameWithType> nesne kurmadı oluşturulan bu uygulama etki alanı için yöntem `S_FALSE` ve yerleştirir `NULL` içinde `*ppObject`.  
+ Yönetilen, <xref:System.AppDomain?displayProperty=nameWithType> nesne henüz oluşturulan bu uygulama etki alanı için yöntem döndürür `S_FALSE` ve yerleştirir `NULL` içinde `*ppObject`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her uygulama etki alanının bir işlemde bir yönetilen olabilir <xref:System.AppDomain?displayProperty=nameWithType> temsil ettiği çalışma zamanında nesne. Bu işlev bu yönetilen karşılık gelen bir Icordebugvalue arabirimi nesneyi alır <xref:System.AppDomain?displayProperty=nameWithType> nesnesi.  
+ Her uygulama etki alanında bir işlem yönetilen sahip <xref:System.AppDomain?displayProperty=nameWithType> temsil ettiği çalışma zamanında nesne. Bu işlev yönetilen bu karşılık gelen bir Icordebugvalue arabirimi nesneyi alır <xref:System.AppDomain?displayProperty=nameWithType> nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

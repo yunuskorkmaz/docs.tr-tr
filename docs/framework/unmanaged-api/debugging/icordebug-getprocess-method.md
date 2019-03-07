@@ -1,5 +1,5 @@
 ---
-title: ICorDebug::GetProcess Metodu
+title: ICorDebug::GetProcess Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebug.GetProcess
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6020950a7ee742f09af67fe856692e19c066e288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e04bef30d4a9edf9898b27e15a79b2b70e3a7f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658055"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477864"
 ---
-# <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess Metodu
+# <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess Yöntemi
 Bir işaretçi "ICorDebugProcess" örneği için belirtilen işlem alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwProcessId`  
  [in] İşlemin kimliği.  
   

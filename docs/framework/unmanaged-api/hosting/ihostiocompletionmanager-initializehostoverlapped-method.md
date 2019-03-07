@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2951b408efa39e1ac2afbd7d8ebcb5ea139a8a71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97d2959a27bb848d05dc44492152866b2d535b68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582457"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503170"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped Yöntemi
 Konak için bir Win32 eklemek için herhangi bir özel veri başlatmak üzere bir fırsat sağlar `OVERLAPPED` zaman uyumsuz g/ç istekleri için kullanılan yapısı.  
@@ -35,7 +35,7 @@ HRESULT InitializeHostOverlapped (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pvOverlapped`  
  [in] Win32 işaretçisi `OVERLAPPED` yapısı ile g/ç isteği dahil edilecek.  
   

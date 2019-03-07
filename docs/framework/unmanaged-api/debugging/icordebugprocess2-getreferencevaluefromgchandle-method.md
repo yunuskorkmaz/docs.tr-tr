@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08bf4022f7cd7f85ffe7939c16fd47950e131a77
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419591"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471530"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle Metodu
-Bir başvuru işaretçi işlemek çöp toplama sahip belirtilen yönetilen nesneyi alır.  
+Bir başvuru işaretçi, tanıtıcı bir çöp toplama olan belirtilen yönetilen nesneyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,25 +36,25 @@ HRESULT GetReferenceValueFromGCHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `handle`  
- [in] Çöp toplama tanıtıcı sahip yönetilen bir nesne için bir işaretçi. Bu değer bir <xref:System.IntPtr> nesne ve kaynağından alınan <xref:System.Runtime.InteropServices.GCHandle> yönetilen nesne için.  
+ [in] Bir çöp toplama tanıtıcı olan yönetilen bir nesneye bir işaretçi. Bu değer bir <xref:System.IntPtr> nesne ve alınabilir <xref:System.Runtime.InteropServices.GCHandle> yönetilen nesne.  
   
  `pOutValue`  
- [out] Bir işaretçi adresine Icordebugreferencevalue nesnenin belirtilen yönetilen nesneye bir başvurusu temsil eder.  
+ [out] Bir işaretçi adresine Icordebugreferencevalue nesnenin belirtilen yönetilen nesneye bir başvuruyu temsil eder.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Döndürülen başvuru değeri bir atık toplama başvuru değeri ile karıştırmayın.  
+ Döndürülen başvuru değeri bir çöp toplama başvuru değeri ile karıştırmayın.  
   
- Döndürülen başvuru normal bir referans gibi davranır. Kod yürütmeyi kesme noktası sonra devam ettiğinde devre dışıdır. Hedef nesne ömrü başvuru değeri ömrü tarafından etkilenmez.  
+ Döndürülen başvuru, normal bir başvurusu gibi davranır. Kod yürütmeyi bir kesme noktası sonra devam ettiğinde devre dışı bırakıldı. Hedef nesnenin ömrünü başvuru değeri ömrünü tarafından etkilenmez.  
   
 > [!NOTE]
->  `GetReferenceValueFromGCHandle` Yöntemi tanıtıcı doğrulamaz. Bu nedenle, `GetReferenceValueFromGCHandle` yöntemi olası bozulmasına neden olabilir hata ayıklayıcı ve geçersiz bir tanıtıcı aktarılırsa ayıklanacak kodu.  
+>  `GetReferenceValueFromGCHandle` Yöntemi tanıtıcı doğrulamaz. Bu nedenle, `GetReferenceValueFromGCHandle` yöntemi büyük olasılıkla bozulmasına neden olabilir hem hata ayıklayıcı hem de Geçersiz tanıtıcı iletilmezse ayıklanan kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

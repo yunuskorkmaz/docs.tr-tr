@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496501"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags Dönüştürme Aracı)
 CorFlags Dönüştürme aracı, taşınabilir çalıştırılabilir bir görüntünün üstbilgisinin CorFlags bölümünü yapılandırmanıza olanak verir.  
@@ -28,7 +28,7 @@ CorFlags Dönüştürme aracı, taşınabilir çalıştırılabilir bir görünt
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
   
 |Gerekli parametre|Açıklama|  
 |------------------------|-----------------|  

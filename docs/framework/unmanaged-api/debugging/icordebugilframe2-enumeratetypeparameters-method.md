@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a0c23c066a6f704c4dfcfbe254e91ab3bc5817e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7454b551edc546fecbd9d091f7c821e0a07b16df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497827"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters Yöntemi
-İçeren bir Icordebugtypeenum nesne alır <xref:System.Type> bu çerçevesinde parametreleri.  
+Icordebugtypeenum nesneyi içeren alır <xref:System.Type> bu çerçeve parametreleri.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppTyParEnum`  
- Tür parametreleri listesi veren bir Icordebugtypeenum arabirimi nesnesi adresini gösteren bir işaretçi.  
+ Numaralandırma tür parametrelerinin izin veren bir Icordebugtypeenum arabirimi nesnesi adresi için bir işaretçi.  
   
- Tür parametreleri listesini (varsa) ve ardından yöntemi türü parametrelerini sınıfı tür parametreleri (varsa) içerir.  
+ Tür parametreleri listesi tarafından yöntemi tür parametreleri (varsa) ve ardından sınıf türündeki parametrelere (varsa) içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [Imetadataımport2::enumgenericparams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) kaç sınıfı tür parametreleri ve yöntemi türü bu listeyi içeren parametreleri belirlemek amacıyla yöntemi.  
+ Kullanım [Imetadataımport2::enumgenericparams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) kaç sınıf türündeki parametrelere ve yöntem parametreleri içeren bu liste türünü belirlemek için yöntemi.  
   
- Tür parametreleri her zaman kullanılabilir değil.  
+ Tür parametreleri her zaman kullanılabilir değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

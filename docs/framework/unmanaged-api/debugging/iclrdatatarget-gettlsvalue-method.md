@@ -1,5 +1,5 @@
 ---
-title: ICLRDataTarget::GetTLSValue Metodu
+title: ICLRDataTarget::GetTLSValue Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICLRDataTarget.GetTLSValue
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 676f3fe9aa9ad7de1499bb42ff23d446b1cb73d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fbea1350c7749f67b7e0cc62378a8a520923ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535495"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502339"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue Metodu
+# <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue Yöntemi
 Hedef işlemde belirtilen iş parçacığının, iş parçacığı yerel depolaması (TLS) bir değer alır. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `threadID`  
  [in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.  
   

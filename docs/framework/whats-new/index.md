@@ -796,7 +796,7 @@ Bu adres için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], aşağıd
 
 **Kalıcı anahtar simetrik şifreleme desteği**
 
-Windows şifreleme kitaplığı (CNG) kalıcı simetrik anahtarları depolamak için destek eklendi ve donanım depolanan simetrik anahtarlar kullanarak ve [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] mades mümkün hale getirmek, geliştiriciler için bu özelliği kullanın.  Anahtar adları ve anahtar sağlayıcıları kavramı uygulamaya özel olduğundan, bu özelliği kullanmaktan yerine tercih edilen Fabrika yaklaşım somut uygulama türlerinin Oluşturucu kullanan gerektirir (arama gibi `Aes.Create`).
+Windows şifreleme kitaplığı (CNG) kalıcı simetrik anahtarları depolamak için destek eklendi ve donanım depolanan simetrik anahtarlar kullanarak ve [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] yapmak, geliştiriciler için olası yapılan bu özelliği kullanın.  Anahtar adları ve anahtar sağlayıcıları kavramı uygulamaya özel olduğundan, bu özelliği kullanmaktan yerine tercih edilen Fabrika yaklaşım somut uygulama türlerinin Oluşturucu kullanan gerektirir (arama gibi `Aes.Create`).
 
 Kalıcı anahtar simetrik şifreleme desteği için AES var (<xref:System.Security.Cryptography.AesCng>) ve 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algoritmaları. Örneğin:
 

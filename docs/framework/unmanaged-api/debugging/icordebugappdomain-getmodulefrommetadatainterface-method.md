@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ab9773a5056dbfba422a9a53c7cd877e4c29abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404605"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481364"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface Metodu
 Belirtilen meta veriler arabirimine karşılık gelen modülü alır.  
@@ -36,17 +36,17 @@ HRESULT GetModuleFromMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pIMetaData`  
- [in] Biri olan bir nesne için bir işaretçi [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ [in] Biri olan bir nesneye bir işaretçi [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
  `ppModule`  
- [out] Bir işaretçi adresine Icordebugmodule nesnenin karşılık gelen modül için belirtilen meta veriler arabirimi temsil eder.  
+ [out] Bir işaretçi adresine Icordebugmodule nesnenin karşılık gelen bir modül için belirtilen meta veriler arabirimi temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5869bf22c74a232f20fc49fe81a6a35c9738f1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6327c9d7dee548957a569b587faefe3d6d9cb1b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497775"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache İşlevi
 Yeni bir işaretçi alır [Iassemblycache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) genel derleme önbelleğini temsil eden örneği.  
@@ -37,7 +37,7 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppAsmCache`  
  [out] Döndürülen `IAssemblyCache` işaretçi.  
   

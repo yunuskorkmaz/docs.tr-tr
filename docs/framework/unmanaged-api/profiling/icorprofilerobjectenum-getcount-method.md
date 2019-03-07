@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerObjectEnum::GetCount Metodu
+title: ICorProfilerObjectEnum::GetCount Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerObjectEnum.GetCount
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a363021700eacea1d4af80ca6371de5c587afda1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65f6067fcfe0e6ef5f01a13865d002afd6da9efb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622214"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474715"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount Metodu
+# <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount Yöntemi
 Koleksiyondaki donmuş nesneler toplam sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcelt`  
  [out] Donmuş nesneler koleksiyonunda sayısı için bir işaretçi.  
   

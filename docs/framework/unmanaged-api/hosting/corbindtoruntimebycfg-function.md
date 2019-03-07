@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d59506b522e1c225912da4bc3bd62ca19d32eb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556092"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474805"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
 Ortak dil çalışma zamanı (CLR), bir XML dosyasından okunan sürüm bilgilerini kullanarak bir işlem içine yükler.  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pCfgStream`  
  [in] Bir işaretçi bir `IStream` XML dosyasını okuyan bir nesne.  
   

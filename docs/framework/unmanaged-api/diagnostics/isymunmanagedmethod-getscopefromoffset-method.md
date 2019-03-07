@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5422e781ab2f494e85f637219aa540bf4ac34cb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b036c5cff5300377580fe22dc254911fbdd79715
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629741"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503131"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset Metodu
 Belirtilen uzaklık kapsayan bu yöntem en kapsayan sözlü kapsamda alır. Bu yerel değişken aramaları başlatmak için kullanılabilir.  
@@ -35,7 +35,7 @@ HRESULT GetScopeFromOffset(
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `offset`  
  [in] A `ULONG` içeren uzaklığı.  
   

@@ -1,5 +1,5 @@
 ---
-title: ICeeGen::GetIMapTokenIface Metodu
+title: ICeeGen::GetIMapTokenIface Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICeeGen.GetIMapTokenIface
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02665d2a00a779ac73a19ec5513790f3862833b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a81c816915eda6a90b5dac9cc6e044575076f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735029"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502988"
 ---
-# <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface Metodu
+# <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface Yöntemi
 Belirtilen belirteç tarafından başvurulan arabirimi alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
@@ -37,7 +37,7 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pIMapToken`  
  [out içinde] Döndürülecek arabirimi için meta veri belirteci.  
   
