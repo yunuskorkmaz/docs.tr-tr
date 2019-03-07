@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d7284399719dd848af43765a392802a589fc33
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597495"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492536"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="c97e9-102">PFN_CLRDataCreateInstance İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="c97e9-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
-<span data-ttu-id="c97e9-103">Belirtilen hedef öğe için bir arabirimi nesne oluşturan bir işlev işaret eder.</span><span class="sxs-lookup"><span data-stu-id="c97e9-103">Points to a function that creates an interface object for the specified target item.</span></span>  
+# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="ecd4d-102">PFN_CLRDataCreateInstance İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="ecd4d-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
+<span data-ttu-id="ecd4d-103">Belirtilen hedef öğe için bir arabirimi nesne oluşturan bir işlev işaret eder.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-103">Points to a function that creates an interface object for the specified target item.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c97e9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c97e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ecd4d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ecd4d-104">Syntax</span></span>  
   
 ```  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
@@ -36,27 +36,27 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c97e9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c97e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ecd4d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ecd4d-105">Parameters</span></span>  
  `iid`  
- <span data-ttu-id="c97e9-106">[in] Oluşturulacak arabirimi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="c97e9-106">[in] The identifier of the interface to be instantiated.</span></span>  
+ <span data-ttu-id="ecd4d-106">[in] Oluşturulacak arabirimi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-106">[in] The identifier of the interface to be instantiated.</span></span>  
   
  `target`  
- <span data-ttu-id="c97e9-107">[in] Bir kullanıcı olarak uygulanan bir işaretçiye [Iclrdatatarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) arabirimi nesnesi oluşturulacağı hedef öğeyi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="c97e9-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
+ <span data-ttu-id="ecd4d-107">[in] Bir kullanıcı olarak uygulanan bir işaretçiye [Iclrdatatarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) arabirimi nesnesi oluşturulacağı hedef öğeyi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
   
  `iface`  
- <span data-ttu-id="c97e9-108">[out] Döndürülen arabirim nesnesinin adresine yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c97e9-108">[out] A pointer to the address of the returned interface object.</span></span>  
+ <span data-ttu-id="ecd4d-108">[out] Döndürülen arabirim nesnesinin adresine yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-108">[out] A pointer to the address of the returned interface object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c97e9-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c97e9-109">Remarks</span></span>  
- <span data-ttu-id="c97e9-110">`ICLRDataTarget` Nesne, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c97e9-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="c97e9-111">Uygulama, temsil ettiği hedef öğesinin türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="c97e9-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="c97e9-112">Hedef öğe, bir işlem, bellek dökümü, uzak makine vb. olabilir.</span><span class="sxs-lookup"><span data-stu-id="c97e9-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ecd4d-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ecd4d-109">Remarks</span></span>  
+ <span data-ttu-id="ecd4d-110">`ICLRDataTarget` Nesne, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="ecd4d-111">Uygulama, temsil ettiği hedef öğesinin türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="ecd4d-112">Hedef öğe, bir işlem, bellek dökümü, uzak makine vb. olabilir.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c97e9-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c97e9-113">Requirements</span></span>  
- <span data-ttu-id="c97e9-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c97e9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ecd4d-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ecd4d-113">Requirements</span></span>  
+ <span data-ttu-id="ecd4d-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecd4d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c97e9-115">**Üst bilgi:** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="c97e9-115">**Header:** ClrData.idl</span></span>  
+ <span data-ttu-id="ecd4d-115">**Üst bilgi:** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="ecd4d-115">**Header:** ClrData.idl</span></span>  
   
- <span data-ttu-id="c97e9-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c97e9-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ecd4d-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ecd4d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c97e9-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c97e9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ecd4d-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecd4d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c97e9-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c97e9-118">See also</span></span>
-- [<span data-ttu-id="c97e9-119">Hata Ayıklama Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="c97e9-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ecd4d-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ecd4d-118">See also</span></span>
+- [<span data-ttu-id="ecd4d-119">Hata Ayıklama Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ecd4d-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
