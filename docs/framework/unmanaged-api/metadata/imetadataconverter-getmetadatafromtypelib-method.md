@@ -1,5 +1,5 @@
 ---
-title: IMetaDataConverter::GetMetaDataFromTypeLib Metodu
+title: IMetaDataConverter::GetMetaDataFromTypeLib Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataConverter.GetMetaDataFromTypeLib
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8d931b2f96045c53b895d7de5204e2d971b1c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561042"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479408"
 ---
-# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="a157a-102">IMetaDataConverter::GetMetaDataFromTypeLib Metodu</span><span class="sxs-lookup"><span data-stu-id="a157a-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
-<span data-ttu-id="a157a-103">Bir arabirim işaretçisi alır bir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) belirtilen tarafından temsil edilen tür kitaplığını meta veri imzası temsil eden örneği `ITypeLib` örneği.</span><span class="sxs-lookup"><span data-stu-id="a157a-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="fa7df-102">IMetaDataConverter::GetMetaDataFromTypeLib Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fa7df-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
+<span data-ttu-id="fa7df-103">Bir arabirim işaretçisi alır bir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) belirtilen tarafından temsil edilen tür kitaplığını meta veri imzası temsil eden örneği `ITypeLib` örneği.</span><span class="sxs-lookup"><span data-stu-id="fa7df-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a157a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a157a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa7df-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fa7df-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataFromTypeLib (  
@@ -36,22 +36,22 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a157a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a157a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa7df-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fa7df-105">Parameters</span></span>  
  `pITL`  
- <span data-ttu-id="a157a-106">[in] İşaretçi bir `ITypeLib` tür kitaplığı temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="a157a-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
+ <span data-ttu-id="fa7df-106">[in] İşaretçi bir `ITypeLib` tür kitaplığı temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="fa7df-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="a157a-107">[out] İşaretçi adresini alan bir konuma `IMetaDataImport` meta veri imzası temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="a157a-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="fa7df-107">[out] İşaretçi adresini alan bir konuma `IMetaDataImport` meta veri imzası temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="fa7df-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a157a-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a157a-108">Requirements</span></span>  
- <span data-ttu-id="a157a-109">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a157a-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa7df-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fa7df-108">Requirements</span></span>  
+ <span data-ttu-id="fa7df-109">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa7df-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a157a-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="a157a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fa7df-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="fa7df-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a157a-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="a157a-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fa7df-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="fa7df-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a157a-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a157a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fa7df-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa7df-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a157a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a157a-113">See also</span></span>
-- [<span data-ttu-id="a157a-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a157a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a157a-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a157a-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fa7df-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fa7df-113">See also</span></span>
+- [<span data-ttu-id="fa7df-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fa7df-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fa7df-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fa7df-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

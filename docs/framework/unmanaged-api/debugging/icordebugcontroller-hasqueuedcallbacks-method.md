@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b107ceec5c9e88117e8ec1f6f94d60debfdf7201
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500063"
 ---
-# <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="04b11-102">ICorDebugController::HasQueuedCallbacks Yöntemi</span><span class="sxs-lookup"><span data-stu-id="04b11-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
-<span data-ttu-id="04b11-103">Tüm yönetilen geri çağırmaları belirtilen iş parçacığı için sıraya alınmış olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="04b11-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  
+# <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="1c7f9-102">ICorDebugController::HasQueuedCallbacks Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1c7f9-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
+<span data-ttu-id="1c7f9-103">Tüm yönetilen geri çağırmaları belirtilen iş parçacığı için sıraya alınmış olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04b11-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="04b11-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c7f9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1c7f9-104">Syntax</span></span>  
   
 ```  
 HRESULT HasQueuedCallbacks (  
@@ -36,28 +36,28 @@ HRESULT HasQueuedCallbacks (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="04b11-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="04b11-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c7f9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1c7f9-105">Parameters</span></span>  
  `pThread`  
- <span data-ttu-id="04b11-106">[in] İş parçacığını temsil eden bir "ICorDebugThread" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="04b11-106">[in] A pointer to an "ICorDebugThread" object that represents the thread.</span></span>  
+ <span data-ttu-id="1c7f9-106">[in] İş parçacığını temsil eden bir "ICorDebugThread" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-106">[in] A pointer to an "ICorDebugThread" object that represents the thread.</span></span>  
   
  `pbQueued`  
- <span data-ttu-id="04b11-107">[out] Bir değer için bir işaretçi `true` tüm yönetilen geri çağırmaları şu anda, belirtilen iş parçacığı için kuyruğa alınan; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="04b11-107">[out] A pointer to a value that is `true` if any managed callbacks are currently queued for the specified thread; otherwise, `false`.</span></span>  
+ <span data-ttu-id="1c7f9-107">[out] Bir değer için bir işaretçi `true` tüm yönetilen geri çağırmaları şu anda, belirtilen iş parçacığı için kuyruğa alınan; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-107">[out] A pointer to a value that is `true` if any managed callbacks are currently queued for the specified thread; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="04b11-108">Null için belirtilirse `pThread` parametresi `HasQueuedCallbacks` döndürür `true` şu anda yönetilen geri çağırmaları herhangi bir iş parçacığı için kuyruğa alındı.</span><span class="sxs-lookup"><span data-stu-id="04b11-108">If null is specified for the `pThread` parameter, `HasQueuedCallbacks` will return `true` if there are currently managed callbacks queued for any thread.</span></span>  
+ <span data-ttu-id="1c7f9-108">Null için belirtilirse `pThread` parametresi `HasQueuedCallbacks` döndürür `true` şu anda yönetilen geri çağırmaları herhangi bir iş parçacığı için kuyruğa alındı.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-108">If null is specified for the `pThread` parameter, `HasQueuedCallbacks` will return `true` if there are currently managed callbacks queued for any thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04b11-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="04b11-109">Remarks</span></span>  
- <span data-ttu-id="04b11-110">Geri çağırmaları gönderilen birer birer, her zaman olacaktır [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağrılır.</span><span class="sxs-lookup"><span data-stu-id="04b11-110">Callbacks will be dispatched one at a time, each time [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called.</span></span> <span data-ttu-id="04b11-111">Aynı anda birden çok hata ayıklama olayları bildirmek istiyorsa, hata ayıklayıcı bu bayrağı kontrol edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="04b11-111">The debugger can check this flag if it wants to report multiple debugging events that occur simultaneously.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1c7f9-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1c7f9-109">Remarks</span></span>  
+ <span data-ttu-id="1c7f9-110">Geri çağırmaları gönderilen birer birer, her zaman olacaktır [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağrılır.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-110">Callbacks will be dispatched one at a time, each time [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called.</span></span> <span data-ttu-id="1c7f9-111">Aynı anda birden çok hata ayıklama olayları bildirmek istiyorsa, hata ayıklayıcı bu bayrağı kontrol edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-111">The debugger can check this flag if it wants to report multiple debugging events that occur simultaneously.</span></span>  
   
- <span data-ttu-id="04b11-112">Hata ayıklama olaylarını sıralandığında, hata ayıklayıcı hata ayıklanan durumunu emin olmak için tüm kuyruk boşaltma gerekir böylece bunlar zaten, oluştu.</span><span class="sxs-lookup"><span data-stu-id="04b11-112">When debugging events are queued, they have already occurred, so the debugger must drain the entire queue to be sure of the state of the debuggee.</span></span> <span data-ttu-id="04b11-113">(Çağrı `ICorDebugController::Continue` boşaltma kuyruğu için.) Örneğin, sıranın iş parçacığı üzerinde iki hata ayıklama olaylarını içeriyorsa *X*, ve hata ayıklayıcı iş parçacığını askıya alır *X* ilk hata ayıklama olayı ve ardından aramaları `ICorDebugController::Continue`, ikinci hata ayıklama olayı için iş parçacığı *X* iş parçacığını askıya alındı ancak gönderilir.</span><span class="sxs-lookup"><span data-stu-id="04b11-113">(Call `ICorDebugController::Continue` to drain the queue.) For example, if the queue contains two debugging events on thread *X*, and the debugger suspends thread *X* after the first debugging event and then calls `ICorDebugController::Continue`, the second debugging event for thread *X* will be dispatched although the thread has been suspended.</span></span>  
+ <span data-ttu-id="1c7f9-112">Hata ayıklama olaylarını sıralandığında, hata ayıklayıcı hata ayıklanan durumunu emin olmak için tüm kuyruk boşaltma gerekir böylece bunlar zaten, oluştu.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-112">When debugging events are queued, they have already occurred, so the debugger must drain the entire queue to be sure of the state of the debuggee.</span></span> <span data-ttu-id="1c7f9-113">(Çağrı `ICorDebugController::Continue` boşaltma kuyruğu için.) Örneğin, sıranın iş parçacığı üzerinde iki hata ayıklama olaylarını içeriyorsa *X*, ve hata ayıklayıcı iş parçacığını askıya alır *X* ilk hata ayıklama olayı ve ardından aramaları `ICorDebugController::Continue`, ikinci hata ayıklama olayı için iş parçacığı *X* iş parçacığını askıya alındı ancak gönderilir.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-113">(Call `ICorDebugController::Continue` to drain the queue.) For example, if the queue contains two debugging events on thread *X*, and the debugger suspends thread *X* after the first debugging event and then calls `ICorDebugController::Continue`, the second debugging event for thread *X* will be dispatched although the thread has been suspended.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04b11-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="04b11-114">Requirements</span></span>  
- <span data-ttu-id="04b11-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04b11-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c7f9-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1c7f9-114">Requirements</span></span>  
+ <span data-ttu-id="1c7f9-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c7f9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04b11-116">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="04b11-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1c7f9-116">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1c7f9-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="04b11-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04b11-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c7f9-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c7f9-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="04b11-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04b11-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1c7f9-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c7f9-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04b11-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="04b11-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c7f9-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c7f9-119">See also</span></span>
 

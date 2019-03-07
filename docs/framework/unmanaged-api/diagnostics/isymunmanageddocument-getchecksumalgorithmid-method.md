@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedDocument::GetCheckSumAlgorithmId Metodu
+title: ISymUnmanagedDocument::GetCheckSumAlgorithmId Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedDocument.GetCheckSumAlgorithmId
@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c5861f598a653f433ffaa611d6f1be3ba6f69a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 116792c6a669f31b0c69dcc0b25134af7e72f9f2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585610"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501038"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="51a01-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Metodu</span><span class="sxs-lookup"><span data-stu-id="51a01-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="51a01-103">Sağlama algoritması tanımlayıcısını alır veya hiç sağlama toplamı sıfırlardan GUİD'sini döndürür.</span><span class="sxs-lookup"><span data-stu-id="51a01-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="c7c3e-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c7c3e-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="c7c3e-103">Sağlama algoritması tanımlayıcısını alır veya hiç sağlama toplamı sıfırlardan GUİD'sini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c7c3e-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51a01-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="51a01-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7c3e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c7c3e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="51a01-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="51a01-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c7c3e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c7c3e-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="51a01-106">[out] Sağlama algoritması tanıtıcısını alan bir değişken için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="51a01-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="c7c3e-106">[out] Sağlama algoritması tanıtıcısını alan bir değişken için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c7c3e-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51a01-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="51a01-107">Return Value</span></span>  
- <span data-ttu-id="51a01-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="51a01-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7c3e-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c7c3e-107">Return Value</span></span>  
+ <span data-ttu-id="c7c3e-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="c7c3e-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51a01-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="51a01-109">See also</span></span>
-- [<span data-ttu-id="51a01-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="51a01-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c7c3e-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c7c3e-109">See also</span></span>
+- [<span data-ttu-id="c7c3e-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c7c3e-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

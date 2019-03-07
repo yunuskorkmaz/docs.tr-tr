@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27001f8560dcd128b5d737ed0f219387be86d6e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 476f28b37efef483b31ad548d3db62c820d536c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672314"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489065"
 ---
-# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="56a1a-102">IAssemblyCache::CreateAssemblyCacheItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="56a1a-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
-<span data-ttu-id="56a1a-103">Yeni bir başvuru alır [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="56a1a-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
+# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="1e835-102">IAssemblyCache::CreateAssemblyCacheItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1e835-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
+<span data-ttu-id="1e835-103">Yeni bir başvuru alır [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="1e835-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56a1a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="56a1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e835-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1e835-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCacheItem (  
@@ -38,30 +38,30 @@ HRESULT CreateAssemblyCacheItem (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56a1a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="56a1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e835-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1e835-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="56a1a-106">[in] Fusion.idl içinde tanımlanan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="56a1a-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="56a1a-107">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="56a1a-107">The following values are supported:</span></span>  
+ <span data-ttu-id="1e835-106">[in] Fusion.idl içinde tanımlanan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="1e835-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="1e835-107">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="1e835-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="56a1a-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="56a1a-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="1e835-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="1e835-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="56a1a-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="56a1a-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="1e835-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="1e835-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="56a1a-110">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="56a1a-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="56a1a-111">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="56a1a-111">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="1e835-110">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="1e835-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="1e835-111">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="1e835-111">`pvReserved` must be a null reference.</span></span>  
   
  `ppAsmItem`  
- <span data-ttu-id="56a1a-112">[out] Döndürülen `IAssemblyCacheItem` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="56a1a-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
+ <span data-ttu-id="1e835-112">[out] Döndürülen `IAssemblyCacheItem` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1e835-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="56a1a-113">[, isteğe bağlı] Uncanonicalized, virgülle ayrılmış `name=value` çiftleri.</span><span class="sxs-lookup"><span data-stu-id="56a1a-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
+ <span data-ttu-id="1e835-113">[, isteğe bağlı] Uncanonicalized, virgülle ayrılmış `name=value` çiftleri.</span><span class="sxs-lookup"><span data-stu-id="1e835-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56a1a-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="56a1a-114">Requirements</span></span>  
- <span data-ttu-id="56a1a-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56a1a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e835-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1e835-114">Requirements</span></span>  
+ <span data-ttu-id="1e835-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e835-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56a1a-116">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="56a1a-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="1e835-116">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="1e835-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="56a1a-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56a1a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1e835-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e835-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56a1a-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="56a1a-118">See also</span></span>
-- [<span data-ttu-id="56a1a-119">IAssemblyCache Arabirimi</span><span class="sxs-lookup"><span data-stu-id="56a1a-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="56a1a-120">IAssemblyCacheItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="56a1a-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1e835-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e835-118">See also</span></span>
+- [<span data-ttu-id="1e835-119">IAssemblyCache Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1e835-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="1e835-120">IAssemblyCacheItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1e835-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

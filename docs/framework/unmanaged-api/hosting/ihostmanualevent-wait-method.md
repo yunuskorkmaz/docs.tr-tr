@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 242c13a381445d5fe9551553cd1e3febc81cb2fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70d5daf6626a26842d91ff6a35d0abf26d79ad1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638229"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492575"
 ---
-# <a name="ihostmanualeventwait-method"></a><span data-ttu-id="9b277-102">IHostManualEvent::Wait Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9b277-102">IHostManualEvent::Wait Method</span></span>
-<span data-ttu-id="9b277-103">Geçerli neden [Ihostmanualevent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) ait kadar beklenecek örneği veya belirli bir zaman geçtikçe miktarını.</span><span class="sxs-lookup"><span data-stu-id="9b277-103">Causes the current [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance to wait until it is owned, or a specified amount of time elapses.</span></span>  
+# <a name="ihostmanualeventwait-method"></a><span data-ttu-id="92233-102">IHostManualEvent::Wait Yöntemi</span><span class="sxs-lookup"><span data-stu-id="92233-102">IHostManualEvent::Wait Method</span></span>
+<span data-ttu-id="92233-103">Geçerli neden [Ihostmanualevent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) ait kadar beklenecek örneği veya belirli bir zaman geçtikçe miktarını.</span><span class="sxs-lookup"><span data-stu-id="92233-103">Causes the current [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance to wait until it is owned, or a specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b277-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9b277-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92233-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92233-104">Syntax</span></span>  
   
 ```  
 HRESULT Wait (  
@@ -36,37 +36,37 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9b277-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9b277-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92233-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="92233-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="9b277-106">[in] Göndermeden önce varsa milisaniye sayısını geçerli `IHostManualEvent` örneği ait değil.</span><span class="sxs-lookup"><span data-stu-id="9b277-106">[in] The number of milliseconds to wait before returning, if the current `IHostManualEvent` instance is not owned.</span></span>  
+ <span data-ttu-id="92233-106">[in] Göndermeden önce varsa milisaniye sayısını geçerli `IHostManualEvent` örneği ait değil.</span><span class="sxs-lookup"><span data-stu-id="92233-106">[in] The number of milliseconds to wait before returning, if the current `IHostManualEvent` instance is not owned.</span></span>  
   
  `option`  
- <span data-ttu-id="9b277-107">[in] Birini [waıt_optıon](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) bu konak sürecektir eylemini belirten değerleri, işlem engeller.</span><span class="sxs-lookup"><span data-stu-id="9b277-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating the action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="92233-107">[in] Birini [waıt_optıon](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) bu konak sürecektir eylemini belirten değerleri, işlem engeller.</span><span class="sxs-lookup"><span data-stu-id="92233-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating the action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9b277-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9b277-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="92233-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="92233-108">Return Value</span></span>  
   
-|<span data-ttu-id="9b277-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9b277-109">HRESULT</span></span>|<span data-ttu-id="9b277-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b277-110">Description</span></span>|  
+|<span data-ttu-id="92233-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="92233-109">HRESULT</span></span>|<span data-ttu-id="92233-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92233-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9b277-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9b277-111">S_OK</span></span>|<span data-ttu-id="9b277-112">`Wait` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="9b277-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="9b277-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9b277-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9b277-114">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="9b277-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="9b277-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9b277-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9b277-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="9b277-116">The call timed out.</span></span>|  
-|<span data-ttu-id="9b277-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9b277-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9b277-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="9b277-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="9b277-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9b277-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9b277-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="9b277-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="9b277-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9b277-121">E_FAIL</span></span>|<span data-ttu-id="9b277-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="9b277-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9b277-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="9b277-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9b277-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="9b277-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="9b277-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="9b277-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="9b277-126">Konak bekleme zaman aralığı boyunca kilitlenme algıladı ve geçerli seçtiğiniz `IHostManualEvent` kilitlenme kurbanı olarak örneği.</span><span class="sxs-lookup"><span data-stu-id="9b277-126">The host detected a deadlock during the wait interval, and chose the current `IHostManualEvent` instance as the deadlock victim.</span></span>|  
+|<span data-ttu-id="92233-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="92233-111">S_OK</span></span>|<span data-ttu-id="92233-112">`Wait` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="92233-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="92233-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="92233-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="92233-114">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="92233-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="92233-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="92233-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="92233-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="92233-116">The call timed out.</span></span>|  
+|<span data-ttu-id="92233-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="92233-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="92233-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="92233-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="92233-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="92233-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="92233-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="92233-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="92233-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="92233-121">E_FAIL</span></span>|<span data-ttu-id="92233-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="92233-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="92233-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="92233-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="92233-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="92233-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="92233-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="92233-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="92233-126">Konak bekleme zaman aralığı boyunca kilitlenme algıladı ve geçerli seçtiğiniz `IHostManualEvent` kilitlenme kurbanı olarak örneği.</span><span class="sxs-lookup"><span data-stu-id="92233-126">The host detected a deadlock during the wait interval, and chose the current `IHostManualEvent` instance as the deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9b277-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9b277-127">Requirements</span></span>  
- <span data-ttu-id="9b277-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b277-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92233-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="92233-127">Requirements</span></span>  
+ <span data-ttu-id="92233-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92233-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b277-129">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9b277-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="92233-129">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="92233-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9b277-130">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="9b277-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="92233-130">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="92233-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9b277-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b277-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="92233-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92233-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b277-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9b277-132">See also</span></span>
-- [<span data-ttu-id="9b277-133">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b277-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="9b277-134">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b277-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="9b277-135">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b277-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="9b277-136">IHostSemaphore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b277-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="9b277-137">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b277-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="92233-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="92233-132">See also</span></span>
+- [<span data-ttu-id="92233-133">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92233-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="92233-134">IHostAutoEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92233-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="92233-135">IHostManualEvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92233-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="92233-136">IHostSemaphore Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92233-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="92233-137">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="92233-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
