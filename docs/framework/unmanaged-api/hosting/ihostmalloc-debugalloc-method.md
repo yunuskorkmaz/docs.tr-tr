@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481644"
 ---
-# <a name="ihostmallocdebugalloc-method"></a><span data-ttu-id="10f93-102">IHostMAlloc::DebugAlloc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="10f93-102">IHostMAlloc::DebugAlloc Method</span></span>
-<span data-ttu-id="10f93-103">Konak yığından bellek belirtilen miktarı ayırın ve ayrıca bellek ayrıldığı izlemek ister.</span><span class="sxs-lookup"><span data-stu-id="10f93-103">Requests that the host allocate the specified amount of memory from the heap, and additionally track where the memory was allocated.</span></span>  
+# <a name="ihostmallocdebugalloc-method"></a><span data-ttu-id="32069-102">IHostMAlloc::DebugAlloc Yöntemi</span><span class="sxs-lookup"><span data-stu-id="32069-102">IHostMAlloc::DebugAlloc Method</span></span>
+<span data-ttu-id="32069-103">Konak yığından bellek belirtilen miktarı ayırın ve ayrıca bellek ayrıldığı izlemek ister.</span><span class="sxs-lookup"><span data-stu-id="32069-103">Requests that the host allocate the specified amount of memory from the heap, and additionally track where the memory was allocated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10f93-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="10f93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32069-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="32069-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugAlloc (  
@@ -39,46 +39,46 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="10f93-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="10f93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32069-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="32069-105">Parameters</span></span>  
  `cbSize`  
- <span data-ttu-id="10f93-106">[in] Bayt cinsinden geçerli bellek ayırma isteği boyutu.</span><span class="sxs-lookup"><span data-stu-id="10f93-106">[in] The size, in bytes, of the current memory allocation request.</span></span>  
+ <span data-ttu-id="32069-106">[in] Bayt cinsinden geçerli bellek ayırma isteği boyutu.</span><span class="sxs-lookup"><span data-stu-id="32069-106">[in] The size, in bytes, of the current memory allocation request.</span></span>  
   
  `dwCriticalLevel`  
- <span data-ttu-id="10f93-107">[in] Aşağıdakilerden birini [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) ayırma hatası etkisini gösteren değer.</span><span class="sxs-lookup"><span data-stu-id="10f93-107">[in] One of the [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) values, indicating the impact of an allocation failure.</span></span>  
+ <span data-ttu-id="32069-107">[in] Aşağıdakilerden birini [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) ayırma hatası etkisini gösteren değer.</span><span class="sxs-lookup"><span data-stu-id="32069-107">[in] One of the [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) values, indicating the impact of an allocation failure.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="10f93-108">[in] Kod dosyası hata ayıklaması yapılan yürütülebilir.</span><span class="sxs-lookup"><span data-stu-id="10f93-108">[in] The code file of the executable being debugged.</span></span>  
+ <span data-ttu-id="32069-108">[in] Kod dosyası hata ayıklaması yapılan yürütülebilir.</span><span class="sxs-lookup"><span data-stu-id="32069-108">[in] The code file of the executable being debugged.</span></span>  
   
  `iLineNo`  
- <span data-ttu-id="10f93-109">[in] Satır numarasını `pszFileName` burada ayırma işlemi istendi.</span><span class="sxs-lookup"><span data-stu-id="10f93-109">[in] The line number in `pszFileName` where the allocation was requested.</span></span>  
+ <span data-ttu-id="32069-109">[in] Satır numarasını `pszFileName` burada ayırma işlemi istendi.</span><span class="sxs-lookup"><span data-stu-id="32069-109">[in] The line number in `pszFileName` where the allocation was requested.</span></span>  
   
  `ppMem`  
- <span data-ttu-id="10f93-110">[out] Ayrılan bellek ya da istek tamamlanamadı, null bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="10f93-110">[out] A pointer to the allocated memory, or null if the request could not be completed.</span></span>  
+ <span data-ttu-id="32069-110">[out] Ayrılan bellek ya da istek tamamlanamadı, null bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="32069-110">[out] A pointer to the allocated memory, or null if the request could not be completed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10f93-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="10f93-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="32069-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="32069-111">Return Value</span></span>  
   
-|<span data-ttu-id="10f93-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="10f93-112">HRESULT</span></span>|<span data-ttu-id="10f93-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="10f93-113">Description</span></span>|  
+|<span data-ttu-id="32069-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32069-112">HRESULT</span></span>|<span data-ttu-id="32069-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="32069-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="10f93-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="10f93-114">S_OK</span></span>|<span data-ttu-id="10f93-115">`DebugAlloc` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="10f93-115">`DebugAlloc` returned successfully.</span></span>|  
-|<span data-ttu-id="10f93-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="10f93-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="10f93-117">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="10f93-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="10f93-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="10f93-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="10f93-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="10f93-119">The call timed out.</span></span>|  
-|<span data-ttu-id="10f93-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="10f93-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="10f93-121">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="10f93-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="10f93-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="10f93-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="10f93-123">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="10f93-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="10f93-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="10f93-124">E_FAIL</span></span>|<span data-ttu-id="10f93-125">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="10f93-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="10f93-126">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="10f93-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="10f93-127">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="10f93-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="10f93-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="10f93-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="10f93-129">Ayırma isteğinin tamamlanması yeterli bellek yoktu.</span><span class="sxs-lookup"><span data-stu-id="10f93-129">Not enough memory was available to complete the allocation request.</span></span>|  
+|<span data-ttu-id="32069-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="32069-114">S_OK</span></span>|<span data-ttu-id="32069-115">`DebugAlloc` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="32069-115">`DebugAlloc` returned successfully.</span></span>|  
+|<span data-ttu-id="32069-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="32069-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="32069-117">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="32069-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="32069-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="32069-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="32069-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="32069-119">The call timed out.</span></span>|  
+|<span data-ttu-id="32069-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="32069-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="32069-121">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="32069-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="32069-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="32069-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="32069-123">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="32069-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="32069-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="32069-124">E_FAIL</span></span>|<span data-ttu-id="32069-125">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="32069-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="32069-126">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="32069-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="32069-127">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="32069-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="32069-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="32069-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="32069-129">Ayırma isteğinin tamamlanması yeterli bellek yoktu.</span><span class="sxs-lookup"><span data-stu-id="32069-129">Not enough memory was available to complete the allocation request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="10f93-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="10f93-130">Remarks</span></span>  
- <span data-ttu-id="10f93-131">CLR bir arabirim işaretçisi alır bir [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) çağırarak örneği [Ihostmemorymanager::createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="10f93-131">The CLR gets an interface pointer to an [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instance by calling the [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) method.</span></span> <span data-ttu-id="10f93-132">`DebugAlloc` hata ayıklama sırasında kullanım için kod dosyası bilgileri almak çalışma zamanı sağlar.</span><span class="sxs-lookup"><span data-stu-id="10f93-132">`DebugAlloc` allows the runtime to get code file information for use during debugging.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32069-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="32069-130">Remarks</span></span>  
+ <span data-ttu-id="32069-131">CLR bir arabirim işaretçisi alır bir [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) çağırarak örneği [Ihostmemorymanager::createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="32069-131">The CLR gets an interface pointer to an [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instance by calling the [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) method.</span></span> <span data-ttu-id="32069-132">`DebugAlloc` hata ayıklama sırasında kullanım için kod dosyası bilgileri almak çalışma zamanı sağlar.</span><span class="sxs-lookup"><span data-stu-id="32069-132">`DebugAlloc` allows the runtime to get code file information for use during debugging.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10f93-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="10f93-133">Requirements</span></span>  
- <span data-ttu-id="10f93-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10f93-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32069-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="32069-133">Requirements</span></span>  
+ <span data-ttu-id="32069-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32069-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10f93-135">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="10f93-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="32069-135">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32069-135">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="10f93-136">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="10f93-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="32069-136">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="32069-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="10f93-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10f93-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32069-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32069-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10f93-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="10f93-138">See also</span></span>
-- [<span data-ttu-id="10f93-139">IHostMemoryManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="10f93-139">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="10f93-140">IHostMalloc Arabirimi</span><span class="sxs-lookup"><span data-stu-id="10f93-140">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a><span data-ttu-id="32069-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="32069-138">See also</span></span>
+- [<span data-ttu-id="32069-139">IHostMemoryManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32069-139">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="32069-140">IHostMalloc Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32069-140">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

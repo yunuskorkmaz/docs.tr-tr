@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo3::GetThreadStaticAddress2 Metodu
+title: ICorProfilerInfo3::GetThreadStaticAddress2 Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo3.GetThreadStaticAddress2 Method
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49139f5b1f65bc2e258362d9b47f4e0d44cc6894
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481527"
 ---
-# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="70976-102">ICorProfilerInfo3::GetThreadStaticAddress2 Metodu</span><span class="sxs-lookup"><span data-stu-id="70976-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
-<span data-ttu-id="70976-103">Belirtilen iş parçacığı ve uygulama etki alanı kapsamı içinde belirtilen statik iş parçacığı alanı adresini alır.</span><span class="sxs-lookup"><span data-stu-id="70976-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
+# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="83f6d-102">ICorProfilerInfo3::GetThreadStaticAddress2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="83f6d-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
+<span data-ttu-id="83f6d-103">Belirtilen iş parçacığı ve uygulama etki alanı kapsamı içinde belirtilen statik iş parçacığı alanı adresini alır.</span><span class="sxs-lookup"><span data-stu-id="83f6d-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70976-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="70976-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83f6d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83f6d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadStaticAddress2(  
@@ -38,43 +38,43 @@ HRESULT GetThreadStaticAddress2(
                 [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="70976-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="70976-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83f6d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="83f6d-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="70976-106">[in] İstenen iş parçacığı statik alanı içeren sınıf kimliği.</span><span class="sxs-lookup"><span data-stu-id="70976-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
+ <span data-ttu-id="83f6d-106">[in] İstenen iş parçacığı statik alanı içeren sınıf kimliği.</span><span class="sxs-lookup"><span data-stu-id="83f6d-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="70976-107">[in] İstenen iş parçacığı statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="70976-107">[in] The metadata token for the requested thread-static field.</span></span>  
+ <span data-ttu-id="83f6d-107">[in] İstenen iş parçacığı statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="83f6d-107">[in] The metadata token for the requested thread-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="70976-108">[in] Uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="70976-108">[in] The ID of the application domain.</span></span>  
+ <span data-ttu-id="83f6d-108">[in] Uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="83f6d-108">[in] The ID of the application domain.</span></span>  
   
  `threadId`  
- <span data-ttu-id="70976-109">[in] Kapsamı istenen statik alan için iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="70976-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="83f6d-109">[in] Kapsamı istenen statik alan için iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="83f6d-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="70976-110">[out] Belirtilen iş parçacığı içinde statik alanı adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="70976-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
+ <span data-ttu-id="83f6d-110">[out] Belirtilen iş parçacığı içinde statik alanı adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="83f6d-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="70976-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="70976-111">Remarks</span></span>  
- <span data-ttu-id="70976-112">`GetThreadStaticAddress2` Yöntemi aşağıdakilerden birini döndürebilir:</span><span class="sxs-lookup"><span data-stu-id="70976-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="83f6d-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="83f6d-111">Remarks</span></span>  
+ <span data-ttu-id="83f6d-112">`GetThreadStaticAddress2` Yöntemi aşağıdakilerden birini döndürebilir:</span><span class="sxs-lookup"><span data-stu-id="83f6d-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="70976-113">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="70976-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+-   <span data-ttu-id="83f6d-113">Bir CORPROF_E_DATAINCOMPLETE belirtilen statik alanı belirtilen bağlam bir adres değil atandıysa HRESULT.</span><span class="sxs-lookup"><span data-stu-id="83f6d-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="70976-114">Adresleri nesnelerin çöp koleksiyonu yığınında olabilir.</span><span class="sxs-lookup"><span data-stu-id="70976-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="70976-115">Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="70976-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+-   <span data-ttu-id="83f6d-114">Adresleri nesnelerin çöp koleksiyonu yığınında olabilir.</span><span class="sxs-lookup"><span data-stu-id="83f6d-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="83f6d-115">Çöp toplamanın ardından, profil oluşturucular geçerli olduğunu varsayın değil için bu adresleri çöp toplamanın ardından geçersiz hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="83f6d-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="70976-116">Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetThreadStaticAddress2` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="70976-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="83f6d-116">Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetThreadStaticAddress2` bazı statik alanlar zaten başlatılmış olabilir ancak tüm kendi statik alanları için CORPROF_E_DATAINCOMPLETE döndürür ve çöp toplama nesneleri kök dizini değiştirme.</span><span class="sxs-lookup"><span data-stu-id="83f6d-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
- <span data-ttu-id="70976-117">[Icorprofilerınfo2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi benzer `GetThreadStaticAddress2` yöntemi, ancak bir uygulama etki alanı bağımsız değişkeni kabul etmiyor.</span><span class="sxs-lookup"><span data-stu-id="70976-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
+ <span data-ttu-id="83f6d-117">[Icorprofilerınfo2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi benzer `GetThreadStaticAddress2` yöntemi, ancak bir uygulama etki alanı bağımsız değişkeni kabul etmiyor.</span><span class="sxs-lookup"><span data-stu-id="83f6d-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70976-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="70976-118">Requirements</span></span>  
- <span data-ttu-id="70976-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70976-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83f6d-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="83f6d-118">Requirements</span></span>  
+ <span data-ttu-id="83f6d-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83f6d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70976-120">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="70976-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="83f6d-120">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="83f6d-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="70976-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70976-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="83f6d-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83f6d-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="70976-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70976-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="83f6d-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83f6d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70976-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="70976-123">See also</span></span>
-- [<span data-ttu-id="70976-124">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="70976-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="70976-125">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="70976-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="70976-126">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="70976-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="83f6d-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83f6d-123">See also</span></span>
+- [<span data-ttu-id="83f6d-124">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="83f6d-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="83f6d-125">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="83f6d-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="83f6d-126">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="83f6d-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

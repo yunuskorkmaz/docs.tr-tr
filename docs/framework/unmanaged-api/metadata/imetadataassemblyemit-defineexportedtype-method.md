@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 984eef16ff576d63a445b199eba8c2364285f62e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624356"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483880"
 ---
-# <a name="imetadataassemblyemitdefineexportedtype-method"></a><span data-ttu-id="259b5-102">IMetaDataAssemblyEmit::DefineExportedType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="259b5-102">IMetaDataAssemblyEmit::DefineExportedType Method</span></span>
-<span data-ttu-id="259b5-103">Oluşturur bir `ExportedType` yapısı meta verilerini içeren, belirtilen dışarı türü ve ilişkili meta veri belirteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="259b5-103">Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineexportedtype-method"></a><span data-ttu-id="dd093-102">IMetaDataAssemblyEmit::DefineExportedType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dd093-102">IMetaDataAssemblyEmit::DefineExportedType Method</span></span>
+<span data-ttu-id="dd093-103">Oluşturur bir `ExportedType` yapısı meta verilerini içeren, belirtilen dışarı türü ve ilişkili meta veri belirteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="dd093-103">Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="259b5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="259b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd093-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dd093-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineExportedType (  
@@ -39,41 +39,41 @@ HRESULT DefineExportedType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="259b5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="259b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd093-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dd093-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="259b5-106">[in] Dışa aktarılacak tür adı.</span><span class="sxs-lookup"><span data-stu-id="259b5-106">[in] The name of type to be exported.</span></span> <span data-ttu-id="259b5-107">Sürüm 1.1 ortak dil çalışma zamanının dışarı aktarılan tür adı verilen ad tam eşleşmelidir `TypeDef` türü.</span><span class="sxs-lookup"><span data-stu-id="259b5-107">For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.</span></span>  
+ <span data-ttu-id="dd093-106">[in] Dışa aktarılacak tür adı.</span><span class="sxs-lookup"><span data-stu-id="dd093-106">[in] The name of type to be exported.</span></span> <span data-ttu-id="dd093-107">Sürüm 1.1 ortak dil çalışma zamanının dışarı aktarılan tür adı verilen ad tam eşleşmelidir `TypeDef` türü.</span><span class="sxs-lookup"><span data-stu-id="dd093-107">For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="259b5-108">[in] Dışarı aktarılan tür burada uygulanan belirten bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="259b5-108">[in] A token specifying where the exported type is implemented.</span></span> <span data-ttu-id="259b5-109">Geçerli değerler ve bunların ilişkili anlamları vardır:</span><span class="sxs-lookup"><span data-stu-id="259b5-109">The valid values and their associated meanings are:</span></span>  
+ <span data-ttu-id="dd093-108">[in] Dışarı aktarılan tür burada uygulanan belirten bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="dd093-108">[in] A token specifying where the exported type is implemented.</span></span> <span data-ttu-id="dd093-109">Geçerli değerler ve bunların ilişkili anlamları vardır:</span><span class="sxs-lookup"><span data-stu-id="dd093-109">The valid values and their associated meanings are:</span></span>  
   
--   <span data-ttu-id="259b5-110">`mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.</span><span class="sxs-lookup"><span data-stu-id="259b5-110">`mdFile` The type is implemented in a different file within this assembly.</span></span>  
+-   <span data-ttu-id="dd093-110">`mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.</span><span class="sxs-lookup"><span data-stu-id="dd093-110">`mdFile` The type is implemented in a different file within this assembly.</span></span>  
   
--   <span data-ttu-id="259b5-111">`mdAssemblyRef` Türü farklı bir derlemede uygulanır.</span><span class="sxs-lookup"><span data-stu-id="259b5-111">`mdAssemblyRef` The type is implemented in a different assembly.</span></span>  
+-   <span data-ttu-id="dd093-111">`mdAssemblyRef` Türü farklı bir derlemede uygulanır.</span><span class="sxs-lookup"><span data-stu-id="dd093-111">`mdAssemblyRef` The type is implemented in a different assembly.</span></span>  
   
--   <span data-ttu-id="259b5-112">`mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.</span><span class="sxs-lookup"><span data-stu-id="259b5-112">`mdExportedTYpe` The type is nested within some other type.</span></span>  
+-   <span data-ttu-id="dd093-112">`mdExportedTYpe` Tür, başka bir tür içinde yer alıyor.</span><span class="sxs-lookup"><span data-stu-id="dd093-112">`mdExportedTYpe` The type is nested within some other type.</span></span>  
   
--   <span data-ttu-id="259b5-113">`mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.</span><span class="sxs-lookup"><span data-stu-id="259b5-113">`mdFileNil` The type is in the same file as the manifest and is not a nested type.</span></span>  
+-   <span data-ttu-id="dd093-113">`mdFileNil` Türü, bildirim olarak aynı dosya ve iç içe geçmiş bir tür değil.</span><span class="sxs-lookup"><span data-stu-id="dd093-113">`mdFileNil` The type is in the same file as the manifest and is not a nested type.</span></span>  
   
  `tkTypeDef`  
- <span data-ttu-id="259b5-114">[in] Bir belirteci meta veri dışarı aktarılmasına izin türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="259b5-114">[in] A token to the metadata that specifies the type to be exported.</span></span> <span data-ttu-id="259b5-115">İçinde bu değer girilir `TypeDef` tablo dosyanızda türün uyguladığı ve yalnızca bu dosya bu derlemede olduğunda geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="259b5-115">This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.</span></span>  
+ <span data-ttu-id="dd093-114">[in] Bir belirteci meta veri dışarı aktarılmasına izin türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="dd093-114">[in] A token to the metadata that specifies the type to be exported.</span></span> <span data-ttu-id="dd093-115">İçinde bu değer girilir `TypeDef` tablo dosyanızda türün uyguladığı ve yalnızca bu dosya bu derlemede olduğunda geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="dd093-115">This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.</span></span>  
   
  `dwExportedTypeFlags`  
- <span data-ttu-id="259b5-116">[in] Bitsel bir birleşimi [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) özellik ayarları dışarı aktarılan türü tanımlayan sabit listesi değerleri.</span><span class="sxs-lookup"><span data-stu-id="259b5-116">[in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.</span></span>  
+ <span data-ttu-id="dd093-116">[in] Bitsel bir birleşimi [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) özellik ayarları dışarı aktarılan türü tanımlayan sabit listesi değerleri.</span><span class="sxs-lookup"><span data-stu-id="dd093-116">[in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.</span></span>  
   
  `pmdct`  
- <span data-ttu-id="259b5-117">[out] Dışarı aktarılan tür gösteren döndürülen meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="259b5-117">[out] A pointer to the returned metadata token that indicates the exported type.</span></span>  
+ <span data-ttu-id="dd093-117">[out] Dışarı aktarılan tür gösteren döndürülen meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="dd093-117">[out] A pointer to the returned metadata token that indicates the exported type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="259b5-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="259b5-118">Remarks</span></span>  
- <span data-ttu-id="259b5-119">Bir `ExportedType` meta veri yapısı, bu derleme tarafından kullanıma sunulan ve bildirimini içeren farklı bir modül içinde uygulanan her türü için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="259b5-119">An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd093-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dd093-118">Remarks</span></span>  
+ <span data-ttu-id="dd093-119">Bir `ExportedType` meta veri yapısı, bu derleme tarafından kullanıma sunulan ve bildirimini içeren farklı bir modül içinde uygulanan her türü için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="dd093-119">An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="259b5-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="259b5-120">Requirements</span></span>  
- <span data-ttu-id="259b5-121">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="259b5-121">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd093-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dd093-120">Requirements</span></span>  
+ <span data-ttu-id="dd093-121">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd093-121">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="259b5-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="259b5-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dd093-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="dd093-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="259b5-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="259b5-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dd093-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="dd093-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="259b5-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="259b5-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dd093-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd093-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="259b5-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="259b5-125">See also</span></span>
-- [<span data-ttu-id="259b5-126">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="259b5-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dd093-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd093-125">See also</span></span>
+- [<span data-ttu-id="dd093-126">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dd093-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

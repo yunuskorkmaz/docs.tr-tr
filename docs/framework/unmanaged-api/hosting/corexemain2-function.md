@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625155"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501688"
 ---
-# <a name="corexemain2-function"></a><span data-ttu-id="24fca-102">_CorExeMain2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="24fca-102">_CorExeMain2 Function</span></span>
-<span data-ttu-id="24fca-103">Belirtilen bellek eşlemeli kod içinde giriş noktasını yürütür.</span><span class="sxs-lookup"><span data-stu-id="24fca-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="24fca-104">Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="24fca-104">This function is called by the operating system loader.</span></span>  
+# <a name="corexemain2-function"></a><span data-ttu-id="8375c-102">_CorExeMain2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="8375c-102">_CorExeMain2 Function</span></span>
+<span data-ttu-id="8375c-103">Belirtilen bellek eşlemeli kod içinde giriş noktasını yürütür.</span><span class="sxs-lookup"><span data-stu-id="8375c-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="8375c-104">Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8375c-104">This function is called by the operating system loader.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24fca-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="24fca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8375c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8375c-105">Syntax</span></span>  
   
 ```  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
@@ -38,30 +38,30 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="24fca-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="24fca-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8375c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8375c-106">Parameters</span></span>  
  `pUnmappedPE`  
- <span data-ttu-id="24fca-107">[in] Bellek eşlemeli kod için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="24fca-107">[in] A pointer to the memory-mapped code.</span></span>  
+ <span data-ttu-id="8375c-107">[in] Bellek eşlemeli kod için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8375c-107">[in] A pointer to the memory-mapped code.</span></span>  
   
  `cUnmappedPE`  
- <span data-ttu-id="24fca-108">[in] Öğe sayısı `pUnmappedPE` basılı tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="24fca-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
+ <span data-ttu-id="8375c-108">[in] Öğe sayısı `pUnmappedPE` basılı tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8375c-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
   
  `pImageNameIn`  
- <span data-ttu-id="24fca-109">[in] Yürütülebilir resmin adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="24fca-109">[in] A pointer to the name of the executable image.</span></span>  
+ <span data-ttu-id="8375c-109">[in] Yürütülebilir resmin adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8375c-109">[in] A pointer to the name of the executable image.</span></span>  
   
  `pLoadersFileName`  
- <span data-ttu-id="24fca-110">[in] Yükleyici dosyasının adı.</span><span class="sxs-lookup"><span data-stu-id="24fca-110">[in] The name of the loader file.</span></span>  
+ <span data-ttu-id="8375c-110">[in] Yükleyici dosyasının adı.</span><span class="sxs-lookup"><span data-stu-id="8375c-110">[in] The name of the loader file.</span></span>  
   
  `pCmdLine`  
- <span data-ttu-id="24fca-111">[in] Komut satırı parametreleri, varsa.</span><span class="sxs-lookup"><span data-stu-id="24fca-111">[in] Command-line parameters, if any.</span></span>  
+ <span data-ttu-id="8375c-111">[in] Komut satırı parametreleri, varsa.</span><span class="sxs-lookup"><span data-stu-id="8375c-111">[in] Command-line parameters, if any.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24fca-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="24fca-112">Requirements</span></span>  
- <span data-ttu-id="24fca-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24fca-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8375c-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8375c-112">Requirements</span></span>  
+ <span data-ttu-id="8375c-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8375c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24fca-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="24fca-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8375c-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="8375c-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="24fca-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="24fca-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8375c-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="8375c-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="24fca-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24fca-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8375c-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8375c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24fca-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="24fca-117">See also</span></span>
-- [<span data-ttu-id="24fca-118">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="24fca-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="8375c-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8375c-117">See also</span></span>
+- [<span data-ttu-id="8375c-118">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="8375c-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

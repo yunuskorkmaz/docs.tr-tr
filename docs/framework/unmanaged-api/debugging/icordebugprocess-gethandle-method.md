@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423448"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498092"
 ---
-# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="8486d-102">ICorDebugProcess::GetHandle Metodu</span><span class="sxs-lookup"><span data-stu-id="8486d-102">ICorDebugProcess::GetHandle Method</span></span>
-<span data-ttu-id="8486d-103">İşlem için bir tanıtıcı alır.</span><span class="sxs-lookup"><span data-stu-id="8486d-103">Gets a handle to the process.</span></span>  
+# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="c52bf-102">ICorDebugProcess::GetHandle Metodu</span><span class="sxs-lookup"><span data-stu-id="c52bf-102">ICorDebugProcess::GetHandle Method</span></span>
+<span data-ttu-id="c52bf-103">İşlem için bir tanıtıcı alır.</span><span class="sxs-lookup"><span data-stu-id="c52bf-103">Gets a handle to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8486d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8486d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c52bf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c52bf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8486d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8486d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c52bf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c52bf-105">Parameters</span></span>  
  `phProcessHandle`  
- <span data-ttu-id="8486d-106">[out] Bir işaretçi bir `HPROCESS` olan işlem için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="8486d-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
+ <span data-ttu-id="c52bf-106">[out] Bir işaretçi bir `HPROCESS` yani işlem tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="c52bf-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8486d-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8486d-107">Remarks</span></span>  
- <span data-ttu-id="8486d-108">Hata ayıklama arabirimi tarafından alınan tanıtıcı aittir.</span><span class="sxs-lookup"><span data-stu-id="8486d-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="8486d-109">Hata ayıklayıcı tanıtıcı kullanmadan önce çoğaltmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8486d-109">The debugger should duplicate the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c52bf-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c52bf-107">Remarks</span></span>  
+ <span data-ttu-id="c52bf-108">Hata ayıklama arabirimi tarafından alınan tanıtıcı aittir.</span><span class="sxs-lookup"><span data-stu-id="c52bf-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="c52bf-109">Hata ayıklayıcı tanıtıcı kullanmadan önce yinelenen.</span><span class="sxs-lookup"><span data-stu-id="c52bf-109">The debugger should duplicate the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8486d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8486d-110">Requirements</span></span>  
- <span data-ttu-id="8486d-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8486d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c52bf-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c52bf-110">Requirements</span></span>  
+ <span data-ttu-id="c52bf-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c52bf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8486d-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8486d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c52bf-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c52bf-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8486d-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8486d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c52bf-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c52bf-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8486d-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8486d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c52bf-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c52bf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

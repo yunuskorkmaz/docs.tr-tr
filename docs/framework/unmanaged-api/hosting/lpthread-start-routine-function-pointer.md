@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f111736f1a8115614cbeb13402f0ef75cf6038f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479330"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="0c0da-102">LPTHREAD_START_ROUTINE İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="0c0da-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
-<span data-ttu-id="0c0da-103">Bir iş parçacığının yürütülmeye başlandığını ana bilgisayara bildiren bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="0c0da-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
+# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="ee9ae-102">LPTHREAD_START_ROUTINE İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="ee9ae-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
+<span data-ttu-id="ee9ae-103">Bir iş parçacığının yürütülmeye başlandığını ana bilgisayara bildiren bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="ee9ae-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
   
- <span data-ttu-id="0c0da-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0c0da-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="ee9ae-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee9ae-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0c0da-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0c0da-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ee9ae-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ee9ae-105">Syntax</span></span>  
   
 ```  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
@@ -36,21 +36,21 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0c0da-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0c0da-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ee9ae-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ee9ae-106">Parameters</span></span>  
  `lpThreadParameter`  
- <span data-ttu-id="0c0da-107">[in] Yürütmeyi başlattı kodu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0c0da-107">[in] A pointer to the code that has started executing.</span></span>  
+ <span data-ttu-id="ee9ae-107">[in] Yürütmeyi başlattı kodu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ee9ae-107">[in] A pointer to the code that has started executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0c0da-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0c0da-108">Remarks</span></span>  
- <span data-ttu-id="0c0da-109">İşleve `LPTHREAD_START_ROUTINE` noktaları bir geri çağırma işlevidir ve uygulamanın barındırma yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="0c0da-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ee9ae-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ee9ae-108">Remarks</span></span>  
+ <span data-ttu-id="ee9ae-109">İşleve `LPTHREAD_START_ROUTINE` noktaları bir geri çağırma işlevidir ve uygulamanın barındırma yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ee9ae-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c0da-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0c0da-110">Requirements</span></span>  
- <span data-ttu-id="0c0da-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c0da-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee9ae-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ee9ae-110">Requirements</span></span>  
+ <span data-ttu-id="ee9ae-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee9ae-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c0da-112">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0c0da-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ee9ae-112">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ee9ae-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0c0da-113">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="0c0da-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="ee9ae-113">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="ee9ae-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="0c0da-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c0da-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ee9ae-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee9ae-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c0da-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0c0da-115">See also</span></span>
-- [<span data-ttu-id="0c0da-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="0c0da-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ee9ae-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ee9ae-115">See also</span></span>
+- [<span data-ttu-id="ee9ae-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ee9ae-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

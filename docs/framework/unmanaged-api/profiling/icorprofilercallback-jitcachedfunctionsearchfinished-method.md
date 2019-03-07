@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de225a0d4855cbd3f8a46787c2472ca727558fc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49f47b23cba64b16b5d9322e82695623f0a5ca03
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669659"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494499"
 ---
-# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="f36e0-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f36e0-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
-<span data-ttu-id="f36e0-103">Profil Oluşturucu, arama Native Image Generator (NGen.exe) kullanarak önceden derlenen bir işlev için tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="f36e0-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
+# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="b6c5e-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b6c5e-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
+<span data-ttu-id="b6c5e-103">Profil Oluşturucu, arama Native Image Generator (NGen.exe) kullanarak önceden derlenen bir işlev için tamamlandığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f36e0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f36e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6c5e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b6c5e-104">Syntax</span></span>  
   
 ```  
 HRESULT JITCachedFunctionSearchFinished(  
@@ -35,24 +35,24 @@ HRESULT JITCachedFunctionSearchFinished(
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f36e0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f36e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6c5e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b6c5e-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="f36e0-106">[in] Aramanın gerçekleştirildiği işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="f36e0-106">[in] The ID of the function for which the search was performed.</span></span>  
+ <span data-ttu-id="b6c5e-106">[in] Aramanın gerçekleştirildiği işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-106">[in] The ID of the function for which the search was performed.</span></span>  
   
  `result`  
- <span data-ttu-id="f36e0-107">[in] Değerini [cor_prf_jıt_cache](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) arama sonucunu gösteren sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="f36e0-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
+ <span data-ttu-id="b6c5e-107">[in] Değerini [cor_prf_jıt_cache](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) arama sonucunu gösteren sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f36e0-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f36e0-108">Remarks</span></span>  
- <span data-ttu-id="f36e0-109">.NET Framework sürüm 2.0 [Icorprofilercallback::jıtcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) ve `JITCachedFunctionSearchFinished` geri çağırmaları değil oluşturulacak normal NGen görüntülerinin tüm işlevler için.</span><span class="sxs-lookup"><span data-stu-id="f36e0-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="f36e0-110">Yalnızca bir profil oluşturucu için en iyi duruma getirilmiş NGen görüntülerinin geri çağırmaları tüm işlevler görüntüde oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f36e0-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="f36e0-111">Ancak, yalnızca derlenmiş just-in-time (JIT) gereken işlevi zorlamak için bu geri aramalarda kullanmaya çalışırsa, ek yükü nedeniyle, bir profil oluşturucu profil oluşturucu için iyileştirilmiş NGen görüntülerinin istemelidir.</span><span class="sxs-lookup"><span data-stu-id="f36e0-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="f36e0-112">Aksi takdirde, profil oluşturucu işlevi bilgileri toplamak için yavaş bir strateji kullanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f36e0-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6c5e-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b6c5e-108">Remarks</span></span>  
+ <span data-ttu-id="b6c5e-109">.NET Framework sürüm 2.0 [Icorprofilercallback::jıtcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) ve `JITCachedFunctionSearchFinished` geri çağırmaları değil oluşturulacak normal NGen görüntülerinin tüm işlevler için.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="b6c5e-110">Yalnızca bir profil oluşturucu için en iyi duruma getirilmiş NGen görüntülerinin geri çağırmaları tüm işlevler görüntüde oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="b6c5e-111">Ancak, yalnızca derlenmiş just-in-time (JIT) gereken işlevi zorlamak için bu geri aramalarda kullanmaya çalışırsa, ek yükü nedeniyle, bir profil oluşturucu profil oluşturucu için iyileştirilmiş NGen görüntülerinin istemelidir.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="b6c5e-112">Aksi takdirde, profil oluşturucu işlevi bilgileri toplamak için yavaş bir strateji kullanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f36e0-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f36e0-113">Requirements</span></span>  
- <span data-ttu-id="f36e0-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f36e0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6c5e-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b6c5e-113">Requirements</span></span>  
+ <span data-ttu-id="b6c5e-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6c5e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f36e0-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f36e0-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b6c5e-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b6c5e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f36e0-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f36e0-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b6c5e-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6c5e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f36e0-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f36e0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b6c5e-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6c5e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f36e0-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f36e0-118">See also</span></span>
-- [<span data-ttu-id="f36e0-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f36e0-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b6c5e-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6c5e-118">See also</span></span>
+- [<span data-ttu-id="b6c5e-119">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b6c5e-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetColumn Metodu
+title: IMetaDataTables::GetColumn Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetColumn
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a88acf59043613bb216ffe84dfb1593bd6ebea00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c380d363830eb6b4c47110d50cdb4d08e4568d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499816"
 ---
-# <a name="imetadatatablesgetcolumn-method"></a><span data-ttu-id="6288e-102">IMetaDataTables::GetColumn Metodu</span><span class="sxs-lookup"><span data-stu-id="6288e-102">IMetaDataTables::GetColumn Method</span></span>
-<span data-ttu-id="6288e-103">Belirtilen sütun ve satır tablodaki hücre bulunan değere bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="6288e-103">Gets a pointer to the value contained in the cell of the specified column and row in the given table.</span></span>  
+# <a name="imetadatatablesgetcolumn-method"></a><span data-ttu-id="bf3ee-102">IMetaDataTables::GetColumn Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bf3ee-102">IMetaDataTables::GetColumn Method</span></span>
+<span data-ttu-id="bf3ee-103">Belirtilen sütun ve satır tablodaki hücre bulunan değere bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-103">Gets a pointer to the value contained in the cell of the specified column and row in the given table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6288e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6288e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf3ee-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bf3ee-104">Syntax</span></span>  
   
 ```  
 HRESULT GetColumn (   
@@ -38,28 +38,28 @@ HRESULT GetColumn (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6288e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6288e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf3ee-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bf3ee-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="6288e-106">[in] Tablo dizini.</span><span class="sxs-lookup"><span data-stu-id="6288e-106">[in] The index of the table.</span></span>  
+ <span data-ttu-id="bf3ee-106">[in] Tablo dizini.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-106">[in] The index of the table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="6288e-107">[in] Tablodaki sütun dizini.</span><span class="sxs-lookup"><span data-stu-id="6288e-107">[in] The index of the column in the table.</span></span>  
+ <span data-ttu-id="bf3ee-107">[in] Tablodaki sütun dizini.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-107">[in] The index of the column in the table.</span></span>  
   
  `rid`  
- <span data-ttu-id="6288e-108">[in] Tablodaki satır dizini.</span><span class="sxs-lookup"><span data-stu-id="6288e-108">[in] The index of the row in the table.</span></span>  
+ <span data-ttu-id="bf3ee-108">[in] Tablodaki satır dizini.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-108">[in] The index of the row in the table.</span></span>  
   
  `pVal`  
- <span data-ttu-id="6288e-109">[out] Hücrenin değerini bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6288e-109">[out] A pointer to the value in the cell.</span></span>  
+ <span data-ttu-id="bf3ee-109">[out] Hücrenin değerini bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-109">[out] A pointer to the value in the cell.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6288e-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6288e-110">Requirements</span></span>  
- <span data-ttu-id="6288e-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6288e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf3ee-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bf3ee-110">Requirements</span></span>  
+ <span data-ttu-id="bf3ee-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf3ee-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6288e-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6288e-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bf3ee-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="bf3ee-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6288e-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="6288e-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bf3ee-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="bf3ee-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6288e-114">**.NET framework sürümleri** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6288e-114">**.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bf3ee-114">**.NET framework sürümleri** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf3ee-114">**.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6288e-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6288e-115">See also</span></span>
-- [<span data-ttu-id="6288e-116">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6288e-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="6288e-117">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6288e-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bf3ee-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf3ee-115">See also</span></span>
+- [<span data-ttu-id="bf3ee-116">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bf3ee-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="bf3ee-117">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bf3ee-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

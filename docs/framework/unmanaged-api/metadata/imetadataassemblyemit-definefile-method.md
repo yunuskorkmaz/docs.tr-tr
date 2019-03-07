@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ede66a39de292cd259cb12742e7c6df4ab5814f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dac6bb6790876e28f1a5cd72f0635a1155caa47
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481046"
 ---
-# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="8c9b4-102">IMetaDataAssemblyEmit::DefineFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8c9b4-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
-<span data-ttu-id="8c9b4-103">Oluşturur bir `File` derleme bu derlemesi tarafından başvurulan ve ilişkili meta veri belirteci döndürür meta verilerini içeren meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="f1e84-102">IMetaDataAssemblyEmit::DefineFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f1e84-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
+<span data-ttu-id="f1e84-103">Oluşturur bir `File` derleme bu derlemesi tarafından başvurulan ve ilişkili meta veri belirteci döndürür meta verilerini içeren meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="f1e84-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c9b4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c9b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1e84-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1e84-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineFile (  
@@ -39,33 +39,33 @@ HRESULT DefineFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c9b4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8c9b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1e84-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f1e84-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="8c9b4-106">[in] Kullanılacak dosya adı.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-106">[in] The name of the file to be consumed.</span></span>  
+ <span data-ttu-id="f1e84-106">[in] Kullanılacak dosya adı.</span><span class="sxs-lookup"><span data-stu-id="f1e84-106">[in] The name of the file to be consumed.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="8c9b4-107">[in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="f1e84-107">[in] Bütünleştirilmiş kod ile ilişkili veri karması için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f1e84-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="8c9b4-108">[in] Bayt cinsinden boyutu `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-108">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="f1e84-108">[in] Bayt cinsinden boyutu `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="f1e84-108">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwFileFlags`  
- <span data-ttu-id="8c9b4-109">[in] Bitsel bir birleşimi `FileFlags` özellik ayarlarını belirten değerleri.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
+ <span data-ttu-id="f1e84-109">[in] Bitsel bir birleşimi `FileFlags` özellik ayarlarını belirten değerleri.</span><span class="sxs-lookup"><span data-stu-id="f1e84-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
   
  `pmdf`  
- <span data-ttu-id="8c9b4-110">[out] Döndürülen işaretçi `File` belirteci.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-110">[out] A pointer to the returned `File` token.</span></span>  
+ <span data-ttu-id="f1e84-110">[out] Döndürülen işaretçi `File` belirteci.</span><span class="sxs-lookup"><span data-stu-id="f1e84-110">[out] A pointer to the returned `File` token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8c9b4-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8c9b4-111">Remarks</span></span>  
- <span data-ttu-id="8c9b4-112">Bir `File` meta veri yapısı, meta veriler içeren dosya hariç olmak üzere bu bütünleştirilmiş kod oluşturulmuş zaman bu derlemenin parçası olan her bir dosya için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1e84-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f1e84-111">Remarks</span></span>  
+ <span data-ttu-id="f1e84-112">Bir `File` meta veri yapısı, meta veriler içeren dosya hariç olmak üzere bu bütünleştirilmiş kod oluşturulmuş zaman bu derlemenin parçası olan her bir dosya için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f1e84-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c9b4-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8c9b4-113">Requirements</span></span>  
- <span data-ttu-id="8c9b4-114">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c9b4-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1e84-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f1e84-113">Requirements</span></span>  
+ <span data-ttu-id="f1e84-114">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1e84-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c9b4-115">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="8c9b4-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f1e84-115">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f1e84-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8c9b4-116">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="8c9b4-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f1e84-116">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="f1e84-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8c9b4-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c9b4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f1e84-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1e84-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c9b4-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c9b4-118">See also</span></span>
-- [<span data-ttu-id="8c9b4-119">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c9b4-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f1e84-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f1e84-118">See also</span></span>
+- [<span data-ttu-id="f1e84-119">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f1e84-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

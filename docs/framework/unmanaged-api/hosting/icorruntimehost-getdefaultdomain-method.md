@@ -1,5 +1,5 @@
 ---
-title: ICorRuntimeHost::GetDefaultDomain Metodu
+title: ICorRuntimeHost::GetDefaultDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorRuntimeHost.GetDefaultDomain
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d301ace3ed99ff8e15ed6ab80781fd8c7f83aaec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3880c1bf9cb1417953818551f802fb78773952d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743497"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485570"
 ---
-# <a name="icorruntimehostgetdefaultdomain-method"></a><span data-ttu-id="082c2-102">ICorRuntimeHost::GetDefaultDomain Metodu</span><span class="sxs-lookup"><span data-stu-id="082c2-102">ICorRuntimeHost::GetDefaultDomain Method</span></span>
-<span data-ttu-id="082c2-103">Türü bir arabirim işaretçisi alır <xref:System._AppDomain?displayProperty=nameWithType> , geçerli işlem için varsayılan etki alanı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="082c2-103">Gets an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the default domain for the current process.</span></span>  
+# <a name="icorruntimehostgetdefaultdomain-method"></a><span data-ttu-id="39729-102">ICorRuntimeHost::GetDefaultDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="39729-102">ICorRuntimeHost::GetDefaultDomain Method</span></span>
+<span data-ttu-id="39729-103">Türü bir arabirim işaretçisi alır <xref:System._AppDomain?displayProperty=nameWithType> , geçerli işlem için varsayılan etki alanı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="39729-103">Gets an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the default domain for the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="082c2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="082c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39729-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="39729-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDefaultDomain (  
@@ -35,31 +35,31 @@ HRESULT GetDefaultDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="082c2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="082c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39729-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="39729-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="082c2-106">[out] Bir arabirim işaretçisi türünde <xref:System._AppDomain?displayProperty=nameWithType> için <xref:System.AppDomain> işlem için varsayılan uygulama etki alanı temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="082c2-106">[out] An interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> to the <xref:System.AppDomain> instance that represents the default application domain for the process.</span></span>  
+ <span data-ttu-id="39729-106">[out] Bir arabirim işaretçisi türünde <xref:System._AppDomain?displayProperty=nameWithType> için <xref:System.AppDomain> işlem için varsayılan uygulama etki alanı temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="39729-106">[out] An interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> to the <xref:System.AppDomain> instance that represents the default application domain for the process.</span></span>  
   
- <span data-ttu-id="082c2-107">Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` bir arabirim işaretçisi türü elde etmek için <xref:System._AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="082c2-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="39729-107">Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` bir arabirim işaretçisi türü elde etmek için <xref:System._AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="39729-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="082c2-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="082c2-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="39729-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="39729-108">Return Value</span></span>  
   
-|<span data-ttu-id="082c2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="082c2-109">HRESULT</span></span>|<span data-ttu-id="082c2-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="082c2-110">Description</span></span>|  
+|<span data-ttu-id="39729-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="39729-109">HRESULT</span></span>|<span data-ttu-id="39729-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="39729-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="082c2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="082c2-111">S_OK</span></span>|<span data-ttu-id="082c2-112">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="082c2-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="082c2-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="082c2-113">S_FALSE</span></span>|<span data-ttu-id="082c2-114">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="082c2-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="082c2-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="082c2-115">E_FAIL</span></span>|<span data-ttu-id="082c2-116">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="082c2-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="082c2-117">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="082c2-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="082c2-118">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="082c2-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="082c2-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="082c2-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="082c2-120">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="082c2-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="39729-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="39729-111">S_OK</span></span>|<span data-ttu-id="39729-112">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="39729-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="39729-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="39729-113">S_FALSE</span></span>|<span data-ttu-id="39729-114">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="39729-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="39729-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="39729-115">E_FAIL</span></span>|<span data-ttu-id="39729-116">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="39729-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="39729-117">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="39729-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="39729-118">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="39729-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="39729-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="39729-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="39729-120">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="39729-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="082c2-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="082c2-121">Requirements</span></span>  
- <span data-ttu-id="082c2-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="082c2-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39729-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="39729-121">Requirements</span></span>  
+ <span data-ttu-id="39729-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39729-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="082c2-123">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="082c2-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="39729-123">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="39729-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="082c2-124">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="082c2-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="39729-124">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="39729-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="082c2-125">**.NET framework sürümleri:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="082c2-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="39729-125">**.NET framework sürümleri:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="39729-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="082c2-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="082c2-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39729-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="39729-126">See also</span></span>
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="082c2-127">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="082c2-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="39729-127">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="39729-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

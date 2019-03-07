@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f770182ef8489d503ed092bb4c6cf43ae5b9ce10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2cf814297397bcc6eddcb4ce7379e7444eb60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478901"
 ---
-# <a name="icordebugilframe4enumeratelocalvariablesex-method"></a><span data-ttu-id="8c55d-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8c55d-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Method</span></span>
-<span data-ttu-id="8c55d-103">[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="8c55d-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4enumeratelocalvariablesex-method"></a><span data-ttu-id="5fbda-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5fbda-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Method</span></span>
+<span data-ttu-id="5fbda-103">[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="5fbda-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="8c55d-104">Bir numaralandırıcı yerel değişken için çerçeveyi alır ve isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen değişkenler içerir.</span><span class="sxs-lookup"><span data-stu-id="8c55d-104">Gets an enumerator for the local variable in the frame, and optionally includes variables added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="5fbda-104">Bir numaralandırıcı yerel değişken için çerçeveyi alır ve isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen değişkenler içerir.</span><span class="sxs-lookup"><span data-stu-id="5fbda-104">Gets an enumerator for the local variable in the frame, and optionally includes variables added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c55d-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c55d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fbda-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5fbda-105">Syntax</span></span>  
   
 ```cpp
 HRESULT EnumerateLocalVariablesEx(  
@@ -35,28 +35,28 @@ HRESULT EnumerateLocalVariablesEx(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c55d-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8c55d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5fbda-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5fbda-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="8c55d-107">[in] Bir [Ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) çerçevede ReJIT izleme profil oluşturucu, eklenen değişkenleri dahil edilip edilmeyeceğini belirten sabit listesi üyesi.</span><span class="sxs-lookup"><span data-stu-id="8c55d-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether variables added in profiler ReJIT instrumentation are included in the frame.</span></span>  
+ <span data-ttu-id="5fbda-107">[in] Bir [Ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) çerçevede ReJIT izleme profil oluşturucu, eklenen değişkenleri dahil edilip edilmeyeceğini belirten sabit listesi üyesi.</span><span class="sxs-lookup"><span data-stu-id="5fbda-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether variables added in profiler ReJIT instrumentation are included in the frame.</span></span>  
   
  `ppValueEnum`  
- <span data-ttu-id="8c55d-108">[out] Numaralandırıcı bu çerçevesinde yerel değişkenler için bir "ICorDebugValueEnum" Nesne adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8c55d-108">[out] A pointer to the address of an "ICorDebugValueEnum" object that is the enumerator for the local variables in this frame.</span></span>  
+ <span data-ttu-id="5fbda-108">[out] Numaralandırıcı bu çerçevesinde yerel değişkenler için bir "ICorDebugValueEnum" Nesne adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5fbda-108">[out] A pointer to the address of an "ICorDebugValueEnum" object that is the enumerator for the local variables in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8c55d-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8c55d-109">Remarks</span></span>  
- <span data-ttu-id="8c55d-110">Bu yöntem benzer [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) dışında olan isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen değişkenlere erişimi yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8c55d-110">This method is similar to the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) method, except that it optionally accesses variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="8c55d-111">Ayarı `flags` için `ILCODE_ORIGINAL_IL` çağırmakla eşdeğerdir [Icordebugılframe::enumeratelocalvariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span><span class="sxs-lookup"><span data-stu-id="8c55d-111">Setting `flags` to `ILCODE_ORIGINAL_IL` is equivalent to calling [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span></span> <span data-ttu-id="8c55d-112">Ayarı `flags` için `ILCODE_REJIT_IL` ReJIT izleme profil oluşturucu, eklenen yerel değişkenlere erişmek hata ayıklayıcı sağlar.</span><span class="sxs-lookup"><span data-stu-id="8c55d-112">Setting `flags` to `ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="8c55d-113">Ara dil (IL) izlenmiyor numaralandırma boştur ve yöntemi döndürür `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="8c55d-113">If the intermediate language (IL) is not instrumented, the enumeration is empty and the method returns `S_OK`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fbda-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5fbda-109">Remarks</span></span>  
+ <span data-ttu-id="5fbda-110">Bu yöntem benzer [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) dışında olan isteğe bağlı olarak ReJIT izleme profil oluşturucu, eklenen değişkenlere erişimi yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5fbda-110">This method is similar to the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) method, except that it optionally accesses variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="5fbda-111">Ayarı `flags` için `ILCODE_ORIGINAL_IL` çağırmakla eşdeğerdir [Icordebugılframe::enumeratelocalvariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span><span class="sxs-lookup"><span data-stu-id="5fbda-111">Setting `flags` to `ILCODE_ORIGINAL_IL` is equivalent to calling [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span></span> <span data-ttu-id="5fbda-112">Ayarı `flags` için `ILCODE_REJIT_IL` ReJIT izleme profil oluşturucu, eklenen yerel değişkenlere erişmek hata ayıklayıcı sağlar.</span><span class="sxs-lookup"><span data-stu-id="5fbda-112">Setting `flags` to `ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="5fbda-113">Ara dil (IL) izlenmiyor numaralandırma boştur ve yöntemi döndürür `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="5fbda-113">If the intermediate language (IL) is not instrumented, the enumeration is empty and the method returns `S_OK`.</span></span>  
   
- <span data-ttu-id="8c55d-114">Bunlardan bazıları etkin olmayabilir olduğundan Numaralandırıcı çalışan yönteminde, tüm yerel değişkenlerin içermeyebilir.</span><span class="sxs-lookup"><span data-stu-id="8c55d-114">The enumerator may not include all of the local variables in the running method, since some of them may not be active.</span></span>  
+ <span data-ttu-id="5fbda-114">Bunlardan bazıları etkin olmayabilir olduğundan Numaralandırıcı çalışan yönteminde, tüm yerel değişkenlerin içermeyebilir.</span><span class="sxs-lookup"><span data-stu-id="5fbda-114">The enumerator may not include all of the local variables in the running method, since some of them may not be active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c55d-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8c55d-115">Requirements</span></span>  
- <span data-ttu-id="8c55d-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c55d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fbda-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5fbda-115">Requirements</span></span>  
+ <span data-ttu-id="5fbda-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5fbda-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c55d-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8c55d-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5fbda-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5fbda-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8c55d-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c55d-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5fbda-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5fbda-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c55d-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c55d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="5fbda-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fbda-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c55d-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c55d-120">See also</span></span>
-- [<span data-ttu-id="8c55d-121">ICorDebugILFrame4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c55d-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [<span data-ttu-id="8c55d-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8c55d-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="8c55d-123">ReJIT: Nasıl yapılır Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8c55d-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="5fbda-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5fbda-120">See also</span></span>
+- [<span data-ttu-id="5fbda-121">ICorDebugILFrame4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5fbda-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [<span data-ttu-id="5fbda-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5fbda-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5fbda-123">ReJIT: Nasıl yapılır Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="5fbda-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
