@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11c08e59813014bf9a474e92d06c6bd2576dd7d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474988"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next Yöntemi
-Icordebugbreakpoint örnekleri belirtilen sayıda geçerli konumdan başlayarak numaralandırması alır.  
+Geçerli konumunda başlayan bir numaralandırma Icordebugbreakpoint örneği belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugBreakpoint` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugBreakpoint` alınacak örnekleri.  
   
  `breakpoints`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugBreakpoint` bir kesme noktası temsil eden nesne.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugBreakpoint` bir kesme noktası temsil eden nesne.  
   
  `pceltFetched`  
- [out] Sayısını gösteren bir işaretçi `ICorDebugBreakpoint` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] Bir işaretçi sayısına `ICorDebugBreakpoint` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

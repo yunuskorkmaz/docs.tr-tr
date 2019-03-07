@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain::GetRegisterSet Metodu
+title: ICorDebugChain::GetRegisterSet Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain.GetRegisterSet
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfdde1f29300fcdc0f4e267949fdc3f6fd9917ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f366a40e1e3cd196f480c5849c49419c7daeea9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401414"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480994"
 ---
-# <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet Metodu
-Etkin bir parçası bu zincirinin ayarlamak kayıt alır.  
+# <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet Yöntemi
+Bu zincir etkin parçası için kaydı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppRegisters`  
- [out] Adresine bir işaretçi bir [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) kayıt temsil eden nesne bu zincirini etkin bölümü için ayarlayın.  
+ [out] Adresine bir işaretçi bir [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) kasayı temsil eden nesne bu zincir etkin parçası için ayarlayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

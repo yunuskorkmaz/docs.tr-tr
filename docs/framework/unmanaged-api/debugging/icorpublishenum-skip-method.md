@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e7d4e449624f295c4011a4ccdad46226e742a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f56792bbdf11c099205efd0cb35e3bf02d67632
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466615"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip Yöntemi
 İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [in] İmleç ilerlemek, öğe sayısı.  
   

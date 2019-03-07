@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727605"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484504"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken Yöntemi
 Şu anda yürütülen iş parçacığıyla ilişkilendirilmiş isteğe bağlı erişim belirteci açılır.  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwDesiredAccess`  
  [in] İstenen iş parçacığı belirteci erişim türlerini belirten erişim değerleri maskesi. Bu değerleri Win32'de tanımlanan `OpenThreadToken` işlevi. İstenen erişim türleri, belirtecin isteğe bağlı erişim denetim listesini (DACL) vermek veya reddetmek için erişim türlerini belirlemek için karşı mutabık kılınır.  
   

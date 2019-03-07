@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c851858ab2f294601d2e7f97b43e21ca815857
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474832"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading İşlevi
 Yönetilen modül görüntüleri yüklenmediği zaman yükleyiciye bildirir.  
@@ -36,7 +36,7 @@ STDAPI (VOID) _CorImageUnloading(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ImageBase`  
  [in] Görüntüyü kaldırmak için başlangıç konumu için bir işaretçi.  
   

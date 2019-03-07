@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e5ce46e1cf034e6b86d738d8ec69332df1ff9fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588268"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486270"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc Yöntemi
 Karşılık gelen Win32 işlevini için mantıksal bir sarmalayıcı olarak görev yapar. Win32 uygulaması `VirtualAlloc` ayırır veya çağırma işleminin sanal adres alanı sayfalarında bölgesi kaydeder.  
@@ -40,7 +40,7 @@ HRESULT VirtualAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pAddress`  
  [in] Başlangıç adresi ayırmak için bölge için bir işaretçi.  
   

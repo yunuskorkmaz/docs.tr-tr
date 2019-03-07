@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31b99ce4435c1282380291e3c3c15723381e8ab4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a60bb79c4b1e250ec2d363816d9837c6b51c91
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474208"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo Yöntemi
 Belirtilen doğrulama hatası hakkında ayrıntılı bir ileti alır.  
@@ -39,7 +39,7 @@ HRESULT FormatEventInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `hVECode`  
  [in] Doğrulama hata işleyicisine geçirilen HRESULT değerini.  
   

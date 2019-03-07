@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cffbf01cb8098f30fb026491e0153ac9a651756a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98df83569681dab5a7aa15651181373ee5d559dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692404"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479213"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags Yöntemi
 Belirtilen belirteç tarafından başvurulan devralınan yöntemi uygulama meta veri imzası güncelleştirir veya ayarlar.  
@@ -36,7 +36,7 @@ HRESULT SetMethodImplFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `md`  
  [in] Değiştirilecek yöntemi için belirteç.  
   

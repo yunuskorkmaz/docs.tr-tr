@@ -4,18 +4,18 @@ description: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sor
 ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471496"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Öğretici: ML.NET bir çok sınıflı sınıflandırma senaryosunda GitHub sorunları sınıflandırmak için kullanın.
 
 Bu örnek öğretici ML.NET kullanarak bir .NET Core konsol uygulaması kullanarak aracılığıyla bir GitHub sorunu sınıflandırıcı oluşturma gösterilmektedir C# Visual Studio 2017'de.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Sorunu anlama
 > * Uygun makine öğrenimi algoritması seçin
@@ -28,6 +28,8 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!NOTE]
 > Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning github deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 ## <a name="github-issue-sample-overview"></a>GitHub sorunu örneğine genel bakış
 

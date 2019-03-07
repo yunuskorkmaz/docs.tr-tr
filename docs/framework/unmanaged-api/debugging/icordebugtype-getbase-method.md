@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType::GetBase Metodu
+title: ICorDebugType::GetBase Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType.GetBase
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d04bc67013a2227f295ac3a41be027b9f9b04e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478732"
 ---
-# <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase Metodu
-Arabirim işaretçisi, bu tarafından temsil edilen türü varsa temel türünü temsil eden bir Icordebugtype alır `ICorDebugType`.  
+# <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase Yöntemi
+Bu tarafından temsil edilen türü varsa temel türünü temsil eden bir Icordebugtype için bir arabirim işaretçisi alır `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetBase (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pBase`  
- [out] Adresine bir işaretçi bir `ICorDebugType` temel türünü temsil eden nesne.  
+ [out] Adresine bir işaretçi bir `ICorDebugType` taban türünü temsil eden nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir tür için temel tür bakarak, tüm alanları bir nesne ya da üst yazdırma gibi ortak hata ayıklayıcı işlevlerini uygulamak yararlıdır.  
+ Bir tür için temel tür bakarak, tüm alanları bir nesnenin ya da üst yazdırma gibi yaygın hata ayıklayıcı işlevselliği uygulamak kullanışlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

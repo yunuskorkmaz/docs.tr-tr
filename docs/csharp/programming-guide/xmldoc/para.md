@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: e97ee59817ec0b60ac85d20199c9219c3e0014a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261375"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481397"
 ---
 # <a name="para-c-programming-guide"></a>\<para > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -23,7 +23,7 @@ ms.locfileid: "55261375"
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `content`  
  Paragraf metni.  
   

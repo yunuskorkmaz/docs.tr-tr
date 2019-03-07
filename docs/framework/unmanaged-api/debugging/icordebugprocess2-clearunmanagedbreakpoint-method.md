@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472657"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint Yöntemi
-Önceden ayarlanmış kaldırır verilen adresindeki kesme noktası.  
+Önceden ayarlanmış kaldırır kesme noktasında belirli adres.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` kesme ayarlandığı adresini belirten değer.  
+ [in] A `CORDB_ADDRESS` Kesme noktasının ayarlandığı adresini belirten bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Belirtilen kesme noktası daha önce daha önceki bir çağrı tarafından ayarlanacak [Icordebugprocess2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- `ClearUnmanagedBreakpoint` Ayıklanacak işlemi çalışırken yöntemi çağrılabilir.  
+ `ClearUnmanagedBreakpoint` Ayıklanan işlemin çalışırken yöntemi çağrılabilir.  
   
- `ClearUnmanagedBreakpoint` Yöntemi, hata ayıklayıcısının yalnızca yönetilen modunda bağlıysa veya belirtilen adresinde hiçbir kesme noktası varsa, bir hata kodu döndürür.  
+ `ClearUnmanagedBreakpoint` Yöntemi yalnızca yönetilen modunda hata ayıklayıcıyı eklediyseniz ya da belirtilen adresteki hiçbir kesme noktası varsa, bir hata kodu döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

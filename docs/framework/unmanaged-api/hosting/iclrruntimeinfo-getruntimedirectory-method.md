@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26bee605724fd69d972a7e07c6fe6be2fbcabfa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466988"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory Metodu
 Bu arabirimi ile ilişkili ortak dil çalışma zamanı (CLR) yükleme dizinini alır.  
@@ -37,7 +37,7 @@ HRESULT GetRuntimeDirectory(
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pwzBuffer`  
  [out] CLR yükleme dizinini döndürür. Yükleme yolu tam olarak; Örneğin, "c:\windows\microsoft.net\framework\v1.0.3705\\".  
   

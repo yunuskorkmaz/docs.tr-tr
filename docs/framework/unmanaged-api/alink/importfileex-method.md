@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0381ee61a0128a8ae303d44198f8d391b4531a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6956fd0bd8217a3b0b44f48cabc80d0c95db8f36
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494378"
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
 İçeri aktarmalar, derleme veya modül ilişkisiz gösterilir.  
@@ -40,7 +40,7 @@ HRESULT ImportFileEx(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pszFilename`  
  Alınacağı dosyasının tam adı.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fda739a71a133a8c6177d0c7b8e0402d1dc97c4f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2861a2f0aec66832c618dda7d50dd543920102f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202216"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468616"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Yöntemi
 Tam etki alanı adı veya uzaktan hata ayıklama hedef makinesinin IPv4 adresini döndürür. IPv6 şu anda desteklenmiyor.  
@@ -37,7 +37,7 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchHostName`  
  [in] Karakter cinsinden boyutu, `szHostName` arabellek. Bu parametre 0 (sıfır) ise `szHostName` null olmalıdır.  
   

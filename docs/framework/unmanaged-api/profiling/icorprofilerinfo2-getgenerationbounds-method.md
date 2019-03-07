@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetGenerationBounds Metodu
+title: ICorProfilerInfo2::GetGenerationBounds Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetGenerationBounds
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 760c2d927409ef9f0a1f7a72c33efd3a7618f771
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec0f953ecd0b578d25bcbe155f4bec97274e176c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489854"
 ---
-# <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds Metodu
+# <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds Yöntemi
 Çeşitli çöp toplama kuşakları ' kılan yığın segmentler bellek bölgeleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetGenerationBounds(
     [out, size_is(cObjectRanges), length_is(*pcObjectRanges)] COR_PRF_GC_GENERATION_RANGE ranges[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cObjectRanges`  
  [in] Öğe için çağırıcı tarafından ayrılan sayısı `ranges` dizisi.  
   

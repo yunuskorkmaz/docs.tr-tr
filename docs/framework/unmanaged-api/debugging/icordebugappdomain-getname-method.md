@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain::GetName Metodu
+title: ICorDebugAppDomain::GetName Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain.GetName
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405775"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471062"
 ---
-# <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Metodu
-Uygulama etki alanı adını alır.  
+# <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Yöntemi
+Uygulama etki alanının adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,23 +38,23 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutunu `szName` dizi. Bu yöntem sorgu moduna sıfıra bu değeri ayarlayın.  
+ [in] Boyutu `szName` dizisi. Bu değer, bu yöntem sorgu moduna sıfıra ayarlayın.  
   
  `pcchName`  
- [out] Boyutu adı ya da gerçekte döndürülen karakter sayısını gösteren bir işaretçi `szName`. Sorgu modunda bu değer ne kadar büyük bir arabellek bilmeniz çağıran sağlar adını ayrılamadı.  
+ [out] Boyut adı ya da gerçekte döndürülen karakter sayısı için bir işaretçi `szName`. Sorgu modunda, bu değer ne büyüklükte bir arabellek bilmeniz arayan olanak tanır. adı ayrılamıyor.  
   
  `szName`  
- [out] Uygulama etki alanı adını depolar bir dizi.  
+ [out] Uygulama etki alanı adını depolar dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata ayıklayıcısı çağırır `GetName` adı gerekli bir arabellek boyutu almak için bir kez yöntemi. Hata ayıklayıcı arabellek ayırır ve ardından arabellek doldurmak için ikinci kez yöntemini çağırır. Ad boyutunu almak için ilk çağrı olarak adlandırılır *sorgu modunu*.  
+ Bir hata ayıklayıcı çağırır `GetName` adı gerekli bir arabellek boyutunu almak için bir kez yöntemi. Hata ayıklayıcı arabelleği ayırır ve ardından arabellek doldurmak için ikinci bir kez yöntemini çağırır. Adı boyutunu almak için birinci çağrı olarak adlandırılır *sorgu modu*.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

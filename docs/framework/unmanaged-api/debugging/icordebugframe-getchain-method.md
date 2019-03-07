@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrame::GetChain Metodu
+title: ICorDebugFrame::GetChain Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrame.GetChain
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c020b9f6c074be11e3433939ce6898586123cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412613"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488489"
 ---
-# <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain Metodu
-Bu çerçeve bir parçası olan zinciri işaretçisi alır.  
+# <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain Yöntemi
+Bu çerçeve parçasıdır zinciri için bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppChain`  
- [out] Bu çerçeve içeren zinciri temsil eden Icordebugchain nesne adresini gösteren bir işaretçi.  
+ [out] Bu çerçeveyi içeren zincirini temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

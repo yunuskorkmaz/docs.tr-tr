@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0dbac6570fc0af0452a0e44f838124afbf6a4fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe237ca01d409636f184930d26ca970d58e90437
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472958"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages Yöntemi
-Hata ayıklayıcı günlük iletilerini iletimini devre dışı bırakır ve sağlar.  
+Etkinleştirir ve günlük ileti hata ayıklayıcı devre dışı bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,17 +33,17 @@ Hata ayıklayıcı günlük iletilerini iletimini devre dışı bırakır ve sa�
 HRESULT EnableLogMessages([in]BOOL fOnOff);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `fOnOff`  
- [in] `true` günlük iletilerini; aktarımını sağlar `false` iletimi devre dışı bırakır.  
+ [in] `true` günlük ileti; sağlar `false` iletimi devre dışı bırakır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem yalnızca sonra geçerli [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma oluşur.  
+ Bu yöntem yalnızca geçerli [Icordebugmanagedcallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

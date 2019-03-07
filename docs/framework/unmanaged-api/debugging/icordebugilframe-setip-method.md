@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed7de70c8ea26f46f44abb3e063c6e4c4b115666
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414496"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471400"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP Yöntemi
-Yönerge işaretçisi Microsoft Ara dili (MSIL) kodda belirtilen uzaklık konumuna ayarlar.  
+Microsoft Ara dil (MSIL) kodu belirtilen uzaklık konuma yönerge işaretçisini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `nOffset`  
- MSIL kodda uzaklık konumu.  
+ MSIL kodu uzaklık konumu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrılar `SetIP` hemen tüm çerçeveler ve zincirleri geçerli iş parçacığı için geçersiz. Hata ayıklayıcı çerçeve bilgileri yapılan bir çağrı sonra gerekirse `SetIP`, yeni bir yığın izlemesi gerçekleştirmelisiniz.  
+ Çağrılar `SetIP` hemen tüm çerçeveleri ve zincirleri için geçerli iş parçacığı geçersiz. Hata ayıklayıcı çağrısı yapıldıktan sonra çerçeve bilgileri gerekiyorsa `SetIP`, yeni bir yığın izlemesi gerçekleştirmeniz gerekir.  
   
- [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) yığın çerçevesi geçerli bir durumda tutmak deneyecek. Ancak, çerçeve geçerli bir durumda olsa bile, yine sorunları olabilir başlatılmayan yerel değişkenlerde gibi. Çağıran, çalışan program önbelleklerinin sağlamak için sorumludur.  
+ [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) yığın çerçevesini geçerli bir durumda tutmak çalışacaktır. Ancak, çerçeve geçerli bir durumda olsa bile, yine de olabilir başlatılmamış yerel değişkenler gibi sorunlar. Çağıran, çalışan programa önbelleklerinin sağlamaktan sorumludur.  
   
- 64 bit platformlarda dışı yönerge işaretçisi taşınamaz bir `catch` veya `finally` bloğu. Varsa `SetIP` çağrılır böyle bir 64-bit platformu üzerinde hareket ettirmek için hata olduğunu gösteren bir HRESULT döndürür.  
+ 64-bit platformlarda, yönerge işaretçisini tanesi taşınamaz bir `catch` veya `finally` blok. Varsa `SetIP` çağrılır böyle bir 64-bit platformlarda hareket ettirmek için hata olduğunu gösteren bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

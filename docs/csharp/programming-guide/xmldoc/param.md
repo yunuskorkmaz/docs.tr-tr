@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: 08b5257cedfcaf6fe34b8218dda93163d4c0d98b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ffa3bd066ce753f2b953f2d6d0a70a3bf65293ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976689"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468039"
 ---
 # <a name="param-c-programming-guide"></a>\<param > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -23,7 +23,7 @@ ms.locfileid: "56976689"
 <param name="name">description</param>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `name`  
  Bir yöntem parametresi adı. Adı çift tırnak içine alın ("").  
   

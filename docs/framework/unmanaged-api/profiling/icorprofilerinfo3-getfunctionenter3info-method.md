@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo3::GetFunctionEnter3Info Metodu
+title: ICorProfilerInfo3::GetFunctionEnter3Info Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo3.GetFunctionEnter3Info Method
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a12e747344f4943dafced2402e0f08a08ac6e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bda97afe3e88e2bab6a57c4bb2271d58541d4e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498244"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484062"
 ---
-# <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info Metodu
+# <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info Yöntemi
 Profil Oluşturucu tarafından bildirilen işlev yığın çerçeve ve bağımsız değişken bilgilerini sağlar [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi. Bu yöntem yalnızca sırasında çağrılabilir `FunctionEnter3WithInfo` geri çağırma.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ HRESULT GetFunctionEnter3Info(
                   COR_PRF_FUNCTION_ARGUMENT_INFO *pArgumentInfo);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `functionId`  
  [in] `FunctionID` İşlevinin giriliyor.  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain2::GetFunctionPointerType Metodu
+title: ICorDebugAppDomain2::GetFunctionPointerType Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2.GetFunctionPointerType
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489754"
 ---
-# <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType Metodu
-Bir işaretçi belirli bir imzaya sahip bir işlevi alır.  
+# <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType Yöntemi
+Belirli bir imzaya sahip bir işlev için bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,20 +37,20 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `nTypeArgs`  
- [in] İşlevi için tür bağımsız değişkenleri sayısı.  
+ [in] Tür bağımsız değişkenleri için işlev sayısı.  
   
  `ppTypeArgs`  
- [in] Her biri bir tür bağımsız değişkeni işlevinin temsil eden bir Icordebugtype bir nesneye işaret etmiyor dizisi işaretçisi. Dönüş türü olan ilk öğedir; diğer öğelerin her biri bir parametre türüdür.  
+ [in] Bir dizi işaretçileri, her biri bir tür bağımsız değişkeni işlevin temsil eden bir Icordebugtype nesneye işaret eder. Dönüş türü olan ilk öğedir; diğer öğelerin her biri bir parametre türüdür.  
   
  `ppType`  
- [out] Adresine bir işaretçi bir `ICorDebugType` işaretçinin işleve temsil eden nesne.  
+ [out] Adresine bir işaretçi bir `ICorDebugType` işaretçiyi işleve temsil eden nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

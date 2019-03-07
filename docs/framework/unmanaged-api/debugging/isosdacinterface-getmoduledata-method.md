@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ed151f998ed7d28ba7ae170839ce2fa3a1ee6135
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490456"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData yöntemi
 
@@ -37,7 +37,7 @@ HRESULT GetModuleData(
 );
 ```
 
-### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
 `moduleAddr`\
 [in] Modül için daha fazla bilgi almak için adresi.

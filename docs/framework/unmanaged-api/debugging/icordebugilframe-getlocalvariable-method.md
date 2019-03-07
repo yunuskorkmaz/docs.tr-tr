@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebd36f01297f24c050f84fb67e7673f8641fe206
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413013"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475248"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable Metodu
-Bu Microsoft Ara dili (MSIL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır.  
+Bu Microsoft Ara dili (MSIL) yığın çerçevesi içinde belirtilen yerel değişkenin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ HRESULT GetLocalVariable (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwIndex`  
- [in] Yerel değişken bu MSIL yığın çerçevesinde dizini.  
+ [in] Bu MSIL yığın çerçevesinde yerel değişken dizini.  
   
  `ppValue`  
- [out] Alınan değerin temsil eden Icordebugvalue nesne adresini gösteren bir işaretçi.  
+ [out] Alınan değeri temsil eden bir Icordebugvalue nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetLocalVariable` MSIL yığın çerçevesi veya tam zamanında (JIT) derlenmiş çerçeve yöntemi kullanılabilir.  
+ `GetLocalVariable` Bir MSIL yığın çerçevesinde veya just-in-time (JIT) derlenmiş çerçevesinde yöntemi kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

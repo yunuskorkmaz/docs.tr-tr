@@ -1,17 +1,17 @@
 ---
-title: ICorDebugLoadedModule::GetName Metodu
+title: ICorDebugLoadedModule::GetName Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97c7c793df389dd6a8f670e985a9c9384eab639
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8b3b25c5e6e80b45ffc97e116c8649078f00861
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703750"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478719"
 ---
-# <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName Metodu
+# <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName Yöntemi
 Yüklenen bir modülün adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -25,7 +25,7 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchName`  
  [in] Karakter sayısı `szName` arabellek.  
   

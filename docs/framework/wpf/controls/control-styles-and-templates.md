@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373211"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488844"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetimin görünümünü ve yapısı değiştirerek değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimin. Bir denetimin görsel ağacın yalnızca bir kısmını değiştirmek için bir yolu yoktur; görsel ağacı ayarlamalısınız bir denetimin değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Windows Presentation Foundation (WPF) denetiminiz bir <xref:System.Windows.Contr
  [ListView Stilleri ve Şablonları](listview-styles-and-templates.md)  
  [Menü Stilleri ve Şablonları](menu-styles-and-templates.md)  
  [NavigationWindow Stilleri ve Şablonları](navigationwindow-styles-and-templates.md)  
- [PasswordBox stilleri ve şablonları](passwordbox-syles-and-templates.md)  
+ [PasswordBox stilleri ve şablonları](passwordbox-styles-and-templates.md)  
  [ProgressBar Stilleri ve Şablonları](progressbar-styles-and-templates.md)  
  [RadioButton Stilleri ve Şablonları](radiobutton-styles-and-templates.md)  
- [RepeatButton stilleri ve şablonları](repeatbutton-syles-and-templates.md)  
+ [RepeatButton stilleri ve şablonları](repeatbutton-styles-and-templates.md)  
  [ScrollBar Stilleri ve Şablonları](scrollbar-styles-and-templates.md)  
  [ScrollViewer Stilleri ve Şablonları](scrollviewer-styles-and-templates.md)  
  [Kaydırıcı Stilleri ve Şablonları](slider-styles-and-templates.md)  
  [StatusBar Stilleri ve Şablonları](statusbar-styles-and-templates.md)  
  [TabControl Stilleri ve Şablonları](tabcontrol-styles-and-templates.md)  
  [TextBox Stilleri ve Şablonları](textbox-styles-and-templates.md)  
- [Parmak stilleri ve şablonları](thumb-syles-and-templates.md)  
- [ToggleButton stilleri ve şablonları](togglebutton-syles-and-templates.md)  
+ [Parmak stilleri ve şablonları](thumb-styles-and-templates.md)  
+ [ToggleButton stilleri ve şablonları](togglebutton-styles-and-templates.md)  
  [ToolBar Stilleri ve Şablonları](toolbar-styles-and-templates.md)  
  [ToolTip Stilleri ve Şablonları](tooltip-styles-and-templates.md)  
  [TreeView Stilleri ve Şablonları](treeview-styles-and-templates.md)  

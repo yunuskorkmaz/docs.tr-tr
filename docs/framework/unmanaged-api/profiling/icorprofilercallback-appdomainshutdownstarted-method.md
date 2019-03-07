@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 174ac8b66c8127c16398de442a7067b742ab58ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465575"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted Yöntemi
 Profil Oluşturucu, bir uygulama etki alanı bir işlemden boşaltılıyor bildirir.  
@@ -34,7 +34,7 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `appDomainId`  
  [in] Uygulamanın derlemelerin saklandığı etki alanını tanımlar.  
   

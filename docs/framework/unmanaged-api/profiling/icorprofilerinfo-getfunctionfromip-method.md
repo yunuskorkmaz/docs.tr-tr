@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo::GetFunctionFromIP Metodu
+title: ICorProfilerInfo::GetFunctionFromIP Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo.GetFunctionFromIP
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b0859d2f6d4ea2abf72867f2a803132cbd04225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fec1d1effbf900974327247078b65f60fef7e21
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466433"
 ---
-# <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP Metodu
+# <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP Yöntemi
 Yönetilen kod yönerge işaretçisi eşleyen bir `FunctionID`.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ip`  
  [in] Yönetilen kodda yönerge işaretçisi.  
   

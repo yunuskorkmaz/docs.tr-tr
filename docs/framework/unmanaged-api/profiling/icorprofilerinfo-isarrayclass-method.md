@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468240"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
 Array sınıfı belirtilen sınıf olup olmadığını belirler.  
@@ -37,7 +37,7 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `classId`  
  [in] İncelenecek sınıfın Kimliğidir.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42710f6c19bb5b2eca6891c2855e010ad9de1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98a53f488467ed1c66543c9861f056bc9890f617
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612209"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478524"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen Yöntemi
 Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -38,7 +38,7 @@ HRESULT StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
  [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer` ya da boş dize veya geçici bir ad oluşturmak için null olmalıdır.  
   

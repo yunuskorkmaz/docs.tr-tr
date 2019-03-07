@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d752eb17b956e2367e8b191080a370506a61ff34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495721"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID Metodu
-İşlemin işletim sistemi (OS) Kimliğini alır.  
+İşletim sistemi (OS) işlem Kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,14 +33,14 @@ ms.locfileid: "33416673"
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwProcessId`  
- [out] İşlemin benzersiz Kimliğidir.  
+ [out] İşlem benzersiz kimliği.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

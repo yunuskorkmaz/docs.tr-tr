@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3b77a0ffc7af3b3640d1b255bd3be522f45a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473441"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength Yöntemi
-Belirtilen uzunlukta bir dize belirtilen içerikle oluşturur.  
+Belirtilen içerikle belirtilen uzunlukta bir dize oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ HRESULT NewStringWithLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `string`  
  [in] Dize değeri için bir işaretçi.  
   
@@ -44,14 +44,14 @@ HRESULT NewStringWithLength (
  [in] Dize uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizenin sonunda ise null karakter yönetilen dizesinde çağıranı olması beklenir `NewStringWithLength` yöntemi dize uzunluğu sonunda null karakteri içeren emin gerekir.  
+ Dize sondaki, null karakteri yönetilen dizesinde çağıran olması bekleniyorsa `NewStringWithLength` yöntemi dize uzunluğu sondaki null karakter içerdiğinden emin gerekir.  
   
- Dize, her zaman iş parçacığı şu anda yürütülmekte uygulama etki alanında oluşturulur.  
+ Dize, her zaman iş parçacığı gerçekleştirmektedir uygulama etki alanında oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

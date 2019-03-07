@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf70d8665d3984c379da9d9058cd97315def7b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43349dd3562b4480746948a0e65cc52580e377b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677686"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470698"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next Yöntemi
 Tarafından belirtilen "ICorDebugType" örnek sayısını alır `celt` öğesinden geçerli konumunda başlayan sabit listesi.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [in] Sayısını `ICorDebugType` alınacak örnekleri.  
   

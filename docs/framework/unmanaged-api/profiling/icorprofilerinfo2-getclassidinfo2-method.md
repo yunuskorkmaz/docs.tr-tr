@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetClassIDInfo2 Metodu
+title: ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetClassIDInfo2
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d58174aa8b8d0e0544566faa6b1d79c2c3d6197
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472622"
 ---
-# <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Metodu
+# <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
 Meta verileri ve üst modül için belirtilen sınıf, açık genel tanımını belirtecini alır `ClassID` kendi üst sınıfın ve `ClassID` her tür bağımsız değişkeni, sınıfın varsa.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,7 +40,7 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `classId`  
  [in] Bilgileri alınır sınıfın Kimliğidir.  
   

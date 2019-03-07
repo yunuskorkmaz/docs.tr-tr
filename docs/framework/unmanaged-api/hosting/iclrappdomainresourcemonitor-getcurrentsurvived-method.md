@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a24f51884b5dc55e45d22f33735fe07db770d06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466927"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived Metodu
 Atık toplamayı engelleme son tam kurtulan ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.  
@@ -36,7 +36,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwAppDomainId`  
  [in] İstenen uygulama etki alanı kimliği.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc4e51ec60c7526f36bbe4909bec91a527e0862c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474962"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask Yöntemi
-İçinde yürütme durdurulur eşlenmemiş kod türünü belirten bir değer ayarlar.  
+Yürütmeyi durdur eşlenmemiş kodun türünü belirten bir değeri ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,21 +35,21 @@ HRESULT SetUnmappedStopMask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `mask`  
- [in] Hata ayıklayıcı yürütme durdurulur eşlenmemiş kod türünü belirtir CorDebugUnmappedStop numaralandırması değeri.  
+ [in] Hata ayıklayıcı yürütme durdurulur eşlenmemiş kodun türünü belirten CorDebugUnmappedStop sabit listesi değeri.  
   
- STOP_OTHER_UNMAPPED varsayılan değerdir. STOP_UNMANAGED değeri yalnızca birlikte çalışma hata ayıklamaya geçerli değil.  
+ STOP_OTHER_UNMAPPED varsayılan değerdir. ' % S'değeri STOP_UNMANAGED yalnızca birlikte çalışma hata ayıklama ile geçerli değil.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcıyı Microsoft Ara dile (MSIL) karşılık gelen hiçbir eşleme sahip bir tam zamanında (JIT) derleme bulduğunda, bu tür bir eşlenmemiş kod belirtme bayrağı ayarlarsanız yürütme durdurur; Aksi takdirde, saydam atlama devam eder.  
+ Hata ayıklayıcı Microsoft Ara dilini (MSIL) için karşılık gelen bir eşlemesi olmayan bir tam zamanında (JIT) derleme bulduğunda eşlenmemiş kod türünü belirten bayrağı ayarlarsanız yürütmeyi durdurur; Aksi takdirde, Adımlama şeffaf bir şekilde devam eder.  
   
- Hata ayıklayıcı, bir yöntem girmek için Adımlayıcı kullanmıyorsa, sonra da mutlaka eşlenmemiş kod adım olmaz.  
+ Hata ayıklayıcı, bir yönteme girmeyi Adımlayıcı kullanmıyorsa, sonra da mutlaka eşlenmemiş bir kod üzerinde Adım olmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

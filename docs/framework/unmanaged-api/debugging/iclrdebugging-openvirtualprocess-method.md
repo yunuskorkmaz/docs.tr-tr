@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478030"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess Yöntemi
 Ortak dil çalışma zamanı (CLR) modül işleme yüklendiğinde karşılık gelen Icordebugprocess arabirimi alır.  
@@ -41,7 +41,7 @@ HRESULT OpenVirtualProcess(
     [out] CLR_DEBUGGING_PROCESS_FLAGS * pdwFlags);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleBaseAddress`  
  [in] Hedef işlemde bir modülün temel adres. Belirtilen modül bir CLR modülünü değilse COR_E_NOT_CLR döndürülür.  
   

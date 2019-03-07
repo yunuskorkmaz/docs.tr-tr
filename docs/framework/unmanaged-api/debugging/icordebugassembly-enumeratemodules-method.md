@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ada2e0e81c9e022e152e01472839d5d506332fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f763151f4e450c48eb9304936541243af06bdca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402388"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485323"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules Yöntemi
-İçinde yer alan modülleri için bir numaralandırıcı alır `ICorDebugAssembly`.  
+Bulunan modüller için bir numaralandırıcı alır `ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT EnumerateModules (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppModules`  
- [out] Numaralayıcı olduğu Icordebugmoduleenum arabirimi adresini gösteren bir işaretçi.  
+ [out] Numaralandırıcı Icordebugmoduleenum arabirimi adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

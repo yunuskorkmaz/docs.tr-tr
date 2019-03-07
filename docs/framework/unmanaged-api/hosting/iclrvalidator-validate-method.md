@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ace11aa2cc3c24a6582b227f9a7ff8816ea0668
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718734"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492120"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate Yöntemi
 Taşınabilir yürütülebilir (PE) veya belirtilen dosyadaki Microsoft Ara dilini (MSIL) doğrular.  
@@ -42,7 +42,7 @@ HRESULT Validate (
 );      
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `veh`  
  [in] Bir işaretçi bir `IVEHandler` doğrulama hatalarını işleyen örneği.  
   

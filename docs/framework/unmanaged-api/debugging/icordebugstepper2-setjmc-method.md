@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 129bf04a097b2019b080f813bf049d41b501f8fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418203"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474221"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC Yöntemi
-Bu ICorDebugStepper yalnızca bir uygulamanın geliştirici tarafından yazılan kodu aracılığıyla adımları olup olmadığını belirten bir değer ayarlar. Bu işlem ayrıca olarak yalnızca benim kodum (JMC) hata ayıklayıcı denir.  
+Bir uygulamanın geliştiricisi tarafından yazılmış kod aracılığıyla bu ICorDebugStepper adımları olup olmadığını belirten bir değeri ayarlar. Bu işlem olarak yalnızca benim kodum (JMC) hata ayıklayıcı da bilinir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT SetJMC (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `fIsJMCStepper`  
- [in] Kümesine `true` adıma uygulamanın geliştirici tarafından yazılan; Aksi takdirde ayarlamak kod aracılığıyla `false`.  
+ [in] Kümesine `true` Uygulama geliştirici tarafından yazılan; Aksi takdirde, kümesine kodu boyunca adım adım `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

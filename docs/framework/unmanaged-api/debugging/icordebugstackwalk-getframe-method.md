@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89515ab0ff08eadfb1eafdf70ead0bc1e0a17628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666253"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487739"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame Metodu
 Geçerli çerçevenin alır [Icordebugstackwalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nesne.  
@@ -33,7 +33,7 @@ Geçerli çerçevenin alır [Icordebugstackwalk](../../../../docs/framework/unma
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pFrame`  
  [in] Geçerli yığındaki çerçeveye temsil eden oluşturulmuş bir çerçeve nesnenin adresi için bir işaretçi.  
   

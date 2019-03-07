@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fc10344757d4dd9f9df7d4931eb339b652303f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9659f37f0ae9297837dbc4b1602cb00b8eff2fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471465"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences Yöntemi
 Profil Oluşturucu belirtilen nesne tarafından başvurulan nesneleri bellekte hakkında bilgilendirir.  
@@ -37,7 +37,7 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `objectId`  
  [in] Nesnelere başvurma nesnesinin kimliği.  
   

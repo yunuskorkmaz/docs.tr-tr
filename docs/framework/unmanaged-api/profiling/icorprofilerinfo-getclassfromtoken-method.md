@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12524de994264d83abf5b5338654e89a0964adff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a74e99e0b669c1b3d8e36d881391f27ef71ae306
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493550"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken Metodu
 Meta veri belirteci verilen sınıfı Kimliğini alır. Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanım [Icorprofilerınfo2::getclassfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) yerine.  
@@ -36,7 +36,7 @@ HRESULT GetClassFromToken(
     [out] ClassID   *pClassId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleID`  
  [in] Sınıfı içeren modül kimliği.  
   

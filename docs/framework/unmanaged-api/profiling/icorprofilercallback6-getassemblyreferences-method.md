@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback6::GetAssemblyReferences Metodu
+title: ICorProfilerCallback6::GetAssemblyReferences Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b63756fd300dc300932d070e451d2d072adc6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a705257c150fe0272674c08c7b316ab968766cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475347"
 ---
-# <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences Metodu
+# <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
  Profil Oluşturucu, ortak dil çalışma zamanı bir bütünleştirilmiş kod başvurusu kapanış Yürüme gerçekleştirirken bir derleme bir çok erken aşama, yükleniyor olduğunu bildirir.  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszAssemblyPath`  
  [in] Olan meta veri değiştirilecek derlemenin adı ve yolu.  
   

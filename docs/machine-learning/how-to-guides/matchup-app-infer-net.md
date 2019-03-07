@@ -1,14 +1,14 @@
 ---
 title: Infer.NET ve probalistic programlama ile bir oyun eşleme listesi uygulaması oluşturma
 description: Probalistic programlama ile Infer.NET TrueSkill basitleştirilmiş bir sürümünü temel alan bir oyun matchup listesi uygulaması oluşturmak için nasıl kullanılacağını keşfedin.
-ms.date: 10/04/2018
+ms.date: 03/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d760c364d874ec9670823be0664005d62526ee93
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152480"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473142"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
 
@@ -16,7 +16,7 @@ Bu nasıl yapılır kılavuzunda Infer.NET kullanarak olasılığa dayalı progr
 
 ## <a name="what-is-probabilistic-programming"></a>Olasılığa dayalı programlama nedir?
 
-Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modeller oluşturmak sağlıyor. 
+Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modelleri oluşturmanıza olanak sağlar. 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -45,9 +45,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Model tasarlama
 
-Foosball eşleşen office içinde yürütülen ya da örnek örnek tablo tenis kullanır. Katılımcılar ve her bir eşleştirmeyi sonucunu sahibiz.  Bu verilerden oyuncunun becerileri çıkarsanacak istiyoruz. Normal olarak dağıtılmış bir görünmeyen becerisi her oyuncusu içeriyor ve performanslarını verilen eşleme bu beceri gürültülü sürümüdür varsayıyoruz. Veri ödül performans kaybeden'ın performansı daha büyük olacak şekilde kısıtlar. Basitleştirilmiş bir sürümünü popüler budur [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) model, hangi takımları çizer ve diğer uzantılar da destekler. Bir [Gelişmiş sürüm](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) bu modeli, en çok satan oyun başlıklarında Halo ve Gears, War matchmaking için kullanılır.
+Foosball eşleşen office içinde yürütülen ya da örnek örnek tablo tenis kullanır. Katılımcılar ve her bir eşleştirmeyi sonucu var.  Bu verilerden oyuncunun becerileri Infer istiyorsunuz. Normal olarak dağıtılmış bir görünmeyen becerisi her oyuncusu içeriyor ve belirli eşleşme performanslarını bu beceri gürültülü sürümüdür varsayılır. Veri ödül performans kaybeden'ın performansı daha büyük olacak şekilde kısıtlar. Basitleştirilmiş bir sürümünü popüler budur [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) model, hangi takımları çizer ve diğer uzantılar da destekler. Bir [Gelişmiş sürüm](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) bu modeli, en çok satan oyun başlıklarında Halo ve Gears, War matchmaking için kullanılır.
 
-Kendi fark – becerileri belirsizliğin ölçüsü ile birlikte çıkarsanan player becerileri listelemek ihtiyacımız var.
+Çıkarsanan player becerileri yanı sıra kendi fark – becerileri belirsizliğin ölçü liste gerekir.
 
 *Oyun sonucu örnek veriler*
 

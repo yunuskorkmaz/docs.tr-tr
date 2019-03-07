@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522420"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465536"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer Yöntemi
 Belirtilen kod bölümüne yönelik arabellek belirler.  
@@ -39,7 +39,7 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `section`  
  [in] Kod bölümünde bir arabellek döndürülecek.  
   

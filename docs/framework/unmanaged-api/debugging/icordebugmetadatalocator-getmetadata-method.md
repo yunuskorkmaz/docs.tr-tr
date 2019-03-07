@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677b38854ada67c4f2d30043bf80a83d9268971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c787a93ac98a086dfb6218d1b4891de87e0e107d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655006"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487009"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData Metodu
 Tam yolu, meta veri hata ayıklayıcı istenen bir işlemi tamamlamak için gereken bir birime geri dönmek için hata ayıklayıcı ister.  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
       );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszImagePath`  
  [in] Dosyaya tam yolunu temsil ettiği bir null ile sonlandırılmış bir dize. Tam yol mevcut değilse adı ve dosya uzantısını (*filename*. *Uzantı*).  
   

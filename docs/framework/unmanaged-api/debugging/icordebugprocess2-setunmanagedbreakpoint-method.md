@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420823"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472791"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint Yöntemi
-Yönetilmeyen bir kesme noktası belirtilen yerel görüntü uzaklığı ayarlar.  
+Belirtilen yerel görüntü uzaklığında yönetilmeyen bir kesme noktası ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +39,26 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` nesne yerel görüntü uzaklığını belirtir.  
+ [in] A `CORDB_ADDRESS` nesnesini yerel görüntü uzaklığını belirtir.  
   
  `bufsize`  
- [in] Bayt olarak boyutu, `buffer` dizi.  
+ [in] Bayt cinsinden boyutu, `buffer` dizisi.  
   
  `buffer`  
- [out] Kesme noktası tarafından değiştirilir işlem kodu içeren bir dizi.  
+ [out] Kesme noktası tarafından değiştirilen bir işlem kodu içeren bir dizi.  
   
  `bufLen`  
- [out] Döndürülen bayt sayısı için bir işaretçi `buffer` dizi.  
+ [out] Döndürülen bayt sayısı için bir işaretçi `buffer` dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yerel görüntü uzaklık ortak dil çalışma zamanı içinde (CLR) ise, kesme yoksayılacak. Bu kesme hata ayıklayıcı ayarlandığında, bant dışı kesme göndermeyi önlemek CLR sağlar.  
+ Yerel görüntü uzaklığı ortak dil çalışma zamanı içinde (CLR) ise, kesme noktasına göz ardı edilir. Kesme noktası hata ayıklayıcı tarafından olarak ayarlandığında bir bant dışı kesme noktası göndermeyi önlemek CLR böylece.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

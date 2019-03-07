@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa5ca8871ab284d2a46e6777b226f5a9b155e566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc4b1a58bba592cfff408f034fb19c0c27616c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480552"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted Yöntemi
 Profil Oluşturucu, bir modül yüklenmekte olduğuna dair bildirir.  
@@ -34,7 +34,7 @@ HRESULT ModuleLoadStarted(
     [in] ModuleID moduleId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleId`  
  [in] Yüklenmekte modül kimliği.  
   

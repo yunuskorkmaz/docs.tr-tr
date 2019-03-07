@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1062b3a74a9f10a6186ef320a97c08e6fab09545
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 490d78cbc8724e12dff8ac24c81e499268e4ed6c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303991"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487775"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime İşlevi
 Ortak dil çalışma zamanı (CLR), bir XML dosyasında depolanan sürüm bilgilerini kullanarak bir işlem içine yükler. XML dosyasının biçimi sonra standart uygulama yapılandırma dosyasına modellenir. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -40,7 +40,7 @@ HRESULT CorBindToCurrentRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pwszFileName`  
  [in] Yüklenecek CLR sürümünü belirten bir uygulama yapılandırma dosyası adı. Dosya adı tam nitelenmiş değil, çağrıyı yapan yürütülebilir dosya ile aynı dizinde olduğu varsayılır.  
   

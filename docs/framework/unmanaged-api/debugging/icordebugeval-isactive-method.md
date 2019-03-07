@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480058"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive Yöntemi
-Bu Icordebugeval nesne şu anda yürütülmekte olup olmadığını belirten bir değer alır.  
+Bu Icordebugeval nesne yürütülmekte olmadığını belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbActive`  
- [out] Bu değerlendirme etkin olup olmadığını belirten bir değer işaretçi.  
+ [out] Bu değerlendirme etkin olup olmadığını gösteren bir değer işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

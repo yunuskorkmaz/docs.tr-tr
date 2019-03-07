@@ -1,5 +1,5 @@
 ---
-title: ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream Metodu
+title: ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICLRAssemblyIdentityManager.GetReferencedAssembliesFromStream
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35f7e168f143d9427bf6905e9b4c383d9a40cd1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49fc3cf6aff94b5914040fba77acd0769fc73a43
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514458"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490040"
 ---
-# <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream Metodu
+# <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream Yöntemi
 Bir işaretçi alır bir [Iclrreferenceassemblyenum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md) belirtilen akış derlemede tarafından başvurulan derlemeler için derleme kimlik verilerini içeren nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetReferencedAssembliesFromStream (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pStream`  
  [in] Bir arabirim işaretçisi için bir `IStream` değerlendirilecek derlemeyi içeren.  
   

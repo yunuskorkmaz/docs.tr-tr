@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a5eb91d02ce55601f86dcadc744ef23ca430d9c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494762"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471699"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
 Bu okuyucu modülü dosya adının yanı sıra, ile ilişkili meta verileri alma arabirimiyle sembol okuyucu başlatır.  
@@ -40,7 +40,7 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `importer`  
  [in] İle bu okuyucu ilişkilendirilecek olan meta verileri alma arabirim.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13137dcf7c2edd96397916cc7db905c9e48a3d0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ce95daaee3c74ac57b107ab8bcb23d41e42cabb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401606"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466654"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a>ICorDebugAppDomain::EnumerateAssemblies Yöntemi
-Bir numaralandırıcı derlemeler için uygulama etki alanında alır.  
+Bir numaralandırıcı için derlemeleri uygulama etki alanında alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT EnumerateAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppAssemblies`  
- [out] Uygulama etki alanında derlemeler için Numaralandırıcı bir Icordebugassemblyenum nesne adresini gösteren bir işaretçi.  
+ [out] Icordebugassemblyenum nesnenin uygulama etki alanı içindeki derlemeler için bir numaralandırıcı adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

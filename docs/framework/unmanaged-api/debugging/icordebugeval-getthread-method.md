@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64cc5b6e7c6fe44080b35dc07f029ad311b88ca7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413767"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489390"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread Metodu
-Bu değerlendirme yürütüyor veya yürütecek iş parçacığı alır.  
+Bu değerlendirme yürütülüyor veya çalıştırır iş parçacığı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppThread`  
- [out] Bir işaretçi adresine Icordebugthread nesnenin iş parçacığı temsil eder.  
+ [out] İş parçacığını temsil eden bir Icordebugthread nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a565c19285b00c807ef6fbfc018a40467139638e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523668"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466355"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString Yöntemi
 HRESULT değerini belirtilen kültür için bir uygun hata iletisine çevirir.  
@@ -43,7 +43,7 @@ HRESULT LoadErrorString(
      [in, lcid] LONG iLocaleID);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `iResourceID`  
  [in] Çevrilecek HRESULT.  
   

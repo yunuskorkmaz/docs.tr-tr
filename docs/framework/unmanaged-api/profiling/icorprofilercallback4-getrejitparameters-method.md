@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback4::GetReJITParameters Metodu
+title: ICorProfilerCallback4::GetReJITParameters Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerCallback4.GetReJITParameters
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14c0da3192bb5488c71527a70ed47b03933c0ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7aae292daefe9333585a50d1d8c9ce49b1008cd9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721223"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470789"
 ---
-# <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters Metodu
+# <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters Yöntemi
 Kod profil oluşturucu, yeni bir znovu yöntem gövdesi için başka bir kod oluşturma bayrakları ayarlamanızı sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,7 +33,7 @@ Kod profil oluşturucu, yeni bir znovu yöntem gövdesi için başka bir kod olu
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleID`  
  [in] Kendisi için CLR JIT yeniden derleme parametreleri gereken yöntemini içeren modül.  
   

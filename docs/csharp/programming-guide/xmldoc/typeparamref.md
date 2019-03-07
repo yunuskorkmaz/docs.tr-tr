@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 0ee9e3571ab601f56ddee2fd9a02bb19f50bac62
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a9b0b9dec09e891105336b3cf0088ed279386d13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471934"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -22,7 +22,7 @@ ms.locfileid: "56967366"
 <typeparamref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `name`  
  Tür parametresinin adı. Adı çift tırnak içine alın ("").  
   

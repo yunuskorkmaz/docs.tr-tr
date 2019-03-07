@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408131"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471660"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies Metodu
-Dizideki her boyut temel dizinini alır.  
+Dizideki her boyutun temel dizini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cdim`  
- [in] Bu boyut sayısını `ICorDebugArrayValue` nesnesi. Bu değer ayrıca boyutudur `indicies` boyutuna boyutlarını sayıya eşit olduğundan dizi `ICorDebugArrayValue` nesnesi.  
+ [in] Bu boyut sayısını `ICorDebugArrayValue` nesne. Bu değer ayrıca boyutudur `indicies` boyutuna boyutlarını sayısına eşit olduğundan dizi `ICorDebugArrayValue` nesne.  
   
  `indicies`  
- [out] Bu boyutun temel dizin (diğer bir deyişle, başlangıç dizini) her biri olan dizisi, `ICorDebugArrayValue` nesnesi.  
+ [out] Tamsayı, her biri olan bu boyutun temel dizini (diğer bir deyişle, başlangıç dizini) dizisi `ICorDebugArrayValue` nesne.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

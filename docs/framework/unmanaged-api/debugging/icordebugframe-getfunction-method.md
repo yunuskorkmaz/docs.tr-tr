@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475296"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction Metodu
-Bu yığın çerçevesi ile ilişkili kodunu içerir işlevi alır.  
+Bu yığın çerçevesiyle ilgili kodu içeren bir işlevi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppFunction`  
- [out] Bir işaretçi adresine ICorDebugFunction nesnenin Bu yığın çerçevesi ile ilişkili kodunu içeren işlevini temsil eder.  
+ [out] Bu yığın çerçevesiyle ilgili kodu içeren bir işlevi temsil eden bir ICorDebugFunction nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `GetFunction` Yöntemi çerçeve herhangi belirli bir işlev ile ilişkili değilse başarısız olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

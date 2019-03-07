@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359555"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482697"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Geliştirilmiş kalitesini ve performansını metin  
@@ -36,13 +34,11 @@ Metin işleme işlem hattı diyagramı
   
  Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipi standart karakter kümesini biçimsel alternatifler sağlayan ek karakterleri içerir. Aşağıdaki metni diğer biçimsel görüntüler.  
   
- ![OpenType diğer biçimsel kullanarak metin](./media/opentypefont02.gif "opentypefont02")  
-OpenType diğer biçimsel kullanarak metin  
+ ![OpenType diğer biçimsel kullanarak metin](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType diğer biçimsel kullanarak metin")  
   
  Süsler genellikle calligraphy ile ilişkili ayrıntılı süsleme kullanan dekoratif karakterlerdir. Standart ve dalgalı karakterleri Palatino yazı tipi için aşağıdaki metni görüntüler.  
   
- ![OpenType standart ve swash karakterleri kullanarak metin](./media/opentypefont08.gif "opentypefont08")  
-OpenType standart ve swash karakterleri kullanarak metin  
+ ![OpenType standart ve swash karakterleri kullanarak metin](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType standart ve swash karakterleri kullanarak metin")  
   
  Daha fazla ayrıntı için [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] özellikler bkz [OpenType yazı tipi özellikleri](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Uygulama TextFormatter arasındaki etkileşimi
 - [Biçimlendirilmiş Metin Çizme](drawing-formatted-text.md)
 - [Gelişmiş Metin Biçimlendirme](advanced-text-formatting.md)
 - [Metin](optimizing-performance-text.md)
-- [Microsoft tipografi](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft tipografi](https://docs.microsoft.com/typography/)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c0545440ed63ba914229249080ec9f6be8eb2b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fdcdf23dfee01e8bad1c95adb4de66f270d5e00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402259"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474975"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious Metodu
-Çerçeve önceki zincirine iş parçacığı alır.  
+Çerçeve önceki zincirini iş parçacığı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetPrevious (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppChain`  
- [out] Bu iş parçacığı için çerçeveleri önceki zincirine temsil eden Icordebugchain nesne adresini gösteren bir işaretçi. Bu zincir ilk zinciri ise `ppChain` null.  
+ [out] Bu iş parçacığı için çerçeve önceki zincirini temsil eden Icordebugchain nesnenin adresini bir işaretçi. Bu zincir ilk zinciri ise `ppChain` null.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

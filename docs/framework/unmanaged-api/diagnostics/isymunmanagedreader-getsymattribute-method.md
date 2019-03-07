@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 763e698c7149de0fee61770e601032a4160b839f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bfe441831cef3f708792767163b9cf2138cd4335
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378580"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473869"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute Yöntemi
 Özel bir öznitelik adı üzerinde temel alır. Meta veri özel öznitelikleri, bu özel öznitelikler sembol deposu içerisinde tutulur.  
@@ -39,7 +39,7 @@ HRESULT GetSymAttribute (
         length_is (*pcBuffer)] BYTE buffer[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `parent`  
  [in] Öznitelik istendiği nesnesi için meta veri belirteci.  
   

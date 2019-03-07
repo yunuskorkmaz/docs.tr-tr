@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475664"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments Yöntemi
-Bir numaralandırıcı Bu çerçevede bağımsız değişkenleri alır.  
+Bir numaralandırıcı bu çerçeveye bağımsız değişkenleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppValueEnum`  
- [out] Bu çerçeve değişkenlerinde Numaralandırıcı bir Icordebugvalueenum nesne adresini gösteren bir işaretçi.  
+ [out] Numaralandırıcı bağımsız değişkenlerin Bu çerçevede Icordebugvalueenum nesnenin adresi için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `EnumerateArguments` Bu Icordebugılframe nesnesi tarafından temsil edilen çağrısı çerçevesinde kullanılabilen bağımsız değişkenler listeleyebilirsiniz bir numaralandırıcı alır. Listede olan bağımsız değişkenler bulunacaktır [vararg](/cpp/windows/vararg) (diğer bir deyişle, bir değişken sayıda bağımsız değişken) olmayan bağımsız değişkenler yanı sıra `vararg`.  
+ `EnumerateArguments` bağımsız değişkenler bu Icordebugılframe nesnesi tarafından temsil edilen çağrı çerçevede kullanılabilir listeleyen bir numaralandırıcıyı alır. Bu liste olan bağımsız değişkenler içerir [vararg](/cpp/windows/vararg) (diğer bir deyişle, değişken sayıda bağımsız değişkenler) olmayan bağımsız değişkenleri yanı sıra `vararg`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

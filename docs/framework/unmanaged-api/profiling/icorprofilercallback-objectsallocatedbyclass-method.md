@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479759"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass Yöntemi
 En son çöp toplamadan beri oluşturulan her belirtilen sınıf örneklerini sayısı hakkında daha fazla profil oluşturucu bildirir.  
@@ -36,7 +36,7 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cClassCount`  
  [in] Boyutu `classIds` ve `cObjects` dizileri.  
   

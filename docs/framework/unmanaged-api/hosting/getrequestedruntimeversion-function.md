@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651536"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471803"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion İşlevi
 Belirtilen uygulamanın istediği ortak dil çalışma zamanı (CLR) sürüm numarasını alır. Bu sürüm yüklü değilse istenen sürümden önce yüklenen en son sürümü alır.  
@@ -40,7 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pExe`  
  [in] Uygulamanın adı.  
   

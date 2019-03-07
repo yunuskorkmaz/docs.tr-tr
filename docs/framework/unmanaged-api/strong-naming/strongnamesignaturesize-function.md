@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495227"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize İşlevi
 Tanımlayıcı ad imzası boyutunu döndürür. `StrongNameSignatureSize` genellikle derleyiciler tarafından gecikmeli imzalanmış bir derlemeyi oluştururken dosyasında ayırmak için ne kadar alan belirlemek için kullanılır.  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pbPublicKeyBlob`  
  [in] Türünden bir yapıyı [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) tanımlayıcı ad imzası oluşturmak için kullanılan anahtar çiftinden ortak kısmını içerir.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488194"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub Yöntemi
-Bir adresi yönetilen kod geçiş neden olacak bir saplama içinde olup olmadığını belirten bir değer alır.  
+Adres yönetilen koda geçiş neden olacak bir saplama içinde olup olmadığını belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +35,22 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` söz konusu adresini belirten değer.  
+ [in] A `CORDB_ADDRESS` söz konusu adresini belirten bir değer.  
   
  `pbTransitionStub`  
- [out] Boolean bir değer için bir işaretçi `true` yönetilen kod; geçiş neden olacak bir saplama içinde belirtilen adres ise, aksi takdirde *`pbTransitionStub` olan `false`.  
+ [out] Boolean bir değer için bir işaretçi `true` yönetilen kod; geçiş neden olacak bir saplama içinde belirtilen adresi ise, aksi takdirde *`pbTransitionStub` olduğu `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsTransitionStub` Yöntemi yönetilen Adımlayıcı sürüm denetimi döndürmek karar vermenize olanak yönetilmeyen sürüm kodu tarafından kullanılabilir.  
+ `IsTransitionStub` Yöntemi sürüm denetimi için yönetilen Adımlayıcı döndürmek ne zaman karar için yönetilmeyen bir atlama kodu tarafından kullanılabilir.  
   
- Taşınabilir yürütülebilir (PE) dosyasındaki bilgilere bakarak kimlik geçiş saplamalar de gruplandırabilirsiniz.  
+ Kimlik geçişi saptamalar da taşınabilir yürütülebilir (PE) dosya bilgileri bakarak yapabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

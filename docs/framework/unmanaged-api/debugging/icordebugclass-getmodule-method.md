@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass::GetModule Metodu
+title: ICorDebugClass::GetModule Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass.GetModule
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c52795251b5cacebe749b1eedf918f8b20497796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96d0d82b08449b4675ec7fd1517317006011ae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478342"
 ---
-# <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule Metodu
-Bu sınıfı tanımlayan modülü alır.  
+# <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule Yöntemi
+Bu sınıfı tanımlayan modül alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pModule`  
- [out] Bu sınıf tanımlandığı modülü temsil eden bir Icordebugmodule nesne adresini gösteren bir işaretçi.  
+ [out] Bu sınıf tanımlandığı modülü temsil eden bir Icordebugmodule nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

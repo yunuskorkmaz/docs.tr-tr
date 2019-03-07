@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bad6c052ec90c8cd3e47c4ec822fc2d5ae944af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf0aa035b78b582ede76f288443734c25e92a02c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466537"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim İşlevi
 Belirtilen .NET Framework yeniden dağıtılabilir pakette bulunan bir DLL sürümünü yükler.  
@@ -40,7 +40,7 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `szDllName`  
  [in] .NET Framework Kitaplığı'ndan yüklenecek DLL adını temsil eden sıfır ile sonlandırılmış dize.  
   

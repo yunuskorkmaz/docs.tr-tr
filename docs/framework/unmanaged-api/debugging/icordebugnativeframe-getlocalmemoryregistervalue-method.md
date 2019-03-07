@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c36e9e38acf1d183bcc5af5284e194c994c16749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abaa543299dec74d769b91ca3b21d76863624f13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706715"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484946"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue Metodu
 Bir bağımsız değişken veya hangi Düşük word ve yüksek word belirtilen kayıt ve bellek konumu, sırasıyla bu yerel çerçeve için depolanır, yerel bir değişken değerini alır.  
@@ -39,7 +39,7 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `highWordAddress`  
  [in] A `CORDB_ADDRESS` değerinin yüksek sözcüğünü içeren bellek konumu belirten bir değer.  
   

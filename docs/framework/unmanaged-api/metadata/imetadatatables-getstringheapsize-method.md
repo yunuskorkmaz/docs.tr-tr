@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetStringHeapSize Metodu
+title: IMetaDataTables::GetStringHeapSize Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetStringHeapSize
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f6f16ebe57be0d09e97fe8aa95df892c2b02394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a46f7b277987df7e15eb2d534d1bbacc3250f4e1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696262"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466017"
 ---
-# <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize Metodu
+# <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize Yöntemi
 Dize yığın bayt cinsinden boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetStringHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcbStrings`  
  [out] Bayt cinsinden dize yığın boyutu için bir işaretçi.  
   

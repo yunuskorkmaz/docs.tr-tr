@@ -1,5 +1,5 @@
 ---
-title: ISymENCUnmanagedMethod::GetLineFromOffset Metodu
+title: ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymENCUnmanagedMethod.GetLineFromOffset
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d993bc6b947d309ce1a0fb10ad231a429be567
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531232"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471920"
 ---
-# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Metodu
+# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
 Bir uzaklık ile ilişkili satır bilgilerini alır. Varsa uzaklık parametresi (`dwOffset`) bir dizi noktası değil. Bu yöntem, önceki uzaklığı ile ilişkili satır bilgileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwOffset`  
  [in] A `ULONG32` içeren uzaklığı.  
   

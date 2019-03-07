@@ -1,5 +1,5 @@
 ---
-title: IHostControl::GetHostManager Metodu
+title: IHostControl::GetHostManager Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IHostControl.GetHostManager
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494304"
 ---
-# <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager Metodu
+# <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager Yöntemi
 Ana bilgisayarın uygulanmasına arabirimi belirtilen bir arabirim işaretçisi alır `IID`.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetHostManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `riid`  
  [in] `IID` Ortak dil çalışma zamanı (CLR) için sorgulama arabirimi.  
   

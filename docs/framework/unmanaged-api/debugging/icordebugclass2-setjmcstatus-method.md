@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403400"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471394"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus Yöntemi
-Her sınıf yöntemi için yöntem kullanıcı tanımlı kod olup olmadığını belirten bir değer ayarlar.  
+Sınıfının her yöntemi için yöntem kullanıcı tarafından tanımlanan kod olup olmadığını gösteren bir değer ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `bIsJustMyCode`  
- [in] Kümesine `true` yöntemi kullanıcı tanımlı olduğunu belirtmek için; Aksi takdirde kümesine kodu `false`.  
+ [in] Kümesine `true` yöntemi, kullanıcı tanımlı olduğunu belirtmek için; Aksi takdirde, kümesine kodu `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca-my-code (JMC) Adımlayıcı kullanıcı tanımlı olmayan kod atlar. Kullanıcı tanımlı kod bir alt kümesini debuggable kodu olmalıdır.  
+ Just--kendi kodum (JMC) Adımlayıcı kullanıcı tanımlı olmayan kod atlar. Kullanıcı tarafından tanımlanan kod hata ayıklaması yapılabilir kod bir alt kümesi olmalıdır.  
   
- `SetJMCStatus` başarıyla diğer tüm yöntemleri için değeri ayarlar olsa bile herhangi bir yöntem değerini ayarlamak başarısız olursa S_FALSE HRESULT değerini döndürür.  
+ `SetJMCStatus` başarılı bir şekilde tüm diğer yöntemler için değeri ayarlar bile herhangi bir yöntem için bir değer ayarlamak başarısız olursa bir HRESULT değerini S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

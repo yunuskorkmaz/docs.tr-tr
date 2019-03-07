@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a957eb6907b55fe948d696a6a25076c3950f7381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402981"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470083"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget İşlevi
-Uzak makinede çalışıyor ve döndüren bir hata ayıklayıcı proxy için bir bağlantı oluşturur bir [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) çalışan işlemleri ve uzak makinede yüklü çalışma zamanları sorgulamak için kullanılan nesne.  
+Uzak bir makinede çalışıyor ve döndüren bir hata ayıklayıcı proxy için bir bağlantı oluşturur bir [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) çalışan işlemleri ve uzak makinede yüklü çalışma zamanları sorgulamak için kullanılan nesne.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,28 +37,28 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwAddress`  
- [in] Bir uzak hedef makinenin bir IPv4 adresi.  
+ [in] Bir uzak hedef makine IPv4 adresi.  
   
  `ppTarget`  
- [out] Bir işaretçi işaretçi bir [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) oluşturulacak nesne.  
+ [out] Bir işaretçi işaretçisi bir [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) oluşturulacak nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- İşlem CLRs sayısında başarıyla belirlendi ve karşılık gelen tanıtıcısı ve yol dizileri düzgün doldurulmuş.  
+ İşlem CLRs sayısında başarıyla belirlendi ve karşılık gelen tanıtıcısı ve yol diziler düzgün doldurulmuş.  
   
  E_OUTOFMEMORY  
- İçin yeterli bellek ayrılamıyor `ppTarget`.  
+ Yeterli bellek ayrılamıyor `ppTarget`.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Diğer hataları.  
+ Diğer hatalar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Kitaplığı:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **.NET framework sürümleri:** 3.5 SP1

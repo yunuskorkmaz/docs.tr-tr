@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27e40618d6128c21e99745ca45e139a9c21c843
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475040"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType Yöntemi
-Bir işaretçi belirtilen türe ait yeni Icordebugvalue için sıfır ya da null bir başlangıç değeriyle birlikte alır.  
+Bir işaretçi için yeni bir Icordebugvalue belirtilen türe ait bir başlangıç değeri sıfır ya da null ile alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT CreateValueForType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pType`  
- [in] İşaretçi Icordebugtype nesneye türünü temsil eder.  
+ [in] İşaretçi Icordebugtype nesnenin türünü temsil eder.  
   
  `ppValue`  
  [out] İşaretçi adresine bir `ICorDebugValue` değerini temsil eden nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateValueForType` genelleştirir [Icordebugeval::createvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) rasgele nesne türünü belirtmenize olanak tanıyarak dahil olmak üzere oluşturulan türleri gibi `List<int>`. Tek amacı, bu yöntem, bir işlev değerlendirmesi için geçirilen değer oluşturmaktır.  
+ `CreateValueForType` genelleştirir [Icordebugeval::createvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) rasgele nesne türünü belirtmenize olanak tanıyarak dahil olmak üzere oluşturulmuş türleri gibi `List<int>`. Bu yöntemin tek amacı, bir işlev değerlendirmesi için geçirilen değer oluşturmaktır.  
   
- Türün bir sınıf veya bir değer türü olmalıdır. Bu yöntem, dizi değerlerini veya dize değerlerini oluşturmak için kullanamazsınız.  
+ Türü, bir sınıf veya değer türü olması gerekir. Bu yöntem, değerler dizisi veya dize değerleri oluşturmak için kullanamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

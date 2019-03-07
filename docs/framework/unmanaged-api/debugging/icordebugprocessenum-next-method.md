@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419750"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493589"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next Yöntemi
-Icordebugprocess örnekleri belirtilen sayıda geçerli konumdan başlayarak numaralandırması alır.  
+Geçerli konumunda başlayan bir numaralandırma Icordebugprocess örneği belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugProcess` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugProcess` alınacak örnekleri.  
   
  `processess`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugProcess` bir işlemi temsil eden nesne.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugProcess` bir işlemi temsil eden nesne.  
   
  `pceltFetched`  
- [out] İşaretçi sayısına `ICorDebugProcess` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] İşaretçi sayısına `ICorDebugProcess` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

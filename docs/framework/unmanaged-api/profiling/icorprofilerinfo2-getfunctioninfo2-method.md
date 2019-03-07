@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetFunctionInfo2 Metodu
+title: ICorProfilerInfo2::GetFunctionInfo2 Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetFunctionInfo2
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2b0273c0e757be9d6d69a02565f8509a196b803
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546325"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478589"
 ---
-# <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Metodu
+# <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Yöntemi
 Üst sınıfın, meta veri belirteci alır ve `ClassID` işlevinin varsa, her tür bağımsız değişkeninin.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,7 +41,7 @@ HRESULT GetFunctionInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `funcId`  
  [in] Üst sınıf ve diğer bilgileri almak işlev kimliği.  
   

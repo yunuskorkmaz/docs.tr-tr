@@ -1,5 +1,5 @@
 ---
-title: ICeeGen::GetIlSection Metodu
+title: ICeeGen::GetIlSection Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICeeGen.GetIlSection
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e75f46d73e068c6bdaac6ae01740ecf589c97d42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e9d71edc580591b698ad039f8ee73e49c4e1d6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489052"
 ---
-# <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection Metodu
+# <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection Yöntemi
 Belirtilen tanıtıcı tarafından başvurulan temel Ara dil kodu bölümünü alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
@@ -37,7 +37,7 @@ HRESULT GetIlSection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `section`  
  [in] Alınacak bölümüne tanıtıcısı.  
   

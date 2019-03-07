@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475053"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor Yöntemi
 Yeni bir nesne örneği belirtilen türe ait bir oluşturucu yöntemini çağırma girişimi olmadan ayırır.  
@@ -37,7 +37,7 @@ HRESULT NewObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pClass`  
  [in] Oluşturulacak nesnenin türünü temsil eden bir Icordebugclass nesne işaretçisi.  
   

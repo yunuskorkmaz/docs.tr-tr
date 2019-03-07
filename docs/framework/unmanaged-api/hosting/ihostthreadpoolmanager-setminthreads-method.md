@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d0e8198fece4a718b6478f199820738d49ed988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed172ca9f10e941938ae43bd730a3fc6d658aca2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484647"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads Yöntemi
 En az sayıda konak korumalıdır boşta iş parçacıkları istekleri olasılığına ayarlar.  
@@ -35,7 +35,7 @@ HRESULT SetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `MinThreads`  
  [in] Yeni en düşük, konak korumalıdır iş parçacığı sayısı.  
   

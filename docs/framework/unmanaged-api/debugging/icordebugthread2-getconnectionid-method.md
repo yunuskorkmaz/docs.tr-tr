@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2::GetConnectionID Metodu
+title: ICorDebugThread2::GetConnectionID Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2.GetConnectionID
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0e76b179854a380e66ac9daedffa8ccf4aa4ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d51e21eab4ac1edc81b58171e5382ada170a57f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468955"
 ---
-# <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID Metodu
-Bağlantı kimliği için bu Icordebugthread2 nesnesi alır.  
+# <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID Yöntemi
+Icordebugthread2 nesneye bağlantı tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT GetConnectionID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwConnectionId`  
- [out] A `CONNID` , bağlantı kimliğini temsil eder.  
+ [out] A `CONNID` temsil eden bağlantı tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetConnectionID` Yöntemi döndürür sıfır `pdwConnectionId` parametresi, bu iş parçacığı bir bağlantısının parçası değilse.  
+ `GetConnectionID` Yöntemi sıfır döndürür `pdwConnectionId` bu iş parçacığı bir bağlantının bir parçası değilse, parametre.  
   
- Örneğine, Microsoft SQL Server 2005 Analysis Services (SSAS), bu iş parçacığı bağlıysa `CONNID` eşleyen bir sunucu işlemi tanımlayıcısını (SPID).  
+ Bu iş parçacığı örneğine, Microsoft SQL Server 2005 Analysis Services (SSAS), bağlı olup olmadığını `CONNID` eşleyen bir sunucu işlemi tanımlayıcısını (SPID).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

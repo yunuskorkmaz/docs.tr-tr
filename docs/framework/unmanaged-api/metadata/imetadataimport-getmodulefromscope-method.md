@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport::GetModuleFromScope Metodu
+title: IMetaDataImport::GetModuleFromScope Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport.GetModuleFromScope
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931b17858465d4ff380069fc2cf2bb37cb7a7ffc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1118c29acd926821e3b5db31694df9935bdefb9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718188"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468812"
 ---
-# <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope Metodu
+# <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope Yöntemi
 Bir meta veri geçerli meta veri kapsamda başvuru modülü için belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetModuleFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pmd`  
  [out] Geçerli meta veri kapsamda başvurulan modülü temsil eden belirteç için bir işaretçi.  
   

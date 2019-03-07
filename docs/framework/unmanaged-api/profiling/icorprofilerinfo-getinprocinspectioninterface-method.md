@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo::GetInprocInspectionInterface Metodu
+title: ICorProfilerInfo::GetInprocInspectionInterface Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo.GetInprocInspectionInterface
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c4e2a094f018b4f77423b6dbfe990925632edf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbb4aa43757df86037d9c883e76ee38cef5eeb86
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494434"
 ---
-# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface Metodu
+# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface Yöntemi
 Sorgulanabilir bir nesne için bir "ICorDebugProcess" arabirimi alır. Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetInprocInspectionInterface(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppicd`  
  [Çıkış](/cpp/atl/iunknown) için sorgulanan nesne bir `ICorDebugProcess` arabirimi.  
   

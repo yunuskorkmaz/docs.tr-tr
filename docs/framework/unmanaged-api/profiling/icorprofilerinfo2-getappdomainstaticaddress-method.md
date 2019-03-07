@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetAppDomainStaticAddress Metodu
+title: ICorProfilerInfo2::GetAppDomainStaticAddress Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetAppDomainStaticAddress
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c5e89057ef4c88d7c5e78120aca9841d731eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e2b4ec0183f010cfc9ad4fce21cf0f616b0ef3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524721"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472466"
 ---
-# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress Metodu
+# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress Yöntemi
 Belirtilen uygulama etki alanı kapsamı içinde belirtilen uygulama etki alanı statik alanı adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `classId`  
  [in] İstenen uygulama etki alanı statik alanı içeren sınıf sınıf kimliği.  
   

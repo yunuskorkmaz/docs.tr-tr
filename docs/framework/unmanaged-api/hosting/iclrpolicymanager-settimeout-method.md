@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8edb16de4c02d2589ecfb9ae5becba22e10e6be6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e367fc772c5b673795c8229f9084fac850d53a8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474820"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout Yöntemi
 Belirtilen işlem için bir zaman aşımı değeri ayarlar.  
@@ -36,7 +36,7 @@ HRESULT SetTimeout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `operation`  
  [in] Aşağıdakilerden birini [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ortak dil çalışma zamanı (CLR) işlem için bir zaman aşımı ayarlanacağı gösteren değer. Aşağıdaki değerleri desteklenir:  
   

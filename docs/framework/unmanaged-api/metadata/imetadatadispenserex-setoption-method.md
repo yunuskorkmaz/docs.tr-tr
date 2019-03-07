@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59d0b040a45b4d56234028778ccc78afd84d098f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9e9d7a66f37759e6f62ddae2c5af989cee57e3b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524409"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470656"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption Yöntemi
 Belirtilen seçeneği geçerli meta veri kapsam için belirli bir değere ayarlar. Geçerli bir meta veri kapsama çağrıları nasıl işleneceğini seçeneği denetler.  
@@ -36,7 +36,7 @@ HRESULT SetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `optionId`  
  [in] Ayarlanacak seçenek belirten bir GUID için bir işaretçi.  
   

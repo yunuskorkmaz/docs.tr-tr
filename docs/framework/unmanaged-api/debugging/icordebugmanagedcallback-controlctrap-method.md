@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd84293b3414a8622c6b91717e9f1b2f2ce85286
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603904"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472479"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap Yöntemi
 Hata ayıklayıcı, CTRL + C ayıklanmakta olan işlemin yakalanır bildirir.  
@@ -35,7 +35,7 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pProcess`  
  [in] CTRL + C ', yakalanan işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.  
   

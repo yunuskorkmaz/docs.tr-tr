@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetThreadAppDomain Metodu
+title: ICorProfilerInfo2::GetThreadAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetThreadAppDomain
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeaf44f6fc34a1d14adf7fa8254ddb15cf6897b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b351c30c8eadd8c55543f664376cc4c7e5e73af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532077"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481488"
 ---
-# <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain Metodu
+# <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain Yöntemi
 İçinde belirtilen iş parçacığı şu anda kod yürüttüğünü uygulama etki alanı Kimliğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetThreadAppDomain(
     [out] AppDomainID *pAppDomainId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `threadId`  
  [in] İş parçacığı belirtme kimliği.  
   

@@ -1,5 +1,5 @@
 ---
-title: IMetaDataTables::GetNextString Metodu
+title: IMetaDataTables::GetNextString Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataTables.GetNextString
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 595bc20b51ef81d7dea61620040ceb50c9418f4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b057b0537bbeff7433b776e64456ccc810cee54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589985"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473493"
 ---
-# <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString Metodu
+# <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString Yöntemi
 Geçerli bir tablo sütununda sonraki dize dizinini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetNextString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ixString`  
  [in] Dize tablosu sütunu dizin değeri.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92df7bbcc2c391dd28f4075a97595762403d8def
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e52ef20f2b8e3937911dc37e68f8a338ab0d85d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416321"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468877"
 ---
 # <a name="icordebugreferencevaluegetvalue-method"></a>ICorDebugReferenceValue::GetValue Metodu
 Başvurulan nesnenin geçerli bellek adresini alır.  
@@ -35,14 +35,14 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pValue`  
- [out] Bir işaretçi bir `CORDB_ADDRESS` bu Icordebugreferencevalue nesne işaret ettiği nesnesinin adresini belirten değer.  
+ [out] Bir işaretçi bir `CORDB_ADDRESS` bu Icordebugreferencevalue nesneye işaret ettiği nesnenin adresini belirten bir değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

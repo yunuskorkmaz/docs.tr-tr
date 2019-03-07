@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedDocument::GetURL Metodu
+title: ISymUnmanagedDocument::GetURL Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedDocument.GetURL
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b4e501629198c9bac627979547a5603d3e7866a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706332"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467135"
 ---
-# <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL Metodu
+# <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL Yöntemi
 Tekdüzen Kaynak Konum Belirleyicisi (URL)'için bu belgeyi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetURL(
     [out, size_is(cchUrl), length_is(*pcchUrl)] WCHAR szUrl[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchUrl`  
  [in] Karakter cinsinden boyutu, `szURL` arabellek.  
   

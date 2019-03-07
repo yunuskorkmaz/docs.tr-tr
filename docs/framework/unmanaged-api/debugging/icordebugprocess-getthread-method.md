@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008f945b5301894261ce1529cbd915dd614b919d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470087"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread Metodu
 Belirtilen işletim sistemi (OS) iş parçacığı kimliği vardır. Bu işlemin iş parçacığı alır  
@@ -35,17 +35,17 @@ HRESULT GetThread(
     [out] ICorDebugThread **ppThread);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwThreadId`  
- [in] İşletim sistemi iş parçacığı alınması için iş parçacığı kimliği.  
+ [in] İşletim sistemi iş parçacığı alınacak iş parçacığının kimliği.  
   
  `ppThread`  
- [out] Bir işaretçi adresine Icordebugthread nesnenin iş parçacığı temsil eder.  
+ [out] İş parçacığını temsil eden bir Icordebugthread nesnenin adresi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
