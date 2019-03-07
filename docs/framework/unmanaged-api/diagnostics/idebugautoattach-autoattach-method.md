@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ccc56579a1ebe45ada61a9565cc8ade335333d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469684"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach Yöntemi
 Hata ayıklayıcı sunucu çağrılan otomatik gerçekleştirir ekleyin.  
@@ -40,7 +40,7 @@ HRESULT AutoAttach
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `guidPort`  
  [in] Her zaman `GUID_NULL`.  
   

@@ -1,5 +1,5 @@
 ---
-title: IHostSecurityManager::GetSecurityContext Metodu
+title: IHostSecurityManager::GetSecurityContext Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IHostSecurityManager.GetSecurityContext
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e11b447ebd03746730a86dbbcda31edd4196f13b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d17609e585f6e0ecd685d893bb0f8b3e4c0fe0cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644956"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484841"
 ---
-# <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext Metodu
+# <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext Yöntemi
 İstenen alır [Ihostsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) konaktan.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,7 +36,7 @@ HRESULT GetSecurityContext (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `eContextType`  
  [in] Aşağıdakilerden birini [EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) döndürmek için güvenlik bağlamı türünü belirten değer.  
   

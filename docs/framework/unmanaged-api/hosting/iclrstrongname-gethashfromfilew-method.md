@@ -1,5 +1,5 @@
 ---
-title: ICLRStrongName::GetHashFromFileW Metodu
+title: ICLRStrongName::GetHashFromFileW Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICLRStrongName.GetHashFromFileW
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2ca00b660a9cbb408fd1175e94a4242dae5f1a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3cc2bb7cc18979f58a407e5e68e6f00e3439c14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523967"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481670"
 ---
-# <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW Metodu
+# <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW Yöntemi
 Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,7 +39,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
  [in] Karma dosyayı Unicode adı.  
   

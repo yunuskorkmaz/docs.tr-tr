@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode::GetVersionNumber Metodu
+title: ICorDebugCode::GetVersionNumber Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode.GetVersionNumber
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b383c322f1119ff13ac4df9a8dc0563d26dcf895
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e1f67dde8193ff97bff835f4b653a61baa0a2d7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499728"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487791"
 ---
-# <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber Metodu
+# <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber Yöntemi
 Bu "Icordebugcode" temsil eden kodu sürümünü tanımlayan bir tabanlı numarasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `nVersion`  
  [out] Sürüm numarası kod için bir işaretçi.  
   

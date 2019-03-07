@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f0c06f9b04c5f15171464b93dc93765625d6f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59ef7bf8f17e79c9ae7b80dd314a5afce7fa9584
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474182"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>ICorDebugReferenceValue::SetValue Yöntemi
-Belirtilen bellek adresini ayarlar. Diğer bir deyişle, bu yöntem bu Icordebugreferencevalue bir nesneye işaret edecek şekilde ayarlar.  
+Belirtilen bellek adresini ayarlar. Diğer bir deyişle, bu yöntem, bir nesneye işaret edecek şekilde bu Icordebugreferencevalue ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,14 +35,14 @@ HRESULT SetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `value`  
- [in] A `CORDB_ADDRESS` bu nesneye adresini belirten değeri `ICorDebugReferenceValue` noktaları.  
+ [in] A `CORDB_ADDRESS` bu nesnenin adresini belirten bir değer `ICorDebugReferenceValue` noktaları.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

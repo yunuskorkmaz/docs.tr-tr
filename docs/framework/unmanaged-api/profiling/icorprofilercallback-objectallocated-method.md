@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1c777a2512306c41413377530576fbe8ad8e7ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0deadc3783663fe595d8217a167d18e6916c6be9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466004"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated Yöntemi
 Bir nesne için bellek yığında ayrılan profil oluşturucu bildirir.  
@@ -35,7 +35,7 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `objectId`  
  [in] Kendisi için bellek ayrılan nesnesinin kimliği.  
   

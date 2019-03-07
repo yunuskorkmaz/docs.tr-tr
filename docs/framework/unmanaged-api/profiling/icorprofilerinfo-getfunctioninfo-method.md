@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8db6912700b199c64d2ebf0f7bd2ccd8939af9b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484712"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo Metodu
 Belirtilen işlev için üst sınıf ve meta veri belirtecini alır.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `functionId`  
  [in] Üst sınıf ve meta veri belirteci almak işlev kimliği.  
   

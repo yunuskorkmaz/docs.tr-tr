@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1b065ecb9a715601e617e288c1dfc0de8dd323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672064"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466576"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
 Belirtilen belirteç tarafından temsil edilen bir özellik için meta verileri alır.  
@@ -50,7 +50,7 @@ HRESULT GetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `prop`  
  [in] Özellik için meta verileri döndürmek için temsil eden bir belirteci.  
   

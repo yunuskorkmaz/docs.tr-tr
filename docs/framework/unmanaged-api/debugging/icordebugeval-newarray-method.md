@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471517"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray Yöntemi
-Belirtilen öğe türü ve boyutları yeni bir dizi ayırır.  
+Belirtilen öğe türü ve boyut yeni bir dizi ayırır.  
   
- Bu yöntem .NET Framework 2.0 sürümünde kullanımdan kalkmıştır. Kullanım [Icordebugeval2::newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) yerine.  
+ Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanım [Icordebugeval2::newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) yerine.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +41,29 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `elementType`  
- [in] Dizi öğesi türünü belirtir CorElementType numaralandırması değeri.  
+ [in] Dizinin öğe türü belirtir CorElementType sabit listesi değeri.  
   
  `pElementClass`  
- [in] Bir işaretçi bir Icordebugclass nesnesine öğe sınıfı belirtir. Bu değer öğe türü basit tür ise null olabilir.  
+ [in] Öğe sınıfı belirten Icordebugclass nesnesine bir işaretçi. Bu değer, öğe türü basit bir tür ise null olabilir.  
   
  `rank`  
- [in] Dizi boyutları sayısı. .NET Framework 2.0 Bu değerin 1 olması gerekir.  
+ [in] Dizinin boyut sayısı. .NET Framework 2.0 sürümünde, bu değeri 1 olmalı.  
   
  `dims`  
- [in] Her boyutun dizisinin bayt cinsinden boyutu.  
+ [in] Dizinin her boyutunun bayt cinsinden boyutu.  
   
  `lowBounds`  
- [in] İsteğe bağlı. Dizinin her boyutu alt sınırı. Bu değer belirtilmezse, bir alt sınırı sıfır her boyut için kabul edilir.  
+ [in] İsteğe bağlı. Dizinin her boyutunun alt sınırı. Bu değer belirtilmezse, her boyut için alt sınırı sıfır varsayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizi her zaman iş parçacığı şu anda yürütülmekte uygulama etki alanında oluşturulur.  
+ Dizinin her zaman iş parçacığı gerçekleştirmektedir uygulama etki alanında oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

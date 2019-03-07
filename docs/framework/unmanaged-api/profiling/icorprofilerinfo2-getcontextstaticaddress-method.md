@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetContextStaticAddress Metodu
+title: ICorProfilerInfo2::GetContextStaticAddress Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetContextStaticAddress
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4ebf93c103b74be458ba51577a5195795029176
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16390317f8a6ea1ee9a3841e35b32e040d12db5d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485128"
 ---
-# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress Metodu
+# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress Yöntemi
 Belirtilen bağlamı kapsamında belirtilen bağlam statik alanı için adresi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `classId`  
  [in] İstenen içerik statik alanı içeren sınıf kimliği.  
   

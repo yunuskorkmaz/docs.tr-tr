@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5b414e1fa035a50cdcfd317592f69abdc40fb0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d01f8c3956298daee9f11c912406079d98964225
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684123"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465304"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName yöntemi
 Bir değişkenin adını alır.  
@@ -24,7 +24,7 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cchName`  
  [in] Karakter sayısı `szName` arabellek.  
   

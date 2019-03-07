@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412811"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479616"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject Yöntemi
-Yeni bir parametreli türü nesnesi oluşturur ve nesnenin oluşturucusu yöntemini çağırır.  
+Yeni bir parametreli tür nesnesi oluşturur ve nesnenin oluşturucusu yöntemini çağırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,29 +39,29 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pConstructor`  
- [in] Bir işaretçi ICorDebugFunction nesneye Oluşturucusu örneğinin oluşturulması için nesnesinin temsil eder.  
+ [in] Oluşturulacak nesnenin oluşturucusunun temsil eden bir ICorDebugFunction nesne işaretçisi.  
   
  `nTypeArgs`  
- [in] Tür bağımsız değişkenleri sayıda geçirildi.  
+ [in] Tür bağımsız değişkenleri geçirildi.  
   
  `ppTypeArgs`  
- [in] Her biri noktalarını oluşturulmasını nesne için bir tür bağımsız değişkeni temsil eden bir Icordebugtype nesnesi için bir dizi işaretçisi.  
+ [in] Her biri örneği oluşturulan nesne için bir tür bağımsız değişkeni temsil eden bir Icordebugtype nesneye işaret eden bir işaretçiler dizisi.  
   
  `nArgs`  
- [in] Oluşturucuya geçirilen bağımsız değişken sayısı.  
+ [in] Bağımsız değişkenlerin sayısı, oluşturucuya geçirilen.  
   
  `ppArgs`  
- [in] Oluşturucuya geçirilen bağımsız değişken değeri temsil eden Icordebugvalue nesne işaret her biri bir dizi işaretçisi.  
+ [in] Oluşturucuya geçirilen bir bağımsız değişken değeri temsil eden bir Icordebugvalue nesne işaret her biri bir işaretçiler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nesnenin oluşturucusu sürebilir <xref:System.Type> parametreleri.  
+ Nesnenin oluşturucusunun sürebilir <xref:System.Type> parametreleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

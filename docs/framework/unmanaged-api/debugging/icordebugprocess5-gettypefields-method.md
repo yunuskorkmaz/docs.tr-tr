@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f688993bfd8e6bef66451b075a49f31efe641cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef54b1ddab9b2ccc0bfcfe8974a65831f70450
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497111"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478005"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields Metodu
 Bir türe ait alanları hakkında bilgi sağlar.  
@@ -38,7 +38,7 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `id`  
  [in] Alan bilgilerini alınan tür tanımlayıcısı.  
   

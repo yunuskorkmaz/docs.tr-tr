@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread::GetID Metodu
+title: ICorDebugThread::GetID Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread.GetID
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468981"
 ---
-# <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID Metodu
+# <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID Yöntemi
 Bu Icordebugthread etkin parçası geçerli işletim sistemi tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,17 +35,17 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pdwThreadId`  
- [out] İş parçacığı tanımlayıcısı.  
+ [out] İş parçacığı tanıtıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşletim sistemi tanımlayıcısını bir işlemin yürütülmesi sırasında değişiklik yapabilirsiniz ve iş parçacığının farklı bölümleri için farklı bir değer olabilir.  
+ İşletim sistemi tanımlayıcı, bir işlemin yürütülmesi sırasında potansiyel olarak değiştirebilirsiniz ve iş parçacığının farklı bölümleri için farklı bir değer olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

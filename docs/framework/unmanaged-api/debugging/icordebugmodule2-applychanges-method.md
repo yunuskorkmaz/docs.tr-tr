@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481590"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges Yöntemi
-Meta veri değişiklikleri ve Microsoft Ara dili (MSIL) kod değişiklikleri çalışan işlemi için geçerlidir.  
+Meta veri değişiklikleri ve Microsoft Ara dil (MSIL) kodu değişiklikleri çalışan işlemi için geçerlidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,36 +38,36 @@ HRESULT ApplyChanges (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `cbMetadata`  
  [in] Delta meta verilerin bayt cinsinden boyutu.  
   
  `pbMetadata`  
- [in] Delta meta veriler içeren bir arabellek. Arabellek adres alanından döndürülür [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) yöntemi.  
+ [in] Delta meta veriler içeren arabellek. Arabelleğin adresi döndürüldüğü [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) yöntemi.  
   
- Meta verilerde göreli sanal adresleri (RVAs) MSIL kod başlangıç göreli olmalıdır.  
+ Meta verilerde göreli sanal adreslerine (RVA) göre MSIL kodu başlangıcını olmalıdır.  
   
  `cbIL`  
- [in] MSIL kod delta bayt cinsinden boyutu.  
+ [in] MSIL kodu delta bayt cinsinden boyutu.  
   
  `pbIL`  
- [in] Güncelleştirilmiş MSIL kodu içeren bir arabellek.  
+ [in] Güncelleştirilmiş MSIL kodu içeren arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pbMetadata` Parametredir özel delta meta veri biçiminde (tarafından çıkış [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` temel olarak önceki meta verileri alır ve bu Bankası'na uygulamak için ayrı ayrı değişiklikleri açıklar.  
+ `pbMetadata` Parametresi, bir özel delta meta veri biçiminde (tarafından çıkış [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` temel olarak önceki meta verileri alır ve bu Bankası'na uygulamak için tek tek değişiklikler açıklanmaktadır.  
   
  Buna karşılık, `pbIL[`] parametresi güncelleştirilmiş yöntemi için yeni MSIL içerir ve bu yöntem için önceki MSIL tamamen değiştirmek için tasarlanmıştır  
   
- Hata Ayıklayıcı'nın bellekte delta MSIL ve meta veri oluşturulduğunda, hata ayıklayıcı çağırır `ApplyChanges` ortak dil çalışma zamanı (CLR) değişiklikleri göndermek için. Çalışma zamanı meta veri tablolarından güncelleştirir, yeni MSIL işlemine yerleştirir ve yeni MSIL bir tam zamanında (JIT) derleme ayarlar. Değişikliklerin uygulanması, hata ayıklayıcı çağırmalıdır [Imetadataemit2::resetenclog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) sonraki düzenleme oturumu için hazırlamak için. Hata ayıklayıcı, sonra işlemi devam edebilir.  
+ Hata Ayıklayıcı'nın bellekte delta MSIL ve meta veriler oluşturulmuş hata ayıklayıcı çağırır `ApplyChanges` ortak dil çalışma zamanı (CLR) değişiklikleri göndermek için. Çalışma zamanı meta veri tablolarından güncelleştirmeleri, yeni MSIL işlemine yerleştirir ve yeni MSIL bir just-ın-time (JIT) derleme ayarlar. Hata ayıklayıcı, değişiklikler uygulandığında, çağırmalıdır [Imetadataemit2::resetenclog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) sonraki düzenleme oturumu için hazırlamak için. Hata ayıklayıcı, sonra işlemi devam edebilir.  
   
- Hata ayıklayıcıyı zaman çağırır `ApplyChanges` delta meta veri olan bir modül üzerinde bu da çağırmalıdır [Imetadataemit::applyeditandcontinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) tüm Bu modülün meta kopyalama dışında kendi kopyalarını aynı delta meta verilerle değişiklikleri yaymak üzere kullanılır. Meta verilerinin bir kopyasını şekilde eşitleme hale gelirse gerçek meta verileriyle hata ayıklayıcı her zaman hemen bu kopyayı throw ve yeni bir kopyasını edinin.  
+ Her hata ayıklayıcı çağırır `ApplyChanges` delta meta verileri olan bir modülde, aynı zamanda çağırmalıdır [Imetadataemit::applyeditandcontinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) tüm Bu modülün meta veri kopyalama dışında bulunan kopyalarını aynı delta meta verilerle değişiklikleri yaymak için kullanılır. Meta verilerinin bir kopyasını şekilde eşitleme dışı hale gelirse gerçek meta veriler ile hata ayıklayıcı her zaman hemen bu kopyayı atar ve yeni bir kopyasını alın.  
   
  Varsa `ApplyChanges` yöntem başarısız, hata ayıklama oturumu geçersiz bir durumda ve yeniden başlatılması gerekiyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

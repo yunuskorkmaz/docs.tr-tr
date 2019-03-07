@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEval::GetResult Metodu
+title: ICorDebugEval::GetResult Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval.GetResult
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e160eddf667b542929c8dd3790de666a8e8bb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8e7fcb4f44d6bdf6f18c93b1046b549331621a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413065"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470802"
 ---
-# <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult Metodu
+# <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult Yöntemi
 Bu değerlendirme sonuçlarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,19 +35,19 @@ HRESULT GetResult (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppResult`  
- [out] İşaretçi değerlendirme normalde tamamlarsa, bu değerlendirme sonuçlarını temsil eden Icordebugvalue nesne adresine.  
+ [out] Değerlendirme normalde tamamlanırsa Bu değerlendirme sonuçlarını temsil eden bir Icordebugvalue nesnenin adresini işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `GetResult` Yöntemi, yalnızca değerlendirme tamamlandıktan sonra geçerlidir.  
   
- Değerlendirme normalde tamamlarsa `ppResult` sonuçları belirtir. Bir özel durumla sona ererse, oluşturulan özel durum oluşur. Değerlendirme için yeni bir nesne varsa, yeni nesne başvurusunu sonucudur.  
+ Normalde, değerlendirme tamamlanırsa `ppResult` sonuçları belirtir. Bir özel durumla sona ererse, oluşturulan özel durum oluşur. Değerlendirme için yeni bir nesne ise, yeni nesneye başvuru sonucudur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

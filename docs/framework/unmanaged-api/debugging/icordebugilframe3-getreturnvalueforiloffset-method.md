@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame3::GetReturnValueForILOffset Metodu
+title: ICorDebugILFrame3::GetReturnValueForILOffset Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d0b92dccceab48fcf0780a29d7bac38d591455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a01e2fcc7dc00d3a57272abb04ebcecc6d5f74a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467092"
 ---
-# <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset Metodu
+# <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset Yöntemi
 Bir işlevin dönüş değeri bir "ICorDebugValue" nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetReturnValueForILOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ILOffset`  
  IL uzaklığı. Açıklamalar bölümüne bakın.  
   

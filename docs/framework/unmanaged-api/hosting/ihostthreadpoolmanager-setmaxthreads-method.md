@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 905ce9183d295568977eb7e216e5327d6b4ee8bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0afd3b187b0424be939146f02f4baed837be444c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466823"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads Yöntemi
 Ana iş parçacığı havuzundaki koruyabilirsiniz iş parçacığı sayısını ayarlar.  
@@ -35,7 +35,7 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `MaxThreads`  
  İş parçacığı havuzundaki çalışan iş parçacığı sayısı.  
   

@@ -1,5 +1,5 @@
 ---
-title: ISymENCUnmanagedMethod::GetFileNameFromOffset Metodu
+title: ISymENCUnmanagedMethod::GetFileNameFromOffset Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymENCUnmanagedMethod.GetFileNameFromOffset
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df1e9d317294127a931bebf100295290a0dd6b23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471843"
 ---
-# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset Metodu
+# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset Yöntemi
 Bir uzaklık ile ilişkili satırı dosya adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetFileNameFromOffset(
        length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwOffset`  
  [in] A `ULONG32` içeren uzaklığı.  
   

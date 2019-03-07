@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5798fc488cf4453b6abcf00a7169b1ec0b529ec
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8de6c745b1d32c3d98f1b54e822ab084f0574b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965377"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486205"
 ---
 # <a name="getscope-method"></a>GetScope Metodu
 Bir içeri aktarma kapsamı alır.  
@@ -37,7 +37,7 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
  Derleme için alınacak benzersiz kimliği.  
   

@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedSymbolSearchInfo::GetSearchPath Metodu
+title: ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedSymbolSearchInfo.GetSearchPath
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f87399b1124870101531f7115d0da211e646562f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bf526b4868fc683eac92a84828ae36b02bb3ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479538"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPath Metodu
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi
 Arama yolunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
     [out] ULONG32 *pcchPath);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pcchPath`  
  [out] Bir işaretçi bir `ULONG32` karakter arama yolunu içermesi gereken arabellek boyutunu alır.  
   

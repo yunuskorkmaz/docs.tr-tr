@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2515e21ec00bd656eafd21a092a27304f7b1769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f014f9213a4b9a2d5119af9a6dceebb9a9d54b52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419022"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473480"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException Yöntemi
-Geçerli yönetilmeyen özel durumu verilen iş parçacığı üzerinde temizler.  
+Verilen iş parçacığı üzerinde geçerli yönetilmeyen özel durum temizler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,19 +33,19 @@ Geçerli yönetilmeyen özel durumu verilen iş parçacığı üzerinde temizler
 HRESULT ClearCurrentException([in] DWORD threadID);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `threadID`  
- [in] Geçerli yönetilmeyen özel durumu silinecek iş parçacığı kimliği.  
+ [in] Geçerli yönetilmeyen özel durum temizlenir iş parçacığı kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemi çağırmadan önce çağırın [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ne zaman bir iş parçacığı bildirdi tarafından ayıklayıcı yoksayılmalıdır yönetilmeyen bir özel durum. Bu işlem bekleyen bant içi (IB) ve bant dışı (OOB) olayları verilen iş parçacığı üzerinde temizleyin. Tüm OOB kesme noktaları ve tek adımlı özel durumları otomatik olarak temizlenir.  
+ Bu yöntemi çağırmadan önce çağrı [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ne zaman bir iş parçacığı bildirdi bir yönetilmeyen özel durum hata ayıklanan tarafından yoksayılacak. Bu, hem bekleyen bant (IB) hem de verilen iş parçacığı üzerinde bant dışı (OOB) olaylarını temizler. Tüm OOB kesme noktaları ve tek adımlı özel durumları otomatik olarak temizlenir.  
   
- Kullanım [Icordebugthread2::ınterceptcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) geçerli müdahale yönetilen bir iş parçacığında özel durum.  
+ Kullanım [Icordebugthread2::ınterceptcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) geçerli ele alınması için bir iş parçacığında özel durum yönetilen.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

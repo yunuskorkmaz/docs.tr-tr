@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250968"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466953"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET ve Machine Learning temel bilgileri nasıl anlıyorum nedir?
 
 ML.NET özel makine öğrenimi çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirin olanak sağlayan bir ücretsiz, açık kaynaklı ve platformlar arası machine learning çerçevedir. ML.NET API'leri ile yapay ZEKA, zaten sahip olduğunuz .NET becerileri kullanarak uygulamalarınızı ve .NET çıkmadan birleştirebilirsiniz.
+
+> [!NOTE]
+> Bu belge, şu anda Önizleme aşamasında olan ML.NET ifade eder. Malzeme değişiklik gösterebilir. Daha fazla bilgi için [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="what-is-machine-learning"></a>Machine learning nedir?
 

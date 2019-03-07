@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo2::GetCodeInfo2 Metodu
+title: ICorProfilerInfo2::GetCodeInfo2 Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo2.GetCodeInfo2
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22463a56911354c9706bbfbc7d1824aee5d3c74d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0beb952cf658c19b596263e7f8b7721394efae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725031"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482385"
 ---
-# <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 Metodu
+# <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 Yöntemi
 Yerel kod belirtilen ile ilişkili kapsam alır `FunctionID`.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `functionID`  
  [in] Yerel kod ilişkilendirildiği işlevi kimliği.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d6a316fb7b17a4859fd4e69acf4422c3e4baffc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478017"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ'te Olası Tuzaklar
 Çoğu durumda, PLINQ, sıralı LINQ-Plınq sorgularının üzerinde önemli performans geliştirmeleri sağlayabilir. Ancak, paralel sorgu yürütme işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, PLINQ sorguları yazarken önlemek için bazı yöntemler listelenmiştir.  
@@ -42,19 +42,19 @@ ms.locfileid: "49121937"
   
 -   Hedef sistem üzerinde sorguyu paralelleştirmek tarafından üretilen iş parçacığı sayısını işlemek için yeterli işlemci sahip olduğu bilinmektedir `cust.Orders`.  
   
- Her durumda en iyi sorgu şeklini belirlemek için en iyi test ve ölçmek için yoludur. Daha fazla bilgi için [nasıl yapılır: PLINQ sorgu performansını](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ Her durumda en iyi sorgu şeklini belirlemek için en iyi test ve ölçmek için yoludur. Daha fazla bilgi için [nasıl yapılır: PLINQ sorgu performansını ölçme](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>İş parçacığı güvenli olmayan yöntemlere yapılan çağrılar kaçının  
  İş parçacığı güvenli olmayan örnek yöntemleri için bir PLINQ yazma sorgu programınızda saptanamayabilir değil veya verilerin bozulmasına neden olabilir. Özel durumlar da neden olabilir. Aşağıdaki örnekte, birden çok iş parçacığı çağrı çalışıyor `Filestream.Write` yöntemi, aynı anda sınıfı tarafından desteklenmiyor.  
   
 ```vb  
 Dim fs As FileStream = File.OpenWrite(…)  
-a.Where(...).OrderBy(...).Select(...).ForAll(Sub(x) fs.Write(x))  
+a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(Sub(x) fs.Write(x))  
 ```  
   
 ```csharp  
 FileStream fs = File.OpenWrite(...);  
-a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));  
+a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));  
 ```  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>İş parçacığı açısından güvenli yöntemlere yapılan çağrılar sınırı  

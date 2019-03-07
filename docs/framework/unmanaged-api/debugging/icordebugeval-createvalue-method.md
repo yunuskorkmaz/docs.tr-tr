@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad40087ca61f1b07c0e0e36e785d89b84132962a
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471058"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue Yöntemi
 Belirtilen türde bir değer sıfır ya da null bir başlangıç değeriyle birlikte oluşturur.  
@@ -39,7 +39,7 @@ HRESULT CreateValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `elementType`  
  [in] Değerini [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) değerin türünü belirten sabit listesi.  
   

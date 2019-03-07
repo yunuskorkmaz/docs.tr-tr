@@ -2,48 +2,48 @@
 title: 'Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 034b8b8be828288f840dbfd902725c4f63c779ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466888"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma
 
 Özel Etkinlik tasarımcıları, genellikle kendi ilişkili etkinlikleri, tasarımcılar, bunları tasarım yüzeyi açın bırakılabilir diğer etkinlikler ile birleştirilebilir, böylece uygulanır. Bu işlev bir özel etkinlik Tasarımcısı "bir bırakma bölge rastgele bir etkinlik nereye yerleştirilmesi" ve ayrıca anlamına gelir elde edilen tasarım yüzeyinde öğelerinin koleksiyonunu yönetmenizi sağlaması gerekir. Bu konu, bu tür bir bırakma bölge içeren bir özel etkinlik Tasarımcısı oluşturma ve düzenleme işlevi Tasarımcı öğelerinin koleksiyonunu yönetmek gerekli olduğunu sağlayan bir özel etkinlik Tasarımcısı oluşturma işlemini açıklar.
 
- Özel Etkinlik tasarımcıları genellikle devralınan <xref:System.Activities.Presentation.ActivityDesigner> belirli bir tasarımcı olmadan herhangi bir etkinlik için varsayılan taban etkinlik Tasarımcısı türü. Bu özellik kılavuzunda ile etkileşim kurma ve renkleri ve simgeleri yönetme gibi temel özellikleri yapılandırma tasarım zamanı deneyimi sağlar.
+Özel Etkinlik tasarımcıları genellikle devralınan <xref:System.Activities.Presentation.ActivityDesigner> belirli bir tasarımcı olmadan herhangi bir etkinlik için varsayılan taban etkinlik Tasarımcısı türü. Bu özellik kılavuzunda ile etkileşim kurma ve renkleri ve simgeleri yönetme gibi temel özellikleri yapılandırma tasarım zamanı deneyimi sağlar.
 
- <xref:System.Activities.Presentation.ActivityDesigner> iki Yardımcısı denetimlerini kullanır <xref:System.Activities.Presentation.WorkflowItemPresenter> ve <xref:System.Activities.Presentation.WorkflowItemsPresenter> özel etkinlik tasarımcıları geliştirmeyi daha kolay hale getirmek için. Bunlar alt öğeleri, silme, seçimi ve söz konusu alt öğelerin eklenmesi sürükleyip gibi ortak işlevselliği işleyin. <xref:System.Activities.Presentation.WorkflowItemPresenter> "Bırakma bölge", sağlayarak kullanıcı Arabirimi öğesi içinde tek bir alt sağlar, çalışırken <xref:System.Activities.Presentation.WorkflowItemsPresenter> destekleyen birden çok kullanıcı Arabirimi öğeleri, sıralama gibi dahil olmak üzere ek işlevler sağlayabilir, taşıma, silme ve alt öğeleri ekleme.
+<xref:System.Activities.Presentation.ActivityDesigner> iki Yardımcısı denetimlerini kullanır <xref:System.Activities.Presentation.WorkflowItemPresenter> ve <xref:System.Activities.Presentation.WorkflowItemsPresenter> özel etkinlik tasarımcıları geliştirmeyi daha kolay hale getirmek için. Bunlar alt öğeleri, silme, seçimi ve söz konusu alt öğelerin eklenmesi sürükleyip gibi ortak işlevselliği işleyin. <xref:System.Activities.Presentation.WorkflowItemPresenter> "Bırakma bölge", sağlayarak kullanıcı Arabirimi öğesi içinde tek bir alt sağlar, çalışırken <xref:System.Activities.Presentation.WorkflowItemsPresenter> destekleyen birden çok kullanıcı Arabirimi öğeleri, sıralama gibi dahil olmak üzere ek işlevler sağlayabilir, taşıma, silme ve alt öğeleri ekleme.
 
- Özel Etkinlik Tasarımcısı uygulamasında vurgulama gereken yazının diğer önemli parçası visual düzenlemeler, bağlı kullanarak şekliyle ilgilidir [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] ne biz tasarımcıda düzenleme bellek depolanan örnek veri bağlama. Bu, aynı zamanda değişiklik bildirimi ve durum değişiklikleri gibi olaylar izlenmesini etkinleştirmek için sorumlu olan Model öğesi ağacı tarafından gerçekleştirilir.
+Özel Etkinlik Tasarımcısı uygulamasında vurgulama gereken yazının diğer önemli parçası visual düzenlemeler, bağlı kullanarak şekliyle ilgilidir [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] ne biz tasarımcıda düzenleme bellek depolanan örnek veri bağlama. Bu, aynı zamanda değişiklik bildirimi ve durum değişiklikleri gibi olaylar izlenmesini etkinleştirmek için sorumlu olan Model öğesi ağacı tarafından gerçekleştirilir.
 
- Bu konu iki yordam açıklanmaktadır.
+Bu konu iki yordam açıklanmaktadır.
 
-1.  Birinci yordamda açıklanan özel etkinlik Tasarımcısı ile oluşturmak nasıl bir <xref:System.Activities.Presentation.WorkflowItemPresenter> diğer etkinlikleri alan açılan bölge sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğesi sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) örnek.
+1. Birinci yordamda açıklanan özel etkinlik Tasarımcısı ile oluşturmak nasıl bir <xref:System.Activities.Presentation.WorkflowItemPresenter> diğer etkinlikleri alan açılan bölge sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğesi sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) örnek.
 
-2.  İkinci yordam özel etkinlik Tasarımcısı ile oluşturma işlemini açıklamaktadır bir <xref:System.Activities.Presentation.WorkflowItemsPresenter> düzenlemek kapsanan öğelerin koleksiyonunu için gereken işlevselliği sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğeleri sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) örnek.
+2. İkinci yordam özel etkinlik Tasarımcısı ile oluşturma işlemini açıklamaktadır bir <xref:System.Activities.Presentation.WorkflowItemsPresenter> düzenlemek kapsanan öğelerin koleksiyonunu için gereken işlevselliği sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğeleri sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) örnek.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Bir alt bölge WorkflowItemPresenter kullanarak özel bir etkinlik Tasarımcısı oluşturmak için
 
-1.  Visual Studio 2010'u başlatın.
+1. Visual Studio 2010'u başlatın.
 
-2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje...** .
+2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje...** .
 
      **Yeni proje** iletişim kutusu açılır.
 
-3.  İçinde **yüklü şablonlar** bölmesinde **Windows** , tercih edilen dil kategorisinden.
+3. İçinde **yüklü şablonlar** bölmesinde **Windows** , tercih edilen dil kategorisinden.
 
-4.  İçinde **şablonları** bölmesinde **WPF uygulaması**.
+4. İçinde **şablonları** bölmesinde **WPF uygulaması**.
 
-5.  İçinde **adı** kutusuna `UsingWorkflowItemPresenter`.
+5. İçinde **adı** kutusuna `UsingWorkflowItemPresenter`.
 
-6.  İçinde **konumu** kutusunda, projeyi kaydedin veya istediğiniz dizin girin **Gözat** gitmek için.
+6. İçinde **konumu** kutusunda, projeyi kaydedin veya istediğiniz dizin girin **Gözat** gitmek için.
 
-7.  İçinde **çözüm** kutusunda, varsayılan değeri kabul edin.
+7. İçinde **çözüm** kutusunda, varsayılan değeri kabul edin.
 
-8.  **Tamam**'ı tıklatın.
+8. **Tamam**'ı tıklatın.
 
 9. MainWindows.xaml dosyaya sağ **Çözüm Gezgini**seçin **Sil** ve onaylayın **Tamam** içinde **Microsoft Visual Studio**iletişim kutusu.
 
@@ -106,7 +106,7 @@ ms.locfileid: "54638190"
 
 13. Bir etkinlik Tasarımcısı bir etkinlik türü ile ilişkilendirmek için bu etkinlik Tasarımcısı ile meta veri deposuna kaydetmeniz gerekir. Bunu yapmak için ekleme `RegisterMetadata` yönteme `RehostingWFDesigner` sınıfı. Kapsamında `RegisterMetadata` yöntemi oluşturma bir <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> nesne ve çağrı <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> öznitelikleri eklemek için yöntemi. Çağrı <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> ekleme yöntemi <xref:System.Activities.Presentation.Metadata.AttributeTable> meta veri deposuna. Aşağıdaki kod, Tasarımcı için rehosting mantığı içerir. Meta veri kaydeder, koyar `SimpleNativeActivity` araç kutusu içine ve iş akışı oluşturur. Bu kodu RehostingWFDesigner.xaml.cs dosyanın koyun.
 
-    ```
+    ```csharp
     using System;
     using System.Activities.Core.Presentation;
     using System.Activities.Presentation;
@@ -160,11 +160,11 @@ ms.locfileid: "54638190"
 
 16. Yordamın aynısını kullanarak, aşağıdaki derlemelere başvurular ekleyin:
 
-    1.  System.Data.DataSetExtensions.dll
+    1. System.Data.DataSetExtensions.dll
 
-    2.  System.Activities.Presentation.dll
+    2. System.Activities.Presentation.dll
 
-    3.  System.ServiceModel.Activities.dll
+    3. System.ServiceModel.Activities.dll
 
 17. App.xaml dosyası açın ve "RehostingWFDesigner.xaml için" StartUpUri değiştirin.
 
@@ -175,7 +175,7 @@ ms.locfileid: "54638190"
 20. SimpleNativeDesigner.xaml dosyasını açın ve aşağıdaki kodu yapıştırın. Bu kod kullandığına dikkat edin <xref:System.Activities.Presentation.ActivityDesigner> nasıl bağlama tümleştirmek için kullanılan gösterir ve kök öğe olarak <xref:System.Activities.Presentation.WorkflowItemPresenter> tasarımcınıza bir alt türü birleşik etkinlik Tasarımcısı'nda görüntülenecek şekilde içine.
 
     > [!NOTE]
-    >  İçin şemayı <xref:System.Activities.Presentation.ActivityDesigner> özel etkinlik Tasarımcısı tanımı; yalnızca bir alt öğenin eklenmesi verir ancak bu öğe olabilir bir `StackPanel`, `Grid`, ya da diğer bazı bir bileşik kullanıcı Arabirimi öğesi.
+    > İçin şemayı <xref:System.Activities.Presentation.ActivityDesigner> özel etkinlik Tasarımcısı tanımı; yalnızca bir alt öğenin eklenmesi verir ancak bu öğe olabilir bir `StackPanel`, `Grid`, ya da diğer bazı bir bileşik kullanıcı Arabirimi öğesi.
 
     ```xml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -217,7 +217,7 @@ ms.locfileid: "54638190"
 
 23. Uygulama `SimpleNativeActivity` SimpleNativeActivity.cs dosyaya aşağıdaki kodu girerek sınıfı.
 
-    ```
+    ```csharp
     using System.Activities;
 
     namespace UsingWorkflowItemPresenter
@@ -225,8 +225,8 @@ ms.locfileid: "54638190"
         public sealed class SimpleNativeActivity : NativeActivity
         {
             // this property contains an activity that will be scheduled in the execute method
-    // the WorkflowItemPresenter in the designer is bound to this to enable editing
-    // of the value
+            // the WorkflowItemPresenter in the designer is bound to this to enable editing
+            // of the value
             public Activity Body { get; set; }
 
             protected override void CacheMetadata(NativeActivityMetadata metadata)
@@ -250,9 +250,9 @@ ms.locfileid: "54638190"
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>WorkflowItemsPresenter kullanarak bir özel etkinlik Tasarımcısı oluşturmak için
 
-1.  İkinci özel etkinlik Tasarımcısı için bazı değişiklikler, ilk başta olan ikinci uygulama adı için parallels oluşan bir yordamdır `UsingWorkflowItemsPresenter`. Ayrıca bu uygulamayı yeni bir özel etkinlik tanımlamıyor.
+1. İkinci özel etkinlik Tasarımcısı için bazı değişiklikler, ilk başta olan ikinci uygulama adı için parallels oluşan bir yordamdır `UsingWorkflowItemsPresenter`. Ayrıca bu uygulamayı yeni bir özel etkinlik tanımlamıyor.
 
-2.  Temel farklılıklar CustomParallelDesigner.xaml ve RehostingWFDesigner.xaml.cs dosyaları yer alır. Kullanıcı arabirimini tanımlar CustomParallelDesigne.xaml dosyasından kod aşağıdaki gibidir.
+2. Temel farklılıklar CustomParallelDesigner.xaml ve RehostingWFDesigner.xaml.cs dosyaları yer alır. Kullanıcı arabirimini tanımlar CustomParallelDesigner.xaml dosyasından kod aşağıdaki gibidir.
 
     ```xml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"
@@ -298,9 +298,9 @@ ms.locfileid: "54638190"
     </sap:ActivityDesigner>
     ```
 
-3.  İşte kod RehostingWFDesigner.xaml.cs dosyasından rehosting mantığı sağlar.
+3. İşte kod RehostingWFDesigner.xaml.cs dosyasından rehosting mantığı sağlar.
 
-    ```
+    ```csharp
     using System;
     using System.Activities.Core.Presentation;
     using System.Activities.Presentation;

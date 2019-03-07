@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo::GetModuleInfo Metodu
+title: ICorProfilerInfo::GetModuleInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo.GetModuleInfo
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9abe342a795f8f511fce0504c7839411079c1c75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cf4396de4eedf719f1f3fea0b9303a4eaed2bb6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467091"
 ---
-# <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo Metodu
+# <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo Yöntemi
 Bir modül kimliği söz konusu modülün dosya adı ve modülün üst derleme Kimliğini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,7 +40,7 @@ HRESULT GetModuleInfo(
     [out] AssemblyID *pAssemblyId);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `moduleId`  
  [in] Bilgileri alınır modül kimliği.  
   

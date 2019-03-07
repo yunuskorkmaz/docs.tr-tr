@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerModuleEnum::GetCount Metodu
+title: ICorProfilerModuleEnum::GetCount Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerModuleEnum.GetCount Method
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0d386dfa3e3ad8d60e239c82a84c648f2813696
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 190d6477e0474a7f865f231dbf116e845a403a34
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572061"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471192"
 ---
-# <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount Metodu
+# <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount Yöntemi
 Uygulamaya yüklenen yönetilen modülleri sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,7 +33,7 @@ Uygulamaya yüklenen yönetilen modülleri sayısını alır.
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
  [out] Çalışma zamanı modülleri koleksiyon sayısı.  
   

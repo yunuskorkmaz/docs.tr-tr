@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1e0f79304c4ed0d052bb05e364f64d6cb524f21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f7141115ff0aa7431f49281bde01b38c5af4260
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495246"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481982"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool İşlevi
 Yürütülmekte olan iş parçacığı havuzu iş parçacığını yönetilen kodun yürütülmesi için işaretler. Bu işlev, .NET Framework sürüm 2.0 ile başlayarak, hiçbir etkisi olmaz. Gerekli değildir ve kodunuzdan kaldırılabilir. Bu işlev kullanım dışı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  

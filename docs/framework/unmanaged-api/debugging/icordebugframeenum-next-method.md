@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f049a7cadf1857495e49b9bdc2fecd1b49103af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68098895b2ad7f5c08d30f222777e52d4ee3f063
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476665"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next Yöntemi
 Icordebugframe örnekleri, geçerli konumdan başlayarak belirtilen sayıda alır.  
@@ -38,20 +38,20 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısı `ICorDebugFrame` alınacak örnekleri.  
+ [in] Sayısını `ICorDebugFrame` alınacak örnekleri.  
   
  `frames`  
- [out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugFrame` nesnesi.  
+ [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugFrame` nesne.  
   
  `pceltFetched`  
- [out] Sayısını gösteren bir işaretçi `ICorDebugFrame` gerçekte döndürülen örnek. Bu değer null ise `celt` biridir.  
+ [out] Bir işaretçi sayısına `ICorDebugFrame` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

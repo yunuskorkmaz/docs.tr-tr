@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedVariable::GetAddressField3 Metodu
+title: ISymUnmanagedVariable::GetAddressField3 Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedVariable.GetAddressField3
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c2695fb6fcd0f4bba3576f2331c80961e9a444d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0838ac08ff69e33a0badef7c0f52cb6189be2b7f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649186"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469046"
 ---
-# <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 Metodu
+# <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 Yöntemi
 Üçüncü adres alanı, bu değişken için alır. Anlamını adresi türüne bağlıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,7 +34,7 @@ HRESULT GetAddressField3(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `pRetVal`  
  [out] Bir işaretçi bir `ULONG32` , üçüncü adres alanı alır.  
   

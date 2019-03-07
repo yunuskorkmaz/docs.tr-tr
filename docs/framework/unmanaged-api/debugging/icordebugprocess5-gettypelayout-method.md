@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess5::GetTypeLayout Metodu
+title: ICorDebugProcess5::GetTypeLayout Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess5.GetTypeLayout
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f12398a2423e7e0081556dbdb279e4a2f23c3af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffef0b7296e2742d6e6207f66f91273f41652469
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723426"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483764"
 ---
-# <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout Metodu
+# <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout Yöntemi
 Kendi tür tanımlayıcısına göre bellekte bir nesne düzeni bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,7 +33,7 @@ Kendi tür tanımlayıcısına göre bellekte bir nesne düzeni bilgilerini alı
 HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `id`  
  [in] A [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) düzeni istenen türünü belirten bir belirteç.  
   

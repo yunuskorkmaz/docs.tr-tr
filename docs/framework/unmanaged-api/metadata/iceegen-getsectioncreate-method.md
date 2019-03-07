@@ -1,5 +1,5 @@
 ---
-title: ICeeGen::GetSectionCreate Metodu
+title: ICeeGen::GetSectionCreate Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICeeGen.GetSectionCreate
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03de69d51b520ae2d8be6c7f450f0541c52c36a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643370"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472440"
 ---
-# <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Metodu
+# <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Yöntemi
 Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.  
   
  Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.  
@@ -39,7 +39,7 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `name`  
  [in] Oluşturulacak bölümün adını belirten bir dize işaretçisi.  
   

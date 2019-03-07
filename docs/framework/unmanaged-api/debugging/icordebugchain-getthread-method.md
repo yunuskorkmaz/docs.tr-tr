@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain::GetThread Metodu
+title: ICorDebugChain::GetThread Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain.GetThread
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291c8129a790c235ee6e7f163c49c4e1e726cce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481657"
 ---
-# <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread Metodu
+# <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread Yöntemi
 Bu çağrı zinciri fiziksel iş parçacığı parçası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,14 +35,14 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppThread`  
- [out] Icordebugthread nesneye fiziksel iş parçacığı gösteren bir işaretçi bu çağrı zincirine, parçasıdır.  
+ [out] Bir fiziksel iş parçacığını temsil eden bir Icordebugthread nesne bu çağrı zincirini parçası işaretçisidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

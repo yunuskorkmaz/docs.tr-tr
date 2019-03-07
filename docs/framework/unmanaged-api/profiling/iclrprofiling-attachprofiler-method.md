@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469007"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
 Belirtilen işleme belirtilen profil oluşturucuyu ekler.  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `dwProfileeProcessID`  
  [in] Profil Oluşturucu eklenmesi işlemin işlem kimliği. Bir 64-bit makinede profilli işlemin bit genişliği bit genişliğinde çağıran bir tetikleyici işlem eşleşmelidir `AttachProfiler`. Altında kullanıcı hesabı `AttachProfiler` çağrılır yönetici ayrıcalıklarına sahip, hedef işlem sistem üzerindeki herhangi bir işlem olabilir. Aksi takdirde, hedef işlem, aynı kullanıcı hesabı tarafından sahiplenilmelidir.  
   

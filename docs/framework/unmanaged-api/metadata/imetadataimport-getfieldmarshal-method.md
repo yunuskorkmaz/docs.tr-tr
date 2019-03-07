@@ -1,5 +1,5 @@
 ---
-title: IMetaDataImport::GetFieldMarshal Metodu
+title: IMetaDataImport::GetFieldMarshal Yöntemi
 ms.date: 03/30/2017
 api_name:
 - IMetaDataImport.GetFieldMarshal
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3c9b879faf49ec7a485641c622d40a684dfb35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647587"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469306"
 ---
-# <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal Metodu
+# <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal Yöntemi
 Belirtilen alan metaveri belirteci tarafından temsil edilen alan yerel, yönetilmeyen tür için bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,7 +37,7 @@ HRESULT GetFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `tk`  
  [in] Birlikte çalışma hazırlama hakkında bilgi alın alanını temsil eden meta veri belirteci.  
   

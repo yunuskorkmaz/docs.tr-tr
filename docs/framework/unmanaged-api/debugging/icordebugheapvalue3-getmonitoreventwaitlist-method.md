@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue3::GetMonitorEventWaitList Metodu
+title: ICorDebugHeapValue3::GetMonitorEventWaitList Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue3.GetMonitorEventWaitList
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06e88e7b3f8e4541c8c7058e27cddb41c78076bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628519"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477848"
 ---
-# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList Metodu
+# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList Yöntemi
 Monitör kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `ppThreadEnum`  
  [out] Icordebugthreadenum Numaralandırıcı iş parçacıkları sıralı listesini sağlar.  
   
