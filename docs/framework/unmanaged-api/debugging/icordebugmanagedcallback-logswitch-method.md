@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 040c7dea7f751accb801f8fda190e9387c7aede1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466173"
 ---
-# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="0d3e8-102">ICorDebugManagedCallback::LogSwitch Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0d3e8-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
-<span data-ttu-id="0d3e8-103">Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.Switch> sınıfı oluşturmak, değiştirmek veya bir hata ayıklama izleme anahtarı silin.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
+# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="13427-102">ICorDebugManagedCallback::LogSwitch Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13427-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
+<span data-ttu-id="13427-103">Hata ayıklayıcı ortak dil çalışma zamanı (CLR) yönetilen iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.Switch> sınıfı oluşturmak, değiştirmek veya bir hata ayıklama izleme anahtarı silin.</span><span class="sxs-lookup"><span data-stu-id="13427-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d3e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0d3e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13427-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13427-104">Syntax</span></span>  
   
 ```  
 HRESULT LogSwitch (  
@@ -39,33 +39,33 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0d3e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0d3e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13427-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13427-105">Parameters</span></span>  
  `PAppDomain`  
- <span data-ttu-id="0d3e8-106">[in] Oluşturulan, değiştirilen veya hata ayıklama izleme anahtarı silindi yönetilen iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
+ <span data-ttu-id="13427-106">[in] Oluşturulan, değiştirilen veya hata ayıklama izleme anahtarı silindi yönetilen iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="13427-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
   
  `pThread`  
- <span data-ttu-id="0d3e8-107">[in] Yönetilen iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="13427-107">[in] Yönetilen iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="13427-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="0d3e8-108">[in] Olay günlüğüne yazılmış açıklayıcı bir ileti önem derecesi belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="13427-108">[in] Olay günlüğüne yazılmış açıklayıcı bir ileti önem derecesi belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="13427-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `ulReason`  
- <span data-ttu-id="0d3e8-109">[in] Değerini [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) işlemi belirten numaralandırma hata ayıklama izleme anahtarı gerçekleşen.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="13427-109">[in] Değerini [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) işlemi belirten numaralandırma hata ayıklama izleme anahtarı gerçekleşen.</span><span class="sxs-lookup"><span data-stu-id="13427-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="0d3e8-110">[in] Hata ayıklama izleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="13427-110">[in] Hata ayıklama izleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13427-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
   
  `pParentName`  
- <span data-ttu-id="0d3e8-111">[in] Üst öğesinin hata ayıklama izleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="13427-111">[in] Üst öğesinin hata ayıklama izleme anahtarı adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13427-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d3e8-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0d3e8-112">Requirements</span></span>  
- <span data-ttu-id="0d3e8-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d3e8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13427-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13427-112">Requirements</span></span>  
+ <span data-ttu-id="13427-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13427-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d3e8-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d3e8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="13427-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="13427-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0d3e8-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d3e8-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13427-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13427-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0d3e8-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d3e8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="13427-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13427-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d3e8-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0d3e8-117">See also</span></span>
-- [<span data-ttu-id="0d3e8-118">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0d3e8-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="13427-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13427-117">See also</span></span>
+- [<span data-ttu-id="13427-118">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13427-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

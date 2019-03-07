@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d1198a931b79cb469048bf5afd48f5172a45721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20a34da8f868a34f3d447ac1a5f6a56eb0bdafe1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481423"
 ---
-# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="8e136-102">ICorProfilerCallback::RuntimeThreadResumed Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8e136-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
-<span data-ttu-id="8e136-103">Profil Oluşturucu, belirtilen iş parçacığını askıya sonra ettirdi bildirir.</span><span class="sxs-lookup"><span data-stu-id="8e136-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="80ac2-102">ICorProfilerCallback::RuntimeThreadResumed Yöntemi</span><span class="sxs-lookup"><span data-stu-id="80ac2-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
+<span data-ttu-id="80ac2-103">Profil Oluşturucu, belirtilen iş parçacığını askıya sonra ettirdi bildirir.</span><span class="sxs-lookup"><span data-stu-id="80ac2-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e136-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8e136-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80ac2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="80ac2-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8e136-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8e136-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80ac2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="80ac2-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="8e136-106">[in] Sürdürüldü iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="8e136-106">[in] The ID of the thread that has been resumed.</span></span>  
+ <span data-ttu-id="80ac2-106">[in] Sürdürüldü iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="80ac2-106">[in] The ID of the thread that has been resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e136-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8e136-107">Requirements</span></span>  
- <span data-ttu-id="8e136-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e136-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80ac2-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="80ac2-107">Requirements</span></span>  
+ <span data-ttu-id="80ac2-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80ac2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8e136-109">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8e136-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="80ac2-109">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="80ac2-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8e136-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e136-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="80ac2-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="80ac2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8e136-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e136-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80ac2-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80ac2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e136-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e136-112">See also</span></span>
-- [<span data-ttu-id="8e136-113">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8e136-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="8e136-114">RuntimeThreadSuspended Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8e136-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+## <a name="see-also"></a><span data-ttu-id="80ac2-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="80ac2-112">See also</span></span>
+- [<span data-ttu-id="80ac2-113">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="80ac2-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="80ac2-114">RuntimeThreadSuspended Yöntemi</span><span class="sxs-lookup"><span data-stu-id="80ac2-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

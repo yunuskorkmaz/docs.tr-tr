@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f049a7cadf1857495e49b9bdc2fecd1b49103af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68098895b2ad7f5c08d30f222777e52d4ee3f063
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476665"
 ---
-# <a name="icordebugframeenumnext-method"></a><span data-ttu-id="8aaf3-102">ICorDebugFrameEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8aaf3-102">ICorDebugFrameEnum::Next Method</span></span>
-<span data-ttu-id="8aaf3-103">Icordebugframe örnekleri, geçerli konumdan başlayarak belirtilen sayıda alır.</span><span class="sxs-lookup"><span data-stu-id="8aaf3-103">Gets the specified number of ICorDebugFrame instances, starting at the current position.</span></span>  
+# <a name="icordebugframeenumnext-method"></a><span data-ttu-id="36995-102">ICorDebugFrameEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="36995-102">ICorDebugFrameEnum::Next Method</span></span>
+<span data-ttu-id="36995-103">Icordebugframe örnekleri, geçerli konumdan başlayarak belirtilen sayıda alır.</span><span class="sxs-lookup"><span data-stu-id="36995-103">Gets the specified number of ICorDebugFrame instances, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8aaf3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8aaf3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36995-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="36995-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8aaf3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8aaf3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="36995-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="36995-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="8aaf3-106">[in] Sayısı `ICorDebugFrame` alınacak örnekleri.</span><span class="sxs-lookup"><span data-stu-id="8aaf3-106">[in] The number of `ICorDebugFrame` instances to be retrieved.</span></span>  
+ <span data-ttu-id="36995-106">[in] Sayısını `ICorDebugFrame` alınacak örnekleri.</span><span class="sxs-lookup"><span data-stu-id="36995-106">[in] The number of `ICorDebugFrame` instances to be retrieved.</span></span>  
   
  `frames`  
- <span data-ttu-id="8aaf3-107">[out] Her biri işaret işaretçileri, bir dizi bir `ICorDebugFrame` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="8aaf3-107">[out] An array of pointers, each of which points to an `ICorDebugFrame` object.</span></span>  
+ <span data-ttu-id="36995-107">[out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugFrame` nesne.</span><span class="sxs-lookup"><span data-stu-id="36995-107">[out] An array of pointers, each of which points to an `ICorDebugFrame` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="8aaf3-108">[out] Sayısını gösteren bir işaretçi `ICorDebugFrame` gerçekte döndürülen örnek.</span><span class="sxs-lookup"><span data-stu-id="8aaf3-108">[out] A pointer to the number of `ICorDebugFrame` instances actually returned.</span></span> <span data-ttu-id="8aaf3-109">Bu değer null ise `celt` biridir.</span><span class="sxs-lookup"><span data-stu-id="8aaf3-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="36995-108">[out] Bir işaretçi sayısına `ICorDebugFrame` gerçekte döndürülen örnekleri.</span><span class="sxs-lookup"><span data-stu-id="36995-108">[out] A pointer to the number of `ICorDebugFrame` instances actually returned.</span></span> <span data-ttu-id="36995-109">Bu değer null olabilir, `celt` biridir.</span><span class="sxs-lookup"><span data-stu-id="36995-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8aaf3-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8aaf3-110">Requirements</span></span>  
- <span data-ttu-id="8aaf3-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8aaf3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36995-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="36995-110">Requirements</span></span>  
+ <span data-ttu-id="36995-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36995-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8aaf3-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8aaf3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="36995-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36995-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8aaf3-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8aaf3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36995-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36995-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8aaf3-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8aaf3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="36995-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36995-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

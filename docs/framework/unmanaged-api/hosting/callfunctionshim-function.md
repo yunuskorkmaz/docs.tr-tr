@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478992"
 ---
-# <a name="callfunctionshim-function"></a><span data-ttu-id="cf933-102">CallFunctionShim İşlevi</span><span class="sxs-lookup"><span data-stu-id="cf933-102">CallFunctionShim Function</span></span>
-<span data-ttu-id="cf933-103">Belirtilen kitaplık içinde belirtilen ad ve parametreler içeren işleve bir çağrı yapar.</span><span class="sxs-lookup"><span data-stu-id="cf933-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
+# <a name="callfunctionshim-function"></a><span data-ttu-id="2a270-102">CallFunctionShim İşlevi</span><span class="sxs-lookup"><span data-stu-id="2a270-102">CallFunctionShim Function</span></span>
+<span data-ttu-id="2a270-103">Belirtilen kitaplık içinde belirtilen ad ve parametreler içeren işleve bir çağrı yapar.</span><span class="sxs-lookup"><span data-stu-id="2a270-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
   
- <span data-ttu-id="cf933-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf933-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="2a270-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a270-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf933-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cf933-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a270-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2a270-105">Syntax</span></span>  
   
 ```  
 HRESULT CallFunctionShim (  
@@ -41,33 +41,33 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cf933-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cf933-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a270-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2a270-106">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="cf933-107">[in] İşlevi içeren kitaplığın adı.</span><span class="sxs-lookup"><span data-stu-id="cf933-107">[in] The name of the library containing the function.</span></span>  
+ <span data-ttu-id="2a270-107">[in] İşlevi içeren kitaplığın adı.</span><span class="sxs-lookup"><span data-stu-id="2a270-107">[in] The name of the library containing the function.</span></span>  
   
  `szFunctionName`  
- <span data-ttu-id="cf933-108">[in] İşlevin adı.</span><span class="sxs-lookup"><span data-stu-id="cf933-108">[in] The name of the function.</span></span>  
+ <span data-ttu-id="2a270-108">[in] İşlevin adı.</span><span class="sxs-lookup"><span data-stu-id="2a270-108">[in] The name of the function.</span></span>  
   
  `lpvArgument1`  
- <span data-ttu-id="cf933-109">[in] İşleve geçirilecek ilk bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="cf933-109">[in] The first argument to pass to the function.</span></span>  
+ <span data-ttu-id="2a270-109">[in] İşleve geçirilecek ilk bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="2a270-109">[in] The first argument to pass to the function.</span></span>  
   
  `lpvArgument2`  
- <span data-ttu-id="cf933-110">[in] İşleve ikinci bağımsız değişkeni.</span><span class="sxs-lookup"><span data-stu-id="cf933-110">[in] The second argument to pass to the function.</span></span>  
+ <span data-ttu-id="2a270-110">[in] İşleve ikinci bağımsız değişkeni.</span><span class="sxs-lookup"><span data-stu-id="2a270-110">[in] The second argument to pass to the function.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="cf933-111">[in] İşlevi içeren kitaplık sürümü.</span><span class="sxs-lookup"><span data-stu-id="cf933-111">[in] The version of the library that contains the function.</span></span>  
+ <span data-ttu-id="2a270-111">[in] İşlevi içeren kitaplık sürümü.</span><span class="sxs-lookup"><span data-stu-id="2a270-111">[in] The version of the library that contains the function.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="cf933-112">[in] Gelecekte kullanılmak üzere ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="cf933-112">[in] Reserved for future use.</span></span> <span data-ttu-id="cf933-113">Bu parametre sıfır geçirin.</span><span class="sxs-lookup"><span data-stu-id="cf933-113">Pass zero in this parameter.</span></span>  
+ <span data-ttu-id="2a270-112">[in] Gelecekte kullanılmak üzere ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="2a270-112">[in] Reserved for future use.</span></span> <span data-ttu-id="2a270-113">Bu parametre sıfır geçirin.</span><span class="sxs-lookup"><span data-stu-id="2a270-113">Pass zero in this parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf933-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cf933-114">Requirements</span></span>  
- <span data-ttu-id="cf933-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf933-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a270-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2a270-114">Requirements</span></span>  
+ <span data-ttu-id="2a270-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a270-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf933-116">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cf933-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2a270-116">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2a270-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cf933-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cf933-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="2a270-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2a270-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cf933-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf933-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2a270-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a270-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf933-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf933-119">See also</span></span>
-- [<span data-ttu-id="cf933-120">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="cf933-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="2a270-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a270-119">See also</span></span>
+- [<span data-ttu-id="2a270-120">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="2a270-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

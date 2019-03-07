@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8c2151494a2ddfc200edc9c6c6cc3f7639bcf19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc2b919cf2f3f4bbd3d06a12734a10534210adcc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466589"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a><span data-ttu-id="709dd-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="709dd-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Method</span></span>
-<span data-ttu-id="709dd-103">Bellek zaten eşleştirilmiş bir derleme için ilişkili ortak anahtar geçerli olduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="709dd-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a><span data-ttu-id="dcd83-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dcd83-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Method</span></span>
+<span data-ttu-id="dcd83-103">Bellek zaten eşleştirilmiş bir derleme için ilişkili ortak anahtar geçerli olduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="dcd83-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="709dd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="709dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcd83-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dcd83-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationFromImage (  
@@ -38,44 +38,44 @@ HRESULT StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="709dd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="709dd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dcd83-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dcd83-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="709dd-106">[in] Eşlenen derleme bildirimi göreli sanal adres.</span><span class="sxs-lookup"><span data-stu-id="709dd-106">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="dcd83-106">[in] Eşlenen derleme bildirimi göreli sanal adres.</span><span class="sxs-lookup"><span data-stu-id="dcd83-106">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="709dd-107">[in] Baytlarında eşlenen görüntünün boyutu.</span><span class="sxs-lookup"><span data-stu-id="709dd-107">[in] The size, in bytes, of the mapped image.</span></span>  
+ <span data-ttu-id="dcd83-107">[in] Baytlarında eşlenen görüntünün boyutu.</span><span class="sxs-lookup"><span data-stu-id="dcd83-107">[in] The size, in bytes, of the mapped image.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="709dd-108">[in] Doğrulama davranışını etkileyen bayraklar.</span><span class="sxs-lookup"><span data-stu-id="709dd-108">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="709dd-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="709dd-109">The following values are supported:</span></span>  
+ <span data-ttu-id="dcd83-108">[in] Doğrulama davranışını etkileyen bayraklar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-108">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="dcd83-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="dcd83-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="709dd-110">`SN_INFLAG_FORCE_VER` (0x00000001) - kayıt defteri ayarlarını geçersiz kılmak gerekli olsa bile doğrulama zorlar.</span><span class="sxs-lookup"><span data-stu-id="709dd-110">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+-   <span data-ttu-id="dcd83-110">`SN_INFLAG_FORCE_VER` (0x00000001) - kayıt defteri ayarlarını geçersiz kılmak gerekli olsa bile doğrulama zorlar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-110">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
--   <span data-ttu-id="709dd-111">`SN_INFLAG_INSTALL` (0x00000002) - bu görüntüye gerçekleştirilen ilk doğrulama olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="709dd-111">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
+-   <span data-ttu-id="dcd83-111">`SN_INFLAG_INSTALL` (0x00000002) - bu görüntüye gerçekleştirilen ilk doğrulama olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-111">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
   
--   <span data-ttu-id="709dd-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - önbellek yönetici ayrıcalıklarına sahip kullanıcılara erişimi sağlayacak belirtir.</span><span class="sxs-lookup"><span data-stu-id="709dd-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+-   <span data-ttu-id="dcd83-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - önbellek yönetici ayrıcalıklarına sahip kullanıcılara erişimi sağlayacak belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
--   <span data-ttu-id="709dd-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - derleme yalnızca geçerli kullanıcı için erişilebilir olacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="709dd-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+-   <span data-ttu-id="dcd83-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - derleme yalnızca geçerli kullanıcı için erişilebilir olacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
--   <span data-ttu-id="709dd-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - önbellek garanti erişim kısıtlama sağlayacak belirtir.</span><span class="sxs-lookup"><span data-stu-id="709dd-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+-   <span data-ttu-id="dcd83-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - önbellek garanti erişim kısıtlama sağlayacak belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
--   <span data-ttu-id="709dd-115">`SN_INFLAG_RUNTIME` (0x80000000) - iç hata ayıklama için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="709dd-115">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+-   <span data-ttu-id="dcd83-115">`SN_INFLAG_RUNTIME` (0x80000000) - iç hata ayıklama için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="dcd83-115">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="709dd-116">[out] Çıktı ek bilgi için bir bayrak.</span><span class="sxs-lookup"><span data-stu-id="709dd-116">[out] A flag for additional output information.</span></span> <span data-ttu-id="709dd-117">Aşağıdaki değeri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="709dd-117">The following value is supported:</span></span>  
+ <span data-ttu-id="dcd83-116">[out] Çıktı ek bilgi için bir bayrak.</span><span class="sxs-lookup"><span data-stu-id="dcd83-116">[out] A flag for additional output information.</span></span> <span data-ttu-id="dcd83-117">Aşağıdaki değeri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="dcd83-117">The following value is supported:</span></span>  
   
--   <span data-ttu-id="709dd-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - bu değeri ayarı `false` doğrulama kayıt defteri ayarları nedeniyle başarılı olduğunu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="709dd-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+-   <span data-ttu-id="dcd83-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - bu değeri ayarı `false` doğrulama kayıt defteri ayarları nedeniyle başarılı olduğunu belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="dcd83-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="709dd-119">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="709dd-119">Return Value</span></span>  
- <span data-ttu-id="709dd-120">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="709dd-120">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dcd83-119">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="dcd83-119">Return Value</span></span>  
+ <span data-ttu-id="dcd83-120">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="dcd83-120">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="709dd-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="709dd-121">Requirements</span></span>  
- <span data-ttu-id="709dd-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="709dd-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcd83-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dcd83-121">Requirements</span></span>  
+ <span data-ttu-id="dcd83-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dcd83-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="709dd-123">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="709dd-123">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="dcd83-123">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="dcd83-123">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="709dd-124">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="709dd-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dcd83-124">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="dcd83-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="709dd-125">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="709dd-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="dcd83-125">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcd83-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="709dd-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="709dd-126">See also</span></span>
-- [<span data-ttu-id="709dd-127">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="709dd-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dcd83-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dcd83-126">See also</span></span>
+- [<span data-ttu-id="dcd83-127">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dcd83-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

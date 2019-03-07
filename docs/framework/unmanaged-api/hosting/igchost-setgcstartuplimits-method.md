@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719956"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473896"
 ---
-# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="01e00-102">IGCHost::SetGCStartupLimits Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01e00-102">IGCHost::SetGCStartupLimits Method</span></span>
-<span data-ttu-id="01e00-103">Nesil 0 için kesim boyutu ve en büyük boyutunu ayarlar.</span><span class="sxs-lookup"><span data-stu-id="01e00-103">Sets the segment size and the maximum size for generation 0.</span></span>  
+# <a name="igchostsetgcstartuplimits-method"></a><span data-ttu-id="2a381-102">IGCHost::SetGCStartupLimits Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2a381-102">IGCHost::SetGCStartupLimits Method</span></span>
+<span data-ttu-id="2a381-103">Nesil 0 için kesim boyutu ve en büyük boyutunu ayarlar.</span><span class="sxs-lookup"><span data-stu-id="2a381-103">Sets the segment size and the maximum size for generation 0.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="01e00-104">İle başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], kesim boyutu ayarlayabileceğiniz ve en fazla nesil 0 boyutu daha büyük değerler `DWORD` kullanarak [Igchost2::setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="01e00-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
+>  <span data-ttu-id="2a381-104">İle başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], kesim boyutu ayarlayabileceğiniz ve en fazla nesil 0 boyutu daha büyük değerler `DWORD` kullanarak [Igchost2::setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2a381-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01e00-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01e00-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a381-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2a381-105">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimits (  
@@ -39,24 +39,24 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="01e00-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01e00-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a381-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2a381-106">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="01e00-107">[in] Çöp toplama sistem tarafından kullanılan kesim boyutu.</span><span class="sxs-lookup"><span data-stu-id="01e00-107">[in] The size of the segment used by the garbage collection system.</span></span>  
+ <span data-ttu-id="2a381-107">[in] Çöp toplama sistem tarafından kullanılan kesim boyutu.</span><span class="sxs-lookup"><span data-stu-id="2a381-107">[in] The size of the segment used by the garbage collection system.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="01e00-108">[in] Nesil 0 en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="01e00-108">[in] The maximum size for generation 0.</span></span>  
+ <span data-ttu-id="2a381-108">[in] Nesil 0 en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="2a381-108">[in] The maximum size for generation 0.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01e00-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="01e00-109">Remarks</span></span>  
- <span data-ttu-id="01e00-110">`SetGCStartupLimits` Yöntemi çağrılabilir yalnızca bir kez.</span><span class="sxs-lookup"><span data-stu-id="01e00-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="01e00-111">Bu değerler daha sonra değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="01e00-111">These values cannot be changed later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a381-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2a381-109">Remarks</span></span>  
+ <span data-ttu-id="2a381-110">`SetGCStartupLimits` Yöntemi çağrılabilir yalnızca bir kez.</span><span class="sxs-lookup"><span data-stu-id="2a381-110">The `SetGCStartupLimits` method may be called only once.</span></span> <span data-ttu-id="2a381-111">Bu değerler daha sonra değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="2a381-111">These values cannot be changed later.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01e00-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01e00-112">Requirements</span></span>  
- <span data-ttu-id="01e00-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01e00-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a381-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2a381-112">Requirements</span></span>  
+ <span data-ttu-id="2a381-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a381-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01e00-114">**Üst bilgi:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="01e00-114">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="2a381-114">**Üst bilgi:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="2a381-114">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="01e00-115">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="01e00-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2a381-115">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="2a381-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="01e00-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01e00-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2a381-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a381-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01e00-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01e00-117">See also</span></span>
-- [<span data-ttu-id="01e00-118">IGCHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01e00-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2a381-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a381-117">See also</span></span>
+- [<span data-ttu-id="2a381-118">IGCHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2a381-118">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

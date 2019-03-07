@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain::GetThread Metodu
+title: ICorDebugChain::GetThread Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain.GetThread
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291c8129a790c235ee6e7f163c49c4e1e726cce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481657"
 ---
-# <a name="icordebugchaingetthread-method"></a><span data-ttu-id="d665c-102">ICorDebugChain::GetThread Metodu</span><span class="sxs-lookup"><span data-stu-id="d665c-102">ICorDebugChain::GetThread Method</span></span>
-<span data-ttu-id="d665c-103">Bu çağrı zinciri fiziksel iş parçacığı parçası alır.</span><span class="sxs-lookup"><span data-stu-id="d665c-103">Gets the physical thread this call chain is part of.</span></span>  
+# <a name="icordebugchaingetthread-method"></a><span data-ttu-id="7d44a-102">ICorDebugChain::GetThread Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7d44a-102">ICorDebugChain::GetThread Method</span></span>
+<span data-ttu-id="7d44a-103">Bu çağrı zinciri fiziksel iş parçacığı parçası alır.</span><span class="sxs-lookup"><span data-stu-id="7d44a-103">Gets the physical thread this call chain is part of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d665c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d665c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d44a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7d44a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread (  
@@ -35,15 +35,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d665c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d665c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d44a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7d44a-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="d665c-106">[out] Icordebugthread nesneye fiziksel iş parçacığı gösteren bir işaretçi bu çağrı zincirine, parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="d665c-106">[out] A pointer to an ICorDebugThread object that represents the physical thread this call chain is part of.</span></span>  
+ <span data-ttu-id="7d44a-106">[out] Bir fiziksel iş parçacığını temsil eden bir Icordebugthread nesne bu çağrı zincirini parçası işaretçisidir.</span><span class="sxs-lookup"><span data-stu-id="7d44a-106">[out] A pointer to an ICorDebugThread object that represents the physical thread this call chain is part of.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d665c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d665c-107">Requirements</span></span>  
- <span data-ttu-id="d665c-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d665c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d44a-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7d44a-107">Requirements</span></span>  
+ <span data-ttu-id="7d44a-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d44a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d665c-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d665c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7d44a-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7d44a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d665c-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d665c-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d44a-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d44a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d665c-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d665c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7d44a-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d44a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
