@@ -2,12 +2,12 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680392"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece tanılama onarın ve WCF hizmet sorunları doğrula izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 |ActivityTracing|Akış olaylarını işleme etkinlikleri ve bileşenleri arasında.<br /><br /> Bu düzey, Yöneticiler ve geliştiriciler uygulamalarını aynı uygulama etki alanında bağıntısını kurmanızı sağlar.<br /><br /> -Etkinlik sınırları izlemelerini: Başlat/Durdur.<br />-İzlemeleri aktarımları.|  
   
  Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Örnek Yapılandırması, dinleyici adlı `sdt` ve standart .NET Framework İzleme dinleyicisi (`System.Diagnostics.XmlWriterTraceListener`) türü olarak eklenir. Kullanım `initializeData` günlük dosyasının adı için bu dinleyici ayarlamak için. Ayrıca, bir basit dosya adı için bir tam yol yerine kullanabilirsiniz.  
-  
+
+.NET Framework 4.8 başlayarak, bazı yüksek karşıtlıklı tema ComboBox denetimleri doğru renkte görüntülenir. Aşağıdaki ayarından kaldırarak bu değişikliği devre dışı bırakabilirsiniz *svcTraceViewer.exe.config* dosyası:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Hizmet izleme görüntüleyicisini kullanma  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Açma ve WCF izleme dosyalarını görüntüleme  

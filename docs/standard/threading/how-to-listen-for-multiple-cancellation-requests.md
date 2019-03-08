@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Birden Çok İptal İsteğini Dinleme'
+title: 'Nasıl yapılır: Birden çok iptal isteğini dinleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178578"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680245"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl Yapılır: Birden Çok İptal İsteğini Dinleme
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl yapılır: Birden çok iptal isteğini dinleme
 Bu örnek, bir işlem ya da belirteç istediği zaman iptal edebilirsiniz iki iptal belirteçleri için aynı anda dinlenecek gösterilmektedir.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ Bu örnek, bir işlem ya da belirteç istediği zaman iptal edebilirsiniz iki ip
   
  Ne zaman bağlı belirteci oluşturur bir <xref:System.OperationCanceledException>, özel durum geçirilen belirteç bağlı, öncül belirteçlerin değil ya da belirtecidir. Hangi belirteçleri iptal edildi belirlemek için doğrudan öncül belirteçleri durumunu denetleyin.  
   
- Bu örnekte, <xref:System.AggregateException> hiçbir zaman durumun oluşturulması gerekir, ancak burada çünkü yakalandı gerçek dünya senaryolarında yanı sıra diğer tüm özel durumlar <xref:System.OperationCanceledException> görev temsilciden durum içinde sarmalanmış bir <xref:System.OperationCanceledException>.  
+ Bu örnekte, <xref:System.AggregateException> hiçbir zaman durumun oluşturulması gerekir, ancak burada çünkü yakalandı gerçek dünya senaryolarında yanı sıra diğer tüm özel durumlar <xref:System.OperationCanceledException> görev temsilciden durum içinde sarmalanmış bir <xref:System.AggregateException>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

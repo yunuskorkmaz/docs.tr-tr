@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966235"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678830"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yordam çağrısı karşılaştığında derleyici çağırmak için aşırı yüklemeleri, karar vermeniz gerekir. Bunu aşağıdaki adımları uygulayarak yapar:  
@@ -36,8 +36,7 @@ Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yor
   
  Aşağıdaki çizimde, bir dizi çağırmak için aşırı yüklenmiş sürümleri belirleyen işlemi gösterilmektedir.  
   
- ![Aşırı yükleme çözünürlüğü işlemi Akış Diyagramı](./media/overloadres.gif "OverloadRes")  
-Aşırı yüklenmiş sürümleri arasında çözümleme  
+ ![Aşırı yükleme çözünürlüğü işlemi Akış Diyagramı](./media/overload-resolution/determine-overloaded-version.gif "aşırı yüklenmiş sürümleri arasında çözümleme")    
   
  Aşağıdaki örnekte, bu aşırı yükleme çözünürlüğü işlemi gösterilmektedir.  
   

@@ -3,12 +3,12 @@ title: Dallar ve döngüler - Giriş C# Öğreticisi
 description: Dallar ve döngüler hakkındaki Bu öğreticide, yazdığınız C# koşullu dallar ve döngüler deyimleri tekrar tekrar yürütmenin destekleyen dili sözdizimi keşfetmek için kod.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153780"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677792"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleriyle koşullu mantık öğrenin
 
@@ -20,7 +20,7 @@ Bu öğretici geliştirme için kullanabileceğiniz bir makine olmasını bekliy
 
 Adlı bir dizin oluşturmak **dalları-tutorial**. Geçerli dizin ve çalışma olun `dotnet new console -n BranchesAndLoops -o .`. Bu komut geçerli dizinde yeni bir .NET Core konsol uygulaması oluşturur.
 
-Açık **Program.cs** satırı değiştirin ve tercih ettiğiniz düzenleyiciyi `Console.Writeline("Hello World!");` aşağıdaki kod ile:
+Açık **Program.cs** satırı değiştirin ve tercih ettiğiniz düzenleyiciyi `Console.WriteLine("Hello World!");` aşağıdaki kod ile:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Bu kod yazarak deneme `dotnet run` konsol pencerenizde. "Yanıt 10'dan büyük sağlıyor." iletisini görmeniz gerekir konsolunuza yazdırılmasını.
 
-Değiştirin `b` böylece toplam 10'dan küçük: 
+Değiştirin `b` böylece toplam 10'dan küçük:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ Deyim `else` anahtar sözcüğü, yalnızca test edilen koşul olduğunda yürü
 
 > [!IMPORTANT]
 > Altındaki girinti `if` ve `else` deyimleri, İnsan okuyuculara yöneliktir.
-> C# dili girintileri veya boşlukları olarak önemli kabul etmez. Deyim `if` veya `else` anahtar sözcüğü, bir koşula göre yürütülecek. Bu öğreticideki tüm örnekler üzerinde deyimlerin denetim akışına bağlı olarak satır girintilemenin sık kullanılan bir yöntemini uygulayın.
+> C# dili girintileri veya boşlukları olarak önemli kabul etmez.
+> Deyim `if` veya `else` anahtar sözcüğü, bir koşula göre yürütülecek. Bu öğreticideki tüm örnekler üzerinde deyimlerin denetim akışına bağlı olarak satır girintilemenin sık kullanılan bir yöntemini uygulayın.
 
 Girinti önemli olmadığı için kullanmanız gerekir `{` ve `}` koşullu olarak yürütülen bloğun parçası olarak birden fazla deyim istediğinizde belirtmek için. C# programcıları genellikle kullanır Bu ayraçları tüm `if` ve `else` yan tümceleri. Aşağıdaki örnek, oluşturduğunuz bir ile aynıdır. Aşağıdaki kod eşleştirmek için yukarıdaki kodunuzu değiştirin:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ Bu `do` döngüsü ve önceki `while` döngü, aynı çıktı üretir.
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Bu aynı işlevi görür `while` döngü ve `do` zaten kullandığınız döngü. `for` Deyimi nasıl çalıştığını denetleyen üç bölümü vardır.
@@ -252,7 +253,7 @@ Kendiniz deneyin. Ardından olup olmadığınıza bakın. 63 için bir yanıt al
 
 Aşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:
 
-[Varsa ve else deyimi](../../language-reference/keywords/if-else.md)  
-[while deyimi](../../language-reference/keywords/while.md)  
-[do deyimi](../../language-reference/keywords/do.md)  
-[For deyimi](../../language-reference/keywords/for.md)  
+- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)
+- [while deyimi](../../language-reference/keywords/while.md)
+- [do deyimi](../../language-reference/keywords/do.md)
+- [For deyimi](../../language-reference/keywords/for.md)

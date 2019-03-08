@@ -1,15 +1,9 @@
 ---
 title: Geliştirme işlemi için Docker tabanlı uygulamalar
-description: Seçenekler Docker tabanlı uygulamalar geliştirmeye yönelik üst düzey bir bakış edinin. Windows için Visual Studio, Visual Studio seçtiğiniz Mac ya da Visual Studio Code için çok platformlu destek için (Windows, Mac ve Linux) kullanarak.
+description: 'Seçenekler Docker tabanlı uygulamalar geliştirmeye yönelik üst düzey bir bakış edinin. Windows için Visual Studio, Visual Studio seçtiğiniz Mac ya da Visual Studio Code için çok platformlu destek için (Windows, Mac ve Linux) kullanarak.'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084933"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme işlemi
 
@@ -42,7 +36,7 @@ Yükleyerek [Docker Community Edition'ı (CE)](https://www.docker.com/community-
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET dil ve çerçeveyi kullanabilmek için Docker kapsayıcıları
 
-Geliştirme Docker kapsayıcılı .NET uygulamaları, bu kılavuzun önceki bölümlerde belirtildiği gibi .NET Framework, .NET Core ve açık kaynaklı Mono projesi kullanabilirsiniz. C'de geliştirebilirsiniz\#, F\#, ya da Linux veya Windows kapsayıcıları, bağlı olarak hangi .NET framework, kullanımda olan hedeflenirken VisualBasic. Daha fazla ayrıntı about.NET diller için blog gönderisine bakın [.NET dil stratejisi](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/).
+Geliştirme Docker kapsayıcılı .NET uygulamaları, bu kılavuzun önceki bölümlerde belirtildiği gibi .NET Framework, .NET Core ve açık kaynaklı Mono projesi kullanabilirsiniz. C'de geliştirebilirsiniz\#, F\#, ya da Linux veya Windows kapsayıcıları, bağlı olarak hangi .NET framework, kullanımda olan hedeflenirken VisualBasic. Daha fazla ayrıntı about.NET diller için blog gönderisine bakın [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/).
 
 >[!div class="step-by-step"]
 >[Önceki](../architect-microservice-container-applications/using-azure-service-fabric.md)

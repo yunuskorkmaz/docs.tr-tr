@@ -4,12 +4,12 @@ description: Genel bir aracı oluşturmayı açıklar. Genel aracı ile .NET Cor
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826427"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677870"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Bir .NET Core genel .NET Core CLI'yı kullanarak aracı oluşturma
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ Tüm bağımsız değişkenlerden sonra `--` sınırlayıcı uygulamanıza geçi
 
 Paketi ve uygulamanızı genel bir aracı olarak dağıtmak için önce proje dosyasını değiştirmeniz gerekir. Açık `botsay.csproj` dosya ve üç yeni XML düğüm ekleme `<Project><PropertyGroup>` düğüm:
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [GEREKLİ] Uygulama genel bir aracı olarak yüklenmesi için paketlendi olduğunu gösterir.
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [İSTEĞE BAĞLI] Aracı için bir diğer ad, aksi takdirde sonra proje dosyası aracı için komut adı adlandırılacaktır. Benzersiz ve kolay bir ad yardımcı olan diğer araçlar aynı pakette ayırt seçerek bir pakette birden çok aracı olabilir.
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [İSTEĞE BAĞLI] NuGet paketini burada oluşturulur. NuGet paketini, .NET Core CLI genel araçları, aracı yüklemek için kullandığı ' dir.
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 `botsay.1.0.0.nupkg` Dosyası tarafından tanımlanan klasöründe oluşturulur `<PackageOutputPath>` XML değerinden `botsay.csproj` olan bu örnekte dosyası `./nupkg` klasör. Bu, yükleme ve test etmek kolaylaştırır. Bir aracı genel olarak yayınlamak istediğinizde, karşıya [ https://www.nuget.org ](https://www.nuget.org). Aracı üzerinde NuGet kullanılabilir olduğunda, geliştiricilerin aracını kullanarak bir kullanıcı genelinde yükleme gerçekleştirebilirsiniz `--global` seçeneği [dotnet aracı yükleme](dotnet-tool-install.md) komutu.
 
-Bir paket olduğuna göre bu paketten aracını yükleyin: 
+Bir paket olduğuna göre bu paketten aracını yükleyin:
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay
@@ -186,7 +186,7 @@ Artık türüne erişebileceğinizi `botsay` ve aracından bir yanıt alın.
 
 ## <a name="remove-the-tool"></a>Aracı kaldırma
 
-İşiniz bittiğinde aracı ile denemeler ile aşağıdaki commnand kaldırabilirsiniz:
+İşiniz bittiğinde aracı ile denemeler, aşağıdaki komutla kaldırabilirsiniz:
 
 ```console
 dotnet tool uninstall -g botsay
