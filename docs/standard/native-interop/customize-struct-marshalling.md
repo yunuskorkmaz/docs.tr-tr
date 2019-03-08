@@ -7,32 +7,32 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416255"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675790"
 ---
-# <a name="customizing-structure-marshalling"></a><span data-ttu-id="c4ffd-103">Yapı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-103">Customizing structure marshalling</span></span>
+# <a name="customizing-structure-marshalling"></a><span data-ttu-id="6e170-103">Yapı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-103">Customizing structure marshalling</span></span>
 
-<span data-ttu-id="c4ffd-104">Bazen yapıları için varsayılan sıralama kuralları tam olarak ihtiyacınız olanları değil.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-104">Sometimes the default marshalling rules for structures aren't exactly what you need.</span></span> <span data-ttu-id="c4ffd-105">.NET çalışma zamanları, yapının düzeni ve alanları nasıl sıralanmış özelleştirmeniz için birkaç uzantı noktaları sağlar.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-105">The .NET runtimes provide a few extension points for you to customize your structure's layout and how fields are marshaled.</span></span>
+<span data-ttu-id="6e170-104">Bazen yapıları için varsayılan sıralama kuralları tam olarak ihtiyacınız olanları değil.</span><span class="sxs-lookup"><span data-stu-id="6e170-104">Sometimes the default marshalling rules for structures aren't exactly what you need.</span></span> <span data-ttu-id="6e170-105">.NET çalışma zamanları, yapının düzeni ve alanları nasıl sıralanmış özelleştirmeniz için birkaç uzantı noktaları sağlar.</span><span class="sxs-lookup"><span data-stu-id="6e170-105">The .NET runtimes provide a few extension points for you to customize your structure's layout and how fields are marshaled.</span></span>
 
-## <a name="customizing-structure-layout"></a><span data-ttu-id="c4ffd-106">Yapı düzenini özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-106">Customizing structure layout</span></span>
+## <a name="customizing-structure-layout"></a><span data-ttu-id="6e170-106">Yapı düzenini özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-106">Customizing structure layout</span></span>
 
-<span data-ttu-id="c4ffd-107">.NET sağlar <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> özniteliği ve <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> alanları bellekte nasıl yerleştirileceğini özelleştirmenize izin vermek için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-107">.NET provides the <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> attribute and the <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> enumeration to allow you to customize how fields are placed in memory.</span></span> <span data-ttu-id="c4ffd-108">Aşağıdaki yönergeler, sık karşılaşılan sorunları önlemenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-108">The following guidance will help you avoid common issues.</span></span>
+<span data-ttu-id="6e170-107">.NET sağlar <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> özniteliği ve <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> alanları bellekte nasıl yerleştirileceğini özelleştirmenize izin vermek için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="6e170-107">.NET provides the <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> attribute and the <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> enumeration to allow you to customize how fields are placed in memory.</span></span> <span data-ttu-id="6e170-108">Aşağıdaki yönergeler, sık karşılaşılan sorunları önlemenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="6e170-108">The following guidance will help you avoid common issues.</span></span>
 
-<span data-ttu-id="c4ffd-109">**✔️ DÜŞÜNÜN** kullanarak `LayoutKind.Sequential` mümkün olduğunda.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-109">**✔️ CONSIDER** using `LayoutKind.Sequential` whenever possible.</span></span>
+<span data-ttu-id="6e170-109">**✔️ DÜŞÜNÜN** kullanarak `LayoutKind.Sequential` mümkün olduğunda.</span><span class="sxs-lookup"><span data-stu-id="6e170-109">**✔️ CONSIDER** using `LayoutKind.Sequential` whenever possible.</span></span>
 
-<span data-ttu-id="c4ffd-110">**✔️ YAPMAK** yalnızca `LayoutKind.Explicit` içinde taşıma, yerel yapı ayrıca olduğunda bir birleşim gibi açık bir düzene sahip.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-110">**✔️ DO** only use `LayoutKind.Explicit` in marshalling when your native struct is also has an explicit layout, such as a union.</span></span>
+<span data-ttu-id="6e170-110">**✔️ YAPMAK** yalnızca `LayoutKind.Explicit` içinde taşıma, yerel yapı ayrıca olduğunda bir birleşim gibi açık bir düzene sahip.</span><span class="sxs-lookup"><span data-stu-id="6e170-110">**✔️ DO** only use `LayoutKind.Explicit` in marshalling when your native struct is also has an explicit layout, such as a union.</span></span>
 
-<span data-ttu-id="c4ffd-111">**❌ KAÇININ** kullanarak `LayoutKind.Explicit` Windows dışı platformlarda yapıları taşıma olduğunda.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-111">**❌ AVOID** using `LayoutKind.Explicit` when marshalling structures on non-Windows platforms.</span></span> <span data-ttu-id="c4ffd-112">.NET Core çalışma zamanı açık yapıları değere göre yerel işlevleri için Intel ya da AMD 64 bit Windows olmayan sistemlerde geçirme desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-112">The .NET Core runtime doesn't support passing explicit structures by value to native functions on Intel or AMD 64-bit non-Windows systems.</span></span> <span data-ttu-id="c4ffd-113">Ancak, çalışma zamanı, tüm platformlarda başvuruya göre geçirme açık yapıları destekler.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-113">However, the runtime supports passing explicit structures by reference on all platforms.</span></span>
+<span data-ttu-id="6e170-111">**❌ KAÇININ** kullanarak `LayoutKind.Explicit` Windows dışı platformlarda yapıları taşıma olduğunda.</span><span class="sxs-lookup"><span data-stu-id="6e170-111">**❌ AVOID** using `LayoutKind.Explicit` when marshalling structures on non-Windows platforms.</span></span> <span data-ttu-id="6e170-112">.NET Core çalışma zamanı açık yapıları değere göre yerel işlevleri için Intel ya da AMD 64 bit Windows olmayan sistemlerde geçirme desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="6e170-112">The .NET Core runtime doesn't support passing explicit structures by value to native functions on Intel or AMD 64-bit non-Windows systems.</span></span> <span data-ttu-id="6e170-113">Ancak, çalışma zamanı, tüm platformlarda başvuruya göre geçirme açık yapıları destekler.</span><span class="sxs-lookup"><span data-stu-id="6e170-113">However, the runtime supports passing explicit structures by reference on all platforms.</span></span>
 
-## <a name="customizing-boolean-field-marshalling"></a><span data-ttu-id="c4ffd-114">Boole alanı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-114">Customizing boolean field marshalling</span></span>
+## <a name="customizing-boolean-field-marshalling"></a><span data-ttu-id="6e170-114">Boole alanı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-114">Customizing boolean field marshalling</span></span>
 
-<span data-ttu-id="c4ffd-115">Yerel kod, birçok farklı Boole temsile sahiptir.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-115">Native code has many different boolean representations.</span></span> <span data-ttu-id="c4ffd-116">Tek başına Windows üzerinde boolean değerlerini temsil edecek şekilde üç yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-116">On Windows alone, there are three ways to represent boolean values.</span></span> <span data-ttu-id="c4ffd-117">Çalışma zamanı yerel tanımı yapınızın bilmeniz, yapmak için en iyi şekilde bir boolean değerlerinizi hazırlama hakkında tahminde değil.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-117">The runtime doesn't know the native definition of your structure, so the best it can do is make a guess on how to marshal your boolean values.</span></span> <span data-ttu-id="c4ffd-118">.NET çalışma zamanı nasıl hazırlanacağını boolean alan belirtmek için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-118">The .NET runtime provides a way to indicate how to marshal your boolean field.</span></span> <span data-ttu-id="c4ffd-119">Aşağıdaki örnekler nasıl hazırlanacağını .NET `bool` farklı yerel Boole türleri için.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-119">The following examples show how to marshal .NET `bool` to different native boolean types.</span></span>
+<span data-ttu-id="6e170-115">Yerel kod, birçok farklı Boole temsile sahiptir.</span><span class="sxs-lookup"><span data-stu-id="6e170-115">Native code has many different boolean representations.</span></span> <span data-ttu-id="6e170-116">Tek başına Windows üzerinde boolean değerlerini temsil edecek şekilde üç yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="6e170-116">On Windows alone, there are three ways to represent boolean values.</span></span> <span data-ttu-id="6e170-117">Çalışma zamanı yerel tanımı yapınızın bilmeniz, yapmak için en iyi şekilde bir boolean değerlerinizi hazırlama hakkında tahminde değil.</span><span class="sxs-lookup"><span data-stu-id="6e170-117">The runtime doesn't know the native definition of your structure, so the best it can do is make a guess on how to marshal your boolean values.</span></span> <span data-ttu-id="6e170-118">.NET çalışma zamanı nasıl hazırlanacağını boolean alan belirtmek için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="6e170-118">The .NET runtime provides a way to indicate how to marshal your boolean field.</span></span> <span data-ttu-id="6e170-119">Aşağıdaki örnekler nasıl hazırlanacağını .NET `bool` farklı yerel Boole türleri için.</span><span class="sxs-lookup"><span data-stu-id="6e170-119">The following examples show how to marshal .NET `bool` to different native boolean types.</span></span>
 
-<span data-ttu-id="c4ffd-120">Boole değerleri varsayılan yerel bir 4 baytlık Win32 taşıma için [ `BOOL` ](/windows/desktop/winprog/windows-data-types#BOOL) aşağıdaki örnekte gösterildiği gibi değeri:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-120">Boolean values default to marshalling as a native 4-byte Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) value as shown in the following example:</span></span>
+<span data-ttu-id="6e170-120">Boole değerleri varsayılan yerel bir 4 baytlık Win32 taşıma için [ `BOOL` ](/windows/desktop/winprog/windows-data-types#BOOL) aşağıdaki örnekte gösterildiği gibi değeri:</span><span class="sxs-lookup"><span data-stu-id="6e170-120">Boolean values default to marshalling as a native 4-byte Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) value as shown in the following example:</span></span>
 
 ```csharp
 public struct WinBool
@@ -48,7 +48,7 @@ struct WinBool
 };
 ```
 
-<span data-ttu-id="c4ffd-121">Açık olmasını istiyorsanız, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> yukarıdakilerle aynı davranışı sağlamak için değer:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-121">If you want to be explicit, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> value to get the same behavior as above:</span></span>
+<span data-ttu-id="6e170-121">Açık olmasını istiyorsanız, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> yukarıdakilerle aynı davranışı sağlamak için değer:</span><span class="sxs-lookup"><span data-stu-id="6e170-121">If you want to be explicit, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.Bool?displayProperty=nameWithType> value to get the same behavior as above:</span></span>
 
 ```csharp
 public struct WinBool
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-<span data-ttu-id="c4ffd-122">Kullanarak `UmanagedType.U1` veya `UnmanagedType.I1` aşağıdaki değerleri, çalışma zamanının sıralamanız öğrenebilirsiniz `b` bir 1 baytlık yerel olarak alan `bool` türü.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-122">Using the `UmanagedType.U1` or `UnmanagedType.I1` values below, you can tell the runtime to marshal the `b` field as a 1-byte native `bool` type.</span></span>
+<span data-ttu-id="6e170-122">Kullanarak `UnmanagedType.U1` veya `UnmanagedType.I1` aşağıdaki değerleri, çalışma zamanının sıralamanız öğrenebilirsiniz `b` bir 1 baytlık yerel olarak alan `bool` türü.</span><span class="sxs-lookup"><span data-stu-id="6e170-122">Using the `UnmanagedType.U1` or `UnmanagedType.I1` values below, you can tell the runtime to marshal the `b` field as a 1-byte native `bool` type.</span></span>
 
 ```csharp
 public struct CBool
@@ -82,7 +82,7 @@ struct CBool
 };
 ```
 
-<span data-ttu-id="c4ffd-123">Windows üzerinde kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> değeri, boolean değerine 2 baytlık hazırlamak için çalışma zamanı bildirmek için `VARIANT_BOOL` değeri:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-123">On Windows, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> value to tell the runtime to marshal your boolean value to a 2-byte `VARIANT_BOOL` value:</span></span>
+<span data-ttu-id="6e170-123">Windows üzerinde kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> değeri, boolean değerine 2 baytlık hazırlamak için çalışma zamanı bildirmek için `VARIANT_BOOL` değeri:</span><span class="sxs-lookup"><span data-stu-id="6e170-123">On Windows, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> value to tell the runtime to marshal your boolean value to a 2-byte `VARIANT_BOOL` value:</span></span>
 
 ```csharp
 public struct VariantBool
@@ -100,13 +100,13 @@ struct VariantBool
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c4ffd-124">`VARIANT_BOOL` Çoğu bool türleri, farklı `VARIANT_TRUE = -1` ve `VARIANT_FALSE = 0`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-124">`VARIANT_BOOL` is different than most bool types in that `VARIANT_TRUE = -1` and `VARIANT_FALSE = 0`.</span></span> <span data-ttu-id="c4ffd-125">Ayrıca, eşit olmayan tüm değerleri `VARIANT_TRUE` yanlış olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-125">Additionally, all values that aren't equal to `VARIANT_TRUE` are considered false.</span></span>
+> <span data-ttu-id="6e170-124">`VARIANT_BOOL` Çoğu bool türleri, farklı `VARIANT_TRUE = -1` ve `VARIANT_FALSE = 0`.</span><span class="sxs-lookup"><span data-stu-id="6e170-124">`VARIANT_BOOL` is different than most bool types in that `VARIANT_TRUE = -1` and `VARIANT_FALSE = 0`.</span></span> <span data-ttu-id="6e170-125">Ayrıca, eşit olmayan tüm değerleri `VARIANT_TRUE` yanlış olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="6e170-125">Additionally, all values that aren't equal to `VARIANT_TRUE` are considered false.</span></span>
 
-## <a name="customizing-array-field-marshalling"></a><span data-ttu-id="c4ffd-126">Dizi alan taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-126">Customizing array field marshalling</span></span>
+## <a name="customizing-array-field-marshalling"></a><span data-ttu-id="6e170-126">Dizi alan taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-126">Customizing array field marshalling</span></span>
 
-<span data-ttu-id="c4ffd-127">.NET, dizi taşıma özelleştirmek için birkaç yol da içerir.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-127">.NET also includes a few ways to customize array marshalling.</span></span>
+<span data-ttu-id="6e170-127">.NET, dizi taşıma özelleştirmek için birkaç yol da içerir.</span><span class="sxs-lookup"><span data-stu-id="6e170-127">.NET also includes a few ways to customize array marshalling.</span></span>
 
-<span data-ttu-id="c4ffd-128">Varsayılan olarak, .NET dizileri için bitişik öğelerin listesini bir işaretçi olarak sürekliliğe devreder:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-128">By default, .NET marshals arrays as a pointer to a contiguous list of the elements:</span></span>
+<span data-ttu-id="6e170-128">Varsayılan olarak, .NET dizileri için bitişik öğelerin listesini bir işaretçi olarak sürekliliğe devreder:</span><span class="sxs-lookup"><span data-stu-id="6e170-128">By default, .NET marshals arrays as a pointer to a contiguous list of the elements:</span></span>
 
 ```csharp
 public struct DefaultArray
@@ -122,7 +122,7 @@ struct DefaultArray
 };
 ```
 
-<span data-ttu-id="c4ffd-129">COM API'leri ile arabirim, dizileri olarak sıralamanız olabilir `SAFEARRAY*` nesneleri.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-129">If you're interfacing with COM APIs, you may have to marshal arrays as `SAFEARRAY*` objects.</span></span> <span data-ttu-id="c4ffd-130">Kullanabileceğiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> değeri olarak bir dizi hazırlamak için çalışma zamanı bildirmek için bir `SAFEARRAY*`:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-130">You can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> and the <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> value to tell the runtime to marshal an array as a `SAFEARRAY*`:</span></span>
+<span data-ttu-id="6e170-129">COM API'leri ile arabirim, dizileri olarak sıralamanız olabilir `SAFEARRAY*` nesneleri.</span><span class="sxs-lookup"><span data-stu-id="6e170-129">If you're interfacing with COM APIs, you may have to marshal arrays as `SAFEARRAY*` objects.</span></span> <span data-ttu-id="6e170-130">Kullanabileceğiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> değeri olarak bir dizi hazırlamak için çalışma zamanı bildirmek için bir `SAFEARRAY*`:</span><span class="sxs-lookup"><span data-stu-id="6e170-130">You can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> and the <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> value to tell the runtime to marshal an array as a `SAFEARRAY*`:</span></span>
 
 ```csharp
 public struct SafeArrayExample
@@ -139,9 +139,9 @@ struct SafeArrayExample
 };
 ```
 
-<span data-ttu-id="c4ffd-131">Ne tür bir öğenin bulunduğu özelleştirmeniz gerekirse `SAFEARRAY`, kullanabileceğiniz sonra <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> tam öğe özelleştirmek için alanları türü `SAFEARRAY`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-131">If you need to customize what type of element is in the `SAFEARRAY`, then you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> and <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> fields to customize the exact element type of the `SAFEARRAY`.</span></span>
+<span data-ttu-id="6e170-131">Ne tür bir öğenin bulunduğu özelleştirmeniz gerekirse `SAFEARRAY`, kullanabileceğiniz sonra <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> tam öğe özelleştirmek için alanları türü `SAFEARRAY`.</span><span class="sxs-lookup"><span data-stu-id="6e170-131">If you need to customize what type of element is in the `SAFEARRAY`, then you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> and <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> fields to customize the exact element type of the `SAFEARRAY`.</span></span>
 
-<span data-ttu-id="c4ffd-132">Yerinde dizi sıralamanız gerekirse, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> yerinde dizi hazırlamak için sıralayıcıya bildirmek için değer.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-132">If you need to marshal the array in-place, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> value to tell the marshaler to marshal the array in-place.</span></span> <span data-ttu-id="c4ffd-133">Bu taşıma kullanırken da bir değer belirtmeniz gerekir <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alan çalışma zamanı yapısı için doğru yer ayırabilirsiniz şekilde dizideki öğelerin sayısı.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-133">When you're using this marshalling, you also must supply a value to the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> field  for the number of elements in the array so the runtime can correctly allocate space for the structure.</span></span>
+<span data-ttu-id="6e170-132">Yerinde dizi sıralamanız gerekirse, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> yerinde dizi hazırlamak için sıralayıcıya bildirmek için değer.</span><span class="sxs-lookup"><span data-stu-id="6e170-132">If you need to marshal the array in-place, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> value to tell the marshaler to marshal the array in-place.</span></span> <span data-ttu-id="6e170-133">Bu taşıma kullanırken da bir değer belirtmeniz gerekir <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alan çalışma zamanı yapısı için doğru yer ayırabilirsiniz şekilde dizideki öğelerin sayısı.</span><span class="sxs-lookup"><span data-stu-id="6e170-133">When you're using this marshalling, you also must supply a value to the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> field  for the number of elements in the array so the runtime can correctly allocate space for the structure.</span></span>
 
 ```csharp
 public struct InPlaceArray
@@ -159,13 +159,13 @@ struct InPlaceArray
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c4ffd-134">.NET, C99 esnek dizi üyesi olarak bir değişken uzunluklu dizi alan taşıma desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-134">.NET doesn't support marshalling a variable length array field as a C99 Flexible Array Member.</span></span>
+> <span data-ttu-id="6e170-134">.NET, C99 esnek dizi üyesi olarak bir değişken uzunluklu dizi alan taşıma desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="6e170-134">.NET doesn't support marshalling a variable length array field as a C99 Flexible Array Member.</span></span>
 
-## <a name="customizing-string-field-marshalling"></a><span data-ttu-id="c4ffd-135">Dize alanı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-135">Customizing string field marshalling</span></span>
+## <a name="customizing-string-field-marshalling"></a><span data-ttu-id="6e170-135">Dize alanı taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-135">Customizing string field marshalling</span></span>
 
-<span data-ttu-id="c4ffd-136">.NET çok çeşitli dize alanları taşıma için özelleştirmeler de sağlar.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-136">.NET also provides a wide variety of customizations for marshalling string fields.</span></span>
+<span data-ttu-id="6e170-136">.NET çok çeşitli dize alanları taşıma için özelleştirmeler de sağlar.</span><span class="sxs-lookup"><span data-stu-id="6e170-136">.NET also provides a wide variety of customizations for marshalling string fields.</span></span>
 
-<span data-ttu-id="c4ffd-137">Varsayılan olarak, .NET bir dize null ile sonlandırılmış dizeye bir işaretçi olarak sürekliliğe devreder.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-137">By default, .NET marshals a string as a pointer to a null-terminated string.</span></span> <span data-ttu-id="c4ffd-138">Kodlama değerine bağlıdır <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanındaki <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-138">The encoding depends on the value of the <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> field in the <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c4ffd-139">Kodlamada hiçbir öznitelik belirtilmezse, bir ANSI kodlaması için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-139">If no attribute is specified, the encoding defaults to an ANSI encoding.</span></span>
+<span data-ttu-id="6e170-137">Varsayılan olarak, .NET bir dize null ile sonlandırılmış dizeye bir işaretçi olarak sürekliliğe devreder.</span><span class="sxs-lookup"><span data-stu-id="6e170-137">By default, .NET marshals a string as a pointer to a null-terminated string.</span></span> <span data-ttu-id="6e170-138">Kodlama değerine bağlıdır <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanındaki <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6e170-138">The encoding depends on the value of the <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> field in the <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6e170-139">Kodlamada hiçbir öznitelik belirtilmezse, bir ANSI kodlaması için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="6e170-139">If no attribute is specified, the encoding defaults to an ANSI encoding.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -197,7 +197,7 @@ struct DefaultString
 };
 ```
 
-<span data-ttu-id="c4ffd-140">Farklı kodlamaları için farklı alanları kullanın veya sadece gerekiyorsa, yapı Tanımınızda daha net olmanızı tercih, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> üzerinde değerleri bir <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-140">If you need to use different encodings for different fields or just prefer to be more explicit in your struct definition, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> or <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> values on a <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> attribute.</span></span>
+<span data-ttu-id="6e170-140">Farklı kodlamaları için farklı alanları kullanın veya sadece gerekiyorsa, yapı Tanımınızda daha net olmanızı tercih, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> üzerinde değerleri bir <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="6e170-140">If you need to use different encodings for different fields or just prefer to be more explicit in your struct definition, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> or <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> values on a <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> attribute.</span></span>
 
 ```csharp
 public struct AnsiString
@@ -229,7 +229,7 @@ struct UnicodeString
 };
 ```
 
-<span data-ttu-id="c4ffd-141">UTF-8 kodlaması kullanarak dizelerinizi hazırlamak istiyorsanız, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> değerini, <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-141">If you want to marshal your strings using the UTF-8 encoding, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> value in your <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>
+<span data-ttu-id="6e170-141">UTF-8 kodlaması kullanarak dizelerinizi hazırlamak istiyorsanız, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> değerini, <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="6e170-141">If you want to marshal your strings using the UTF-8 encoding, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> value in your <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>
 
 
 ```csharp
@@ -248,9 +248,9 @@ struct UTF8String
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c4ffd-142">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> ya da .NET Framework 4.7 (veya sonraki sürümler) gerektirir veya .NET Core 1.1 (veya sonraki sürümler).</span><span class="sxs-lookup"><span data-stu-id="c4ffd-142">Using <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> requires either .NET Framework 4.7 (or later versions) or .NET Core 1.1 (or later versions).</span></span> <span data-ttu-id="c4ffd-143">.NET Standard 2.0 içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-143">It isn't available in .NET Standard 2.0.</span></span>
+> <span data-ttu-id="6e170-142">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> ya da .NET Framework 4.7 (veya sonraki sürümler) gerektirir veya .NET Core 1.1 (veya sonraki sürümler).</span><span class="sxs-lookup"><span data-stu-id="6e170-142">Using <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> requires either .NET Framework 4.7 (or later versions) or .NET Core 1.1 (or later versions).</span></span> <span data-ttu-id="6e170-143">.NET Standard 2.0 içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="6e170-143">It isn't available in .NET Standard 2.0.</span></span>
 
-<span data-ttu-id="c4ffd-144">COM API'leri ile çalışıyorsanız, bir dize olarak sıralamanız gerekebilir bir `BSTR`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-144">If you're working with COM APIs, you may need to marshal a string as a `BSTR`.</span></span> <span data-ttu-id="c4ffd-145">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> değeri bir dize olarak hazırlamak bir `BSTR`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-145">Using the <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> value, you can marshal a string as a `BSTR`.</span></span>
+<span data-ttu-id="6e170-144">COM API'leri ile çalışıyorsanız, bir dize olarak sıralamanız gerekebilir bir `BSTR`.</span><span class="sxs-lookup"><span data-stu-id="6e170-144">If you're working with COM APIs, you may need to marshal a string as a `BSTR`.</span></span> <span data-ttu-id="6e170-145">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> değeri bir dize olarak hazırlamak bir `BSTR`.</span><span class="sxs-lookup"><span data-stu-id="6e170-145">Using the <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> value, you can marshal a string as a `BSTR`.</span></span>
 
 ```csharp
 public struct BString
@@ -267,7 +267,7 @@ struct BString
 };
 ```
 
-<span data-ttu-id="c4ffd-146">WinRT tabanlı bir API kullanırken, bir dize olarak sıralamanız gerekebilir bir `HSTRING`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-146">When using a WinRT-based API, you may need to marshal a string as an `HSTRING`.</span></span>  <span data-ttu-id="c4ffd-147">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> değeri bir dize olarak hazırlamak bir `HSTRING`.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-147">Using the <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> value, you can marshal a string as a `HSTRING`.</span></span>
+<span data-ttu-id="6e170-146">WinRT tabanlı bir API kullanırken, bir dize olarak sıralamanız gerekebilir bir `HSTRING`.</span><span class="sxs-lookup"><span data-stu-id="6e170-146">When using a WinRT-based API, you may need to marshal a string as an `HSTRING`.</span></span>  <span data-ttu-id="6e170-147">Kullanarak <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> değeri bir dize olarak hazırlamak bir `HSTRING`.</span><span class="sxs-lookup"><span data-stu-id="6e170-147">Using the <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> value, you can marshal a string as a `HSTRING`.</span></span>
 
 ```csharp
 public struct HString
@@ -284,7 +284,7 @@ struct BString
 };
 ```
 
-<span data-ttu-id="c4ffd-148">API'nizi yapısında yerinde dizesini geçirmenizi gerektiriyorsa, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-148">If your API requires you to pass the string in-place in the structure, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> value.</span></span> <span data-ttu-id="c4ffd-149">Kodlama için bir dize tarafından sıraya olduğunu unutmayın `ByValTStr` gelen belirlenir `CharSet` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-149">Do note that the encoding for a string marshalled by `ByValTStr` is determined from the `CharSet` attribute.</span></span> <span data-ttu-id="c4ffd-150">Ayrıca, bir dize uzunluğu geçirilen gerektirir <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alan.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-150">Additionally, it requires that a string length is passed by the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> field.</span></span>
+<span data-ttu-id="6e170-148">API'nizi yapısında yerinde dizesini geçirmenizi gerektiriyorsa, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="6e170-148">If your API requires you to pass the string in-place in the structure, you can use the <xref:System.Runtime.InteropServices.UnmanagedType.ByValTStr?displayProperty=nameWithType> value.</span></span> <span data-ttu-id="6e170-149">Kodlama için bir dize tarafından sıraya olduğunu unutmayın `ByValTStr` gelen belirlenir `CharSet` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="6e170-149">Do note that the encoding for a string marshalled by `ByValTStr` is determined from the `CharSet` attribute.</span></span> <span data-ttu-id="6e170-150">Ayrıca, bir dize uzunluğu geçirilen gerektirir <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> alan.</span><span class="sxs-lookup"><span data-stu-id="6e170-150">Additionally, it requires that a string length is passed by the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> field.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -318,9 +318,9 @@ struct DefaultString
 };
 ```
 
-## <a name="customizing-decimal-field-marshalling"></a><span data-ttu-id="c4ffd-151">Ondalık alan taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4ffd-151">Customizing decimal field marshalling</span></span>
+## <a name="customizing-decimal-field-marshalling"></a><span data-ttu-id="6e170-151">Ondalık alan taşıma özelleştirme</span><span class="sxs-lookup"><span data-stu-id="6e170-151">Customizing decimal field marshalling</span></span>
 
-<span data-ttu-id="c4ffd-152">Windows üzerinde çalışıyorsanız, yerel kullanan bazı API'leri karşılaşabileceğiniz [ `CY` veya `CURRENCY` ](/windows/desktop/api/wtypes/ns-wtypes-tagcy) yapısı.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-152">If you're working on Windows, you might encounter some APIs that use the native [`CY` or `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) structure.</span></span> <span data-ttu-id="c4ffd-153">Varsayılan olarak, .NET `decimal` türü için yerel sıraladığında [ `DECIMAL` ](/windows/desktop/api/wtypes/ns-wtypes-tagdec) yapısı.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-153">By default, the .NET `decimal` type marshals to the native [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) structure.</span></span> <span data-ttu-id="c4ffd-154">Ancak, kullanabileceğiniz bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> dönüştürmek için sıralayıcı istemek için değer bir `decimal` yerel bir değer `CY` değeri.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-154">However, you can use a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> value to instruct the marshaler to convert a `decimal` value to a native `CY` value.</span></span>
+<span data-ttu-id="6e170-152">Windows üzerinde çalışıyorsanız, yerel kullanan bazı API'leri karşılaşabileceğiniz [ `CY` veya `CURRENCY` ](/windows/desktop/api/wtypes/ns-wtypes-tagcy) yapısı.</span><span class="sxs-lookup"><span data-stu-id="6e170-152">If you're working on Windows, you might encounter some APIs that use the native [`CY` or `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) structure.</span></span> <span data-ttu-id="6e170-153">Varsayılan olarak, .NET `decimal` türü için yerel sıraladığında [ `DECIMAL` ](/windows/desktop/api/wtypes/ns-wtypes-tagdec) yapısı.</span><span class="sxs-lookup"><span data-stu-id="6e170-153">By default, the .NET `decimal` type marshals to the native [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) structure.</span></span> <span data-ttu-id="6e170-154">Ancak, kullanabileceğiniz bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> dönüştürmek için sıralayıcı istemek için değer bir `decimal` yerel bir değer `CY` değeri.</span><span class="sxs-lookup"><span data-stu-id="6e170-154">However, you can use a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> value to instruct the marshaler to convert a `decimal` value to a native `CY` value.</span></span>
 
 ```csharp
 public struct Currency
@@ -337,14 +337,14 @@ struct Currency
 };
 ```
 
-## <a name="marshalling-systemobjects"></a><span data-ttu-id="c4ffd-155">Taşıma `System.Object`s</span><span class="sxs-lookup"><span data-stu-id="c4ffd-155">Marshalling `System.Object`s</span></span>
+## <a name="marshalling-systemobjects"></a><span data-ttu-id="6e170-155">Taşıma `System.Object`s</span><span class="sxs-lookup"><span data-stu-id="6e170-155">Marshalling `System.Object`s</span></span>
 
-<span data-ttu-id="c4ffd-156">Windows üzerinde sıralanmamaktadır `object`-yazılan yerel kod için alanlar.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-156">On Windows, you can marshal `object`-typed fields to native code.</span></span> <span data-ttu-id="c4ffd-157">Bu alanlar üç türlerden sıralanmamaktadır:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-157">You can marshal these fields to one of three types:</span></span>
+<span data-ttu-id="6e170-156">Windows üzerinde sıralanmamaktadır `object`-yazılan yerel kod için alanlar.</span><span class="sxs-lookup"><span data-stu-id="6e170-156">On Windows, you can marshal `object`-typed fields to native code.</span></span> <span data-ttu-id="6e170-157">Bu alanlar üç türlerden sıralanmamaktadır:</span><span class="sxs-lookup"><span data-stu-id="6e170-157">You can marshal these fields to one of three types:</span></span>
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- <span data-ttu-id="c4ffd-158">[`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch).</span><span class="sxs-lookup"><span data-stu-id="c4ffd-158">[`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch).</span></span> 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
-<span data-ttu-id="c4ffd-159">Varsayılan olarak, bir `object`-alanın yazılan sıraya için bir `IUnknown*` nesnesinin sonuna geldik.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-159">By default, an `object`-typed field will be marshalled to an `IUnknown*` that wraps the object.</span></span>
+<span data-ttu-id="6e170-158">Varsayılan olarak, bir `object`-alanın yazılan sıraya için bir `IUnknown*` nesnesinin sonuna geldik.</span><span class="sxs-lookup"><span data-stu-id="6e170-158">By default, an `object`-typed field will be marshalled to an `IUnknown*` that wraps the object.</span></span>
 
 ```csharp
 public struct ObjectDefault
@@ -360,7 +360,7 @@ struct ObjectDefault
 };
 ```
 
-<span data-ttu-id="c4ffd-160">Bir nesne alanının için hazırlamak istiyorsanız bir `IDispatch*`, ekleme bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-160">If you want to marshal an object field to an `IDispatch*`, add a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> value.</span></span>
+<span data-ttu-id="6e170-159">Bir nesne alanının için hazırlamak istiyorsanız bir `IDispatch*`, ekleme bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="6e170-159">If you want to marshal an object field to an `IDispatch*`, add a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> value.</span></span>
 
 ```csharp
 public struct ObjectDispatch
@@ -377,7 +377,7 @@ struct ObjectDispatch
 };
 ```
 
-<span data-ttu-id="c4ffd-161">Olarak hazırlamak istiyorsanız bir `VARIANT`, ekleme bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="c4ffd-161">If you want to marshal it as a `VARIANT`, add a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> value.</span></span>
+<span data-ttu-id="6e170-160">Olarak hazırlamak istiyorsanız bir `VARIANT`, ekleme bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> ile <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> değeri.</span><span class="sxs-lookup"><span data-stu-id="6e170-160">If you want to marshal it as a `VARIANT`, add a <xref:System.Runtime.InteropServices.MarshalAsAttribute> with the <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> value.</span></span>
 
 ```csharp
 public struct ObjectVariant
@@ -394,9 +394,9 @@ struct ObjectVariant
 };
 ```
 
-<span data-ttu-id="c4ffd-162">Aşağıdaki tabloda farklı çalışma zamanı türlerini açıklar `obj` depolanan çeşitli türleri için alan haritası bir `VARIANT`:</span><span class="sxs-lookup"><span data-stu-id="c4ffd-162">The following table describes how different runtime types of the `obj` field map to the various types stored in a `VARIANT`:</span></span>
+<span data-ttu-id="6e170-161">Aşağıdaki tabloda farklı çalışma zamanı türlerini açıklar `obj` depolanan çeşitli türleri için alan haritası bir `VARIANT`:</span><span class="sxs-lookup"><span data-stu-id="6e170-161">The following table describes how different runtime types of the `obj` field map to the various types stored in a `VARIANT`:</span></span>
 
-| <span data-ttu-id="c4ffd-163">.NET türü</span><span class="sxs-lookup"><span data-stu-id="c4ffd-163">.NET Type</span></span> | <span data-ttu-id="c4ffd-164">DEĞİŞKEN türü</span><span class="sxs-lookup"><span data-stu-id="c4ffd-164">VARIANT Type</span></span> | | <span data-ttu-id="c4ffd-165">.NET türü</span><span class="sxs-lookup"><span data-stu-id="c4ffd-165">.NET Type</span></span> | <span data-ttu-id="c4ffd-166">DEĞİŞKEN türü</span><span class="sxs-lookup"><span data-stu-id="c4ffd-166">VARIANT Type</span></span> |
+| <span data-ttu-id="6e170-162">.NET türü</span><span class="sxs-lookup"><span data-stu-id="6e170-162">.NET Type</span></span> | <span data-ttu-id="6e170-163">DEĞİŞKEN türü</span><span class="sxs-lookup"><span data-stu-id="6e170-163">VARIANT Type</span></span> | | <span data-ttu-id="6e170-164">.NET türü</span><span class="sxs-lookup"><span data-stu-id="6e170-164">.NET Type</span></span> | <span data-ttu-id="6e170-165">DEĞİŞKEN türü</span><span class="sxs-lookup"><span data-stu-id="6e170-165">VARIANT Type</span></span> |
 |------------|--------------|-|----------|--------------|
 |  `byte`  | `VT_UI1` |     | `System.Runtime.InteropServices.BStrWrapper` | `VT_BSTR` |
 | `sbyte`  | `VT_I1`  |     | `object`  | `VT_DISPATCH` |

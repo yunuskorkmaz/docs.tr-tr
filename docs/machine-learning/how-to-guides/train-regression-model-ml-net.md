@@ -1,24 +1,29 @@
 ---
 title: ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme
 description: Bir machine learning ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitmek nasıl keşfedin
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092910"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673151"
 ---
-# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="4400d-103">ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="4400d-103">Train a regression model to predict a value using ML.NET</span></span>
+# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="b92c6-103">ML.NET kullanarak bir değeri tahmin etmek için regresyon modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="b92c6-103">Train a regression model to predict a value using ML.NET</span></span>
 
-<span data-ttu-id="4400d-104">Genellikle, ML.NET modeli eğitimi için üç adım vardır:</span><span class="sxs-lookup"><span data-stu-id="4400d-104">Generally, there are three steps for model training in ML.NET:</span></span>
+> [!NOTE]
+> <span data-ttu-id="b92c6-104">Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="b92c6-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="b92c6-105">Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="b92c6-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-1. <span data-ttu-id="4400d-105">Eğitim verileri bir formda almak bir `IDataView`</span><span class="sxs-lookup"><span data-stu-id="4400d-105">Get the training data in a form of an `IDataView`</span></span>
-2. <span data-ttu-id="4400d-106">'Öğrenme işlem hattınızı' temel 'işleçleri' (estimators) dizisi olarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="4400d-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
-3. <span data-ttu-id="4400d-107">Çağrı `Fit` işlem hattında, eğitilen model elde edilir.</span><span class="sxs-lookup"><span data-stu-id="4400d-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+<span data-ttu-id="b92c6-106">Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**.</span><span class="sxs-lookup"><span data-stu-id="b92c6-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="b92c6-107">Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="b92c6-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="4400d-108">Bu [örnek dosyası](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), tahmin edilen etiketi (`target`) son sütunu (12) ve geri kalan özellikleri:</span><span class="sxs-lookup"><span data-stu-id="4400d-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
+<span data-ttu-id="b92c6-108">Genellikle, ML.NET modeli eğitimi için üç adım vardır:</span><span class="sxs-lookup"><span data-stu-id="b92c6-108">Generally, there are three steps for model training in ML.NET:</span></span>
+
+1. <span data-ttu-id="b92c6-109">Eğitim verileri bir formda almak bir `IDataView`</span><span class="sxs-lookup"><span data-stu-id="b92c6-109">Get the training data in a form of an `IDataView`</span></span>
+2. <span data-ttu-id="b92c6-110">'Öğrenme işlem hattınızı' temel 'işleçleri' (estimators) dizisi olarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b92c6-110">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
+3. <span data-ttu-id="b92c6-111">Çağrı `Fit` işlem hattında, eğitilen model elde edilir.</span><span class="sxs-lookup"><span data-stu-id="b92c6-111">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+
+<span data-ttu-id="b92c6-112">Bu [örnek dosyası](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), tahmin edilen etiketi (`target`) son sütunu (12) ve geri kalan özellikleri:</span><span class="sxs-lookup"><span data-stu-id="b92c6-112">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
 
 ```console
 feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;feature_8;feature_9;feature_10;target

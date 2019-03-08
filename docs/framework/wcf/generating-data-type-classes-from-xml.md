@@ -2,37 +2,37 @@
 title: XML'den Veri Türü Sınıfları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6666f1ba23dd563bd7a005d458cd7fe8253c3af
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498673"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679092"
 ---
-# <a name="generating-data-type-classes-from-xml"></a><span data-ttu-id="6ff61-102">XML'den Veri Türü Sınıfları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="6ff61-102">Generating Data Type Classes from XML</span></span>
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="6ff61-103"> XML'den veri türü sınıfları oluşturmak için yeni bir özellik içerir.</span><span class="sxs-lookup"><span data-stu-id="6ff61-103"> includes a new feature to generate data type classes from XML.</span></span> <span data-ttu-id="6ff61-104">Bu konu, veri türleri .NET Blog RSS akışı için otomatik olarak oluşturmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="6ff61-104">This topic describes how to automatically generate data types for the .NET Blog RSS feed.</span></span>  
+# <a name="generating-data-type-classes-from-xml"></a><span data-ttu-id="f690f-102">XML'den Veri Türü Sınıfları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f690f-102">Generating Data Type Classes from XML</span></span>
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] <span data-ttu-id="f690f-103">XML'den veri türü sınıfları oluşturmak için yeni bir özellik içerir.</span><span class="sxs-lookup"><span data-stu-id="f690f-103">includes a new feature to generate data type classes from XML.</span></span> <span data-ttu-id="f690f-104">Bu konuda, veri türleri .NET blogu RSS akışı için otomatik olarak oluşturacak şekilde açıklar.</span><span class="sxs-lookup"><span data-stu-id="f690f-104">This topic describes how to automatically generate data types for the .NET Blog RSS feed.</span></span>  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a><span data-ttu-id="6ff61-105">.NET Blog RSS XML alma akış</span><span class="sxs-lookup"><span data-stu-id="6ff61-105">Obtaining the XML from the .NET Blog RSS feed</span></span>  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a><span data-ttu-id="f690f-105">XML alma .NET blogu RSS akışı</span><span class="sxs-lookup"><span data-stu-id="f690f-105">Obtaining the XML from the .NET Blog RSS feed</span></span>  
   
-1.  <span data-ttu-id="6ff61-106">Internet Explorer'a gidin [.NET Blog RSS akışı](https://blogs.msdn.microsoft.com/dotnet/feed/).</span><span class="sxs-lookup"><span data-stu-id="6ff61-106">In Internet Explorer, navigate to the [.NET Blog RSS feed](https://blogs.msdn.microsoft.com/dotnet/feed/).</span></span>  
+1.  <span data-ttu-id="f690f-106">Internet Explorer'da gidin [.NET blogu RSS akışı](https://devblogs.microsoft.com/dotnet/feed/).</span><span class="sxs-lookup"><span data-stu-id="f690f-106">In Internet Explorer, navigate to the [.NET Blog RSS feed](https://devblogs.microsoft.com/dotnet/feed/).</span></span>  
   
-2.  <span data-ttu-id="6ff61-107">Sayfanın sağ tıklatıp **kaynağı görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="6ff61-107">Right-click the page and select **View Source**.</span></span>  
+2.  <span data-ttu-id="f690f-107">Sayfanın sağ tıklayıp **kaynağı görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="f690f-107">Right-click the page and select **View Source**.</span></span>  
   
-3.  <span data-ttu-id="6ff61-108">Akışın metni tuşlarına basarak kopyalayın **Ctrl + A** tüm metni seçmek için ve **Ctrl + C** kopyalamak için.</span><span class="sxs-lookup"><span data-stu-id="6ff61-108">Copy the text of the feed by pressing **Ctrl+A** to select all text, and **Ctrl+C** to copy.</span></span>  
+3.  <span data-ttu-id="f690f-108">Akışın metni tuşlarına basarak kopyalayın **Ctrl + A** tüm metni seçmek için ve **Ctrl + C** kopyalanacak.</span><span class="sxs-lookup"><span data-stu-id="f690f-108">Copy the text of the feed by pressing **Ctrl+A** to select all text, and **Ctrl+C** to copy.</span></span>  
   
-### <a name="creating-the-data-types"></a><span data-ttu-id="6ff61-109">Veri türleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="6ff61-109">Creating the data types</span></span>  
+### <a name="creating-the-data-types"></a><span data-ttu-id="f690f-109">Veri türleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="f690f-109">Creating the data types</span></span>  
   
-1.  <span data-ttu-id="6ff61-110">Kullanılacak proxy olduğu bir kod dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="6ff61-110">Open a code file where the proxy is to be used.</span></span> <span data-ttu-id="6ff61-111">Bu dosya parçası olması gereken bir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] projesi.</span><span class="sxs-lookup"><span data-stu-id="6ff61-111">This file should be part of a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] project.</span></span>  
+1.  <span data-ttu-id="f690f-110">Kullanılacak proxy olduğu bir kod dosyası açın.</span><span class="sxs-lookup"><span data-stu-id="f690f-110">Open a code file where the proxy is to be used.</span></span> <span data-ttu-id="f690f-111">Bu dosya parçası olması gereken bir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proje.</span><span class="sxs-lookup"><span data-stu-id="f690f-111">This file should be part of a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] project.</span></span>  
   
-2.  <span data-ttu-id="6ff61-112">İmleci dosyası var olan tüm sınıflar dışında bir konuma yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="6ff61-112">Place the cursor in a location in the file outside any existing classes.</span></span>  
+2.  <span data-ttu-id="f690f-112">Dosyanın mevcut tüm sınıflar dışında bir konumda imleci yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="f690f-112">Place the cursor in a location in the file outside any existing classes.</span></span>  
   
-3.  <span data-ttu-id="6ff61-113">Seçin **Düzenle**, **Özel Yapıştır**, **XML sınıflar Yapıştır**.</span><span class="sxs-lookup"><span data-stu-id="6ff61-113">Select **Edit**, **Paste Special**, **Paste XML as Classes**.</span></span>  
+3.  <span data-ttu-id="f690f-113">Seçin **Düzenle**, **Özel Yapıştır**, **XML sınıflar Yapıştır**.</span><span class="sxs-lookup"><span data-stu-id="f690f-113">Select **Edit**, **Paste Special**, **Paste XML as Classes**.</span></span>  
   
-4.  <span data-ttu-id="6ff61-114">Adlı sınıf `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` ve `rssChannelItemGuid` RSS akışı öğelerinde erişmek için gerekli üyelerle oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="6ff61-114">Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.</span></span>  
+4.  <span data-ttu-id="f690f-114">Sınıflar adlandırılan `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` ve `rssChannelItemGuid` RSS akışı öğeleri erişmek için gereken üyeleri ile oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="f690f-114">Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.</span></span>  
   
-### <a name="using-the-generated-classes"></a><span data-ttu-id="6ff61-115">Oluşturulan sınıflarını kullanma</span><span class="sxs-lookup"><span data-stu-id="6ff61-115">Using the generated classes</span></span>  
+### <a name="using-the-generated-classes"></a><span data-ttu-id="f690f-115">Oluşturulan sınıfları kullanma</span><span class="sxs-lookup"><span data-stu-id="f690f-115">Using the generated classes</span></span>  
   
-1.  <span data-ttu-id="6ff61-116">Sınıflar sonra diğer sınıflar gibi kodda kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6ff61-116">Once the classes are generated, they can be used in code like any other classes.</span></span> <span data-ttu-id="6ff61-117">Aşağıdaki kod örneğinde yeni bir örneğini döndürür `rssChannelImage` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="6ff61-117">The following code example returns a new instance of the `rssChannelImage` class.</span></span>  
+1.  <span data-ttu-id="f690f-116">Sınıfları oluşturduktan sonra diğer tüm sınıflar benzer bir kod içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f690f-116">Once the classes are generated, they can be used in code like any other classes.</span></span> <span data-ttu-id="f690f-117">Aşağıdaki kod örneğinde yeni bir örneğini döndürür `rssChannelImage` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="f690f-117">The following code example returns a new instance of the `rssChannelImage` class.</span></span>  
   
     ```  
     var channelImage = new rssChannelImage()   
