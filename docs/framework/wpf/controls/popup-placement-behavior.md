@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360567"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679521"
 ---
 # <a name="popup-placement-behavior"></a>Açılan Pencere Yerleştirme Davranışı
 A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yükünü gezinen ayrı bir pencerede içeriğini görüntüler. Konumu belirleyebileceğiniz bir <xref:System.Windows.Controls.Primitives.Popup> göre bir denetim, fare ve kullanarak ekrandaki <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri.  Bu özellikler konumunu belirten esneklik sunmak için birlikte çalışır. <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -30,8 +30,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulamanın yü
   
  Görüntüyü aşağıda gösterilmiştir ve <xref:System.Windows.Controls.Primitives.Popup> denetimleri  
   
- ![Dört açılan denetim görüntüsüyle](./media/popupplacementintro.png "PopupPlacementIntro")  
-Görüntü ile dört açılan pencereler  
+ ![Dört açılan denetim görüntüsüyle](./media/popup-placement-behavior/popup-placement-intro.png "görüntüsüyle dört açılan pencereler")    
   
  Bu basit örnek nasıl ayarlanacağı gösterilmektedir <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> ve <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özellikleri, ancak kullanarak <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri nereden daha fazla denetime sahip <xref:System.Windows.Controls.Primitives.Popup> konumlandırıldı.  
   
@@ -58,8 +57,8 @@ Görüntü ile dört açılan pencereler
   
  Aşağıdaki çizimde gösterilmektedir <xref:System.Windows.Controls.Primitives.Popup> göreli konumlu <xref:System.Windows.Controls.Canvas>.  
   
- ![Açılan pencere denetimi PlacementTarget içermeyen](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
-Açılan pencere PlacementTarget içermeyen  
+ ![Açılan pencere denetimi PlacementTarget içermeyen](./media/popup-placement-behavior/popup-placement-no-placement-target.png "PlacementTarget içermeyen açılır.")  
+  
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Primitives.Popup> alt öğesi olan bir <xref:System.Windows.Controls.Canvas>, ancak bu kez <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> ayarlanır `ellipse1`, açılan pencerenin altında görünecek şekilde <xref:System.Windows.Shapes.Ellipse>.  
   
@@ -67,8 +66,7 @@ Açılan pencere PlacementTarget içermeyen
   
  Aşağıdaki çizimde gösterilmektedir <xref:System.Windows.Controls.Primitives.Popup> göreli konumlu <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Elips göreli konumlu açılan](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
-Açılır penceresi ile PlacementTarget  
+ ![Elips göreli konumlu açılan](./media/popup-placement-behavior/popup-placement-with-placement-target.png "açılır penceresi ile PlacementTarget")    
   
 > [!NOTE]
 >  İçin <xref:System.Windows.Controls.ToolTip>, varsayılan değerini <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>.  İçin <xref:System.Windows.Controls.ContextMenu>, varsayılan değerini <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>. Bu değerler daha sonra "Nasıl özellikleri birlikte çalışacak." açıklanmaktadır  
@@ -82,8 +80,8 @@ Açılır penceresi ile PlacementTarget
   
  Aşağıdaki çizim, yukarıdaki örnekte sonucunu gösterir.  
   
- ![Açılır ve PlacementRectangle olmadan](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
-Açılır ve PlacementRectangle olmadan  
+ ![Açılır ve PlacementRectangle olmadan](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "PlacementRectangle olmadan ve açılır.")  
+  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>Hedef kaynak ve açılan hizalama noktası  
  *Hedef kaynak* ve *açılan hizalama noktası* başvuru noktalarında hedef alan ve açılan, sırasıyla konumlandırma için kullanılır. Kullanabileceğiniz <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> açılır penceresinden hedef alan dengelemek için özellikleri.  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> Ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> hedef kaynağı ve açılan hizalama noktası göre. Değerini <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliği, hedef kaynak ve açılan hizalama noktası yerleştirildiği belirler.  
@@ -94,8 +92,7 @@ Açılır ve PlacementRectangle olmadan
   
  Aşağıdaki çizim, yukarıdaki örnekte sonucunu gösterir.  
   
- ![Açılan Pencere yerleştirme hedef kaynak hizalama noktasıyla](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
-HorizontalOffset ve VerticalOffset açılan menüsü  
+ ![Açılan Pencere yerleştirme hedef kaynak hizalama noktasıyla](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "HorizontalOffset ve VerticalOffset ile açılır.")    
   
 <a name="How"></a>   
 ## <a name="how-the-properties-work-together"></a>Özellikleri birlikte nasıl çalışır  
@@ -120,32 +117,23 @@ HorizontalOffset ve VerticalOffset açılan menüsü
   
  Aşağıdaki resimlerde gösterildiği <xref:System.Windows.Controls.Primitives.Popup>, hedef alan, hedef kaynağı ve açılan hizalama noktası her biri için <xref:System.Windows.Controls.Primitives.PlacementMode> değeri. Her şekilde hedef alan sarı, ve <xref:System.Windows.Controls.Primitives.Popup> mavi.  
   
- ![Mutlak veya AbsolutePoint yerleşimiyle](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
-Yerleştirme mutlak AbsolutePoint mi  
+ ![Mutlak veya AbsolutePoint yerleşimiyle](./media/popup-placement-behavior/popup-placement-absolute.png "yerleştirme mutlak veya AbsolutePoint olduğu.")    
   
- ![Alt yerleşimiyle](./media/popupplacementbottom.png "PopupPlacementBottom")  
-Yerleştirme alt vardır.  
+ ![Alt yerleşimiyle](./media/popup-placement-behavior/popup-placement-bottom.png "yerleştirme olan alt.")   
   
- ![Merkezi yerleşimiyle](./media/popupplacementcenter.png "PopupPlacementCenter")  
-Yerleştirme merkezidir.  
+ ![Merkezi yerleşimiyle](./media/popup-placement-behavior/popup-placement-center.png "yerleştirme olduğu Merkezi.")    
   
- ![Sol yerleşimiyle](./media/popupplacementleft.png "PopupPlacementLeft")  
-Yerleştirme olan sol  
+ ![Sol yerleşimiyle](./media/popup-placement-behavior/popup-placement-left.png "yerleştirme olan sol.")   
   
- ![Fare yerleşimiyle](./media/popupplacementmouse.png "PopupPlacementMouse")  
-Fare yerleştirme olan  
+ ![Fare yerleşimiyle](./media/popup-placement-behavior/popup-placement-mouse.png "yerleştirme fare olduğu.")  
   
- ![MousePoint yerleşimiyle](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
-Yerleştirme MousePoint olduğu  
+ ![MousePoint yerleşimiyle](./media/popup-placement-behavior/popup-placement-mousepoint.png "yerleştirme MousePoint olduğu.")  
   
- ![Göreli veya RelativePoint yerleşimiyle](./media/popupplacementrelative.png "PopupPlacementRelative")  
-Yerleştirme göreli RelativePoint mi  
+ ![Göreli veya RelativePoint yerleşimiyle](./media/popup-placement-behavior/popup-placement-relative.png "yerleştirme olan göreli veya RelativePoint.")    
   
- ![Doğru yerleşimiyle](./media/popupplacementright.png "PopupPlacementRight")  
-Yerleştirme unsurdur.  
+ ![Doğru yerleşimiyle](./media/popup-placement-behavior/popup-placement-right.png "yerleştirme sağ olduğunu.")    
   
- ![Üst yerleşimiyle](./media/popupplacementtop.png "PopupPlacementTop")  
-Yerleştirme üst bulunuyor  
+ ![Üst yerleşimiyle](./media/popup-placement-behavior/popup-placement-top.png "yerleştirme üst'tür.")    
   
 <a name="When"></a>   
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Açılan pencerenin kenarında karşılaştığında  
@@ -178,21 +166,19 @@ Yerleştirme üst bulunuyor
 ### <a name="aligning-to-the-screen-edge"></a>Ekran uca hizalama  
  A <xref:System.Windows.Controls.Primitives.Popup> kenarında için kendisi kadar yeniden konumlandırma tarafından tüm hizalayabilirsiniz <xref:System.Windows.Controls.Primitives.Popup> ekranda görülebilir.  Böyle bir durumda, hedef kaynak ve açılan hizalama noktası arasındaki uzaklığı değerlerden farklı olabilir <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>. Zaman <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, veya <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>, <xref:System.Windows.Controls.Primitives.Popup> kendisini her ekran kenarına hizalanır.  Örneğin, varsayımında bir <xref:System.Windows.Controls.Primitives.Popup> sahip <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> kümesine <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 100 olarak ayarlayın.  Ekranın alt kenarı kısmını veya tamamını gizlerse <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.Primitives.Popup> kendisi yeniden konumlandırır ekran ve dikey uzaklığı açılan ve hedef kaynak arasında alt kenarı boyunca hizalama 100'den küçük noktasıdır. Aşağıdaki çizimde bu gösterir.  
   
- ![Ekran kenarına hizalanır açılan](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
-Açılan ekran ucuna hizalar.  
+ ![Ekran kenarına hizalanır açılan](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "açılan ekran kenarına hizalanır.")    
   
 ### <a name="changing-the-popup-alignment-point"></a>Açılan pencere hizalama noktasını değiştirme  
  Varsa <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>, <xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>, veya <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>, açılan hizalama noktası açılan Alttan veya sağ ekran edge karşılaştığında değiştirir.  
   
  Ekranın alt kenarı kısmını veya tamamını gizlediğinde aşağıda gösteren <xref:System.Windows.Controls.Primitives.Popup>, sol alt köşesindeki açılır hizalama noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Alt ekranın kenarı nedeniyle yeni hizalama noktası](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
-Açılır ekranın alt kenarı karşılaşır ve açılan hizalama noktası değişiklikleri  
+ ![Alt ekranın kenarı nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "açılır ekranın alt kenarı karşılaşır ve açılan hizalama noktası değiştirir.")  
+ 
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup> gizli ekranın sağ kenarından açılan hizalama sağ üst köşesindeki noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Yeni açılan hizalama nokta ekran kenar nedeniyle](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
-Popup sağ kenarında karşılaşır ve açılan hizalama noktası değişiklikleri  
+ ![Yeni açılan hizalama nokta ekran kenar nedeniyle](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup sağ kenarında karşılaşır ve açılan hizalama noktası değiştirir.")    
   
  Varsa <xref:System.Windows.Controls.Primitives.Popup> alt ve sağ ekran kenarlar karşılaştığında sağ alt köşesindeki açılır hizalama noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
@@ -201,28 +187,24 @@ Popup sağ kenarında karşılaşır ve açılan hizalama noktası değişiklikl
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> ve <xref:System.Windows.Controls.Primitives.Popup> alt ekranın kenarı karşılaştığında hedef kaynak hedef alanın sol üst köşedeki ve açılan hizalama noktası sol alt köşesindeki <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Alt ekranın kenarı nedeniyle yeni hizalama noktası](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
-Yerleştirme alt vardır ve açılır ekranın alt kenarı karşılaştığında  
+ ![Alt ekranın kenarı nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "yerleştirme olan alt ve açılır ekranın alt kenarı karşılaşır.")    
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Left> ve <xref:System.Windows.Controls.Primitives.Popup> karşılaştığında ekranın sol kenarı hedef kaynak hedef alanının sağ üst köşedeki ve açılan hizalama noktası solüstköşesinde<xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Ekranın sol kenarı nedeniyle yeni hizalama noktası](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
-Yerleştirme sol olduğunu ve açılır ekranın sol kenarında karşılaşır.  
+ ![Ekranın sol kenarı nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-left-screen-edge.png "yerleştirme ise sola ve açılır ekranın sol kenarında karşılaşır.")  
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Right> ve <xref:System.Windows.Controls.Primitives.Popup> doğru ekran edge karşılaştığında hedef alanın sol üst köşesine hedef kaynağı olduğundan ve sağ üst köşesindeki açılır hizalama noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Ekranın sağ kenar nedeniyle yeni hizalama noktası](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
-Yerleştirme hangisi ve açılan pencerenin sağ kenarında karşılaştığında  
+ ![Ekranın sağ kenar nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "yerleştirme sağ olduğunu ve açılan pencerenin sağ kenarında karşılaşır.")  
+  
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Top> ve <xref:System.Windows.Controls.Primitives.Popup> ekranın üst kenarı ile karşılaşırsa hedef alanın sol alt köşesine hedef kaynağı olan ve sol üst köşesindeki açılır hizalama noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Ekranın üst kenarı nedeniyle yeni hizalama noktası](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
-Yerleştirme üst bulunur ve açılır ekranın üst kenarı ile karşılaşırsa  
+ ![Ekranın üst kenarı nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "yerleştirme üst'tür ve açılır ekranın üst kenarı karşılaşır.")  
   
  Kullanırken aşağıdaki çizimde gösterilmiştir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> olduğu <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> ve <xref:System.Windows.Controls.Primitives.Popup> alt ekranın kenarı karşılaştığında hedef alan (fare işaretçisi sınırları) ve açılan hizalama sol üst köşesinde hedef kaynağı olan sol alt köşesindeki noktasıdır <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![fare ekranın kenarındaki nedeniyle yeni hizalama noktası](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
-Fare yerleştirme olduğunu ve açılır ekranın alt kenarı karşılaşır.  
+ ![fare ekranın kenarındaki nedeniyle yeni hizalama noktası](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "yerleştirme olan fare ve açılır ekranın alt kenarı karşılaşır.")    
   
 ### <a name="customizing-popup-placement"></a>Açılan Pencere yerleştirme özelleştirme  
  Hedef kaynak ve açılan hizalama noktası ayarlayarak özelleştirebileceğiniz <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliğini <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Ardından tanımlayan bir <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> için bir dizi olası yerleştirme noktası ve birincil eksenleri (tercih sırasına göre) döndüren bir temsilci <xref:System.Windows.Controls.Primitives.Popup>. En büyük bölümünü gösteren noktası <xref:System.Windows.Controls.Primitives.Popup> seçilir.  Konumunu <xref:System.Windows.Controls.Primitives.Popup> varsa otomatik olarak düzeltilir <xref:System.Windows.Controls.Primitives.Popup> kenarında tarafından gizlenir. Bir örnek için bkz. [özel açılan pencerenin konumunu belirtme](how-to-specify-a-custom-popup-position.md).  

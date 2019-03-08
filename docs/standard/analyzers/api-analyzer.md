@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759138"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680275"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -44,7 +44,7 @@ Kullanım dışı API, aşağıdakiler gibi <xref:System.Net.WebClient>, kullan�
 
 **Hata listesi** penceresi, aşağıdaki örnekte gösterildiği gibi uyarılarla kullanım dışı API başına benzersiz bir kimlik içerir (`DE004`): 
 
-!["Hata listesi penceresine uyarı'nın kimlik ve açıklama gösteren ekran görüntüsü"](media/api-analyzer/warnings.jpg)
+!["Hata listesi penceresine uyarı'nın kimlik ve açıklama gösteren ekran görüntüsü"](media/api-analyzer/warnings-id-and-descriptions.jpg "uyarıları içeren Hata Listesi penceresi.")
 
 Kimliğinde tıklayarak, API'nin neden kullanım dışı bırakıldı hakkında ayrıntılı bilgi ile bir Web sayfasına gidin ve kullanılabilecek diğer API'ler ile ilgili öneriler.
 
@@ -112,5 +112,5 @@ Kullanıcı tanılama nasıl işleneceğini karar: uyarıları, hataları, öner
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [API Çözümleyicisi](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) blog gönderisi.
+- [API Çözümleyicisi](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) blog gönderisi.
 - [API Çözümleyicisi](https://youtu.be/eeBEahYXGd0) tanıtım YouTube video.

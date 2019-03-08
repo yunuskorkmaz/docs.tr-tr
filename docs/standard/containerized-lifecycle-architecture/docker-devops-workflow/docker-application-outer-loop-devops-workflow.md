@@ -4,12 +4,12 @@ description: "\"Dış döngü\" DevOps iş akışının adımları öğrenin"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836415"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676206"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -144,7 +144,7 @@ Docker görevleri kullanarak hizmet görüntüleri tarafından tanımlanan bir d
 
 Docker görüntülerinin değiştirilemezlik ne geliştirilen, CI aracılığıyla test ve üretim ortamında çalışması tekrarlanabilir bir dağıtım sağlar. Docker kayıt defterinizde (özel veya genel) yayımlanmış uygulama Docker görüntüleri oluşturduktan sonra bunları sahip olabileceğiniz birden fazla ortam dağıtabilirsiniz (üretim, QA, hazırlama, vb.) gelen Azure DevOps hizmetlerini kullanarak CD işlem hattı işlem hattı görevler veya Azure DevOps Services Release Management.
 
-Ancak, bu noktada, dağıttığınız ne tür bir Docker uygulaması üzerinde bağlıdır. Basit bir uygulaması (açısından bir oluşturma ve dağıtma) gibi bir tek parçalı birkaç kapsayıcılar veya hizmetler oluşturan uygulama ve dağıtılan birkaç sunucular veya VM'ler dağıtma gibi daha karmaşık bir uygulama dağıtması farklı bir mikro hizmet tabanlı uygulama hiper ölçekli özelliklere sahip. Bu iki senaryo aşağıdaki bölümlerde açıklanmıştır.
+Ancak, bu noktada, ne tür bir Docker uygulaması dağıtmakta üzerinde bağlıdır. Basit bir uygulaması (açısından bir oluşturma ve dağıtma) gibi bir tek parçalı birkaç kapsayıcılar veya hizmetler oluşturan uygulama ve dağıtılan birkaç sunucular veya VM'ler dağıtma gibi daha karmaşık bir uygulama dağıtması farklı bir mikro hizmet tabanlı uygulama hiper ölçekli özelliklere sahip. Bu iki senaryo aşağıdaki bölümlerde açıklanmıştır.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Docker uygulamaları için birden fazla Docker ortamlarını oluşan dağıtma
 
@@ -202,7 +202,7 @@ Başlangıçta, belirli bir küme veya düzenleyicileri dağıtırken, gelenekse
 
 ## <a name="step-5-run-and-manage"></a>5. Adım: Çalıştırma ve yönetme
 
-Çalıştıran ve uygulamaları yönetmek için Kurumsal üretim sırasında önemli bir konu içinde ve kendisinin ve işlemleri türü nedeniyle düzeyidir ve bu alan büyük kapsamını yanı sıra bu düzeyde (BT işlemleri) çalışan kişiler, biz tüm sonraki HARCANMIŞTIR Bunu açıklayan için bölüm.
+Çalıştıran ve uygulamaları yönetmek için Kurumsal üretim sırasında önemli bir konu içinde ve kendisinin ve işlemleri türü nedeniyle düzeyidir ve bu alanı büyük kapsamını yanı sıra bu (BT işlemleri) düzeyinde çalışan kişiler için tüm sonraki bölümde ayrılmıştır Bunu açıklayan.
 
 ## <a name="step-6-monitor-and-diagnose"></a>6. Adım: İzleme ve tanılama
 

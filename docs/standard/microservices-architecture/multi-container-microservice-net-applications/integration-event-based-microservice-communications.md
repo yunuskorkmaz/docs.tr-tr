@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967977"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676024"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler (tümleştirme olayları) arasında olay tabanlı iletişim uygulama
 
@@ -66,7 +66,7 @@ Yalnızca birkaç tür kitaplıkları mikro hizmetler arasında paylaşmalıdır
 
 Bir olay veri yolu Şekil 6-19'gösterildiği gibi açıkça birbirinden farkında olması gereken bileşenleri gerektirmeden mikro hizmetler arasında yayımlama/abone olun-style iletişime olanak sağlar.
 
-![Temel pub/sub desenini, mikro hizmet bir olay veri yolu susbcribing mikro B ve C, yayımcı susbcribers bilmenize gerek dağıtan yayımlar.](./media/image20.png)
+![Temel pub/sub desenini, mikro hizmet A B ve C, mikro hizmetler yayımcının aboneleri bilmenize gerek abone olmaya dağıtır olay Bus yayımlar.](./media/image20.png)
 
 **Şekil 6-19**. Yayımlama/abonelik bir olay veri yolu temel kavramları
 
@@ -76,25 +76,25 @@ Olay veri yolu gözlemci deseni ve yayımlama ilgili-abone ol modeli.
 
 İçinde [gözlemci deseni](https://en.wikipedia.org/wiki/Observer_pattern), birincil nesnenizin (Observable bilinir) ilgili bilgileri (olayları) ile (gözlemciler bilinir) diğer ilgili nesneleri bildirir.
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Yayımlama/abone ol (Pub/Sub) deseni 
+### <a name="publishsubscribe-pubsub-pattern"></a>Yayımlama/abone ol (Pub/Sub) deseni
 
 Amacı [Yayımla/abone ol deseni](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetleri bildirimde bulunmak istiyorsunuz. Ancak gözlemci ve Pub/Sub desenler arasında önemli bir fark yoktur. "Birbirine alışık oldukları için" gözlemci desende yayın gözlemciler için doğrudan observable gerçekleştirilir. Ancak bir Pub/Sub düzeni kullanılırken yayımcı ve abone tarafından bilinen aracısı veya ileti Aracısı ya da olay veri yolu, adlı üçüncü bir bileşen, yoktur. Bu nedenle, Pub/Sub düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılmıştır.
 
-### <a name="the-middleman-or-event-bus"></a>Middleman ya da olay veri yolu 
+### <a name="the-middleman-or-event-bus"></a>Middleman ya da olay veri yolu
 
 Yayımcı ile abone arasındaki gizlilik nasıl elde edebilirim? Kolay bir yolu, tüm iletişimi dikkatli bir middleman izin ' dir. Bir olay veri yolu bir middleman ' dir.
 
 Bir olay veri yolu, genellikle iki bölümden oluşur:
 
--   Soyut veya arabirim.
+- Soyut veya arabirim.
 
--   Bir veya daha fazla uygulamaları.
+- Bir veya daha fazla uygulamaları.
 
 Şekil 6-19'nasıl bir uygulama açısından bakıldığında, olay veri yolu bir Pub/Sub kanal başka bir şey olduğunu görebilirsiniz. Bu zaman uyumsuz iletişim uygulamak yol gösterebilir. Böylece ortamı gereksinimlerini (örneğin, geliştirme ortamları ve üretim) bağlı olarak bunlar arasında değiştirme birden fazla uygulaması sahip olabilir.
 
 Şekil 6-20 RabbitMQ, Azure Service Bus veya başka bir olay/ileti aracısı gibi teknolojileri Mesajlaşma altyapısının temel birden çok uygulama ile bir olay veri yolu bir özeti görebilirsiniz.
 
-![RabbitMQ Azure Service bus veya diğerleri gibi çeşitli tecnologies ile uygulanabilir için bir arabirim ile tanımlanan olay veri yolu uygundur.](./media/image21.png)
+![RabbitMQ Azure Service bus veya diğerleri gibi çeşitli teknolojilerle uygulanabilir için bir arabirim ile tanımlanan olay veri yolu uygundur.](./media/image21.png)
 
 **Şekil 6 - 20.** Bir olay veri yolu birden fazla uygulaması
 
@@ -129,6 +129,6 @@ public interface IEventBus
 
 `Subscribe` Yöntemleri (bağımsız değişkenler bağlı olarak çeşitli uygulamalar olabilir), olaylar almak istiyorsanız mikro hizmetler tarafından kullanılır. Bu yöntem, iki bağımsız değişkeni vardır. İlk abone olmak için tümleştirme olaydır (`IntegrationEvent`). Tümleştirme olay işleyici (ya da geri arama yöntemi) adlı ikinci bağımsız değişken olan `IIntegrationEventHandler<T>`, alıcı mikro hizmet, bu tümleştirme olay iletisi aldığında çalıştırılacak.
 
->[!div class="step-by-step"]
->[Önceki](database-server-container.md)
->[İleri](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Önceki](database-server-container.md)
+> [İleri](rabbitmq-event-bus-development-test-environment.md)

@@ -3,12 +3,12 @@ title: Docker giriş
 description: Bu makale Docker için bir .NET Core uygulaması bağlamında bir giriş ve genel bakış sağlar.
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656173"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676284"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker'a giriş
 
@@ -101,7 +101,7 @@ Bu deponun çeşitli .NET Framework Docker yapılandırmaları gösteren örnekl
 
 [Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "Merhaba Dünya" kullanımını gösteren [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Size nasıl oluşturun ve bağlı uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntüsü](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile).
 
-**.NET framework 3.5**
+**.NET Framework 3.5**
 
  [Dotnet-framework: 3.5 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) temel "Merhaba Dünya" kullanımını gösteren [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile). Bu, nasıl yapı ve .NET Framework 3.5 docker'da bağlı bir proje dağıtma gösterilmektedir.
 
@@ -178,7 +178,7 @@ Bu deponun çeşitli .NET Framework Docker yapılandırmaları gösteren örnekl
 
 Docker platformu ve farklı Docker görüntüleri hakkında öğrendiniz, sonraki adım, zengin Docker ekosistemi sayesinde keşfedin sağlamaktır. Aşağıdaki bağlantılar, Microsoft araçları kapsayıcı geliştirmeyi nasıl tamamlayıcı gösterir.
 
-* [.NET ve Docker'a birlikte kullanma](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
+* [.NET ve Docker'a birlikte kullanma](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)
 * [.NET çok kapsayıcılı ve mikro hizmet tabanlı uygulamalar tasarlayıp geliştirerek](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio kod Docker uzantısı](https://code.visualstudio.com/docs/languages/dockerfile)
 * [Azure Service Fabric kullanmayı öğrenin](/azure/service-fabric/index)

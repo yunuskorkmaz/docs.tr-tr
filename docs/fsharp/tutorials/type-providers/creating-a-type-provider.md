@@ -2,12 +2,12 @@
 title: 'Öğretici: Bir tür sağlayıcısı oluşturma'
 description: Kendi oluşturmayı öğrenin F# tür sağlayıcıları F# İnceleme temel kavramları göstermek üzere birkaç basit tür sağlayıcıları tarafından 3.0.
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371573"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678429"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: Bir tür sağlayıcısı oluşturma
 
@@ -469,7 +469,7 @@ Aşağıdaki noktalara dikkat edin:
 
 - Belirtilen bir özelliği her adlandırılmış Grup sonuçları gruplayan ve özellik erişen bir kullanımıyla sonuçlanıyor bir dizin oluşturucusunda bir eşleşme'nın `Groups` koleksiyonu.
 
-Aşağıdaki kodu bir tür sağlayıcısı için uygulanacak bir mantıksal çekirdek olduğunu ve sağlanan türü için tüm üyeleri Ayrıca bu örnek atlar. Her üye eklendi hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerinde ilgili bölüme bakın. Tam kod için içinden örneği karşıdan [ F# 3.0 örnek paketi](https://fsharp3sample.codeplex.com) Codeplex Web sitesinde.
+Aşağıdaki kodu bir tür sağlayıcısı için uygulanacak bir mantıksal çekirdek olduğunu ve sağlanan türü için tüm üyeleri Ayrıca bu örnek atlar. Her üye eklendi hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerinde ilgili bölüme bakın. Tam kod için içinden örneği karşıdan [ F# 3.0 örnek paketi](https://archive.codeplex.com/?p=fsharp3sample) CodePlex Web sitesinde.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

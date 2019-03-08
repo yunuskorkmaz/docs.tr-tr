@@ -3,12 +3,12 @@ title: Yeni dotnet için özel şablonlar
 description: Herhangi bir türde .NET proje veya dosya için özel şablonlar hakkında bilgi edinin.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503932"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679066"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Yeni dotnet için özel şablonlar
 
@@ -16,7 +16,7 @@ ms.locfileid: "54503932"
 
 Özel şablonlar akış, bir NuGet başvurarak herhangi bir NuGet üzerindeki bir NuGet paketini yükleyebilirsiniz *nupkg* doğrudan veya şablon içeren bir dosya sistemi dizin belirterek dosya. Şablon altyapısı değerleri değiştirin, içerir ve dosyaları ve bölgeler dosyaları dışarıda bırak olanak sağlar ve şablonunuzu kullanıldığında özel işlemleri yürüten özellikleri sunar.
 
-Şablon altyapısı açık kaynaklıdır ve çevrimiçi kod deposundaki altındadır [dotnet/şablon](https://github.com/dotnet/templating/) GitHub üzerinde. Ziyaret [dotnet/dotnet-şablonu-samples](https://github.com/dotnet/dotnet-template-samples) şablonları örnekleri için depo. Üçüncü taraf şablonları dahil olmak üzere daha fazla şablon adresten [yeni dotnet şablonları](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) GitHub üzerinde. Özel şablon oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [yeni dotnet için kendi şablonlarınızı oluşturmak nasıl](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) ve [dotnet/şablon GitHub deposunu Wiki](https://github.com/dotnet/templating/wiki).
+Şablon altyapısı açık kaynaklıdır ve çevrimiçi kod deposundaki altındadır [dotnet/şablon](https://github.com/dotnet/templating/) GitHub üzerinde. Ziyaret [dotnet/dotnet-şablonu-samples](https://github.com/dotnet/dotnet-template-samples) şablonları örnekleri için depo. Üçüncü taraf şablonları dahil olmak üzere daha fazla şablon adresten [yeni dotnet şablonları](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) GitHub üzerinde. Özel şablon oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [yeni dotnet için kendi şablonlarınızı oluşturmak nasıl](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) ve [dotnet/şablon GitHub deposunu Wiki](https://github.com/dotnet/templating/wiki).
 
 Bir kılavuz uygulayın ve bir şablon oluşturmak için bkz: [yeni dotnet için özel bir şablon oluşturma](~/docs/core/tutorials/create-custom-template.md) öğretici.
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [Yeni dotnet (eğitim) için özel bir şablon oluşturma](../tutorials/create-custom-template.md)
 - [DotNet/şablon GitHub deposunu Wiki](https://github.com/dotnet/templating/wiki)
 - [DotNet/dotnet-şablonu-örnekleri GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
-- [Dotnet için kendi şablonlarınızı yeni oluşturma](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Dotnet için kendi şablonlarınızı yeni oluşturma](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [*Template.JSON* JSON şema Store şema](http://json.schemastore.org/template)

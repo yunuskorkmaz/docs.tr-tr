@@ -1,16 +1,21 @@
 ---
 title: Eğitilen makine öğrenme uygulamaları - ML.NET modeli kullanıma hazır hale getirme
 description: ML.NET eğitilen ve değerlendirilen makine öğrenme modeli uygulamalarında kullanmak için nasıl kullanılacağını keşfedin
-ms.date: 11/07/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff3f0a8856382d020129693bcf722f572fd87606
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: be6906c939b82d00067babaeebe809dae3de413a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131572"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675140"
 ---
 # <a name="operationalize-a-trained-machine-learning-model-in-apps---mlnet"></a>Eğitilen makine öğrenme uygulamaları - ML.NET modeli kullanıma hazır hale getirme
+
+> [!NOTE]
+> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning github deposu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)
 
 Model ölçümler için iyi baktığınızda, zaman 'modeli hazır hale getirmek için ' dir. `model` Oluşturulan nesne kullanılabilir, kalıcı ve onu 'öğrenilen' eğitim sırasında aynı adımları uygulayarak farklı ortamlarda yeniden kullanılan.
 

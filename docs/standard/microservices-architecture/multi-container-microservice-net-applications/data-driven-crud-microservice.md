@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5d338834724c3c5733f2a8a3de1b236e270d28d2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677441"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
@@ -33,7 +33,7 @@ Bu tür bir hizmet geliştirirken, yalnızca gereksinim duyduğunuz [ASP.NET Cor
 
 Tüm bağımlılıklarınızı sahip için bir Docker kapsayıcısı içinde SQL Server geliştirme ortamları için harikadır gibi bir veritabanı sunucusunu çalıştıran ve bulutta veya şirket içi bir veritabanını sağlamak zorunda kalmadan çalıştıran unutmayın. Tümleştirme testleri, bu kullanışlı olur. Genellikle bu yaklaşım sayesinde yüksek kullanılabilirlik elde ederim çünkü ancak üretim ortamları için bir veritabanı sunucusu çalıştıran bir kapsayıcıda, önerilmez. Azure'da bir üretim ortamı için Azure SQL DB veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilir herhangi bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşım için CosmosDB seçebilirsiniz.
 
-Son olarak, Dockerfile ve docker-compose.yml meta veri dosyaları düzenleyerek, bu kapsayıcı görüntüsü nasıl oluşturulur yapılandırabileceğiniz — hangi temel görüntü kullanmak yanı tasarım iç ve dış adları ve TCP bağlantı noktaları gibi ayarlar. 
+Son olarak, Dockerfile ve docker-compose.yml meta veri dosyaları düzenleyerek, bu kapsayıcı görüntüsü nasıl oluşturulur yapılandırabileceğiniz — hangi temel görüntü kullanmak yanı tasarım iç ve dış adları ve TCP bağlantı noktaları gibi ayarlar.
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core ile bir basit CRUD mikro hizmet uygulama
 
@@ -100,9 +100,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-Ek olabilir `DbContext` uygulamaları. Örneğin, örnek Catalog.API mikro hizmet içinde olduğu ikinci `DbContext` adlı `CatalogContextSeed` nerede otomatik olarak doldurulur örnek verileri ilk kez çalıştığında veritabanına erişmek için. Bu yöntem, tanıtım verileri ve otomatikleştirilmiş test senaryoları için de kullanışlıdır. 
+Ek olabilir `DbContext` uygulamaları. Örneğin, örnek Catalog.API mikro hizmet içinde olduğu ikinci `DbContext` adlı `CatalogContextSeed` nerede otomatik olarak doldurulur örnek verileri ilk kez çalıştığında veritabanına erişmek için. Bu yöntem, tanıtım verileri ve otomatikleştirilmiş test senaryoları için de kullanışlıdır.
 
-İçinde `DbContext`, kullandığınız `OnModelCreating` nesne/veritabanı varlık eşlemelerini ve diğer özelleştirme yöntemi [EF genişletilebilirlik noktaları](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
+İçinde `DbContext`, kullandığınız `OnModelCreating` nesne/veritabanı varlık eşlemelerini ve diğer özelleştirme yöntemi [EF genişletilebilirlik noktaları](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web APİ'si denetleyicilerinin verileri Sorgulama
 
@@ -116,7 +116,7 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context, 
+    public CatalogController(CatalogContext context,
                              IOptionsSnapshot<CatalogSettings> settings,
                              ICatalogIntegrationEventService catalogIntegrationEventService)
     {
@@ -131,7 +131,7 @@ public class CatalogController : ControllerBase
     [HttpGet]
     [Route("[action]")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
                                            [FromQuery]int pageIndex = 0)
 
     {
@@ -150,7 +150,7 @@ public class CatalogController : ControllerBase
             pageIndex, pageSize, totalItems, itemsOnPage);
 
         return Ok(model);
-    } 
+    }
     //...
 }
 ```
@@ -253,19 +253,19 @@ catalog.api:
     - "5101:80"
 ```
 
-Docker-compose.yml dosyaları çözüm düzeyinde yalnızca yapılandırma dosyalarını proje veya mikro hizmet düzeyinde daha esnek değildir, ancak docker-compose dosyalara kümeden değerlerle bildirilen ortam değişkenlerini geçersiz kılarsanız daha da güvenli Dağıtım Araçları, Azure DevOps Hizmetleri Docker dağıtım görevlerini ister. 
+Docker-compose.yml dosyaları çözüm düzeyinde yalnızca yapılandırma dosyalarını proje veya mikro hizmet düzeyinde daha esnek değildir, ancak docker-compose dosyalara kümeden değerlerle bildirilen ortam değişkenlerini geçersiz kılarsanız daha da güvenli Dağıtım Araçları, Azure DevOps Hizmetleri Docker dağıtım görevlerini ister.
 
 Kodunuz aracılığıyla yapılandırmayı kullanarak bu değeri son olarak, alabilirsiniz\["ConnectionString"\]Createservicereplicalisteners() yöntemi bir önceki kod örneğinde gösterildiği gibi.
 
 Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri depolamak nasıl ek yollarını keşfetmek isteyebilirsiniz. Uygulama gizli dizilerini yönetmek için mükemmel bir yoldur kullanarak [Azure anahtar kasası](https://azure.microsoft.com/services/key-vault/).
 
-Azure Key Vault depolamak ve şifreleme anahtarlarını ve gizli dizileri, bulut uygulamaları ve Hizmetleri tarafından kullanılan korunmasına yardımcı olur. API anahtarları, bağlantı dizeleri, parolalar vb. gibi katı denetimi, korumak istediğiniz her şeyi bir gizli dizidir ve sıkı denetim günlüğü, sona erme ayarı, erişimi yönetme kullanım içerir <span class="underline">diğerlerinin yanı sıra</span>.
+Azure Key Vault depolamak ve şifreleme anahtarlarını ve gizli dizileri, bulut uygulamaları ve Hizmetleri tarafından kullanılan korunmasına yardımcı olur. API anahtarları, bağlantı dizeleri, parolalar vb. gibi katı denetimi, korumak istediğiniz her şeyi bir gizli dizidir ve sıkı denetim günlüğü, sona erme ayarı, erişimi yönetme kullanım içerir *diğerlerinin yanı sıra*.
 
 Azure Key Vault, uygulama gizli anahtarları kullanım herkesin bunları biliyor olanak gerek kalmadan çok ayrıntılı denetim düzeyini sağlar. Gizli dizileri, geliştirme veya işlemleri kesintiye uğratmadan Gelişmiş güvenlik için bile döndürülebilir.
 
 Uygulamaların, anahtar Kasası'nı kullanabilmeleri kuruluşun Active Directory'de kayıtlı olması gerekir.
 
-Denetleyebilirsiniz <span class="underline">Key Vault kavramlarını belgeleri</span> daha fazla ayrıntı için.
+Denetleyebilirsiniz *Key Vault kavramlarını belgeleri* daha fazla ayrıntı için.
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API, uygulama sürümü oluşturma
 
@@ -305,7 +305,7 @@ Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlen
 - **Roy Fielding. Sürüm oluşturma, iletilir ve REST** \
   [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Swagger tanım meta verileri, ASP.NET Core Web API'si oluşturma 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Swagger tanım meta verileri, ASP.NET Core Web API'si oluşturma
 
 [Swagger](https://swagger.io/) olduğu bir yaygın olarak kullanılan açık kaynak çerçeve tasarım, derleme, belge yardımcı olan oluşan geniş ekosistem araçları tarafından desteklenen ve RESTful API'leri kullanır. Bu API'leri açıklama meta verileri etki alanı için standart hale gelmektedir. Swagger tanım meta verileri ile mikro hizmet, veri odaklı bir mikro hizmetler veya daha fazla etki alanı odaklı bir mikro hizmetler (aşağıdaki bölümde açıklandığı gibi) Gelişmiş herhangi bir türden içermelidir.
 
@@ -333,9 +333,9 @@ Apı'leriniz için Swagger meta verileri oluşturmak için temel neden aşağıd
 
 Microsoft Flow, PowerApps ve Logic Apps Azure API'leri ve bunlara nasıl kullanılacağını anlamak için kullandıklarınız swagger'ın meta verilerdir.
 
-Temel işlevsel API Yardım sayfaları biçiminde ASP.NET Core REST API uygulamaları için Swagger meta verileri oluşturmayı otomatikleştirmek için birkaç seçenek vardır <span class="underline">swagger kullanıcı arabirimi</span>.
+Temel işlevsel API Yardım sayfaları biçiminde ASP.NET Core REST API uygulamaları için Swagger meta verileri oluşturmayı otomatikleştirmek için birkaç seçenek vardır *swagger kullanıcı arabirimi*.
 
-En iyi bilinen olabilir [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) şu anda kullanılan [eShopOnCntainers](https://github.com/dotnet-architecture/eShopOnContainers) ve bu kılavuzdaki bazı ayrıntılı şu konulara değineceğiz ancak kullanmak için bir seçenek de mevcuttur [NSwag](https://github.com/RSuter/NSwag), Typescript ve C oluşturabileceği\# C yanı sıra API istemciler\# denetleyicileri, Swagger veya Openapı belirtiminden ve kullanarak denetleyicileri içeren .dll tarayarak bile [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
+En iyi bilinen olabilir [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) şu anda kullanılan [hizmetine](https://github.com/dotnet-architecture/eShopOnContainers) ve bu kılavuzdaki bazı ayrıntılı şu konulara değineceğiz ancak kullanmak için bir seçenek de mevcuttur [NSwag](https://github.com/RSuter/NSwag), Typescript ve C oluşturabileceği\# C yanı sıra API istemciler\# denetleyicileri, Swagger veya Openapı belirtiminden ve kullanarak denetleyicileri içeren .dll tarayarak bile [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swagger API meta verileri oluşturma Swashbuckle NuGet paketini ile otomatikleştirme
 
@@ -402,17 +402,17 @@ Bunu yaptıktan sonra uygulamanızı başlatın ve bu gibi URL'leri kullanarak a
 
 ```url
   http://<your-root-url>/swagger/v1/swagger.json
-  
+
   http://<your-root-url>/swagger/
 ```
 
-Daha önce oluşturulan kullanıcı arabirimini http:// gibi bir URL için Swashbuckle tarafından oluşturulan gördüğünüz\<kök URL'si your \> /swagger. Şekil 6-9'da herhangi bir API yöntemini nasıl test görebilirsiniz.
+Daha önce oluşturulan kullanıcı arabirimini gibi bir URL için Swashbuckle tarafından oluşturulan gördüğünüz `http://<your-root-url>/swagger`. Şekil 6-9'da herhangi bir API yöntemini nasıl test görebilirsiniz.
 
 ![Swagger kullanıcı Arabirimi API ayrıntılı bir yanıt örneği gösterilmektedir ve geliştirici bulma için harika olan gerçek API yürütmek için kullanılabilir.](./media/image10.png)
 
 **Şekil 6-9**. Swashbuckle UI testi katalog/öğeleri API yöntemi
 
-Şekil 6-10 hizmetine mikro hizmet oluşturulan Swagger JSON meta verileri gösterir (olan araçlar altında kullanın) olduğunda, isteği \<kök URL'si your\>/swagger/v1/swagger.json kullanarak [Postman](https://www.getpostman.com/).
+Şekil 6-10 hizmetine mikro hizmet oluşturulan Swagger JSON meta verileri gösterir (olan araçlar altında kullanın) olduğunda, isteği `http://<your-root-url>/swagger/v1/swagger.json` kullanarak [Postman](https://www.getpostman.com/).
 
 ![Swagger JSON meta verileri gösteren örnek Postman UI](./media/image11.png)
 
@@ -431,6 +431,6 @@ Bu basit bir işlemdir. Ve daha fazla işlevsellik API'nize eklediğinizde otoma
 - **NSwag ve ASP.NET Core ile çalışmaya başlama** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
->[!div class="step-by-step"]
->[Önceki](microservice-application-design.md)
->[İleri](multi-container-applications-docker-compose.md)
+> [!div class="step-by-step"]
+> [Önceki](microservice-application-design.md)
+> [İleri](multi-container-applications-docker-compose.md)

@@ -2,17 +2,17 @@
 title: C# 7.2 yenilikleri
 description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148181"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673229"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
 C# 7.2 birçok yararlı özellik ekleyen başka bir noktası sürümdür.
-Bu sürüm için bir tema, gereksiz kopyalarını veya ayırmaları önleyerek değer türleri ile daha verimli bir şekilde çalışıyor. 
+Bu sürüm için bir tema, gereksiz kopyalarını veya ayırmaları önleyerek değer türleri ile daha verimli bir şekilde çalışıyor.
 
 Geri kalan özellikleri, küçük, iyi sahip özellikleridir.
 
@@ -36,7 +36,7 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
 Tanıtılan 7.2 dil özellikleri, değer türleri ile başvuru semantiği kullanırken çalışmanıza olanak tanır. Kopyalama değer türleri başvuru türleri kullanmayla ilişkili bellek ayırmaları ödemeden en aza indirerek, performansı artırmak için tasarlanmıştır. Özellikler şunlardır:
 
  - `in` Değiştirici bağımsız değişken başvuruyla geçirildi ancak tarafından çağrılan yöntem değiştirilmemiş belirtmek için parametreleri. Ekleme `in` değiştiricisi bir bağımsız değişken için bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes).
- - `ref readonly` Değiştirici yöntemi döndüğünde, bir yöntem değerine başvuru ile döndürülen ancak bu nesne için yazma izin vermez belirtmek için. Ekleme `ref readonly` değiştiricisi bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes), dönüş için bir değer atanır. Ekleme `readonly` varolan modifer `ref` dönüş deyimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). Bildirimi güncelleştirmek çağıranlar gerektirir `ref` eklemek için yerel değişkenleri `readonly` değiştiricisi.
+ - `ref readonly` Değiştirici yöntemi döndüğünde, bir yöntem değerine başvuru ile döndürülen ancak bu nesne için yazma izin vermez belirtmek için. Ekleme `ref readonly` değiştiricisi bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes), dönüş için bir değer atanır. Ekleme `readonly` değiştirici mevcut bir `ref` dönüş deyimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). Bildirimi güncelleştirmek çağıranlar gerektirir `ref` eklemek için yerel değişkenleri `readonly` değiştiricisi.
  - `readonly struct` Yapı sabittir ve olarak geçirilmelidir belirtmek için bildirimi bir `in` üye yöntemlerinin parametre. Ekleme `readonly` değiştiricisi var olan bir yapı bildirim için bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
  - `ref struct` Bildirimi, bir yapı türü yönetilen bellek doğrudan erişir ve her zaman yığını ayrılmalıdır. Ekleme `ref` değiştirici mevcut bir `struct` bildirimi bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). A `ref struct` bunu ayrıldığı yığında diğer konumlarda kullanılan veya bir sınıf üyesi olamaz.
 
@@ -48,7 +48,7 @@ Yöntem çağrıları artık bu adlandırılmış bağımsız değişkenler doğ
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Sayısal sabit değerlerde önde gelen altçizgilere
 
-Rakam ayırıcıları C# 7.0 desteği uygulamasına izin vermedi `_` değişmez değerin ilk karakteri olarak. Onaltılık ve ikili sayısal değişmez değerler artık ile başlayan bir `_`. 
+Rakam ayırıcıları C# 7.0 desteği uygulamasına izin vermedi `_` değişmez değerin ilk karakteri olarak. Onaltılık ve ikili sayısal değişmez değerler artık ile başlayan bir `_`.
 
 Örneğin:
 

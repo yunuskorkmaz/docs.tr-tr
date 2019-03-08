@@ -3,12 +3,12 @@ title: İçindeki numaralandırır C# -giriş C# Öğreticisi
 description: Bilgi C# sayısal türler, özellikler ve yöntemler keşfetmeye tarafından.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978624"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673866"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>İntegral ve kayan nokta numaralarını c ile düzenleme\#
 
@@ -20,7 +20,7 @@ Bu öğretici geliştirme için kullanabileceğiniz bir makine olmasını bekliy
 
 Adlı bir dizin oluşturmak **numaraları-quickstart**. Geçerli dizin ve çalışma olun `dotnet new console -n NumbersInCSharp -o .`.
 
-Açık **Program.cs** satırı değiştirin ve tercih ettiğiniz düzenleyiciyi `Console.Writeline("Hello World!");` aşağıdaki:
+Açık **Program.cs** satırı değiştirin ve tercih ettiğiniz düzenleyiciyi `Console.WriteLine("Hello World!");` aşağıdaki:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Bu kod yazarak çalıştırın `dotnet run` komut pencerenizde. 
+Bu kod yazarak çalıştırın `dotnet run` komut pencerenizde.
 
 Az önce tamsayılarla gerçekleştirilen temel matematik işlemlerinden birini gördünüz. `int` Türü temsil eder bir **tamsayı**, bir pozitif veya negatif tamsayı. Kullandığınız `+` sembol ekleme. Tamsayılar için kullanılan diğer matematiksel işlemler şunlardır:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Bu kod yazarak çalıştırın `dotnet run` komut pencerenizde. 
-    
+Bu kod yazarak çalıştırın `dotnet run` komut pencerenizde.
+
 Dilerseniz aynı satırda birden çok matematik işlemi gerçekleştirerek de deneyebilirsiniz. Deneyin `c = a + b - 12 * 17;` örneğin. Değişkenleri ve sabit sayıları karıştırılmasına izin.
 
 > [!TIP]
 > C# (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı, hata iletileri içerdiğinde, örnek kod ve kodda neyin düzeltilmesi gerektiğini görmek için pencerenizi yakından bakın.
-> Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.     
+> Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
 
 İlk adımı tamamladınız. Sonraki bölümde başlamadan önce geçerli kodu ayrı bir yöntem geçelim. Bu, yeni bir örnek ile çalışmaya başlamak kolaylaştırır. Yeniden adlandırma, `Main` yönteme `WorkingWithIntegers` ve yeni bir yazma `Main` metoduna çağrı yapan `WorkingWithIntegers`. İşiniz bittiğinde, kodunuzun şu şekilde görünmelidir:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Tamsayı duyarlığını ve sınırlarını İnceleme
+
 Son örnek, Tamsayı bölme sonucu kestiğini size göstermiştir.
 Alabileceğiniz **kalan** kullanarak **modül** işleci `%` karakter. Aşağıdaki kodu deneyin, `Main` yöntemi:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 C# tamsayı türü diğer bir özelliğiyle matematiksel tamsayılardan farklıdır: `int` türünün alt ve üst sınırları vardır. Bu kodu ekleyin, `Main` yöntemi bu sınırları görmek için:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Bir hesaplama, bu sınırları aşan bir değer veriyorsa, sahip olduğunuz bir 
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Yanıt çok az (negatif) tamsayı yakın olduğuna dikkat edin. Aynı olan `min + 2`. Toplama işlemi **taştı** tamsayılar için izin verilen değerler.
+
+Yanıt çok az (negatif) tamsayı yakın olduğuna dikkat edin. Aynı olan `min + 2`.
+Toplama işlemi **taştı** tamsayılar için izin verilen değerler.
 Taşma "etrafında en büyük olası tamsayı değerinden en küçük kaydırıldığı" yanıt oldukça büyük negatif bir sayı olmasıdır.
 
 Farklı sınırlar ve ne zaman kullanacağınız duyarlık içeren başka sayısal türler vardır `int` türü, gereksinimlerinizi karşılamadığında. Bir sonraki adımda bunları inceleyelim.
 
-Bir kez daha, bu bölümde ayrı bir yöntem içinde yazdığınız kodun geçelim. Adlandırın `TestLimits`. 
+Bir kez daha, bu bölümde ayrı bir yöntem içinde yazdığınız kodun geçelim. Adlandırın `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Çift tür ile çalışma
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Bu değerler bilimsel gösterimde yazdırılır. Sol tarafındaki sayı `E` katsayıdır. Sağ taraftaki sayı, 10 'un bir kuvveti üstür. 
+Bu değerler bilimsel gösterimde yazdırılır. Sol tarafındaki sayı `E` katsayıdır. Sağ taraftaki sayı, 10 'un bir kuvveti üstür.
 
 Yalnızca ondalık sayılar gibi C# double yuvarlama hataları olabilir. Bu kodu deneyin:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 `M` Numaralarda sonekidir nasıl bir sabit kullanması gerektiğini belirten `decimal` türü.
 
-Ondalık türünün kullanıldığı Matematikte, ondalık noktanın sağındaki daha fazla rakam olduğuna dikkat edin. 
+Ondalık türünün kullanıldığı Matematikte, ondalık noktanın sağındaki daha fazla rakam olduğuna dikkat edin.
 
 ***Sınama***
 
-Farklı sayısal türleri gördüğünüze göre çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Unutmayın PI sayısı ile çarpılan bir dairenin alanının kare RADIUS olduğunu. İpucu: .NET, PI sayısı için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
+Farklı sayısal türleri gördüğünüze göre çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Unutmayın PI sayısı ile çarpılan bir dairenin alanının kare RADIUS olduğunu. İpucu: .NET, PI sayısı için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz.
 
 19 ile 20 arasında bir yanıt almanız gerekir.
 Yanıtınız tarafından denetleyebilirsiniz [tamamlanan örnek koda Github'da bakmak](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
-Dilerseniz diğer formüllerden deneyin. 
+Dilerseniz diğer formüllerden deneyin.
 
 Tamamladınız "içindeki numaralandırır C#" Hızlı Başlangıç. İle devam edebilir [dallar ve döngüler](branches-and-loops-local.md) kendi geliştirme ortamında hızlı başlangıç.
 
 Aşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:
 
-[Tam sayı türleri tablosu](../../language-reference/keywords/integral-types-table.md)   
-[Kayan nokta türleri tablosu](../../language-reference/keywords/floating-point-types-table.md)   
-[Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md)   
-[Örtük sayısal dönüşümler tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tam Sayı Türleri Tablosu](../../language-reference/keywords/integral-types-table.md)
+- [Kayan Nokta Türleri Tablosu](../../language-reference/keywords/floating-point-types-table.md)
+- [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)

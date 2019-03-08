@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441778"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676570"
 ---
 # <a name="workflow-security"></a>İş akışı güvenliği
 Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birçok farklı teknoloji ile tümleşiktir. Bu teknolojiler ile etkileşim güvenlik sorunları yanlış yapıldığında, iş akışınıza neden olabilir.
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication 
 
 4.  WS-Trust ActAs kullanarak arka uç hizmeti (talep tabanlı temsilci) için bir istemci güvenlik belirteci akan
 
-Daha fazla bilgi ve WF güvenlik paketi CTP indirmek için bkz: [WF güvenlik paketi CTP](https://wf.codeplex.com/releases/view/48114)
+Daha fazla bilgi ve WF güvenlik paketi CTP indirmek için bkz: [WF güvenlik paketi CTP](https://archive.codeplex.com/?p=wf)

@@ -3,12 +3,12 @@ title: 'Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın'
 description: Bu öğretici bir çözümleyici oluşturmak için adım adım yönergeler sağlar ve kod düzeltmesi .NET derleyici SDK'sı (Roslyn API'leri) kullanarak.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201904"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677193"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın
 
@@ -199,7 +199,7 @@ Tüm kod düzeltmeleri türetilmesi <xref:Microsoft.CodeAnalysis.CodeFixes.CodeF
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-Ardından, bir kod düzeltme kaydetmek için son satırını değiştirin. Düzeltmenizi eklemesini sonuçları yeni bir belge oluşturacak `const` değiştiricisi var olan bir bildirim için:  
+Ardından, bir kod düzeltme kaydetmek için son satırını değiştirin. Düzeltmenizi eklemesini sonuçları yeni bir belge oluşturacak `const` değiştiricisi var olan bir bildirim için:
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,7 +275,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-Bu test için yeni bir veri satırı bir uyarı tetiklemek, tanılama oluşmamalıdır herhangi bir kod parçası tanımlayarak oluşturabilirsiniz. Bu aşırı yüklemesini `VerifyCSharpDiagnostic` için kaynak kod parçasını harekete hiçbir tanılama olduğunda geçirir.  
+Bu test için yeni bir veri satırı bir uyarı tetiklemek, tanılama oluşmamalıdır herhangi bir kod parçası tanımlayarak oluşturabilirsiniz. Bu aşırı yüklemesini `VerifyCSharpDiagnostic` için kaynak kod parçasını harekete hiçbir tanılama olduğunda geçirir.
 
 Ardından, değiştirin `TestMethod2` bir tanılama oluşturulur sağlar. Bu test ve kaynak kod parçasını için uygulanan bir kod düzeltmesi:
 
@@ -426,7 +426,7 @@ Neredeyse bitti. İşlemek, Çözümleyicisi için birkaç başka koşullar vard
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Ayrıca, başvuru türleri düzgün işlenmez. Bir başvuru türü için izin verilen maksimum yalnızca sabit değer `null`, bu durumda dışındaki <xref:System.String?displayPropert=nameWIthType>, dize değişmez değerleri sağlar. Diğer bir deyişle, `const string s = "abc"` geçerli, ancak `const object s = "abc"` değil. Bu kod parçacığı bu koşulu doğrular:
+Ayrıca, başvuru türleri düzgün işlenmez. Bir başvuru türü için izin verilen maksimum yalnızca sabit değer `null`, bu durumda dışındaki <xref:System.String?displayProperty=nameWIthType>, dize değişmez değerleri sağlar. Diğer bir deyişle, `const string s = "abc"` geçerli, ancak `const object s = "abc"` değil. Bu kod parçacığı bu koşulu doğrular:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ Bu değişiklikler iki test için veri satırı bildirimler güncelleştirin. A�
 
 Neyse ki, yukarıdaki hataları tüm yeni öğrendiğiniz teknikleri kullanarak çözülebilir.
 
-İlk hatayı düzeltmek için önce açın **DiagnosticAnalyzer.cs** ve burada her biri yerel bildirimin başlatıcıları sabit değerler atadığınız denetlenir foreach döngüsü bulun. Hemen _önce_ çağrı, ilk foreach döngüsü `context.SemanicModel.GetTypeInfo()` yerel bildirim türü hakkında ayrıntılı bilgi almak için:
+İlk hatayı düzeltmek için önce açın **DiagnosticAnalyzer.cs** ve burada her biri yerel bildirimin başlatıcıları sabit değerler atadığınız denetlenir foreach döngüsü bulun. Hemen _önce_ çağrı, ilk foreach döngüsü `context.SemanticModel.GetTypeInfo()` yerel bildirim türü hakkında ayrıntılı bilgi almak için:
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;

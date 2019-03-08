@@ -1,16 +1,21 @@
 ---
 title: Machine learning işlem - ML.NET bir CSV dosyasından fazla sayıda sütun ile veri yükleme
 description: Çok sütunlu veri verileri makine öğrenimi modeli oluşturma, eğitim ve puanlama ML.NET ile kullanım için bir CSV dosyasından öğrenin
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091974"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675959"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Machine learning işlem - ML.NET bir CSV dosyasından fazla sayıda sütun ile veri yükleme
+
+> [!NOTE]
+> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 `TextLoader` metin dosyalarından veri yüklemek için kullanılır. Metin dosyasında veri sütunları, türlerini ve konumlarını belirtmeniz gerekir.
 

@@ -1,40 +1,38 @@
 ---
-title: Ortak tür sistemi & ortak dil belirtimi
-description: Nasıl ortak tür sistemi (CTS) ve ortak dil belirtimi (CLS), birden fazla dili desteklemek .NET için olası hale öğrenin.
-author: blackdwarf
-ms.author: mairaw
+title: Ortak tür sistemi ve ortak dil belirtimi
+description: Nasıl ortak tür sistemi (CTS) ve ortak dil belirtimi (CLS), .NET için birden fazla dili desteklemeye mümkün hale öğrenin.
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 992f70cc7c2e55a0a2cfd08e08a3a9f16aad8c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569554"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675374"
 ---
-# <a name="common-type-system--common-language-specification"></a>Ortak tür sistemi & ortak dil belirtimi
+# <a name="common-type-system--common-language-specification"></a>Ortak tür sistemi ve ortak dil belirtimi
 
-Yeniden .NET dünyada ücretsiz olarak kullanılan bu iki terimi aslında bir .NET uygulaması birden fazla dil geliştirme nasıl sağladığını anlamak ve nasıl çalıştığını anlamanız için önemli oldukları.
+Yeniden serbestçe .NET dünyada kullanılan iki terim, aslında bir .NET uygulamasında çok dilde geliştirme nasıl sağladığını anlamak ve nasıl çalıştığını anlamak için önemlidir.
 
 ## <a name="common-type-system"></a>Ortak Tür Sistemi
 
-Baştan başlamak için bir .NET uygulaması olduğunu unutmayın _dil belirsiz_. Bu yalnızca bir programcı için IL derlenebilir herhangi bir dilde kendi kod yazabilirsiniz anlamına gelmez. Ayrıca, aynen bir .NET uygulaması kullanılması için diğer dillerde yazılmış kod ile etkileşim kurabilmesi gerektiği anlamına gelir.
+En baştan başlamak için bir .NET uygulaması olduğunu unutmayın _dilden_. Bu yalnızca bir programcı için IL derlenebilir herhangi bir dilde kodunu yazabilirsiniz gelmez. Ayrıca, kendisi üzerinde bir .NET uygulaması arzulanan diğer dillerde yazılmış kod ile etkileşemeyebilirsiniz gerektiği anlamına gelir.
 
-Saydam, bunun için var olan tüm desteklenen türlerini tanımlamak için yaygın bir yolu olmalıdır. Ortak tür sistemi (CTS) sorumlu yapılması nedir budur. Çeşitli işlemler yapmak için yapıldı:
+Şeffaf bir şekilde, bunu yapmak için var olan desteklenen tüm türlerini tanımlamak için yaygın bir yolu olacak. Bunun yapılması sorumlu ortak tür sistemi (CTS) nedir budur. Çeşitli şeyler çalışıldı:
 
 *   Diller arası yürütme için bir çerçeve oluşturun.
-*   Bir .NET uygulaması üzerinde çeşitli dillerde uygulama desteklemek için bir nesne yönelimli modeli sağlar.
-*   Türleriyle çalışmaya geldiğinde, tüm diller izlemeniz gereken kurallar kümesini tanımlar.
-*   Uygulama geliştirme kullanılan temel ilkel türler içeren bir kitaplığı belirtin (gibi `Boolean`, `Byte`, `Char` vs.)
+*   Bir .NET uygulaması üzerinde çeşitli dillerde uygulama desteklemek için nesne odaklı bir model sağlar.
+*   Türleriyle çalışmak için söz konusu olduğunda, tüm dillerin izlemesi gereken kural kümesini tanımlar.
+*   Uygulama geliştirmesinde kullanılan ilkel temel türler içeren bir kitaplık sağlar (gibi `Boolean`, `Byte`, `Char` vs.)
 
-CTS iki ana çeşit desteklenmesi gereken türünü tanımlar: başvuru ve değer türleri. Adları tanımlarını için gelin.
+CTS desteklenmesi gereken türleri iki tür tanımlar: başvuru ve değer türleri. Adları için bunların tanımlarının üzerine gelin.
 
-Başvuru türleri nesneleri nesnesinin gerçek değer için bir başvuru olarak temsil edilir; C/C++ içinde bir işaretçi başvuru burada benzer. Yalnızca nesnelerin değerlerinin olduğu bir bellek konumunuz anlamına gelir. Bu, bu tür nasıl kullanıldığı hakkında çok büyük bir etkisi yoktur. Örneğin, bir başvuru türü bir değişkene atayın ve sonra bu değişkeni bir yönteme geçirin, nesne değişiklikleri ana nesnede yansıtılır; hiçbir kopyalama yoktur.
+Başvuru türleri nesneleri, nesnenin gerçek değerine bir başvuru tarafından temsil edilir; C/C++'ta bir işaretçi başvuru burada benzer. Yalnızca bir bellek konumuna nesnelerin değerlerinin olduğu anlamına gelir. Bu, bu tür nasıl kullanıldığını üzerinde çok büyük bir etkisi yoktur. Örneğin, bir başvuru türü bir değişkene atayın ve ardından bu değişkeni bir yönteme geçirmek, nesne değişiklikleri ana nesne üzerinde yansıtılır; kopyalamaya yoktur.
 
-Değer bunun tersini de göre bunların değerleri nerede nesneleri temsil edilen türleridir. Bir değişkene bir değer türü atarsanız, nesnenin bir değeri aslında kopyalarsınız.
+Değer bunun tersini de burada nesneleri değerlerine tarafından temsil edilen türleridir. Bir değer türü bir değişkene atarsanız, aslında bir nesnenin değerini kopyalarsınız.
 
-CTS türleri, her biri kendi belirli semantiği ve kullanım birkaç kategorisi tanımlar:
+CTS, her biri kendi belirli semantikler ve kullanım türleri çeşitli kategorileri tanımlar:
 
 *   Sınıflar
 *   Yapılar
@@ -42,15 +40,15 @@ CTS türleri, her biri kendi belirli semantiği ve kullanım birkaç kategorisi 
 *   Arabirimler
 *   Temsilciler
 
-CTS ayrıca tanımlar türlerinin erişim değiştiricileri, geçerli tür üyeleri nasıl nelerdir gibi diğer tüm özellikleri devralma ve çalışır ve benzeri aşırı yüklemesi. Ne yazık ki, giderek bu hiçbirine derin bunun gibi bir giriş makalesi kapsamı dışında olsa da, başvurabilirsiniz [daha fazla kaynak](#more-resources) bu konuları kapsar daha fazla ayrıntılı içeriğe bağlantılar için sonunda bölüm.
+CTS diğer tüm özellikler gibi geçerli bir tür üyelerini nasıl nedir, erişim değiştiricileri türleri de tanımlar ve devralma çalışır ve benzeri aşırı yükleme. Ne yazık ki giderek ayrıntılı bulunanlardan herhangi biri olarak bunun gibi bir giriş makalesi kapsamı dışında olsa da, başvurabilirsiniz [daha fazla kaynak](#more-resources) bağlantıları bu konuları kapsayan daha kapsamlı bilgi edinmek için son bölümü.
 
 ## <a name="common-language-specification"></a>Ortak Dil Belirtimi
 
-Tam birlikte çalışabilirlik senaryoları etkinleştirmek için kod içinde oluşturulan tüm nesneler bazı ortak özellikler bunları kullanan dillerde Bel gerekir (olan kendi _arayanlar_). Çok sayıda farklı dillerde olduğundan, .NET bu commonalities olarak adlandırılan şeyin belirtti **ortak dil belirtimi** (CLS). CLS birçok yaygın uygulama tarafından gerekli olan özellikler kümesini tanımlar. Ayrıca, .NET üstünde desteklemek gerekenler üzerinde uygulanan herhangi bir dil için tarif tür sağlar.
+Tam birlikte çalışabilirlik senaryoları etkinleştirmek için kod içinde oluşturulan tüm nesneleri bazı ortak özellikler, bunları kullanan dillerde dayanan gerekir (olan kendi _çağıranlar_). Çok sayıda farklı dillerde olduğundan, .NET bu commonalities adlı bir şey belirtilmiş **ortak dil belirtimi** (CLS). CLS birçok yaygın uygulamalar için gerekli özellikler kümesini tanımlar. Ayrıca, bir tür üzerinde .NET desteklemek için gerekenler üzerinde gerçekleştirilen herhangi bir dilde tarif sağlar.
 
-CLS CTS alt kümesidir. CLS kural daha katı sürece bu CTS kurallarında tümünün aynı zamanda CLS uygulamak anlamına gelir. Bir bileşenin CLS yalnızca kurallarını kullanarak oluşturulursa, diğer bir deyişle, yalnızca kendi API CLS özellikleri kullanıma sunan, olarak kabul edilir **CLS uyumlu**. Örneğin, `<framework-librares>` tam olarak tüm .NET desteklenen dilleri çalışmak gereksinim duydukları olduğundan CLS uyumlu değil.
+CLS CTS bir alt kümesidir. CLS kural daha katı olmadığı sürece bu cts'deki kurallarının tümü de CLS, uygulamanız anlamına gelir. Bir bileşen içinde CLS kuralları yalnızca kullanılarak derlendi ise diğer bir deyişle, yalnızca kendi API CLS özellikleri sunan, olarak kabul edilir **CLS uyumlu**. Örneğin, `<framework-librares>` tam olarak tüm .NET üzerinde desteklenen dilleri çalışmak ihtiyaç duydukları çünkü CLS uyumludur.
 
-Belgelerde başvurabilirsiniz [daha kaynakları](#more-resources) tüm özelliklerine genel bakış CLS almak için aşağıdaki bölümü.
+Belgelerde başvurabilirsiniz [daha kaynakları](#more-resources) CLS içinde tüm özelliklerine genel bakış edinmek için aşağıdaki bölümü.
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 

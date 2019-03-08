@@ -1,19 +1,19 @@
 ---
 title: Modern uygulamaları kapsayıcılara göre yol
-description: Docker, kapsayıcılar ve mikro hizmet mimarisi BT'ye çözüm olmadığını anlama. Burada, karar vermenize yardımcı olacak bazı başvuruları bulacaksınız.
+description: Docker, kapsayıcılar ve mikro hizmet mimarisi BT'ye çözüm olmadığını anlama. Burada karar vermenize yardımcı olacak bazı başvurular bulabilirsiniz.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442431"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674438"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Modern uygulamaları kapsayıcılara göre yol
 
-Bu kitap, yeni uygulamaları geliştirmeye yönelik planlama ve/veya Docker, kapsayıcılar ve mikro hizmetler gibi yeni yaklaşımlar şirketinizdeki kullanarak etkisini değerlendirme nedeni büyük olasılıkla okuyorsanız.
+Büyük olasılıkla bu kitap yeni uygulamaların geliştirilmesini planlıyorsanız veya, Docker, kapsayıcılar ve mikro hizmetler gibi yeni yaklaşımlar şirketinizdeki kullanarak etkisini değerlendirdiğiniz yönlendirildiğiniz için görüyorsunuz.
 
 Geliştirme konusunda yeni yaklaşımlar benimsenmesini dikkatli bir proje başlatmadan önce Geliştirme ekibinizin, bütçenizi veya altyapınız üzerindeki etkisini değerlendirmek için özenli olunması gerekir.
 

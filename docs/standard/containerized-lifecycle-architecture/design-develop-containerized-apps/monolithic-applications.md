@@ -4,16 +4,16 @@ description: Tek yapılı uygulamaları kapsayıcıya alma için temel kavramlar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747268"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676843"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
-Bu senaryoda, bir tek ve tek parça bir web uygulaması veya hizmeti oluşturma ve kapsayıcı olarak dağıtma. Uygulama içinde yapısı tek parça olmayabilir; birkaç kitaplıklar, bileşenler veya hatta katmanları (uygulama katmanı, etki alanı katmanı, veri erişim katmanı, vb.) oluşturan. Harici olarak tek bir işlem, tek bir web uygulaması veya tek bir hizmet gibi tek bir kapsayıcı olduğundan.
+Bu senaryoda, tek ve tek parça bir web uygulaması veya hizmeti oluşturma ve kapsayıcı olarak dağıtma. Uygulama içinde yapısı tek parça olmayabilir; birkaç kitaplıklar, bileşenler veya hatta katmanları (uygulama katmanı, etki alanı katmanı, veri erişim katmanı, vb.) oluşturan. Harici olarak tek bir işlem, tek bir web uygulaması veya tek bir hizmet gibi tek bir kapsayıcı olduğundan.
 
 Bu model yönetmek için uygulamayı temsil etmek için tek bir kapsayıcı dağıtırsınız. Ölçeklendirme için önde gelen bir yük dengeleyici ile birkaç kopya eklemeniz yeterlidir. Basitlik, bir çoklu kapsayıcı veya sanal makine (VM) tek bir dağıtım yönetmesini gelir.
 
@@ -71,7 +71,7 @@ Ya da hızlı bir doğrulama Azure'a dağıtılan bir kapsayıcının almak iste
 
 Azure App Service'i kullanarak, kullanımı kolay olan ve başlayabilirsiniz ve harika Git sağladığından hızlıca çalışmaya tümleştirme, kodunuzu almak için Microsoft Visual Studio'da derleyin ve doğrudan Azure'a dağıtın. Ancak, geleneksel olarak (hiçbir Docker ile), diğer özellikleri, çerçeveleri veya uygulama hizmetleri, desteklenmeyen bağımlılıkları gerekirse bu bağımlılıkların App Service'te Azure ekibi güncelleştirmeleri için beklemeniz gerektiği veya gibi diğer hizmetlere geçiş Service Fabric, bulut Hizmetleri veya bile düz VM'ler, daha fazla denetime sahip olursunuz ve uygulamanız için gerekli bileşen veya framework yükleyebilirsiniz.
 
-Şimdi, Şekil 4-4'te gösterildiği gibi Visual Studio 2017'yi kullanarak, kapsayıcı desteği Azure App Service, uygulama ortamınızda istediğiniz dahil etme yeteneği sağlar. Bir kapsayıcıda çalıştığından uygulamanıza bir bağımlılık eklediyseniz, bu bağımlılıkların Dockerfile ya da Docker görüntünüzü dahil olmak üzere özelliğine sahip olursunuz.
+Şimdi, Şekil 4-4'te gösterildiği gibi Visual Studio 2017'yi kullanarak, kapsayıcı desteği Azure App Service, uygulama ortamınızda istediğiniz dahil etme yeteneği sağlar. Bir kapsayıcıda çalıştırdığınız olduğundan, uygulamanıza bir bağımlılık eklediyseniz, bu bağımlılıkların Dockerfile ya da Docker görüntünüzü dahil olmak üzere özelliğine sahip olursunuz.
 
 ![Kapsayıcı kayıt defteri Seçicisi vurgulama, bir Azure app Service'e yayımlama için Visual Studio Sihirbazı'nı görüntüleyin.](./media/image4.png)
 

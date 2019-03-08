@@ -4,16 +4,16 @@ description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836168"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679053"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
-Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıya bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan gerekir. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
+Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıya bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan olursunuz. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
 
 Şekil 4-6, bir uygulama (kapsayıcılar) birden çok mikro hizmetlerden oluşan bir küme içine dağıtım gösterilmektedir.
 
@@ -27,7 +27,7 @@ Docker komut satırı arabirimi (CLI) bir konak üzerindeki bir kapsayıcı yön
 
 Kapsayıcılara veya basit oluşturulmuş uygulamalar ve mikro Hizmetleri daha büyük kuruluş uygulamaları doğru taşıma yönetimini ötesine gitmek için düzenleme ve platformları kümeleme için etkinleştirmeniz gerekir.
 
-Yapı büyük, Kurumsal, mikro hizmet tabanlı olması durumunda bir mimari ve geliştirme açısından bakıldığında, uygulamalar, aşağıdaki platformları ve Gelişmiş senaryolar destekleyen ürünleri anlamak önemlidir:
+Yapı büyük, Kurumsal, mikro hizmet tabanlı kullanıyorsanız bir mimari ve geliştirme açısından bakıldığında, uygulamalar, aşağıdaki platformları ve Gelişmiş senaryolar destekleyen ürünleri anlamak önemlidir:
 
 - **Kümeler ve düzenleyiciler.** Uygulamalarının çoğu Docker konakları arasında Ölçeklendirmesi gerektiğinde, olduğu gibi büyük mikro hizmet tabanlı uygulamaları ile tüm bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için önemlidir. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Azure Service Fabric ve Kubernetes düzenleyicileri örnekleridir. Kubernetes, azure'da Azure Kubernetes hizmeti aracılığıyla kullanılabilir.
 
@@ -74,7 +74,7 @@ Geliştirme ortamında, [Temmuz 2018'de duyurulan Docker](https://blog.docker.co
 
 AKS'ı kullanmaya başlamak için Azure portalından veya CLI kullanarak bir AKS kümesi dağıtın. Bir Azure Container Service kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesini dağıtma](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Herhangi birini varsayılan olarak, AKS bir parçası olarak yüklenen yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır. AKS, azure'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücretlendirilirsiniz. AKS kendisi için artımlı ücretlendirme yoktur.
+Herhangi birini varsayılan olarak, AKS bir parçası olarak yüklenen yazılım için herhangi bir ücret yoktur. Tüm varsayılan seçenekleri ile açık kaynaklı yazılım uygulanır. AKS, azure'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri yanı sıra, depolama ve ağ gibi kullanılan temel altyapı kaynakları için ücret ödersiniz. AKS kendisi için artımlı ücretlendirme yoktur.
 
 Kubernetes dağıtımı hakkında bilgi için daha fazla uygulama temel `kubectl` ve orijinal `.yaml` dosyaları, üzerinde gönderisine bakın [hizmetine (Azure Kubernetes hizmeti) AKS'de ayarlama](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
@@ -149,7 +149,7 @@ Azure Service fabric'te kapsayıcı desteği hakkında güncel bilgiler için bk
 
 Service Fabric iyi bir platformun burada bir farklı mantıksal mimarisine (iş mikro hizmetler veya sınırlanmış Bağlamlar) fiziksel uygulaması tanımlayabilirsiniz. bir örnektir. Örneğin, uygulamanız [durum bilgisi olan Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) içinde [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), sonraki bölümde tanıtılır "[durum bilgisi olmayan durum bilgisi olan mikro Hizmetlerkarşı](#stateless-versus-stateful-microservices), "birden çok fiziksel Hizmetleri ile iş mikro hizmet kavramını sahip.
 
-Şekil 4-10 yanı sıra, bir Service Fabric durum bilgisi olan güvenilir hizmet uygularken mantıksal/iş mikro hizmet açısından, düşünme olarak gösterilen, genellikle iki katmanda Hizmetleri uygulamak ihtiyacınız olacak. İlk (her bölüm bir durum bilgisi olan bir hizmettir) birden çok bölüm işleme arka uç durum bilgisi olan güvenilir hizmetidir. Ön uç hizmeti veya birden çok bölüm ya da durum bilgisi olan hizmet örnekleri arasında yönlendirme ve veri toplama sorumlu ağ geçidi hizmeti saniyedir. Bu ağ geçidi hizmeti, yeniden deneme döngüleri ile arka uç hizmetine erişim ayrıca istemci-tarafı iletişimi gerçekleştirir. Özel hizmetinizi uygulamak ya da alternatif olarak kullanıma hazır Service Fabric ayrıca kullanabileceğiniz bir ağ geçidi hizmeti adlı [ters proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Şekil 4-10 yanı sıra, bir Service Fabric durum bilgisi olan güvenilir hizmet uygularken mantıksal/iş mikro hizmet açısından, düşünme olarak gösterilen, genellikle iki katmanda Hizmetleri uygulamak ihtiyacınız olacak. İlk (her bölüm bir durum bilgisi olan bir hizmettir) birden çok bölüm işleme arka uç durum bilgisi olan güvenilir hizmetidir. Ön uç hizmeti veya birden çok bölüm ya da durum bilgisi olan hizmet örnekleri arasında yönlendirme ve veri toplama sorumlu ağ geçidi hizmeti saniyedir. Bu ağ geçidi hizmeti, yeniden deneme döngüleri ile arka uç hizmetine erişim ayrıca istemci-tarafı iletişimi gerçekleştirir. Bir ağ geçidi hizmeti, özel bir hizmet ekleme ya da alternatif olarak kullanıma hazır Service Fabric ayrıca kullanabileceğiniz çağırdı [ters proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
 
 ![Service Fabric, kapsayıcılarda birkaç durum bilgisi olan reliable services desteklemek için reçete sahiptir.](./media/service-fabric-stateful-business-microservice.png)
 
@@ -187,7 +187,7 @@ Ancak hizmetler ayrıca veri mikro hizmet içinde bulunduğu anlamına gelir Ser
 
 **Şekil 4-14**. Durum bilgisiz ve durum bilgisi olan mikro hizmetler
 
-Durum bilgisi olmayan bir yaklaşım mükemmel geçerli olduğundan ve durum bilgisi olan mikro hizmetler geleneksel ve iyi bilinen desenleri için benzer bir yaklaşım olduğundan uygulamak daha kolaydır. Ancak, durum bilgisi olmayan mikro hizmetler, işlem ve veri kaynakları arasındaki gecikme süresini büyük oranda yansıtmaktadır. Bunlar ayrıca performansı ek önbellek ve Kuyruklar ile çalışılırken daha fazla hareketli parça içerir. Sonuç, çok fazla katman karmaşık mimarilerin kalabilirsiniz emin olur.
+Durum bilgisi olmayan bir yaklaşım mükemmel geçerli olduğundan ve durum bilgisi olan mikro hizmetler geleneksel ve iyi bilinen desenleri için benzer bir yaklaşım olduğundan uygulamak daha kolaydır. Ancak, durum bilgisi olmayan mikro hizmetler, işlem ve veri kaynakları arasındaki gecikme süresini büyük oranda yansıtmaktadır. Bunlar ayrıca ek önbellek ve Kuyruklar ile performansı artırmak çalışırken daha fazla hareketli parça içerir. Sonuç, çok fazla katman karmaşık mimarilerin kalabilirsiniz emin olur.
 
 Buna karşılık, [durum bilgisi olan mikro Hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) olmadığı için etki alanı mantığı ve verileri arasında herhangi bir gecikme Gelişmiş senaryolar excel. Yoğun veri işleme, geri oyun, bir hizmet olarak veritabanı sona erer ve tüm diğer düşük gecikmeli senaryolar daha hızlı erişim için yerel durumunu etkinleştirmek durum bilgisi olan hizmetler yararlanın.
 

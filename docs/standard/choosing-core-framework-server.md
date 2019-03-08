@@ -4,12 +4,12 @@ description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828520"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678806"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
@@ -52,7 +52,7 @@ Mikro hizmet mimarisi hakkında daha fazla bilgi için bkz: [.NET mikro Hizmetle
 
 Kapsayıcılar, mikro hizmet mimarisi ile birlikte sık kullanılır. Kapsayıcılar, web uygulamaları veya herhangi bir mimari deseni izleyen Hizmetleri kapsayıcılı hale getirme için de kullanılabilir. .NET framework Windows kapsayıcılarında kullanılabilir, ancak basit bir .NET Core doğasını ve modülerlik kılar kapsayıcılar için daha iyi bir seçenek. Oluşturma ve kapsayıcı dağıtma, kendi görüntüsünün boyutu .NET Framework ile .NET Core küçüktür. Platformlar arası olduğundan, sunucu uygulamaları için Linux Docker kapsayıcılar, örneğin dağıtabilirsiniz.
 
-Docker kapsayıcıları barındırılabilir Linux veya Windows kendi altyapınızı ya da bir bulut hizmeti gibi [Azure Container Service](https://azure.microsoft.com/services/container-service/). Azure Container Service, yönetme, düzenlemeyi ve kapsayıcı tabanlı uygulamaları bulutta ölçeklendirin.
+Docker kapsayıcıları barındırılabilir Linux veya Windows kendi altyapınızı ya da bir bulut hizmeti gibi [Azure Kubernetes hizmeti](https://azure.microsoft.com/services/kubernetes-service/). Azure Kubernetes hizmeti yönetme, düzenlemeyi ve kapsayıcı tabanlı uygulamaları bulutta ölçeklendirin.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Yüksek performanslı ve ölçeklenebilir sistemleri için bir gereksinimi
 
@@ -77,7 +77,7 @@ Farklı sürümleri .NET ilgili bağımlılıkları olan uygulamaları yüklemek
 Hızlı bir şekilde kitaplıkları .NET Standard benimsemektedir. .NET standard paylaşım kod arasında tüm .NET uygulamalarının .NET Core dahil olmak üzere sağlar. .NET Standard 2.0 ile bunu daha da kolaydır:
 
 - Bir API yüzeyi, çok daha büyük hale geldi. 
-- .NET Framework uyumluluk modu kullanıma sunuldu. Bu uyumluluk modu, .NET Framework kitaplıkları başvurmak .NET standart/.NET Core projeleri sağlar. Uyumluluk modu hakkında daha fazla bilgi için bkz: [.NET Standard 2.0 ile tanışın](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
+- .NET Framework uyumluluk modu kullanıma sunuldu. Bu uyumluluk modu, .NET Framework kitaplıkları başvurmak .NET standart/.NET Core projeleri sağlar. Uyumluluk modu hakkında daha fazla bilgi için bkz: [.NET Standard 2.0 ile tanışın](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Burada kitaplıkları veya NuGet paketlerini de .NET standart/.NET Core kullanılamayan teknolojilerini kullanan durumlarda yalnızca .NET Framework kullanmanız gerekir.
 

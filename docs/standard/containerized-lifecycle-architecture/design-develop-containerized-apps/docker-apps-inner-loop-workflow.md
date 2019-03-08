@@ -4,16 +4,16 @@ description: Docker uygulamaları geliştirmek için "İç döngü" iş akışı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835687"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676674"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
-Tüm DevOps kapsayan dış döngü iş akışı tetiklemeden önce döngüsü, tüm uygulama kodlama, kullanıcılarınızın tercih edilen diller veya platformlar ve yerel olarak test her geliştiricinin makine üzerinde (Şekil 4-21) başlar. Ancak her durumda, önemli bir nokta ortak hangi dil, çerçeve veya platformlar, seçtiğiniz ne olursa olsun gerekir. Bu belirli bir iş akışında, her zaman geliştirdiğiniz ve Docker kapsayıcıları, ancak yerel olarak test etme.
+Tüm DevOps kapsayan dış döngü iş akışı tetiklemeden önce döngüsü, tüm uygulama kodlama, kullanıcılarınızın tercih edilen diller veya platformlar ve yerel olarak test her geliştiricinin makine üzerinde (Şekil 4-21) başlar. Ancak her durumda, önemli bir nokta ortak hangi dil, çerçeve veya platformlar, seçtiğiniz ne olursa olsun sahip olacaksınız. Bu belirli bir iş akışında, her zaman geliştirirken ve Docker kapsayıcıları, ancak yerel olarak test etme.
 
 ![Adım 1 - kod/Çalıştır/Hata Ayıkla](./media/image18.png)
 
@@ -43,7 +43,7 @@ Uygulamaları, kendi Hizmetleri artı ek kitaplıklar (bağımlılıklar) oluşu
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1. Adım: Visual Studio Code'da kodlamaya başlayın ve ilk uygulama/hizmet temel oluşturma
 
-Uygulamanızı geliştirdiğiniz yolu Docker yaptığınız gibi benzer. Geliştirmeye devam ederken, dağıtan ve uygulamanızı veya yerel ortamınızda (örneğin, bir Linux VM veya Windows) yerleştirilen Docker kapsayıcıları içinde çalışan hizmetleri test etme, farktır.
+Uygulamanızı geliştirdiğiniz yolu Docker yaptığınız gibi benzer. Geliştirmeye devam ederken, dağıtma ve uygulama veya yerel ortamınızda (örneğin, bir Linux VM veya Windows) yerleştirilen Docker kapsayıcıları içinde çalışan hizmetleri test etme, farktır.
 
 **Yerel ortamınızda ayarlama**
 
@@ -97,7 +97,7 @@ Docker uzantısını yüklemek için Ctrl + Shift + P tuşlarına basın yazın 
 
 > [!TIP]
 >
-> Docker uzantısını kullanırken yol göstermesi için kullanabileceğiniz `Dockerfile` ve `docker-compose.yml` Docker kapsayıcıları için ilgili dosyaları. Sonuç olarak, bu tür dosyaları bu aracı olmadan büyük olasılıkla yazacak, ancak Docker uzantısını kullanmaktır, öğrenme eğrisi hızlandıracaktır iyi bir başlangıç noktası.
+> Docker uzantısını kullanırken yol göstermesi için kullanabileceğiniz `Dockerfile` ve `docker-compose.yml` Docker kapsayıcıları için ilgili dosyaları. Sonuç olarak, bu tür dosyaları bu aracı olmadan büyük olasılıkla yazacaksınız, ancak Docker uzantısını kullanmaktır, öğrenme eğrisi hızlandıracaktır iyi bir başlangıç noktası.
 
 Şekil 4-24'te bir docker nasıl görebilirsiniz-compose dosyası, VS Code için Docker uzantısını kullanarak eklenir.
 
@@ -105,7 +105,7 @@ Docker uzantısını yüklemek için Ctrl + Shift + P tuşlarına basın yazın 
 
 **Şekil 4-24**. Docker dosyaları kullanılarak eklenen **çalışma komut Docker ekleme dosyaları**
 
-Bir DockerFile eklediğinizde, kullanıyor hangi temel Docker görüntüsüne belirtin (kullanma gibi `FROM microsoft/aspnetcore`). Özel görüntünüzü herhangi bir resmi deponun aldığınız bir temel görüntünün üstüne genellikle oluşturacağınız [Docker Hub kayıt defterinde](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/r/microsoft/dotnet/) veya [Node.jsiçin](https://hub.docker.com/_/node/)).
+Bir DockerFile eklediğinizde, kullanıyor hangi temel Docker görüntüsüne belirtin (kullanma gibi `FROM microsoft/aspnetcore`). Özel görüntünüzü herhangi bir resmi deponun aldığınız bir temel görüntünün üstüne genellikle oluşturacaksınız [Docker Hub kayıt defterinde](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/r/microsoft/dotnet/) veya [Node.jsiçin](https://hub.docker.com/_/node/)).
 
 ***Var olan resmi bir Docker görüntüsü kullanma***
 
@@ -149,7 +149,7 @@ Bir tek bir görüntü adı bir depoda bir Linux görüntüsü ve bir Windows g�
 
 ***Temel görüntünüzü sıfırdan oluşturma***
 
-Bu konuda açıklandığı gibi sıfırdan kendi Docker temel görüntüsünde oluşturabilirsiniz [makale](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Bu senaryo sizin için en iyi Docker ile yeni başlıyorsanız, ancak kendi temel görüntü belirli bitlerini ayarlamak istiyorsanız, bunu yapabilirsiniz, büyük olasılıkla değil.
+Bu konuda açıklandığı gibi sıfırdan kendi Docker temel görüntüsünde oluşturabilirsiniz [makale](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Bu senaryo sizin için en iyi Docker ile yeni başlıyor ister, ancak kendi temel görüntü belirli bitlerini ayarlamak istiyorsanız, bunu yapabilirsiniz, büyük olasılıkla değil.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3. Adım: Hizmetinizi katıştırarak, özel Docker görüntüleri oluşturma
 

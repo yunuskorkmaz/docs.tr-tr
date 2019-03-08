@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746422"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679287"
 ---
 # <a name="what-about-cloud-native-applications"></a>Bulutta çalışan uygulamalar hakkında neler diyeceksiniz?
 
@@ -21,13 +21,13 @@ Ancak [bulutta yerel](https://azure.microsoft.com/overview/cloudnative/) uygulam
 
 > **Şekil 4-3.** Bulutta çalışan uygulamalar konumlandırma
 
-Bulutta yerel modernizasyonu olgunluk seviyesi, genellikle yeni geliştirme yatırımlarından gerektirir. Genellikle bulut yerel düzeye taşıma önemli ölçüde dağıtılabilir otonom alt (mikro) oluşturarak büyük uygulamalar ölçek ve ölçeği artırmak mümkün olduğunca uygulamaları modernize etme işletme ihtiyaçlarına göre bağımsız olarak yönetilir uzun dönem ve artışı evrimi çevikliği sağlayan bu otonom uygulamanın bölümlerinin maliyetlerini düşürürken çalışırken uygulamanın diğer bölgelerden avantajları önemli rekabet. 
+Bulutta yerel modernizasyonu olgunluk seviyesi, genellikle yeni geliştirme yatırımlarından gerektirir. Genellikle bulut yerel düzeye taşıma önemli ölçüde dağıtılabilir otonom alt (mikro) oluşturarak büyük uygulamalar ölçek ve ölçeği artırmak mümkün olduğunca uygulamaları modernize etme işletme ihtiyaçlarına göre bağımsız olarak yönetilir uzun dönem ve artışı evrimi çevikliği sağlayan bu otonom uygulamanın bölümlerinin maliyetlerini düşürürken çalışırken uygulamanın diğer bölgelerden avantajları önemli rekabet.
 
 Bulutta çalışan uygulamalar, ana yapı taşına çeviklikle evrim geçiren ve şirket içi veya Bulut için Dağıtılmış bir tek parçalı mimari sağlamak zor olurdu limitleri ölçek, mikro hizmetler mimari yaklaşımları dayanır ortam.
 
-Şekil 4-4, yerel bulut modelinin temel özellikleri gösterilmektedir.  
+Şekil 4-4, yerel bulut modelinin temel özellikleri gösterilmektedir.
 
-> ![Buluta özgü özellikleri mikro hizmetler, kapsayıcılar, bulut dayanıklı ve düzenleyicileri serverles sahiptir.](./media/image4.png)
+> ![Buluta özgü özellikleri, mikro hizmetler, kapsayıcılar, bulut esnek, Düzenleyicileri sahiptir ve sunucusuz](./media/image4.png)
 >
 > **Şekil 4-4.** Buluta özgü özellikleri
 
@@ -47,7 +47,7 @@ Bulutta yerel, büyük ve görev açısından kritik uygulamalar için daha geli
 
 Bir mikro hizmet tabanlı mimariye yeniden oluşturma, tam bir uygulama bulutta yerel modeline geçirme, dikkate alınması gereken en önemli faktör olan. Bu açıkça büyük yeniden düzenleme işlemi nedeniyle ilgili geliştirme önemli bir yatırım gerektirir. Bu seçenek, genellikle yeni düzeyde ölçeklenebilirlik ve uzun vadeli çevikliği gereken görev açısından kritik uygulamalar için seçilir. Ancak, doğru buluta özgü birkaç yeni senaryolar için mikro hizmetler ekleyerek taşımadan ve sonunda uygulamayı mikro Hizmetleri tam olarak yeniden düzenleme. Bazı senaryolar için en iyi seçenektir artımlı bir yaklaşımdır.
 
-## <a name="what-about-microservices"></a>Mikro hizmetler hakkında neler diyeceksiniz? 
+## <a name="what-about-microservices"></a>Mikro hizmetler hakkında neler diyeceksiniz?
 
 Kuruluşunuz için bulutta çalışan uygulamalar değerlendirirken, mikro hizmetler ve nasıl çalıştığını anlamak önemlidir.
 
@@ -67,6 +67,6 @@ Yinelenen bu kavramı hakkında edilerek at the risk of bile son Not olarak mikr
 
 Herhangi bir durumda, bu kılavuz temel olarak tek parça veya N katmanlı mimariler genellikle olan mevcut uygulamaları modernleştirme hedeflediği olduğundan mevcut bu kılavuzda kalan tüm "mikro hizmet tabanlı uygulama" çoğunu odaklanır.
 
->[!div class="step-by-step"]
->[Önceki](microsoft-technologies-in-cloud-optimized-applications.md)
->[İleri](deploy-existing-net-apps-as-windows-containers.md)
+> [!div class="step-by-step"]
+> [Önceki](microsoft-technologies-in-cloud-optimized-applications.md)
+> [İleri](deploy-existing-net-apps-as-windows-containers.md)

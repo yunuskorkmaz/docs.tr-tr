@@ -4,12 +4,12 @@ description: Kapsayıcılı uygulamaları durumunu kaydetmek için kullanılabil
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746004"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678091"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarında veri
 

@@ -1,15 +1,15 @@
 ---
 title: Zaman uyumsuz ileti tabanlı iletişim
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler birbirlerinden beeing eşzamanlı sırasında da sonuçta bağımsız tutmak için en iyi yolu, çünkü zaman uyumsuz ileti tabanlı iletişim mikro hizmetler mimarisinde önemli bir kavramdır.
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler birbirlerinden da sonuçta eşitlenmekte olan sırasında bağımsız tutmak için en iyi yolu, çünkü zaman uyumsuz ileti tabanlı iletişim mikro hizmetler mimarisinde önemli bir kavramdır.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5010b521dc80a61718de1c797ae451bb1f5ad93
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969368"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674672"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -106,6 +106,6 @@ Zaman uyumsuz iletişim kullanırken dikkate alınması gereken ek konuları ile
 - **Jimmy Bogard. Doğru dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** \
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
->[!div class="step-by-step"]
->[Önceki](communication-in-microservice-architecture.md)
->[İleri](maintain-microservice-apis.md)
+> [!div class="step-by-step"]
+> [Önceki](communication-in-microservice-architecture.md)
+> [İleri](maintain-microservice-apis.md)

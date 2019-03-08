@@ -4,12 +4,12 @@ description: Kapsayıcılar, DevOps kolaylaştırmak için önemli bir rol anlay
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583738"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679105"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps işbirliğinin temeli olarak kapsayıcılar
 
@@ -53,7 +53,7 @@ Bu zorluklar, DevOps araçları, DevOps etkinliklerinizde yeni işlemleri tanım
 
 - Microsoft azure'da kapsayıcılar için açık kaynak araçları/platformları nasıl kullanabileceğimizi?
 
-Tüm bu soruları yanıtlayabilir, daha iyi Docker kapsayıcıları, uygulamalarınızı (mevcut veya yeni uygulamalar) taşımak hazır olacaksınız. 
+Tüm bu soruları yanıtlayabilir, daha iyi Docker kapsayıcıları, uygulamalarınızı (mevcut veya yeni uygulamalar) taşımak hazırlanmış olacaksınız. 
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Bir genel uçtan uca Docker uygulaması yaşam döngüsü iş giriş
 
@@ -63,11 +63,11 @@ Tüm bu soruları yanıtlayabilir, daha iyi Docker kapsayıcıları, uygulamalar
 
 **Şekil 2-2.** Docker kapsayıcı uygulama yaşam döngüsü için üst düzey iş akışı
 
-Her şeyi Geliştirici iç döngü akışında kod yazmaya başlar ile başlar. Geliştiriciler kodu depoya (örneğin, bir kaynak denetim sistemi Git gibi) kod göndermeden önce gerçekleşen her şeyi burada tanımlarsınız iç döngü aşamadır. Taahhüt edilen olduktan sonra depo sürekli tümleştirme (CI) ve iş akışının geri kalanı tetikler.
+Her şeyi Geliştirici iç döngü akışında kod yazmaya başlar ile başlar. Geliştiriciler kodu depoya (örneğin, bir kaynak denetim sistemi Git gibi) kod göndermeden önce gerçekleşen her şeyi burada tanımlarsınız iç döngü aşamadır. Bundan sonra taahhüt, depo Tetikleyiciler sürekli tümleştirme (CI) ve iş akışının geri kalanı.
 
 İç döngü temelde "code"Çalıştır""test"ve"debug"yanı sıra doğrudan uygulamayı yerel olarak çalıştırmadan önce gereken ek adımlar" gibi tipik adımları içerir. Bu çalıştırmak ve uygulamayı bir Docker kapsayıcısı olarak test etmek için geliştirici işlemidir. İzleyen bölümlerde iç döngü iş akışı açıklanacaktır.
 
-Bir adım sonuna kadar son iş akışı sırasında bakmak için geri alma, DevOps iş akışı bir teknoloji veya bir araç kümesi büyük: kültürel evrimi gerektiren bir yaklaşımdır. Bu kişilerin, işlemlerin ve uygun araçları, uygulama yaşam döngüsü daha hızlı ve daha öngörülebilir hale getirmek için olur. Kapsayıcıya alınmış bir iş akışı genellikle benimseyen kuruluşlar, kuruluşlarının, insanları ve kapsayıcılı iş akışıyla eşleşecek işlemleri temsil etmek için yeniden yapılandırabilirsiniz.
+Bir adım sonuna kadar son iş akışı sırasında bakmak için geri alma, DevOps iş akışı bir teknoloji veya bir araç kümesi büyük: kültürel evrimi gerektiren bir yaklaşımdır. Kişiler, işlemler ve uygun araçları, uygulama yaşam döngüsü daha hızlı ve daha öngörülebilir hale getirmek için. Kapsayıcıya alınmış bir iş akışı genellikle benimseyen kuruluşlar, kuruluşlarının, insanları ve kapsayıcılı iş akışıyla eşleşecek işlemleri temsil etmek için yeniden yapılandırabilirsiniz.
 
 DevOps uygulayan daha hızlı birlikte için rekabet baskılarına sonuçları geliştirilmiş izlenebilirlik ve yinelenebilir iş akışları Otomasyon, hata yapmaya açık ve el ile gerçekleştirilen işlemleri değiştirerek yanıt ekipleri yardımcı olabilir. Kuruluşlar da ortamları daha verimli bir şekilde yönetebilir ve şirket içi ve bulut kaynakları ile maliyet tasarrufu yanı sıra sıkıca tümleşik Araçlar farkında olun.
 

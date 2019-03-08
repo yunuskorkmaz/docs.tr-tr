@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655718"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677337"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction Numaralandırması
 Ana bilgisayar tarafından açıklanan işlemleri için ayarlayabileceğiniz İlkesi eylemleri açıklar [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ve hataları tarafından açıklanan [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|Ortak dil çalışma zamanı (CLR) iş parçacığı düzgün bir şekilde iptal belirtir. Normal iptal tüm çalıştırma girişimlerini içerir `finally` engeller, tüm `catch` blokları, iş parçacığı iptalleri ve sonlandırıcılar ilgili.|  
 |`eDisableRuntime`|CLR devre dışı durumuna girdiğini belirtir. Yönetilen kod etkilenen işlemde başka yürütülebilecek ve iş parçacıkları CLR girmesini engellenir.|  
 |`eExitProcess`|CLR işleminin sonlandırıcılar çalıştırma ve temizleme ve günlüğe kaydetme işlemlerini gerçekleştirme gibi normal bir çıkış denemesi belirtir.|  
-|`eFastExitProcess`|CLR işlemi hemen sonlandırıcılar çalıştırma veya temizleme ve günlüğe kaydetme işlemlerini gerçekleştiren çıkış belirtir. Nowever, hata ayıklayıcı için bildirim gönderilir.|  
+|`eFastExitProcess`|CLR işlemi hemen sonlandırıcılar çalıştırma veya temizleme ve günlüğe kaydetme işlemlerini gerçekleştiren çıkış belirtir. Ancak, bildirim hata ayıklayıcıya gönderilir.|  
 |`eNoAction`|Hiçbir işlem yapılmadı olduğunu belirtir.|  
 |`eRudeAbortThread`|CLR rude iş parçacığı iptal gerçekleştirileceğini belirtir. Yalnızca `catch` ve `finally` simgesiyle işaretli blok <xref:System.EnterpriseServices.MustRunInClientContextAttribute> yürütülür.|  
 |`eRudeExitProcess`|Sonlandırıcılar çalıştıran veya işlem günlüğü CLR işleminden çıkış olduğunu belirtir.|  

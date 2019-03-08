@@ -4,24 +4,24 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 297461f1403ab2d6ca6fd63a05d5ded7f210483e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128105"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674412"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances'a (ACI) Windows kapsayıcıları dağıtma zamanı
 
-Ana değer önerisi hemen kapsayıcılar için uygulamayı dağıtmak ve bu ortamı sürdürmeniz gerekmez olan Azure Container Instances, yükseltmek/yama uygulamak underlaying işletim sistemi ya da tüm saydam olan VM'ler ihtiyacınız yoksa ve yalnızca dağıtma kullanıma hazır bir ortam kapsayıcılarına.
+Ana değer önerisi hemen kapsayıcılar için uygulamayı dağıtmak ve bu ortamı sürdürmeniz gerekmez olan Azure Container Instances, yükseltmek/yama uygulamak temel işletim sistemi veya tüm saydam olan VM'ler ihtiyacınız yoksa ve yalnızca dağıtma kullanıma hazır bir ortam kapsayıcılarına.
 
 ACI kullanmak istediğiniz zaman senaryoları ve nedeni, Azure Vm'leri kapsayıcılar ile aslında kullandığınızda yönelik temel senaryolar için benzer, Azure Container Instances kullanılarak için ana senaryolar şunlardır:
 
--   **Geliştirme/Test senaryoları**
--   **Görev Otomasyonu**
--   **CI/CD aracıları**
--   **Küçük/ölçek toplu işleme**
--   **Basit web uygulamaları**
+- **Geliştirme/Test senaryoları**
+- **Görev Otomasyonu**
+- **CI/CD aracıları**
+- **Küçük/ölçek toplu işleme**
+- **Basit web uygulamaları**
 
 Basit web apps senaryosu için ACI adil bir senaryodur ancak ACI kapsayıcı görüntüsü başına tek bir kapsayıcı örneği yalnızca olabileceği için yüksek oranda kullanılabilir olmaz ve yalnızca ölçeklenebilirlik sınırlı olduğunu dikkate alın.
 
@@ -29,13 +29,13 @@ Ancak, yalnızca tek bir container Instances sağladığından ACI altyapı bile
 
 Azure Container Instances'a (ACI) başlıca avantajları şunlardır:
 
--   Kapsayıcıları, sunucu yönetmeye gerek kalmadan çalıştırın
--   İsteğe bağlı kapsayıcılarla çevikliği artırın
--   Bulutta hiç olmadığı kadar kolay ve hızlı kapsayıcılar dağıtma — tek bir komutla. 
--   Hiper yönetici yalıtımı ile uygulamaları güvenli hale getirin
+- Kapsayıcıları, sunucu yönetmeye gerek kalmadan çalıştırın
+- İsteğe bağlı kapsayıcılarla çevikliği artırın
+- Bulutta hiç olmadığı kadar kolay ve hızlı kapsayıcılar dağıtma — tek bir komutla.
+- Hiper yönetici yalıtımı ile uygulamaları güvenli hale getirin
 
 Kısacası, ACI ile uygulamaları hızlı sanal makineler yönetmeden veya yeni araçlar öğrenmek zorunda kalmadan geliştirebilirsiniz. Yalnızca uygulamanızda, bir kapsayıcı içinde bulutta olduğu.
 
->[!div class="step-by-step"]
->[Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
->[İleri](when-to-deploy-windows-containers-to-service-fabric.md)
+> [!div class="step-by-step"]
+> [Önceki](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [İleri](when-to-deploy-windows-containers-to-service-fabric.md)

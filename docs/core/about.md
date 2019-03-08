@@ -3,12 +3,12 @@ title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058561"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675972"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -34,7 +34,7 @@ C#, Visual Basic ve F# diller için .NET Core uygulamaları ve kitaplıkları ya
 - Koleksiyonları gibi <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Gibi yardımcı programı türleri <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, ve <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Veri türleri, aşağıdaki gibi <xref:System.Data.DataSet?displayProperty=nameWithType>, ve [olan DB](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Gibi yüksek performanslı türleri <xref:System.Numerics.Vector?displayProperty=nameWithType> ve [işlem hatları](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
+- Gibi yüksek performanslı türleri <xref:System.Numerics.Vector?displayProperty=nameWithType> ve [işlem hatları](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 .NET core uygulayarak .NET Framework ve Mono API'leri ile uyumluluk sağlar [.NET Standard](../standard/net-standard.md) belirtimi.
 
@@ -95,7 +95,7 @@ Belki de boyutu ve şekli .NET Core için var olan .NET uygulamalarını karşı
 
 .NET Core ve .NET Framework arasındaki temel farklar:
 
-- **Uygulama modelleri** --.NET Core, tüm .NET Framework uygulaması-modelleri desteklemez. Özellikle, ASP.NET Web Forms ve ASP.NET MVC desteklemez, ancak ASP.NET Core MVC destekler. Bunu Duyuruldu, [.NET Core 3, WPF ve Windows Forms destekleyeceği](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Uygulama modelleri** --.NET Core, tüm .NET Framework uygulaması-modelleri desteklemez. Özellikle, ASP.NET Web Forms ve ASP.NET MVC desteklemez, ancak ASP.NET Core MVC destekler. Bunu Duyuruldu, [.NET Core 3, WPF ve Windows Forms destekleyeceği](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/).
 - **API'leri** --.NET Core içeren farklı bir hesaba katarak ile büyük bir alt kümesini .NET Framework temel sınıf kitaplığı (derleme adları farklı; üyeler türleri üzerinde kullanıma sunulan farklı anahtar durumda). Bu farklılıklar, bazı durumlarda .NET Core için bağlantı noktası kaynak değişiklikler gerektirir (bkz [dotnet/microsoft-apiport](https://github.com/microsoft/dotnet-apiport)). .NET core uygulayan [.NET Standard](../standard/net-standard.md) API belirtimi.
 - **Alt sistemler** --.NET Core, .NET Framework'teki amacı, bir basit uygulama ve programlama modeli ile bir alt kümesini uygular. Yansıma desteklense de, kod erişim güvenliği (CAS), desteklenmiyor.
 - **Platformları** --.NET Framework, Windows ve Windows Server .NET Core macOS ve Linux desteklese de destekler.

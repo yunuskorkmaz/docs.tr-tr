@@ -2,12 +2,12 @@
 title: Ayarlama işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 8a9cf898faeccdf513daf1ae384e811cd559e72a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692187"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675517"
 ---
 # <a name="set-operations-c"></a>Ayarlama işlemleri (C#)
 LINQ ayarlama işlemleri varlığı veya yokluğu, eşdeğer öğelerin aynı veya farklı koleksiyonlar (veya kümeleri) temel alan bir sonuç kümesi oluşturan sorgu işlemleri bakın.  
@@ -33,7 +33,7 @@ LINQ ayarlama işlemleri varlığı veya yokluğu, eşdeğer öğelerin aynı ve
 ### <a name="except"></a>Dışlama  
  Aşağıdaki çizimde gösterilmektedir davranışını <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Döndürülen dizinin ikinci giriş dizisi içinde olmayan yalnızca öğeleri ilk giriş dizisi içerir.  
   
- ![Eylemi gösteren grafik dışında&#40;&#41;. ](../../../../csharp/programming-guide/concepts/linq/media/except.png "Dışında")  
+ ![Eylemi gösteren grafik dışında&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Davranışını gösteren dışında.")  
   
 ### <a name="intersect"></a>Kesiştir  
  Aşağıdaki çizimde gösterilmektedir davranışını <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Döndürülen dizi hem giriş dizilerini için ortak olan öğeleri içerir.  

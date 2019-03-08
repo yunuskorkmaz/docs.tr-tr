@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710266"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679339"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
@@ -100,7 +100,7 @@ Aşağıdaki örnek deconstructs bir `Person` dört dizelere (ilk ve son adları
 
 Bir sınıf, yapı veya arabirim yaramadı yazarsanız, yine de bu tür nesneleri bir veya daha fazla uygulayarak Ayrıştır `Deconstruct` [genişletme yöntemleri](programming-guide/classes-and-structs/extension-methods.md) içinde ilginizi değer döndürmek için.
 
-Aşağıdaki örnek iki tanımlar `Deconstruct` için genişletme yöntemleri <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> sınıfı. İlk özelliğinin türünü statik olup dahil olmak üzere özellikleri belirtin veya örnek değerleri, salt okunur olup ve olup dizine kümesini döndürür. İkinci özelliğin erişilebilirlik gösterir. Çünkü erişilebilirliği get ve set erişimcileri gösterebileceğini, Boole değerleri göstermek özelliği ayrı olup get ve set erişimcileri ve bunların aynı erişilebilirliği sahip olup olmadığını, varsa. Yalnızca bir erişimci veya aynı erişilebilirlik, hem get hem de ayarlama erişimcisine sahip `access` değişkeni özelliğinin erişilebilirliğini bir bütün olarak gösterir. Aksi takdirde, Erişilebilirlik get ve set erişimcileri accessaccessibility tarafından belirtilen tarafından belirtilen `getAccess` ve `setAccess` değişkenleri.
+Aşağıdaki örnek iki tanımlar `Deconstruct` için genişletme yöntemleri <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> sınıfı. İlk özelliğinin türünü statik olup dahil olmak üzere özellikleri belirtin veya örnek değerleri, salt okunur olup ve olup dizine kümesini döndürür. İkinci özelliğin erişilebilirlik gösterir. Çünkü erişilebilirliği get ve set erişimcileri gösterebileceğini, Boole değerleri göstermek özelliği ayrı olup get ve set erişimcileri ve bunların aynı erişilebilirliği sahip olup olmadığını, varsa. Yalnızca bir erişimci veya aynı erişilebilirlik, hem get hem de ayarlama erişimcisine sahip `access` değişkeni özelliğinin erişilebilirliğini bir bütün olarak gösterir. Aksi takdirde, Erişilebilirlik get ve set erişimcileri gösterilen `getAccess` ve `setAccess` değişkenleri.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 

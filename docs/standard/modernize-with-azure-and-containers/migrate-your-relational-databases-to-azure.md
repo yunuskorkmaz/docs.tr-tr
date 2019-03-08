@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153767"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677558"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı azure'a geçirin
 
@@ -49,7 +49,7 @@ Azure SQL veritabanı yönetilen örneği, aşağıdaki özelliklere sahiptir:
 
   - Yerel yedekleme ve geri yükleme ve günlük aktarma
 
-Mevcut uygulama veritabanlarını Azure SQL veritabanı'na geçirirken bu özellikler sayesinde, SQL Server için yaklaşık %100 Paas avantajlarını yönetilen örnek modeli sunar. Yönetilen örnek, burada örnek düzeyi özelliklerini uygulama tasarımınızı değiştirmeden kullanmaya devam bir SQL Server ortamıdır.
+Mevcut uygulama veritabanlarını Azure SQL veritabanı'na geçirirken bu özellikler sayesinde, SQL Server için yaklaşık %100 PaaS avantajlarını yönetilen örnek modeli sunar. Yönetilen örnek, burada örnek düzeyi özelliklerini uygulama tasarımınızı değiştirmeden kullanmaya devam bir SQL Server ortamıdır.
 
 Yönetilen örnek SQL Server kullanıyorsanız ve bulutta kullanarak ağ güvenliğini esneklik gerektiren kuruluşlar için en uygun olabilir. Bu, SQL veritabanları için özel bir sanal ağ gibidir.
 
@@ -126,6 +126,6 @@ Azure veritabanı geçiş hizmetini kullanarak veritabanlarını geçirme konusu
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Önceki](lift-and-shift-existing-apps-azure-iaas.md)
->[İleri](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Önceki](lift-and-shift-existing-apps-azure-iaas.md)
+> [İleri](modernize-existing-apps-to-cloud-optimized/index.md)

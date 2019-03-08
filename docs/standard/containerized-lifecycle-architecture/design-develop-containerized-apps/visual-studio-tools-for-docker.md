@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835609"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680366"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows üzerinde Visual Studio 2017'de Docker araçları kullanın
 
@@ -85,9 +85,9 @@ Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımc�
 
 > [! Bilgi] Hizmetleri uygulaması ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
 >
->Yerel bir Docker kapsayıcısı uygulamalarında hata ayıklama: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>Yerel bir Docker kapsayıcısı uygulamalarında hata ayıklama: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->ASP.NET kapsayıcısını Visual Studio kullanarak bir kapsayıcı kayıt defterine dağıtın: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>ASP.NET kapsayıcısını Visual Studio kullanarak bir kapsayıcı kayıt defterine dağıtın: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[Önceki](docker-apps-inner-loop-workflow.md)

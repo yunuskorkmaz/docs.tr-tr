@@ -1,17 +1,15 @@
 ---
 title: .NET Portability Analyzer - .NET
 description: '.NET Core, .NET standart, UWP ve Xamarin de dahil olmak üzere çeşitli .NET uygulamaları arasında nasıl taşınabilir kodunuz: değerlendirilecek .NET Portability Analyzer aracını kullanmayı öğrenin.'
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17b05b9434d406acec03d84d17901f8339bcb6bc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205763"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677649"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,11 +17,11 @@ ms.locfileid: "44205763"
 
 ## <a name="new-targets"></a>Yeni hedefleri
 
-* [.NET core](../../core/index.md): modüler bir tasarım olan, yan yana artırdığını ve platformlar arası senaryolar hedefler. Yan yana diğer uygulamaları bozmadan yeni .NET Core sürümleri benimsemenizi sağlar.
+* [.NET core](../../core/index.md): Modüler bir tasarım olan, yan yana artırdığını ve platformlar arası senaryolar hedefler. Yan yana diğer uygulamaları bozmadan yeni .NET Core sürümleri benimsemenizi sağlar.
 * [ASP.NET Core](/aspnet/core):, bir modern web-böylece geliştiriciler avantajların vererek, .NET Core üzerine yapılandırılan altyapısıdır.
-* [Evrensel Windows platformu](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): .NET Native'nın statik derlemesi kullanarak x64 ve ARM makineleri üzerinde çalışan Windows Store uygulamalarınızın performansını artırın. 
-* .NET core + uzantılar: .NET ekosisteminin WCF ve ASP.NET Core, FSharp ve Azure gibi diğer API'lerin yanı sıra .NET Core API'ları içerir.
-* .NET standard + uzantılar: WCF ve ASP.NET Core, FSharp ve Azure gibi diğer .NET ekosisteminin yanı sıra .NET standart API'leri içerir.
+* [Evrensel Windows platformu](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): .NET Native'nın statik derlemesi kullanarak x64 ve ARM makineleri üzerinde çalışan Windows Store uygulamalarınızın performansını geliştirin. 
+* .NET core + uzantılar: WCF ve ASP.NET Core, FSharp ve Azure gibi .NET ekosistemindeki diğer API'lerin yanı sıra .NET Core API'ları içerir.
+* .NET standard + uzantılar: WCF ve ASP.NET Core, FSharp ve Azure gibi diğer .NET ekosisteminin yanı sıra .NET standart API'ler de dahildir.
 
 ## <a name="how-to-use-portability-analyzer"></a>Taşınabilirlik Çözümleyicisi'ni kullanma
 

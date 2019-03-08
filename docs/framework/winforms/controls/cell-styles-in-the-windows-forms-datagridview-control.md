@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575167"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674685"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Hücre Stilleri
 İçindeki her bir hücresinde <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, arka plan rengi, ön plan rengini ve yazı tipi gibi kendi stil sahip olabilir. Genellikle, ancak birden çok hücre belirli stil özellikleri paylaşır.  
@@ -87,7 +87,7 @@ ms.locfileid: "54575167"
   
  Aşağıdaki diyagram bu işlemi göstermektedir.  
   
- ![DataGridViewCellStyle türünün özellikleri](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![DataGridViewCellStyle türünün özellikleri](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells devralma diyagramı")  
   
  Ayrıca, belirli satırlar ve sütunlar tarafından devralınan stilleri erişebilir. Sütun <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> özellik değerleri aşağıdaki özelliklerine devralır.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "54575167"
   
  Aşağıdaki diyagramda gösterilmektedir nasıl farklı <xref:System.Windows.Forms.DataGridViewCellStyle> özelliklerini farklı yerden değerlerini devralır.  
   
- ![DataGridView özelliği&#45;değeri devralma](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView özelliği&#45;değeri devralma](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells değeri devralma diyagramı")  
   
  Stil devralımı avantajlarından yararlanarak, aynı bilgilerin birden fazla yerde belirtmenize gerek kalmadan tüm denetim için uygun stiller sağlayabilir.  
   

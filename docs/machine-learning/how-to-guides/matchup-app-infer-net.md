@@ -1,22 +1,27 @@
 ---
-title: Infer.NET ve probalistic programlama ile bir oyun eşleme listesi uygulaması oluşturma
-description: Probalistic programlama ile Infer.NET TrueSkill basitleştirilmiş bir sürümünü temel alan bir oyun matchup listesi uygulaması oluşturmak için nasıl kullanılacağını keşfedin.
-ms.date: 03/01/2019
+title: Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
+description: Olasılığa dayalı programlama ile Infer.NET TrueSkill basitleştirilmiş bir sürümünü temel alan bir oyun matchup listesi uygulaması oluşturmak için nasıl kullanılacağını keşfedin.
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d760c364d874ec9670823be0664005d62526ee93
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473142"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679144"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
+
+> [!NOTE]
+> Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Bu nasıl yapılır kılavuzunda Infer.NET kullanarak olasılığa dayalı programlama hakkında size öğretir. Olasılığa dayalı programlama bir machine learning burada özel modelleri bilgisayar programları olarak ifade edilir yaklaşımdır. Bu etki alanı bilgisini modellerindeki birleştirmek için izin verir ve makine öğrenimi sistemi daha yorumlanabilirinde yapar. Ayrıca, çevrimiçi çıkarımı – yeni veriler ulaştıkça öğrenme işlemi destekler. Microsoft Azure, Xbox ve Bing çeşitli ürünlerin Infer.NET kullanılır.
 
 ## <a name="what-is-probabilistic-programming"></a>Olasılığa dayalı programlama nedir?
 
-Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modelleri oluşturmanıza olanak sağlar. 
+Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modelleri oluşturmanıza olanak sağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -85,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -149,7 +154,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-Sonuçlarda oyuncu 3 4 oyuncu modelimizi göre biraz daha sıralayan dikkat edin. Oynatıcı 3 player 1 üzerinde tek tek oynatıcı 4 oyuncu 2 – üzerinden daha önemli çünkü 1 oyuncu vuruş player 2 unutmayın. Oynatıcı 0 Genel uzmanının sunuluyor  
+Sonuçlarda oyuncu 3 4 oyuncu modelimizi göre biraz daha sıralayan dikkat edin. Oynatıcı 3 player 1 üzerinde tek tek oynatıcı 4 oyuncu 2 – üzerinden daha önemli çünkü 1 oyuncu vuruş player 2 unutmayın. Oynatıcı 0 Genel uzmanının sunuluyor
 
 ## <a name="keep-learning"></a>Öğrenme tutun
 

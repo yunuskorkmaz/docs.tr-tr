@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479613"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674659"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
@@ -23,9 +23,9 @@ Resmi .NET Docker görüntüleri oluşturulan ve Microsoft tarafından en iyi du
 
 Geliştiriciler için Docker görüntülerini oluştururken, Microsoft aşağıdaki temel senaryolara odaklanır:
 
--   Kullanılacak görüntüleri *geliştirme* ve .NET Core uygulamaları oluşturun.
+- Kullanılacak görüntüleri *geliştirme* ve .NET Core uygulamaları oluşturun.
 
--   Kullanılacak görüntüleri *çalıştırma* .NET Core uygulamaları.
+- Kullanılacak görüntüleri *çalıştırma* .NET Core uygulamaları.
 
 Neden birden çok görüntü? Geliştirme, derleme ve kapsayıcılı uygulamalar çalıştırmak, genellikle farklı önceliklere sahip. Microsoft, ayrı aşağıdaki görevler için farklı görüntüleri sağlayarak geliştirme, derleme ve uygulamaları dağıtma ayrı işlemleri iyileştirilmesine yardımcı olur.
 
@@ -50,6 +50,6 @@ Docker Hub .NET resmi depoları geçirirken, Sınıflandırılmamış veya etike
 | Microsoft/dotnet:**aspnetcore-2.2-çalışma zamanı** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeler, Linux ve Windows (çok arch) |
 | Microsoft/dotnet:**2.2-sdk**                | .NET core SDK'ları dahil, Linux ve Windows (çok arch)                                  |
 
->[!div class="step-by-step"]
->[Önceki](net-container-os-targets.md)
->[İleri](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Önceki](net-container-os-targets.md)
+> [İleri](../architect-microservice-container-applications/index.md)

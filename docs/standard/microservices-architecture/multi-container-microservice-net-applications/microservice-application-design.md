@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981887"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674399"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -63,11 +63,11 @@ Her mikro hizmet, diğer mikro Hizmetleri tam olarak ölçeklendirilebilmeleri i
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: .NET Core ve kapsayıcılar kullanılarak dağıtılmış mikro hizmetler için bir başvuru uygulaması
 
-Böylece bilmiyor bir hypothetic iş etki alanı düşünmek yerine teknolojileri ve mimari odaklanabilirsiniz iyi bilinen iş etki alanı seçmiş olduğunuz — yani, bir katalog sunar bir Basitleştirilmiş e-ticaret (e-Atölye) uygulama ürünler, işle ilgili diğer işlevleri gerçekleştiren müşterilerden siparişleri alır ve envanter doğrular. Bu kapsayıcı tabanlı uygulama kaynak kodunu kullanılabilir [hizmetine](https://aka.ms/MicroservicesArchitecture) GitHub deposu.
+Böylece bilmiyor bir kuramsal iş etki alanı düşünmek yerine teknolojileri ve mimari odaklanabilirsiniz iyi bilinen iş etki alanı seçmiş olduğunuz — yani, bir katalog sunar bir Basitleştirilmiş e-ticaret (e-Atölye) uygulama ürünleri, siparişler müşterilerden alır, Envanter doğrular ve diğer iş işlevleri gerçekleştirir. Bu kapsayıcı tabanlı uygulama kaynak kodunu kullanılabilir [hizmetine](https://aka.ms/MicroservicesArchitecture) GitHub deposu.
 
 Uygulamayı birkaç depolama UI ön uçlar (bir Web uygulaması ve yerel bir mobil uygulama) arka uç mikro hizmetler ve kapsayıcılar için gerekli tüm sunucu tarafı işlemleri birkaç API ağ geçitleri ile birlikte dahil olmak üzere birden çok alt sistemin oluşur İç mikro hizmetler birleştirilmiş giriş işaret eder. Şekil 6-1, başvuru uygulaması mimarisi gösterilmektedir.
 
-![Mobil ve SPA istemciler, mikro hizmetler için ardından iletişim kuran tek API ağ geçidi uç iletişim kurar. Tradditional web istemcileriyle iletişim kurmak için MVC mikro hizmet, mikro hizmetler için iletişim kuran](./media/image1.png)
+![Mobil ve SPA istemciler, mikro hizmetler için ardından iletişim kuran tek API ağ geçidi uç iletişim kurar. Geleneksel web istemcileriyle iletişim kurmak için MVC mikro hizmet, mikro hizmetler için iletişim kuran](./media/image1.png)
 
 **Şekil 6-1**. Geliştirme ortamı için uygulama mimarisi hizmetine başvuru
 
@@ -91,7 +91,7 @@ Bu nedenle, mikro hizmetler için (ve bu uygulamada veritabanları için bile) d
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **GitHub deposunu hizmetine. Başvuru uygulaması için kaynak kodu**  
+- **GitHub deposunu hizmetine. Başvuru uygulaması için kaynak kodu**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözüm avantajları
@@ -142,7 +142,7 @@ Tasarlama ve üzerinde mikro hizmet tabanlı karmaşık bir uygulama oluştururk
 
 Bu kılavuz mimarisi kısmında tanımlanan ilkeler uygulayarak birden çok hizmet tarafından oluşan mikro hizmet mimarisi dış mimaridir. Ancak, her mikro hizmet ve üst düzey bir mikro hizmet mimarisi seçtiğiniz bağımsız olarak yapısı, bağlı olarak ortak ve farklı iç mimarileri için bazen önerilir, her için farklı eğilimlere bağlı farklı mikro hizmetler. Mikro hizmetler, hatta farklı teknolojiler ve programlama dilini kullanabilirsiniz. Şekil 6-2 Bu seviyelerine gösterilir.
 
-![Dış mimarisi arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimleri, yayımlama/abonelik, vb. ve iç mimarisi: veri temelli/CRUD DDD pattrens, bağımlılık ekleme, birden çok kitaplıkları, vs.](./media/image2.png)
+![Dış mimarisi arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimleri, yayımlama/abonelik, vb. ve iç mimarisi: veri temelli/CRUD DDD deseni, bağımlılık ekleme, birden çok kitaplıkları, vs.](./media/image2.png)
 
 **Şekil 6-2**. Dış ve iç mimari ve tasarım
 
@@ -150,7 +150,7 @@ Bu kılavuz mimarisi kısmında tanımlanan ilkeler uygulayarak birden çok hizm
 
 Mikro hizmet başına farklı bir teknoloji başka bir nedenle, her bir mikro hizmetin niteliği olabilir. Örneğin, F gibi işlevsel bir programlama dili kullanmak daha iyi olabilir\#, hatta bir dil R gibi yapay ZEKA ve makine öğrenimi C gibi daha fazla nesne yönelimli programlama dili yerine etki alanları hedefliyorsanız\#.
 
-Alt çizgi, her bir mikro hizmetin farklı tasarım düzenlerini esas alarak farklı bir iç mimari sahip olabilmeleridir. Bunları aşırı mühendislik çünkü tüm mikro Hizmetleri, Gelişmiş DDD deseni kullanılarak uygulanmalıdır. Benzer şekilde, karmaşık mikro hizmetler durmaksızın değişen iş mantığına sahip CRUD bileşenleri uygulanmamalıdır veya düşük kaliteli kodlar kalabilirsiniz. 
+Alt çizgi, her bir mikro hizmetin farklı tasarım düzenlerini esas alarak farklı bir iç mimari sahip olabilmeleridir. Bunları aşırı mühendislik çünkü tüm mikro Hizmetleri, Gelişmiş DDD deseni kullanılarak uygulanmalıdır. Benzer şekilde, karmaşık mikro hizmetler durmaksızın değişen iş mantığına sahip CRUD bileşenleri uygulanmamalıdır veya düşük kaliteli kodlar kalabilirsiniz.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Yeni Dünya: birden çok mimari desenleri ve çok yönlü mikro hizmetler
 
@@ -172,7 +172,7 @@ Ayrıca, birçok teknolojiler ve ASP.NET Core Web API, NancyFx, ASP.NET Core Sig
 
 Herhangi bir belirli mimari desen veya stil ya da belirli bir teknoloji tüm durumlar için doğru olduğunu önemli noktasıdır. (Değil herhangi bir sırada belirli rağmen) Şekil 6-3 gösteren bazı yaklaşımları ve teknolojileri farklı mikro Hizmetleri kullanılabilir.
 
-![Birden çok mimari deseni ve çok yönlü mikro hizmetler anlamına gelir, sizin diller ve her bir mikro hizmet gereksinimlerine tecnologies karıştırarak eşleştirebilir devam ediyor, birbirleriyle konuşan.](./media/image3.png)
+![Birden çok mimari deseni ve çok yönlü mikro hizmetler anlamına gelir, diller ve teknolojiler her mikro hizmet gereksinimlerine karıştırarak eşleştirebilir devam ediyor, birbirleriyle konuşan.](./media/image3.png)
 
 **Şekil 6-3**. Birden çok mimari desenleri ve çok yönlü mikro hizmetler world
 

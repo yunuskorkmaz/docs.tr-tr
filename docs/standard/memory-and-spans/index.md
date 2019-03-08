@@ -3,34 +3,29 @@ title: Bellek ve yayılma
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- Memory<T>
-- Span<T>
-- buffers"
-- pipeline processing
+  - Memory<T>
+  - Span<T>
+  - buffers"
+  - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116c08872385406224972e34feaddfe44122355e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130933"
 ---
+
 # <a name="memory--and-span-related-types"></a>Bellek ve aralık ilgili türler
 
 .NET, .NET Core 2.1 ile başlayarak, bir dizi bitişik, kesin türü belirtilmiş rastgele bir bellek bölgesini temsil eden birbiriyle türlerini içerir. Bu güncelleştirmeler şunlardır:
 
 - <xref:System.Span%601?displayProperty=nameWithType>, bitişik bellek bölgesini erişmek için kullanılan bir tür. A <xref:System.Span%601> örneği bir dizi türü tarafından desteklenen `T`, <xref:System.String>, arabellek ile ayrılan [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), veya yönetilmeyen bellek işaretçisi. Yığında ayrılacak olduğundan, bazı kısıtlamalar vardır. Örneğin, bir alanın bir sınıf türünde olamaz <xref:System.Span%601>, ne de aralık içinde zaman uyumsuz işlemleri kullanılabilir.
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithtype>, sabit bir sürümünü <xref:System.Span%601> yapısı.
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, sabit bir sürümünü <xref:System.Span%601> yapısı.
 
 - <xref:System.Memory%601?displayProperty=nameWithType>, bölgesine bitişik bir yığın yerine yönetilen yığında ayrılan bellek. A <xref:System.Memory%601> örneği bir dizi türü tarafından desteklenen `T` veya <xref:System.String>. Yönetilen yığında depolanmış çünkü <xref:System.Memory%601> sınırlamaları hiçbirinin <xref:System.Span%601>.
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithtype>, sabit bir sürümünü <xref:System.Memory%601> yapısı.
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, sabit bir sürümünü <xref:System.Memory%601> yapısı.
 
 - <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, hangi ayırır bellek blokları kesin türü belirtilmiş bir bellek havuzundan sahip. <xref:System.Buffers.IMemoryOwner%601> örnekleri gibi verilere dayanarak havuzdan çağırarak <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> ve geri çağırarak havuzuna serbest <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, bir bellek bloğu sahibi temsil eder ve kendi ömrü Yönetimi denetler. 
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, bir bellek bloğu sahibi temsil eder ve kendi ömrü Yönetimi denetler.
 
 - <xref:System.Buffers.MemoryManager%601>, uygulamasını değiştirmek için kullanılan bir soyut temel sınıf <xref:System.Memory%601> böylece <xref:System.Memory%601> güvenli tanıtıcıları gibi ek türleri tarafından desteklenir. <xref:System.Buffers.MemoryManager%601> Gelişmiş senaryolar için tasarlanmıştır.
 

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361335"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677532"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
@@ -142,7 +142,7 @@ Bir kez `await` karşılaşılırsa, yürütülmesini `CalculateResult()` sıras
 
 ### <a name="why-does-async-help-here"></a>Neden zaman uyumsuz burada yardımcı oldu mu?
 
-`async` ve `await` yanıt hızını gerektiğinde yönetme CPU bağımlı iş en iyi uygulama olan. Zaman uyumsuz CPU bağımlı iş ile kullanmak için birden çok desen vardır. Zaman uyumsuz kullanarak küçük bir maliyeti yoktur ve sıkı döngüler için önerilmez unutulmaması önemlidir.  Kodunuzda bu yeni özellikten nasıl yazdığınız belirlemek size aittir.
+`async` ve `await` yanıt hızını gerektiğinde CPU bağımlı iş yönetimi için en iyi uygulamalardan biridir. Zaman uyumsuz CPU bağımlı iş ile kullanmak için birden çok desen vardır. Zaman uyumsuz kullanarak küçük bir maliyeti yoktur ve sıkı döngüler için önerilmez unutulmaması önemlidir.  Kodunuzda bu yeni özellikten nasıl yazdığınız belirlemek size aittir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,28 +4,28 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971786"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675036"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
 Olay veri yolu kullanmanın ilk adımı, mikro hizmetler almak istediği olaylara abone olmaktır. Alıcı mikro Hizmetleri yapılmalıdır.
 
-Aşağıdaki basit kod her alıcı mikro hizmete uygulamak gereken gösterir (diğer bir deyişle, `Startup` sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Bu durumda, `basket.api` mikro hizmet abone olmak için gereksinim duyduğu `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri. 
+Aşağıdaki basit kod her alıcı mikro hizmete uygulamak gereken gösterir (diğer bir deyişle, `Startup` sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Bu durumda, `basket.api` mikro hizmet abone olmak için gereksinim duyduğu `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri.
 
 Örneğin, abone olduğunda `ProductPriceChangedIntegrationEvent` sepet mikro hizmet herhangi farkında sağlayan bir olay ürün fiyatı değiştirir ve bu ürünün kullanıcının sepetteki ise değişiklik hakkında kullanıcıyı uyarmak olanak tanır.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-Bu durumda, kaynak mikro hizmet basit CRUD mikro hizmeti olduğundan, bu kodu bir Web API denetleyicisi sağ yerleştirilir. 
- 
-Mikro hizmetlerde CQRS yaklaşımı kullanırken gibi daha gelişmiş, onu uygulanabilen `CommandHandler` içinde sınıf `Handle()` yöntemi. 
+Bu durumda, kaynak mikro hizmet basit CRUD mikro hizmeti olduğundan, bu kodu bir Web API denetleyicisi sağ yerleştirilir.
+
+Mikro hizmetlerde CQRS yaklaşımı kullanırken gibi daha gelişmiş, onu uygulanabilen `CommandHandler` içinde sınıf `Handle()` yöntemi.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Kararlılık ve dayanıklılık olay veri yoluna yayımlanırken tasarlama
 
@@ -103,11 +103,11 @@ Mikro hizmet tabanlı mimariler, kullanılabilirlik ve dayanıklılık seçmelis
 
 Mimari bölümünde daha önce bahsedildiği gibi bu sorunu uğraşmanızı için çeşitli yaklaşımlar olabilir:
 
--   Tam kullanarak [olay kaynağını belirleme düzeni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+- Tam kullanarak [olay kaynağını belirleme düzeni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
--   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak için bu işlem bir tablodur.
+- Kullanarak [giden deseni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak için bu işlem bir tablodur.
 
 Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır *en* iyi. Ancak, birçok uygulama senaryolarında, tam bir ES sistemi uygulamak mümkün olmayabilir. Geçerli durumu verilerini depolamak yerine işlemsel veritabanı, yalnızca etki alanı olayları depolamak ES anlamına gelir. Yalnızca etki alanı olayları depolamadan gibi sistem geçmişini sahip olunması ve geçmişteki herhangi bir anda, sistem durumunu belirlemek için harika avantajlar, olabilir. Ancak, tam bir ES sistemi uygulama sisteminizi çoğunu yeniden oluşturma gerektiren ve diğer birçok karmaşıklık ve gereksinimler sunar. Örneğin, özellikle olay kaynağını belirleme için gibi yapılan bir veritabanı kullanmak isteyebilirsiniz [olay Store](https://eventstore.org/), veya bir Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli veritabanı. Olay kaynağını belirleme ile bilginiz sürece ES Bu sorun, ancak kolay çözümü için harika bir yaklaşımdır.
 
@@ -125,19 +125,19 @@ Bu nedenle, dengeli bu yaklaşım bir Basitleştirilmiş ES sistemidir. Tümleş
 
 Adım adım işlemi şu şekilde geçer:
 
-1.  Uygulama yerel veritabanı işlemi başlar.
+1. Uygulama yerel veritabanı işlemi başlar.
 
-2.  Etki alanı varlıklarınızın durumunu güncelleştirir ve bir olay tümleştirme olay tablosuna ekler.
+2. Etki alanı varlıklarınızın durumunu güncelleştirir ve bir olay tümleştirme olay tablosuna ekler.
 
-3.  Son olarak, bu işlem işlemeler istenen kararlılık alabilmeniz ve ardından
+3. Son olarak, bu işlem işlemeler istenen kararlılık alabilmeniz ve ardından
 
-4.  Olayı şekilde yayımlamak (İleri).
+4. Olayı şekilde yayımlamak (İleri).
 
 Olayları yayımlama adımları uygularken bu seçeneğiniz vardır:
 
--   Tümleştirme olay sağ işlem uyguladıktan sonra yayımlayın ve yayımlanan olarak tablo olayları işaretlemek için başka bir yerel işlem'ı kullanın. Ardından uzak mikro hizmetler sorunları yaşanması tümleştirme olayları izlemek için yalnızca bir yapıt tabloyu kullanın ve saklı tümleştirme etkinliklere göre telafi izin eylemleri gerçekleştirin.
+- Tümleştirme olay sağ işlem uyguladıktan sonra yayımlayın ve yayımlanan olarak tablo olayları işaretlemek için başka bir yerel işlem'ı kullanın. Ardından uzak mikro hizmetler sorunları yaşanması tümleştirme olayları izlemek için yalnızca bir yapıt tabloyu kullanın ve saklı tümleştirme etkinliklere göre telafi izin eylemleri gerçekleştirin.
 
--   Tablo, kuyruk bir tür olarak kullanın. Ayrı uygulama iş parçacığı veya işlem tümleştirme olay tablo sorguları, olayları olay veri yoluna yayımlar ve olayları yayınlanan olarak işaretlemek için bir yerel işlem'i kullanır.
+- Tablo, kuyruk bir tür olarak kullanın. Ayrı uygulama iş parçacığı veya işlem tümleştirme olay tablo sorguları, olayları olay veri yoluna yayımlar ve olayları yayınlanan olarak işaretlemek için bir yerel işlem'i kullanır.
 
 Şekil 6-22 Bu yaklaşımların ilk mimarisi gösterilmektedir.
 
@@ -166,55 +166,55 @@ Daha anlaşılır olması için aşağıdaki örnek, bu işlem tek bir kod parç
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -281,7 +281,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Ürün sepet örneği hiçbirinde var olup olmadığını doğrulamak olay işleyicisi gerekir. Ayrıca, her ilgili sepet satır öğesi için öğe fiyat güncelleştirir. Son olarak, Şekil 6-24'te gösterildiği gibi fiyat değişikliği hakkında kullanıcıya görüntülenecek bir uyarı oluşturur.
 
-![İşlem Tarayıcı Görünümü Kullanıcı sepet bildirim değiştirin.](./media/image25.png)
+![Tarayıcı Görünümü işleminin kullanıcı sepet bildirim değiştirin.](./media/image25.png)
 
 **Şekil 6-24**. Bir öğe fiyat değişikliği sepet, tümleştirme olayları tarafından iletilen olarak görüntüleme
 
@@ -303,7 +303,7 @@ Bazı ileti işleme kendiliğinden etkilidir. Bir sistem görüntüsü küçük 
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **İleti Teklik uygularken** <br/>
+- **İleti Teklik uygularken** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Tümleştirme olay iletileri alanında yinelenenleri kaldırma
@@ -324,69 +324,69 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Çatalı hizmetine NServiceBus (yazılım) kullanma** <br/>
+- **Çatalı hizmetine NServiceBus (yazılım) kullanma** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Mesajlaşma typu EventDriven** <br/>
+- **Mesajlaşma typu EventDriven** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Doğru dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** <br/>
+- **Jimmy Bogard. Doğru dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Kanal Yayımla-abone ol** <br/>
+- **Kanal Yayımla-abone ol** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Sınırlanmış Bağlamlar arasında iletişim kurma** <br/>
+- **Sınırlanmış Bağlamlar arasında iletişim kurma** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Son tutarlılık** <br/>
+- **Son tutarlılık** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Tümleştirmeye yönelik stratejiler sınırlanmış bağlamlar** <br/>
+- **Philip Brown. Tümleştirmeye yönelik stratejiler sınırlanmış bağlamlar** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme** <br/>
+- **Chris Richardson. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Olay kaynağını belirleme düzeni** <br/>
+- **Chris Richardson. Olay kaynağını belirleme düzeni** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Olay kaynağını belirleme ile tanışın** <br/>
+- **Olay kaynağını belirleme ile tanışın** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Olay Store veritabanı**. Resmi sitesi. <br/>
+- **Olay Store veritabanı**. Resmi sitesi. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Mikro hizmetlere yönelik olay odaklı veri yönetimi** <br/>
+- **Patrick Nommensen. Mikro hizmetlere yönelik olay odaklı veri yönetimi** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP Teoremi** <br/>
+- **CAP Teoremi** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **CAP Teoremi nedir?** <br/>
+- **CAP Teoremi nedir?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Veri tutarlılığı temel bilgileri** <br/>
+- **Veri tutarlılığı temel bilgileri** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** <br/>
+- **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP on yıl: "Kurallar" nasıl değişti** <br/>
+- **Eric Brewer. CAP on yıl: "Kurallar" nasıl değişti** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**  <br/>
+- **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) * <br/>
+- **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) * <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama** <br/>
+- **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Güvenilirlik Kılavuzu** (RabbitMQ belgeler) <br/>
+- **Güvenilirlik Kılavuzu** (RabbitMQ belgeler) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[Önceki](rabbitmq-event-bus-development-test-environment.md)
->[İleri](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [Önceki](rabbitmq-event-bus-development-test-environment.md)
+> [İleri](test-aspnet-core-services-web-apps.md)

@@ -4,6 +4,7 @@ description: Özel yapay ZEKA çözümleri oluşturma ve Machine Learning .NET u
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET makine öğrenimi nasıl yapılır kılavuzlarından - ML.NET
 
 ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleler bulmayı kolaylaştırmak için birden çok bölümlerinde listelenen.
@@ -44,7 +45,7 @@ ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtların
 
 * [ML.NET ile metinsel veriler üzerinde özellik Mühendisliği, eğitim modeli için geçerlidir.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Çalıştır 
+## <a name="run"></a>Çalıştır
 
 * [ML.NET ardışık düzen işleme sırasında ara veri değerleri inceleyin.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ ML.NET Kılavuzu bölümüne nasıl hızlı sık sorulan soruların yanıtların
 
 * [Aynı anda bir tahminde bulunmak için PredictionFunction kullanın.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Probabalistic (Infer.NET)
+## <a name="probabilistic-infernet"></a>Olasılıklara (Infer.NET)
 
 * [Bir oyun eşleme listesi uygulaması Infer.NET olasılığa dayalı programlama ile oluşturun.](matchup-app-infer-net.md)
-

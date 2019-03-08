@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679783"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677272"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 içinde yenilikler nelerdir?
 
@@ -28,9 +28,9 @@ Bu yeni bir dağıtım modu doğrudan çağırmadan uygulamanızı çalıştıra
 
 **Çalışma zamanı Hizmetleri olayları işleme**
 
-Genellikle, GC, JIT ve iş parçacığı havuzu, bunların uygulamanızı nasıl etkilediği anlamak için gibi çalışma zamanı Hizmetleri, uygulamanızın kullanımını izlemek isteyebilirsiniz. Windows sistemlerde, bu genellikle geçerli işlem ETW olaylarını izleme tarafından gerçekleştirilir. Bu da çalışmaya devam ederken, her zaman düşük ayrıcalıklı bir ortamda veya Linux veya macOS üzerinde çalıştırıyorsanız, ETW kullanmak mümkün değildir.  
+Genellikle, GC, JIT ve iş parçacığı havuzu, bunların uygulamanızı nasıl etkilediği anlamak için gibi çalışma zamanı Hizmetleri, uygulamanızın kullanımını izlemek isteyebilirsiniz. Windows sistemlerde, bu genellikle geçerli işlem ETW olaylarını izleme tarafından gerçekleştirilir. Bu da çalışmaya devam ederken, her zaman düşük ayrıcalıklı bir ortamda veya Linux veya macOS üzerinde çalıştırıyorsanız, ETW kullanmak mümkün değildir. 
 
-.NET Core 2.2 ile başlayarak, CoreCLR olayları artık kullanarak tüketilebilir <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> sınıfı. Bu olaylar, GC, JIT, iş parçacığı havuzu ve birlikte çalışabilirlik gibi çalışma zamanı Hizmetleri davranışını açıklar. Bu bölümleri aynı olaylardır CoreCLR ETW sağlayıcısı.  Bu olayları kullanan veya bir telemetri toplama hizmete göndermek aktarım mekanizması kullanmak uygulamalara izin verir. Aşağıdaki kod örneği olaylara abone olma görebilirsiniz:
+.NET Core 2.2 ile başlayarak, CoreCLR olayları artık kullanarak tüketilebilir <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> sınıfı. Bu olaylar, GC, JIT, iş parçacığı havuzu ve birlikte çalışabilirlik gibi çalışma zamanı Hizmetleri davranışını açıklar. Bunlar CoreCLR ETW sağlayıcısı bir parçası olarak sunulan aynı olaylardır.  Bu olayları kullanan veya bir telemetri toplama hizmete göndermek aktarım mekanizması kullanmak uygulamalara izin verir. Aşağıdaki kod örneği olaylara abone olma görebilirsiniz:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ Ayrıca, aşağıdaki iki özelliği .NET Core 2.2 ekler <xref:System.Diagnostic
 
 - A **ikinci katman**, oluşturduğu kodu sık yürütülen bu yöntemleri için en iyi duruma getirilmiş. Derleme, ikinci katman, Gelişmiş performans için paralel gerçekleştirilir.
 
-Katmanlı derlemeden sonuçlanabilir performans geliştirmesi hakkında daha fazla bilgi için bkz: [.NET Core 2.2 Önizleme 2 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). 
+Katmanlı derlemeden sonuçlanabilir performans geliştirmesi hakkında daha fazla bilgi için bkz: [.NET Core 2.2 Önizleme 2 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).
 
 .NET Core 2.2 Preview 2'deki katmanlı derleme varsayılan olarak etkinleştirildi. Ancak biz katmanlı derleme varsayılan olarak etkinleştirmek hala hazır değil duyuyoruz karar verdiniz. Bu nedenle .NET Core 2.2 içinde katmanlı derleme Tercihli özellik olmaya devam eder. Seçim için katmanlı derleme hakkında daha fazla bilgi için bkz: [JIT Derleyici iyileştirmeleri](dotnet-core-2-1.md#jit-compiler-improvements) içinde [.NET Core 2.1 yenilikler](dotnet-core-2-1.md).
 

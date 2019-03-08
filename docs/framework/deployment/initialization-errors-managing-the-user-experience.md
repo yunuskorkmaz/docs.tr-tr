@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fa197b12e6a5bfb37cd0f275bc615dc179291b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222525"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679378"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET framework başlatma hataları: Kullanıcı deneyimini yönetme
 
@@ -41,7 +41,7 @@ CLR etkinleştirme API'leri bir konağa bir etkinleştirme işleminin sonucu bil
 
 CLR etkinleştirme sistemine doğru bir uygulama için gereken çalışma zamanı sürümü yüklenemiyor, hata iletisi bilgisayarlarının uygulamayı çalıştırmak için düzgün yapılandırılmamış ve bunları sağlar bildirmek amacıyla kullanıcılara görüntüler bir Bu durumu ortadan kaldırmak için bir fırsat. Aşağıdaki hata iletisini, bu durumda genellikle sunulur. Kullanıcı seçebilir **Evet** nerede bunlar yükleyebilir doğru .NET Framework sürümünü uygulama için bir Microsoft Web sitesine gidin.
 
-![.NET framework başlatma hatası iletişim kutusu](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog") başlatma hataları için tipik bir hata iletisi
+![.NET framework başlatma hatası iletişim kutusu](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "başlatma hataları için tipik bir hata iletisi")
 
 ## <a name="resolving-the-initialization-error"></a>Başlatma hatası çözümleme
 
@@ -82,7 +82,7 @@ CLR çeşitli senaryoları için konak kümesini içerir ve bunlar gerekli çal�
 
 CLR etkinleştirme sistemine üzerinde aynı davranışı ve kullanıcı Arabirimi sağlayan [!INCLUDE[win8](../../../includes/win8-md.md)] diğer Windows işletim sistemi sürümlerinde olduğu gibi CLR 2.0 yüklerken sorun bulduğu durumlar hariç. [!INCLUDE[win8](../../../includes/win8-md.md)] içerir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR 4.5 kullanır. Ancak, [!INCLUDE[win8](../../../includes/win8-md.md)] .NET Framework 2.0, 3.0 veya 3.5 CLR 2.0 kullanan tüm hangi içermez. Sonuç olarak, CLR 2.0 bağlı uygulamalar çalıştırmayın [!INCLUDE[win8](../../../includes/win8-md.md)] varsayılan olarak. Bunun yerine, .NET Framework 3.5 yüklemek kullanıcıları etkinleştirmek için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar, Denetim Masası'nda .NET Framework 3.5 de etkinleştirebilirsiniz. İki seçenek de makalesinde açıklanan [Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme](../../../docs/framework/install/dotnet-35-windows-10.md).
 
-![Windows 8 yükle 3.5 için iletişim kutusu](../../../docs/framework/deployment/media/installdialog.png "installdialog") istek üzerine .NET Framework 3.5 yükleme istemi
+![Windows 8 yükle 3.5 için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "istek üzerine .NET Framework 3.5 yükleme istemi")
 
 > [!NOTE]
 > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kullanıcının bilgisayarında .NET Framework 4 (CLR 4) değiştirir. Bu nedenle, .NET Framework 4 uygulamalarını sorunsuz bir şekilde, bu iletişim kutusunu görüntüleme olmadan çalıştırmak [!INCLUDE[win8](../../../includes/win8-md.md)].

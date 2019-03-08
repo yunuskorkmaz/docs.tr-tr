@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976193"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677753"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
@@ -17,13 +17,13 @@ Denetleyicileri, herhangi bir ASP.NET Core API'si hizmeti ve ASP.NET MVC Web uyg
 
 Test denetleyicisinin geçerli ya da geçersiz girişler temelinde nasıl davranacağını ve test denetleyicisi yanıtları gerçekleştirdiği iş işleminin sonucuna göre gerekir. Ancak, bu tür testler için mikro hizmetlerin sahip olmalıdır:
 
--   Birim testleri. Bu, tek tek bileşenler uygulamanın beklendiği gibi çalıştığından emin olun. Onaylamalar bileşen API'yi test etme.
+- Birim testleri. Bu, tek tek bileşenler uygulamanın beklendiği gibi çalıştığından emin olun. Onaylamalar bileşen API'yi test etme.
 
--   Tümleştirme testleri. Bu bileşen etkileşimleri veritabanları gibi dış yapıtları karşı beklendiği gibi çalıştığından emin olun. Onaylamalar bileşen API, kullanıcı Arabirimi veya yan etkilerini, günlük, vb. Eylemler gibi veritabanı g/ç test edebilirsiniz.
+- Tümleştirme testleri. Bu bileşen etkileşimleri veritabanları gibi dış yapıtları karşı beklendiği gibi çalıştığından emin olun. Onaylamalar bileşen API, kullanıcı Arabirimi veya yan etkilerini, günlük, vb. Eylemler gibi veritabanı g/ç test edebilirsiniz.
 
--   Her mikro hizmet işlevsel sınar. Bu, uygulama kullanıcının açısından beklendiği gibi çalıştığından emin olun.
+- Her mikro hizmet işlevsel sınar. Bu, uygulama kullanıcının açısından beklendiği gibi çalıştığından emin olun.
 
--   Hizmeti test eder. Bu, uçtan uca hizmeti kullanım örnekleri aynı anda birden çok hizmet testi dahil olmak üzere, test emin olun. Bu tür sınama ortamı önce hazırlamanız gerekir. Bu durumda, bu hizmetleri başlatılıyor anlamına gelir (örneğin, kullanarak docker compose up).
+- Hizmeti test eder. Bu, uçtan uca hizmeti kullanım örnekleri aynı anda birden çok hizmet testi dahil olmak üzere, test emin olun. Bu tür sınama ortamı önce hazırlamanız gerekir. Bu durumda, bu hizmetleri başlatılıyor anlamına gelir (örneğin, kullanarak docker compose up).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API'leri için uygulama birim testleri
 
@@ -42,18 +42,18 @@ public async Task Get_order_detail_success()
     //Arrange
     var fakeOrderId = "12";
     var fakeOrder = GetFakeOrder();
- 
+
     //...
 
     //Act
     var orderController = new OrderController(
-        _orderServiceMock.Object, 
-        _basketServiceMock.Object, 
+        _orderServiceMock.Object,
+        _basketServiceMock.Object,
         _identityParserMock.Object);
 
     orderController.ControllerContext.HttpContext = _contextMock.Object;
     var actionResult = await orderController.Detail(fakeOrderId);
- 
+
     //Assert
     var viewResult = Assert.IsType<ViewResult>(actionResult);
     Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
@@ -103,28 +103,28 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Steve Smith. Test denetleyicileri** (ASP.NET Core) <br/>
+- **Steve Smith. Test denetleyicileri** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Tümleştirme testi** (ASP.NET Core) <br/>
+- **Steve Smith. Tümleştirme testi** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Birim testi .NET Core kullanarak dotnet testi** <br/>
+- **Birim testi .NET Core kullanarak dotnet testi** <br/>
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
--   **xUnit.net**. Resmi sitesi. <br/>
+- **xUnit.net**. Resmi sitesi. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Birim testi temel bilgileri.** <br/>
+- **Birim testi temel bilgileri.** <br/>
     [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
--   **Moq**. GitHub deposu. <br/>
+- **Moq**. GitHub deposu. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Resmi sitesi. <br/>
+- **NUnit**. Resmi sitesi. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Çok kapsayıcılı bir uygulama üzerinde uygulama hizmet testleri 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Çok kapsayıcılı bir uygulama üzerinde uygulama hizmet testleri
 
 Çok kapsayıcılı uygulamaları test ederken daha önce belirtildiği gibi tüm mikro Hizmetleri Docker kapsayıcı ya da konak kümede çalışıyor olması gerekir. Birden fazla mikro hizmetler içeren birden çok işlem içeren uçtan uca hizmet testleri gerektirir dağıtma ve docker çalıştırarak Docker ana tüm uygulama başlatma-compose up (veya bir orchestrator kullanıyorsanız benzer bir mekanizma). Tüm uygulama ve tüm hizmetlerinin çalıştığını sonra uçtan uca tümleştirme ve işlevsel testler yürütebilir.
 
@@ -136,15 +136,15 @@ Compose uygulaması çalışır duruma geldikten sonra Visual Studio çalıştı
 
 Başvuru uygulaması (hizmetine) testleri kısa bir süre önce yapmayın ve artık dört kategorisi vardır:
 
-1.  **Birim** testleri, yer alan, yalnızca düz eski Normal birim testleri **{MicroserviceName}. UnitTests** projeleri
+1. **Birim** testleri, yer alan, yalnızca düz eski Normal birim testleri **{MicroserviceName}. UnitTests** projeleri
 
-2.  **Mikro hizmet işlev/tümleştirme testleri**, altyapı için her bir mikro hizmetin diğerlerinden yalıtılmış ancak test çalışmalarıyla ilgili ve içerdiği **{MicroserviceName}. FunctionalTests** projeleri.
+2. **Mikro hizmet işlev/tümleştirme testleri**, her bir mikro hizmetin diğerlerinden yalıtılmış ancak altyapısı test çalışmalarıyla ilgili ve içerdiği **{MicroserviceName}. FunctionalTests** projeleri.
 
-3.  **Uygulama işlevsel/tümleştirme testleri**, mikro hizmetler tümleştirme, test çalışmaları birden fazla mikro hizmetler sağlama odaklanan. Bu testler, projede bulunan **Application.FunctionalTests**.
+3. **Uygulama işlevsel/tümleştirme testleri**, mikro hizmetler tümleştirme, test çalışmaları birden fazla mikro hizmetler sağlama odaklanan. Bu testler, projede bulunan **Application.FunctionalTests**.
 
-4.  **Yük testleri**, her bir mikro hizmetin yanıt süreleri, odaklanan. Bu testler, projede bulunan **LoadTest** ve Visual Studio 2017 Enterprise Edition gerekiyor.
+4. **Yük testleri**, her bir mikro hizmetin yanıt süreleri, odaklanan. Bu testler, projede bulunan **LoadTest** ve Visual Studio 2017 Enterprise Edition gerekiyor.
 
-Mikro hizmet başına birim ve tümleştirme test içerdiği yük testleri Çözüm klasörü'ndeki test foldel altında bulunan her mikro hizmet ve uygulama testi klasöründe Şekil 6-25 gösterildiği gibi.
+Mikro hizmet başına birim ve tümleştirme test içerdiği yük testleri Çözüm klasörü'ndeki test klasörü altında bulunan her mikro hizmet ve uygulama testi klasöründe Şekil 6-25 gösterildiği gibi.
 
 ![Testleri hizmetine yapısı: Her hizmetin birim ve işlev testleri içeren "test" klasörü vardır. Çözüm "test" klasörü altında vardır uygulama genelinde işlevsel testleri ve yük testi.](./media/image42.png)
 
@@ -180,7 +180,7 @@ services:
   rabbitmq:
     ports:
       - "15672:15672"
-      - "5672:5672" 
+      - "5672:5672"
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
@@ -198,16 +198,16 @@ Bu nedenle, işlev/tümleştirme testleri çalıştırmak için önce bu komut �
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-Gördüğünüz gibi bu docker-dosyaları yalnızca başlangıç Redis, RabitMQ, SQL Server ve MongoDB mikro hizmetler oluşturun.
+Gördüğünüz gibi bu docker-dosyaları yalnızca başlangıç Redis, RabbitMQ, SQL Server ve MongoDB mikro hizmetler oluşturun.
 
-### <a name="additionl-resources"></a>Additionl kaynakları
+### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Testleri Benioku dosyası** github'da hizmetine depoda <br/>
+- **Testleri Benioku dosyası** github'da hizmetine depoda <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
--   **Yük testleri Benioku dosyası** github'da hizmetine depoda <br/>
+- **Yük testleri Benioku dosyası** github'da hizmetine depoda <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
->[!div class="step-by-step"]
->[Önceki](subscribe-events.md)
->[İleri](background-tasks-with-ihostedservice.md)
+> [!div class="step-by-step"]
+> [Önceki](subscribe-events.md)
+> [İleri](background-tasks-with-ihostedservice.md)

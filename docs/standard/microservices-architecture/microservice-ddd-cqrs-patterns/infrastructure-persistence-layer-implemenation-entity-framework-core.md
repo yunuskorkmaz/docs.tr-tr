@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146140"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676349"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core ile altyapı Kalıcılık katmanını uygulama
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-Unutmayın `OrderItems` özelliği yalnızca erişilebilir salt okunur kullanılarak `IReadOnlyCollection<OrderItem>`. Bu tür, salt okunur normal dış güncelleştirmeleri karşı korunur. 
+Unutmayın `OrderItems` özelliği yalnızca erişilebilir salt okunur kullanılarak `IReadOnlyCollection<OrderItem>`. Bu tür, salt okunur normal dış güncelleştirmeleri karşı korunur.
 
 EF Core "etki alanı modeli contaminating olmadan" etki alanı modeli fiziksel veritabanında eşlemek için bir yol sağlar. Eşleme eylem Kalıcılık katmanında uygulanır saf POCO .NET kodu olmasıdır. Bu eşleme eylem alanları veritabanı eşleme yapılandırmanız gerekir. Aşağıdaki örnekte `OnModelCreating` yönteminden `OrderingContext` ve `OrderEntityTypeConfiguration` sınıfı, çağrı `SetPropertyAccessMode` erişmeye EF Core söyler `OrderItems` özelliği aracılığıyla kendi alan.
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -353,11 +353,11 @@ Tasarım bölümünde daha önce sunulan gibi sorgu belirtimi burada bir sorgu t
 
 Sorgu belirtimi deseni bir sorgu bir nesneyi tanımlar. Örneğin, bazı ürünler için bir disk belleğine alınan sorgu kapsüllemek için gereken giriş parametrelerini (pageNumber, pageSize, filtre, vb.) alan bir PagedProduct belirtimi oluşturabilirsiniz. Sonra hiçbir depo yöntemi içinde (genellikle bir List() aşırı yük) bir IQuerySpecification kabul ve bu belirtimine göre beklenen sorgusunu çalıştırın.
 
-Aşağıdaki kod, bir genel belirtimi arabirimi örnektir [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb).
+Aşağıdaki kod, bir genel belirtimi arabirimi örnektir [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ Ardından, genel belirtimi temel sınıfın uygulaması verilmiştir.
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 Filtreleme mantığı Kapsüllenen yanı sıra belirtimi doldurmak için hangi özelliklerin dahil olmak üzere verilerin döndürülmesi için Şekil belirtebilirsiniz.
 
 Bir depodan Iqueryable döndürülecek önermemekteyiz olsa da, bunları bir sonuç kümesini oluşturmak için depo içinde kullanmak mükemmel bir şekilde daha uygundur. Bu yaklaşım, sorgunun listesini oluşturmak için Ara Iqueryable ifadeler kullanan yukarıdaki son satırında belirtimi ölçütlerle sorguyu çalıştırmadan önce includes yöntemi listesinde kullanılan görebilirsiniz.
@@ -468,6 +469,6 @@ Bir depodan Iqueryable döndürülecek önermemekteyiz olsa da, bunları bir son
 - **Belirtimi deseni** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[Önceki](infrastructure-persistence-layer-design.md)
->[İleri](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [Önceki](infrastructure-persistence-layer-design.md)
+> [İleri](nosql-database-persistence-infrastructure.md)

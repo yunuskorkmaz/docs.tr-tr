@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221257"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677220"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a> Birlikte çalışma hazırlama veri çağrıları sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221257"
   
  Her iki platform çağırma ve COM birlikte çalışma kullanım birlikte çalışma doğru yöntem bağımsız çağıran ve çağrılan ve geri arasında taşımak için hazırlama gerekli. Aşağıdaki çizimde gösterildiği gibi bir platform çağırma yöntemi çağrısı akışlar yönetilmeyen kod ve hiçbir zaman zaman dışında başka şekilde yönetilen [geri çağırma işlevleri](callback-functions.md) kullanılır. Platform çağırma olsa bile çağrıları yalnızca yönetilmeyen kod için yönetilen akış, giriş veya çıkış parametreleri olarak her iki yönde veri akabilir. COM birlikte çalışma yöntemi çağrıları, herhangi bir yönde akabilir.  
   
- ![Platform Çağırma](./media/interopmarshaling.png "interopmarshaling")  
-Platform çağırma ve COM birlikte çalışabilirlik çağrısı akış  
+ ![Platform Çağırma](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Platform çağırma ve akış COM birlikte çalışabilirlik çağrısı")  
   
  En düşük düzeyde aynı birlikte çalışma hazırlama hizmeti iki mekanizmalarını kullanır; Ancak, yalnızca COM birlikte çalışma tarafından desteklenen belirli veri türleri veya platform çağırma. Ayrıntılar için bkz [varsayılan hazırlama davranışı](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Platform çağırma ve COM birlikte çalışabilirlik çağrısı akış
   
  İstemci ve sunucu aynı grupta olduğundan, hizmeti otomatik olarak hazırlama birlikte çalışma hazırlama tüm verileri işler. Aşağıdaki çizimde, yönetilen ve yönetilmeyen yığınlar aynı COM Stili grup içinde arasında işletim birlikte çalışma hazırlama hizmet gösterir.  
   
- ![Birlikte çalışma hazırlama](./media/interopheap.gif "interopheap")  
-Grup aynı sıralama işlemi  
+ ![Yönetilen ve yönetilmeyen yığınlar arasında birlikte çalışma hazırlama](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "aynı gruba işlem hazırlama")  
   
  Yönetilen sunucu dışa aktarmayı planlıyorsanız, COM istemcisi sunucusunun Grup belirlediğini unutmayın. MTA içinde başlatılan bir COM istemcisi tarafından yönetilen bir sunucu, iş parçacığı güvenliği emin olmanız gerekir.  
   
@@ -84,8 +82,7 @@ Grup aynı sıralama işlemi
   
  Yönetilen istemci ve yönetilmeyen sunucu aynı grupta olduğunda, tüm veri hazırlama hazırlama hizmet birlikte çalışabilirliği işler. İstemci ve sunucu içinde farklı apartmanlar başlatılır, ancak, COM hazırlama de gereklidir. Aşağıdaki çizimde bir çapraz-grup çağrısının öğeleri gösterir.  
   
- ![COM hazırlama](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-Bir .NET istemcisi ve COM nesnesi arasında çapraz-grup araması  
+ ![COM hazırlama](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET istemcisi ve COM nesnesi arasında çapraz-grup araması")  
   
  Çapraz-Grup sıralama için aşağıdakileri yapabilirsiniz:  
   
@@ -110,14 +107,12 @@ Bir .NET istemcisi ve COM nesnesi arasında çapraz-grup araması
   
  COM hazırlama, işlem ve konak sınırları içinde iletişim kanalları sağlamak ve nasıl birlikte çalışma hazırlama aşağıdaki çizimde gösterilmektedir.  
   
- ![COM hazırlama](./media/interophost.gif "interophost")  
-Çapraz işlem hazırlama  
+ ![COM hazırlama](./media/interop-marshaling/interop-and-com-marshaling.gif "çapraz işlem hazırlama")  
   
 ### <a name="preserving-identity"></a>Kimliği koruma  
  Ortak dil çalışma zamanı, yönetilen ve yönetilmeyen başvuruları kimliğini korur. Aşağıdaki çizimde, işlem ve konak sınırları içinde doğrudan yönetilmeyen başvuruları (üst satırı) ve doğrudan yönetilen başvuruları (alttaki) akışı gösterilmektedir.  
   
- ![COM çağrılabilir sarmalayıcısı ve çalışma zamanı çağrılabilir sarmalayıcı](./media/interopdirectref.gif "interopdirectref")  
-İşlem ve konak sınırlarından geçirirken başvurusu  
+ ![COM çağrılabilir sarmalayıcısı ve çalışma zamanı çağrılabilir sarmalayıcı](./media/interop-marshaling/interop-direct-ref-across-process.gif "işlemi ve konak sınırlarından geçirirken başvurusu")  
   
  Bu çizimde:  
   
@@ -133,7 +128,7 @@ Bir .NET istemcisi ve COM nesnesi arasında çapraz-grup araması
 ### <a name="managed-remoting"></a>Yönetilen uzaktan iletişim  
  Çalışma zamanı Ayrıca, işlem ve konak sınırları yönetilen nesneler arasında bir iletişim kanalı kurmak için kullanabileceğiniz yönetilen uzaktan iletişim sağlar. Yönetilen uzaktan iletişim, aşağıdaki çizimde gösterildiği gibi iletişim kuran bileşenler arasında bir güvenlik duvarı barındırabilir.  
   
- ![SOAP veya TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP veya TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP veya TcpChannel sınıfı kullanarak güvenlik duvarları üzerinden uzaktan çağırır")  
 Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar  
   
  Yönetilmeyen bazı çağrılar SOAP, com ile hizmet verilen bileşenleri arasındaki çağrıları gibi channeled  

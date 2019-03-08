@@ -1,15 +1,8 @@
 ---
 title: Project.json .NET core geçişi
 description: Project.JSON kullanarak eski bir .NET Core projesi geçirmeyi öğrenin
-author: blackdwarf
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170697"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Project.json .NET Core projeleri geçirme
 
@@ -89,7 +82,7 @@ Varsa bu hatayı alırsınız bir *global.json* geçerli dosya ya da üst dizini
 
 Bu adımlardan sonra projeniz .NET Core RTM csproj biçimi ile tamamen uyumlu olmalıdır.
 
-Örnekleri önce ve sonra yeni bir tane eski csproj biçimine geçiş için bkz: [güncelleştirme Visual Studio 2017 RC – .NET Core araçları geliştirmeleri](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) .NET blogunda makalesi.
+Örnekleri önce ve sonra yeni bir tane eski csproj biçimine geçiş için bkz: [güncelleştirme Visual Studio 2017 RC – .NET Core araçları geliştirmeleri](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) .NET blogunda makalesi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

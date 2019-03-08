@@ -1,21 +1,20 @@
 ---
 title: .NET core komut satırı araçları mimarisi
 description: Katmanlar ve en son sürümlerde nelerin değiştiğini .NET Core hakkında bilgi edinin.
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696343"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675699"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core Araçları'nda değişiklikler üst düzey genel bakış
 
-Bu belgede taşıma ile ilişkili değişiklikler açıklanmaktadır *project.json* MSBuild ve *csproj* proje sistemi ile .NET Core Araçları'nın katmanlarını değişiklikler hakkında bilgi ve CLI komutlarını uygulaması. Bu değişiklikler 7 Mart 2017'de .NET Core SDK'sı 1.0 ve Visual Studio 2017 sürümüyle (bkz [duyuru](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)) .NET Core SDK Preview 3'ın yayınlanmasıyla birlikte başlangıçta uygulandığına ancak.
+Bu belgede taşıma ile ilişkili değişiklikler açıklanmaktadır *project.json* MSBuild ve *csproj* proje sistemi ile .NET Core Araçları'nın katmanlarını değişiklikler hakkında bilgi ve CLI komutlarını uygulaması. Bu değişiklikler 7 Mart 2017'de .NET Core SDK'sı 1.0 ve Visual Studio 2017 sürümüyle (bkz [duyuru](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)) .NET Core SDK Preview 3'ın yayınlanmasıyla birlikte başlangıçta uygulandığına ancak.
 
 ## <a name="moving-away-from-projectjson"></a>Project.JSON uzağa taşınması
-Büyük .NET Core Araçları'nda kesinlikle değişikliktir [uzağa project.json csproj'a geçirilmesi taşıma](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) proje sistemi olarak. Komut satırı araçlarının son sürümleri desteklemeyen *project.json* dosyaları. Bu, oluşturmak, çalıştırmak veya project.json tabanlı uygulamaları ve kitaplıkları yayımlamak için kullanılamaz anlamına gelir. Araçlar'ın bu sürümü kullanmak için mevcut projelerinizi geçirme veya yenilerini başlatmak gerekir. 
+Büyük .NET Core Araçları'nda kesinlikle değişikliktir [uzağa project.json csproj'a geçirilmesi taşıma](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) proje sistemi olarak. Komut satırı araçlarının son sürümleri desteklemeyen *project.json* dosyaları. Bu, oluşturmak, çalıştırmak veya project.json tabanlı uygulamaları ve kitaplıkları yayımlamak için kullanılamaz anlamına gelir. Araçlar'ın bu sürümü kullanmak için mevcut projelerinizi geçirme veya yenilerini başlatmak gerekir. 
 
 Bu taşıma işleminin bir parçası olarak, project.json projeleri derlemek için geliştirilmiş özel yapı altyapısı adlı bir yetişkin ve tam özellikli derleme altyapısıyla değiştirildi [MSBuild](https://github.com/Microsoft/msbuild). Platformun ilk sürümünden sonra anahtar teknoloji edildiğinden MSBuild .NET topluluğundaki iyi bilinen bir altyapısıdır. Elbette, .NET Core uygulamaları gerektiğinden, MSBuild .NET Core için unity'nin ve .NET Core üzerinde çalışan herhangi bir platformda kullanılabilir. .NET Core ana gösterir, platformlar arası geliştirme yığınını biridir ve yaptık Bu taşıma, promise bozmadığından emin.
 

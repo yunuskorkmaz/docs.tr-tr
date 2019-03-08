@@ -8,14 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 8670b6cca65003a1f86e5caacda9aa4545434c01
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 559c2c3f13aa92f5d4e27504e37fd886334e69bf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036200"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680028"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Yönetilen Kod Nasıl Yapılır Konuları İçin UI Otomasyon Sağlayıcılar
 > [!NOTE]

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145273"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675023"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,9 +133,9 @@ public class Address : ValueObject
 
 Kimlik ve bu nedenle, hiçbir Kimliği alanı ne adresi sınıfı bile ValueObject sınıfı, bu adresi değer nesnesini uygulaması nasıl sahip olduğunu görebilirsiniz.
 
-Entity Framework tarafından kullanılacak bir sınıf içinde hiç kimlik alanı sahip hiçbir kimliği ile daha iyi değer nesneleri uygulamak için büyük ölçüde yardımcı olan EF Core 2.0 kadar mümkün değildi Tam olarak bir sonraki bölüm açıklaması olmasıdır. 
+EF Core 2.0, önemli ölçüde daha iyi değeri uygulamak için yardımcı olan herhangi bir kimliğe sahip nesneleri kadar hiçbir Kimliği alanı Entity Framework tarafından kullanılacak bir sınıf olması mümkün değildi Tam olarak bir sonraki bölüm açıklaması olmasıdır.
 
-Bunu tartışılabilir yalnızca (yani salt alma özellikleri) ve sabit, olan değer nesneleri okunmalıdır gerçekten de geçerlidir. Ancak, değer nesneler genellikle serileştirilmiş ve ileti kuyrukları gitmek için seri durumdan ve salt okunur, biz yalnızca onları özel olarak bırakmak için değerler atama gelen seri durumdan çıkarıcının ayarladığı durakları pratik olacak şekilde salt okunur yeterli.
+Değer nesneleri, sabit, olan salt okunur (yani salt alma Özellikler) olması gerektiğini tartışılabilir ve gerçekten de true. Ancak, değer nesneler genellikle serileştirilmiş ve ileti kuyrukları gitmek için seri durumdan ve salt okunur olan, böylece biz yalnızca bunları kullanışlı olması için salt okunur yeterince özel ayarlı bırakın gelen değerler, atama seri durumdan çıkarıcının durdurur.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Değer EF Core 2.0 ile veritabanı nesnelerini kalıcı yapma
 
@@ -150,9 +150,9 @@ Hizmetine (.NET Core 1.1) ilk sürümünde, EF Core altyapısı tarafından gere
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ Hizmetine OnModelCreating() metodundaki OrderingContext.cs adresindeki var. uygu
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 Aşağıdaki kodda sipariş varlığı için Kalıcılık altyapısı olarak tanımlanır:
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -330,6 +330,6 @@ public class Address
 - **Sınıf adresi.** Örnek değer hizmetine nesne sınıfı. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[Önceki](seedwork-domain-model-base-classes-interfaces.md)
->[İleri](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [Önceki](seedwork-domain-model-base-classes-interfaces.md)
+> [İleri](enumeration-classes-over-enum-types.md)

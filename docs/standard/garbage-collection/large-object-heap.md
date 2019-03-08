@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066434"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677191"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerde büyük nesne yığını
 
@@ -47,12 +47,12 @@ Bir atık toplama işlemi tetiklendiğinde, GC Canlı nesneleri izler ve bunlar�
 
 Şekil 1 GC forms sonra birinci nesil 0 atık Toplayıcı nesil 1 burada bir senaryo gösterilmektedir burada `Obj1` ve `Obj3` ölü olan ve forms 2. nesil birinci nesil 1 GC sonra nerede `Obj2` ve `Obj5` ölü olan. Bu ve aşağıdaki şekilde yalnızca gösterim amacıyla olduğunu unutmayın; daha iyi yığında ne göstermek için çok az sayıda nesneleri içerirler. Gerçekte çok daha fazla nesneyi GC genellikle faydalanırsınız.
 
-![Şekil 1: Gen 0 GC ve gen 1 GC](media/loh/loh-figure-1.jpg)  
+![Şekil 1: Gen 0 GC ve gen 1 GC](media/loh/loh-figure-1.jpg)\
 Şekil 1: Bir nesil 0 ve 1. kuşak GC.
 
 Şekil 2 gösterir, 2. nesil GC sonra gördüğünüz `Obj1` ve `Obj2` ölü GC forms tarafından kullanılıyor kullanılan bellek yetersiz bitişik boş alan olan `Obj1` ve `Obj2`, daha sonra bir ayırma isteğini karşılamak için kullanıldı için `Obj4`. Son nesne sonra boşluk `Obj3`, ucuna da ayırma isteklerini karşılamak için kullanılabilir.
 
-![Şekil 2: Gen 2 GC sonra](media/loh/loh-figure-2.jpg)  
+![Şekil 2: Gen 2 GC sonra](media/loh/loh-figure-2.jpg)\
 Şekil 2: 2. nesil GC sonra
 
 Büyük nesne ayırma isteklerini karşılamak için yeterli boş alan yoksa, GC ilk işletim sisteminden daha fazla kesim almaya çalışır. Bu başarısız olursa umuduyla bazı yer açmayı, içinde 2. nesil GC tetikler.
@@ -61,7 +61,7 @@ Büyük nesne ayırma isteklerini karşılamak için yeterli boş alan yoksa, GC
 
 LOH segment, yalnızca LOH yalnızca 2. nesil GC'ler sırasında toplanan olduğundan, bu tür bir GC sırasında serbest bırakılabilir. Şekil 3, çöp toplayıcı'nın bir segmente (kesim 2) geri işletim sistemi sürümleri ve kalan segmentler hakkında daha fazla alan kaydeder burada bir senaryo gösterilmektedir. Kaydı geri alınmış boşluk kesim sonunda, büyük nesne ayırma isteklerini karşılamak için kullanması gereken, bellek yeniden kaydeder. (Bir işleme ve kaydetmek için hakkında açıklama belgelerine bakın [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
-![Şekil 3: Gen 2 GC sonra LOH](media/loh/loh-figure-3.jpg)  
+![Şekil 3: Gen 2 GC sonra LOH](media/loh/loh-figure-3.jpg)\
 Şekil 3: 2. nesil GC sonra LOH
 
 ## <a name="when-is-a-large-object-collected"></a>Büyük nesne ne toplanır?
@@ -156,7 +156,7 @@ Bu performans sayaçlarını genellikle performans sorunlarını araştırma, iy
 
 Performans İzleyicisi (perfmon.exe) performans sayaçlarını aramak için genel bir yoludur. Verdiğiniz işlemleri için ilgi çekici sayaç eklemek için "Sayaç Ekle" kullanın. Şekil 4'te gösterildiği gibi performans sayacı verileri bir günlük dosyasına kaydedebilirsiniz.
 
-![Şekil 4: Performans sayaçlarını ekleme.](media/loh/perfcounter.png)  
+![Şekil 4: Performans sayaçlarını ekleme.](media/loh/perfcounter.png)\
 Şekil 4: 2. nesil GC sonra LOH
 
 Performans sayaçları da programlı bir şekilde sorgulanabilir. Çoğu kişi, bunları kendi rutin test işleminin bir parçası olarak bu şekilde toplayın. Bunlar normal dışı değerleri sayaçlarla spot, bunlar başka bir yolla araştırmaya yardımcı olması için daha ayrıntılı veri almak için kullanın.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Sonuç aşağıdakine benzer olacaktır:
 
-![Şekil 5: PerfView kullanma ETW olayları İnceleme](media/loh/perfview.png)  
-Şekil 5: PerfView kullanma gösterilen ETW olayları
+![Şekil 5: PerfView kullanma ETW olayları İnceleme](media/loh/perfview.png) Şekil 5: PerfView kullanma gösterilen ETW olayları
 
 Gördüğünüz gibi tüm GC'ler 2. GC'ye olan ve tüm büyük nesne ayırma bu GC tetiklenen yani AllocLarge tarafından tetiklenir. Bu ayırmalar geçici olduğunu biliyoruz çünkü **LOH hayatta kalma oranı %** sütun %1 söyler.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 yaklaşık her 100 bin cinsinden değer ayırmaların harekete geçirilen bir AllocationTick olay toplar. Diğer bir deyişle, her zaman büyük nesne ayrılmış bir olay harekete geçirilir. Ardından, büyük nesnelerin ayrılmış çağrı yığınını gösteren GC yığın ayırma görünümlerden birine göz atabilirsiniz:
 
-![Şekil 6: GC yığın ayırma görünümü](media/loh/perfview2.png)  
+![Şekil 6: GC yığın ayırma görünümü](media/loh/perfview2.png)\
 Şekil 6: GC yığın ayırma görünümü
 
 Gördüğünüz gibi yalnızca büyük nesneleri ayırdığı çok basit bir test budur kendi `Main` yöntemi.
@@ -244,7 +243,7 @@ LOH öbek boyutudur (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 bayt. Ad
 
 Bazen, hata ayıklayıcı LOH toplam boyutu küçüktür 85.000 bayt olduğunu gösterir. Çalışma zamanının kendisi büyük bir nesneye daha küçük olan bazı nesneler ayrılacak LOH kullandığından bu gerçekleşir.
 
-Bazen LOH sıkıştırılmamıştır çünkü LOH thoought parçalanma kaynağı olması olabilir. Parçalanma anlamına gelir:
+Bazen LOH sıkıştırılmamıştır çünkü LOH parçalanma bir kaynak olarak düşünülebilir. Parçalanma anlamına gelir:
 
 - Yönetilen nesneler arasındaki boş alan miktarı tarafından belirtilen yönetilen yığının parçalanma. SoS içinde `!dumpheap –type Free` komut, yönetilen nesneler arasındaki boş alan miktarını görüntüler.
 
@@ -310,7 +309,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 Bu komut ayıklayıcıya girer ve çağrı yığını yalnızca şu durumlarda gösterir [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) bir ayırma boyutu 8 MB (0x800000) değerinden büyük olarak adlandırılır.
 
-CLR 2.0 denilen bir özelliği eklendi *VM Hoarding* , scenarious için yararlı olabilir burada kesim (yığın nesnesi büyük ve küçük üzerinde de dahil olmak üzere) sık alınan ve yayımlanmış. Adlı bir başlangıç bayrak belirttiğiniz VM Hoarding belirtmek için `STARTUP_HOARD_GC_VM` barındırma API'si aracılığıyla. İşletim sistemi boş segmentlere geri serbest bırakılması, yerine CLR bu segmentlerde belleği kaydeder ve onları bir bekleme listesine koyar. (CLR için çok büyük olduğundan kesimleri bunu değil olduğunu unutmayın.) CLR, yeni segment isteklerini karşılamak için daha sonra bu kesimler kullanır. Yeterince büyük bir bulabilirsiniz, uygulamanızın yeni bir segment duyduğunda bekleme listeden bir CLR kullanır.
+CLR 2.0 denilen bir özelliği eklendi *VM Hoarding* , senaryolar için yararlı olabilir burada kesim (yığın nesnesi büyük ve küçük üzerinde de dahil olmak üzere) sık alınan ve yayımlanmış. Adlı bir başlangıç bayrak belirttiğiniz VM Hoarding belirtmek için `STARTUP_HOARD_GC_VM` barındırma API'si aracılığıyla. İşletim sistemi boş segmentlere geri serbest bırakılması, yerine CLR bu segmentlerde belleği kaydeder ve onları bir bekleme listesine koyar. (CLR için çok büyük olduğundan kesimleri bunu değil olduğunu unutmayın.) CLR, yeni segment isteklerini karşılamak için daha sonra bu kesimler kullanır. Yeterince büyük bir bulabilirsiniz, uygulamanızın yeni bir segment duyduğunda bekleme listeden bir CLR kullanır.
 
 VM hoarding de bunlar zaten, yetersiz bellek özel durumları engellemek için bu sistemde çalışan baskın uygulamalar, bazı sunucu uygulamaları gibi alınan parçaları üzerine tutmak istediğiniz uygulamalar için yararlıdır.
 
