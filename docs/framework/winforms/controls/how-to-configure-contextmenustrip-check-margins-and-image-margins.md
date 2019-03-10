@@ -9,33 +9,33 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 9406a1dc0fca36a42674d5455e5529b703d87e3e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 8527c8f2195c586ba7d9c61c5c2ea1fa26bf53f8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220094"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715224"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="1924d-102">Nasıl yapılır: Yapılandırma ContextMenuStrip denetim kenar boşluklarını ve görüntü kenar boşluklarını</span><span class="sxs-lookup"><span data-stu-id="1924d-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
-<span data-ttu-id="1924d-103">Özelleştirebileceğiniz bir <xref:System.Windows.Forms.ContextMenuStrip> ayarlayarak <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> ve <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> çeşitli birleşimlerini özellikleri.</span><span class="sxs-lookup"><span data-stu-id="1924d-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="dc411-102">Nasıl yapılır: Yapılandırma ContextMenuStrip denetim kenar boşluklarını ve görüntü kenar boşluklarını</span><span class="sxs-lookup"><span data-stu-id="dc411-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
+<span data-ttu-id="dc411-103">Özelleştirebileceğiniz bir <xref:System.Windows.Forms.ContextMenuStrip> ayarlayarak <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> ve <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> çeşitli birleşimlerini özellikleri.</span><span class="sxs-lookup"><span data-stu-id="dc411-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1924d-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1924d-104">Example</span></span>  
- <span data-ttu-id="1924d-105">Aşağıdaki kod örneği, ayarlayın ve özelleştirmek gösterilmiştir <xref:System.Windows.Forms.ContextMenuStrip> denetleyin ve görüntü kenar boşluklarını.</span><span class="sxs-lookup"><span data-stu-id="1924d-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
+## <a name="example"></a><span data-ttu-id="dc411-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="dc411-104">Example</span></span>  
+ <span data-ttu-id="dc411-105">Aşağıdaki kod örneği, ayarlayın ve özelleştirmek gösterilmiştir <xref:System.Windows.Forms.ContextMenuStrip> denetleyin ve görüntü kenar boşluklarını.</span><span class="sxs-lookup"><span data-stu-id="dc411-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
-[!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
-[!code-vb[System.Windows.Forms.ToolStrip.Misc#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
+[!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
+[!code-vb[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1924d-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="1924d-106">Compiling the Code</span></span>  
- <span data-ttu-id="1924d-107">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="1924d-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="dc411-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="dc411-106">Compiling the Code</span></span>  
+ <span data-ttu-id="dc411-107">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="dc411-107">This example requires:</span></span>  
   
--   <span data-ttu-id="1924d-108">System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="1924d-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="dc411-108">System.Windows.Forms System.Design ve System.Drawing derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="dc411-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="1924d-109">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="1924d-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="1924d-110">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1924d-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="dc411-109">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="dc411-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="dc411-110">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dc411-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1924d-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1924d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc411-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dc411-111">See also</span></span>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [<span data-ttu-id="1924d-112">ToolStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="1924d-112">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="1924d-113">Nasıl yapılır: Kenar boşluklarını ve görüntü kenar boşluklarını ContextMenuStrip denetimlerinde denetim etkinleştir</span><span class="sxs-lookup"><span data-stu-id="1924d-113">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [<span data-ttu-id="dc411-112">ToolStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="dc411-112">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="dc411-113">Nasıl yapılır: Kenar boşluklarını ve görüntü kenar boşluklarını ContextMenuStrip denetimlerinde denetim etkinleştir</span><span class="sxs-lookup"><span data-stu-id="dc411-113">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
