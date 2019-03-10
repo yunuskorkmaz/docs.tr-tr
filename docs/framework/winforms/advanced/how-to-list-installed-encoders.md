@@ -8,29 +8,29 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: c5019a349b4f3c881190241042cecc6c4c571950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 492930b7d8a47db478c8fa0f282cb5f491e144ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605662"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708463"
 ---
-# <a name="how-to-list-installed-encoders"></a><span data-ttu-id="70d6c-102">Nasıl yapılır: Yüklenen Kodlayıcıları listeleme</span><span class="sxs-lookup"><span data-stu-id="70d6c-102">How to: List Installed Encoders</span></span>
-<span data-ttu-id="70d6c-103">Uygulamanız için bir özel görüntü dosya biçimi tasarrufu yapıp yapamayacağınızı belirleyebilirsiniz için görüntü Kodlayıcıları bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="70d6c-103">You may want to list the image encoders available on a computer, to determine whether your application can save to a particular image file format.</span></span> <span data-ttu-id="70d6c-104"><xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statik yöntemler hangi görüntü Kodlayıcıları kullanılabilir belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="70d6c-104">The <xref:System.Drawing.Imaging.ImageCodecInfo> class provides the <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> static methods so that you can determine which image encoders are available.</span></span> <span data-ttu-id="70d6c-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="70d6c-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> returns an array of <xref:System.Drawing.Imaging.ImageCodecInfo> objects.</span></span>  
+# <a name="how-to-list-installed-encoders"></a><span data-ttu-id="caf66-102">Nasıl yapılır: Yüklenen Kodlayıcıları listeleme</span><span class="sxs-lookup"><span data-stu-id="caf66-102">How to: List Installed Encoders</span></span>
+<span data-ttu-id="caf66-103">Uygulamanız için bir özel görüntü dosya biçimi tasarrufu yapıp yapamayacağınızı belirleyebilirsiniz için görüntü Kodlayıcıları bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="caf66-103">You may want to list the image encoders available on a computer, to determine whether your application can save to a particular image file format.</span></span> <span data-ttu-id="caf66-104"><xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statik yöntemler hangi görüntü Kodlayıcıları kullanılabilir belirleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="caf66-104">The <xref:System.Drawing.Imaging.ImageCodecInfo> class provides the <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> static methods so that you can determine which image encoders are available.</span></span> <span data-ttu-id="caf66-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="caf66-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> returns an array of <xref:System.Drawing.Imaging.ImageCodecInfo> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="70d6c-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="70d6c-106">Example</span></span>  
- <span data-ttu-id="70d6c-107">Aşağıdaki kod örneği, yüklenen Kodlayıcıları listesi ve özellik değerlerine çıkarır.</span><span class="sxs-lookup"><span data-stu-id="70d6c-107">The following code example outputs the list of installed encoders and their property values.</span></span>  
+## <a name="example"></a><span data-ttu-id="caf66-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="caf66-106">Example</span></span>  
+ <span data-ttu-id="caf66-107">Aşağıdaki kod örneği, yüklenen Kodlayıcıları listesi ve özellik değerlerine çıkarır.</span><span class="sxs-lookup"><span data-stu-id="caf66-107">The following code example outputs the list of installed encoders and their property values.</span></span>  
   
- [!code-csharp[UsingImageEncodersDecoders#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#1)]
- [!code-vb[UsingImageEncodersDecoders#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#1)]  
+ [!code-csharp[UsingImageEncodersDecoders#1](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#1)]
+ [!code-vb[UsingImageEncodersDecoders#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="70d6c-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="70d6c-108">Compiling the Code</span></span>  
- <span data-ttu-id="70d6c-109">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="70d6c-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="caf66-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="caf66-108">Compiling the Code</span></span>  
+ <span data-ttu-id="caf66-109">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="caf66-109">This example requires:</span></span>  
   
--   <span data-ttu-id="70d6c-110">Bir Windows Forms uygulaması.</span><span class="sxs-lookup"><span data-stu-id="70d6c-110">A Windows Forms application.</span></span>  
+-   <span data-ttu-id="caf66-110">Bir Windows Forms uygulaması.</span><span class="sxs-lookup"><span data-stu-id="caf66-110">A Windows Forms application.</span></span>  
   
--   <span data-ttu-id="70d6c-111">A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="70d6c-111">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+-   <span data-ttu-id="caf66-111">A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="caf66-111">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70d6c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="70d6c-112">See also</span></span>
-- [<span data-ttu-id="70d6c-113">Nasıl yapılır: Yüklenen kod çözücüleri listeleme</span><span class="sxs-lookup"><span data-stu-id="70d6c-113">How to: List Installed Decoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)
-- [<span data-ttu-id="70d6c-114">Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="70d6c-114">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="caf66-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="caf66-112">See also</span></span>
+- [<span data-ttu-id="caf66-113">Nasıl yapılır: Yüklenen kod çözücüleri listeleme</span><span class="sxs-lookup"><span data-stu-id="caf66-113">How to: List Installed Decoders</span></span>](how-to-list-installed-decoders.md)
+- [<span data-ttu-id="caf66-114">Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="caf66-114">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)

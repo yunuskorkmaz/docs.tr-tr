@@ -9,29 +9,29 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: f961345c4b9be43e73a8c7a11914cf82833a822f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbce48643d21418d580a6db44f86b00cf50fb9d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559027"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714196"
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a><span data-ttu-id="be727-102">Nasıl yapılır: Windows Forms'ta bir dosyayla ilişkili simgeyi çıkarma</span><span class="sxs-lookup"><span data-stu-id="be727-102">How to: Extract the Icon Associated with a File in Windows Forms</span></span>
-<span data-ttu-id="be727-103">Çok sayıda dosya sağlayan bir görsel bir temsili ilişkili dosya türü simgeleri katıştırılmış sahip.</span><span class="sxs-lookup"><span data-stu-id="be727-103">Many files have embedded icons that provide a visual representation of the associated file type.</span></span> <span data-ttu-id="be727-104">Örneğin, Microsoft Word belgeleri, bunları Word belgeleri olarak tanımlayan bir simge içerir.</span><span class="sxs-lookup"><span data-stu-id="be727-104">For example, Microsoft Word documents contain an icon that identifies them as Word documents.</span></span> <span data-ttu-id="be727-105">Liste denetimi ya da tablo denetim dosyaları görüntülerken, her dosya adının yanındaki dosya türünü temsil eden bir simge görüntülemek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="be727-105">When displaying files in a list control or table control, you may want to display the icon representing the file type next to each file name.</span></span> <span data-ttu-id="be727-106">Kolayca kullanarak bunu yapabilirsiniz <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="be727-106">You can do this easily by using the <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> method.</span></span>  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a><span data-ttu-id="bc88b-102">Nasıl yapılır: Windows Forms'ta bir dosyayla ilişkili simgeyi çıkarma</span><span class="sxs-lookup"><span data-stu-id="bc88b-102">How to: Extract the Icon Associated with a File in Windows Forms</span></span>
+<span data-ttu-id="bc88b-103">Çok sayıda dosya sağlayan bir görsel bir temsili ilişkili dosya türü simgeleri katıştırılmış sahip.</span><span class="sxs-lookup"><span data-stu-id="bc88b-103">Many files have embedded icons that provide a visual representation of the associated file type.</span></span> <span data-ttu-id="bc88b-104">Örneğin, Microsoft Word belgeleri, bunları Word belgeleri olarak tanımlayan bir simge içerir.</span><span class="sxs-lookup"><span data-stu-id="bc88b-104">For example, Microsoft Word documents contain an icon that identifies them as Word documents.</span></span> <span data-ttu-id="bc88b-105">Liste denetimi ya da tablo denetim dosyaları görüntülerken, her dosya adının yanındaki dosya türünü temsil eden bir simge görüntülemek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bc88b-105">When displaying files in a list control or table control, you may want to display the icon representing the file type next to each file name.</span></span> <span data-ttu-id="bc88b-106">Kolayca kullanarak bunu yapabilirsiniz <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="bc88b-106">You can do this easily by using the <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="be727-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="be727-107">Example</span></span>  
- <span data-ttu-id="be727-108">Aşağıdaki kod örneği bir dosyayla ilişkili simgeyi çıkarma ve görüntü dosya adı ve ilgili simgeye yapmayı gösteren bir <xref:System.Windows.Forms.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="be727-108">The following code example demonstrates how to extract the icon associated with a file and display the file name and its associated icon in a <xref:System.Windows.Forms.ListView> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc88b-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="bc88b-107">Example</span></span>  
+ <span data-ttu-id="bc88b-108">Aşağıdaki kod örneği bir dosyayla ilişkili simgeyi çıkarma ve görüntü dosya adı ve ilgili simgeye yapmayı gösteren bir <xref:System.Windows.Forms.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="bc88b-108">The following code example demonstrates how to extract the icon associated with a file and display the file name and its associated icon in a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
- [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="be727-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="be727-109">Compiling the Code</span></span>  
- <span data-ttu-id="be727-110">Örneği derlemek için:</span><span class="sxs-lookup"><span data-stu-id="be727-110">To compile the example:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bc88b-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="bc88b-109">Compiling the Code</span></span>  
+ <span data-ttu-id="bc88b-110">Örneği derlemek için:</span><span class="sxs-lookup"><span data-stu-id="bc88b-110">To compile the example:</span></span>  
   
--   <span data-ttu-id="be727-111">Yukarıdaki kod, bir Windows Form ve çağrı yapıştırın `ExtractAssociatedIconExample` formun oluşturucudan yöntemi veya <xref:System.Windows.Forms.Form.Load> olay işleme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="be727-111">Paste the preceding code into a Windows Form, and call the `ExtractAssociatedIconExample` method from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
+-   <span data-ttu-id="bc88b-111">Yukarıdaki kod, bir Windows Form ve çağrı yapıştırın `ExtractAssociatedIconExample` formun oluşturucudan yöntemi veya <xref:System.Windows.Forms.Form.Load> olay işleme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="bc88b-111">Paste the preceding code into a Windows Form, and call the `ExtractAssociatedIconExample` method from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
   
-     <span data-ttu-id="be727-112">Formunuza alındığından emin olmak ihtiyacınız olacak <xref:System.IO> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="be727-112">You will need to make sure that your form imports the <xref:System.IO> namespace.</span></span>  
+     <span data-ttu-id="bc88b-112">Formunuza alındığından emin olmak ihtiyacınız olacak <xref:System.IO> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="bc88b-112">You will need to make sure that your form imports the <xref:System.IO> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be727-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="be727-113">See also</span></span>
-- [<span data-ttu-id="be727-114">Görüntüler, Bit Eşlemler ve Meta Dosyaları</span><span class="sxs-lookup"><span data-stu-id="be727-114">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [<span data-ttu-id="be727-115">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="be727-115">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="bc88b-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc88b-113">See also</span></span>
+- [<span data-ttu-id="bc88b-114">Görüntüler, Bit Eşlemler ve Meta Dosyaları</span><span class="sxs-lookup"><span data-stu-id="bc88b-114">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="bc88b-115">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="bc88b-115">ListView Control</span></span>](../controls/listview-control-windows-forms.md)
