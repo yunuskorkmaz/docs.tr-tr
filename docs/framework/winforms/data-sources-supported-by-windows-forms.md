@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664750"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711310"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  
   
 ## <a name="structures-to-bind-to"></a>Yapılarını bağlama  
- Windows Forms'ta çok çeşitli yapıları basit bağlayabilirsiniz nesneleri (basit bağlama) için ADO.NET veri tablolarını (Karmaşık bağlama) gibi karmaşık listeler. Basit bağlama için Windows Forms basit nesne üzerinde ortak özellikler bağlamayı destekler. Windows Forms liste tabanlı bağlama genellikle gerektirir nesnenin destekleyebildiği <xref:System.Collections.IList> arabirimi veya <xref:System.ComponentModel.IListSource> arabirimi. Ayrıca, ile ile bağlıyorsanız bir <xref:System.Windows.Forms.BindingSource> bileşeni destekleyen bir nesne bağlayabilirsiniz <xref:System.Collections.IEnumerable> arabirimi. Veri bağlama ile ilgili arabirimler hakkında daha fazla bilgi için bkz: [veri bağlama arabirimleri ilgili](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ Windows Forms'ta çok çeşitli yapıları basit bağlayabilirsiniz nesneleri (basit bağlama) için ADO.NET veri tablolarını (Karmaşık bağlama) gibi karmaşık listeler. Basit bağlama için Windows Forms basit nesne üzerinde ortak özellikler bağlamayı destekler. Windows Forms liste tabanlı bağlama genellikle gerektirir nesnenin destekleyebildiği <xref:System.Collections.IList> arabirimi veya <xref:System.ComponentModel.IListSource> arabirimi. Ayrıca, ile ile bağlıyorsanız bir <xref:System.Windows.Forms.BindingSource> bileşeni destekleyen bir nesne bağlayabilirsiniz <xref:System.Collections.IEnumerable> arabirimi. Veri bağlama ile ilgili arabirimler hakkında daha fazla bilgi için bkz: [veri bağlama arabirimleri ilgili](interfaces-related-to-data-binding.md).  
   
  Aşağıdaki liste, Windows Forms'ta adlarınıza bağlayabileceğiniz yapıları gösterir.  
   
@@ -58,6 +58,6 @@ Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan veri
 -   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> tüm özelleştirilmiş bir görünümü olan <xref:System.Data.DataSet>, benzer bir <xref:System.Data.DataView>, ancak dahil ilişkileri. İle bir <xref:System.Data.DataViewManager.DataViewSettings%2A> koleksiyonu ayarlayabileceğiniz varsayılan filtreler ve görünümler için sıralama seçeneklerinde, <xref:System.Data.DataViewManager> için belirli bir tabloya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

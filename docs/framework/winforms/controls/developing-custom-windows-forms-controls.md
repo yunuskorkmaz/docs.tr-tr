@@ -5,42 +5,42 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442717"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716445"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework ile Özel Windows Forms Denetimleri Geliştirme
 Windows Forms denetimleri, kullanıcı arabiriminin işlevselliğini kapsülleyen ve istemci tarafı Windows tabanlı uygulamalarda kullanılır, yeniden kullanılabilir bileşenleridir. Yalnızca Windows Forms pek çok kullanıma hazır denetimi sağlar, ayrıca kendi denetimleri geliştirmek için altyapı sağlar. Mevcut denetimleri birleştirmek, mevcut denetimleri genişletmek veya kendi özel denetimler yazar. Bu bölümde, arka plan bilgileri ve Windows Forms denetimleri geliştirmenize yardımcı olacak örnekler sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms'da Denetimlerin Kullanımına Genel Bakış](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ [Windows Forms'da Denetimlerin Kullanımına Genel Bakış](overview-of-using-controls-in-windows-forms.md)  
  Windows Forms uygulamalarında denetimlerin kullanımına temel öğeleri vurgular.  
   
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)  
  Özel denetimler ile yazar farklı türlerde açıklar <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı.  
   
- [Windows Forms Denetimi Geliştirmenin Esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Windows Forms Denetimi Geliştirmenin Esasları](windows-forms-control-development-basics.md)  
  Bir Windows Forms denetimi geliştirme ilk adımlar anlatılmaktadır.  
   
- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Özellikler](properties-in-windows-forms-controls.md)  
  Windows Forms denetimlerine özellikleri ekleme işlemi gösterilmektedir.  
   
- [Windows Forms Denetimlerindeki Olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Olaylar](events-in-windows-forms-controls.md)  
  Windows Forms denetimlerinde olay tanımlama ve işlemek nasıl gösterir.  
   
- [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Öznitelikler](attributes-in-windows-forms-controls.md)  
  Özellikleri veya diğer üyeleri özel denetimler ve bileşenlerinizi uygulayabilirsiniz öznitelikleri açıklanmaktadır.  
   
- [Özel Denetim Boyama ve İşleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ [Özel Denetim Boyama ve İşleme](custom-control-painting-and-rendering.md)  
  Denetimleri özelleştirme işlemi gösterilmektedir.  
   
- [Windows Forms Denetimlerindeki Düzenler](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Düzenler](layout-in-windows-forms-controls.md)  
  Formlar ve denetimler için Gelişmiş düzenleri oluşturma işlemi gösterilmektedir.  
   
- [Windows Forms Denetimlerinde Çoklu Kullanım](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerinde Çoklu Kullanım](multithreading-in-windows-forms-controls.md)  
  Çok iş parçacıklı denetimleri uygulama işlemi gösterilmektedir.  
   
 ## <a name="reference"></a>Başvuru  
