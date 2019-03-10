@@ -6,33 +6,33 @@ helpviewer_keywords:
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-ms.openlocfilehash: 5a4dd320b4242b1e557b5fc5edfca1a1baf7c954
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0175a6551d7257d7d74df27ab4b927320b176dd7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536152"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707748"
 ---
 # <a name="label-control-windows-forms"></a>Etiket Denetimi (Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripLabel> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.Label> denetim. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripLabel> gibi diğer yeni denetimleri ile <xref:System.Windows.Forms.ToolStripDropDown>. Ancak, <xref:System.Windows.Forms.Label> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+>  <xref:System.Windows.Forms.ToolStripLabel> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.Label> denetimi. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripLabel> gibi diğer yeni denetimler ile <xref:System.Windows.Forms.ToolStripDropDown>. Ancak, <xref:System.Windows.Forms.Label> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
- Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez görüntüler görüntülemek için kullanılır. Bir form üzerinde nesneleri tanımlamak için kullanılan — hangi belirli bir denetimin açıklamasını yeterlidir tıkladıysanız, örneğin sağlayın ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Çünkü <xref:System.Windows.Forms.Label> denetimi odağı alamıyor, diğer denetimler için erişim anahtarları oluşturmak için de kullanılabilir.  
+ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez resimleri görüntülemek için kullanılır. Form üzerindeki nesneleri tanımlamak için kullanılan — hangi belirli denetim açıklamasını yeterlidir seçeneğine tıkladıysanız, örneğin sağlamak ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Çünkü <xref:System.Windows.Forms.Label> denetim odağı alamaz, diğer denetimler için erişim anahtarları oluşturmak için de kullanılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Etiket Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- Bu denetimi nedir ve anahtar özellikleri ve özelliklerini açıklar.  
+ [Etiket Denetimine Genel Bakış](label-control-overview-windows-forms.md)  
+ Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- Başka bir denetim için erişim anahtarı tanımlamak için bir etiket kullanmayı açıklar.  
+ [Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ Başka bir denetim için bir erişim tuşunu tanımlamak için bir etiket kullanmayı açıklar.  
   
- [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- Etiket denetimi, resim yazısı boyutunu ayarlama açıklanmaktadır.  
+ [Nasıl yapılır: Bir Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ Etiket denetimi için kendi açıklamalı alt yazı boyutunu ayarlama açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Label>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

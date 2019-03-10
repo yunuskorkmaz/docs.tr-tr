@@ -8,15 +8,15 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 8d6c509d8e603063309dada6f536c43b8ada5f6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61a8d4baba35a7a8a8ae221b054029eb59107d0e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591740"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716263"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider Bileşenine Genel Bakış (Windows Forms)
-Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) bileşeni, bir form veya denetim kullanıcı girişini doğrulamak için kullanılır. Genellikle, bir form üzerinde kullanıcı girişini doğrulama veya dataset içindeki hataları görüntüleme ile birlikte kullanılır. Bir ileti kutusu kapatıldıktan sonra hata iletisi artık görünür olmadığı için bir hata sağlayıcısı bir hata iletisi bir ileti kutusu görüntüleme daha daha iyi bir alternatiftir. <xref:System.Windows.Forms.ErrorProvider> Bileşen bir hata simgesi görüntülenir (![ErrorProvider simgesi](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) gibi bir metin kutusu; kullanıcının fareyi üzerine getirdiğinde ilgili denetimin yanındaki hata simgesi, bir araç ipucu, hata iletisi dizesi gösteren görüntülenir.  
+Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) bileşeni, bir form veya denetim kullanıcı girişini doğrulamak için kullanılır. Genellikle, bir form üzerinde kullanıcı girişini doğrulama veya dataset içindeki hataları görüntüleme ile birlikte kullanılır. Bir ileti kutusu kapatıldıktan sonra hata iletisi artık görünür olmadığı için bir hata sağlayıcısı bir hata iletisi bir ileti kutusu görüntüleme daha daha iyi bir alternatiftir. <xref:System.Windows.Forms.ErrorProvider> Bileşen bir hata simgesi görüntülenir (![ErrorProvider simgesi](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) gibi bir metin kutusu; kullanıcının fareyi üzerine getirdiğinde ilgili denetimin yanındaki hata simgesi, bir araç ipucu, hata iletisi dizesi gösteren görüntülenir.  
   
 ## <a name="key-properties"></a>Anahtar Özellikler  
  <xref:System.Windows.Forms.ErrorProvider> Bileşeninin anahtar özellikleri <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, ve <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Kullanırken <xref:System.Windows.Forms.ErrorProvider> verilere bağlı denetimler ile bileşen <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> özelliği sırada bir hata simgesi formda göstermek için bileşeni için uygun bir kapsayıcı için (genellikle Windows Form) ayarlanmalıdır. Bileşen Tasarımcısı'nda eklendiğinde <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> özelliği içeren form için ayarlandığında; kod denetimi eklerseniz bu kendiniz ayarlamanız gerekir.  
@@ -28,5 +28,5 @@ Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/error
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile DataSet içindeki hataları görüntüleme](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile Form doğrulama için hata simgeleri görüntüleme](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile DataSet içindeki hataları görüntüleme](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile Form doğrulama için hata simgeleri görüntüleme](display-error-icons-for-form-validation-with-wf-errorprovider.md)

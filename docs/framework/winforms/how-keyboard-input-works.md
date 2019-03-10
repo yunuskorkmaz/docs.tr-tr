@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645489"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718031"
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
-Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları yükselterek işler. Çoğu Windows Forms uygulamaları klavye girişi, klavye olaylarını işleme tarafından özel olarak işler. Ancak, bir denetim ulaşmadan önce anahtarları kesintiye gibi daha gelişmiş klavye girişi senaryoları uygulayabilmesi klavye iletileri nasıl çalıştığını anlamak gerekir. Bu konu, Windows Forms tanır ve klavye iletileri nasıl yönlendirileceğini genel bir bakış sağlar anahtar veri türlerini açıklar. Klavye olaylarını hakkında daha fazla bilgi için bkz. [kullanan klavye olayları](../../../docs/framework/winforms/using-keyboard-events.md).  
+Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları yükselterek işler. Çoğu Windows Forms uygulamaları klavye girişi, klavye olaylarını işleme tarafından özel olarak işler. Ancak, bir denetim ulaşmadan önce anahtarları kesintiye gibi daha gelişmiş klavye girişi senaryoları uygulayabilmesi klavye iletileri nasıl çalıştığını anlamak gerekir. Bu konu, Windows Forms tanır ve klavye iletileri nasıl yönlendirileceğini genel bir bakış sağlar anahtar veri türlerini açıklar. Klavye olaylarını hakkında daha fazla bilgi için bkz. [kullanan klavye olayları](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Anahtar türü  
  Windows Forms bit düzeyi tarafından temsil edilen sanal anahtar kodlarını olarak klavye girişi tanımlayan <xref:System.Windows.Forms.Keys> sabit listesi. İle <xref:System.Windows.Forms.Keys> numaralandırma basılı tuşlarını kullanarak tek bir değer bir dizi birleştirebilirsiniz. Bu değerler WM_KEYDOWN ve WM_SYSKEYDOWN Windows iletilerle değerlere karşılık gelir. Çoğu fiziksel tuş basışlarını işleyerek algılayabilir <xref:System.Windows.Forms.Control.KeyDown> veya <xref:System.Windows.Forms.Control.KeyUp> olayları. Karakter anahtarları olan bir alt kümesini <xref:System.Windows.Forms.Keys> numaralandırma ve WM_CHAR ve WM_SYSCHAR Windows iletilerle değerlere karşılık gelir. Basılan anahtarları birleşimi bir karakter sonuçlanırsa, karakter işleyerek algılayabilir <xref:System.Windows.Forms.Control.KeyPress> olay. Alternatif olarak, <xref:Microsoft.VisualBasic.Devices.Keyboard>, hangi anahtarları basılan bulmak ve anahtarları göndermek için Visual Basic programlama arabirimi tarafından sunulan. Daha fazla bilgi için [klavyeye erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları y�
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard Nesnesi](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Klavyeye Erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Klavye Olaylarını Kullanma](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Klavye Olaylarını Kullanma](using-keyboard-events.md)
