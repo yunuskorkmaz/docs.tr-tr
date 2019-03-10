@@ -11,111 +11,111 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664204"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716952"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="25d11-102">Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="25d11-102">How to: Create a Windows Forms application from the command line</span></span>
-<span data-ttu-id="25d11-103">Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar.</span><span class="sxs-lookup"><span data-stu-id="25d11-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="25d11-104">Visual Studio'da bu yordamları için kapsamlı desteği yoktur.</span><span class="sxs-lookup"><span data-stu-id="25d11-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="25d11-105">Ayrıca bkz: [izlenecek yol: WPF içinde Forms Denetimi'ne bir Windows barındırma](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="25d11-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="44020-102">Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="44020-102">How to: Create a Windows Forms application from the command line</span></span>
+<span data-ttu-id="44020-103">Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar.</span><span class="sxs-lookup"><span data-stu-id="44020-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="44020-104">Visual Studio'da bu yordamları için kapsamlı desteği yoktur.</span><span class="sxs-lookup"><span data-stu-id="44020-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="44020-105">Ayrıca bkz: [izlenecek yol: WPF içinde Forms Denetimi'ne bir Windows barındırma](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="44020-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="25d11-106">Yordam</span><span class="sxs-lookup"><span data-stu-id="25d11-106">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="44020-106">Yordam</span><span class="sxs-lookup"><span data-stu-id="44020-106">Procedure</span></span>  
   
-#### <a name="to-create-the-form"></a><span data-ttu-id="25d11-107">Form oluşturma</span><span class="sxs-lookup"><span data-stu-id="25d11-107">To create the form</span></span>  
+#### <a name="to-create-the-form"></a><span data-ttu-id="44020-107">Form oluşturma</span><span class="sxs-lookup"><span data-stu-id="44020-107">To create the form</span></span>  
   
-1.  <span data-ttu-id="25d11-108">Bir boş bir kod dosyasında, aşağıdaki içeri aktarma veya using deyimlerini yazın:</span><span class="sxs-lookup"><span data-stu-id="25d11-108">In an empty code file, type the following import or using statements:</span></span>  
+1.  <span data-ttu-id="44020-108">Bir boş bir kod dosyasında, aşağıdaki içeri aktarma veya using deyimlerini yazın:</span><span class="sxs-lookup"><span data-stu-id="44020-108">In an empty code file, type the following import or using statements:</span></span>  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2.  <span data-ttu-id="25d11-109">Adlı bir sınıf bildirme `Form1` Form sınıfından devralır.</span><span class="sxs-lookup"><span data-stu-id="25d11-109">Declare a class named `Form1` that inherits from the Form class.</span></span>  
+2.  <span data-ttu-id="44020-109">Adlı bir sınıf bildirme `Form1` Form sınıfından devralır.</span><span class="sxs-lookup"><span data-stu-id="44020-109">Declare a class named `Form1` that inherits from the Form class.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  <span data-ttu-id="25d11-110">İçin varsayılan oluşturucu oluşturma `Form1`.</span><span class="sxs-lookup"><span data-stu-id="25d11-110">Create a default constructor for `Form1`.</span></span>  
+3.  <span data-ttu-id="44020-110">İçin varsayılan oluşturucu oluşturma `Form1`.</span><span class="sxs-lookup"><span data-stu-id="44020-110">Create a default constructor for `Form1`.</span></span>  
   
-     <span data-ttu-id="25d11-111">Bir sonraki yordamda Oluşturucusu daha fazla kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="25d11-111">You will add more code to the constructor in a subsequent procedure.</span></span>  
+     <span data-ttu-id="44020-111">Bir sonraki yordamda Oluşturucusu daha fazla kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="44020-111">You will add more code to the constructor in a subsequent procedure.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4.  <span data-ttu-id="25d11-112">Ekleme bir `Main` sınıfı için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="25d11-112">Add a `Main` method to the class.</span></span>  
+4.  <span data-ttu-id="44020-112">Ekleme bir `Main` sınıfı için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="44020-112">Add a `Main` method to the class.</span></span>  
   
-    1.  <span data-ttu-id="25d11-113">Uygulama <xref:System.STAThreadAttribute> C# `Main` yöntemi, Windows Forms uygulamasının adını belirtin tek kullanımlık apartman.</span><span class="sxs-lookup"><span data-stu-id="25d11-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="25d11-114">(Windows forms uygulamaları Visual Basic ile kullanılacak tek kullanımlık apartman modeli varsayılan olarak geliştirilen beri öznitelik Visual Basic'te, gerekli değildir.)</span><span class="sxs-lookup"><span data-stu-id="25d11-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
+    1.  <span data-ttu-id="44020-113">Uygulama <xref:System.STAThreadAttribute> C# `Main` yöntemi, Windows Forms uygulamasının adını belirtin tek kullanımlık apartman.</span><span class="sxs-lookup"><span data-stu-id="44020-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="44020-114">(Windows forms uygulamaları Visual Basic ile kullanılacak tek kullanımlık apartman modeli varsayılan olarak geliştirilen beri öznitelik Visual Basic'te, gerekli değildir.)</span><span class="sxs-lookup"><span data-stu-id="44020-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
   
-    2.  <span data-ttu-id="25d11-115">Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanıza işletim sistemi stilleri uygulamak için.</span><span class="sxs-lookup"><span data-stu-id="25d11-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
+    2.  <span data-ttu-id="44020-115">Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanıza işletim sistemi stilleri uygulamak için.</span><span class="sxs-lookup"><span data-stu-id="44020-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
   
-    3.  <span data-ttu-id="25d11-116">Form örneği oluşturun ve çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="25d11-116">Create an instance of the form and run it.</span></span>  
+    3.  <span data-ttu-id="44020-116">Form örneği oluşturun ve çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="44020-116">Create an instance of the form and run it.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
-     [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
+     [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="25d11-117">Derlemek ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="25d11-117">To compile and run the application</span></span>  
+#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="44020-117">Derlemek ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="44020-117">To compile and run the application</span></span>  
   
-1.  <span data-ttu-id="25d11-118">.NET Framework komut isteminde, oluşturduğunuz dizine gidin `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="25d11-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
+1.  <span data-ttu-id="44020-118">.NET Framework komut isteminde, oluşturduğunuz dizine gidin `Form1` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="44020-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
   
-2.  <span data-ttu-id="25d11-119">Form derleyin.</span><span class="sxs-lookup"><span data-stu-id="25d11-119">Compile the form.</span></span>  
+2.  <span data-ttu-id="44020-119">Form derleyin.</span><span class="sxs-lookup"><span data-stu-id="44020-119">Compile the form.</span></span>  
   
-    -   <span data-ttu-id="25d11-120">C# kullanıyorsanız yazın: `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="25d11-120">If you are using C#, type: `csc form1.cs`</span></span>  
+    -   <span data-ttu-id="44020-120">C# kullanıyorsanız yazın: `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="44020-120">If you are using C#, type: `csc form1.cs`</span></span>  
   
          `-or-`  
   
-    -   <span data-ttu-id="25d11-121">Visual Basic kullanıyorsanız yazın: `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="25d11-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
+    -   <span data-ttu-id="44020-121">Visual Basic kullanıyorsanız yazın: `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="44020-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
   
-3.  <span data-ttu-id="25d11-122">Komut isteminde aşağıdakini yazın: `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="25d11-122">At the command prompt, type: `Form1.exe`</span></span>  
+3.  <span data-ttu-id="44020-122">Komut isteminde aşağıdakini yazın: `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="44020-122">At the command prompt, type: `Form1.exe`</span></span>  
   
-## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="25d11-123">Denetim ekleme ve bir olay işleme</span><span class="sxs-lookup"><span data-stu-id="25d11-123">Adding a Control and Handling an Event</span></span>  
- <span data-ttu-id="25d11-124">Önceki yordamdaki adımları yalnızca derleyen ve çalışan temel bir Windows Form oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="25d11-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="25d11-125">Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olayı işlemek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="25d11-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="25d11-126">Windows Forms ekleyebileceğiniz denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](../../../docs/framework/winforms/controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="25d11-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](../../../docs/framework/winforms/controls/index.md).</span></span>  
+## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="44020-123">Denetim ekleme ve bir olay işleme</span><span class="sxs-lookup"><span data-stu-id="44020-123">Adding a Control and Handling an Event</span></span>  
+ <span data-ttu-id="44020-124">Önceki yordamdaki adımları yalnızca derleyen ve çalışan temel bir Windows Form oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="44020-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="44020-125">Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olayı işlemek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="44020-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="44020-126">Windows Forms ekleyebileceğiniz denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](./controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="44020-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](./controls/index.md).</span></span>  
   
- <span data-ttu-id="25d11-127">Windows Forms uygulamalarının nasıl oluşturulacağını anlamanın yanı sıra, olay tabanlı programlama ve kullanıcı girişini işlemek nasıl anlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="25d11-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="25d11-128">Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), ve [kullanıcı girişini işleme](../../../docs/framework/winforms/controls/handling-user-input.md)</span><span class="sxs-lookup"><span data-stu-id="25d11-128">For more information, see [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), and [Handling User Input](../../../docs/framework/winforms/controls/handling-user-input.md)</span></span>  
+ <span data-ttu-id="44020-127">Windows Forms uygulamalarının nasıl oluşturulacağını anlamanın yanı sıra, olay tabanlı programlama ve kullanıcı girişini işlemek nasıl anlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="44020-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="44020-128">Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](creating-event-handlers-in-windows-forms.md), ve [kullanıcı girişini işleme](./controls/handling-user-input.md)</span><span class="sxs-lookup"><span data-stu-id="44020-128">For more information, see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md), and [Handling User Input](./controls/handling-user-input.md)</span></span>  
   
-#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="25d11-129">Bir düğme denetimi bildirmek ve bunun tıklama olayı işlemek için</span><span class="sxs-lookup"><span data-stu-id="25d11-129">To declare a button control and handle its click event</span></span>  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="44020-129">Bir düğme denetimi bildirmek ve bunun tıklama olayı işlemek için</span><span class="sxs-lookup"><span data-stu-id="44020-129">To declare a button control and handle its click event</span></span>  
   
-1.  <span data-ttu-id="25d11-130">Adlı bir düğme denetimi bildirin `button1`.</span><span class="sxs-lookup"><span data-stu-id="25d11-130">Declare a button control named `button1`.</span></span>  
+1.  <span data-ttu-id="44020-130">Adlı bir düğme denetimi bildirin `button1`.</span><span class="sxs-lookup"><span data-stu-id="44020-130">Declare a button control named `button1`.</span></span>  
   
-2.  <span data-ttu-id="25d11-131">Oluşturucu, düğmeyi oluşturmak ve ayarlamak kendi <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Text%2A> özellikleri.</span><span class="sxs-lookup"><span data-stu-id="25d11-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
+2.  <span data-ttu-id="44020-131">Oluşturucu, düğmeyi oluşturmak ve ayarlamak kendi <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Text%2A> özellikleri.</span><span class="sxs-lookup"><span data-stu-id="44020-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
   
-3.  <span data-ttu-id="25d11-132">Forma düğme ekleyin.</span><span class="sxs-lookup"><span data-stu-id="25d11-132">Add the button to the form.</span></span>  
+3.  <span data-ttu-id="44020-132">Forma düğme ekleyin.</span><span class="sxs-lookup"><span data-stu-id="44020-132">Add the button to the form.</span></span>  
   
-     <span data-ttu-id="25d11-133">Aşağıdaki kod örneği, düğme denetimini nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="25d11-133">The following code example demonstrates how to declare the button control.</span></span>  
+     <span data-ttu-id="44020-133">Aşağıdaki kod örneği, düğme denetimini nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="44020-133">The following code example demonstrates how to declare the button control.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4.  <span data-ttu-id="25d11-134">İşlemek için bir yöntem oluşturma <xref:System.Windows.Forms.Control.Click> düğmesi için olay.</span><span class="sxs-lookup"><span data-stu-id="25d11-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
+4.  <span data-ttu-id="44020-134">İşlemek için bir yöntem oluşturma <xref:System.Windows.Forms.Control.Click> düğmesi için olay.</span><span class="sxs-lookup"><span data-stu-id="44020-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
   
-5.  <span data-ttu-id="25d11-135">Click olay işleyicisi, görüntüleme bir <xref:System.Windows.Forms.MessageBox> "Hello World" iletisini ile.</span><span class="sxs-lookup"><span data-stu-id="25d11-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
+5.  <span data-ttu-id="44020-135">Click olay işleyicisi, görüntüleme bir <xref:System.Windows.Forms.MessageBox> "Hello World" iletisini ile.</span><span class="sxs-lookup"><span data-stu-id="44020-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
   
-     <span data-ttu-id="25d11-136">Aşağıdaki kod örneği, düğmeyi işlemek gösterilmiştir denetimin olay'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="25d11-136">The following code example demonstrates how to handle the button control's click event.</span></span>  
+     <span data-ttu-id="44020-136">Aşağıdaki kod örneği, düğmeyi işlemek gösterilmiştir denetimin olay'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="44020-136">The following code example demonstrates how to handle the button control's click event.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6.  <span data-ttu-id="25d11-137">İlişkilendirme <xref:System.Windows.Forms.Control.Click> oluşturduğunuz yöntemiyle olay.</span><span class="sxs-lookup"><span data-stu-id="25d11-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
+6.  <span data-ttu-id="44020-137">İlişkilendirme <xref:System.Windows.Forms.Control.Click> oluşturduğunuz yöntemiyle olay.</span><span class="sxs-lookup"><span data-stu-id="44020-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
   
-     <span data-ttu-id="25d11-138">Aşağıdaki kod örneği, olay yöntemi ile ilişkilendirilecek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="25d11-138">The following code example demonstrates how to associate the event with the method.</span></span>  
+     <span data-ttu-id="44020-138">Aşağıdaki kod örneği, olay yöntemi ile ilişkilendirilecek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="44020-138">The following code example demonstrates how to associate the event with the method.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7.  <span data-ttu-id="25d11-139">Derleme ve önceki yordamda açıklanan şekilde uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="25d11-139">Compile and run the application as described in the previous procedure.</span></span>  
+7.  <span data-ttu-id="44020-139">Derleme ve önceki yordamda açıklanan şekilde uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="44020-139">Compile and run the application as described in the previous procedure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25d11-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="25d11-140">Example</span></span>  
- <span data-ttu-id="25d11-141">Aşağıdaki kod örneğine, önceki yordamlarda gelen tam örnektir.</span><span class="sxs-lookup"><span data-stu-id="25d11-141">Following code example is the complete example from the previous procedures.</span></span>  
+## <a name="example"></a><span data-ttu-id="44020-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="44020-140">Example</span></span>  
+ <span data-ttu-id="44020-141">Aşağıdaki kod örneğine, önceki yordamlarda gelen tam örnektir.</span><span class="sxs-lookup"><span data-stu-id="44020-141">Following code example is the complete example from the previous procedures.</span></span>  
   
- [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="25d11-142">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="25d11-142">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="44020-142">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="44020-142">Compiling the Code</span></span>  
   
--   <span data-ttu-id="25d11-143">Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="25d11-143">To compile the code, follow the instructions in the proceeding procedure that describe how to compile and run the application.</span></span>  
+-   <span data-ttu-id="44020-143">Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="44020-143">To compile the code, follow the instructions in the proceeding procedure that describe how to compile and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25d11-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="25d11-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44020-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44020-144">See also</span></span>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [<span data-ttu-id="25d11-145">Windows Forms’un Görünüşünü Değiştirme</span><span class="sxs-lookup"><span data-stu-id="25d11-145">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
-- [<span data-ttu-id="25d11-146">Windows Forms Uygulamalarını Geliştirme</span><span class="sxs-lookup"><span data-stu-id="25d11-146">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)
-- [<span data-ttu-id="25d11-147">Windows Forms'a Başlarken</span><span class="sxs-lookup"><span data-stu-id="25d11-147">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [<span data-ttu-id="44020-145">Windows Forms’un Görünüşünü Değiştirme</span><span class="sxs-lookup"><span data-stu-id="44020-145">Changing the Appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)
+- [<span data-ttu-id="44020-146">Windows Forms Uygulamalarını Geliştirme</span><span class="sxs-lookup"><span data-stu-id="44020-146">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
+- [<span data-ttu-id="44020-147">Windows Forms'a Başlarken</span><span class="sxs-lookup"><span data-stu-id="44020-147">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
