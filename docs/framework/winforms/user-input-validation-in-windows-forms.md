@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498914"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711323"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, uzunluğu sıfır, bir alan, bir telefon numarası veya diğer türdeki bir biçimlendirilmiş veri biçimlendirilmiş olması veya bir dize bir veritabanının güvenliğini tehlikeye atmak için kullanılabilir tüm güvenli olmayan karakterleri içermemesi gerektirebilir. Windows Forms, uygulamanızdaki girişi doğrulama birçok yol sağlar.  
@@ -22,14 +22,14 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
   
  Tarafından kullanılan maskeleme dil <xref:System.Windows.Forms.MaskedTextBox> çok esnektir. Gerekli karakter, isteğe bağlı karakterler, sabit karakter, kısa çizgi ve parantez gibi para birimi karakterleri ve tarih ayırıcı belirtmenize olanak sağlar. İyi ne zaman bir veri kaynağına bağlı denetim de çalışır. <xref:System.Windows.Forms.Binding.Format> Olayında veri bağlamayı maskesi ile uyum sağlamak için gelen verileri yeniden biçimlendirmek için kullanılabilir ve <xref:System.Windows.Forms.Binding.Parse> olay, giden veri veri alanının belirtimlerine uygun şekilde yeniden biçimlendirmek için kullanılabilir.  
   
- Daha fazla bilgi için [MaskedTextBox denetimi](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Daha fazla bilgi için [MaskedTextBox denetimi](./controls/maskedtextbox-control-windows-forms.md).  
   
 ## <a name="event-driven-validation"></a>Olay temelli doğrulama  
  Doğrulama üzerinde tam programlı denetim istiyorsanız veya karmaşık doğrulama denetimleri gerçekleştirmek gerekirse, çoğu Windows Forms denetimlerinin yerleşik doğrulama olayları kullanmanız gerekir. Serbest biçimli kullanıcı girişi kabul eden her denetimin bir <xref:System.Windows.Forms.Control.Validating> olayı, denetimi veri doğrulama gerekli olduğunda meydana gelir. İçinde <xref:System.Windows.Forms.Control.Validating> olay işleme yöntemindeki kullanıcı çeşitli yollarla girişi doğrulayabilir. Örneğin, bir posta kodu içermesi gereken bir metin kutusu varsa, aşağıdaki yollarla doğrulama gerçekleştirebilirsiniz:  
   
 -   Posta kodu, posta kodları belirli bir gruba ait olması gerekir, kullanıcı tarafından girilen verileri doğrulamak için bir girişteki bir dize karşılaştırma gerçekleştirebilirsiniz. Posta kodu {10001, 10002, 10003} kümesinde olması gerekir, örneğin, ardından bir dize karşılaştırma verileri doğrulamak için kullanabilirsiniz.  
   
--   Posta kodu belirli bir biçimde olması gerekiyorsa kullanıcı tarafından girilen verileri doğrulamak için normal ifadeler kullanabilirsiniz. Örneğin, form doğrulama için `#####` veya `#####-####`, normal bir ifadeyi kullanabilirsiniz `^(\d{5})(-\d{4})?$`. Form doğrulamak için `A#A #A#`, normal bir ifadeyi kullanabilirsiniz `[A-Z]\d[A-Z] \d[A-Z]\d`. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadelerinde](../../../docs/standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Posta kodu belirli bir biçimde olması gerekiyorsa kullanıcı tarafından girilen verileri doğrulamak için normal ifadeler kullanabilirsiniz. Örneğin, form doğrulama için `#####` veya `#####-####`, normal bir ifadeyi kullanabilirsiniz `^(\d{5})(-\d{4})?$`. Form doğrulamak için `A#A #A#`, normal bir ifadeyi kullanabilirsiniz `[A-Z]\d[A-Z] \d[A-Z]\d`. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadelerinde](../../standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../standard/base-types/regular-expression-examples.md).  
   
 -   Posta kodu geçerli bir Amerika Birleşik Devletleri posta kodu olması gerekiyorsa, kullanıcı tarafından girilen verileri doğrulamak için bir posta kodu Web hizmeti çağırabilir.  
   
@@ -94,5 +94,5 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox Denetimi](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox Denetimi](./controls/maskedtextbox-control-windows-forms.md)
+- [Normal İfade Örnekleri](../../standard/base-types/regular-expression-examples.md)

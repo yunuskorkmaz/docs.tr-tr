@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601837"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719368"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
@@ -41,7 +41,7 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
   
 6.  Bileşeni seçin.  
   
-     İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![VisualBasicInheritanceSymbol ekran](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")), ve seçili olduğunda, belirten bir kenarlık üst sınıf formda bir denetim olan güvenlik düzeyi. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
+     İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![VisualBasicInheritanceSymbol ekran](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")), ve seçili olduğunda, belirten bir kenarlık üst sınıf formda bir denetim olan güvenlik düzeyi. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
   
     |Denetim için güvenlik düzeyi|Kullanılabilir etkileşiminin Tasarımcısı ve form devralınmış Kod Düzenleyicisi|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
     |İç (Visual Basic'te Friend)|Standart Özellikler görünür formunda gösterilen hiçbir boyutlandırma tutamaçlarını kenarlıklı **özellikleri** penceresi. Ancak, tüm yönlerini denetimi salt okunur kabul edilir. Taşıyamaz veya denetimin boyutunu veya özelliklerini değiştirin. Denetim bir grup kutusu gibi diğer denetim kapsayıcısı ise yeni denetimler eklenemez ve bu denetimleri ortak bile mevcut denetimleri kaldırılamaz. Denetim, yalnızca derlemenin içerdiği diğer üyeleri tarafından erişilebilir.|  
     |Özel|Standart Özellikler görünür formunda gösterilen hiçbir boyutlandırma tutamaçlarını kenarlıklı **özellikleri** penceresi. Ancak, tüm yönlerini denetimi salt okunur kabul edilir. Taşıyamaz veya denetimin boyutunu veya özelliklerini değiştirin. Denetim bir grup kutusu gibi diğer denetim kapsayıcısı ise yeni denetimler eklenemez ve bu denetimleri ortak bile mevcut denetimleri kaldırılamaz. Denetim yalnızca bunu bildiren bir sınıf tarafından erişilebilir.|  
   
-     Taban formun görünüşünü değiştirme hakkında daha fazla bilgi için bkz: [taban formun görünüşünü değiştirmenin etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
+     Taban formun görünüşünü değiştirme hakkında daha fazla bilgi için bkz: [taban formun görünüşünü değiştirmenin etkileri](effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katmanlara](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katmanlara](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
+- [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

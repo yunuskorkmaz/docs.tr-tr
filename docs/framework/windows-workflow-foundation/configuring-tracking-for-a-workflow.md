@@ -2,12 +2,12 @@
 title: Bir iş akışı için izlemeyi yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491262"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719409"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Bir iş akışı için izlemeyi yapılandırma
 
@@ -67,7 +67,7 @@ Barındırılan bir iş akışı hizmeti için <xref:System.ServiceModel.Workflo
 Alternatif olarak, bir iş akışı hizmeti için barındırılan <xref:System.ServiceModel.WorkflowServiceHost>, ekleyebileceğiniz <xref:System.Activities.Tracking.EtwTrackingParticipant> kod aracılığıyla davranış uzantısı. Özel İzleme Katılımcı eklemek için yeni bir davranış uzantısı oluşturun ve eklemek <xref:System.ServiceModel.ServiceHost> aşağıdaki örnekte gösterildiği gibi.
 
 > [!NOTE]
-> Özel İzleme katılımcı ekleyen bir özel davranış öğesi oluşturmak nasıl gösteren örnek kodunu görüntülemek istiyorsanız, başvurmak [izleme](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) örnekleri.
+> Özel İzleme katılımcı ekleyen bir özel davranış öğesi oluşturmak nasıl gösteren örnek kodunu görüntülemek istiyorsanız, başvurmak [izleme](./samples/tracking.md) örnekleri.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Workflowınvoker kullanarak izlemeyi yapılandırma
 
-İzleme kullanarak çalıştırılan bir iş akışı için yapılandırmak için <xref:System.Activities.WorkflowInvoker>, izleme sağlayıcısı için bir genişletme olarak ekleme bir <xref:System.Activities.WorkflowInvoker> örneği. Aşağıdaki kod örneği dandır [özel izleme](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) örnek.
+İzleme kullanarak çalıştırılan bir iş akışı için yapılandırmak için <xref:System.Activities.WorkflowInvoker>, izleme sağlayıcısı için bir genişletme olarak ekleme bir <xref:System.Activities.WorkflowInvoker> örneği. Aşağıdaki kod örneği dandır [özel izleme](./samples/custom-tracking.md) örnek.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ WF 4, izleme kayıtları bir ETW (olay izleme için Windows) oturumu Yazar izlem
 
 Aşağıdaki görüntüde, Olay Görüntüleyicisi'nde izleme olayları gösterir.
 
-![Kayıtları İzleme Olay Görüntüleyicisi'ni gösteren](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Kayıtları İzleme Olay Görüntüleyicisi'ni gösteren](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Bir uygulamaya özgü sağlayıcı kimliği kaydediliyor
 

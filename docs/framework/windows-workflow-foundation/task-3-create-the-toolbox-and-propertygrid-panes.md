@@ -2,21 +2,21 @@
 title: '3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558429"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721233"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma
 Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri ve bunları yeniden barındırılan için ekleme [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Başvuru için üç tamamladıktan sonra MainWindow.xaml.cs dosyasında olmalıdır kodu görevleri de [iş akışı tasarımcısını yeniden barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) konuları dizi, bu konunun sonunda sağlanır.  
+ Başvuru için üç tamamladıktan sonra MainWindow.xaml.cs dosyasında olmalıdır kodu görevleri de [iş akışı tasarımcısını yeniden barındırma](rehosting-the-workflow-designer.md) konuları dizi, bu konunun sonunda sağlanır.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Araç kutusu oluşturmak ve bu kılavuza eklemek için  
   
-1.  Elde edilen açıklanan yordamı izleyerek HostingApplication projeyi açın [görev 2: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Elde edilen açıklanan yordamı izleyerek HostingApplication projeyi açın [görev 2: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md).  
   
 2.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [2. Görev: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
+- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
+- [2. Görev: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md)

@@ -4,12 +4,12 @@ description: '.NET Core, .NET standart, UWP ve Xamarin de dahil olmak üzere çe
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 17b05b9434d406acec03d84d17901f8339bcb6bc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677649"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717654"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ ms.locfileid: "57677649"
 
 * [.NET core](../../core/index.md): Modüler bir tasarım olan, yan yana artırdığını ve platformlar arası senaryolar hedefler. Yan yana diğer uygulamaları bozmadan yeni .NET Core sürümleri benimsemenizi sağlar.
 * [ASP.NET Core](/aspnet/core):, bir modern web-böylece geliştiriciler avantajların vererek, .NET Core üzerine yapılandırılan altyapısıdır.
-* [Evrensel Windows platformu](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): .NET Native'nın statik derlemesi kullanarak x64 ve ARM makineleri üzerinde çalışan Windows Store uygulamalarınızın performansını geliştirin. 
+* [Evrensel Windows platformu](https://devblogs.microsoft.com/dotnet/net-native-performance/): .NET Native'nın statik derlemesi kullanarak x64 ve ARM makineleri üzerinde çalışan Windows Store uygulamalarınızın performansını geliştirin. 
 * .NET core + uzantılar: WCF ve ASP.NET Core, FSharp ve Azure gibi .NET ekosistemindeki diğer API'lerin yanı sıra .NET Core API'ları içerir.
 * .NET standard + uzantılar: WCF ve ASP.NET Core, FSharp ve Azure gibi diğer .NET ekosisteminin yanı sıra .NET standart API'ler de dahildir.
 

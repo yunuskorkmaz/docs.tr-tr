@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466888"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716835"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma
 
@@ -21,9 +21,9 @@ ms.locfileid: "57466888"
 
 Bu konu iki yordam açıklanmaktadır.
 
-1. Birinci yordamda açıklanan özel etkinlik Tasarımcısı ile oluşturmak nasıl bir <xref:System.Activities.Presentation.WorkflowItemPresenter> diğer etkinlikleri alan açılan bölge sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğesi sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) örnek.
+1. Birinci yordamda açıklanan özel etkinlik Tasarımcısı ile oluşturmak nasıl bir <xref:System.Activities.Presentation.WorkflowItemPresenter> diğer etkinlikleri alan açılan bölge sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğesi sunucu](./samples/custom-composite-designers-workflow-item-presenter.md) örnek.
 
-2. İkinci yordam özel etkinlik Tasarımcısı ile oluşturma işlemini açıklamaktadır bir <xref:System.Activities.Presentation.WorkflowItemsPresenter> düzenlemek kapsanan öğelerin koleksiyonunu için gereken işlevselliği sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğeleri sunucu](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) örnek.
+2. İkinci yordam özel etkinlik Tasarımcısı ile oluşturma işlemini açıklamaktadır bir <xref:System.Activities.Presentation.WorkflowItemsPresenter> düzenlemek kapsanan öğelerin koleksiyonunu için gereken işlevselliği sağlar. Bu yordamı dayanır [özel bileşik tasarımcılar - iş akışı öğeleri sunucu](./samples/custom-composite-designers-workflow-items-presenter.md) örnek.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Bir alt bölge WorkflowItemPresenter kullanarak özel bir etkinlik Tasarımcısı oluşturmak için
 
@@ -350,4 +350,4 @@ Bu konu iki yordam açıklanmaktadır.
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [İş Akışı Tasarım Deneyimini Özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [İş Akışı Tasarım Deneyimini Özelleştirme](customizing-the-workflow-design-experience.md)

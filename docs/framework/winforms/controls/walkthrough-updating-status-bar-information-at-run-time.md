@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665153"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716471"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme
 > [!IMPORTANT]
@@ -30,9 +30,9 @@ ms.locfileid: "56665153"
   
 1.  Yeni bir Windows formu oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).  
   
-3.  Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  İçin <xref:System.Windows.Forms.StatusBar> formunuza, eklediğiniz denetimi ayarlama <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğini `true`.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "56665153"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Nasıl yapılır: Bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
-- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

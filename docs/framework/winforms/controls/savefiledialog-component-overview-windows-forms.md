@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: ab8eb5409d017c6ea73a44e4e57ccec9cece4824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93bf0f63e18ee3a384aa062c80faa991b68a6abe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631067"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721508"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>SaveFileDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SaveFileDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Standart ile aynı olduğu **dosyayı Kaydet** Windows tarafından kullanılan iletişim kutusu. Devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  
@@ -26,4 +26,4 @@ Windows Forms <xref:System.Windows.Forms.SaveFileDialog> bir önceden yapıland�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog Bileşeni](savefiledialog-component-windows-forms.md)

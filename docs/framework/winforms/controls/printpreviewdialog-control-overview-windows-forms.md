@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667563"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711284"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog denetimine genel bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimidir görüntülemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu nasıl bir [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) yazdırıldığında görünür. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırmak yerine basit bir çözüm olarak kullanın. Yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğme denetimi içerir.  
+Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimidir görüntülemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu nasıl bir [PrintDocument](printdocument-component-windows-forms.md) yazdırıldığında görünür. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırmak yerine basit bir çözüm olarak kullanın. Yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğme denetimi içerir.  
   
 ## <a name="key-properties-and-methods"></a>Anahtar özellikleri ve yöntemleri  
  Denetimin anahtar özelliği <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, belgenin önizlemesi için ayarlar. Belge olmalıdır bir <xref:System.Drawing.Printing.PrintDocument> nesne. İletişim kutusunu görüntülemek için çağırmalıdır kendi <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi. Daha sorunsuz yükseltmelere görünen metin düzgünleştirme yapabilirsiniz, ancak daha yavaş görünen yapabilirsiniz; Bunu kullanmak için ayarlanmış <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> özelliğini `true`.  
@@ -53,6 +53,6 @@ Kullanırsanız <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> p
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog Denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [İletişim Kutusu Denetimleri ve Bileşenleri](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [PrintPreviewControl Denetimine Genel Bakış](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog Denetimi](printpreviewdialog-control-windows-forms.md)
+- [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)

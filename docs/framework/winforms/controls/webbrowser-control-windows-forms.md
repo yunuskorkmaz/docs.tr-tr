@@ -6,39 +6,39 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: ca4e4beed068d47bef7a5cd4f7b05bde0a19de23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6607ec9754f708d2c1e5abfd61cd77013efec4e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510800"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721001"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser Denetimi (Windows Forms)
 Windows Forms `WebBrowser` denetimi Web sayfalarını barındıran ve göz atma özellikleri uygulamanıza Web sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WebBrowser Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [WebBrowser Denetimine Genel Bakış](webbrowser-control-overview.md)  
  Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [WebBrowser Güvenliği](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [WebBrowser Güvenliği](webbrowser-security.md)  
  Denetimi ile ilgili güvenlik konuları açıklanmaktadır.  
   
- [Nasıl yapılır: WebBrowser denetimi ile URL'ye gitme](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Nasıl yapılır: WebBrowser denetimi ile URL'ye gitme](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  Belirli bir URL'ye giderek denetimin nasıl yapılacağı açıklanır.  
   
- [Nasıl yapılır: WebBrowser denetimi ile yazdırma](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Nasıl yapılır: WebBrowser denetimi ile yazdırma](how-to-print-with-a-webbrowser-control.md)  
  Bir Web sayfası görüntüleme olmadan nasıl yazdırılacağı gösterilir.  
   
- [Nasıl yapılır: Bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Nasıl yapılır: Bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Bir Web tarayıcısı olarak kullanılmak üzere denetimi başlatmak açıklar.  
   
- [Nasıl yapılır: Bir Windows Forms uygulamasında HTML belge Görüntüleyicisi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Nasıl yapılır: Bir Windows Forms uygulamasında HTML belge Görüntüleyicisi oluşturma](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  HTML Görüntüleyicisi olarak kullanılmak üzere denetimi başlatmak açıklar.  
   
- [Nasıl yapılır: DHTML koduyla istemci uygulaması kodu arasında iki yönlü iletişim uygulamak](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [Nasıl yapılır: DHTML koduyla istemci uygulaması kodu arasında iki yönlü iletişim uygulamak](implement-two-way-com-between-dhtml-and-client.md)  
  DHTML ve uygulama kodu arasında iki yönlü iletişim denetim tarafından barındırılan bir Web sayfasında ayarlama işlemi açıklanmaktadır.  
   
- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)  
  Yönetmek veya tarafından barındırılan HTML sayfaları oluşturmak nasıl açıklayan konuları sağlar <xref:System.Windows.Forms.WebBrowser> denetimi.  
   
 ## <a name="reference"></a>Başvuru  
@@ -79,4 +79,4 @@ Windows Forms `WebBrowser` denetimi Web sayfalarını barındıran ve göz atma 
  Bu listeleme ve tüm değerleri açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

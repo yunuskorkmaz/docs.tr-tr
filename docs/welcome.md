@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: d5ee6d9cbb8beb819d023c92af1123ebc37b53c8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 648dd8017f5c1f043a450ef207912cca51f2d3a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834920"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720276"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 
@@ -22,10 +22,10 @@ Bkz: [.NET Core ile çalışmaya başlama](core/get-started.md) .NET Core uygula
 
 .NET hakkında daha fazla haber için aşağıdaki Bloglara bakın:
 
-- [.NET blogu](https://blogs.msdn.microsoft.com/dotnet/)
-- [ASP.NET Web günlüğü](https://blogs.msdn.microsoft.com/webdev/)
-- [Visual Studio blogu](https://blogs.msdn.microsoft.com/visualstudio/)
-- [Visual Basic ekip](https://blogs.msdn.microsoft.com/vbteam/)
+- [.NET blogu](https://devblogs.microsoft.com/dotnet/)
+- [ASP.NET Web günlüğü](https://devblogs.microsoft.com/aspnet/)
+- [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)
+- [Visual Basic ekip](https://devblogs.microsoft.com/vbteam/)
 
 Ayrıca en son .NET olayları izleyin:
 

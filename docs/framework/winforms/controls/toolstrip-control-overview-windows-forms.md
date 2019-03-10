@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558754"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719392"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sınıflarının sağlayan ortak bir çerçeve kullanıcı arabirimi öğeleri araç çubukları, durum çubukları ve menüler birleştirmek için. <xref:System.Windows.Forms.ToolStrip> denetimleri yatay veya dikey boşluk paylaşma olanağı, araç çubuklarının olduğu yerinde etkinleştirme ve düzenleme, özel düzen ve radye, içeren zengin bir tasarım zamanı deneyimi sunar.  
@@ -77,7 +77,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sını
 |<xref:System.Windows.Forms.ToolStripControlHost>|Özellikle olmayan diğer denetimleri barındıran <xref:System.Windows.Forms.ToolStrip> denetimleri ancak istediğiniz <xref:System.Windows.Forms.ToolStrip> işlevselliği.|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|Belirtir olup olmadığını bir <xref:System.Windows.Forms.ToolStripItem> ana üzerinde düzenlendiği için <xref:System.Windows.Forms.ToolStrip>, taşmada <xref:System.Windows.Forms.ToolStrip>, ya da hiçbiri.|  
   
- Daha fazla bilgi için [ToolStrip teknoloji özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) ve [ToolStrip denetim mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).  
+ Daha fazla bilgi için [ToolStrip teknoloji özeti](toolstrip-technology-summary.md) ve [ToolStrip denetim mimarisi](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ToolStrip>

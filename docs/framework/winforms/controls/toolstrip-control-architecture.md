@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: d972e738305b14f44910acf755e0ffc1d7297e49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547059"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719396"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
 <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.ToolStripItem> sınıfları, araç, durum ve menü öğeleri görüntülemek için esnek, Genişletilebilir bir sistem sağlar. Bu sınıfların tümü bulunur <xref:System.Windows.Forms> ad alanı ve bunların tümü genellikle adlandırılır "ToolStrip" ön ekine sahip (gibi <xref:System.Windows.Forms.ToolStripOverflow>) veya "Şeridinde" soneki ile (gibi <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,7 +19,7 @@ ms.locfileid: "54547059"
   
  <xref:System.Windows.Forms.ToolStrip> soyut temel sınıf için <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, ve <xref:System.Windows.Forms.ContextMenuStrip>. Aşağıdaki nesne modeli gösterir <xref:System.Windows.Forms.ToolStrip> Devralma Hiyerarşisi.  
   
- ![ToolStrip nesne modeli](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.gif "ToolStripObjectModel")  
+ ![ToolStrip nesne modeli](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
 ToolStrip nesne modeli  
   
  Tüm öğeleri erişebileceğiniz bir <xref:System.Windows.Forms.ToolStrip> aracılığıyla <xref:System.Windows.Forms.ToolStrip.Items%2A> koleksiyonu. Tüm öğeleri erişebileceğiniz bir <xref:System.Windows.Forms.ToolStripDropDownItem> aracılığıyla <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> koleksiyonu. Türetilen bir sınıfta <xref:System.Windows.Forms.ToolStrip>, ayrıca <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> görüntülenmekte olan öğelere erişmek için özelliği. Bu bir taşma menüde olmayan bilgilerdir.  
@@ -251,7 +251,7 @@ ToolStrip nesne modeli
   
  <xref:System.Windows.Forms.ToolStripItem> tarihinden itibaren tüm öğeler için soyut temel sınıf bir <xref:System.Windows.Forms.ToolStrip>. Aşağıdaki nesne modeli gösterir <xref:System.Windows.Forms.ToolStripItem> Devralma Hiyerarşisi.  
   
- ![ToolStripItem nesne modeli](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
+ ![ToolStripItem nesne modeli](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
 ToolStripItem nesne modeli  
   
  <xref:System.Windows.Forms.ToolStripItem> doğrudan ya da devralma sınıfları <xref:System.Windows.Forms.ToolStripItem>, ya da dolaylı olarak devralındığı <xref:System.Windows.Forms.ToolStripItem> aracılığıyla <xref:System.Windows.Forms.ToolStripControlHost> veya <xref:System.Windows.Forms.ToolStripDropDownItem>.  
@@ -379,10 +379,10 @@ ToolStripItem nesne modeli
 -   <xref:System.Windows.Forms.ToolStripPanel> taşıma ve düzenleme için alan sağlar <xref:System.Windows.Forms.ToolStrip> kontrol eder. Bu nedenle seçerseniz, yalnızca tek bir panel kullanabilirsiniz ve <xref:System.Windows.Forms.ToolStripPanel> iyi MDI senaryolarında çalışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
-- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [StatusStrip Denetimi](../../../../docs/framework/winforms/controls/statusstrip-control.md)
-- [ContextMenuStrip Denetimi](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
-- [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip Teknoloji Özeti](toolstrip-technology-summary.md)
+- [ToolStrip Denetimi](toolstrip-control-windows-forms.md)
+- [MenuStrip Denetimi](menustrip-control-windows-forms.md)
+- [StatusStrip Denetimi](statusstrip-control.md)
+- [ContextMenuStrip Denetimi](contextmenustrip-control.md)
+- [BindingNavigator Denetimi](bindingnavigator-control-windows-forms.md)
