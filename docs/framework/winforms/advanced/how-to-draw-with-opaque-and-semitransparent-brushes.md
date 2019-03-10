@@ -10,12 +10,12 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 922cf6f9fd506e6095d87c3e0ee9eff85f920eba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebb2f1008d267c4b5dcf36a7a4aae749fe73bb59
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586975"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716887"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Nasıl yapılır: Donuk ve yarı saydam fırçalarla fırçaları ile çizme
 Bir şekil doldururken geçmesi gereken bir <xref:System.Drawing.Brush> dolgu yöntemlerinden birini nesnesine <xref:System.Drawing.Graphics> sınıfı. Bir parametre <xref:System.Drawing.SolidBrush.%23ctor%2A> Oluşturucusu bir <xref:System.Drawing.Color> nesne. Donuk bir şekli doldurmak için renk alfa bileşeni 255'e ayarlayın. Yarı saydam bir şekil doldurmak için 1 ila 254 herhangi bir değere alfa bileşenini ayarlayın.  
@@ -27,16 +27,16 @@ Bir şekil doldururken geçmesi gereken bir <xref:System.Drawing.Brush> dolgu y�
   
  Aşağıdaki kodun çıktısı aşağıdaki çizimde gösterilmektedir.  
   
- ![Donuk ve yarı saydam fırçalarla](../../../../docs/framework/winforms/advanced/media/compqualellipse.png "compqualellipse")  
+ ![Donuk ve yarı saydam fırçalarla](./media/compqualellipse.png "compqualellipse")  
   
- [!code-csharp[System.Drawing.AlphaBlending#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.AlphaBlending#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Çizgi ve Dolgularda Alfa Karışım Kullanma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
-- [Nasıl yapılır: Denetiminize saydam arka plan verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
-- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Çizgi ve Dolgularda Alfa Karışım Kullanma](alpha-blending-lines-and-fills.md)
+- [Nasıl yapılır: Denetiminize saydam arka plan verme](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](how-to-draw-opaque-and-semitransparent-lines.md)

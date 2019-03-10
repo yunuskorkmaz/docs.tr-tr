@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727592"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718534"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox denetimi ile Web stili bağlantılar görüntüleme
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak. Bağlantıya tıklandığında bağlantı metni belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.  
@@ -33,7 +33,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıla
      Aşağıdaki örnekte <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay bir örneğini belirtilen URL'ye Internet Explorer açılır <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimi. Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi.  
   
     > [!IMPORTANT]
-    >  İçinde arama <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi karşılaşırsınız bir <xref:System.Security.SecurityException> yetersiz ayrıcalıklar nedeniyle bir kısmi güven bağlamında kod çalıştırıyorsanız, özel durum. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  İçinde arama <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi karşılaşırsınız bir <xref:System.Security.SecurityException> yetersiz ayrıcalıklar nedeniyle bir kısmi güven bağlamında kod çalıştırıyorsanız, özel durum. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -120,5 +120,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıla
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

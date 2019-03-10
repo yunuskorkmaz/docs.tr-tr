@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 20815518c2a683878e0d3adf6a4bdc9261b614d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a54b76eb92c7d3f518b9bf13e154e6faf58de63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644619"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718174"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Nasıl yapılır: Denetiminize saydam arka plan verme
 Önceki .NET Framework sürümlerinde ilk ayarlamadan saydam backcolors ayarı denetimleri desteklemekteydi <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemi Formlar'ın Oluşturucusu. Geçerli framework sürümü backcolor çoğu denetimleri için ayarlanabilir <xref:System.Drawing.Color.Transparent%2A> içinde **özellikleri** tasarım zamanında ya da formun Oluşturucusu kodunda penceresi.  
@@ -28,6 +28,6 @@ ms.locfileid: "54644619"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Yönetilen Grafik Sınıflarını Kullanma](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
-- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
+- [Yönetilen Grafik Sınıflarını Kullanma](../advanced/using-managed-graphics-classes.md)
+- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

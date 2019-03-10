@@ -2,12 +2,12 @@
 title: Belge onay işlemi
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582716"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717719"
 ---
 # <a name="document-approval-process"></a>Belge onay işlemi
 Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin kullanımını gösterir. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması, belgeler için onay gönderin ve onaylayın belgeleri. Kurallar onay işlemi uygular ve istemciler arasındaki iletişimi kolaylaştırmak için bir onay Yöneticisi uygulaması yok. Onay, onay çeşitli yürütebilen bir iş akışı işlemidir. Etkinlikler, tek bir onay, çekirdek onay (onaylayanlara kümesini yüzdesi) ve bir çekirdek ve dizideki tek onay içeren bir karmaşık bir onay işlemi mevcut.
@@ -24,7 +24,7 @@ Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communic
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Aşağıdaki grafikte belge onay işlemi iş akışı gösterilmektedir.  
   
- ![Bir belge onay işlemi iş akışı](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Bir belge onay işlemi iş akışı](./media/approvalprocess.jpg "ApprovalProcess")  
   
  İstemcinin açısından bakıldığında, onay işlemi işlevleri gibi:  
   

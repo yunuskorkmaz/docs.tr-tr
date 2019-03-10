@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 1849e1bab440d779eaebfc7d2cd12e817c31bf79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605425"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718902"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetimidir aslında bir birleşimini bir metin kutusu ve bir çift bir listede yukarı veya aşağı taşımak için düğmeler. Denetim, görüntüler ve seçenekler listesinden bir metin dizesini ayarlar. Kullanıcı, bir listesi geçmek düğmelerini yukarı ve aşağı tıklayarak yukarı ve aşağı ok tuşlarına basarak veya bir öğe listesinde eşleşen bir dize yazarak dize seçebilirsiniz. Bir olası bu denetim için öğe adları alfabetik olarak sıralanmış bir listesinden seçmek için kullanılır.  
@@ -25,8 +25,8 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetimidir aslında bir 
 ## <a name="key-properties"></a>Anahtar Özellikler  
  Anahtar özellikleri denetimin <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, ve <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Özelliği, metin değerleri denetimde görüntülenen nesnelerin listesini içerir. Varsa <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> ayarlanır `false`, denetimin kullanıcı türleri ve listedeki bir değeri ile eşleşen metni otomatik olarak tamamlar. Varsa <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> ayarlanır `true`, son öğenin kaydırma yönlendirilirsiniz ilk öğeye listesinde ve bunun tersi de geçerlidir. Denetimin önemli yöntemlerdir <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> ve <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
   
- Bu denetim yalnızca metin dizelerini görüntüler. Sayısal değerleri görüntüleyen bir denetimi istiyorsanız kullanın <xref:System.Windows.Forms.NumericUpDown> denetimi. Daha fazla bilgi için [NumericUpDown denetimine genel bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md).  
+ Bu denetim yalnızca metin dizelerini görüntüler. Sayısal değerleri görüntüleyen bir denetimi istiyorsanız kullanın <xref:System.Windows.Forms.NumericUpDown> denetimi. Daha fazla bilgi için [NumericUpDown denetimine genel bakış](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.DomainUpDown>
-- [DomainUpDown Denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+- [DomainUpDown Denetimi](domainupdown-control-windows-forms.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 6c3ad0892ea0892b7c4c0e21e14bdb75fe22b447
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554224"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718798"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>GDI+'da Görüntü Kırpma ve Ölçeklendirme
 Kullanabileceğiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> çizmek ve vektör görüntüleri ve ızgara resimlerin konumlandırmak için sınıf. <xref:System.Drawing.Graphics.DrawImage%2A> bağımsız değişkenleriyle sağlayabilirsiniz birkaç yolu olduğundan aşırı yüklü bir yönteminiz var.  
@@ -28,24 +28,24 @@ Kullanabileceğiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:S
 ## <a name="drawimage-variations"></a>DrawImage farklılıkları  
  Bir çeşitlemesi <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi alır bir <xref:System.Drawing.Bitmap> ve <xref:System.Drawing.Rectangle>. Dikdörtgen çizme işlemi için hedef belirtir. diğer bir deyişle, hangi görüntü çizme dikdörtgen belirtir. Hedef dikdörtgenin boyut orijinal görüntünün boyutundan farklıysa, hedef dikdörtgenin sığacak şekilde ölçeklendirilir. Aşağıdaki kod örneği, üç kez aynı görüntü çizmek gösterilmektedir: hiçbir ölçeklendirme ile bir kez, bir genişletme ile bir kez ve bir sıkıştırma ile bir kez:  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
  Aşağıdaki çizim üç resimleri gösterir.  
   
- ![Ölçeklendirme](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
+ ![Ölçeklendirme](./media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
  Bazı çeşitleri <xref:System.Drawing.Graphics.DrawImage%2A> yöntemine sahip bir hedef dikdörtgenin parametre yanı sıra kaynak dikdörtgenin parametresi. Kaynak dikdörtgenin parametresi çizmek için özgün görüntü kısmı belirtir. Hedef dikdörtgenin kaydedileceği görüntünün kısmı çizmek dikdörtgen belirtir. Hedef dikdörtgenin boyutu kaynak dikdörtgenin boyutundan farklı ise, resmi hedef dikdörtgenin sığacak şekilde ölçeklendirilir.  
   
  Aşağıdaki kod örneğinde nasıl oluşturulacağını gösterir. bir <xref:System.Drawing.Bitmap> Runner.jpg dosyasından. Ölçeklendirme yok, görüntünün çizilir (0, 0). Görüntünün küçük bir kısmını iki kez çizilir sonra: bir kez bir sıkıştırma ile bir kez bir genişletme.  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
  Ölçeklendirilmemiş resim ve görüntü sıkıştırılmış ve genişletilmiş bölümleri aşağıda gösterilmiştir.  
   
- ![Kırpma ve ölçeklendirme](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
+ ![Kırpma ve ölçeklendirme](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

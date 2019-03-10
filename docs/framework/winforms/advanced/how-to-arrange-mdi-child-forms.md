@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 6e1e4f22aa70d8ee4d4122f9e77427c101b6713f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540747"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711908"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Nasıl yapılır: MDI alt formlarını düzenleme
 Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşimini denetleyen gibi eylemleri menü komutlarını uygulamanız olacak. Kullanabileceğiniz <xref:System.Windows.Forms.Form.LayoutMdi%2A> yöntemi biriyle <xref:System.Windows.Forms.MdiLayout> numaralandırma değerlerinden bir MDI alt formları yeniden düzenlemek için ana formu.  
@@ -48,8 +48,8 @@ Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşi
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI alt formları oluştur](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md)
+- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)

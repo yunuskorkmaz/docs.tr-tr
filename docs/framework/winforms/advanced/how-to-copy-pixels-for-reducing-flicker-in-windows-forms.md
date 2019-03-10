@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559456"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719253"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da titreşimi azaltmak için piksel kopyalama
 Basit bir grafik animasyon eklediğinizde, kullanıcılar bazen titreşimini veya istenmeyen diğer görsel efektler karşılaşırsınız. Bu sorunu sınırlamanın yöntemlerinden biri, grafiğin üzerinde "bitblt" işlem kullanmaktır. BitBlt "bit bloğu aktarımı" renk verileri piksel bir kaynak dikdörtgenden hedef dikdörtgene piksel ' dir.  
@@ -66,5 +66,5 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)

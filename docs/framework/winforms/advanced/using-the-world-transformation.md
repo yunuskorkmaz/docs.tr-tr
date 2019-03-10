@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: ec232c92d32b91a7b334b237c869db8eb428eccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc6bcca42e84580199f75c64087af6d98f476d4b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647616"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715704"
 ---
 # <a name="using-the-world-transformation"></a>Gerçek Koordinat Dönüştürmesini Kullanma
 Gerçek koordinat dönüştürmesini parçasıdır <xref:System.Drawing.Graphics> sınıfı. Gerçek koordinat dönüştürmesini belirtin sayıları depolanan bir <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 matrisi temsil eden nesne. <xref:System.Drawing.Drawing2D.Matrix> Ve <xref:System.Drawing.Graphics> sınıflarının sayıları dünya dönüşümü matriste ayarlamak için çeşitli yöntemler vardır.  
@@ -21,27 +21,27 @@ Gerçek koordinat dönüştürmesini parçasıdır <xref:System.Drawing.Graphics
 ## <a name="different-types-of-transformations"></a>Farklı tür dönüşümleri  
  Aşağıdaki örnekte, kod ilk 50 x 50 Dikdörtgen oluşturur ve kaynak (0, 0) bulur. Kaynak istemci alanını sol üst köşesinde ' dir.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
  Aşağıdaki kod, dikdörtgen x yönünde 1.75 faktörüyle genişleyen veya 0,5 y yönünde faktörüyle dikdörtgen bir ölçekleme dönüşümü geçerlidir:  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
- [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
  X yönünde uzun ve kısa y yönünde özgün bir dikdörtgen sonucudur.  
   
  Ölçeklendirme yerine dikdörtgen döndürmek için aşağıdaki kodu kullanın:  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
- [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
  Dikdörtgen çevirmek için aşağıdaki kodu kullanın:  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
- [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.Drawing2D.Matrix>
-- [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Yönetilen GDI+'da Dönüştürmeleri Kullanma](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)
+- [Yönetilen GDI+'da Dönüştürmeleri Kullanma](using-transformations-in-managed-gdi.md)

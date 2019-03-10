@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ccf98ee1afe82b2e76679406a08e98e6f4e6fb15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637472"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711011"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox denetimi ile sürükle ve bırak işlemleri etkinleştir
 Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.RichTextBox> denetim işleyerek yapılır <xref:System.Windows.Forms.RichTextBox.DragEnter> ve <xref:System.Windows.Forms.RichTextBox.DragDrop> olayları. Bu nedenle, sürükle ve bırak işlemleri ile son derece basit <xref:System.Windows.Forms.RichTextBox> denetimi.  
@@ -166,6 +166,6 @@ Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.Rich
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.RichTextBox>
-- [Nasıl yapılır: Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
-- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Nasıl yapılır: Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

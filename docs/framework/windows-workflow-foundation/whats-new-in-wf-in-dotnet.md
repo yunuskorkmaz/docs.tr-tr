@@ -2,16 +2,16 @@
 title: .NET 4.5 içinde Windows Workflow Foundation'daki yenilikler
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212410"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718928"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 içinde Windows Workflow Foundation'daki yenilikler
 
-Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcı özellikleri ve iş akışı geliştirme modelleri gibi birçok yeni özellik sunar. Çok sayıda, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı tasarımcısında yeni Workflow Foundation 4.5 özellikleri desteği](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz. [geçiş kılavuzuna](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konu başlığı altında tanıtılan yeni iş akışı özelliklerine genel bakış sağlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcı özellikleri ve iş akışı geliştirme modelleri gibi birçok yeni özellik sunar. Çok sayıda, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı tasarımcısında yeni Workflow Foundation 4.5 özellikleri desteği](wf-features-in-the-rehosted-workflow-designer.md). En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz. [geçiş kılavuzuna](migration-guidance.md). Bu konu başlığı altında tanıtılan yeni iş akışı özelliklerine genel bakış sağlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
 > [!WARNING]
 > Eklenen yeni Windows Workflow Foundation özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] framework'ün önceki sürümlerini hedefleyen projeler için kullanılabilir değil. Hedefleyen bir proje varsa [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] framework'ün önceki bir sürüme çeşitli sorunlar ortaya çıkabilir yeniden yöneliktir.
@@ -25,13 +25,13 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeni tabanlı birçok yeni sürüm oluşturma özelliği sunulan <xref:System.Activities.WorkflowIdentity> sınıfı. <xref:System.Activities.WorkflowIdentity> uygulama yazarları iş akışı tanımını kalıcı iş akışı örneğiyle eşleme için bir mekanizma sağlar.
 
-- Kullanan geliştiriciler <xref:System.Activities.WorkflowApplication> barındırma kullanabileceğiniz <xref:System.Activities.WorkflowIdentity> birden çok sürümünü bir iş akışı yan yana barındırma olanağı. Kalıcı iş akışı örnekleri kullanarak yeni yüklenebilir <xref:System.Activities.WorkflowApplicationInstance> sınıfı ve ardından <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> örneklerken iş akışı tanımı doğru sürümünü sağlamak için ana bilgisayar tarafından kullanılan <xref:System.Activities.WorkflowApplication>. Daha fazla bilgi için [Workflowıdentity kullanma ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) ve [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Kullanan geliştiriciler <xref:System.Activities.WorkflowApplication> barındırma kullanabileceğiniz <xref:System.Activities.WorkflowIdentity> birden çok sürümünü bir iş akışı yan yana barındırma olanağı. Kalıcı iş akışı örnekleri kullanarak yeni yüklenebilir <xref:System.Activities.WorkflowApplicationInstance> sınıfı ve ardından <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> örneklerken iş akışı tanımı doğru sürümünü sağlamak için ana bilgisayar tarafından kullanılan <xref:System.Activities.WorkflowApplication>. Daha fazla bilgi için [Workflowıdentity kullanma ve sürüm oluşturma](using-workflowidentity-and-versioning.md) ve [nasıl yapılır: Bir iş akışı yan yana birden çok sürümünü konak](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- <xref:System.ServiceModel.WorkflowServiceHost> artık bir çok sürümlü ana bilgisayardır. Bir iş akışı hizmeti yeni bir sürümü dağıtıldığında, yeni hizmetini kullanarak yeni örnekleri oluşturulur, ancak önceki sürümünü kullanarak mevcut örneklerdeki tamamlayın. Daha fazla bilgi için [WorkflowServiceHost yan yana sürüm oluşturma](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- <xref:System.ServiceModel.WorkflowServiceHost> artık bir çok sürümlü ana bilgisayardır. Bir iş akışı hizmeti yeni bir sürümü dağıtıldığında, yeni hizmetini kullanarak yeni örnekleri oluşturulur, ancak önceki sürümünü kullanarak mevcut örneklerdeki tamamlayın. Daha fazla bilgi için [WorkflowServiceHost yan yana sürüm oluşturma](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Dinamik güncelleştirme bir kalıcı iş akışı örneğinin tanımını güncelleştirmeye yönelik bir mekanizma sağlayan kullanıma sunulmuştur. Daha fazla bilgi için [dinamik güncelleştirme](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) ve [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Dinamik güncelleştirme bir kalıcı iş akışı örneğinin tanımını güncelleştirmeye yönelik bir mekanizma sağlayan kullanıma sunulmuştur. Daha fazla bilgi için [dinamik güncelleştirme](dynamic-update.md) ve [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı betiği kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu betik güncelleştirmeleri [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] de kullanıma sunulan yeni sürüm oluşturma özellikleri desteklemek için Kalıcılık veritabanlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Veritabanında kalıcı iş akışı örnekleri varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme katılabilir. Daha fazla bilgi için [destek iş akışı sürüm oluşturma için .NET Framework 4 Kalıcılık veritabanı yükseltme](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı betiği kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu betik güncelleştirmeleri [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] de kullanıma sunulan yeni sürüm oluşturma özellikleri desteklemek için Kalıcılık veritabanlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Veritabanında kalıcı iş akışı örnekleri varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme katılabilir. Daha fazla bilgi için [destek iş akışı sürüm oluşturma için .NET Framework 4 Kalıcılık veritabanı yükseltme](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Etkinlikleri
 
@@ -72,7 +72,7 @@ Akış çizelgeleri için güncelleştirilmiş [!INCLUDE[net_v45](../../../inclu
 
      Özel durumları değil serileştirilecek varsa, özel durumlar içinde kullanıldığından emin olun. bir <xref:System.Activities.Statements.NoPersistScope>.
 
-4. Etkinlik yazarlar geçersiz kılmalıdır <xref:System.Activities.Activity.CacheMetadata%2A> otomatik olarak yansıma türü karşı yürütme iş akışı çalışma zamanı olmamasına özen gösterin. Bağımsız değişkenler ve alt etkinlikleri null olmayan, olmalıdır ve <xref:System.Activities.ActivityMetadata.Bind%2A> özel olarak çağrılması gerekir. Geçersiz kılma hakkında daha fazla bilgi için <xref:System.Activities.Activity.CacheMetadata%2A>, bkz: [CacheMetadata ile verileri kullanıma sunduğundan](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md). Ayrıca, bir türü olan bağımsız değişkenler örneklerini `internal` veya **özel** açıkça oluşturulmalıdır <xref:System.Activities.Activity.CacheMetadata%2A> yansıma tarafından oluşturulmasını önlemek için.
+4. Etkinlik yazarlar geçersiz kılmalıdır <xref:System.Activities.Activity.CacheMetadata%2A> otomatik olarak yansıma türü karşı yürütme iş akışı çalışma zamanı olmamasına özen gösterin. Bağımsız değişkenler ve alt etkinlikleri null olmayan, olmalıdır ve <xref:System.Activities.ActivityMetadata.Bind%2A> özel olarak çağrılması gerekir. Geçersiz kılma hakkında daha fazla bilgi için <xref:System.Activities.Activity.CacheMetadata%2A>, bkz: [CacheMetadata ile verileri kullanıma sunduğundan](exposing-data-with-cachemetadata.md). Ayrıca, bir türü olan bağımsız değişkenler örneklerini `internal` veya **özel** açıkça oluşturulmalıdır <xref:System.Activities.Activity.CacheMetadata%2A> yansıma tarafından oluşturulmasını önlemek için.
 
 5. Türlerini kullanmaz <xref:System.Runtime.Serialization.ISerializable> veya <xref:System.SerializableAttribute> serileştirilecek türlere serileştirme için; desteklemelidir <xref:System.Runtime.Serialization.DataContractSerializer>.
 
@@ -118,7 +118,7 @@ Hızlı Bul tasarımcının üzerinde gerçekleştirilen <xref:System.Activities
 
 Aşağıdaki ekran görüntüsünde, değişken ve bağımsız değişken Tasarımcı bağlam menüsünü gösterir.
 
-![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![Değişken ve bağımsız değişken Tasarımcı bağlam menüsü](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> Otomatik-çevrelemeyi dizisi
 
@@ -126,11 +126,11 @@ Bir iş akışı veya belirli bir kapsayıcı etkinlikleri (gibi <xref:System.Ac
 
 Aşağıdaki ekran görüntüsü gösterildiği bir `WriteLine` etkinliğinde `Body` , bir `NoPersistScope`.
 
-![Otomatik&#45;çevreleyen bırakma konumu](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![Otomatik&#45;çevreleyen bırakma konumu](./media/autosurround1.png "AutoSurround1")
 
 Aşağıdaki ekran görüntüsünde otomatik olarak oluşturulan gösterilmektedir `Sequence` etkinliğinde `Body` ikinci zaman `WriteLine` ilk düştü.
 
-![Sıralı etkinlik otomatik olarak oluşturulan](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![Sıralı etkinlik otomatik olarak oluşturulan](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> PAN modu
 
@@ -138,7 +138,7 @@ Büyük bir iş akışı Tasarımcısı'nda daha kolay gezinme için kaydırma m
 
 Aşağıdaki ekran görüntüsünde, iş akışı Tasarımcısı alt sağ köşesinde bulunan pan düğmesini gösterir.
 
-![İş Akışı Tasarımcısı'nda PAN düğmesi](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![İş Akışı Tasarımcısı'nda PAN düğmesi](./media/panbutton.png "PanButton")
 
 Orta fare düğmesine veya Ara çubuğuna iş akışı Tasarımcısı kaydırmak için de kullanılabilir.
 
@@ -152,9 +152,9 @@ Birden çok etkinlik seçimleri ayrıca sürüklediğiniz ve tasarımcı içinde
 
 Hiyerarşik iş akışları gidin daha kolay hale getirmek için bir iş akışı bileşenleri, ağaç stili ana görünümünde gösterilir. Anahat görünümünde görüntülenen **belge anahattı** görünümü. Bu görünüm, üstteki menüden açmak için seçmeniz **görünümü**, **diğer Windows**, **belge anahattı**, ya da Ctrl W, u tuşuna basın Ana görünümünde bir düğüm tıklayarak ilgili etkinlik iş akışı tasarımcısında gider ve anahat görünümü Tasarımcısı'nda seçili etkinlikler göstermek için güncelleştirilir.
 
-Aşağıdaki ekran görüntüsünde tamamlanan iş akışından [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) sıralı bir iş akışı ile ana hat görünümü gösterilir.
+Aşağıdaki ekran görüntüsünde tamamlanan iş akışından [başlangıç Öğreticisi](getting-started-tutorial.md) sıralı bir iş akışı ile ana hat görünümü gösterilir.
 
-![Anahat iş akışı Tasarımcısı'nda görünümü](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Anahat iş akışı Tasarımcısı'nda görünümü](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> C# ifadeleri
 
@@ -162,7 +162,7 @@ Aşağıdaki ekran görüntüsünde tamamlanan iş akışından [başlangıç Ö
 
 C# ifadeleri tasarım zamanında doğrulanır. C# ifadelerini hatalar bir kırmızı dalgalı çizgi işaretlenir.
 
-C# ifadeleri hakkında daha fazla bilgi için bkz: [C# ifadelerini](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).
+C# ifadeleri hakkında daha fazla bilgi için bkz: [C# ifadelerini](csharp-expressions.md).
 
 ### <a name="BKMK_Visibility"></a> Daha fazla denetim görünürlüğünü Kabuk çubuğu ve üstbilgi öğeleri
 
@@ -174,17 +174,17 @@ Yeniden barındırılan tasarımcıda, bazı standart kullanıcı Arabirimi dene
 
 Aşağıdaki ekran görüntüsünde bir etkinlik araç kutusundan sürüklendiğinde görünür hale gelmiş eki noktalarını gösterir.
 
-![Otomatik bağlanma noktalarını gösteren akış çizelgesi başlangıç düğümü](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![Otomatik bağlanma noktalarını gösteren akış çizelgesi başlangıç düğümü](./media/autoconnect1.png "Autoconnect1")
 
 Etkinlikler de akış düğüm ve düğüm iki düğüm arasındaki otomatik olarak eklemek üzere durumları arasında bağlantılar sürüklenebilen. Aşağıdaki ekran görüntüsünde vurgulanan bağlantı satırı burada etkinlikler araç kutusundan sürüklediğiniz ve olması bırakılan gösterir.
 
-![Otomatik&#45;etkinlikleri silmek için tanıtıcı eklemek](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+![Otomatik&#45;etkinlikleri silmek için tanıtıcı eklemek](./media/autoinsert.png "Autoinsert")
 
 ### <a name="BKMK_Annotations"></a> Tasarımcı ek açıklamaları
 
 Daha büyük iş akışları geliştirme kolaylaştırmak için tasarımcı tasarım süreci izlemenize yardımcı olması için ekleme ek açıklamalarını destekler. Ek açıklama, etkinlikleri, durumları, akış düğümleri, değişkenler ve bağımsız değişkenler eklenebilir. Aşağıdaki ekran görüntüsünde, ek açıklamalar tasarımcıya eklemek için kullanılan bağlam menüsünü gösterir.
 
-![Ek açıklama bağlam menüsü](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![Ek açıklama bağlam menüsü](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>Hata ayıklama durumları
 
@@ -230,12 +230,12 @@ Durum makinesi iş akışları, .NET Framework 4, sürüm 4.0.1'in parçası ola
 
 4. Etkinlikler dahil olmak üzere durum makine iş akışları oluşturmak için kullanılan: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, ve <xref:System.Activities.Statements.Transition>
 
-Aşağıdaki ekran görüntüsünde tamamlanan durum makine iş akışından gösterilmektedir [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).
+Aşağıdaki ekran görüntüsünde tamamlanan durum makine iş akışından gösterilmektedir [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](how-to-create-a-state-machine-workflow.md).
 
-![Durum makinesi iş akışı tamamlandı](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Durum makinesi iş akışı tamamlandı](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [durum makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).
+Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [durum makine iş akışları](state-machine-workflows.md).
 
 ### <a name="BKMK_ContractFirst"></a> Sözleşme öncelikli iş akışı geliştirme
 
-Bir kod sözleşmesi ilk tasarlayın ve ardından Visual Studio'da birkaç tıklama ile her bir işlemi temsil eden araç kutusunda otomatik olarak bir etkinlik şablonu oluşturmak Geliştirici sözleşme öncelikli iş akışı geliştirme aracı sağlar. Bu etkinlikler, ardından anlaşmada tanımlanan işlemleri uygulayan bir iş akışı oluşturmak için kullanılır. İş Akışı Tasarımcısı bu işlemleri uygulanır ve iş akışı imzası sözleşme imzayla eşleşen emin olmak için iş akışı hizmeti doğrular. Geliştirici, ayrıca bir iş akışı hizmeti uygulanan sözleşmelerin koleksiyonu ile ilişkilendirebilirsiniz. Sözleşme öncelikli iş akışı hizmet geliştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+Bir kod sözleşmesi ilk tasarlayın ve ardından Visual Studio'da birkaç tıklama ile her bir işlemi temsil eden araç kutusunda otomatik olarak bir etkinlik şablonu oluşturmak Geliştirici sözleşme öncelikli iş akışı geliştirme aracı sağlar. Bu etkinlikler, ardından anlaşmada tanımlanan işlemleri uygulayan bir iş akışı oluşturmak için kullanılır. İş Akışı Tasarımcısı bu işlemleri uygulanır ve iş akışı imzası sözleşme imzayla eşleşen emin olmak için iş akışı hizmeti doğrular. Geliştirici, ayrıca bir iş akışı hizmeti uygulanan sözleşmelerin koleksiyonu ile ilişkilendirebilirsiniz. Sözleşme öncelikli iş akışı hizmet geliştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

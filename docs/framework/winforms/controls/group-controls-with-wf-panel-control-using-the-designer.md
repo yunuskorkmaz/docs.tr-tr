@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 706a020bfb007250b9a1b708da25704aacd755e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601547"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717459"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak Windows Forms Panel denetimi ile denetimleri gruplandırma
 Windows Forms <xref:System.Windows.Forms.Panel> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır. NET kullanıcı arabirimi için ilgili form öğelerinin gruplandırma visual biridir; başka bir program, radyo düğmeleri örneğin gruplandırmadır; Tasarım zamanında bir birim olarak denetimleri taşımak için son olur.  
@@ -30,6 +30,6 @@ Windows Forms <xref:System.Windows.Forms.Panel> denetimleri başka denetimler gr
 3.  (İsteğe bağlı) Bir panel için bir kenarlık eklemek istiyorsanız, kendi <xref:System.Windows.Forms.BorderStyle> özelliği. Üç seçeneğiniz vardır: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, ve <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Panel Denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Panel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Bir panelin arka planını ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel Denetimi](panel-control-windows-forms.md)
+- [Panel Denetimine Genel Bakış](panel-control-overview-windows-forms.md)
+- [Nasıl yapılır: Bir panelin arka planını ayarlama](how-to-set-the-background-of-a-windows-forms-panel.md)

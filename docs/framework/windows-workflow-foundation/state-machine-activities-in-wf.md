@@ -2,12 +2,12 @@
 title: WF Durum makinesi etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 3086348d1c4f29e3f446e9525a12a9c207efb328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee507f873cde3aabce09c9b3fdb1620cd79fdab
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619006"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710322"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF Durum makinesi etkinlikleri
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] çeşitli sistem tarafından sağlanan etkinlikleri ve etkinlik tasarımcıları, durum makine iş akışları oluşturmak için sağlar.  
@@ -20,4 +20,4 @@ ms.locfileid: "54619006"
 |<xref:System.Activities.Statements.Transition>|İki durum arasında geçiş temsil eder. Yok hiçbir **araç kutusu** için madde <xref:System.Activities.Statements.Transition>; geçişleri iki durum arasında bir satır sürükleyip bırakarak iş akışı Tasarımcısı üzerinde oluşturulur veya görünür üçgenler durumuna bırakarak bir durumdan başka bir vurgulanan . Daha fazla bilgi için [Transition etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer).|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Başlangıç Öğreticisi](getting-started-tutorial.md)

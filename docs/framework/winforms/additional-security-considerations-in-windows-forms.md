@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442535"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718915"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Microsoft Win32 API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği güvenlik ayarlarını etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Microsoft Win32 API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği güvenlik ayarlarını etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
   
  Panoyla çalışma, pencere işleyin ve kısmi güven ortamında çalışan uygulamalardan Win32 API çağrısı hakkında aşağıdaki bölümlerde açıklanmaktadır.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "56442535"
   
  Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanızın istemelisiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yolu düşünmeniz gerekir; çoğu durumda, Windows Forms Win32 API yönetilen bir alternatif sağlar. İşlevler. Mevcut olmadığı anlamına gelir ve uygulamanın yönetilmeyen kod erişmeniz gerekiyorsa uygulama izinlerini yükseltmesine gerekecektir.  
   
- Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
+ Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
-- [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)
+- [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](more-secure-file-and-data-access-in-windows-forms.md)
+- [Windows Forms'ta Daha Güvenli Yazdırma](more-secure-printing-in-windows-forms.md)
+- [Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)
+- [Windows Forms Güvenliği](windows-forms-security.md)
 - [ClickOnce Uygulamalarının Güvenliğini Sağlama](/visualstudio/deployment/securing-clickonce-applications)
