@@ -6,23 +6,23 @@ helpviewer_keywords:
 - graphics containers
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
-ms.openlocfilehash: 8755a95434d3fed06a55cfca0f71d86e5521cb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525027"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704498"
 ---
 # <a name="using-graphics-containers"></a>Grafik Kapsayıcıları Kullanma
-A <xref:System.Drawing.Graphics> nesnesi sağlar yöntemleri gibi <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, ve <xref:System.Drawing.Graphics.DrawString%2A> vektör görüntüleri, ızgara görüntüleri ve metin görüntüleme. A <xref:System.Drawing.Graphics> nesne kalitesini ve çizilir öğeleri yönünü etkileyen çeşitli özellikler de vardır. Örneğin, yumuşatma modu özelliği çizgiler ve eğrilerle düzgünleştirme uygulanır ve dünya dönüşümü özelliği konum ve dönüş çizilir öğelerinin etkilediğini olup olmadığını belirler.  
+A <xref:System.Drawing.Graphics> nesne yöntemleri gibi sağlar <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, ve <xref:System.Drawing.Graphics.DrawString%2A> vektör görüntüleri, tarama görüntü ve metin gösterme. A <xref:System.Drawing.Graphics> nesne çizilir öğeleri yönünü ve kalite etkileyen çeşitli özellikleri de vardır. Örneğin, yumuşatma modu özelliği için çizgiler ve eğrilerle düzgünleştirme uygulanır ve konum ve döndürme çizilir öğelerinin dünya dönüştürme özelliğini etkiler olup olmadığını belirler.  
   
- A <xref:System.Drawing.Graphics> nesne belirli görüntüleme cihazı ile ilişkili değil. Kullandığınızda, bir <xref:System.Drawing.Graphics> bir pencerede çizmek için nesne <xref:System.Drawing.Graphics> nesne bu belirli pencere ile ilişkili değil de.  
+ A <xref:System.Drawing.Graphics> nesne belirli bir görüntü cihazı ile ilişkili değil. Kullandığınızda, bir <xref:System.Drawing.Graphics> bir pencerede çizmek için nesne <xref:System.Drawing.Graphics> nesnedir Ayrıca, belirli bir pencere ile ilişkili.  
   
- A <xref:System.Drawing.Graphics> nesne zorlayıcı bir kapsayıcı olarak çizim etkileyen özellikler kümesi tutan olduğundan ve cihaza özgü bilgileri bağlı. Var olan içindeki ikincil bir kapsayıcı oluşturabilirsiniz <xref:System.Drawing.Graphics> çağırarak nesne <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi, <xref:System.Drawing.Graphics> nesnesi.  
+ A <xref:System.Drawing.Graphics> nesne düşünülebilir bir kapsayıcı gibi çizim etkileyen özellikler kümesi tutmadığından ve cihaza özgü bilgiler için bağlıdır. İçinde mevcut bir ikincil bir kapsayıcı oluşturduğunuz <xref:System.Drawing.Graphics> çağırarak <xref:System.Drawing.Graphics.BeginContainer%2A> yöntem <xref:System.Drawing.Graphics> nesne.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir Grafik Nesnesinin Durumunu Yönetme](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)  
- Açıklar kalitesi ayarları, kırpma alanı ve dönüşümleri, nasıl yönettiğini bir <xref:System.Drawing.Graphics> nesnesi.  
+ [Bir Grafik Nesnesinin Durumunu Yönetme](managing-the-state-of-a-graphics-object.md)  
+ Açıklar kalite ayarları, kırpma alan ve dönüşümleri yönetme bir <xref:System.Drawing.Graphics> nesne.  
   
- [İç İçe Grafik Kapsayıcılarını Kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)  
- Kapsayıcıları durumunu denetlemek için nasıl kullanılacağını gösterir <xref:System.Drawing.Graphics> nesnesi.
+ [İç İçe Grafik Kapsayıcılarını Kullanma](using-nested-graphics-containers.md)  
+ Durumu denetlemek için kapsayıcıları kullanmayı gösterir <xref:System.Drawing.Graphics> nesne.

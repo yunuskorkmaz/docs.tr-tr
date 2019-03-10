@@ -6,52 +6,52 @@ helpviewer_keywords:
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-ms.openlocfilehash: 2e60a98492947a5ce21652cff1ca7dda7993e8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b4e56c332567cdf1aea94a836ef7dcdcd8a94fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515694"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703653"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation programlama
-Bu bölümde, yeterli bir Windows Workflow Foundation (WF) Programcı olmasını anlamalısınız primer konular kümesini içerir.  
+Bu bölüm, bir dizi usta bir Windows Workflow Foundation (WF) Programcı olmaya anlamanız gereken temel konuları içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İş Akışları Tasarlama](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- İş akışı geliştirme kullanılan akış denetimi örneklerinde açıklayan konulara.  
+ [İş Akışları Tasarlama](designing-workflows.md)  
+ İş akışı geliştirmede kullanılan akış denetimi paradigmalarını açıklayan konulara.  
   
- [Etkinlik Kullanma ve Oluşturma](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
- Windows Workflow Foundation (WF) kullanılabilir sistem tarafından sağlanan etkinliklerini açıklar Konular.  
+ [Etkinlik Kullanma ve Oluşturma](using-and-creating-activities.md)  
+ Bu konular Windows Workflow Foundation (WF) kullanılabilir sistem tarafından sağlanan etkinliklerini açıklar.  
   
- [Windows Workflow Foundation Veri Modeli](../../../docs/framework/windows-workflow-foundation/data-model.md)  
- Değişkenleri, bağımsız değişkenleri ve ifadelerinde açıklayan konulara [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+ [Windows Workflow Foundation Veri Modeli](data-model.md)  
+ Değişkenleri, bağımsız değişkenleri ve ifadeleri açıklayan konulara [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
   
- [Bir iş akışında giriş bekleme](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
- Yer işaretleri ve mesajlaşma etkinlikleri kullanmayı açıklar Konular.  
+ [Bir iş akışında giriş bekleme](waiting-for-input-in-a-workflow.md)  
+ Yer işaretleri ve mesajlaşma etkinlikleri nasıl kullanılacağını açıklayan konulara.  
   
- [Özel Durumlar, İşlemler ve Dengeleme](../../../docs/framework/windows-workflow-foundation/exceptions-transactions-and-compensation.md)  
- Özel durum işleyicileri, işlemleri ve maaş çalışma zamanı hataları işlemek için nasıl kullanılacağını açıklayan konulara.  
+ [Özel Durumlar, İşlemler ve Dengeleme](exceptions-transactions-and-compensation.md)  
+ Özel durum işleyicileri, işlemler ve Dengeleme çalışma zamanı hataları işlemek için nasıl kullanılacağını açıklayan konulara.  
   
- [İş Akışları Barındırma](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)  
- İş akışı ana bilgisayar uygulamaları yazmak için ayrıntıları açıklayan konulara.  
+ [İş Akışları Barındırma](hosting-workflows.md)  
+ İş akışı ana bilgisayar uygulamalarını yazmaya ayrıntılarını açıklayan konulara.  
   
- [Dinamik Güncelleştirme](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)  
- Güncelleştirme için güncelleştirme dinamik kullanmayı kalıcı iş akışı örneği iş akışı tanımını açıklar.  
+ [Dinamik Güncelleştirme](dynamic-update.md)  
+ Güncelleştirme için güncelleştirme dinamik bir kalıcı iş akışı örneği iş akışı tanımını açıklar.  
   
- [İş Akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [İş Akışı Hizmetleri](../wcf/feature-details/workflow-services.md)  
  Bildirimli olarak yazma hizmetleri destekleyen programlama modeli açıklayan konulara.  
   
- [İş Akışı Kalıcılığı](../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
- Otomatik olarak veya el ile iş akışı veri kalıcı yapma ve iş akışları bellekten yüklemeyi kaldırma seçeneklerini açıklayan konulara.  
+ [İş Akışı Kalıcılığı](workflow-persistence.md)  
+ Otomatik veya el ile iş akışı verileri kalıcı hale getirmeniz ve bellekten iş akışları kaldırma seçeneklerini açıklayan konulara.  
   
- [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
- Önceki sürümlerden Windows Workflow Foundation (WF) iş akışları geçirileceği anlatılmaktadır Konular.  
+ [Geçiş Kılavuzu](migration-guidance.md)  
+ Önceki sürümlerden Windows Workflow Foundation (WF) iş akışlarını geçiş yapmayı açıklayan konular.  
   
- [İş Akışı Takip ve İzleme](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- İzleme ve izleme iş akışı ve iş akışı uygulamaları izlemek için bu özelliklerin nasıl kullanıldığını açıklayan konulara.  
+ [İş Akışı Takip ve İzleme](workflow-tracking-and-tracing.md)  
+ İzleme ve izleme iş akışını ve iş akışı uygulamaları izlemek için bu özelliklerin nasıl kullanılacağını açıklayan konulara.  
   
- [İş Akışı Güvenliği](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
+ [İş Akışı Güvenliği](workflow-security.md)  
  SQL ve Windows Communication Foundation (WCF) kullanırken, iş akışınızı güvenli tutmak nasıl ele alınmaktadır.  
   
- [Windows Workflow Foundation 4 Performansı](../../../docs/framework/windows-workflow-foundation/performance.md)  
- Windows Workflow Foundation 4 performans açıklanır ve WF önceki sürüme geri karşılaştırır.
+ [Windows Workflow Foundation 4 Performansı](performance.md)  
+ Windows Workflow Foundation 4 performansı açıklanır ve WF önceki sürümüne karşılaştırır.

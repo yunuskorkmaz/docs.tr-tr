@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521763"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714339"
 ---
 # <a name="graphics-overview-windows-forms"></a>Grafiklere Genel Bakış (Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] CİHAZDAN bağımsız uygulamaları yazmak programcıları sağlayan bir grafik cihaz arabirimi var. Hizmetlerini [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıflar bir dizi sunulur.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] programcıların CİHAZDAN bağımsız uygulamalar yazma olanağı tanıyan bir grafik cihaz arabirimi var. Hizmetlerini [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıflar bir dizi aracılığıyla sunulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Grafiklere Genel Bakış](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ [Grafiklere Genel Bakış](overview-of-graphics.md)  
  Genel bir giriş sağlar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Üç Grafik Hizmeti Kategorisi](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- İle programlama oluşturan üç kategorileri açıklanmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Üç Grafik Hizmeti Kategorisi](three-categories-of-graphics-services.md)  
+ İle programlama oluşturan üç kategoriye açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Grafik Arabiriminin Yapısı](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- Yönetilen sınıf arabiriminin açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Grafik Arabiriminin Yapısı](structure-of-the-graphics-interface.md)  
+ Yönetilen sınıf arabirimi açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing>  
  Erişim sağlayan [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] temel grafik işlevselliği.  
   
  <xref:System.Drawing.Drawing2D>  
- Vektör grafikleri işlevselliği ve Gelişmiş iki boyutlu sağlar.  
+ Gelişmiş iki boyutlu sağlar ve vektör grafik işlevlerini.  
   
  <xref:System.Drawing.Imaging>  
- Sağlayan gelişmiş [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] görüntüleme işlevselliği.  
+ Sağlayan gelişmiş [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] görüntüleme işlevlerini.  
   
  <xref:System.Drawing.Text>  
  Sağlayan gelişmiş [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tipografi işlevselliği.  
   
  <xref:System.Drawing.Printing>  
- Yazdırma ilgili hizmetleri sağlar.  
+ Yazdırma ile ilgili hizmetler sağlar.  
   
  <xref:System.Windows.Forms.TextRenderer>  
  Sağlar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] çizim ve işlevsellik ölçme metin.

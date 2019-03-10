@@ -10,15 +10,15 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: 55cd3284f331e9793a0bb73f26ed16bbd99fa116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685660"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720429"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+'da Grafik Yolları
-Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulur. Geri çekilemedi [vektör grafiklerine genel bakış](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) resimler çizmek için en kullanışlı olması için aşağıdaki temel yapı taşlarını kanıtladıktan:  
+Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulur. Geri çekilemedi [vektör grafiklerine genel bakış](vector-graphics-overview.md) resimler çizmek için en kullanışlı olması için aşağıdaki temel yapı taşlarını kanıtladıktan:  
   
 -   satırları  
   
@@ -36,7 +36,7 @@ Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulu
   
  GDI +'ta, <xref:System.Drawing.Drawing2D.GraphicsPath> nesne, bu yapı taşlarını bir dizi tek bir birimde toplamanıza olanak sağlar. Tüm satırları, dikdörtgenler, çokgenler ve eğriler dizisini ardından bir çağrı ile kurulabilir <xref:System.Drawing.Graphics.DrawPath%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki çizimde, bir satır, bir yay Bézier eğri ve Kardinal eğri birleştirilerek oluşturulan bir yolunu gösterir.  
   
- ![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")  
+ ![Path](./media/aboutgdip02-art14.gif "Aboutgdip02_art14")  
   
 ## <a name="using-a-path"></a>Bir yol kullanma  
  <xref:System.Drawing.Drawing2D.GraphicsPath> Sınıfı çizilecek öğelerinin bir dizisini oluşturmak için aşağıdaki yöntemleri sağlar: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (için ana Eğriler), ve <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>. Bu yöntemlerin her biri aşırı yüklendi; diğer bir deyişle, her bir yöntemin birkaç farklı parametre listelerini destekler. Örneğin, bir çeşitlemesi <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> yöntemi alır dört tamsayının ve başka bir çeşitlemesi <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> yöntemi iki alan <xref:System.Drawing.Point> nesneleri.  
@@ -45,30 +45,30 @@ Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulu
   
  Bir yol çizmek için ihtiyacınız bir <xref:System.Drawing.Graphics> nesnesi bir <xref:System.Drawing.Pen> nesnesi ve bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlar <xref:System.Drawing.Graphics.DrawPath%2A> yöntemi ve <xref:System.Drawing.Pen> nesneyi genişlik ve yolun işlemek için kullanılan çizginin rengi gibi özniteliklerini depolar. <xref:System.Drawing.Drawing2D.GraphicsPath> Çizgiler ve eğrilerle yolu kolaylaştıran bir dizi nesnesini depolar. <xref:System.Drawing.Pen> Nesne ve <xref:System.Drawing.Drawing2D.GraphicsPath> nesne bağımsız değişkenleri olarak geçirilir <xref:System.Drawing.Graphics.DrawPath%2A> yöntemi. Aşağıdaki örnek, bir satır, bir elips ve Bézier eğri oluşan bir yol çizer:  
   
- [!code-csharp[LinesCurvesAndShapes#101](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
- [!code-vb[LinesCurvesAndShapes#101](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
+ [!code-csharp[LinesCurvesAndShapes#101](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
+ [!code-vb[LinesCurvesAndShapes#101](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
   
  Aşağıdaki çizimde yolunu gösterir.  
   
- ![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")  
+ ![Path](./media/aboutgdip02-art15.gif "Aboutgdip02_art15")  
   
  Çizgiler, dikdörtgenler ve eğriler yolunu eklemenin yanı sıra, bir yol yollar ekleyebilirsiniz. Bu, büyük ve karmaşık yolları oluşturmak için mevcut yolları birleştirmenize olanak sağlar.  
   
- [!code-csharp[LinesCurvesAndShapes#102](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
- [!code-vb[LinesCurvesAndShapes#102](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
+ [!code-csharp[LinesCurvesAndShapes#102](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
+ [!code-vb[LinesCurvesAndShapes#102](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
   
  Yolu ekleyebileceğiniz iki öğe: dizeleri ve pasta. Bir pasta, bir elipsin iç bölümüdür. Aşağıdaki örnek, Yayı Kardinal eğri, bir dize ve bir pasta bir yol oluşturur:  
   
- [!code-csharp[LinesCurvesAndShapes#103](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
- [!code-vb[LinesCurvesAndShapes#103](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
+ [!code-csharp[LinesCurvesAndShapes#103](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
+ [!code-vb[LinesCurvesAndShapes#103](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
   
  Aşağıdaki çizimde yolunu gösterir. Unutmayın; bir yolu, bağlı olması gerekmez. Yayı Kardinal eğri, dize ve pasta ayrılır.  
   
- ![Paths](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
+ ![Paths](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
-- [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Yollar Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
+- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Yollar Oluşturma ve Çizme](constructing-and-drawing-paths.md)

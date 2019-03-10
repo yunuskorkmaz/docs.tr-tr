@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967873"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722674"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama
 Uygulama tasarımınızı, bunu tek olay işleyicisine birden fazla olaylar için kullanın veya sahip birden çok olayı aynı yordamı gerçekleştirmek için gerekli bulabilirsiniz. Örneğin, genellikle bir güçlü zaman-bir menü komutu, bunlar aynı işlevselliği göstermek, form üzerindeki bir düğme gibi aynı olay yükseltmek için koruyucu olur. Özellikler penceresinde olayların görünümünü kullanarak bunu yapabilirsiniz C# veya bu adı kullanıyor `Handles` anahtar sözcüğü ve **sınıf adı** ve **yöntem adı** Visual Basic Kod Düzenleyicisi'nde açılır kutuları.  
@@ -50,7 +50,7 @@ Uygulama tasarımınızı, bunu tek olay işleyicisine birden fazla olaylar içi
   
 1.  Bir olay işleyicisi bağlanmak istediğiniz denetimi seçin.  
   
-2.  Özellikler penceresinde tıklayın **olayları** düğmesine (![olayları düğmesi](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
+2.  Özellikler penceresinde tıklayın **olayları** düğmesine (![olayları düğmesi](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3.  Kullanmak istediğiniz olayın adına tıklayın.  
   
@@ -61,5 +61,5 @@ Uygulama tasarımınızı, bunu tek olay işleyicisine birden fazla olaylar içi
      Kodu varolan olay işleyicisine olaya bağlamak için forma eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)
+- [Olay İşleyicilerine Genel Bakış](event-handlers-overview-windows-forms.md)

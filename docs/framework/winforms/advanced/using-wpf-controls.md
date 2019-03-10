@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841624"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713806"
 ---
 # <a name="using-wpf-controls"></a>WPF Denetimlerini Kullanma
 Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF) denetimleri kullanabilirsiniz. Bu iki farklı görünümü teknolojileri olsa da, bunlar düzgün çalışmak.  
@@ -20,19 +20,19 @@ Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF)
  WPF tabanlı uygulamalarınızı Windows Forms denetimleri de kullanabilirsiniz. Daha fazla bilgi için [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Tasarım Zamanında bir ElementHost Denetimini Kopyalayıp Yapıştırma](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
+ [Nasıl yapılır: Tasarım zamanında bir ElementHost denetimini yapıştırın](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Bir Windows formunda Windows Presentation Foundation denetim kopyalama işlemi gösterilmektedir.  
   
- [İzlenecek yol: Windows Forms'ta Tasarım Zamanında WPF İçeriğini Düzenleme](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
+ [İzlenecek yol: Tasarım zamanında WPF içeriğini Windows Forms'ta düzenleme](walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
  Sabitleme ve dayama çizgileri, gibi Windows Forms düzeni özellikleri Windows Presentation Foundation denetimleri düzenlemek için nasıl kullanılacağını gösterir.
   
- [İzlenecek yol: Windows Forms’ta Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
+ [İzlenecek yol: Windows Forms'ta tasarım zamanında yeni WPF içeriği oluşturma](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
  Windows Forms tabanlı uygulamalarda kullanmak için bir Windows Presentation Foundation denetim oluşturma işlemi gösterilmektedir.
   
- [İzlenecek yol: Windows Forms’ta Tasarım Zamanında WPF İçeriği Atama](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
+ [İzlenecek yol: Tasarım zamanında Windows Forms WPF içeriği atama](walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Formunuzda görüntülemek istediğiniz Windows Presentation Foundation denetim türlerini seçmek gösterilmektedir.  
   
- [İzlenecek yol: WPF İçeriği için Stil Oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
+ [İzlenecek yol: WPF içeriği için stil oluşturma](walkthrough-styling-wpf-content.md)  
  Windows Form Tasarımcısı arasındaki iş akışını gösterir ve [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] Windows Presentation Foundation denetimleri için stil uygulamak için.  
   
 ## <a name="reference"></a>Başvuru  
@@ -43,7 +43,7 @@ Windows Forms tabanlı uygulamalarınızı Windows Presentation Foundation (WPF)
  Ana bilgisayar Windows Forms denetimlerine Windows Presentation Foundation tabanlı uygulamanızda kullanabileceğiniz bir sınıfı tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [Geçiş ve Birlikte Çalışabilirlik](../../wpf/advanced/migration-and-interoperability.md)  
  Windows Presentation Foundation ve Windows Forms teknolojileri arasında birlikte çalışabilirliği açıklar.  
   
  [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  

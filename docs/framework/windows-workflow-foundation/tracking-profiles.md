@@ -2,12 +2,12 @@
 title: İzleme profilleri
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482307"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721378"
 ---
 # <a name="tracking-profiles"></a>İzleme profilleri
 
@@ -345,7 +345,7 @@ Sorgu öğeleri izleme bir izleme profili kullanarak bir XML yapılandırma dosy
 > [!WARNING]
 > İş akışı hizmeti konağı kullanarak WF izleme profili genellikle bir yapılandırma dosyası kullanılarak oluşturulur. İzleme profili kullanarak ve sorgu API'si izleme kodu ile bir izleme profili oluşturmak mümkündür.
 
-Bir XML yapılandırma dosyası olarak yapılandırılan bir profili bir davranış uzantısı kullanarak bir izleme katılımcı uygulanır. Bu sonraki bölümde açıklandığı gibi bir WorkflowServiceHost eklenir [yapılandırma izleme için bir iş akışı](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Bir XML yapılandırma dosyası olarak yapılandırılan bir profili bir davranış uzantısı kullanarak bir izleme katılımcı uygulanır. Bu sonraki bölümde açıklandığı gibi bir WorkflowServiceHost eklenir [yapılandırma izleme için bir iş akışı](configuring-tracking-for-a-workflow.md).
 
 Ayrıntı düzeyini ana bilgisayar tarafından yayılan izleme kayıtları izleme profili yapılandırma ayarlarında belirlenir. İzleme katılımcı, sorgular için bir izleme profili ekleyerek kayıtları izleme için abone olur. Tüm izleme kayıtları abone olmak izleme profili kullanarak tüm izleme sorguları belirtilmesi gerekiyor "\*" her bir sorgu ad alanları.
 
@@ -388,6 +388,6 @@ Ayrıntı düzeyini ana bilgisayar tarafından yayılan izleme kayıtları izlem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL İzleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL İzleme](./samples/sql-tracking.md)
 - [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

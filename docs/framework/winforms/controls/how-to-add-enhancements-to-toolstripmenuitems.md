@@ -24,12 +24,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685095"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719331"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme
 Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> aşağıdaki yollarla denetimler:  
@@ -116,4 +116,4 @@ Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.F
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip Denetimine Genel Bakış](menustrip-control-overview-windows-forms.md)

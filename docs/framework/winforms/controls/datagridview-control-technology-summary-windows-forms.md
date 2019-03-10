@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: efa567e6f8a91b40d2710b4cef0d1a56d38650c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737838"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717641"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView Denetimi Teknoloji Özeti (Windows Forms)
 Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kullanımını destekleyen sınıflar.  
@@ -31,7 +31,7 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
 ## <a name="background"></a>Arka Plan  
  Kullanıcı Arabirimi (UI) tasarımcıları sık, kullanıcılara tablosal verileri görüntülemek gerekli bulur. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Verileri bir tablo veya kılavuz göstermek için birçok yol sağlar. `DataGridView` Denetimi bu teknoloji Windows Forms uygulamaları için en son evrimini temsil eder.  
   
- `DataGridView` Denetimi, bir veri deposundan veri satırı görüntüleyebilirsiniz. Birçok veri depolarının türleri desteklenir. Veri deposu, tek boyutlu bir dizi gibi basit, yazılmamış veri tutabilir veya türü belirtilmiş veri gibi tutabilen bir <xref:System.Data.DataSet>. Daha fazla bilgi için [nasıl yapılır: Veri bağlama Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ `DataGridView` Denetimi, bir veri deposundan veri satırı görüntüleyebilirsiniz. Birçok veri depolarının türleri desteklenir. Veri deposu, tek boyutlu bir dizi gibi basit, yazılmamış veri tutabilir veya türü belirtilmiş veri gibi tutabilen bir <xref:System.Data.DataSet>. Daha fazla bilgi için [nasıl yapılır: Veri bağlama Windows Forms DataGridView denetiminde](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
  `DataGridView` Denetimi verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar. Denetim, küçük ve büyük veri kümelerini salt okunur veya düzenlenebilir görünümlerini göstermek için kullanabilirsiniz.  
   
@@ -44,7 +44,7 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
   
  Uygulayabileceğiniz `IDataGridViewEditingCell` türetilmiş hücre sınıfınızda, düzenleme işlevi sahip, ancak düzenleme modu, bir denetimin barındırmamalıdır hücresi türü oluşturmak için arabirim. Bir hücrede düzenleme moduna barındırabilecek bir denetim oluşturmak için uygulayabileceğiniz `IDataGridViewEditingControl` sınıfından türetilen bir sınıfta arabirimi <xref:System.Windows.Forms.Control>.  
   
- Daha fazla bilgi için [nasıl yapılır: Hücreleri özelleştirme ve sütunları Windows Forms DataGridView denetiminde davranış ve görünümünü genişleterek](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) ve [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Daha fazla bilgi için [nasıl yapılır: Hücreleri özelleştirme ve sütunları Windows Forms DataGridView denetiminde davranış ve görünümünü genişleterek](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) ve [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="datagridview-classes-at-a-glance"></a>Bir bakışta DataGridView sınıfları  
  <xref:System.Windows.Forms>  
@@ -56,11 +56,11 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
 |<xref:System.Windows.Forms.DataGridView> Genişletilebilirlik|<xref:System.Windows.Forms.DataGridViewCell> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Yenilikler  
- <xref:System.Windows.Forms.DataGridView> Denetimini Windows Forms tablo verilerini görüntülemek için eksiksiz bir çözüm olarak tasarlanmıştır. Kullanmayı düşünmelisiniz <xref:System.Windows.Forms.DataGridView> diğer çözümleri önce denetimini <xref:System.Windows.Forms.DataGrid>, yeni bir uygulama yazarken. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+ <xref:System.Windows.Forms.DataGridView> Denetimini Windows Forms tablo verilerini görüntülemek için eksiksiz bir çözüm olarak tasarlanmıştır. Kullanmayı düşünmelisiniz <xref:System.Windows.Forms.DataGridView> diğer çözümleri önce denetimini <xref:System.Windows.Forms.DataGrid>, yeni bir uygulama yazarken. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  <xref:System.Windows.Forms.DataGridView> Denetim Kapat birlikte çalışabilir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu bileşen, birincil veri kaynağına bir formun olacak şekilde tasarlanmıştır. Arasındaki etkileşimi yönetebilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetim ve veri bağımsız olarak kendi veri kaynağı kaynak türü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [DataGridView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [DataGridView Denetimi Mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)
-- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [DataGridView Denetimine Genel Bakış](datagridview-control-overview-windows-forms.md)
+- [DataGridView Denetimi Mimarisi](datagridview-control-architecture-windows-forms.md)
+- [Bağlantı Bilgilerini Koruma](../../data/adonet/protecting-connection-information.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503995"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722377"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi, Web stili bağlantılar için Windows Forms uygulamaları eklemenize olanak sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.LinkLabel> denetimi için kullanabileceğiniz her şeyi <xref:System.Windows.Forms.Label> için denetimi; bir dosya, klasör veya Web sayfası bağlantısı olarak metnin bir bölümünü de ayarlayabilirsiniz.  
@@ -25,6 +25,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi, Web stili bağlant
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.LinkLabel>
-- [Etiket Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Nasıl yapılır: Bir nesneye bağlayın veya Web sayfası Windows Forms LinkLabel denetimi ile](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Nasıl yapılır: Windows Forms LinkLabel denetiminin görünüşünü değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Etiket Denetimine Genel Bakış](label-control-overview-windows-forms.md)
+- [Nasıl yapılır: Bir nesneye bağlayın veya Web sayfası Windows Forms LinkLabel denetimi ile](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Nasıl yapılır: Windows Forms LinkLabel denetiminin görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

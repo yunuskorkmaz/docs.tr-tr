@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4f4bcd06067775c6f43063ebe5682730deba1d4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498893"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710291"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme
 
@@ -31,7 +31,7 @@ SQL iş akışı örneği Store özelliği kullanmadan önce iş akışı örne�
 >
 > System.Data.SqlClient.SqlException: Saklı yordam 'System.Activities.DurableInstancing.CreateLockOwner' bulunamadı.
 
-Aşağıdaki bölümlerde, iş akışları ve SQL iş akışı örneği Store kullanarak iş akışı hizmetleri için kalıcılığı etkinleştirme açıklanmaktadır. SQL iş akışı örneği Store özellikleri hakkında daha fazla bilgi için bkz. [özellikleri SQL iş akışı örneği Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).
+Aşağıdaki bölümlerde, iş akışları ve SQL iş akışı örneği Store kullanarak iş akışı hizmetleri için kalıcılığı etkinleştirme açıklanmaktadır. SQL iş akışı örneği Store özellikleri hakkında daha fazla bilgi için bkz. [özellikleri SQL iş akışı örneği Store](properties-of-sql-workflow-instance-store.md).
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication şirket içinde barındırılan iş akışı için kalıcılığı etkinleştirme
 
@@ -72,7 +72,7 @@ Aşağıdaki bölümlerde, iş akışları ve SQL iş akışı örneği Store ku
    ```
 
 > [!NOTE]
-> Bkz: [nasıl yapılır: Oluşturma ve uzun çalışan iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) adımında [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) adım adım yönergeler için.
+> Bkz: [nasıl yapılır: Oluşturma ve uzun çalışan iş akışı çalıştırma](how-to-create-and-run-a-long-running-workflow.md) adımında [başlangıç Öğreticisi](getting-started-tutorial.md) adım adım yönergeler için.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost kullanan şirket içinde barındırılan iş akışı hizmetleri için kalıcılığı etkinleştirme
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Şirket içinde barındırılan veya Windows İşlem Etkinleştirme hizmeti WAS barındırılan iş akışı hizmetleri için kalıcılığı yapılandırma dosyası kullanarak etkinleştirebilirsiniz. Şirket içinde barındırılan iş akışı Hizmetleri gibi WorkflowServiceHost WAS barındırılan iş akışı hizmeti kullanır.
 
-`SqlWorkflowInstanceStoreBehavior`, Uygun şekilde değiştirmenize olanak sağlayan bir hizmet davranışını [SQL iş akışı örneği Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) özellikleri aracılığıyla XML yapılandırması. WAS barındırılan iş akışı hizmetleri için Web.config dosyasını kullanın. Aşağıdaki yapılandırma örnek SQL iş akışı örneği Store kullanarak yapılandırmak nasıl gösterir `sqlWorkflowInstanceStore` yapılandırma dosyasında bir davranış öğesi.
+`SqlWorkflowInstanceStoreBehavior`, Uygun şekilde değiştirmenize olanak sağlayan bir hizmet davranışını [SQL iş akışı örneği Store](sql-workflow-instance-store.md) özellikleri aracılığıyla XML yapılandırması. WAS barındırılan iş akışı hizmetleri için Web.config dosyasını kullanın. Aşağıdaki yapılandırma örnek SQL iş akışı örneği Store kullanarak yapılandırmak nasıl gösterir `sqlWorkflowInstanceStore` yapılandırma dosyasında bir davranış öğesi.
 
 ```xml
 <serviceBehaviors>

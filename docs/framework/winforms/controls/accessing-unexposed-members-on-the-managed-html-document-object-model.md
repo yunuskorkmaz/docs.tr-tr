@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658958"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704523"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak yönetilen arabirimi doğrudan kullanıma üyelere erişim ihtiyacınız olacak. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişim için iki şekilde inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve tanımlanmış bir Web sayfası VBScript işlevleri.  
@@ -49,8 +49,8 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
   
  Bu sayfaya yükledikten sonra <xref:System.Windows.Forms.WebBrowser> kullanabileceğiniz denetimi <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> alınacak yöntemi `FORM` kullanarak çalışma zaman `form1` bağımsız değişken olarak.  
   
- [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
- [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
+ [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>Yönetilmeyen arabirimler erişme  
  Yönetilen HTML DOM gösterilmeyen her DOM sınıfı tarafından kullanıma sunulan yönetilmeyen Bileşen Nesne Modeli (COM) arabirimlerini kullanarak da erişebilirsiniz. Gösterilmeyen üyelere karşı çeşitli çağrılar yapmak varsa veya gösterilmeyen yönetilen HTML DOM tarafından Sarmalanan değil diğer yönetilmeyen arabirimler döndürürse bu önerilir  
@@ -72,4 +72,4 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
  Tanımladığınız bir HTML sayfasını kullanarak içinde herhangi bir betik işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi HTML öğesi döndürürse, bu dönüş sonuç dönüştürmek için bir yayın kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntıları ve örnek kod için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)

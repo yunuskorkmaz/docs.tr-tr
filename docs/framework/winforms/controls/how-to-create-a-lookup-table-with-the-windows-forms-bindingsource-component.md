@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539902"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723926"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Forms BindingSource bileşeniyle arama tablosu oluşturma
 Arama tablosu kayıttan alınan ilişkili bir tabloda görüntüleyen bir sütun olan verilerin bir tablodur. Aşağıdaki yordamlarda, bir <xref:System.Windows.Forms.ComboBox> denetimi üst alt tablo için yabancı anahtar ilişkisi alanıyla görüntülemek için kullanılır.  
@@ -35,7 +35,7 @@ Arama tablosu kayıttan alınan ilişkili bir tabloda görüntüleyen bir sütun
   
  Bu senaryoda, bir tablo, CustomersTable, görüntülemek ve kaydetmek istediğiniz gerçek bilgi depolar. Ancak alanı kaydetmek için tabloda açıklık veri çıkışı bırakır. Diğer tablo, OrdersTable, hangi müşterinin hakkında kimlik numarasını hangi sipariş tarihi ve sipariş kimliği için eşdeğer yalnızca görünüm ile ilgili bilgiler içerir Müşterilerin adlarını hiçbir Bahsetme yoktur.  
   
- Dört önemli özellikleri üzerinde ayarlanır [ComboBox denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) arama tablosu oluşturma için denetimi.  
+ Dört önemli özellikleri üzerinde ayarlanır [ComboBox denetimi](combobox-control-windows-forms.md) arama tablosu oluşturma için denetimi.  
   
 -   <xref:System.Windows.Forms.ComboBox.DataSource%2A> Özelliği tablo adını içerir.  
   
@@ -53,7 +53,7 @@ Arama tablosu kayıttan alınan ilişkili bir tabloda görüntüleyen bir sütun
   
      Bu denetim, üst tablo sütunu görüntülenir.  
   
-2.  Alt tablo ayrıntılarını görüntülemek için diğer denetimler sürükleyin. Hangi denetimlerin seçtiğiniz tablodaki verileri biçimi belirlemeniz gerekir. Daha fazla bilgi için [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Alt tablo ayrıntılarını görüntülemek için diğer denetimler sürükleyin. Hangi denetimlerin seçtiğiniz tablodaki verileri biçimi belirlemeniz gerekir. Daha fazla bilgi için [işleve göre Windows Forms denetimleri](windows-forms-controls-by-function.md).  
   
 3.  Sürükleme bir <xref:System.Windows.Forms.BindingNavigator> forma denetim; bu alt tablodaki verileri gezinmenize olanak tanır.  
   
@@ -93,6 +93,6 @@ Arama tablosu kayıttan alınan ilişkili bir tabloda görüntüleyen bir sütun
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox Denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [BindingSource Bileşeni](bindingsource-component.md)
+- [ComboBox Denetimi](combobox-control-windows-forms.md)
 - [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

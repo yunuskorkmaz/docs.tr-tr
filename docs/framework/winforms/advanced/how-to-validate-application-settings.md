@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496292"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705837"
 ---
 # <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama ayarlarını doğrulama
 Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.  
@@ -40,9 +40,9 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
 -   Önce ilişkili eylemlerinin, gibi harekete geçirilen olayları <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, kullandığı <xref:System.ComponentModel.CancelEventArgs> işlemi iptal etmek için bağımsız değişken.  
   
- Olay işleme hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Olay işleme hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../event-handlers-overview-windows-forms.md).  
   
- Aşağıdaki yordamlardan herhangi birini kullanarak geçerli bir doğum tarihi için test etme Göster <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> veya <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay. Yordamları, uygulama ayarlarınızı oluşturduysanız varsayım altında yazılmıştır; Bu örnekte biz sınır adlı ayarda denetimi gerçekleştirir `DateOfBirth`. Ayarları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Aşağıdaki yordamlardan herhangi birini kullanarak geçerli bir doğum tarihi için test etme Göster <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> veya <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay. Yordamları, uygulama ayarlarınızı oluşturduysanız varsayım altında yazılmıştır; Bu örnekte biz sınır adlı ayarda denetimi gerçekleştirir `DateOfBirth`. Ayarları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Uygulama Ayarları nesnesini almak için  
   
@@ -161,5 +161,5 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](../creating-event-handlers-in-windows-forms.md)
+- [Nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md)

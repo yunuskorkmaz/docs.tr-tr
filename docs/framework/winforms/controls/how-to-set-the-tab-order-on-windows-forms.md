@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675269"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705889"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows formlarında sekme sırasını ayarlama
 Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırasını sahiptir. Varsayılan olarak, sekme sırasını denetimleri oluşturduğunuz sırada ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
@@ -32,7 +32,7 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
 2.  Denetimlerin sekme sırasını istediğiniz sırayla kurmak için tıklayın.  
   
     > [!NOTE]
-    >  Sekme sırası içinde denetimin yer, daha büyük veya 0'a eşit herhangi bir değere ayarlanabilir. Yinelenen meydana geldiğinde, z düzenini iki denetimin değerlendirilir ve üst denetimin ilk olarak sekmeli. (Z-formun z ekseni [derinliği] boyunca bir form üzerinde denetimleri visual katmanlarını sırasıdır. Z düzenini hangi denetimlerin önüne başka denetimler belirler.) Z düzeni hakkında daha fazla bilgi için bkz. [Windows Forms'da nesneleri katmanlama](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Sekme sırası içinde denetimin yer, daha büyük veya 0'a eşit herhangi bir değere ayarlanabilir. Yinelenen meydana geldiğinde, z düzenini iki denetimin değerlendirilir ve üst denetimin ilk olarak sekmeli. (Z-formun z ekseni [derinliği] boyunca bir form üzerinde denetimleri visual katmanlarını sırasıdır. Z düzenini hangi denetimlerin önüne başka denetimler belirler.) Z düzeni hakkında daha fazla bilgi için bkz. [Windows Forms'da nesneleri katmanlama](how-to-layer-objects-on-windows-forms.md).  
   
 3.  İşiniz bittiğinde tıklayın **sekme sırasını** üzerinde **görünümü** yeniden sekme sırasını modundan ayrılmak için menü.  
   
@@ -52,10 +52,10 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
      Bir denetim <xref:System.Windows.Forms.Control.TabStop%2A> özelliği sınıflandırmalara ayarlandığı `false` denetimlerde TAB tuşuyla geçiş denetimi atlanır olsa da hala sekme sırası içindeki konumuna tutar.  
   
     > [!NOTE]
-    >  Bir radyo düğmesi grubunda, çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmeyi kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlayın `true`, diğer düğmeleri açıkken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimlerini, [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Bir radyo düğmesi grubunda, çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmeyi kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlayın `true`, diğer düğmeleri açıkken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimlerini, [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
-- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms Denetimleri](index.md)
+- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

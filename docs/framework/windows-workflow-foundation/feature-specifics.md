@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation özellik ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492601"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721859"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özellik ayrıntıları
 
@@ -43,9 +43,9 @@ A `BestPriceFinder` belirli bir rota için en iyi bilet fiyatı bulmak için bir
 
 - İçin örnek <xref:System.ServiceModel.WorkflowServiceHost> aşağıdaki bölümlerde bulunabilir:
 
-    - [Yürütme](samples/execution.md)
+    - [Yürütme](./samples/execution.md)
 
-    - Uygulama: [Askıya Alınmış Örnek Yönetimi](samples/suspended-instance-management.md)
+    - Uygulama: [Askıya Alınmış Örnek Yönetimi](./samples/suspended-instance-management.md)
 
 - [İş akışı hizmetlerini barındırma genel bakış](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özel
 
 - Örneğin, bir seri hale getirme örnek boyutu kablo küçültmek için kablo üzerinde görünür olmasını istediğiniz hangi xsi: type belirtmek kullanıcılar için mümkün değildi.
 
-[DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) .NET 4.5 içinde bu sorunları çözer.
+[DataContractResolver](../wcf/samples/datacontractresolver.md) .NET 4.5 içinde bu sorunları çözer.
 
 ### <a name="getting-started"></a>Başlarken
 
@@ -131,9 +131,9 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özel
 
 - Örnekler:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Veri anlaşması çözümleyici senaryoları
 
@@ -163,9 +163,9 @@ Akış Çizelgesi, etki alanı sorunlarını görsel olarak göstermek için iyi
 
 - Örnekler:
 
-    - [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [İşe Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [İşe Alma İşlemi](./samples/hiring-process.md)
 
 - Tasarımcı belgeler:
 
@@ -197,9 +197,9 @@ Yordam etkinlikleri programcıları kavramları kullanarak model Sıralı deneti
 
 - Örnekler:
 
-    - [İşe Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [İşe Alma İşlemi](./samples/hiring-process.md)
 
-    - [Şirket Satın Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [Şirket Satın Alma İşlemi](./samples/corporate-purchase-process.md)
 
 - Tasarımcı belgeler:
 
@@ -237,7 +237,7 @@ Yordam etkinlikleri programcıları kavramları kullanarak model Sıralı deneti
 
 - Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.TryCatch> iş akışı tasarımcısında etkinlik.
 
-- Örnek: [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- Örnek: [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - Tasarımcı belgeler: [Hata İşleme Etkinlik Tasarımcıları](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ Bir dizi etkinliği yürütülmesi gerekiyor ve belirli mantığı bir hata olu�
 
 - Visual Studio 2012'de bir iş akışı konsol uygulaması oluşturun. Ekleme bir <xref:System.Activities.Statements.Pick> iş akışı tasarımcısında etkinlik.
 
-- Örnek: [Pick Etkinliği Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- Örnek: [Pick Etkinliği Kullanma](./samples/using-the-pick-activity.md)
 
 - Tasarımcı belgeler: [Pick Etkinlik Tasarımcısı](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ Yönlendirme hizmeti, bir genel yazılım nasıl WCF iletileri, istemciler ve hi
 
 ### <a name="getting-started"></a>Başlarken
 
-1. Belgeler: [Yönlendirme](../../../docs/framework/wcf/feature-details/routing.md)
+1. Belgeler: [Yönlendirme](../wcf/feature-details/routing.md)
 
-2. Örnekler: [Yönlendirme Hizmetleri &#91;WCF örnekleri&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. Örnekler: [Yönlendirme Hizmetleri &#91;WCF örnekleri&#93;](../wcf/samples/routing-services.md)
 
 3. Blog: [Yönlendirme kuralları!](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ Ayrıca, bulma iletileri ağ protokolü bağımsızdır; bunları üstte modu ge
 
 ### <a name="getting-started"></a>Başlarken
 
-- Belgeler: [WCF Bulma](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- Belgeler: [WCF Bulma](../wcf/feature-details/wcf-discovery.md)
 
-- Örnekler: [Keşif (örnekler)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- Örnekler: [Keşif (örnekler)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Bulma senaryoları
 
@@ -343,9 +343,9 @@ Hizmetimi kullanılabilir olduğunda, bilinmeyen olduğundan bir geliştirici sa
 
     4. İş akışı izleme olayları Olay Görüntüleyicisi'nde gözlemleyin.
 
-3. Örnekler: [İzleme](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. Örnekler: [İzleme](./samples/tracking.md)
 
-4. Kavramsal belgeler: [İş Akışı Takip ve İzleme](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. Kavramsal belgeler: [İş Akışı Takip ve İzleme](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği Store
 
@@ -355,6 +355,6 @@ Hizmetimi kullanılabilir olduğunda, bilinmeyen olduğundan bir geliştirici sa
 
 1. Visual Studio 2012'de kapalı veya açık içeren iş akışı oluşturma <xref:System.Activities.Statements.Persist> etkinlik. Ekleme <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> davranışı, iş akışı hizmeti konağı için. Bu, kodda veya uygulama yapılandırma dosyasında yapılabilir.
 
-2. Örnekler: [Kalıcılık](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. Örnekler: [Kalıcılık](./samples/persistence.md)
 
-3. Kavramsal belgeler: [SQL iş akışı örneği Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Kavramsal belgeler: [SQL iş akışı örneği Store](sql-workflow-instance-store.md).

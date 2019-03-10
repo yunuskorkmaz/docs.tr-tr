@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552820"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724537"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu Bileşeni (Windows Forms)
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "54552820"
  Windows Forms `ContextMenu` bileşen bir kolayca erişilebilir kısayol menüsünde seçilen bir nesneyle ilişkili sık kullanılan komutlar, kullanıcılara sağlamak için kullanılır. Bir kısayol menü öğelerinde, sık sık başka bir uygulamada görüntülenen ana menü öğelerinden bir alt kümesidir. Kısayol menüleri fareye sağ tıklayarak genellikle kullanılabilir. Windows Forms'ta bunlar diğer denetimleri ile ilişkilendirilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ContextMenu Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu Bileşenine Genel Bakış](contextmenu-component-overview-windows-forms.md)  
  Genel konseptlerini tanıtan `ContextMenu` seçilen bir nesneyle ilişkili sık kullanılan komutlar, menüler oluşturma olanağı tanıyan bir bileşen.  
   
- [Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -35,7 +35,7 @@ ms.locfileid: "54552820"
  Başvuru bilgileri sağlar <xref:System.Windows.Forms.ContextMenu> sınıfını ve üyelerini.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

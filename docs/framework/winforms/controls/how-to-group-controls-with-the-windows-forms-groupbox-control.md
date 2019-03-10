@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686926"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708564"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox denetimiyle denetimleri gruplandırma
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır:  
@@ -34,4 +34,4 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.GroupBox>
-- [GroupBox Denetimi](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [GroupBox Denetimi](groupbox-control-windows-forms.md)

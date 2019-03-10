@@ -1,51 +1,51 @@
 ---
-title: Sorgular için destek
+title: Sorgu desteği
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517997"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712032"
 ---
-# <a name="support-for-queries"></a>Sorgular için destek
-SQL iş akışı örneği deposuna iyi bilinen bir özellik kümesi depolama alanına kaydeder. Kullanıcılar için Sorgulayabileceğiniz çıkarak bu özellikleri. Aşağıdaki listede bu iyi bilinen özelliklerini içerir:  
+# <a name="support-for-queries"></a>Sorgu desteği
+SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydeder. Kullanıcılar için sorgulayabilir örnekleri, bu özellikleri bağlı. Aşağıdaki liste, bazı iyi bilinen bu özellikleri içerir:  
   
--   **Site adı.** Hizmet içeren Web sitesi adı.  
+-   **Site adı.** Hizmeti içeren Web sitesinin adı.  
   
--   **Göreli uygulama yolu.** Web sitesi göre uygulamanın yolu.  
+-   **Uygulama göreli yolu.** Uygulamanın Web sitesini göreli yolu.  
   
--   **Göreli hizmet yolu.** Hizmet uygulaması göreli yolu.  
+-   **Hizmet göreli yolu.** Hizmet uygulaması göreli yolu.  
   
 -   **Hizmet adı.** Hizmetin adı.  
   
 -   **Hizmet Namespace.** Hizmetin kullandığı ad alanının adı.  
   
--   **Geçerli makineye.**  
+-   **Geçerli makine.**  
   
--   **Son makine**. İş akışı hizmeti örneği en son ne zaman çalıştırıldığı bilgisayar.  
+-   **Son makine**. İş akışı hizmet örneği son kez çalıştırıldığı bir bilgisayar.  
   
 > [!NOTE]
->  İş akışı hizmeti ana bilgisayarı kullanarak kendini barındıran senaryolar için yalnızca son dört özellikleri doldurulur. İş akışı uygulama senaryoları için yalnızca en son özellik doldurulur.  
+>  İş akışı hizmeti konağı kullanarak şirket içinde barındırılan senaryoları için yalnızca son dört özellikleri doldurulur. İş akışı uygulama senaryoları için yalnızca en son özellik doldurulur.  
   
- İş akışı çalışma zamanı ilk üç özellikleri için değer sağlıyor. İş akışı hizmeti ana bilgisayarı için değer sağlıyor **askıya neden** özelliği. SQL iş akışı örneği deposuna kendisi için değer sağlıyor **son güncelleştirilen makine** özelliği.  
+ İş akışı çalışma zamanı ilk üç özellikleri için değer sağlıyor. İş akışı hizmeti konağı için değer sağlayan **askıya alma nedeni** özelliği. SQL iş akışı örneği Store kendisi için değer sağlıyor **son güncelleştirilen makine** özelliği.  
   
- SQL iş akışı örneği depolama özelliğini de Kalıcılık veritabanı ve belirttiğiniz değerleri depolamak istediğiniz özel özellikler sorgularda kullanmak istediğiniz belirtmenize olanak sağlar. Özel promosyonlar hakkında daha fazla bilgi için bkz: [deposu genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
+ SQL iş akışı örneği Store özellik de Kalıcılık veritabanı ve belirttiğiniz değerleri depolamak kullanmak istediğiniz özel özellikler sorgularda kullanmak istediğinizi belirtmek olanak sağlar. Özel promosyonlar hakkında daha fazla bilgi için bkz: [Store genişletilebilirlik](store-extensibility.md).  
   
 ## <a name="views"></a>Görünümler  
- Örnek deposuna aşağıdaki görünümleri içerir. Bkz: [Kalıcılık veritabanı şeması](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) daha ayrıntılı bilgi için.  
+ Örnek depo, aşağıdaki görünümleri içerir. Bkz: [Kalıcılık veritabanı şeması](persistence-database-schema.md) daha ayrıntılı bilgi için.  
   
-### <a name="the-instances-view"></a>Örnek görünümü  
- Örnekleri görünüm aşağıdaki alanları içerir:  
+### <a name="the-instances-view"></a>Örnekleri görüntüle  
+ Örnekler görünümü, aşağıdaki alanları içerir:  
   
-1.  **Kimliği**  
+1.  **Kimlik**  
   
 2.  **PendingTimer**  
   
 3.  **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4.  **lastUpdatedTime**  
   
 5.  **ServiceDeploymentId**  
   
@@ -77,26 +77,26 @@ SQL iş akışı örneği deposuna iyi bilinen bir özellik kümesi depolama ala
   
 19. **WriteOnlyComplexDataProperties**  
   
-### <a name="the-servicedeployments-view"></a>ServiceDeployments görünümü  
- ServiceDeployments görünüm aşağıdaki alanları içerir:  
+### <a name="the-servicedeployments-view"></a>ServiceDeployments görüntüle  
+ ServiceDeployments görünümü, aşağıdaki alanları içerir:  
   
-1.  **SiteName**  
+1.  **Site adı**  
   
 2.  **RelativeServicePath**  
   
 3.  **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4.  **serviceName**  
   
 5.  **ServiceNamespace**  
   
-### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görünümü  
- InstancePromotedProperties görünüm aşağıdaki alanları içerir. Yükseltilen özellikleri hakkında daha fazla bilgi için bkz: [deposu genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) konu.  
+### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görüntüle  
+ InstancePromotedProperties görünümü, aşağıdaki alanları içerir. Yükseltilen özellikleri hakkında ayrıntılı bilgi için bkz. [Store genişletilebilirlik](store-extensibility.md) konu.  
   
-1.  **örnek kimliği**  
+1.  **InstanceId**  
   
 2.  **EncodingOption**  
   
 3.  **PromotionName**  
   
-4.  **Değer #** (alanlardan çeşitli **Value1** için **Value64**).
+4.  **Değer #** (alanlardan bir dizi **Value1** için **Value64**).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671115"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722444"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Yükleme, kaydetme ve ekleme İptal düğmeleri Windows Forms BindingNavigator denetimi
 <xref:System.Windows.Forms.BindingNavigator> Denetimidir özel amaçlı <xref:System.Windows.Forms.ToolStrip> denetimi gezinme ve verilere bağlı denetimler formunuzdaki işlemek için tasarlanmıştır.  
@@ -34,7 +34,7 @@ ms.locfileid: "54671115"
   
 5.  Seçin <xref:System.Windows.Forms.BindingNavigator> denetimi.  
   
-6.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) böylece **BindingNavigator görevleri** iletişim kutusu açılır ve seçin **öğedüzenleme**.  
+6.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) böylece **BindingNavigator görevleri** iletişim kutusu açılır ve seçin **öğedüzenleme**.  
   
      **Öğeler Koleksiyonu Düzenleyicisi** görünür.  
   
@@ -113,5 +113,5 @@ ms.locfileid: "54671115"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [BindingSource Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator Denetimi](bindingnavigator-control-windows-forms.md)
+- [BindingSource Bileşenine Genel Bakış](bindingsource-component-overview.md)

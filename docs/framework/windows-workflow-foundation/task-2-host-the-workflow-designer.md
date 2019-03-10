@@ -2,12 +2,12 @@
 title: '2. Görev: İş akışı tasarımcısını barındırma'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572779"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708645"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>2. Görev: İş akışı tasarımcısını barındırma
 Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasındaki.  
@@ -16,7 +16,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
   
 ### <a name="to-host-the-workflow-designer"></a>İş akışı tasarımcısını barındırma için  
   
-1.  Açık HostingApplication proje oluşturduğunuz [görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Açık HostingApplication proje oluşturduğunuz [görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md).  
   
 2.  Kullanımını kolaylaştırmak için penceresinin boyutunu ayarlayın [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için **MainWindow** Tasarımcısı'nda görüntülenecek F4 tuşuna basın **özellikleri** penceresinde hem de **Düzen** var. bölümünde, **genişliği** 600 değerini ve **yükseklik** 350 değerini.  
   
@@ -97,7 +97,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
         }  
         ```  
   
-         Etkinlik tasarımcıları kaydetme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Etkinlik tasarımcıları kaydetme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](how-to-create-a-custom-activity-designer.md).  
   
     5.  İçinde `MainWindow` sınıfının oluşturucusu, tasarımcı desteği için meta verileri kaydetmek ve oluşturmak için daha önce bildirilen yöntemlere yapılan çağrılar ekleyin <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
   
 9. Derleme ve çözümü çalıştırmak için F5 tuşuna basın.  
   
-10. Bkz: [görev 3: Araç kutusu ve PropertyGrid bölmeleri oluşturma](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) ekleme hakkında bilgi edinmek için **araç kutusu** ve **PropertyGrid** , yeniden barındırılan iş akışı Tasarımcısı için destek.  
+10. Bkz: [görev 3: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md) ekleme hakkında bilgi edinmek için **araç kutusu** ve **PropertyGrid** , yeniden barındırılan iş akışı Tasarımcısı için destek.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
+- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
+- [3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)

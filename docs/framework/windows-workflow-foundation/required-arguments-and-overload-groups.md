@@ -2,12 +2,12 @@
 title: Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452907"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707878"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli bağımsız değişkenler ve aşırı yüklenmiş gruplar
 Etkinlikleri belirli bağımsız değişkenler etkinliğinin yürütme için geçerli olacak şekilde bağlanması için gerekli olacak şekilde yapılandırılabilir. `RequiredArgument` Özniteliği, belirli bir etkinliğin bağımsız gerekli olduğunu belirtmek için kullanılır ve `OverloadGroup` öznitelik gerekli bağımsız değişken kategorisi gruplamak için kullanılır. Öznitelikleri kullanarak etkinlik yazarlar basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Povinný argument 'İşlenen1' için değer sağlanmadı.**  
 > [!NOTE]
-> Denetleme ve doğrulama hataları ve Uyarıları işleme hakkında daha fazla bilgi için bkz. [etkinlik doğrulamayı çağırma](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Denetleme ve doğrulama hataları ve Uyarıları işleme hakkında daha fazla bilgi için bkz. [etkinlik doğrulamayı çağırma](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Aşırı yüklenmiş gruplar kullanma
 
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  Amacı, bu etkinlik bir konuma ABD'de belirtmektir. Bunu yapmak için kullanıcı etkinliğinin üç bağımsız değişken grupları kullanarak konumu belirtebilirsiniz. Bağımsız değişkenlerin geçerli birleşimleri belirtmek için üç aşırı yüklenmiş gruplar tanımlanır. `G1` içeren `Latitude` ve `Longitude` bağımsız değişkenler. `G2` içeren `Street`, `City`, ve `State`. `G3` içeren `Street` ve `Zip`. `Name` Ayrıca gerekli bir bağımsız değişkendir, ancak bir aşırı yükleme grubunun parçası değil. Geçerli olması bu etkinliği `Name` tüm bağımsız değişkenleri ile birlikte bir ve yalnızca bir aşırı yükleme grubundan bağlanması gerekir.  
   
- Aşağıdaki örnekte, geçen gelen [veritabanı erişimi etkinlikleri](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) örnek, aşırı yükleme iki grup vardır: `ConnectionString` ve `ConfigFileSectionName`. Ya da geçerli olması bu etkinliği `ProviderName` ve `ConnectionString` bağımsız değişkenleri ilişkili olmalıdır, veya `ConfigName` bağımsız değişkeni, ancak ikisine birden değil.  
+ Aşağıdaki örnekte, geçen gelen [veritabanı erişimi etkinlikleri](./samples/database-access-activities.md) örnek, aşırı yükleme iki grup vardır: `ConnectionString` ve `ConfigFileSectionName`. Ya da geçerli olması bu etkinliği `ProviderName` ve `ConnectionString` bağımsız değişkenleri ilişkili olmalıdır, veya `ConfigName` bağımsız değişkeni, ancak ikisine birden değil.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

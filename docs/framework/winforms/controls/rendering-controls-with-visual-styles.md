@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664360"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708060"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Görsel stilleri kullanarak bunları destekleyen işletim sistemlerinde arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda destek çeşitli düzeylerde anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve diğer UI öğeleri ile işletim sisteminin geçerli görsel stili.  
@@ -49,7 +49,7 @@ ms.locfileid: "56664360"
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Bir denetim çizmek için bu sınıflar kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Denetim işleme sınıfı kullanma](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).  
+ Bir denetim çizmek için bu sınıflar kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Denetim işleme sınıfı kullanma](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Görsel stilde öğe ve sınıfları oluşturma  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Ad alanını çizmek ve herhangi bir denetim veya görsel stilleri tarafından desteklenen kullanıcı Arabirimi öğesi hakkında bilgi almak için kullanılan sınıfları içerir. Desteklenen denetimleri içeren bir işleme sınıf olmayan ortak denetimleri <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı (önceki bölüme bakın), sekme denetimleri ve çubuk barınağı denetimleri gibi diğer denetimler yanı sıra. Desteklenen diğer kullanıcı Arabirimi öğeleri içeren bölümlerini **Başlat** menü, görev ve windows istemci olmayan alanın.  
@@ -58,7 +58,7 @@ ms.locfileid: "56664360"
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Çizim ve her biri hakkında bilgi almak için yöntemler sağlar <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sisteminin geçerli görsel stil tarafından tanımlanır. Varsayılan boyutunda, arka plan türü ve renk tanımları alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> görsel stiller (UxTheme) API Windows Kabuğu bölümünden Windows Platform SDK'sının işlevselliğini sarmalar. Daha fazla bilgi için [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: Bir görsel stilde öğe işleme](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
+ Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: Bir görsel stilde öğe işleme](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
  Yazılmış bir uygulama için görsel stilleri etkinleştirmek için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, programcılar ComCtl32.dll sürüm 6 veya sonraki denetimlerini çizmek için kullanılacak belirten bir uygulama bildirimi içermelidir. İle oluşturulan uygulamalar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1 veya üstünün kullanabileceğiniz <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi <xref:System.Windows.Forms.Application> sınıfı.  
@@ -79,4 +79,4 @@ ms.locfileid: "56664360"
 >  Kullanmak istiyorsanız <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> kullanıcı etkinleştirir ya da görsel stilleri anahtarları bir denetim veya kullanıcı Arabirimi öğesi işlemek için bu işlerken yaptığınızdan emin olun <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> yerine olay <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> olay. Kullanırsanız, bir özel durum <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> sınıfı işlenirken <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel Denetim Boyama ve İşleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [Özel Denetim Boyama ve İşleme](custom-control-painting-and-rendering.md)

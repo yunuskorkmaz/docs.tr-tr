@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674774"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713221"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisidir. Tek bir piksele şekillendiriyorsa bit sayısı kadar bu piksele atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilir, örneğin, ardından belirli bir pikselin 16 farklı renkler birini atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksele atanabilir renklerin sayısı birkaç örnek gösterilmektedir.  
@@ -41,7 +41,7 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
   
  Bit eşlemler genellikle depolama disk dosyaları, dizide piksel, her bir satırdaki piksel sayısı ve satır sayısı başına bit sayısı gibi bilgileri depolayan bir veya daha fazla bilgi bloğu içerir. Böyle bir dosya (renk paleti olarak da adlandırılır) bir renk tablosu da içerebilir. Bir renk tablosu bit eşlem numaraları belirli bir renge eşler. Aşağıdaki çizim, bit eşlem ve renk tablosunu yanı sıra genişletilmiş bir görüntü gösterir. 2 olduklarından her piksel 4 bit bir sayı tarafından temsil edilen ^ 4 = 16 renk tablosunda renkleri. Tablodaki her renk, 24 bit bir sayı temsil edilir: 8 bit kırmızı, yeşil için 8 bit ve mavi için 8 bit. Sayıları, onaltılık (16 tabanında) biçiminde gösterilir: A 10, B = 11, C = 12, D = 13, E = 14, F = = 15.  
   
- ![Bit eşlem örnek](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![Bit eşlem örnek](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  Satır 3'te, görüntünün sütun 5 piksel bakın. Bit eşlem karşılık gelen sayısı 1'dir. Renk tablosunu bize 1 piksel kırmızı renkte kırmızı renk temsil ettiğini gösterir. Tüm bit eşlemin en üst sıradaki 3 girişlerdir. Renk tablosunu bize görüntünün üst satırdaki tüm pikselleri mavi şekilde 3 mavi temsil ettiğini söyler.  
   
@@ -50,7 +50,7 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
   
  Bir renk tablosunu dizinleri depolayan bir bit eşlem palet-dizinli bir bit eşlem olarak adlandırılır. Bazı bit eşlemler bir renk tablosu gerek vardır. Bir bit eşlem 24 bit / piksel kullanıyorsa, örneğin, bu bit eşlem dizinleri yerine renkleri kendilerini bir renk tablosunu depolayabilirsiniz. Aşağıdaki çizimde, bir renk tablosu kullanmak yerine doğrudan renkleri (24 bit / piksel) depolayan bir bit eşlem gösterir. Çizim, ayrıca karşılık gelen görüntü genişletilmiş bir görünümünü gösterir. Bit eşlem FFFFFF beyaz temsil eder, FF0000 temsil eden kırmızı, yeşil 00FF00 temsil eder ve 0000FF mavi temsil eder.  
   
- ![Bit eşlem örnek](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![Bit eşlem örnek](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Grafik dosya biçimleri  
  Bit eşlemleri kaydetme disk dosyaları için birçok standart biçimi vardır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dosya grafikler aşağıdaki paragrafta açıklanan biçimlerini destekler.  
@@ -66,11 +66,11 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
   
  JPEG görüntüleri sıkıştırma düzeyi yapılandırılabilir, ancak yüksek sıkıştırma düzeyleri (daha küçük dosyalar) daha fazla bilgi kaybına neden. 20:1 sıkıştırma oranı genellikle İnsan gözüyle orijinalden ayırt etmek zor bulur bir görüntü oluşturur. Bir BMP görüntüsünü ve bu BMP görüntüsünü sıkıştırılan iki JPEG görüntüleri aşağıda gösterilmiştir. İlk JPEG sıkıştırma oranı 4:1 ve ikinci JPEG sıkıştırma yaklaşık 8:1 oranında sahiptir.  
   
- ![Dosya türü örnekleri](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Dosya türü örnekleri](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG sıkıştırma de satır çizimler için düz renk bloklarını çalışma ve sınırları diyez desteklemez. Bir BMP iki JPEG ve bir GIF ile birlikte aşağıda gösterilmiştir. JPEG ve GIF BMP sıkıştırıldı. Sıkıştırma oranı 4:1 GIF, 4:1 küçük JPEG ve 8:3 büyük JPEG için var. GIF satırları sharp bölümlere korur, ancak JPEG sınırları bulanıklaştıran eğilimindedir unutmayın.  
   
- ![Dosya türleri](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Dosya türleri](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG bir sıkıştırma, bir dosya biçimi kullanılır. JPEG dosyası Değişim Biçimi (JFIF), depolama ve aktarma JPEG düzenine uygun sıkıştırılmış görüntüleri için yaygın olarak kullanılan bir dosya biçimidir. Web tarayıcıları tarafından görüntülenen JFIF dosyaları .jpg uzantısını kullanır.  
   
@@ -89,5 +89,5 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

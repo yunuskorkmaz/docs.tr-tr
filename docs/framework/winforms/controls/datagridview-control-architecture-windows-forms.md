@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: c57f7d22219c0cda91dad174be4e225808a9949d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d215eeaa367156c6228615a8f6e0a7f889efdf60
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494931"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713819"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView Denetimi Mimarisi (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Denetimi ve ilişkili sınıflarının görüntüleme ve düzenleme sekmeli veri için esnek, Genişletilebilir bir sistem için tasarlanmıştır. Bu sınıfların tümü bulunur <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ve tüm adlandırılmış "DataGridView" ön ekine sahip.  
@@ -17,7 +17,7 @@ ms.locfileid: "54494931"
 ## <a name="architecture-elements"></a>Mimari öğeler  
  Birincil <xref:System.Windows.Forms.DataGridView> yardımcı sınıflar türetilen <xref:System.Windows.Forms.DataGridViewElement>. Aşağıdaki nesne modelini göstermektedir <xref:System.Windows.Forms.DataGridViewElement> Devralma Hiyerarşisi.  
   
- ![DataGridViewElement nesne modeli](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")  
+ ![DataGridViewElement nesne modeli](./media/datagridviewelement.gif "DataGridViewElement")  
 DataGridViewElement nesne modeli  
   
  <xref:System.Windows.Forms.DataGridViewElement> Sınıfı üst öğeye bir başvuru sağlar <xref:System.Windows.Forms.DataGridView> denetlemek ve sahip bir <xref:System.Windows.Forms.DataGridViewElement.State%2A> değerlerinden bir birleşimini gösteren bir değer tutuyor özelliği <xref:System.Windows.Forms.DataGridViewElementStates> sabit listesi.  
@@ -51,7 +51,7 @@ DataGridViewElement nesne modeli
 ### <a name="datagridviewcell"></a>DataGridViewCell  
  Hücre etkileşimi için temel birimdir <xref:System.Windows.Forms.DataGridView>. Görüntü hücreleri ortalanır ve veri girişini çoğunlukla hücreleri gerçekleştirilir. Hücreleri kullanarak erişebileceğiniz <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> koleksiyonunu <xref:System.Windows.Forms.DataGridViewRow> sınıfı ve seçili hücreleri kullanarak erişebilirsiniz <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> koleksiyonunu <xref:System.Windows.Forms.DataGridView> denetimi. Aşağıdaki nesne modeli bu kullanımı gösterir ve gösterir <xref:System.Windows.Forms.DataGridViewCell> Devralma Hiyerarşisi.  
   
- ![DataGridViewCell nesne modeli](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
+ ![DataGridViewCell nesne modeli](./media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell nesne modeli  
   
  <xref:System.Windows.Forms.DataGridViewCell> Tüm hücre türleri türettiğiniz soyut temel sınıf türüdür. <xref:System.Windows.Forms.DataGridViewCell> ve türetilmiş türlerini Windows Forms denetimleri, ancak bazı ana bilgisayar Windows Forms denetimleri değildir. Bir hücreyi tarafından desteklenen herhangi bir düzenleme işlevi genellikle barındırılan bir denetim tarafından işlenir.  
@@ -85,7 +85,7 @@ DataGridViewCell nesne modeli
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  Şemasını <xref:System.Windows.Forms.DataGridView> denetimin ekli veri deposu olarak ifade edilir <xref:System.Windows.Forms.DataGridView> denetimin sütunları. Erişebildiğiniz <xref:System.Windows.Forms.DataGridView> kullanarak denetimin sütunları <xref:System.Windows.Forms.DataGridView.Columns%2A> koleksiyonu. Seçili sütunları kullanarak erişebileceğiniz <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> koleksiyonu. Aşağıdaki nesne modeli bu kullanımı gösterir ve gösterir <xref:System.Windows.Forms.DataGridViewColumn> Devralma Hiyerarşisi.  
   
- ![DataGridViewColumn nesne modeli](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")  
+ ![DataGridViewColumn nesne modeli](./media/datagridviewcolumn.gif "DataGridViewColumn")  
 DataGridViewColumn nesne modeli  
   
  Bazı anahtar hücresi türlerine karşılık gelen sütun türleri vardır. Bu türetilmiş <xref:System.Windows.Forms.DataGridViewColumn> temel sınıfı.  
@@ -109,7 +109,7 @@ DataGridViewColumn nesne modeli
 ### <a name="datagridview-editing-controls"></a>DataGridView denetimi düzenleme  
  Gelişmiş düzenleme işlevi genellikle destekleyen hücreleri bir Windows Forms denetiminden türetilen bir denetimden kullanın. Bu denetimler Ayrıca uygulama <xref:System.Windows.Forms.IDataGridViewEditingControl> arabirimi. Aşağıdaki nesne modeli, bu denetimleri kullanımını gösterir.  
   
- ![DataGridView denetimi nesne modeli düzenleme](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")  
+ ![DataGridView denetimi nesne modeli düzenleme](./media/datagridviewediting.gif "DataGridViewEditing")  
 DataGridView düzenleme denetimi nesne modeli  
   
  Aşağıdaki düzenleme denetimleri ile sağlanan <xref:System.Windows.Forms.DataGridView> denetimi:  
@@ -118,7 +118,7 @@ DataGridView düzenleme denetimi nesne modeli
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Kendi düzenleme denetimler oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Kendi düzenleme denetimler oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
  Aşağıdaki tabloda, düzenleme denetimleri hücre türleri ve sütun türleri arasındaki ilişkiyi gösterir.  
   
@@ -134,14 +134,14 @@ DataGridView düzenleme denetimi nesne modeli
 ### <a name="datagridviewrow"></a>DataGridViewRow  
  <xref:System.Windows.Forms.DataGridViewRow> Sınıfı görüntüler bir kaydın veri alanları verileri depolamak istediğiniz <xref:System.Windows.Forms.DataGridView> denetimi eklenir. Erişebildiğiniz <xref:System.Windows.Forms.DataGridView> kullanarak denetiminin satırları <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu. Seçili satırları kullanarak erişebileceğiniz <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> koleksiyonu. Aşağıdaki nesne modeli bu kullanımı gösterir ve gösterir <xref:System.Windows.Forms.DataGridViewRow> Devralma Hiyerarşisi.  
   
- ![DataGridViewRow nesne modeli](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")  
+ ![DataGridViewRow nesne modeli](./media/datagridviewrow.gif "DataGridViewRow")  
 DataGridViewRow nesne modeli  
   
  Kendi türlerinden türetebilirsiniz <xref:System.Windows.Forms.DataGridViewRow> sınıfı, ancak bu genellikle gerekli olmaz. <xref:System.Windows.Forms.DataGridView> Denetim sahip birkaç satır ile ilgili olayları ve özelliklerini davranışını özelleştirmek için kendi <xref:System.Windows.Forms.DataGridViewRow> nesneleri.  
   
- Etkinleştirirseniz <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği, yeni satır eklemek için özel bir satır son satırı görünür. Bu satırı parçasıdır <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu, ancak ilgilenmenizi gerektiren özel işlevler sahiptir. Daha fazla bilgi için [Windows Forms DataGridView denetiminde yeni kayıtlar için satır kullanma](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ Etkinleştirirseniz <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği, yeni satır eklemek için özel bir satır son satırı görünür. Bu satırı parçasıdır <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu, ancak ilgilenmenizi gerektiren özel işlevler sahiptir. Daha fazla bilgi için [Windows Forms DataGridView denetiminde yeni kayıtlar için satır kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [DataGridView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [DataGridView Denetimine Genel Bakış](datagridview-control-overview-windows-forms.md)
+- [Windows Forms DataGridView Denetimini Özelleştirme](customizing-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

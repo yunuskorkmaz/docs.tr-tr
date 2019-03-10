@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526736"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715366"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Nasıl yapılır: Forms uygulamaları Windows baskı önizlemede görüntüleme
 Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> yazdırılması için önce bir belge genellikle görüntüleme olanağı denetimi.  
   
- Bunu yapmak için örneği belirtmeniz gerekir <xref:System.Drawing.Printing.PrintDocument> sınıfı; yazdırılması için belgeyi budur. Baskı Önizleme ile kullanma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Windows Forms'ta baskı önizlemeyi kullanarak yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Bunu yapmak için örneği belirtmeniz gerekir <xref:System.Drawing.Printing.PrintDocument> sınıfı; yazdırılması için belgeyi budur. Baskı Önizleme ile kullanma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Windows Forms'ta baskı önizlemeyi kullanarak yazdırma](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
 >  Kullanılacak <xref:System.Windows.Forms.PrintPreviewDialog> denetimi şu kısmen olduğundan çalışma zamanında, kullanıcıların kendi bilgisayarlarında yerel olarak veya bir ağ üzerinden yüklü bir yazıcının olmalıdır nasıl <xref:System.Windows.Forms.PrintPreviewDialog> bileşeni, bir belge yazdırıldığında nasıl görüneceğini belirler.  
@@ -82,7 +82,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> yazdırılmas
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [PrintDocument Bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog Denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [PrintDocument Bileşeni](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog Denetimi](printpreviewdialog-control-windows-forms.md)
+- [Windows Forms Yazdırma Desteği](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)

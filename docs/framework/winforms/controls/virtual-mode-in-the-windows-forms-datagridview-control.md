@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672025"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709490"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sanal Mod
 Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows.Forms.DataGridView> denetimi ve bir özel veri önbelleği. Sanal modu uygulamak için ayarlanmış <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve bir veya daha fazla bu konuda açıklanan olayları işler. Genellikle işleyecek en az `CellValueNeeded` değerleri önbellekteki denetimi arama sağlayan bir olay.  
@@ -27,14 +27,14 @@ Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows
 ## <a name="replacing-bound-mode"></a>Bağımlı modu değiştirme  
  Bağlı mod performans gereksinimlerinizi karşılamıyorsa, tüm verilerinizi özel bir önbellek modu sanal olay işleyicileri aracılığıyla yönetebilirsiniz. Örneğin, yalnızca alır mekanizması yüklenirken just-ın-time Veri uygulamak için sanal mod kullanabilirsiniz kadar veri en iyi performans için gerekli olan bir ağa bağlı veritabanından. Bu senaryo, büyük miktarlarda verinin bir yavaş ağ bağlantısı veya sınırlı miktarda RAM veya depolama alanı olan istemci makineler ile çalışırken, özellikle yararlı olur.  
   
- Just-ın-time senaryoda sanal modu kullanma hakkında daha fazla bilgi için bkz. [ile tam zamanında veri yükleme Windows Forms DataGridView denetiminde sanal modu uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Just-ın-time senaryoda sanal modu kullanma hakkında daha fazla bilgi için bkz. [ile tam zamanında veri yükleme Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="virtual-mode-events"></a>Sanal modda olayları  
  Verilerinizi salt okunur ise `CellValueNeeded` olay ihtiyaç duyacağınız işlemek için yalnızca olay olabilir. Ek sanal modu olaylarını kullanıcı düzenlemeleri, satır eklemeyi ve silmeyi ve satır düzeyinde işlemleri gibi belirli işlevleri etkinleştirme olanak tanır.  
   
  Bazı standart <xref:System.Windows.Forms.DataGridView> olayları (kullanıcılar eklediğinizde veya satırları silmek veya ne zaman, değerleri hücre meydana gelen olayları düzenlendi, ayrıştırıldığında, doğrulanmış biçimlendirilmiş veya gibi) sanal modda da yararlıdır. Ayrıca, normal hücresi araç ipucu metni, hücre ve satır hata metni, hücre ve satır kısayol menüsünde veri ve satır yüksekliği veri gibi bir bağımlı veri kaynağında depolanan değerleri tutmanıza olanak tanıyan olayları işleyebilir.  
   
- Okuma/yazma verileri satır düzeyinde işleme kapsamlı yönetmek için sanal modu uygulama hakkında daha fazla bilgi için bkz. [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Okuma/yazma verileri satır düzeyinde işleme kapsamlı yönetmek için sanal modu uygulama hakkında daha fazla bilgi için bkz. [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
   
  Hücre düzeyinde işleme kapsamı ile sanal modu uygulayan bir örnek için bkz: <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özellik başvuru konusu.  
   
@@ -60,12 +60,12 @@ Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Denetim tarafından almak veya satır yüksekliği bilgi verileri önbelleğe depolamak için kullanılır. Çağrı <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> yöntemi önbelleğe alınan satır yüksekliği bilgileri dışında değiştirildiğinde bir <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> geçerli değeri denetimin ekranda kullanıldığından emin olmak için olay işleyicisi.|  
   
 ## <a name="best-practices-in-virtual-mode"></a>Sanal modda en iyi uygulamalar  
- Büyük miktarda veriyi verimli bir şekilde çalışması için sanal mod uyguluyorsanız, ayrıca verimli bir şekilde çalıştığınız emin olmak isteyeceksiniz <xref:System.Windows.Forms.DataGridView> denetiminin kendisini. Hücre stilleri, otomatik boyutlandırma, seçim ve satır paylaşma verimli kullanımı hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Büyük miktarda veriyi verimli bir şekilde çalışması için sanal mod uyguluyorsanız, ayrıca verimli bir şekilde çalıştığınız emin olmak isteyeceksiniz <xref:System.Windows.Forms.DataGridView> denetiminin kendisini. Hücre stilleri, otomatik boyutlandırma, seçim ve satır paylaşma verimli kullanımı hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Windows Forms DataGridView Denetiminde Performans Ayarlaması](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

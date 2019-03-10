@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 4d000adfa02555a766410833fabe4039dd06c268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592052"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708125"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Grafik Arabiriminin Yapısı
 Yönetilen sınıf arabirimine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yaklaşık 60 sınıfları, 50 sabit listeleri ve 8 yapıları içerir. <xref:System.Drawing.Graphics> Sınıftır özünde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] işlevselliği; aslında çizgiler, eğriler, rakamları, görüntü ve metin çizer sınıftır.  
@@ -23,6 +23,6 @@ Yönetilen sınıf arabirimine [!INCLUDE[ndptecgdiplus](../../../../includes/ndp
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] koleksiyonları ilgili sabitlerinin birkaç sabit listeleri tanımlanmıştır. Örneğin, <xref:System.Drawing.Drawing2D.LineJoin> sabit listesi öğeleri içerir <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, ve <xref:System.Drawing.Drawing2D.LineJoin.Round>, iki satır katılmak için kullanılan stilleri belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Grafiklere Genel Bakış](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [GDI+ Yönetilen Kodu Hakkında](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Yönetilen Grafik Sınıflarını Kullanma](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Grafiklere Genel Bakış](graphics-overview-windows-forms.md)
+- [GDI+ Yönetilen Kodu Hakkında](about-gdi-managed-code.md)
+- [Yönetilen Grafik Sınıflarını Kullanma](using-managed-graphics-classes.md)

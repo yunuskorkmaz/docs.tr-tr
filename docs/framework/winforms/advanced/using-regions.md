@@ -5,28 +5,28 @@ helpviewer_keywords:
 - examples [Windows Forms], regions
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
-ms.openlocfilehash: bb116cd22c87aab1402bd2989f4039acc4ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522616"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713754"
 ---
 # <a name="using-regions"></a>Bölgeleri Kullanma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Sınıfı özel bir şekil tanımlamanıza olanak verir. Şeklin satırları, çokgenler ve eğriler oluşur.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Sınıfı özel bir şekil tanımlamanıza izin verir. Şekil satırları, çokgenler ve eğriler oluşur.  
   
- Test ve kırpma ulaştı. bölgeler için iki yaygın kullanımları. İsabet testi fare ekranın belirli bir bölgede tıklandığını belirliyor. Kırpma belirli bir bölgeye çizim kısıtlama.  
+ Test ve kırpma bölgeleri için iki yaygın kullanımları gelindiğinde. İsabet sınaması fare ekranın belirli bir bölgede tıklandığını belirliyor. Kırpma belirli bir bölgeye çizim kısıtlama.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
+ [Nasıl yapılır: Test bir bölgeyle vuruş kullanma](how-to-use-hit-testing-with-a-region.md)  
  Nasıl kullanılacağını gösteren bir <xref:System.Drawing.Region> isabet testi gerçekleştirmek için.  
   
- [Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)  
- Kırpma bölgesini ayarlamak açıklanmaktadır bir <xref:System.Drawing.Graphics> nesnesi.  
+ [Nasıl yapılır: Bir bölgeyle kırpma kullanma](how-to-use-clipping-with-a-region.md)  
+ Kırpma bölgesini açıklanmaktadır bir <xref:System.Drawing.Graphics> nesne.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Region>  
- Bu sınıf tanımlar ve üyeleri tümüne bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyelerini bağlantılar içerir.  
   
  <xref:System.Drawing.Graphics>  
- Bu sınıf tanımlar ve üyeleri tümüne bağlantılar içerir.
+ Bu sınıf açıklar ve tüm üyelerini bağlantılar içerir.

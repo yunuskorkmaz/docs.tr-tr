@@ -10,21 +10,21 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: b42b84fe88dea84faf1455f0d4d8af4f3c6358ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589959"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713308"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox Denetimi (Windows Forms)
 Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek için kullanılır. Varsayılan olarak, `ComboBox` denetimi iki parça halinde görünür: kullanıcı bir liste öğesi türüne izin veren bir metin kutusu üst parçasıdır. İkinci bir kullanıcı bir seçebileceği öğe listesini görüntüleyen bir liste kutusu bölümüdür.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ComboBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)  
  Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Özel çizim metin gösteren bir `ComboBox` denetimi.  
   
 ## <a name="reference"></a>Başvuru  
@@ -32,8 +32,8 @@ Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)  
  Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz çok şey bir listesini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

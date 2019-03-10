@@ -4,14 +4,14 @@ description: Docker-compose.yml ile çok kapsayıcılı bir uygulama için mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973515"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712363"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
 
 Bu kılavuzdaki [docker-compose.yml](https://docs.docker.com/compose/compose-file/) dosya bölümünde tanıtılmıştır [4. adım. Çok kapsayıcılı Docker uygulaması oluştururken, hizmetlerinizi docker-compose.yml tanımlamak](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Ancak, daha ayrıntılı olarak incelenmesi yararlı olan docker-compose dosyaları kullanmak için ek yolu vardır.
 
@@ -117,21 +117,21 @@ Tek bir kapsayıcı'na Odaklanıldığında, basit bir tanımı catalog.api cont
 
 Bu kapsayıcı hizmeti, temel yapılandırması aşağıdaki gibidir:
 
--   Bu özel eshop/catalog.api görüntüye bağlıdır. Basitlik'ın çok için hiçbir derleme yok: anahtar dosyasında ayarı. Bu görüntü daha önce (docker derleme ile) oluşturulmuş gerekir veya herhangi bir Docker kayıt defterinden (docker pull komutuyla) indirilip anlamına gelir.
+- Bu özel eshop/catalog.api görüntüye bağlıdır. Basitlik'ın çok için hiçbir derleme yok: anahtar dosyasında ayarı. Bu görüntü daha önce (docker derleme ile) oluşturulmuş gerekir veya herhangi bir Docker kayıt defterinden (docker pull komutuyla) indirilip anlamına gelir.
 
--   ConnectionString Kataloğu veri modeli içeren SQL Server örneğine erişmesi için Entity Framework tarafından kullanılacak bağlantı dizesiyle adlı bir ortam değişkeni tanımlar. Bu durumda, aynı SQL Server kapsayıcı birden çok veritabanı tutuyor. Bu nedenle, daha az bellek için Docker geliştirme makinenizde gerekir. Ancak, her bir mikro hizmet veritabanı için bir SQL Server kapsayıcı dağıtabilirsiniz.
+- ConnectionString Kataloğu veri modeli içeren SQL Server örneğine erişmesi için Entity Framework tarafından kullanılacak bağlantı dizesiyle adlı bir ortam değişkeni tanımlar. Bu durumda, aynı SQL Server kapsayıcı birden çok veritabanı tutuyor. Bu nedenle, daha az bellek için Docker geliştirme makinenizde gerekir. Ancak, her bir mikro hizmet veritabanı için bir SQL Server kapsayıcı dağıtabilirsiniz.
 
--   SQL Server sql.data, Linux için SQL Server örneğini çalıştıran kapsayıcısı için kullanılan aynı adı olan addır. Bu kullanışlıdır; Bu ad çözümlemesi (Docker konağı dahili) kullanabilmek için ağ adresi çözer, bu diğer kapsayıcılardan eriştiğiniz kapsayıcılar için iç IP bilmek zorunda kalmazsınız.
+- SQL Server sql.data, Linux için SQL Server örneğini çalıştıran kapsayıcısı için kullanılan aynı adı olan addır. Bu kullanışlıdır; Bu ad çözümlemesi (Docker konağı dahili) kullanabilmek için ağ adresi çözer, bu diğer kapsayıcılardan eriştiğiniz kapsayıcılar için iç IP bilmek zorunda kalmazsınız.
 
 Bağlantı dizesi bir ortam değişkeni tarafından tanımlı olduğundan, farklı bir mekanizma aracılığıyla ve farklı bir zamanda bu değişkeni ayarlayabilirsiniz. Örneğin, son konaklar veya CI/CD işlem hatlarınızı Azure DevOps Hizmetleri veya tercih edilen DevOps sisteminizi gelen yapmakta üretime dağıtırken farklı bağlantı dizesi ayarlayabilirsiniz.
 
--   Bu, Docker konağının catalog.api hizmetinde iç erişimi için 80 numaralı bağlantı noktasını kullanıma sunar. Konak şu anda bir Linux VM Linux için Docker görüntü temel alan, ancak bunun yerine bir Windows görüntüsü üzerinde çalıştırmak için kapsayıcı yapılandırabilirsiniz olmasıdır.
+- Bu, Docker konağının catalog.api hizmetinde iç erişimi için 80 numaralı bağlantı noktasını kullanıma sunar. Konak şu anda bir Linux VM Linux için Docker görüntü temel alan, ancak bunun yerine bir Windows görüntüsü üzerinde çalıştırmak için kapsayıcı yapılandırabilirsiniz olmasıdır.
 
--   Bu, kullanıma sunulan bağlantı noktası (Linux VM) Docker konak makinedeki 5101 numaralı bağlantı noktasına kapsayıcı üzerindeki 80 iletir.
+- Bu, kullanıma sunulan bağlantı noktası (Linux VM) Docker konak makinedeki 5101 numaralı bağlantı noktasına kapsayıcı üzerindeki 80 iletir.
 
--   Web hizmeti sql.data hizmet (SQL Server örneği için bir kapsayıcı içinde çalışan Linux veritabanı) bağlar. Bu bağımlılık belirttiğinizde, sql.data kapsayıcı zaten başlamış catalog.api kapsayıcı tamamlanıncaya kadar çalışmaz; Bu ilk catalog.api SQL Server veritabanına sahip gerektiğinden önemli ve çalışır durumdadır. Docker kapsayıcı düzeyinde iade ettiğinden ancak, bu tür bir kapsayıcı bağımlılık çoğu durumda, yeterli değildir. Üstel geri alma ile yeniden deneme mantığı, istemci mikro Hizmetleri uygulamak için önerilir, bu nedenle bazen hizmeti (büyük/küçük harf bu SQL Server) hala hazır olmayabilir. Bu şekilde, bir bağımlılık kapsayıcı kısa bir süre için hazır değilse, uygulama hala dayanıklı olacak.
+- Web hizmeti sql.data hizmet (SQL Server örneği için bir kapsayıcı içinde çalışan Linux veritabanı) bağlar. Bu bağımlılık belirttiğinizde, sql.data kapsayıcı zaten başlamış catalog.api kapsayıcı tamamlanıncaya kadar çalışmaz; Bu ilk catalog.api SQL Server veritabanına sahip gerektiğinden önemli ve çalışır durumdadır. Docker kapsayıcı düzeyinde iade ettiğinden ancak, bu tür bir kapsayıcı bağımlılık çoğu durumda, yeterli değildir. Üstel geri alma ile yeniden deneme mantığı, istemci mikro Hizmetleri uygulamak için önerilir, bu nedenle bazen hizmeti (büyük/küçük harf bu SQL Server) hala hazır olmayabilir. Bu şekilde, bir bağımlılık kapsayıcı kısa bir süre için hazır değilse, uygulama hala dayanıklı olacak.
 
--   Dış sunucuları erişmesine izin vermek için yapılandırılmış: ek\_konakları ayarlama dış sunucuların ya da Docker konağı dışında makineleri erişmenizi sağlar (diğer bir deyişle, varsayılan bir Docker geliştirme olan bir Linux VM dışında barındırma) gibi bir yerel SQL Sunucu örneği geliştirme koruyun.
+- Dış sunucuları erişmesine izin vermek için yapılandırılmış: ek\_konakları ayarlama dış sunucuların ya da Docker konağı dışında makineleri erişmenizi sağlar (diğer bir deyişle, varsayılan bir Docker geliştirme olan bir Linux VM dışında barındırma) gibi bir yerel SQL Sunucu örneği geliştirme koruyun.
 
 Aşağıdaki bölümlerde ele alınacaktır diğer, daha gelişmiş bir docker-compose.yml ayarları vardır.
 
@@ -155,7 +155,7 @@ Herhangi bir sürekli dağıtım (CD) veya sürekli tümleştirme (CI) işlem ö
 
 Docker Compose ile oluşturabilir ve bu yalıtılmış bir ortamda çok bir kolayca komut istemi veya komut dosyaları, aşağıdaki komutları gibi birkaç komut yok:
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
 docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
@@ -207,7 +207,7 @@ services:
     image: eshop/basket.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
       - basket.data
       - identity.api
@@ -217,7 +217,7 @@ services:
     image: eshop/catalog.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
       - sql.data
       - rabbitmq
@@ -226,7 +226,7 @@ services:
     image: eshop/marketing.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
       - sql.data
       - nosql.data
@@ -237,7 +237,7 @@ services:
     image: eshop/webmvc:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Web/WebMVC/Dockerfile    
+      dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
       - catalog.api
       - ordering.api
@@ -253,7 +253,7 @@ services:
 
   basket.data:
     image: redis
-      
+
   rabbitmq:
     image: rabbitmq:3-management
 
@@ -263,13 +263,13 @@ Temel docker-compose.yml dosyasındaki değerleri nedeniyle farklı bir hedef da
 
 Örneğin, webmvc hizmet tanımı üzerinde odaklanmak, nasıl bu bilgileri çok hedefleyen hangi ortamı ne olursa olsun aynıdır görebilirsiniz. Aşağıdaki bilgileri vardır:
 
--   Hizmet adı: webmvc.
+- Hizmet adı: webmvc.
 
--   Kapsayıcının özel görüntü: Elektronik Mağaza/webmvc.
+- Kapsayıcının özel görüntü: Elektronik Mağaza/webmvc.
 
--   Kullanmak için hangi Dockerfile belirten özel Docker görüntüsü oluşturmak için komutu.
+- Kullanmak için hangi Dockerfile belirten özel Docker görüntüsü oluşturmak için komutu.
 
--   Bağımlılıkları diğer hizmetleri, bir bağımlılık kapsayıcıları başlatılıncaya kadar bu kapsayıcı başlamaz.
+- Bağımlılıkları diğer hizmetleri, bir bağımlılık kapsayıcıları başlatılıncaya kadar bu kapsayıcı başlamaz.
 
 Ek yapılandırma olabilir, ancak önemli temel docker-compose.yml dosyasında, yalnızca ortamlar arasında ortak olan bilgiyi ayarlamak istediğiniz noktasıdır. Ardından docker-compose.override.yml veya benzer dosyaları üretim ya da hazırlık, her ortam için belirli yapılandırma yerleştirmeniz gerekir.
 
@@ -279,19 +279,19 @@ Genellikle, docker-compose.override.yml hizmetine aşağıdaki örnekte olduğu 
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
 version: '3.4'
 
-services: 
-# Simplified number of services here: 
-      
+services:
+# Simplified number of services here:
+
   basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api              
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureServiceBusEnabled=False
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -305,10 +305,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_CATALOG_NAME}
       - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_CATALOG_KEY}
       - UseCustomizationData=True
@@ -328,8 +328,8 @@ services:
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
-      - identityUrl=http://identity.api              
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -374,7 +374,7 @@ services:
       - "27017:27017"
   basket.data:
     ports:
-      - "6379:6379"      
+      - "6379:6379"
   rabbitmq:
     ports:
       - "15672:15672"
@@ -386,13 +386,13 @@ Bu örnekte, geliştirme geçersiz kılma yapılandırmasını konağa bazı ba�
 
 Çalıştırdığınızda `docker-compose up` (veya Visual Studio'dan başlatmak), her iki dosya birleştirme gibi komut geçersiz kılmaları otomatik olarak okur.
 
-Farklı yapılandırma değerleri, bağlantı noktası veya bağlantı dizeleri üretim ortamı için başka bir Compose dosyasının istediğinizi varsayalım. Adlı bir dosya gibi başka bir geçersiz kılma dosyası oluşturabilirsiniz `docker-compose.prod.yml` farklı ayarlar ve ortam değişkenleri.  Bu dosyayı farklı bir Git deposunda depolanabilir veya yönetilen ve farklı bir takım tarafından güvenli hale getirilmiş.
+Farklı yapılandırma değerleri, bağlantı noktası veya bağlantı dizeleri üretim ortamı için başka bir Compose dosyasının istediğinizi varsayalım. Adlı bir dosya gibi başka bir geçersiz kılma dosyası oluşturabilirsiniz `docker-compose.prod.yml` farklı ayarlar ve ortam değişkenleri. Bu dosyayı farklı bir Git deposunda depolanabilir veya yönetilen ve farklı bir takım tarafından güvenli hale getirilmiş.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Bir özel geçersiz kılma dosyası ile dağıtma
 
 Farklı ada sahip birden fazla geçersiz kılma dosyası veya bir geçersiz kılma dosyası kullanmak için -f seçeneğiyle kullanabilirsiniz docker-compose komutu ve dosyaları belirtin. Komut satırında belirtildikleri sırada birleştirmeleri dosyalarını oluşturun. Aşağıdaki örnek, geçersiz kılma dosyalarıyla dağıtma gösterilmektedir.
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
@@ -422,17 +422,17 @@ Docker-compose bekliyor biçiminde bir .env dosyasında her satırı \<değişke
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Genel Bakış docker Compose** <br/>
+- **Genel Bakış docker Compose** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Birden çok Compose dosyaları** <br/>
+- **Birden çok Compose dosyaları** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>ASP.NET Core Docker görüntüleri oluşturma en iyi duruma getirilmiş
 
 Internet kaynaklarında Docker ve .NET Core araştırıyorsanız, Basitlik, bir kapsayıcıya kaynağınızı kopyalayarak bir Docker görüntüsü oluşturma gösteren dockerfile'ları bulabilirsiniz. Bu örnekler, basit bir yapılandırma öğesini kullanarak bir Docker görüntüsü, uygulamanızla birlikte paketlenmiş ortamıyla sağlayabilirsiniz önerin. Aşağıdaki örnek, basit bir Dockerfile içinde bu damarlı gösterir.
 
-```
+```Dockerfile
 FROM microsoft/dotnet
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
@@ -446,30 +446,30 @@ Böyle bir Dockerfile çalışır. Ancak, özellikle de üretim görüntülerini
 
 Kapsayıcı ve mikro hizmetler modeli sürekli kapsayıcıları başlıyor. Kapsayıcıları kullanarak normal şekilde kapsayıcı atılabilir olduğundan Uyuyan bir kapsayıcı yeniden başlatmaz. Düzenleyiciler (gibi Kubernetes ve Azure Service Fabric) yalnızca görüntüleri yeni bir örneğini oluşturun. Ne bu örnekleme işlemi daha hızlı olacak şekilde nasıl yapılandırıldığında, uygulama ön derleme tarafından en iyi duruma getirme gerektiğini anlamına gelir. Kapsayıcı başlatıldığında, çalıştırmaya hazır olmalıdır. Olmayan geri yükleme ve çalışma zamanında derleme kullandığınızdan `dotnet restore` ve `dotnet build` dotnet CLI komutları bu, .NET Core ve Docker birçok blog gönderileri gördüğünüz gibi.
 
-.NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım üç ana senaryo için en iyi duruma getirilmiş Docker görüntüleri odaklanan ve bunları Docker Hub kayıt defterinde yayımlanan <span class="underline">microsoft/dotnet</span>, sürüm 2.1 ile başlangıç:
+.NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım üç ana senaryo için en iyi duruma getirilmiş Docker görüntüleri odaklanan ve bunları Docker Hub kayıt defterinde yayımlanan *microsoft/dotnet*, sürüm 2.1 ile başlangıç:
 
-1.  **Geliştirme**: Burada hızlıca interate olanağı önceliği, hata ayıklama değişiklikleri ve boyutu ise ikincil.
+1. **Geliştirme**: Burada öncelik hızla tekrarlayabilir ve değişiklikleri hata ayıklama olanağı ve burada boyutu ikincil.
 
-2.  **Derleme**: Öncelikli uygulama derlemek ve ikili dosyalar ve ikili dosyaları iyileştirmek için diğer bağımlılıklar içerir.
+2. **Derleme**: Öncelikli uygulama derlemek ve ikili dosyalar ve ikili dosyaları iyileştirmek için diğer bağımlılıklar içerir.
 
-3.  **Üretim**: Burada odağı hızlı dağıtma ve bu görüntüleri ikili dosyaları ve uygulamayı çalıştırmak için içerik nedded sınırlı olacak şekilde kapsayıcılar, başlatılıyor.
+3. **Üretim**: Burada odağı hızlı dağıtma ve bu görüntüleri ikili dosyaları ve uygulamayı çalıştırmak için gerekli içeriklere sınırlı olacak şekilde kapsayıcılar, başlatılıyor.
 
 Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (en Docker hub'ı):
 
-1.  **SDK'sı**: geliştirme ve derleme senaryolar için.
-2.  **çalışma zamanı**: üretim senaryosu için ve
-3.  **çalışma zamanı deps**: üretim bir senaryo için [kendi içindeki uygulamaları](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **SDK'sı**: geliştirme ve derleme senaryolar için.
+2. **çalışma zamanı**: üretim senaryosu için ve
+3. **çalışma zamanı deps**: üretim bir senaryo için [kendi içindeki uygulamaları](../../../core/deploying/index.md#self-contained-deployments-scd).
 
-Çalışma zamanı görüntüleri de aspnetcore otomatik ayarı sağlar\_URL'ler 80 numaralı bağlantı noktasını ve daha hızlı başlatma alınırken yardımcı olmak için derleme; öncesi ngend önbellek.
+Hızlı Başlangıç için çalışma zamanı görüntüleri aspnetcore da otomatik olarak ayarlamak\_URL'ler 80 numaralı bağlantı noktası ve Ngen bir yerel görüntü önbelleğinde derlemeleri oluşturmak için kullanın.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET Core ile Docker görüntü oluşturma en iyi duruma getirilmiş** <br/>
+- **ASP.NET Core ile Docker görüntü oluşturma en iyi duruma getirilmiş** <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
--   **.NET Core Uygulamaları için Docker Görüntülerinizi Derleme** <br/>
+- **.NET Core Uygulamaları için Docker Görüntülerinizi Derleme** <br/>
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
->[!div class="step-by-step"]
->[Önceki](data-driven-crud-microservice.md)
->[İleri](database-server-container.md)
+> [!div class="step-by-step"]
+> [Önceki](data-driven-crud-microservice.md)
+> [İleri](database-server-container.md)

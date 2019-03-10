@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835492"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708411"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 
@@ -43,7 +43,7 @@ ms.locfileid: "56835492"
     -   
   [!INCLUDE[wrt](../../../includes/wrt-md.md)] öğesini yönetilen koddan çağırmak kolay olduğundan, yalnızca işletim sistemi API'sini sarmalayan özellikler de kaldırılır.
 
-     Hakkında daha fazla bilgi edinmek için [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], bkz: [.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi için bkz [Metro style apps için .NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET blog girişi.
+     Hakkında daha fazla bilgi edinmek için [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], bkz: [.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi için bkz [Metro style apps için .NET](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .NET blog girişi.
 
 -   [Windows çalışma zamanı](/uwp/api/) kullanıcı arabirimi öğeleri için yapı sağlar. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar ve işletim sistemi özelliklerine erişim sağlar. .NET Framework gibi [!INCLUDE[wrt](../../../includes/wrt-md.md)], C# ve Visual Basic derleyicilerinin [!INCLUDE[wrt](../../../includes/wrt-md.md)] öğesini .NET Framework sınıf kütüphanelerini kullandığı şekilde kullanmasını sağlayan meta verilere sahiptir. .NET Framework bazı farklılıkları gizleyerek [!INCLUDE[wrt](../../../includes/wrt-md.md)] kullanımını kolaylaştırır:
 

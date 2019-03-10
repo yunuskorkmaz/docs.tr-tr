@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632133"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717732"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Nasıl yapılır: Windows Forms LinkLabel denetiminin görünüşünü değiştirme
 Tarafından görüntülenen metni değiştirebilirsiniz <xref:System.Windows.Forms.LinkLabel> çeşitli amaçlarla uyacak şekilde denetim. Örneğin, metin metnin altı çizili ile belirli bir renkte görünmesini ayarlayarak tıklanabilecek kullanıcıya göstermek için yaygın bir uygulamadır. Kullanıcının metin tıkladıktan sonra farklı bir renge rengini değiştirir. Bu davranışını denetlemek için beş farklı özellikleri ayarlayabilirsiniz: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, ve <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özellikleri.  
@@ -126,6 +126,6 @@ Tarafından görüntülenen metni değiştirebilirsiniz <xref:System.Windows.For
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [LinkLabel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Bir nesneye bağlayın veya Web sayfası Windows Forms LinkLabel denetimi ile](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel Denetimi](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel Denetimine Genel Bakış](linklabel-control-overview-windows-forms.md)
+- [Nasıl yapılır: Bir nesneye bağlayın veya Web sayfası Windows Forms LinkLabel denetimi ile](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [LinkLabel Denetimi](linklabel-control-windows-forms.md)

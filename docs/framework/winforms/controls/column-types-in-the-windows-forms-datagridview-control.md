@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591603"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724576"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Türleri
 <xref:System.Windows.Forms.DataGridView> Denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcıları etkinleştirmek için birden fazla sütun türleri kullanır.  
@@ -30,7 +30,7 @@ ms.locfileid: "54591603"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|Hücrelerde düğmeleri görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle, bağlanmamış sütunlar kullanılır.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Hücrelerde açılan listeleri görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle veri el ile ilişkili.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|Hücrelerde bağlantılarını görüntülemek için kullanılır. Bağlama sırasında otomatik olarak oluşturulur. Genellikle veri el ile ilişkili.|  
-|Özel sütun türü|Kendi sütun sınıfı devralarak oluşturabileceğiniz <xref:System.Windows.Forms.DataGridViewColumn> sınıfı veya özel görünüşünü, davranış veya barındırılan denetim sağlamak için ondan türetilen sınıflardan biri. Daha fazla bilgi için [nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|Özel sütun türü|Kendi sütun sınıfı devralarak oluşturabileceğiniz <xref:System.Windows.Forms.DataGridViewColumn> sınıfı veya özel görünüşünü, davranış veya barındırılan denetim sağlamak için ondan türetilen sınıflardan biri. Daha fazla bilgi için [nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  Bu sütun türleri, aşağıdaki bölümlerde daha ayrıntılı açıklanmıştır.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54591603"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  İle <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, aşağı açılan liste kutuları içeren hücre içeren bir sütun görüntüleyebilirsiniz. Bu, yalnızca kategori sütunu Northwind örnek veritabanındaki Ürünler tablosunun gibi belirli değerleri içeren alanları veri girişi için kullanışlıdır.  
   
- Açılan listenin doldurmak aynı şekilde tüm hücreler için kullanılan doldurabilirsiniz bir <xref:System.Windows.Forms.ComboBox> aşağı açılan listesinde, el ile tarafından döndürülen koleksiyon üzerinden <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> özelliği veya veri kaynağına bağlama <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özellikleri. Daha fazla bilgi için [ComboBox denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ Açılan listenin doldurmak aynı şekilde tüm hücreler için kullanılan doldurabilirsiniz bir <xref:System.Windows.Forms.ComboBox> aşağı açılan listesinde, el ile tarafından döndürülen koleksiyon üzerinden <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> özelliği veya veri kaynağına bağlama <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özellikleri. Daha fazla bilgi için [ComboBox denetimi](combobox-control-windows-forms.md).  
   
  Veri kaynağı tarafından kullanılan gerçek hücre değerlerinin bağlayabilirsiniz <xref:System.Windows.Forms.DataGridView> ayarlayarak denetim <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> özelliği <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591603"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminin hücrelerinde görüntü görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView Denetimi](datagridview-control-windows-forms.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminin hücrelerinde görüntü görüntüleme](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimini Özelleştirme](customizing-the-windows-forms-datagridview-control.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536340"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723172"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma
-<xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı; ancak <xref:System.Threading> ad alanı korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+<xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı; ancak <xref:System.Threading> ad alanı korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](backgroundworker-component-overview.md).  
   
- Windows Forms kendiliğinden boş iş parçacıklı yerel Win32 windows üzerinde bağlı olduğu Windows Forms tek iş parçacıklı grup (STA) modeli kullanır. STA modelini bir pencere bir iş parçacığı üzerinde oluşturulabilir ancak iş parçacığı oluşturulduktan sonra geçiş yapamazsınız, ve onu tüm işlev çağrılarını kendi oluşturma iş parçacığı üzerinde gerçekleşmesi gerektiğini anlamına gelir. Windows Forms dışında ücretsiz iş parçacıklı model .NET Framework sınıflarını kullanın. .NET Framework'teki iş parçacığı oluşturma hakkında daha fazla bilgi için bkz: [parçacıkları](../../../../docs/standard/threading/index.md).  
+ Windows Forms kendiliğinden boş iş parçacıklı yerel Win32 windows üzerinde bağlı olduğu Windows Forms tek iş parçacıklı grup (STA) modeli kullanır. STA modelini bir pencere bir iş parçacığı üzerinde oluşturulabilir ancak iş parçacığı oluşturulduktan sonra geçiş yapamazsınız, ve onu tüm işlev çağrılarını kendi oluşturma iş parçacığı üzerinde gerçekleşmesi gerektiğini anlamına gelir. Windows Forms dışında ücretsiz iş parçacıklı model .NET Framework sınıflarını kullanın. .NET Framework'teki iş parçacığı oluşturma hakkında daha fazla bilgi için bkz: [parçacıkları](../../../standard/threading/index.md).  
   
  Denetimin oluşturma iş parçacığı dışında öğesinden çağrılması gereken denetim üzerinde herhangi bir yöntem için (üzerinde yürütülen) sıralanması gerekir, STA modelini gerektirir denetimin oluşturma iş parçacığı. Temel sınıf <xref:System.Windows.Forms.Control> çeşitli yöntemler sunar (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, ve <xref:System.Windows.Forms.Control.EndInvoke%2A>) bu amaç için. <xref:System.Windows.Forms.Control.Invoke%2A> zaman uyumlu yöntem çağrısı yapar; <xref:System.Windows.Forms.Control.BeginInvoke%2A> zaman uyumsuz yöntem çağrısı yapar.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.ComponentModel.BackgroundWorker>
-- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
+- [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

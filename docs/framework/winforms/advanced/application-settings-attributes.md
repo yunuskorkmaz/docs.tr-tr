@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714664"
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
 Uygulama ayarları mimarisi, uygulama ayarlarını sarmalayıcı sınıfı veya bireysel özelliklerini uygulanabilir birçok öznitelikleri sağlar. Bu öznitelikler çalışma zamanında uygulama ayarları altyapısı tarafından genellikle özel ayar sağlayıcısı kendi işlevi için belirtilen özel bir sarmalayıcı gereksinimlerine uyarlamak için incelenir.  
@@ -40,5 +40,5 @@ Uygulama ayarları mimarisi, uygulama ayarlarını sarmalayıcı sınıfı veya 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarları Mimarisi](application-settings-architecture.md)
 - [Nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md)

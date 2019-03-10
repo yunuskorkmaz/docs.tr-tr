@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615968"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719435"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşen, dosya sistemi ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu iletişim kutusunda kullanıcının seçtiği dosya adını ve yolunu döndürür. Ancak, gerçekte dosyaları diske yazmak için kod yazmanız gerekir.  
@@ -32,7 +32,7 @@ ms.locfileid: "54615968"
      Aşağıdaki örnekte bir <xref:System.Windows.Forms.Button> kendisine atanmış bir görüntü içeren denetim. Düğmeye tıkladığınızda bir <xref:System.Windows.Forms.SaveFileDialog> bileşen türü .gif, .jpeg ve .bmp dosyaları izin veren bir filtre ile oluşturulur. Bu tür bir dosyayı dosya Kaydet iletişim kutusunda seçili ise, düğmenin görüntü kaydedilir.  
   
     > [!IMPORTANT]
-    >  Alınacak veya ayarlanacak <xref:System.Windows.Forms.FileDialog.FileName%2A> özellik, derlemenizin gerektirir ayrıcalık düzeyi verilmiş tarafından <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Alınacak veya ayarlanacak <xref:System.Windows.Forms.FileDialog.FileName%2A> özellik, derlemenizin gerektirir ayrıcalık düzeyi verilmiş tarafından <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).  
   
      Formunuza sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimini kendi <xref:System.Windows.Forms.ButtonBase.Image%2A> özellik türü .gif, .jpeg veya .bmp dosyasına ayarlayın.  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615968"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog Bileşeni](savefiledialog-component-windows-forms.md)

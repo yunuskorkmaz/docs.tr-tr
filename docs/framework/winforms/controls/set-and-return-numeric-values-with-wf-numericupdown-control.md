@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 4fd995e5f7694616d7b6be7aa9a2eab6611997b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166b14fca2009d0609fa48a5f07912b33f074071
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703220"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Nasıl yapılır: Ayarlama ve Windows Forms NumericUpDown denetimi ile sayı değerleri döndürme
 Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denetimi tarafından belirlenir, <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği. Herhangi bir özellik olarak ile yalnızca koşullu testler için denetimin değerini yazabilirsiniz. Bir kez <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği, doğrudan bu işlemleri gerçekleştirmek için kod yazarak bunu ayarlayabilirsiniz veya çağırabilirsiniz <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ve <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> yöntemleri.  
@@ -95,5 +95,5 @@ Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denet
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [NumericUpDown Denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
-- [NumericUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown Denetimi](numericupdown-control-windows-forms.md)
+- [NumericUpDown Denetimine Genel Bakış](numericupdown-control-overview-windows-forms.md)

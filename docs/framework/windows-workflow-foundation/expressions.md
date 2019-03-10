@@ -2,23 +2,23 @@
 title: Expressions1
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 015bf50fc718881ee4e67d17298031ef0f94d4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7643279c2db5608c028e0a1213802ab609a2d347
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514892"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704290"
 ---
 # <a name="expressions"></a>İfadeler
-Bir sonuç döndürür herhangi bir etkinliği bir Windows Workflow Foundation (WF) ifadesidir. Tüm ifade etkinlikleri dolaylı olarak türetilen <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi tek bir iş akışı değişken karmaşık etkinliklere işleci etkinlikleri üzerinden erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Bu teklif sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin. Ek ifade etkinlikleri türetme tarafından oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.  
+Windows Workflow Foundation (WF) döndüren herhangi bir etkinliği ifadesidir. Tüm ifade etkinlikleri dolaylı olarak türetir <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi karmaşık etkinliklere işleci etkinlikleri aracılığıyla tek bir iş akışı değişkenine erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> bu teklifi sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin. Ek ifade etkinlikleri türeterek oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.  
   
-## <a name="using-expressions"></a>İfadeler kullanma  
- İş Akışı Tasarımcısı kullanır <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> tüm ifadelerde Visual Basic projeleri için ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve <xref:Microsoft.CSharp.Activities.CSharpReference%601> ifadeleri iş akışı C# projelerinde için.  
+## <a name="using-expressions"></a>İfadeleri kullanma  
+ İş akışı tasarımcısını kullanan <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> Visual Basic projelerinde tüm ifadeler için ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve <xref:Microsoft.CSharp.Activities.CSharpReference%601> ifadelerinde için C# iş akışı projeleri.  
   
 > [!NOTE]
->  C# ifadeleri iş akışı projelerinde desteği sunulmuştur [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Daha fazla bilgi için bkz: [C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+>  Destek C# iş akışı projeleri ifadelerinde öğesinde tanıtılmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Daha fazla bilgi için [ C# ifadeleri](csharp-expressions.md).  
   
- Tasarımcı tarafından üretilen iş akışları ifadeleri aşağıdaki örnekteki gibi köşeli ayraçlar içinde çevrelenmiş göründüğü XAML'de kaydedilir.  
+ İfadeler aşağıdaki örnekte olduğu gibi köşeli parantez kapama göründüğü, XAML tasarımcısı tarafından üretilen iş akışları kaydedilir.  
   
 ```xml  
 <Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">  
@@ -39,7 +39,7 @@ Bir sonuç döndürür herhangi bir etkinliği bir Windows Workflow Foundation (
 </Sequence>  
 ```  
   
- Bir iş akışı kodda tanımlarken ifade etkinlikler kullanılabilir. Aşağıdaki örnek bir birleşim işleci etkinliklerin üç sayıları kullanımını gösterir.  
+ Bir iş akışı kodu tanımlarken, herhangi bir ifade etkinlik kullanılabilir. Aşağıdaki örnek, bir birleşim işleci etkinliklerin üç numaralarını eklemek için kullanımını gösterir.  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -68,7 +68,7 @@ Sequence w = new Sequence
 };  
 ```  
   
- Aynı iş akışı C# lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi kullanarak daha sıkı şekilde ifade edilebilir.  
+ Aynı iş akışının daha sıkı bir şekilde kullanarak ifade edilebilir C# lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi.  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -110,8 +110,8 @@ Sequence w = new Sequence
 };  
 ```  
   
-## <a name="extending-available-expressions-with-custom-expression-activities"></a>Kullanılabilir özel ifade etkinlikleri ifadelerle genişletme  
- İfadelerde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ek ifade etkinlikleri oluşturulmasına izin vererek genişletilebilir. Aşağıdaki örnekte, üç tamsayı değerlerin toplamını döndürür bir etkinlik gösterir.  
+## <a name="extending-available-expressions-with-custom-expression-activities"></a>Özel ifade etkinlikleri ile kullanılabilen ifadeler genişletme  
+ İfadelerde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] oluşturulacak ek ifade etkinlikleri için izin verme genişletilebilir. Aşağıdaki örnek, bir üç tamsayı değerlerinin toplamını döndüren bir etkinlik gösterir.  
   
 ```  
 using System;  
@@ -138,7 +138,7 @@ namespace ExpressionsDemo
 }  
 ```  
   
- Bu yeni aktivitesi aşağıdaki örnekte gösterildiği gibi üç değerden eklenen önceki bir iş akışı yazabilirsiniz.  
+ Bu yeni etkinlik ile aşağıdaki örnekte gösterildiği gibi üç değerden eklenen önceki bir iş akışı yazabilirsiniz.  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -165,4 +165,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- Kodda ifadeleri kullanma hakkında daha fazla bilgi için bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Kodda ifadeleri kullanma hakkında daha fazla bilgi için bkz. [yazma iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](authoring-workflows-activities-and-expressions-using-imperative-code.md).

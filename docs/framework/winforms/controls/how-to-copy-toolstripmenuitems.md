@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639451"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713884"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems kopyalama
 Tasarım zamanında, tüm üst düzey menüler ve bunların alt öğeleri farklı bir konuma üzerinde kopyalayabilirsiniz <xref:System.Windows.Forms.MenuStrip>. Ayrıca, tek tek menü öğeleri üst düzey menüler arasında kopyalama veya içindeki menü öğelerinin konumu değiştirebilirsiniz.  
@@ -45,4 +45,4 @@ Tasarım zamanında, tüm üst düzey menüler ve bunların alt öğeleri farkl�
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip Denetimine Genel Bakış](menustrip-control-overview-windows-forms.md)

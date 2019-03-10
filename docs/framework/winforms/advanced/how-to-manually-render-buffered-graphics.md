@@ -8,12 +8,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: f901350b1cb63f385eba52665785c8d0f7fd7e5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9763620d5fe56a0720d5d5f4ad53ec2ef18531c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636358"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705811"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Nasıl yapılır: Arabelleğe alınan grafikleri elle işleme
 Kendi arabelleğe alınan grafikleri yönetiyorsanız oluşturabilmek ve grafik arabellekleri işleme olması gerekir. Örneklerini oluşturabilirsiniz <xref:System.Drawing.BufferedGraphics> yüzeyleri ekranda çizim çağrısı yaparak ilişkili sınıf <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> yöntemi. Bu yöntem, oluşturur bir <xref:System.Drawing.BufferedGraphics> bir form veya denetim gibi bir belirli bir işleme yüzeyi ile ilişkili olan örneği. Oluşturduktan sonra bir <xref:System.Drawing.BufferedGraphics> örneğini temsil eden aracılığıyla arabelleğe grafik çizebilir <xref:System.Drawing.BufferedGraphics.Graphics%2A> özelliği. Tüm grafik işlemleri gerçekleştirdikten sonra arabellek içeriği ekrana çağırarak kopyalayabilirsiniz <xref:System.Drawing.BufferedGraphics.Render%2A> yöntemi.  
@@ -23,30 +23,30 @@ Kendi arabelleğe alınan grafikleri yönetiyorsanız oluşturabilmek ve grafik 
   
 ### <a name="to-manually-display-buffered-graphics"></a>Arabelleğe alınan grafikleri elle görüntülemek için  
   
-1.  Örneğine bir başvuru elde <xref:System.Drawing.BufferedGraphicsContext> sınıfı. Daha fazla bilgi için [nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+1.  Örneğine bir başvuru elde <xref:System.Drawing.BufferedGraphicsContext> sınıfı. Daha fazla bilgi için [nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md).  
   
 2.  Bir örneğini oluşturmak <xref:System.Drawing.BufferedGraphics> çağırarak sınıfı <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> yöntemini aşağıdaki kod örneğinde gösterildiği gibi.  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
   
 3.  Ayarlayarak grafik arabelleği için grafik çizim <xref:System.Drawing.BufferedGraphics.Graphics%2A> özelliği. Örneğin:  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  
   
 4.  Tüm grafik arabellek çizim, işlemlerini tamamladıktan sonra çağrı <xref:System.Drawing.BufferedGraphics.Render%2A> arabellek ya da o arabelleğe veya belirtilen bir çizim yüzeyi için aşağıdaki kod örneğinde gösterildiği gibi ilişkili çizim yüzeyini işlemek için yöntemi.  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#23)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#23)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#23)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#23)]  
   
 5.  Grafik tamamlanmış işleme olduktan sonra çağrı `Dispose` metodunda <xref:System.Drawing.BufferedGraphics> sistem kaynakları serbest örneği.  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#24)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#24)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
-- [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
-- [Nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)
+- [İki Kez Arabelleğe Alınan Grafikler](double-buffered-graphics.md)
+- [Nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md)

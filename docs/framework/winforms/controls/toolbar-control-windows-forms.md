@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863289"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723054"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar Denetimi (Windows Forms)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863289"
 >  `ToolBar` Denetimin <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> özelliği bir örneğini alır <xref:System.Windows.Forms.ContextMenu> sınıfı başvuru olarak. Devralınan özelliği tüm nesne kabul gibi araç, uygulamanızda bu tür bir düğme uygulama, geçirdiğiniz başvuru dikkatlice <xref:System.Windows.Forms.Menu> sınıfı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ToolBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [ToolBar Denetimine Genel Bakış](toolbar-control-overview-windows-forms.md)  
  Genel konseptlerini tanıtan `ToolBar` kullanıcılarınızın çalışabilirsiniz özel araç çubukları tasarım olanak tanıyan bir denetim.  
   
- [Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Nasıl yapılır: Bir ToolBar denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md)  
  Düğmelere eklemeyi açıklar bir `ToolBar` denetimi.  
   
- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)  
  İçinde simge görüntülenecek açıklar bir `ToolBar` denetim düğmelerinin.  
   
- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Hangi kullanıcı düğmesi yorumlamak için kod yazma verir yönergeleri tıkladığında içinde bir `ToolBar` denetimi.  
   
- Ayrıca bkz: [nasıl yapılır: bir araç çubuğu düğmesini kullanarak için tasarımcı simge tanımlama](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [nasıl yapılır: araç çubuğu denetimi kullanarak bir tasarımcı düğmeleri ekleme](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Ayrıca bkz: [nasıl yapılır: Tasarımcı kullanarak ToolBar düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [nasıl yapılır: Tasarımcı kullanarak bir ToolBar denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ToolBar> Sınıfı  
  Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
- [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [ToolStrip Denetimi](toolstrip-control-windows-forms.md)  
  Menüleri, Denetim ve Windows Forms uygulamalarında kullanıcı denetimleri barındırabilir araç çubukları açıklar.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972657"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708385"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider Bileşenine Genel Bakış (Windows Forms)
-Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) bileşeni, bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının), Windows uygulama ile ilişkilendirmek için kullanılır. Çeşitli şekillerde Yardım sağlayabilirsiniz:  
+Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) bileşeni, bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının), Windows uygulama ile ilişkilendirmek için kullanılır. Çeşitli şekillerde Yardım sağlayabilirsiniz:  
   
 -   Windows Forms'da denetimleri için bağlama duyarlı Yardım sağlar.  
   
@@ -37,4 +37,4 @@ Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helppr
 >  Yardım dosyasında da yolunu belirtirken göreli yolu kullanarak sorunlarla karşılaşabilirsiniz <xref:System.Windows.Forms.Help.ShowHelp%2A> yöntemi veya <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği <xref:System.Windows.Forms.HelpProvider> denetimi. Bu nedenle, Yardım dosyasını belirtmek için mutlak dosya yolunu kullandığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Uygulamalarındaki Yardım Sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+- [Windows Forms Uygulamalarındaki Yardım Sistemleri](../advanced/help-systems-in-windows-forms-applications.md)

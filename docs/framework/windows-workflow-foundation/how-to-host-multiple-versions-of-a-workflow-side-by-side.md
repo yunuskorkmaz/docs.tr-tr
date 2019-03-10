@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366716"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705993"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: Birden çok sürümünü bir iş akışı yan yana barındırma
 `WorkflowIdentity` Bu bilgiler bir kalıcı iş akışı örneğiyle ilişkili olmasını yanı sıra, bir adı ve sürümü, bir iş akışı tanımıyla ilişkilendirilecek iş akışı uygulama geliştiricileri için bir yol sağlar. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu adım öğreticide nasıl kullanılacağını gösteren `WorkflowIdentity` aynı anda birden çok iş akışı sürümünü barındırmak için.
@@ -21,22 +21,22 @@ ms.locfileid: "57366716"
 ## <a name="in-this-topic"></a>Bu konuda  
  Öğreticinin bu adımında `WriteLine` ek bilgiler ve yeni bir iş akışındaki etkinlikler değiştirildiğinde `WriteLine` etkinlik eklenir. Özgün iş akışı derleme kopyası depolanır ve aynı anda hem özgün hem de güncelleştirilmiş iş akışı çalışması için ana bilgisayar uygulaması güncelleştirilir.  
   
--   [NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [NumberGuessWorkflowActivities projenin bir kopyasını oluşturmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [İş akışları güncelleştirmek için](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [İş akışları güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [Durum makinesi iş akışını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [Durum makinesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Akış Çizelgesi iş akışını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Akış Çizelgesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Sıralı iş akışını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Sıralı iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Derleme ve uygulamayı çalıştırmak için](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Derleme ve uygulamayı çalıştırmak için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Bu konu başlığındaki adımları uygulayarak önce uygulamayı çalıştırmak, her türden çeşitli iş akışlarını başlatmak ve her biri için bir veya iki tahmin yapma. Bu adım ve aşağıdaki adımı kalıcı bu iş akışları kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Başlarken Öğreticisi her adımda, önceki adımları bağlıdır. Önceki adımları tamamlanmadıysa öğreticinin tamamlanmış bir sürümünü indirebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -60,7 +60,7 @@ ms.locfileid: "57366716"
     > [!NOTE]
     >  Bu konu başlığındaki adımları iş akışları birden çok sürümünü kapsamak için kullanılmış olan derlemeleri yönetmek için bir yol gösterir. Güçlü derlemelerini adlandırma ve bunları genel derleme önbelleğinde kaydetme gibi diğer yöntemleri de kullanılabilir.
 
-8.  Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör. Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Adlı yeni bir klasör oluşturun **NumberGuessWorkflowActivities_du** aynı klasörde **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**ve yeni eklenen **PreviousVersions** klasörünü ve tüm dosyaları ve alt klasörlerdeki kopyalayın **NumberGuessWorkflowActivities** yeni klasöre  **NumberGuessWorkflowActivities_du** klasör. Bu yedekleme kopyası proje etkinliklerinin ilk sürümü için kullanılan [nasıl yapılır: Bir çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Yeniden açın **WF45GettingStartedTutorial** çözümü Visual Studio 2012.
 
@@ -580,4 +580,4 @@ ms.locfileid: "57366716"
 
 4.  Sayı tahmin eden uygulamaya geri geçin ve güncelleştirme yapılmadan önce başlatıldı iş akışları birini seçin. Seçili durumdaki iş akışı sürümü durum penceresi görüntülenir sürüm bilgilerine bakarak belirleyebilirsiniz. Tahminler girin ve eşleşme güncelleştirme durumu Not `WriteLine` etkinliği önceki bir sürümünden çıktı ve kullanıcının tahmin içermez. Bu iş akışları sahip olmayan bir önceki iş akışı tanımı kullanıyorsunuz çünkü `WriteLine` güncelleştirmeleri.
 
-     Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.
+     Sonraki adımda [nasıl yapılır: Çalışan iş akışı örneğinin tanımını güncelleştirme](how-to-update-the-definition-of-a-running-workflow-instance.md), çalışan `v1` iş akışı örnekleri yeni işlevselliği içerdikleri için güncelleştirilmiş `v2` örnekleri.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 70e6e53c4aaa348c6cae2e677121f92367f33349
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 9995542385ed32b6e6f522d049113279a711dba4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305265"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715402"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows formları için kılavuz seçeneklerini ayarlama
 Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri formları ve projeleri ile iş için Windows Form Tasarımcısı'nda ayarlayabilirsiniz.  
@@ -27,16 +27,16 @@ Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri fo
   
 2.  Sol bölmesinde **seçenekleri** iletişim kutusu, tıklayın **Windows Form Tasarımcısı**.  
   
-     Sağ bölmede altında **düzen ayarlarını** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, mi denetimleri için Yaslama ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **LayoutMode** ve **dayama çizgileri** Düzen modu. Dayama çizgileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Forms dayama çizgileri kullanarak Windows denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Sağ bölmede altında **düzen ayarlarını** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, mi denetimleri için Yaslama ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **LayoutMode** ve **dayama çizgileri** Düzen modu. Dayama çizgileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Forms dayama çizgileri kullanarak Windows denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)
-- [Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows formlarında sekme sırasını ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)
-- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms Denetimleri](index.md)
+- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows formlarında sekme sırasını ayarlama](how-to-set-the-tab-order-on-windows-forms.md)
+- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

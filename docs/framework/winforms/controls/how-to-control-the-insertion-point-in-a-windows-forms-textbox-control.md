@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 6ed49cac8341551dd0900a8468990e314a16e7b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660196"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714898"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox denetiminde ekleme noktasını belirleme
 Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk odağı aldığında, varolan herhangi bir metni sola metin kutusu içinde varsayılan ekleme. Kullanıcı, klavye veya fare ile ekleme noktasını taşıyabilirsiniz. Metin kutusu kaybeder ve ardından odak kazandıktan, ekleme noktasını yerde kullanıcı son uygulanan olacaktır.  
@@ -28,7 +28,7 @@ Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk oda
   
 2.  (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> özelliğini seçmek istediğiniz metnin uzunluğu.  
   
-     Aşağıdaki kod, her zaman 0 olarak ekleme noktasını döndürür. `TextBox1_Enter` Olay işleyicisi bağlı denetime; daha fazla bilgi için bkz: [Windows Forms'ta olay işleyicileri oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
+     Aşağıdaki kod, her zaman 0 olarak ekleme noktasını döndürür. `TextBox1_Enter` Olay işleyicisi bağlı denetime; daha fazla bilgi için bkz: [Windows Forms'ta olay işleyicileri oluşturma](../creating-event-handlers-in-windows-forms.md).  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -63,10 +63,10 @@ Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk oda
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Nasıl yapılır: Dizeye tırnak işaretleri koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox Denetimine Genel Bakış](textbox-control-overview-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Nasıl yapılır: Dizeye tırnak işaretleri koyma](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox Denetimi](textbox-control-windows-forms.md)

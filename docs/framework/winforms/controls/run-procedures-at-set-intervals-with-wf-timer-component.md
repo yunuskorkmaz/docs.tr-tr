@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663996"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705577"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Nasıl yapılır: Windows Forms süreölçer bileşeni ile belirlenen aralıklarda yordamları çalıştırma
 Bazen bir döngü sona veya bir kümesi zaman aralığı süresi sona erdiğinde çalıştırılan kadar belirli aralıklarla çalışan bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> Bileşeni gibi bir yordam mümkün kılar.  
@@ -26,7 +26,7 @@ Bazen bir döngü sona veya bir kümesi zaman aralığı süresi sona erdiğinde
  Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  Kullanırken bazı sınırlamalar uygulanır <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [Windows Forms süreölçer bileşeninin aralık özelliğiyle ilgili sınırlamalar](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
+>  Kullanırken bazı sınırlamalar uygulanır <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [Windows Forms süreölçer bileşeninin aralık özelliğiyle ilgili sınırlamalar](limitations-of-the-timer-component-interval-property.md).  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Süreölçer bileşeni ile belirlenen aralıklarda bir yordamı çalıştırmak için  
   
@@ -244,5 +244,5 @@ private:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Timer>
-- [Süreölçer Bileşeni](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Süreölçer Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Süreölçer Bileşeni](timer-component-windows-forms.md)
+- [Süreölçer Bileşenine Genel Bakış](timer-component-overview-windows-forms.md)

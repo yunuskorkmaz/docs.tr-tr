@@ -9,12 +9,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643604"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707969"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms CheckedListBox denetimindeki işaretli öğeleri belirleme
 Bir Windows Forms veri sunarken <xref:System.Windows.Forms.CheckedListBox> denetimi, ya da yineleme depolanan koleksiyonu aracılığıyla <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özellik ya da liste aracılığıyla adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> hangi öğelerin denetlenir belirlemek için yöntemi. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Yöntemi ve bağımsız değişkeni olarak bir öğe dizin numarasını alır ve döndürür `true` veya `false`. Beklediğiniz, aykırı <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özelliklerini değil belirleme hangi öğelerin denetlenir; hangi öğelerin vurgulanmış belirlerler.  
@@ -112,4 +112,4 @@ Bir Windows Forms veri sunarken <xref:System.Windows.Forms.CheckedListBox> denet
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)

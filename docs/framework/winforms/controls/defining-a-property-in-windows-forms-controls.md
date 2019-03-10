@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 8d040d4de566ea750b9a9d14531061a63524e668
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441898"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712207"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Özellik Tanımlama
 Özellikleri genel bakış için bkz. [özelliklerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Bir özellik tanımlarken birkaç önemli nokta vardır:  
@@ -121,7 +121,7 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)
-- [Özellik Değişti Olayları](../../../../docs/framework/winforms/controls/property-changed-events.md)
-- [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Windows Forms Denetimlerindeki Özellikler](properties-in-windows-forms-controls.md)
+- [ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [Özellik Değişti Olayları](property-changed-events.md)
+- [Windows Forms Denetimlerindeki Öznitelikler](attributes-in-windows-forms-controls.md)

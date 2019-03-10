@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 2150e7797095b88227b499ec5481a3ce521270e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667917"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711505"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Nasıl yapılır: Döndürme, yansıtma ve eğme görüntüleri
 Döndürme, yansıtma ve özgün resmin sol, sağ ve sol alt köşeler için hedef noktaları belirleyerek görüntü eğme. Üç hedef noktaları özgün dikdörtgen görüntü için bir eğdiğinizde Paralel Kenar eşleyen bir ilişkili dönüşümü belirler.  
@@ -30,23 +30,23 @@ Döndürme, yansıtma ve özgün resmin sol, sağ ve sol alt köşeler için hed
   
  Aşağıdaki çizimde, özgün resmin ve için eğdiğinizde Paralel Kenar eşlenen görüntüyü gösterir. Özgün resmin dengesiz, yansıtılan, döndürülen, çevrilmiş ve. X ekseni orijinal görüntünün üst kenarı boyunca çalıştırılma satıra eşlendi (200, 20) ve (110, 100). Y ekseni özgün resmin sol kenarda çalıştırılma satıra eşlendi (200, 20) ve (250, 30).  
   
- ![Şeritler](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ ![Şeritler](./media/stripes1.gif "Stripes1")  
   
  Aşağıdaki çizimde, bir fotoğraf görüntüsüne uygulanacağı benzer bir dönüştürmeyi gösterir.  
   
- ![Dönüştürülen Tırmanıcı](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![Dönüştürülen Tırmanıcı](./media/transformedclimber.png "TransformedClimber")  
   
  Aşağıdaki çizim, meta dosyası için uygulanan benzer bir dönüştürmeyi gösterir.  
   
- ![Dönüştürülmüş meta](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ ![Dönüştürülmüş meta](./media/transformedmetafile.png "TransformedMetafile")  
   
  Aşağıdaki örnek ilk çizimde gösterilen görüntüleri oluşturur.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirdiğinizden emin olun `Stripes.bmp` yoluyla sisteminize göre geçerli bir görüntü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

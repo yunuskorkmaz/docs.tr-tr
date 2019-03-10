@@ -8,37 +8,37 @@ helpviewer_keywords:
 - spin button control
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-ms.openlocfilehash: c23f374f1ec9cab6e43b12d32b97c40533ac36cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527332"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704550"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown Denetimi (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetim arar düğmeleri çiftini ve bir metin kutusu birleşimini gibi listesini yukarı veya aşağı taşıma. Denetim görüntüler ve seçenekler listesinden bir metin dizesini ayarlar. Kullanıcı düğmeleri listesini taşımak için yukarı ve aşağı tıklatarak yukarı ve aşağı ok tuşlarına basarak veya listeden bir öğe eşleşen bir dize yazarak dize seçebilirsiniz. Öğe adları alfabetik olarak sıralanan bir listesinden seçmek için bu denetim için bir olası kullanımı içindir. (Sıralamak için ayarlanmış <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> özelliğine `true`.) Bu denetim işlevi liste kutusu veya birleşik giriş kutusu çok benzer, ancak çok az alanı kaplar.  
+Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetimi görünür bir birleşimini bir metin kutusu ve bir çift düğmeler gibi bir listede yukarı veya aşağı taşıma. Denetim, görüntüler ve seçenekler listesinden bir metin dizesini ayarlar. Kullanıcı, bir listesi geçmek düğmelerini yukarı ve aşağı tıklayarak yukarı ve aşağı ok tuşlarına basarak veya bir öğe listesinde eşleşen bir dize yazarak dize seçebilirsiniz. Bir olası bu denetim için öğe adları alfabetik olarak sıralanmış bir listesinden seçmek için kullanılır. (Listeyi sıralamak için ayarlanmış <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> özelliğini `true`.) Bu denetimin işlev birleşik giriş kutusu ve liste kutusu için çok benzer, ancak çok az alanı kaplar.  
   
- Anahtar özellikler denetiminin <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, ve <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Özellik metin değerleri denetiminde görüntülenen nesnelerin listesini içerir. Varsa <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> ayarlanır `false`, kullanıcı türleri ve listesindeki bir değeri ile eşleşen metin denetimi otomatik olarak tamamlar. Varsa <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> ayarlanır `true`, son öğenin kaydırma yönlendirilirsiniz ilk öğeye listesinde ve tersi. Denetimin anahtar yöntemleri <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> ve <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ Anahtar özellikleri denetimin <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, ve <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Özelliği, metin değerleri denetimde görüntülenen nesnelerin listesini içerir. Varsa <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> ayarlanır `false`, denetimin kullanıcı türleri ve listedeki bir değeri ile eşleşen metni otomatik olarak tamamlar. Varsa <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> ayarlanır `true`, son öğenin kaydırma yönlendirilirsiniz ilk öğeye listesinde ve bunun tersi de geçerlidir. Denetimin önemli yöntemlerdir <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> ve <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
   
- Bu denetim yalnızca metin dizelerini görüntüler. Sayısal değerler görüntüleyen bir denetim istiyorsanız kullanın <xref:System.Windows.Forms.NumericUpDown> denetim. Daha fazla bilgi için bkz: [NumericUpDown denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .  
+ Bu denetim yalnızca metin dizelerini görüntüler. Sayısal değerleri görüntüleyen bir denetimi istiyorsanız kullanın <xref:System.Windows.Forms.NumericUpDown> denetimi. Daha fazla bilgi için [NumericUpDown denetimi](numericupdown-control-windows-forms.md) .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DomainUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
- Genel kavramlarını tanıtır <xref:System.Windows.Forms.DomainUpDown> göz atın ve metin dizelerini listesinden olanak tanıyan denetim.  
+ [DomainUpDown Denetimine Genel Bakış](domainupdown-control-overview-windows-forms.md)  
+ Genel konseptlerini tanıtan <xref:System.Windows.Forms.DomainUpDown> göz atın ve bir metin dizesi seçim olanağı tanıyan bir denetim.  
   
- [Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- Metin dizelerini belirtin açıklar <xref:System.Windows.Forms.DomainUpDown> denetim görüntülemelidir.  
+ [Nasıl yapılır: Windows Forms DomainUpDown denetimlerine programlı olarak öğeleri Ekle](how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ Metin dizelerinin belirtme açıklar <xref:System.Windows.Forms.DomainUpDown> denetim görüntülemelidir.  
   
- [Nasıl yapılır: Windows Forms DomainUpDown Denetimlerinden Öğeleri Kaldırma](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
- Gelen öğelerinin nasıl silineceğini açıklar <xref:System.Windows.Forms.DomainUpDown> denetim kodu.  
+ [Nasıl yapılır: Windows Forms DomainUpDown denetimlerinden öğeleri kaldırma](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ Öğeleri silme işlemini açıklamaktadır <xref:System.Windows.Forms.DomainUpDown> kod denetimi.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DomainUpDown>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
  <xref:System.Windows.Forms.NumericUpDown>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılara sahip...  
+ Bu sınıf açıklar ve tüm üyeleri bağlantılara sahip...  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanabileceğiniz denetimleri](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Kullanabileceğiniz Windows formlarında denetimleri](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

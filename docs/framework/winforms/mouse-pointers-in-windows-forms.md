@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491785"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712740"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms'ta Fare İşaretçileri
 Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktası belirten bir bit eşlem olduğundan, bazen bir imleç adlandırılır. Bu konu, Windows Forms'ta fare işaretçisi genel bir bakış sağlar ve bazı değiştirebilir ve fare işaretçisini denetim yolları açıklanmaktadır.  
@@ -32,5 +32,5 @@ Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktas�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Cursor>
-- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms'ta Sürükle ve Bırak İşlevi](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms'ta Sürükle ve Bırak İşlevi](drag-and-drop-functionality-in-windows-forms.md)

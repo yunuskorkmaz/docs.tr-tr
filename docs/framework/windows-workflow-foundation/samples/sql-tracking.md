@@ -2,15 +2,15 @@
 title: SQL izleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 240e6ab750b4ef82d2afcf1c2ab26c08369926d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690611"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710023"
 ---
 # <a name="sql-tracking"></a>SQL izleme
-Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
+Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 

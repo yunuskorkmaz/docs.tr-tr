@@ -1,37 +1,37 @@
 ---
-title: Etkinlik doğrulama yapılandırma
+title: Etkinlik doğrulamayı yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-ms.openlocfilehash: e6fa043e0a0a96875319d556c19ab8ee90cd2139
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65928de1dc8b8d9914648463a136790c7978f53c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512606"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704563"
 ---
-# <a name="configuring-activity-validation"></a>Etkinlik doğrulama yapılandırma
-Etkinlik yazarlar ve kullanıcıları tanımlamak ve hataları yürütülmesinin önce bir etkinliğin yapılandırmasında raporlar etkinlik doğrulamayı etkinleştirir. Windows Workflow Foundation (WF) etkinlik doğrulama aşağıdaki üç türlerini sağlar:  
+# <a name="configuring-activity-validation"></a>Etkinlik doğrulamayı yapılandırma
+Etkinlik yazarlar ve kullanıcıları tanımlama ve yürütme öncesi bir etkinliğin yapılandırma hatalarını raporlamak etkinlik doğrulamayı etkinleştirir. Windows Workflow Foundation (WF) aşağıdaki üç tür etkinliği doğrulama sağlar:  
   
 -   `RequiredArgument` ve `OverloadGroup` öznitelikleri.  
   
--   Kesinlik temelli kod tabanlı doğrulama.  
+-   Kesin kod temelli doğrulama.  
   
--   Bildirim temelli kısıtlamaları.  
+-   Bildirim temelli kısıtlamalar.  
   
- `RequiredArgument` ve `OverloadGroup` öznitelikleri gösteren bir etkinlikte bazı bağımsız değişkenler zorunludur. Kesinlik temelli kod tabanlı doğrulama kendisi hakkında doğrulama sağlamak bir etkinlik için basit bir yol sağlar ve doğrulama ve etkinliğini içeren iş akışı ile ilişkisini hakkında bildirim temelli kısıtlamalarını etkinleştirin. Bir etkinlik doğrulama gereksinimlerine göre düzgün şekilde yapılandırılmazsa, doğrulama hataları ve Uyarıları döndürülür. İş Akışı Tasarımcısı'nı kullanarak içeren iş akışı oluşturduysanız, doğrulama hataları ve Uyarıları Tasarımcısı'nda görüntülenir. İş akışını iş akışı Tasarımcısı dışında oluşturulursa, iş akışı çalıştırıldığında herhangi bir doğrulama hatası döndürülür. İş akışının nasıl oluşturulduğuna bakılmaksızın, doğrulama hataları içeren bir iş akışının asla yürütmek için izin verilmez. Bu bölümde, bu tür etkinlik doğrulama ve etkinlik doğrulama nasıl çağrıldığını genel bakış sağlar.  
+ `RequiredArgument` ve `OverloadGroup` öznitelikleri gösteren belirli bağımsız değişkenler bir etkinlikte gereklidir. Kesin kod temelli doğrulama doğrulama kendisi hakkında sağlamaya bir etkinlik için basit bir yol sağlar ve doğrulama etkinliği ve ilişkisini içeren iş akışı ile ilgili bildirim temelli kısıtlamalar etkinleştirin. Bir etkinlik doğrulama gereksinimlerine göre düzgün şekilde yapılandırılmadıysa, doğrulama hataları ve Uyarıları döndürülür. Kapsanan iş akışını iş akışı Tasarımcısı'nı kullanarak oluşturulduysa, doğrulama hataları ve Uyarıları Tasarımcısı'nda görüntülenir. İş akışı iş akışı Tasarımcısı dışında oluşturulursa tüm doğrulama hatalarını iş akışı çalıştırıldığında döndürülür. İş akışını nasıl oluşturulduğuna bakılmaksızın, bir iş akışı doğrulama hataları asla yürütmek için izin verilmez. Bu bölümde, bu tür etkinlik doğrulamayı ve etkinlik doğrulamayı nasıl çağrıldığını'ne genel bakış sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)  
+ [Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar](required-arguments-and-overload-groups.md)  
  Nasıl kullanılacağını açıklar `RequiredArgument` ve `OverloadGroup` doğrulama sağlamak için öznitelikler.  
   
- [Kesin Kod Temelli Doğrulama](../../../docs/framework/windows-workflow-foundation/imperative-code-based-validation.md)  
- Kod tabanlı doğrulama için kullanılacak açıklar <xref:System.Activities.CodeActivity> ve <xref:System.Activities.NativeActivity> etkinlikleri tabanlı.  
+ [Kesin Kod Temelli Doğrulama](imperative-code-based-validation.md)  
+ Kod temelli doğrulama için kullanmayı açıklar <xref:System.Activities.CodeActivity> ve <xref:System.Activities.NativeActivity> etkinlikleri temel.  
   
- [Bildirim Temelli Kısıtlamalar](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)  
- Bildirim temelli kısıtlamaları karmaşık etkinlik doğrulama sağlamak için nasıl kullanılacağını açıklar.  
+ [Bildirim Temelli Kısıtlamalar](declarative-constraints.md)  
+ Bildirim temelli kısıtlamalar karmaşık etkinlik doğrulama sağlamak için nasıl kullanılacağını açıklar.  
   
- [Etkinlik Doğrulamayı Çağırma](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)  
- Etkinlik doğrulama otomatik olarak ne zaman çağrılır ve açıkça doğrulamayı çağırmak nasıl anlatılmaktadır.  
+ [Etkinlik Doğrulamayı Çağırma](invoking-activity-validation.md)  
+ Etkinlik doğrulamayı otomatik olarak ne zaman çağrılır ve doğrulama açıkça çağırmak nasıl ele alır.  
   
 ## <a name="reference"></a>Başvuru  
   

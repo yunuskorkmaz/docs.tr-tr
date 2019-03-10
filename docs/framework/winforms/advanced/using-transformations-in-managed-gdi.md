@@ -5,23 +5,23 @@ helpviewer_keywords:
 - transformations
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-ms.openlocfilehash: e20f779a3314b0f8f88cdeb67f60841302264f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22984ca8b12b1b71cfc5df78f8ac4005e1ad55f2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523802"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702405"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Yönetilen GDI+'da Dönüştürmeleri Kullanma
-Afin dönüşümler döndürme, ölçekleme, yansıtma, yamultma ve çevirme içerir. İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> sınıfı Vektör çizimleri, görüntüler ve metin afin dönüşümler gerçekleştirmek için temeli sağlar.  
+Afin dönüşümler döndürme ve ölçeklendirme, yansıtma, yamultma ve çevirme içerir. İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> sınıfı, Vektör çizimleri, resimleri ve metin afin dönüşümler gerçekleştirmek için temel sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Gerçek Koordinat Dönüştürmesini Kullanma](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  
- Ölçek ve world dönüştürme matrisini kullanarak grafikler döndürmek açıklar.  
+ [Gerçek Koordinat Dönüştürmesini Kullanma](using-the-world-transformation.md)  
+ Ölçeklendirme ve dünya dönüştürme matrisini kullanarak grafik döndürmek açıklar.  
   
- [Dönüştürme Sırası Neden Önemlidir](../../../../docs/framework/winforms/advanced/why-transformation-order-is-significant.md)  
- Dönüştürme işlemlerinin siparişi neden önemli olduğunu gösterir.  
+ [Dönüştürme Sırası Neden Önemlidir](why-transformation-order-is-significant.md)  
+ Dönüştürme sırası neden önemli olduğunu gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Bu sınıf tanımlar ve üyeleri tümüne bağlantılar içerir.
+ Bu sınıf açıklar ve tüm üyelerini bağlantılar içerir.

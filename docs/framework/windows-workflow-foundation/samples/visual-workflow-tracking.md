@@ -2,18 +2,18 @@
 title: Görsel iş akışı izleme
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 4b6dac8020ba8df0fad57b8cbd0853b4aeb4e75d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261387"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703588"
 ---
 # <a name="visual-workflow-tracking"></a>Görsel iş akışı izleme
 Bu örnek nasıl izleme uygulaması aracılığıyla hata ayıklama işlevselliğini kullanarak görsel bir iş akışı yazılacağını gösterir [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
 
 ## <a name="sample-details"></a>Örnek Ayrıntıları
- Uygulama (Workflow.xaml içinde tanımlanmıştır) basit bir akış çizelgesi iş akışı çalıştırır ve o anda yürütülen iş akışı görüntülemek için iş akışı tasarımcısını yeniden barındırır. İş akışı yürütülür, o anda yürütülen etkinlik sarı bir anahat ve hata ayıklama ok ile gösterilir. Ayrıca, iş akışı tarafından oluşturulan izleme kayıtları da uygulama penceresinde görüntülenir. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). İş akışı tasarımcısını yeniden barındırma hakkında daha fazla bilgi için bkz. [iş akışı tasarımcısını yeniden barındırma](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).
+ Uygulama (Workflow.xaml içinde tanımlanmıştır) basit bir akış çizelgesi iş akışı çalıştırır ve o anda yürütülen iş akışı görüntülemek için iş akışı tasarımcısını yeniden barındırır. İş akışı yürütülür, o anda yürütülen etkinlik sarı bir anahat ve hata ayıklama ok ile gösterilir. Ayrıca, iş akışı tarafından oluşturulan izleme kayıtları da uygulama penceresinde görüntülenir. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../workflow-tracking-and-tracing.md). İş akışı tasarımcısını yeniden barındırma hakkında daha fazla bilgi için bkz. [iş akışı tasarımcısını yeniden barındırma](../rehosting-the-workflow-designer.md).
 
  İş akışı simülatör iki sözlük tutarak çalışır. Şu anda yürütülen etkinlik nesnesi ve etkinlik örneği oluşturulan XAML satır numarası arasındaki eşlemeyi içerir. Diğer Etkinlik örneği kimliği ve etkinlik nesnesi arasındaki eşlemeyi içerir. Kullanarak bir özel izleme kayıtları yayılan profili, izleme uygulama şu anda yürütülen etkinliğin örnek kimliği belirler ve geri örneği XAML dosyası ile eşleştirir. Yeniden barındırılan iş akışı Tasarımcısı, Tasarımcı yüzeyine faaliyete vurgulayın ve özellikle etkinlik etrafında sarı bir kenarlık çizmek ve sol tarafında bir sarı ok görüntüleme iş akışı hata ayıklayıcı, aynı yöntemi kullanmak için talimat verilmiştir Tasarımcı.
 

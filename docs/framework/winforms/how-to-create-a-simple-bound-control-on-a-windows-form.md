@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643578"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708346"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma
 İle *basit bağlama*, tek bir veri öğesi, bir veri kümesi tablodaki bir sütun değeri gibi bir denetimi görüntüleme. Basit bir denetimin herhangi bir özelliği bir veri değerine bağlamak.  
@@ -20,7 +20,7 @@ ms.locfileid: "54643578"
   
 ### <a name="to-simple-bind-a-control"></a>Basit-bağlama bir denetim için  
   
-1.  Bir veri kaynağına bağlanın. Daha fazla bilgi için [bir veri kaynağına bağlanma](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Bir veri kaynağına bağlanın. Daha fazla bilgi için [bir veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  Form denetimi seçin ve görüntüleme **özellikleri** penceresi.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54643578"
   
      Çoğunlukla ilişkili özellikleri altında görüntülenen **(DataBindings)** özelliği. Örneğin, çoğu denetim, **metin** özelliği sık bağlı.  
   
-4.  İstediğiniz özelliğin bağlama yaygın olarak bağlı özelliklerden biri değil, tıklayın **üç nokta** düğmesine (![VisualStudioEllipsesButton ekran](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) içinde **(Gelişmiş)** görüntülemek için kutusu **biçimlendirme ve Gelişmiş bağlama** bu denetim için özelliklerin tam bir liste ile iletişim kutusu.  
+4.  İstediğiniz özelliğin bağlama yaygın olarak bağlı özelliklerden biri değil, tıklayın **üç nokta** düğmesine (![VisualStudioEllipsesButton ekran](./media/vbellipsesbutton.png "vbEllipsesButton") ) içinde **(Gelişmiş)** görüntülemek için kutusu **biçimlendirme ve Gelişmiş bağlama** bu denetim için özelliklerin tam bir liste ile iletişim kutusu.  
   
 5.  Altındaki aşağı açılan oka tıklayın ve bağlamak istediğiniz özelliği seçin **bağlama**.  
   
@@ -47,5 +47,5 @@ ms.locfileid: "54643578"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.Binding>
-- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows Forms Veri Bağlama](windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)

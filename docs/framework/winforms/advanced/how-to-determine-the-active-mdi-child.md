@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512560"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714338"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI alt öğesini belirleme
 Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde denetim sağlamak isteyeceksiniz. Örneğin, alt formun metin kutusunda seçili metni panoya kopyalamak istediğiniz varsayalım. Seçili metni panoya kullanmaya kopyalayan bir yordam oluşturacak <xref:System.Windows.Forms.Control.Click> Standart Düzen menüsünde kopyalama menü öğesinin olay.  
@@ -30,7 +30,7 @@ Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde den
 1.  Bir yöntem içinde etkin denetim etkin alt formun metnini panoya kopyalayın.  
   
     > [!NOTE]
-    >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde den
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Nasıl yapılır: MDI alt formlarını düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI alt formları oluştur](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)
+- [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)

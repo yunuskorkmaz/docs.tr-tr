@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674925"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711810"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms'ta yüksek DPI desteği
 
@@ -49,7 +49,7 @@ Ayrıca, Windows Forms uygulaması'nda yüksek DPI desteği yapılandırmak içi
 
 - İzleyici başına DPI tanıma etkinleştirme *app.config* dosya.
 
-  Yeni bir Windows Forms tanıtır [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) yeni özellikler ve .NET Framework 4.7 ile başlayan eklenen özelleştirmeleri desteklemek için öğesi. Yüksek DPI desteği yeni özelliklerden yararlanmak için uygulama yapılandırma dosyasına aşağıdakileri ekleyin.   
+  Yeni bir Windows Forms tanıtır [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) yeni özellikler ve .NET Framework 4.7 ile başlayan eklenen özelleştirmeleri desteklemek için öğesi. Yüksek DPI desteği yeni özelliklerden yararlanmak için uygulama yapılandırma dosyasına aşağıdakileri ekleyin.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ Ayarı `DpiAwareness` değerini `PerMonitorV2` .NET Framework 4.7 ile başlayan 
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Tek tek anahtarları ve değerleri listesi için bkz. [Windows Forms ekleme yapılandırma öğesi](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Tek tek anahtarları ve değerleri listesi için bkz. [Windows Forms ekleme yapılandırma öğesi](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Yeni DPI değişikliği olayları
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms yapılandırma öğesi Ekle](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Windows Forms Boyutunu ve Ölçeğini Ayarlama](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms yapılandırma öğesi Ekle](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows Forms Boyutunu ve Ölçeğini Ayarlama](adjusting-the-size-and-scale-of-windows-forms.md)

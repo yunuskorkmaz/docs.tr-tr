@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547137"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703545"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Veri Bağlama ile İlgili Arabirimler
 İle [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], uygulamanızı ve birlikte çalıştığınız veri bağlama gereksinimlerine uyacak şekilde birçok farklı veri yapılarını oluşturabilirsiniz. Kendi sınıflarınızı sağlayan veya tüketen Windows Forms verilerinde oluşturmak isteyebilirsiniz. Bu nesneler, temel veri bağlamanın dışında veri için yapılan değişikliklerin yapılandırılmış bir geri alma için tasarım zamanı desteği, hata denetimi, değişiklik bildirimi veya hatta destek sağlamaya işlevselliği ve karmaşıklığı, çeşitli izin düzeyleriyle sunabilir.  
@@ -150,6 +150,6 @@ ms.locfileid: "54547137"
     >  Öğesinden devralınan bir sınıf <xref:System.Windows.Forms.Control> bağlamaları ile otomatik olarak yönetir, <xref:System.Windows.Forms.Control.BindingContext%2A> özelliği, gerektiği uygulamak bunu çalışmaları <xref:System.Windows.Forms.ICurrencyManagerProvider> oldukça nadir rastlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)
+- [Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

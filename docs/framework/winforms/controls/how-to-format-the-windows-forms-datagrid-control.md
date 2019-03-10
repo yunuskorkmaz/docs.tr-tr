@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 58735e372793f18a3dd14ded3d5e8729d06309af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 696fdc09d285e0a04148e82b0cece6108b7d5a45
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616751"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705915"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid denetimini biçimlendirme
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Çeşitli bölümlerine farklı renkler uygulayarak bir <xref:System.Windows.Forms.DataGrid> denetim bilgileri içine okumak ve yorumlamak kolay hale getirmek için yardımcı olabilir. Satırları ve sütunları için renk uygulanabilir. Satırları ve sütunları da gizli veya gösterilen günlüklerinizin bekletilme.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54616751"
     > [!NOTE]
     >  Denetimler, denetimi kötü renk seçimi (örneğin, kırmızı ve yeşil) nedeniyle erişilemez hale getirmek mümkündür renklerini özelleştirirken göz önünde tutun. Kullanılabilir renklerini kullan **sistem renkleri** bu sorunu önlemek için palet.  
   
-     Aşağıdaki yordamlar, formda olduğunu varsayalım. bir <xref:System.Windows.Forms.DataGrid> denetim bir veri tablosuna bağlı. Daha fazla bilgi için [Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     Aşağıdaki yordamlar, formda olduğunu varsayalım. bir <xref:System.Windows.Forms.DataGrid> denetim bir veri tablosuna bağlı. Daha fazla bilgi için [Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Tablo ve sütun bir veri tablosu stilini program üzerinden ayarlamak için  
   
@@ -157,5 +157,5 @@ ms.locfileid: "54616751"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid Denetimi](datagrid-control-windows-forms.md)

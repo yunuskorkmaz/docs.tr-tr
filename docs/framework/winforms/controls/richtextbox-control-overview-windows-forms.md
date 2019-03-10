@@ -7,24 +7,24 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: 88a94a5256ba016fbdcc7ceab3802e0c3777f7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642223"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720256"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi görüntüleme, girerek ve biçimlendirme metin düzenleme için kullanılır. <xref:System.Windows.Forms.RichTextBox> Netimi her şeyi <xref:System.Windows.Forms.TextBox> denetimi yapar, ancak ayrıca yazı tiplerini, renkleri ve bağlantılar görüntülemek; metin ve görüntüleri gömülü bir dosyadan; yüklemek ve belirtilen karakter bulun. <xref:System.Windows.Forms.RichTextBox> Denetimi genellikle metin düzenlemesini sağlar ve Microsoft Word gibi bir sözcük işleme uygulamalarını benzer özellikleri görüntülemek için kullanılır. Gibi <xref:System.Windows.Forms.TextBox> denetimi <xref:System.Windows.Forms.RichTextBox> denetimi, kaydırma çubukları; görüntüleyebilir ancak tersine <xref:System.Windows.Forms.TextBox> denetimi, varsayılan ayardır yatay ve dikey kaydırma çubukları gerektiği şekilde görüntülenecek ve ek kaydırma çubuğu ayarları vardır.  
   
 ## <a name="working-with-the-richtextbox-control"></a>RichTextBox denetimi ile çalışma  
- Olduğu gibi <xref:System.Windows.Forms.TextBox> denetimi görüntülenen metni tarafından belirlenir <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği. <xref:System.Windows.Forms.RichTextBox> Denetimi metni biçimlendirmek için çeşitli özelliklere sahiptir. Bu özellikler hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms RichTextBox denetimi için yazı tipi özniteliklerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) ve [nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlanmış](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Dosyaları işlemek için <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> ve <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemleri görüntüleyebilir ve düz metin, Unicode düz metin ve zengin metin biçimi (RTF) dahil olmak üzere birden çok dosya biçimleri yazma. Olası dosya biçimlerini listelenen <xref:System.Windows.Forms.RichTextBoxStreamType>. Kullanabileceğiniz <xref:System.Windows.Forms.RichTextBox.Find%2A> metin veya belirli karakter dizeleri bulmak için yöntemi.  
+ Olduğu gibi <xref:System.Windows.Forms.TextBox> denetimi görüntülenen metni tarafından belirlenir <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği. <xref:System.Windows.Forms.RichTextBox> Denetimi metni biçimlendirmek için çeşitli özelliklere sahiptir. Bu özellikler hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms RichTextBox denetimi için yazı tipi özniteliklerini ayarlama](how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) ve [nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlanmış](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Dosyaları işlemek için <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> ve <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemleri görüntüleyebilir ve düz metin, Unicode düz metin ve zengin metin biçimi (RTF) dahil olmak üzere birden çok dosya biçimleri yazma. Olası dosya biçimlerini listelenen <xref:System.Windows.Forms.RichTextBoxStreamType>. Kullanabileceğiniz <xref:System.Windows.Forms.RichTextBox.Find%2A> metin veya belirli karakter dizeleri bulmak için yöntemi.  
   
- Ayrıca bir <xref:System.Windows.Forms.RichTextBox> ayarlayarak Web stili bağlantılar denetimi <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliğini `true` ve işlemek için kod yazma <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay. Daha fazla bilgi için [nasıl yapılır: Windows ile Web stili bağlantılar görüntüleme Forms RichTextBox denetimi](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). Kullanıcının denetimdeki metnin tümünü veya ayarlayarak değiştirmelerine engelleyebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> özelliğini `true`.  
+ Ayrıca bir <xref:System.Windows.Forms.RichTextBox> ayarlayarak Web stili bağlantılar denetimi <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliğini `true` ve işlemek için kod yazma <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay. Daha fazla bilgi için [nasıl yapılır: Windows ile Web stili bağlantılar görüntüleme Forms RichTextBox denetimi](how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). Kullanıcının denetimdeki metnin tümünü veya ayarlayarak değiştirmelerine engelleyebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> özelliğini `true`.  
   
  Geri Al ve Yinele çoğu düzenleme işlemleri bir <xref:System.Windows.Forms.RichTextBox> çağırarak denetim <xref:System.Windows.Forms.TextBoxBase.Undo%2A> ve <xref:System.Windows.Forms.RichTextBox.Redo%2A> yöntemleri. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Yöntemi denetime kullanıcı geri son işlemi uygulanabilir olup olmadığını belirlemenize olanak sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
+- [TextBox Denetimine Genel Bakış](textbox-control-overview-windows-forms.md)

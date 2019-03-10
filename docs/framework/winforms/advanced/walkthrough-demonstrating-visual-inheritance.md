@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564337"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721456"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel devralmayı gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetimler eklemek için sağlar. Bu izlenecek yolda temel bir form oluşturun ve bir sınıf kitaplığı derleyin. Bu sınıf kitaplığı, başka bir projeye içeri aktarmak ve temel formundan devralan yeni bir form oluşturun. Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:  
@@ -140,7 +140,7 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
   
 5.  Devralınan form açın (**Form2**) zaten açık değilse, çift tıklayarak tasarımcıda.  
   
-     Tasarımcıda bir sembol devralınan düğmeleri sahip (![VisualBasicInheritanceSymbol ekran](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) devralınan belirten kendi üst köşedeki.  
+     Tasarımcıda bir sembol devralınan düğmeleri sahip (![VisualBasicInheritanceSymbol ekran](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) devralınan belirten kendi üst köşedeki.  
   
 6.  Seçin **Say Hello** düğmesine tıklayın ve yeniden boyutlandırma tutamaçları gözlemleyin. Bu düğme korunduğu devralanlar taşıyabilir, yeniden boyutlandırabilir, kendi başlığını değiştirme ve diğer değişiklikleri yapın.  
   
@@ -161,9 +161,9 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
 12. Uygulamayı çalıştırmak ve devralınan form davranışını gözlemlemek için F5 tuşuna basın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekleyin. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı projesi açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim ekleyerek deneyin (aracılığıyla **yeni öğe ekleme** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi eklemek ve değiştirmek `Inherits` (`:` Visual C#) deyimi. Daha fazla bilgi için [nasıl yapılır: Windows Form devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekleyin. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı projesi açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim ekleyerek deneyin (aracılığıyla **yeni öğe ekleme** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi eklemek ve değiştirmek `Inherits` (`:` Visual C#) deyimi. Daha fazla bilgi için [nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows Form devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
+- [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
+- [Windows Forms](../index.md)

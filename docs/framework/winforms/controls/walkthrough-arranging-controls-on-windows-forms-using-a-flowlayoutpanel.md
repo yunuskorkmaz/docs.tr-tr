@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: c6bd35965c3e7f0e92ecdf98d4aa9052ebb9e35b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdb92a1ec9aa349c8768b5dc4ddf3d403297cf7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573529"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703549"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi, form üzerinde denetimleri düzenlemek için sezgisel yolu sağlayın. Her ikisini birden içerdiği alt denetimler göreli konumlarını denetlemek için otomatik, yapılandırılabilir bir yeteneği sağlar ve yeniden boyutlandırma ve alt denetimler üst formun boyutları yeniden konumlandırmak için hem de çalışma zamanında dinamik düzen özelliklerini size değiştirin. Düzen bölmeleri, gelişmiş kullanıcı arabirimleri gerçekleştirme etkinleştirmek için Düzen panelleri içinde yuvalanabilir.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> İçeriğinin HTML benzer işlevsellik sağlayan bir kılavuzda düzenler \<Tablo > öğesi. Satırları ve sütunları hücrelerinden düzenlenir ve bu farklı boyutlarda olabilir. Daha fazla bilgi için [izlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+ <xref:System.Windows.Forms.TableLayoutPanel> İçeriğinin HTML benzer işlevsellik sağlayan bir kılavuzda düzenler \<Tablo > öğesi. Satırları ve sütunları hücrelerinden düzenlenir ve bu farklı boyutlarda olabilir. Daha fazla bilgi için [izlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli bir akış yönünü ayarlar: yatay veya dikey. İçeriği sonraki bir satır veya sonraki bir sütun sarmalanabilir. Alternatif olarak, içeriğinin yerine kırpılmış DC'de sona erdi. Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
   
@@ -124,7 +124,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
   
 1.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. Formunuza yeteri kadar büyük olursa <xref:System.Windows.Forms.Button> denetimleri ilk sütuna taşınacak <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
-2.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğini **20**. Daha fazla bilgi için [izlenecek yol: Yerleştirme Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Alt denetimler merkezine taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Daha fazla değer için <xref:System.Windows.Forms.Control.Padding%2A> özelliği liste kutusundan alt denetimler gönderim <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin kenarlık.  
+2.  Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> özelliğini **20**. Daha fazla bilgi için [izlenecek yol: Yerleştirme Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](windows-forms-controls-padding-autosize.md). Alt denetimler merkezine taşınır Not <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Daha fazla değer için <xref:System.Windows.Forms.Control.Padding%2A> özelliği liste kutusundan alt denetimler gönderim <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin kenarlık.  
   
 3.  Tümünü seçmek <xref:System.Windows.Forms.Button> denetimlerini <xref:System.Windows.Forms.FlowLayoutPanel> ve değerini ayarlama <xref:System.Windows.Forms.Control.Margin%2A> özelliğini **20**. Unutmayın aralığını <xref:System.Windows.Forms.Button> arttıkça daha sonraya taşındıktan şekilde denetler. Yeniden boyutlandırma gerekebilir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi tüm alt denetimleri görmek için daha büyük olabilir.  
   
@@ -190,10 +190,10 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [AutoSize Özelliğine Genel Bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
-- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [AutoSize Özelliğine Genel Bakış](autosize-property-overview.md)
+- [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'da denetimleri](how-to-anchor-controls-on-windows-forms.md)
+- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](windows-forms-controls-padding-autosize.md)

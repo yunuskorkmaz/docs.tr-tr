@@ -6,36 +6,36 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: c44d338bbe026726abe77d41812363b9b10851f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526070"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720481"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator Denetimi (Windows Forms)
-`BindingNavigator` Denetimidir gezinme ve düzenleme için kullanıcı arabirimi (UI) verilere bağlı denetimler. `BindingNavigator` Denetim aracılığıyla gidin ve bir Windows formunda verileri işlemek kullanıcıların sağlar.  
+`BindingNavigator` Gezinti ve düzenleme için kullanıcı arabirimi (UI) verilere bağlı denetimler denetimidir. `BindingNavigator` Denetim gezinmek ve bir Windows formunda veri işlemek kullanıcıların sağlar.  
   
- Bu bölümdeki konular, genel bir bakış sağlayan `BindingNavigator` denetlemek ve denetiminin nasıl kullanılacağını veri gidin ve dolaşır adım adım yönergeler sunan bir <xref:System.Data.DataSet>.  
+ Bu bölümdeki konular, genel bir bakış sağlayan `BindingNavigator` denetlemek ve denetiminin nasıl kullanılacağını verilerde gezinme ve gezinmek için adım adım yönergeler sağlar bir <xref:System.Data.DataSet>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [BindingNavigator Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
- Genel kavramlarını tanıtır `BindingNavigator` bir veri kaynağı öğeler arasında taşımak kullanıcıların sağlayan denetim.  
+ [BindingNavigator Denetimine Genel Bakış](bindingnavigator-control-overview-windows-forms.md)  
+ Genel konseptlerini tanıtan `BindingNavigator` denetimi, kullanıcıların bir veri kaynağının öğeler arasında taşımasına olanak tanır.  
   
- [Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile Verilerde Gezinme](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
- Bağlamak için adımları sağlar bir `BindingNavigator` bir veri kaynağına denetim.  
+ [Nasıl yapılır: Windows Forms BindingNavigator denetimi ile verilerde gezinme](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ Bağlama için adımları sağlar bir `BindingNavigator` denetim bir veri kaynağı.  
   
- [Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile DataSet içinde Hareket Etme](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
- Kullanarak gösteren bir `BindingNavigator` kayıtları arasında gezinmek için denetim bir <xref:System.Data.DataSet>.  
+ [Nasıl yapılır: Windows Forms BindingNavigator denetimi ile DataSet Taşı](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ Kullanmayı gösterir bir `BindingNavigator` denetim kayıtları arasında taşımak için bir <xref:System.Data.DataSet>.  
   
- Ayrıca bkz. [nasıl yapılır: yükleme, kaydetme ve ekleme İptal düğmeleri Windows Forms BindingNavigator denetimi](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ Ayrıca bkz: [nasıl yapılır: Yükleme, kaydetme ve ekleme İptal düğmeleri Windows Forms BindingNavigator denetimi](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.BindingNavigator>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.BindingNavigator> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingNavigator> denetimi.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.BindingSource> denetim.  
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingSource> denetimi.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

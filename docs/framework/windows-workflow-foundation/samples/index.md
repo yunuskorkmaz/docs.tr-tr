@@ -2,12 +2,6 @@
 title: Windows Workflow (WF) örnek belgeleri
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201341"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) Örnekleri
 
@@ -20,8 +14,8 @@ Bu bölümdeki makaleleri indirme paketini örneklerinde bazılarını açıklar
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md) -iş akışı uygulamalarla ilgili örnekleri sağlar.
+[Uygulama](application.md) -iş akışı uygulamalarla ilgili örnekleri sağlar.
 
-[Temel](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) -temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekleri sağlar.
+[Temel](basic.md) -temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekleri sağlar.
 
-[Senaryo](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) -Windows Workflow Foundation (WF) senaryolarına örnekler sağlar.
+[Senaryo](scenario.md) -Windows Workflow Foundation (WF) senaryolarına örnekler sağlar.

@@ -2,28 +2,28 @@
 title: Özel Etkinlik tasarımcıları ve şablonları kullanma
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-ms.openlocfilehash: 674af9fa6f03e78045d7c195f94e7fa23b4d30d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb00a2927c8521e68bc2c5fc73bc2aab55d7d868
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714638"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Özel Etkinlik tasarımcıları ve şablonları kullanma
-Bu bölüm, özel etkinlik tasarımcıları ve özel etkinlik şablonları nasıl oluşturulacağını açıklayan konuları içerir.  
+Bu bölüm, özel etkinlik tasarımcıları ve özel etkinlik şablonları oluşturmak nasıl eklendiğini açıklayan konulara içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl Yapılır: Özel Etkinlik Tasarımcısı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
- Açıklar iş akışı tarafından sağlanan tasarımcıları Tasarım Görevleri uygun olmadığında özelleştirilmiş etkinlik Tasarımcısı nasıl oluşturun.  
+ [Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](how-to-create-a-custom-activity-designer.md)  
+ Açıklar iş akışı tarafından sağlanan tasarımcıları için Tasarım Görevleri uygun olmadığı durumlarda bir özel etkinlik Tasarımcısı oluşturma.  
   
- [Nasıl Yapılır: Özel Etkinlik Şablonu Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-template.md)  
- Böylece kullanıcılar her etkinlik tek tek oluşturabilirsiniz ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz etkinlikleri önceden yapılandırması için özel etkinlik şablonları kullanmayı açıklar el ile.  
+ [Nasıl yapılır: Özel Etkinlik şablonu oluşturma](how-to-create-a-custom-activity-template.md)  
+ Özel Etkinlik şablonları, böylece kullanıcılar her etkinliği ayrı ayrı oluşturun ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz etkinlikleri önceden yapılandırmak için kullanmayı açıklar el ile.  
   
- [ModelItem Düzenleme Bağlamını Kullanma](../../../docs/framework/windows-workflow-foundation/using-the-modelitem-editing-context.md)  
- Konak ile etkileşim kurmak Tasarımcı izin vermek için ModelItem düzenleme bağlam özelliklerini kullanmayı açıklar.  
+ [ModelItem Düzenleme Bağlamını Kullanma](using-the-modelitem-editing-context.md)  
+ Tasarımcı konağı ile etkileşim kurmak izin vermek için ModelItem düzenleme bağlamını özelliklerini kullanmayı açıklar.  
   
- [Özel etkinlik özelliğini tasarımcı denetimine bağlama](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
- Listview denetimi Tasarımcısı'nda bir etkinlik özelliğinin bağlamak açıklar.  
+ [Özel etkinlik özelliğini tasarımcı denetimine bağlama](binding-a-custom-activity-property-to-a-designer-control.md)  
+ Bir etkinlik özelliğinin Tasarımcısı'nda listview denetimine bağlamak açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Activities.Presentation.ActivityDesigner>  
@@ -37,7 +37,7 @@ Bu bölüm, özel etkinlik tasarımcıları ve özel etkinlik şablonları nası
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
- [Özel Etkinlikler](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)
+ [Özel Etkinlikler](./samples/custom-activities.md)

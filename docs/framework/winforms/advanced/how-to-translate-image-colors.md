@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549765"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703029"
 ---
 # <a name="how-to-translate-image-colors"></a>Nasıl yapılır: Görüntü renklerini çevirme
 Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Çevirileri temsil eden renk matrisi girişleri aşağıdaki tabloda verilmiştir.  
@@ -31,7 +31,7 @@ Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Ç
   
  Aşağıdaki çizimde, sol taraftaki özgün görüntü ve dönüştürülen görüntü sağ tarafta gösterir.  
   
- ![Renklerini çevirme](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![Renklerini çevirme](./media/colortrans2.png "colortrans2")  
   
  Aşağıdaki tabloda dört Çubuklar için rengi vektörleri önce ve sonra kırmızı çeviri listeler. Renk bileşeni için maksimum değeri 1 olduğundan, kırmızı bileşeni ikinci satıra değil değiştiğine dikkat edin. (Benzer şekilde, bir renk bileşeni için en düşük değer 0'dır.)  
   
@@ -42,8 +42,8 @@ Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Ç
 |Yeşil (0, 1, 0, 1)|(0.75, 1, 0, 1)|  
 |Mavi (0, 0, 1, 1)|(0.75, 0, 1, 1)|  
   
- [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.RecoloringImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir resim dosyası adı ve sisteminize göre geçerli yolu.  
@@ -51,5 +51,5 @@ Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Ç
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Görüntüleri Yeniden Renklendirme](recoloring-images.md)

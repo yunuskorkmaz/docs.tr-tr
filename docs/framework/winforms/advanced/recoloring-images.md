@@ -1,53 +1,53 @@
 ---
-title: Görüntüleri Yeniden Renklendirme
+title: Resimleri Yeniden Renklendirme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - images [Windows Forms], recoloring
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708827"
 ---
-# <a name="recoloring-images"></a>Görüntüleri Yeniden Renklendirme
-Yeniden renklendirme görüntü renkleri ayarlama işlemidir. Yeniden renklendirme ilişkin bazı örnekler, başka bir, başka bir renk göreli bir rengin yoğunluğunu ayarlama, parlaklığını veya tüm renkleri karşıtlığını ayarlama ve renkler için gri dönüştürme bir renk değiştiriyorsunuz.  
+# <a name="recoloring-images"></a>Resimleri Yeniden Renklendirme
+Yeniden renklendirme görüntü renkleri ayarlama işlemidir. Bazı örnekler yeniden renklendirme, başka bir, başka bir renge göre bir renk yoğunluğu ayarlama, parlaklık veya tüm renk karşıtlığını ayarlama ve renkleri için gri dönüştürme için bir renk değiştiriyorsunuz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
+ [Nasıl yapılır: Tek bir rengi dönüştürmek için renk matrisi kullanma](how-to-use-a-color-matrix-to-transform-a-single-color.md)  
  Bir rengi dönüştürmek için renk matrisi kullanma açıklanır.  
   
- [Nasıl yapılır: Görüntü Renklerini Çevirme](../../../../docs/framework/winforms/advanced/how-to-translate-image-colors.md)  
- Bir renk matrisi kullanma renklerini çevirme gösterilmektedir.  
+ [Nasıl yapılır: Görüntü renklerini çevirme](how-to-translate-image-colors.md)  
+ Renk Matrisi kullanma renklerini çevirme işlemi gösterilmektedir.  
   
- [Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma](../../../../docs/framework/winforms/advanced/using-transformations-to-scale-colors.md)  
- Bir renk matrisi kullanma renkleri ölçeklendirmek açıklanmaktadır.  
+ [Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma](using-transformations-to-scale-colors.md)  
+ Renk Matrisi kullanma renkleri ölçeklendirmek nasıl açıklar.  
   
- [Nasıl yapılır: Renkleri Döndürme](../../../../docs/framework/winforms/advanced/how-to-rotate-colors.md)  
- Bir renk matrisi kullanarak bir renk döndürmek açıklar.  
+ [Nasıl yapılır: Renkleri döndürme](how-to-rotate-colors.md)  
+ Renk Matrisi kullanma bir renk döndürüleceğini açıklar.  
   
- [Nasıl yapılır: Renkleri Bükme](../../../../docs/framework/winforms/advanced/how-to-shear-colors.md)  
+ [Nasıl yapılır: Renkleri bükme](how-to-shear-colors.md)  
  Yamultma tanımlar ve renk matrisi kullanma renkleri bükme açıklanmaktadır.  
   
- [Nasıl yapılır: Yeniden Renk Eşleme Tablosu Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
- Yeniden eşleme tanımlar ve yeniden renk eşleme tablosu kullanmayı gösterir.  
+ [Nasıl yapılır: Yeniden renk eşleme tablosu kullanma](how-to-use-a-color-remap-table.md)  
+ Yeniden eşleme tanımlar ve yeniden renk eşleme tablosu kullanma işlemini gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Imaging.ColorMatrix>  
- Bu sınıf tanımlar ve üyeleri tümüne bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyelerini bağlantılar içerir.  
   
  <xref:System.Drawing.Imaging.ColorMap>  
- Bu sınıf tanımlar ve üyeleri tümüne bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyelerini bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- Görüntüleri farklı türde ilgili konuların listesini sağlar.  
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)  
+ Görüntüleri farklı türleri ile ilgili konular bir listesini sağlar.  
   
- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Farklı türde görüntüleri kullanmayı gösteren konuların listesi içerir.  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)  
+ Farklı türde görüntüleri kullanmayı gösteren konuların listesini içerir.  
   
- [Yönetilen Grafik Sınıflarını Kullanma](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
- Yönetilen grafik sınıflarını kullanma açıklayan konuların listesi içerir.
+ [Yönetilen Grafik Sınıflarını Kullanma](using-managed-graphics-classes.md)  
+ Yönetilen grafik sınıflarını kullanmayı açıklayan konuların listesini içerir.

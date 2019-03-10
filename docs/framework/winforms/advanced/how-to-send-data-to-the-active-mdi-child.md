@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589991"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707410"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI alt öğesine veri gönderme
-Genellikle, bağlamında [Çok Belgeli Arabirim (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), ne zaman kullanıcı Pano'dan veri bir MDI uygulaması yapıştırır gibi etkin alt pencerenin veri göndermek ihtiyacınız olacak.  
+Genellikle, bağlamında [Çok Belgeli Arabirim (MDI) uygulamaları](multiple-document-interface-mdi-applications.md), ne zaman kullanıcı Pano'dan veri bir MDI uygulaması yapıştırır gibi etkin alt pencerenin veri göndermek ihtiyacınız olacak.  
   
 > [!NOTE]
->  Hangi alt pencerenin odaklanmış doğrulama ve içeriği panoya gönderme hakkında daha fazla bilgi için bkz. [etkin MDI alt belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Hangi alt pencerenin odaklanmış doğrulama ve içeriği panoya gönderme hakkında daha fazla bilgi için bkz. [etkin MDI alt belirleme](how-to-determine-the-active-mdi-child.md).  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Etkin MDI alt penceresine panodan veri göndermesini  
   
 1.  Bir yöntem içinde etkin alt formunun etkin denetimi için metni panoya kopyalayın.  
   
     > [!NOTE]
-    >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -92,8 +92,8 @@ Genellikle, bağlamında [Çok Belgeli Arabirim (MDI) uygulamaları](../../../..
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Nasıl yapılır: MDI alt formlarını düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI alt formları oluştur](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md)
+- [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)

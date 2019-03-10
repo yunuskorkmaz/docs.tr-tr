@@ -5,32 +5,32 @@ helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 23251116344af49509547055af824802c4878849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523390"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712376"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms Uygulamalarında Ağ İletişimi
-.NET Framework Web sayfalarını görüntüleme, Web içeriği yükleme, Dosya Aktarım Protokolü (FTP) siteleri ile etkileşim ve Web Hizmetleri, yapı ağ işlevselliği uygulamanıza kolaylaşır kullanma için sınıflar sağlar. Aşağıdaki kaynaklar, .NET Framework ve nasıl bunları Windows formlarına tümleştirebilir ağ teknolojileri anlamanıza yardımcı olur.  
+.NET Framework Web sayfalarını görüntüleme, Web içerik yükleme, Dosya Aktarım Protokolü (FTP) siteler ile etkileşim kurma ve uygulamanızda ağ işlevselliğini oluşturmanızı kolaylaştıran, Web hizmetlerini kullanma için sınıflar sağlar. Aşağıdaki kaynaklar, .NET Framework ve nasıl bunları Windows formlarına tümleştirebilir ağ teknolojileri anlamanıza yardımcı olur.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Net>  
- .NET Framework tanıtıcı ağ bağlantısı sınıflar için kök ad alanı.  
+ Sınıflar .NET Framework'teki tanıtıcı ağ bağlantısı kök ad alanı.  
   
  <xref:System.Net.WebClient>  
- Program aracılığıyla Web veya HTTP tabanlı içerik almak için kullanışlı bir sınıf.  
+ Program aracılığıyla Web veya HTTP tabanlı içeriği almak için uygun bir sınıf.  
   
  <xref:System.Net.FtpWebRequest>  
- FTP ile dosya gönderme ve alma için bir sınıf.  
+ FTP ile dosyaları göndermek ve almak için bir sınıf.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Yönetilen sarmalayıcı sınıfı için `WebBrowser` Windows ile birlikte gelen denetim.  
+ Yönetilen sarmalayıcı sınıf için `WebBrowser` Windows ile birlikte sağlanan denetimi.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [.NET Framework'te Ağ Programlaması](../../../../docs/framework/network-programming/index.md)  
+ [.NET Framework'te Ağ Programlaması](../../network-programming/index.md)  
  .NET Framework'te ağ giriş.  
   
- [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Uygulamanızda yerel veri deposundaki veya bir ağda bulunan bir veritabanı ya da veritabanı içeriğini görüntülemek açıklar.
+ [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)  
+ Uygulamanızdaki bir yerel veri deposu ya da bir ağ üzerinde bulunan bir veritabanı ya da veritabanı içeriğini görüntüleme işlemini açıklamaktadır.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: b1f7e0f5c1c9a01e47d0d972c56db8da922d2d0b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664581"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708918"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Özellikler
 Bir Windows Forms denetimi birçok özellikleri formu temel sınıf devralan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Bu gibi özellikleri içeren <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>ve diğer birçok. Devralınan özellikler hakkında daha fazla ayrıntı için bkz: <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
@@ -19,19 +19,19 @@ Bir Windows Forms denetimi birçok özellikleri formu temel sınıf devralan <xr
  Devralınan özellikler geçersiz kılma denetiminizi yapabilir yeni özelliklerini tanımlayın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özellik Tanımlama](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [Özellik Tanımlama](defining-a-property-in-windows-forms-controls.md)  
  Bir özelliği bir özel denetim veya bileşen için uygulama işlemini gösterir ve tasarım ortamına özelliği tümleştirme işlemi açıklanır.  
   
- [ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama](defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  Özel denetim veya bileşen için varsayılan özellik değerlerini tanımlayabileceğiniz gösterilmektedir.  
   
- [Özellik Değişti Olayları](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [Özellik Değişti Olayları](property-changed-events.md)  
  Özellik değişikliği bildirimleri bir özellik değeri değiştiğinde etkinleştirmeyi açıklar.  
   
- [Nasıl yapılır: Bağlı denetimlerin özelliklerini kullanıma sunma](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ [Nasıl yapılır: Bağlı denetimlerin özelliklerini kullanıma sunma](how-to-expose-properties-of-constituent-controls.md)  
  Bağlı denetimlerin özelliklerini özel bileşik denetim olarak kullanıma sunma işlemi gösterilmektedir.  
   
- [Özel Denetimlerde Yöntem Uygulama](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ [Özel Denetimlerde Yöntem Uygulama](method-implementation-in-custom-controls.md)  
  Özel denetimleri ve bileşenleri yöntemleri uygulamak açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -45,7 +45,7 @@ Bir Windows Forms denetimi birçok özellikleri formu temel sınıf devralan <xr
  Belirten özniteliği belgeleri <xref:System.Drawing.Design.UITypeEditor> özel bir özellik için kullanılacak.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Öznitelikler](attributes-in-windows-forms-controls.md)  
  Özellikleri veya diğer üyeleri özel denetimler ve bileşenlerinizi uygulayabilirsiniz öznitelikleri açıklanmaktadır.  
   
  [Bileşenler için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  

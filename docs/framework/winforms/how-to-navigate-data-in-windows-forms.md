@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 0d3703019f081f07ecb29bf9229f0a2044764ae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586910"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725343"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta verilerde gezinme
 Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerini bileşen <xref:System.Windows.Forms.BindingSource>. Daha sonra üzerinde yerleşik gezinti yöntemi kullanabilirsiniz <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulmak ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  
@@ -28,8 +28,8 @@ Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları g
     > [!NOTE]
     >  Ayarı <xref:System.Windows.Forms.BindingSource.Position%2A> ilk veya son kaydını dışında bir değere neden bir hata olarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] konum listesi sınırları dışında bir değere ayarlamak izin vermez. Uygulamanızda ilk veya son kaydını ilerlemiş olup olmadığını bilmek önemlidir, veri öğesi sayısı aşarsanız olup olmadığını sınamak için mantığı içerir.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Başlangıç ve bitiş geçip geçmediğini kontrol etmek için  
   
@@ -40,18 +40,18 @@ Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtları g
     > [!NOTE]
     >  Değiştirdiğiniz kodda gezinme, liste, yeniden etkinleştirmeniz gerekir, dikkat **sonraki** düğmesi, böylece kullanıcılar yeni liste tüm uzunluğu göz atabilirsiniz. Ayrıca, dikkat, yukarıdaki <xref:System.Windows.Forms.BindingSource.PositionChanged> belirli olay <xref:System.Windows.Forms.BindingSource> kendi olay işleme yöntemi ile ilişkilendirilmesi gerekiyor çalıştığınız. İşleme için bir yöntemin bir örneği verilmiştir <xref:System.Windows.Forms.BindingSource.PositionChanged> olay:  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.NavigatingData#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Öğeyi bulup geçerli öğesi olarak ayarla  
   
 1.  Geçerli öğe ayarlamak istediğiniz kaydı bulun. Bunu kullanarak yapabilirsiniz <xref:System.Windows.Forms.BindingSource.Find%2A> yöntemi <xref:System.Windows.Forms.BindingSource>uygular, veri kaynağı, <xref:System.ComponentModel.IBindingList>. Bazı örnekler veri kaynakları uygulayan <xref:System.ComponentModel.IBindingList> olan <xref:System.ComponentModel.BindingList%601> ve <xref:System.Data.DataView>.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Tarafından Desteklenen Veri Kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)
-- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows Forms Tarafından Desteklenen Veri Kaynakları](data-sources-supported-by-windows-forms.md)
+- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
+- [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

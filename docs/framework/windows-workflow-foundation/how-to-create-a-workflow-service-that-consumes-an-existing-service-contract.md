@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma'
+title: 'Nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 146b3bba3a880c780644eecd277827823793b5e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515311"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705070"
 ---
-# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Özellikler, web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasındaki tümleştirme daha iyi. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur.  
   
 > [!NOTE]
->  Bu konu, bir sözleşme ilk iş akışı hizmeti oluşturma ile ilgili adım adım yönergeler sağlar. Önce anlaşma iş akışı hizmeti geliştirme hakkında daha fazla bilgi için bkz: [sözleşme ilk iş akışı hizmeti geliştirme](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Bu konu, bir sözleşme öncelikli iş akışı hizmeti oluşturma ile ilgili adım adım yönergeler sağlar. Sözleşme öncelikli iş akışı hizmet geliştirme hakkında daha fazla bilgi için bkz: [sözleşme ilk iş akışı hizmet geliştirme](contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>İş akışı projesi oluşturma  
   
-1.  Visual Studio'da seçin **dosya**, **yeni proje**. Seçin **WCF** düğümü altında **C#** düğümünde **şablonları** ağacı ve seçin **WCF iş akışı hizmeti uygulaması** şablonu.  
+1.  Visual Studio'da **dosya**, **yeni proje**. Seçin **WCF** düğümünde **C#** düğümünde **şablonları** ağaç ve seçin **WCF iş akışı hizmeti uygulaması** şablonu.  
   
-2.  Yeni proje adı `ContractFirst` tıklatıp **Tamam**.  
+2.  Yeni proje adını `ContractFirst` tıklatıp **Tamam**.  
   
 ### <a name="creating-the-service-contract"></a>Hizmet sözleşmesi oluşturma  
   
-1.  ' Nde projeye sağ **Çözüm Gezgini** seçip **Ekle**, **yeni öğe...** . Seçin **kod** sol düğümünde ve **sınıfı** sağdaki şablonu. Yeni sınıf `IBookService` tıklatıp **Tamam**.  
+1.  Projeye sağ **Çözüm Gezgini** seçip **Ekle**, **yeni öğe...** . Seçin **kod** solda, düğüm ve **sınıfı** sağdaki şablonu. Yeni bir sınıf adı `IBookService` tıklatıp **Tamam**.  
   
-2.  Görüntülenen kodu penceresi üst kullanma deyimine `System.Servicemodel`.  
+2.  Görünen kod penceresinde üst bir Using deyimi ekleyin `System.Servicemodel`.  
   
     ```  
     using System.ServiceModel;  
     ```  
   
-3.  Örnek sınıf tanımını aşağıdaki arabirimi tanımını değiştirin.  
+3.  Örnek sınıf tanımına aşağıdaki arabirim tanımı için değiştirin.  
   
     ```  
     [ServiceContract]  
@@ -47,18 +47,18 @@ ms.locfileid: "33515311"
   
 4.  Tuşuna basarak projeyi oluşturun **Ctrl + Shift + B**.  
   
-### <a name="importing-the-service-contract"></a>Hizmet sözleşmesi içeri aktarma  
+### <a name="importing-the-service-contract"></a>Hizmet sözleşmesi içe aktarılıyor  
   
-1.  ' Nde projeye sağ **Çözüm Gezgini** seçip **alma hizmet sözleşmesini**. Altında  **\<geçerli Proje >**, tüm alt düğümleri açıp seçin **IBookService**. **Tamam**'ı tıklatın.  
+1.  Projeye sağ **Çözüm Gezgini** seçip **hizmet sözleşmesini içer aktar**. Altında  **\<geçerli Proje >**, tüm alt düğümleri açın ve seçin **IBookService**. **Tamam**'ı tıklatın.  
   
-2.  Bu işlemi başarıyla tamamlandı ve Projeyi derledikten sonra görünecek oluşturulan etkinlikler Araç Kutusu'nda uyarı bir iletişim kutusu açılır. **Tamam**'ı tıklatın.  
+2.  Sizi, işlemi başarıyla tamamlandı ve Projeyi derledikten sonra görünecek oluşturulan etkinlikler araç kutusundan bir iletişim kutusu açılır. **Tamam**'ı tıklatın.  
   
-3.  Tuşuna basarak projeyi oluşturun **Ctrl + Shift + B**, böylece içeri aktarılan etkinlikler araç kutusu'nda görünür.  
+3.  Tuşuna basarak projeyi oluşturun **Ctrl + Shift + B**, böylece içeri aktarılan etkinlikler araç kutusunda görünür.  
   
-4.  İçinde **Çözüm Gezgini**, Service1.xamlx açın. İş akışı hizmeti Tasarımcısı'nda görünür.  
+4.  İçinde **Çözüm Gezgini**, Service1.xamlx açın. İş akışı hizmetinin tasarımcıda görünür.  
   
-5.  Seçin **dizisi** etkinlik. Özellikler penceresinde **...** düğmesini **ImplementedContract** özelliği. İçinde **türü Koleksiyonu Düzenleyicisi** görünen penceresini tıklatın **türü** açılan listesinde seçip **türleri için Gözat...** girişi. İçinde **göz atma ve seçme bir .net türü** iletişim altında  **\<geçerli Proje >**, tüm alt düğümleri açıp seçin **IBookService**. **Tamam**'ı tıklatın. İçinde **türü Koleksiyonu Düzenleyicisi** iletişim kutusunda, tıklatın **Tamam**.  
+5.  Seçin **dizisi** etkinlik. Özellikler penceresinde tıklayın **...** düğmesini **ImplementedContract** özelliği. İçinde **Editor Typu Kolekce** penceresine tıklayın **türü** açılır listesinde seçip **vyhledat Typy...** girişi. İçinde **Gözat ve Seç bir .net türü** iletişim altında  **\<geçerli Proje >**, tüm alt düğümleri açın ve seçin **IBookService**. **Tamam**'ı tıklatın. İçinde **Editor Typu Kolekce** iletişim kutusunda, tıklayın **Tamam**.  
   
-6.  Seçin ve delete **ReceiveRequest** ve **SendResponse** etkinlikler.  
+6.  Seçip silin **ReceiveRequest** ve **SendResponse** etkinlikler.  
   
-7.  Araç Kutusu'ndan sürükleyin bir **Buy_ReceiveAndSendReply** ve **Checkout_Receive** etkinlik üzerine **sıralı hizmet** etkinlik.
+7.  Araç kutusundan sürükleyin bir **Buy_ReceiveAndSendReply** ve **Checkout_Receive** üzerine etkinlik **sıralı hizmeti** etkinlik.

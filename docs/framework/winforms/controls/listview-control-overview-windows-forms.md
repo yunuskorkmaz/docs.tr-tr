@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664633"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709813"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Denetim dört görünüm modu vardır: LargeIcon, SmallIcon, liste ve ayrıntılar.  
@@ -21,9 +21,9 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
 ## <a name="what-you-can-do-with-the-listview-control"></a>ListView denetimi ile yapabilecekleriniz  
   
 > [!NOTE]
->  Ek görünüm modu, kutucuk, yalnızca Windows XP ve Windows Server 2003 işletim sistemi üzerinde kullanılabilir. Daha fazla bilgi için [nasıl yapılır: Döşeme görünümünü etkinleştirme bir Windows Forms ListView denetiminde](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Ek görünüm modu, kutucuk, yalnızca Windows XP ve Windows Server 2003 işletim sistemi üzerinde kullanılabilir. Daha fazla bilgi için [nasıl yapılır: Döşeme görünümünü etkinleştirme bir Windows Forms ListView denetiminde](how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- LargeIcon modu öğesi metnin yanında büyük simgeler görüntülüyor; Denetim yeterince büyük ise öğeleri birden çok sütunda görünür. Küçük simgeleri görüntüler SmallIcon modu aynı olmasıdır. Liste modu küçük simgeleri görüntüler, ancak her zaman tek bir sütunda olur. Ayrıntı Modu, birden çok sütunda öğeleri görüntüler. Ayrıntılar için bkz [nasıl yapılır: Sütunları Windows Forms ListView denetiminde ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Görünüm modu belirlenir <xref:System.Windows.Forms.ListView.View%2A> özelliği. Görüntüleme modlarına tüm görüntü listelerinden görüntüler görüntüleyebilirsiniz. Ayrıntılar için bkz [nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ LargeIcon modu öğesi metnin yanında büyük simgeler görüntülüyor; Denetim yeterince büyük ise öğeleri birden çok sütunda görünür. Küçük simgeleri görüntüler SmallIcon modu aynı olmasıdır. Liste modu küçük simgeleri görüntüler, ancak her zaman tek bir sütunda olur. Ayrıntı Modu, birden çok sütunda öğeleri görüntüler. Ayrıntılar için bkz [nasıl yapılır: Sütunları Windows Forms ListView denetiminde ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md). Görünüm modu belirlenir <xref:System.Windows.Forms.ListView.View%2A> özelliği. Görüntüleme modlarına tüm görüntü listelerinden görüntüler görüntüleyebilirsiniz. Ayrıntılar için bkz [nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
  Aşağıdaki tablo bazı listeler <xref:System.Windows.Forms.ListView> üyeleri ve bunların geçerli görünümleri.  
   
@@ -49,14 +49,14 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ListView>
-- [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimiyle sütunlardaki alt öğeleri görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir Windows Forms ListView denetimi içinde öğeleri gruplandırma](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
-- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [ListView Denetimi](listview-control-windows-forms.md)
+- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimiyle sütunlardaki alt öğeleri görüntüleme](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Bir Windows Forms ListView denetimi içinde öğeleri gruplandırma](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)

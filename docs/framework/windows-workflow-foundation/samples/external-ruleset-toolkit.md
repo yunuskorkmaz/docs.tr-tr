@@ -2,12 +2,12 @@
 title: Dış kural kümesi Araç Seti
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482372"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710049"
 ---
 # <a name="external-ruleset-toolkit"></a>Dış kural kümesi Araç Seti
 
@@ -30,7 +30,7 @@ Bu örnek Ekle bileşenlerinin:
 
 Şekil 1'de bileşenlerin etkileşimi gösterilmektedir. Aşağıdaki bölümlerde, her bir bileşeni açıklar.
 
-![Dış kural kümesi örnek kavramsal genel bakış](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![Dış kural kümesi örnek kavramsal genel bakış](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 Şekil 1: Örnek genel bakış
 
@@ -47,7 +47,7 @@ Bu örnek Ekle bileşenlerinin:
 
 Şekil 2'de bir RuleSet aracı ekran görüntüsü gösterilmektedir. Gelen **kural Store** menüsünde kullanılabilir RuleSets veritabanından yükleyin ve değiştirilen RuleSets depoya kaydedin. Uygulama yapılandırma dosyası bir veritabanı bağlantı dizesi için RuleSet veritabanı sağlar. Aracı'nı başlattığınızda, yapılandırılmış veritabanından otomatik olarak RuleSets yükler.
 
-![Dış kural kümesi Araç Seti örnek çıktı](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![Dış kural kümesi Araç Seti örnek çıktı](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 Şekil 2: RuleSet tarayıcı
 
@@ -55,13 +55,13 @@ Kural kümesi araç aynı anda korumak ve (araç kilitleme veya diğer yapıland
 
 Tıkladığınızda **kurallarını Düzenle**, Şekil 3'te gösterildiği gibi kural kümesi Düzenleyicisi'ni başlatır.
 
-![Dış kural kümesi Araç Seti örnek çıktı](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![Dış kural kümesi Araç Seti örnek çıktı](./media/ruleseteditor.gif "RuleSetEditor")
 
 Şekil 3: Kural kümesi Düzenleyicisi
 
 Bir Windows Workflow Foundation için Visual Studio eklentisinin bir parçası olan Düzenleyicisi iletişim yeniden barındırma budur. Bu, IntelliSense desteği dahil olmak üzere aynı işlevselliği sağlar. Kurallar, araç kümesinde ile ilişkili olan bir hedef türü (örneğin, bir iş akışı) karşı yazılan; tıkladığınızda **Gözat** ana aracı iletişim kutusunda **türündeki iş akışı Seçici** Şekil 4'te gösterildiği gibi iletişim kutusu görünür.
 
-![İş akışı &#47;yazın seçimi](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![İş akışı &#47;yazın seçimi](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 Şekil 4: İş akışı/türü Seçici
 
@@ -71,7 +71,7 @@ Derleme dosya ve tür yolu `name are stored with the` RuleSet veritabanındaki z
 
 Tıkladığınızda **Tamam** içinde **türündeki iş akışı Seçici** iletişim kutusunda, seçili türü hedef türü kurallar tarafından başvurulan tüm üyeleri olduğundan emin olmak için RuleSet karşı doğrular. Hatalar gösterilir bir **doğrulama hatalarını** iletişim (bkz: Şekil 5). Hataları rağmen değişiklik ile devam edin veya seçebileceğiniz **iptal**. Gelen **Araçları** menüsünde ana aracı iletişim kutusunda, tıklayabilirsiniz **doğrulama** hedef etkinlik karşı RuleSet sürümü yeniden doğrulamak için.
 
-![Doğrulama hataları dış RuleSet örnekten](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![Doğrulama hataları dış RuleSet örnekten](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 Şekil 5: Doğrulama hataları
 
@@ -81,7 +81,7 @@ Gelen **veri** menü aracında içeri ve dışarı aktarma RuleSets. Tıkladığ
 
 Bunu aktarır her kural kümesi için aracı denemeleri .rules dosyasının (varsa) konumu altında bin\Debug klasöründen ilişkili türünü bulun temel kümesinde kullanılan üyeler. Aracın birden çok eşleşen türleri bulur .rules dosya adı ve tür adı arasında bir eşleşme göre bir türü seçmek çalışır (örneğin, `Workflow1` Workflow1.rules için karşılık gelen türü). Birden çok eşleşme varsa, türü seçmek için istenir. Eşleşen bir derleme veya tür bulmak bu otomatik kimlik mekanizması başarısız durumunda tıklayabilirsiniz içeri aktardıktan sonra **Gözat** ilişkili türe gitmek için ana aracı iletişim.
 
-![Kural kümesi Seçici](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![Kural kümesi Seçici](./media/rulesetselector.gif "RuleSetSelector")
 
 Şekil 6: Kural kümesi Seçici
 

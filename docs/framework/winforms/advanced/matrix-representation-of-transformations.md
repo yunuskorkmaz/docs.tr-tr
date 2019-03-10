@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732095"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720832"
 ---
 # <a name="matrix-representation-of-transformations"></a>Dönüşümlerin Matrisle Temsili
 M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir. Aşağıdaki resimde, birkaç matrislerde gösterilmektedir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![Dönüşümler](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
  Tek tek öğelerine ekleyerek aynı boyutta iki matrislerde ekleyebilirsiniz. Matris Ayrıca iki örnekleri aşağıda gösterilmiştir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![Dönüşümler](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
  Bir milyon × n matris bir n × p matris ile çarpılmasına ve bir m × p matris sonucudur. İlk Matris sütun sayısı, ikinci matrisin satır sayısı ile aynı olmalıdır. Örneğin, 4 × 2 matris 4 x 3 matris üretmek için 2 bir × 3 matris ile çarpılmasına.  
   
@@ -48,23 +48,23 @@ M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir.
   
  Matris çarpım bazı örnekleri aşağıda gösterilmiştir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![Dönüşümler](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
  Bir noktanın 1 × 2 matris olarak düzlemde düşünüyorsanız, 2 × 2 matris ile çarpılarak o noktadan dönüştürebilirsiniz. (2, 1) noktasına uygulanan çeşitli dönüşümler aşağıda gösterilmiştir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![Dönüşümler](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
  Yukarıdaki şekilde gösterilen dönüştürmeleri doğrusal dönüşümler tümü. Çeviri gibi diğer bazı dönüştürmeleri doğrusal değildir ve 2 × 2 matris çarpım olarak ifade edilemez. İstediğiniz varsayalım başlamak noktası (2, 1) 90 derece döndür 3 birim x yönünde çevirir ve 4 birimi y yönünde çevirir. Bu, bir matris ekleyerek ve ardından bir matris çarpım kullanarak gerçekleştirebilirsiniz.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![Dönüşümler](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
  Bir çeviri (1 × 2 matrisin ek olarak) ve ardından bir doğrusal dönüştürme (2 × 2 matris çarpım) afin bir dönüştürme çağrılır. Afin bir dönüştürme matrisi (bir doğrusal bölümü için) ve bir çeviri için bir çift depolamak için bir alternatif, tüm dönüşümü 3 × 3 matriste depolamaktır. Bunun çalışmasını sağlamak için masasında bir noktadan kukla 3 koordinat 1 × 3 sunulmakta depolanması gerekir. Tüm 3 koordinatları 1'e eşit hale getirmek için her zamanki tekniktir bakın. Örneğin, (2, 1) noktası [2, 1, 1] matris tarafından temsil edilir. Afin bir dönüştürme aşağıdaki çizimde (90 derece Döndür; Çevir 3 birim x yönünde, y yönünde 4 birimi) tek 3 × 3 matris çarpım olarak ifade edilir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![Dönüşümler](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
  Önceki örnekte, (2, 1) noktası noktası (2, 6) eşlenmiş. Üçüncü sütunda 3 × 3 matris numaraları 0, 0, 1 içerdiğine dikkat edin. Bu, her zaman bir afin dönüşümü 3 × 3 matris olayı olacaktır. Önemli rakamları 1 ve 2 sütunlardaki altı sayılardır. Matris sol 2 × 2 bölümüne dönüştürme doğrusal bir parçası ve çeviri 3 satır ilk iki girişleri temsil eder.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![Dönüşümler](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
  İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir afin dönüşümünde depoladığınız bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Üçüncü sütunda bir afin dönüşümü temsil eden bir matris her zaman olduğundan (0, 0, 1) oluşturduğunuzda, ilk iki sütunlarda yalnızca altı numaralarını belirtme bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Deyim `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` önceki şekilde gösterildiği matris oluşturur.  
   
@@ -87,7 +87,7 @@ M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir.
   
  Aşağıdaki çizim A, B, C ve d matrislerde gösterir  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![Dönüşümler](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
  Bileşik bir dönüştürme matrisi tek bir dönüştürme matrisi çarpılarak oluşturulabilir afin dönüşümler herhangi bir dizi tek bir depolanabilir anlamına gelir <xref:System.Drawing.Drawing2D.Matrix> nesne.  
   
@@ -96,13 +96,13 @@ M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir.
   
  <xref:System.Drawing.Drawing2D.Matrix> Sınıfı bir bileşik dönüşümü oluşturmak için çeşitli yöntemler sağlar: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, ve <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. Aşağıdaki örnek, ilk 30 derece döndürür sonra y yönünde 2'in göre ölçeklenen ve ardından 5 birim x yönünde çevirir bileşik bir dönüştürme matrisini oluşturur:  
   
- [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
  Matris aşağıda gösterilmiştir.  
   
- ![Dönüşümler](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![Dönüşümler](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Yönetilen GDI+'da Dönüştürmeleri Kullanma](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)
+- [Yönetilen GDI+'da Dönüştürmeleri Kullanma](using-transformations-in-managed-gdi.md)

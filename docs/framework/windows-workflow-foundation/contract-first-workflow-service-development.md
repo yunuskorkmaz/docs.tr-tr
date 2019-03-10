@@ -2,48 +2,48 @@
 title: Sözleşme ilk iş akışı hizmet geliştirme
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721794"
 ---
 # <a name="contract-first-workflow-service-development"></a>Sözleşme ilk iş akışı hizmet geliştirme
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özelliklerini daha iyi bir web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özelliklerini daha iyi bir web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur. Bu konu nasıl etkinlikleri ve bir iş akışı hizmeti özelliklerinde harita hizmet sözleşme öznitelikleri için genel bir bakış sağlar. Bir sözleşme öncelikli iş akışı hizmeti oluşturma adım adım örnek için bkz. [nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Bu konuda  
   
--   [Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Hizmet sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [İşlem sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [İleti sözleşmesi öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Veri sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Hata sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Ek destek ve uygulama bilgileri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Ek destek ve uygulama bilgileri](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Desteklenmeyen hizmet sözleşme özellikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Hizmet sözleşme öznitelikleri için iş akışı öznitelikleri eşleme  
  Aşağıdaki bölümlerde tablolarda farklı WCF belirtin öznitelikler ve özellikler ve mesajlaşma etkinlikleri ve sözleşme öncelikli iş akışı özellikleri için nasıl eşlendiğini.  
   
--   [Hizmet sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Hizmet sözleşme öznitelikleri](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [İşlem sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [İşlem sözleşme öznitelikleri](contract-first-workflow-service-development.md#OperationContract)  
   
--   [İleti sözleşmesi öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [İleti sözleşmesi öznitelikleri](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Veri sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Veri sözleşme öznitelikleri](contract-first-workflow-service-development.md#DataContract)  
   
--   [Hata sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Hata sözleşme öznitelikleri](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Hizmet sözleşme öznitelikleri  
   
@@ -109,9 +109,9 @@ ms.locfileid: "57373068"
   
 ## <a name="AdditionalSupport"></a> Ek destek ve uygulama bilgileri  
   
--   [Desteklenmeyen hizmet sözleşme özellikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Desteklenmeyen hizmet sözleşme özellikleri](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Yapılandırılmış Mesajlaşma etkinlik oluşturma](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Desteklenmeyen hizmet sözleşme özellikleri  
   

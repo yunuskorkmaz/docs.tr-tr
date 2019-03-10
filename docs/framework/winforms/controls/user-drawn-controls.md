@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709686"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler kodla birlikte ilişkili bir dizi olan bir kullanıcı denetimi oluşturabilir veya sıfırdan kendi denetiminizi yukarı tasarlayabilirsiniz. Devralma, varolan bir denetimden devralan bir denetim oluşturma ve doğal işlevselliği eklemek için bile kullanabilirsiniz. Hangi yaklaşımı kullanın, .NET Framework özel bir grafik arabirim için oluşturduğunuz herhangi bir denetimi çizmek için işlevsellik sağlar.  
@@ -25,7 +25,7 @@ ms.locfileid: "54509967"
   
 -   <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizi çizmek için gereken işlevselliği sağlayan yöntemler kapsüller.  
   
- Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve onu kullanmak üzere nasıl [nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve onu kullanmak üzere nasıl [nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A> Her denetimin çizilmiş veya ekranda yenilenir olay tetiklenir ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesneyi temsil ediyor dikdörtgenin boyama yer alır. Tüm denetim yenilenmesi, gerekiyorsa <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tüm denetiminin boyutunu temsil eder. Yalnızca denetim parçası yenilenmesi, ancak gereken <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> nesnesini temsil eden çizilmesini gerektiren bölge. Bir denetimi başka bir denetim veya form kullanıcı arabiriminde kısmen engellediği zaman örneği böyle bir durumda olacaktır.  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Bağlı Denetimler](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Bağlı Denetimler](constituent-controls.md)
+- [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543723"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710738"
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
 Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, fareyle tıklamak veya bir tuşuna basmak gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodu tarafından; veya sistemi.  
@@ -26,12 +26,12 @@ Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, 
 > [!NOTE]
 >  Diğer olaylarla birlikte birçok olayları oluşur. Örneğin, içinde course, <xref:System.Windows.Forms.Control.DoubleClick> gerçekleşmesini olay <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>, ve <xref:System.Windows.Forms.Control.Click> olaylar gerçekleşir.  
   
- Bir olay yükseltilip tüketileceğini hakkında daha fazla bilgi için bkz. [olayları](../../../docs/standard/events/index.md).  
+ Bir olay yükseltilip tüketileceğini hakkında daha fazla bilgi için bkz. [olayları](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Temsilciler ve kendi rolleri  
  Temsilcileri, bir sınıf içinde yaygın olarak kullanılan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] olay işleme mekanizmalarını oluşturulacak. Temsilciler kabaca günleriyle işlev işaretçilerine, yaygın olarak kullanılan [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ve diğer nesne yönelimli programlama dili. İşlev işaretçileri, ancak nesne yönelimli, tür kullanımı uyumlu ve güvenli temsilciler. Ayrıca, burada bir işlev işaretçisi yalnızca belirli bir işleve bir başvuru içerir bir temsilci bir nesneye bir başvuru oluşur ve nesnesi içinde bir veya daha fazla yöntemlere başvuruyor.  
   
- Bu olay modeli kullanan *Temsilciler* bunları işlemek için kullanılan yöntemleri için olaylar bağlamak için. Temsilci işleyicisi yöntemi belirterek olay bildirimi için kaydetmek diğer sınıflar sağlar. Olay gerçekleştiğinde temsilci ilişkili yöntemi çağırır. Temsilcileri tanımlama hakkında daha fazla bilgi için bkz. [olayları](../../../docs/standard/events/index.md).  
+ Bu olay modeli kullanan *Temsilciler* bunları işlemek için kullanılan yöntemleri için olaylar bağlamak için. Temsilci işleyicisi yöntemi belirterek olay bildirimi için kaydetmek diğer sınıflar sağlar. Olay gerçekleştiğinde temsilci ilişkili yöntemi çağırır. Temsilcileri tanımlama hakkında daha fazla bilgi için bkz. [olayları](../../standard/events/index.md).  
   
  Temsilciler, tek bir yöntemi veya çok noktaya yayın başvurulan birden çok yöntem bağlanabilir. Bir olay için temsilci oluştururken siz (veya Windows Form Tasarımcısı) genellikle çok noktaya yayın olay oluşturursunuz. Nadir bir özel durum, birden çok kez olay mantıksal olarak tekrarlayın değil belirli yordam (örneğin, bir iletişim kutusunu görüntüleme) sonuçlanır bir olay olabilir. Çok noktaya yayın temsilci oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, 
  Temsilciler ile kullanılan bir bağlama mekanizması dinamik: bir temsilci imzası olan, olay işleyicisinin eşleşen herhangi bir yöntemi için çalışma zamanında bağlanabilir. Bu özellik ile ayarlayın veya bağımlı bir yöntem bir koşula bağlı ve bir olay işleyicisi bir denetimi dinamik olarak eklemek için değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)
+- [Olay İşleyicilerine Genel Bakış](event-handlers-overview-windows-forms.md)

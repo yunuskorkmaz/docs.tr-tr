@@ -9,26 +9,26 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663985"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720416"
 ---
 # <a name="vector-graphics-overview"></a>Vektör Grafiklerine Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgiler ve dikdörtgenler diğer şekiller üzerinde bir koordinat sistemi çizer. Koordinat sistemleri çeşitli arasından seçim yapabilirsiniz, ancak varsayılan koordinat sistemi kaynağını sağa ve aşağı işaret eden y ekseni işaret eden x ekseni ile sol üst köşedeki sahiptir. Piksel varsayılan koordinat sisteminde ölçü birimidir.  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI +'ın yapı taşlarını  
- ![Vektör grafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
+ ![Vektör grafik](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
   
  Bir bilgisayar monitörü, resim öğeleri veya piksel olarak adlandırılan noktalardan dikdörtgen bir dizi görünümünü oluşturur. Ekrandaki piksel sayısı bir İzleyici'den sonraki değişir ve tek bir monitörde görünen piksel sayısı genellikle bir dereceye kadar kullanıcı tarafından yapılandırılabilir.  
   
- ![Vektör grafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
+ ![Vektör grafik](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
  Kullanırken [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] satır, dikdörtgende veya eğri çizme için çizilecek öğeyle ilgili belirli bir anahtar bilgileri sağlayın. Örneğin, bir satır, iki nokta sağlayarak belirtebilir ve bir dikdörtgen bir nokta, yükseklik ve genişlik sağlayarak belirtebilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Satır, dikdörtgende veya eğri göstermek için hangi piksel açılmalıdır belirlemek için görüntüleme sürücü yazılım ile birlikte çalışır. Aşağıdaki çizimde, bir satırı (4, 2) noktasından noktası (12, 8) görüntülemek için açık piksel gösterir.  
   
- ![Vektör grafik](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
+ ![Vektör grafik](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
  Zamanla, iki boyutlu bir resim oluşturmaya yönelik en yararlı olacak bazı temel yapı taşlarını kanıtlanmış. Tarafından desteklenen tüm bu yapı taşlarını, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], aşağıdaki listede verilir:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54663985"
   
  Tüm çizim yöntemlerinden birini <xref:System.Drawing.Graphics> sınıfı ile birlikte çalışma bir <xref:System.Drawing.Pen> nesne. Herhangi bir şey çizmek için en az iki nesneleri oluşturmanız gerekir: bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Pen> Nesnesi gibi çizgi genişliği ve rengine, çizilecek öğesinin özniteliklerini depolar. <xref:System.Drawing.Pen> Nesne, çizim yönteme bağımsız değişkenlerden biri geçirilir. Örneğin, bir çeşitlemesi <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi alır bir <xref:System.Drawing.Pen> nesne ve 100, 50 yüksekliğini ve bir sol üst köşesinde genişliği ile bir dikdörtgen çizer aşağıdaki örnekte gösterildiği gibi dört tamsayının (20, 10):  
   
- [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
- [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
+ [!code-csharp[LinesCurvesAndShapes#11](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
+ [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
+- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)

@@ -2,12 +2,12 @@
 title: Durum makinesi iş akışları
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 89819f6b37fdaf601cf4e8b99fd5156c8e40af99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521302"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724966"
 ---
 # <a name="state-machine-workflows"></a>Durum makinesi iş akışları
 Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programlar oluşturmak için kullanılabilir. Bu konu, durum makine iş akışları oluşturmaya genel bir bakış sağlar.  
@@ -21,16 +21,16 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
   
 -   <xref:System.Activities.Statements.Transition>  
   
- Bir Durum makinesi iş akışı oluşturmak için durumları eklenir bir <xref:System.Activities.Statements.StateMachine> etkinlik ve geçişleri kullanılır durumlar arasında akışını denetleme. Aşağıdaki ekran görüntüsünde, gelen [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), üç durumları ve geçişleri üç olan bir Durum makinesi iş akışı gösterilmektedir. **Hedef başlatmak** ilk durumudur ve iş akışındaki ilk duruma temsil eder. Bu satırın içinden baştaki tarafından belirlenen **Başlat** düğümü. Son durum iş akışında adlı **FinalState**ve iş akışı tamamlandığında noktasını temsil eder.  
+ Bir Durum makinesi iş akışı oluşturmak için durumları eklenir bir <xref:System.Activities.Statements.StateMachine> etkinlik ve geçişleri kullanılır durumlar arasında akışını denetleme. Aşağıdaki ekran görüntüsünde, gelen [başlangıç Öğreticisi](getting-started-tutorial.md) adım [nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md), üç durumları ve geçişleri üç olan bir Durum makinesi iş akışı gösterilmektedir. **Hedef başlatmak** ilk durumudur ve iş akışındaki ilk duruma temsil eder. Bu satırın içinden baştaki tarafından belirlenen **Başlat** düğümü. Son durum iş akışında adlı **FinalState**ve iş akışı tamamlandığında noktasını temsil eder.  
   
- ![Durum makinesi iş akışı tamamlandı](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Durum makinesi iş akışı tamamlandı](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  Bir Durum makinesi iş akışı, bir ve yalnızca bir ilk durumu ve en az bir son duruma sahip olmalıdır. Son durum değil. her durum, en az bir geçiş olması gerekir. Aşağıdaki bölümlerde, oluşturma ve durumları ve geçişleri yapılandırma kapsar.  
   
 ## <a name="creating-and-configuring-states"></a>Oluşturma ve durumları yapılandırma  
  A <xref:System.Activities.Statements.State> içinde bir Durum makinesi olabilir bir durumu temsil eder. Eklemek için bir <xref:System.Activities.Statements.State> bir iş akışına sürükleyin **durumu** etkinlik Tasarımcısı'ndan **Durum makinesi** bölümünü **araç kutusu** üzerine bırakın bir <xref:System.Activities.Statements.StateMachine> Etkinlik [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] yüzeyi.  
   
- ![WF4 Durum makine etkinlikleri](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 Durum makine etkinlikleri](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  Bir durum olarak yapılandırmak için **ilk durumu**, durumu sağ tıklayıp **başlangıç durumuna ayarla**. Geçerli bir ilk durumu olmadan varsa, ek olarak, ilk durumuna bir çizgi sürükleyerek belirlenebilir **Başlat** istenen duruma iş akışının üst düğüm. Olduğunda bir <xref:System.Activities.Statements.StateMachine> etkinlik iş akışı Tasarımcısı bırakılan, adlandırılmış bir ilk durumu ile önceden yapılandırılmış **State1**. Bir Durum makinesi iş akışı bir ve yalnızca bir ilk duruma sahip olmalıdır.  
   
@@ -59,7 +59,7 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
 > [!NOTE]
 >  Unutmayın <xref:System.Activities.Statements.Transition.Condition%2A> değerlendiren bir geçişin `False` (veya tüm koşulları bir paylaşılan tetikleyici geçişi için değerlendirmek `False`), geçiş gerçekleşmez ve tüm tetikleyiciler durumundan tüm geçişler için olacaktır işlemi yeniden zamanlanacak.  
   
- Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [StateMachine etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer), [State etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer), [FinalState etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)ve [Geçiş etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer).  
+ Durum makine iş akışları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir Durum makinesi iş akışı oluşturmak](how-to-create-a-state-machine-workflow.md), [StateMachine etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer), [State etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer), [FinalState etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)ve [Geçiş etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Durum makinesi terminolojisi  
  Bu bölümde bu konu başlığı altında yaptığımız kullanılan durum makine sözlüğü tanımlar.  
@@ -101,7 +101,7 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
  Durum makinesi tamamlama belirten bir durum.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)
+- [Nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md)
 - [StateMachine Etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State Etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState Etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)

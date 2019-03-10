@@ -2,12 +2,12 @@
 title: Store genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465736"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703295"
 ---
 # <a name="store-extensibility"></a>Store genişletilebilirliği
 
@@ -36,7 +36,7 @@ ms.locfileid: "57465736"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Özel Kalıcılık Katılımcısı ekleme hakkında daha fazla ayrıntı için bkz. [Kalıcılık katılımcıları](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) örnek.
+     Özel Kalıcılık Katılımcısı ekleme hakkında daha fazla ayrıntı için bkz. [Kalıcılık katılımcıları](persistence-participants.md) örnek.
 
 3. Özel etkinlikler DP uygulamada çeşitli durumu alanları doldurmak **yürütme** yöntemi.
 

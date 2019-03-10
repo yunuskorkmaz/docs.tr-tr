@@ -10,40 +10,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524419"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705304"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Forms Görsel Devralma
-Bazen, bir proje için bir form önceki bir proje ile oluşturduğunuz bir benzer çağırır karar verebilirsiniz. Ya da Filigran veya daha sonra yeniden bir projede özgün form şablonu değişiklikler içeren her bir yineleme ile kullanacağınız belirli denetim düzenini gibi ayarlarla temel form oluşturmak isteyebilirsiniz. Form devralma, temel bir form oluşturun ve ardından ondan devralır ve ihtiyacınız ne olursa olsun özgün ayarlarına korurken değişiklik olanak sağlar.  
+Bazen, bir proje için bir form benzer şekilde, önceki bir proje içinde oluşturduğunuz bir çağıran karar verebilirsiniz. Veya bir filigran ya da daha sonra yeniden içinde bir proje, özgün form şablonu değişiklikleri içeren her yineleme ile kullanacağınız belirli denetim düzeni gibi ayarları ile temel bir form oluşturmak isteyebilirsiniz. Form devralma, bir taban formunu oluşturmak ve ardından bu türden devralmalıdır ve değişiklik hangi özgün ayarlarına ihtiyacınız korurken sağlar.  
   
- Türetilmiş sınıf forms program aracılığıyla veya görsel devralma Seçici kullanarak oluşturabilirsiniz.  
+ Programlama yoluyla veya görsel devralma Seçici'yi kullanarak, türetilmiş sınıf formlar oluşturabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms’u Devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- Devralınan formlar kod oluşturma için yönergeler sağlar.  
+ [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)  
+ Devralınan form kod oluşturma için yönergeler sağlar.  
   
- [Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
- Devralınan formlar ile devralma Seçici oluşturma için yönergeler sağlar.  
+ [Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ Devralınan form devralma Seçici ile oluşturma için yönergeler sağlar.  
   
- [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- Taban formun denetimleri ve bunların özelliklerini değiştirmek için yönergeler sağlar.  
+ [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)  
+ Taban formun denetimler ve özellikleri değiştirmek için yönergeler sağlar.  
   
- [İzlenecek Yol: Görsel Devralmayı Gösterme](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- Temel bir Windows formu oluşturma ve bir sınıf kitaplığı'na derlemek açıklar. Bu sınıf kitaplığı başka bir projeye almak ve temel formundan devralan yeni bir form oluşturun.  
+ [İzlenecek yol: Görsel devralmayı gösterme](walkthrough-demonstrating-visual-inheritance.md)  
+ Temel bir Windows formu oluşturun ve bir sınıf kitaplığı derleme açıklar. Bu sınıf kitaplığı, başka bir projeye içeri aktarmak ve temel formundan devralan yeni bir form oluşturun.  
   
- [Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
- Kullanma için yönergeler sağlar `GenerateMember` ve `Modifiers` Windows Form Tasarımcısı bileşeni için bir üye değişkenine oluşturduğunda, ilgili özellikler.  
+ [Nasıl yapılır: Değiştiricileri ve GenerateMember özelliklerini kullanma](how-to-use-the-modifiers-and-generatemember-properties.md)  
+ Kullanma için yönergeler sağlar `GenerateMember` ve `Modifiers` Windows Form Tasarımcısı ' bileşeni için bir üye değişkeni oluşturduğunda, ilgili özellikler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Devralma temelleri (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- Diğer sınıflar için temel görevi gören Visual Basic sınıflarını tanımlamak açıklar.  
+ Diğer sınıflar için temel olarak hizmet veren bir Visual Basic sınıflarını tanımlamak açıklar.  
   
  [class](~/docs/csharp/language-reference/keywords/class.md)  
- Tek devralma izin sınıfların C# yaklaşımı açıklanmaktadır.  
+ Açıklar C# yaklaşım sınıfların tek devralma verilir.  
   
- [Devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- Olay işleyicileri devralınan bileşenleri ile ortaya ortak sorunları listeler
+ [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ Devralınan bileşenler olay işleyicileri ile ortaya çıkan ortak sorunları listeler

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701462"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708047"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Nasıl yapılır: Pencereyi yatay bölme
 Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.  
@@ -57,4 +57,4 @@ Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.For
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer Denetimi](splitcontainer-control-windows-forms.md)

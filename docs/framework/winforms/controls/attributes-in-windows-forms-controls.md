@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441248"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724407"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Öznitelikler
 .NET Framework özel denetimleri ve bileşenleri üyelerine uygulayabilirsiniz özniteliklerin çeşitli sağlar. Bazı bu öznitelikler bir sınıfın çalışma zamanı davranışını etkiler ve diğer tasarım zamanı davranışını etkiler.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Denetim ve bileşen özellikleri için öznitelikler  
- Aşağıdaki tablo, özellikler veya diğer üyeleri özel denetimler ve bileşenlerinizi uygulayabilirsiniz öznitelikleri gösterir. Bu özniteliklerin çoğu kullanan bir örnek için bkz: [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Aşağıdaki tablo, özellikler veya diğer üyeleri özel denetimler ve bileşenlerinizi uygulayabilirsiniz öznitelikleri gösterir. Bu özniteliklerin çoğu kullanan bir örnek için bkz: [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
@@ -62,6 +62,6 @@ ms.locfileid: "56441248"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Attribute>
-- [Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)

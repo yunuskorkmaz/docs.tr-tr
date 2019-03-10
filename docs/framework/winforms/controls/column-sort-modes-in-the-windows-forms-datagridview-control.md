@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615062"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717862"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 <xref:System.Windows.Forms.DataGridView> Sütun sıralama modları üç sahip. Her bir sütunun sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> sabit listesi değerleri.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615062"
   
  Olduğunda bir <xref:System.Windows.Forms.DataGridView> olan sıralı, hem sıralama sütunu ve sıralama düzenini değerlerini kontrol ederek belirleyebilirsiniz <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> ve <xref:System.Windows.Forms.DataGridView.SortOrder%2A> özellikleri. Bu değerler sonra özel bir sıralama işlemi anlamlı değildir. Özel sıralama hakkında daha fazla bilgi için bu konunun devamındaki özel sıralama bölümüne bakın.  
   
- Olduğunda bir <xref:System.Windows.Forms.DataGridView> ilişkili ve ilişkisiz sütunlarını içeren bir denetim sıralandığı, ilişkisiz sütunlardaki değerleri otomatik olarak korunmasını olamaz. Bu değerleri tutmak için sanal mod ayarlayarak uygulamalıdır <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve işleme <xref:System.Windows.Forms.DataGridView.CellValueNeeded> ve <xref:System.Windows.Forms.DataGridView.CellValuePushed> olayları. Daha fazla bilgi için [nasıl yapılır: Sanal modu Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Bağlanmamış sütunlar ilişkili modunda sıralama desteklenmiyor.  
+ Olduğunda bir <xref:System.Windows.Forms.DataGridView> ilişkili ve ilişkisiz sütunlarını içeren bir denetim sıralandığı, ilişkisiz sütunlardaki değerleri otomatik olarak korunmasını olamaz. Bu değerleri tutmak için sanal mod ayarlayarak uygulamalıdır <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve işleme <xref:System.Windows.Forms.DataGridView.CellValueNeeded> ve <xref:System.Windows.Forms.DataGridView.CellValuePushed> olayları. Daha fazla bilgi için [nasıl yapılır: Sanal modu Windows Forms DataGridView denetiminde](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Bağlanmamış sütunlar ilişkili modunda sıralama desteklenmiyor.  
   
 ## <a name="programmatic-sorting"></a>Programlı sıralama  
  Sıralayabilir bir <xref:System.Windows.Forms.DataGridView> çağırarak programlama yoluyla kendi <xref:System.Windows.Forms.DataGridView.Sort%2A> yöntemi.  
@@ -65,6 +65,6 @@ ms.locfileid: "54615062"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView Denetimindeki Verileri Sıralama](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

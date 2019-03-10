@@ -2,28 +2,28 @@
 title: İş akışı barındırma seçenekleri
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516558"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713325"
 ---
 # <a name="workflow-hosting-options"></a>İş akışı barındırma seçenekleri
-Windows Workflow Foundation (WF) örnekleri çoğu bir konsol uygulamasında barındırılan iş akışlarını kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında barındırılacağı kalıcı işlemleri bir Windows hizmeti geliştirici ya da bir sunucu uygulaması tarafından gibi yazılan- [!INCLUDE[iisver](../../../includes/iisver-md.md)] veya AppFabric. Bu yaklaşım arasındaki farklar aşağıdaki gibidir.  
+Bir konsol uygulamasında barındırılan iş akışı Windows Workflow Foundation (WF) örnekleri çoğu kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında barındırılacak kalıcı işlemleri bir Windows hizmeti yazılan geliştirici veya bir sunucu uygulaması gibi- [!INCLUDE[iisver](../../../includes/iisver-md.md)] veya AppFabric. Bu yaklaşımların arasındaki farklar aşağıdaki gibidir.  
   
-## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS Windows AppFabric ile iş akışlarında barındırma  
- IIS ile AppFabric iş akışları için tercih edilen konak kullanmaktır. IIS üzerinde tek başına HTTP üzerindeki bağımlılığı kaldırır Windows Etkinleştirme hizmeti AppFabric kullanarak da iş akışları için ana bilgisayar uygulamasıdır.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS Windows AppFabric ile iş akışları barındırma  
+ AppFabric ile IIS kullanarak iş akışları için tercih edilen ana bilgisayardır. IIS üzerinde tek başına HTTP üzerindeki bağımlılığı kaldırır Windows Etkinleştirme hizmeti AppFabric kullanarak iş akışları için ana bilgisayar uygulamasıdır.  
   
-## <a name="hosting-workflows-in-iis-alone"></a>IIS tek başına iş akışlarında barındırma  
- Kullanarak [!INCLUDE[iisver](../../../includes/iisver-md.md)] vardır yönetim ve izleme çalışan uygulamalar bakım kolaylaştırmak AppFabric ile kullanılabilir Araçları tek başına, önerilmez. İş akışları yalnızca barındırılan [!INCLUDE[iisver](../../../includes/iisver-md.md)] AppFabric için taşıma ile altyapı kaygılarınız varsa tek başına.  
+## <a name="hosting-workflows-in-iis-alone"></a>Tek başına bir IIS iş akışları barındırma  
+ Kullanarak [!INCLUDE[iisver](../../../includes/iisver-md.md)] yönetim ve izleme çalışan uygulamaların Bakımı kolaylaştıran AppFabric ile kullanılabilen araçları olduğundan tek başına önerilmez. İş akışları alanınızın yalnızca barındırılması [!INCLUDE[iisver](../../../includes/iisver-md.md)] AppFabric için taşıma ile altyapıyla ilgili endişelerini yoksa tek başına.  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] Uygulama havuzları çeşitli nedenlerle düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuzuna iletileri kabul etmeye durdurur ve yeni isteklerini kabul etmek için yeni bir uygulama havuzu oluşturur. Bir yanıt gönderdikten sonra bir iş akışı çalışmaya devam ederse [!INCLUDE[iisver](../../../includes/iisver-md.md)] gerçekleştirilen çalışmanın haberdar olmaz ve barındırma uygulama havuzu geri. Bu durum, iş akışı iptal edilecek ve Hizmetleri izleme kayıt bir [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) boş bir nedenle alan iletisiyle.  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)] Uygulama havuzları, çeşitli nedenlerle düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuzuna iletileri kabul etmeye durdurur ve yeni isteklerini kabul etmek için yeni bir uygulama havuzu oluşturur. Bir iş akışı bir yanıt gönderdikten sonra çalışmaya devam ederse [!INCLUDE[iisver](../../../includes/iisver-md.md)] yapılmakta olan çalışmanın uyumlu olmaz ve barındırma uygulama havuzunu geri dönüştür. Böyle, iş akışını iptal edilecek ve izleme hizmetleri kayıt bir [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) neden boş alan iletisi.  
 >   
->  Kalıcılık kullanılırsa, konak açıkça son Kalıcılık noktasından durdurulan örnekleri yeniden başlatmanız gerekir.  
+>  Kalıcılık kullandıysanız, konak açıkça iptal edilmiş örneklerden son Kalıcılık noktası yeniden başlatmanız gerekir.  
 >   
->  AppFabric kullanılırsa, Kalıcılık kullanılırsa, iş akışı yönetimi hizmeti sonunda son başarılı Kalıcılık noktasından iş akışı devam eder. İş akışı iptal ettiğinde Kalıcılık değeri kullanılır ve iş akışı bir istek/yanıt desen dışında işlemleri gerçekleştirir, verileri kaybolur.  
+>  AppFabric kullandıysanız, Kalıcılık kullanılıyorsa, iş akışı yönetimi hizmetinin sonunda son başarılı Kalıcılık noktasından iş akışı devam edecek. İş akışı iptal ettiğinde hiçbir Kalıcılık kullanılır ve iş akışı bir istek/yanıt deseni dışındaki işlemleri gerçekleştirir, veriler kaybolacak.  
   
-## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Özel bir Windows hizmetinde bir iş akışı barındırma  
- İş akışı barındırmak için özel iş akışı hizmeti oluşturma out-of-box AppFabric tarafından sağlanan işlevleri çok çoğaltmak Geliştirici gerektirir, ancak daha fazla esneklik için özel işlevsellikle izin verir. AppFabric bir seçenek olmadığı durumlarda, bu seçenek yalnızca dikkate alınmalıdır.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Bir iş akışı özel bir Windows hizmetinde barındırma  
+ İş akışı barındırmak için bir özel iş akışı hizmeti oluşturma çok sayıda kullanıma hazır AppFabric tarafından sağlanan işlevselliği çoğaltmak Geliştirici gerektirir, ancak daha fazla esneklik için özel işlevsellikle izin verir. AppFabric bir seçenek olmadığı durumlarda, bu seçenek yalnızca kabul edilmelidir.

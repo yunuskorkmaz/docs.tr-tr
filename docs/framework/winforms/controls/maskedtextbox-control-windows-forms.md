@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: 84e01e3c8b2275f910c7daf3de31d1ffbe891171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539844"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713728"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox Denetimi (Windows Forms)
-Bu konu hakkında başkalarına bağlantılar `MaskedTextBox` denetim.  
+Bu konu hakkında diğerlerine bağlanan `MaskedTextBox` denetimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- Anahtar özelliklerini gösteren `MaskedTextBox` denetim.  
+ [İzlenecek yol: MaskedTextBox denetimiyle çalışma](walkthrough-working-with-the-maskedtextbox-control.md)  
+ Anahtar özelliklerini gösterir `MaskedTextBox` denetimi.  
   
- [Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- Veritabanındaki verileri maskesi tanımı tarafından beklenen biçimde eşleşmediğinde verileri yeniden biçimlendirmek gösterilmiştir.  
+ [Nasıl yapılır: MaskedTextBox denetimine veri bağlama](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ Veritabanı verilerini maskesi tanımınızı tarafından beklenen biçimde eşleşmediğinde verileri yeniden biçimlendirmek nasıl gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.MaskedTextBox>  
- Maskelenmiş metin kutusu denetimi uyarlamasını birincil sınıf.  
+ Maskelenmiş metin kutusu denetimini uygulanması için birincil sınıf.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

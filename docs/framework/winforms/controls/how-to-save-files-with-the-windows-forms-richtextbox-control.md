@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539785"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723047"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: İle Windows Forms RichTextBox denetimi dosyaları kaydetme
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi olarak bulunan biçimlerden birini görüntüler bilgileri yazabilirsiniz:  
@@ -41,7 +41,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi olarak bulunan bi
   
 1.  Kaydedilecek dosyanın yolunu belirleyin.  
   
-     Bir gerçek yaşam uygulaması içinde bunun için genellikle kullanacağınız <xref:System.Windows.Forms.SaveFileDialog> bileşeni. Genel bakış için bkz. [SaveFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     Bir gerçek yaşam uygulaması içinde bunun için genellikle kullanacağınız <xref:System.Windows.Forms.SaveFileDialog> bileşeni. Genel bakış için bkz. [SaveFileDialog bileşenine genel bakış](savefiledialog-component-overview-windows-forms.md).  
   
 2.  Çağrı <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemi <xref:System.Windows.Forms.RichTextBox> kaydedin ve isteğe bağlı olarak bir dosya türünü belirten bir denetim. Bir dosya adı yalnızca bağımsız değişken olarak yöntemi çağırın, dosyanın RTF olarak kaydedilir. Başka bir dosya türü belirtmek için bir değerini yöntemi çağırın <xref:System.Windows.Forms.RichTextBoxStreamType> ikinci bağımsız değişken olarak numaralandırması.  
   
@@ -90,5 +90,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi olarak bulunan bi
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

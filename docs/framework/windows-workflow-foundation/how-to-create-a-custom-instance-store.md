@@ -2,16 +2,16 @@
 title: 'Nasıl yapılır: Bir özel örneği Store oluşturun'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503196"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707775"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Nasıl yapılır: Bir özel örneği Store oluşturun
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verileri kalıcı hale getirmek için SQL Server kullanan bir örnek deposu. Uygulamanız farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta iş akışı verileri kalıcı hale getirmek için gerekli ise bir özel örnek deposu uygulayabilirsiniz. Özet genişleterek bir özel örnek deposu oluşturulan <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gereken yöntemleri uygulamak. Bir özel örnek deposu tam bir uygulama için bkz: [şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) örnek.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verileri kalıcı hale getirmek için SQL Server kullanan bir örnek deposu. Uygulamanız farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta iş akışı verileri kalıcı hale getirmek için gerekli ise bir özel örnek deposu uygulayabilirsiniz. Özet genişleterek bir özel örnek deposu oluşturulan <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gereken yöntemleri uygulamak. Bir özel örnek deposu tam bir uygulama için bkz: [şirket satın alma işlemi](./samples/corporate-purchase-process.md) örnek.
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand yöntemi uygulama
 
@@ -226,11 +226,11 @@ ms.locfileid: "57503196"
 
 ## <a name="using-a-custom-instance-store"></a>Bir özel örnek deposu kullanma
 
-Bir özel örnek deposu uygulamak için örnek deposuna örneği atamak <xref:System.Activities.WorkflowApplication.InstanceStore%2A>ve uygulama <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> yöntemi. Bkz: [nasıl yapılır: Oluşturma ve uzun çalışan iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) özellikleri için öğretici.
+Bir özel örnek deposu uygulamak için örnek deposuna örneği atamak <xref:System.Activities.WorkflowApplication.InstanceStore%2A>ve uygulama <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> yöntemi. Bkz: [nasıl yapılır: Oluşturma ve uzun çalışan iş akışı çalıştırma](how-to-create-and-run-a-long-running-workflow.md) özellikleri için öğretici.
 
 ## <a name="a-sample-instance-store"></a>Bir örnek örnek deposu
 
-Aşağıdaki kod örneği alındığı bir tam örnek deposu uygulaması olan [şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) örnek. Bu örnek depo, iş akışı verileri XML kullanarak bir dosyaya devam ettirir.
+Aşağıdaki kod örneği alındığı bir tam örnek deposu uygulaması olan [şirket satın alma işlemi](./samples/corporate-purchase-process.md) örnek. Bu örnek depo, iş akışı verileri XML kullanarak bir dosyaya devam ettirir.
 
 ```csharp
 using System;

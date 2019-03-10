@@ -13,30 +13,30 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: f87d76d4215d7d944b465b47113cf7cb24473df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525594"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724433"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox Denetimi (Windows Forms)
-Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <xref:System.Windows.Forms.ListBox> denetlemek ve listedeki öğeleri yanındaki onay işareti de görüntüleyebilirsiniz.  
+Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <xref:System.Windows.Forms.ListBox> denetlemek ve öğelerin yanında bir onay işareti listede de görüntüleyebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CheckedListBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Bu denetimi nedir ve anahtar özellikleri ve özelliklerini açıklar.  
+ [CheckedListBox Denetimine Genel Bakış](checkedlistbox-control-overview-windows-forms.md)  
+ Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ [Nasıl yapılır: Windows Forms CheckedListBox denetimindeki işaretli öğeleri belirleme](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Hangi öğelerin denetlenir belirlemek için bir listeyi gözden geçirip açıklar.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.CheckedListBox> sınıfı  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ <xref:System.Windows.Forms.CheckedListBox> Sınıfı  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz işlemler listesini sağlar.  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)  
+ Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz çok şey bir listesini sağlar.  
   
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

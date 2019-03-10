@@ -4,12 +4,12 @@ description: Windows Uyumluluk Paketi hakkında bilgi edinmek ve nasıl, kullana
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903761"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717901"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core kod bağlantı noktası için Windows Uyumluluk Paketi kullanma
 
@@ -53,7 +53,7 @@ Daha fazla bilgi için [uyumluluk paketinin belirtim](https://github.com/dotnet/
 
 3. Windows üzerinde kalmak istiyorsanız, başlamaya hazırsınız.
 
-4. Linux veya Macos'ta .NET Core uygulaması veya .NET Standard kitaplığı çalıştırmak istediğiniz kullanırsanız [API Çözümleyicisi](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) platformlar arası çalışmaz API kullanım bulunamadı.
+4. Linux veya Macos'ta .NET Core uygulaması veya .NET Standard kitaplığı çalıştırmak istediğiniz kullanırsanız [API Çözümleyicisi](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) platformlar arası çalışmaz API kullanım bulunamadı.
 
 5. Bu API kullanımları Kaldır, bunları platformlar arası alternatif ile değiştirin veya gibi bir platform denetimi kullanarak bunları koruma:
 

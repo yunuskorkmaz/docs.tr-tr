@@ -6,35 +6,35 @@ helpviewer_keywords:
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525040"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704394"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Şekilleri Doldurmak için Gradyan Fırçası Kullanma
-Bir şekli kademeli olarak değişen bir renkle doldurmak için gradyan fırçası kullanabilirsiniz. Örneğin, bir şekli şeklin sol kenarından sağ kenarı hareket ederken, yavaş yavaş değişir renkle doldurma için yatay bir gradyan kullanabilirsiniz. Dikdörtgene siyah olan sol kenar düşünün (kırmızı, yeşil ve mavi bileşenleri tarafından temsil edilen 0, 0, 0) ve bir sağ kenar diğer bir deyişle kırmızı (255, 0, 0 tarafından gösterilen). Dikdörtgen 256 piksel genişliğinde ise, verilen piksel kırmızı bileşeninin bir solunda piksel kırmızı bileşeninin fazla olacaktır. Bir satırda soldaki piksel renk bileşenleri (0, 0, 0) varsa, ikinci piksel (1, 0, 0) sahip, üçüncü piksel (2, 0, 0) sahip vb. renk bileşenleri (255, 0, 0) sahip bir sağdaki piksel ulaşana kadar. Bu Ara değerli renk değerleri renk gradyan olun.  
+Bir şekli bir yavaş yavaş değişen rengi ile doldurmak için gradyan fırçası kullanabilirsiniz. Örneğin, bir şekli olarak şeklin sol kenardan sağ kenarına taşıyın, yavaş yavaş değişen renk ile doldurma için Yatay Gradyan kullanabilirsiniz. Siyah bir sol kenarı ile bir dikdörtgen Imagine (kırmızı, yeşil ve mavi bileşenleriyle belirtildiği 0, 0, 0) ve bir sağ kenar diğer bir deyişle kırmızı (255, 0, 0 tarafından gösterilen). 256 piksel genişliğinde dikdörtgen ise kırmızı bileşeni belirli bir pikselin bir pikselin solunda kırmızı bileşeni büyük olacaktır. Bir satırdaki en soldaki piksel renk bileşeni (0, 0, 0) sahip, ikinci piksel olan (1, 0, 0), üçüncü piksel (2, 0, 0) sahip vb. (255, 0, 0) renk bileşenleri en sağdaki piksel gelene kadar. Bu ilişkilendirilmiş renk değerleri renk gradyanı olun.  
   
- Yatay, dikey taşımak veya belirli bir Eğimli satırını paralel olarak doğrusal gradyan rengi değişir. Sınır bir yolu ve iç hakkında taşırken yol gradyanı rengi değişir. Yol gradyanları çok çeşitli efektler elde etmek için özelleştirebilirsiniz.  
+ Yatay, dikey taşıdığınızda veya belirli bir Eğimli satırını paralel olarak doğrusal gradyan rengini değiştirir. İç ve bir yol sınırları hakkında hareket yolu gradyan rengini değiştirir. Yol gradyanları çok çeşitli efektler elde etmek için özelleştirebilirsiniz.  
   
- Aşağıdaki çizimde bir dikdörtgen doğrusal gradyan fırçası ile doldurulur ve yolun gradyan fırçası ile elips doldurulmuş gösterir.  
+ Doğrusal gradyan fırçası ile bir dikdörtgen doldurulmuş ve yolun gradyan fırçası ile bir elips doldurulmuş aşağıda gösterilmiştir.  
   
- ![Gradyan](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
+ ![Gradyan](./media/gradient2.png "gradient2")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Doğrusal Gradyan Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- Doğrusal gradyan kullanarak bir oluşturmayı gösteren <xref:System.Drawing.Drawing2D.LinearGradientBrush> sınıfı.  
+ [Nasıl yapılır: Doğrusal gradyan oluşturma](how-to-create-a-linear-gradient.md)  
+ Bir doğrusal gradyan kullanarak oluşturulacağını gösterir <xref:System.Drawing.Drawing2D.LinearGradientBrush> sınıfı.  
   
- [Nasıl yapılır: Yol Gradyanı Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
- Kullanarak bir yol gradyanı oluşturma açıklanmaktadır <xref:System.Drawing.Drawing2D.PathGradientBrush> sınıfı.  
+ [Nasıl yapılır: Yol gradyanı oluşturma](how-to-create-a-path-gradient.md)  
+ Kullanarak bir yol gradyanı oluşturma işlemini açıklamaktadır <xref:System.Drawing.Drawing2D.PathGradientBrush> sınıfı.  
   
- [Nasıl yapılır: Bir Gradyana Gama Düzeltmesi Uygulama](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
- Gama düzeltmesi ile bir gradyan fırçası kullanımı açıklanmaktadır.  
+ [Nasıl yapılır: Bir Gradyana gama düzeltmesi uygulama](how-to-apply-gamma-correction-to-a-gradient.md)  
+ Gradyan fırça gama düzeltmesi kullanmayı açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
- Bu sınıf için bir açıklama içerir ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıfın bir açıklama içerir ve tüm üyelerini bağlantılar.  
   
  <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
- Bu sınıf için bir açıklama içerir ve tüm üyeleri bağlantılar içerir.
+ Bu sınıfın bir açıklama içerir ve tüm üyelerini bağlantılar.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e746cd1d0f9f7d9850d0263ee6ed0a82472fcb5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504164"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722028"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox denetiminde biçimlendirme öznitelikleri belirlerken
 Windows Forms yaygın bir kullanımı <xref:System.Windows.Forms.RichTextBox> denetim metin yazı tipi seçenekleri veya stilleri gibi özniteliklerle biçimlendirme. Birçok kelime işleme uygulaması olduğu gibi bir araç çubuğunu görüntüleme amacıyla biçimlendirme metin değişiklikleri izlemek, uygulamanız gerekebilir.  
@@ -25,7 +25,7 @@ Windows Forms yaygın bir kullanımı <xref:System.Windows.Forms.RichTextBox> de
   
 1.  Kod yazmaya <xref:System.Windows.Forms.RichTextBox.SelectionChanged> özniteliğin değerine bağlı olarak uygun bir eylem gerçekleştirmek için olay işleyicisi. Aşağıdaki örnek bir araç çubuğu düğmesinin değerine bağlı olarak değişir <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği. Araç çubuğu düğmesini yalnızca denetiminde ekleme noktasını taşındığında güncelleştirilecektir.  
   
-     Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi ve bir <xref:System.Windows.Forms.ToolBar> içeren bir araç çubuğu düğmesi denetimi. Araç çubukları ve araç çubuğu düğmeleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir ToolBar denetimine düğme ekleme](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
+     Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi ve bir <xref:System.Windows.Forms.ToolBar> içeren bir araç çubuğu düğmesi denetimi. Araç çubukları ve araç çubuğu düğmeleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir ToolBar denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -83,5 +83,5 @@ Windows Forms yaygın bir kullanımı <xref:System.Windows.Forms.RichTextBox> de
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

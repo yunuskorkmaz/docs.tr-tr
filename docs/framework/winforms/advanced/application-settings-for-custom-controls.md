@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526749"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714352"
 ---
 # <a name="application-settings-for-custom-controls"></a>Özel Denetimler için Uygulama Ayarları
 Özel denetimlerinizi denetimleri üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için belirli görevleri tamamlamanız gerekir.  
@@ -26,7 +26,7 @@ ms.locfileid: "54526749"
   
 2.  Denetim oluşturulan ve bir form üzerinde olduğu gibi formun yerleştirilir. sonra bu özel ayarları sınıfı oluşturma <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
- Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Ayarları anahtarları ve paylaşılan ayarları  
  Bazı denetimler, birden çok kez aynı form içinde kullanılabilir. Çoğu zaman, kullanıcıların kendi tek tek ayarların kalıcı olması için bu denetimleri isteyeceksiniz. İle <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> özelliği <xref:System.Configuration.IPersistComponentSettings>, bir form denetiminde birden fazla sürümünü ayırt etmek için görevi gören benzersiz bir dize sağlayabilirsiniz.  
@@ -48,4 +48,4 @@ ms.locfileid: "54526749"
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarları Mimarisi](application-settings-architecture.md)

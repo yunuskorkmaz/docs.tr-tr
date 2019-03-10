@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650589"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705197"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Nasıl yapılır: TabControl ile yana hizalanmış sekmeler görüntüleme
 <xref:System.Windows.Forms.TabControl.Alignment%2A> Özelliği <xref:System.Windows.Forms.TabControl> yatay (üst veya alt denetimin) olarak, dikey (sol veya sağ kenarı boyunca denetimi), sekmeler görüntüleme destekler. Varsayılan olarak, çünkü bu dikey ekran bir kullanıcı deneyimi zayıf içinde sonuçları <xref:System.Windows.Forms.TabPage.Text%2A> özelliği <xref:System.Windows.Forms.TabPage> nesne görsel stiller etkinken sekmede görüntülemez. Sekme içindeki metnin yönünü denetlemek için doğrudan bir yol yoktur. Sahibi kullanabileceğiniz üzerine çizileceği <xref:System.Windows.Forms.TabControl> iyi bir deneyim sunmak için.  
@@ -37,8 +37,8 @@ ms.locfileid: "54650589"
   
 6.  Tanımlamak için bir işleyici <xref:System.Windows.Forms.TabControl.DrawItem> olayı <xref:System.Windows.Forms.TabControl> , soldan sağa metnin işler.  
   
-     [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
-     [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
+     [!code-csharp[TabControl.RightAlignedTabs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
+     [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [TabControl Denetimi](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+- [TabControl Denetimi](tabcontrol-control-windows-forms.md)

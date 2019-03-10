@@ -2,12 +2,12 @@
 title: Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733213"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724641"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Bir etkinlik, Dynamicactivity'nin ile çalışma zamanında oluşturma
 <xref:System.Activities.DynamicActivity> bir somut, korumalı bir public Oluşturucu ile sınıftır. <xref:System.Activities.DynamicActivity> bir etkinlik yerli kullanarak çalışma zamanında etkinlik işlevselliğini bir araya getirmek için kullanılabilir  
@@ -98,4 +98,4 @@ ms.locfileid: "54733213"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](authoring-workflows-activities-and-expressions-using-imperative-code.md)

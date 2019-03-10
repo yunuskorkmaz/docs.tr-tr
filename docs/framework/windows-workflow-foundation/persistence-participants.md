@@ -2,12 +2,12 @@
 title: Kalıcılık katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569511"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723770"
 ---
 # <a name="persistence-participants"></a>Kalıcılık katılımcıları
 Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklenen bir Kalıcılık işlemi (kaydetme veya yük) katılabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıf ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık Katılımcısı oluşturma için kullanabilirsiniz. Kalıcılık Katılımcısı bu sınıflardan birine türetilen, ilgilenilen yöntemlerini uygular ve sonra sınıfa bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama konağı, bir iş akışı örneği kalıcı olduğunda bu tür iş akışı uzantılar için Ara ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırmak olabilir.  
@@ -58,7 +58,7 @@ Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklene
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Nasıl yapılır: Özel Kalıcılık Katılımcısı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Nasıl yapılır: Özel Kalıcılık Katılımcısı oluşturma](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Depo Genişletilebilirliği](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Depo Genişletilebilirliği](store-extensibility.md)

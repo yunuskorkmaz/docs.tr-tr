@@ -1,19 +1,19 @@
 ---
-title: Değişkenleri ve bağımsız değişkenler
+title: Değişkenler ve bağımsız değişkenler
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520113"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717823"
 ---
-# <a name="variables-and-arguments"></a>Değişkenleri ve bağımsız değişkenler
-Windows Workflow Foundation (WF) değişkenleri verilerin depolama alanı temsil eder ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bir etkinlik bir bağımsız değişkenler kümesine sahip ve etkinlik imza yapın. Ayrıca, aktivite Geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenlerin listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifadeye kullanarak bağlanır.  
+# <a name="variables-and-arguments"></a>Değişkenler ve bağımsız değişkenler
+Windows Workflow Foundation (WF) değişkenleri temsil eden veri depolama ve küme içi ve dışı bir etkinlik bağımsız değişkenleri veri akışını temsil eder. Bağımsız değişken kümesinin bir etkinlik içerir ve bunlar etkinlik imzasını yapın. Ayrıca, bir etkinlik bir geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenler listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifade kullanarak bağlanır.  
   
 ## <a name="variables"></a>Değişkenler  
- Veri depolama konumları değişkenlerdir. Değişkenleri bir iş akışı tanımının bir parçası olarak bildirilir. Değerleri çalışma zamanında değişkenleri alın ve bu değerleri bir iş akışı örneğinin durumunu bir parçası olarak depolanır. Bir değişken tanımını değişkeni ve isteğe bağlı olarak, ad türünü belirtir. Aşağıdaki kod kullanarak bir değere bir değişken, Ata bildirmeyi gösterir bir <xref:System.Activities.Statements.Assign%601> etkinlik ve ardından konsol kullanmaya değerini görüntülemek bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
+ Veri depolama konumları değişkenlerdir. Değişkenleri, bir iş akışının tanımını bir parçası olarak belirtilir. Değişken değerleri çalışma zamanında alır ve bu değerleri bir iş akışı örneği durumu bir parçası olarak depolanır. Değişken bir tanım değişkenini ve isteğe bağlı olarak ad türünü belirtir. Aşağıdaki kodu kullanarak bir değere bir değişken, Ata bildirmek gösterilmiştir bir <xref:System.Activities.Statements.Assign%601> etkinlik ve ardından Konsolu kullanarak değerinin görüntülendiğini bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
   
 ```csharp  
 // Define a variable named "str" of type string.  
@@ -44,7 +44,7 @@ Activity wf = new Sequence()
 WorkflowInvoker.Invoke(wf);  
 ```  
   
- Varsayılan değer ifadesi bir değişken bildirimi bir parçası olarak isteğe bağlı olarak belirtilebilir. Değişkenleri değiştiricileri da sahip olabilirsiniz. Örneğin, bir değişken salt okunur ise sonra salt okunur için <xref:System.Activities.VariableModifiers> değiştiricisi uygulanabilir. Aşağıdaki örnekte, bir salt okunur değişken atanan varsayılan değer olan oluşturulur.  
+ Varsayılan değer ifadesi bir değişken bildirimi bir parçası olarak isteğe bağlı olarak belirtilebilir. Değişkenleri de değiştiricilere sahip olabilir. Örneğin, bir değişken salt okunur ise ardından salt okunur <xref:System.Activities.VariableModifiers> değiştiricisi uygulanabilir. Aşağıdaki örnekte, atanmış bir varsayılan değere sahip bir salt okunur değişken oluşturulur.  
   
 ```csharp  
 // Define a read-only variable with a default value.  
@@ -56,23 +56,23 @@ Variable<string> var = new Variable<string>
 ```  
   
 ## <a name="variable-scoping"></a>Değişken kapsamı  
- Çalışma zamanında bir değişken ömrü onu tanımlandığı etkinlik için kullanım ömrü eşittir. Bir etkinlik tamamlandığında değişkenlerini temizlenmesini ve artık başvurulabilir.  
+ Çalışma zamanında bir değişkenin ömrü, onu bildiren etkinlik ömrünü eşittir. Bir etkinlik tamamlandığında değişkenlerini temizlenir ve artık başvurulabilir.  
   
 ## <a name="arguments"></a>Arguments  
- Etkinlik yazarlar şekilde verileri tanımlamak için bağımsız değişkenleri kullanma içine ve dışına bir etkinlik akışı. Belirtilen yöne her bağımsız değişkenlere sahiptir: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out>, veya <xref:System.Activities.ArgumentDirection.InOut>.  
+ Etkinlik yazarlar şekilde verileri tanımlamak için bağımsız değişkenler kullanın içine ve dışına Etkinlik Akışları. Belirtilen yönde her bağımsız değişkenlere sahiptir: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out>, veya <xref:System.Activities.ArgumentDirection.InOut>.  
   
- İş akışı çalışma zamanı veri taşıma içine ve dışına etkinlikleri zamanlama hakkında aşağıdaki garantisi yapar:  
+ İş akışı çalışma zamanı veri taşıma içine ve dışına etkinlikleri zamanlaması hakkında aşağıdakileri garantiler:  
   
-1.  Bir etkinlik yürütme başladığında, tüm giriş ve giriş/çıkış değişkenlerinin değerlerini hesaplanır. Örneğin, bağımsız olarak ne zaman <xref:System.Activities.Argument.Get%2A> olan adlı bir hesaplanan kendi çağrılması önce çalışma zamanı tarafından döndürülen değer `Execute`.  
+1.  Bir etkinlik yürütme başlatıldığında, tüm giriş ve giriş/çıkış bağımsız değişkenlerinin değerlerini hesaplanır. Örneğin, ne zaman bakılmaksızın <xref:System.Activities.Argument.Get%2A> olan adlı bir hesaplanır kendi çağrılmasına önce çalışma zamanı tarafından döndürülen değer `Execute`.  
   
-2.  Zaman <xref:System.Activities.InOutArgument%601.Set%2A> olan çağrılmadan hemen değeri çalışma zamanı ayarlar.  
+2.  Zaman <xref:System.Activities.InOutArgument%601.Set%2A> olan çağrılır, hemen değeri çalışma zamanı ayarlar.  
   
-3.  Bağımsız değişkenler isteğe bağlı olarak olabilir kendi <xref:System.Activities.Argument.EvaluationOrder%2A> belirtilen. <xref:System.Activities.Argument.EvaluationOrder%2A> bağımsız değişken değerlendirildiği sırayı belirtir sıfır tabanlı bir değerdir. Varsayılan olarak bağımsız değişkenin değerlendirme sırası belirtilmezse, eşittir <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> değeri. Ayarlama <xref:System.Activities.Argument.EvaluationOrder%2A> bu bağımsız değişken için bir değerlendirme sıra belirtmek sıfıra eşit veya daha büyük bir değer. Windows Workflow Foundation belirtilen değerlendirme sırası artan düzende değişkenleriyle değerlendirir. Belirtilmeyen değerlendirme sırası değişkenleriyle belirtilen değerlendirme sırası olanlar önce değerlendirildiğini unutmayın.  
+3.  Bağımsız değişken isteğe bağlı olarak olabilir, <xref:System.Activities.Argument.EvaluationOrder%2A> belirtilen. <xref:System.Activities.Argument.EvaluationOrder%2A> bağımsız değişken değerlendirilme sırasını belirleyen sıfır tabanlı bir değerdir. Varsayılan olarak, değerlendirme sırasında bağımsız değişken belirtilmezse ve eşittir <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> değeri. Ayarlama <xref:System.Activities.Argument.EvaluationOrder%2A> büyük veya bu bağımsız değişken için bir değerlendirme sırasını belirlemek için sıfıra eşit bir değer. Windows Workflow Foundation bir belirtilen değerlendirme sırası artan düzende bağımsız değişken değerlendirilir. Bağımsız değişkenlerle bir belirtilmeyen Değerlendirme sırasını belirtilen değerlendirme sırası olanlardan önce değerlendirildiğini unutmayın.  
   
- Bir etkinlik Yazar kesin türü belirtilmiş bir mekanizma değişkenlerinin gösterme için kullanabilirsiniz. Bu tür özelliklerini bildirerek gerçekleştirilir <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, ve <xref:System.Activities.InOutArgument%601>. Bu, belirli bir sözleşme içine ve dışına bir etkinlik giderek verilerle ilgili kurmak bir etkinlik Yazar sağlar.  
+ Bir etkinlik Yazar bağımsız değişkenlerinden açığa çıkarmak için kesin türü belirtilmiş bir mekanizma kullanabilirsiniz. Bu türün özelliklerini bildirerek gerçekleştirilir <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, ve <xref:System.Activities.InOutArgument%601>. Bu, küme içi ve dışı bir etkinlik giden verileri hakkında belirli bir sözleşme'kurmak bir etkinlik Yazar sağlar.  
   
-### <a name="defining-the-arguments-on-an-activity"></a>Bir etkinliği bağımsız değişkenleri tanımlama  
- Bağımsız değişkenler tanımlanabilir üzerinde bir etkinlik türünün özelliklerini belirterek <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, ve <xref:System.Activities.InOutArgument%601>. Aşağıdaki kod, bağımsız değişkenleri tanımlamak gösterilmiştir bir `Prompt` etkinliği kullanıcıya görüntülenecek bir dize alır ve kullanıcının yanıtı içeren bir dize döndürür.  
+### <a name="defining-the-arguments-on-an-activity"></a>Bir etkinlik bağımsız değişkenleri tanımlama  
+ Bağımsız değişkenler tanımlanabilir bir etkinlik türünün özelliklerini belirterek <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, ve <xref:System.Activities.InOutArgument%601>. Aşağıdaki kod, bağımsız değişkenleri tanımlamak gösterilmiştir bir `Prompt` etkinliği kullanıcıya göstermek için bir dize alır ve kullanıcının yanıt içeren bir dize döndürür.  
   
 ```csharp  
 public class Prompt : Activity  
@@ -84,10 +84,10 @@ public class Prompt : Activity
 ```  
   
 > [!NOTE]
->  Tek bir değer döndürmesi etkinlikler türetilen <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601>, veya <xref:System.Activities.CodeActivity%601>. Bu etkinlikler iyi tanımlanmış olması <xref:System.Activities.OutArgument%601> adlı <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri içerir.  
+>  Tek bir değer döndürmesi etkinlikleri türeyebilir <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601>, veya <xref:System.Activities.CodeActivity%601>. Bu etkinlikler, iyi tanımlanmış olması <xref:System.Activities.OutArgument%601> adlı <xref:System.Activities.Activity%601.Result%2A> , etkinliğin dönüş değerini içerir.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>İş akışlarında değişkenler ve bağımsız değişkenleri kullanma  
- Aşağıdaki örnek, değişkenler ve bağımsız değişkenleri bir iş akışında nasıl kullanıldığını gösterir. İş akışı üç değişkenleri bildiren bir dizidir: `var1`, `var2`, ve `var3`. İş akışındaki ilk etkinliği bir `Assign` değişkeninin değeri atar etkinlik `var1` değişkenine `var2`. Bu tarafından izlenir bir `WriteLine` değerini yazdırır etkinlik `var2` değişkeni. Sonraki başka olduğu `Assign` değişkeninin değeri atar etkinlik `var2` değişkenine `var3`. Son olarak olduğundan başka `WriteLine` değerini yazdırır etkinlik `var3` değişkeni. İlk `Assign` aktivitesi kullanır `InArgument<string>` ve `OutArgument<string>` açıkça etkinliğin bağımsız değişkenler için olan bağlamaları temsil eden nesne. `InArgument<string>` için kullanılan <xref:System.Activities.Statements.Assign.Value%2A> değeri içine akan çünkü <xref:System.Activities.Statements.Assign%601> etkinliği aracılığıyla kendi <xref:System.Activities.Statements.Assign.Value%2A> bağımsız değişkeni, ve `OutArgument<string>` için kullanılan <xref:System.Activities.Statements.Assign.To%2A> değeri dışı akan olduğundan <xref:System.Activities.Statements.Assign.To%2A> bağımsız değişkeni olarak. İkinci `Assign` etkinlik daha fazla ile aynı işlevi gerçekleştirir örtük atamaları kullanır ancak eşdeğer sözdizimi sıkıştırın. `WriteLine` Etkinlikleri de compact sözdizimini kullanın.  
+ Aşağıdaki örnek, değişkenler ve bağımsız değişkenleri bir iş akışında nasıl kullanılacağını gösterir. İş akışı üç değişkenler bildirilmektedir dizisidir: `var1`, `var2`, ve `var3`. İlk etkinlik iş akışında bir `Assign` değişkeninin değeri atar etkinlik `var1` değişkenine `var2`. Bu takip bir `WriteLine` değerini yazdırır etkinlik `var2` değişkeni. Başka bir sonraki olduğu `Assign` değişkeninin değeri atar etkinlik `var2` değişkenine `var3`. Son olarak yoktur başka `WriteLine` değerini yazdırır etkinlik `var3` değişkeni. İlk `Assign` etkinliği kullanan `InArgument<string>` ve `OutArgument<string>` bağlamaları etkinliğe ilişkin bağımsız değişkenler için açıkça temsil eden nesneleri. `InArgument<string>` için kullanılan <xref:System.Activities.Statements.Assign.Value%2A> değeri içine akar çünkü <xref:System.Activities.Statements.Assign%601> etkinlik aracılığıyla kendi <xref:System.Activities.Statements.Assign.Value%2A> bağımsız değişkeni, ve `OutArgument<string>` için kullanılan <xref:System.Activities.Statements.Assign.To%2A> değeri tanesi akan çünkü <xref:System.Activities.Statements.Assign.To%2A> bağımsız değişkeni olarak. İkinci `Assign` etkinlik daha aynı şeyi gerçekleştirir örtük yayınları kullanır ancak eşdeğer sözdizimi sıkıştırın. `WriteLine` Etkinlikleri de kısa sözdizimini kullanın.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  
@@ -122,8 +122,8 @@ Activity wf = new Sequence
 WorkflowInvoker.Invoke(wf);  
 ```  
   
-### <a name="using-variables-and-arguments-in-code-based-activities"></a>Değişken ve bağımsız değişkenler kod tabanlı etkinlikleri kullanma  
- Önceki örneklerde bağımsız ve iş akışları ve bildirim temelli etkinlikleri değişkenler nasıl kullanılacağını gösterir. Bağımsız değişkenler ve değişkenleri kod tabanlı etkinlikleri de kullanılır. Kavramsal kullanım çok benzer. Değişkenleri veri depolama etkinlik temsil eder ve bağımsız değişkenleri içine veya etkinlik dışı veri akışını temsil eder ve burada veriler veya akar temsil eden diğer değişkenleri veya bağımsız değişkenler iş akışı iş akışı yazarı tarafından bağlı. GET veya etkinliğin geçerli yürütme ortamı temsil eden bir değişken veya bir etkinlik, bir etkinlik bağlamı değişkeninde değerini kullanılmalıdır kümesi. Bu içine geçirilir <xref:System.Activities.CodeActivity%601.Execute%2A> etkinlik iş akışı çalışma zamanı tarafından yöntemi. Bu örnekte, özel bir `Add` etkinlik tanımlanmış iki sahip <xref:System.Activities.ArgumentDirection.In> bağımsız değişkenler. Bağımsız değişken değeri erişmek için <xref:System.Activities.Argument.Get%2A> yöntemi kullanılır ve iş akışı çalışma zamanı tarafından geçirilen bağlamı kullanılır.  
+### <a name="using-variables-and-arguments-in-code-based-activities"></a>Değişkenler ve bağımsız değişkenler, kod tabanlı etkinlikleri kullanma  
+ Önceki örneklerde, bağımsız değişkenleri ve iş akışları ve bildirim temelli etkinlikleri değişkenler nasıl kullanılacağını gösterir. Bağımsız değişkenler ve değişkenler, kod tabanlı etkinlikler de kullanılır. Kavramsal olarak kullanım çok benzer. Değişkenleri temsil eden etkinlik içinde veri depolama ve bağımsız değişkenler içine veya dışına etkinlik veri akışını temsil eden ve burada veya veri akışları temsil eden diğer değişkenleri veya iş akışı bağımsız değişkenler iş akışı yazar tarafından bağlı. GET veya değeri bir değişkene veya bağımsız bir etkinlik, bir etkinlik bağlamı içinde kullanılması gerekir kümesi, etkinliğin geçerli yürütme ortamını temsil eder. Yöntemlere geçirilen bu <xref:System.Activities.CodeActivity%601.Execute%2A> etkinlik iş akışı çalışma zamanı tarafından yöntemi. Bu örnekte, özel bir `Add` etkinlik iki içeren tanımlanır <xref:System.Activities.ArgumentDirection.In> bağımsız değişkenler. Bağımsız değişkenler değere erişmek için <xref:System.Activities.Argument.Get%2A> yöntemi kullanılır ve iş akışı çalışma zamanı tarafından geçirilen bağlamı kullanılır.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Bağımsız değişkenler, değişkenleri ve kodda ifadeleri ile çalışma hakkında daha fazla bilgi için bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) ve [gerekli bağımsız değişkenleri ve gruplarıaşırıyükleme](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Bağımsız değişkenler, değişkenler ve ifadeleri kod ile çalışma hakkında daha fazla bilgi için bkz. [yazma iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](authoring-workflows-activities-and-expressions-using-imperative-code.md) ve [gerekli bağımsız değişkenler ve aşırı grupları](required-arguments-and-overload-groups.md).

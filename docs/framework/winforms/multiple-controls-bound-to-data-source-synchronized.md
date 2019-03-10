@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558897"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721391"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama
 Windows Forms veri bağlama ile önerilmesine çalışırken, birden çok denetim aynı veri kaynağına bağlanır. Bazı durumlarda, bağlı denetimlerin özelliklerini birbirine ve veri kaynağı ile eşitlenmiş kalmasını sağlamak için ek adımlar gerekebilir. Bu adımlar, iki durumda gereklidir:  
@@ -29,8 +29,8 @@ Windows Forms veri bağlama ile önerilmesine çalışırken, birden çok deneti
   
  Örnekte bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve denetimlerini bağlamak için. Alternatif olarak, denetimi doğrudan veri kaynağına bağlanır ve alma <xref:System.Windows.Forms.BindingManagerBase> formun bağlamayı için <xref:System.Windows.Forms.Control.BindingContext%2A> ve ardından işleme <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> olayı <xref:System.Windows.Forms.BindingManagerBase>. Bunu yapmak nasıl bir örneği için yardım sayfasına bakın <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> olayı <xref:System.Windows.Forms.BindingManagerBase>.  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
@@ -41,7 +41,7 @@ Windows Forms veri bağlama ile önerilmesine çalışırken, birden çok deneti
 -   Bir formla <xref:System.Windows.Forms.Form.Load> işlenen olay ve çağrı `InitializeControlsAndDataSource` formun örnekten yönteminde <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bağlı veri BindingSource bileşenini kullanarak formlar arasında paylaşma](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Veri Bağlama ile İlgili Arabirimler](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Nasıl yapılır: Bağlı veri BindingSource bileşenini kullanarak formlar arasında paylaşma](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
+- [Veri Bağlama ile İlgili Arabirimler](interfaces-related-to-data-binding.md)
+- [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

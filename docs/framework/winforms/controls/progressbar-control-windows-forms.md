@@ -5,30 +5,30 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: bb648c6bd7feecf805a1d3c18b69c77f36f66cd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535071"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714729"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar Denetimi (Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevlerini ekler <xref:System.Windows.Forms.ProgressBar> kontrol; ancak, <xref:System.Windows.Forms.ProgressBar> denetim tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+>  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ProgressBar> denetler; ancak, <xref:System.Windows.Forms.ProgressBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
- Windows Forms <xref:System.Windows.Forms.ProgressBar> denetim yatay çubuğunda düzenlenmiş dikdörtgenler uygun sayıda görüntüleyerek bir eylemin ilerleme durumunu gösterir. Eylem tamamlandığında çubuğu girilir. İlerleme çubukları nasıl bir göstergesi kullanıcıya vermek için kullanılan yaygın olarak tamamlanması uzun bir eylem için beklenecek uzun — Örneğin, ne zaman büyük bir dosya yükleniyor.  
+ Windows Forms <xref:System.Windows.Forms.ProgressBar> denetimi yatay bir çubuk düzenlenmiş dikdörtgenler uygun sayıda görüntüleyerek bir eylemin ilerleme durumunu gösterir. İşlem tamamlandığında, çubuk doldurulur. İlerleme çubukları nasıl bir göstergesi kullanıcıya vermek için kullanılan yaygın olarak bir protracted eylemi tamamlamak beklenecek uzun — Örneğin, büyük bir dosya yüklendiğinden.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
- Genel kavramlarını tanıtır <xref:System.Windows.Forms.ProgressBar> grafiksel bir işlemin ilerlemesini görüntülemek sağlayan denetim.  
+ [ProgressBar Denetimine Genel Bakış](progressbar-control-overview-windows-forms.md)  
+ Genel konseptlerini tanıtan <xref:System.Windows.Forms.ProgressBar> grafiksel bir işlemin ilerlemesini görüntülemek sağlayan bir denetim.  
   
- [Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- Çeşitli tarafından görüntülenen değeri artırmak için farklı yollarla ele <xref:System.Windows.Forms.ProgressBar> denetim.  
+ [Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ Bir dizi tarafından görüntülenen değeri artırmak için farklı yolla anlatır <xref:System.Windows.Forms.ProgressBar> denetimi.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ProgressBar>  
- Sınıf ve üyelerine başvuru bilgileri sağlar.  
+ Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

@@ -6,58 +6,58 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 1a2407065930da6fff74e50d1a6946dad94560da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524892"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720455"
 ---
 # <a name="using-managed-graphics-classes"></a>Yönetilen Grafik Sınıflarını Kullanma
-Aşağıdaki konular nasıl kullanılacağı açıklanmıştır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıf Framework API.  
+Aşağıdaki konular nasıl kullanılacağını açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıf Framework API.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- İle temel görevlerin nasıl gerçekleştirileceğini açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)  
+ Temel görevlerinde size nasıl yapılacağını anlatmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Kalem oluşturmak ve çeşitli satırlar ve şekiller çizmek için nasıl kullanılacağını gösterir.  
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)  
+ Kalem oluşturmak ve çeşitli satırlar ve şekiller çizmek için kullanma gösterilmektedir.  
   
- [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Fırça ve dolgu şekilleri çeşitli efektleri ile oluşturulacağını gösterir.  
+ [Şekilleri Doldurmak için Fırça Kullanma](using-a-brush-to-fill-shapes.md)  
+ Nasıl bir fırça ve dolgu şekiller etkileri çeşitli oluşturulacağını gösterir.  
   
- [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Gradyan Fırçalar farklı türlerde oluşturulacağı ve kullanılacağı gösterilmiştir.  
+ [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](using-a-gradient-brush-to-fill-shapes.md)  
+ Oluşturma ve farklı tür gradyan fırçası kullanma işlemi gösterilmektedir.  
   
- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Oluşturun ve resimleri işlemek gösterilmiştir.  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)  
+ Oluşturun ve görüntüleri işlemek nasıl gösterir.  
   
- [Çizgi ve Dolgularda Alfa Karışım Kullanma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Şekiller ve çizgileri için saydamlığı elde etmek gösterilmiştir.  
+ [Çizgi ve Dolgularda Alfa Karışım Kullanma](alpha-blending-lines-and-fills.md)  
+ Şekilleri ve çizgileri için saydamlığı elde etmek nasıl gösterir.  
   
- [Yazı Tipleri ve Metin Kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Metin çizme ve yazı tipleri ve yazı tipi aileleri nasıl kullanılacağını gösterir.  
+ [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)  
+ Metin çizme ve yazı tipleri ve yazı tipi aileleri kullanma işlemi gösterilmektedir.  
   
- [Eğriler Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Nasıl Kardinal ve Bezier eğrileri çizileceğini gösterir.  
+ [Eğriler Oluşturma ve Çizme](constructing-and-drawing-curves.md)  
+ Kardinal ve Bezier eğrileri çizmek gösterilmektedir.  
   
- [Yollar Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- Yollar kullanılarak rakamları oluşturulacağını gösterir.  
+ [Yollar Oluşturma ve Çizme](constructing-and-drawing-paths.md)  
+ Şekil yolları kullanarak oluşturma işlemi gösterilmektedir.  
   
- [Yönetilen GDI+'da Dönüştürmeleri Kullanma](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ [Yönetilen GDI+'da Dönüştürmeleri Kullanma](using-transformations-in-managed-gdi.md)  
  Matris dönüşümleri gösterir.  
   
- [Grafik Kapsayıcıları Kullanma](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Grafik nesne durum ve iç içe grafik kapsayıcılarını yönetmek nasıl gösterir.  
+ [Grafik Kapsayıcıları Kullanma](using-graphics-containers.md)  
+ Grafik nesne durum ve iç içe grafik kapsayıcılarını yönetme işlemini göstermektedir.  
   
- [Bölgeleri Kullanma](../../../../docs/framework/winforms/advanced/using-regions.md)  
- İsabet testi ve kırpma ile bölgeleri gösterir.  
+ [Bölgeleri Kullanma](using-regions.md)  
+ İsabet testi ve bölgeler ile kırpma gösterir.  
   
- [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [Görüntüleri Yeniden Renklendirme](recoloring-images.md)  
  Renkleri düzenleme çeşitli yönlerini gösterir.  
   
- [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Görüntü Kodlayıcıları ve kod çözücüleri resimleri işlemek için nasıl kullanılacağını gösterir.  
+ [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Görüntü Kodlayıcıları ve kod çözücüleri görüntüleri işlemek için nasıl kullanılacağını gösterir.  
   
- [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- İki kez arabelleğe alma ile titreşimi azaltmak gösterilmiştir.
+ [İki Kez Arabelleğe Alınan Grafikler](double-buffered-graphics.md)  
+ İki kez arabelleğe alma ile titreşimini azaltma işlemi gösterilmektedir.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093950"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715691"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -228,7 +228,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 
 - Uygulamanızı .NET Framework 4'e geçiş hakkında bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya onun nokta sürümleri birine bakın [Geçiş Kılavuzu](~/docs/framework/migration-guide/index.md).
 
-- Bkz: [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) .NET Framework kaynak kodu çevrimiçi gidin. Başvuru kaynağı de kullanılabilir [GitHub](https://github.com/Microsoft/referencesource). Yapabilecekleriniz [başvuru kaynağı indir](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
+- Bkz: [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) .NET Framework kaynak kodu çevrimiçi gidin. Başvuru kaynağı de kullanılabilir [GitHub](https://github.com/Microsoft/referencesource). Yapabilecekleriniz [başvuru kaynağı indir](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

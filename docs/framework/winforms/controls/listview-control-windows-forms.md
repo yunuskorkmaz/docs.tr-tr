@@ -11,51 +11,51 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: a1689af75eab6a327c657b5c4da3e649056d56ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664893"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717784"
 ---
 # <a name="listview-control-windows-forms"></a>ListView Denetimi (Windows Forms)
 Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ListView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)  
  Bu denetim ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  Öğeleri listesi görünümünden ekleyip açıklar.  
   
- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)  
  Her liste öğesi hakkında bilgi görüntülemek için sütunlar oluşturmayı açıklar.  
   
- [Nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](how-to-display-icons-for-the-windows-forms-listview-control.md)  
  Bir liste görünümü büyük veya küçük simgeleri görüntülemek için uygun bir görüntü listesi ilişkilendirmek nasıl açıklar.  
   
- [Nasıl yapılır: Windows Forms ListView denetimiyle sütunlardaki alt öğeleri görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetimiyle sütunlardaki alt öğeleri görüntüleme](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
  Sütunlarda her bir liste öğesi hakkında bilgi görüntülemek açıklar.  
   
- [Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
  Program aracılığıyla bir öğe seçin açıklar.  
   
- [Nasıl yapılır: Bir Windows Forms ListView denetimi içinde öğeleri gruplandırma](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Bir Windows Forms ListView denetimi içinde öğeleri gruplandırma](how-to-group-items-in-a-windows-forms-listview-control.md)  
  Kategorilere ayrılmış görüntü gruplarının nasıl oluşturulacağını ve öğeleri her grup için atama açıklanmaktadır.  
   
  Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Nasıl yapılır: Windows Forms ListView denetiminde döşeme görünümünü etkinleştirme](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView denetiminde döşeme görünümünü etkinleştirme](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
  Her biri büyük bir simge ve birden çok metin satırı oluşur kutucuk olarak öğeleri görüntülemek nasıl açıklar.  
   
  Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
  Kullanıcı geri bildirimi ekleme işareti her fare işaretçisi konumunun bırakma konumunu belirten bir Sürükle ve bırak işlemleri için uygulanacağını açıklar.  
   
  Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+ [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
  Program aracılığıyla metin arama veya ekran koordinatları kullanarak bir öğeyi bulmak açıklar.  
   
 -   [Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi döşeme görünümünü etkinleştirme](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
@@ -73,14 +73,14 @@ Windows Forms `ListView` denetim simgeler ile öğeler bir listesini görüntül
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
  Liste görünümünde bir öğe veya ağaç görünümünde bir düğüm herhangi bir alanlar, yöntemler veya gereksinim duyduğunuz oluşturucular eklemek için devralınacak açıklar.  
   
- [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [ImageList Bileşeni](imagelist-component-windows-forms.md)  
  Açıklayan bir görüntü listesi ve başlıca özellikleri ve özellikleri.  
   
- [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Birden fazla bölme içeren bir Windows formunu yerleştirmeye ilişkin yönergeler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

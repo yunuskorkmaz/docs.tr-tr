@@ -2,12 +2,12 @@
 title: Null başvuru türleri
 description: Bu makalede eklenen boş değer atanabilir başvuru türleri, genel bir bakış sağlanmaktadır C# 8. Özellik null başvuru özel durumlar, yeni ve mevcut projeler için karşı güvenliği nasıl sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203279"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725031"
 ---
 # <a name="nullable-reference-types"></a>Null başvuru türleri
 
@@ -41,7 +41,7 @@ Derleyici statik analiz, null olmayan değer için boş değer atanabilir bir ba
 name!.Length;
 ```
 
-Bu işleci hakkında ayrıntıları edinebilirsiniz [Taslak null başvuru türleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) github'da belirtimi teklifi.
+Bu işleci hakkında ayrıntıları edinebilirsiniz [Taslak null başvuru türleri](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) github'da belirtimi teklifi.
 
 ## <a name="nullability-of-types"></a>Null değer alabilme durumunun türleri
 

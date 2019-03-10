@@ -6,33 +6,33 @@ helpviewer_keywords:
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: d186b9deb88753566713dbf053e475a024f0bfa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535216"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702756"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox Denetimi (Windows Forms)
-Windows Forms `PictureBox` denetimi grafik bitmap, GIF, JPEG, meta dosyası veya simgesi biçimde görüntülemek için kullanılır.  
+Windows Forms `PictureBox` denetim, bit eşlem, GIF, JPEG, meta dosyası veya simge biçiminde grafikleri görüntülemek için kullanılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [PictureBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- Bu denetimi nedir ve anahtar özellikleri ve özelliklerini açıklar.  
+ [PictureBox Denetimine Genel Bakış](picturebox-control-overview-windows-forms.md)  
+ Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Ne açıklanır <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği mu ve nasıl ayarlanacağını.  
+ [Nasıl yapılır: Çalışma zamanında resmin yerleştirme ve boyutunu değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ Ne <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği yapar ve nasıl ayarlanacağını.  
   
- [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- Görüntüleme ve çalışma zamanında resmin temizlemek açıklar.  
+ [Nasıl yapılır: Çalışma zamanında resimleri ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)  
+ Görüntüleyebilir ve çalışma zamanında bir resmi Temizle açıklar.  
   
- [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- Yüklemek ve bir resim tasarım zamanında bir formda görüntülemek açıklar.  
+ [Nasıl yapılır: Tasarımcıyı kullanarak resim yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ Yükleme ve bir resim, tasarım zamanında bir form üzerinde görüntüleme işlemini açıklamaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.PictureBox>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

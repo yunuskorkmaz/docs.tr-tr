@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 87b49b025cfb27812933511b76c5a024cde4995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680318"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724673"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>İş akışı tasarım deneyimini özelleştirme
 
@@ -17,15 +17,15 @@ ms.locfileid: "54680318"
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
- [Özel Etkinlik Tasarımcıları ve Şablonları Kullanma](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [Özel Etkinlik Tasarımcıları ve Şablonları Kullanma](using-custom-activity-designers-and-templates.md)
 
  Yeni özel etkinlik tasarımcıları ve şablonları nasıl oluşturulacağını açıklar.
 
- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
 
  Yeniden barındırma açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Visual Studio ve doğrulama hataları görüntülemek nasıl dışında.
 
- [Özel İfade Düzenleyicisi Kullanma](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [Özel İfade Düzenleyicisi Kullanma](using-a-custom-expression-editor.md)
 
  Visual Studio 2010 dışında yeniden barındırılan iş akışı tasarımcıları ile kullanılacak özel ifade düzenleyicisini uygulanacağını açıklar.
 
@@ -35,7 +35,7 @@ ms.locfileid: "54680318"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Workflow Foundation’ı Genişletme](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [Tasarımcı](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [Özel Etkinlik Tasarımcıları](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [Tasarımcıyı Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [Windows Workflow Foundation’ı Genişletme](extend.md)
+- [Tasarımcı](./samples/designer.md)
+- [Özel Etkinlik Tasarımcıları](./samples/custom-activity-designers.md)
+- [Tasarımcıyı Yeniden Barındırma](./samples/designer-rehosting.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: a15563560615f5b857220c0b548fc57f31ee4e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527672"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707344"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Nasıl yapılır: Kullanıcı girişi bir printdialog'dan çalışma zamanında yakalama
 İlgili tasarım zamanında yazdırma seçeneklerini ayarlayabilirsiniz, ancak bazen çalışma zamanında, kullanıcı tarafından yapılan seçimler nedeniyle büyük olasılıkla bu seçenekleri değiştirmek istersiniz. Kullanarak bir belge yazdırma için kullanıcı girişi yakalayabilirsiniz <xref:System.Windows.Forms.PrintDialog> ve <xref:System.Drawing.Printing.PrintDocument> bileşenleri.  
@@ -56,5 +56,5 @@ ms.locfileid: "54527672"
 4.  Kullanıcının yazdırma seçenekleri iletişim kutusundan kopyalanmasını <xref:System.Drawing.Printing.PrinterSettings> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Forms Yazdırma Desteği](windows-forms-print-support.md)

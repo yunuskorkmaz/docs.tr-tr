@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6605809f984a4a1323f555cd73ecb04a67830f46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582065"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708359"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework ve Bant Dışı Yayınlar
 
@@ -49,7 +49,7 @@ ms.locfileid: "54582065"
  Daha önce belirtildiği gibi, OOB paketi kullanan bir uygulamayı dağıttığınızda OOB derlemeleri, uygulama paketinizle birlikte sevk edilir.
 
 ## <a name="types-of-oob-releases"></a>OOB sürümlerinin türleri
- Genellikle, bir OOB paketi bir veya daha fazla yayın öncesi sürüm ve kararlı bir sürüm içerir. Bir ön sürümle birlikte verilen lisans genellikle yeniden dağıtıma izin vermeyip değil, ancak bir paket denemenize ve geribildirim sağlamanıza olanak sağlar. Geribildirim, pakete yapılan tüm güncelleştirmelere eklenmiştir. Son sürüm NuGet ile bir kararlı paket olarak dağıtılır ve NuGet paketini uygulamanızla yeniden dağıtmanıza olanak sağlayan bir lisans içerir. Kararlı paketler Microsoft tarafından desteklenir. Microsoft, IntelliSense desteğinin yanı sıra diğer blog gönderilerini gibi belge türlerini sağlar ve forum tüm paketler için yanıtlar. Ayrıca, kaynak kodu bazı, tümü değil, paketlerle kullanılabilir. Yeni ve güncelleştirilmiş paketleri ile ilgili Duyurular almak için abone olabileceğiniz [.NET Framework blogu](https://blogs.msdn.com/b/dotnet/).
+ Genellikle, bir OOB paketi bir veya daha fazla yayın öncesi sürüm ve kararlı bir sürüm içerir. Bir ön sürümle birlikte verilen lisans genellikle yeniden dağıtıma izin vermeyip değil, ancak bir paket denemenize ve geribildirim sağlamanıza olanak sağlar. Geribildirim, pakete yapılan tüm güncelleştirmelere eklenmiştir. Son sürüm NuGet ile bir kararlı paket olarak dağıtılır ve NuGet paketini uygulamanızla yeniden dağıtmanıza olanak sağlayan bir lisans içerir. Kararlı paketler Microsoft tarafından desteklenir. Microsoft, IntelliSense desteğinin yanı sıra diğer blog gönderilerini gibi belge türlerini sağlar ve forum tüm paketler için yanıtlar. Ayrıca, kaynak kodu bazı, tümü değil, paketlerle kullanılabilir. Yeni ve güncelleştirilmiş paketleri ile ilgili Duyurular almak için abone olabileceğiniz [.NET Framework blogu](https://devblogs.microsoft.com/dotnet/).
 
  Ön sürüm ve kararlı paketler bulmak için **öncesini** NuGet Paket Yöneticisi'nde.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746610"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713035"
 ---
 # <a name="varieties-of-custom-controls"></a>Özel Denetim Çeşitleri
 .NET Framework ile geliştirin ve yeni denetimleri uygulayın. Devralma yoluyla da olarak mevcut denetimleri hakkında bilgi sahibi kullanıcı denetiminin işlevselliğini genişletebilirsiniz. Ayrıca, kendi boyama gerçekleştiren özel denetimler yazabilirsiniz.  
@@ -53,9 +53,9 @@ ms.locfileid: "56746610"
   
  Bileşik Denetim tüm kapsanan bir Windows Forms denetimleri her biriyle ilişkili devralınan işlevselliğini içerir ve seçmeli olarak kullanıma sunmak ve bunların özelliklerini bağlama olanak tanır. Bileşik Denetim önemli miktarda geliştirme ek çaba sarf işlevsellikle işleme varsayılan klavye de sağlar.  
   
- Örneğin, bir veritabanından müşteriyi adresini görüntülemek için bileşik denetim oluşturulabilir. Bu denetim içerebilir bir <xref:System.Windows.Forms.DataGridView> denetimi veritabanı alanları görüntülemek için bir <xref:System.Windows.Forms.BindingSource> bir veri kaynağına bağlama işlemek için ve bir <xref:System.Windows.Forms.BindingNavigator> Kayıtlarda gezinmek için denetimi. Veri bağlama özellikleri seçerek erişimlere açabilir ve paketini ve tüm denetim uygulamaya yeniden. Bu tür bir bileşik denetim örneği için bkz: [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Örneğin, bir veritabanından müşteriyi adresini görüntülemek için bileşik denetim oluşturulabilir. Bu denetim içerebilir bir <xref:System.Windows.Forms.DataGridView> denetimi veritabanı alanları görüntülemek için bir <xref:System.Windows.Forms.BindingSource> bir veri kaynağına bağlama işlemek için ve bir <xref:System.Windows.Forms.BindingNavigator> Kayıtlarda gezinmek için denetimi. Veri bağlama özellikleri seçerek erişimlere açabilir ve paketini ve tüm denetim uygulamaya yeniden. Bu tür bir bileşik denetim örneği için bkz: [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Bileşik denetim yazma için türetilen <xref:System.Windows.Forms.UserControl> sınıfı. <xref:System.Windows.Forms.UserControl> Taban sınıfı sağlar klavye yönlendirme alt denetler ve bir grup olarak çalışması alt denetimler sağlar. Daha fazla bilgi için [bir bileşik Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+ Bileşik denetim yazma için türetilen <xref:System.Windows.Forms.UserControl> sınıfı. <xref:System.Windows.Forms.UserControl> Taban sınıfı sağlar klavye yönlendirme alt denetler ve bir grup olarak çalışması alt denetimler sağlar. Daha fazla bilgi için [bir bileşik Windows Forms denetimi geliştirme](developing-a-composite-windows-forms-control.md).  
   
  **Öneri**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56746610"
   
  Özel denetim uygulamak için kod yazma <xref:System.Windows.Forms.Control.OnPaint%2A> gereksinim duyduğunuz herhangi bir özelliğe özgü kod yanı sıra denetim olayı. Ayrıca geçersiz kılabilirsiniz <xref:System.Windows.Forms.Control.WndProc%2A> doğrudan yöntemi ve tutamacı windows iletileri. Bu en güçlü bir şekilde bir denetim oluşturmak için ancak bu tekniği etkili bir şekilde kullanmak için Microsoft Win32® API ile ilgili bilgi sahibi olmanız gerekir.  
   
- Örnek bir özel denetimin görünümünü ve davranışını bir analog saatinin çoğaltan bir saat denetimidir. Özel boyama yanıt olarak taşımak için saat kullanımına neden çağrıldığında <xref:System.Windows.Forms.Timer.Tick> bir iç olayları <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Örnek bir özel denetimin görünümünü ve davranışını bir analog saatinin çoğaltan bir saat denetimidir. Özel boyama yanıt olarak taşımak için saat kullanımına neden çağrıldığında <xref:System.Windows.Forms.Timer.Tick> bir iç olayları <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md).  
   
  **Öneri**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56746610"
 -   Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
   
 ### <a name="activex-controls"></a>ActiveX Denetimleri  
- Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Penceresiz denetimleri  
  The Microsoft Visual Basic® 6.0and ActiveX teknolojilerini desteklemek *penceresiz* kontrol eder. Windows Forms'ta penceresiz denetimleri desteklenmez.  
@@ -107,8 +107,8 @@ ms.locfileid: "56746610"
  Kullanım <xref:System.ComponentModel.DesignerAttribute> denetiminiz tasarımcınıza ile ilişkilendirilecek. Daha fazla bilgi için [tasarım zamanı desteğini genişletmek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) ve [nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Bileşik Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
+- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md)
+- [Bileşik Windows Forms Denetimi Geliştirme](developing-a-composite-windows-forms-control.md)
 - [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

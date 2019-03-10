@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 43641b89ae405caf9807b00b4b3c84f25c4e5e67
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332201"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713767"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Nasıl yapılır: Fare ve kod klavye olaylarının benzetimini yapma
 Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşitli seçenekler sunar. Bu konu, bu seçeneklerine genel bakış sağlar.  
@@ -31,7 +31,7 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
   
 2.  Çağrı <xref:System.Windows.Forms.Control.OnMouseClick%2A> bu yöntemle <xref:System.Windows.Forms.MouseEventArgs> bağımsız değişken olarak.  
   
- Özel denetimler hakkında daha fazla bilgi için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).  
+ Özel denetimler hakkında daha fazla bilgi için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](./controls/developing-windows-forms-controls-at-design-time.md).  
   
  Fare girişi benzetimini yapmanın başka yolları da vardır. Örneğin, program aracılığıyla genellikle fare girdisi ayarlanan bir durumu temsil eden denetim özelliğini ayarlayabilirsiniz (gibi <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği <xref:System.Windows.Forms.CheckBox> denetimi), veya olaya bağlı temsilcinin doğrudan çağırabilir, benzetimini yapmak istediğiniz.  
   
@@ -60,9 +60,9 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
   
 1.  Çağrı <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemi <xref:System.Windows.Forms.SendKeys> sınıfı. Belirtilen tuş vuruşları uygulamanın etkin denetim alınır. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.SendKeys.Send%2A> form yüzeyi kullanıcı çift tıkladığında ENTER tuşuna basarak benzetimi yapmak için. Bu örnekte bir <xref:System.Windows.Forms.Form> tek bir <xref:System.Windows.Forms.Button> bir sekme dizini 0 olan denetim.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>Farklı bir uygulamaya tuş vuruşu göndermek için  
   
@@ -71,16 +71,16 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
     > [!NOTE]
     >  Doğru parametreleri `FindWindow` hesaplayıcısı uygulaması bulur çağrı Windows sürümünüz göre değişir.  Aşağıdaki kod üzerinde hesaplayıcısı uygulaması bulur [!INCLUDE[win7](../../../includes/win7-md.md)]. Üzerinde [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], "SciCalc" için ilk parametre değiştirin. Visual Studio'ya dahil edildi Spy ++ araç, doğru parametreleri belirlemek için kullanabilirsiniz.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, önceki kod örnekleri için tam uygulamasıdır.  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
@@ -90,4 +90,4 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Kullanıcı Girdisi](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+- [Windows Forms'ta Kullanıcı Girdisi](user-input-in-windows-forms.md)

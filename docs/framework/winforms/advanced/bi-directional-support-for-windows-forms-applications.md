@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442977"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712298"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu formlarda bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilen tüm denetimler içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
@@ -79,7 +79,7 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
 |<xref:System.Windows.Forms.VScrollBar>|Sol tarafta kaydırılabilir denetimleri sağ tarafında yerine görüntülenir|Herhangi bir etkisi|Hayır|  
   
 ## <a name="encoding"></a>Encoding  
- Windows Forms Unicode desteğini, çift yönlü uygulamalarınızı oluşturduğunuzda herhangi bir karakter içerebilir. Ancak, tüm Windows Forms denetimleri, tüm platformlarda Unicode'u destekler. Daha fazla bilgi için [kodlama ve Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Windows Forms Unicode desteğini, çift yönlü uygulamalarınızı oluşturduğunuzda herhangi bir karakter içerebilir. Ancak, tüm Windows Forms denetimleri, tüm platformlarda Unicode'u destekler. Daha fazla bilgi için [kodlama ve Windows Forms Genelleştirme](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
  Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağdan sola okuma düzeni ile metin çizin. <xref:System.Drawing.Graphics.DrawString%2A> Metin çizmek için kullanılan yöntemi destekleyen bir `StringFormat` ayarlamak için parametre <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> üyesi <xref:System.Drawing.StringFormatFlags> metin için başlangıç noktasını tersine çevirmek için sabit listesi.  

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a9e90ebc941d07c24f7b14ecf72e5a764bf48d77
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664984"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708225"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı haklarını veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni, kod dosya sistemine erişebilir izin; Kullanıcı bir veritabanına erişmek için izin verilen, kod veritabanına erişmeye izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü olan yürütülebilir dosyaları, kod için kabul edilebilir olsa da, bunlar Internet veya yerel Intranet gelen kötü amaçlı kodlar için kabul edilebilir olmayabilir. Bu kod, kullanıcının izni olmadan bilgisayar kaynaklarına erişebilmesi olmamalıdır.  
   
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Adlı kod erişimi güvenliği izinleri veya kullanıcının sahip olduğu hakları koduna sahip hakları ayırt olanak tanıyan bir altyapı sunar. Varsayılan olarak, Internet ve Intranet gelen kod yalnızca kısmi güven bilinen içinde çalıştırabilirsiniz. Kısmi güven konuları kısıtlamaları bir dizi uygulamaya: diğer özelliklerin yanı sıra, bir uygulamanın yerel sabit disk erişimi sınırlıdır ve yönetilmeyen kod çalıştıramazsınız. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kod erişmek için bu kod kimliğine izin kaynakları denetler: nereden geldiğini içerip içermediğine, bir [Strong-Named derlemeleri](../../../docs/framework/app-domains/strong-named-assemblies.md), bir sertifika ve benzeri ile imzalı olup olmadığını.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Adlı kod erişimi güvenliği izinleri veya kullanıcının sahip olduğu hakları koduna sahip hakları ayırt olanak tanıyan bir altyapı sunar. Varsayılan olarak, Internet ve Intranet gelen kod yalnızca kısmi güven bilinen içinde çalıştırabilirsiniz. Kısmi güven konuları kısıtlamaları bir dizi uygulamaya: diğer özelliklerin yanı sıra, bir uygulamanın yerel sabit disk erişimi sınırlıdır ve yönetilmeyen kod çalıştıramazsınız. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kod erişmek için bu kod kimliğine izin kaynakları denetler: nereden geldiğini içerip içermediğine, bir [Strong-Named derlemeleri](../app-domains/strong-named-assemblies.md), bir sertifika ve benzeri ile imzalı olup olmadığını.  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Windows Forms uygulamaları dağıtmak için kullandığınız, teknoloji, yardımcı olur, kısmi güven, tam güven veya kısmi güven yükseltilmiş izinlerle çalışan uygulamalar geliştirmek kolaylaştırır. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] İzin yükseltilmesi ve güvenilir uygulama dağıtımı gibi özellikler sağlar, böylece uygulama tam güven veya yükseltilmiş izinler yerel kullanıcı sorumlu bir şekilde talep edebilir.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework Güvenliği anlama  
- Kod erişimi güvenliği, kodun diğer yönleri ve kod kaynaklandığı bağlı olarak değişen düzeylerde güvenilir olması için kod sağlar. Ortak dil çalışma zamanı kullanan güvenlik ilkesi belirlemek için kanıt hakkında daha fazla bilgi için bkz. [kanıt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Bilgisayar sistemlerini kötü amaçlı koddan korunmasına yardımcı olur ve kasıtlı olarak veya yanlışlıkla güvenlikten ödün güvenilen kod korunmasına yardımcı olur. Yalnızca uygulamanız için gereken izinleri belirtebildiğinizden kod erişimi güvenliği, uygulamanız, hangi eylemleri üzerinde daha fazla denetim sağlar. Bile bu kod bir tek kod-erişim-security yapma izni denetimi kod erişimi güvenliği, ortak dil çalışma zamanını hedefleyen tüm yönetilen kodun etkiler. Güvenlik hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], bkz: [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md) ve [kod erişimi güvenliği Temelleri](../../../docs/framework/misc/code-access-security-basics.md).  
+ Kod erişimi güvenliği, kodun diğer yönleri ve kod kaynaklandığı bağlı olarak değişen düzeylerde güvenilir olması için kod sağlar. Ortak dil çalışma zamanı kullanan güvenlik ilkesi belirlemek için kanıt hakkında daha fazla bilgi için bkz. [kanıt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Bilgisayar sistemlerini kötü amaçlı koddan korunmasına yardımcı olur ve kasıtlı olarak veya yanlışlıkla güvenlikten ödün güvenilen kod korunmasına yardımcı olur. Yalnızca uygulamanız için gereken izinleri belirtebildiğinizden kod erişimi güvenliği, uygulamanız, hangi eylemleri üzerinde daha fazla denetim sağlar. Bile bu kod bir tek kod-erişim-security yapma izni denetimi kod erişimi güvenliği, ortak dil çalışma zamanını hedefleyen tüm yönetilen kodun etkiler. Güvenlik hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], bkz: [temel güvenlik kavramları](../../standard/security/key-security-concepts.md) ve [kod erişimi güvenliği Temelleri](../misc/code-access-security-basics.md).  
   
  Kullanıcı bir Windows Forms yürütülebilir dosyayı doğrudan bir Web sunucusu veya dosya paylaşımı dışına çalıştırırsanız, derecede güven, uygulamaya verilen kod bulunduğu ve kullanmaya nasıl bağlıdır. Bir uygulama çalıştırdığında, otomatik olarak değerlendirilir ve ortak dil çalışma zamanını şuradan adlandırılmış bir izin kümesini alır. Varsayılan olarak, yerel bilgisayardan kod tam güven izni verilir ayarlayın, bir yerel ağ koddan yerel Intranet izin kümesi verilir ve Internet'ten kod Internet izni verilir.  
   
@@ -37,11 +37,11 @@ Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)
  Güvenlik İlkesi değiştirilebildiğinden, uygulamanız için gerçek izinler varsayılan değerlerden farklı olabilir; başka bir deyişle, bir bilgisayarda, ancak başka bir uygulama izni olabilir.  
   
 ## <a name="developing-a-more-secure-windows-forms-application"></a>Daha güvenli bir Windows Forms uygulaması geliştirme  
- Güvenlik, uygulama geliştirme tüm adımları önemlidir. Başlangıç gözden geçirerek ve aşağıdaki [güvenli kodlama kılavuzları](../../../docs/standard/security/secure-coding-guidelines.md).  
+ Güvenlik, uygulama geliştirme tüm adımları önemlidir. Başlangıç gözden geçirerek ve aşağıdaki [güvenli kodlama kılavuzları](../../standard/security/secure-coding-guidelines.md).  
   
  Ardından, uygulama tam güven çalışıp gerekir veya kısmi güvende mi çalıştırılması gereken karar verin. Uygulamanızın tam güvende çalıştırma yerel bilgisayardaki kaynaklara erişmeye kolaylaştırır, ancak etmez tasarım ve güvenli kodlama yönergeleri kesinlikle göre uygulamanızı geliştirmek, uygulamanız ve onun kullanıcıları için yüksek güvenlik riskleri sunar. konu. Uygulamanızı kısmi güvende çalışan daha güvenli uygulama geliştirmeyi daha kolay hale getirir ve çok riskini azaltır, ancak daha fazla belirli özellikleri uygulamak nasıl planlama gerektirir.  
   
- Kısmi güven (diğer bir deyişle, ya da Internet veya yerel Intranet izin kümeleri) tercih ederseniz bu ortamda mono'da uygulamanızın nasıl istediğinize karar verin. Windows Forms, yarı güvenilir bir ortamda özellikleri uygulamak için daha güvenli, alternatif yollar sağlar. Veri erişimi gibi uygulamanızın belirli bölümlerini tasarlanmış ve kısmi güven hem de tam güven ortamlar için farklı bir şekilde yazılmış. Uygulama ayarları gibi bazı Windows Forms özellikleri, kısmi güven çalışacak şekilde tasarlanmıştır. Daha fazla bilgi için [uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md).  
+ Kısmi güven (diğer bir deyişle, ya da Internet veya yerel Intranet izin kümeleri) tercih ederseniz bu ortamda mono'da uygulamanızın nasıl istediğinize karar verin. Windows Forms, yarı güvenilir bir ortamda özellikleri uygulamak için daha güvenli, alternatif yollar sağlar. Veri erişimi gibi uygulamanızın belirli bölümlerini tasarlanmış ve kısmi güven hem de tam güven ortamlar için farklı bir şekilde yazılmış. Uygulama ayarları gibi bazı Windows Forms özellikleri, kısmi güven çalışacak şekilde tasarlanmıştır. Daha fazla bilgi için [uygulama ayarlarına genel bakış](./advanced/application-settings-overview.md).  
   
  Kısmi güven verir, ancak tam güvende çalıştırmak istiyor musunuz daha fazla izin uygulamanız gerekiyorsa, yalnızca gereksinim duyduğunuz ek izinler sunduğundan çalışırken kısmi güvende çalıştırabilirsiniz. Örneğin, kısmi güvende çalıştırmak istediğiniz, ancak kullanıcının dosya sistemindeki bir dizin, uygulama yalnızca okuma erişimi vermeniz gerekir, isteyebileceğiniz <xref:System.Security.Permissions.FileIOPermission> yalnızca bu dizin için. Bu yaklaşım, doğru kullanıldığında, uygulamanızın artırılmış işlevselliğini sağlamak ve kullanıcılarınıza güvenlik riskleri en aza indirmek.  
   
@@ -55,9 +55,9 @@ Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|-   [Daha güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)|Dosyaları ve verileri kısmi güven ortamında nasıl açıklar.|  
-|-   [Windows Forms'ta daha güvenli yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)|Kısmi güven ortamında yazdırma özelliklerine erişmek nasıl açıklar.|  
-|-   [Windows Forms'ta ek güvenlik konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)|Pano'yu kullanıyor ve yönetilmeyen kodu bir kısmi güven ortamında aramaların gerçekleştirme penceresi işleme açıklar.|  
+|-   [Daha güvenli dosya ve Windows Forms veri erişimi](more-secure-file-and-data-access-in-windows-forms.md)|Dosyaları ve verileri kısmi güven ortamında nasıl açıklar.|  
+|-   [Windows Forms'ta daha güvenli yazdırma](more-secure-printing-in-windows-forms.md)|Kısmi güven ortamında yazdırma özelliklerine erişmek nasıl açıklar.|  
+|-   [Windows Forms'ta ek güvenlik konuları](additional-security-considerations-in-windows-forms.md)|Pano'yu kullanıyor ve yönetilmeyen kodu bir kısmi güven ortamında aramaların gerçekleştirme penceresi işleme açıklar.|  
   
 -  
   
@@ -83,9 +83,9 @@ Yayınlanmadan önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)
  Visual Studio kullanarak, Windows Forms uygulaması dağıttıysanız, kısmi güven veya geliştirme ortamından ayarlanan sınırlı izin kümesinde hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz: [nasıl yapılır: Sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)
-- [Kod erişimi güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)
+- [Windows Forms Güvenliği](windows-forms-security.md)
+- [Kod erişimi güvenliği temelleri](../misc/code-access-security-basics.md)
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)
-- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

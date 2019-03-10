@@ -6,48 +6,48 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: 18a05a739f42d41a650e66723f44aae69c1707c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526057"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722145"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Özel Denetim Boyama ve İşleme
-Denetimlerin özel boyama .NET Framework tarafından kolay pek çok karmaşık görevlerden biridir. Bir özel denetim yazarken denetiminizin grafik görünümü ile ilgili birçok seçeneğiniz vardır. Öğesinden devralan bir denetim yazıyorsanız `Control`, grafik gösterimi işlemek, denetim kodu sağlamalısınız. İçinden devralma tarafından bir kullanıcı denetimi oluşturuyorsanız `UserControl`, veya devralan Windows Forms denetimleri her birinden, standart grafik gösterimi geçersiz kılabilir ya da kendi grafik kodunuzu girin. Özel işleme bağlı denetimler için sağlamak istiyorsanız bir `UserControl` geliştirmekte olduğunuz, seçeneklerinizi daha kısıtlı hale, ancak hala çok çeşitli grafik olasılıklarını denetimleri ve uygulamaları sağlar.  
+Özel boyama denetimlerin .NET Framework tarafından daha kolay pek çok karmaşık görev biridir. Özel denetim yazarken, denetiminizin grafik görünümü ile ilgili birçok seçeneğiniz vardır. Devralınan bir denetim yazıyorsanız `Control`, Denetim, grafik gösterimi işleme veren kod sağlamanız gerekir. Devralarak bir kullanıcı denetimi oluşturuyorsanız `UserControl`, veya devraldığını Windows Forms denetimleri birinden, standart grafik gösterimi geçersiz kılabilir ya da kendi grafik kodunu sağlayın. Bağlı denetimler için özel işleme sağlamak istiyorsanız bir `UserControl` geliştirmekte olduğunuz, seçeneklerinizi daha sınırlı olur, ancak yine de çok çeşitli grafik denetimleri ve uygulamaları olasılıklarını izin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms Denetimini İşleme](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- Bir denetim görüntüler mantığı program gösterilmektedir.  
+ [Windows Forms Denetimini İşleme](rendering-a-windows-forms-control.md)  
+ Bir denetim görüntüler mantığını nasıl programlama yapılacağı gösterilmektedir.  
   
- [Kullanıcı Çizimli Denetimler](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- Yazma ve işleme kodu denetlemek için geçersiz kılma adımlarını genel bir bakış sağlar.  
+ [Kullanıcı Çizimli Denetimler](user-drawn-controls.md)  
+ Yazma ve işleme kodunu denetlemek için geçersiz kılma içinde yer alan adımların bir genel bakış sağlar.  
   
- [Bağlı Denetimler](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- Kullanıcı denetimleri ve formlarında bağlı denetimler için özel işleme kodu uygulamak açıklar.  
+ [Bağlı Denetimler](constituent-controls.md)  
+ Bağlı denetimler için özel işleme kodu, kullanıcı denetimleri ve forms uygulanacağını açıklar.  
   
- [Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
- Nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Control.Visible%2A> denetim gösterme ve gizleme için özellik.  
+ [Nasıl yapılır: Çalışma zamanında denetiminizi görünmez yapma](how-to-make-your-control-invisible-at-run-time.md)  
+ Nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Control.Visible%2A> özelliğini gizler ve bir denetimi gösterir.  
   
- [Nasıl yapılır: Denetiminize Saydam Arka Plan Verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- Nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Control.SetStyle%2A> opak, saydam veya kısmen saydam arka plan rengi oluşturmak için yöntemi.  
+ [Nasıl yapılır: Denetiminize saydam arka plan verme](how-to-give-your-control-a-transparent-background.md)  
+ Nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemini opak, saydam veya kısmen saydam bir arka plan rengi.  
   
- [Denetimleri Görsel Stilde İşleme](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- Görsel stiller işletim sistemlerinde desteklemek kullanarak denetimlerini işlemeye gösterilmektedir.  
+ [Denetimleri Görsel Stilde İşleme](rendering-controls-with-visual-styles.md)  
+ Görsel stiller, bunları destekleyen işletim sistemlerinde kullanarak denetimleri nasıl oluşturulacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Control>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
  <xref:System.Windows.Forms.UserControl>  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  Bu yöntem açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Tanıtır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] daha fazla bilgi için Visual Studio Perspektif ve verir bağlantılardan grafik işlevselliği.  
+ [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md)  
+ Tanıtır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grafik işlevlerini Perspektif ve size bir Visual Studio bağlantılardan daha fazla bilgi için.  
   
- [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)  
  Özel denetimler, yazabilirsiniz türlerini açıklar.

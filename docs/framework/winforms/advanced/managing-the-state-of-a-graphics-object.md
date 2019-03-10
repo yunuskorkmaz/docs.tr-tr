@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540864"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717628"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Bir Grafik Nesnesinin Durumunu Yönetme
 <xref:System.Drawing.Graphics> Sınıftır yaklaşımının temelindeki [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlayın ve yöntemlerinin çağrılması <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Dönüşümler  
- A <xref:System.Drawing.Graphics> nesne tarafından çizilen tüm öğelere uygulanır iki Dönüşümleri (dünya ve sayfa) tutar <xref:System.Drawing.Graphics> nesne. Afin herhangi bir dönüştürme gerçek koordinat dönüştürmesini içinde depolanabilir. Afin dönüşümler ölçeklendirme, döndürme, yansıtma, eğme ve çevirme içerir. Sayfa dönüşümü, ölçekleme ve birimler (örneğin, piksel inç olarak) değiştirmek için kullanılabilir. Daha fazla bilgi için [koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ A <xref:System.Drawing.Graphics> nesne tarafından çizilen tüm öğelere uygulanır iki Dönüşümleri (dünya ve sayfa) tutar <xref:System.Drawing.Graphics> nesne. Afin herhangi bir dönüştürme gerçek koordinat dönüştürmesini içinde depolanabilir. Afin dönüşümler ölçeklendirme, döndürme, yansıtma, eğme ve çevirme içerir. Sayfa dönüşümü, ölçekleme ve birimler (örneğin, piksel inç olarak) değiştirmek için kullanılabilir. Daha fazla bilgi için [koordinat sistemleri ve dönüştürmeler](coordinate-systems-and-transformations.md).  
   
  Aşağıdaki örnek, dünya ve sayfa dönüşümleri ayarlar bir <xref:System.Drawing.Graphics> nesne. Gerçek koordinat dönüştürmesini bir 30 derece döndürme için ayarlanır. Böylece ikinci koordinatları geçirilen sayfa dönüşümü ayarlanır <xref:System.Drawing.Graphics.DrawEllipse%2A> milimetre yerine piksel olarak kabul edilir. Kod iki özdeş çağrılar <xref:System.Drawing.Graphics.DrawEllipse%2A> yöntemi. Gerçek koordinat dönüştürmesini ilk uygulanan <xref:System.Drawing.Graphics.DrawEllipse%2A> çağrısı ve her iki Dönüşümleri (dünya ve sayfa) ikinci uygulanır <xref:System.Drawing.Graphics.DrawEllipse%2A> çağırın.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  Aşağıdaki çizimde, iki üç nokta simgesini gösterir. 30 derece döndürme koordinat sisteminde (istemci alanını sol üst köşesinde) kaynağı hakkında üç nokta simgesini merkezleri hakkında değil unutmayın. Ayrıca kalem genişliği 1 için ikinci üç noktanın 1 piksel artımlı ilk üç nokta işaretine ve 1 milimetre anlamına gelir.  
   
- ![Elips](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Elips](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Kırpma bölgesini  
  A <xref:System.Drawing.Graphics> nesne tarafından çizilen tüm öğelere uygulanır bir kırpma bölgesini tutar <xref:System.Drawing.Graphics> nesne. Kırpma bölgesini çağırarak ayarlayabileceğiniz <xref:System.Drawing.Graphics.SetClip%2A> yöntemi.  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  Aşağıdaki çizimde, kırpılmış satırları gösterir.  
   
- ![Kırpma bölgesini sınırlı](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Kırpma bölgesini sınırlı](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [İç İçe Grafik Kapsayıcılarını Kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [İç İçe Grafik Kapsayıcılarını Kullanma](using-nested-graphics-containers.md)

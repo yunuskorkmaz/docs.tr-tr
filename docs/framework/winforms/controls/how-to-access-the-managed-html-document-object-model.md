@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637157"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715951"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML belgesi nesne modeline erişme
 Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişebilirsiniz:  
@@ -24,18 +24,18 @@ Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişe
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>DOM bir Windows Forms uygulamasından erişmek için  
   
-1.  Konak bir <xref:System.Windows.Forms.WebBrowser> Windows Forms uygulamanızdaki denetlemek ve izlemek için <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay. Denetimleri barındırma ve olaylar için izleme hakkında daha fazla bilgi için bkz [olayları](../../../../docs/standard/events/index.md).  
+1.  Konak bir <xref:System.Windows.Forms.WebBrowser> Windows Forms uygulamanızdaki denetlemek ve izlemek için <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay. Denetimleri barındırma ve olaylar için izleme hakkında daha fazla bilgi için bkz [olayları](../../../standard/events/index.md).  
   
 2.  Alma <xref:System.Windows.Forms.HtmlDocument> erişerek geçerli sayfa için <xref:System.Windows.Forms.WebBrowser.Document%2A> özelliği <xref:System.Windows.Forms.WebBrowser> denetimi.  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Internet Explorer'da barındırılan bir UserControl DOM erişmek için  
   
-1.  Kendi özel bir türetilmiş sınıf, oluşturmak <xref:System.Windows.Forms.UserControl> sınıfı. Daha fazla bilgi için [nasıl yapılır: Bileşik denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Kendi özel bir türetilmiş sınıf, oluşturmak <xref:System.Windows.Forms.UserControl> sınıfı. Daha fazla bilgi için [nasıl yapılır: Bileşik denetimler yazma](how-to-author-composite-controls.md).  
   
 2.  Aşağıdaki kod, yük olay işleyicisi içine yerleştirin, <xref:System.Windows.Forms.UserControl>:  
   
- [!code-csharp[AccessHTMLDOMControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
- [!code-vb[AccessHTMLDOMControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
+ [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
+ [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
   
@@ -46,4 +46,4 @@ Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişe
 1.  Uygulamanızı veya <xref:System.Windows.Forms.UserControl> yönetilen HTML DOM erişmek için tam güven gerektirir Bir Windows Forms uygulaması kullanarak dağıtıyorsanız [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], tam güven izni yükseltme ya da güvenilir uygulama dağıtımı kullanarak isteyebilir; bkz [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications) Ayrıntılar için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)

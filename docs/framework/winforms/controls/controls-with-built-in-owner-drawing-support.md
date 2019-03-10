@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707367"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Yerleşik Sahip Çizimi Destekli Denetimler
 Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde belirli denetimlerin görünümünü değiştirmek için kullanılan bir tekniktir.  
@@ -86,7 +86,7 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem bileşeni  
  <xref:System.Windows.Forms.MenuItem> Bileşenini temsil eder, bir tek menü öğesi bir <xref:System.Windows.Forms.MainMenu> veya <xref:System.Windows.Forms.ContextMenu> bileşeni.  
@@ -172,9 +172,9 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip Denetimi  
  <xref:System.Windows.Forms.ToolStrip> ve türetilen denetimler görünümlerini herhangi bir özelliği özelleştirmenize olanak sağlar.  
@@ -185,9 +185,9 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Nasıl yapılır: Windows Forms'ta ToolStrip denetimi için özel Oluşturucu Oluşturma ve](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Nasıl yapılır: Windows Forms'ta ToolStrip denetimi için özel Oluşturucu Oluşturma ve](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Nasıl yapılır: Bir ToolStrip denetimini özel olarak çizme](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Nasıl yapılır: Bir ToolStrip denetimini özel olarak çizme](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

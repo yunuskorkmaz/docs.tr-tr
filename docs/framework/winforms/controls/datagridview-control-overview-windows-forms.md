@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: a327b225dca3dfcab8444567d37a6a5ebe7490ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7ff88f877f73382f69874c58392c3374a83c019
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710540"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706006"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  İle <xref:System.Windows.Forms.DataGridView> denetimi, görüntüleyebilir ve tablosal verilerden birçok farklı türde veri kaynaklarını düzenleyin.  
   
@@ -46,41 +46,41 @@ ms.locfileid: "54710540"
   
  <xref:System.Windows.Forms.DataGridView> Denetimi bu arabirimleri tarafından döndürülen nesnelerin genel özelliklerini veya özellikler koleksiyonu tarafından döndürülen veri bağlamayı destekler bir <xref:System.ComponentModel.ICustomTypeDescriptor> döndürülen nesnelerin uygulanırsa, arabirim.  
   
- Genellikle, bağlayacaksınız bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bağlama <xref:System.Windows.Forms.BindingSource> bileşen başka bir veri kaynağı veya iş nesneleri ile doldurur. <xref:System.Windows.Forms.BindingSource> Bileşeni olduğundan tercih edilen veri kaynağı çok çeşitli veri kaynakları bağlayabilirsiniz ve çok sayıda veri bağlama sorunlarını otomatik olarak çözebilirsiniz. Daha fazla bilgi için [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md).  
+ Genellikle, bağlayacaksınız bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bağlama <xref:System.Windows.Forms.BindingSource> bileşen başka bir veri kaynağı veya iş nesneleri ile doldurur. <xref:System.Windows.Forms.BindingSource> Bileşeni olduğundan tercih edilen veri kaynağı çok çeşitli veri kaynakları bağlayabilirsiniz ve çok sayıda veri bağlama sorunlarını otomatik olarak çözebilirsiniz. Daha fazla bilgi için [BindingSource bileşeni](bindingsource-component.md).  
   
- <xref:System.Windows.Forms.DataGridView> Denetimi ayrıca kullanılabilir *ilişkisiz* moduyla temel alınan veri depo yok. İlişkisiz bir kullanan bir kod örnek <xref:System.Windows.Forms.DataGridView> denetlemek için bkz: [izlenecek yol: Oluşturma bağlantısız bir Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
+ <xref:System.Windows.Forms.DataGridView> Denetimi ayrıca kullanılabilir *ilişkisiz* moduyla temel alınan veri depo yok. İlişkisiz bir kullanan bir kod örnek <xref:System.Windows.Forms.DataGridView> denetlemek için bkz: [izlenecek yol: Oluşturma bağlantısız bir Windows Forms DataGridView denetiminde](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
   
  <xref:System.Windows.Forms.DataGridView> Denetimidir son derece yapılandırılabilir ve genişletilebilir ve birçok özellikleri, yöntemleri ve onun görünümünü ve davranışını özelleştirmek için olayları sağlar. Tablosal verileri görüntülemek için Windows Forms uygulaması istediğinizde kullanmayı <xref:System.Windows.Forms.DataGridView> diğerlerinden önce denetim (örneğin, <xref:System.Windows.Forms.DataGrid>). Salt okunur değerleri küçük bir kılavuz görüntülüyorsanız ya da milyonlarca kayıt içeren bir tablo düzenlemek bir kullanıcı etkinleştiriyorsanız <xref:System.Windows.Forms.DataGridView> denetimi, bir kolayca programlanabilir, belleği verimli kullanan Çözümle sağlayacaktır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataGridView Denetimi Teknoloji Özeti](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
+ [DataGridView Denetimi Teknoloji Özeti](datagridview-control-technology-summary-windows-forms.md)  
  Özetler <xref:System.Windows.Forms.DataGridView> kavramları ve ilişkili sınıflarının kullanımını denetler.  
   
- [DataGridView Denetimi Mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [DataGridView Denetimi Mimarisi](datagridview-control-architecture-windows-forms.md)  
  Mimarisini açıklar <xref:System.Windows.Forms.DataGridView> türü ve devralma hiyerarşisi yapısını açıklayan denetimi.  
   
- [DataGridView Denetimi Senaryoları](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
+ [DataGridView Denetimi Senaryoları](datagridview-control-scenarios-windows-forms.md)  
  En yaygın senaryoları açıklar <xref:System.Windows.Forms.DataGridView> denetimleri kullanılır.  
   
- [DataGridView Denetimi Kod Dizini](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
+ [DataGridView Denetimi Kod Dizini](datagridview-control-code-directory-windows-forms.md)  
  Kod örnekleri çeşitli belgelerine bağlantılar sağlar <xref:System.Windows.Forms.DataGridView> görevleri. Bu örnekler, görev türüne göre kategorize edilir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms DataGridView Denetiminde Sütun Türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)  
  Windows Forms'ta sütun türleri ele alınmaktadır <xref:System.Windows.Forms.DataGridView> denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcılara izin vermek için kullanılır.  
   
- [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)  
  El ile veya bir dış veri kaynağından denetimi veriyle doldurmak nasıl açıklayan konuları sağlar.  
   
- [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimini Özelleştirme](customizing-the-windows-forms-datagridview-control.md)  
  Özel boyama açıklayan konuları sağlar <xref:System.Windows.Forms.DataGridView> hücre ve satırları ve oluşturma türetilmiş hücre, sütun ve satır türleri.  
   
- [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Performans Ayarlaması](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Denetim verimli bir şekilde büyük miktarlarda veri ile çalışırken, performans sorunlarını önlemek için nasıl kullanılacağını açıklayan konuları sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Windows Forms DataGridView Denetimindeki Varsayılan İşlevler](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Varsayılan Klavye ve Fare Kullanımı](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [DataGridView Denetimi](datagridview-control-windows-forms.md)
+- [Windows Forms DataGridView Denetimindeki Varsayılan İşlevler](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Varsayılan Klavye ve Fare Kullanımı](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

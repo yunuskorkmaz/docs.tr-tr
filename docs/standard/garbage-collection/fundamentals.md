@@ -1,6 +1,7 @@
 ---
-title: Çöp Toplamanın Temelleri
-ms.date: 03/30/2017
+title: Çöp toplamanın temelleri
+description: Çöp toplayıcı nasıl çalıştığını ve en iyi performans için nasıl yapılandırılabileceğini öğrenin.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066339"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712480"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>Çöp Toplamanın Temelleri
+# <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
   
 -   Belleği boşaltmak zorunda kalmadan uygulamanızı geliştirmenizi sağlar.  
@@ -30,28 +31,8 @@ ms.locfileid: "55066339"
   
 -   Bir nesne başka bir nesnenin içeriğini kullanamazsınız sağlayarak bellek emniyet sağlar.  
   
- Bu konuda, çöp toplama işleminin temel kavramlar açıklanmaktadır. Aşağıdaki bölümleri içerir:  
-  
--   [Bellek temelleri](#fundamentals_of_memory)  
-  
--   [Bir çöp toplama koşulları](#conditions_for_a_garbage_collection)  
-  
--   [Yönetilen yığın](#the_managed_heap)  
-  
--   [Nesiller](#generations)  
-  
--   [Bir çöp toplama sırasında ne olur?](#what_happens_during_a_garbage_collection)  
-  
--   [Yönetilmeyen kaynakları düzenleme](#manipulating_unmanaged_resources)  
-  
--   [İş istasyonu ve sunucu çöp toplama](#workstation_and_server_garbage_collection)  
-  
--   [Eş zamanlı çöp toplama](#concurrent_garbage_collection)  
-  
--   [Arka plan iş istasyonu çöp toplama](#background_garbage_collection)  
-  
--   [Arka plan sunucusu çöp toplama](#background_server_garbage_collection)  
-  
+ Bu konuda, çöp toplama işleminin temel kavramlar açıklanmaktadır. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Bellek temelleri  
  Aşağıdaki liste önemli CLR belleği kavramlarını özetlemektedir.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066339"
   
  Ne kadar zorlayıcı olduğunu (sıklığı ve süresi) çöp koleksiyonları sonucu ayırmaların hacminin ve yönetilen yığındaki kalan bellek miktarı ' dir.  
   
- Yığın, iki yığın birikmesi kabul edilebilir: büyük nesne yığını ve küçük nesne yığını.  
+ Yığın, iki yığın birikmesi kabul edilebilir: [büyük nesne yığını](large-object-heap.md) ve küçük nesne yığını.  
   
- Büyük nesne yığını 85.000 bayt çok geniş nesneleri içerir ve daha büyük. Büyük nesne yığını üzerindeki nesneler genellikle dizilerdir. Bir örnek nesne için çok büyük olmak nadir olarak rastlanıyor.  
+ [Büyük nesne yığını](large-object-heap.md) 85.000 bayt çok geniş nesneleri içerir ve daha büyük. Büyük nesne yığını üzerindeki nesneler genellikle dizilerdir. Bir örnek nesne için çok büyük olmak nadir olarak rastlanıyor.  
   
  [Başa dön](#top)  
   

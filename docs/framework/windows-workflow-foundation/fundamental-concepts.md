@@ -2,12 +2,12 @@
 title: Temel Windows Workflow kavramları
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: ef2f327bdf2641648d266cecd0c6674762a95c18
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347831"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703419"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Temel Windows Workflow kavramları
 İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramları ve nasıl uygulandığı açıklanmaktadır.  
@@ -52,7 +52,7 @@ ms.locfileid: "49347831"
  Etkinlikler, uygun kullanarak iş akışı çalışma zamanı ortamı erişim elde edersiniz <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bunlar bu bağımsız değişkenleri ve değişkenlerini çözmek için alt etkinlikler zamanlamak için ve birçok diğer amaçlar için kullanır.  
   
 ## <a name="services"></a>Hizmetler  
- İş akışları uygulamak ve mesajlaşma etkinlikleri kullanma zamanı gevşek bağlanmış hizmetlerine erişmek için doğal bir yol sağlar. Mesajlaşma etkinlikleri WCF yerleşiktir ve veri ekleme çıkarma iş akışı almak için kullanılan birincil mekanizmadır. Mesajlaşma etkinlikleri birlikte ileti değişim deseni, istediğiniz herhangi bir türden model oluşturabilirsiniz. Daha fazla bilgi için [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı hizmetlerini kullanarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için [iş akışı hizmetlerini barındırma genel bakış](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). İş akışı hizmetleri hakkında daha fazla bilgi için bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ İş akışları uygulamak ve mesajlaşma etkinlikleri kullanma zamanı gevşek bağlanmış hizmetlerine erişmek için doğal bir yol sağlar. Mesajlaşma etkinlikleri WCF yerleşiktir ve veri ekleme çıkarma iş akışı almak için kullanılan birincil mekanizmadır. Mesajlaşma etkinlikleri birlikte ileti değişim deseni, istediğiniz herhangi bir türden model oluşturabilirsiniz. Daha fazla bilgi için [Mesajlaşma etkinlikleri](../wcf/feature-details/messaging-activities.md). İş akışı hizmetlerini kullanarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için [iş akışı hizmetlerini barındırma genel bakış](../wcf/feature-details/hosting-workflow-services-overview.md). İş akışı hizmetleri hakkında daha fazla bilgi için bkz: [iş akışı Hizmetleri](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Kalıcılık, kaldırma ve uzun süre çalışan iş akışları  
  Windows iş akışı sağlayarak uzun süreli reaktif programlarını geliştirme kolaylaştırır:  

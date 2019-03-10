@@ -2,12 +2,12 @@
 title: Dinamik güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496748"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724486"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 
@@ -17,13 +17,13 @@ Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı
 
 Bir kalıcı iş akışı örneği için dinamik güncelleştirmeleri uygulamak için bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> oluşturulur, istediğiniz değişiklikleri yansıtacak şekilde kalıcı iş akışı örneği değişiklik yapma açıklayan yönergeler çalışma zamanı için içerir. Güncelleştirme eşlemesi oluşturulduktan sonra bu istenen kalıcı iş akışı örneklerine uygulanır. Dinamik güncelleştirme uygulandıktan sonra yeni güncelleştirilmiş iş akışı tanımı kullanarak iş akışı örneği sürdürülebilir. Oluşturma ve bir güncelleştirme eşlemesi uygulamak için gereken dört adım vardır.
 
-1. [Dinamik güncelleştirme iş akışı tanımı hazırlama](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [Dinamik güncelleştirme iş akışı tanımı hazırlama](dynamic-update.md#Prepare)
 
-2. [İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin](dynamic-update.md#Update)
 
-3. [Güncelleştirme eşlemesi oluşturma](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [Güncelleştirme eşlemesi oluşturma](dynamic-update.md#Create)
 
-4. [Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir](dynamic-update.md#Apply)
 
 > [!NOTE]
 > Adımlar güncelleştirme eşlemesi oluşturulmasını kapsar, 3, 1 güncelleştirmeyi uygulamadan bağımsız olarak gerçekleştirilebilir unutmayın. İş akışı Geliştirici çevrimdışı güncelleştirme eşlemesi oluşturur ve ardından yönetici daha sonra güncelleştirme uygulanır sık karşılaşılan bir senaryodur.
@@ -37,7 +37,7 @@ Dinamik güncelleştirme işleminin ilk adımı, istenen iş akışı tanım gü
 Dinamik güncelleştirme, yüklenemeyen içine bir Xaml iş akışı hazırlamak için bir <xref:System.Activities.ActivityBuilder>, ardından <xref:System.Activities.ActivityBuilder> yöntemlere geçirilen <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> İle çalışma hakkında daha fazla bilgi için iş akışları seri hale getirilmiş ve <xref:System.Activities.ActivityBuilder>, bkz: [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).
+> İle çalışma hakkında daha fazla bilgi için iş akışları seri hale getirilmiş ve <xref:System.Activities.ActivityBuilder>, bkz: [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](serializing-workflows-and-activities-to-and-from-xaml.md).
 
 Aşağıdaki örnekte, bir `MortgageWorkflow` tanımı (oluşur, bir <xref:System.Activities.Statements.Sequence> birkaç alt etkinliklerle) içine yüklenen bir <xref:System.Activities.ActivityBuilder>ve ardından dinamik güncelleştirme için hazır. Yöntemin dönüşünün ardından, <xref:System.Activities.ActivityBuilder> özgün iş akışı tanımı ve bunun yanı sıra bir kopyasını içerir.
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 Dinamik güncelleştirme uygulandıktan sonra iş akışı örneği sürdürülebilir. Yeni tanım güncelleştirme olduğunu unutmayın ve <xref:System.Activities.WorkflowIdentity> kullanılmalıdır.
 
 > [!NOTE]
-> İle çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowIdentity>, bkz: [Workflowıdentity kullanma ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).
+> İle çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowIdentity>, bkz: [Workflowıdentity kullanma ve sürüm oluşturma](using-workflowidentity-and-versioning.md).
 
 Aşağıdaki örnekte, `MortgageWorkflow_v1.1.xaml` önceki örnekte iş akışı derlendiğinden, yüklenir ve güncelleştirilmiş iş akışı tanımı kullanarak devam ettirildi.
 

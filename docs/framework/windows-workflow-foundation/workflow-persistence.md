@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748573"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715548"
 ---
 # <a name="workflow-persistence"></a>İş akışı kalıcılığı
 İş akışı kalıcılığı dayanıklı yakalama bir iş akışı örneği durumu, işlem veya bilgisayar bilgilerinin bağımsız olur. Bu sistem hatası durumunda iş akışı örneği için bilinen bir kurtarma noktası sağlamak veya etkin bir şekilde iş yapmamanın kaldırma iş akışı örnekleri tarafından bellek korumak için veya iş akışı örneği durumu bir düğümden diğerine taşımak için gerçekleştirilir bir sunucu grubundaki düğümü.  
   
  Kalıcılık işlemin çeviklik, ölçeklenebilirlik, Kurtarma hata ile karşılaşıldığında ve belleği daha verimli bir şekilde yönetme olanağı sağlar. Kalıcılık işlem Kalıcılık noktası, veri toplamayı ve son olarak verilerin kalıcı bir sağlayıcı gerçek depolama alanlarının kimliğini içerir.  
   
- Bir iş akışı kalıcılığını etkinleştirmek için bir örnek deposuna ile ilişkilendirmeniz gerekir **WorkflowApplication** veya **WorkflowServiceHost** belirtildiği gibi [nasıl yapılır: etkinleştirmek için kalıcılığı İş akışları ve iş akışı Hizmetleri](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** ve **WorkflowServiceHost** ilişkili örnek deposuna sürdürme deposundan ve iş akışı örneği yükleniyor kalıcı hale getirme iş akışı örnekleri etkinleştirmek için kullanın İş akışı örneği verileri sürdürme deposunda saklanan bağlı bellek.  
+ Bir iş akışı kalıcılığını etkinleştirmek için bir örnek deposuna ile ilişkilendirmeniz gerekir **WorkflowApplication** veya **WorkflowServiceHost** belirtildiği gibi [nasıl yapılır: İş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** ve **WorkflowServiceHost** ilişkili örnek deposuna sürdürme deposundan ve iş akışı örneği yükleniyor kalıcı hale getirme iş akışı örnekleri etkinleştirmek için kullanın İş akışı örneği verileri sürdürme deposunda saklanan bağlı bellek.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Birlikte **SqlWorkflowInstanceStore** Kalıcılık verileri ve SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı örnekleri hakkında meta veriler sağlayan sınıf. Bkz: [SQL iş akışı örneği Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) daha fazla ayrıntı için.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Birlikte **SqlWorkflowInstanceStore** Kalıcılık verileri ve SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı örnekleri hakkında meta veriler sağlayan sınıf. Bkz: [SQL iş akışı örneği Store](sql-workflow-instance-store.md) daha fazla ayrıntı için.  
   
- Depolayın ve iş akışı örneği ile ilgili bilgilerin yanı sıra, uygulamaya özgü verileri yüklemek için genişletme Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> sınıfı. Kalıcı depoya belleğe örneği Mağazası'ndan veri yüklemeye ve herhangi ek bir mantık Kalıcılık işlem altında gerçekleştirmek için özel seri hale getirilebilir veri kaydetmek için Kalıcılık işleminde bir Kalıcılık Katılımcısı katılır. Daha fazla bilgi için [Kalıcılık katılımcıları](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
+ Depolayın ve iş akışı örneği ile ilgili bilgilerin yanı sıra, uygulamaya özgü verileri yüklemek için genişletme Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> sınıfı. Kalıcı depoya belleğe örneği Mağazası'ndan veri yüklemeye ve herhangi ek bir mantık Kalıcılık işlem altında gerçekleştirmek için özel seri hale getirilebilir veri kaydetmek için Kalıcılık işleminde bir Kalıcılık Katılımcısı katılır. Daha fazla bilgi için [Kalıcılık katılımcıları](persistence-participants.md).  
   
  Windows Server App Fabric kalıcılığını yapılandırma işlemini basitleştirir. Daha fazla bilgi için [Windows Server App Fabric ile Kalıcılık kavramları](https://go.microsoft.com/fwlink/?LinkId=201200)  
   
@@ -43,14 +43,14 @@ ms.locfileid: "43748573"
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [SQL İş Akışı Örnek Deposu](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
+-   [SQL İş Akışı Örnek Deposu](sql-workflow-instance-store.md)  
   
--   [Örnek Depoları](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
+-   [Örnek Depoları](instance-stores.md)  
   
--   [Kalıcılık Katılımcıları](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
+-   [Kalıcılık Katılımcıları](persistence-participants.md)  
   
--   [Kalıcılık En İyi Uygulamaları](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
+-   [Kalıcılık En İyi Uygulamaları](persistence-best-practices.md)  
   
--   [Kalıcı Olmayan İş Akışı Örnekleri](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
+-   [Kalıcı Olmayan İş Akışı Örnekleri](non-persisted-workflow-instances.md)  
   
--   [İş Akışını Duraklatma ve Sürdürme](../../../docs/framework/windows-workflow-foundation/pausing-and-resuming-a-workflow.md)
+-   [İş Akışını Duraklatma ve Sürdürme](pausing-and-resuming-a-workflow.md)

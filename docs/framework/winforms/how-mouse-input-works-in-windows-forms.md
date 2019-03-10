@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496013"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725335"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows Forms'ta Fare Girdisi Nasıl Çalışır
-Alma ve fare girişi işleme Windows her uygulamanın önemli bir parçasıdır. Uygulamanızda bir eylem gerçekleştirmek için fare olayları işlemek veya isabet testi gerçekleştirmek için fare konum bilgilerini veya diğer eylemleri kullanın. Ayrıca, uygulamanızı denetimleri fare girişi işleme biçimini değiştirebilirsiniz. Bu konu, ayrıntı ve nasıl elde edilir ve fare sistem ayarlarını değiştirmek bu fare olayları açıklar. Fare ile sağlanan veriler hakkında daha fazla bilgi için olaylar ve fare olayları tıklayın sırasını oluşturulan bkz [Windows Forms'ta fare olayları](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+Alma ve fare girişi işleme Windows her uygulamanın önemli bir parçasıdır. Uygulamanızda bir eylem gerçekleştirmek için fare olayları işlemek veya isabet testi gerçekleştirmek için fare konum bilgilerini veya diğer eylemleri kullanın. Ayrıca, uygulamanızı denetimleri fare girişi işleme biçimini değiştirebilirsiniz. Bu konu, ayrıntı ve nasıl elde edilir ve fare sistem ayarlarını değiştirmek bu fare olayları açıklar. Fare ile sağlanan veriler hakkında daha fazla bilgi için olaylar ve fare olayları tıklayın sırasını oluşturulan bkz [Windows Forms'ta fare olayları](mouse-events-in-windows-forms.md).  
   
 ## <a name="mouse-location-and-hit-testing"></a>Fare konumu ve isabet testi  
  Kullanıcı fareyi hareket ettirdiğinde işletim sisteminin fare işaretçisi hareket. Fare işaretçisi, işletim sistemi izler ve işaretçiyi konumu tanır etkin nokta, adlı tek bir piksel içerir. Kullanıcı fareyi hareket ya da bir fare düğmesine bastığında <xref:System.Windows.Forms.Control> içeren <xref:System.Windows.Forms.Cursor.HotSpot%2A> uygun fare olayını başlatır. Geçerli fare konumu edinebilirsiniz <xref:System.Windows.Forms.MouseEventArgs.Location%2A> özelliği <xref:System.Windows.Forms.MouseEventArgs> bir fare olayına işlenirken veya kullanarak <xref:System.Windows.Forms.Cursor.Position%2A> özelliği <xref:System.Windows.Forms.Cursor> sınıfı. Sonradan isabet testi gerçekleştirmek için fare konumu bilgileri kullanın ve ardından fareyi konumunu temel alarak bir eylem gerçekleştirin. İsabet testi özelliği yerleşik Windows Forms çeşitli denetimlere gibi <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> ve <xref:System.Windows.Forms.DataGridView> kontrol eder. Uygun fare olay ile kullanılan <xref:System.Windows.Forms.Control.MouseHover> isabet sınaması Örneğin, uygulamanızın ne zaman belirli bir eylem gerçekleştirmeniz gerekir belirlemek için çok yararlı olacaktır.  
@@ -53,6 +53,6 @@ Alma ve fare girişi işleme Windows her uygulamanın önemli bir parçasıdır.
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Fare tekerleği döndürüldüğünde satır sayısını alır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms'ta Fare Yakalama](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Windows Forms'ta Fare İşaretçileri](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms'ta Fare Yakalama](mouse-capture-in-windows-forms.md)
+- [Windows Forms'ta Fare İşaretçileri](mouse-pointers-in-windows-forms.md)

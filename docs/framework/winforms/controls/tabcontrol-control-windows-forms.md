@@ -10,41 +10,41 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867624"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707735"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl Denetimi (Windows Forms)
 Windows Forms `TabControl` etiketler, bir dosya dolabı klasörlerinde kümesi ya da bir not defterinde Bölücü gibi birden fazla sekme görüntüler. Sekmeler, resim ve diğer denetimleri içerebilir. Kullanım `TabControl` özellik sayfaları oluşturmak için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TabControl Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl Denetimine Genel Bakış](tabcontrol-control-overview-windows-forms.md)  
  Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Sekme Sayfasına Denetim Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Nasıl yapılır: Sekme sayfasına denetim ekleme](how-to-add-a-control-to-a-tab-page.md)  
  Sekme sayfaları denetimlerini görüntülemek için yönergeler sağlar.  
   
- [Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Sekmeler ekleme ve Tasarımcısı'nda veya kod kaldırma için yönergeler sağlar.  
   
- [Nasıl yapılır: Windows Forms TabControl’un Görünüşünü Değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  Tek tek sekmeler görünümünü etkileyen özellikler ayarlamak için yönergeler sağlar.  
   
- [Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Nasıl yapılır: Sekme sayfalarını devre dışı bırak](how-to-disable-tab-pages.md)  
  Büyük olasılıkla kullanıcı kimlik bilgilerine göre bir sekme sayfasına erişimi kısıtlamak nasıl açıklar.  
   
- Ayrıca bkz: [nasıl yapılır: ekleme ve kaldırma sekmeler Windows Forms TabControl kullanmaya Tasarımcı](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [nasıl yapılır: sekme sayfası kullanarak bir tasarımcıya denetim ekleme](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
+ Ayrıca bkz: [nasıl yapılır: Tasarımcı kullanarak Windows Forms TabControl ile sekme ekleme ve kaldırma](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [nasıl yapılır: Tasarımcı kullanarak sekme sayfasına denetim ekleme](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.TabControl> Sınıfı  
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta İletişim Kutuları](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Windows Forms'ta İletişim Kutuları](../dialog-boxes-in-windows-forms.md)  
  Genellikle sekmelerini görüntülemek iletişim kutuları için Görevler listesini sağlar.  
   
- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 802367c26562d1b5aaf2398ed122cb97afbff255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc883cca2ef7fa7abd65362da054251513af76a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580118"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713923"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Nasıl yapılır: (Windows Forms) hangi TreeView düğümüne tıklandığını belirleme
 Windows Forms ile çalışırken <xref:System.Windows.Forms.TreeView> denetimi, genel bir görevdir belirlemek için hangi düğümüne tıklandığını ve uygun şekilde yanıt verin.  
@@ -59,4 +59,4 @@ Windows Forms ile çalışırken <xref:System.Windows.Forms.TreeView> denetimi, 
     >  Alternatif olarak, kullandığınız <xref:System.Windows.Forms.MouseEventArgs> , <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.MouseUp> almak için olay <xref:System.Drawing.Point.X%2A> ve <xref:System.Drawing.Point.Y%2A> koordinat değerlerini <xref:System.Drawing.Point> oluştuğu yeri tıklatın. Ardından, <xref:System.Windows.Forms.TreeView> denetimin <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> hangi düğümüne tıklandığını belirleme için yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [TreeView Denetimi](treeview-control-windows-forms.md)

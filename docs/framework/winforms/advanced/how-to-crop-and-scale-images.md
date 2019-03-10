@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707706"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705824"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Nasıl yapılır: Görüntü kırpma ve ölçeklendirme
 <xref:System.Drawing.Graphics> Sınıfı sağlayan çeşitli <xref:System.Drawing.Graphics.DrawImage%2A> bazıları kırpma ve ölçeklendirme görüntüleri için kullanabileceğiniz kaynak ve hedef dikdörtgenin parametreleri olan yöntemleri.  
@@ -27,14 +27,14 @@ ms.locfileid: "54707706"
   
  Apple kırpılmış orijinal apple ve genişletilmiş, aşağıdaki çizimde gösterilmektedir.  
   
- ![Kırpma ve ölçeklendirme](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
+ ![Kırpma ve ölçeklendirme](./media/cscropscale1.png "csCropScale1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirdiğinizden emin olun `Apple.gif` bir resim dosyası adı ve sisteminize göre geçerli yolu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-ms.openlocfilehash: 4d0a3cb7a56b388ee9bd3f932f9fec604b39fa62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56585bf91a559844f15aede4519706674357a924
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521770"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708320"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Varsayılan klavye ve fare Windows Forms DataGridView denetiminde
 
@@ -117,4 +117,4 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView Denetimi](datagridview-control-windows-forms.md)

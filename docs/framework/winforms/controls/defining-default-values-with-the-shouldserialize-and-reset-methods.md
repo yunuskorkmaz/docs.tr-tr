@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497439"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704484"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama
 `ShouldSerialize` ve `Reset` özelliği yoksa, bir özelliği için sağlayabilirsiniz isteğe bağlı yöntemlerdir bir basit varsayılan değere sahip. Özelliği bir basit varsayılan değere sahipse, uygulamalıdır <xref:System.ComponentModel.DefaultValueAttribute> ve bunun yerine varsayılan değer özniteliği sınıf oluşturucusuna sağlayın. Bu mekanizmaların birini Tasarımcısı'nda aşağıdaki özellikleri sağlar:  
@@ -144,6 +144,6 @@ public class MyControl : Control {
  Bu durumda, hatta özel bir değişken değeri tarafından erişildiğinde `MyFont` özelliği `null`, özellik tarayıcısı aşağıdaki dotnetclıtools'u görüntülemiyor `null`; bunun yerine, görüntülediği <xref:System.Windows.Forms.Control.Font%2A> değilse üst öğesinin özellik `null`, Varsayılan <xref:System.Windows.Forms.Control.Font%2A> tanımlanan değer <xref:System.Windows.Forms.Control>. Bu nedenle için varsayılan değer `MyFont` yalnızca ayarlanamaz ve <xref:System.ComponentModel.DefaultValueAttribute> bu özelliğe uygulanamaz. Bunun yerine, `ShouldSerialize` ve `Reset` yöntemleri için uygulanmalı `MyFont` özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Özellik Tanımlama](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
-- [Özellik Değişti Olayları](../../../../docs/framework/winforms/controls/property-changed-events.md)
+- [Windows Forms Denetimlerindeki Özellikler](properties-in-windows-forms-controls.md)
+- [Özellik Tanımlama](defining-a-property-in-windows-forms-controls.md)
+- [Özellik Değişti Olayları](property-changed-events.md)

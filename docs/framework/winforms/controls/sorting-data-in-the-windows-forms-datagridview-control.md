@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-ms.openlocfilehash: 588678b3ba0d75fea58709c1969a3e276d65439e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688291"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724927"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView denetiminde verileri sıralama
 
@@ -19,13 +19,13 @@ Varsayılan olarak, kullanıcılar verileri sıralayabilir bir <xref:System.Wind
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Windows Forms DataGridView Denetiminde Sütun Sıralama Modları](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+[Windows Forms DataGridView Denetiminde Sütun Sıralama Modları](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 Denetimindeki verileri sıralama seçeneklerini açıklar.
 
-[Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 Varsayılan olarak sıralanabilir yer almayan sütunlara göre sıralama olanağı açıklar.
 
-[Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+[Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 Verileri programlamayla sıralama ve sıralama kullanarak özelleştirmek nasıl açıklar <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> olay veya uygulama tarafından <xref:System.Collections.IComparer> arabirimi.
 
 ## <a name="reference"></a>Başvuru
@@ -44,5 +44,5 @@ Verileri programlamayla sıralama ve sıralama kullanarak özelleştirmek nasıl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Windows Forms DataGridView Denetiminde Sütun Türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [DataGridView Denetimi](datagridview-control-windows-forms.md)
+- [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)

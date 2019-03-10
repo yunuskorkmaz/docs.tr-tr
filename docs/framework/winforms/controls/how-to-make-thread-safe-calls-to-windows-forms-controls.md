@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362571"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714014"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Nasıl yapılır: Windows Forms denetimlerine iş parçacığı güvenli aramalar yapın
 
-Çoklu iş parçacığı kullanımı Windows Forms uygulamalarının performansını artırabilir, ancak Windows Forms denetimleri için erişim kendiliğinden iş parçacığı açısından güvenli değildir. Çoklu iş parçacığı kullanımı, kodunuzu çok önemli ve karmaşık hataları için kullanıma sunabilirsiniz. Bir denetim düzenleme iki veya daha fazla iş parçacığı, tutarsız bir duruma denetimi zorlamak ve yarış durumları, kilitlenmeleri ve donuyor veya kilitlenmelerine neden. Uygularsanız çoklu iş parçacığı kullanımı uygulamanızda çoklu iş parçacığı denetimleri bir iş parçacığı açısından güvenli şekilde çağrılacak emin olun. Daha fazla bilgi için [yönetilen iş parçacığı oluşturma en iyi yöntemleri](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+Çoklu iş parçacığı kullanımı Windows Forms uygulamalarının performansını artırabilir, ancak Windows Forms denetimleri için erişim kendiliğinden iş parçacığı açısından güvenli değildir. Çoklu iş parçacığı kullanımı, kodunuzu çok önemli ve karmaşık hataları için kullanıma sunabilirsiniz. Bir denetim düzenleme iki veya daha fazla iş parçacığı, tutarsız bir duruma denetimi zorlamak ve yarış durumları, kilitlenmeleri ve donuyor veya kilitlenmelerine neden. Uygularsanız çoklu iş parçacığı kullanımı uygulamanızda çoklu iş parçacığı denetimleri bir iş parçacığı açısından güvenli şekilde çağrılacak emin olun. Daha fazla bilgi için [yönetilen iş parçacığı oluşturma en iyi yöntemleri](../../../standard/threading/managed-threading-best-practices.md). 
 
 Bir Windows Forms denetimini denetleyen oluşturmamışsınızdır bir iş parçacığından güvenli bir şekilde çağırmak için iki yolu vardır. Kullanabileceğiniz <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> sırayla denetim çağrıları ana iş parçacığı içinde oluşturulan bir temsilci çağrılacak yöntem. Veya, uygulayabileceğiniz bir <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, arka plan iş parçacığında sonuçları bildiriminden çalışmanın ayırmak için bir olay odaklı modeli kullanır. 
 
@@ -75,8 +75,8 @@ Aşağıdaki örnek, bir Windows Forms denetimi iş parçacığı güvenli arama
 
 `SafeCallDelegate` Sağlayan ayarı <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği. `WriteTextSafe` Yöntemi sorguları <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Varsa <xref:System.Windows.Forms.Control.InvokeRequired%2A> döndürür `true`, `WriteTextSafe` geçirir `SafeCallDelegate` için <xref:System.Windows.Forms.Control.Invoke%2A> gerçek denetim çağrı yapmak için yöntemi. Varsa <xref:System.Windows.Forms.Control.InvokeRequired%2A> döndürür `false`, `WriteTextSafe` ayarlar <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> doğrudan. `Button1_Click` Olay işleyicisi yeni iş parçacığı oluşturan ve çalıştıran `WriteTextSafe` yöntemi. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Örnek: BackgroundWorker olay işleyicisini kullanın
 
@@ -86,12 +86,12 @@ Kullanarak iş parçacığı çağrı yapmak için <xref:System.ComponentModel.B
 
 Örnekte <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> ayarlamak için olay işleyicisi <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği. Bir örnek için <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olay bkz <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka plan işlemi kullanan bir form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [.NET Framework ile özel Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [.NET Framework ile özel Windows Forms denetimleri geliştirme](developing-custom-windows-forms-controls.md)

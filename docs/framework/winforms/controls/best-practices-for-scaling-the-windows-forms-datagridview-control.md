@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710878"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706423"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler
 <xref:System.Windows.Forms.DataGridView> Denetimi en fazla ölçekleme sağlamak için tasarlanmıştır. Büyük miktarlarda veri görüntülemek gerekiyorsa, büyük miktarlarda bellek tüketen veya kullanıcı arabirimi (UI) yanıt verme hızını önemli önlemek için bu konuda açıklanan yönergeleri izlemelisiniz. Bu konuda aşağıdaki sorunlar ele alınmıştır:  
@@ -31,16 +31,16 @@ ms.locfileid: "54710878"
   
 -   Paylaşımı kaldırılabilir hale satırları önleme  
   
- Özel performans gereksinimleriniz varsa, sanal modu uygulama ve kendi veri yönetimi işlemleri sağlar. Daha fazla bilgi için [Windows Forms DataGridView denetiminde veri görüntüleme modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).  
+ Özel performans gereksinimleriniz varsa, sanal modu uygulama ve kendi veri yönetimi işlemleri sağlar. Daha fazla bilgi için [Windows Forms DataGridView denetiminde veri görüntüleme modları](data-display-modes-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-cell-styles-efficiently"></a>Hücre stilleri verimli şekilde kullanma  
  Kendi stil bilgilerini, her bir hücre, satır ve sütun olabilir. Stil bilgilerini depolanan <xref:System.Windows.Forms.DataGridViewCellStyle> nesneleri. Hücre birçok kişiye ait stili nesneleri oluşturma <xref:System.Windows.Forms.DataGridView> özellikle büyük miktarlarda veri ile çalışırken öğeleri verimsiz olabilir. Performansı etkilemelerini önlemek için aşağıdaki yönergeleri kullanın:  
   
 -   Tek tek hücre stil özelliklerini ayarlamaktan kaçının <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewRow> nesneleri. Bu tarafından belirtilen satır nesneyi içeren <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği. Satır şablondan klonlanmış her yeni satır şablonun hücre stil nesnesinin kendine ait kopyasını alır. En yüksek ölçeklenebilirlik için hücre stil özelliklerini ayarlama <xref:System.Windows.Forms.DataGridView> düzeyi. Örneğin, <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> özelliği yerine <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> özelliği.  
   
--   Bazı hücreler varsayılan biçimlendirme dışında biçimlendirme gerektiriyorsa, aynı kullanın <xref:System.Windows.Forms.DataGridViewCellStyle> hücre, satır veya sütun grupları arasında örneği. Doğrudan türünün özelliklerini ayarlamaktan kaçının <xref:System.Windows.Forms.DataGridViewCellStyle> tek tek hücreler, satırlar ve sütunlarla üzerinde. Hücre stili paylaşımı ilişkin bir örnek için bkz [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Bir performans cezası hücre stilleri ayrı olarak işleyerek ayarlarken kaçınabilirsiniz <xref:System.Windows.Forms.DataGridView.CellFormatting> olay işleyicisi. Bir örnek için bkz [nasıl yapılır: Windows Forms DataGridView denetiminde veri biçimlendirmeyi özelleştirme](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+-   Bazı hücreler varsayılan biçimlendirme dışında biçimlendirme gerektiriyorsa, aynı kullanın <xref:System.Windows.Forms.DataGridViewCellStyle> hücre, satır veya sütun grupları arasında örneği. Doğrudan türünün özelliklerini ayarlamaktan kaçının <xref:System.Windows.Forms.DataGridViewCellStyle> tek tek hücreler, satırlar ve sütunlarla üzerinde. Hücre stili paylaşımı ilişkin bir örnek için bkz [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Bir performans cezası hücre stilleri ayrı olarak işleyerek ayarlarken kaçınabilirsiniz <xref:System.Windows.Forms.DataGridView.CellFormatting> olay işleyicisi. Bir örnek için bkz [nasıl yapılır: Windows Forms DataGridView denetiminde veri biçimlendirmeyi özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
--   Bir hücrenin stili belirlerken kullanın <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> özelliği yerine <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> özelliği. Erişim <xref:System.Windows.Forms.DataGridViewCell.Style%2A> özelliği, yeni bir örneğini oluşturur <xref:System.Windows.Forms.DataGridViewCellStyle> özelliği zaten kullanımda değilse sınıfı. Ayrıca, bazı stilleri satır, sütun veya denetim devralınırsa, bu nesne hücre için tam stil bilgileri içermeyebilir. Hücre stili devralma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimindeki hücre stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+-   Bir hücrenin stili belirlerken kullanın <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> özelliği yerine <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> özelliği. Erişim <xref:System.Windows.Forms.DataGridViewCell.Style%2A> özelliği, yeni bir örneğini oluşturur <xref:System.Windows.Forms.DataGridViewCellStyle> özelliği zaten kullanımda değilse sınıfı. Ayrıca, bazı stilleri satır, sütun veya denetim devralınırsa, bu nesne hücre için tam stil bilgileri içermeyebilir. Hücre stili devralma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-shortcut-menus-efficiently"></a>Kısayol menüleri verimli şekilde kullanma  
  Her bir hücre, satır ve sütun kısayol menüsünü olabilir. Kısayol menülerinde <xref:System.Windows.Forms.DataGridView> denetimi tarafından temsil edilir <xref:System.Windows.Forms.ContextMenuStrip> kontrol eder. Yalnızca nesnelerle hücre stili gibi çok sayıda kullanıcı için kısayol menüleri oluşturma <xref:System.Windows.Forms.DataGridView> öğeleri performansı olumsuz etkileyecektir. Bu cezasını önlemek için aşağıdaki yönergeleri kullanın:  
@@ -60,7 +60,7 @@ ms.locfileid: "54710878"
   
 -   En yüksek ölçeklenebilirlik için otomatik boyutlandırmayı kapatın ve yeniden boyutlandırma programlı kullanın.  
   
- Daha fazla bilgi için [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Daha fazla bilgi için [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>Seçili hücre, satır ve sütunları koleksiyonları verimli şekilde kullanma  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Koleksiyon büyük seçimleri verimli bir şekilde gerçekleştirmez. <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> Ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> koleksiyonları da olabilir verimsiz, ancak daha düşük bir düzeyde için tipik bir hücre birçok daha az satır olduğundan <xref:System.Windows.Forms.DataGridView> denetimi ve satırdan çok daha az sütun. Bu koleksiyonlar ile çalışırken, performans cezalarını önlemek için aşağıdaki yönergeleri kullanın:  
@@ -137,9 +137,9 @@ ms.locfileid: "54710878"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Sanal Mod](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetimindeki Hücre Stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Performans Ayarlaması](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Sanal Mod](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Hücre Stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)

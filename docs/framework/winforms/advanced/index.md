@@ -2,65 +2,59 @@
 title: Windows Forms Uygulamalarını Geliştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms, enhancing
-- Windows Forms, adding features
+  - 'Windows Forms, enhancing'
+  - 'Windows Forms, adding features'
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208484"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms Uygulamalarını Geliştirme
-Windows Forms, kullanıcılarınızın özel ihtiyaçlarını karşılamak için Windows tabanlı uygulamalar geliştirmek için kullanabileceğiniz birçok özellik içerir. Aşağıdaki konular bu özellikleri ve bunların nasıl kullanılacağını açıklar.  
+Windows Forms, kullanıcılarınızın belirli ihtiyaçlarını karşılamak için Windows tabanlı uygulamalar geliştirmek için kullanabileceğiniz birçok özellik içerir. Aşağıdaki konularda, bu özellikler ve bunların nasıl kullanılacağı açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- Açıklayan ve Windows Forms'ta grafik arabiriminin nasıl kullanılacağını göster konulara bağlantılar içerir.  
+ [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)  
+ Windows Forms'ta grafik arabiriminin nasıl kullanılacağını ve konulara bağlantılar içerir.  
   
- [Windows Forms için uygulama ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
- Açıklayan ve nasıl kullanılacağını gösteren konulara bağlantılar içerir **uygulama ayarları** özelliği.  
+ [Windows Forms için uygulama ayarları](application-settings-for-windows-forms.md).  
+ Açıklayan ve nasıl kullanabileceğinizi gösteren konulara bağlantılar içerir **uygulama ayarları** özelliği.  
   
- [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- Açıklayan ve Windows Forms uygulamalardan dosyaları yazdırmak nasıl Göster konulara bağlantılar içerir.  
+ [Windows Forms Yazdırma Desteği](windows-forms-print-support.md)  
+ Windows Forms uygulamaları nasıl dosyaları ve konulara bağlantılar içerir.  
   
- [Sürükle ve Bırak İşlemleri ve Pano Desteği](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
- Açıklayan ve Windows Forms'ta sürükle ve bırak özelliği ve Pano kullanma Göster konulara bağlantılar içerir.  
+ [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)  
+ Windows Forms'ta sürükle ve bırak özellik ve Pano kullanma ve konulara bağlantılar içerir.  
   
- [Windows Forms Uygulamalarında Ağ İletişimi](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
- Açıklayan ve Windows Forms'ta ağ kullanmayı gösteren konulara bağlantılar içerir.  
+ [Windows Forms Uygulamalarında Ağ İletişimi](networking-in-windows-forms-applications.md)  
+ Windows Forms'ta ağ kullanma ve konulara bağlantılar içerir.  
   
- [Windows Forms uygulamaları Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
- Windows Forms uygulamaları globalize nasıl Göster konulara bağlantılar içerir.  
+ [Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)  
+ Windows Forms uygulamaları globalleştirmek nasıl gösteren konulara bağlantılar içerir.  
   
- [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- Açıklayan ve COM bileşenlerini Windows Form uygulamalardan nasıl erişeceğinizi gösterir konulara bağlantılar içerir.  
+ [Windows Forms ve Yönetilmeyen Uygulamalar](windows-forms-and-unmanaged-applications.md)  
+ Windows Form uygulamalardan COM bileşenlerine erişmek nasıl ve konulara bağlantılar içerir.  
   
- [Sistem Bilgileri ve Windows Forms](../../../../docs/framework/winforms/advanced/system-information-and-windows-forms.md)  
- Windows Forms'ta sistem bilgisi kullanmayı açıklar.  
+ [Sistem Bilgileri ve Windows Forms](system-information-and-windows-forms.md)  
+ Windows Forms'ta sistem bilgileri kullanmayı açıklar.  
   
- [Windows Forms'ta Güç Yönetimi](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)  
- Windows Forms uygulamalarında güç kullanımını yönetmek açıklar.  
+ [Windows Forms'ta Güç Yönetimi](power-management-in-windows-forms.md)  
+ Windows Forms uygulamalarındaki güç kullanımını yönetme işlemi açıklanır.  
   
- [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- Bir taban formunu devralacak şekilde açıklar.  
+ [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)  
+ Taban form devralma işlemini açıklamaktadır.  
   
- [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- Birden çok belge arabirimi (MDI) uygulamalarının nasıl oluşturulacağını açıklar.  
+ [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)  
+ Çok Belgeli Arabirim (MDI) uygulamalarının nasıl oluşturulacağını açıklar.  
   
- [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- Kullanıcı Yardım uygulamalarınıza tümleştirmek açıklar.  
+ [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](integrating-user-help-in-windows-forms.md)  
+ Kullanıcı Yardımı uygulamalarınızda tümleştirmeyi açıklamaktadır.  
   
- [Windows Forms Erişilebilirliği](../../../../docs/framework/winforms/advanced/windows-forms-accessibility.md)  
- Uygulamalarınızı çok çeşitli kullanıcılar tarafından kullanılabilmesini açıklar.  
+ [Windows Forms Erişilebilirliği](windows-forms-accessibility.md)  
+ Uygulamalarınızı çok çeşitli kullanıcılar tarafından kullanılabilir hale getirmek açıklar.  
   
- [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- Windows Forms tabanlı uygulamalarda WPF denetimleri kullanmayı açıklar.  
+ [WPF Denetimlerini Kullanma](using-wpf-controls.md)  
+ Windows Forms tabanlı uygulamalarınız içinde WPF denetimleri kullanmayı açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms Uygulamalarındaki Yardım Sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)  
- Açıklayan ve Windows Forms uygulamalarında kullanıcı Yardım sağlamak üzere nasıl Göster konulara bağlantılar içerir.  
+ [Windows Forms Uygulamalarındaki Yardım Sistemleri](help-systems-in-windows-forms-applications.md)  
+ Windows Forms uygulamalarındaki Yardım kullanıcı sağlama ve konulara bağlantılar içerir.  
   
- [Windows Forms'a Başlarken](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- Windows formlarının temel özelliklerinin nasıl kullanılacağını açıklayan konulara bağlantılar içerir.
+ [Windows Forms'a Başlarken](../getting-started-with-windows-forms.md)  
+ Windows Forms'ın temel özelliklerinin nasıl kullanılacağını açıklayan konulara bağlantılar içerir.

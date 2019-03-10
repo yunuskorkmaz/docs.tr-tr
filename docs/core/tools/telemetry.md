@@ -4,16 +4,16 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168851"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718044"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
-[.NET Core SDK'sı](index.md) içeren bir [telemetri özellik](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) , kullanım bilgilerini toplar. .NET ekibi geliştirilebilir bu nedenle araçları nasıl kullanıldığını anladığını önemlidir. Daha fazla bilgi için [.NET Core SDK'sı Telemetri öğrendiklerimizi](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[.NET Core SDK'sı](index.md) içeren bir [telemetri özellik](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) , kullanım bilgilerini toplar. .NET ekibi geliştirilebilir bu nedenle araçları nasıl kullanıldığını anladığını önemlidir. Daha fazla bilgi için [.NET Core SDK'sı Telemetri öğrendiklerimizi](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).
 
 Anonim ve yayınlanan hem Microsoft hem de altında topluluk tarafından kullanım için toplu bir biçimde toplanan verileri [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).
 
@@ -83,7 +83,7 @@ Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core 
 
 ### <a name="example"></a>Örnek
 
-| Zaman damgası      | Örnekleri | Komut | Coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| Zaman damgası      | Örnekleri | Komut | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | Çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core SDK'sı Telemetri öğrendiklerimizi](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)
+- [.NET Core SDK'sı Telemetri öğrendiklerimizi](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
 - [Telemetri başvuru kaynağı (dotnet/CLI depo)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
 - [.NET core SDK'sı kullanım verileri](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

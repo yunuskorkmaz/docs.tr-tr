@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260926"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719279"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda
 Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingButton_Click` olay işleyicisi çalıştığında, herhangi bir sesi durdurur yürütülmekte. Ses çalma, hiçbir şey olmaz.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
@@ -55,5 +55,5 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Nasıl yapılır: Bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [Nasıl yapılır: Bir Windows formdan ses çalma](how-to-play-a-sound-from-a-windows-form.md)
+- [SoundPlayer Sınıfına Genel Bakış](soundplayer-class-overview.md)

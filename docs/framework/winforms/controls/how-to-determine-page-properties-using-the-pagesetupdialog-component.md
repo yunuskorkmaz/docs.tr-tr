@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713544"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713208"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) kullanıcıya bir belge için bileşen sunar düzen, sayfa boyutunu ve diğer sayfa düzeni seçenekleri.  
+[PageSetupDialog](pagesetupdialog-component-windows-forms.md) kullanıcıya bir belge için bileşen sunar düzen, sayfa boyutunu ve diğer sayfa düzeni seçenekleri.  
   
  Örneği belirtmeniz gereken <xref:System.Drawing.Printing.PrintDocument> sınıfı — belgenin yazdırılması budur. Ayrıca, bu kısmen olduğundan kullanıcıların kendi bilgisayarlarında yerel olarak veya bir ağ üzerinden yüklü bir yazıcının olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşen sayfasının kullanıcıya sunulan seçenekler biçimlendirme belirler.  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713544"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [Nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog bileşeni](pagesetupdialog-component-windows-forms.md)

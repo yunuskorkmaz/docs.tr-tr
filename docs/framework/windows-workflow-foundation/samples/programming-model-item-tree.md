@@ -2,12 +2,12 @@
 title: Programlama modeli öğe ağacı
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: fe2076740331df861d1861b0cecef43cf96039b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2af628e10d8b04a91c4f6565dfa1d0d879e870
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694158"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714755"
 ---
 # <a name="programming-model-item-tree"></a>Programlama modeli öğe ağacı
 Bu örnek nasıl gidileceğini gösteren <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) ağaç görünümünden bildirim temelli veriler bağlama kullanarak ağaç.
@@ -15,7 +15,7 @@ Bu örnek nasıl gidileceğini gösteren <xref:System.Activities.Presentation.Mo
 ## <a name="sample-details"></a>Örnek Ayrıntıları
  <xref:System.Activities.Presentation.Model.ModelItem> Ağacıdır tarafından kullanılan soyutlama [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] düzenlenmekte olan temel örneği hakkındaki verileri göstermek için altyapı. Aşağıdaki çizimde bir altyapı dahilinde çeşitli katmanları bir gösterimi olan [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
 
- ![İş Akışı Tasarımcısı mimarisi](../../../../docs/framework/windows-workflow-foundation/samples/media/workflowdesignerarch.JPG "WorkflowDesignerArch")
+ ![İş Akışı Tasarımcısı mimarisi](./media/workflowdesignerarch.JPG "WorkflowDesignerArch")
 
  A <xref:System.Activities.Presentation.Model.ModelItem> koleksiyonunu yanı sıra, temeldeki değeri için bir işaretçi oluşur <xref:System.Activities.Presentation.Model.ModelProperty> nesneleri. A <xref:System.Activities.Presentation.Model.ModelProperty> nesnesi sırayla oluşur adı ve türü özelliği ve buna karşılık, başka değeri için bir işaretçi gibi veri <xref:System.Activities.Presentation.Model.ModelItem>. Bazılarını işlemek için kullanılan bir değer dönüştürücü <xref:System.Activities.Presentation.Model.ModelItem>s öğesinden döndürülen bir <xref:System.Activities.Presentation.Model.ModelProperty> hale getirmek için bunları doğru ağaç görünümünde görünür. Örnek daha sonra kesin karşı programlamak nasıl gösterir <xref:System.Activities.Presentation.Model.ModelItem> aşağıdaki örnekte görüldüğü gibi kesinlik temelli sözdizimi kullanılarak ağaç.
 

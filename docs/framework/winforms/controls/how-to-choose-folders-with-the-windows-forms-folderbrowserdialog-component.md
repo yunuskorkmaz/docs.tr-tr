@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614699"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724563"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog bileşeni ile klasörleri seçin
 Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesini kaydetmek için bir klasör seçmek için kullanıcılara sor gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşen kolayca bu görevi gerçekleştirmek sağlar.  
@@ -62,11 +62,11 @@ Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesi
     ```  
   
     > [!IMPORTANT]
-    >  Bu sınıf kullanmak için ayrıcalık düzeyi verilen tarafından derlemeyi <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> parçası olan özelliği, <xref:System.Security.Permissions.FileIOPermissionAccess> sabit listesi. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle özel bir durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Bu sınıf kullanmak için ayrıcalık düzeyi verilen tarafından derlemeyi <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> parçası olan özelliği, <xref:System.Security.Permissions.FileIOPermissionAccess> sabit listesi. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle özel bir durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).  
   
- Dosyaları kaydetme hakkında daha fazla bilgi için bkz: [nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Dosyaları kaydetme hakkında daha fazla bilgi için bkz: [nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog Bileşeni](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog Bileşeni](folderbrowserdialog-component-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717914"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri
 <xref:System.Windows.Forms.DataGridView> Satırlar, sütunlar ve üst bilgiler birçok farklı oluşum sonucunda boyutunu değiştirebilirsiniz. Aşağıdaki tabloda bu örnekleri gösterilmektedir.  
@@ -61,7 +61,7 @@ ms.locfileid: "54536314"
 ## <a name="automatic-sizing"></a>Otomatik boyutlandırma  
  Otomatik boyutlandırma, iki tür vardır <xref:System.Windows.Forms.DataGridView> denetimi: sütun doldurma modu ve içerik tabanlı otomatik boyutlandırma.  
   
- Sütun doldurma modu, denetimin görüntüleme alanının genişliğini doldurmak için denetiminde görünür sütunlar neden olur. Bu mod hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetiminde sütun dolgu modu](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Sütun doldurma modu, denetimin görüntüleme alanının genişliğini doldurmak için denetiminde görünür sütunlar neden olur. Bu mod hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetiminde sütun dolgu modu](column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
  Ayrıca, satırlar, sütunlar ve üst bilgileri otomatik olarak boyutlarının hücrenin içerikleri sığacak şekilde ayarlamak için de yapılandırabilirsiniz. Bu durumda, hücre içeriğini değiştirdiğinizde boyut düzeltmesini gerçekleşir.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536314"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696873"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715522"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET Native uygulamalarında çalışma zamanı özel durumları
 Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan kendi Hedef platformlar üzerinde Evrensel Windows platformu uygulamanızın sürüm derlemeleri test etmek önemlidir. Varsayılan olarak, uygulamanızı derlemek için .NET Core çalışma zamanı hata ayıklama yapılandırması kullanır, ancak sürüm yapılandırmasını yerel kod için uygulamanızı derlemek için .NET Native kullanır.  
@@ -60,5 +60,5 @@ Additional information: Value does not fall within the expected range.
  Tam yığın almak için hata ayıklama derlemesini çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET yerel Windows Evrensel uygulamaları hata ayıklama](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [.NET yerel Windows Evrensel uygulamaları hata ayıklama](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)

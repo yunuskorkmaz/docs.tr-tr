@@ -2,12 +2,12 @@
 title: '1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679415"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711904"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma
 Bu görevde, WPF uygulaması Visual Studio şablonu kullanarak boş bir Windows Presentation Foundation (WPF) uygulaması oluşturun ve uygun başvuruları eklemek [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı bütünleştirilmiş kodları.  
@@ -40,8 +40,8 @@ Bu görevde, WPF uygulaması Visual Studio şablonu kullanarak boş bir Windows 
   
 10. **Tamam**'ı tıklatın.  
   
-11. Bkz: [görev 2: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) nasıl iş akışı Tasarımcısı tasarım tuvali barındıracağınızı öğrenin.  
+11. Bkz: [görev 2: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md) nasıl iş akışı Tasarımcısı tasarım tuvali barındıracağınızı öğrenin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [2. Görev: İş akışı tasarımcısını barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
+- [2. Görev: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md)

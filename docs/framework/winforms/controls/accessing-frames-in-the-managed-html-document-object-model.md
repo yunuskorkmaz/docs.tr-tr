@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443230"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723796"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
@@ -40,4 +40,4 @@ Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belge
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [\<Çerçeve > öğesi](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
-- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)

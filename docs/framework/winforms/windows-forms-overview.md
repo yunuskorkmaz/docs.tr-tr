@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375330"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705850"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a genel bakış
 
@@ -26,9 +26,9 @@ Aşağıdaki genel akıllı istemci uygulamaları, Windows Forms programlama ve 
 
  Windows Forms'ta bir *form* üzerinde görüntü bilgileri kullanıcıya görsel bir yüzeydir. Normalde formlarına denetimler ekleme ve fare tıklamasına veya tuş basışlarını gibi kullanıcı eylemlerini yanıtlarını geliştirmeye göre Windows Forms uygulamaları oluşturun. A *denetimi* veri girişi kabul eder ya da veri görüntüleyen bir ayrık bir kullanıcı arabirimi (UI) öğesidir.
 
- Bir kullanıcı bir şey formunuza veya denetimlerinden birini yaptığında, eylem, bir olay oluşturur. Uygulamanız kod kullanarak bu olaylara yanıt verir ve bunlar ortaya çıktığında olayları işler. Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).
+ Bir kullanıcı bir şey formunuza veya denetimlerinden birini yaptığında, eylem, bir olay oluşturur. Uygulamanız kod kullanarak bu olaylara yanıt verir ve bunlar ortaya çıktığında olayları işler. Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](creating-event-handlers-in-windows-forms.md).
 
- Windows Forms formlara ekleyebilirsiniz denetimleri çeşitli içerir: metin kutuları, düğmeler, aşağı açılan kutusu, radyo düğmeleri ve bile Web sayfalarını görüntüleyen denetimler. Bir form üzerinde kullanabileceğiniz tüm denetimleri listesi için bkz. [Windows Forms'da kullanılacak denetimler](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Varolan bir denetimi gereksinimlerinizi karşılamıyorsa, Windows Forms Ayrıca kendi özel denetimler kullanarak oluşturulmasını destekler <xref:System.Windows.Forms.UserControl> sınıfı.
+ Windows Forms formlara ekleyebilirsiniz denetimleri çeşitli içerir: metin kutuları, düğmeler, aşağı açılan kutusu, radyo düğmeleri ve bile Web sayfalarını görüntüleyen denetimler. Bir form üzerinde kullanabileceğiniz tüm denetimleri listesi için bkz. [Windows Forms'da kullanılacak denetimler](./controls/controls-to-use-on-windows-forms.md). Varolan bir denetimi gereksinimlerinizi karşılamıyorsa, Windows Forms Ayrıca kendi özel denetimler kullanarak oluşturulmasını destekler <xref:System.Windows.Forms.UserControl> sınıfı.
 
  Windows Forms, yüksek kaliteli uygulamalar Microsoft Office gibi özellikleri öykünmek zengin kullanıcı Arabirimi denetimlerine sahiptir. Kullanırken <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.MenuStrip> denetimi araç çubuklarında ve menülerde menülerinde görüntülemek ve metin kutuları ve birleşik giriş kutuları gibi diğer denetimleri barındıran metin ve görüntüleri içeren oluşturabilirsiniz.
 
@@ -45,10 +45,10 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir ToolStrip oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Özel denetimler oluşturma|[Nasıl yapılır: UserControl sınıfından devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms'a denetimler ekleme](./controls/how-to-add-controls-to-windows-forms.md)|
+|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir ToolStrip oluşturma](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](./advanced/getting-started-with-graphics-programming.md)|
+|Özel denetimler oluşturma|[Nasıl yapılır: UserControl sınıfından devralma](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Verileri görüntüleme ve düzenleme
  Birçok uygulama, verileri bir veritabanından, XML dosyası, XML Web hizmeti veya başka bir veri kaynağı görüntülemeniz gerekir. Windows Forms adlı esnek bir denetim sağlar <xref:System.Windows.Forms.DataGridView> kendi hücrenin her veri parçası kapladığı bir tablo gibi veri geleneksel bir satır ve sütun biçiminde, görüntüleme için denetimi. Kullanırken <xref:System.Windows.Forms.DataGridView>, tek tek hücrelerin görünüşünü özelleştirme, rastgele satırları kilitlemek ve sütunlardaki yerleştirin ve karmaşık denetimlerin yanı sıra başka özellikler hücreleri içine görüntülemek.
@@ -65,10 +65,10 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|Çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Veri Kaynakları penceresini kullanma|[Visual Studio'da verilere Windows Forms denetimleri bağlama](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Uygulama ayarlarını kullanma|[Nasıl yapılır: Uygulama ayarları oluşturma](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Uygulama ayarlarını kullanma|[Nasıl yapılır: Uygulama ayarları oluşturma](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma
 
@@ -98,15 +98,15 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta grafik yazdırma](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta grafik yazdırma](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Yeni bir Windows Formu Oluşturma](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [ToolStrip Denetimine Genel Bakış](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [DataGridView Denetimine Genel Bakış](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [BindingSource Bileşenine Genel Bakış](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)
+- [Yeni bir Windows Formu Oluşturma](creating-a-new-windows-form.md)
+- [ToolStrip Denetimine Genel Bakış](./controls/toolstrip-control-overview-windows-forms.md)
+- [DataGridView Denetimine Genel Bakış](./controls/datagridview-control-overview-windows-forms.md)
+- [BindingSource Bileşenine Genel Bakış](./controls/bindingsource-component-overview.md)
+- [Uygulama Ayarlarına Genel Bakış](./advanced/application-settings-overview.md)
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)

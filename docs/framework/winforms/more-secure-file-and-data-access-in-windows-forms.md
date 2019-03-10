@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664932"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724552"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
@@ -26,7 +26,7 @@ ms.locfileid: "56664932"
  Bir güvenlik kısıtlaması karşılaştığınızda, iki seçeneğiniz vardır: (Bu verilmiş uygulamanıza varsayılarak) izin onay veya kısmi güvende çalışması için yazılmış özelliğinin bir sürümü kullanın. Aşağıdaki bölümlerde, dosya, veritabanı ve kayıt defteri erişimini, kısmi güven ortamında çalışan uygulamalar ile nasıl çalışılacağı açıklanmaktadır.  
   
 > [!NOTE]
->  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımları isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalışan ek güvenlik avantajları istediğiniz karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmeli [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] araçlarını (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyinin nasıl belirleneceği hakkında daha fazla bilgi için bkz: [Windows Forms'ta Güvenliğe genel bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımları isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalışan ek güvenlik avantajları istediğiniz karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmeli [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] araçlarını (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyinin nasıl belirleneceği hakkında daha fazla bilgi için bkz: [Windows Forms'ta Güvenliğe genel bakış](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dosya erişimi  
  <xref:System.Security.Permissions.FileIOPermission> Sınıf içindeki dosya ve klasör erişimi denetler [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Varsayılan olarak, güvenlik sistemi yok yetkisi <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgelerinden gibi. Ancak, uygulamanızın tasarımını değiştirmek ya da dosyalara erişmek için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulamayı hala bu ortamlarda çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için aynı dizin erişim hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir, kaynak siteye geri hakkı.  
@@ -136,7 +136,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  Visual C# içinde olay işleyicisi olanak sağlamak için kod ekleme emin olun. Aşağıdaki kod, önceki örnekte kodunu kullanarak, olay işleyicisi etkinleştirme gösterir.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Diğer dosyalar  
- Bazen bir kullanıcı, uygulama ayarları ne zaman kalıcı tutmalıdır gibi belirtmediğinden emin dosyaları okunamıyor veya yazılamıyor gerekir. Yerel intranet ve Internet bölgelerinden, uygulamanızı bir yerel dosya verilerini depolamak için izni yoktur. Ancak, uygulamanız verileri yalıtılmış depolamada depolamak mümkün olacaktır. Yalıtılmış Depolama verilerinin nerede depolanacağını gerçek dizin konumlarını içeren denen bir veya daha fazla yalıtılmış depolama dosyalarını içeren bir soyut bir veri bölmesine (belirli bir depolama konumu değil) var. Dosya erişim izinlerini gibi <xref:System.Security.Permissions.FileIOPermission> gerekli değildir; bunun yerine, <xref:System.Security.Permissions.IsolatedStoragePermission> sınıfı yalıtılmış depolama izinlerini denetler. Varsayılan olarak, yerel intranet ve Internet bölgelerinden çalışan uygulamalar, yalıtılmış depolama kullanarak veri depolayabilir; Ancak, disk kotası gibi ayarları farklılık gösterebilir. Yalıtılmış depolama hakkında daha fazla bilgi için bkz. [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md).  
+ Bazen bir kullanıcı, uygulama ayarları ne zaman kalıcı tutmalıdır gibi belirtmediğinden emin dosyaları okunamıyor veya yazılamıyor gerekir. Yerel intranet ve Internet bölgelerinden, uygulamanızı bir yerel dosya verilerini depolamak için izni yoktur. Ancak, uygulamanız verileri yalıtılmış depolamada depolamak mümkün olacaktır. Yalıtılmış Depolama verilerinin nerede depolanacağını gerçek dizin konumlarını içeren denen bir veya daha fazla yalıtılmış depolama dosyalarını içeren bir soyut bir veri bölmesine (belirli bir depolama konumu değil) var. Dosya erişim izinlerini gibi <xref:System.Security.Permissions.FileIOPermission> gerekli değildir; bunun yerine, <xref:System.Security.Permissions.IsolatedStoragePermission> sınıfı yalıtılmış depolama izinlerini denetler. Varsayılan olarak, yerel intranet ve Internet bölgelerinden çalışan uygulamalar, yalıtılmış depolama kullanarak veri depolayabilir; Ancak, disk kotası gibi ayarları farklılık gösterebilir. Yalıtılmış depolama hakkında daha fazla bilgi için bkz. [yalıtılmış depolama](../../standard/io/isolated-storage.md).  
   
  Aşağıdaki örnek, bir depolama alanında bulunan bir dosyaya veri yazmak için yalıtılmış depolama kullanır. Örnek gerektirir <xref:System.Security.Permissions.IsolatedStorageFilePermission> ve <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> numaralandırma değeri. Örnek okuma ve yazma belirli özellik değerlerini gösterir <xref:System.Windows.Forms.Button> yalıtılmış depolamadaki dosyaya denetimi. `Read` Uygulama başladıktan sonra işlev'in çağrılabilir ve `Write` işlevi uygulama sona ermeden önce çağrılabilir. Örnek gerektiren `Read` ve `Write` işlevleri, üye olarak mevcut bir <xref:System.Windows.Forms.Form> içeren bir <xref:System.Windows.Forms.Button> adlı Denetim `MainButton`.  
   
@@ -349,7 +349,7 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Veritabanı erişimi  
- Bir veritabanına erişmek için gerekli izinlere veritabanı sağlayıcısı'na bağlı olarak değişiklik gösterir; Ancak, uygun izinlerle çalışmakta olan uygulamalar, veri bağlantısı aracılığıyla bir veritabanına erişebilir. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişimi güvenliği ve ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ Bir veritabanına erişmek için gerekli izinlere veritabanı sağlayıcısı'na bağlı olarak değişiklik gösterir; Ancak, uygun izinlerle çalışmakta olan uygulamalar, veri bağlantısı aracılığıyla bir veritabanına erişebilir. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişimi güvenliği ve ADO.NET](../data/adonet/code-access-security.md).  
   
  Kısmi güvende çalıştırmak için uygulamanızın istediğinden bir veritabanına doğrudan erişemez, verilerinize erişmek bir alternatif anlamına gelir, bir Web hizmetini kullanabilirsiniz. Program aracılığıyla bir ağ üzerinden erişilebilen bir yazılım parçasıdır bir Web hizmetidir. Web hizmetleri sayesinde, uygulamalar, kod grubu bölgeler arasında veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgelerinden uygulamalar aynı sunucuda barındırılan bir Web hizmeti çağırmak amacıyla sağlayan, kaynak sitelerini erişim hakkı verilir. Daha fazla bilgi için [ASP.NET AJAX Web hizmetlerini](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) veya [Windows Communication Foundation](../wcf/index.md).  
   
@@ -359,9 +359,9 @@ public void Write()
  Kısmi güven altında kayıt defteri erişemediği için diğer yöntemleri, verilerinizi depolamaya gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama yerine kayıt defterini kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyaları depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya site kaynak, genel uygulama bilgilerini da depolayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Windows Forms'ta Ek Güvenlik Konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)
-- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Windows Forms'ta Daha Güvenli Yazdırma](more-secure-printing-in-windows-forms.md)
+- [Windows Forms'ta Ek Güvenlik Konuları](additional-security-considerations-in-windows-forms.md)
+- [Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)
+- [Windows Forms Güvenliği](windows-forms-security.md)
+- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

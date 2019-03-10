@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543074"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717927"
 ---
 # <a name="windows-forms-controls-by-function"></a>İşlevlere Göre Windows Forms Denetimleri
 Windows Forms denetimleri ve İşlevler bir dizi yerine bileşenleri sunar. Aşağıdaki tabloda, Windows Forms denetimleri ve bileşenleri genel işlev göre listelenmektedir. Ayrıca, birden çok denetim aynı işleve hizmet eden mevcut olduğunda, önerilen denetimi yenisiyle denetimi ile ilgili bir not listelenir. Ayrı bir sonraki tabloda, yerine geçilen denetimleri ile kendi önerilen yedekler listelenir.  
   
 > [!NOTE]
->  Aşağıdaki tablolarda her kontrol ya da Windows Forms'ta kullanabileceğiniz bileşen listesinde değil; daha kapsamlı bir listesi için bkz [Windows Forms'da kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  Aşağıdaki tablolarda her kontrol ya da Windows Forms'ta kullanabileceğiniz bileşen listesinde değil; daha kapsamlı bir listesi için bkz [Windows Forms'da kullanılacak denetimler](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>Önerilen denetimleri ve bileşenleri tarafından işlevi  
   
 |İşlev|Denetim|Açıklama|  
 |--------------|-------------|-----------------|  
-|Verileri görüntüleme|<xref:System.Windows.Forms.DataGridView> Denetimi|<xref:System.Windows.Forms.DataGridView> Denetim verileri görüntülemek için özelleştirilebilir bir tablo sağlar. <xref:System.Windows.Forms.DataGridView> Sınıfı hücreler, satırlar, sütunlar ve Kenarlıklar özelleştirmesini sağlar. **Not:**  <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Verileri görüntüleme|<xref:System.Windows.Forms.DataGridView> Denetimi|<xref:System.Windows.Forms.DataGridView> Denetim verileri görüntülemek için özelleştirilebilir bir tablo sağlar. <xref:System.Windows.Forms.DataGridView> Sınıfı hücreler, satırlar, sütunlar ve Kenarlıklar özelleştirmesini sağlar. **Not:**  <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Veri bağlama ve gezinti|<xref:System.Windows.Forms.BindingSource> bileşeni|Bir forma veri bağlama denetimleri, para birimi yönetimi, değişiklik bildirimi ve diğer hizmetleri sunarak basitleştirir.|  
 ||<xref:System.Windows.Forms.BindingNavigator> Denetimi|Gidin ve bir form üzerinde verileri işlemek için bir araç çubuğu türü arabirimi sağlar.|  
 |Metin düzenleme|<xref:System.Windows.Forms.TextBox> Denetimi|Tasarım zamanında çalışma zamanında kullanıcı tarafından düzenlenebilir veya program aracılığıyla değiştirdiğiniz girilen metni görüntüler.|  
@@ -85,5 +85,5 @@ Windows Forms denetimleri ve İşlevler bir dizi yerine bileşenleri sunar. Aşa
 |Form düzeni|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)

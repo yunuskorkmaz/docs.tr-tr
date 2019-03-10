@@ -2,12 +2,12 @@
 title: Dengeleme
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607611"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721318"
 ---
 # <a name="compensation"></a>Dengeleme
 Windows Workflow Foundation (WF) Maaş tarafından daha önce tamamlanan iş geri alınamaz veya yapabilirsiniz (aşağıdaki uygulama tarafından tanımlanan mantık) dengelenebilecek mekanizması olduğunu bir sonraki hata oluştuğunda. Bu bölümde, iş akışlarında Dengeleme kullanmayı açıklar.  
@@ -16,12 +16,12 @@ Windows Workflow Foundation (WF) Maaş tarafından daha önce tamamlanan iş ger
  Bir işlem, birden fazla işlemi tek bir birim iş birleştirmenize olanak sağlar. Bir işlem kullanarak uygulamanızı (geri alma) gelen işlem işlemi sırasında herhangi bir bölümü herhangi bir hata meydana gelirse işlem içinde yürütülen tüm değişiklikleri iptal olanağı sağlar. Ancak, işlemleri kullanarak iş uzun süredir, uygun olmayabilir. Örneğin, bir seyahat planlama uygulama iş akışı olarak uygulanır. İş akışının adımları, bir uçuştaki kayıt, manager onay bekliyor ve ardından uçuş için ödeme oluşabilir. Bu işlem günlerce sürebilir ve kayıt ve aynı işlemde katılmak uçuş için ödeme işlemleri için kullanışlı değildir. Böyle bir senaryoda maaş, işleme, bir hata varsa iş akışının kayıt adımları geri almak için kullanılabilir.  
   
 > [!NOTE]
->  Bu konu, iş akışlarında maaş kapsar. İş akışlarında işlemleri hakkında daha fazla bilgi için bkz. [işlemleri](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) ve <xref:System.Activities.Statements.TransactionScope>. İşlemler hakkında daha fazla bilgi için bkz. <xref:System.Transactions?displayProperty=nameWithType> ve <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  Bu konu, iş akışlarında maaş kapsar. İş akışlarında işlemleri hakkında daha fazla bilgi için bkz. [işlemleri](workflow-transactions.md) ve <xref:System.Activities.Statements.TransactionScope>. İşlemler hakkında daha fazla bilgi için bkz. <xref:System.Transactions?displayProperty=nameWithType> ve <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>CompensableActivity kullanma  
  <xref:System.Activities.Statements.CompensableActivity> Çekirdek maaş etkinliktir [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Dengelenebilecek gereken çalışmayı gerçekleştirmek herhangi bir etkinlik içine yerleştirilir <xref:System.Activities.Statements.CompensableActivity.Body%2A> , bir <xref:System.Activities.Statements.CompensableActivity>. Bu örnekte, bir uçuştaki satın ayırma adım içine yerleştirilir <xref:System.Activities.Statements.CompensableActivity.Body%2A> , bir <xref:System.Activities.Statements.CompensableActivity> ve rezervasyon iptal getirilir <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Hemen <xref:System.Activities.Statements.CompensableActivity> akışında olan iki etkinliği için yönetici onayı bekleyin ve ardından uçuş satın alma adımı tamamlayın. Bir hata durumu iş akışını sonra iptal edilmesine neden olursa <xref:System.Activities.Statements.CompensableActivity> başarıyla tamamlandı, ardından etkinliklerinin <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> işleyici zamanlanır ve uçuş iptal edilir.  
   
- [!code-csharp[CFX_CompensationExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
+ [!code-csharp[CFX_CompensationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
   
  Aşağıdaki örnekte iş akışı XAML içinde bulunur.  
   
@@ -62,7 +62,7 @@ Windows Workflow Foundation (WF) Maaş tarafından daha önce tamamlanan iş ger
   
  Bu örnekte, uçuş ayrılmış sonra ancak yönetici onayı adımdan önce bir özel durum oluşturulur.  
   
- [!code-csharp[CFX_CompensationExample#2](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
+ [!code-csharp[CFX_CompensationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
   
  Bu örnek iş akışı XAML içinde içindir.  
   
@@ -87,7 +87,7 @@ Windows Workflow Foundation (WF) Maaş tarafından daha önce tamamlanan iş ger
 </Sequence>  
 ```  
   
- [!code-csharp[CFX_CompensationExample#100](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
+ [!code-csharp[CFX_CompensationExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
   
  İş akışı çağrıldığında benzetilmiş hata koşulu özel durum konak uygulama tarafından işlenir <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, iş akışını iptal edilir ve telafi mantığının çağrılır.  
   
@@ -166,12 +166,12 @@ Activity wf = new Sequence()
 **İş akışı, işlenmemiş özel durum oluştu:**   
 **System.ApplicationException: İş akışında hata koşulu benzetimi.**   
 **CancelCreditCard: Kredi kartı ücretleri iptal edin.**   
-**İş akışı durumu ile başarıyla tamamlandı: İptal edildi.**  İptal işlemleri hakkında daha fazla bilgi için bkz. [iptal](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**İş akışı durumu ile başarıyla tamamlandı: İptal edildi.**  İptal işlemleri hakkında daha fazla bilgi için bkz. [iptal](modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Açık maaş kullanarak etkinlik dengelemek  
  Önceki bölümde örtük maaş çalışmasındaki. Örtük maaş sonra işleme maaş zamanlama üzerinde daha kesin denetim gerekli olup olmadığını fakat basit senaryolar için uygun olabilir <xref:System.Activities.Statements.Compensate> etkinlik kullanılabilir. İle telafi işlemini başlatmak için <xref:System.Activities.Statements.Compensate> etkinliği <xref:System.Activities.Statements.CompensationToken> , <xref:System.Activities.Statements.CompensableActivity> hangi maaş istenen kullanılır. <xref:System.Activities.Statements.Compensate> Etkinliği, tüm tamamlanan maaş başlatmak için kullanılabilir <xref:System.Activities.Statements.CompensableActivity> , doğrulanmamış veya dengelendi. Örneğin, bir <xref:System.Activities.Statements.Compensate> etkinlik kullanılabilirdi <xref:System.Activities.Statements.TryCatch.Catches%2A> bölümünü bir <xref:System.Activities.Statements.TryCatch> etkinliği ya da sonra istediğiniz zaman <xref:System.Activities.Statements.CompensableActivity> tamamlandı. Bu örnekte, <xref:System.Activities.Statements.Compensate> etkinlik kullanılan <xref:System.Activities.Statements.TryCatch.Catches%2A> bölümünü bir <xref:System.Activities.Statements.TryCatch> eylemi tersine çevirmek için etkinlik <xref:System.Activities.Statements.CompensableActivity>.  
   
- [!code-csharp[CFX_CompensationExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
+ [!code-csharp[CFX_CompensationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
   
  Bu örnek iş akışı XAML içinde içindir.  
   
@@ -251,7 +251,7 @@ Activity wf = new Sequence()
 ### <a name="confirming-compensation"></a>Maaş onaylanıyor  
  Varsayılan olarak, bunlar tamamladıktan sonra istediğiniz zaman compensable etkinlikleri dengelenebilecek. Bazı senaryolarda bu uygun olmayabilir. Önceki örnekte bileti rezervasyonu için maaş ayırmayı iptal etmek için oluştu. Uçuş tamamlandıktan sonra ancak bu maaş adımı artık geçerli değil. Compensable etkinliğinde onaylayan tarafından belirtilen etkinliği çağırır <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Bunun için bir olası kullanım, yayımlanacak Dengeleme gerçekleştirmek gerekli olan herhangi bir kaynağa izin vermektir. Compensable etkinliğinde dengelenebilecek için mümkün değildir onaylandıktan sonra ve bu yapılmaya çalışılırsa bir <xref:System.InvalidOperationException> özel durumu oluşturulur. Bir iş akışı başarıyla tamamlandığında başarıyla tamamlanan tüm onaylanmamış ve dengelenebilecek compensable etkinlikler tamamlandığında, ters sırada onaylanır. Bu örnekte, uçuş ayrılmış, satın alınan tamamlandı ve ve ardından compensable etkinliğinde onaylanır. Onaylamak için bir <xref:System.Activities.Statements.CompensableActivity>, kullanın <xref:System.Activities.Statements.Confirm> etkinlik belirtin <xref:System.Activities.Statements.CompensationToken> , <xref:System.Activities.Statements.CompensableActivity> onaylamak için.  
   
- [!code-csharp[CFX_CompensationExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
+ [!code-csharp[CFX_CompensationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
   
  Bu örnek iş akışı XAML içinde içindir.  
   
