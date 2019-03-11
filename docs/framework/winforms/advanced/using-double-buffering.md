@@ -7,35 +7,35 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: 9b09210eba0ac3a141219a7cdbff15f22c6ed003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523916"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716295"
 ---
 # <a name="using-double-buffering"></a>İki Kez Arabelleğe Almayı Kullanma
-Karmaşık Boyama işlemleri içeren uygulamalarınızı titreşimi azaltmak için iki kez arabelleğe alınan grafikler kullanabilirsiniz. .NET Framework çift arabelleğe alma için yerleşik destek içerir veya yönetebilir ve grafikleri elle işleme.  
+İki kez arabelleğe alınan grafikler, karmaşık boyama işlemler içeren, uygulamalarınızda titreşimi azaltmak için kullanabilirsiniz. .NET Framework iki kez arabelleğe alma için yerleşik destek içerir veya yönetebilir ve grafikleri elle işleme.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Çift arabelleğe alma kavram ve anahatları .NET Framework destek sunar.  
+ [İki Kez Arabelleğe Alınan Grafikler](double-buffered-graphics.md)  
+ Çift arabelleğe alma kavram ve ana hatlarını .NET Framework Destek sunuyor.  
   
- [Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- Varsayılan .NET Framework Destek arabelleğe çift kullanımı gösterilmiştir.  
+ [Nasıl yapılır: Formlar ve denetimler için çift arabelleğe alma ile grafik titreşimini azaltma](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ Varsayılan .NET Framework Destek arabelleğe çift nasıl yapılacağı açıklanır.  
   
- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- Uygulamalarda iki kez arabelleğe alma yönetmek nasıl gösterir.  
+ [Nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md)  
+ Uygulamalarda iki kez arabelleğe alma yönetme işlemini göstermektedir.  
   
- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- İki kez arabelleğe alınan grafikler işlemek gösterilmiştir.  
+ [Nasıl yapılır: Arabelleğe alınan grafikleri elle işleme](how-to-manually-render-buffered-graphics.md)  
+ İki kez arabelleğe alınan grafikler nasıl oluşturulacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- İki kez arabelleğe alma sağlayan denetim yöntemi.  
+ Denetim yöntemi iki kez arabelleğe almayı sağlar.  
   
  <xref:System.Drawing.BufferedGraphicsContext> ,  
- Grafik arabellekleri oluşturmak için yöntemler sağlar.  
+ Grafik arabellekleri oluşturmak için yöntemleri sağlar.  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
- Uygulama etki alanı için arabelleğe alınan grafikleri bağlam erişim sağlar.
+ Bir uygulama etki alanı için arabelleğe alınan grafikleri bağlam erişim sağlar.

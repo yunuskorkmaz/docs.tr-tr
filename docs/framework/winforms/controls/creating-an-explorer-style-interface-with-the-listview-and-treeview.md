@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517103"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716991"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: ListView ve tasarımcı kullanarak TreeView denetimleri ile Gezgin stilinde bir arabirim oluşturma
 Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için olanağıdır. Sık karşılaşılan bir senaryodur ile bir kullanıcı arabirimi (UI) oluşturma <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarında dosyaları ve klasörleri hiyerarşik yapısını görüntüler.  
@@ -54,33 +54,33 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
     2.  Ayarlama <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Üç noktaya tıklayarak ColumnHeader Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği **.** Üç sütun ekleme ve bunların <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğini `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    3.  Üç noktaya tıklayarak ColumnHeader Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği **.** Üç sütun ekleme ve bunların <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğini `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
     4.  Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği `imageList1.`  
   
 8.  Doldurmak için kodu Uygula <xref:System.Windows.Forms.TreeView> düğümleri ve alt düğümleri. Bu kodu ekleyin `Form1` sınıfı.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
   
 9. Önceki kod System.IO ad alanı kullandığından, uygun kullanarak ekleyebilir veya formun üstünde deyimini içeri aktar.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
   
 10. Formun oluşturucuda önceki adımdan Kurulum yöntemi çağırın veya <xref:System.Windows.Forms.Form.Load> olay işleme yöntemi. Bu kod, form oluşturucuyu ekleyin.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
 11. Tanıtıcı <xref:System.Windows.Forms.TreeView.NodeMouseClick> olayı için `treeview1` **,** ve doldurmak için kodu Uygula `listview1` bir düğüm tıklandığında bir düğümün içeriğe sahip. Bu kodu ekleyin `Form1` sınıfı.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
   
      C# kullanıyorsanız olduğundan emin olun <xref:System.Windows.Forms.TreeView.NodeMouseClick> olay, olay işleme yöntemi ile ilişkili. Bu kod, form oluşturucuyu ekleyin.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
   
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
  Şimdi beklendiği gibi davrandığından emin olmak için form test edebilirsiniz.  
@@ -94,16 +94,16 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulama, örnek olarak kullanabileceğiniz bir yol sunar <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ListView> birlikte denetler. Bu denetimler hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
-- [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Nasıl yapılır: Ekleme ve Windows Forms TreeView denetimi ile düğüm kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [ListView Denetimi](listview-control-windows-forms.md)
+- [Nasıl yapılır: Ekleme ve Windows Forms TreeView denetimi ile düğüm kaldırma](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)

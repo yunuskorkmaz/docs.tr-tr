@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618980"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713057"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
 `await` İşleci awaited görevi tamamlanıncaya kadar yöntemin yürütülmesine askıya alma noktası eklemek için bir zaman uyumsuz yöntemdeki bir göreve uygulanır. Görev, devam eden çalışmayı temsil eder.  
@@ -21,17 +21,16 @@ ms.locfileid: "54618980"
 `await` yalnızca zaman uyumsuz bir yöntem değiştiren kullanılabilir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) anahtar sözcüğü. Tarafından tanımlanan tür bir yöntem, `async` değiştiricisi ve genellikle bir veya daha fazla içeren `await` ifadeleri olarak adlandırılır bir *zaman uyumsuz yöntem*.  
   
 > [!NOTE]
->  `async` Ve `await` anahtar sözcükler C# 5'te kullanıma sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
+> `async` Ve `await` anahtar sözcükler C# 5'te kullanıma sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-Görev `await` işleci uygulanır genellikle uygulayan bir yönteme bir çağrı tarafından döndürülen [görev tabanlı zaman uyumsuz desen](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Döndüren yöntemler içerirler <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, ve `System.Threading.Tasks.ValueType<TResult>` nesneleri.  
+Görev `await` işleci uygulanır genellikle uygulayan bir yönteme bir çağrı tarafından döndürülen [görev tabanlı zaman uyumsuz desen](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Döndüren yöntemler içerirler <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask>, ve <xref:System.Threading.Tasks.ValueTask%601> nesneleri.  
 
-  
- Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> yöntemi döndürür bir `Task<byte[]>`. Görev, görev tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `await` İşleci çalışması kadar yürütmeyi askıya alır <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> yöntemi tamamlanmıştır. Bu sırada, Denetim çağırana döndürülmeden `GetPageSizeAsync`. Görev yürütme tamamlandığında `await` ifadesi bir bayt dizisine değerlendirir.  
+Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> yöntemi döndürür bir `Task<byte[]>`. Görev, görev tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `await` İşleci çalışması kadar yürütmeyi askıya alır <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> yöntemi tamamlanmıştır. Bu sırada, Denetim çağırana döndürülmeden `GetPageSizeAsync`. Görev yürütme tamamlandığında `await` ifadesi bir bayt dizisine değerlendirir.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Tam bir örnek için bkz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
+> Tam bir örnek için bkz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
   
 Önceki örnekte gösterildiği gibi `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task<TResult>`, sonra türünü `await` ifade `TResult`. Varsa `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task`, sonra türünü `await` ifade `void`. Fark aşağıdaki örnekte gösterilmiştir.  
   

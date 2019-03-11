@@ -197,6 +197,7 @@
 ### [.NET Core için proje düzenleme](core/porting/project-structure.md)
 ### [.NET Core’a taşıma konusunda yardımcı olabilecek araçlar](core/porting/tools.md)
 ### [Windows Uyumluluk Paketi Kullanma](core/porting/windows-compat-pack.md)
+### [Windows Forms projelerini bağlama](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Kaynaktan .NET Core derleme](core/build/index.md)
 ### [.NET Core dağıtımı paketleme](core/build/distribution-packaging.md)
