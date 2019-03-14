@@ -5,5 +5,4 @@
 ## [Düzensiz Diziler](jagged-arrays.md)
 ## [Dizilerle foreach kullanma](using-foreach-with-arrays.md)
 ## [Dizileri Bağımsız Değişkenler Olarak Geçirme](passing-arrays-as-arguments.md)
-## [ref ve out Kullanarak Dizileri Geçirme](passing-arrays-using-ref-and-out.md)
 ## [Örtük Olarak Yazılan Diziler](implicitly-typed-arrays.md)
