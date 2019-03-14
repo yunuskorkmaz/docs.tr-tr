@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533214"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788433"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 
@@ -43,7 +43,7 @@ Aşağıdaki tabloda, bu araç ve nasıl kullanıldığı açıklanır ilgili ko
 
 Araç, meta verileri alınırken bir beş dakikalık zaman aşımı vardır. Bu zaman aşımı, yalnızca ağ üzerinden meta veri alma için geçerlidir. Bu meta verilere herhangi bir işlem için geçerli değildir.
 
-### <a name="multi-targetting"></a>Çoklu hedefleyen
+### <a name="multi-targeting"></a>Çoklu sürüm desteği
 
 Aracı, multi-targeting'e desteklemez. .NET 4 yapıdan oluşturmak istiyorsanız *svcutil.exe*, kullanın *svcutil.exe* .NET 4 SDK. .NET 3.5 yapıt üretmek için yürütülebilir dosyadan .NET 3.5 SDK'yı kullanın.
 
@@ -71,7 +71,7 @@ Svcutil.exe meta veri belgelerinden Hizmet sözleşmeleri, istemciler ve veri t�
 
 Kullanabileceğiniz *SvcUtil.exe* aracını üzerinde önceden tanımlanmış bir WSDL belgesi tabanlı hizmet ve veri sözleşmeleri oluşturmak için. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde bulunamadı veya İndirilebilecek URL veya dosya konumu belirtin. Bu, ardından uyumlu hizmet uygulamak için kullanılan WSDL belgesinde tanımlanan hizmet ve veri sözleşmeleri oluşturur. Daha fazla bilgi için [nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Bir hizmetin BasicHttpContextbinding uç noktası ile *Svcutil.exe* ile bir BasicHttpBinding oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgilerini kullandığında istemcide bağlam yönetmek istiyorsanız, bağlam bağlama kullanmak için yapılandırmayı el ile değiştirebilirsiniz.
+Bir hizmetin BasicHttpContextBinding uç noktası ile *Svcutil.exe* ile bir BasicHttpBinding oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgilerini kullandığında istemcide bağlam yönetmek istiyorsanız, bağlam bağlama kullanmak için yapılandırmayı el ile değiştirebilirsiniz.
 
 > [!CAUTION]
 > Svcutil.exe hizmetinden alınan WSDL veya ilke dosyası bağlı olarak istemciye oluşturur. Kullanıcı asıl adı (UPN) kullanıcı adı, birleştirilerek oluşturulan "\@" ve tam etki alanı adı (FQDN). Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracı tarafından oluşturulan UPN "oturum açma girişimi başarısız oldu" hata iletisiyle Kerberos kimlik doğrulamasındaki bir hata neden olur. Bu sorunu gidermek için bu aracı tarafından oluşturulan istemci dosyası el ile düzeltmeniz.

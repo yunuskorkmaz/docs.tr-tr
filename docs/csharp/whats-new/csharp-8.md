@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d723bdf55104fa0a8d4a8e20c60a9debb26c7886
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674451"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788602"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -83,7 +83,7 @@ Burada birkaç söz dizimi geliştirmeleri vardır:
 Klasik kullanarak eşdeğer kodla, Karşıtlık `switch` deyimi:
 
 ```csharp
-public static RGBColor fromRainbowClassic(Rainbow colorBand)
+public static RGBColor FromRainbowClassic(Rainbow colorBand)
 {
     switch (colorBand)
     {

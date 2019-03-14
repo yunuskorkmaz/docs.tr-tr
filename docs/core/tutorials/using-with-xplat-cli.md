@@ -5,14 +5,14 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212176"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788316"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
+# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
 
 Bu konuda, makinenizde .NET Core CLI araçları ile platformlar arası uygulamalar geliştirmeye başlamak nasıl gösterir.
 

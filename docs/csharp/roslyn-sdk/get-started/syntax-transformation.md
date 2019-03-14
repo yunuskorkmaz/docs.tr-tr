@@ -3,12 +3,12 @@ title: Söz dizimi dönüştürme (Roslyn API'leri) ile çalışmaya başlama
 description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122592"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788446"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Söz dizimi dönüştürme ile çalışmaya başlama
 
@@ -152,7 +152,7 @@ Hiçbir yeniden yazma döndürerek gerçekleşir, yöntemi gösterir `node` değ
 
 Son olarak, aşağıdaki ekleyin `if` mevcut tür adıyla değiştirilecek deyimi `var` Başlatıcı ifadesinin türü belirtilen tür eşleşiyorsa anahtar sözcüğü:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 Koşul bildirimi Başlatıcı ifadesinin bir temel sınıf veya arabirim için tür dönüştürme için gereklidir. İstenirse, sol ve sağ taraftaki atama türleri eşleşmiyor. Bu gibi durumlarda açık tür kaldırma programı semantiği değiştirirsiniz. `var` bir anahtar sözcüğü yerine bir tanımlayıcı olarak çünkü belirtilen `var` bağlamsal bir anahtar sözcüktür. Baştaki ve sondaki trivia (boşluk) eski tür adına aktarılırken `var` dikey boşluk ve girinti korumak için anahtar sözcüğü. Kullanmak daha kolaydır `ReplaceNode` yerine `With*` dönüştürmek için <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> gerçekten bildirim deyiminin en alt tür adı olduğu için.
 

@@ -1209,6 +1209,7 @@
 ### Eğitilen modeli kullanma
 #### [PredictionEngine ile bir kerede bir tahmin](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Eğitilen bir modeli kullanıma hazır hale getirme](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Hizmet Modeli Azure İşlevleri](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Infer.NET ile olasılığa dayalı programlama](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Başvuru

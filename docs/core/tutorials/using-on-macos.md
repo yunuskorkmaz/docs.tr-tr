@@ -1,17 +1,17 @@
 ---
-title: MacOS üzerinde .NET Core kullanmaya başlama
+title: MacOS üzerinde .NET Core ile çalışmaya başlama
 description: Bu belge, Visual Studio Code'u kullanarak bir .NET Core çözümü oluşturmak için iş akışı ve adımları sağlar.
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170297"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788459"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core kullanmaya başlama
+# <a name="get-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core ile çalışmaya başlama
 
 Bu belge, macOS için .NET Core çözüm oluşturmak için iş akışı ve adımları sağlar. Projeleri, birim testleri oluşturma, hata ayıklama araçlarını kullanın ve aracılığıyla üçüncü taraf kitaplıklarını birleştirebilir öğrenin [NuGet](https://www.nuget.org/).
 
@@ -26,7 +26,7 @@ Yükleme [Visual Studio Code'u](https://code.visualstudio.com). Bu makalede Kurs
 
 Visual Studio kodu açma ve basarak Visual Studio kodu C# uzantısı yükleme <kbd>F1</kbd> Visual Studio Code paletini açın. Tür **ext yükleme** uzantılarının listesini görmek için. C# uzantısı'nı seçin. Uzantıyı etkinleştirmek için Visual Studio Code'u yeniden başlatın. Daha fazla bilgi için [Visual Studio Code C# uzantısı belgeleri](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Bu öğreticide, üç proje oluştur: bir kitaplığı projesini test Bu kitaplık projesi ve bir konsol uygulaması yapar kitaplığını kullanın. Yapabilecekleriniz [görüntüleme veya indirme kaynağını](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) dotnet/samples deposunda github'da Bu konu. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 

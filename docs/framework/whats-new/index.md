@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# .NET Framework'teki yenilikler <a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
 Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framework sürümlerinde özetlenmektedir:
 
@@ -1570,8 +1570,6 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
      Sabit koleksiyonlar gibi .NET core paketleri [SIMD API'leri](https://go.microsoft.com/fwlink/?LinkID=518639), ve API'leri gibi ağ bulunan <xref:System.Net.Http> ad alanı şu anda açık kaynak paketleri olarak kullanılabilir durumda [GitHub](https://github.com/). Kod erişmek için bkz: [github'da Corefx'te](https://github.com/dotnet/corefx). Daha fazla bilgi ve bu paketlere katkıda bulunmak için bkz: [.NET Core ve açık kaynaklı](../../../docs/framework/get-started/net-core-and-open-source.md), [GitHub .NET giriş sayfasında](https://github.com/dotnet/home).
 
-[Başa dön](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2'deki yenilikler
@@ -1643,8 +1641,6 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
      Yöntemi tarafından önceden oluşturulmuş bir liste tarafından kullanılabilir <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> yanıt olarak <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> yöntemi. Bunu ister `System.Transactions` işlem için bir MSDTC işlem yükseltmek ve "kalıcı bir liste promotable liste dönüştürmek için". Bu yöntem başarıyla tamamlandıktan sonra <xref:System.Transactions.IPromotableSinglePhaseNotification> arabirimi artık başvuru tarafından `System.Transactions`, ve gelecekteki tüm bildirimleri sağlanan ulaşır <xref:System.Transactions.ISinglePhaseNotification> arabirimi. Söz konusu liste, işlem günlüğü ve kurtarma destekleyen bir kalıcı liste davranmalıdır. Başvurmak <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> Ayrıntılar için. Ayrıca, liste desteklemelidir <xref:System.Transactions.ISinglePhaseNotification>.  Bu yöntem için *yalnızca* işlenirken çağrılabilir bir <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> çağırın. Bu durumda değilse bir <xref:System.Transactions.TransactionException> özel durumu oluşturulur.
 
-[Başa dön](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1'teki yenilikler
@@ -1706,8 +1702,6 @@ Windows Forms için geliştirmeler şunlardır:
 Kullanabileceğiniz Visual Studio 2013 ile başlayarak, [yönetilen profil Kılavuzlu optimizasyon Aracı (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) iyileştirmek için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Masaüstü uygulamaların yanı sıra uygulamaları.
 
 ASP.NET 4.5.1'deki yeni özellikler için bkz: [için ASP.NET and Web Tools Visual Studio 2013 sürüm notları](/aspnet/visual-studio/overview/2013/release-notes).
-
-[Başa dön](#introduction)
 
 <a name="v45" />
 

@@ -4,14 +4,14 @@ description: Bu konu başlığı altında Mac ve .NET Core için Visual Studio k
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ed6c25f424e1b87c1a18a3654f756500af9f78de
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169579"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788628"
 ---
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama
+# <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama
 
 Mac için Visual Studio, .NET Core uygulamaları geliştirmek için bir tam özellikli tümleşik geliştirme ortamı (IDE) sağlar. Bu konu başlığı altında Mac ve .NET Core için Visual Studio kullanarak basit bir konsol uygulaması oluşturma sürecinde size yol gösterir.
 
@@ -24,7 +24,7 @@ Mac için Visual Studio, .NET Core uygulamaları geliştirmek için bir tam öze
 
 Bkz: [Mac üzerinde .NET Core önkoşulları](../../core/macos-prerequisites.md) konu.
 
-## <a name="getting-started"></a>Başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Mac için Visual Studio ve önkoşullar önce yüklediğiniz, bu bölümü atlayarak devam [proje oluşturma](#creating-a-project). Mac için Visual Studio ve önkoşulları yüklemek için aşağıdaki adımları izleyin:
 

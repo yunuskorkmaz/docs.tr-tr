@@ -23,12 +23,12 @@ Aşağıdaki öğreticilerde, .NET Core hakkında bilgi almak için kullanılabi
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code ile uygulamaları oluşturma
 
-- [Kullanmaya başlama C# ve Visual Studio Code](with-visual-studio-code.md)
-- [MacOS üzerinde .NET Core kullanmaya başlama](using-on-macos.md)
+- [C# ve Visual Studio Code kullanmaya başlama](with-visual-studio-code.md)
+- [MacOS üzerinde .NET Core ile çalışmaya başlama](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Mac için Visual Studio ile uygulamalar oluşturma
 
-- [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](using-on-mac-vs.md)
+- [Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama](using-on-mac-vs.md)
 - [Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](using-on-mac-vs-full-solution.md)
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI araçları ile uygulamaları oluşturma
