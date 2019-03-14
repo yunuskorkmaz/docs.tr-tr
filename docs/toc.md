@@ -449,7 +449,7 @@
 ### [İmza Dosyaları](fsharp/language-reference/signature-files.md)
 ### [Ölçü Birimleri](fsharp/language-reference/units-of-measure.md)
 ### [XML Belgeleri](fsharp/language-reference/xml-documentation.md)
-### [Geç Hesaplamalar](fsharp/language-reference/lazy-computations.md)
+### [Gecikmeli İfadeler](fsharp/language-reference/lazy-expressions.md)
 ### [Hesaplama İfadeleri](fsharp/language-reference/computation-expressions.md)
 ### [Zaman Uyumsuz İş Akışları](fsharp/language-reference/asynchronous-workflows.md)
 ### [Sorgu İfadeleri](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [PredictionEngine ile bir kerede bir tahmin](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Eğitilen bir modeli kullanıma hazır hale getirme](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [Hizmet Modeli Azure İşlevleri](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [Web API’de hizmet modeli](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [Infer.NET ile olasılığa dayalı programlama](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Başvuru
