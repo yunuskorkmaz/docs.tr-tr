@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619334"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037687"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu şekilde. Başvurulan statik özelliği, XAML içinde bir özelliğinin değeri sağlamak için kullanılabilir.  
@@ -69,7 +69,7 @@ Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu ku
 
 .NET Framework XAML hizmetlerinde uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanan <xref:System.Windows.Markup.StaticExtension> sınıfı.  
 
-`x:Static` bir işaretleme uzantısıdır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter kendi öznitelik sözdizimi kuralı tarafından bir XAML işlemcisinin bir işaretleme uzantısı bir değer belirtmeniz gerekir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [genel XAML işaretleme uzantılarına](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+`x:Static` bir işaretleme uzantısıdır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter kendi öznitelik sözdizimi kuralı tarafından bir XAML işlemcisinin bir işaretleme uzantısı bir değer belirtmeniz gerekir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  WPF programlama için kullandığınız varsayılan XAML ad alanı birçok yararlı statik özellikleri içermiyor ve kullanışlı statik özelliklerin çoğu sahip gerek kalmadan, kullanımı kolaylaştırmak tür dönüştürücüleri gibi desteği `{x:Static}` . Statik özellikler için aşağıdakilerden biri doğruysa bir XAML ad alanı için bir önek eşlemeniz gerekir:  
@@ -78,10 +78,10 @@ Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu ku
   
 -   Özel bir derlemeden bir tür başvuruyor.  
   
--   Varsayılan WPF XAML ad alanı bir parçası olarak eşlenmedi CLR ad alanı içinde türüdür, ancak bir WPF derlemede mevcut bir türe başvuruyor. CLR ad alanları için WPF eşleme varsayılan XAML ad alanına çeşitli WPF derlemeleri tanımlarında tarafından gerçekleştirilen (Bu kavramı hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). XAML için genellikle gibi amaçlanmayan çoğunlukla sınıf tanımları, CLR ad uzayı oluşturuluyorsa olmayan eşlenen bir CLR ad alanları varolabilir <xref:System.Windows.Threading>.  
+-   Varsayılan WPF XAML ad alanı bir parçası olarak eşlenmedi CLR ad alanı içinde türüdür, ancak bir WPF derlemede mevcut bir türe başvuruyor. CLR ad alanları için WPF eşleme varsayılan XAML ad alanına çeşitli WPF derlemeleri tanımlarında tarafından gerçekleştirilen (Bu kavramı hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). XAML için genellikle gibi amaçlanmayan çoğunlukla sınıf tanımları, CLR ad uzayı oluşturuluyorsa olmayan eşlenen bir CLR ad alanları varolabilir <xref:System.Windows.Threading>.  
   
- WPF için ön ekleri ve XAML ad alanları kullanma hakkında daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML Namespace eşleme](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ WPF için ön ekleri ve XAML ad alanları kullanma hakkında daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML Namespace eşleme](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [x:Type İşaretleme Uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Type İşaretleme Uzantısı](x-type-markup-extension.md)
+- [WPF'den System.Xaml'e Geçirilen Türler](types-migrated-from-wpf-to-system-xaml.md)

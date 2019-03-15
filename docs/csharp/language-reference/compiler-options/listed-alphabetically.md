@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677740"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037704"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -29,7 +29,7 @@ Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel
 |[-baseaddress](baseaddress-compiler-option.md)|Oluşturulacak kitaplığın temel adresini belirtir.|
 |[-bugreport](bugreport-compiler-option.md)|'Hata raporu' dosyası oluşturur. -Errorreport ile kullanılıyorsa, bu dosyayı herhangi bir kilitlenme bilgi ile birlikte gönderilir: komut istemi veya - errorreport: gönderin.|
 |[-checked](checked-compiler-option.md)|Taşma denetimleri oluşturmak derleyicinin neden olur.|
-|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritmasını belirtir.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.|
+|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritmasını belirtir.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir. |
 |[-codepage](codepage-compiler-option.md)|Kaynak dosyalar açılırken kullanılacak kod sayfasını belirtir.|
 |[-debug](debug-compiler-option.md)|Hata ayıklama bilgilerini gösterir.|
 |[-define](define-compiler-option.md)|Koşullu derleme sembollerini tanımlar.|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442418"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58028709"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
@@ -105,7 +105,7 @@ Aşağıdaki derleyici seçeneklerinin kategoriye göre sıralanır. Alfabetik l
 |[-unsafe](unsafe-compiler-option.md)|Kullanan kod derlemesini etkinleştirir [güvenli](../../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü.|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 kodlaması kullanarak derleyici çıkışı görüntüler.|
 |-Paralel [+&#124;-]|Eş zamanlı derleme (+) kullanılıp kullanılmayacağını belirtir.|
-|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritması belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.|
+|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritması belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|
 
 ## <a name="obsolete-options"></a>Geçersiz Seçenekler
 
