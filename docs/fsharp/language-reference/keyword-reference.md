@@ -2,12 +2,12 @@
 title: Klavye Başvurusu
 description: Tüm ilgili bilgilere bağlantılar bulma F# dil anahtar sözcükleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857911"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845300"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -50,7 +50,7 @@ Aşağıdaki tablo tüm gösterir F# kısa açıklamaları ve ilgili daha fazla 
 |`inline`|[İşlevler](functions/index.md)<br /><br />[Satır İçi İşlevler](functions/inline-functions.md)|Arayanın koda doğrudan tümleştirilmiş bir işlev belirtmek için kullanılır.|
 |`interface`|[Arabirimler](interfaces.md)|Arabirimi uygulayan ve bildirmek için kullanılır.|
 |`internal`|[Erişim Denetimi](access-control.md)|Üye görünür olduğunu belirtmek için kullanılan bir derleme içinde ancak değil dışında.|
-|`lazy`|[Geç Hesaplamalar](lazy-computations.md)|Bir sonuç yalnızca ihtiyacınız olduğunda gerçekleştirilecek olan hesaplamayı belirtmek için kullanılır.|
+|`lazy`|[Gecikmeli İfadeler](lazy-expressions.md)|Bir sonuç yalnızca ihtiyacınız olduğunda gerçekleştirilecek bir ifade belirtmek için kullanılır.|
 |`let`|[`let` Bağlamaları](functions/let-bindings.md)|Bağlama, bir değer veya işlevi için bir ad veya ilişkilendirmek için kullanılır.|
 |`let!`|[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)<br /><br />[Hesaplama İfadeleri](computation-expressions.md)|Zaman uyumsuz bir hesaplama sonucu için bir ad bağlamak için zaman uyumsuz iş akışları veya hesaplama türü olan bir sonuç için bir ad bağlamak için kullanılan diğer hesaplama ifadeleri kullanılır.|
 |`match`|[Eşleşme İfadeleri](match-expressions.md)|Bir değer için bir desen karşılaştırarak dal için kullanılır.|

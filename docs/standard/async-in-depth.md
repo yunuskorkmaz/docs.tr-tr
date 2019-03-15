@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b9017c30deebf6762b60d70e2be0b68ab5e27fc
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677532"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844742"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
@@ -21,12 +21,12 @@ G/ç ve CPU sınır yazma zaman uyumsuz kod basit .NET görev tabanlı zaman uyu
 
 Görevleridir olarak bilinen uygulamak için kullanılan yapıları [, Promise modeli eşzamanlılık](https://en.wikipedia.org/wiki/Futures_and_promises).  Kısacası, bunlar sonraki bir noktada, "iş promise" tamamlanacak promise temiz bir API ile birlikte olanak sağlar.
 
-*   `Task` bir değer döndürmeyen tek bir işlemi temsil eder.
-*   `Task<T>` türünde bir değer döndüren tek bir işlemi temsil eden `T`.
+* `Task` bir değer döndürmeyen tek bir işlemi temsil eder.
+* `Task<T>` türünde bir değer döndüren tek bir işlemi temsil eden `T`.
 
 Zaman uyumsuz olarak gerçekleştirilecek iş özetlerini görevleri hakkında daha fazla neden önemlidir ve *değil* iş parçacığı üzerinde bir soyutlamadır. Varsayılan olarak, uygun işletim sistemi için geçerli iş parçacığı ve temsilci iş görevleri yürütün. İsteğe bağlı olarak, görevleri açıkça ayrı bir iş parçacığı üzerinde çalıştırılacak istenebilir `Task.Run` API.
 
-Görevleri izleme, üzerinde bekleyen ve sonuç değeri erişmek için bir API Protokolü kullanıma sunma (durumunda `Task<T>`) bir görev. Dil Tümleştirmesi ile `await` anahtar sözcüğü, görevleri kullanarak için üst düzey bir Özet sağlar. 
+Görevleri izleme, üzerinde bekleyen ve sonuç değeri erişmek için bir API Protokolü kullanıma sunma (durumunda `Task<T>`) bir görev. Dil Tümleştirmesi ile `await` anahtar sözcüğü, görevleri kullanarak için üst düzey bir Özet sağlar.
 
 Kullanarak `await` görev tamamlanana kadar denetim çağırana sonuçlanmıyor tarafından bir görev devam ederken yararlı işlerini yapmak için uygulama veya hizmet verir. Kodunuzun geri çağırmaları veya görev tamamlandıktan sonra yürütmeye devam etmeyi olayları dayalı gerekmez. Görev API tümleştirmesi ve dil, sizin için yapar. Kullanıyorsanız `Task<T>`, `await` anahtar sözcüğü ayrıca "sarmalamadan çıkarma" Görev tamamlandığında, döndürülen değer.  Bunun nasıl çalıştığını ayrıntıları, aşağıda daha ayrıntılı açıklanmıştır.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-Çağrı `GetStringAsync()` çağrılar aracılığıyla bu kadar düşük düzeyli .NET kitaplıkları (belki başka bir zaman uyumsuz yöntem çağırmadan) ulaştığında bir P/Invoke birlikte çalışma çağrısına yerel ağ kitaplığı. Yerel Kitaplığı daha sonra sistem API çağrısını çağırabilir (gibi `write()` Linux üzerinde bir yuva için). Bir görev nesnesi, yerel ve yönetilen sınırında, büyük olasılıkla kullanarak oluşturulacak [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Görev nesnesi katmanından aktarılabilir, büyük olasılıkla üzerinde çalıştırılan veya doğrudan döndürülen, sonuçta ilk arayana döndürülür. 
+Çağrı `GetStringAsync()` çağrılar aracılığıyla bu kadar düşük düzeyli .NET kitaplıkları (belki başka bir zaman uyumsuz yöntem çağırmadan) ulaştığında bir P/Invoke birlikte çalışma çağrısına yerel ağ kitaplığı. Yerel Kitaplığı daha sonra sistem API çağrısını çağırabilir (gibi `write()` Linux üzerinde bir yuva için). Bir görev nesnesi, yerel ve yönetilen sınırında, büyük olasılıkla kullanarak oluşturulacak [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Görev nesnesi katmanından aktarılabilir, büyük olasılıkla üzerinde çalıştırılan veya doğrudan döndürülen, sonuçta ilk arayana döndürülür.
 
 Yukarıdaki ikinci örnekte bir `Task<T>` nesne öğesinden döndürüleceği `GetStringAsync`. Kullanımını `await` anahtar sözcüğü, yeni oluşturulan görev nesnesi döndürmek yöntemin neden olur. Denetim, bu konumdan çağırana döner `GetFirstCharactersCountAsync` yöntemi. Özellikleri ve yöntemleri [görev&lt;T&gt; ](xref:System.Threading.Tasks.Task%601) etkinleştir çağıranlar GetFirstCharactersCountAsync kalan kod yürütüldüğünde tamamlayacak görev, ilerleyişini izlemek için nesne.
 
@@ -90,9 +90,9 @@ Yukarıdaki birçok iş duvar saati süresi bakımından ölçüldüğünde yap�
 
 0-1————————————————————————————————————————————————–2-3
 
-*   Harcanan süre noktalarından `0` için `1` kadar zaman uyumsuz bir yöntem denetimi onu arayan verir gereken her şey vardır.
-*   Harcanan süre noktalarından `1` için `2` maliyet herhangi bir CPU ile g/ç üzerinde harcanan zamanı.
-*   Son olarak, noktalarından harcanan süre `2` için `3` Denetim Arka (ve büyük olasılıkla bir değer) Bu noktada yürütme yaptığı yeniden zaman uyumsuz yönteme geçiyor.
+* Harcanan süre noktalarından `0` için `1` kadar zaman uyumsuz bir yöntem denetimi onu arayan verir gereken her şey vardır.
+* Harcanan süre noktalarından `1` için `2` maliyet herhangi bir CPU ile g/ç üzerinde harcanan zamanı.
+* Son olarak, noktalarından harcanan süre `2` için `3` Denetim Arka (ve büyük olasılıkla bir değer) Bu noktada yürütme yaptığı yeniden zaman uyumsuz yönteme geçiyor.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Bu sunucu senaryosu için anlamı nedir?
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

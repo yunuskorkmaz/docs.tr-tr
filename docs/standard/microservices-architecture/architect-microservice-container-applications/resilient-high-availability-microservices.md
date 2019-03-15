@@ -4,12 +4,12 @@ description: Mikro hizmetler, geçici ağ ve yüksek kullanılabilirlik elde etm
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c5bd272380f25f801c7b75c8b8e73a080ac89eef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970798"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846629"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
 
@@ -77,7 +77,7 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğ
   [*https://www.splunk.com/*](https://www.splunk.com/)
 
 - **EventSource sınıfı** izleme için Windows (ETW) olayları için API \
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[Önceki](microservice-based-composite-ui-shape-layout.md)

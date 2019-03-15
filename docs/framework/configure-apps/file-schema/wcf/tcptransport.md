@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272025"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845966"
 ---
 # <a name="tcptransport"></a>\<Connectionpoolsettings >
 Özel bağlama için iletileri için bir kanal tarafından kullanılabilen bir TCP taşıması tanımlar.  
@@ -49,7 +49,7 @@ ms.locfileid: "55272025"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ChannelInitializationTimeout|Alır veya ayarlar zaman sınırını kabul edilmesi için bir kanal başlatılıyor.  En uzun süreyi saniye cinsinden kesilmeden önce bir kanal başlatma durumda olabilir. TCP bağlantısı, .net kullanarak kendi kimliğini doğrulamak için gerçekleştirebileceğiniz zaman bu kotayı içeren ileti çerçeveleme protokolü. Sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip önce bazı ilk veri göndermek bir istemci gerekir. Varsayılan değer 30 saniyedir.|  
+|ChannelInitializationTimeout|Alır veya ayarlar zaman sınırını kabul edilmesi için bir kanal başlatılıyor.  En uzun süreyi saniye cinsinden kesilmeden önce bir kanal başlatma durumda olabilir. Bu kota ileti .NET Framing protokolünü kullanarak kendi kimliğini doğrulamak için bir TCP bağlantı sürebilir süreyi de içerir. Sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip önce bazı ilk veri göndermek bir istemci gerekir. Varsayılan değer 30 saniyedir.|  
 |ConnectionBufferSize|Alır veya ayarlar istemci veya hizmet serileştirilmiş ileti öbeğini iletmek için kullanılan arabellek boyutu.|  
 |hostNameComparisonMode|Alır veya ayarlar üzerinde URI'yi eşleştirirken hizmete erişmek için ana bilgisayar adının kullanılıp kullanılmadığını gösteren bir değer.|  
 |listenBacklog|Bekleyen sıraya alınan bağlantı isteklerinin sayısı için bir Web hizmeti. `connectionLeaseTimeout` Öznitelik sınırlar istemci bağlantısı özel durumu atamadan önce bağlanması için bekleyeceği süre. Bu bekleyen sıraya alınan bağlantı isteklerinin sayısı denetleyen bir yuva düzeyi özelliktir bir Web hizmeti için. ListenBacklog çok düşük olduğunda, WCF istekleri kabul etmeyi ve sunucunun mevcut sıraya alınan bağlantıların bazıları kabul edene kadar bu nedenle yeni bağlantıları bırakın. Varsayılan değer 16 * işlemci sayısı.|  

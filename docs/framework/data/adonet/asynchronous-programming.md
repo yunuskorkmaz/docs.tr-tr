@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366133"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846135"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -38,9 +38,9 @@ Sunulan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için [!
 
 - [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.Net 4.5 (Kısım 1) SqlDataReader'ın yeni zaman uyumsuz yöntemler kullanma](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [.NET 4.5 (Kısım 1) SqlDataReader'ın yeni zaman uyumsuz yöntemler kullanma](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [.Net 4.5 (Bölüm 2) SqlDataReader'ın yeni zaman uyumsuz yöntemler kullanma](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [.NET 4.5 (Bölüm 2) SqlDataReader'ın yeni zaman uyumsuz yöntemler kullanma](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 Kullanıcı arabiriminizi yanıt vermiyor veya sunucunuza ölçekli değildir, kodunuzu daha zaman uyumsuz olması gerektiğini olasıdır. Zaman uyumsuz kod yazma geleneksel zaman uyumsuz işlem tamamlandıktan sonra gerçekleşen mantığı ifade etmek (devamlılık olarak da bilinir) bir geri yükleme dahil. Eş zamanlı kod değiştirmeyen zaman uyumsuz kod yapısını, karmaşık hale getirir.
 

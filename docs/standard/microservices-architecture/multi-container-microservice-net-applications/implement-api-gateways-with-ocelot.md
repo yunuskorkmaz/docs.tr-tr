@@ -4,12 +4,12 @@ description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir o
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846110"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>API ağ geçitleri ile Ocelot uygular
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Giriş, ancak yalnızca HTTP isteklerini yönlendirerek, ancak herhangi bir mikr
 
 Web uygulamalarının yanı sıra birkaç Ocelot API ağ geçitleri önünde bir giriş Ngınx katmanı Kubernetes'te sahip / BFF ideal mimarisi, aşağıdaki diyagramda gösterildiği gibi.
 
- ![Kubernetes giriş, giden tüm trafik, genellikle API ağ geçidi kapsam dışına web uygulamaları da dahil olmak üzere, uygulama için ters Ara sunucu görevi görür.](./media/image41.png)
+![Kubernetes giriş, giden tüm trafik, genellikle API ağ geçidi kapsam dışına web uygulamaları da dahil olmak üzere, uygulama için ters Ara sunucu görevi görür.](./media/image41.png)
 
 **Şekil 6-41**. Kubernetes dağıtıldığında hizmetine giriş katmanı
 
 Kubernetes hizmetine dağıtın, yalnızca birkaç hizmet veya uç noktaları aracılığıyla kullanıma sunduğu _giriş_, temelde aşağıdaki listede yer alan postfixes URL'leri üzerinde:
 
--   `/` SPA istemci için web uygulaması
--   `/webmvc` MVC web uygulaması istemci için
--   `/webstatus` İstemci web uygulaması için durum/healthchecks gösteriliyor
--   `/webshoppingapigw` alışveriş iş süreçleri ve web BFF için
--   `/webmarketingapigw` Pazarlama iş süreçleri ve web BFF için
--   `/mobileshoppingapigw` Mobil BFF ve iş süreçlerini alışveriş için
--   `/mobilemarketingapigw` Mobil BFF ve iş süreçlerini pazarlama için
+- `/` SPA istemci için web uygulaması
+- `/webmvc` MVC web uygulaması istemci için
+- `/webstatus` İstemci web uygulaması için durum/healthchecks gösteriliyor
+- `/webshoppingapigw` alışveriş iş süreçleri ve web BFF için
+- `/webmarketingapigw` Pazarlama iş süreçleri ve web BFF için
+- `/mobileshoppingapigw` Mobil BFF ve iş süreçlerini alışveriş için
+- `/mobilemarketingapigw` Mobil BFF ve iş süreçlerini pazarlama için
 
 Kubernetes için dağıtırken her Ocelot API ağ geçidi farklı "configuration.json" dosya her biri için kullanan _pod_ API ağ geçitleri çalışıyor. Bu "configuration.json" dosyaları (başlangıçta deploy.ps1 betikle) azure'da bir Kubernetes göre oluşturulan birim bağlama tarafından sağlanan _yapılandırma eşlemesi_ 'ocelot' adlı. Her kapsayıcı, ilgili yapılandırma dosyası adlı kapsayıcının klasör içinde bağlar `/app/configuration`.
 

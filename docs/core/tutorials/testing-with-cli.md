@@ -4,12 +4,12 @@ description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core p
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8460cb04297a0a5c1785009cbf3d86f5e133b00
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788264"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845914"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
 
@@ -48,7 +48,7 @@ Mantıksal olarak klasörlere Grup dosyaları gidin ve korumak kolay projeleri. 
 
 Aşağıdaki adımları için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun. Testler ayrıca mantıksal olarak klasörlere daha sonra ayrıca daha fazla test sorgulamasına yerleştirilir ve türlerini mantıksal olarak daha fazla türlerinin eklenmesi daha sonra izin veren bir klasör yapısına düzenlenir.
 
-İki tür örnek içeren `Dog` ve `Cat`ve bunları ortak bir arabirim uygulamak `IPet`. İçin `NewTypes` amacınız projesidir evcil hayvan ilgili tür olarak düzenlemek için bir *Evcil Hayvanlar* klasör. Daha sonra başka bir dizi türleri eklenirse *WildAnimals* bunlar, örneğin, yerleştirilir *NewTypes* klasör yanı sıra *Evcil Hayvanlar* klasör. *WildAnimals* klasör hayvanlar gibi olmayan hayvanlar türleri içerebilir `Squirrel` ve `Rabbit` türleri. Bu şekilde türleri eklendikçe proje de düzenli olarak kalır. 
+İki tür örnek içeren `Dog` ve `Cat`ve bunları ortak bir arabirim uygulamak `IPet`. İçin `NewTypes` amacınız projesidir evcil hayvan ilgili tür olarak düzenlemek için bir *Evcil Hayvanlar* klasör. Daha sonra başka bir dizi türleri eklenirse *WildAnimals* bunlar, örneğin, yerleştirilir *NewTypes* klasör yanı sıra *Evcil Hayvanlar* klasör. *WildAnimals* klasör hayvanlar gibi olmayan hayvanlar türleri içerebilir `Squirrel` ve `Rabbit` türleri. Bu şekilde türleri eklendikçe proje de düzenli olarak kalır.
 
 Aşağıdaki klasör yapısını, belirtilen dosya içeriği oluşturun:
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ Tam proje yapısını gösterir:
 
 Başlangıç *test/NewTypesTests* dizin. Test projesi ile geri [ `dotnet restore` ](../tools/dotnet-restore.md) komutu. Testler ile [ `dotnet test` ](../tools/dotnet-test.md) komutu. Bu komut, proje dosyasında belirtilen test Çalıştırıcısı başlatır.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Test başarısız olur ve konsolu, beklendiği gibi aşağıdaki çıkışı görüntüler:
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 Geçiş testi. Evcil hayvan türleri yöntemleri, sahibi konuşurken doğru değerleri döndürür.
 
 Düzenleme ve xUnit kullanarak projeleri test teknikleri öğrendiniz. Bunları kendi projelerinde uygulayarak bu teknikler ile ileri gidin. *İyi Kodlamalar!*
-

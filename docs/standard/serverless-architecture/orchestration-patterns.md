@@ -4,12 +4,12 @@ description: Azure dayanıklı işlevler çekme isteği
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: c3b9dbe473ba9272a8c8c07cec86e11fcd9fc12d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8be499a24e2c5a94132ce07241e17f675e8a1274
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129319"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843764"
 ---
 # <a name="orchestration-patterns"></a>Orchestration desenleri
 
@@ -154,7 +154,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 ## <a name="recommended-resources"></a>Önerilen kaynaklar
 
 * [Azure dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [.NET Core ve .NET standart birim testi](https://docs.microsoft.com/dotnet/core/testing/)
+* [.NET Core ve .NET standart birim testi](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
 >[Önceki](durable-azure-functions.md)

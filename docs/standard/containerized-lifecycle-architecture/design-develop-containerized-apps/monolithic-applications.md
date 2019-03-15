@@ -4,12 +4,12 @@ description: Tek yapılı uygulamaları kapsayıcıya alma için temel kavramlar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676843"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843551"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -63,7 +63,7 @@ Kapsayıcılar tasarım gereği, doğası gereği sabit olduğundan, hiçbir zam
 
 Tek yapılı uygulamaları Docker yararlı olabilir ancak biz avantajlardan yalnızca ipuçları temas. Kapsayıcıları yönetme büyük avantajlar, çeşitli örnekleri ve her kapsayıcı örneği yaşam döngüsünü yönetme kapsayıcı düzenleyicileri ile dağıtması gelir. Ölçeği, geliştirilen ve dağıtılan ayrı ayrı alt sistemler tek parça uygulamasına'kurmak bozucu, mikro hizmetlerin bölge içinde giriş noktası niteliğindedir.
 
-Kapsayıcılar "kaldırma ve kaydırma" tek parçalı uygulamalarla ve uygulamalarınızı nasıl modernleştirmelisiniz hakkında bilgi edinmek için bu ek Microsoft Kılavuzu okuyabilirsiniz [Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını Modernleştirme ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/), PDF olarak karşıdan yükleyebileceğiniz <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Kapsayıcılar "kaldırma ve kaydırma" tek parçalı uygulamalarla ve uygulamalarınızı nasıl modernleştirmelisiniz hakkında bilgi edinmek için bu ek Microsoft Kılavuzu okuyabilirsiniz [Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını Modernleştirme ](../../modernize-with-azure-and-containers/index.md), PDF olarak karşıdan yükleyebileceğiniz <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Tek bir Docker kapsayıcı uygulamasını Azure App Service'e yayımlama
 

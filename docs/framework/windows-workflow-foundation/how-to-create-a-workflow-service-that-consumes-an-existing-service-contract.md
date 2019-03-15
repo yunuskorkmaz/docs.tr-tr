@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06d4d4f6687979f4fd54e919ca6f236a5b5402e8
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705070"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843014"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Nasıl yapılır: Mevcut bir hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Özellikler, web hizmetleri ve iş akışları sözleşme öncelikli iş akışı geliştirme biçiminde arasındaki tümleştirme daha iyi. Sözleşme öncelikli iş akışı geliştirme aracı, kod sözleşmede ilk tasarlamak sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşme işlemleri için araç kutusunda oluşturur.  
@@ -57,7 +57,7 @@ ms.locfileid: "57705070"
   
 4.  İçinde **Çözüm Gezgini**, Service1.xamlx açın. İş akışı hizmetinin tasarımcıda görünür.  
   
-5.  Seçin **dizisi** etkinlik. Özellikler penceresinde tıklayın **...** düğmesini **ImplementedContract** özelliği. İçinde **Editor Typu Kolekce** penceresine tıklayın **türü** açılır listesinde seçip **vyhledat Typy...** girişi. İçinde **Gözat ve Seç bir .net türü** iletişim altında  **\<geçerli Proje >**, tüm alt düğümleri açın ve seçin **IBookService**. **Tamam**'ı tıklatın. İçinde **Editor Typu Kolekce** iletişim kutusunda, tıklayın **Tamam**.  
+5.  Seçin **dizisi** etkinlik. Özellikler penceresinde tıklayın **...** düğmesini **ImplementedContract** özelliği. İçinde **Editor Typu Kolekce** penceresine tıklayın **türü** açılır listesinde seçip **vyhledat Typy...** girişi. İçinde **göz atın ve bir .NET türü seçin** iletişim altında  **\<geçerli Proje >**, tüm alt düğümleri açın ve seçin **IBookService**. **Tamam**'ı tıklatın. İçinde **Editor Typu Kolekce** iletişim kutusunda, tıklayın **Tamam**.  
   
 6.  Seçip silin **ReceiveRequest** ve **SendResponse** etkinlikler.  
   

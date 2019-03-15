@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143416"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844281"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>.NET Core için Docker kapsayıcıları ne zaman
 
@@ -29,9 +29,9 @@ Amacınız için .NET Framework yalnızca Windows desteklediğinden NET bir şek
 
 [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/) macOS üzerinde çalışır ve Docker tabanlı uygulama geliştirmeyi destekleyen Xamarin Studio evrimi bir IDE. Bu da güçlü bir IDE kullanmak isteyen Mac makinelerinizde çalışan geliştiriciler için tercih edilen seçenek olmalıdır.
 
-Ayrıca [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows. VS Code, .NET Core hata ayıklama ve IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit Düzenleyici olduğundan, kapsayıcılı uygulamaları Docker CLI ile birlikte Mac'te geliştirin olarak da kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). Ayrıca, Sublime, Emacs, VI ve IntelliSense desteği sağlayan açık kaynaklı OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz.
+Ayrıca [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows. VS Code, .NET Core hata ayıklama ve IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit Düzenleyici olduğundan, kapsayıcılı uygulamaları Docker CLI ile birlikte Mac'te geliştirin olarak da kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI)](../../../core/tools/index.md). Ayrıca, Sublime, Emacs, VI ve IntelliSense desteği sağlayan açık kaynaklı OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz.
 
-IDE'ler ve düzenleyicilerden ek olarak kullanabileceğiniz [.NET Core CLI](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) desteklenen tüm platformlar için Araçlar.
+IDE'ler ve düzenleyicilerden ek olarak kullanabileceğiniz [.NET Core CLI](../../../core/tools/index.md) desteklenen tüm platformlar için Araçlar.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Yeni ("alanı yeşil") projeler için kapsayıcıları kullanma
 

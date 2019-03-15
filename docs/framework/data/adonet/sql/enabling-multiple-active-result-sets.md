@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570206"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845672"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden çok etkin sonuç kümesini etkinleştirme
 Birden çok etkin sonuç kümesi (MARS) tek bir bağlantı üzerinde birden çok toplu iş yürütme izin vermek için SQL Server ile birlikte çalışan bir özelliktir. SQL Server ile kullanmak için MARS etkinleştirilmişse kullanılan her komut nesnesi bir oturum bağlantı ekler.  
@@ -94,7 +94,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  İleti: İşlem bağlamı başka bir oturum tarafından kullanılıyor.  
   
- Kaynak: .net SqlClient veri sağlayıcısı  
+ Kaynak: .NET SqlClient veri sağlayıcısı  
   
  Beklenen: (null)  
   

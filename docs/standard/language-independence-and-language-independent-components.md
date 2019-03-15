@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836558"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846473"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 .NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, birinde gibi .NET Framework hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir C#, C + +/ CLI, Eiffel, F#, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
@@ -343,7 +343,7 @@ ms.locfileid: "56836558"
 ### <a name="member-accessibility"></a>Üye erişilebilirliği  
  Devralınmış bir üyeyi geçersiz kılmak o üyenin erişilebilirliğini değiştiremezsiniz. Örneğin, genel bir temel sınıf yöntemi özel bir yöntem türetilmiş bir sınıf tarafından geçersiz kılınamaz. Bir istisna vardır: bir `protected internal` (C# ' de) veya `Protected Friend` (Visual Basic'te) üyesi farklı bir derlemedeki bir türe tarafından geçersiz kılınan bir derlemedeki. Bu durumda geçersiz kılma erişimi olan `Protected`.  
   
- Oluşan hata aşağıdaki örnekte oluşturulan <xref:System.CLSCompliantAttribute> özniteliği `true`, ve `Person`, bir sınıf, türetilir `Animal`, erişilebilirliğini özele değiştirmeye `Species` özelliği Genel özel. Erişilebilirlik genel olarak değişirse örnek başarıyla derler.  
+ Oluşan hata aşağıdaki örnekte oluşturulan <xref:System.CLSCompliantAttribute> özniteliği `true`, ve `Human`, bir sınıf, türetilir `Animal`, erişilebilirliğini özele değiştirmeye `Species` özelliği Genel özel. Erişilebilirlik genel olarak değişirse örnek başarıyla derler.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

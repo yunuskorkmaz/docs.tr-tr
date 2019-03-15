@@ -2,12 +2,12 @@
 title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261621"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846187"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşme sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut hizmetlerden. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.
@@ -87,11 +87,11 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
 
 -   **ImportXMLTypes**: Bu ayar uygulamak için veri sözleşmesi serileştiricisi yapılandırılıp yapılandırılmayacağını belirtir <xref:System.SerializableAttribute> özniteliği sınıflarına <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği.  Bu ayar yalnızca geçerlidir **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**.
 
--   **SupportFx35TypedDataSets**: Bu ayar, .net için oluşturulan türü belirtilmiş veri kümeleri için ek işlevler sağlamasına olanak belirtir Framework 3.5. Zaman **Serializer mod** ayarlanır **XML serileştiricisi**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> uzantısı bu değeri True olarak ayarlandığında XML şema içeri Aktarıcı için eklenir. Zaman **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**, türü <xref:System.DateTimeOffset> bu değeri False olarak ayarlandığında başvurularından dahil edilmeyecek şekilde bir <xref:System.DateTimeOffset> her zaman oluşturulur eski çerçeve sürümleri için.
+-   **SupportFx35TypedDataSets**: Bu ayar, .NET Framework 3.5 için oluşturulmuş, türü belirlenmiş veri kümeleri için ek işlevler sağlamasına olanak belirtir. Zaman **Serializer mod** ayarlanır **XML serileştiricisi**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> uzantısı bu değeri True olarak ayarlandığında XML şema içeri Aktarıcı için eklenir. Zaman **Serializer mod** ayarlanır **veri sözleşmesi serileştiricisi**, türü <xref:System.DateTimeOffset> bu değeri False olarak ayarlandığında başvurularından dahil edilmeyecek şekilde bir <xref:System.DateTimeOffset> her zaman oluşturulur eski çerçeve sürümleri için.
 
 -   **InputXsdFiles**: Bu ayar, girdi dosyası listesini belirtir. Her dosya geçerli bir XML Şeması içermelidir.
 
--   **Dil**: Bu ayar oluşturulan sözleşme kodunun dilini belirtir. Ayarı tarafından tanınan <xref:System.CodeDom.Compiler.CodeDomProvider>.
+-   **Dil**: Bu ayar, oluşturulan sözleşme kodunun dilini belirtir. Ayarı tarafından tanınan <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
 -   **NamespaceMappings**: Bu ayar, XSD hedef ad alanından eşlemeleri için CLR ad uzayını belirtir. Her eşleme, şu biçimi kullanmalıdır:
 
@@ -105,7 +105,7 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Bu ayar, kod dosyaları burada oluşturulacak dizini belirtir.
+-   **OutputDirectory**: Bu ayar, kod dosyaları oluşturulacağı dizini belirtir.
 
  Ayarları, proje oluşturulduğunda Hizmet anlaşması türleri hizmet sözleşmesi dosyaları oluşturmak için kullanılır.
 

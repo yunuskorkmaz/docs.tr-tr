@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711810"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843615"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms'ta yüksek DPI desteği
 
-.NET Framework 4.7 ile başlayarak, Windows Forms ortak yüksek DPI ve dinamik DPI senaryoları için geliştirmeler içerir. Bu güncelleştirmeler şunlardır: 
+.NET Framework 4.7 ile başlayarak, Windows Forms ortak yüksek DPI ve dinamik DPI senaryoları için geliştirmeler içerir. Bu güncelleştirmeler şunlardır:
 
-- Gibi ölçeklendirme ve düzen çok sayıda Windows Forms denetimleri <xref:System.Windows.Forms.MonthCalendar> denetimi ve <xref:System.Windows.Forms.CheckedListBox> denetimi. 
+- Gibi ölçeklendirme ve düzen çok sayıda Windows Forms denetimleri <xref:System.Windows.Forms.MonthCalendar> denetimi ve <xref:System.Windows.Forms.CheckedListBox> denetimi.
 
 - Tek-geçişi ölçeklendirme.  .NET Framework 4.6 ve önceki sürümlerinde, ölçeklendirme, gerekli birden ölçeklendirilmesi bazı denetimler neden birden çok geçer gerçekleştirildi.
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711810"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Windows Forms uygulamanızı yüksek DPI desteği için yapılandırma
 
-Yüksek DPI tanıma destekleyen yeni bir Windows Forms özellikler, .NET Framework 4.7 hedefleyen ve Windows 10 Creators güncelleştirmesi ile başlayarak Windows işletim sistemleri üzerinde çalışan uygulamalarda kullanılabilir. 
+Yüksek DPI tanıma destekleyen yeni bir Windows Forms özellikler, .NET Framework 4.7 hedefleyen ve Windows 10 Creators güncelleştirmesi ile başlayarak Windows işletim sistemleri üzerinde çalışan uygulamalarda kullanılabilir.
 
 Ayrıca, Windows Forms uygulaması'nda yüksek DPI desteği yapılandırmak için aşağıdakileri yapmanız gerekir:
 
@@ -49,27 +49,27 @@ Ayrıca, Windows Forms uygulaması'nda yüksek DPI desteği yapılandırmak içi
 
 - İzleyici başına DPI tanıma etkinleştirme *app.config* dosya.
 
-  Yeni bir Windows Forms tanıtır [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) yeni özellikler ve .NET Framework 4.7 ile başlayan eklenen özelleştirmeleri desteklemek için öğesi. Yüksek DPI desteği yeni özelliklerden yararlanmak için uygulama yapılandırma dosyasına aşağıdakileri ekleyin.   
+  Yeni bir Windows Forms tanıtır [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) yeni özellikler ve .NET Framework 4.7 ile başlayan eklenen özelleştirmeleri desteklemek için öğesi. Yüksek DPI desteği yeni özelliklerden yararlanmak için uygulama yapılandırma dosyasına aşağıdakileri ekleyin.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > Önceki .NET Framework sürümlerinde, bildirim yüksek DPI desteği eklemek için kullanılır. Bu app.config dosyası üzerinde tanımlanan ayarları geçersiz kıldığından bu yaklaşım artık önerilir.
-   
+
 - Statik çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi.
-   
+
   Bu, uygulama giriş noktası ilk yöntem çağrısında olmalıdır. Örneğin:
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ Ayarı `DpiAwareness` değerini `PerMonitorV2` .NET Framework 4.7 ile başlayan 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 Tek tek anahtarları ve değerleri listesi için bkz. [Windows Forms ekleme yapılandırma öğesi](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).

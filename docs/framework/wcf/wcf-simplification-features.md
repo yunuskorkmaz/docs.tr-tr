@@ -2,12 +2,12 @@
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467187"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845287"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 
@@ -96,7 +96,7 @@ Aşağıdaki tabloda, değişen ayarlar ve ek bilgilerin nerede bulunacağı aç
 
 |Özellik|Açık|Yeni varsayılan|Daha fazla bilgi|
 |--------------|--------|-----------------|----------------------|
-|ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|Bu özellik, TCP bağlantısı .net kullanarak kendi kimliğini doğrulamak için ne kadar uzun sürebilir belirler Protokolü çerçeve. Sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip önce bazı ilk veri göndermek bir istemci gerekir. Kimliği doğrulanmamış kötü niyetli kullanıcılar için uzun sunucuya bağlı bağlantılar tutma, bu zaman aşımı kasıtlı olarak ReceiveTimeout (10 dakika) daha küçük yapılır. Varsayılan değer 30 saniyedir. Hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|Bu özellik, TCP bağlantısı .NET Framing protokolünü kullanarak kendi kimliğini doğrulamak için ne kadar uzun sürebilir belirler. Sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip önce bazı ilk veri göndermek bir istemci gerekir. Kimliği doğrulanmamış kötü niyetli kullanıcılar için uzun sunucuya bağlı bağlantılar tutma, bu zaman aşımı kasıtlı olarak ReceiveTimeout (10 dakika) daha küçük yapılır. Varsayılan değer 30 saniyedir. Hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * işlemci sayısı|Bu yuva düzeyinde özelliği "kabul et" sayısını açıklayan istekler kuyruğa alınacak. Dinleme biriktirme listesi sırası dolarsa yeni yuva istekler reddedilir. Hakkında daha fazla bilgi için <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * taşıma için İşlemci sayısı<br /><br /> 4 \* SMSvcHost.exe işlemci sayısı|Bu özellik, sunucunun bir Dinleyicide bekleyen olabilir kanal sayısını sınırlar. MaxPendingAccepts çok düşük olduğunda, küçük bir bekleme kanalları tüm bağlantıları bakım başlatıldığından ancak yeni kanal yok dinleme başlamıştır zaman aralığını olacaktır. Bir bağlantı, bu zaman aralığında gelen ve hiçbir şey için sunucuda beklemesi nedeniyle başarısız olur. Bu özelliği ayarlanarak yapılandırılabilir <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> özelliğini daha büyük bir sayı. Daha fazla bilgi için <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> ve [Net.TCP bağlantı noktası paylaşım hizmetini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * işlemci sayısı|Bu özellik, bağlantı sayısı, aktarım kabul etti ancak olmayan ServiceModel gönderici tarafından teslim alındı denetler. Bu değeri ayarlamak için kullanın `MaxConnections` bağlama üzerinde veya `maxOutboundConnectionsPerEndpoint` bağlama öğesi üzerinde. Hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

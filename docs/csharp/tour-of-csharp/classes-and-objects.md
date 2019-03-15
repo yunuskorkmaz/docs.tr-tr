@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# -Turu C# dil
 description: Yeni C#? Bu sınıflar, nesneleri ve devralma bakış okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147560"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846148"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -123,7 +123,7 @@ Türleri gibi yöntemleri de bir dizi yöntem çağrıldığında tür bağıms�
 
 Parametre değerleri veya değişken başvuruları yöntemlere geçirmek için kullanılır. Bir yöntem parametreleri, gerçek değerleri alma *bağımsız değişkenleri* yöntemi çağrıldığında belirtilir. Dört tür parametrelerinin vardır: parametreler, başvuru parametreleri, çıktı parametreleri ve parametre dizileri değeri.
 
-A *değer parametresi* giriş bağımsız değişkenleri geçirmek için kullanılır. Bir değer parametresini karşılık gelen bir yerel değişkene parametresi için geçirilen bağımsız ilk değerini alır. Parametresi için geçirilen bağımsız değişken bir değer parametresini değişiklikler etkilemez. 
+A *değer parametresi* giriş bağımsız değişkenleri geçirmek için kullanılır. Bir değer parametresini karşılık gelen bir yerel değişkene parametresi için geçirilen bağımsız ilk değerini alır. Parametresi için geçirilen bağımsız değişken bir değer parametresini değişiklikler etkilemez.
 
 Böylece karşılık gelen bağımsız değişken atlanırsa, varsayılan bir değer belirterek değeri parametreleri, isteğe bağlı olabilir.
 
@@ -293,6 +293,6 @@ A *Sonlandırıcı* uygulayan bir sınıfın örneği sonlandırmaya gereken eyl
 
 `using` Deyim nesnesi yok etme için daha iyi bir yaklaşım sağlar.
 
->[!div class="step-by-step"]
->[Önceki](statements.md)
->[İleri](structs.md)
+> [!div class="step-by-step"]
+> [Önceki](statements.md)
+> [İleri](structs.md)

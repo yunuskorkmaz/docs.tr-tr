@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617414"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843345"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)
 Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.  

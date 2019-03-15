@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: fbbd400ae842ae24bae0307c362642d8fe1d5bea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364066"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846447"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriği hızlı geliştirilmesini destekleyen birçok özellik vardır, örneğin, verileri karma soldan sağa ve için sağ aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Arapça ve kullanıcıların konuşma İbranice gibi çift yönlü özellikler ihtiyaç duyan kullanıcılar için mükemmel bir deneyim oluşturur.  
@@ -34,10 +34,8 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
  [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
  Aşağıdaki grafikte, önceki kod nasıl işlediğini gösterir.  
-  
- **FlowDirection gösteren grafik**  
-  
- ![TextBlock hizalama](./media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
+    
+ ![Farklı akış yönergeleri gösteren grafik.](./media/bidirectional-features-in-wpf-overview/left-right-right-left.png)  
   
  İçindeki bir öğeye bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ağaç devralacaktır <xref:System.Windows.FrameworkElement.FlowDirection%2A> kendi kapsayıcısından. Aşağıdaki örnekte, <xref:System.Windows.Controls.TextBlock> içinde bir <xref:System.Windows.Controls.Grid>, içinde bulunduğu bir <xref:System.Windows.Window>. Ayarı <xref:System.Windows.FrameworkElement.FlowDirection%2A> için <xref:System.Windows.Window> için ayarlama gelir <xref:System.Windows.Controls.Grid> ve <xref:System.Windows.Controls.TextBlock> de.  
   
@@ -47,12 +45,10 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  En üst düzey <xref:System.Windows.Window> sahip bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, içerdiği tüm öğeleri de aynı devral <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Bir öğenin belirtilen geçersiz kılma <xref:System.Windows.FrameworkElement.FlowDirection%2A> gibi ikinci bir açık yönü değişikliği eklemelisiniz <xref:System.Windows.Controls.TextBlock> değişikliklerini önceki örnekte <xref:System.Windows.FlowDirection.LeftToRight>. Hiçbir <xref:System.Windows.FrameworkElement.FlowDirection%2A> tanımlanan varsayılan <xref:System.Windows.FlowDirection.LeftToRight> uygular.  
   
- Aşağıdaki grafikte, önceki örnekte çıktısını gösterir.  
-  
- **FlowDirection açıkça gösteren bir grafiği atanan**  
-  
- ![Akış yönü çizim](./media/flowdir.PNG "FlowDir")  
-  
+ Aşağıdaki grafikte, önceki örnek çıktı gösterilmektedir:
+
+ ![Açık akış yönü değişiklik gösteren grafik.](./media/bidirectional-features-in-wpf-overview/explicit-direction-change.png)  
+
 <a name="FlowDocument"></a>   
 ## <a name="flowdocument"></a>FlowDocument  
  Gibi birçok geliştirme platformları [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)], [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] ve Java çift yönlü içerik geliştirme için özel destek sağlar. Biçimlendirme diller gibi [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] içerik yazıcılar gerekli bir yönde örneğin metni görüntülemek için gerekli biçimlendirme vermek [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 4.0 etiketi, "" rtl"veya"ltr"değerleri alır dir". Bu etiket benzer <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği, ancak <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni metinsel içeriği daha gelişmiş bir biçimde çalışır ve metin dışında içerik için kullanılabilir.  
@@ -61,19 +57,15 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  Metne ekleme bir <xref:System.Windows.Documents.FlowDocument> daha bir bu şekilde yapılabilir. Bunu yapmak için basit bir yolu bir <xref:System.Windows.Documents.Paragraph> olduğu gibi metin içeriği gruplandırmak için kullanılan bir blok düzeyinde öğe. Metin için örnekleri kullanın düzeydeki öğeler eklemek için <xref:System.Windows.Documents.Span> ve <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> diğer satır içi öğeleri gruplandırmak için kullanılan bir düzeyi satır içi akış içeriği öğe sırada bir <xref:System.Windows.Documents.Run> öğesi amaçlanan bir çalıştırma biçimlendirilmemiş metin içeren bir satır içi düzeydeki akışı içeriktir. A <xref:System.Windows.Documents.Span> birden çok içerebilir <xref:System.Windows.Documents.Run> öğeleri.  
   
- Paylaşım adları bir dizi ağ sahip bir belge ilk belge örneği içerir. Örneğin `\\server1\folder\file.ext`. Bu ağ bağlantısı olup Arapça veya İngilizce bir belgede her zaman aynı şekilde görünmesini istediğiniz. Aşağıdaki grafikte bir Arapça'bağlantıyı gösterir <xref:System.Windows.FlowDirection.RightToLeft> belge.  
-  
- **Span öğesi kullanarak gösteren grafik**  
-  
- ![Sağdan sola akışları belge](./media/flowdocument.PNG "FlowDocument")  
+ Paylaşım adları bir dizi ağ sahip bir belge ilk belge örneği içerir. Örneğin `\\server1\folder\file.ext`. Bu ağ bağlantısı olup Arapça veya İngilizce bir belgede her zaman aynı şekilde görünmesini istediğiniz. Aşağıdaki grafikte Span öğesi kullanılması gösterilmektedir ve bir Arapça ' bağlantıyı gösterir <xref:System.Windows.FlowDirection.RightToLeft> belge:
+
+ ![Span öğesi kullanarak gösteren grafik. ](./media/bidirectional-features-in-wpf-overview/flow-direction-span-element.png "FlowDocument")  
   
  Metin olduğundan <xref:System.Windows.FlowDirection.RightToLeft>, tüm özel karakterleri, gibi "\\", sağdan sola düzeni metinde ayırın. Doğru sırayla gösteriliyor değil bağlantıda sonuçları, bu nedenle bu sorunu çözmek için metin ayrı bir korumak için gömülmesi <xref:System.Windows.Documents.Run> akan <xref:System.Windows.FlowDirection.LeftToRight>. Ayrı bir yerine <xref:System.Windows.Documents.Run> her dil için daha az sık kullanılan İngilizce metni daha büyük bir Arapça gömmek için sorunu çözmenize daha iyi bir yolu olan <xref:System.Windows.Documents.Span>.  
   
- Aşağıdaki grafikte bunu göstermektedir.  
-  
- **Katıştırılmış bir Span öğesi içinde çalışma öğesini kullanarak gösteren grafik**  
-  
- ![XamlPad ekran görüntüsü](./media/runspan.PNG "RunSpan")  
+ Aşağıdaki grafikte bir Span öğesi içinde gömülü çalışma öğesini kullanarak bunu göstermektedir:
+
+ ![Çalışma öğesi çizildiği grafik bir Span öğesi içinde gömülü.](./media/bidirectional-features-in-wpf-overview/embedded-span-element.png)  
   
  Aşağıdaki örneği kullanarak göstermektedir <xref:System.Windows.Documents.Run> ve <xref:System.Windows.Documents.Span> belgelerde öğeleri.  
   
@@ -84,10 +76,8 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
  <xref:System.Windows.Documents.Span> Metinler ile akış farklı yönleri arasında sınır ayırıcı olarak çalışır.  Hatta <xref:System.Windows.Documents.Span> aynı akış yönü öğelerle anlamına farklı çift yönlü kapsamlar değerlendirilir <xref:System.Windows.Documents.Span> öğeleri kapsayıcının içinde sıralı <xref:System.Windows.FlowDirection>, yalnızca içeriği içinde <xref:System.Windows.Documents.Span> öğesi Aşağıdaki <xref:System.Windows.FlowDirection> , <xref:System.Windows.Documents.Span>.  
   
  Aşağıdaki grafikte birkaç akış yönünü gösterir <xref:System.Windows.Controls.TextBlock> öğeleri.  
-  
- **FlowDirection birkaç TextBlock öğeleri gösteren grafik**  
-  
- ![Metin blokları farklı akış yönergeleri ile](./media/span.PNG "yayılma")  
+    
+ ![Metin blokları farklı akış yönergeleri ile gösteren grafik.](./media/bidirectional-features-in-wpf-overview/flow-direction-text-blocks.png)  
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Span> ve <xref:System.Windows.Documents.Run> öğeleri önceki grafikte gösterilen istediğiniz sonuçları vermeyebilir.  
   
@@ -97,20 +87,16 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
 ### <a name="adding-xmllang"></a>XML: lang ekleme  
  Sayılar ve aritmetik ifadeler gibi kullanan başka bir örnek aşağıda görüldüğü `"200.0+21.4=221.4"`. Yalnızca bildirimi <xref:System.Windows.FlowDirection> ayarlanır.  
-  
- **Yalnızca FlowDirection kullanarak sayılar görüntüleyen grafik**  
-  
- ![Sağdan sola akış numaraları](./media/langattribute.PNG "LangAttribute")  
+    
+ ![Yalnızca FlowDirection kullanarak numaralarını gösteren grafik.](./media/bidirectional-features-in-wpf-overview/numbers-flow-right-left.png)  
   
  Bu uygulamanın kullanıcıları üzüntü çıktı tarafından olsa bile <xref:System.Windows.FlowDirection> sayılar değil Arapça numaraları şeklinde gibi şeklinde doğru olduğundan.  
   
  XAML öğeleri içerebilir bir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] özniteliği (`xml:lang`), her öğenin dil tanımlar. XAML da destekler bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dil İlkesi yapabildiği `xml:lang` ağaç içinde üst öğelere uygulanan değerleri, alt öğeler tarafından kullanılır. Önceki örnekte, bir dil için tanımlı değil çünkü <xref:System.Windows.Documents.Run> öğe veya herhangi bir en üst düzey öğeleri, varsayılan `xml:lang` kullanılan olduğu `en-US` XAML için. Dahili numara şekillendirme algoritmasının [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] seçer sayıları karşılık gelen dilde – bu durumda İngilizce. Arapça yapmak numaraları işleme doğru `xml:lang` ayarlanması gerekir.  
   
  Aşağıdaki grafikte örnek ile gösterir `xml:lang` eklendi.  
-  
- **Grafik gösterir kullanarak XML: lang özniteliği**  
-  
- ![Arapça numaraları akan sağdan sola](./media/langattribute2.PNG "LangAttribute2")  
+    
+ ![Grafik, sağdan sola akış Arapça sayıları gösterir.](./media/bidirectional-features-in-wpf-overview/arabic-numbers-flow-right-left.png)  
   
  Aşağıdaki örnek ekler `xml:lang` uygulama.  
   
@@ -120,19 +106,15 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>FlowDirection metin olmayan öğeler ile  
- <xref:System.Windows.FlowDirection> yalnızca nasıl metin değerinin metinsel bir öğe aynı zamanda, neredeyse diğer akış yönü içinde akışları tanımlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesi. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> yatay kullanan <xref:System.Windows.Media.LinearGradientBrush> arka planı çizmek için.  
-  
- **Soldan sağa gradyan ile bir araç çubuğunu gösteren grafik**  
-  
- ![Gradyan ekran](./media/gradient.PNG "gradyan")  
+ <xref:System.Windows.FlowDirection> yalnızca nasıl metin değerinin metinsel bir öğe aynı zamanda, neredeyse diğer akış yönü içinde akışları tanımlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesi. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> yatay kullanan <xref:System.Windows.Media.LinearGradientBrush> sol ile arka planı doğru gradyanın.  
+
+ ![Bir soldan sağa gradyan ile bir araç çubuğunu gösteren grafik.](./media/bidirectional-features-in-wpf-overview/toolbar-left-right-gradient.png)  
   
  Ayarlanmasından sonra <xref:System.Windows.FlowDirection> için <xref:System.Windows.FlowDirection.RightToLeft>, yalnızca <xref:System.Windows.Controls.ToolBar> düğmeleri ancak bile, soldan sağa düzenlenmiştir <xref:System.Windows.Media.LinearGradientBrush> sağdan sola akış uzaklıkları, yeniden hizalar.  
   
  Aşağıdaki grafikte, yeniden hizalama gösterilmektedir <xref:System.Windows.Media.LinearGradientBrush>.  
-  
- **Bir hak ile bir araç çubuğu için sol gradyan gösteren grafik**  
-  
- ![Sağdan sola akan gradyan](./media/gradient2-wpf.PNG "Gradient2_WPF")  
+    
+ ![Bir sağdan sola gradyan ile bir araç çubuğunu gösteren grafik.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
  Aşağıdaki örnek çizen bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Sağdan sola çizip için kaldırın <xref:System.Windows.FlowDirection> özniteliği <xref:System.Windows.Controls.ToolBar>.  
   
@@ -149,10 +131,8 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
  Diğer aksine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri bir <xref:System.Windows.Controls.Image> devralmaz <xref:System.Windows.FlowDirection> kapsayıcısından. Ancak, varsa <xref:System.Windows.FlowDirection> açıkça ayarlanmış <xref:System.Windows.FlowDirection.RightToLeft>, bir <xref:System.Windows.Controls.Image> yatay çevrilmiş görüntülenir. Bu, çift yönlü içeriğinin geliştiriciler için kullanışlı bir özellik olarak uygulanır; Bazı durumlarda, yatay görüntü çevirme çünkü istenen efekti oluşturur.  
   
  Aşağıdaki grafikte bir çevrilen gösterilmektedir <xref:System.Windows.Controls.Image>.  
-  
- **Döndürülen resim gösteren grafik**  
-  
- ![XamlPad ekran görüntüsü](./media/image.PNG "görüntüsü")  
+    
+ ![Döndürülen resim gösteren grafik.](./media/bidirectional-features-in-wpf-overview/flipped-image-example.png)  
   
  Aşağıdaki örnek, gösterir <xref:System.Windows.Controls.Image> devralmak başarısız <xref:System.Windows.FlowDirection> gelen <xref:System.Windows.Controls.StackPanel> , içerir. **Not** adlı bir dosya olmalıdır **ms_logo.jpg** , C:\ üzerinde Bu örneği çalıştırmak için sürücü.  
   
@@ -168,11 +148,9 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
- Aşağıdaki grafikte, önceki örnekte çıktısını gösterir.  
-  
- **Yol öğesi kullanılarak çizilen oklar gösteren grafik**  
-  
- ![Yolları](./media/paths.PNG "yolları")  
+ Aşağıdaki grafikte, önceki örnek çıktısı okları kullanarak gösterir. `Path` öğesi:
+
+ ![Grafik, yol öğesi kullanılarak çizilen oklar gösterilmektedir.](./media/bidirectional-features-in-wpf-overview/arrows-drawn-path-element.png)  
   
  <xref:System.Windows.Controls.Image> Ve <xref:System.Windows.Shapes.Path> iki örnek bir nasıl [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanan <xref:System.Windows.FlowDirection>. Yerleştirme yanında [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] belirli bir yönde bir kapsayıcı içindeki öğeleri <xref:System.Windows.FlowDirection> öğelerle gibi kullanılabilir <xref:System.Windows.Controls.InkPresenter> bir yüzeydeki mürekkebi işler <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>. Sol davranışı sağa doğru davranışları sola taklit eden içeriğiniz için ihtiyaç duyduğunuzda ya da tam tersi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bu yeteneği sağlar.  
   
@@ -218,11 +196,9 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   
- Arapça bir sürümünde çalıştırıyorsanız aşağıdaki grafikte önceki örnek çıktı gösterilmektedir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
-  
- **Görüntülenen Arapça ve İngilizce sayılarını gösteren grafik**  
-  
- ![Numaralarıyla XamlPad ekran](./media/numbers.PNG "numaraları")  
+ Görüntülenen Arapça ve İngilizce numaralarıyla Arapça bir Windows sürümünde çalıştırıyorsanız, aşağıdaki grafikte önceki örnek çıktı gösterilmektedir:
+
+ ![Arapça ve İngilizce sayılarını gösteren grafik.](./media/bidirectional-features-in-wpf-overview/arabic-english-numbers.png)  
   
  <xref:System.Windows.FlowDirection> Ayarlama çünkü bu durumda önemli olduğunu <xref:System.Windows.FlowDirection> için <xref:System.Windows.FlowDirection.LeftToRight> Avrupa basamak yerine veriyor. Aşağıdaki bölümlerde, belge boyunca basamak birleşik bir görünümünü sağlamak nasıl açıklanmaktadır. Bu örnek Arapça Windows üzerinde çalışmıyorsa, Avrupa basamakla tüm basamakları görüntüler.  
   
@@ -265,11 +241,9 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   
- Aşağıdaki grafikte, pencerenin ya da programlama dili için nasıl göründüğünü gösterir.  
-  
- **Arapça numaralarını gösteren grafik**  
-  
- ![Arapça numaraları](./media/numbers2.PNG "Numbers2")  
+ Aşağıdaki grafikte, pencerenin Arapça numaraları görüntüleme ya da programlama dili için nasıl göründüğünü gösterir:
+     
+ ![Arapça numaralarını gösteren grafik.](./media/bidirectional-features-in-wpf-overview/displays-arabic-numbers.png)  
   
  **Değiştirme özelliğini kullanma**  
   

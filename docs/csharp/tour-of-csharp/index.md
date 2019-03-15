@@ -1,16 +1,11 @@
 ---
-title: Turu C# - C# Kılavuzu
-description: Yeni C#? Dilinin temellerini öğrenin.
+title: 'Turu C# - C# Kılavuzu'
+description: 'Yeni C#? Dilinin temellerini öğrenin.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150400"
 ---
-# <a name="a-tour-of-the-c-language"></a>Turu C# dil  
+
+# <a name="a-tour-of-the-c-language"></a>Turu C# dil
 
 C# (okunur "Bkz Sharp") bir basit, modern, nesne yönelimli ve tür kullanımı uyumlu programlama dilidir. C#kendi kökleri dilleri C ailesinde vardır ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir.
 
@@ -73,7 +68,7 @@ Hakkında bilgi edinmek için çok daha fazla C#.  Aşağıdaki konularda öğel
 * [Temsilciler](delegates.md)
     - A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
 * [Öznitelikler](attributes.md)
-    * ***Öznitelikleri*** programları türleri, üyeleri ve diğer varlıkları hakkında daha fazla bildirim temelli bilgi belirtmek etkinleştirin.
+     * ***Öznitelikleri*** programları türleri, üyeleri ve diğer varlıkları hakkında daha fazla bildirim temelli bilgi belirtmek etkinleştirin.
 
->[!div class="step-by-step"]
->[Next](program-structure.md)
+> [!div class="step-by-step"]
+> [Next](program-structure.md)

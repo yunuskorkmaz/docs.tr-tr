@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 19d7f20bf33de6e23860d475f38d49553049dec1
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: af30095c18a333d5ac3089fe3bf201c32739d9cf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211968"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846356"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# Derleyici Seçenekleri)
 
@@ -89,4 +89,4 @@ Seçilen C# dil belirtiminde dahil edilen sözdizimi kabul etmek derleyicinin ne
 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/derleme araçları 2010 veya .NET Framework 4.0 ile birlikte gelen derleyici  
 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/derleme araçları 2008 ya da .NET Framework 3.5 ile birlikte gelen derleyici  
 [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/derleme araçları 2005 ya da .NET Framework 2.0 ile birlikte gelen derleyici  
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/derleme araçları .net 2002 veya paketlenmiş. N Framework 1.0 derleyici  
+[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/derleme araçları .NET 2002 veya paket. N Framework 1.0 derleyici  

@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680366"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844255"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows üzerinde Visual Studio 2017'de Docker araçları kullanın
 
@@ -20,7 +20,8 @@ Visual Studio 2017 sürüm 15.7 ve üzeri, Docker araçları kullanırken, geli�
 
 Docker için Windows en son sürümleri ile Kurulumu aşağıdaki başvuruları açıklandığı gibi basit, çünkü Docker uygulamaları geliştirmek için her zamankinden daha kolaydır.
 
-> [! Docker için Windows yükleme hakkında daha fazla bilgi için Git bilgi] (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Docker için Windows yükleme hakkında daha fazla bilgi için şuraya gidin (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017'de docker desteği
 
@@ -83,7 +84,8 @@ Aşağıdaki tabloda, bu seçenekleri ayarlamak nasıl karar vermenize yardımc�
 > [!WARNING]
 > Ardından localhost SSL sertifikasına güvenilmiyor ve isteyen bastırmak için kutuyu işaretleyin, HTTPS isteklerine uygulamanızı veya hizmetinizi çalışma zamanında başarısız olabilir. Bu durumda, onay kutusunu temizleyin **sorma** onay kutusunu projenizi çalıştırmak ve güven isteminde gösterir.
 
-> [! Bilgi] Hizmetleri uygulaması ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
+> [!TIP]
+> Uygulama hizmetleri ve Docker için Visual Studio Araçları'nın kullanımı hakkında daha ayrıntılı bilgi için bu makaleleri okuyun:
 >
 >Yerel bir Docker kapsayıcısı uygulamalarında hata ayıklama: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

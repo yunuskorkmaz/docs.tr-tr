@@ -3,12 +3,12 @@ title: Azure Blob Depolama kullanmaya başlamaF#
 description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981913"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846434"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolamayı kullanmaya başlama\#
 
@@ -102,14 +102,14 @@ Adı blobları adlarında yol bilgileriyle de kullanabilirsiniz. Bu, geleneksel 
 
 Örneğin, aşağıdaki adlı bir kapsayıcı içinde blok blobları kümesine göz önünde bulundurun `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015 / Mimari/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/Architecture/Description.txt*\
+*2015/Architecture/photo3.jpg*\
+*2015/Architecture/photo4.jpg*\
+*2016/Architecture/photo5.jpg*\
+*2016/Architecture/photo6.jpg*\
+*2016/Architecture/Description.txt*\
+*2016/photo7.jpg*\
 
 Çağırdığınızda `ListBlobs` (Yukarıdaki örnek) olduğu gibi bir kapsayıcı, hiyerarşik bir listeleme döndürülür. Her ikisi de içeriyorsa `CloudBlobDirectory` ve `CloudBlockBlob` sonuçta çıktı şuna benzer sonra dizinleri ve blobları kapsayıcıda sırasıyla temsil eden nesneler:
 

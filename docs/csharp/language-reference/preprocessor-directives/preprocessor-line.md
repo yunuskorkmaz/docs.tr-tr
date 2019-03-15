@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51cffe40321aad2c91fb9a09821531545a415aec
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740560"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845927"
 ---
 # <a name="line-c-reference"></a>#line (C# Başvurusu)
 `#line` Derleyicinin değiştirmenize olanak tanır satır numaraları ve (isteğe bağlı olarak) hataları ve uyarıları için dosya adı çıktı.
 
-Aşağıdaki örnek, iki uyarı satır numaraları ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi, sonraki satırın numarasını (varsayılan #6 olmasına rağmen) 200 olmasını zorlar ve sonraki #line yönergesi kadar dosya adı "Özel" raporlanır. #Line varsayılan yönergesi, önceki yönerge tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için satır numaralandırmasını döndürür.  
+Aşağıdaki örnek, iki uyarı satır numaraları ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi, sonraki satırın numarasını (varsayılan #6 olmasına rağmen) 200 olmasını zorlar ve sonraki kadar `#line` yönerge, dosya adı "Özel" raporlanır. `#line default` Yönergesi, önceki yönerge tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için satır numaralandırmasını döndürür.  
   
 ```csharp
 class MainClass  

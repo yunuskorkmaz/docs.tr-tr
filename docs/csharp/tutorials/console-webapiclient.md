@@ -3,23 +3,25 @@ title: .NET Core kullanarak bir REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126648"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846174"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
 ## <a name="introduction"></a>Giriş
+
 Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir. Şunları öğreneceksiniz:
-*   Temel .NET Core komut satırı arabirimi (CLI).
-*   C# dili özellikleri genel bakış.
-*   NuGet ile bağımlılık Yönetimi
-*   HTTP iletişimleri
-*   JSON bilgilerini işleme
-*   Öznitelikleri yapılandırmasıyla yönetme. 
+
+* Temel .NET Core komut satırı arabirimi (CLI).
+* C# dili özellikleri genel bakış.
+* NuGet ile bağımlılık Yönetimi
+* HTTP iletişimleri
+* JSON bilgilerini işleme
+* Öznitelikleri yapılandırmasıyla yönetme.
 
 GitHub üzerinde bir REST hizmeti için HTTP isteklerini veren bir uygulama oluşturacaksınız. JSON biçiminde bilgileri okuyun ve C# nesneler bu JSON paket dönüştürme. Son olarak, C# nesneleriyle çalışma konusunda görürsünüz.
 
@@ -28,15 +30,20 @@ Bu öğreticide birçok özellik vardır. Bunları tek tek oluşturalım.
 İle birlikte izlemek isterseniz [son örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) yönelik bu konuda, indirebilirsiniz. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
-.NET core çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası. Bu uygulama, Windows, Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz. Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki tanımlamalar [Visual Studio Code](https://code.visualstudio.com/), açık kaynaklı, çapraz platform Düzenleyicisi olduğu. Ancak, rahat sevdiğiniz araçları kullanabilirsiniz.
+
+.NET core çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası. Bu uygulama, Windows, Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz.
+Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki tanımlamalar [Visual Studio Code](https://code.visualstudio.com/), açık kaynaklı, çapraz platform Düzenleyicisi olduğu. Ancak, rahat sevdiğiniz araçları kullanabilirsiniz.
+
 ## <a name="create-the-application"></a>Uygulama oluşturma
+
 İlk adım, yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Bu, geçerli bir dizin oluşturun. Komut türü `dotnet new console` komut isteminde. Bu, temel bir "Hello World" uygulaması için başlangıç dosyaları oluşturur.
 
-Bir değişiklik yapmadan başlamadan önce basit bir Hello World uygulamasını çalıştırmak için adımlara Bahsedelim. Uygulamayı oluşturduktan sonra yazın `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komut isteminde. Bu komut, NuGet paket geri yükleme işlemi çalıştırır. NuGet, .NET paket yöneticisidir. Bu komut tüm projeniz için eksik bağımlılıkların indirir. Bu yeni bir proje olduğundan, ilk çalıştırma .NET Core framework yükleyecek şekilde bağımlılıkları hiçbiri yerde değil. Bu ilk adımdan sonra yalnızca çalıştırmanız gerekir `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeni bağımlı paketler eklediğinizde, veya herhangi birini bağımlılıklarınızı sürümlerini güncelleştirin.  
+Bir değişiklik yapmadan başlamadan önce basit bir Hello World uygulamasını çalıştırmak için adımlara Bahsedelim. Uygulamayı oluşturduktan sonra yazın `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komut isteminde. Bu komut, NuGet paket geri yükleme işlemi çalıştırır. NuGet, .NET paket yöneticisidir. Bu komut tüm projeniz için eksik bağımlılıkların indirir. Bu yeni bir proje olduğundan, ilk çalıştırma .NET Core framework yükleyecek şekilde bağımlılıkları hiçbiri yerde değil. Bu ilk adımdan sonra yalnızca çalıştırmanız gerekir `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeni bağımlı paketler eklediğinizde, veya herhangi birini bağımlılıklarınızı sürümlerini güncelleştirin.
 
 Paketleri geri yükledikten sonra çalıştırmanız `dotnet build`. Bu yapı altyapısının yürütür ve uygulamanızı oluşturur. Son olarak, yürüttüğünüz `dotnet run` uygulamanızı çalıştırmak için.
 
 ## <a name="adding-new-dependencies"></a>Yeni bağımlılıkları ekleme
+
 .NET Core için önemli tasarım amaçlarından .NET yükleme boyutu en aza indirmektir. Bir uygulamanın bazı özelliklerin ek kitaplıklar gerekiyorsa bu bağımlılıkların C# projenize ekleyin (\*.csproj) dosyası. Bizim örneğimizde, eklemeniz gerekecektir `System.Runtime.Serialization.Json` uygulamanızın JSON yanıtları işleyebilmek için paket.
 
 Açık, `csproj` proje dosyası. Dosyanın ilk satırı olarak görünmesi gerekir:
@@ -45,18 +52,20 @@ Açık, `csproj` proje dosyası. Dosyanın ilk satırı olarak görünmesi gerek
 <Project Sdk="Microsoft.NET.Sdk">
 ```
 
-Bu satırın hemen sonra aşağıdakileri ekleyin: 
+Bu satırın hemen sonra aşağıdakileri ekleyin:
 
 ```xml
    <ItemGroup>
       <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
-   </ItemGroup> 
+   </ItemGroup>
 ```
+
 Çoğu kod düzenleyicilerinden, bu kitaplıkların farklı sürümleri için tamamlama sağlayacaktır. Genellikle, eklediğiniz herhangi bir paket en son sürümünü kullanmak isteyeceksiniz. Ancak, tüm paketlerin sürümlerinin eşleştiğinden ve .NET Core uygulaması framework sürümü de eşleştiğinden emin olmak önemlidir.
 
 Bu değişiklikleri yaptıktan sonra çalıştırmalısınız `dotnet restore` ([bkz. Not](#dotnet-restore-note)) yeniden böylece paket sisteminize yüklenir.
 
 ## <a name="making-web-requests"></a>Web istekleri yapma
+
 Artık Web'den veri almaya başlamak hazırsınız. Bilgileri okuyun bu uygulamada [GitHub API](https://developer.github.com/v3/). Projeleri hakkında bilgi okuyalım [.NET Foundation](https://www.dotnetfoundation.org/) terimdir. Projeler hakkında bilgi almak için GitHub API isteği yapan başlayacağız. Kullandığınız hesap uç noktadır: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Bir HTTP GET isteği kullanacaksınız böylece bu projeleri hakkındaki tüm bilgileri almak istediğiniz.
 Tarayıcınız, ayrıca hangi bilgileri görmek için URL'yi tarayıcınıza aldığınız, yapıştırabilirsiniz HTTP GET istekleri ve işleme kullanır.
 
@@ -66,7 +75,6 @@ Zaman uyumsuz bir yöntem sağlayarak başlatın. Uygulamanın işlevselliğini 
 ```csharp
 private static async Task ProcessRepositories()
 {
-    
 }
 ```
 
@@ -108,7 +116,7 @@ namespace WebAPIClient
 }
 ```
 
- Geri dönelim `ProcessRepositories` yöntemi ve ilk sürümü doldurun:
+Geri dönelim `ProcessRepositories` yöntemi ve ilk sürümü doldurun:
 
 ```csharp
 private static async Task ProcessRepositories()
@@ -135,10 +143,10 @@ using System.Net.Http.Headers;
 Bu ilk sürümü dotnet foundation kuruluş altındaki tüm depo listesi okumak için bir web isteği yapar. (GitHub .NET Foundation 'dotnet' kimliğidir). İlk birkaç satırı ayarlanan <xref:System.Net.Http.HttpClient> bu istek için. İlk olarak, bunu GitHub JSON yanıtları kabul edecek şekilde yapılandırılır.
 Yalnızca JSON biçimidir. Sonraki satır, bu nesneden tüm istekler için bir kullanıcı aracısı üstbilgisi ekler. Bu iki üstbilgi GitHub sunucu kodu tarafından denetlenir ve Github'dan bilgileri almak gereklidir.
 
-Yapılandırmayı tamamladığınızda <xref:System.Net.Http.HttpClient>, bir web isteği ve yanıtı almak olun. Bu ilk sürümde kullandığınız <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> kolaylık yöntemi. Bu kolaylık yöntemi web isteği yapan bir görev başlatır ve ardından istek geri döndüğünde, yanıt akışına okur ve içeriği akıştan ayıklar. Yanıt gövdesi olarak döndürülen bir <xref:System.String>. Görev tamamlandığında kullanılabilir bir dizedir. 
+Yapılandırmayı tamamladığınızda <xref:System.Net.Http.HttpClient>, bir web isteği ve yanıtı almak olun. Bu ilk sürümde kullandığınız <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> kolaylık yöntemi. Bu kolaylık yöntemi web isteği yapan bir görev başlatır ve ardından istek geri döndüğünde, yanıt akışına okur ve içeriği akıştan ayıklar. Yanıt gövdesi olarak döndürülen bir <xref:System.String>. Görev tamamlandığında kullanılabilir bir dizedir.
 
 Bu yöntem son iki satırı, o görev await ve konsola yanıt yazdırın.
-Uygulamayı oluşturun ve çalıştırın. Derleme uyarısı artık, çünkü kalktığını `ProcessRepositories` artık içeren bir `await` işleci. Biçimlendirilmiş metin JSON uzun bir görünümünü görürsünüz.   
+Uygulamayı oluşturun ve çalıştırın. Derleme uyarısı artık, çünkü kalktığını `ProcessRepositories` artık içeren bir `await` işleci. Biçimlendirilmiş metin JSON uzun bir görünümünü görürsünüz.
 
 ## <a name="processing-the-json-result"></a>JSON sonuç işleme
 
@@ -156,7 +164,7 @@ namespace WebAPIClient
         public string name;
     }
 }
-``` 
+```
 
 Yukarıdaki kod, 'repo.cs' adlı yeni bir dosya içinde yerleştirin. Bu sürüm sınıfının, JSON verilerini işlemek için en basit yolu temsil eder. Sınıf adı ve üye adı yerine aşağıdaki C# kuralları JSON Pakette kullanılan adları aynı. Bazı configuration öznitelikleri daha sonra sağlayarak çözeceksiniz. Bu sınıf, JSON seri hale getirme ve seri durumundan çıkarma başka bir önemli özelliği gösterilmektedir: JSON paketteki tüm alanlar, bu sınıfın bir parçasıdır.
 JSON serileştirici kullanılan sınıf türü içinde yer almayan bilgi yoksayar.
@@ -184,7 +192,8 @@ var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 
 Kullanmakta olduğunuz bildirimi <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> yerine <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>. Seri hale getirici bir akış, bir dize yerine, kaynağı olarak kullanır. Şimdi ikinci satırında yukarıdaki kullanılan birkaç C# dili özellikleri açıklanmaktadır. Bağımsız değişkeni <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> olduğu bir `await` ifade. Await ifadeleri neredeyse herhangi bir yerinde görünebilir kodunuzda şimdiye kadar yalnızca bunları Atama ifadesinin bir parçası olarak gördüğünüz olsa bile.
 
-İkincisi, `as` işleci dönüştürür derleme zamanı türünden `object` için `List<repo>`. Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> türünde bir nesne döndürür bildirir <xref:System.Object?displayProperty=nameWithType>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> oluşturduğu zaman belirttiğiniz türü döndürür (`List<repo>` bu öğreticideki). Dönüştürme başarısız olursa `as` işleci değerlendirilen `null`, bir özel durum oluşturmaktansa.
+İkincisi, `as` işleci dönüştürür derleme zamanı türünden `object` için `List<repo>`.
+Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> türünde bir nesne döndürür bildirir <xref:System.Object?displayProperty=nameWithType>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> oluşturduğu zaman belirttiğiniz türü döndürür (`List<repo>` bu öğreticideki). Dönüştürme başarısız olursa `as` işleci değerlendirilen `null`, bir özel durum oluşturmaktansa.
 
 Bu bölümde ile neredeyse hazırsınız. C# nesnelerini JSON dönüştürdükten sonra şimdi her depo adını görüntüler. Okuma satırları değiştirin:
 
@@ -204,7 +213,7 @@ Derleme ve uygulamayı çalıştırın. .NET Foundation'ın yer depolar adların
 
 ## <a name="controlling-serialization"></a>Serileştirme denetleme
 
-Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla standart C# kurallarına uygun hale getirebilirsiniz. Bu açıklama ekleyerek yaparsınız `repo` tür *öznitelikleri* JSON serileştirici nasıl çalıştığını denetleyen. Sizin durumunuzda, bu öznitelikler JSON anahtar adlarını ve C# sınıf ve üye adları arasında bir eşleme tanımlamak için kullanırsınız. Kullanılan iki öznitelikleri `DataContract` özniteliği ve `DataMember` özniteliği. Kural gereği, tüm öznitelik sınıfları soneki bitiş `Attribute`. Ancak, bir öznitelik uygulamak soneki kullanın gerekmez. 
+Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla standart C# kurallarına uygun hale getirebilirsiniz. Bu açıklama ekleyerek yaparsınız `repo` tür *öznitelikleri* JSON serileştirici nasıl çalıştığını denetleyen. Sizin durumunuzda, bu öznitelikler JSON anahtar adlarını ve C# sınıf ve üye adları arasında bir eşleme tanımlamak için kullanırsınız. Kullanılan iki öznitelikleri `DataContract` özniteliği ve `DataMember` özniteliği. Kural gereği, tüm öznitelik sınıfları soneki bitiş `Attribute`. Ancak, bir öznitelik uygulamak soneki kullanın gerekmez.
 
 `DataContract` Ve `DataMember` öznitelikleri olan farklı bir kitaplıkta, bu nedenle bu kitaplığı, bağımlılık olarak C# proje dosyası eklemek gerekir. Aşağıdaki satırı ekleyin `<ItemGroup>` proje dosyanızın bölümü:
 
@@ -261,8 +270,8 @@ public string Name { get; set; }
 Derleyici gövdesinin oluşturur `get` ve `set` erişimcileri, aynı zamanda özel bir alan adı depolamak için. El ile yazabilirsiniz aşağıdaki koda benzer olacaktır:
 
 ```csharp
-public string Name 
-{ 
+public string Name
+{
     get { return this._name; }
     set { this._name = value; }
 }
@@ -334,6 +343,7 @@ foreach (var repo in repositories)
     Console.WriteLine();
 }
 ```
+
 Son adım olarak, son zorlama işlemi için bilgi ekleyelim. Bu bilgiler, JSON yanıtındaki bu şekilde biçimlendirilir:
 
 ```json
@@ -375,10 +385,11 @@ Console.WriteLine(repo.LastPush);
 ```
 
 Sürümünüz artık eşleşmelidir [tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
- 
+
 ## <a name="conclusion"></a>Sonuç
 
 Bu öğreticide, web isteklerinde bulunmak, istemcinin sonucu ayrıştırması ve sonuçları özelliklerini görüntülemek nasıl gösterilmiştir. Projenizde bağımlılıklar olarak yeni paketler de ekledik. C# dilinin nesne yönelimli teknikleri destekleyen özelliklerden bazıları gördünüz.
 
 <a name="dotnet-restore-note"></a>
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

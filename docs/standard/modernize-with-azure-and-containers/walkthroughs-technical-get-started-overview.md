@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674945"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846265"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -83,7 +83,7 @@ Bu izlenecek yolda avantajlarını basittir: Yalnızca ilk uygulamaları ve kod 
 Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 
 - [Tur taban ASP.NET MVC ve Web Forms "eski" uygulamaları](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [Temel WCF hizmeti ve WinForms (Katman 3) "eski" uygulama turu](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Temel WCF hizmeti ve WinForms (Katman 3) "eski" uygulama turu](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>İzlenecek yol: 2: Windows kapsayıcıları ile mevcut .NET uygulamalarınızı kapsayıcılı hale getirme
 

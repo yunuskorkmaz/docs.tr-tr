@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation özellik ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721859"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846551"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özellik ayrıntıları
 
@@ -101,7 +101,7 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özel
 
 - [Standart uç nokta öğesi](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Hizmet yapılandırma yenilikleri .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4'te hizmeti yapılandırma geliştirmeleri](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [.NET 4'te yaygın kullanıcı hata: WF/WCF hizmeti yapılandırma adı yanlış yazmanız](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ Bir kullanıcının giriş sorulması gerekir. Normal koşullar altında Gelişt
 
 ## <a name="wcf-routing-service"></a>WCF yönlendirme hizmeti
 
-Yönlendirme hizmeti, bir genel yazılım nasıl WCF iletileri, istemciler ve hizmetler arası akışını denetlemenizi sağlayan bir yönlendirici olacak şekilde tasarlanmıştır. Yönlendirme hizmeti, hizmetlerinizi, istemcilerden ayırmak için yapılandırmaları açısından çok daha fazla özgürlük sağlayan, destekleyebilir ve hizmetlerinizi nasıl değerlendirirken sahip esnekliği sağlar. .NET 3. 5 ', istemciler ve hizmetler sıkı şekilde bağlı; bir istemci, tüm hizmetleri bunun için iletişim kurmak için gereken ve burada bulunduğu hakkında bilmeniz gerekiyordu. Ayrıca, WCF'de .net Framework 3.5 olan aşağıdaki sınırlamalar:
+Yönlendirme hizmeti, bir genel yazılım nasıl WCF iletileri, istemciler ve hizmetler arası akışını denetlemenizi sağlayan bir yönlendirici olacak şekilde tasarlanmıştır. Yönlendirme hizmeti, hizmetlerinizi, istemcilerden ayırmak için yapılandırmaları açısından çok daha fazla özgürlük sağlayan, destekleyebilir ve hizmetlerinizi nasıl değerlendirirken sahip esnekliği sağlar. .NET 3. 5 ', istemciler ve hizmetler sıkı şekilde bağlı; bir istemci, tüm hizmetleri bunun için iletişim kurmak için gereken ve burada bulunduğu hakkında bilmeniz gerekiyordu. Ayrıca, .NET Framework 3.5 WCF'de aşağıdaki sınırlamalar sahipti:
 
 - Bu mantık istemciyi sabit kodlanmış olması gerekiyordu karmaşık hata işleme kaydedildi.
 
@@ -271,7 +271,7 @@ Yönlendirme hizmeti, bir genel yazılım nasıl WCF iletileri, istemciler ve hi
 
 - Hizmetleri nadiren de factored: her şeyi uygulayan bir hizmetinizle iletişim kurmasına istemcinin daha kolay denetlediğinden birden çok hizmetleri arasında seçim yapma.
 
-.Net 4'te yönlendirme hizmeti, bu sorunları gidermek daha kolay hale getirmek için tasarlanmıştır. Yeni yönlendirme hizmeti aşağıdaki özelliklere sahiptir:
+.NET 4'te yönlendirme hizmeti, bu sorunları gidermek daha kolay hale getirmek için tasarlanmıştır. Yeni yönlendirme hizmeti aşağıdaki özelliklere sahiptir:
 
 1. İçerik tabanlı yönlendirme (<xref:System.ServiceModel.Dispatcher.MessageFilter> nesneleri nereye gönderileceğini belirlemek için bir ileti inceleyin.)
 
@@ -327,7 +327,7 @@ Hizmetimi kullanılabilir olduğunda, bilinmeyen olduğundan bir geliştirici sa
 
 ## <a name="tracking"></a>İzleme
 
-İş akışı izleme bir iş akışı örneği yürütülmesi hakkında Öngörüler sağlar. Bir iş akışındaki etkinliklerin yürüttüğünüzde ve iş akışı örnek düzeyinde akışından yayılan izleme olayları. İş akışı izleme katılımcı abone izleme kayıtları için iş akışı ana bilgisayarı için eklenmesi gerekir. İzleme kayıtları bir izleme profili kullanılarak filtrelenir. .net Framework bir (olay izleme için Windows) ETW İzleme katılımcı sağlar ve temel profil machine.config dosyasında yüklenir.
+İş akışı izleme bir iş akışı örneği yürütülmesi hakkında Öngörüler sağlar. Bir iş akışındaki etkinliklerin yürüttüğünüzde ve iş akışı örnek düzeyinde akışından yayılan izleme olayları. İş akışı izleme katılımcı abone izleme kayıtları için iş akışı ana bilgisayarı için eklenmesi gerekir. İzleme kayıtları bir izleme profili kullanılarak filtrelenir. .NET Framework bir (olay izleme için Windows) ETW İzleme katılımcı sağlar ve temel profil machine.config dosyasında yüklenir.
 
 ### <a name="getting-started"></a>Başlarken
 
