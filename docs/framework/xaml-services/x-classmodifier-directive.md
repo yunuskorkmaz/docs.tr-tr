@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507596"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026774"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier Yönergesi
 XAML derlemesi davranışı değiştirir, `x:Class` de sağlanır. Kısmi oluşturmak yerine özellikle `class` olan bir `Public` erişim düzeyi (varsayılan), sağlanan `x:Class` ile oluşturulan bir `NotPublic` erişim düzeyi. Bu davranış, sınıf oluşturulmuş derlemeler için erişim düzeyi etkiler.  
@@ -35,7 +35,7 @@ XAML derlemesi davranışı değiştirir, `x:Class` de sağlanır. Kısmi oluşt
 |*NotPublic*|Tam dizeyi belirtmek için geçirilecek <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullandığınız arka plan kod programlama diline bağlı olarak değişir. Açıklamalara bakın.|  
   
 ## <a name="dependencies"></a>Bağımlılıkları  
- [x: Class](../../../docs/framework/xaml-services/x-class-directive.md) de aynı öğede sağlanması gerekir ve bu öğe bir sayfa kök öğesi olması gerekir. Daha fazla bilgi için [ \[MS-XAML\] bölümü 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ [x: Class](x-class-directive.md) de aynı öğede sağlanması gerekir ve bu öğe bir sayfa kök öğesi olması gerekir. Daha fazla bilgi için [ \[MS-XAML\] bölümü 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Açıklamalar  
  Değerini `x:ClassModifier` programlama dili tarafından kullanım .NET Framework XAML hizmetlerinde değişir. Her bir dilin nasıl uyguladığını kullanılacak dize bağlıdır, <xref:System.CodeDom.Compiler.CodeDomProvider> ve döndürür anlamı tanımlamak için tür dönüştürücüleri <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ve <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, ve bu dilin büyük küçük harfe duyarlı olup olmadığını.  
@@ -54,8 +54,8 @@ XAML derlemesi davranışı değiştirir, `x:Class` de sağlanır. Kısmi oluşt
  Erişim düzeyi bildirilen `x:ClassModifier` yorumu belirli çerçeveleri ve yeteneklerini hala tabidir. WPF yüklemek ve türleri örneği için özellikleri içerir burada `x:ClassModifier` olduğu `internal`, bu sınıfı bir WPF kaynaktan bir URI başvuru paketi aracılığıyla başvurulur. Bu durumda ve diğerleri gibi diğer çerçeveler tarafından uygulanan, söz konusu kümelerdeki potansiyel olarak, özel olarak üzerinde güvenmeyin `x:ClassModifier` olası tüm oluşturmada engellemeye çalışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Arka Plan Kod ve WPF İçindeki XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:FieldModifier Yönergesi](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
-- [Güvenlik (WPF)](../../../docs/framework/wpf/security-wpf.md)
-- [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Class Yönergesi](x-class-directive.md)
+- [Arka Plan Kod ve WPF İçindeki XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier Yönergesi](x-fieldmodifier-directive.md)
+- [Güvenlik (WPF)](../wpf/security-wpf.md)
+- [WPF'den System.Xaml'e Geçirilen Türler](types-migrated-from-wpf-to-system-xaml.md)
