@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faf7ec75334f20742ff9d27f029d88bfaca9efd4
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845849"
 ---
-# <a name="oracle-lobs"></a><span data-ttu-id="c5088-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="c5088-102">Oracle LOBs</span></span>
-<span data-ttu-id="c5088-103">Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleLob> Oracle ile çalışmak için kullanılan sınıfı **LOB** veri türleri.</span><span class="sxs-lookup"><span data-stu-id="c5088-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
+# <a name="oracle-lobs"></a><span data-ttu-id="77360-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="77360-102">Oracle LOBs</span></span>
+<span data-ttu-id="77360-103">Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleLob> Oracle ile çalışmak için kullanılan sınıfı **LOB** veri türleri.</span><span class="sxs-lookup"><span data-stu-id="77360-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
   
- <span data-ttu-id="c5088-104">Bir **OracleLob** bunlardan biri olabilir <xref:System.Data.OracleClient.OracleType> veri türleri:</span><span class="sxs-lookup"><span data-stu-id="c5088-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
+ <span data-ttu-id="77360-104">Bir **OracleLob** bunlardan biri olabilir <xref:System.Data.OracleClient.OracleType> veri türleri:</span><span class="sxs-lookup"><span data-stu-id="77360-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
   
-|<span data-ttu-id="c5088-105">Veri türü</span><span class="sxs-lookup"><span data-stu-id="c5088-105">Data type</span></span>|<span data-ttu-id="c5088-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5088-106">Description</span></span>|  
+|<span data-ttu-id="77360-105">Veri türü</span><span class="sxs-lookup"><span data-stu-id="77360-105">Data type</span></span>|<span data-ttu-id="77360-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="77360-106">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c5088-107">**Blob**</span><span class="sxs-lookup"><span data-stu-id="c5088-107">**Blob**</span></span>|<span data-ttu-id="c5088-108">Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="c5088-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="c5088-109">Bu eşleyen bir **dizi** türü **bayt**.</span><span class="sxs-lookup"><span data-stu-id="c5088-109">This maps to an **Array** of type **Byte**.</span></span>|  
-|<span data-ttu-id="c5088-110">**CLOB**</span><span class="sxs-lookup"><span data-stu-id="c5088-110">**Clob**</span></span>|<span data-ttu-id="c5088-111">Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="c5088-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="c5088-112">Bu eşlendiği **dize**.</span><span class="sxs-lookup"><span data-stu-id="c5088-112">This maps to **String**.</span></span>|  
-|<span data-ttu-id="c5088-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="c5088-113">**NClob**</span></span>|<span data-ttu-id="c5088-114">Oracle **NCLOB** Ulusal karakter boyut sınırı 4 gigabayt sunucusu üzerinde kümesini temel karakter verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="c5088-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="c5088-115">Bu eşlendiği **dize**.</span><span class="sxs-lookup"><span data-stu-id="c5088-115">This maps to **String**.</span></span>|  
+|<span data-ttu-id="77360-107">**Blob**</span><span class="sxs-lookup"><span data-stu-id="77360-107">**Blob**</span></span>|<span data-ttu-id="77360-108">Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="77360-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="77360-109">Bu eşleyen bir **dizi** türü **bayt**.</span><span class="sxs-lookup"><span data-stu-id="77360-109">This maps to an **Array** of type **Byte**.</span></span>|  
+|<span data-ttu-id="77360-110">**CLOB**</span><span class="sxs-lookup"><span data-stu-id="77360-110">**Clob**</span></span>|<span data-ttu-id="77360-111">Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="77360-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="77360-112">Bu eşlendiği **dize**.</span><span class="sxs-lookup"><span data-stu-id="77360-112">This maps to **String**.</span></span>|  
+|<span data-ttu-id="77360-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="77360-113">**NClob**</span></span>|<span data-ttu-id="77360-114">Oracle **NCLOB** Ulusal karakter boyut sınırı 4 gigabayt sunucusu üzerinde kümesini temel karakter verileri içeren veri türü.</span><span class="sxs-lookup"><span data-stu-id="77360-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="77360-115">Bu eşlendiği **dize**.</span><span class="sxs-lookup"><span data-stu-id="77360-115">This maps to **String**.</span></span>|  
   
- <span data-ttu-id="c5088-116">Bir **OracleLob** farklıdır bir <xref:System.Data.OracleClient.OracleBFile> içeren veriler yerine sunucunun işletim sistemini fiziksel bir dosyasında depolanır.</span><span class="sxs-lookup"><span data-stu-id="c5088-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="c5088-117">Farklı bir okuma-yazma nesnesi ayrıca olabilir bir **OracleBFile**, bu değer her zaman salt okunur.</span><span class="sxs-lookup"><span data-stu-id="c5088-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
+ <span data-ttu-id="77360-116">Bir **OracleLob** farklıdır bir <xref:System.Data.OracleClient.OracleBFile> içeren veriler yerine sunucunun işletim sistemini fiziksel bir dosyasında depolanır.</span><span class="sxs-lookup"><span data-stu-id="77360-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="77360-117">Farklı bir okuma-yazma nesnesi ayrıca olabilir bir **OracleBFile**, bu değer her zaman salt okunur.</span><span class="sxs-lookup"><span data-stu-id="77360-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="c5088-118">Oluşturmaya, almaya ve bir LOB için yazma</span><span class="sxs-lookup"><span data-stu-id="c5088-118">Creating, Retrieving, and Writing to a LOB</span></span>  
- <span data-ttu-id="c5088-119">Aşağıdaki C# örneği nasıl bir Oracle tablosunda LOB'lar oluşturun ve ardından alabilir ve bunlara biçiminde yazmak gösterir **OracleLob** nesneleri.</span><span class="sxs-lookup"><span data-stu-id="c5088-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="c5088-120">Örnek kullanarak gösterir <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="c5088-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="c5088-121">Oracle örnekte **BLOB**, **CLOB**, ve **NCLOB** veri türleri.</span><span class="sxs-lookup"><span data-stu-id="c5088-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="77360-118">Oluşturmaya, almaya ve bir LOB için yazma</span><span class="sxs-lookup"><span data-stu-id="77360-118">Creating, Retrieving, and Writing to a LOB</span></span>  
+ <span data-ttu-id="77360-119">Aşağıdaki C# örneği nasıl bir Oracle tablosunda LOB'lar oluşturun ve ardından alabilir ve bunlara biçiminde yazmak gösterir **OracleLob** nesneleri.</span><span class="sxs-lookup"><span data-stu-id="77360-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="77360-120">Örnek kullanarak gösterir <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="77360-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="77360-121">Oracle örnekte **BLOB**, **CLOB**, ve **NCLOB** veri türleri.</span><span class="sxs-lookup"><span data-stu-id="77360-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
   
 ```csharp  
 using System;  
@@ -90,10 +90,10 @@ public class LobExample
          // Note: You can read character data as raw Unicode bytes   
          // (using OracleLob.Read as in the above example).  
          // However, because the OracleLob object inherits directly   
-         // from the .Net stream object,   
+         // from the .NET stream object,   
          // all the existing classes that manipluate streams can   
          // also be used. For example, the   
-         // .Net StreamReader makes it easier to convert the raw bytes   
+         // .NET StreamReader makes it easier to convert the raw bytes   
          // into actual characters.  
          StreamReader streamreader =   
            new StreamReader(clob, Encoding.Unicode);  
@@ -215,8 +215,8 @@ public class LobExample
 }  
 ```  
   
-## <a name="creating-a-temporary-lob"></a><span data-ttu-id="c5088-122">Geçici bir LOB'ı oluşturma</span><span class="sxs-lookup"><span data-stu-id="c5088-122">Creating a Temporary LOB</span></span>  
- <span data-ttu-id="c5088-123">Aşağıdaki C# örneği, geçici bir LOB oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c5088-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
+## <a name="creating-a-temporary-lob"></a><span data-ttu-id="77360-122">Geçici bir LOB'ı oluşturma</span><span class="sxs-lookup"><span data-stu-id="77360-122">Creating a Temporary LOB</span></span>  
+ <span data-ttu-id="77360-123">Aşağıdaki C# örneği, geçici bir LOB oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="77360-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5088-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5088-124">See also</span></span>
-- [<span data-ttu-id="c5088-125">Oracle ve ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c5088-125">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="c5088-126">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="c5088-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="77360-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77360-124">See also</span></span>
+- [<span data-ttu-id="77360-125">Oracle ve ADO.NET</span><span class="sxs-lookup"><span data-stu-id="77360-125">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [<span data-ttu-id="77360-126">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="77360-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
