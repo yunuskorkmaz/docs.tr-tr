@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693804"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845715"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler özel öğesi
 
 Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları.
 
-[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<Yapılandırma >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
 &nbsp;&nbsp;**\<sectionName >**
 
 ## <a name="attributes"></a>Öznitelikler
@@ -37,7 +37,7 @@ Hiçbiri
 |     | Açıklama |
 | --- | ----------- |
 | [**\<Ekle >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler>  | Özel uygulama ayarları ekler. |
-| [**\<kaldırma >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> |    Önceden tanımlanmış ayar kaldırır. |
+| [**\<kaldırma >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> | Önceden tanımlanmış ayar kaldırır. |
 | [**\<Temizle >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) için <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> | Bir bölümdeki tüm önceden tanımlanmış ayarlar temizler. |
 
 ## <a name="remarks"></a>Açıklamalar
@@ -53,7 +53,7 @@ Aşağıdaki tabloda, her yapılandırma bölümü işleyicisi için Configurati
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, kullanan bölümler bildirmek gösterilmektedir <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıfları. 
+Aşağıdaki örnek, kullanan bölümler bildirmek gösterilmektedir <xref:System.Configuration.DictionarySectionHandler> ve <xref:System.Configuration.NameValueSectionHandler> sınıfları.
 
 İlk özel öğe  **\<dictionarySample >**, UX'te insanlar tarafından ayarları içeren <xref:System.Configuration.DictionarySectionHandler> sınıfını `System.dll` derleme. İkinci özel öğe  **\<mySection >**, UX'te insanlar tarafından ayarları içeren <xref:System.Configuration.NameValueSectionHandler> sınıfını `System.dll` derleme.
 

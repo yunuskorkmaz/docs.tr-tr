@@ -1,6 +1,6 @@
 ---
 title: Takvimlerle çalışma
-ms.date: 03/30/2017
+ms.date: 02/23/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b116944a45546604d1d60a5a44afcce8fee2f026
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721521"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845992"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -140,6 +140,8 @@ Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globaliz
 > [!IMPORTANT]
 >  Yeni bir dönemde bir <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Bkz: [.NET Japonca takviminde yeni bir dönemi işleme](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) daha fazla bilgi ve uygulamalarınızı etkilenip etkilenmediğini belirlemek için. Bkz: [uygulamanızı Japonca era değiştirmek için hazırlama](/windows/uwp/design/globalizing/japanese-era-change) era değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi.
 
+Çoğu takvimler bir dönemde son derece uzun bir süre gösterir. Gregoryen takvimindeki, örneğin, birden fazla iki millenia geçerli dönem yayılır. İçin <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, birden çok dönemi destekleyen iki takvimler, bu durum geçerli değildir. Bir dönem için bir ın İmparatorluk dönemin karşılık gelir. Geçerli dönem sayısı üst sınırı bilinmeyen olduğunda özellikle birden çok dönemi için destek, özel zorlukları doğurur. 
+
 ### <a name="eras-and-era-names"></a>Dönemler ve dönem adları
 
 . NET'te, belirli bir takvim uygulamasıyla desteklenen dönemleri gösteren tamsayılar ters sırada depolanır <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizisi. Geçerli dönem dizin ve içindir <xref:System.Globalization.Calendar> destekleyen birden çok dönemi, art arda gelen her dizin sınıfları önceki dönemi yansıtır. Statik <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> özelliği geçerli dönemin dizinini tanımlar <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizi; bir sabit değeri olan her zaman sıfır olan. Tek tek <xref:System.Globalization.Calendar> sınıfları da geçerli dönemin değerini döndüren statik alanlar içerir. Bunlar aşağıdaki tabloda listelenmiştir.
@@ -167,14 +169,92 @@ Ek olarak, "g" özel tarih ve saat biçimi dizisi, bir tarih ve saatin dize gös
 
 ### <a name="instantiating-a-date-with-an-era"></a>Bir tarihi bir dönemle örnekleme
 
-İki <xref:System.Globalization.Calendar> birden çok dönemi destekleyen sınıflar, belirli bir yıl, ay ve değer belirsiz olabilir örneğin, ayın günü tüm dört döneminin yılları oluşan bir tarihi <xref:System.Globalization.JapaneseCalendar> sahip 1 ile 15 arasında numaralandırılmıştır. Normalde, bir dönem belirtilmezse, tarih ve saat ve takvim yöntemleri değerlerin geçerli döneme ait olduğunu varsayar. Dönemi açıkça belirtmek için bir tarih örneklerken bir <xref:System.Globalization.Calendar> , birden çok dönemi destekleyen sınıfı çağırabilirsiniz <xref:System.Globalization.Calendar.ToDateTime%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> yöntemi. Bu yöntem, takvimin yılı, ayı, günü, saati, dakikası, saniyesi ve milisaniyesiyle birlikte bir dönemi açıkça belirtmenize olanak tanır.
+İki <xref:System.Globalization.Calendar> birden çok dönemi destekleyen sınıflar, bir belirli bir yıl, ay ve gün, ay değeri içeren bir tarih belirsiz olabilir. Örneğin, tarafından desteklenen tüm Arial <xref:System.Globalization.JapaneseCalendar> yıllar numarası 1'dir. Normalde, bir dönem belirtilmezse, tarih ve saat ve takvim yöntemleri değerlerin geçerli döneme ait olduğunu varsayar. Bu doğru <xref:System.DateTime.%23ctor%2A> ve <xref:System.DateTimeOffset.%23ctor%2A> parametreleri türü oluşturucuları <xref:System.Globalization.Calendar>, hem de [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) ve [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) yöntemleri. Aşağıdaki örnek, belirtilmeyen bir dönem, ikinci yılın 1 Ocak temsil eden bir tarih oluşturur. Örnekte gösterildiği çıktısı, tarih, ikinci yılın Heisei dönemi, bu örnekte yürütülmesi zaman geçerli dönem olarak yorumlanır. Tarafından döndürülen dizede yıl Çağ, 平成, önündeki <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> yöntemi ve 1 Ocak 1990 için de Gregoryen takvimindeki karşılık gelir. (Heisei dönemi aralığını 1989, Gregoryen takvimindeki 2019 sağlamaktır.)
 
-Aşağıdaki örnekte <xref:System.Globalization.Calendar.ToDateTime%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> aynı tarihi, desteklediği her bir dönemde ikinci yılın ilk gününün ilk ay örneklemek için yöntemi <xref:System.Globalization.JapaneseCalendar> sınıfı. Ardından, tarihi hem Japonca hem de Gregoryen takvimlerinde görüntüler. Ayrıca bir <xref:System.DateTime> bir dönem belirtmeden tarih değerlerini oluşturma yöntemleri geçerli dönemde tarihler oluşturduğunu göstermek için oluşturucu.
+[!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
+[!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+Ancak, dönemi değişirse, bu kodun amacı belirsiz hale gelir. Tarih, iki yıl geçerli dönemin temsil etmek için amaçlanmamıştır veya Heisei dönemi ikinci yılın göstermek için tasarlanmıştır? Bu belirsizlik işlemler sırasında önlemek için iki yolu vardır:
 
-### <a name="representing-dates-in-calendars-with-eras"></a>Tarihleri takvimlerde dönemlerle gösterme
+- Varsayılan tarih ve saat değeri örneklemek <xref:System.Globalization.GregorianCalendar> sınıfı. Ardından, aşağıdaki örnekte gösterildiği gibi bir tarih dize gösterimini için Japonca takvimi veya Japonca Ay Güneş takvimini kullanabilirsiniz.
+
+   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
+   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
+
+- Bir dönemi açıkça belirten bir tarih ve saat yöntemini çağırın. Bu, aşağıdaki yöntemleri içerir:
+
+   - <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> Yöntemi <xref:System.Globalization.JapaneseCalendar> veya <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfı.
+
+   - A <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemi gibi ayrıştırma <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>, veya <xref:System.DateTime.TryParseExact%2A>, ayrıştırılacak dize içerir ve isteğe bağlı olarak bir <xref:System.Globalization.DateTimeStyles> geçerli kültür Japonca-Japonya ise bağımsız değişken (" ja-JP") ve bu kültürün takvimini <xref:System.Globalization.JapaneseCalendar>. Ayrıştırılacak dize dönemi içermelidir.
+
+   - A <xref:System.DateTime> veya <xref:System.DateTimeOffset> içeren yöntemi ayrıştırılırken bir `provider` türünde parametre <xref:System.IFormatProvider>. `provider` aşağıdakilerden biri olması gereken bir <xref:System.Globalization.CultureInfo> Japonca-Japonya ("ja-JP") kültürü geçerli takvimini temsil eden nesne <xref:System.Globalization.JapaneseCalendar> veya <xref:System.Globalization.DateTimeFormatInfo> nesnesi <xref:System.Globalization.DateTimeFormatInfo.Calendar> özelliği <xref:System.Globalization.JapaneseCalendar>. Ayrıştırılacak dize dönemi içermelidir.
+
+   Aşağıdaki örnek bir tarih ve saat 8 Eylül 1868 üzerinde başladı ve 29 Temmuz 1912 sonlandı Meiji dönemi içinde örneklemek için üç bu yöntemleri kullanır. 
+
+   [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
+   [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
+
+> [!TIP]
+> Birden çok dönemi destekleyen takvimlerle çalışırken *her zaman* bir tarihi örneklemek için Miladi kullanın veya ne zaman örneği bir tarih ve saat o takvime dayalı dönemi belirtin.
+
+Bir döneme belirtilirken <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> yöntem, takvimin dönem dizinini sağlamak <xref:System.Globalization.Calendar.Eras> özelliği. Takvimler, dönemleri değişikliğe tabi olduğu için ancak bu dizinleri sabit değerlerdir değil; Geçerli dönem dizin 0 olduğundan ve eski dönemi dizindeki `Eras.Length - 1`. Takvime yeni bir dönemi eklendiğinde, önceki dönemleri dizinleri birer birer artırır. İlgili dönem dizin şu şekilde belirtebilirsiniz:
+
+- Geçerli dönem içinde tarihler için her zaman Takvim kullanın <xref:System.Globalization.Calendar.CurrentEra> özelliği.
+
+- Belirtilen bir dönem içinde tarihler için kullanmak <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> belirtilen dönem adına karşılık gelen dizine almak için yöntemi. Bunu gerektiren <xref:System.Globalization.JapaneseCalendar> geçerli takvimi olması <xref:System.Globalization.CultureInfo> ja-JP kültürü temsil eden nesne.  (Bu tekniği çalışır <xref:System.Globalization.JapaneseLunisolarCalendar> de beri destekliyorsa aynı dönemi olarak <xref:System.Globalization.JapaneseCalendar>.) Önceki örnekte, bu yaklaşımı gösterir.
+
+### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Takvimleri, dönemleri ve tarih aralıkları: Gevşek aralığı denetimleri
+
+Çok fazla bağımsız takvimler tarih aralıkları desteklenen gibi dönemi içinde <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları de aralık desteklenen. Daha önce .NET katı dönem dönem özel tarih aralığı bu dönem içinde olduğunu emin olmak için aralığı denetler kullanılır. Bir aralık dışı tarih alanlarına bir .NET Framework, gevşek aralıklı varsayılan denetimini kullanır. Diğer bir deyişle, bir tarih belirtilen dönem aralığının dışında ise çağırılıyorsa yöntem bir <xref:System.ArgumentOutOfRangeException>. Tüm sürümlerinde sunulan .NET Framework'ün era rahat güncelleştirmeleri denetimleri aralığı; Aşağıdaki dönemi ve hiçbir özel durum "taşma" belirtilen dönem aralığının dışında bir dönem özgü tarih örneği girişimi oluşturulur.
+
+Aşağıdaki örnek, bir tarihi 25 aralık 1926 üzerinde başladı ve 7 Ocak 1989 sonlandı Showa dönemi 65th yılında örneklemek çalışır. Bu tarihin 9 Ocak 1990 için karşılık gelen Showa dönem aralığının dışında olan <xref:System.Globalization.JapaneseCalendar>. Örneğin çıktısında gösterildiği gibi örnek tarafından görüntülenen 9 Ocak 1990 Heisei dönemi ikinci yılında tarihtir.
+
+   [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
+   [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
+
+İstenmeyen gevşek aralığı denetimleri katı bir aralık girişinde, uygulamanızın üzerinde çalıştığı .NET sürümüne bağlı olarak çeşitli yollarla geri yükleyebilirsiniz:
+
+- **.NET core:** Şu şekilde ekleyebilirsiniz *. netcore.runtime.json* yapılandırma dosyası:
+
+   ```json
+   "runtimeOptions": {
+      "configProperties": {
+         "Switch.System.Globalization.EnforceJapaneseEraYearRanges": true
+      } 
+   }
+   ```
+
+- **.NET framework 4.6 veya üzeri:** Aşağıdaki AppContext anahtarı ayarlayabilirsiniz:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <configuration>
+     <runtime>
+       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceJapaneseEraYearRanges=true" />
+     </runtime>
+   </configuration>
+   ```
+
+- **.NET framework 4.5.2 veya önceki sürümleri:** Aşağıdaki kayıt defteri değerini ayarlayabilirsiniz:
+
+   |  |  |
+   |--|--|
+   |Anahtar | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+   |Ad | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   |Tür | REG_SZ |
+   |Değer | 1. |
+
+Önceki örnekte etkin katı aralığı denetimleri ile oluşturur bir <xref:System.ArgumentOutOfRangeException> ve aşağıdaki çıkışı görüntüler:
+
+```console
+Unhandled Exception: System.ArgumentOutOfRangeException: Valid values are between 1 and 64, inclusive.
+Parameter name: year
+   at System.Globalization.GregorianCalendarHelper.GetYearOffset(Int32 year, Int32 era, Boolean throwOnError)
+   at System.Globalization.GregorianCalendarHelper.ToDateTime(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second, Int32 millisecond, Int32 era)
+   at Example.Main()
+```
+
+### <a name="representing-dates-in-calendars-with-multiple-eras"></a>Tarihleri takvimlerde birden çok dönemlerle gösterme
 
 Varsa bir <xref:System.Globalization.Calendar> nesnesi dönemleri destekliyorsa ve geçerli takvimi ise bir <xref:System.Globalization.CultureInfo> nesnesi, dönem bir tarih ve saat değerinin dize gösterimine tam tarih ve saat, uzun tarih ve kısa tarih desenleri için dahil edilmiştir. Aşağıdaki örnekte, geçerli kültür Japonya (Japonca) ve geçerli takvim Japon takvimi olduğunda bu tarih desenleri görüntülenmektedir.
 
@@ -193,6 +273,89 @@ Bir tarih dize gösterimini geçerli takvimi olmayan bir takvimde açıklanır o
 
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
+
+Japonca takvimlerinde ilk yıllık bir dönem Gannen (元年) olarak adlandırılır. Örneğin, Heisei 1 yerine Heisei dönemi, ilk yıl Heisei Gannen açıklanabilir. .NET, biçimlendirme işlemleri tarihler için içinde bu kuralı devralır ve kez biçimlendirilmiş aşağıdaki standart veya özel bir tarih ve saat biçimi dizeleri ile kullanıldığında bir <xref:System.Globalization.CultureInfo> ileJaponca-Japonya("ja-JP")kültürütemsiledennesne<xref:System.Globalization.JapaneseCalendar> sınıfı:
+
+- [Uzun tarih deseni](../base-types/standard-date-and-time-format-strings.md#LongDate), "D" standart tarih ve saat biçim dizesi tarafından belirtilen.
+- [Tam tarih uzun saat deseni](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), "F" standart tarih ve saat biçim dizesi tarafından belirtilen.
+- [Tam tarih kısa saat deseni](../base-types/standard-date-and-time-format-strings.md#FullDateShortTime), "f" standart tarih ve saat biçim dizesi tarafından belirtilen.
+- [Yıl/ay desen](../base-types/standard-date-and-time-format-strings.md#YearMonth), Y belirttiği "veya"y"standart tarih ve saat biçimi.
+- ["Ggy '年'" veya "ggy年" [özel tarih ve saat biçim dizesi](../base-types/custom-date-and-time-format-strings.md).
+
+Örneğin, aşağıdaki örnekte ilk yılında Heisei dönem bir tarih görüntüler <xref:System.Globalization.JapaneseCalendar> .
+
+   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
+   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
+
+Bu davranış istenmeyen biçimlendirme işlemlerinde, her zaman ilk yıllık bir dönem "1" olarak .NET sürümüne bağlı olarak aşağıdakileri yaparak "Gannen yerine" temsil önceki davranışı geri yükleyebilirsiniz:
+
+- **.NET core:** Şu şekilde ekleyebilirsiniz *. netcore.runtime.json* yapılandırma dosyası:
+
+   ```json
+   "runtimeOptions": {
+      "configProperties": {
+         "Switch.System.Globalization.FormatJapaneseFirstYearAsANumber": true
+      } 
+   }
+   ```
+
+- **.NET framework 4.6 veya üzeri:** Aşağıdaki AppContext anahtarı ayarlayabilirsiniz:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <configuration>
+     <runtime>
+       <AppContextSwitchOverrides value="Switch.System.Globalization.FormatJapaneseFirstYearAsANumber=true" />
+     </runtime>
+   </configuration>
+   ```
+
+- **.NET framework 4.5.2 veya önceki sürümleri:** Aşağıdaki kayıt defteri değerini ayarlayabilirsiniz:
+
+   |  |  |
+   |--|--|
+   |Anahtar | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+   |Ad | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
+   |Tür | REG_SZ |
+   |Değer | 1. |
+
+Biçimlendirme işlemleri devre dışı olarak gannen desteği sayesinde, önceki örnek aşağıdaki çıkışı görüntüler:
+
+```console
+Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
+```
+
+Tarih ve saat ayrıştırma işlemlerinde, "1" veya Gannen olarak yıl içeren dizeleri destekler, böylece .NET de güncelleştirildi. Bunu yapmanız ancak tanıdığı için "1" yalnızca bir dönem ilk yıl önceki davranışı geri yükleyebilirsiniz. Aşağıdaki gibi .NET sürümüne bağlı olarak bunu yapabilirsiniz:
+
+- **.NET core:** Şu şekilde ekleyebilirsiniz *. netcore.runtime.json* yapılandırma dosyası:
+
+   ```json
+   "runtimeOptions": {
+      "configProperties": {
+         "Switch.System.Globalization.EnforceLegacyJapaneseDateParsing": true
+      } 
+   }
+   ```
+
+- **.NET framework 4.6 veya üzeri:** Aşağıdaki AppContext anahtarı ayarlayabilirsiniz:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <configuration>
+     <runtime>
+       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceLegacyJapaneseDateParsing=true" />
+     </runtime>
+   </configuration>
+   ```
+
+- **.NET framework 4.5.2 veya önceki sürümleri:** Aşağıdaki kayıt defteri değerini ayarlayabilirsiniz:
+
+   |  |  |
+   |--|--|  
+   |Anahtar | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+   |Ad | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   |Tür | REG_SZ |
+   |Değer | 1. | 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
