@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: bc895313ae89d464c4ddc16607d19b2e6160f80c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524266"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031477"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
 İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation XAML dil uygulaması eklenir. Birçok genişletilebilirlik WPF XAML uygulaması için sağlanan genel tür WindowsBase ve PresentationCore PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlayan genel türleri System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML ile ilgili türlerinden bazıları System.Xaml derlemeye geçirilir. XAML dil Hizmetleri ortak bir .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulaması tarafından tanımlanmadı, ancak artık genel bir parçası olan birçok XAML genişletilebilirlik senaryolarına olanak sağlayan [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML dil desteği. Bu konuda, geçirilir ve geçişle ilgili sorunlar ele alınmıştır türlerini listeler.  
@@ -65,7 +65,7 @@ ms.locfileid: "54524266"
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- System.Xaml belirli destek sınıfları olmayabilir rağmen XAML dili için dil özellikleri artık işleme için genel mantığı System.Xaml ve uygulanan XAML okuyucular ve yazıcılar XAML içinde yer alıyor. Örneğin, `x:TypeArguments` XAML okuyucular ve System.Xaml uygulamalardan; XAML yazıcılar tarafından işlenen bir özniteliktir, XAML düğüm akış içinde belirtilen, varsayılan (CLR tabanlı) XAML şema içeriği içinde işleme sahip, bir XAML tür sistemi vardır gösterim ve benzeri. Sonuç olarak, tüm XAML dili düzeyinde özellikler için başvuru belgeleri için alt konu olan [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md) ve genel olarak WPF belgeler parçası olmak yerine .NET Framework belgeleri kümesi alanı bir alt konu, [Gelişmiş (Windows Presentation Foundation)](../../../docs/framework/wpf/advanced/index.md) (yine de 3,5 belge kümeleri durumda olduğu gibi).  
+ System.Xaml belirli destek sınıfları olmayabilir rağmen XAML dili için dil özellikleri artık işleme için genel mantığı System.Xaml ve uygulanan XAML okuyucular ve yazıcılar XAML içinde yer alıyor. Örneğin, `x:TypeArguments` XAML okuyucular ve System.Xaml uygulamalardan; XAML yazıcılar tarafından işlenen bir özniteliktir, XAML düğüm akış içinde belirtilen, varsayılan (CLR tabanlı) XAML şema içeriği içinde işleme sahip, bir XAML tür sistemi vardır gösterim ve benzeri. Sonuç olarak, tüm XAML dili düzeyinde özellikler için başvuru belgeleri için alt konu olan [XAML Hizmetleri](index.md) ve genel olarak WPF belgeler parçası olmak yerine .NET Framework belgeleri kümesi alanı bir alt konu, [Gelişmiş (Windows Presentation Foundation)](../wpf/advanced/index.md) (yine de 3,5 belge kümeleri durumda olduğu gibi).  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer ve Destek sınıfları  
@@ -126,4 +126,4 @@ ms.locfileid: "54524266"
  System.Xaml ve WPF derlemelerine başvurular dahil olmak üzere ve ayrıca kullanmakta olduğunuz `include` hem deyimleri <xref:System.Windows.Markup> ve <xref:System.Xaml> ad alanlarını, türleri çözümlemek için bu API çağrıları tam olarak nitelemek gerekebilir belirsizlik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)
+- [XAML Hizmetleri](index.md)

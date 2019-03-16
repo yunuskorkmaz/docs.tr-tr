@@ -2,12 +2,12 @@
 title: DotNet Paketi komutu
 description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini oluşturur.
 ms.date: 12/04/2018
-ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170099"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58020925"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -17,9 +17,9 @@ ms.locfileid: "53170099"
 
 `dotnet pack` -Kod bir NuGet paketine paketleri.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
@@ -53,7 +53,7 @@ MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -205,7 +205,7 @@ MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu.
   dotnet pack --runtime win10-x64
   ```
 
-* Proje şablonu kullanarak paketi bir [.nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+* Project kullanarak paketi bir [.nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
   dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget

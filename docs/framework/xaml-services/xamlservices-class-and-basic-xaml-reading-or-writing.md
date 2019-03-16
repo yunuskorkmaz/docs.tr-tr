@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503202"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027136"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices Sınıfı ve Temel XAML Okuma veya Yazma
 <xref:System.Xaml.XamlServices> XAML düğümü akışı özel erişim gerektiren değil XAML senaryoları için kullanılan bir .NET Framework XAML hizmetlerinde tarafından sağlanan sınıfı veya bu düğümünden elde edilen XAML türü sistem bilgileri kullanılabilir. <xref:System.Xaml.XamlServices> API aşağıdaki gibi özetlenen: `Load` veya `Parse` XAML yükleme yolu desteklemek için `Save` kaydetme yolu, bir XAML desteklemek için ve `Transform` bir yükleme yolu birleştiren bir teknik sağlar ve yol kaydetmek için. `Transform` bir XAML şema diğerine geçmek için kullanılabilir. Bu konu, her biri bu API sınıflandırmalar özetler ve belirli bir yöntemi aşırı yüklemeleri arasındaki farklar açıklanmaktadır.  
@@ -21,7 +21,7 @@ ms.locfileid: "54503202"
   
  Çoğu senaryo için basit aşırı <xref:System.Xaml.XamlServices.Load%28System.String%29>. Bu aşırı yüklenmiş bir `fileName` yalnızca yüklemek için XAML içeren bir metin dosyasının adı parametresi. Bu, daha önce eyalet veya yerel bilgisayarda veri serileştirilmiş tam güven uygulamaları gibi uygulama senaryoları için uygundur. Ayrıca, uygulama modelini tanımlama ve uygulama davranışını tanımlayan standart dosyalardan biri yüklemek kullanıcı Arabirimi veya çerçeve tarafından tanımlanmış XAML kullanan diğer özellikleri başlangıç istediğiniz çerçeveleri için kullanışlıdır.  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> benzer senaryoları sahiptir. Bu aşırı yükleme yüklenemedi, dosya seçerken, çünkü kullanıcı varsa yararlı olabilir bir <xref:System.IO.Stream> diğer sık kullanılan bir çıktıdır <xref:System.IO> API'leri bir dosya sistemine erişebilir. Veya, XAML kaynakları zaman uyumsuz indirme veya bir akışa sağlayan diğer ağ teknikleri erişiyor. (Yükleme akışı veya kullanıcı tarafından seçilen kaynak güvenlikle ilgili etkileri olabilir. Daha fazla bilgi için [XAML güvenlik konuları](../../../docs/framework/xaml-services/xaml-security-considerations.md).)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> benzer senaryoları sahiptir. Bu aşırı yükleme yüklenemedi, dosya seçerken, çünkü kullanıcı varsa yararlı olabilir bir <xref:System.IO.Stream> diğer sık kullanılan bir çıktıdır <xref:System.IO> API'leri bir dosya sistemine erişebilir. Veya, XAML kaynakları zaman uyumsuz indirme veya bir akışa sağlayan diğer ağ teknikleri erişiyor. (Yükleme akışı veya kullanıcı tarafından seçilen kaynak güvenlikle ilgili etkileri olabilir. Daha fazla bilgi için [XAML güvenlik konuları](xaml-security-considerations.md).)  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> ve <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> okuyucular .NET Framework'ün önceki sürümlerinden biçimlerinin kullanan aşırı yüklemeler. Bu aşırı yüklemeler kullanmak için zaten bir okuyucu örneği oluşturulan ve kullanılan kendi `Create` XAML ilgili biçiminde (metin veya XML) yüklemek için API. Zaten diğer okuyucuların kayıt işaretçileri taşıdığınız veya diğer işlemlerle gerçekleştirilen, bu önemli değildir. Yükleme yolu mantığından <xref:System.Xaml.XamlServices.Load%2A> her zaman aşağı kökünden giriş tüm XAML işler. Bu aşırı yüklemeler için senaryolar şunları içerebilir:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54503202"
 ## <a name="transform"></a>Dönüştürme  
  <xref:System.Xaml.XamlServices.Transform%2A> dönüştürür veya bir yükleme yolu ve kaydetmeyi bağlayarak XAML dönüştüren tek bir işlem olarak yol. Farklı şema içeriği veya farklı bir yedekleme tür sistemi için kullanılabilir <xref:System.Xaml.XamlReader> ve <xref:System.Xaml.XamlWriter>, olduğu ne elde edilen XAML nasıl dönüştürdüğünü etkiler. Bu geniş dönüştürme işlemleri için iyi çalışır.  
   
- XAML düğümü akışı içindeki her bir düğümün İnceleme üzerinde kullanan işlemleri için genellikle kullanmanızı <xref:System.Xaml.XamlServices.Transform%2A>. Bunun yerine kendi yükleme yolu kayıt yolu işlemi tanımlamanız ve kendi mantığınızı interject gerekir. Yolları her birinde bir XAML okuyucu/XAML yazıcı çifti kendi düğüm döngü etrafında kullanın. Örneğin, ilk XAML kullanarak yük <xref:System.Xaml.XamlXmlReader> ve düğümleri art arda gelen adımla <xref:System.Xaml.XamlXmlReader.Read%2A> çağırır. XAML düğüm akış düzeyinde, işletim artık bir dönüştürme uygulamak için tek tek düğümleri (türleri, üyeler, diğer düğümler) ayarlayabilir veya düğüm olarak bırakın-olduğu. Düğüm ve sonraki sürümlerde ilgili gönderdiğiniz sonra `Write` API'si, bir <xref:System.Xaml.XamlObjectWriter> ve nesne yazma. Daha fazla bilgi için [anlama XAML düğüm Stream yapılarını ve kavramlarını](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ XAML düğümü akışı içindeki her bir düğümün İnceleme üzerinde kullanan işlemleri için genellikle kullanmanızı <xref:System.Xaml.XamlServices.Transform%2A>. Bunun yerine kendi yükleme yolu kayıt yolu işlemi tanımlamanız ve kendi mantığınızı interject gerekir. Yolları her birinde bir XAML okuyucu/XAML yazıcı çifti kendi düğüm döngü etrafında kullanın. Örneğin, ilk XAML kullanarak yük <xref:System.Xaml.XamlXmlReader> ve düğümleri art arda gelen adımla <xref:System.Xaml.XamlXmlReader.Read%2A> çağırır. XAML düğüm akış düzeyinde, işletim artık bir dönüştürme uygulamak için tek tek düğümleri (türleri, üyeler, diğer düğümler) ayarlayabilir veya düğüm olarak bırakın-olduğu. Düğüm ve sonraki sürümlerde ilgili gönderdiğiniz sonra `Write` API'si, bir <xref:System.Xaml.XamlObjectWriter> ve nesne yazma. Daha fazla bilgi için [anlama XAML düğüm Stream yapılarını ve kavramlarını](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)
+- [XAML Hizmetleri](index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365730"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034749"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 
@@ -232,7 +232,7 @@ Belirli yönergeleri, özellikle daha fazla bilgi için bir nesneden bir nesne �
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter davranışı ve düğüm sırası
 
-`StartObject` için bir <xref:System.Xaml.XamlObjectWriter> mutlaka hemen nesne örneği oluşturmak için bir sinyal için XAML nesne yazıcısı değil. XAML ek Giriş bir nesne başlatmak ve ilk nesnesi ve ardından yalnızca ayarı özellikleri oluşturmak için varsayılan bir oluşturucu tamamen çağırmaya dayanması değil olanaklı kılan birçok dil özellikleri içerir. Bu özellikler şunları içerir: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; başlatma metin; [x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); konumsal bir işaretleme uzantısı parametre; Fabrika yöntemleri ve ilişkili [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) düğümleri (XAML 2009). Her durumda gerçek nesnenin yapımı gecikme ve XAML nesne yazıcısı düğümü akışı yeniden olduğundan, özellikle bir yapım olmayan bir başlangıç üyesi karşılaşıldığında, aslında örneği oluşturma davranışı güvenebilirsiniz nesne türüne yönergesi.
+`StartObject` için bir <xref:System.Xaml.XamlObjectWriter> mutlaka hemen nesne örneği oluşturmak için bir sinyal için XAML nesne yazıcısı değil. XAML ek Giriş bir nesne başlatmak ve ilk nesnesi ve ardından yalnızca ayarı özellikleri oluşturmak için varsayılan bir oluşturucu tamamen çağırmaya dayanması değil olanaklı kılan birçok dil özellikleri içerir. Bu özellikler şunları içerir: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; başlatma metin; [x: TypeArguments](x-typearguments-directive.md); konumsal bir işaretleme uzantısı parametre; Fabrika yöntemleri ve ilişkili [x: Arguments](x-arguments-directive.md) düğümleri (XAML 2009). Her durumda gerçek nesnenin yapımı gecikme ve XAML nesne yazıcısı düğümü akışı yeniden olduğundan, özellikle bir yapım olmayan bir başlangıç üyesi karşılaşıldığında, aslında örneği oluşturma davranışı güvenebilirsiniz nesne türüne yönergesi.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Belirli yönergeleri, özellikle daha fazla bilgi için bir nesneden bir nesne �
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xaml.XamlObjectReader>
-- [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)
-- [XAML Ad Alanları](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [XAML Hizmetleri](index.md)
+- [XAML Ad Alanları](xaml-namespaces-for-net-framework-xaml-services.md)

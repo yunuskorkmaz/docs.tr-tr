@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641115"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050606"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code İç XAML Türü
 Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir çalışma zamanı tarafından yorumu gibi sonraki kullanımlar için XAML üretimde sol derleyen herhangi XAML işlemci uygulamasında tarafından derlenebilir.  
@@ -40,7 +40,7 @@ Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir
   
 -   `x:Code` Yönerge öğesi, XAML üretim kök öğesinin ilk alt öğesi olmalıdır.  
   
--   [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md) üst kök öğe üzerinde sağlanmalıdır.  
+-   [x: Class yönergesi](x-class-directive.md) üst kök öğe üzerinde sağlanmalıdır.  
   
 -   Kod içinde yerleştirilen `x:Code` için bu XAML sayfası oluşturulmakta olan kısmi sınıf kapsamında olmasını derleme tarafından kabul edilir. Bu nedenle tanımladığınız tüm kodları üyeleri veya kısmi söz konusu sınıfın değişkenleri olmalıdır.  
   
@@ -49,6 +49,6 @@ Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir
 -   Kısmi sınıf CLR ad alanı dışında kod varlıklara başvurular tüm tam olarak nitelenmiş olmalıdır. Bildirilen üyeleri geçersiz kılmalar için geçersiz kılınabilir kısmi sınıf üyeleri, bu dile özgü geçersiz kılma anahtar sözcüğü ile belirtilmelidir. Üyeleri bildirilmişlerse `x:Code` kapsam çakışan XAML dışında oluşturulan bir kısmi sınıf üyelerine, şekilde derleyici çakışma raporları XAML dosyası derleme yüklemek veya.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Arka Plan Kod ve WPF İçindeki XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class Yönergesi](x-class-directive.md)
+- [Arka Plan Kod ve WPF İçindeki XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)
