@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 27cbacacefb64d3a9c0257011a188397e83b9186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582051"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58024545"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Son öğe dışında tüm alan genişlikleri sıfırdan büyük olmalıdır
 Son öğe dışında tüm alan genişlikleri sıfırdan büyük olmalıdır. Alan genişliği son öğesinde sıfır veya daha az son alan değişken uzunluğa sahip olduğunu gösterir.  
@@ -21,6 +21,7 @@ Son öğe dışında tüm alan genişlikleri sıfırdan büyük olmalıdır. Ala
 -   Alan genişliği doğru uzunluğa ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>
 - [Nasıl yapılır: Sabit genişlikli metin dosyalarından okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)

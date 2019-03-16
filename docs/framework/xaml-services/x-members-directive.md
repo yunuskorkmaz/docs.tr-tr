@@ -2,15 +2,15 @@
 title: x:Members Yönergesi
 ms.date: 03/30/2017
 ms.assetid: 155b393d-3b49-4c5a-8c9e-b3d9893af4e4
-ms.openlocfilehash: 2c273fce1f15d9a5af72bc3f5a530d3c26dfc77e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d23e6b459af932e0a6f69309f26a1cce70a9d256
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564142"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034497"
 ---
 # <a name="xmembers-directive"></a>x:Members Yönergesi
-X: Class için üst öğenin uygulamak biçimlendirme içinde tanımlanan üyelerin kümesini içerir.  
+X: sınıf için üst öğenin geçerli biçimlendirme içinde tanımlanan üyelerin kümesini tutar.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -26,13 +26,13 @@ X: Class için üst öğenin uygulamak biçimlendirme içinde tanımlanan üyele
   
 |||  
 |-|-|  
-|`className`|XAML üretim için yedekleme sınıfı ya da parçalı sınıf adıdır. Açıklamalar bakın.|  
-|`oneOrMoreMembers`|Üye tanımları temsil eden bir veya daha fazla nesne öğeleri. Genellikle, bunlar `x:Property` nesne öğeleri. Açıklamalar bakın.|  
+|`className`|XAML üretim için yedekleme sınıf veya kısmi sınıf adıdır. Açıklamalara bakın.|  
+|`oneOrMoreMembers`|Üye tanımları temsil eden bir veya daha fazla nesne öğeleri. Bunlar genellikle `x:Property` nesne öğeleri. Açıklamalara bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework XAML hizmetlerinde uygulamasında yedekleme sınıfı veya yoktur için temel üye uygulaması `x:Members`. `x:Members` herhangi bir üye olarak bulunabilir özel XAML üyesi olduğu. XAML düğüm akış `x:Members` adlı bir üye temsil edilir `Members`, XAML dili XAML ad. Üye `Members` salt okunur bir genel listesini içeren `Member` nesneleri. Tipik biçimlendirmede tek tek üyeleri olarak belirtilen `x:Property` özelliği öğeleri. `x:Property` özellikle türlerinin özellikleri için daha kesin bir türü ve için atanamaz `x:Member`. Daha fazla bilgi için bkz: [x: Property yönergesi](../../../docs/framework/xaml-services/x-property-directive.md).  
+ .NET Framework XAML hizmetlerinde uygulama, yedekleme sınıfı veya yoktur için temel alınan üye uygulama `x:Members`. `x:Members` herhangi bir üyesi olarak bulunabilir özel bir XAML üye var. XAML düğüm akış `x:Members` adlı bir üyesi olarak temsil edilen `Members`, XAML dili XAML ad uzayındaki. Üye `Members` salt okunur bir genel listesini içeren `Member` nesneleri. Tipik biçimlendirme içinde tek tek üyeleri olarak belirtilen `x:Property` özellik öğeleri. `x:Property` özellikle türlerin özellikleri için daha kesin bir tür ve öğesine atanamaz `x:Member`. Daha fazla bilgi için [x: Property yönergesi](x-property-directive.md).  
   
- Pratik kullanımını desteklemek için `x:Members` üye tanımları biçimlendirmede belirtmek için bir yol üyeleri değiştirilebilir bir sınıf ile ilişkili olmalıdır. Hedeflenen modeli olan `x:Members` belirten bir türü bir üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üyenin tanımları oluşturan mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu üye tanımları XAML destek uygulama modelleri sahip tek tek çerçeveler bırakılır. Genellikle, isteğe bağlı olarak işaretleme-XAML ve ya da derleme MSBUILD yapı eylemleri arka plan kodu ile tümleştirmek veya üretim XAML gelen saf derlemeler bu özelliği desteklemek için gereklidir.  
+ Pratik kullanımını desteklemek üzere `x:Members` üyeleri üye tanımları işaretlemede belirtmek için bir yol değiştirilebilir bir sınıf ile ilişkili olması gerekir. Hedeflenen modeli olan `x:Members` belirten bir tür üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üye tanımları oluşturmayı mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu, XAML üyesi tanımları desteği uygulama modellerini sahip tek çerçeveleri için bırakılır. Genellikle, isteğe bağlı olarak, XAML ve aşağıdakilerden birini işaretleme-derleme MSBUILD yapı eylemleri arka plan kod ile tümleştirin veya üretim saf gelen XAML derlemeleri, bu özelliği desteklemek için gereklidir.  
   
 ## <a name="xmembers-for-windows-workflow-foundation"></a>x: Members Windows Workflow Foundation için  
- Windows Workflow Foundation için `x:Members` tamamen XAML veya XAML oluşan özel bir aktivite üyeleri içerir – dinamik üyeler arka plan kodu ile bir etkinlik Tasarımcısı için tanımlanmış. `x:Class` XAML üretim kök öğesinin de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde zorunlu değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklenen bir gereksinim haline gelir. `x:Members` Biçimlendirme bildirir nesne öğesinin ilk alt öğe olmalıdır `x:Class`.
+ Windows Workflow Foundation için `x:Members` tamamen XAML veya XAML oluşan özel bir etkinlik üyelerini içeren – dinamik üyeler bir etkinlik Tasarımcısı ile arka plan kod için tanımlanır. `x:Class` XAML üretim kök öğe üzerinde de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde bir gereksinim değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklendiğinde bir gereksinim haline gelir. `x:Members` ilk biçimlendirme bildirir nesne öğesinin alt öğesi olmalıdır `x:Class`.

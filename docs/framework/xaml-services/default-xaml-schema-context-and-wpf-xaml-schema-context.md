@@ -2,12 +2,12 @@
 title: Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492201"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018525"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davranışını nasıl tür eşlemesi çözümler, derlemelerin nasıl yüklü olduğundan, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, nesne ile nasıl etkileştiğini niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konuda, .NET Framework XAML hizmetlerinde CLR tür sistemine dayalı varsayılan XAML şema içeriği ve özellikler açıklanmaktadır. Bu konuda kullanılan WPF XAML şema içeriği anlatılır.  
@@ -89,4 +89,4 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davra
     -   Çağırmak için kısa ad + ortak anahtar belirteci kullanmanız <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](understanding-xaml-node-stream-structures-and-concepts.md)

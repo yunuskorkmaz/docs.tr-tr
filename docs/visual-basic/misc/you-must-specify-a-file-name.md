@@ -2,12 +2,12 @@
 title: Bir dosya adı belirtmeniz gerekir
 ms.date: 07/20/2015
 ms.assetid: e011825a-019f-4c01-8d5b-3194f172e495
-ms.openlocfilehash: b27bf88bbaf58af34863313406d5ff0b3005db69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 201c92879a42b323e93fba2267c5c9c7d3a29e4e
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499164"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046987"
 ---
 # <a name="you-must-specify-a-file-name"></a>Bir dosya adı belirtmeniz gerekir
 Taşıma veya bir adı sağlayarak gerektiren bir dosyayı kopyalama gibi bir işlem denendi.  
@@ -19,6 +19,7 @@ Taşıma veya bir adı sağlayarak gerektiren bir dosyayı kopyalama gibi bir i�
 -   Yol bir dizin ayırıcı karakterde ile sonlanmıyor emin olun (\\).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: Dosya yollarını ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Visual Basic ile Dosya Erişimi](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

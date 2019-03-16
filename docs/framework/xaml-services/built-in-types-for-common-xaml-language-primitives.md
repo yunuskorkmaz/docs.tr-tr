@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839098"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048679"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>XAML Dili Ortak Temelleri İçin Yerleşik Türler
 XAML 2009, ortak dil çalışma zamanı (CLR) ve diğer programlama dillerinde sık kullanılan temel eleman olan birkaç veri türü için XAML dili düzeyinde destek sunar. XAML 2009 şu temelleri için destek ekler: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, ve `x:Array`  
@@ -88,7 +88,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.9 and 5.4.3](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xint16"></a>x: Int16  
+### <a name="xint16"></a>x:Int16  
  CLR yedekleme `x:Int16` karşılık gelen temel <xref:System.Int16> ve `x:Int16` imzalı olarak kabul edilir. XAML, artı olmaması, (`+`) içinde metin sözdiziminde oturum pozitif imzalı değer belirtilir.  
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.11 and 5.4.5](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -98,19 +98,19 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.12 and 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xint64"></a>x: Int64  
+### <a name="xint64"></a>x:Int64  
  CLR yedekleme `x:Int64` karşılık gelen temel <xref:System.Int64>. `x:Int64` işaretlenmiş olarak kabul edilir. XAML, artı olmaması, (`+`) içinde metin sözdiziminde oturum pozitif imzalı değer belirtilir.  
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.13 and 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xtimespan"></a>x: TimeSpan  
+### <a name="xtimespan"></a>x:TimeSpan  
  CLR yedekleme `x:TimeSpan` karşılık gelen temel <xref:System.TimeSpan>.  
   
  Bu XAML ayrıştırma için saat ve tarih biçimi altında kendiliğinden yapıldığına dikkat edin `en-US` kültür.  
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.16 and 5.4.10](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xuri"></a>x: Uri  
+### <a name="xuri"></a>x:Uri  
  CLR yedekleme `x:Uri` karşılık gelen temel <xref:System.Uri>.  
   
  Protokollerin denetimi için XAML tanımının bir parçası değil `x:Uri`.  
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x: Array  
  CLR yedekleme `x:Array` karşılık gelen temel <xref:System.Array>.  
   
- Biçimlendirme uzantısı sözdizimi kullanarak XAML 2006'da dizi tanımlayabilirsiniz; Ancak, XAML 2009 biçimlendirme uzantısına erişmesi gerekmeyen dil tanımlı temel sözdizimidir. XAML 2006 desteği hakkında daha fazla bilgi için bkz. [x: Array işaretleme uzantısı](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ Biçimlendirme uzantısı sözdizimi kullanarak XAML 2006'da dizi tanımlayabilirsiniz; Ancak, XAML 2009 biçimlendirme uzantısına erişmesi gerekmeyen dil tanımlı temel sözdizimidir. XAML 2006 desteği hakkında daha fazla bilgi için bkz. [x: Array işaretleme uzantısı](x-array-markup-extension.md).  
   
  XAML dil belirtimi tanımı için bkz. [ \[MS-XAML\] Sections 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
   

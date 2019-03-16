@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668996"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042087"
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
 CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel alınan türü bir nesne.  
@@ -61,7 +61,7 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>Varsayılan XAML Namespace ve tür eşlemesi  
- Varsayılan XAML ad alanı WPF programlama için tipik XAML senaryoları için gereksinim duyduğunuz XAML türlerin çoğu içerir; Bu nedenle, genellikle önekleri XAML türü değerleri başvururken önleyebilirsiniz. Bir özel bütünleştirilmiş kod veya, bir WPF bütünleştirilmiş kodda mevcut ancak varsayılan XAML ad alanına eşlenmedi bir CLR ad alanındaki türleri için bir tür başvuru değilse bir önek harita gerekebilir. Ön ekleri, XAML ad alanları ve CLR ad alanlarını eşleme ile ilgili daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Varsayılan XAML ad alanı WPF programlama için tipik XAML senaryoları için gereksinim duyduğunuz XAML türlerin çoğu içerir; Bu nedenle, genellikle önekleri XAML türü değerleri başvururken önleyebilirsiniz. Bir özel bütünleştirilmiş kod veya, bir WPF bütünleştirilmiş kodda mevcut ancak varsayılan XAML ad alanına eşlenmedi bir CLR ad alanındaki türleri için bir tür başvuru değilse bir önek harita gerekebilir. Ön ekleri, XAML ad alanları ve CLR ad alanlarını eşleme ile ilgili daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>Bu destek Typename olarak-dizesini-özellikler yazın  
  WPF destekleyen bazı özelliklerin türünün değerini belirtmek teknikleri <xref:System.Type> gerektirmeden bir `x:Type` biçimlendirme uzantısı kullanımı. Bunun yerine, değer türü adları bir dize olarak belirtebilirsiniz. Örneğin <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> ve <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Bu davranış için destek, tür dönüştürücüleri veya biçimlendirme uzantıları sağlanmadı. Bunun yerine, bu aracılığıyla uygulanan bir erteleme, davranıştır <xref:System.Windows.FrameworkElementFactory>.  
@@ -71,7 +71,7 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009, genel türleri ve özellik davranışını değiştiren için ek destek sağlar `x:TypeArguments` ve `x:Type` bu desteği sağlamak için.  
   
--   `x:TypeArguments` ve kök dışında öğelerde genel nesne örneklemesini için ilişkili nesne öğesi olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın. [x: TypeArguments yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` ve kök dışında öğelerde genel nesne örneklemesini için ilişkili nesne öğesi olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın. [x: TypeArguments yönergesi](x-typearguments-directive.md).  
   
 -   XAML 2009, genel bir türün kısıtlaması işaretlemede belirtmek için sözdizimi destekler. Bu, tarafından kullanılabilir `x:TypeArguments`tarafından `x:Type`, ya da iki özellik birlikte.  
   
@@ -81,6 +81,6 @@ CLR'nin sağladığı <xref:System.Type> belirtilen bir XAML türü için temel 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Style>
-- [Stil ve Şablon Oluşturma](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Stil ve Şablon Oluşturma](../wpf/controls/styling-and-templating.md)
+- [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
