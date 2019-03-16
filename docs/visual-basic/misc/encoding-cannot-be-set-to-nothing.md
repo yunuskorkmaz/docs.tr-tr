@@ -2,12 +2,12 @@
 title: Kodlama için hiçbir şey olacak şekilde ayarlanamaz
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 99dbd1a068cabca7f57b6d5e8dd13e1069aede65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30b0b4a29fbdf931aa62263b75d1fa946e87b145
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691339"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58028446"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Kodlama için hiçbir şey olacak şekilde ayarlanamaz
 Bir dosyaya yazma veya okuma girişimi başarısız oldu çünkü parametre `encoding` ayarlanmış `Nothing` ancak geçerli bir değer gerektirir.  
@@ -19,6 +19,7 @@ Bir dosyaya yazma veya okuma girişimi başarısız oldu çünkü parametre `enc
 -   İçin geçerli bir değer sağlamanız `encoding` parametresi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dosya Kodlamaları](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
 - [Dosyalardan Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [Dosyalara Yazma](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

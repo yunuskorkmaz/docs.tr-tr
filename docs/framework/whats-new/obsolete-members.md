@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635981"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58038179"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
-Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
+Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](obsolete-types.md).  
   
 -   [Sistem bütünleştirilmiş kodlarında eski üyeler](#SystemMembers)  
   
@@ -799,5 +799,5 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Kayıt defteri anahtarı çalışır yalnızca Win9x, .NET Framework'ün bu sürümü tarafından desteklenmiyor. Kullanım `PerformanceData` kayıt defteri anahtarı yerine. Bu özellik gelecek bir sürümünde Framework kaldırılacak.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)
+- [Sınıf Kitaplığında Artık Kullanılmayanlar](whats-obsolete.md)
+- [Eski Türler](obsolete-types.md)

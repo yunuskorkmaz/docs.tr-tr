@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699746"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047888"
 ---
 # <a name="xarray-markup-extension"></a>x:Array İşaretleme Uzantısı
 XAML işaretleme uzantısı aracılığıyla nesne dizileri için genel destek sağlar. Bu karşılık gelir `x:ArrayExtension` XAML [MS-XAML] yazın.  
@@ -46,9 +46,9 @@ XAML işaretleme uzantısı aracılığıyla nesne dizileri için genel destek s
   
  `x:Array` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. `x:Array` kısmen bu kural için bir özel çünkü alternatif özniteliği değeri işleme sağlamak yerine `x:Array` iç metin içeriği alternatif işleme sağlar. Bu davranış, bir dizi içine gruplanır ve adlandırılmış dizi erişerek daha sonra arka plan kod içinde başvurulan, mevcut bir içerik modeli tarafından desteklenmeyebilir türleri sağlar; çağırabilirsiniz <xref:System.Array> dizi öğeleri almak için yöntemleri.  
   
- XAML içindeki tüm biçimlendirme uzantıları parantezler kullanın ({,} `)` kendi öznitelik sözdizimi içinde olduğu kuralı tarafından bir XAML işlemcisinin bir işaretleme uzantısı öznitelik değeri işlemesi gerekir. Genel olarak işaretleme uzantıları hakkında daha fazla bilgi için bkz. [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ XAML içindeki tüm biçimlendirme uzantıları parantezler kullanın ({,} `)` kendi öznitelik sözdizimi içinde olduğu kuralı tarafından bir XAML işlemcisinin bir işaretleme uzantısı öznitelik değeri işlemesi gerekir. Genel olarak işaretleme uzantıları hakkında daha fazla bilgi için bkz. [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- XAML 2009 `x:Array` bir işaretleme uzantısı yerine basit dili olarak tanımlanır. Daha fazla bilgi için [XAML dili ortak temelleri için yerleşik türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ XAML 2009 `x:Array` bir işaretleme uzantısı yerine basit dili olarak tanımlanır. Daha fazla bilgi için [XAML dili ortak temelleri için yerleşik türler](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  Genellikle, doldurmak nesne öğeleri bir `x:Array` mevcut öğesi olmayan [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML ad alanı ve bir varsayılan olmayan bir XAML ad alanı ön eki eşleşmesi gerekir.  
@@ -67,8 +67,8 @@ XAML işaretleme uzantısı aracılığıyla nesne dizileri için genel destek s
   
  `</x:Array>`  
   
- Dizi öğeleri kullanılan özel türleri sınıf ayrıca XAML içinde nesne öğeleri olarak oluşturulmasını gereksinimleri desteklemesi gerekir. Daha fazla bilgi için [XAML ve özel sınıflar için WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Dizi öğeleri kullanılan özel türleri sınıf ayrıca XAML içinde nesne öğeleri olarak oluşturulmasını gereksinimleri desteklemesi gerekir. Daha fazla bilgi için [XAML ve özel sınıflar için WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [WPF'den System.Xaml'e Geçirilen Türler](types-migrated-from-wpf-to-system-xaml.md)

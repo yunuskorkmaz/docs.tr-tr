@@ -11,12 +11,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521276"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018555"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Kaçış dizisi / işaretleme uzantısı
 XAML kaçış dizisi, öznitelik değerleri sağlar. Kaçış sırası bundan sonraki değerlere öznitelik değişmez değer olarak yorumlanmasını sağlar.  
@@ -56,8 +56,8 @@ XAML kaçış dizisi, öznitelik değerleri sağlar. Kaçış sırası bundan so
   
  Kaçış dizisi ({}) bir XAML işaretleme uzantısı göründüğü bir konumda bir ad alanı niteleyicisi içermelidir bir XML türü belirtirken sık gereklidir. Bu, hemen bir eşittir işaretinden sonra (=) başlangıç XAML öznitelik değeri ve bir işaretleme uzantısı içerir. Aşağıdaki örnek bir XAML öznitelik değeri başlangıcında görünür bir XML ad alanı için kaçış sıralarını gösterir.  
   
- [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XML Karakter Varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](type-converters-and-markup-extensions-for-xaml.md)
+- [XML Karakter Varlıkları ve XAML](xml-character-entities-and-xaml.md)

@@ -2,12 +2,12 @@
 title: <transport> , <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: c82a786fe8e4a2b2e3243db007f4f705d9fbd79a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 25dc616aa8801c28b301c6219cc45fe69c43e559
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277153"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039347"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<Aktarım >, \<netMsmqBinding >
 Taşıma güvenlik ayarlarını tanımlar.  
@@ -44,7 +44,7 @@ Taşıma güvenlik ayarlarını tanımlar.
 |msmqAuthenticationMode|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması yok.<br />-   WindowsDomain: İletiyle ilişkili güvenlik kimliği için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, ardından kullanıcı emin olmak için ACL kuyruğun sıra için yazma iznine sahip olmadığını denetlemek için kullanılır.<br />-Sertifikası: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Varsayılan, `WindowsDomain` değeridir.<br /><br /> Bu öznitelik ayarlanırsa `None`, `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>|  
 |msmqEncryptionAlgorithm|Etkin ileti şifreleme için iletileri ileti sıra yöneticileri arasında transfer ederken kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br />-Varsayılan değer `RC4Stream`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
 |msmqProtectionLevel|MSMQ taşıma düzeyinde güvenli şekilde iletileri belirtir. İleti bütünlüğü hem takası ileti bütünlüğü çalışırken işaretini ve şifreleme sağlar şifreleme sağlar. Diğer bir deyişle, ileti gönderen gerçekten geldi ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-   EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br />-Varsayılan `Sign`.|  
-|msmqSecureHashAlgorithm|İleti özeti bilgi işlem için kullanılan karma algoritmasını belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, `SHA1` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|msmqSecureHashAlgorithm|İleti özeti bilgi işlem için kullanılan karma algoritmasını belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, `SHA1` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Çakışma sorunları nedeniyle MD5 ve SHA1, SHA256 veya iyi Microsoft önerir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Hiçbiri  

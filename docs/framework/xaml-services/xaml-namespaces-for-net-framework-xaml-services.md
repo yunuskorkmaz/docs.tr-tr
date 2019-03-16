@@ -2,12 +2,12 @@
 title: .NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736805"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030528"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdır. Benzer şekilde bir XML ad alanı, XAML ad alanını kullanarak tanımlayabilirsiniz bir `xmlns` biçimlendirme özniteliği. XAML ad alanları, XAML düğümü akışı ve diğer XAML hizmetler API'lerini de temsil edilir. Bu konu, XAML ad alanı kavramını tanımlar ve XAML ad alanları'nın tanımlanabilir ve XAML şema bağlamları ve .NET Framework XAML hizmetlerinde diğer yönleri tarafından kullanılan nasıl açıklanmaktadır.  
@@ -44,14 +44,14 @@ XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdı
   
  *assemblyName* yasal olarak bir dize temsil eden bir <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> giriş. Bu dize, kültür, ortak anahtarı ve sürüm bilgileri içerebilir (Bu kavramların tanımlarını için başvuru konusu tanımlanmış <xref:System.Reflection.Assembly>). COFF biçimi ve kanıt (diğer aşırı yüklemeleri tarafından kullanılan <xref:System.Reflection.Assembly.Load%2A>) yükleme amacıyla; XAML derlemesi için ilgili olmayan bir dize olarak tüm yük bilgileri sunulmalıdır.  
   
- Derleme için bir ortak anahtar belirterek XAML güvenlik veya derlemeleri basit adıyla yüklenen ya da bir önbellek ya da uygulama etki alanında önceden mevcut olan bulunabilir olası belirsizliğini kaldırmak için kullanışlı bir yöntem var. Daha fazla bilgi için [XAML güvenlik konuları](../../../docs/framework/xaml-services/xaml-security-considerations.md).  
+ Derleme için bir ortak anahtar belirterek XAML güvenlik veya derlemeleri basit adıyla yüklenen ya da bir önbellek ya da uygulama etki alanında önceden mevcut olan bulunabilir olası belirsizliğini kaldırmak için kullanışlı bir yöntem var. Daha fazla bilgi için [XAML güvenlik konuları](xaml-security-considerations.md).  
   
 ## <a name="xaml-namespace-declarations-in-the-xaml-services-api"></a>XAML Namespace bildirimlerinde XAML Hizmetleri API'si  
  XAML Services API, bir XAML ad alanı bildirimi tarafından temsil edilen bir <xref:System.Xaml.NamespaceDeclaration> nesne. XAML ad alanında kod bildiriliyorsa, çağrı <xref:System.Xaml.NamespaceDeclaration.%23ctor%28System.String%2CSystem.String%29> Oluşturucusu. `ns` Ve `prefix` parametreleri dize olarak belirtildi ve giriş için şu parametreleri sağlamak için XAML ad alanı tanımlayıcısı ve XAML ad alanı öneki tanımına bu konuda daha önce sağlanan karşılık gelir.  
   
  XAML ad alanı bilgi parçası olarak bir XAML düğümü akışı veya diğer erişim XAML tür sistemi, İncelemekte olduğunuz varsa <xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType> XAML ad alanı tanımlayıcısı, rapor ve <xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType> XAML ad alanı öneki bildirir.  
   
- XAML düğümü akışı XAML ad alanı bilgisi geçerli olduğu varlık önündeki bir XAML düğüm olarak görünür. Bu XAML ad alanı bilgileri burada önündeki servis taleplerini içerir `StartObject` XAML kök öğe. Daha fazla bilgi için [anlama XAML düğüm Stream yapılarını ve kavramlarını](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ XAML düğümü akışı XAML ad alanı bilgisi geçerli olduğu varlık önündeki bir XAML düğüm olarak görünür. Bu XAML ad alanı bilgileri burada önündeki servis taleplerini içerir `StartObject` XAML kök öğe. Daha fazla bilgi için [anlama XAML düğüm Stream yapılarını ve kavramlarını](understanding-xaml-node-stream-structures-and-concepts.md).  
   
  .NET Framework XAML Hizmetleri API kullanan birçok senaryo için en az bir XAML ad alanı bildiriminin bulunması bekleniyordu ve bildirimi içeren veya XAML şema içeriği tarafından gerekli bilgilere bakın. XAML ad alanları yüklenmesine veya ad alanları ve önceden yüklenmiş veya XAML şema içeriği tarafından bilinen bütünleştirilmiş kodlar içindeki belirli türlerini çözümlemek için derlemeleri ya da belirtmeniz gerekir.  
   
@@ -61,7 +61,7 @@ XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdı
   
  XAML ad alanı bilgisi nerede XAML şema içeriği kullanmak için istediğinize XAML ad alanı tanımlı değil biçimlendirmede durumlarda önceden doldurmak gerekiyorsa kullanabileceğiniz bir XML ad alanı bildirimi bildirmek için bir tekniktir <xref:System.Xml.XmlParserContext> bir için<xref:System.Xml.XmlReader>. Ardından, kullanan <xref:System.Xml.XmlReader> XAML okuyucu oluşturucusu için giriş olarak veya <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler, derlemelere uygulanır. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bir URI içeren herhangi bir XAML ad alanı bildirimi yorumlamak için XAML şema içeriği tarafından kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute> belirli bir XAML ad alanı tahmin edilebilir bir önek ile seri hale getirilebilir, böylece bu XAML yayma araçları tarafından kullanılır. Daha fazla bilgi için [özel türler ve Kitaplıkar için CLR öznitelikleri XAML-Related](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler, derlemelere uygulanır. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bir URI içeren herhangi bir XAML ad alanı bildirimi yorumlamak için XAML şema içeriği tarafından kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute> belirli bir XAML ad alanı tahmin edilebilir bir önek ile seri hale getirilebilir, böylece bu XAML yayma araçları tarafından kullanılır. Daha fazla bilgi için [özel türler ve Kitaplıkar için CLR öznitelikleri XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](understanding-xaml-node-stream-structures-and-concepts.md)

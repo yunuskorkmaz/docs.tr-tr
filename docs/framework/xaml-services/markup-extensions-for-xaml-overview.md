@@ -1,18 +1,18 @@
 ---
-title: XAML İşaretleme Uzantılarına Genel Bakış
+title: XAML Biçimlendirme Uzantılarına Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570024"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019161"
 ---
-# <a name="markup-extensions-for-xaml-overview"></a>XAML İşaretleme Uzantılarına Genel Bakış
+# <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değer almak için bir XAML tekniğidir. Öznitelik kullanımı için biçimlendirme uzantıları açılış kaşlı ayracından bilinen karakter dizisini kullanın. `{` işaretleme uzantısı kapsamı ve bir kapanış küme ayracını girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken bazı System.Xaml derlemesinden önceden tanımlanmış XAML dil biçimlendirme uzantıları kullanabilirsiniz. Alt sınıfı ayrıca <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantılarını tanımlayın. Veya zaten bu çerçeve başvurduğunuz, belirli bir framework tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  
   
  Biçimlendirme uzantısı kullanımı erişildiğinde XAML nesne yazan bir özel hizmet sunabilir <xref:System.Windows.Markup.MarkupExtension> sınıfı aracılığıyla bir hizmet bağlantı noktası <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> geçersiz kılar. Hizmetlerin kullanımıyla ilgili bağlam, nesne yazıcısı, XAML şema içeriği ve benzeri belirli özelliklerini almak için kullanılabilir.  
@@ -25,28 +25,28 @@ Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değ
 >  `x:` Tipik XAML ad alanı eşlemesi XAML dil ad alanı bir XAML üretim kök öğesi için kullanılan önek. Örneğin, çeşitli belirli çerçeveler için Visual Studio projeyi ve sayfa şablonları kullanan bir XAML dosyası başlatmak `x:` eşleme. Kendi XAML ad alanı eşlemesi, farklı ön ek belirteç seçebilir, ancak bu belgeleri varsayılan kabul edecek `x:` başlangıcı yerine sonundan XAML dil XAML ad alanı, tanımlanmış bir parçası olan bu varlıklar tanımlayan bir yol olarak eşleme bir belirli framework'ün varsayılan XAML ad alanı veya diğer rastgele CLR veya XML ad alanı.  
   
 ### <a name="xtype"></a>x: Type  
- `x:Type` Kaynakları <xref:System.Type> adlandırılmış bir türün nesnesi. Bu işlev, temel alınan CLR türü kullanan ve bir gruplandırma bilinen adı veya tanımlayıcısı olarak türetme türü erteleme mekanizmaları en sık kullanılıyor. WPF stilleri ve şablonları ve bunların kullanımını `TargetType` özelliklerdir, belirli bir örneği. Daha fazla bilgi için [x: Type işaretleme uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+ `x:Type` Kaynakları <xref:System.Type> adlandırılmış bir türün nesnesi. Bu işlev, temel alınan CLR türü kullanan ve bir gruplandırma bilinen adı veya tanımlayıcısı olarak türetme türü erteleme mekanizmaları en sık kullanılıyor. WPF stilleri ve şablonları ve bunların kullanımını `TargetType` özelliklerdir, belirli bir örneği. Daha fazla bilgi için [x: Type işaretleme uzantısı](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x: Static  
- `x:Static` doğrudan bir özelliğin değerinin türü değildir, ancak bu türe hesaplanan değer türü kodu varlıkları statik değerlerini üretir. Bu, bir tür tanımı iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için [x: Static işaretleme uzantısı](../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+ `x:Static` doğrudan bir özelliğin değerinin türü değildir, ancak bu türe hesaplanan değer türü kodu varlıkları statik değerlerini üretir. Bu, bir tür tanımı iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için [x: Static işaretleme uzantısı](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ `x:Null` belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x: Array  
- `x:Array` XAML söz dizimi temel öğeleri ve denetim modelleri tarafından sağlanan koleksiyon desteğiyle kasıtlı olarak değil kullanıldığı durumlarda genel diziler oluşturulmasını destekler. Daha fazla bilgi için [x: Array işaretleme uzantısı](../../../docs/framework/xaml-services/x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için [XAML 2009 dil özellikleri](../../../docs/framework/xaml-services/xaml-2009-language-features.md).  
+ `x:Array` XAML söz dizimi temel öğeleri ve denetim modelleri tarafından sağlanan koleksiyon desteğiyle kasıtlı olarak değil kullanıldığı durumlarda genel diziler oluşturulmasını destekler. Daha fazla bilgi için [x: Array işaretleme uzantısı](x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için [XAML 2009 dil özellikleri](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x: Reference  
- `x:Reference` XAML 2009, uzantı özgün (2006) dil kümesinin parçasıdır. `x:Reference` başka bir var olan bir nesne grafiğinin nesnesinde bir başvuruyu temsil eder. Bu nesne tarafından tanımlanan kendi `x:Name`. Daha fazla bilgi için [x: Reference işaretleme uzantısı](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
+ `x:Reference` XAML 2009, uzantı özgün (2006) dil kümesinin parçasıdır. `x:Reference` başka bir var olan bir nesne grafiğinin nesnesinde bir başvuruyu temsil eder. Bu nesne tarafından tanımlanan kendi `x:Name`. Daha fazla bilgi için [x: Reference işaretleme uzantısı](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Diğer x: Yapıları  
- Diğer `x:` yapıları, XAML dili özelliklerini desteklemek için mevcut, ancak bunlar biçimlendirme uzantıları uygulanmadı. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Diğer `x:` yapıları, XAML dili özelliklerini desteklemek için mevcut, ancak bunlar biçimlendirme uzantıları uygulanmadı. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri](xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension temel sınıfı  
  XAML okuyucular ve XAML yazıcılarının System.Xaml varsayılan uygulamaları ile etkileşime özel biçimlendirme uzantısı tanımlamak için bir sınıf soyut türetilen <xref:System.Windows.Markup.MarkupExtension> sınıfı. Sınıfı, geçersiz kılmak için bir yöntem olduğunu <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Bağımsız değişken biçimlendirme uzantısı kullanımı desteklemek için ek yapıcıları tanımlayın gerekebilir ve ayarlanabilir özelliklerin eşleştirme.  
   
- Aracılığıyla <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, özel biçimlendirme uzantısı raporları nereye işaretleme uzantısı gerçekten çağrıldığında bir XAML işlemcisi tarafından ortam bir hizmet bağlamı erişebilir. Yükleme yolu bu genellikle, bir <xref:System.Xaml.XamlObjectWriter>. Kaydetme yolu Bu, genellikle bir <xref:System.Xaml.XamlXmlWriter>. Rapor her bir hizmet sağlayıcısı deseni uygulayan bir iç XAML hizmet sağlayıcısı bağlamı sınıf olarak hizmet bağlamı. Kullanılabilir hizmetleri ve neyi gösterdikleri hakkında daha fazla bilgi için bkz: [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Aracılığıyla <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, özel biçimlendirme uzantısı raporları nereye işaretleme uzantısı gerçekten çağrıldığında bir XAML işlemcisi tarafından ortam bir hizmet bağlamı erişebilir. Yükleme yolu bu genellikle, bir <xref:System.Xaml.XamlObjectWriter>. Kaydetme yolu Bu, genellikle bir <xref:System.Xaml.XamlXmlWriter>. Rapor her bir hizmet sağlayıcısı deseni uygulayan bir iç XAML hizmet sağlayıcısı bağlamı sınıf olarak hizmet bağlamı. Kullanılabilir hizmetleri ve neyi gösterdikleri hakkında daha fazla bilgi için bkz: [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
  Genel erişim düzeyi, işaretleme uzantısı sınıfı kullanmanız gerekir; XAML işlemci her zaman hizmetlerini kullanmak için işaretleme uzantının destek sınıfının örneği mümkün olması gerekir.  
   
@@ -110,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Hizmet sağlayıcısı bağlamı bir işaretleme uzantısı uygulamasından erişme  
- Kullanılabilen hizmetler, herhangi bir değer dönüştürücü için aynıdır. Nasıl her değer dönüştürücü alan hizmet bağlamı farktır. Hizmetlerine erişimi ve hizmetler konusunda belgelenir [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Kullanılabilen hizmetler, herhangi bir değer dönüştürücü için aynıdır. Nasıl her değer dönüştürücü alan hizmet bağlamı farktır. Hizmetlerine erişimi ve hizmetler konusunda belgelenir [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>Özellik öğesi kullanımı bir işaretleme uzantısı  
  Biçimlendirme uzantısı kullanımı için senaryoları, genellikle öznitelik kullanımında da işaretleme uzantısı kullanarak geçici olarak tasarlanmıştır. Ancak, aynı zamanda özellik öğesi kullanımı desteklemek için yedekleme sınıfını tanımlamak potansiyel olarak mümkündür.  
   
- Özellik öğesi kullanımı, biçimlendirme uzantısı desteklemek için genel varsayılan oluşturucu tanımlayın. Bu, bir statik Oluşturucu örnek oluşturucusu olmalıdır. Bu gereklidir çünkü bir XAML işlemci genellikle biçimlendirmeden işler herhangi bir nesne öğe varsayılan oluşturucu çağırmanız gerekir ve bu nesne öğesi olarak işaretleme uzantısı sınıfları içerir. Gelişmiş senaryolar için sınıflar için varsayılan olmayan oluşturma yolları tanımlayabilirsiniz. (Daha fazla bilgi için [x: FactoryMethod yönergesi](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Ancak, bu kullanım deseninin bulma çok daha zor hem tasarımcıları ve kullanıcılar ham biçimlendirme sağlar çünkü bu desenleri işaretleme uzantısı amacıyla kullanmamalısınız.  
+ Özellik öğesi kullanımı, biçimlendirme uzantısı desteklemek için genel varsayılan oluşturucu tanımlayın. Bu, bir statik Oluşturucu örnek oluşturucusu olmalıdır. Bu gereklidir çünkü bir XAML işlemci genellikle biçimlendirmeden işler herhangi bir nesne öğe varsayılan oluşturucu çağırmanız gerekir ve bu nesne öğesi olarak işaretleme uzantısı sınıfları içerir. Gelişmiş senaryolar için sınıflar için varsayılan olmayan oluşturma yolları tanımlayabilirsiniz. (Daha fazla bilgi için [x: FactoryMethod yönergesi](x-factorymethod-directive.md).) Ancak, bu kullanım deseninin bulma çok daha zor hem tasarımcıları ve kullanıcılar ham biçimlendirme sağlar çünkü bu desenleri işaretleme uzantısı amacıyla kullanmamalısınız.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Özel biçimlendirme uzantısı için öznitelik atanıyor  
@@ -156,5 +156,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Markup.MarkupExtension>
-- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](type-converters-and-markup-extensions-for-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

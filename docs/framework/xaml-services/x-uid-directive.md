@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745421"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042963"
 ---
 # <a name="xuid-directive"></a>x:Uid Yönergesi
 Biçimlendirme öğesi için benzersiz bir tanımlayıcı sağlar. Birçok senaryoda bu benzersiz tanımlayıcı XAML yerelleştirme işlemleri ve araçları tarafından kullanılır.  
@@ -39,9 +39,9 @@ Biçimlendirme öğesi için benzersiz bir tanımlayıcı sağlar. Birçok senar
  Çerçeveleri belirli bir özellik için bir diğer ad olarak kendi nesne modelinde belirtebilirsiniz `x:Uid` özniteliği uygulayarak <xref:System.Windows.Markup.UidPropertyAttribute> tanımlama türü. Belirli bir özelliği bir çerçeve belirtiyorsa, her ikisini de belirtmek için geçerli değil `x:Uid` ve diğer adlı üye aynı nesne üzerinde. Her iki `x:Uid` ve belirtilen diğer adlı üye, .NET Framework XAML Hizmetleri API genellikle oluşturur <xref:System.Xaml.XamlDuplicateMemberException> bu durum için.  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- Rolü hakkında daha fazla bilgi için `x:Uid` WPF yerelleştirme işleminde ve XAML BAML biçiminde görmek [WPF için genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) veya <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Rolü hakkında daha fazla bilgi için `x:Uid` WPF yerelleştirme işleminde ve XAML BAML biçiminde görmek [WPF için genelleştirme](../wpf/advanced/globalization-for-wpf.md) veya <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF için Genelleştirme](../wpf/advanced/globalization-for-wpf.md)

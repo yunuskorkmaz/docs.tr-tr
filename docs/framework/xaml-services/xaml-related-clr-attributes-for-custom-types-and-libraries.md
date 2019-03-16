@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530118"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039470"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, XAML ile ilgili bir senaryo uygulamayı derlemeler veya türler için olan .NET Framework içinde tanımlanan diğer CLR öznitelikleri açıklar. Derlemeleri, türleri veya üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML türü sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek veya ayrılmış XAML okuyucular ve yazıcılar XAML aracılığıyla .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML tüketici bilgileri sağlanır.  
@@ -81,7 +81,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** A <xref:System.Type> olarak beklediğiniz en hassas türünü belirten `ProvideValue` öznitelikli sonucunu <xref:System.Windows.Markup.MarkupExtension>.  
   
- Daha fazla bilgi için [genel XAML işaretleme uzantılarına](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Daha fazla bilgi için [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** Öznitelikli türüne göre çalışma zamanı adı özelliğin adını belirten dize.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> XAML için eşlenen öznitelikli türünün bir özelliği bildirir [x: Name yönergesi](../../../docs/framework/xaml-services/x-name-directive.md). Özellik türü olmalıdır <xref:System.String> ve okuma/yazma olmalıdır.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> XAML için eşlenen öznitelikli türünün bir özelliği bildirir [x: Name yönergesi](x-name-directive.md). Özellik türü olmalıdır <xref:System.String> ve okuma/yazma olmalıdır.  
   
  Tanımlama türüne atanabilir tüm türetilmiş türlere tanımı devralır. Uygulama tarafından belirli bir türetilmiş tür tanımında geçersiz kılabilirsiniz <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> belirli türetilmiş tür.  
   
@@ -114,7 +114,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** Yok.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> içindeki boşluk önemli içeriği alt öğe olarak görünebilir belirli türlere uygulanır (içeriği içeren bir koleksiyon tarafından tutulan <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> esas olarak Kaydet geçerlidir, ancak yoludur yükleme yolu XAML türü sistemde bulunan inceleyerek <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Daha fazla bilgi için [boşluk XAML içinde işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> içindeki boşluk önemli içeriği alt öğe olarak görünebilir belirli türlere uygulanır (içeriği içeren bir koleksiyon tarafından tutulan <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> esas olarak Kaydet geçerlidir, ancak yoludur yükleme yolu XAML türü sistemde bulunan inceleyerek <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Daha fazla bilgi için [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Başvuru belgeleri:**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  Uyguladığınız <xref:System.ComponentModel.TypeConverterAttribute> öznitelik, bir tür dönüştürücüsü gerçeklemesi başvuran türünüz için. Sınıflar, yapılar veya arabirimlerini XAML için tür dönüştürücüleri tanımlayabilirsiniz. Numaralandırmalar için tür dönüştürme dönüştürme yerel olarak etkin olduğunu sağlamak gerekmez.  
   
- Bir tür dönüştürücüsü hedeflenen hedef türünüz öznitelikleri ya da başlatma metin biçimlendirme için kullanılan bir dize dönüştürmek başlatabilmeniz gerekir. Daha fazla bilgi için [TypeConverters ve XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Bir tür dönüştürücüsü hedeflenen hedef türünüz öznitelikleri ya da başlatma metin biçimlendirme için kullanılan bir dize dönüştürmek başlatabilmeniz gerekir. Daha fazla bilgi için [TypeConverters ve XAML](../wpf/advanced/typeconverters-and-xaml.md).  
   
  Bir türdeki tüm değerlere uygulamak yerine, XAML için tür dönüştürücüsü davranış da belirli bir özellik üzerinde kurulabilir. Bu durumda, uyguladığınız <xref:System.ComponentModel.TypeConverterAttribute> özellik tanımı için (Dış tanımı, söz konusu `get` ve `set` tanımları).  
   
@@ -142,7 +142,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** İlgili özellik adıyla başvuran bir dize.  
   
- Bir sınıfın CLR özelliği bu diğer adları gösterir [x: Uid yönergesi](../../../docs/framework/xaml-services/x-uid-directive.md).  
+ Bir sınıfın CLR özelliği bu diğer adları gösterir [x: Uid yönergesi](x-uid-directive.md).  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -169,7 +169,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Bağımsız değişkenleri:** Yok.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> bir koleksiyon türü boşluk önemli XAML düğümü akışın değeri düğümleri koleksiyonundaki oluşumu etkileyen bir XAML işlemcisi tarafından işlenmesi gerektiğini gösterir. Daha fazla bilgi için [boşluk XAML içinde işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> bir koleksiyon türü boşluk önemli XAML düğümü akışın değeri düğümleri koleksiyonundaki oluşumu etkileyen bir XAML işlemcisi tarafından işlenmesi gerektiğini gösterir. Daha fazla bilgi için [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -270,4 +270,4 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Attribute>
-- [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](defining-custom-types-for-use-with-net-framework-xaml-services.md)

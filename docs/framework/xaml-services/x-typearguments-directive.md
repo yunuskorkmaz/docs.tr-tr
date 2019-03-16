@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520184"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043266"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
 Sınırlama geçişleri bir genel oluşturucuya genel tür bağımsız değişkenlerini yazın.  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ya da WPF 3.0 veya 3.5 WPF XAML 2006 bağımlılık  
  .NET Framework XAML hizmetlerinde XAML 2006 ya da XAML 2009, WPF ile ilgili sınırlamalar genel XAML kullanım esnek. Yedekleme türü sistem ve nesne modelini desteklemek XAML biçimlendirmesi içinde herhangi bir konumda bir genel nesne öğesi örneği oluşturabilir.  
   
- XAML 2009 kullanıyorsanız, CLR eşleme yerine temel türleri XAML dili ortak temelleri için elde etmek için türler, kullanabileceğiniz [XAML dili ortak temelleri için yerleşik türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) bilgi öğeleri olarak bir `typeString`. Örneğin, aşağıdaki bildirebilirsiniz (önek eşletirmeleri gösterilmez, ancak x olan XAML dil XAML ad alanı için XAML 2009):  
+ XAML 2009 kullanıyorsanız, CLR eşleme yerine temel türleri XAML dili ortak temelleri için elde etmek için türler, kullanabileceğiniz [XAML dili ortak temelleri için yerleşik türler](built-in-types-for-common-xaml-language-primitives.md) bilgi öğeleri olarak bir `typeString`. Örneğin, aşağıdaki bildirebilirsiniz (önek eşletirmeleri gösterilmez, ancak x olan XAML dil XAML ad alanı için XAML 2009):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -82,7 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  WPF ve hedeflenirken [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML 2009 özelliklerini ile birlikte kullanabileceğiniz `x:TypeArguments` ancak yalnızca gevşek XAML (biçimlendirme yapılmayan XAML). WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri. XAML biçimlendirme için derlerseniz, "XAML 2006 ve WPF genel XAML kullanım" bölümünde belirtildiği kısıtlamaları'nın altında çalışması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)
-- [x:Type İşaretleme Uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [XAML Dili Ortak Temelleri İçin Yerleşik Türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
-- [XAML'deki Genel Türler](../../../docs/framework/xaml-services/generics-in-xaml.md)
+- [x:Class Yönergesi](x-class-directive.md)
+- [x:Type İşaretleme Uzantısı](x-type-markup-extension.md)
+- [XAML Dili Ortak Temelleri İçin Yerleşik Türler](built-in-types-for-common-xaml-language-primitives.md)
+- [XAML'deki Genel Türler](generics-in-xaml.md)
