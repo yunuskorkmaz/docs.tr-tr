@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 6fc4e12bb7532019a0571095263b5447e4b0d1ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702522"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126285"
 ---
-# <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="10337-102">Nasıl yapılır: Tek bir B çizmek&#233;zier eğri</span><span class="sxs-lookup"><span data-stu-id="10337-102">How to: Draw a Single B&#233;zier Spline</span></span>
-<span data-ttu-id="10337-103">Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktası, iki denetim noktalarını ve uç nokta.</span><span class="sxs-lookup"><span data-stu-id="10337-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  
+# <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="b1d03-102">Nasıl yapılır: Tek bir B çizmek&#233;zier eğri</span><span class="sxs-lookup"><span data-stu-id="b1d03-102">How to: Draw a Single B&#233;zier Spline</span></span>
+<span data-ttu-id="b1d03-103">Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktası, iki denetim noktalarını ve uç nokta.</span><span class="sxs-lookup"><span data-stu-id="b1d03-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="10337-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="10337-104">Example</span></span>  
- <span data-ttu-id="10337-105">Aşağıdaki örnek, başlangıç noktası (10, 100) ve (200, 100) uç noktası olan bir Bézier eğrisi çizer.</span><span class="sxs-lookup"><span data-stu-id="10337-105">The following example draws a Bézier spline with start point (10, 100) and endpoint (200, 100).</span></span> <span data-ttu-id="10337-106">Denetim olan (100, 10) ve (150, 150) işaret eder.</span><span class="sxs-lookup"><span data-stu-id="10337-106">The control points are (100, 10) and (150, 150).</span></span>  
+## <a name="example"></a><span data-ttu-id="b1d03-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b1d03-104">Example</span></span>  
+ <span data-ttu-id="b1d03-105">Aşağıdaki örnek, başlangıç noktası (10, 100) ve (200, 100) uç noktası olan bir Bézier eğrisi çizer.</span><span class="sxs-lookup"><span data-stu-id="b1d03-105">The following example draws a Bézier spline with start point (10, 100) and endpoint (200, 100).</span></span> <span data-ttu-id="b1d03-106">Denetim olan (100, 10) ve (150, 150) işaret eder.</span><span class="sxs-lookup"><span data-stu-id="b1d03-106">The control points are (100, 10) and (150, 150).</span></span>  
   
- <span data-ttu-id="10337-107">Sonuçta elde edilen Bézier eğri, başlangıç noktası, denetim noktalarını ve uç nokta ile birlikte aşağıda gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="10337-107">The following illustration shows the resulting Bézier spline along with its start point, control points, and endpoint.</span></span> <span data-ttu-id="10337-108">Çizimde, dört noktası düz çizgiler ile bağlanarak oluşturulmuş bir Çokgen eğri'nın dışbükey Kabuk da gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="10337-108">The illustration also shows the spline's convex hull, which is a polygon formed by connecting the four points with straight lines.</span></span>  
+ <span data-ttu-id="b1d03-107">Sonuçta elde edilen Bézier eğri, başlangıç noktası, denetim noktalarını ve uç nokta ile birlikte aşağıda gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b1d03-107">The following illustration shows the resulting Bézier spline along with its start point, control points, and endpoint.</span></span> <span data-ttu-id="b1d03-108">Çizimde, dört noktası düz çizgiler ile bağlanarak oluşturulmuş bir Çokgen eğri'nın dışbükey Kabuk da gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b1d03-108">The illustration also shows the spline's convex hull, which is a polygon formed by connecting the four points with straight lines.</span></span>  
   
- <span data-ttu-id="10337-109">![Bezier Spline](./media/bezierspline1.png "BezierSpline1")</span><span class="sxs-lookup"><span data-stu-id="10337-109">![Bezier Spline](./media/bezierspline1.png "BezierSpline1")</span></span>  
+ ![Bezier eğrisi gösterimi.](./media/how-to-draw-a-single-bezier-spline/bezier-spline-illustration.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="10337-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="10337-110">Compiling the Code</span></span>  
- <span data-ttu-id="10337-111">Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="10337-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b1d03-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="b1d03-110">Compiling the Code</span></span>  
+ <span data-ttu-id="b1d03-111">Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="b1d03-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10337-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="10337-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1d03-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1d03-112">See also</span></span>
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
-- [<span data-ttu-id="10337-113">GDI+'daki Bézier Eğrileri</span><span class="sxs-lookup"><span data-stu-id="10337-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
-- [<span data-ttu-id="10337-114">Nasıl yapılır: Bir dizi Bézier eğrileri çizme</span><span class="sxs-lookup"><span data-stu-id="10337-114">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)
+- [<span data-ttu-id="b1d03-113">GDI+'daki Bézier Eğrileri</span><span class="sxs-lookup"><span data-stu-id="b1d03-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
+- [<span data-ttu-id="b1d03-114">Nasıl yapılır: Bir dizi Bézier eğrileri çizme</span><span class="sxs-lookup"><span data-stu-id="b1d03-114">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)
