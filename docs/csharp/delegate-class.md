@@ -1,28 +1,28 @@
 ---
 title: System.Delegate ve `delegate` anahtar sözcüğü
-description: .NET Framework'teki temsilcileri ve nasıl olanlar 'temsilci' anahtar sözcüğü eşleme desteği sınıfları hakkında bilgi edinin.
+description: .NET Framework'teki temsilcileri ve bu 'temsilci' anahtar sözcüğü nasıl eşleştiği destekleyen sınıfları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827306"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126181"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate ve `delegate` anahtar sözcüğü
 
 [Önceki](delegates-overview.md)
 
-Bu makalede Temsilciler ve nasıl olanlar için eşleme destekleyen sınıfları .NET Framework'teki ele alınacaktır `delegate` anahtar sözcüğü.
+Bu makalede, temsilciler ve bu'nasıl eşleştiğini destekleyen sınıfları .NET Framework'teki kapsar `delegate` anahtar sözcüğü.
 
 ## <a name="defining-delegate-types"></a>Temsilci türleri tanımlama
 
-Temsilciler ile çalışırken ne kullanır, öncelikle olduğu için 'temsilci' anahtar sözcüğüyle başlayalım. Derleyici kullandığınızda oluşturduğu kodu `delegate` anahtar sözcüğü üyeleri çağırma yöntem çağrıları eşleme <xref:System.Delegate> ve <xref:System.MulticastDelegate> sınıfları. 
+Temsilciler ile çalışırken kullandığınız, öncelikle olduğu için 'temsilci' anahtar sözcüğü ile başlayalım. Kullandığınızda, derleyici oluşturan kod `delegate` anahtar sözcüğü, üyelerini çağırmak için yöntem çağrıları eşleme <xref:System.Delegate> ve <xref:System.MulticastDelegate> sınıfları. 
 
-Bir yöntem imzası tanımlamak için benzer sözdizimini kullanarak bir temsilci türü tanımlayın. Yalnızca Ekle `delegate` tanımına anahtar sözcüğü.
+Bir yöntem imzasını tanımlayan benzer söz dizimini kullanarak bir temsilci türü tanımlarsınız. Yalnızca eklediğiniz `delegate` tanımına anahtar sözcüğü.
 
-Şimdi List.Sort() yöntemi bizim örnek olarak kullanmaya devam edin. İlk adım, bir tür için karşılaştırma temsilci oluşturmaktır:
+Bizim örnek olarak List.Sort() yöntemi kullanmak üzere devam edelim. İlk adım, bir tür karşılaştırma temsilcisi oluşturmaktır:
 
 ```csharp
 // From the .NET Core library
@@ -31,19 +31,19 @@ Bir yöntem imzası tanımlamak için benzer sözdizimini kullanarak bir temsilc
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Derleyici türetilmiş bir sınıf oluşturur `System.Delegate` (Bu durumda, bir tamsayı döndürür ve iki bağımsız olan bir yöntem) kullanılan imzayı eşleşir. Bu temsilci türü `Comparison`. `Comparison` Temsilci türüdür genel bir tür. Genel türler hakkında ayrıntılar için bkz: [burada](generics.md).
+Derleyici, türetilen bir sınıf oluşturur `System.Delegate` eşleştiren (Bu durumda bir tamsayı döndürür ve iki bağımsız değişkeni olan bir yöntem) kullanılır. Bu temsilci türü `Comparison`. `Comparison` Temsilci türü olan genel bir tür. Genel türler hakkında ayrıntılar için bkz. [burada](generics.md).
 
-Sözdizimi değişken bildirme, ancak gerçekte bildirme gibi sorgulamanıza görünebilir bildirimi bir *türü*. Sınıfları, ad alanları doğrudan içinde ya da hatta genel ad alanında temsilci türlerinde tanımlayabilirsiniz.
+Sözdizimi, bir değişken bildiriyor, ancak gerçekte bildirme gibi sorgulamanıza görünebilir bildirimi bir *türü*. Temsilci türleri sınıflar, ad alanları doğrudan içinde veya hatta genel ad içinde tanımlayabilirsiniz.
 
 > [!NOTE]
 > Doğrudan genel ad alanında temsilci türleri (veya diğer türleri) bildirme önerilmez. 
 
-Derleyici de oluşturur ekleyin ve böylece istemciler, bu sınıfın ekleyin ve yöntemleri bir örneğinin çağırma listesinden kaldırmak bu yeni tür için işleyiciler kaldırın. Derleyici eklendiğinde veya kaldırıldığında yöntemi imzası yöntemi bildirirken kullanılan imzayı eşleştiğini zorlar. 
+Derleyici ayrıca oluşturur ekleyin ve böylece istemciler bu sınıfın ekleyebilir ve yöntemleri bir örneğin çağırma listesinden kaldırmak için bu yeni türü işleyicilerini kaldırmak. Derleyici, eklendiğinde veya kaldırıldığında metodun imzası yöntem bildirirken kullanılan imzayla eşleşen zorlar. 
 
-## <a name="declaring-instances-of-delegates"></a>Temsilciler örneklerini bildirme
+## <a name="declaring-instances-of-delegates"></a>Temsilci örneklerini bildirme
 
-Temsilci tanımladıktan sonra o türünün bir örneğini oluşturabilirsiniz.
-C# tüm değişkenler gibi bir ad alanındaki doğrudan ya da genel ad alanında temsilci örneklerinin bildiremezsiniz.
+Temsilci tanımladıktan sonra bu türün bir örneği oluşturabilirsiniz.
+Tüm değişkenler gibi C#, doğrudan bir ad alanında ya da genel ad alanında temsilci örneklerini bildiremezsiniz.
 
 ```csharp
 // inside a class definition:
@@ -54,82 +54,82 @@ public Comparison<T> comparator;
 
 Değişken türü `Comparison<T>`, daha önce tanımlanan temsilci türü. Değişken adı `comparator`.
  
- Yukarıdaki kod parçacığında, bir üye değişkenine bir sınıf içinde bildirildi. Yerel değişkenler ya da bağımsız değişkenleri yöntemleri için temsilci değişkenleri de bildirebilirsiniz.
+ Yukarıdaki Bu kod parçacığında, bir sınıf içinde bir üye değişkeni bildirildi. Ayrıca, yerel değişkenler veya yöntemlerinin bağımsız değişkenleri temsilci değişkenleri bildirebilirsiniz.
 
-## <a name="invoking-delegates"></a>Çağıran temsilciler
+## <a name="invoking-delegates"></a>Çağrılıyor temsilciler
 
-Bu temsilci çağırarak bir temsilci çağırma listesi yöntemleri çağırır. İçinde `Sort()` yöntemi, kodun hangi sırada yerleştirmek için nesneleri belirlemek için karşılaştırma yöntemi çağıracaktır:
+Bu temsilciyi çağırarak bir temsilci çağırma listesinde yöntemleri çağırır. İçinde `Sort()` yöntemi, kod nesneleri yerleştirmek için sırasını belirlemek için karşılaştırma metodu çağıracaktır:
 
 ```csharp
 int result = comparator(left, right);
 ```
 
-Yukarıdaki kod satırına *çağırır* yöntemi temsilciye bağlı.
-Değişken bir yöntem adı kabul eder ve normal yöntemi çağrı sözdizimini kullanarak çağırma.
+Yukarıdaki kod satırında *çağırır* yöntem temsilciye bağlı.
+Değişkeni bir yöntem adı kabul et ve normal yöntem çağrı sözdizimini kullanarak çağırma.
 
-Bu kod satırı güvenli olmayan bir varsayım yapmaz: hedef temsilciye eklendi garantisi yoktur. Hiçbir hedef eklediyseniz, yukarıdaki satır neden olacağından bir `NullReferenceException` oluşturulmasına. Bu sorunu gidermek için kullanılan deyimleri basit bir null denetimi daha karmaşıktır ve daha sonra bu konuda ele alınmıştır [serisi](delegates-patterns.md).
+Bu kod satırı, güvenli olmayan bir varsayım yapmaz: Bir hedef temsilciye eklendiğini garantisi yoktur. Hiçbir hedef bağlı değilse, yukarıdaki satırı neden bir `NullReferenceException` oluşturulması için. Bu sorunu gidermek için kullanılan deyimleri basit bir null denetimi daha karmaşıktır ve daha sonra bu konuda ele alınmaktadır [serisi](delegates-patterns.md).
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Atama, ekleme ve çağırma hedeflerini kaldırma
+## <a name="assigning-adding-and-removing-invocation-targets"></a>Atama, ekleme ve kaldırma çağırma hedefleri
 
-Bir temsilci türü nasıl tanımlanır ve temsilci örneklerinin nasıl bildirilir ve çağrılan olmasıdır.
+Bir temsilci türü nasıl tanımlandığını ve temsilci örneklerini nasıl bildirildi ve çağrılan olmasıdır.
 
-Kullanmak istediğiniz geliştiriciler `List.Sort()` yöntemi ihtiyacınız olan imza temsilci türü tanımı eşleşen bir yöntemi tanımlamak ve sıralama yöntemi tarafından kullanılan temsilci atamak. Bu atama yöntemi temsilci nesnenin çağırma listesine ekler.
+Kullanmak istediğiniz geliştiriciler `List.Sort()` imzası olan, temsilci türü tanımı eşleşen bir yöntemi tanımlamak ve sıralama yöntemi tarafından kullanılan temsilci atamak yöntem gerekir. Bu atama yöntemi, temsilci nesnesini çağırma listesine ekler.
 
-Dizeleri listesini kendi uzunluğa göre sıralamak istediğinizi varsayalım. Karşılaştırma işlevinizi şöyle olabilir:
+Bir dize listesi kendi uzunluğa göre sıralamak istediğinizi varsayalım. Karşılaştırma işlevinizi aşağıdakiler olabilir:
 
 ```csharp
 private static int CompareLength(string left, string right) =>
     left.Length.CompareTo(right.Length);
 ```
 
-Yöntemi, özel bir yöntem olarak bildirilir. Bu sorun yoktur. Ortak arabirimi bir parçası olması için bu yöntemi istemeyebilirsiniz. Bir temsilciye eklendiğinde karşılaştırma yöntemi olarak hala kullanılabilir. Çağrıyı yapan kod temsilci nesnesini hedef listeye eklenen bu yöntem sahip olur ve bu temsilciyi erişebilir.
+Yöntemi, özel bir yöntem bildirilir. İyi olur. Bu yöntem, genel arabiriminin bir parçası olmasını istemeyebilirsiniz. Bir temsilciye eklendiğinde karşılaştırma yöntemi olarak hala kullanılabilir. Çağıran kod bu yöntem hedef temsilci nesne listesine bağlı olacaktır ve bu temsilci erişebilirsiniz.
 
-Bu yönteme geçirerek bu ilişki oluşturmak `List.Sort()` yöntemi:
+Bu yönteme geçirerek bu ilişki oluşturma `List.Sort()` yöntemi:
 
 ```csharp
 phrases.Sort(CompareLength);
 ```
 
-Yöntem adı, parantez olmadan kullanılmıştır. Yöntemin bağımsız değişken olarak kullanarak, bu yöntem çağırma hedefi olarak eklemek ve temsilci çağırma hedef olarak kullanılabilir bir başvuru yöntemi başvuru dönüştürmek için derleyici söyler.
+Yöntem adı, parantez olmadan kullanıldığına dikkat edin. Bağımsız değişken olarak yöntemi kullanarak, bir temsilci çağırma hedefi olarak kullanılabilir ve bu yöntem bir çağırma hedefi olarak ekleme başvuru yöntemi başvuru dönüştürmek için derleyiciye bildirir.
 
-Ayrıca türünde bir değişken bildirerek açık atanmış olmanız ' karşılaştırma<string>' ve bir ataması yapıyor:
+Ayrıca türünün bir değişkeni bildirerek açık atanmış ' karşılaştırma<string>' ve atama:
 
 ```csharp
 Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-Bir temsilci hedef küçük bir yöntem olarak kullanılmakta olan yöntemin olduğu kullanmak için yaygın kullanımları içinde [Lambda ifadesi](lambda-expressions.md) ataması gerçekleştirmek için söz dizimi:
+Small yöntemi temsilci hedefi olarak kullanılan yöntemin olduğu kullanmak yaygın kullanır [lambda ifadesi](./programming-guide/statements-expressions-operators/lambda-expressions.md) ataması gerçekleştirmek için söz dizimi:
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
 phrases.Sort(comparer);
 ```
 
-Lambda ifadeleri için temsilci hedefleri kullanarak kapsanan daha içinde bir [daha sonra bölüm](delegates-patterns.md).
+Lambda ifadeleri için temsilci hedefleri kullanarak kapsanan daha bir [daha sonra bölüm](delegates-patterns.md).
 
-Sort() örnek, bir tek hedef yöntemi temsilciye genellikle iliştirir. Ancak, temsilci nesneleri bir temsilci nesnesine bağlı birden çok hedef yöntemleri çağırma listelerini destekler.
+Sort() örnek bir tek hedef yöntem temsilciye genellikle ekler. Ancak, temsilci nesneleri birden çok hedef yöntem bir temsilci nesnesine ekli olan çağırma listelerini destekler.
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Temsilci ve MulticastDelegate sınıfları
 
-Yukarıda açıklanan dil desteği, özellikleri ve genellikle temsilciler ile çalışması gerekir desteği sağlar. Bu özellikler iki sınıf .NET Core Framework üzerine kurulu: <xref:System.Delegate> ve <xref:System.MulticastDelegate>.
+Yukarıda açıklanan dil desteği, destek temsilcileri ile çalışmak için genellikle gerekir ve özellikleri sağlar. Bu özelliklerin .NET Core Framework iki sınıf temel alır: <xref:System.Delegate> ve <xref:System.MulticastDelegate>.
 
-`System.Delegate` Sınıfı ve onun tek doğrudan alt sınıfını `System.MulticastDelegate`, temsilci oluşturmak, yöntemleri temsilci hedefleri olarak kaydetme ve temsilci hedef olarak kayıtlı olan tüm yöntemleri çağırma framework desteği sağlar. 
+`System.Delegate` Sınıfı ve onun tek doğrudan alt sınıfını `System.MulticastDelegate`, temsilciler oluşturma yöntemleri temsilci hedefler olarak kaydetme ve temsilci hedef olarak kayıtlı olan tüm yöntemlerini çağırmaktan framework desteği sağlayın. 
 
-İlginçtir ki, `System.Delegate` ve `System.MulticastDelegate` sınıfları kendilerini olmayan temsilci türleri. Bunlar, tüm özel temsilci türleri için temel sağlar. İşlem zorunlu bir sınıfı bildiremezsiniz aynı dil tasarımında, türetilen olduğunu `Delegate` veya `MulticastDelegate`. C# dil kurallarına yasaklayabilmek.
+İlginçtir ki, `System.Delegate` ve `System.MulticastDelegate` sınıfları kendilerini olmayan temsilci türleri. Bunlar, tüm özel temsilci türleri için temel sağlar. Aynı dil tasarım işlemi uygulanan bir sınıfı bildiremez öğesinden türetilen `Delegate` veya `MulticastDelegate`. C# Dil kuralları yasaklar.
  
-Bunun yerine, C# derleyici türetilmiş bir sınıf örneklerini oluşturur `MulticastDelegate` temsilci türleri bildirmek için C# dil anahtar sözcüğünü kullandığınızda.
+Bunun yerine, C# derleyici türetilmiş bir sınıfın örneklerini oluşturur `MulticastDelegate` kullandığınızda C# temsilci türleri bildirmek için dil anahtar sözcüğü.
 
-Bu tasarım, kökleri ve C# .NET ilk sürümünde sahiptir. Dil temsilciler kullanırken tür güvenliği uygulanmasını sağlamak için bir hedef Tasarım ekibi için oluştu. Temsilciler sağ türü ve bağımsız değişken sayısı ile çağrıldı emin olma anlamına gelir. Derleme zamanı ve herhangi bir dönüş türü en doğru belirtildi. Temsilciler önce genel türler edildi 1.0 .NET sürüm parçası olan.
+Bu tasarım, ilk sürümünde, kökleri sahip C# ve .NET. Temsilcileri kullanarak zaman dil tür güvenliği zorunlu emin olmak için Tasarım ekibi için bir hedef oluştu. Bu temsilciler doğru tür ve sayıda bağımsız değişken ile çağrılan sağlama geliyordu. Derleme zamanı ve herhangi bir dönüş türü, doğru şekilde belirtildi. Temsilciler genel türler önce olan 1.0 .NET sürümünün bir parçası olan.
 
-Bu tür güvenliği zorlamak için en iyi yolu derleyici somut temsilci kullanılan yöntem imzası temsil sınıfları oluşturmak oluştu.
+En iyi yolu, bu tür güvenliği zorlamak için kullanılan yöntem imzası temsil sınıflar somut temsilci oluşturmak derleyicinin için oluştu.
 
-Türetilen sınıflar doğrudan oluşturamaz olsa da, bu sınıflara tanımlanan yöntemler kullanır. Temsilciler ile çalışırken kullanacağınız en yaygın yöntemleri aracılığıyla edelim.
+Türetilmiş sınıflar doğrudan oluşturamazsınız olsa da, bu sınıflarında tanımlanan yöntemler kullanır. Temsilciler ile çalışırken kullanacağınız en yaygın yöntemleri aracılığıyla Bahsedelim.
 
-Anımsaması ilk ve en önemli ile çalışırsınız her temsilci türetilmiş gerçeğidir `MulticastDelegate`. Çok noktaya yayın temsilci bir temsilci çağrılırken, birden fazla yöntem hedef çağrılabilir anlamına gelir. Özgün Tasarım olarak kabul burada yalnızca bir hedef yönteme bağlı çağrılır ve yüklenemedi Temsilciler ve burada birden çok hedef yöntemi bağlı çağrılır ve yüklenemedi temsilciler arasında ayrım yapma. Bu ayrım başlangıçta zorlayıcı daha uygulamada daha az kullanışlı olması için oluyor uygulamasına yol açıyordu. Farklı iki sınıf zaten oluşturulmuş ve framework ilk sürülmeden itibaren kapatıldı.
+Anımsanması ilk ve en önemli iş her temsilci türetilir gerçeğidir `MulticastDelegate`. Çok noktaya yayın temsilci, bir temsilci çağrılırken birden fazla yöntem hedef çağrılabilir anlamına gelir. Yalnızca bir hedef yöntemi burada bağlı ve çağrılan Temsilciler ve birden çok hedef yöntem nereye eklenmiş ve çağrılan temsilcileri arasında bir ayrım yapma özgün tasarımda dikkate. İlk olarak düşünülebilir daha uygulamada daha az kullanışlı olması için Bu ayrım kanıtladılar. Farklı iki sınıf zaten oluşturulduğunu ve framework ilk genel sürümünden sonra olmuştur.
 
-En temsilciler ile kullanacağınız yöntemler `Invoke()` ve `BeginInvoke()`  /  `EndInvoke()`. `Invoke()` belirli temsilci örneğine bağlı tüm yöntemleri çağırır. Yukarıda gördüğünüz gibi genellikle temsilcileri temsilci değişkeni yöntemi çağrı sözdizimini kullanarak çağırır. Gördüğünüz gibi [bu serideki sonraki](delegates-patterns.md), doğrudan bu yöntemlerle iş desenleri vardır.
+En iyi temsilcilerinden kullanacağınız yöntemler `Invoke()` ve `BeginInvoke()`  /  `EndInvoke()`. `Invoke()` belirli bir temsilci örneğine eklenmiş olan tüm yöntemleri çağırır. Yukarıda anlatıldığı gibi genellikle temsilcileri yöntemi çağrı sözdizimini kullanarak temsilci değişkeni çağırır. Gördüğünüz gibi [bu serideki sonraki](delegates-patterns.md), doğrudan bu yöntemlerle iş desenleri vardır.
 
-Dili sözdizimi ve temsilciler destekleyen sınıfları gördüğünüze göre nasıl kesin türü belirtilmiş temsilciler inceleyelim, oluşturulan çağrılır ve kullanıldığını.
+Dilinin sözdizimi ve temsilcileri destekleyen sınıfları gördüğünüze göre şimdi nasıl kesin tür belirtilmiş temsilciler inceleyin, oluşturulan çağrılır ve kullanıldığını.
 
 [Next](delegates-strongly-typed.md)

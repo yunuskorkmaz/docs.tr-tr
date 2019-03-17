@@ -3,16 +3,16 @@ title: Lambda ifadeleri ve yerel işlevler
 description: Yerel işlevler lambda ifadeleri daha iyi bir seçim neden olabiliyor öğrenin.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740438"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125778"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Lambda ifadeleri karşılaştırma yerel işlevler
 
-İlk bakışta [yerel işlevler](programming-guide/classes-and-structs/local-functions.md) ve [lambda ifadeleri](lambda-expressions.md) çok benzer. Çoğu durumda, lambda ifadeleri ve yerel işlevleri kullanma arasında seçim, stil ve kişisel tercihinize bir konudur. Ancak, birini veya diğerini farkında olmanız gereken kullanabileceğiniz gerçek farklar vardır.
+İlk bakışta [yerel işlevler](programming-guide/classes-and-structs/local-functions.md) ve [lambda ifadeleri](./programming-guide/statements-expressions-operators/lambda-expressions.md) çok benzer. Çoğu durumda, lambda ifadeleri ve yerel işlevleri kullanma arasında seçim, stil ve kişisel tercihinize bir konudur. Ancak, birini veya diğerini farkında olmanız gereken kullanabileceğiniz gerçek farklar vardır.
 
 Yerel işlev ve lambda ifadesi uygulamaları Faktöriyel algoritmasının arasındaki farklar inceleyelim. İlk yerel bir işlevi kullanarak sürüm:
 

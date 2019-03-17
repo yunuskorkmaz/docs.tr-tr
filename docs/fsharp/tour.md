@@ -2,12 +2,12 @@
 title: F# turu
 description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968302"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125583"
 ---
 # <a name="tour-of-f"></a>F turu\#
 
@@ -136,10 +136,6 @@ Yukarıdaki takip edilmemesi bir derleme hatasına neden olur.
 [Eşleşen desen](language-reference/pattern-matching.md) sağlayan doğruluk F# türleri üzerinde çalışması için F# dil özelliğidir.  Yukarıdaki örneklerde, büyük olasılıkla oldukça fark etmiş `match x with ...` söz dizimi.  Bu yapı ne bilinen aracılığıyla bir veri türü kapsamlı desen eşleştirme kullanılırken tüm olası durumları dikkate almak için zorlamak için veri türleri "şekline" anlayabilmeniz derleyici sağlar.  Bu doğruluğu inanılmaz güçlü ve zekice "ne bir çalışma zamanı sorunu derleme zamanı içine normalde olacağını kaldırmak için" kullanılabilir.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-Toplu kullanabilirsiniz `function` yapan işlevleri kullanın yazarken, kullanışlı olan desen eşleştirme için yapı [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Bir sorun fark kullanımıdır `_` deseni.  Bu olarak bilinir [joker karakter deseni](language-reference/pattern-matching.md#wildcard-pattern), "Miyim yoksa dikkatli bir şey nedir" ifadesini içeren bir yolu olan.  Kullanışlı olsa da, kapsamlı desen eşleştirme yanlışlıkla atlamak ve artık fayda derleme zamanı enforcements kullanırken dikkatli olmazsanız `_`.  Ayrılmış bir tür hakkında belirli bilgilere İlgilenmiyor, en iyi şekilde kullanılır anlamlı bir desen eşleme ifadesinde durumlarda tüm numaralandırılan olduğunda ne zaman eşleştirme veya son yan desen.
 

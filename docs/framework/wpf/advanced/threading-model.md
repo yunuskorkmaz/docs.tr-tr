@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353042"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125687"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler, iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden fazla iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Çoklu iş parçacığı kullanan programları, karmaşık ve hata ayıklama zor olduğundan, bunlar çözümleri tek iş parçacıklı bulunduğunda kaçınılmalıdır.  
@@ -62,7 +62,7 @@ ms.locfileid: "57353042"
   
  Aşağıdaki örnek göz önünde bulundurun:  
   
- ![Asal sayıları ekran görüntüsü](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Asal sayıları iş parçacığı gösteren ekran görüntüsü.](./media/threading-model/threading-prime-numbers.png)  
   
  Bu basit uygulama, üç, aramasını asal sayıları için yukarı doğru sayar. Kullanıcı tıkladığında **Başlat** arama düğmesini başlar. Program bir asal bulduğunda, kullanıcı arabirimi keşfi ile güncelleştirir. Herhangi bir noktada, kullanıcı arama durdurabilirsiniz.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57353042"
   
  İşlem süresi hesaplama ve olay işleme arasında bölmek için en iyi yolu, hesaplama yönetmektir <xref:System.Windows.Threading.Dispatcher>. Kullanarak <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> yöntemi, biz asal sayı denetimlerini zamanlayabilirsiniz aynı sıra [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gelen olayları çizilmiştir. Bizim örneğimizde, biz yalnızca bir tek asal sayı denetimi birer birer zamanlayın. Asal sayı onay tamamlandıktan sonra biz sonraki denetim hemen zamanlayın. Bu denetim yalnızca sonra bekleyen geçer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olayları işlenmiş.  
   
- ![Dağıtıcı sırası çizimi](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Dağıtıcı sıranın gösteren ekran görüntüsü.](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] Bu mekanizma kullanılarak yazım denetimi gerçekleştirir. Yazım denetimi boşta kalma süresi'ni kullanarak arka planda gerçekleştirilir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Kod bir göz atalım.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "57353042"
   
  Bu örnekte biz hava durumu tahminini alan bir uzak yordam çağrısı taklit. Bu çağrı yürütmek için ayrı iş parçacığı kullanıyoruz ve biz de bir güncelleştirme yöntemi zamanlama <xref:System.Windows.Threading.Dispatcher> , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tamamlandığında iş parçacığı.  
   
- ![Hava durumu, kullanıcı Arabirimi ekran görüntüsü](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![UI hava durumu gösteren ekran görüntüsü.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -189,7 +189,7 @@ ms.locfileid: "57353042"
 ### <a name="nested-pumping"></a>İç içe pompalama  
  Bazen tamamen kilitlemek için uygun değil [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Düşünelim <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox.Show%2A> Kullanıcı Tamam düğmesine tıklayana kadar döndürmüyor. Ancak, bir ileti döngüsü etkileşimli olması gereken bir pencere oluşturur. Özgün uygulama penceresi şu kullanıcı için Tamam'a tıklayın beklerken, kullanıcı girişine yanıt vermiyor. Boyama iletileri işlemek ancak devam eder. Özgün penceresinde kendisi kapsamında ve ortaya çıktığı zaman yeniden çizer.  
   
- !["Tamam" düğmesini kullanarak MessageBox](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![Tamam düğmesi ile bir MessageBox gösteren ekran görüntüsü](./media/threading-model/threading-message-loop.png)  
   
  Bazı iş parçacığı ileti kutusu penceresi sorumlu olması gerekir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti kutusu penceresi için yeni bir iş parçacığı oluşturabilirsiniz, ancak bu iş parçacığı özgün penceresinde devre dışı bırakılan öğeleri boyama veremeyebilir (karşılıklı dışlama önceki tartışmayı unutmayın). Bunun yerine, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç içe geçmiş ileti işleme sistemi kullanır. <xref:System.Windows.Threading.Dispatcher> Sınıfı olarak adlandırılan özel bir yöntem içerir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, ardından depoladığı uygulamanın geçerli yürütme noktasını yeni bir ileti döngüsü başlatır. İç içe geçmiş ileti döngüsü sona erdiğinde, sonra özgün yürütmeyi devam ettirir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> çağırın.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "57353042"
   
  Çoğu arabirimleri ile iş parçacığı güvenliği aklınızda almayan geliştiriciler varsayım altında çalıştığından, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiçbir zaman birden fazla iş parçacığı tarafından erişilebilir. Bu durumda, tek bir iş parçacığı beklenmeyen zamanlarda ortam değişiklikleri yapabilir, bu hatalı neden, efektler <xref:System.Windows.Threading.DispatcherObject> karşılıklı dışlama mekanizması çözmek gereken. Aşağıdaki sözde kod göz önünde bulundurun:  
   
- ![Yeniden giriş diyagram iş parçacığı](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Yeniden giriş iş parçacığı gösteren diyagram. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  Çoğu zaman doğru şeyi olan, ancak bazı durumlarda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] burada beklenmeyen tür yeniden giriş gerçekten sorunlara neden olabilir. Bu nedenle, belirli bir anahtar zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çağrıları <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, hangi değişiklikleri kullanılacak iş parçacığı için kilit yönerge [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine yeniden giriş ücretsiz kilit [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] kilit.  
   

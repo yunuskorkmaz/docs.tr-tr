@@ -3,16 +3,16 @@ title: İfade Ağaçları
 description: İfade ağaçlarında .NET Core ve bunları kodunu incelemek, değiştirmek, çalıştırmak ve yapıları olarak temsil etmek üzere kullanma hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190742"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125843"
 ---
 # <a name="expression-trees"></a>İfade Ağaçları
 
-LINQ kullandıysanız, zengin kitaplığı deneyimi olan burada `Func` türleri API kümesi bir parçasıdır. (LINQ ile ilgili bilgi sahibi değilseniz, büyük olasılıkla okumak istediğiniz [LINQ öğretici](linq/index.md) ve öğretici [lambda ifadeleri](lambda-expressions.md) bundan önce.) *İfade ağaçları* işlevleri bağımsız değişkenleriyle daha zengin etkileşim sağlar.
+LINQ kullandıysanız, zengin kitaplığı deneyimi olan burada `Func` türleri API kümesi bir parçasıdır. (LINQ ile ilgili bilgi sahibi değilseniz, büyük olasılıkla okumak istediğiniz [LINQ öğretici](linq/index.md) ve ilgili makaleyi [lambda ifadeleri](./programming-guide/statements-expressions-operators/lambda-expressions.md) bundan önce.) *İfade ağaçları* işlevleri bağımsız değişkenleriyle daha zengin etkileşim sağlar.
 
 İşlev bağımsız değişkenlerinin, Lambda ifadeleri LINQ sorguları oluşturduğunuzda genellikle kullanarak yazın. Bu işlev bağımsız değişkenleri, tipik bir LINQ Sorgu derleyici oluşturur bir temsilciye dönüştürülür. 
 

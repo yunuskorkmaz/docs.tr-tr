@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için desen eşleştirme özelliklerini kull
 description: Gelişmiş Bu öğretici, verileri ve ayrı oluşturulur algoritmaları kullanarak işlevi oluşturmak için desen eşleştirme teknikleri kullanmayı gösterir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 210cb15699057482e36984f80dd08f8b19db55d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58051546"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125817"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için özellikler desen kullanma
 
@@ -39,7 +39,7 @@ Trafiği yönetmek için ücretli geçişler ve en yüksek süre fiyatlandırma 
 
 Bu kısa açıklamasından, hızlı bir şekilde bu sistem modeli için bir nesne hiyerarşisine ince ince. Bununla birlikte, verilerinizi diğer araç kayıt yönetim sistemleri gibi birden çok kaynaktan geliyor. Bu sistemler, veri modeli için farklı sınıfları sağlar ve bir tek nesne modeli kullandığınız yok. Bu öğreticide, bu dış sistemlerden vehicle veri modeli için aşağıdaki kodda gösterildiği gibi bu Basitleştirilmiş sınıfların kullanacaksınız:
 
-[!code-csharp[ExternalSystems](../../../samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Başlatıcı kodu indirebileceğiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub deposu. Araç sınıfları farklı sistemlerden ve farklı ad alanlarında, görebilirsiniz. Dışındaki hiçbir ortak bir taban sınıf `System.Object` yararlanılabilir.
 
@@ -76,18 +76,18 @@ namespace toll_calculator
         public decimal CalculateToll(object vehicle) =>
             vehicle switch
         {
-            Car c => 2.00m,
-            Taxi t => 3.50m,
-            Bus b => 5.00m,
+            Car c           => 2.00m,
+            Taxi t          => 3.50m,
+            Bus b           => 5.00m,
             DeliveryTruck t => 10.00m,
-            { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
-            null => throw new ArgumentNullException(nameof(vehicle))
+            { }             => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+            null            => throw new ArgumentNullException(nameof(vehicle))
         };
     }
 }
 ```
 
-Önceki kod bir **geçiş ifadesi** (aynı bir [ `switch` ](../language-reference/keywords/switch.md) deyimi) kullanan testlerin **türü deseni**. A **geçiş ifadesi** değişkeniyle başlar `vehicle` önceki kodda, arkasından `switch` anahtar sözcüğü. Sonraki küme ayraçlarının içindeki tüm anahtar Silah gelir. `switch` İfade çevreleyen sözdizimine diğer iyileştirme yapar `switch` deyimi. `case` Anahtar sözcüğü atlanırsa ve her bir arm sonucunu bir ifadedir. Son iki Silah yeni bir dil özelliği gösterir. `{ }` Çalışması eşleşen bir önceki arm eşleşmedi herhangi bir null olmayan nesne. Bu arm bu yönteme geçirilen yanlış türler yakalar. Son olarak, `null` deseni yakalar `null` bu yönteme iletilir. `null` Deseni bir türü desenleri yalnızca null olmayan bir nesne doğru türde olduğundan son olabilir.
+Önceki kod bir **geçiş ifadesi** (aynı bir [ `switch` ](../language-reference/keywords/switch.md) deyimi) kullanan testlerin **türü deseni**. A **geçiş ifadesi** değişkeniyle başlar `vehicle` önceki kodda, arkasından `switch` anahtar sözcüğü. Sonraki tüm gelen **geçiş Silah** küme ayraçlarının içindeki. `switch` İfade çevreleyen sözdizimine diğer iyileştirme yapar `switch` deyimi. `case` Anahtar sözcüğü atlanırsa ve her bir arm sonucunu bir ifadedir. Son iki Silah yeni bir dil özelliği gösterir. `{ }` Çalışması eşleşen bir önceki arm eşleşmedi herhangi bir null olmayan nesne. Bu arm bu yönteme geçirilen yanlış türler yakalar. Son olarak, `null` deseni yakalar `null` bu yönteme iletilir. `null` Deseni bir türü desenleri yalnızca null olmayan bir nesne doğru türde olduğundan son olabilir.
 
 Aşağıdaki kodu kullanarak bu kodu test edebilirsiniz `Program.cs`:
 
@@ -155,16 +155,16 @@ Bu kurallar kullanılarak uygulanır **özelliği desenini** aynı ifade geçin.
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0} => 2.00m + 0.50m,
-    Car { Passengers: 1 } => 2.0m,
-    Car { Passengers: 2} => 2.0m - 0.50m,
+    Car { Passengers: 0}        => 2.00m + 0.50m,
+    Car { Passengers: 1 }       => 2.0m,
+    Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-İlk üç çalışmalarını test türü olarak bir `Car`, ardından değerini kontrol `Passengers` özelliği. Her ikisi de eşleşirse, ifade değerlendirilir ve döndürdü. Son yan tümcesi gösterir `when` özelliği desenini yan tümcesi. Kullandığınız `when` özellikte eşitlik dışındaki koşulları test etmeye yönelik yan tümcesi. Önceki örnekte `when` Arabada 2'den fazla Yolcuların olduğunu görmek için yan tümcesi sınar. NET olarak söylemek gerekirse, bu örnekte gerekli değildir.
+İlk üç çalışmalarını test türü olarak bir `Car`, ardından değerini kontrol `Passengers` özelliği. Her ikisi de eşleşirse, ifade değerlendirilir ve döndürdü. Son yan tümcesi gösterir `when` anahtar arm yan tümcesi. Kullandığınız `when` özellikte eşitlik dışındaki koşulları test etmeye yönelik yan tümcesi. Önceki örnekte `when` Arabada 2'den fazla Yolcuların olduğunu görmek için yan tümcesi sınar. NET olarak söylemek gerekirse, bu örnekte gerekli değildir.
 
 Benzer şekilde taksiler durumlarda da genişletin:
 
@@ -173,10 +173,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0} => 3.50m + 1.00m,
+    Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2} => 3.50m - 0.50m,
-    Taxi t => 3.50m - 1.00m,
+    Taxi { Fares: 2}  => 3.50m - 0.50m,
+    Taxi t            => 3.50m - 1.00m,
 
     // ...
 };
@@ -217,15 +217,15 @@ vehicle switch
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0} => 2.00m + 0.50m,
-    Car { Passengers: 1 } => 2.0m,
-    Car { Passengers: 2} => 2.0m - 0.50m,
+    Car { Passengers: 0}        => 2.00m + 0.50m,
+    Car { Passengers: 1}        => 2.0m,
+    Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
    
-    Taxi { Fares: 0} => 3.50m + 1.00m,
+    Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2} => 3.50m - 0.50m,
-    Taxi t => 3.50m - 1.00m,
+    Taxi { Fares: 2}  => 3.50m - 0.50m,
+    Taxi t            => 3.50m - 1.00m,
     
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
@@ -237,9 +237,9 @@ vehicle switch
 };
 ```
 
-## <a name="recursive-patterns"></a>Özyinelemeli desenleri
+Bunların çoğu Silah geçiş örnekler **özyinelemeli desenleri**. Örneğin, `Car { Passengers: 1}` özelliği desenini içinde sabit bir deseni gösterir.
 
-Bu kod daha az tekrarlı kullanarak yapabileceğiniz **özyinelemeli desenleri**. `Car` Ve `Taxi` her ikisi de Yukarıdaki örneklerde dört farklı Silah sahiptir. Her iki durumda da, bir özellik modele akışları bir tür deseni oluşturabilirsiniz. Bu teknik, aşağıdaki kodda gösterilmiştir:
+İç içe geçmiş anahtarlarını kullanarak bu kodu daha az tekrarlı yapabilirsiniz. `Car` Ve `Taxi` her ikisi de Yukarıdaki örneklerde dört farklı Silah sahiptir. Her iki durumda da, bir özellik modele akışları bir tür deseni oluşturabilirsiniz. Bu teknik, aşağıdaki kodda gösterilmiştir:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -268,7 +268,8 @@ public decimal CalculateToll(object vehicle) =>
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
-        { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+
+        { }  => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
         null => throw new ArgumentNullException(nameof(vehicle))
     };
 ```
@@ -314,41 +315,29 @@ Araçları toplayan sistem kullanan bir <xref:System.DateTime> Ücretli koleksiy
 private static bool IsWeekDay(DateTime timeOfToll) =>
     timeOfToll.DayOfWeek switch
     {
-        DayOfWeek.Monday => true,
-        DayOfWeek.Tuesday => true,
+        DayOfWeek.Monday    => true,
+        DayOfWeek.Tuesday   => true,
         DayOfWeek.Wednesday => true,
-        DayOfWeek.Thursday => true,
-        DayOfWeek.Friday => true,
-        DayOfWeek.Saturday => false,
-        DayOfWeek.Sunday => false
+        DayOfWeek.Thursday  => true,
+        DayOfWeek.Friday    => true,
+        DayOfWeek.Saturday  => false,
+        DayOfWeek.Sunday    => false
     };
 ```
 
 Bu yöntem çalışır, ancak tekrarlayan. Aşağıdaki kodda gösterildiği gibi basitleştirebilirsiniz:
 
-```csharp
-private static bool IsWeekDay(DateTime timeOfToll) =>
-    timeOfToll.DayOfWeek switch
-    {
-        DayOfWeek.Saturday,  => false,
-        DayOfWeek.Sunday => false,
-        _ => true
-    };
-```
-
-Bu ifade için başka bir basitleştirme bir arm iki değer birleştirerek yapabilirsiniz:
-
-[!code-csharp[IsWeekDay](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Ardından, bloklarda süreyi kategorilere ayıran bir benzer işlevi ekleyin:
 
-[!code-csharp[GetTimeBand](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Desen eşleştirme yönteminin kullanmaz. Tanıdık bir cascade birini kullanarak nettir `if` deyimleri. Özel bir ekleme `enum` her zaman aralığı bir ayrık değere dönüştürülecek.
 
 Bu yöntemleri oluşturduktan sonra başka kullanabilirsiniz `switch` ifadesiyle **kayıt düzeni deseni** fiyatlandırma premium hesaplamak için. Derleme bir `switch` 16 kollu ifade:
 
-[!code-csharp[FullTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Yukarıdaki kodu çalışır, ancak Basitleştirilmiş. Tüm sekiz hafta birleşimlerini aynı Ücretli vardır. Tüm sekiz bir satırı aşağıdaki ile değiştirebilirsiniz:
 
@@ -360,7 +349,7 @@ Gelen ve giden trafiği, ertesi gün saat ve haftanın günü daytime sırasınd
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
-(true, TimeBand.Daytime, _) => 1.5m,
+(true, TimeBand.Daytime, _)   => 1.5m,
 ```
 
 Kod, sonra bu iki değişikliği şu kod gibi görünmelidir:
@@ -369,13 +358,13 @@ Kod, sonra bu iki değişikliği şu kod gibi görünmelidir:
 public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
     (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
     {
-        (true, TimeBand.MorningRush, true) => 2.00m,
+        (true, TimeBand.MorningRush, true)  => 2.00m,
         (true, TimeBand.MorningRush, false) => 1.00m,
-        (true, TimeBand.Daytime, _) => 1.50m,
-        (true, TimeBand.EveningRush, true) => 1.00m,
+        (true, TimeBand.Daytime,     _)     => 1.50m,
+        (true, TimeBand.EveningRush, true)  => 1.00m,
         (true, TimeBand.EveningRush, false) => 2.00m,
-        (true, TimeBand.Overnight, _) => 0.75m,
-        (false, _, _) => 1.00m,
+        (true, TimeBand.Overnight,   _)     => 0.75m,
+        (false, _,                   _)     => 1.00m,
     };
 ```
 

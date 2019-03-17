@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372184"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125440"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -24,8 +24,7 @@ Bu konu, özelliklerine genel bir bakış sağlar. <xref:System.Windows.Media.Fo
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
  <xref:System.Windows.Media.FormattedText> Nesne, metindeki her karakter ayrı ayrı biçimlendirilebilir, çok satırlı metin çizme olanak tanır. Aşağıdaki örnek, çeşitli biçimlerde uygulanmış olan metni gösterir.  
   
- ![FormattedText nesnesi kullanılarak görüntülenen metin](./media/formattedtext01.jpg "FormattedText01")  
-FormattedText yöntemi kullanılarak görüntülenen metin  
+ ![Metin BiçimlendirilmişMetin nesnesi kullanma](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  Geçiş bu geliştiriciler için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API'si, tabloda [Win32 geçiş](#win32_migration) bölümünde listeleri [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText bayraklar ve yaklaşık eşdeğeri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -42,8 +41,7 @@ FormattedText yöntemi kullanılarak görüntülenen metin
   
  Kullanım <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> metni belirli bir genişlikte kısıtlamak için özellik. Metnin belirtilen genişlik aşmamak için otomatik olarak kaydırılır. Kullanım <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> metni belirli bir yükseklikte kısıtlamak için özellik. "..." Belirtilen yüksekliğini aşıyor metin için üç nokta metni görüntüler.  
   
- ![FormattedText nesnesi kullanılarak görüntülenen metin](./media/formattedtext02.png "FormattedText02")  
-Sözcük kaydırma ve üç nokta gösteren metin  
+ ![Sözcük kaydırmayı ve üç nokta ile görüntülenen metin.](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  Bir veya daha fazla karakterle birden çok biçimlendirme stil uygulayabilirsiniz. Örneğin, her ikisi de çağırabilirsiniz <xref:System.Windows.Media.FormattedText.SetFontSize%2A> ve <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> ilk beş karakterlerini biçimini değiştirmek için yöntem.  
   
@@ -62,19 +60,15 @@ Sözcük kaydırma ve üç nokta gösteren metin
 ### <a name="converting-formatted-text-to-a-geometry"></a>Biçimlendirilmiş metin geometriye dönüştürme  
  Biçimlendirilmiş metin dönüştürebilirsiniz <xref:System.Windows.Media.Geometry> görsel metin ilginç diğer tür oluşturmanızı sağlayan nesneler. Örneğin, aşağıdakileri oluşturabilirsiniz bir <xref:System.Windows.Media.Geometry> nesne tabanlı bir metin dizesinin çerçevesinde.  
   
- ![Doğrusal gradyan fırçası kullanma metin anahat](./media/outlinedtext02.jpg "OutlinedText02")  
-Metin anahat doğrusal gradyan fırçası kullanma  
+ ![Metin anahat doğrusal gradyan fırçası kullanma](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  Aşağıdaki örnekler, ilgi çekici görsel efektler vuruş dolgu ve dönüştürülen metin vurgulama değiştirerek oluşturmanın birkaç yolu gösterilmektedir.  
   
- ![Metin doldurup için farklı renklerde](./media/outlinedtext03.jpg "OutlinedText03")  
-Fırça darbesi ve dolgu farklı renkleri ayarlama örneği  
+ ![Farklı renklerde doldurup için metin](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Resim fırçası uygulandığı metinle](./media/outlinedtext04.jpg "OutlinedText04")  
-Bir resim fırçası uygulandığı örneği  
+ ![Resim fırçası uygulandığı metin](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Resim fırçası uygulandığı metinle](./media/outlinedtext05.jpg "OutlinedText05")  
-Fırça darbesi ve vurgulamaya uygulanan bir resim fırçası örneği  
+ ![Resim fırçası vuruş yapmak ve vurgulamak için uygulanan metin](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Ne zaman metin dönüştürülür bir <xref:System.Windows.Media.Geometry> nesnesi, artık bir derlemesidir karakter — metin dizesindeki karakterlerin değiştiremezsiniz. Ancak, çizme ve İşaretleme dolgu özelliklerini değiştirerek Dönüştürülen metin görünümünü etkileyebilir. Fırça darbesi Dönüştürülen metin anahattına gösterir. Dolgu Dönüştürülen metin özetini içindeki alan ifade eder. Daha fazla bilgi için [özetlenen metin oluşturma](how-to-create-outlined-text.md).  
   
@@ -82,15 +76,14 @@ Fırça darbesi ve vurgulamaya uygulanan bir resim fırçası örneği
   
  Aşağıdaki örnek, dönüştürülen biçimlendirilmiş metni gösterir. bir <xref:System.Windows.Media.PathGeometry> nesne. Animasyonlu bir elips işlenen metin vuruşlarının yolu izler.  
   
- ![Metin yolu geometri izleyen küre](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Metin yolu geometri izleyen küre](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 Metin yolu geometri izleyen küre  
   
  Daha fazla bilgi için [nasıl yapılır: Bir PathGeometry animasyon metnini oluşturmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Biçimlendirilmiş metin için ilgi çekici diğer kullanımlar için dönüştürüldükten sonra oluşturabilirsiniz bir <xref:System.Windows.Media.PathGeometry> nesne. Örneğin, içinde görüntülemek için video bölebilirsiniz.  
   
- ![Video görüntüleme metnin yol geometrisini](./media/videotextdemo01.png "VideoTextDemo01")  
-Metnin yolu geometrisini video görüntüleme  
+ ![Metnin yolu geometrisini video görüntüleme](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Win32 geçiş  

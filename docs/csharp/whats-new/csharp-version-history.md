@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981939"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126155"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -84,7 +84,7 @@ Dil özelliklerinin tam bot gerçekten .NET Framework sürüm 3.5 gelecektir anc
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [Lambda ifadeleri](../lambda-expressions.md)
+- [Lambda ifadeleri](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [İfade ağaçları](../expression-trees.md)
 - [Genişletme yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)

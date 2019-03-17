@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202359"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125921"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -30,8 +30,7 @@ Devralma, kapsülleme ve çok biçimlilik, birlikte üç birincil nesne yönelim
   
  Bir sınıf aşağıdaki çizimde `WorkItem` , bazı iş sürecini iş bir öğeyi temsil eder. Öğesinden türetilen tüm sınıflar gibi <xref:System.Object?displayProperty=nameWithType> ve tüm yöntemleri alır. `WorkItem` beş üyeleri kendi ekler. Oluşturucular devralınmaz çünkü bunlar bir oluşturucu içerir. Sınıf `ChangeRequest` devraldığı `WorkItem` ve belirli bir iş öğesi türünü temsil eder. `ChangeRequest` öğesinden devralınan üyelere iki daha fazla üye ekleyen `WorkItem` ve <xref:System.Object>. Kendi Oluşturucusu eklemelisiniz ve ayrıca ekler `originalItemID`. Özellik `originalItemID` sağlayan `ChangeRequest` özgün ile ilişkilendirilecek örneği `WorkItem` değişiklik isteğini geçerli olduğu için.  
   
- ![Sınıf devralma](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Sınıf devralma  
+ ![Sınıf devralma gösteren diyagram](./media/inheritance/class-inheritance-diagram.png)  
   
  Aşağıdaki örnek nasıl önceki resimde gösterilen ilişkileri C# dilinde ifade edildiğini gösterir. Örnek ayrıca gösterir nasıl `WorkItem` sanal yöntemini geçersiz kılan <xref:System.Object.ToString%2A?displayProperty=nameWithType>ve nasıl `ChangeRequest` sınıfından devralan `WorkItem` yöntemi.  
   

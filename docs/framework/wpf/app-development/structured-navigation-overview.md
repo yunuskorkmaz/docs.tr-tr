@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369753"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125609"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.  
@@ -37,9 +37,9 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
   
 -   Arama sayfası çağrılan sayfaya geri döndüğünde, çağrılan sayfanın adlı başka bir sayfadan bir örneğini ayırmak için Gezinti geçmişinden kaldırılır.  
   
- Bu davranışların aşağıdaki şekilde gösterilmiştir.  
+ Bu davranışların aşağıdaki şekilde gösterilmiştir:  
   
- ![Arama sayfası ve çağrılan sayfa arasındaki akışını](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![Ekran arama sayfası ve çağrılan sayfa arasındaki akışını gösterir.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  Bu davranışların kullanarak uygulayabileceğiniz bir <xref:System.Windows.Navigation.PageFunction%601> çağrılan sayfası.  
   

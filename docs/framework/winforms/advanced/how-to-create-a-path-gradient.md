@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720403"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126233"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol gradyanı oluşturma
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı renkleri yavaş yavaş değişen bir şeklin dolgu özelleştirmenize olanak tanır. Örneğin, merkezi bir yolu için bir renk ve başka bir renk için bir yol sınırını belirtebilirsiniz. Ayrıca her bir yol sınırları boyunca birkaç noktası için farklı renkler belirtebilirsiniz.  
@@ -26,13 +26,13 @@ ms.locfileid: "57720403"
   
 -   Aşağıdaki örnek, bir elips yol gradyan fırçası ile doldurur. Orta rengini Mavi olarak ayarlanır ve sınır rengini Açık Deniz Mavisi olarak ayarlanır. Dolu Elips aşağıda gösterilmiştir.  
   
-     ![Gradyan yolu](./media/pathgradient1.png "pathgradient1")  
+     ![Gradyan yolu, bir elips doldurur.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Varsayılan olarak, bir yolun gradyan fırçası yol sınırının dışında genişletilmez. Yolun sınırının ötesine genişletir bir şekil doldurmak için yol gradyan fırçası kullanırsanız, alan yolu dışında bir ekranın dolu değil.  
   
-     Değiştirirseniz ne aşağıdaki çizimde gösterildiği <xref:System.Drawing.Graphics.FillEllipse%2A> aşağıdaki kodu çağırın `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     Değiştirirseniz ne aşağıdaki çizimde gösterildiği <xref:System.Drawing.Graphics.FillEllipse%2A> aşağıdaki kodu çağırın `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Gradyan yolu](./media/pathgradient2.png "pathgradient2")  
+     ![Gradyan yolu yol sınırının genişletilmiş.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ ms.locfileid: "57720403"
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   Aşağıdaki örnek bir yol gradyanı olmadan çizer bir <xref:System.Drawing.Drawing2D.GraphicsPath> kodu nesnesi. Belirli <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> örnek oluşturucusunda bir dizi noktaları alır ancak gerektirmez bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne. Ayrıca, <xref:System.Drawing.Drawing2D.PathGradientBrush> bir dikdörtgen bir yol değil doldurmak için kullanılır. Dikdörtgen, bazı dikdörtgen olmayan boyanır şekilde fırça tarafından fırça tanımlamak için kullanılan kapalı yolu fazladır. Dikdörtgenin (noktalı çizgi) ve yolun gradyan fırçası tarafından boyanan dikdörtgenin bir bölümü aşağıda gösterilmiştir.  
+-   Aşağıdaki örnek bir yol gradyanı olmadan çizer bir <xref:System.Drawing.Drawing2D.GraphicsPath> kodu nesnesi. Belirli <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> örnek oluşturucusunda bir dizi noktaları alır ancak gerektirmez bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne. Ayrıca, <xref:System.Drawing.Drawing2D.PathGradientBrush> bir dikdörtgen bir yol değil doldurmak için kullanılır. Dikdörtgen, bazı dikdörtgen olmayan boyanır şekilde fırça tarafından fırça tanımlamak için kullanılan kapalı yolu fazladır. Dikdörtgenin (noktalı çizgi) ve yolun gradyan fırçası tarafından boyanan dikdörtgenin bir bölümü aşağıda gösterilmiştir: 
   
-     ![Gradyan](./media/gradient4.png "gradient4")  
+     ![Yolun gradyan fırçası tarafından boyanan gradyan bölümü.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ ms.locfileid: "57720403"
   
      Aşağıdaki kodun çıktısı aşağıdaki çizimde gösterilmektedir. Açık Deniz Mavisi merkez noktasını yalnızca en soldaki elips olur. Sağındaki elips aqua iç yolun içinde her yerde ' dir.  
   
- ![Gradyan](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Gradyan etkisini odak ölçekler](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ ms.locfileid: "57720403"
   
      Özel yol gradyan fırçası ile doldurulmuş üçgen aşağıda gösterilmiştir.  
   
-     ![Gradyan yolu](./media/pathgradient4.png "pathgradient4")  
+     ![Üçgen özel yol gradyan fırçası ile doldurulur.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ ms.locfileid: "57720403"
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Dolu Elips ve yolun gradyan fırçası merkez noktasını aşağıdaki çizimde gösterilmektedir.  
+     Dolu Elips ve yolun gradyan fırçası merkez noktasını aşağıda gösterilmiştir:  
   
-     ![Gradyan yolu](./media/pathgradient5.png "pathgradient5")  
+     ![Gradyan yolu ile doldurulmuş elips ve orta noktası.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Fırça oluşturmak için kullanılan yolu dışında bir konuma yol gradyan fırçası merkez noktasını ayarlayabilirsiniz. Aşağıdaki örnek ayarlamak için yapılan çağrı değiştirir <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> önceki kodda özelliği.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Bu değişiklik ile çıktı aşağıda gösterilmiştir.  
+     Bu değişiklik ile çıktı aşağıda gösterilmiştir:  
   
-     ![Gradyan yolu](./media/pathgradient6.png "pathgradient6")  
+     ![Gradyan yolu ile merkez noktası yolu dışında.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      (Çok yakın oldukları rağmen) Yukarıdaki çizimde, en sağdaki noktaları olan elipsin saf mavi değildir. Gradyan renklerini dolgu rengi (0, 0, 255) saf mavi ise olacağı noktası (145, 35) gibi eriştiyseniz konumlandırılır. Ancak hiçbir dolgu ulaştığında (145, 35) olduğundan, yol içinde yalnızca yolun gradyan fırçası boyar.  
   
