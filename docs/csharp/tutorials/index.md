@@ -43,7 +43,11 @@ Hello World Ders aşağıdaki tanıtım öğreticilerine kendi yerel geliştirme
 
 ## <a name="explore-new-features-in-c"></a>C'de yeni özellikleri keşfedin\#
 
-Yeni özellikleri deneyin [ C# 6](../whats-new/csharp-6.md) bu [etkileşimli incelenmesi](exploration/csharp-6.yml).
+* [Yeni özellikleri deneyin C# 6 etkileşimli olarak](exploration/csharp-6.yml): Eklenen özellikleri keşfedin [ C# 6](../whats-new/csharp-6.md) tarayıcınızda etkileşimli olarak.
+* [Dize ilişkilendirme](string-interpolation.md): dize ilişkilendirme, biçimlendirilmiş dizeler oluşturulacağı gösterilmektedir C#.
+* [Null başvuru türleri](nullable-reference-types.md): null başvuru için amacınız ifade etmek için boş değer atanabilir başvuru türleri nasıl yapılacağı açıklanır.
+* [Güncelleştirme Nullable kullanmak için bir proje başvuru türleri](upgrade-to-nullable-references.md): yapmak için var olan bir projeyi yükseltmesine teknikleri gösterir null başvuru türlerini kullanın.
+* [Desen eşleştirme kullanan veri yeteneklerini genişletmek](pattern-matching.md): desen eşleştirme türleri temel özelliklerine ötesine genişletmek için nasıl kullanılacağını gösterir.
 
 ## <a name="general-tutorials"></a>Genel öğreticiler
 
@@ -53,6 +57,4 @@ Aşağıdaki öğreticilerde oluşturmanıza olanak tanıyan C# kullanarak progr
 * [REST istemcisi](console-webapiclient.md): web iletişimi, JSON seri hale getirme ve nesne yönelimli özellikleri gösterir C# dili.
 * [Devralmada C# ve .NET](inheritance.md): devralma gösterir C#temel sınıflarını tanımlamak için soyut temel sınıflar, devralma kullanımı dahil olmak üzere ve türetilmiş sınıflar.
 * [LINQ ile çalışma](working-with-linq.md): LINQ ve Dil öğelerini destekleyen özelliklerin çoğunu gösterir.
-* [Dize ilişkilendirme](string-interpolation.md): dize ilişkilendirme, biçimlendirilmiş dizeler oluşturulacağı gösterilmektedir C#.
 * [Öznitelikleri kullanarak](attributes.md): oluşturma ve öznitelikleri kullanma işlemi gösterilmektedir C#.
-* [Null başvuru türleri](nullable-reference-types.md): null başvuru için amacınız ifade etmek için boş değer atanabilir başvuru türleri nasıl yapılacağı açıklanır.

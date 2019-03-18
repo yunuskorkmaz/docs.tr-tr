@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542268"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039398"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaşmak yerine, her istek için yeni bir örneği oluşturma isteği öznitelikli kaynağı için WPF kaynak alma davranışını değiştirir.  
@@ -33,7 +33,7 @@ Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaş
   
  Bir kaynağı API gibi döndürülen bir nesne değiştirme <xref:System.Windows.FrameworkElement.FindResource%2A>, veya bir nesne doğrudan içinde değiştirerek bir <xref:System.Windows.ResourceDictionary>, özgün kaynak değiştirir. Referansları bu kaynağa dinamik kaynak başvurularını varsa, bu kaynağa tüketicilerinin değiştirilen kaynak alın.  
   
- Kaynak başvurularını statik kaynak başvurularını olsaydı, sonra kaynak değişikliklerini [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ilgisiz işleme süresi. Statik ve dinamik kaynak başvuruları hakkında daha fazla bilgi için bkz: [XAML kaynakları](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Kaynak başvurularını statik kaynak başvurularını olsaydı, sonra kaynak değişikliklerini [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ilgisiz işleme süresi. Statik ve dinamik kaynak başvuruları hakkında daha fazla bilgi için bkz: [XAML kaynakları](../wpf/advanced/xaml-resources.md).  
   
  Açıkça belirtilmesi `x:Shared="true"` , zaten varsayılan olduğundan nadiren, gerçekleştirilir. Doğrudan kod için eşdeğer `x:Shared` WPF içinde nesne modeli; yalnızca bir XAML kullanımı belirtilebilir ve varsayılan WPF davranış veya yükleme yolundaki Ara bir XAML düğüm akış kullanarak .NET Framework XAML Se işlediğinde işlenmesi gerekir rvices ve kendi XAML okuyucular.  
   
@@ -51,5 +51,5 @@ Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaş
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.ResourceDictionary>
-- [XAML Kaynakları](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Temel Öğeler](../../../docs/framework/wpf/advanced/base-elements.md)
+- [XAML Kaynakları](../wpf/advanced/xaml-resources.md)
+- [Temel Öğeler](../wpf/advanced/base-elements.md)

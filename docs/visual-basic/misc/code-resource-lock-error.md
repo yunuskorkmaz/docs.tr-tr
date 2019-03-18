@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID455
 ms.assetid: 67a269bf-f436-4913-bc3c-af7f68116b7d
-ms.openlocfilehash: c24f412b9e904d10d69d2a8e07db2bc5b4bdf00e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32fd18d84e3f402dbd27bdfd3370327a456eaa43
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521146"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041401"
 ---
 # <a name="code-resource-lock-error"></a>Kod kaynak kilidi hatası
 Kod kaynak bir yordamda bir arama yapıldı. Kod kaynak bulundu, ancak kullanımda olduğundan kaynak belki de kilitlemek için bir girişimde bulunuldu çalışırken bir hata oluştu.  
@@ -19,5 +19,5 @@ Kod kaynak bir yordamda bir arama yapıldı. Kod kaynak bulundu, ancak kullanım
 -   Neden bir hata oluştuğunu belirlemek için kaynak kontrol edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
 
+- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)

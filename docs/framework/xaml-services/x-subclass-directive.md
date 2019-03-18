@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 67d699782cd2ce2b13e159d2b7218b4868a8794c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670933"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048004"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass Yönergesi
 XAML biçimlendirmesi derleme davranışını değiştiren olduğunda `x:Class` de sağlanır. Temel alan bir parçalı sınıf oluşturmak yerine `x:Class`, sağlanan `x:Class` Ara bir sınıf olarak oluşturulur ve ardından sağlanan türetilmiş sınıfınızın temel beklenen `x:Class`.  
@@ -38,7 +38,7 @@ XAML biçimlendirmesi derleme davranışını değiştiren olduğunda `x:Class` 
 |`subclassName`|Gerekli. Alt CLR adını belirtir.|  
   
 ## <a name="dependencies"></a>Bağımlılıkları  
- [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md) da aynı nesne üzerinde sağlanmalıdır ve o nesnenin XAML üretim kök öğesi olmalıdır.  
+ [x: Class yönergesi](x-class-directive.md) da aynı nesne üzerinde sağlanmalıdır ve o nesnenin XAML üretim kök öğesi olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `x:Subclass` Kullanım, öncelikle kısmi sınıf bildirimi desteklemeyen diller için tasarlanmıştır.  
@@ -57,5 +57,5 @@ XAML biçimlendirmesi derleme davranışını değiştiren olduğunda `x:Class` 
  Tanımladığınızda hem `x:Class` ve `x:Subclass`, herhangi bir uygulama tarafından başvurulan sınıfın sağlamak gerekmez `x:Class`. Yalnızca aracılığıyla bir ad vermeniz gerekir `x:Class` derleyici Ara dosyaları (derleyici ı varsayılan adı bu durumda) oluşturan sınıf için bazı yönergeler sahip olacak şekilde özniteliği. Size verebilir `x:Class` uygulama sınıf; ancak, bu her ikisini de kullanarak tipik bir senaryo değildir `x:Class` ve `x:Subclass`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)
-- [WPF için XAML ve Özel Sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:Class Yönergesi](x-class-directive.md)
+- [WPF için XAML ve Özel Sınıflar](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
