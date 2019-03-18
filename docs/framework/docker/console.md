@@ -4,12 +4,12 @@ description: Mevcut bir .NET Framework konsol uygulamasını alıp Windows Docke
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145286"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126090"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcıları içinde çalışan konsol uygulamaları
 
@@ -50,7 +50,7 @@ Windows kapsayıcıları desteklenmektedir [Windows 10 Yıldönümü güncelleş
 
 Docker için Windows, sürüm 1.12 desteklemek için Beta 26 veya üzeri Windows kapsayıcıları olması gerekir. Varsayılan olarak, Docker, Linux tabanlı kapsayıcılar sağlar; Windows kapsayıcıları için Docker sistem tepsisindeki simgeye sağ tıklayarak geçin ve seçin **Windows kapsayıcılarına geç**. Docker değiştirme işlemi çalışır ve bir yeniden başlatma gerekebilir.
 
-![Windows kapsayıcıları](./media/console/SwitchContainer.png)
+![Windows kapsayıcı menü seçeneğinin ekran görüntüsü.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Uygulama oluşturma
 Yükleyici, FTP veya dosya paylaşımı konsol uygulamaları genellikle dağıtılmış dağıtım. Bir kapsayıcıya dağıtılırken varlıkları derlenir ve Docker görüntüsü oluşturulduğunda kullanılabilecek bir konuma aşamalı gerekir.

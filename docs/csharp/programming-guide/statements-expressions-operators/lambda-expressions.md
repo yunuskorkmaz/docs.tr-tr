@@ -1,7 +1,7 @@
 ---
 title: Lambda ifadeleri - C# Programlama Kılavuzu
 ms.custom: seodec18
-ms.date: 03/03/2017
+ms.date: 03/14/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,285 +9,226 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 77701653abacbe6d876c0890a11586f0840bad5d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200903"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125739"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
-Bir lambda ifadesi; bir [anonim işlev](anonymous-methods.md) oluşturmak için kullanabileceğiniz [Temsilciler](../delegates/using-delegates.md) veya [ifade ağacı](../concepts/expression-trees/index.md) türleri. Lambda ifadeleri kullanarak, bağımsız değişken yerine geçebilecek veya işlev çağrılarının değeri olarak döndürülebilecek, yerel işlevler yazabilirsiniz. Lambda ifadeleri LINQ sorgu ifadeleri yazmak için özellikle yararlıdır.
-  
-Bir lambda ifadesi oluşturmak için giriş parametrelerini (varsa) lambda işlecinin sol tarafında belirttiğiniz [ => ](../../../csharp/language-reference/operators/lambda-operator.md), ve ifadeyi veya deyim bloğunu diğer tarafa yerleştirin. Örneğin, lambda ifadesi `x => x * x` adlı bir parametre belirtir `x` ve değerini döndürür `x` karesi alınmış. Bu ifadeyi aşağıdaki örnekte gösterildiği gibi bir temsilci türüne atayabilirsiniz:  
-  
-```csharp  
-delegate int del(int i);  
-static void Main(string[] args)  
-{  
-    del myDelegate = x => x * x;  
-    int j = myDelegate(5); //j = 25  
-}  
-```  
-  
- Bir ifade ağacı türü oluşturmak için:  
-  
-```csharp  
-using System.Linq.Expressions;  
-  
-namespace ConsoleApplication1  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            Expression<del> myET = x => x * x;  
-        }  
-    }  
-}  
-```  
-  
- `=>` İşleci atamayla aynı önceliğe sahip (`=`) ve [sağdan birleşir](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (işleçler makalesindeki "Birleşme" bölümüne bakın).  
-  
- Lambda ifadeleri yöntem tabanlı kullanılan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] gibi sorgularında standart sorgu işleci yöntemlerinin bağımsız değişkenleri olarak <xref:System.Linq.Enumerable.Where%2A>.  
-  
- Çağırmak için yöntem tabanlı sözdizimi kullandığınızda <xref:System.Linq.Enumerable.Where%2A> yönteminde <xref:System.Linq.Enumerable> sınıfı (yaptığınız gibi [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesnelere ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) parametre temsilci türüdür <xref:System.Func%602?displayProperty=nameWithType>. Lambda ifadesi, bu temsilciyi oluşturmak için en kullanışlı yoldur. Aynı yöntemi örneğin çağırdığınızda <xref:System.Linq.Queryable?displayProperty=nameWithType> sınıfı (yaptığınız gibi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) parametre türü bir <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>< Func\> burada Func, on altı adede kadar giriş parametresi Func temsilcilerinden biridir. Yine, Lambda ifadesi bu ifade ağacını oluşturmanın yalnızca çok kısa bir yoludur. Lambdalar izin `Where` çağrılarının benzer görünmesine, aslında lambdadan oluşturulan nesnenin türü farklı olsa.  
-  
- Önceki örnekte, temsilci imzasında örtük olarak dikkat edin giriş parametresi türü `int`ve döndüren bir `int`. Lambda ifadesi bu türden bir temsilciye dönüştürülebilir çünkü ayrıca bir giriş parametresi vardır (`x`) ve derleyicinin dolaylı olarak türüne çevirebildiği bir dönüş değeri `int`. (Tür çıkarımı, ilerleyen bölümlerde daha ayrıntılı bir şekilde tartışılmıştır.) Temsilci, giriş parametresi 5 kullanılarak çağrıldığında 25 sonucunu döndürür.  
-  
- Lambda ifadeleri, sol tarafında verilmez [olduğu](../../../csharp/language-reference/keywords/is.md) veya [olarak](../../../csharp/language-reference/keywords/as.md) işleci.  
-  
- Anonim yöntemler için uygulanan tüm kısıtlamalar lambda ifadeleri için de geçerlidir. Daha fazla bilgi için [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+A *lambda ifadesi* (bir ifadeyi veya deyim bloğunu) bir nesne olarak işlem kod bloğudur. Yöntemi için bağımsız değişken olarak geçirilebilir ve yöntem çağrıları tarafından da döndürülebilir. Lambda ifadeleri için yaygın olarak kullanılır:
+
+- Kod geçirmeden olduğu gibi zaman uyumsuz yöntemler için yürütülecek <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>.
+
+- Yazma [LINQ Sorgu ifadeleri](../../linq/index.md).
+
+- Oluşturma [ifade ağaçları](../concepts/expression-trees/index.md).
+
+Lambda ifadeleri temsilci olarak veya bir ifade ağacına derleyen bir temsilciye olarak gösterilen kodu var. Bir lambda ifadesinin özel temsilci türü kendi parametrelerine göre değişir ve dönüş değeri. Bir değer döndürmeyen bir lambda ifadeleri, belirli bir karşılık gelen `Action` , parametreleri, sayısına bağlı olarak temsilci. Bir değer döndüren bir lambda ifadeleri, belirli bir karşılık gelen `Func` , parametreleri, sayısına bağlı olarak temsilci. Örneğin, iki parametreye sahip ancak hiçbir değer döndürmeyen bir lambda ifadesi için karşılık gelen bir <xref:System.Action%602> temsilci. Bir parametreye sahiptir ve bir değer döndüren bir lambda ifadesi karşılık gelen <xref:System.Func%602> temsilci.
+
+Bir lambda ifadesi kullanır `=>`, [lambda bildirimi işleci](../../language-reference/operators/lambda-operator.md), lambdanın parametre listesi, yürütülebilir kodundan ayırın. Bir lambda ifadesi oluşturmak için giriş parametreleri (varsa) lambda işlecinin sol tarafında belirtin ve ifadeyi veya deyim bloğunu diğer tarafa yerleştirin. Örneğin, tek satırlı lambda ifadesi `x => x * x` adlı bir parametre belirtir `x` ve değerini döndürür `x` karesi alınmış. Bu ifadeyi aşağıdaki örnekte gösterildiği gibi bir temsilci türüne atayabilirsiniz:
+
+[!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
+
+Ayrıca, bir lambda ifadesi bir ifade ağacı türüne atayabilirsiniz:
+
+[!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
+
+Veya doğrudan bir yöntemi bağımsız değişken geçirin:
+
+[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+
+Çağırmak için yöntem tabanlı sözdizimi kullandığınızda <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> yönteminde <xref:System.Linq.Enumerable?displayProperty=nameWithType> sınıfı (LINQ to nesneleri ve LINQ to XML için yaptığınız gibi) parametre temsilci türüdür <xref:System.Func%602?displayProperty=nameWithType>. Lambda ifadesi, bu temsilciyi oluşturmak için en kullanışlı yoldur. Çağırdığınızda <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> yönteminde <xref:System.Linq.Queryable?displayProperty=nameWithType> sınıfı (LINQ to SQL için yaptığınız gibi) parametre türü bir ifade ağacı türü olan [ `Expression<Func<TSource,TResult>>` ](<xref:System.Linq.Expressions.Expression%601>). Yine, Lambda ifadesi bu ifade ağacını oluşturmanın yalnızca çok kısa bir yoludur. Lambdalar izin `Select` çağrılarının benzer görünmesine, aslında lambdadan oluşturulan nesnenin türü farklı olsa.
+
+İçin tüm kısıtlamalar [anonim yöntemler](anonymous-methods.md) lambda ifadeleri için de geçerlidir.
   
 ## <a name="expression-lambdas"></a>Expression lambdas
 
- Bir lambda ifadesi işlecin sağ tarafındaki bir ifadeyle = > işleci çağrıldığında bir *lambda ifadesi*. İfade lambdaları oluşumunu oluşturulurken sıkça kullanılır [ifade ağaçları](../concepts/expression-trees/index.md). Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
-  
+Sağ alt tarafında bir ifade olan bir lambda ifadesine `=>` işleci çağrıldığında bir *lambda ifadesi*. İfade lambdaları oluşumunu oluşturulurken sıkça kullanılır [ifade ağaçları](../concepts/expression-trees/index.md). Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
+
 ```csharp
 (input-parameters) => expression
 ```
 
- Parantezler yalnızca lambdanın bir çıktı parametresi varsa isteğe bağlıdır; aksi takdirde bunlar gereklidir. İki veya daha fazla giriş parametresi, ayraç içinde virgülle ayrılır:  
-  
-```csharp
-(x, y) => x == y
-```
+Parantezler yalnızca lambdanın bir çıktı parametresi varsa isteğe bağlıdır; aksi takdirde bunlar gereklidir.
 
- Bazen derleyicinin giriş türlerini çıkarması zor veya imkansız olabilir. Bu durumda türleri aşağıdaki örnekte olduğu gibi açıkça belirtebilirsiniz:  
-  
-```csharp
-(int x, string s) => s.Length > x
-```
- Giriş parametre türlerinin tümü explicit veya tümü implicit olmalıdır; Aksi takdirde, C# oluşturur bir [CS0748](../../misc/cs0748.md) derleyici hatası.
+Boş ayraçlarla sıfır giriş parametrelerini belirtin:  
 
- Boş ayraçlarla sıfır giriş parametrelerini belirtin:  
-  
-```csharp
-() => SomeMethod()
-```
+[!code-csharp[zero parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
 
- Önceki örnekte bir lambda ifadesi gövdesinin yöntem çağrısından oluşabileceğini unutmayın. Ancak, .NET Framework dışında, örneğin SQL Server'da değerlendirilen ifade ağaçları oluşturuyorsanız, lambda ifadelerinde yöntem çağrısı kullanmamanız gerekir. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.  
-  
+İki veya daha fazla giriş parametresi, ayraç içinde virgülle ayrılır:
+
+[!code-csharp[two parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+
+Bazen derleyicinin giriş türlerini çıkarması mümkün değildir. Türleri aşağıdaki örnekte gösterildiği gibi açıkça belirtebilirsiniz:
+
+[!code-csharp[explicitly typed parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+
+Giriş parametre türlerinin tümü explicit veya tümü implicit olmalıdır; Aksi takdirde, bir [CS0748](../../misc/cs0748.md) derleyici hatası oluşur.
+
+Bir lambda ifadesi gövdesinin yöntem çağrısından oluşabilir. .NET ortak dil çalışma zamanı bağlamı dışında değerlendirilen ifade ağaçları oluşturuyorsanız, ancak gibi SQL Server'da, yöntem çağrılarını lambda ifadelerinde kullanmamanız gerekir. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.
+
 ## <a name="statement-lambdas"></a>Deyim lambdaları
 
- Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:  
-  
-(giriş parametreleri) = > {deyimi;}
+Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:
 
- Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, uygulamada genellikle iki veya üçten fazla değildir.  
-  
-[!code-csharp[StatementLambda#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
+```csharp  
+(input-parameters) => { statement; }
+```
 
-[!code-csharp[StatementLambda#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
+Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, uygulamada genellikle iki veya üçten fazla değildir.
 
- Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kullanılamaz.  
+[!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+
+Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kullanılamaz.
   
 ## <a name="async-lambdas"></a>Async lambdas
 
- İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) ve [await](../../../csharp/language-reference/keywords/await.md) anahtar sözcükleri. Örneğin, aşağıdaki Windows Forms örneği, çağıran ve bekleyen zaman uyumsuz bir yöntem, bir olay işleyici içerir `ExampleMethodAsync`.  
-  
+İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](../../language-reference/keywords/async.md) ve [await](../../language-reference/keywords/await.md) anahtar sözcükleri. Örneğin, aşağıdaki Windows Forms örneği, çağıran ve bekleyen zaman uyumsuz bir yöntem, bir olay işleyici içerir `ExampleMethodAsync`.
+
 ```csharp
-public partial class Form1 : Form  
-{  
-    public Form1()  
-    {  
-        InitializeComponent();  
-    }  
-  
-    private async void button1_Click(object sender, EventArgs e)  
-    {  
-        // ExampleMethodAsync returns a Task.  
-        await ExampleMethodAsync();  
-        textBox1.Text += "\r\nControl returned to Click event handler.\n";  
-    }  
-  
-    async Task ExampleMethodAsync()  
-    {  
-        // The following line simulates a task-returning asynchronous process.  
-        await Task.Delay(1000);  
-    }  
-}  
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        button1.Click += button1_Click;
+    }
+
+    private async void button1_Click(object sender, EventArgs e)
+    {
+        await ExampleMethodAsync();
+        textBox1.Text += "\r\nControl returned to Click event handler.\n";
+    }
+
+    private async Task ExampleMethodAsync()
+    {
+        // The following line simulates a task-returning asynchronous process.
+        await Task.Delay(1000);
+    }
+}
 ```
 
- Zaman uyumsuz lambda kullanarak aynı olay işleyicisini ekleyebilirsiniz. Bu işleyiciyi eklemek için Ekle bir `async` aşağıdaki örnekte göründüğü gibi lambda parametre listesinden önce değiştiricisi.  
-  
-```csharp  
-public partial class Form1 : Form  
-{  
-    public Form1()  
-    {  
-        InitializeComponent();  
-        button1.Click += async (sender, e) =>  
-        {  
-            // ExampleMethodAsync returns a Task.  
-            await ExampleMethodAsync();  
-            textBox1.Text += "\nControl returned to Click event handler.\n";  
-        };  
-    }  
-  
-    async Task ExampleMethodAsync()  
-    {  
-        // The following line simulates a task-returning asynchronous process.  
-        await Task.Delay(1000);  
-    }  
-}  
-```  
+Zaman uyumsuz lambda kullanarak aynı olay işleyicisini ekleyebilirsiniz. Bu işleyiciyi eklemek için Ekle bir `async` değiştiricisi, aşağıdaki örnekte göründüğü gibi lambda parametre listesinden önce:
 
- Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
-  
+```csharp
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        button1.Click += async (sender, e) =>
+        {
+            await ExampleMethodAsync();
+            textBox1.Text += "\r\nControl returned to Click event handler.\n";
+        };
+    }
+
+    private async Task ExampleMethodAsync()
+    {
+        // The following line simulates a task-returning asynchronous process.
+        await Task.Delay(1000);
+    }
+}
+```
+
+Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../concepts/async/index.md).
+
+## <a name="lambda-expressions-and-tuples"></a>Lambda ifadeleri ve diziler
+
+İle başlayarak C# 7.0 C# dil için yerleşik destek sağlar [diziler](../../tuples.md). Bir lambda ifadesi bağımsız değişkeni olarak bir tanımlama grubu sağlayabilir ve, lambda ifadesi, ayrıca bir demet döndürebilir. Bazı durumlarda, tanımlama grubu bileşenleri türlerini belirlemek için tür çıkarımı C# derleyicisini kullanır.
+
+Bir dizi, parantez içine alarak bileşenlerinden virgülle ayrılmış bir listesini tanımlayın. Aşağıdaki örnek, her değerin iki katına çıkar ve multiplications sonucunu içeren bir tanımlama grubu üç bileşeni ile döndüren bir lambda ifadesi için bir sayı dizisi üzerinde geçirmek için üç bileşeni ile tanımlama grubu kullanır.
+
+[!code-csharp-interactive[lambda and tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
+
+Normalde, bir kayıt düzeni alanlarını olarak da adlandırılır `Item1`, `Item2`vb. Ancak, aşağıdaki örnekte olduğu gibi bir dizi adlandırılmış bileşenlerle tanımlayabilirsiniz.
+
+[!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
+
+Hakkında daha fazla bilgi için C# diziler için bkz: [ C# tanımlama grubu türleri](../../tuples.md).
+
 ## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile lambda ifadeleri
 
- Standart sorgu işleçlerinin çoğu, türü bir giriş parametresine sahiptir, <xref:System.Func%602> Genel temsilci ailesinden olan. Bu temsilciler girdi parametrelerinin sayısını ve türünü ve temsilcinin döndürdüğü değerin türünü tanımlamak için tür parametreleri kullanır. `Func` Temsilciler, kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadelerin Kapsüllenmesi için son çok yararlı olur. Örneğin, aşağıdaki temsilci türünü göz önünde bulundurun:  
-  
-```csharp  
-public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
-```  
-  
- Temsilci olarak oluşturulabilir `Func<int,bool> myFunc` burada `int` giriş parametresi, ve `bool` dönüş değeridir. Dönüş değeri her zaman son tür parametresinde belirtilir. `Func<int, string, bool>` iki giriş parametrelerini içeren bir temsilci tanımlar `int` ve `string`ve bir dönüş türü `bool`. Aşağıdaki `Func` temsilcisi çağrıldığında, true ya da giriş parametresinin 5'e eşit olup olmadığını belirtmek için false döndürür:  
-  
-```csharp  
-Func<int, bool> myFunc = x => x == 5;  
-bool result = myFunc(4); // returns false of course  
-```  
-  
- Ayrıca bağımsız değişken türü bir lambda ifadesi sağlayabilirsiniz bir `Expression<Func>`, örneğin işleçlerinde tanımlı System.Linq.queryable standart sorgu işleçleri içinde. Belirttiğinizde bir `Expression<Func>` bağımsız değişkeni, lambda ifade ağacında derlenecek.  
-  
- Standart sorgu işleci <xref:System.Linq.Enumerable.Count%2A> yöntemi burada gösterilmektedir:  
-  
-```csharp  
-int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
-int oddNumbers = numbers.Count(n => n % 2 == 1);  
-```  
-  
- Derleyici giriş parametresinin türünü çıkarabilir veya bunu açıkça belirtebilirsiniz. Bu belirli lambda ifadesi tamsayıları sayar (`n`), ikiye bölündüğünde 1 kalan sahip.  
-  
- Aşağıdaki kod satırını tüm öğelerini içeren bir dizi üretir `numbers` , dizisinde koşulu sağlamayan ilk sayı olduğundan 9 sol tarafına olan dizi:  
-  
-```csharp  
-var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
-```  
-  
- Bu örnek birden fazla giriş parametrelerini paranteze alarak belirtmeyi gösterir. Yöntem, değeri konumundan daha az olan bir sayı ile karşılaşana dek sayı dizisindeki tüm öğeleri döndürür. Lambda işlecini karıştırmayın (`=>`) büyüktür veya eşittir işleciyle (`>=`).  
-  
-```csharp  
-var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
-```  
-  
-## <a name="type-inference-in-lambdas"></a>Lambda içinde tür çıkarımı
+LINQ to Objects'in, diğer uygulamalar arasında olması, türü giriş parametresi, <xref:System.Func%601> Genel temsilci ailesinden olan. Bu Temsilciler, tür parametreleri sayısı ve girdi parametrelerinin türünü ve temsilcinin dönüş türünü tanımlamak için kullanın. `Func` Temsilciler, kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadelerin Kapsüllenmesi için son çok yararlı olur. Örneğin, düşünün <xref:System.Func%602> temsilci türü:  
 
- Lambda ifadeleri yazarken genellikle giriş parametreleri için bir tür belirtmeniz gerekmez; derleyici lambda gövdesine, parametrenin temsilci türüne ve C# Dil Belirtimi'nde açıklanan diğer etkenlere göre türü çıkarsayabilir. Standart sorgu işleçlerinin çoğunda ilk giriş kaynak dizisindeki öğelerin türüdür. Sorguluyorsanız bunu bir `IEnumerable<Customer>`, giriş değişkeni olması sorguluyorsanız bir `Customer` nesne erişim yöntemleri ve özellikleri iznine sahip olduğunuz anlamına gelir:  
+```csharp
+public delegate TResult Func<in T, out TResult>(T arg)
+```
+
+Temsilci olarak oluşturulabilir bir `Func<int, bool>` örneğinde `int` giriş parametresi, ve `bool` dönüş değeridir. Dönüş değeri her zaman son tür parametresinde belirtilir. Örneğin, `Func<int, string, bool>` iki giriş parametrelerini içeren bir temsilci tanımlar `int` ve `string`ve bir dönüş türü `bool`. Aşağıdaki `Func` temsilcisi çağrıldığında, giriş parametresinin 5 için eşit olup olmadığını gösteren Boole değeri döndürür:
+
+[!code-csharp-interactive[Func example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#Func)]
+
+Ayrıca bağımsız değişken türü bir lambda ifadesi sağlayabilirsiniz bir <xref:System.Linq.Expressions.Expression%601>, örneğin tanımlanan standart sorgu işleçleri içinde <xref:System.Linq.Queryable> türü. Belirttiğinizde bir <xref:System.Linq.Expressions.Expression%601> bağımsız değişkeni, lambda ifade ağacında derlenmiştir.
   
-```csharp  
-customers.Where(c => c.City == "London");  
-```  
+Aşağıdaki örnekte <xref:System.Linq.Enumerable.Count%2A> standart sorgu işleci:
+
+[!code-csharp-interactive[Count example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#Count)]
+
+Derleyici giriş parametresinin türünü çıkarabilir veya bunu açıkça belirtebilirsiniz. Bu belirli lambda ifadesi tamsayıları sayar (`n`), ikiye bölündüğünde 1 kalan sahip.
+
+Aşağıdaki örnekte tüm öğelerini içeren bir dizi üretir `numbers` , dizisinde koşulu sağlamayan ilk sayı olduğundan 9 önünde dizinin:
+
+[!code-csharp-interactive[TakeWhile example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#TakeWhile)]
+
+Aşağıdaki örnek, birden fazla giriş parametrelerini paranteze tarafından belirtir. Bu yöntem tüm öğeleri döndürür `numbers` sıralı konumuna dizideki değerinden bir sayı değeri karşılaşana kadar dizisi:
+
+[!code-csharp-interactive[TakeWhile example 2](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#TakeWhileWithIndex)]
+
+## <a name="type-inference-in-lambda-expressions"></a>Lambda ifadeleri içinde tür çıkarımı
+
+Lambda ifadeleri yazarken, genellikle derleyici açıklandığı lambda gövdesi, parametre türleri ve diğer etkenlere göre türü çıkarsayabilir giriş parametreleri için bir tür belirtmeniz gerekmez C# dil belirtimi. Standart sorgu işleçlerinin çoğunda ilk giriş kaynak dizisindeki öğelerin türüdür. Sorguluyorsanız bir `IEnumerable<Customer>`, giriş değişkeni olması sorguluyorsanız bir `Customer` nesne erişim yöntemleri ve özellikleri iznine sahip olduğunuz anlamına gelir:  
+
+```csharp
+customers.Where(c => c.City == "London");
+```
+
+Lambdalar için tür çıkarımı için genel kurallar aşağıdaki gibidir:
+
+- Lambda temsilci türüyle aynı sayıda parametre içermelidir.
+
+- Lambdadaki her giriş parametresi, denk gelen temsilci parametresine dolaylı olarak dönüştürülebilir olmalıdır.
+
+- Lambdanın (varsa) dönüş değeri örtük olarak temsilcinin dönüş türüne dönüştürülebilir olmalıdır.
   
- Lambdalar için genel kurallar şunlardır:  
-  
--   Lambda temsilci türüyle aynı sayıda parametre içermelidir.  
-  
--   Lambdadaki her giriş parametresi, denk gelen temsilci parametresine dolaylı olarak dönüştürülebilir olmalıdır.  
-  
--   Lambdanın (varsa) dönüş değeri örtük olarak temsilcinin dönüş türüne dönüştürülebilir olmalıdır.  
-  
- Ortak tür sisteminin "lambda ifadesi" için iç kavramı olmadığından kendi içlerindeki lambda ifadelerinin türü olmadığını unutmayın. Ancak bazen bir lambda ifadesinin "türünden" resmi olmayan bir şekilde bahsetmek daha kolaydır. Bu gibi durumlarda, tür temsilci türüne başvuruyor. veya <xref:System.Linq.Expressions.Expression> , lambda ifadesinin dönüştürüldüğü yazın.  
-  
+Ortak tür sistemi "lambda ifadesi" İç kavramı olmadığından kendi içlerindeki lambda ifadelerinin türü yüklü olmadığını unutmayın Ancak, bazen "türü" bir lambda ifadesinin peter'in konuşmak kullanışlı olabilir. Bu gibi durumlarda, tür temsilci türüne başvuruyor. veya <xref:System.Linq.Expressions.Expression> , lambda ifadesinin dönüştürüldüğü yazın.
+
 ## <a name="variable-scope-in-lambda-expressions"></a>Lambda ifadelerinde değişken kapsamı
 
- Lambdalar başvurabilir *dış değişkenlere* (bkz [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), lambda işlevini tanımlayan yöntemin kapsamındaki ya da lambda ifadesini içeren türün kapsamındaki. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:  
-  
-```csharp  
-delegate bool D();  
-delegate bool D2(int i);  
-  
-class Test  
-{  
-    D del;  
-    D2 del2;  
-    public void TestMethod(int input)  
-    {  
-        int j = 0;  
-        // Initialize the delegates with lambda expressions.  
-        // Note access to 2 outer variables.  
-        // del will be invoked within this method.  
-        del = () => { j = 10;  return j > input; };  
-  
-        // del2 will be invoked after TestMethod goes out of scope.  
-        del2 = (x) => {return x == j; };  
-  
-        // Demonstrate value of j:  
-        // Output: j = 0   
-        // The delegate has not been invoked yet.  
-        Console.WriteLine("j = {0}", j);        // Invoke the delegate.  
-        bool boolResult = del();  
-  
-        // Output: j = 10 b = True  
-        Console.WriteLine("j = {0}. b = {1}", j, boolResult);  
-    }  
-  
-    static void Main()  
-    {  
-        Test test = new Test();  
-        test.TestMethod(5);  
-  
-        // Prove that del2 still has a copy of  
-        // local variable j from TestMethod.  
-        bool result = test.del2(10);  
-  
-        // Output: True  
-        Console.WriteLine(result);  
-  
-        Console.ReadKey();  
-    }  
-}  
-```  
-  
- Lambda ifadelerindeki değişken kapsam için aşağıdaki kurallar geçerlidir:  
-  
--   Tutulan bir değişkenin kullandığı bellek, ona başvuran temsilcinin kullandığı bellek geri kazanılmaya hazır hale gelinceye kadar geri kazanılmaz.  
-  
--   Bir lambda ifadesi içinde tanıtılan değişkenler, dış yöntemde görünmez.  
-  
--   Bir lambda ifadesini doğrudan yakalayamaz bir `in`, `ref`, veya `out` parametresi kapsayan bir yöntemden alınan.  
-  
--   Lambda ifadesindeki bir dönüş ifadesi, kapsayan yöntemin döndürülmesine neden olmaz.  
-  
--   Bir lambda ifadesi içeremez bir `goto` deyimi `break` deyimi veya `continue` varsa atlama bildiriminin hedefi blok dışındaysa lambda işlevi içinde deyimi. Ayrıca, hedef, blok içinde ise lambda işlev bloğu dışında bir deyim olması bir hatadır.  
-  
+Lambdalar başvurabilir *dış değişkenlere* (bkz [anonim yöntemler](anonymous-methods.md)), lambda ifadesi tanımlayan yöntemin kapsamındaki ya da lambda ifadesini içeren türün kapsamındaki. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:
+
+[!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
+
+Lambda ifadelerindeki değişken kapsam için aşağıdaki kurallar geçerlidir:  
+
+- Tutulan bir değişkenin kullandığı bellek, ona başvuran temsilcinin kullandığı bellek geri kazanılmaya hazır hale gelinceye kadar geri kazanılmaz.
+
+- Bir lambda ifadesi içinde tanıtılan değişkenler, kapsayan yöntemin görünmez.
+
+- Bir lambda ifadesini doğrudan yakalayamaz bir [içinde](../../language-reference/keywords/in-parameter-modifier.md), [ref](../../language-reference/keywords/ref.md), veya [kullanıma](../../language-reference/keywords/out-parameter-modifier.md) parametresi kapsayan bir yöntemden alınan.
+
+- A [dönüş](../../language-reference/keywords/return.md) deyiminde bir lambda ifadesi kapsayan yöntemin dönüş neden değil.
+
+- Bir lambda ifadesi içeremez bir [goto](../../language-reference/keywords/goto.md), [sonu](../../language-reference/keywords/break.md), veya [devam](../../language-reference/keywords/continue.md) hedefi, atlama deyimi, deyimi, lambda ifadesi blok dışındaysa. Ayrıca hedef blok içinde ise lambda ifadesi bloğu dışında bir deyim olması hatadır.
+
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+Daha fazla bilgi için [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+
 ## <a name="featured-book-chapter"></a>Özel Kitap bölümü
 
- [Temsilciler, olayları ve Lambda ifadeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) içinde [ C# 3.0 Cookbook, Third Edition: İçin 250'den fazla çözüm C# 3.0 programcıları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+[Temsilciler, olayları ve Lambda ifadeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) içinde [ C# 3.0 Cookbook, Third Edition: İçin 250'den fazla çözüm C# 3.0 programcıları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [LINQ (dil ile tümleşik sorgu)](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
-- [İfade Ağaçları](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [LINQ (dil ile tümleşik sorgu)](../concepts/linq/index.md)
+- [Anonim Metotlar](anonymous-methods.md)
+- [İfade Ağaçları](../concepts/expression-trees/index.md)
+- [Lambda ifadeleri karşılaştırma yerel işlevler](../../local-functions-vs-lambdas.md)
+- [Türü örtük olarak belirlenmiş lambda ifadeleri](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# örnekleri (bkz: LINQ örnek sorgular dosyalar ve XQuery programı)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Yinelemeli lambda ifadeleri](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
