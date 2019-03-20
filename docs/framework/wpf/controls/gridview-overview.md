@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360205"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185447"
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
 <xref:System.Windows.Controls.GridView> Görünüm modu görüntüleme modlarına ilişkin biridir bir <xref:System.Windows.Controls.ListView> denetimi. <xref:System.Windows.Controls.GridView> Siz ve kullanıcılarınız genellikle etkileşimli sütun üst bilgilerini düğmeleri kullanan bir tablo öğesi koleksiyonları görüntülemek sınıf ve bunun destekleyici sınıfları etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını açıklar.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360205"
 >  Bu düğme denetimleri <xref:System.Windows.Controls.GridView> kullanımlar için sütun başlıkları türetilir <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
  Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.GridView> görünümünü <xref:System.Windows.Controls.ListView> içeriği.  
-  
- **ListView içeriğini GridView Görünüm**  
-  
- ![ListView biçimlendirilmiş](./media/styledlistview.PNG "StyledListView")  
+    
+ ![GridView Görünüm ListView içeriğini gösteren ekran görüntüsü.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> sütunları olarak temsil edilir <xref:System.Windows.Controls.GridViewColumn> kendi içeriğinin boyutunu otomatik olarak nesneleri. İsteğe bağlı olarak, açıkça ayarlayabilirsiniz bir <xref:System.Windows.Controls.GridViewColumn> belirli bir genişliğe. Kavrayıcının sütun başlıkları arasında sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca dinamik olarak ekleyebilir, Kaldır, Değiştir ve bu işlev yerleşik olarak bulunur çünkü sütunları yeniden Sırala <xref:System.Windows.Controls.GridView>. Ancak, <xref:System.Windows.Controls.GridView> görüntülediği verileri doğrudan güncelleştirilemiyor.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360205"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- Aşağıdaki resimde, önceki örneğin oluşturduğu tabloda gösterilmiştir.  
-  
- **Bir ItemsSource verileri görüntüleyen GridView**  
-  
- ![ListView GridView çıktıyla](./media/listviewgridview.JPG "ListViewGridView")  
+ Aşağıdaki resimde, önceki örneğin oluşturduğu tabloda gösterilmiştir. GridView denetiminde ItemsSource nesne verilerden görüntüler:
+    
+ ![Bir ListView GridView çıktıyla gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView düzenini ve stili  

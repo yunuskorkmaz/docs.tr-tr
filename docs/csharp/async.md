@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212215"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185746"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -254,12 +254,12 @@ Geçerli iş parçacığı engelleme beklenecek bir yol bir görevin tamamlanmas
 
 Genel nesnelerin veya belirli yöntemleri yürütme durumunu bağlı değilsiniz. Bunun yerine, yalnızca yöntemlerinin dönüş değerlerine bağlıdır. Neden?
 
-  * Kod nedeni hakkında daha kolay olacaktır.
-  * Kodu test etmek daha kolay olacaktır.
-  * Zaman uyumsuz ve eş zamanlı kod karıştırma kadar basittir.
-  * Yarış durumları genellikle tamamen önlenebilir.
-  * Dönüş değerlerine bağlı olarak, denetleyici zaman uyumsuz kodu basitleştirir.
-  * (Ekstra) gerçekten de bağımlılık ekleme ile çalışır.
+* Kod nedeni hakkında daha kolay olacaktır.
+* Kodu test etmek daha kolay olacaktır.
+* Zaman uyumsuz ve eş zamanlı kod karıştırma kadar basittir.
+* Yarış durumları genellikle tamamen önlenebilir.
+* Dönüş değerlerine bağlı olarak, denetleyici zaman uyumsuz kodu basitleştirir.
+* (Ekstra) gerçekten de bağımlılık ekleme ile çalışır.
 
 Önerilen bir hedef tam veya neredeyse eksiksiz elde etmektir [başvuru saydamlık](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) kodunuzda. Bunun yapılması, son derece tahmin edilebilir, sınanabilir ve sürdürülebilir bir kod temeli neden olur.
 

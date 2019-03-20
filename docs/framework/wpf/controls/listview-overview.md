@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379152"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186123"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
@@ -33,7 +33,7 @@ ms.locfileid: "57379152"
   
  Aşağıdaki çizim, önceki örneğin verinin nasıl göründüğünü gösterir.  
   
- ![ListView GridView çıktıyla](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Bir ListView GridView çıktıyla gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  Özel Görünüm modu öğesinden devralınan bir sınıf tanımlayarak oluşturabileceğiniz <xref:System.Windows.Controls.ViewBase> sınıfı. <xref:System.Windows.Controls.ViewBase> Sınıfı, bir özel görünüm oluşturmak için gereken altyapıyı sağlar. Özel Görünüm oluşturma hakkında daha fazla bilgi için bkz. [bir ListView için özel görünüm modu oluşturma](how-to-create-a-custom-view-mode-for-a-listview.md).  
   

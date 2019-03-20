@@ -1,22 +1,17 @@
 ---
 title: .NET Core ve .NET standart birim testi
-description: Bu makalede, birim testi .NET Core ve .NET Standard projeleri için kısa bir genel bakış sağlar.
+description: 'Bu makalede, birim testi .NET Core ve .NET Standard projeleri için kısa bir genel bakış sağlar.'
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058340"
 ---
+
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET standart birim testi
 
 .NET core birim testleri oluşturmayı kolay hale getirir. Bu makalede, birim testleri tanıtır ve diğer tür testlerin farkı göstermektedir. Sayfanın alt kısmındaki bağlı kaynaklar, bir test projesi çözümünüze ekleyin gösterilmektedir. Test projenizin ayarladıktan sonra komut satırında veya Visual Studio kullanarak birim testleri çalıştırmak mümkün olacaktır.
 
-.NET core 2.0 ve sonraki [.NET Standard 2.0](../../standard/net-standard.md), ve onun kitaplıkları birim testleri göstermek için kullanacağız.
+.NET core 2.0 ve sonraki [.NET Standard 2.0](../../standard/net-standard.md), ve kitaplıklarını birim testleri göstermek için kullanacağız.
 
 Yerleşik .NET Core 2.0 ve sonraki birim test projesi şablonları kullanabilmek için C#, F# ve Visual Basic kişisel projeniz için bir başlangıç noktası olarak.
 

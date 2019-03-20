@@ -4,12 +4,12 @@ description: .NET Framework ve .NET Core yan yana karşı çözüm derlemek iste
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904020"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186071"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Hem .NET Framework ve .NET Core desteklemek için proje düzenleme
 
@@ -36,7 +36,7 @@ Hem .NET Framework ve .NET Core yan yana için derleyen bir çözüm oluşturmay
 
 Aşağıdaki depoya göz önünde bulundurun:
 
-![Mevcut proje](media/project-structure/project.png)
+![Mevcut proje](./media/project-structure/existing-project-structure.png)
 
 [**Kaynak kodu**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ Aşağıdaki kısıtlamalar ve mevcut projeleri karmaşıklığına bağlı olar
 
 Herhangi bir mevcut depoyu reorganıze  *\*.csproj* dosyalar kaldırılır ve tek  *\*.csproj* dosyası birden çok çerçeveyi hedefleyen oluşturulur. Tek bir proje için farklı çerçeveler derleyemezsiniz olduğu için bu harika bir seçenektir. Ayrıca, farklı bir derleme seçenekleri ve bağımlılıkları hedeflenen çerçeve başına işleme gücüne sahiptir.
 
-![Birden çok çerçeveyi hedefleyen bir csproj oluşturma](media/project-structure/project.csproj.png)
+![Birden çok çerçeveyi hedefleyen bir csproj oluşturma](./media/project-structure/multi-targeted-project.png)
 
 [**Kaynak kodu**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Dikkat edilecek değişiklikler şunlardır:
 
 Eski çerçeveleri hedefleyen var olan projeler varsa, bu projelerin dokunmayın ve gelecekteki çerçeveleri hedeflemek için bir .NET Core projesinden kullanmak isteyebilirsiniz.
 
-![Varolan projede, farklı bir klasör ile .NET core projesi](media/project-structure/project.csproj.different.png)
+![Varolan projede, farklı bir klasör ile .NET core projesi](./media/project-structure/separate-projects-same-source.png)
 
 [**Kaynak kodu**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 

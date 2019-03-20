@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202684"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186084"
 ---
 # <a name="methods"></a>Yöntemler
 
@@ -62,7 +62,7 @@ Unutmayın `Motorcycle` sınıfı içeren bir aşırı yüklenmiş yöntem `Driv
 
 ## <a name="method-invocation"></a>Yöntem çağırma
 
-Yöntem ya da olabilir *örneği* veya *statik*. Bir örnek yöntemi çağrılırken bir nesne örneği oluşturun ve bu nesnede yöntemi çağrısı gerektirir; bir örnek yöntemi, bu örneği ve verileri üzerinde çalışır. Statik bir yöntemi, yöntemin ait olduğu tür adını başvurarak Çağır; statik yöntemler çalışan örnek veriler üzerinde çalıştırmayın. Bir nesne örneği aracılığıyla statik bir yöntemi çağırmak çalışırken, bir derleyici hatası oluşturur.
+Yöntem ya da olabilir *örneği* veya *statik*. Bir örnek yöntemi çağrılırken bir nesne örneği oluşturun ve bu nesnede yöntemi çağrısı gerektirir; bir örnek yöntemi, bu örneği ve verileri üzerinde çalışır. Statik bir yöntemi, yöntemin ait olduğu tür adını başvurarak Çağır; statik yöntemler, örnek veri çalıştırmayın. Bir nesne örneği aracılığıyla statik bir yöntemi çağırmak çalışırken, bir derleyici hatası oluşturur.
 
 Bir alan erişme gibi olan bir yöntemi çağırmak. Nesne adı (bir örnek yöntemi çağırıyorsanız) ya da tür adı (çağırıyorsanız, bir `static` yöntemi), nokta, adı yöntemi ve parantez ekleyin. Bağımsız değişkenler, parantez içinde listelenir ve virgülle ayrılır.
 

@@ -4,12 +4,12 @@ description: .NET yerel gösterimine türlerinizi nasıl sürekliliğe devreder 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416252"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185421"
 ---
 # <a name="type-marshalling"></a>Türü taşıma
 
@@ -38,8 +38,8 @@ Birinci tablo eşlemelerini kendisi için taşıma P/Invoke ve alan taşıma iç
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Ya da `char` veya `char16_t` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](/.charset.md). |
-| `string`  | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](/.charset.md). |
+| `char`    | Ya da `char` veya `char16_t` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](charset.md). |
+| `string`  | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET işaretçi türleri (ör. `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Bazı türleri yalnızca alanları değil de, parametre olarak sıraya. Bu tür 
 
 | .NET türü | Yerel bir tür (yalnızca parametresi) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke.  Bkz: [charset belgeleri](/.charset.md). |
+| `System.Text.StringBuilder` | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke.  Bkz: [charset belgeleri](charset.md). |
 | `System.ArgIterator` | `va_list` (Windows x86/x64/arm64'te yalnızca) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

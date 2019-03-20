@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için desen eşleştirme özelliklerini kull
 description: Gelişmiş Bu öğretici, verileri ve ayrı oluşturulur algoritmaları kullanarak işlevi oluşturmak için desen eşleştirme teknikleri kullanmayı gösterir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 78b7215631a3988cff1ab942b677bcd5205e311c
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125817"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185837"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için özellikler desen kullanma
 
@@ -17,9 +17,9 @@ C#7 özellikleri temel desen kullanıma sunuldu. Bu özellikler, Genişletilmiş
 Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
 > [!div class="checklist"]
-> * Desen eşleştirme burada kullanılması gereken durumları anlamayı.
-> * Desen eşleştirme ifadelerinde türleri ve özellik değerlerine göre davranışı uygulamak için kullanma
-> * Desen eşleştirme tam algoritmalar oluşturmak için diğer teknikleri ile bir araya getirilebileceğini öğrenin.
+> * Desen eşleştirme burada kullanılması gereken durumları algılar.
+> * Desen eşleştirme ifadelerinde, türleri ve özellik değerlerine göre davranışı uygulamak için kullanın.
+> * Desen eşleştirme tam algoritmalar oluşturmak için diğer teknikleri ile birleştirin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -45,12 +45,12 @@ Başlatıcı kodu indirebileceğiniz [dotnet/samples](https://github.com/dotnet/
 
 ## <a name="pattern-matching-designs"></a>Desen eşleştirme tasarımları
 
-Bu öğreticide kullanılan senaryo tür çözmek için desen eşleştirme kullanmak için uygun olan sorunları vurgular: 
+Bu öğretici vurguların kullanılan senaryo tür desen eşleştirme sorunları çözmek için uygundur:
 
 - Çalışmanız için gereken nesneleri hedeflerinizi karşılayan bir nesne hiyerarşisine değildir. İlişkisiz sistemleri parçası olan sınıfları ile çalışıyor.
 - Ekliyorsunuz işlevselliği, bu sınıflar için temel Özet bir parçası değildir. Ücretli bir araç tarafından ödenen *değişiklikleri* vehicle çekirdek işlevi araçları, ancak Ücretli farklı türde değil.
 
-Zaman *şekli* verilerin ve *işlemleri* üzerinde veri değil açıklanacak olan birlikte özelliklerinde desen C# çalışmak daha kolay hale getirmek. 
+Zaman *şekli* verilerin ve *işlemleri* üzerinde veri değil açıklanacak olan birlikte özelliklerinde desen C# çalışmak daha kolay hale getirmek.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Temel Ücretli hesaplamalar uygulayın
 
@@ -150,7 +150,7 @@ Maksimum kapasitede her fırsatta seyahat etmeye taşıtlardan teşvik etmek Üc
 - Değerinden % 50 tam yolları 2,00 fazladan bir ücret ödersiniz.
 - Birden fazla % 90 tam olan yollarına 1,00 indirim alın.
 
-Bu kurallar kullanılarak uygulanır **özelliği desenini** aynı ifade geçin. Türü belirlendikten sonra özelliği düzeni nesnenin özelliklerini inceler.  Tek bir kasada bir `Car` dört farklı çalışmalarına genişletir:
+Bu kurallar kullanılarak uygulanır **özelliği desenini** aynı ifade geçin. Türü belirlendikten sonra özelliği düzeni nesnenin özelliklerini inceler. Tek bir kasada bir `Car` dört farklı çalışmalarına genişletir:
 
 ```csharp
 vehicle switch
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-Ücretli yetkilisi yolcu teslimi kamyon içinde sayısı ile ilgili değildir. Bunun yerine, bunlar daha kamyon ağırlık sınıfında göre ücret alınır. Kamyon 5000 lbs üzerinde fazladan bir $5.00 ücretlendirilir. Açık kamyon altında 3000 lbs 2,00 indirim sağlanır.  Bu kural, aşağıdaki kod ile gerçekleştirilir:
+Ücretli yetkilisi yolcu teslimi kamyon içinde sayısı ile ilgili değildir. Bunun yerine, bunlar daha kamyon ağırlık sınıfında göre ücret alınır. Kamyon 5000 lbs üzerinde fazladan bir $5.00 ücretlendirilir. Açık kamyon altında 3000 lbs 2,00 fiyatla sunulur. Bu kural, aşağıdaki kod ile gerçekleştirilir:
 
 ```csharp
 vehicle switch
@@ -221,16 +221,16 @@ vehicle switch
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,13 +274,13 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-Yukarıdaki örnekte, özyinelemeli ifadesi kullanarak yoksa yineleyin anlamına gelir `Car` ve `Taxi` Silah özellik değeri test alt Silah içerir. Bu yöntem için kullanılmayan `Bus` ve `DeliveryTruck` bu Silah aralıkları özelliği değil ayrık değerler için test çünkü etkinleştirme.
+Yukarıdaki örnekte, özyinelemeli ifadesi kullanarak yoksa yineleyin anlamına gelir `Car` ve `Taxi` içeren özellik değeri test alt Silah Silah. Bu yöntem için kullanılmayan `Bus` ve `DeliveryTruck` bu Silah aralıkları özelliği değil ayrık değerler için test çünkü etkinleştirme.
 
 ## <a name="add-peak-pricing"></a>En yüksek fiyatlandırma Ekle
 
 Son bir özellik için ücretli yetkilisi hassas en yüksek süre fiyatlandırma eklemek istiyor. Ücretli geçişler iki katına sabah ve akşam yoğun saatler sırasında. Bu kural yalnızca bir yöndeki trafiği etkiler: sabah şehirde gelen ve giden Akşam sağladığından saat içinde. Workday sırasında diğer zamanlarda, ücretli geçişler % 50'ye yükseltin. Gece geç ve erken sabah, ücretli geçişler 25 oranında azalır. Normal fiyat, saat bakılmaksızın olduğu tarihlerinde.
 
-Bu özellik için desen kullanacağız ancak bunu diğer teknikleri ile tümleştirmeniz. Hesap yön tüm bileşimleri, haftanın günü ve saat bir tek desen eşleştirme ifadesi oluşturabilirsiniz. Sonuç, karmaşık bir ifadeyi olur. Okunmasını ve anlaşılması zor olacaktır. Doğruluk emin olmak zorlaştırır. Bunun yerine, tüm eyaletler kısaca açıklayan bir demet değerler oluşturmak için bu yöntemleri birleştirin. Ardından Ücretli çarpanı hesaplamak için desen eşleştirme kullanın. Tanımlama grubu üç farklı koşullar içeriyor:
+Bu özellik için desen kullanacağız ancak bunu diğer teknikleri ile tümleştirmeniz. Hesap yön tüm bileşimleri, haftanın günü ve saat için bir tek desen eşleştirme ifadesi oluşturabilirsiniz. Sonuç, karmaşık bir ifadeyi olur. Okunmasını ve anlaşılması zor olacaktır. Doğruluk emin olmak zorlaştırır. Bunun yerine, tüm eyaletler kısaca açıklayan bir demet değerler oluşturmak için bu yöntemleri birleştirin. Ardından Ücretli çarpanı hesaplamak için desen eşleştirme kullanın. Tanımlama grubu üç farklı koşullar içeriyor:
 
 - , Bir hafta içi gün veya hafta günüdür.
 - Zaman zaman Ücretli toplandıktan bant.
@@ -309,7 +309,7 @@ Aşağıdaki tabloda, giriş değerleri birleşimlerini ve çarpan fiyatlandırm
 
 Üç değişkenin 16 farklı birleşimlerini vardır. Bazı koşullar birleştirerek son switch ifadesi basitleştireceğiz.
 
-Araçları toplayan sistem kullanan bir <xref:System.DateTime> Ücretli koleksiyonu ne zaman kez yapısı. Önceki tabloda değişkenlerinin üye yöntemleri oluşturun.  Eşleşen switch ifadesi desen gibi bir ifade etmek için aşağıdaki işlevi kullanır olup olmadığını bir <xref:System.DateTime> hafta veya bir iş günü temsil eder:
+Ücretli geçişler toplayan sistem kullanan bir <xref:System.DateTime> zaman Ücretli toplanmıştır kez yapısı. Önceki tabloda değişkenlerinin üye yöntemleri oluşturun. Aşağıdaki işlev express için switch ifadesi bir desen kullanır. olup olmadığını bir <xref:System.DateTime> hafta veya bir iş günü temsil eder:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,13 +339,13 @@ Bu yöntemleri oluşturduktan sonra başka kullanabilirsiniz `switch` ifadesiyle
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-Yukarıdaki kodu çalışır, ancak Basitleştirilmiş. Tüm sekiz hafta birleşimlerini aynı Ücretli vardır. Tüm sekiz bir satırı aşağıdaki ile değiştirebilirsiniz:
+Yukarıdaki kodu çalışır, ancak Basitleştirilmiş. Tüm sekiz hafta birleşimlerini aynı Ücretli vardır. Tüm sekiz aşağıdaki satırı ile değiştirebilirsiniz:
 
 ```csharp
 (false, _, _) => 1.0m,
 ```
 
-Gelen ve giden trafiği, ertesi gün saat ve haftanın günü daytime sırasında aynı çarpan vardır. Bu dört anahtar Silah izleyin iki satır ile değiştirilebilir:
+Gelen ve giden trafiği, ertesi gün saat ve haftanın günü daytime sırasında aynı çarpan vardır. Bu dört anahtar Silah aşağıdaki iki satır ile değiştirilebilir:
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ Son olarak, normal ücretini ödemem saat kez iki sağladığından kaldırabili
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Bu örnek bir desen eşleştirme avantajlarını vurgular. Düzen dalları sırayla değerlendirilir. Önceki bir dalı, sonraki durumlarından biri işler, böylece bunları yeniden varsa derleyici sizi uyarır. Bu dil kuralları önceki basitleştirme kod değişmedi güvenle yapmak daha kolay yapılır.
+Bu örnek bir desen eşleştirme avantajlarını vurgular: Düzen dalları sırayla değerlendirilir. Önceki bir dalı, sonraki durumlarından biri işler, böylece bunları yeniden varsa derleyici sizi uyarır. Bu dil kuralları önceki basitleştirme kod değişmedi güvenle yapmak daha kolay yapılır.
 
-Desen eşleştirme, nesne yönelimli teknikleri kullandıysanız oluşturacak daha farklı çözümler uygulamak için doğal bir söz dizimi sağlar. Bulut, veri ve İşlevler parçalayın Canlı neden oluyor. *Şekli* verilerin ve *işlemleri* açık olmayan mutlaka anlatılan birlikte. Bu öğreticide, kendi özgün işlevden tamamen farklı şekillerde mevcut verilerini kullandınız. Desen eşleştirme genişletmek uygulanamadı olsa bile, üzerinde bu türleri, işlevselliği yazma olanağı getirdi.
+Desen eşleştirme, nesne yönelimli teknikleri kullandıysanız oluşturacak daha farklı çözümler uygulamak için doğal bir söz dizimi sağlar. Bulut, veri ve İşlevler parçalayın Canlı neden oluyor. *Şekli* verilerin ve *işlemleri* açık olmayan mutlaka anlatılan birlikte. Bu öğreticide, kendi özgün işlevden tamamen farklı şekillerde mevcut verilerini kullandınız. Desen eşleştirme genişletmek uygulanamadı olsa da bu türlerin geçersiz kılınmış işlevselliği yazma olanağı getirdi.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
