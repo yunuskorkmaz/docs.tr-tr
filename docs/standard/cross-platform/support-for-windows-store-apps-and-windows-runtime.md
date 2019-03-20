@@ -153,7 +153,7 @@ ms.locfileid: "57708411"
  İlgili bir UI denetimleri kümesini, yeniden kullanılabilir bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeninde paketleyebilirsiniz. Bileşen kendi üzerinde pazarlanabilir veya kendi oluşturduğunuz uygulamalarda bir öğe olarak kullanılabilir. Bu senaryoda, kullanılacak mantıklı [!INCLUDE[wrt](../../../includes/wrt-md.md)] <xref:Windows.Foundation.Metadata.VersionAttribute> uyumluluğu artırmak için özniteliği.
 
 ### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>Varolan .NET Framework Uygulamalarından Yeniden Kullanılabilir Uygulama Mantığı
- Varolan masaüstü uygulamalarınızdan gelen yönetilen kodu, tek başına bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak paketleyebilirsiniz. Bu, bileşeni, C++ veya Virtual Basic kullanılarak oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]  uygulamalarının yanı sıra C# veya JavaScript kullanılarak oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında da kullanmanızı sağlar. Kod için birden çok yeniden kullanılabilir senaryo varsa sürümleme bir seçenektir.
+ Varolan masaüstü uygulamalarınızdan gelen yönetilen kodu, tek başına bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak paketleyebilirsiniz. Bu, bileşeni, C++ veya Visual Basic kullanılarak oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]  uygulamalarının yanı sıra C# veya JavaScript kullanılarak oluşturulan [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarında da kullanmanızı sağlar. Kod için birden çok yeniden kullanılabilir senaryo varsa sürümleme bir seçenektir.
 
 ## <a name="related-topics"></a>İlgili Konular
 
