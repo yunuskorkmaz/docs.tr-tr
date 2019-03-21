@@ -3,15 +3,15 @@ title: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme
 description: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846342"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307986"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Öğretici: ML.NET ile bir regresyon learner kullanarak fiyatlarını tahmin etme
 
@@ -152,7 +152,7 @@ Kullanarak verileri yüklemek `MLContext.Data.LoadFromTextFile` için sarmalayı
 
 Giriş ve çıkış olarak `Transforms`, `DataView` için karşılaştırılabilir temel veri işlem hattı türü `IEnumerable` için `LINQ`.
 
-ML.NET veriler SQL görünümüne benzer. Bu, gevşek değerlendirilen, şema ve heterojen olur. Nesne, işlem hattını ilk kısmı ve verileri yükler. Bu öğreticide, açıklama ve karşılık gelen toxic veya olmayan toxic yaklaşım bir veri kümesine yükler. Bu model oluşturmayı ve bunu eğitmek için kullanılır.
+ML.NET veriler SQL görünümüne benzer. Bu, gevşek değerlendirilen, şema ve heterojen olur. Nesne, işlem hattını ilk kısmı ve verileri yükler. Bu öğreticide, bir veri kümesi ile taksi seyahat fiyatlandırma bilgileri yükler. Bu model oluşturmayı ve bunu eğitmek için kullanılır.
 
 İlk satırı olarak aşağıdaki kodu ekleyin `Train` yöntemi:
 
@@ -187,8 +187,6 @@ Aşağıdaki kodu ekleyin `Train` ekleme yöntemi `FastTreeRegressionTrainer` ö
 Modeli eğitmek için son adımdır bakın. Biz modeli eğitmek <xref:Microsoft.ML.Data.TransformerChain>bağlı olarak yüklenen ve dönüştürülen bir veri kümesi. Tahmin tanımlandıktan sonra kullanarak modeli eğitme <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> zaten yüklenmiş eğitim verilerini sağlayarak. Bu tahminler elde etmek için kullanılacak bir modelini döndürür. `pipeline.Fit()` işlem hattı eğitir ve döndürür bir `Transformer` göre `DataView` geçirildi. Denemeyi böyle kadar yürütülmez.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-Ve İşte bu kadar! Başarıyla bir makine öğrenimi taksi fares NYC içinde tahmin edebilen bir model eğitim. Şimdi şimdi modelin nasıl doğru olup olmadığını anlamak için göz atın ve taksi taksi değerleri tahmin etmek için kullanmayı öğrenin.
 
 ### <a name="save-the-model"></a>Modeli kaydedin
 

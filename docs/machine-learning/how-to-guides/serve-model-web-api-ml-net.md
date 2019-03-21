@@ -3,12 +3,12 @@ title: Machine Learning modeli ASP.NET Core Web API hizmet
 description: ML.NET yaklaşım analizi, makine öğrenme modelinin ASP.NET Core Web API'si kullanarak internet üzerinden hizmet
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57849064"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307921"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Nasıl yapılır: Machine Learning modeli ASP.NET Core Web API'si aracılığıyla hizmet
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Öngörü hizmeti oluşturma
+## <a name="register-predictionengine-for-use-in-application"></a>Uygulama kullanım PredictionEngine kaydolun
 
-Düzenleme ve tahmin mantıksal uygulamanın tamamı boyunca yeniden kullanmak için bir öngörü hizmeti oluşturun.
-
-1. Adlı bir dizin oluşturmak *Hizmetleri* uygulama tarafından kullanılan hizmetler tutmak için projenizdeki:
-
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **Ekle > Yeni klasör**. "Hizmetler" yazın ve isabet **Enter**.
-
-1. Çözüm Gezgini'nde sağ *Hizmetleri* dizin ve ardından **Ekle > Yeni öğe**.
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *PredictionService.cs*. Ardından, **Ekle** düğmesi. *PredictionService.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *PredictionService.cs*:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *PredictionService.cs* dosyası:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Uygulamada Öngörüler hizmeti kullanmak için kaydetme
-
-Öngörü hizmeti kullanmak için gereken her zaman oluşturmanız gerekir. Bu durumda, dikkate alınması gereken bir en iyi ASP.NET Core bağımlılık ekleme yöntemidir.
+Tek bir tahminde bulunmak için kullanabileceğiniz `PredictionEngine`. Kullanmak için `PredictionEngine` uygulamanızdaki her zaman gerekli oluşturmak olacaktır. Bu durumda, dikkate alınması gereken bir en iyi ASP.NET Core bağımlılık ekleme yöntemidir.
 
 Hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlar. [bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Aşağıdaki kod satırlarını ekleme *Createservicereplicalisteners()* yöntemi:
+2. Aşağıdaki kod satırlarını ekleme *Createservicereplicalisteners()* yöntemi:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` iş parçacığı açısından güvenli değildir. Nesne oluşturulurken maliyeti sınırlayabilirsiniz bir hizmet ömrü sağlayarak yoludur *kapsamındaki*. *Kapsamlı* nesneleri, ancak farklı bir istek içinde aynı istekler arasında. Hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıyı ziyaret edin [hizmet yaşam süreleri](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
 
 Yüksek düzeyde, bu kod nesneleri ve otomatik yerine el ile yapmanıza gerek kalmadan uygulama tarafından istendiğinde hizmetlerini başlatır.
 
@@ -202,9 +156,10 @@ Gelen HTTP isteklerini işlemek için bir denetleyici oluşturmanız gerekir.
 1. Komut istemi değişim **Denetleyici adı** alanı *PredictController.cs*. Ardından Ekle düğmesini seçin. *PredictController.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *PredictController.cs*:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *PredictController.cs* dosyası:
@@ -212,12 +167,12 @@ Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *PredictContr
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Bağımlılık ekleme erişmenizi denetleyicinin oluşturucusuna geçirerek bu tahmin hizmet atanmasıdır. Ardından, İLETİDE bu denetleyicinin öngörü hizmeti yöntemi tahminlerde bulunabilir ve kullanıcıya geri başarılı olursa sonuçları döndürmek için kullanılıyor.
+Bu atama `PredictionEngine` bağımlılık ekleme erişmenizi denetleyicinin oluşturucusuna geçirerek. Ardından, bu denetleyicinin POST yönteminde `PredictionEngine` tahminlerde bulunabilir ve başarılı olursa sonuçları kullanıcıya geri döndürmek için kullanılır.
 
 ## <a name="test-web-api-locally"></a>Web API'si yerel olarak test etme
 
