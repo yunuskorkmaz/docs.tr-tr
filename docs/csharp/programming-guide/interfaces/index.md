@@ -21,7 +21,7 @@ Struct'ın adı geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-progra
 
 Herhangi bir sınıfın veya yapının uyguladığı <xref:System.IEquatable%601> arabirimi için bir tanım içermelidir bir <xref:System.IEquatable%601.Equals%2A> arabirimi belirtir imzayla eşleşen yöntemi. Sonuç olarak uygulayan bir sınıf güvenebilirsiniz `IEquatable<T>` içerecek şekilde bir `Equals` yöntemi ile bir sınıf örneği belirleyebilir aynı sınıfın başka bir örneğe eşit olup olmadığını.  
   
-Tanımı `IEquatable<T>` için bir uygulama sağlamaz `Equals`. Arabirimi yalnızca imzası tanımlar. Bu şekilde, C# dilinde bir arabirim yöntemleri soyut bir soyut sınıf benzer. Ancak, bir sınıfın veya yapının birden fazla arabirim uygulayabilir, ancak bir sınıf veya yalnızca tek bir sınıf, soyut devralabilir. Bu nedenle, arabirimleri kullanarak, bir sınıfta birden çok kaynaktan davranışı içerebilir.  
+Tanımı `IEquatable<T>` için bir uygulama sağlamaz `Equals`. Arabirimi yalnızca imzası tanımlar. Bu şekilde, C# dilinde bir arabirim yöntemleri soyut bir soyut sınıf benzer. Ancak, bir sınıfın veya yapının birden fazla arabirim uygulayabilir, ancak bir sınıf veya yalnızca tek bir sınıf, soyut devralabilir.
   
 Soyut sınıflar hakkında daha fazla bilgi için bkz: [soyut ve korumalı sınıflar ve sınıf üyeleri](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -45,7 +45,7 @@ Bir taban sınıfı sanal üye kullanarak arabirim üyelerini de uygulayabilirsi
 
 Bir arabirim, aşağıdaki özelliklere sahiptir:  
 
-- Bir soyut temel sınıf gibi bir arabirimdir. Herhangi bir sınıfı veya arabirimi uygulayan yapı tüm üyeleri uygulamalıdır.
+- Bir arabirim yalnızca soyut üye bir soyut temel sınıf gibidir. Herhangi bir sınıfı veya arabirimi uygulayan yapı tüm üyeleri uygulamalıdır.
 - Bir arabirimi doğrudan başlatılamaz. Üyeleri herhangi bir sınıfı veya arabirimi uygulayan yapı tarafından uygulanır.
 - Arabirimleri, olaylar, dizin oluşturucular, yöntemler ve özellikler içerebilir.
 - Arabirim yöntemleri uygulaması içerir.

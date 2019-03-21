@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186221"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262451"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -193,13 +193,13 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 -   [Active Directory etki alanı Hizmetleri](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Etki alanı adı sistemi (DNS)](/windows-server/networking/dns/dns-top)  
+-   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
 -   [Dinamik konak Yapılandırma Protokolü (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [SQL Server 2008 (SQL Server Video) yükleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
+-   [SQL Server 2008 (SQL Server Video) yükleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
 -   [Veritabanı yöneticileri için SQL Server 2008 Güvenliğe genel bakış](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   

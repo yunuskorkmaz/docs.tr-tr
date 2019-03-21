@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592856"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262479"
 ---
 # <a name="members-c-programming-guide"></a>Üyeler (C# Programlama Kılavuzu)
 Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyelere sahiptir. Sınıfında, devralma hiyerarşisindeki tüm sınıflarda bildirilen tüm üyeleri (oluşturucular ve sonlandırıcılar dışında) bir sınıfın üyeleri bildirilen tüm üyeleri içerir. Temel sınıflardaki özel üyeler devralınır ancak türetilmiş sınıflardan erişilebilir değildir.  
@@ -21,7 +21,7 @@ Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyel
 |Üye|Açıklama|  
 |------------|-----------------|  
 |[Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)|Alanlar, sınıf kapsamında bildirilen değişkenlerdir. Bir alan, yerleşik bir sayısal tür veya başka bir sınıfın bir örneği olabilir. Örneğin bir takvim sınıfı, geçerli tarihi içeren bir alana sahip olabilir.|  
-|[Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)|Sabitler, değeri derleme zamanında atanan ve değiştirilemeyen alanlar veya özelliklerdir.|  
+|[Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)|Alan değeri olarak ayarlandıysa, derleme zamanı ve değiştirilemez sabittir.|  
 |[Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)|Özellikler, bir sınıftaki alanlar gibi erişilen o sınıftaki öğelerdir. Bir özellik, nesne bilgisi olmadan değiştirilmesini engellemek üzere bir sınıf alanı için koruma sağlayabilir.|  
 |[Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)|Yöntemler, bir sınıfın gerçekleştirebildiği eylemleri tanımlar. Yöntemler girdi verilerini sağlayan parametreleri alabilir ve parametreler ile çıktı verilerini döndürebilir. Ayrıca yöntemler parametre kullanmadan bir değeri doğrudan döndürebilir.|  
 |[Olaylar](../../../csharp/programming-guide/events/index.md)|Olaylar, diğer nesnelere düğme tıklamaları veya bir yöntemin başarıyla tamamlanması gibi örnekleri sağlar. Olaylar, temsilciler kullanılarak tanımlanır ve tetiklenir.|  

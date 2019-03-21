@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719643"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262572"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Sıralı iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Sequence> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
@@ -21,7 +21,7 @@ ms.locfileid: "57719643"
 > [!NOTE]
 >  Öğreticinin tamamlanmış bir sürümünü indirmek için bkz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### <a name="to-create-the-workflow"></a>İş akışını oluşturmak için  
+## <a name="to-create-the-workflow"></a>İş akışını oluşturmak için  
   
 1.  Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719643"
   
 4.  Sürükle bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** üzerindeki etiket İş akışı tasarım yüzeyi.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Bağımsız değişkenler ve iş akışı değişkenlerini oluşturmak için  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Bağımsız değişkenler ve iş akışı değişkenlerini oluşturmak için  
   
 1.  Çift **SequentialNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719643"
   
 13. Tıklayın **değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **değişkenleri** bölmesi.  
   
-### <a name="to-add-the-workflow-activities"></a>İş akışı etkinlikleri eklemek için  
+## <a name="to-add-the-workflow-activities"></a>İş akışı etkinlikleri eklemek için  
   
 1.  Sürükleme bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **dizisi** etkinlik. Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "57719643"
   
 13. Tıklayın **WriteLine** etkinliğinde **ardından** seçmek için bölüm ve içine aşağıdaki ifadeyi yazın **metin** özellik değer kutusu.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Tıklayın **WriteLine** etkinliğinde **Else** seçmek için bölüm ve içine aşağıdaki ifadeyi yazın **metin** özellik değer kutusu.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ ms.locfileid: "57719643"
   
      ![Sıralı iş akışı tamamlandı](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
+## <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
   
 1.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   

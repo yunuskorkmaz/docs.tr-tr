@@ -2,19 +2,19 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: d723bdf55104fa0a8d4a8e20c60a9debb26c7886
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843948"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262580"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
 İçin birçok geliştirme vardır C# Önizleme 2 ile deneyebileceğiniz dili. Preview 2 sürümünde eklenen yeni özellikleri şunlardır:
 
 - [Desen eşleştirme geliştirmeleri](#more-patterns-in-more-places):
-  * [anahtar ifadeler](#switch-expressions)
+  * [Anahtar ifadeler](#switch-expressions)
   * [Özellik desenleri](#property-patterns)
   * [Kayıt düzenleri](#tuple-patterns)
   * [Konumsal desenleri](#positional-patterns)
@@ -51,6 +51,7 @@ public enum Rainbow
     Red,
     Orange,
     Yellow,
+    Green,
     Blue,
     Indigo,
     Violet
@@ -66,6 +67,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
         Rainbow.Red    => new RGBColor(0xFF, 0x00, 0x00),
         Rainbow.Orange => new RGBColor(0xFF, 0x7F, 0x00),
         Rainbow.Yellow => new RGBColor(0xFF, 0xFF, 0x00),
+        Rainbow.Green  => new RGBColor(0x00, 0xFF, 0x00),
         Rainbow.Blue   => new RGBColor(0x00, 0x00, 0xFF),
         Rainbow.Indigo => new RGBColor(0x4B, 0x00, 0x82),
         Rainbow.Violet => new RGBColor(0x94, 0x00, 0xD3),
@@ -93,6 +95,8 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
             return new RGBColor(0xFF, 0x7F, 0x00);
         case Rainbow.Yellow:
             return new RGBColor(0xFF, 0xFF, 0x00);
+        case Rainbow.Green:
+            return new RGBColor(0x00, 0xFF, 0x00);
         case Rainbow.Blue:
             return new RGBColor(0x00, 0x00, 0xFF);
         case Rainbow.Indigo:
@@ -176,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 Eşleşen atma deseni önceki anahtarda ya da `x` veya `y`, iki değil, 0'dır. Bir switch ifadesi bir değer üreten veya bir özel durum. Servis taleplerini hiçbiri eşleşen switch ifadesi bir özel durum oluşturur. Tüm olası durumların anahtar İfadenizde kapsamaz varsa derleyici bir uyarı oluşturur.
+
+Bu teknikler desen keşfedebilirsiniz [desen eşleştirme Gelişmiş öğretici](../tutorials/pattern-matching.md).
 
 ## <a name="using-declarations"></a>Bildirimi kullanarak
 

@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için desen eşleştirme özelliklerini kull
 description: Gelişmiş Bu öğretici, verileri ve ayrı oluşturulur algoritmaları kullanarak işlevi oluşturmak için desen eşleştirme teknikleri kullanmayı gösterir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 78b7215631a3988cff1ab942b677bcd5205e311c
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185837"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262517"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için özellikler desen kullanma
 
@@ -61,7 +61,7 @@ En temel Ücret hesaplama vehicle türüne bağlıdır:
 - A `Bus` 5,00 $ ise.
 - A `DeliveryTruck` $10,00 olduğu
 
-Yeni bir `TollCalculator` sınıfı ve ücret tutarı almak için araç türüne desen uygulayın.
+Yeni bir `TollCalculator` sınıfı ve ücret tutarı almak için araç türüne desen uygulayın. Aşağıdaki kod ilk uygulamasını gösterir `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-Önceki kod bir **geçiş ifadesi** (aynı bir [ `switch` ](../language-reference/keywords/switch.md) deyimi) kullanan testlerin **türü deseni**. A **geçiş ifadesi** değişkeniyle başlar `vehicle` önceki kodda, arkasından `switch` anahtar sözcüğü. Sonraki tüm gelen **geçiş Silah** küme ayraçlarının içindeki. `switch` İfade çevreleyen sözdizimine diğer iyileştirme yapar `switch` deyimi. `case` Anahtar sözcüğü atlanırsa ve her bir arm sonucunu bir ifadedir. Son iki Silah yeni bir dil özelliği gösterir. `{ }` Çalışması eşleşen bir önceki arm eşleşmedi herhangi bir null olmayan nesne. Bu arm bu yönteme geçirilen yanlış türler yakalar. Son olarak, `null` deseni yakalar `null` bu yönteme iletilir. `null` Deseni bir türü desenleri yalnızca null olmayan bir nesne doğru türde olduğundan son olabilir.
+Önceki kod bir **geçiş ifadesi** (aynı bir [ `switch` ](../language-reference/keywords/switch.md) deyimi) kullanan testlerin **türü deseni**. A **geçiş ifadesi** değişkeniyle başlar `vehicle` önceki kodda, arkasından `switch` anahtar sözcüğü. Sonraki tüm gelen **geçiş Silah** küme ayraçlarının içindeki. `switch` İfade çevreleyen sözdizimine diğer iyileştirme yapar `switch` deyimi. `case` Anahtar sözcüğü atlanırsa ve her bir arm sonucunu bir ifadedir. Son iki Silah yeni bir dil özelliği gösterir. `{ }` Çalışması eşleşen bir önceki arm eşleşmedi herhangi bir null olmayan nesne. Bu arm bu yönteme geçirilen yanlış türler yakalar.  `{ }` Çalışması, her bir araç türü durumlarda izlemelidir. Sırasını tersine çevrilmiş, `{ }` çalışması önceliklidir. Son olarak, `null` algılar deseni bir `null` bu yönteme iletilir. `null` Deseni bir türü desenleri yalnızca null olmayan bir nesne doğru türde olduğundan son olabilir.
 
 Aşağıdaki kodu kullanarak bu kodu test edebilirsiniz `Program.cs`:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-İlk üç çalışmalarını test türü olarak bir `Car`, ardından değerini kontrol `Passengers` özelliği. Her ikisi de eşleşirse, ifade değerlendirilir ve döndürdü. Son yan tümcesi gösterir `when` anahtar arm yan tümcesi. Kullandığınız `when` özellikte eşitlik dışındaki koşulları test etmeye yönelik yan tümcesi. Önceki örnekte `when` Arabada 2'den fazla Yolcuların olduğunu görmek için yan tümcesi sınar. NET olarak söylemek gerekirse, bu örnekte gerekli değildir.
+İlk üç çalışmalarını test türü olarak bir `Car`, ardından değerini kontrol `Passengers` özelliği. Her ikisi de eşleşirse, ifade değerlendirilir ve döndürdü.
 
 Benzer şekilde taksiler durumlarda da genişletin:
 
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-İşiniz bittiğinde, aşağıdaki gibi görünen bir yöntem sahip olacaksınız:
+Önceki kodun gösterdiği `when` anahtar arm yan tümcesi. Kullandığınız `when` özellikte eşitlik dışındaki koşulları test etmeye yönelik yan tümcesi. İşiniz bittiğinde, aşağıdaki gibi görünen bir yöntem sahip olacaksınız:
 
 ```csharp
 vehicle switch
@@ -220,7 +220,7 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
@@ -372,9 +372,9 @@ Son olarak, normal ücretini ödemem saat kez iki sağladığından kaldırabili
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Bu örnek bir desen eşleştirme avantajlarını vurgular: Düzen dalları sırayla değerlendirilir. Önceki bir dalı, sonraki durumlarından biri işler, böylece bunları yeniden varsa derleyici sizi uyarır. Bu dil kuralları önceki basitleştirme kod değişmedi güvenle yapmak daha kolay yapılır.
+Bu örnek bir desen eşleştirme avantajlarını vurgular: Düzen dalları sırayla değerlendirilir. Önceki bir dalı, sonraki durumlarından biri işler, böylece bunları yeniden düzenlerseniz, derleyici, erişilemeyen kod hakkında sizi uyarır. Bu dil kuralları önceki basitleştirme kod değişmedi güvenle yapmak daha kolay yapılır.
 
-Desen eşleştirme, nesne yönelimli teknikleri kullandıysanız oluşturacak daha farklı çözümler uygulamak için doğal bir söz dizimi sağlar. Bulut, veri ve İşlevler parçalayın Canlı neden oluyor. *Şekli* verilerin ve *işlemleri* açık olmayan mutlaka anlatılan birlikte. Bu öğreticide, kendi özgün işlevden tamamen farklı şekillerde mevcut verilerini kullandınız. Desen eşleştirme genişletmek uygulanamadı olsa da bu türlerin geçersiz kılınmış işlevselliği yazma olanağı getirdi.
+Desen eşleştirme, bazı türleri kod daha okunabilir hale getirir ve sınıflarınızı için kod eklenemiyor, teknikleri nesne yönelimli bir alternatif sunar. Bulut, veri ve İşlevler parçalayın Canlı neden oluyor. *Şekli* verilerin ve *işlemleri* açık olmayan mutlaka anlatılan birlikte. Bu öğreticide, kendi özgün işlevden tamamen farklı şekillerde mevcut verilerini kullandınız. Desen eşleştirme genişletmek uygulanamadı olsa da bu türlerin geçersiz kılınmış işlevselliği yazma olanağı getirdi.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
