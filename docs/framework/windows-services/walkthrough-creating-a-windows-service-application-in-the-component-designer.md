@@ -1,6 +1,6 @@
 ---
-title: Visual Studio'da bir Windows hizmeti uygulaması oluşturma
-ms.date: 09/10/2018
+title: 'Öğretici: Bir Windows hizmeti uygulaması oluşturma'
+ms.date: 03/14/2019
 dev_langs:
 - csharp
 - vb
@@ -9,68 +9,80 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665036"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262494"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a><span data-ttu-id="2945b-102">İzlenecek yol: Bir Windows hizmeti uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="2945b-102">Walkthrough: Create a Windows service app</span></span>
+# <a name="tutorial-create-a-windows-service-app"></a><span data-ttu-id="a5847-102">Öğretici: Bir Windows hizmeti uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="a5847-102">Tutorial: Create a Windows service app</span></span>
 
-<span data-ttu-id="2945b-103">Bu makalede, Visual Studio'da bir olay günlüğüne iletiler yazan basit bir Windows hizmeti uygulaması oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2945b-103">This article demonstrates how to create a simple Windows service app in Visual Studio that writes messages to an event log.</span></span>
+<span data-ttu-id="a5847-103">Bu makalede, olay günlüğüne bir ileti yazar Visual Studio'da bir Windows hizmeti uygulaması oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a5847-103">This article demonstrates how to create a Windows service app in Visual Studio that writes messages to an event log.</span></span>
 
-## <a name="create-a-service"></a><span data-ttu-id="2945b-104">Bir hizmet oluşturma</span><span class="sxs-lookup"><span data-stu-id="2945b-104">Create a service</span></span>
+## <a name="create-a-service"></a><span data-ttu-id="a5847-104">Bir hizmet oluşturma</span><span class="sxs-lookup"><span data-stu-id="a5847-104">Create a service</span></span>
 
-<span data-ttu-id="2945b-105">Başlamak için projeyi oluşturmak ve hizmetin düzgün çalışması için gerekli olan değerleri ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="2945b-105">To begin, create the project and set values that are required for the service to function correctly.</span></span>
+<span data-ttu-id="a5847-105">Başlamak için projeyi oluşturmak ve hizmetin düzgün çalışması için gerekli değerleri ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="a5847-105">To begin, create the project and set the values that are required for the service to function correctly.</span></span>
 
-1. <span data-ttu-id="2945b-106">Visual Studio'da menü çubuğunda, **dosya** > **yeni** > **proje** (veya basın **Ctrl** + **Shift**+**N**) açmak için **yeni proje** iletişim.</span><span class="sxs-lookup"><span data-stu-id="2945b-106">In Visual Studio, on the menu bar, choose **File** > **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** dialog.</span></span>
+1. <span data-ttu-id="a5847-106">Visual Studio'dan **dosya** menüsünde **yeni** > **proje** (veya basın **Ctrl** + **Shift**+**N**) açmak için **yeni proje** penceresi.</span><span class="sxs-lookup"><span data-stu-id="a5847-106">From the Visual Studio **File** menu, select **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** window.</span></span>
 
-2. <span data-ttu-id="2945b-107">Bulun ve seçin **Windows hizmeti** proje şablonu.</span><span class="sxs-lookup"><span data-stu-id="2945b-107">Navigate to and select the **Windows Service** project template.</span></span> <span data-ttu-id="2945b-108">Genişletin **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Windows Masaüstü**, veya tür **Windows Hizmet** sağ üst köşedeki arama kutusuna.</span><span class="sxs-lookup"><span data-stu-id="2945b-108">Expand **Installed** > [**Visual C#** or **Visual Basic**] > **Windows Desktop**, or type **Windows Service** in the search box on the upper right.</span></span>
+2. <span data-ttu-id="a5847-107">Bulun ve seçin **Windows hizmeti (.NET Framework)** proje şablonu.</span><span class="sxs-lookup"><span data-stu-id="a5847-107">Navigate to and select the **Windows Service (.NET Framework)** project template.</span></span> <span data-ttu-id="a5847-108">Bunu bulmak için genişletme **yüklü** ve **Visual C#**  veya **Visual Basic**, ardından **Windows Masaüstü**.</span><span class="sxs-lookup"><span data-stu-id="a5847-108">To find it, expand **Installed** and **Visual C#** or **Visual Basic**, then select **Windows Desktop**.</span></span> <span data-ttu-id="a5847-109">Veya, girin *Windows hizmeti* tuşuna basın ve sağ üst köşedeki arama kutusuna **Enter**.</span><span class="sxs-lookup"><span data-stu-id="a5847-109">Or, enter *Windows Service* in the search box on the upper right and press **Enter**.</span></span>
 
    ![Visual Studio'da yeni proje iletişim kutusunda Windows hizmet şablonu](media/new-project-dialog.png)
 
    > [!NOTE]
-   > <span data-ttu-id="2945b-110">Görmüyorsanız **Windows hizmeti** şablon yüklemeniz gerekebilir **.NET Masaüstü geliştirmesinden** iş yükü.</span><span class="sxs-lookup"><span data-stu-id="2945b-110">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload.</span></span> <span data-ttu-id="2945b-111">İçinde **yeni proje** iletişim kutusunda bağlantısına tıklayın **açık Visual Studio yükleyicisi** sol alt.</span><span class="sxs-lookup"><span data-stu-id="2945b-111">In the **New Project** dialog, click the link that says **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="2945b-112">İçinde **Visual Studio yükleyicisi**seçin **.NET masaüstü geliştirme** iş yükü ve ardından **Değiştir**.</span><span class="sxs-lookup"><span data-stu-id="2945b-112">In **Visual Studio Installer**, select the **.NET desktop development** workload and then choose **Modify**.</span></span>
+   > <span data-ttu-id="a5847-111">Görmüyorsanız **Windows hizmeti** şablon yüklemeniz gerekebilir **.NET Masaüstü geliştirmesinden** iş yükü:</span><span class="sxs-lookup"><span data-stu-id="a5847-111">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload:</span></span>
+   >  
+   > <span data-ttu-id="a5847-112">İçinde **yeni proje** iletişim kutusunda **açık Visual Studio yükleyicisi** sol alt.</span><span class="sxs-lookup"><span data-stu-id="a5847-112">In the **New Project** dialog, select **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="a5847-113">Seçin **.NET masaüstü geliştirme** iş yükü ve ardından **Değiştir**.</span><span class="sxs-lookup"><span data-stu-id="a5847-113">Select the **.NET desktop development** workload, and then select **Modify**.</span></span>
 
-3. <span data-ttu-id="2945b-113">Projeyi adlandırın **MyNewService**ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="2945b-113">Name the project **MyNewService**, and then choose **OK**.</span></span>
+3. <span data-ttu-id="a5847-114">İçin **adı**, girin *MyNewService*ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="a5847-114">For **Name**, enter *MyNewService*, and then select **OK**.</span></span>
 
-   <span data-ttu-id="2945b-114">Proje şablonu adında bir bileşen sınıfını içeren `Service1` öğesinden devralan <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2945b-114">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="2945b-115">Hizmeti başlatmak için kodu gibi temel hizmet kodunun çoğunu içerir.</span><span class="sxs-lookup"><span data-stu-id="2945b-115">It includes much of the basic service code, such as the code to start the service.</span></span>
+   <span data-ttu-id="a5847-115">**Tasarım** sekmesi görünür (**Service1.cs [Design]** veya **gt;service1.vb [Design]**).</span><span class="sxs-lookup"><span data-stu-id="a5847-115">The **Design** tab appears (**Service1.cs [Design]** or **Service1.vb [Design]**).</span></span>
+   
+   <span data-ttu-id="a5847-116">Proje şablonu adında bir bileşen sınıfını içeren `Service1` öğesinden devralan <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a5847-116">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a5847-117">Hizmeti başlatmak için kodu gibi temel hizmet kodunun çoğunu içerir.</span><span class="sxs-lookup"><span data-stu-id="a5847-117">It includes much of the basic service code, such as the code to start the service.</span></span>
 
-## <a name="rename-the-service"></a><span data-ttu-id="2945b-116">Hizmet yeniden adlandır</span><span class="sxs-lookup"><span data-stu-id="2945b-116">Rename the service</span></span>
+## <a name="rename-the-service"></a><span data-ttu-id="a5847-118">Hizmet yeniden adlandır</span><span class="sxs-lookup"><span data-stu-id="a5847-118">Rename the service</span></span>
 
-<span data-ttu-id="2945b-117">Hizmet Yeniden Adlandır **Service1** için **MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="2945b-117">Rename the service from **Service1** to **MyNewService**.</span></span>
+<span data-ttu-id="a5847-119">Hizmet Yeniden Adlandır **Service1** için **MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="a5847-119">Rename the service from **Service1** to **MyNewService**.</span></span>
 
-1. <span data-ttu-id="2945b-118">İçinde **tasarım** Service1.cs (veya gt;service1.vb) görünümüne tıklayın bağlantısını **kod görünümüne geçin**.</span><span class="sxs-lookup"><span data-stu-id="2945b-118">In the **Design** view for Service1.cs (or Service1.vb), click the link to **switch to code view**.</span></span> <span data-ttu-id="2945b-119">Sağ **Service1** seçip **Yeniden Adlandır** bağlam menüsünden.</span><span class="sxs-lookup"><span data-stu-id="2945b-119">Right-click on **Service1** and select **Rename** from the context menu.</span></span> <span data-ttu-id="2945b-120">ENTER **MyNewService** ve tuşuna **Enter** veya **Uygula**.</span><span class="sxs-lookup"><span data-stu-id="2945b-120">Enter **MyNewService** and then press **Enter** or click **Apply**.</span></span>
+1. <span data-ttu-id="a5847-120">İçinde **Çözüm Gezgini**seçin **Service1.cs**, veya **Service1.vb**ve **Yeniden Adlandır** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-120">In **Solution Explorer**, select **Service1.cs**, or **Service1.vb**, and choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="a5847-121">Dosyayı Yeniden Adlandır **MyNewService.cs**, veya **MyNewService.vb**ve tuşuna **girin**</span><span class="sxs-lookup"><span data-stu-id="a5847-121">Rename the file to **MyNewService.cs**, or **MyNewService.vb**, and then press **Enter**</span></span>
 
-2. <span data-ttu-id="2945b-121">İçinde **özellikleri** penceresi **Service1.cs [Design]** veya **gt;service1.vb [Design]**, değiştirme **ServiceName** değerine**MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="2945b-121">In the **Properties** window for **Service1.cs [Design]** or **Service1.vb [Design]**, change the **ServiceName** value to **MyNewService**.</span></span>
+    <span data-ttu-id="a5847-122">Kod öğesi için tüm başvuruları yeniden adlandırmak istediğiniz soran bir açılır pencere görünür *Service1*.</span><span class="sxs-lookup"><span data-stu-id="a5847-122">A pop-up window appears asking whether you would like to rename all references to the code element *Service1*.</span></span>
 
-3. <span data-ttu-id="2945b-122">İçinde **Çözüm Gezgini**, yeniden adlandırma **Service1.cs** için **MyNewService.cs**, veya yeniden adlandırmak **Service1.vb** için  **MyNewService.vb**.</span><span class="sxs-lookup"><span data-stu-id="2945b-122">In **Solution Explorer**, rename **Service1.cs** to **MyNewService.cs**, or rename **Service1.vb** to **MyNewService.vb**.</span></span>
+2. <span data-ttu-id="a5847-123">Açılır pencerede seçin **Evet**.</span><span class="sxs-lookup"><span data-stu-id="a5847-123">In the pop-up window, select **Yes**.</span></span>
 
-## <a name="add-features-to-the-service"></a><span data-ttu-id="2945b-123">Hizmete özellik ekleme</span><span class="sxs-lookup"><span data-stu-id="2945b-123">Add features to the service</span></span>
+    <span data-ttu-id="a5847-124">![Yeniden adlandırma istemi](media/windows-service-rename.png "Windows hizmetini yeniden adlandırma, istemi")</span><span class="sxs-lookup"><span data-stu-id="a5847-124">![Rename prompt](media/windows-service-rename.png "Windows service rename prompt")</span></span>
 
-<span data-ttu-id="2945b-124">Bu bölümde, Windows hizmeti için özel bir olay günlüğü ekleyin.</span><span class="sxs-lookup"><span data-stu-id="2945b-124">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="2945b-125">Olay günlükleri, Windows hizmetleri ile hiçbir şekilde ilişkili değildir.</span><span class="sxs-lookup"><span data-stu-id="2945b-125">Event logs are not associated in any way with Windows services.</span></span> <span data-ttu-id="2945b-126"><xref:System.Diagnostics.EventLog> Bileşen kullanılan bir Windows hizmetine ekleyebileceğiniz bileşen türüne bir örnek burada.</span><span class="sxs-lookup"><span data-stu-id="2945b-126">The <xref:System.Diagnostics.EventLog> component is used here as an example of the type of component you can add to a Windows service.</span></span>
+2. <span data-ttu-id="a5847-125">İçinde **tasarım** sekmesinde **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-125">In the **Design** tab, select **Properties** from the shortcut menu.</span></span> <span data-ttu-id="a5847-126">Gelen **özellikleri** penceresinde değişiklik **ServiceName** değerini *MyNewService*.</span><span class="sxs-lookup"><span data-stu-id="a5847-126">From the **Properties** window, change the **ServiceName** value to *MyNewService*.</span></span>
 
-### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="2945b-127">Özel olay günlüğü işlevselliği ekleme</span><span class="sxs-lookup"><span data-stu-id="2945b-127">Add custom event log functionality</span></span>
+    <span data-ttu-id="a5847-127">![Hizmet Özellikleri](media/windows-service-properties.png "Windows hizmet özellikleri")</span><span class="sxs-lookup"><span data-stu-id="a5847-127">![Service properties](media/windows-service-properties.png "Windows service properties")</span></span>
 
-1. <span data-ttu-id="2945b-128">İçinde **Çözüm Gezgini**, bağlam menüsünü **MyNewService.cs** veya **MyNewService.vb**ve ardından **Görünüm Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="2945b-128">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+3. <span data-ttu-id="a5847-128">Seçin **Tümünü Kaydet** gelen **dosya** menüsü.</span><span class="sxs-lookup"><span data-stu-id="a5847-128">Select **Save All** from the **File** menu.</span></span>
 
-2. <span data-ttu-id="2945b-129">Gelen **bileşenleri** bölümünü **araç kutusu**, sürükleyin bir <xref:System.Diagnostics.EventLog> tasarımcıya bileşeni.</span><span class="sxs-lookup"><span data-stu-id="2945b-129">From the **Components** section of the **Toolbox**, drag an <xref:System.Diagnostics.EventLog> component to the designer.</span></span>
 
-3. <span data-ttu-id="2945b-130">İçinde **Çözüm Gezgini**, bağlam menüsünü **MyNewService.cs** veya **MyNewService.vb**ve ardından **Kodu Görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="2945b-130">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Code**.</span></span>
+## <a name="add-features-to-the-service"></a><span data-ttu-id="a5847-129">Hizmete özellik ekleme</span><span class="sxs-lookup"><span data-stu-id="a5847-129">Add features to the service</span></span>
 
-4. <span data-ttu-id="2945b-131">Özel bir olay günlüğü tanımlamak için oluşturucuyu Düzenle:</span><span class="sxs-lookup"><span data-stu-id="2945b-131">Edit the constructor to define a custom event log:</span></span>
+<span data-ttu-id="a5847-130">Bu bölümde, Windows hizmeti için özel bir olay günlüğü ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a5847-130">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="a5847-131"><xref:System.Diagnostics.EventLog> Bileşen bir Windows hizmetine ekleyebileceğiniz bileşen türüne bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a5847-131">The <xref:System.Diagnostics.EventLog> component is an example of the type of component you can add to a Windows service.</span></span>
+
+### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="a5847-132">Özel olay günlüğü işlevselliği ekleme</span><span class="sxs-lookup"><span data-stu-id="a5847-132">Add custom event log functionality</span></span>
+
+1. <span data-ttu-id="a5847-133">İçinde **Çözüm Gezgini**, kısayol menüsünden **MyNewService.cs**, veya **MyNewService.vb**, seçin **Görünüm Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="a5847-133">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
+
+2. <span data-ttu-id="a5847-134">İçinde **araç kutusu**, genişletin **bileşenleri**ve ardından sürükleyin **EventLog** bileşeni **Service1.cs [Design]**, veya  **[Design] gt;service1.vb** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="a5847-134">In **Toolbox**, expand **Components**, and then drag the **EventLog** component to the **Service1.cs [Design]**, or **Service1.vb [Design]** tab.</span></span>
+
+3. <span data-ttu-id="a5847-135">İçinde **Çözüm Gezgini**, kısayol menüsünden **MyNewService.cs**, veya **MyNewService.vb**, seçin **Kodu Görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="a5847-135">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Code**.</span></span>
+
+4. <span data-ttu-id="a5847-136">Bir özel olay günlüğü'nü tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="a5847-136">Define a custom event log.</span></span> <span data-ttu-id="a5847-137">İçin C#, var olan düzenleme `MyNewService()` Oluşturucusu; Visual Basic için ekleme `New()` Oluşturucusu:</span><span class="sxs-lookup"><span data-stu-id="a5847-137">For C#, edit the existing `MyNewService()` constructor; for Visual Basic, add the `New()` constructor:</span></span>
 
    ```csharp
    public MyNewService()
    {
         InitializeComponent();
 
-        eventLog1 = new System.Diagnostics.EventLog();
-        if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+        eventLog1 = new EventLog();
+        if (!EventLog.SourceExists("MySource"))
         {
-            System.Diagnostics.EventLog.CreateEventSource(
-                "MySource", "MyNewLog");
+            EventLog.CreateEventSource("MySource", "MyNewLog");
         }
         eventLog1.Source = "MySource";
         eventLog1.Log = "MyNewLog";
@@ -79,64 +91,99 @@ ms.locfileid: "56665036"
 
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="2945b-132">Hizmet başlatıldığında ne olacağını tanımlayın</span><span class="sxs-lookup"><span data-stu-id="2945b-132">Define what occurs when the service starts</span></span>
+5. <span data-ttu-id="a5847-138">Ekleme bir `using` ifadesine **MyNewService.cs** (zaten mevcut değilse), veya bir `Imports` deyimi **MyNewService.vb**, için <xref:System.Diagnostics?displayProperty=nameWithType> ad alanı:</span><span class="sxs-lookup"><span data-stu-id="a5847-138">Add a `using` statement to **MyNewService.cs** (if it doesn't already exist), or an `Imports` statement **MyNewService.vb**, for the <xref:System.Diagnostics?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="2945b-133">Kod Düzenleyicisi'nde bulun <xref:System.ServiceProcess.ServiceBase.OnStart%2A> projeyi oluşturduğunuzda otomatik olarak geçersiz kılınan yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2945b-133">In the code editor, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method that was automatically overridden when you created the project.</span></span> <span data-ttu-id="2945b-134">Hizmet başlatıldığında, bir giriş olay günlüğüne yazan kod satırını ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2945b-134">Add a line of code that writes an entry to the event log when the service starts:</span></span>
+    ```csharp
+    using System.Diagnostics;
+    ```
+
+    ```vb
+    Imports System.Diagnostics
+    ```
+
+6. <span data-ttu-id="a5847-139">Seçin **Tümünü Kaydet** gelen **dosya** menüsü.</span><span class="sxs-lookup"><span data-stu-id="a5847-139">Select **Save All** from the **File** menu.</span></span>
+
+### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="a5847-140">Hizmet başlatıldığında ne olacağını tanımlayın</span><span class="sxs-lookup"><span data-stu-id="a5847-140">Define what occurs when the service starts</span></span>
+
+<span data-ttu-id="a5847-141">Kod düzenleyicisinde **MyNewService.cs** veya **MyNewService.vb**, bulun <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi Projeyi oluşturduğunuzda visual Studio, bir boş yöntem tanımını otomatik olarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a5847-141">In the code editor for **MyNewService.cs** or **MyNewService.vb**, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method; Visual Studio automatically created an empty method definition when you created the project.</span></span> <span data-ttu-id="a5847-142">Hizmet başlatıldığında, bir giriş olay günlüğüne yazan kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="a5847-142">Add code that writes an entry to the event log when the service starts:</span></span>
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-<span data-ttu-id="2945b-135">Bir hizmet uygulaması, uzun süre çalışan, genellikle yoklar veya sistemde izleyen bir şey olacak şekilde tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="2945b-135">A service application is designed to be long-running, so it usually polls or monitors something in the system.</span></span> <span data-ttu-id="2945b-136">İzleme ayarlanır <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2945b-136">The monitoring is set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="2945b-137">Ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aslında izleme yapmaz.</span><span class="sxs-lookup"><span data-stu-id="2945b-137">However, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doesn’t actually do the monitoring.</span></span> <span data-ttu-id="2945b-138"><xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemi hizmetin çalışması başladıktan sonra işletim sistemine döndürmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="2945b-138">The <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method must return to the operating system after the service's operation has begun.</span></span> <span data-ttu-id="2945b-139">Sonsuza kadar döngü veya engelleme gerçekleştirmemelidir.</span><span class="sxs-lookup"><span data-stu-id="2945b-139">It must not loop forever or block.</span></span> <span data-ttu-id="2945b-140">Basit bir yoklama mekanizması kurmak için kullanabileceğiniz <xref:System.Timers.Timer?displayProperty=nameWithType> bileşeni aşağıdaki gibi: İçinde <xref:System.ServiceProcess.ServiceBase.OnStart%2A> bileşen üzerinde parametreleri ayarlayın ve ardından yöntemi <xref:System.Timers.Timer.Enabled%2A> özelliğini `true`.</span><span class="sxs-lookup"><span data-stu-id="2945b-140">To set up a simple polling mechanism, you can use the <xref:System.Timers.Timer?displayProperty=nameWithType> component as follows: In the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, set parameters on the component, and then set the <xref:System.Timers.Timer.Enabled%2A> property to `true`.</span></span> <span data-ttu-id="2945b-141">Zamanlayıcı, aynı zamanda hizmetiniz izlemeyi yapabileceği kodunuzda olayları periyodik olarak başlatır.</span><span class="sxs-lookup"><span data-stu-id="2945b-141">The timer raises events in your code periodically, at which time your service could do its monitoring.</span></span> <span data-ttu-id="2945b-142">Bunu yapmak için aşağıdaki kodu kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2945b-142">You can use the following code to do this:</span></span>
+#### <a name="polling"></a><span data-ttu-id="a5847-143">Yoklama</span><span class="sxs-lookup"><span data-stu-id="a5847-143">Polling</span></span>
 
-```csharp
-// Set up a timer that triggers every minute.
-System.Timers.Timer timer = new System.Timers.Timer();
-timer.Interval = 60000; // 60 seconds
-timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
-timer.Start();
-```
+<span data-ttu-id="a5847-144">Bir hizmet uygulaması, uzun süre çalışan olacak şekilde tasarlandığından, genellikle yoklar veya izler, ayarlanan sistem <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a5847-144">Because a service application is designed to be long-running, it usually polls or monitors the system, which you set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="a5847-145">`OnStart` Yöntemi, böylece sistem kilitli değilse hizmetin çalışması başladıktan sonra işletim sistemine döndürmelidir.</span><span class="sxs-lookup"><span data-stu-id="a5847-145">The `OnStart` method must return to the operating system after the service's operation has begun so that the system isn't blocked.</span></span> 
 
-```vb
-' Set up a timer that triggers every minute.
-Dim timer As System.Timers.Timer = New System.Timers.Timer()
-timer.Interval = 60000 ' 60 seconds
-AddHandler timer.Elapsed, AddressOf Me.OnTimer
-timer.Start()
-```
+<span data-ttu-id="a5847-146">Basit bir yoklama mekanizması kurmak için kullanın <xref:System.Timers.Timer?displayProperty=nameWithType> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="a5847-146">To set up a simple polling mechanism, use the <xref:System.Timers.Timer?displayProperty=nameWithType> component.</span></span> <span data-ttu-id="a5847-147">Süreölçer başlatır bir <xref:System.Timers.Timer.Elapsed> düzenli aralıklarla zaman hizmetinizi yapabilir, izleme olayı.</span><span class="sxs-lookup"><span data-stu-id="a5847-147">The timer raises an <xref:System.Timers.Timer.Elapsed> event at regular intervals, at which time your service can do its monitoring.</span></span> <span data-ttu-id="a5847-148">Kullandığınız <xref:System.Timers.Timer> bileşeni aşağıdaki gibi:</span><span class="sxs-lookup"><span data-stu-id="a5847-148">You use the <xref:System.Timers.Timer> component as follows:</span></span>
 
-<span data-ttu-id="2945b-143">Üye değişkeni sınıfına ekleyin.</span><span class="sxs-lookup"><span data-stu-id="2945b-143">Add a member variable to the class.</span></span> <span data-ttu-id="2945b-144">Bu, olay günlüğüne yazmak için sonraki olayı tanımlayıcısını içerir.</span><span class="sxs-lookup"><span data-stu-id="2945b-144">It contains the identifier of the next event to write into the event log.</span></span>
+- <span data-ttu-id="a5847-149">Özelliklerini ayarlama <xref:System.Timers.Timer> bileşeninin `MyNewService.OnStart` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a5847-149">Set the properties of the <xref:System.Timers.Timer> component in the `MyNewService.OnStart` method.</span></span>
+- <span data-ttu-id="a5847-150">Çağırarak zamanlayıcıyı başlatmak <xref:System.Timers.Timer.Start%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a5847-150">Start the timer by calling the <xref:System.Timers.Timer.Start%2A> method.</span></span>
 
-```csharp
-private int eventId = 1;
-```
+##### <a name="set-up-the-polling-mechanism"></a><span data-ttu-id="a5847-151">Yoklama mekanizması kurmak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="a5847-151">Set up the polling mechanism.</span></span>
 
-```vb
-Private eventId As Integer = 1
-```
+1. <span data-ttu-id="a5847-152">Aşağıdaki kodu ekleyin `MyNewService.OnStart` yoklama mekanizması kurmak için olay:</span><span class="sxs-lookup"><span data-stu-id="a5847-152">Add the following code in the `MyNewService.OnStart` event to set up the polling mechanism:</span></span>
 
-<span data-ttu-id="2945b-145">Zamanlayıcı olayı işlemek için yeni bir yöntem ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2945b-145">Add a new method to handle the timer event:</span></span>
+   ```csharp
+   // Set up a timer that triggers every minute.
+   Timer timer = new Timer();
+   timer.Interval = 60000; // 60 seconds
+   timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
+   timer.Start();
+   ```
 
-```csharp
-public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
-{
-    // TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
-}
-```
+   ```vb
+   ' Set up a timer that triggers every minute.
+   Dim timer As Timer = New Timer()
+   timer.Interval = 60000 ' 60 seconds
+   AddHandler timer.Elapsed, AddressOf Me.OnTimer
+   timer.Start()
+   ```
 
-```vb
-Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
-    ' TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
-    eventId = eventId + 1
-End Sub
-```
+2. <span data-ttu-id="a5847-153">Ekleme bir `using` ifadesine **MyNewService.cs**, veya bir `Imports` ifadesine **MyNewService.vb**, için <xref:System.Timers?displayProperty=nameWithType> ad alanı:</span><span class="sxs-lookup"><span data-stu-id="a5847-153">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Timers?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="2945b-146">Tüm iş ana iş parçacığında çalıştırmak yerine arka plan çalışan iş parçacıkları kullanarak görevleri gerçekleştirmek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-146">You might want to perform tasks by using background worker threads instead of running all your work on the main thread.</span></span> <span data-ttu-id="2945b-147">Daha fazla bilgi için bkz. <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="2945b-147">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
 
-### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="2945b-148">Hizmet durdurulduğunda ne olacağını tanımlayın</span><span class="sxs-lookup"><span data-stu-id="2945b-148">Define what occurs when the service is stopped</span></span>
+   ```csharp
+   using System.Timers;
+   ```
 
-<span data-ttu-id="2945b-149">Bir kod satırını ekleyin <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmet durdurulduğunda, olay günlüğüne bir giriş ekler yöntemi:</span><span class="sxs-lookup"><span data-stu-id="2945b-149">Add a line of code to the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
+   ```vb
+   Imports System.Timers
+   ```
+
+
+3. <span data-ttu-id="a5847-154">İçinde `MyNewService` sınıfı, ekleme `OnTimer` işlemek için gereken yöntemini <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> olay:</span><span class="sxs-lookup"><span data-stu-id="a5847-154">In the `MyNewService` class, add the `OnTimer` method to handle the <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> event:</span></span>
+
+   ```csharp
+   public void OnTimer(object sender, ElapsedEventArgs args)
+   {
+       // TODO: Insert monitoring activities here.
+       eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
+   }
+   ```
+
+   ```vb
+   Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
+      ' TODO: Insert monitoring activities here.
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
+      eventId = eventId + 1
+   End Sub
+   ```
+
+4. <span data-ttu-id="a5847-155">İçinde `MyNewService` sınıfı, bir üye değişkeni ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a5847-155">In the `MyNewService` class, add a member variable.</span></span> <span data-ttu-id="a5847-156">Olay günlüğüne yazmak için bir sonraki olay tanıtıcısı aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="a5847-156">It contains the identifier of the next event to write into the event log:</span></span>
+
+   ```csharp
+   private int eventId = 1;
+   ```
+
+   ```vb
+   Private eventId As Integer = 1
+   ```
+
+<span data-ttu-id="a5847-157">Tüm iş ana iş parçacığında çalıştırmak yerine arka plan çalışan iş parçacıkları kullanarak görevler çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-157">Instead of running all your work on the main thread, you can run tasks by using background worker threads.</span></span> <span data-ttu-id="a5847-158">Daha fazla bilgi için bkz. <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="a5847-158">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
+
+### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="a5847-159">Hizmet durdurulduğunda ne olacağını tanımlayın</span><span class="sxs-lookup"><span data-stu-id="a5847-159">Define what occurs when the service is stopped</span></span>
+
+<span data-ttu-id="a5847-160">Bir kod satırı Ekle <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmet durdurulduğunda, olay günlüğüne bir giriş ekler yöntemi:</span><span class="sxs-lookup"><span data-stu-id="a5847-160">Insert a line of code in the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
 
 ```csharp
 eventLog1.WriteEntry("In OnStop.");
@@ -144,22 +191,26 @@ eventLog1.WriteEntry("In OnStop.");
 
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
-### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="2945b-150">Diğer Eylemler için hizmet tanımlama</span><span class="sxs-lookup"><span data-stu-id="2945b-150">Define other actions for the service</span></span>
+### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="a5847-161">Diğer Eylemler için hizmet tanımlama</span><span class="sxs-lookup"><span data-stu-id="a5847-161">Define other actions for the service</span></span>
 
-<span data-ttu-id="2945b-151">Geçersiz kılabilirsiniz <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, ve <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> bileşeniniz için ek işlemler tanımlamak için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="2945b-151">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> <span data-ttu-id="2945b-152">Aşağıdaki kod nasıl geçersiz gösterir <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yöntemi:</span><span class="sxs-lookup"><span data-stu-id="2945b-152">The following code shows how you can override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method:</span></span>
+<span data-ttu-id="a5847-162">Geçersiz kılabilirsiniz <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, ve <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> bileşeniniz için ek işlemler tanımlamak için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="a5847-162">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> 
+
+<span data-ttu-id="a5847-163">Aşağıdaki kodda gösterildiği nasıl geçersiz kılmanıza da olanak <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yönteminde `MyNewService` sınıfı:</span><span class="sxs-lookup"><span data-stu-id="a5847-163">The following code shows how you to override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method in the `MyNewService` class:</span></span>
 
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-<span data-ttu-id="2945b-153">Bazı özel eylemler ile bir Windows hizmeti yüklendiğinde ortaya zorunda <xref:System.Configuration.Install.Installer> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="2945b-153">Some custom actions have to occur when a Windows service is installed by the <xref:System.Configuration.Install.Installer> class.</span></span> <span data-ttu-id="2945b-154">Visual Studio, bu yükleyicileri bir Windows hizmeti için özel olarak oluşturabilir ve sonra da projenize ekleyebilir.</span><span class="sxs-lookup"><span data-stu-id="2945b-154">Visual Studio can create these installers specifically for a Windows service and add them to your project.</span></span>
 
-## <a name="set-service-status"></a><span data-ttu-id="2945b-155">Hizmet durumunu ayarla</span><span class="sxs-lookup"><span data-stu-id="2945b-155">Set service status</span></span>
+## <a name="set-service-status"></a><span data-ttu-id="a5847-164">Hizmet durumunu ayarla</span><span class="sxs-lookup"><span data-stu-id="a5847-164">Set service status</span></span>
 
-<span data-ttu-id="2945b-156">Böylece kullanıcılar bir hizmet doğru şekilde çalışıp çalışmadığını söyleyebilirsiniz Hizmetleri durumlarını hizmet denetimi yöneticisine bildirir.</span><span class="sxs-lookup"><span data-stu-id="2945b-156">Services report their status to the Service Control Manager, so that users can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="2945b-157">Varsayılan olarak, devralınan Hizmetleri <xref:System.ServiceProcess.ServiceBase> rapor durdurulmuş, duraklatılmış ve çalıştıran sınırlı sayıda dahil olmak üzere durumu ayarları.</span><span class="sxs-lookup"><span data-stu-id="2945b-157">By default, services that inherit from <xref:System.ServiceProcess.ServiceBase> report a limited set of status settings, including Stopped, Paused, and Running.</span></span> <span data-ttu-id="2945b-158">Bunun başlatmak için bir başlangıç bekleme durumu raporlamak faydalı olabilir ancak bir hizmet biraz uzun sürerse.</span><span class="sxs-lookup"><span data-stu-id="2945b-158">If a service takes a little while to start up, it might be helpful to report a Start Pending status.</span></span> <span data-ttu-id="2945b-159">Windows çağıran kod ekleyerek de bekleyen başlatmak ve durdurmak bekleyen durum ayarlarını uygulayabilirsiniz [artırılmış işlevi](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).</span><span class="sxs-lookup"><span data-stu-id="2945b-159">You can also implement the Start Pending and Stop Pending status settings by adding code that calls into the Windows [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).</span></span>
+<span data-ttu-id="a5847-165">Hizmetleri, kendi durumunu rapor [Hizmet Denetimi Yöneticisi](/windows/desktop/Services/service-control-manager) böylece bir kullanıcı bir hizmet doğru şekilde çalışıp çalışmadığını söyleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-165">Services report their status to the [Service Control Manager](/windows/desktop/Services/service-control-manager) so that a user can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="a5847-166">Varsayılan olarak, bir hizmet öğesinden devralan <xref:System.ServiceProcess.ServiceBase> SERVICE_STOPPED SERVICE_PAUSED ve SERVICE_RUNNING durumu ayarları, sınırlı sayıda raporlar.</span><span class="sxs-lookup"><span data-stu-id="a5847-166">By default, a service that inherits from <xref:System.ServiceProcess.ServiceBase> reports a limited set of status settings, which include SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING.</span></span> <span data-ttu-id="a5847-167">Bir hizmetin başlatılması biraz zaman alır, SERVICE_START_PENDING durumunu raporlamak kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="a5847-167">If a service takes a while to start up, it's useful to report a SERVICE_START_PENDING status.</span></span> 
 
-<span data-ttu-id="2945b-160">Hizmet Durumu Beklemede uygulamak için:</span><span class="sxs-lookup"><span data-stu-id="2945b-160">To implement service pending status:</span></span>
+<span data-ttu-id="a5847-168">Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING durum ayarlarını uygulayabilirsiniz [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) işlevi.</span><span class="sxs-lookup"><span data-stu-id="a5847-168">You can implement the SERVICE_START_PENDING and SERVICE_STOP_PENDING status settings by adding code that calls the Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function.</span></span>
 
-1. <span data-ttu-id="2945b-161">Ekleme bir `using` deyimi veya `Imports` bildirimi <xref:System.Runtime.InteropServices?displayProperty=nameWithType> MyNewService.cs veya MyNewService.vb dosyasında ad alanı:</span><span class="sxs-lookup"><span data-stu-id="2945b-161">Add a `using` statement or `Imports` declaration for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace in the MyNewService.cs or MyNewService.vb file:</span></span>
+
+### <a name="implement-service-pending-status"></a><span data-ttu-id="a5847-169">Hizmet durumu bekleyen ekleme</span><span class="sxs-lookup"><span data-stu-id="a5847-169">Implement service pending status</span></span>
+
+1. <span data-ttu-id="a5847-170">Ekleme bir `using` ifadesine **MyNewService.cs**, veya bir `Imports` ifadesine **MyNewService.vb**, için <xref:System.Runtime.InteropServices?displayProperty=nameWithType> ad alanı:</span><span class="sxs-lookup"><span data-stu-id="a5847-170">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace:</span></span>
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -169,7 +220,7 @@ eventLog1.WriteEntry("In OnStop.");
     Imports System.Runtime.InteropServices
     ```
 
-2. <span data-ttu-id="2945b-162">Bildirmek için MyNewService.cs için aşağıdaki kodu ekleyin `ServiceState` değerleri ve platform kullanacağınız durum için bir yapı eklemek için çağrı çağırın:</span><span class="sxs-lookup"><span data-stu-id="2945b-162">Add the following code to MyNewService.cs to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
+2. <span data-ttu-id="a5847-171">Aşağıdaki kodu ekleyin **MyNewService.cs**, veya **MyNewService.vb**bildirmek için `ServiceState` değerleri ve platform kullanacağınız durum için bir yapı eklemek için çağrı çağırın:</span><span class="sxs-lookup"><span data-stu-id="a5847-171">Add the following code to **MyNewService.cs**, or **MyNewService.vb**, to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
 
     ```csharp
     public enum ServiceState
@@ -219,7 +270,7 @@ eventLog1.WriteEntry("In OnStop.");
     End Structure
     ```
 
-3. <span data-ttu-id="2945b-163">Şimdi, `MyNewService` sınıfı, bildirmek [artırılmış işlevi](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) kullanarak [platform çağırma](../interop/consuming-unmanaged-dll-functions.md):</span><span class="sxs-lookup"><span data-stu-id="2945b-163">Now, in the `MyNewService` class, declare the [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
+3. <span data-ttu-id="a5847-172">İçinde `MyNewService` sınıfı, bildirmek [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) işlevi kullanarak [platform çağırma](../interop/consuming-unmanaged-dll-functions.md):</span><span class="sxs-lookup"><span data-stu-id="a5847-172">In the `MyNewService` class, declare the [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
 
     ```csharp
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -230,7 +281,7 @@ eventLog1.WriteEntry("In OnStop.");
     Declare Auto Function SetServiceStatus Lib "advapi32.dll" (ByVal handle As IntPtr, ByRef serviceStatus As ServiceStatus) As Boolean
     ```
 
-4. <span data-ttu-id="2945b-164">Başlangıç bekleme durumu uygulamak için aşağıdaki kodu ekleyin başlangıcına <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi:</span><span class="sxs-lookup"><span data-stu-id="2945b-164">To implement the Start Pending status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
+4. <span data-ttu-id="a5847-173">SERVICE_START_PENDING durum uygulamak için aşağıdaki kodu ekleyin başlangıcına <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi:</span><span class="sxs-lookup"><span data-stu-id="a5847-173">To implement the SERVICE_START_PENDING status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
 
     ```csharp
     // Update the service state to Start Pending.
@@ -248,7 +299,7 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-5. <span data-ttu-id="2945b-165">Sonunda çalışan durum için kod ekleyin <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2945b-165">Add code to set the status to Running at the end of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span>
+5. <span data-ttu-id="a5847-174">Kod sonuna ekleyin `OnStart` yöntemi SERVICE_RUNNING için durum ayarlanamadı:</span><span class="sxs-lookup"><span data-stu-id="a5847-174">Add code to the end of the `OnStart` method to set the status to SERVICE_RUNNING:</span></span>
 
     ```csharp
     // Update the service state to Running.
@@ -262,52 +313,88 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. <span data-ttu-id="2945b-166">(İsteğe bağlı) İçin bu yordamı yineleyin <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2945b-166">(Optional) Repeat this procedure for the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method.</span></span>
+6. <span data-ttu-id="a5847-175">(İsteğe bağlı) Varsa <xref:System.ServiceProcess.ServiceBase.OnStop%2A> bir uzun süre çalışan yöntemdir, bu yordamı yineleyin `OnStop` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a5847-175">(Optional) If <xref:System.ServiceProcess.ServiceBase.OnStop%2A> is a long-running method, repeat this procedure in the `OnStop` method.</span></span> <span data-ttu-id="a5847-176">SERVICE_STOP_PENDING durumu uygulamak ve dönüş önce SERVICE_STOPPED durumu `OnStop` yöntemi çıkar.</span><span class="sxs-lookup"><span data-stu-id="a5847-176">Implement the SERVICE_STOP_PENDING status and return the SERVICE_STOPPED status before the `OnStop` method exits.</span></span>
+
+   <span data-ttu-id="a5847-177">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="a5847-177">For example:</span></span>
+
+    ```csharp
+    // Update the service state to Stop Pending.
+    ServiceStatus serviceStatus = new ServiceStatus();
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING;
+    serviceStatus.dwWaitHint = 100000;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+
+    // Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+    ```
+
+    ```vb
+    ' Update the service state to Stop Pending.
+    Dim serviceStatus As ServiceStatus = New ServiceStatus()
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING
+    serviceStatus.dwWaitHint = 100000
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
+
+    ' Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    ```
 
 > [!NOTE]
-> <span data-ttu-id="2945b-167">[Hizmet Denetimi Yöneticisi](/windows/desktop/Services/service-control-manager) kullanan `dwWaitHint` ve `dwCheckpoint` üyeleri [SERVICE_STATUS yapısı](/windows/desktop/api/winsvc/ns-winsvc-_service_status) bir Windows hizmeti başlatmak veya kapatmak beklenecek ne kadar süre belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="2945b-167">The [Service Control Manager](/windows/desktop/Services/service-control-manager) uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="2945b-168">Varsa, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemleri çalıştırmak uzun, hizmetinizin daha fazla zaman çağırarak isteyebilir [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) yeniden ile bir artımlı `dwCheckPoint` değeri.</span><span class="sxs-lookup"><span data-stu-id="2945b-168">If your <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods run long, your service can request more time by calling [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) again with an incremented `dwCheckPoint` value.</span></span>
+> <span data-ttu-id="a5847-178">Hizmet Denetimi Yöneticisi kullanan `dwWaitHint` ve `dwCheckpoint` üyeleri [SERVICE_STATUS yapısı](/windows/desktop/api/winsvc/ns-winsvc-_service_status) bir Windows hizmeti başlatmak veya kapatmak beklenecek ne kadar süre belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="a5847-178">The Service Control Manager uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="a5847-179">Varsa, `OnStart` ve `OnStop` yöntemleri çalıştırmak uzun, hizmetinizin daha fazla zaman çağırarak isteyebilir `SetServiceStatus` yeniden ile bir artımlı `dwCheckPoint` değeri.</span><span class="sxs-lookup"><span data-stu-id="a5847-179">If your `OnStart` and `OnStop` methods run long, your service can request more time by calling `SetServiceStatus` again with an incremented `dwCheckPoint` value.</span></span>
 
-## <a name="add-installers-to-the-service"></a><span data-ttu-id="2945b-169">Hizmete yükleyiciler ekleme</span><span class="sxs-lookup"><span data-stu-id="2945b-169">Add installers to the service</span></span>
+## <a name="add-installers-to-the-service"></a><span data-ttu-id="a5847-180">Hizmete yükleyiciler ekleme</span><span class="sxs-lookup"><span data-stu-id="a5847-180">Add installers to the service</span></span>
 
-<span data-ttu-id="2945b-170">Bir Windows hizmeti çalıştırmadan önce Hizmet Denetimi Yöneticisi ile kaydeden yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="2945b-170">Before you can run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="2945b-171">Kayıt ayrıntıları işleyen projenize yükleyicileri ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-171">You can add installers to your project that handle the registration details.</span></span>
+<span data-ttu-id="a5847-181">Çalıştırmadan önce bir Windows hizmeti, hizmet denetimi Yöneticisi ile kaydeden yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a5847-181">Before you run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="a5847-182">Yükleyiciler, kayıt ayrıntılarını işlemek için projenize ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a5847-182">Add installers to your project to handle the registration details.</span></span>
 
-1. <span data-ttu-id="2945b-172">İçinde **Çözüm Gezgini**, bağlam menüsünü **MyNewService.cs** veya **MyNewService.vb**ve ardından **Görünüm Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="2945b-172">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+1. <span data-ttu-id="a5847-183">İçinde **Çözüm Gezgini**, kısayol menüsünden **MyNewService.cs**, veya **MyNewService.vb**, seçin **Görünüm Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="a5847-183">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
 
-2. <span data-ttu-id="2945b-173">Hizmetin herhangi bir içeriğini değil de, hizmetin kendisini seçmek için tasarımcının arka planına tıklayın.</span><span class="sxs-lookup"><span data-stu-id="2945b-173">Click the background of the designer to select the service itself, instead of any of its contents.</span></span>
+2. <span data-ttu-id="a5847-184">İçinde **tasarım** görüntüleyebilir, arka plan alanını seçin ve ardından **Yükleyici Ekle** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-184">In the **Design** view, select the background area, then choose **Add Installer** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="2945b-174">Tasarımcı penceresini (bir işaretleme penceresi içine sağ kullanıyorsanız) için bağlam menüsünü açın ve ardından **Yükleyici Ekle**.</span><span class="sxs-lookup"><span data-stu-id="2945b-174">Open the context menu for the designer window (if you’re using a pointing device, right-click inside the window), and then choose **Add Installer**.</span></span>
+     <span data-ttu-id="a5847-185">Varsayılan olarak, Visual Studio adında bir bileşen sınıfını ekler `ProjectInstaller`, projenize iki yükleyici içeriyor.</span><span class="sxs-lookup"><span data-stu-id="a5847-185">By default, Visual Studio adds a component class named `ProjectInstaller`, which contains two installers, to your project.</span></span> <span data-ttu-id="a5847-186">Bu yükleyicilerden hizmetiniz ve hizmetin ilişkili işlem içindir.</span><span class="sxs-lookup"><span data-stu-id="a5847-186">These installers are for your service and for the service's associated process.</span></span>
 
-   <span data-ttu-id="2945b-175">Varsayılan olarak, projenize iki yükleyici içeren bir bileşen sınıfı eklenir.</span><span class="sxs-lookup"><span data-stu-id="2945b-175">By default, a component class that contains two installers is added to your project.</span></span> <span data-ttu-id="2945b-176">Bileşene **ProjectInstaller**ve içerdiği yükleyiciler hizmetinize yükleyici ve yükleyici hizmeti için işlem ilişkili.</span><span class="sxs-lookup"><span data-stu-id="2945b-176">The component is named **ProjectInstaller**, and the installers it contains are the installer for your service and the installer for the service's associated process.</span></span>
+4. <span data-ttu-id="a5847-187">İçinde **tasarım** görüntüleme **ProjectInstaller**seçin **Serviceınstaller1** bir görsel için C# projesi veya **Serviceınstaller1**Visual Basic projesi için ardından **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-187">In the **Design** view for **ProjectInstaller**, select **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span>
 
-4. <span data-ttu-id="2945b-177">İçinde **tasarım** görüntüleme **ProjectInstaller**, seçin **Serviceınstaller1** Visual C# proje için veya **Serviceınstaller1** bir görsel için Temel Proje.</span><span class="sxs-lookup"><span data-stu-id="2945b-177">In **Design** view for **ProjectInstaller**, choose **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project.</span></span>
+5. <span data-ttu-id="a5847-188">İçinde **özellikleri** penceresinde doğrulayın <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği **MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="a5847-188">In the **Properties** window, verify the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
 
-5. <span data-ttu-id="2945b-178">İçinde **özellikleri** penceresinde emin <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği **MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="2945b-178">In the **Properties** window, make sure the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
+6. <span data-ttu-id="a5847-189">Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.Description%2A> özelliği gibi *örnek hizmeti*.</span><span class="sxs-lookup"><span data-stu-id="a5847-189">Add text to the <xref:System.ServiceProcess.ServiceInstaller.Description%2A> property, such as *A sample service*.</span></span> 
 
-6. <span data-ttu-id="2945b-179">Ayarlama **açıklama** özelliğini "Örnek hizmeti" gibi şeyler.</span><span class="sxs-lookup"><span data-stu-id="2945b-179">Set the **Description** property to some text, such as "A sample service".</span></span> <span data-ttu-id="2945b-180">Bu metin hizmetleri penceresinde görüntülenmesi ve kullanıcının hizmetinizi tanımlamak ve ne için kullanıldığını anlamanıza yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="2945b-180">This text appears in the Services window and helps the user identify the service and understand what it’s used for.</span></span>
+     <span data-ttu-id="a5847-190">Bu metin görünür **açıklama** sütununun **Hizmetleri** penceresi ve kullanıcının hizmete açıklar.</span><span class="sxs-lookup"><span data-stu-id="a5847-190">This text appears in the **Description** column of the **Services** window and describes the service to the user.</span></span>
 
-7. <span data-ttu-id="2945b-181">Ayarlama <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> Hizmetleri penceresinde görünmesini istediğiniz metni özelliğini **adı** sütun.</span><span class="sxs-lookup"><span data-stu-id="2945b-181">Set the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property to the text that you want to appear in the Services window in the **Name** column.</span></span> <span data-ttu-id="2945b-182">Örneğin, "MyNewService görünen ad" girebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-182">For example, you can enter "MyNewService Display Name".</span></span> <span data-ttu-id="2945b-183">Bu ad farklı olabilir <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> sistem tarafından kullanılan ad özelliği (örneğin, kullandığınızda `net start` hizmetinizi başlatmak için komut).</span><span class="sxs-lookup"><span data-stu-id="2945b-183">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name used by the system (for example, when you use the `net start` command to start your service).</span></span>
+    <span data-ttu-id="a5847-191">![Hizmetler penceresini hizmet açıklamasında. ](media/windows-service-description.png "Hizmet açıklaması")</span><span class="sxs-lookup"><span data-stu-id="a5847-191">![Service description in the Services window.](media/windows-service-description.png "Service description")</span></span>
 
-8. <span data-ttu-id="2945b-184">Ayarlama <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini <xref:System.ServiceProcess.ServiceStartMode.Automatic>.</span><span class="sxs-lookup"><span data-stu-id="2945b-184">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic>.</span></span>
+7. <span data-ttu-id="a5847-192">Metne ekleme <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a5847-192">Add text to the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property.</span></span> <span data-ttu-id="a5847-193">Örneğin, *MyNewService görünen ad*.</span><span class="sxs-lookup"><span data-stu-id="a5847-193">For example, *MyNewService Display Name*.</span></span> 
 
-     <span data-ttu-id="2945b-185">![Bir Windows hizmeti için yükleyici özelliklerini](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")</span><span class="sxs-lookup"><span data-stu-id="2945b-185">![Installer Properties for a Windows service](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")</span></span>
+     <span data-ttu-id="a5847-194">Bu metin görünür **görünen ad** sütununun **Hizmetleri** penceresi.</span><span class="sxs-lookup"><span data-stu-id="a5847-194">This text appears in the **Display Name** column of the **Services** window.</span></span> <span data-ttu-id="a5847-195">Bu ad farklı olabilir <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği adı Sistem kullanır (örneğin, adı için kullandığınız `net start` hizmetinizi başlatmak için komut).</span><span class="sxs-lookup"><span data-stu-id="a5847-195">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name the system uses (for example, the name you use for the `net start` command to start your service).</span></span>
 
-9. <span data-ttu-id="2945b-186">Tasarımcısı'nda **ServiceProcessInstaller1** Visual C# proje için veya **ServiceProcessInstaller1** Visual Basic projesi için.</span><span class="sxs-lookup"><span data-stu-id="2945b-186">In the designer, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project.</span></span> <span data-ttu-id="2945b-187">Ayarlama <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> özelliğini <xref:System.ServiceProcess.ServiceAccount.LocalSystem>.</span><span class="sxs-lookup"><span data-stu-id="2945b-187">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem>.</span></span> <span data-ttu-id="2945b-188">Bu hizmet yüklü olmasını ve yerel sistem hesabı kullanarak çalıştırılacak neden olur.</span><span class="sxs-lookup"><span data-stu-id="2945b-188">This causes the service to be installed and to run using the local system account.</span></span>
+8. <span data-ttu-id="a5847-196">Ayarlama <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini <xref:System.ServiceProcess.ServiceStartMode.Automatic> aşağı açılan listeden.</span><span class="sxs-lookup"><span data-stu-id="a5847-196">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic> from the drop-down list.</span></span>
+
+9. <span data-ttu-id="a5847-197">İşiniz bittiğinde, **özellikleri** windows gibi şu şekilde görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="a5847-197">When you're finished, the **Properties** windows should look like the following figure:</span></span>
+
+     <span data-ttu-id="a5847-198">![Bir Windows hizmeti için yükleyici özelliklerini](media/windows-service-installer-properties.png "Windows Installer özellikleri hizmet")</span><span class="sxs-lookup"><span data-stu-id="a5847-198">![Installer Properties for a Windows service](media/windows-service-installer-properties.png "Windows service installer properties")</span></span>
+
+9. <span data-ttu-id="a5847-199">İçinde **tasarım** görüntüleme **ProjectInstaller**, seçin **ServiceProcessInstaller1** bir görsel için C# projesi veya **ServiceProcessInstaller1**  Visual Basic projesi için ardından **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-199">In the **Design** view for **ProjectInstaller**, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span> <span data-ttu-id="a5847-200">Ayarlama <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> özelliğini <xref:System.ServiceProcess.ServiceAccount.LocalSystem> aşağı açılan listeden.</span><span class="sxs-lookup"><span data-stu-id="a5847-200">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem> from the drop-down list.</span></span> 
+
+     <span data-ttu-id="a5847-201">Bu ayar hizmetini yükler ve yerel sistem hesabı kullanılarak çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="a5847-201">This setting installs the service and runs it by using the local system account.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="2945b-189"><xref:System.ServiceProcess.ServiceAccount.LocalSystem> Hesabının olay günlüğüne yazma olanağı dahil olmak üzere geniş izinlere sahip.</span><span class="sxs-lookup"><span data-stu-id="2945b-189">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="2945b-190">Bu hesabı kullanırken dikkatli olun; kötü amaçlı yazılımlardan gelecek saldırı riskinizi arttırabilir.</span><span class="sxs-lookup"><span data-stu-id="2945b-190">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="2945b-191">Diğer görevler için kullanmayı <xref:System.ServiceProcess.ServiceAccount.LocalService> hesabı yerel bilgisayarda ayrıcalıklı olmayan kullanıcı olarak davranan ve herhangi bir uzak sunucuya anonim kimlik bilgilerini sunar.</span><span class="sxs-lookup"><span data-stu-id="2945b-191">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="2945b-192">Bu örnek kullanmaya çalışırsanız başarısız <xref:System.ServiceProcess.ServiceAccount.LocalService> olay günlüğüne yazma izni gerektiğinden, hesap.</span><span class="sxs-lookup"><span data-stu-id="2945b-192">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
+    > <span data-ttu-id="a5847-202"><xref:System.ServiceProcess.ServiceAccount.LocalSystem> Hesabının olay günlüğüne yazma olanağı dahil olmak üzere geniş izinlere sahip.</span><span class="sxs-lookup"><span data-stu-id="a5847-202">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="a5847-203">Bu hesabı kullanırken dikkatli olun; kötü amaçlı yazılımlardan gelecek saldırı riskinizi arttırabilir.</span><span class="sxs-lookup"><span data-stu-id="a5847-203">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="a5847-204">Diğer görevler için kullanmayı <xref:System.ServiceProcess.ServiceAccount.LocalService> hesabı yerel bilgisayarda ayrıcalıklı olmayan kullanıcı olarak davranan ve herhangi bir uzak sunucuya anonim kimlik bilgilerini sunar.</span><span class="sxs-lookup"><span data-stu-id="a5847-204">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="a5847-205">Bu örnek kullanmaya çalışırsanız başarısız <xref:System.ServiceProcess.ServiceAccount.LocalService> olay günlüğüne yazma izni gerektiğinden, hesap.</span><span class="sxs-lookup"><span data-stu-id="a5847-205">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
 
-<span data-ttu-id="2945b-193">Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama hizmetinize yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="2945b-193">For more information about installers, see [How to: Add Installers to Your service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>
+<span data-ttu-id="a5847-206">Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="a5847-206">For more information about installers, see [How to: Add installers to your service application](how-to-add-installers-to-your-service-application.md).</span></span>
 
-## <a name="optional-set-startup-parameters"></a><span data-ttu-id="2945b-194">(İsteğe bağlı) Başlangıç parametrelerini ayarlayın</span><span class="sxs-lookup"><span data-stu-id="2945b-194">(Optional) Set startup parameters</span></span>
-
-<span data-ttu-id="2945b-195">Diğer herhangi bir yürütülebilir gibi bir Windows hizmeti, komut satırı bağımsız değişkenleri veya başlangıç parametreleri kabul edebilir.</span><span class="sxs-lookup"><span data-stu-id="2945b-195">A Windows service, like any other executable, can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="2945b-196">İşlem Başlangıç parametrelerine kod eklediğinizde, kullanıcılar Windows Denetim Masası'ndaki Hizmetler penceresini kullanarak kendi özel başlatma parametrelerle hizmetinizi başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-196">When you add code to process startup parameters, users can start your service with their own custom startup parameters by using the Services window in the Windows Control Panel.</span></span> <span data-ttu-id="2945b-197">Ancak, bu başlangıç parametreleri hizmet bir sonraki başlatılışında kalıcı değildir.</span><span class="sxs-lookup"><span data-stu-id="2945b-197">However, these startup parameters are not persisted the next time the service starts.</span></span> <span data-ttu-id="2945b-198">Başlangıç parametreleri kalıcı olarak ayarlamak için bunları kayıt defterinde, bu yordamda gösterildiği gibi ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-198">To set startup parameters permanently, you can set them in the registry, as shown in this procedure.</span></span>
+## <a name="optional-set-startup-parameters"></a><span data-ttu-id="a5847-207">(İsteğe bağlı) Başlangıç parametrelerini ayarlayın</span><span class="sxs-lookup"><span data-stu-id="a5847-207">(Optional) Set startup parameters</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2945b-199">Başlangıç parametreleri eklemek karar vermeden önce hizmetinize bilgi geçirmek için en iyi yolu olup olmadığını göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="2945b-199">Before you decide to add startup parameters, consider whether that is the best way to pass information to your service.</span></span> <span data-ttu-id="2945b-200">Başlangıç parametreleri kullanımı kolay olsa ve için ayrıştırma ve kullanıcıların kolayca bunları geçersiz kılabilirsiniz, kullanıcıların keşfetmesi ve kullanması belgeleri daha zor olabilir.</span><span class="sxs-lookup"><span data-stu-id="2945b-200">Although startup parameters are easy to use and to parse, and users can easily override them, they might be harder for users to discover and use without documentation.</span></span> <span data-ttu-id="2945b-201">Genel olarak, hizmetiniz birkaç taneden fazla yalnızca başlangıç parametre gerektiriyorsa, kayıt defteri veya bir yapılandırma dosyası kullanmayı düşünmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-201">Generally, if your service requires more than just a few startup parameters, you should consider using the registry or a configuration file instead.</span></span> <span data-ttu-id="2945b-202">Her bir Windows hizmetinde altında kayıt defterinde girişi olmayan **HKLM\System\CurrentControlSet\services**.</span><span class="sxs-lookup"><span data-stu-id="2945b-202">Every Windows service has an entry in the registry under **HKLM\System\CurrentControlSet\services**.</span></span> <span data-ttu-id="2945b-203">Hizmet anahtarı altında kullanabileceğiniz **parametreleri** hizmetinizi erişebileceği bilgileri depolamak için alt.</span><span class="sxs-lookup"><span data-stu-id="2945b-203">Under the service's key, you can use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="2945b-204">Uygulama yapılandırma dosyaları programlar diğer türleri için yaptığınız şekilde bir Windows hizmeti için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-204">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="2945b-205">Örnek kod için bkz: <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.</span><span class="sxs-lookup"><span data-stu-id="2945b-205">For example code, see <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.</span></span>
+> <span data-ttu-id="a5847-208">Başlangıç parametreleri eklemek karar vermeden önce hizmetinize bilgi geçirmek için en iyi yolu olup olmadığını göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="a5847-208">Before you decide to add startup parameters, consider whether it's the best way to pass information to your service.</span></span> <span data-ttu-id="a5847-209">Bunlar, kullanımı kolay ve ayrıştırma ve kullanıcı bir kolayca bunları geçersiz kılabilirsiniz ancak bulmak ve belgeleri kullanmak bir kullanıcı için daha zor olabilir.</span><span class="sxs-lookup"><span data-stu-id="a5847-209">Although they're easy to use and parse, and a user can easily override them, they might be harder for a user to discover and use without documentation.</span></span> <span data-ttu-id="a5847-210">Genel olarak, hizmetiniz birkaç taneden fazla yalnızca başlangıç parametre gerektiriyorsa, kayıt defteri veya bir yapılandırma dosyası yerine kullanmalısınız.</span><span class="sxs-lookup"><span data-stu-id="a5847-210">Generally, if your service requires more than just a few startup parameters, you should use the registry or a configuration file instead.</span></span> 
 
-<span data-ttu-id="2945b-206">Başlangıç parametreleri eklemek için:</span><span class="sxs-lookup"><span data-stu-id="2945b-206">To add startup parameters:</span></span>
+<span data-ttu-id="a5847-211">Bir Windows hizmeti, komut satırı bağımsız değişkenleri veya başlangıç parametreleri kabul edebilir.</span><span class="sxs-lookup"><span data-stu-id="a5847-211">A Windows service can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="a5847-212">İşlem Başlangıç parametrelerine kod eklediğinizde, bir kullanıcı ile kendi özel başlangıç parametreleri hizmet Özellikler penceresindeki hizmetinizi başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-212">When you add code to process startup parameters, a user can start your service with their own custom startup parameters in the service properties window.</span></span> <span data-ttu-id="a5847-213">Ancak, bu başlangıç parametreleri, hizmetin bir sonraki başlatılışında kalıcı değildir.</span><span class="sxs-lookup"><span data-stu-id="a5847-213">However, these startup parameters aren't persisted the next time the service starts.</span></span> <span data-ttu-id="a5847-214">Başlangıç parametreleri kalıcı olarak ayarlamak için kayıt defterinde ayarlanan.</span><span class="sxs-lookup"><span data-stu-id="a5847-214">To set startup parameters permanently, set them in the registry.</span></span>
 
-1. <span data-ttu-id="2945b-207">İçinde `Main` yöntemi Program.cs veya MyNewService.Designer.vb, hizmet oluşturucuya geçirilecek giriş parametresi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2945b-207">In the `Main` method in Program.cs or in MyNewService.Designer.vb, add an input parameter to pass to the service constructor:</span></span>
+<span data-ttu-id="a5847-215">Her bir Windows hizmeti altında kayıt defteri girdisini sahip **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** alt.</span><span class="sxs-lookup"><span data-stu-id="a5847-215">Each Windows service has a registry entry under the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** subkey.</span></span> <span data-ttu-id="a5847-216">Her hizmetin alt anahtarı altında kullanın **parametreleri** hizmetinizi erişebileceği bilgileri depolamak için alt.</span><span class="sxs-lookup"><span data-stu-id="a5847-216">Under each service's subkey, use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="a5847-217">Uygulama yapılandırma dosyaları programlar diğer türleri için yaptığınız şekilde bir Windows hizmeti için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-217">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="a5847-218">Örnek kod için bkz: <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a5847-218">For sample code, see <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.</span></span>
+
+### <a name="to-add-startup-parameters"></a><span data-ttu-id="a5847-219">Başlangıç parametreleri eklemek için</span><span class="sxs-lookup"><span data-stu-id="a5847-219">To add startup parameters</span></span>
+
+1. <span data-ttu-id="a5847-220">Seçin **Program.cs**, veya **MyNewService.Designer.vb**, ardından **kodu görüntüle** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-220">Select **Program.cs**, or **MyNewService.Designer.vb**, then choose **View Code** from the shortcut menu.</span></span> <span data-ttu-id="a5847-221">İçinde `Main` yöntemi, bir giriş parametresi ekleyin ve hizmet oluşturucuya geçirmek için kodu değiştirin:</span><span class="sxs-lookup"><span data-stu-id="a5847-221">In the `Main` method, change the code to add an input parameter and pass it to the service constructor:</span></span>
 
    ```csharp
    static void Main(string[] args)
@@ -323,44 +410,48 @@ eventLog1.WriteEntry("In OnStop.");
 
    ```vb
    Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewServiceVB(cmdArgs)}
+       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
        System.ServiceProcess.ServiceBase.Run(ServicesToRun)
    End Sub
    ```
 
-2. <span data-ttu-id="2945b-208">Değişiklik `MyNewService` Oluşturucu aşağıdaki gibi:</span><span class="sxs-lookup"><span data-stu-id="2945b-208">Change the `MyNewService` constructor as follows:</span></span>
+2. <span data-ttu-id="a5847-222">İçinde **MyNewService.cs**, veya **MyNewService.vb**, değiştirme `MyNewService` Oluşturucusu giriş parametresinin şu şekilde işler:</span><span class="sxs-lookup"><span data-stu-id="a5847-222">In **MyNewService.cs**, or **MyNewService.vb**, change the `MyNewService` constructor to process the input parameter as follows:</span></span>
 
    ```csharp
+   using System.Diagnostics;
+
    public MyNewService(string[] args)
    {
        InitializeComponent();
 
-        string eventSourceName = "MySource";
-        string logName = "MyNewLog";
+       string eventSourceName = "MySource";
+       string logName = "MyNewLog";
 
-        if (args.Length > 0)
-        {
-            eventSourceName = args[0];
-        }
+       if (args.Length > 0)
+       {
+          eventSourceName = args[0];
+       }
 
-        if (args.Length > 1)
-        {
-            logName = args[1];
-        }
+       if (args.Length > 1)
+       {
+           logName = args[1];
+       }
 
-        eventLog1 = new System.Diagnostics.EventLog();
+       eventLog1 = new EventLog();
 
-        if (!System.Diagnostics.EventLog.SourceExists(eventSourceName))
-        {
-            System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName);
-        }
+       if (!EventLog.SourceExists(eventSourceName))
+       {
+           EventLog.CreateEventSource(eventSourceName, logName);
+       }
 
-        eventLog1.Source = eventSourceName;
-        eventLog1.Log = logName;
+       eventLog1.Source = eventSourceName;
+       eventLog1.Log = logName;
    }
    ```
 
    ```vb
+   Imports System.Diagnostics
+
    Public Sub New(ByVal cmdArgs() As String)
        InitializeComponent()
        Dim eventSourceName As String = "MySource"
@@ -371,18 +462,18 @@ eventLog1.WriteEntry("In OnStop.");
        If (cmdArgs.Count() > 1) Then
            logName = cmdArgs(1)
        End If
-       eventLog1 = New System.Diagnostics.EventLog()
-       If (Not System.Diagnostics.EventLog.SourceExists(eventSourceName)) Then
-           System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName)
+       eventLog1 = New EventLog()
+       If (Not EventLog.SourceExists(eventSourceName)) Then
+           EventLog.CreateEventSource(eventSourceName, logName)
        End If
        eventLog1.Source = eventSourceName
        eventLog1.Log = logName
    End Sub
    ```
 
-   <span data-ttu-id="2945b-209">Bu kod, sağlanan başlangıç parametreleri göre olay kaynağı ve günlük adını ayarlar veya herhangi bir bağımsız değişken sağlanmadıysa varsayılan değerleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="2945b-209">This code sets the event source and log name according to the supplied startup parameters, or uses default values if no arguments are supplied.</span></span>
+   <span data-ttu-id="a5847-223">Bu kod, kullanıcı kaynakları başlangıç parametreleri göre olay kaynağı ve günlük adını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a5847-223">This code sets the event source and log name according to the startup parameters that the user supplies.</span></span> <span data-ttu-id="a5847-224">Bağımsız değişken sağlanmadıysa varsayılan değerleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="a5847-224">If no arguments are supplied, it uses default values.</span></span>
 
-3. <span data-ttu-id="2945b-210">Komut satırı bağımsız değişkenlerini belirtmek için aşağıdaki kodu ekleyin. `ProjectInstaller` ProjectInstaller.cs veya ProjectInstaller.vb sınıfı:</span><span class="sxs-lookup"><span data-stu-id="2945b-210">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in ProjectInstaller.cs or ProjectInstaller.vb:</span></span>
+3. <span data-ttu-id="a5847-225">Komut satırı bağımsız değişkenlerini belirtmek için aşağıdaki kodu ekleyin. `ProjectInstaller` sınıfını **ProjectInstaller.cs**, veya **ProjectInstaller.vb**:</span><span class="sxs-lookup"><span data-stu-id="a5847-225">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in **ProjectInstaller.cs**, or **ProjectInstaller.vb**:</span></span>
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -401,90 +492,100 @@ eventLog1.WriteEntry("In OnStop.");
    End Sub
    ```
 
-   <span data-ttu-id="2945b-211">Bu kodu değiştirir **ImagePath** genellikle varsayılan parametre değerlerini ekleyerek Windows hizmeti için yürütülebilir dosyanın tam yolunu içeren kayıt defteri anahtarı.</span><span class="sxs-lookup"><span data-stu-id="2945b-211">This code modifies the **ImagePath** registry key, which typically contains the full path to the executable for the Windows service, by adding the default parameter values.</span></span> <span data-ttu-id="2945b-212">Yolun (ve tek tek her parametreyi) tırnak işareti, hizmetin doğru şekilde başlatmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="2945b-212">The quotation marks around the path (and around each individual parameter) are required for the service to start up correctly.</span></span> <span data-ttu-id="2945b-213">Bu Windows hizmeti için başlangıç parametreleri değiştirmek için kullanıcıların belirtilen parametrelerle değiştirip **ImagePath** kayıt defteri anahtarı, program aracılığıyla değiştirme ve kullanıcılara işlevselliği göstermek için daha iyi şekilde olmasına rağmen bir kolay bir yolla (örneğin, bir yönetim veya yapılandırma yardımcı programını kullanarak).</span><span class="sxs-lookup"><span data-stu-id="2945b-213">To change the startup parameters for this Windows service, users can change the parameters given in the **ImagePath** registry key, although the better way is to change it programmatically and expose the functionality to users in a friendly way (for example, in a management or configuration utility).</span></span>
+   <span data-ttu-id="a5847-226">Genellikle, bu değer, Windows hizmeti için yürütülebilir dosyanın tam yolunu içerir.</span><span class="sxs-lookup"><span data-stu-id="a5847-226">Typically, this value contains the full path to the executable for the Windows service.</span></span> <span data-ttu-id="a5847-227">Hizmet doğru bir şekilde kullanıcı yolu ve tek tek her parametre için tırnak işaretleri sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="a5847-227">For the service to start up correctly, the user must supply quotation marks for the path and each individual parameter.</span></span> <span data-ttu-id="a5847-228">Bir kullanıcının parametrelerini değiştirip **ImagePath** Windows hizmeti için başlangıç parametreleri değiştirmek için kayıt defteri girişi.</span><span class="sxs-lookup"><span data-stu-id="a5847-228">A user can change the parameters in the **ImagePath** registry entry to change the startup parameters for the Windows service.</span></span> <span data-ttu-id="a5847-229">Ancak, değeri program aracılığıyla değiştirme ve işlevi kullanımı kolay bir şekilde gibi bir yönetim veya yapılandırma yardımcı programını kullanarak ortaya çıkarmak için daha iyi bir yolu olan.</span><span class="sxs-lookup"><span data-stu-id="a5847-229">However, a better way is to change the value programmatically and expose the functionality in a user-friendly way, such as by using a management or configuration utility.</span></span>
 
-## <a name="build-the-service"></a><span data-ttu-id="2945b-214">Derleme hizmeti</span><span class="sxs-lookup"><span data-stu-id="2945b-214">Build the service</span></span>
 
-1. <span data-ttu-id="2945b-215">İçinde **Çözüm Gezgini**, projeniz için bağlam menüsünü açın ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="2945b-215">In **Solution Explorer**, open the context menu for your project, and then choose **Properties**.</span></span>
+## <a name="build-the-service"></a><span data-ttu-id="a5847-230">Derleme hizmeti</span><span class="sxs-lookup"><span data-stu-id="a5847-230">Build the service</span></span>
 
-   <span data-ttu-id="2945b-216">Projeniz için özellik sayfaları görünür.</span><span class="sxs-lookup"><span data-stu-id="2945b-216">The property pages for your project appear.</span></span>
+1. <span data-ttu-id="a5847-231">İçinde **Çözüm Gezgini**, seçin **özellikleri** için kısayol menüsünden **MyNewService** proje.</span><span class="sxs-lookup"><span data-stu-id="a5847-231">In **Solution Explorer**, choose **Properties** from the shortcut menu for the **MyNewService** project.</span></span>
 
-2. <span data-ttu-id="2945b-217">Üzerinde **uygulama** sekmesinde **Başlangıç nesnesi** listesinde **MyNewService.Program**.</span><span class="sxs-lookup"><span data-stu-id="2945b-217">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**.</span></span>
+   <span data-ttu-id="a5847-232">Projeniz için özellik sayfaları görünür.</span><span class="sxs-lookup"><span data-stu-id="a5847-232">The property pages for your project appear.</span></span>
 
-3. <span data-ttu-id="2945b-218">İçinde **Çözüm Gezgini**, projeniz için bağlam menüsünü açın ve ardından **derleme** Projeyi derlemek için (veya basın **Ctrl**+**kaydırma**  + **B**).</span><span class="sxs-lookup"><span data-stu-id="2945b-218">In **Solution Explorer**, open the context menu for your project, and then choose **Build** to build the project (or press **Ctrl**+**Shift**+**B**).</span></span>
+2. <span data-ttu-id="a5847-233">Üzerinde **uygulama** sekmesinde **Başlangıç nesnesi** listesinde **MyNewService.Program**, veya **Sub Main** Visual Basic projeleri için.</span><span class="sxs-lookup"><span data-stu-id="a5847-233">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**, or **Sub Main** for Visual Basic projects.</span></span>
 
-## <a name="install-the-service"></a><span data-ttu-id="2945b-219">Hizmet yükleme</span><span class="sxs-lookup"><span data-stu-id="2945b-219">Install the service</span></span>
+3. <span data-ttu-id="a5847-234">İçinde projeyi oluşturmak için **Çözüm Gezgini**, seçin **derleme** projeniz için kısayol menüsünden (veya basın **Ctrl**+**Shift** + **B**).</span><span class="sxs-lookup"><span data-stu-id="a5847-234">To build the project, in **Solution Explorer**, choose **Build** from the shortcut menu for your project (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-<span data-ttu-id="2945b-220">Windows hizmeti oluşturduğunuza göre bunu yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-220">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="2945b-221">Bir Windows hizmetini yüklemek için yükleme yaptığınız bilgisayarda yönetici kimlik bilgileri olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="2945b-221">To install a Windows service, you must have administrator credentials on the computer on which you're installing it.</span></span>
+## <a name="install-the-service"></a><span data-ttu-id="a5847-235">Hizmet yükleme</span><span class="sxs-lookup"><span data-stu-id="a5847-235">Install the service</span></span>
 
-1. <span data-ttu-id="2945b-222">Açık **Visual Studio için geliştirici komut istemi** yönetici kimlik bilgilerine sahip.</span><span class="sxs-lookup"><span data-stu-id="2945b-222">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span> <span data-ttu-id="2945b-223">Fare kullanıyorsanız, sağ **VS 2017 için geliştirici komut istemi** içinde Windows Başlat menüsünü ve ardından **daha fazla** > **yönetici olarak çalıştır** .</span><span class="sxs-lookup"><span data-stu-id="2945b-223">If you’re using a mouse, right-click on **Developer Command Prompt for VS 2017** in the Windows Start menu, and then choose **More** > **Run as Administrator**.</span></span>
+<span data-ttu-id="a5847-236">Windows hizmeti oluşturduğunuza göre bunu yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-236">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="a5847-237">Bir Windows hizmetini yüklemek için yüklü olduğu bilgisayarda yönetici kimlik bilgileriniz olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a5847-237">To install a Windows service, you must have administrator credentials on the computer where it's installed.</span></span>
 
-2. <span data-ttu-id="2945b-224">İçinde **Geliştirici komut istemi** penceresinde projenizin çıktısını içeren klasöre gidin (varsayılan olarak, bu *\bin\Debug* projenizin alt).</span><span class="sxs-lookup"><span data-stu-id="2945b-224">In the **Developer Command Prompt** window, navigate to the folder that contains your project's output (by default, it's the *\bin\Debug* subdirectory of your project).</span></span>
+1. <span data-ttu-id="a5847-238">Açık [Visual Studio için geliştirici komut istemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) yönetici kimlik bilgilerine sahip.</span><span class="sxs-lookup"><span data-stu-id="a5847-238">Open [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) with administrative credentials.</span></span> <span data-ttu-id="a5847-239">Windows gelen **Başlat** menüsünde **VS 2017 için geliştirici komut istemi** Visual Studio klasöründe seçip **daha fazla** > **Çalıştır Yönetici** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-239">From the Windows **Start** menu, select **Developer Command Prompt for VS 2017** in the Visual Studio folder, then select **More** > **Run as Administrator** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="2945b-225">Aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="2945b-225">Enter the following command:</span></span>
+2. <span data-ttu-id="a5847-240">İçinde **Visual Studio için geliştirici komut istemi** penceresinde projenizin çıktısını içeren klasöre gidin (varsayılan olarak, *\bin\Debug* projenizin alt).</span><span class="sxs-lookup"><span data-stu-id="a5847-240">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output (by default, the *\bin\Debug* subdirectory of your project).</span></span>
+
+3. <span data-ttu-id="a5847-241">Aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="a5847-241">Enter the following command:</span></span>
 
     ```shell
-    installutil.exe MyNewService.exe
+    installutil MyNewService.exe
     ```
 
-    <span data-ttu-id="2945b-226">Hizmet başarıyla yüklerse **installutil.exe** başarılı olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="2945b-226">If the service installs successfully, **installutil.exe** reports success.</span></span> <span data-ttu-id="2945b-227">Sistem bulunamadı, **InstallUtil.exe**, bilgisayarınızda mevcut olduğundan emin olun.</span><span class="sxs-lookup"><span data-stu-id="2945b-227">If the system could not find **InstallUtil.exe**, make sure that it exists on your computer.</span></span> <span data-ttu-id="2945b-228">Bu araç, .NET Framework klasörüne yüklenir *% windir%\Microsoft.NET\Framework[64]\\[framework sürümü]*.</span><span class="sxs-lookup"><span data-stu-id="2945b-228">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\[framework version]*.</span></span> <span data-ttu-id="2945b-229">Örneğin, 32-bit sürüm için varsayılan yolu olan *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span><span class="sxs-lookup"><span data-stu-id="2945b-229">For example, the default path for the 32-bit version is *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span></span>
+    <span data-ttu-id="a5847-242">Hizmet başarıyla yüklerse, komut başarılı olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="a5847-242">If the service installs successfully, the command reports success.</span></span> 
 
-    <span data-ttu-id="2945b-230">Varsa **installutil.exe** işlem hata raporları, nedenini bulmak için yükleme günlüğüne bakın.</span><span class="sxs-lookup"><span data-stu-id="2945b-230">If the **installutil.exe** process reports failure, check the install log to find out why.</span></span> <span data-ttu-id="2945b-231">Varsayılan olarak günlük hizmeti yürütülebilir dosyası ile aynı klasörde bulunur.</span><span class="sxs-lookup"><span data-stu-id="2945b-231">By default the log is in the same folder as the service executable.</span></span> <span data-ttu-id="2945b-232">Yükleme başarısız olabilir <xref:System.ComponentModel.RunInstallerAttribute> sınıfı üzerinde mevcut değil `ProjectInstaller` öznitelik olarak ayarlanmazsa, sınıf **true**, veya `ProjectInstaller` sınıfı işaretlenmemiş **genel**.</span><span class="sxs-lookup"><span data-stu-id="2945b-232">The installation can fail if  the <xref:System.ComponentModel.RunInstallerAttribute> Class is not present on the `ProjectInstaller` class, if the attribute is not set to **true**, or if the `ProjectInstaller` class is not marked **public**.</span></span>
+    <span data-ttu-id="a5847-243">Sistem bulamazsa *installutil.exe*, bilgisayarınızda mevcut olduğundan emin olun.</span><span class="sxs-lookup"><span data-stu-id="a5847-243">If the system can't find *installutil.exe*, make sure that it exists on your computer.</span></span> <span data-ttu-id="a5847-244">Bu araç, .NET Framework klasörüne yüklenir *% windir%\Microsoft.NET\Framework[64]\\&lt;framework sürümü&gt;*.</span><span class="sxs-lookup"><span data-stu-id="a5847-244">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt;*.</span></span> <span data-ttu-id="a5847-245">Örneğin, 64-bit sürüm için varsayılan yolu olan *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span><span class="sxs-lookup"><span data-stu-id="a5847-245">For example, the default path for the 64-bit version is *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span></span>
 
-<span data-ttu-id="2945b-233">Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="2945b-233">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+    <span data-ttu-id="a5847-246">Varsa **installutil.exe** işlem başarısız olursa, nedenini bulmak için yükleme günlüğüne bakın.</span><span class="sxs-lookup"><span data-stu-id="a5847-246">If the **installutil.exe** process fails, check the install log to find out why.</span></span> <span data-ttu-id="a5847-247">Varsayılan olarak, günlük hizmeti yürütülebilir olarak aynı klasörde olduğu.</span><span class="sxs-lookup"><span data-stu-id="a5847-247">By default, the log is in the same folder as the service executable.</span></span> <span data-ttu-id="a5847-248">Yükleme başarısız olabilir:</span><span class="sxs-lookup"><span data-stu-id="a5847-248">The installation can fail if:</span></span> 
+    - <span data-ttu-id="a5847-249"><xref:System.ComponentModel.RunInstallerAttribute> Sınıfı üzerinde mevcut değilse `ProjectInstaller` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a5847-249">The <xref:System.ComponentModel.RunInstallerAttribute> class isn't present on the `ProjectInstaller` class.</span></span>
+    -  <span data-ttu-id="a5847-250">Öznitelik belirlendiğinden `true`.</span><span class="sxs-lookup"><span data-stu-id="a5847-250">The attribute isn't set to `true`.</span></span> 
+    - <span data-ttu-id="a5847-251">`ProjectInstaller` Sınıfı değil olarak tanımlanan `public`.</span><span class="sxs-lookup"><span data-stu-id="a5847-251">The `ProjectInstaller` class isn't defined as `public`.</span></span>
 
-## <a name="start-and-run-the-service"></a><span data-ttu-id="2945b-234">Başlat ve Çalıştır hizmeti</span><span class="sxs-lookup"><span data-stu-id="2945b-234">Start and run the service</span></span>
+<span data-ttu-id="a5847-252">Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="a5847-252">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-1. <span data-ttu-id="2945b-235">Windows içinde açın **Hizmetleri** masaüstü uygulaması.</span><span class="sxs-lookup"><span data-stu-id="2945b-235">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="2945b-236">Basın **Windows**+**R** açmak için **çalıştırma** kutusuna ve ardından girin **services.msc** basın **Enter**  veya **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="2945b-236">Press **Windows**+**R** to open the **Run** box, and then enter **services.msc** and press **Enter** or click **OK**.</span></span>
+## <a name="start-and-run-the-service"></a><span data-ttu-id="a5847-253">Başlat ve Çalıştır hizmeti</span><span class="sxs-lookup"><span data-stu-id="a5847-253">Start and run the service</span></span>
 
-     <span data-ttu-id="2945b-237">Hizmetiniz listede görürsünüz **Hizmetleri**alfabetik olarak ayarladığınız için görünen ada göre gösterilir.</span><span class="sxs-lookup"><span data-stu-id="2945b-237">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
+1. <span data-ttu-id="a5847-254">Windows içinde açın **Hizmetleri** masaüstü uygulaması.</span><span class="sxs-lookup"><span data-stu-id="a5847-254">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="a5847-255">Basın **Windows**+**R** açmak için **çalıştırma** kutusuna *services.msc*ve tuşuna **girin** veya **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="a5847-255">Press **Windows**+**R** to open the **Run** box, enter *services.msc*, and then press **Enter** or select **OK**.</span></span>
 
-     ![MyNewService Hizmetleri penceresinde.](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG)
+     <span data-ttu-id="a5847-256">Hizmetiniz listede görürsünüz **Hizmetleri**alfabetik olarak ayarladığınız için görünen ada göre gösterilir.</span><span class="sxs-lookup"><span data-stu-id="a5847-256">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
 
-2. <span data-ttu-id="2945b-239">İçinde **Hizmetleri**, hizmetiniz için kısayol menüsünü açın ve ardından **Başlat**.</span><span class="sxs-lookup"><span data-stu-id="2945b-239">In **Services**, open the shortcut menu for your service, and then choose **Start**.</span></span>
+     ![MyNewService Hizmetleri penceresinde.](media/windowsservices-serviceswindow.PNG)
 
-3. <span data-ttu-id="2945b-240">Hizmeti durdurmak için hizmet için kısayol menüsünü açın ve ardından **Durdur**.</span><span class="sxs-lookup"><span data-stu-id="2945b-240">To stop the service, open the shortcut menu for the service, and then choose **Stop**.</span></span>
+2. <span data-ttu-id="a5847-258">Hizmeti başlatmak için **Başlat** hizmetin kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-258">To start the service, choose **Start** from the service's shortcut menu.</span></span>
 
-4. <span data-ttu-id="2945b-241">(İsteğe bağlı) Komut satırından komutları kullanabilirsiniz `net start ServiceName` ve `net stop ServiceName` hizmetinizi durdurmak ve başlatmak.</span><span class="sxs-lookup"><span data-stu-id="2945b-241">(Optional) From the command line, you can use the commands `net start ServiceName` and `net stop ServiceName` to start and stop your service.</span></span>
+3. <span data-ttu-id="a5847-259">Hizmeti durdurmak için seçin **Durdur** hizmetin kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="a5847-259">To stop the service, choose **Stop** from the service's shortcut menu.</span></span>
 
-### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="2945b-242">Hizmetinizin olay günlüğü çıktısını doğrulamak</span><span class="sxs-lookup"><span data-stu-id="2945b-242">Verify the event log output of your service</span></span>
+4. <span data-ttu-id="a5847-260">(İsteğe bağlı) Komutları komut satırından kullanın **net start &lt;hizmet adı&gt;**  ve **net stop &lt;hizmet adı&gt;**  hizmetinizi durdurmak ve başlatmak.</span><span class="sxs-lookup"><span data-stu-id="a5847-260">(Optional) From the command line, use the commands **net start &lt;service name&gt;** and **net stop &lt;service name&gt;** to start and stop your service.</span></span>
 
-1. <span data-ttu-id="2945b-243">Açık **Olay Görüntüleyicisi'ni** türüne başlatarak **Olay Görüntüleyicisi'ni** Windows görev çubuğunda ve sonra arama kutusuna **Olay Görüntüleyicisi'ni** Arama sonuçlarından.</span><span class="sxs-lookup"><span data-stu-id="2945b-243">Open **Event Viewer** by starting to type **Event Viewer** in the search box on the Windows task bar, and then selecting **Event Viewer** from the search results.</span></span>
+### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="a5847-261">Hizmetinizin olay günlüğü çıktısını doğrulamak</span><span class="sxs-lookup"><span data-stu-id="a5847-261">Verify the event log output of your service</span></span>
+
+1. <span data-ttu-id="a5847-262">Windows içinde açın **Olay Görüntüleyicisi'ni** masaüstü uygulaması.</span><span class="sxs-lookup"><span data-stu-id="a5847-262">In Windows, open the **Event Viewer** desktop app.</span></span> <span data-ttu-id="a5847-263">Girin *Olay Görüntüleyicisi'ni* çubuğu ve ardından Windows Search'te **Olay Görüntüleyicisi'ni** Arama sonuçlarından.</span><span class="sxs-lookup"><span data-stu-id="a5847-263">Enter *Event Viewer* in the Windows search bar, and then select **Event Viewer** from the search results.</span></span>
 
    > [!TIP]
-   > <span data-ttu-id="2945b-244">Visual Studio'da açıp olay günlüklerini erişebilirsiniz **Sunucu Gezgini** (klavye: **CTRL**+**Alt**+**S**) ve genişletme **olay günlüklerini** düğüm yerel bilgisayar.</span><span class="sxs-lookup"><span data-stu-id="2945b-244">In Visual Studio, you can access event logs by opening **Server Explorer** (Keyboard: **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
+   > <span data-ttu-id="a5847-264">Visual Studio'da açıp olay günlüklerini erişebilirsiniz **Sunucu Gezgini** gelen **görünümü** menü (veya basın **Ctrl**+**Alt** + **S**) ve genişletme **olay günlüklerini** düğüm yerel bilgisayar.</span><span class="sxs-lookup"><span data-stu-id="a5847-264">In Visual Studio, you can access event logs by opening **Server Explorer** from the **View** menu (or press **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
 
-2. <span data-ttu-id="2945b-245">İçinde **Olay Görüntüleyicisi'ni**, genişletme **uygulama ve hizmet günlükleri**.</span><span class="sxs-lookup"><span data-stu-id="2945b-245">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
+2. <span data-ttu-id="a5847-265">İçinde **Olay Görüntüleyicisi'ni**, genişletme **uygulama ve hizmet günlükleri**.</span><span class="sxs-lookup"><span data-stu-id="a5847-265">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
 
-3. <span data-ttu-id="2945b-246">Bulun **MyNewLog** (veya **MyLogFile1**, komut satırı bağımsız değişkenleri eklemek için isteğe bağlı yordamı izlediyseniz) genişletin.</span><span class="sxs-lookup"><span data-stu-id="2945b-246">Locate the listing for **MyNewLog** (or **MyLogFile1**, if you followed the optional procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="2945b-247">Hizmetinizi gerçekleştirilen iki eylem (başlatma ve durdurma) girişleri görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="2945b-247">You should see entries for the two actions (start and stop) that your service performed.</span></span>
+3. <span data-ttu-id="a5847-266">Bulun **MyNewLog** (veya **MyLogFile1** komut satırı bağımsız değişkenleri eklemek için yordamı izlediyseniz) genişletin.</span><span class="sxs-lookup"><span data-stu-id="a5847-266">Locate the listing for **MyNewLog** (or **MyLogFile1** if you followed the procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="a5847-267">Hizmetinizi gerçekleştirilen iki eylem (başlatma ve durdurma) girişleri görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a5847-267">You should see the entries for the two actions (start and stop) that your service performed.</span></span>
 
-     ![Olay günlüğü girişlerini görmek için Olay Görüntüleyicisi'ni kullanın](../../../docs/framework/windows-services/media/windows-service-event-viewer.png)
+     ![Olay günlüğü girişlerini görmek için Olay Görüntüleyicisi'ni kullanın](media/windows-service-event-viewer.png)
 
-## <a name="uninstall-the-service"></a><span data-ttu-id="2945b-249">Hizmeti Kaldır</span><span class="sxs-lookup"><span data-stu-id="2945b-249">Uninstall the service</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="a5847-269">Kaynakları temizleme</span><span class="sxs-lookup"><span data-stu-id="a5847-269">Clean up resources</span></span>
 
-1. <span data-ttu-id="2945b-250">Açık **Visual Studio için geliştirici komut istemi** yönetici kimlik bilgilerine sahip.</span><span class="sxs-lookup"><span data-stu-id="2945b-250">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
+<span data-ttu-id="a5847-270">Windows hizmet uygulaması artık ihtiyacınız kalmadığında, kaldırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5847-270">If you no longer need the Windows service app, you can remove it.</span></span> 
 
-2. <span data-ttu-id="2945b-251">Komut İstemi penceresinde, projenizin çıktısını içeren klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="2945b-251">In the command prompt window, navigate to the folder that contains your project's output.</span></span>
+1. <span data-ttu-id="a5847-271">Açık **Visual Studio için geliştirici komut istemi** yönetici kimlik bilgilerine sahip.</span><span class="sxs-lookup"><span data-stu-id="a5847-271">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
 
-3. <span data-ttu-id="2945b-252">Aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="2945b-252">Enter the following command:</span></span>
+2. <span data-ttu-id="a5847-272">İçinde **Visual Studio için geliştirici komut istemi** penceresinde projenizin çıktısını içeren klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="a5847-272">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output.</span></span>
+
+3. <span data-ttu-id="a5847-273">Aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="a5847-273">Enter the following command:</span></span>
 
     ```shell
     installutil.exe /u MyNewService.exe
     ```
 
-   <span data-ttu-id="2945b-253">Hizmet başarıyla kaldırırsa **installutil.exe** hizmetinizin başarıyla kaldırıldığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="2945b-253">If the service uninstalls successfully, **installutil.exe** reports that your service was successfully removed.</span></span> <span data-ttu-id="2945b-254">Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="2945b-254">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+   <span data-ttu-id="a5847-274">Hizmet başarıyla kaldırırsa, hizmetinizin başarıyla kaldırıldığını komutu bildirir.</span><span class="sxs-lookup"><span data-stu-id="a5847-274">If the service uninstalls successfully, the command reports that your service was successfully removed.</span></span> <span data-ttu-id="a5847-275">Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="a5847-275">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="2945b-255">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="2945b-255">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a5847-276">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="a5847-276">Next steps</span></span>
 
-<span data-ttu-id="2945b-256">Hizmet oluşturduğunuza göre diğerleri Windows hizmetinizi yüklemek için kullanabileceğiniz tek başına Kurulum programını oluşturmak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-256">Now that you've created the service, you might want to create a standalone setup program that others can use to install your Windows service.</span></span> <span data-ttu-id="2945b-257">ClickOnce Windows hizmetlerini desteklemiyor, ancak kullanabileceğiniz [WiX Toolset](http://wixtoolset.org/) bir Windows hizmeti için bir yükleyici oluşturmak üzere.</span><span class="sxs-lookup"><span data-stu-id="2945b-257">ClickOnce doesn't support Windows services, but you can use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="2945b-258">Diğer fikir edinmek için bkz: [Yükleyici paketi oluştur](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span><span class="sxs-lookup"><span data-stu-id="2945b-258">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
+<span data-ttu-id="a5847-277">Hizmet oluşturduğunuza göre şunları yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="a5847-277">Now that you've created the service, you can:</span></span>
 
-<span data-ttu-id="2945b-259">Kullanımını keşfedebilirsiniz bir <xref:System.ServiceProcess.ServiceController> bileşenin yüklediğiniz hizmete komutlar göndermenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2945b-259">You might explore the use of a <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
+- <span data-ttu-id="a5847-278">Windows hizmetinizi yüklemek için kullanmak üzere başkalarını için tek başına bir Kurulum programı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a5847-278">Create a standalone setup program for others to use to install your Windows service.</span></span> <span data-ttu-id="a5847-279">Kullanım [WiX Toolset](http://wixtoolset.org/) bir Windows hizmeti için bir yükleyici oluşturmak üzere.</span><span class="sxs-lookup"><span data-stu-id="a5847-279">Use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="a5847-280">Diğer fikir edinmek için bkz: [Yükleyici paketi oluştur](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span><span class="sxs-lookup"><span data-stu-id="a5847-280">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
 
-<span data-ttu-id="2945b-260">Uygulama çalıştığında bir olay günlüğü oluşturmak yerine, uygulama yüklenirken bir olay günlüğü oluşturmak için bir yükleyici kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2945b-260">You can use an installer to create an event log when the application is installed instead of creating the event log when the application runs.</span></span> <span data-ttu-id="2945b-261">Ayrıca, uygulama kaldırıldığında olay günlüğü de yükleyici tarafından silinecektir.</span><span class="sxs-lookup"><span data-stu-id="2945b-261">Additionally, the event log will be deleted by the installer when the application is uninstalled.</span></span> <span data-ttu-id="2945b-262">Daha fazla bilgi için <xref:System.Diagnostics.EventLogInstaller> başvuru sayfası.</span><span class="sxs-lookup"><span data-stu-id="2945b-262">For more information, see the <xref:System.Diagnostics.EventLogInstaller> reference page.</span></span>
+- <span data-ttu-id="a5847-281">Keşfedin <xref:System.ServiceProcess.ServiceController> bileşenin yüklediğiniz hizmete komutlar göndermenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="a5847-281">Explore the <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2945b-263">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2945b-263">See also</span></span>
+- <span data-ttu-id="a5847-282">Uygulama çalıştığında bir olay günlüğü oluşturmak yerine, uygulamayı yüklediğinizde, bir olay günlüğü oluşturmak için bir yükleyici kullanın.</span><span class="sxs-lookup"><span data-stu-id="a5847-282">Instead of creating the event log when the application runs, use an installer to create an event log when you install the application.</span></span> <span data-ttu-id="a5847-283">Uygulamayı kaldırdığınızda olay günlüğü de yükleyici tarafından silindi.</span><span class="sxs-lookup"><span data-stu-id="a5847-283">The event log is deleted by the installer when you uninstall the application.</span></span> <span data-ttu-id="a5847-284">Daha fazla bilgi için bkz. <xref:System.Diagnostics.EventLogInstaller>.</span><span class="sxs-lookup"><span data-stu-id="a5847-284">For more information, see <xref:System.Diagnostics.EventLogInstaller>.</span></span>
 
-- [<span data-ttu-id="2945b-264">Windows hizmet uygulamaları</span><span class="sxs-lookup"><span data-stu-id="2945b-264">Windows service applications</span></span>](../../../docs/framework/windows-services/index.md)
-- [<span data-ttu-id="2945b-265">Windows hizmeti uygulamalarına giriş</span><span class="sxs-lookup"><span data-stu-id="2945b-265">Introduction to Windows service applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [<span data-ttu-id="2945b-266">Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="2945b-266">How to: Debug Windows service applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [<span data-ttu-id="2945b-267">Hizmetleri (Windows)</span><span class="sxs-lookup"><span data-stu-id="2945b-267">Services (Windows)</span></span>](/windows/desktop/Services/services)
+## <a name="see-also"></a><span data-ttu-id="a5847-285">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a5847-285">See also</span></span>
+
+- [<span data-ttu-id="a5847-286">Windows hizmet uygulamaları</span><span class="sxs-lookup"><span data-stu-id="a5847-286">Windows service applications</span></span>](index.md)
+- [<span data-ttu-id="a5847-287">Windows hizmeti uygulamalarına giriş</span><span class="sxs-lookup"><span data-stu-id="a5847-287">Introduction to Windows service applications</span></span>](introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="a5847-288">Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="a5847-288">How to: Debug Windows service applications</span></span>](how-to-debug-windows-service-applications.md)
+- [<span data-ttu-id="a5847-289">Hizmetleri (Windows)</span><span class="sxs-lookup"><span data-stu-id="a5847-289">Services (Windows)</span></span>](/windows/desktop/Services/services)
