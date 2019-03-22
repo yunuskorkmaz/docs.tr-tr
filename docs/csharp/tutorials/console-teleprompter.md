@@ -3,12 +3,12 @@ title: Konsol Uygulaması
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058405"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348836"
 ---
 # <a name="console-application"></a>Konsol Uygulaması
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Bu sınıfın yeni bir dosya yerleştirin ve bu sınıfta içine `TeleprompterCo
 ```csharp
 using static System.Math;
 ```
-
-Yeni bir dil özelliği [ `lock` ](../language-reference/keywords/lock-statement.md) deyimi. Bu bildirimi, yalnızca tek bir iş parçacığı kodda herhangi bir zamanda olabilmesini sağlar. Bir iş parçacığı kilitli bölümde ise, diğer iş parçacıkları bu bölümü çıkmak ilk iş parçacığı için beklemeniz gerekir. `lock` Deyim bölümü kilitle korur bir nesne kullanır. Bu sınıf, özel bir nesne sınıfında kilitlemek için standart bir deyim izler.
 
 Ardından, güncelleştirmeye gerek duyduğunuz `ShowTeleprompter` ve `GetInput` yeni yöntemleri `config` nesne. Bir son yazma `Task` döndüren `async` her iki görevi başlatmak ve ilk görev tamamlandığında çıkmak için yöntemi:
 

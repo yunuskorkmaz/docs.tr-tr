@@ -6,23 +6,28 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: d30d452a7c140a0c56529386b14ef3a3512df490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722159"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348771"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. ve? () null koşullu işleçleri (Visual Basic)
 
-Sol işlenen null değerini test eder (`Nothing`) üye erişimi gerçekleştirmeden önce (`?.`) ya da dizin (`?()`) döndürür; işlem `Nothing` sol işlenen değerlendirilirse `Nothing`. Değer türleri normalde döndürecekti ifadelerinde null koşullu işleci döndürdüğünü unutmayın bir <xref:System.Nullable%601>.
+Sol işlenen null değerini test eder (`Nothing`) üye erişimi gerçekleştirmeden önce (`?.`) ya da dizin (`?()`) döndürür; işlem `Nothing` sol işlenen değerlendirilirse `Nothing`. Normalde değer türleri döndüren ifadeler null koşullu işleci döndürmediğine dikkat edin bir <xref:System.Nullable%601>.
 
 Bu işleçler null denetimleri, özellikle veri yapılarda azalan zaman işlemek için daha az kod yazmanıza yardımcı olur. Örneğin:
 
 ```vb
-Dim length As Integer? = customers?.Length  ' Nothing if customers is Nothing  
-Dim first As Customer = customers?(0)  ' Nothing if customers is Nothing  
-Dim count As Integer? = customers?(0)?.Orders?.Count()  ' Nothing if customers, the first customer, or Orders is Nothing  
+' Nothing if customers is Nothing  
+Dim length As Integer? = customers?.Length  
+
+' Nothing if customers is Nothing
+Dim first As Customer = customers?(0)
+
+' Nothing if customers, the first customer, or Orders is Nothing
+Dim count As Integer? = customers?(0)?.Orders?.Count()   
 ```
 
 Karşılaştırma için ilk kez bir null koşullu işleci olmadan bu ifadelerin alternatif koddur:
@@ -34,27 +39,57 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Null koşullu işleçleri short-circuiting.  Koşullu üye erişimi ve dizin işlemlerini zincirinin tek bir işlemde bir şey döndürürse, rest zincirinin yürütme durdurur.  Aşağıdaki örnekte, C(E) değilse değerlendirilmez `A`, `B`, veya `C` Nothing olarak değerlendirilir.
+Null koşullu işleçleri short-circuiting.  Koşullu üye erişimi ve dizin işlemlerini zincirinin tek bir işlemde döndürürse `Nothing`, kalan zincirinin yürütmeyi durdurur.  Aşağıdaki örnekte, `C(E)` değilse değerlendirilmez `A`, `B`, veya `C` değerlendiren `Nothing`.
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Başka bir null koşullu üye erişimi için temsilciler çok daha az kod ile iş parçacığı güvenli bir şekilde çağırmak için kullanılır.  Kod aşağıdaki gibi eski yöntem gerektirir:  
+Başka bir null koşullu üye erişimi için temsilciler çok daha az kod ile iş parçacığı güvenli bir şekilde çağırmak için kullanılır.  Aşağıdaki örnek, iki tür tanımlar. bir `NewsBroadcaster` ve `NewsReceiver`. Haber öğelerinin bir alıcı tarafından gönderilen `NewsBroadcaster.SendNews` temsilci.
+
+```vb
+Public Module NewsBroadcaster
+   Dim SendNews As Action(Of String) 
+
+   Public Sub Main()
+      Dim rec As New NewsReceiver()
+      Dim rec2 As New NewsReceiver()
+      SendNews?.Invoke("Just in: A newsworthy item...")
+   End Sub
+
+   Public Sub Register(client As Action(Of String))
+      SendNews = SendNews.Combine({SendNews, client})
+   End Sub
+End Module
+
+Public Class NewsReceiver
+   Public Sub New()
+      NewsBroadcaster.Register(AddressOf Me.DisplayNews)
+   End Sub
+
+   Public Sub DisplayNews(newsItem As String)
+      Console.WriteLine(newsItem)
+   End Sub
+End Class
+```
+
+Hiçbir öğe olarak varsa `SendNews` çağrı listesine `SendNews` temsilci oluşturur bir <xref:System.NullReferenceException>. Null koşullu işleçleri önce aşağıdaki temsilci çağırma listesi olmadığını sağlamış gibi kod `Nothing`:
 
 ```vb  
-Dim handler = AddressOf(Me.PropertyChanged)  
-If handler IsNot Nothing  
-    Call handler(…)  
+SendNews = SendNews.Combine({SendNews, client})  
+If SendNews IsNot Nothing Then 
+   SendNews("Just in...")
+End If
 ```
 
 Yeni yolu çok daha kolaydır:  
 
 ```vb
-PropertyChanged?.Invoke(…)
+SendNews = SendNews.Combine({SendNews, client})  
+SendNews?.Invoke("Just in...")
 ```
 
-Derleyici değerlendirmek için kod oluşturur çünkü iş parçacığı açısından güvenli yeni yoludur `PropertyChanged` sonucu geçici bir değişkende tutma yalnızca bir kez. Açıkça çağırmak ihtiyacınız `Invoke` yöntemi hiçbir null koşullu temsilci çağırma söz dizimi olduğundan `PropertyChanged?(e)`.  
+Derleyici değerlendirmek için kod oluşturur çünkü iş parçacığı açısından güvenli yeni yoludur `SendNews` sonucu geçici bir değişkende tutma yalnızca bir kez. Açıkça çağırmak ihtiyacınız `Invoke` yöntemi hiçbir null koşullu temsilci çağırma söz dizimi olduğundan `SendNews?(String)`.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
