@@ -2,12 +2,12 @@
 title: FILESTREAM verileri
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674748"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410283"
 ---
 # <a name="filestream-data"></a>FILESTREAM verileri
 
@@ -180,7 +180,7 @@ FILESTREAM için kapsamlı belgeler, aşağıdaki bölümlerde SQL Server Çevri
 |Konu|Açıklama|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM depolama kullanmak ne zaman ve nasıl bir NTFS dosya sistemi ile SQL Server veritabanı altyapısı tümleştirildiğini açıklar.|
-|[FILESTREAM verileri için istemci uygulamalar oluşturun](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM verileri ile çalışmak için Win32 API işlevleri açıklar.|
+|[FILESTREAM verileri için istemci uygulamalar oluşturun](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM verileri ile çalışma için Windows API işlevleri açıklar.|
 |[FILESTREAM ve diğer SQL Server özellikleri](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Dikkat edilecek noktalar, yönergeleri ve sınırlamaları kullanarak SQL Server'ın diğer özelliklerle FILESTREAM verileri için sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

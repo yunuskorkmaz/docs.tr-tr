@@ -2,12 +2,12 @@
 title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 4adbd558aff9e1689b1e14521c43f1cad281dbc6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066421"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411505"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Windows Communication Foundation (WCF) kullanarak büyük iletileri gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti akışı sağlamaktır. Ancak bazı protokoller, iletinin tamamı arabelleğe alma gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilebilir. Başka bir olası öbekleri adlı küçük iletilere büyük ileti ayırmak, söz konusu öbekleri bir öbek teker teker gönderilir ve alıcı tarafında büyük ileti yeniden oluşturmak için bir çözümdür. Uygulama bu parçalama yapabilirsiniz ve serbest Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl bir özel protokolü veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  
@@ -201,11 +201,11 @@ as the ChunkingStart message.
 ## <a name="chunking-channel-architecture"></a>Öbekleme kanalı mimarisi  
  Kümeleme kanal bir `IDuplexSessionChannel` tipik kanal mimari, yüksek bir düzeyde izler. Var olan bir `ChunkingBindingElement` , yapılandırılabilir bir `ChunkingChannelFactory` ve `ChunkingChannelListener`. `ChunkingChannelFactory` Örneklerini oluşturur `ChunkingChannel` zaman bunu istenir. `ChunkingChannelListener` Örneklerini oluşturur `ChunkingChannel` ne zaman yeni bir iç kanal kabul edilir. `ChunkingChannel` Kendisi ileti gönderme ve alma için sorumlu değildir.  
   
- Aşağı, sonraki düzeyde `ChunkingChannel` kümeleme Protokolü uygulamak için çeşitli bileşenleri kullanır. Gönderme tarafında, özel bir kanal kullanan `XmlDictionaryWriter` adlı `ChunkingWriter` gerçek Öbekleme yapar. `ChunkingWriter` İç kanal öbekleri doğrudan göndermek için kullanır. Özel bir kullanarak `XmlDictionaryWriter` büyük iletisinin gövdesi, özgün yazıldığı gibi öbekleri göndermemizi sağlar. Bu, biz özgün iletinin tamamı arabellek yok anlamına gelir.  
+ Aşağı, sonraki düzeyde `ChunkingChannel` kümeleme Protokolü uygulamak için çeşitli bileşenleri kullanır. Gönderme tarafında, özel bir kanal kullanan <xref:System.Xml.XmlDictionaryWriter> adlı `ChunkingWriter` gerçek Öbekleme yapar. `ChunkingWriter` İç kanal öbekleri doğrudan göndermek için kullanır. Özel bir kullanarak `XmlDictionaryWriter` büyük iletisinin gövdesi, özgün yazıldığı gibi öbekleri göndermemizi sağlar. Bu, biz özgün iletinin tamamı arabellek yok anlamına gelir.  
   
  ![Öbekleme kanalı](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- Alma tarafında `ChunkingChannel` iç kanal gelen iletileri alır ve bunları özel bir uygulamalı `XmlDictionaryReader` adlı `ChunkingReader`, gelen öbek özgün iletiden reconstitutes. `ChunkingChannel` Bu sarmalar `ChunkingReader` özel `Message` adlı uygulama `ChunkingMessage` ve bu iletiyi yukarıdaki katmana döndürür. Bu birleşimi `ChunkingReader` ve `ChunkingMessage` tüm özgün ileti gövdesini arabelleğe alıp zorunda kalmak yerine katmanın üzerinde okunduğu şekilde özgün ileti gövdesi serbest öbek olanak sağlıyor. `ChunkingReader` bir kuyruk, burada arabelleğe alınan öbekleri yapılandırılabilir en fazla sayıya kadar gelen öbekleri arabelleğe alır sahiptir. Bu maksimum sınıra ulaşıldığında, okuyucu iletilerin kuyruktan yukarıdaki katmanı tarafından boşaltılır bekler (diğer bir deyişle, yalnızca özgün iletinin gövdesinden okuyarak) veya en fazla alana kadar zaman aşımına ulaşıldığı.  
+ Alma tarafında `ChunkingChannel` iç kanal gelen iletileri alır ve bunları özel bir uygulamalı <xref:System.Xml.XmlDictionaryReader> adlı `ChunkingReader`, gelen öbek özgün iletiden reconstitutes. `ChunkingChannel` Bu sarmalar `ChunkingReader` özel `Message` adlı uygulama `ChunkingMessage` ve bu iletiyi yukarıdaki katmana döndürür. Bu birleşimi `ChunkingReader` ve `ChunkingMessage` tüm özgün ileti gövdesini arabelleğe alıp zorunda kalmak yerine katmanın üzerinde okunduğu şekilde özgün ileti gövdesi serbest öbek olanak sağlıyor. `ChunkingReader` bir kuyruk, burada arabelleğe alınan öbekleri yapılandırılabilir en fazla sayıya kadar gelen öbekleri arabelleğe alır sahiptir. Bu maksimum sınıra ulaşıldığında, okuyucu iletilerin kuyruktan yukarıdaki katmanı tarafından boşaltılır bekler (diğer bir deyişle, yalnızca özgün iletinin gövdesinden okuyarak) veya en fazla alana kadar zaman aşımına ulaşıldığı.  
   
  ![Öbekleme kanalı](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
@@ -248,7 +248,7 @@ interface ITestService
   
 -   Gönderme geçirilen zaman aşımı, tüm öbekleri gönderme içeren tüm gönderme işlemi için zaman aşımı olarak kullanılır.  
   
--   Özel `XmlDictionaryWriter` tasarım, tüm özgün ileti gövdesini arabelleğe almayı önlemek için seçildi. Alınacak olsaydık bir `XmlDictionaryReader` gövdesi kullanma `message.GetReaderAtBodyContents` tüm gövdesinin arabelleğe. Bunun yerine, özel bir sahibiz `XmlDictionaryWriter` yapan `message.WriteBodyContents`. İletiyi WriteBase64 yazıcısı, yazıcı iletileri parçalara'kurmak paketleri ve bunları gönderir çağrıları iç kanal kullanma. Öbek gönderilene kadar WriteBase64 engeller.  
+-   Özel <xref:System.Xml.XmlDictionaryWriter> tasarım, tüm özgün ileti gövdesini arabelleğe almayı önlemek için seçildi. Alınacak olsaydık bir <xref:System.Xml.XmlDictionaryReader> gövdesi kullanma `message.GetReaderAtBodyContents` tüm gövdesinin arabelleğe. Bunun yerine, özel bir sahibiz <xref:System.Xml.XmlDictionaryWriter> yapan `message.WriteBodyContents`. İletiyi WriteBase64 yazıcısı, yazıcı iletileri parçalara'kurmak paketleri ve bunları gönderir çağrıları iç kanal kullanma. Öbek gönderilene kadar WriteBase64 engeller.  
   
 ## <a name="implementing-the-receive-operation"></a>Uygulama alma işlemi  
  Yüksek bir düzeyde alma işlemi önce gelen ileti olmadığını denetler `null` ve sahip olduğu eylem ise `ChunkingAction`. Her iki ölçütleri karşılamıyorsa ileti alma değiştirilmeden döndürülür. Aksi takdirde, Al yeni bir oluşturur `ChunkingReader` ve yeni bir `ChunkingMessage` etrafında sarmalanmış (çağırarak `GetNewChunkingMessage`). Bu yeni döndürmeden önce `ChunkingMessage`, alma kullanan bir iş parçacığı havuzu iş parçacığını yürütmek için `ReceiveChunkLoop`, çağıran `innerChannel.Receive` döngü ve öbekleri için ellerini `ChunkingReader` son öbek ileti alındığında veya alma işlemi zamanı aşımını isabet kadar.  

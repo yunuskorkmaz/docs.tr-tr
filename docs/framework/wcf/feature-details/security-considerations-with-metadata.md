@@ -2,12 +2,12 @@
 title: Meta Veriler Hakkında Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585571"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411919"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, yayımlama, alma ve hizmet meta verileri kullanarak güvenlikle ilgili etkileri göz önünde bulundurun.  
@@ -28,7 +28,7 @@ Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, ya
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Meta verileri işlemek için güvenli teknikleri kullanarak  
  Hizmet meta verileri, WS-MetadataExchange (MEX) gibi standart protokolleri kullanarak ağ üzerinden bir hizmet sık alınır. Çok sayıda meta veri biçimleri mekanizmaları işaret eden ek meta verileri için başvuru içerir. <xref:System.ServiceModel.Description.MetadataExchangeClient> Türü otomatik olarak işler başvurular sizin için Web Hizmetleri Açıklama Dili (WSDL) belgeleri, XML şema ve MEX belgeleri. Boyutu <xref:System.ServiceModel.Description.MetadataSet> alınan meta verilerinden oluşturulan nesne doğru orantılı <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> değerini <xref:System.ServiceModel.Description.MetadataExchangeClient> kullanılır örneği ve `MaxReceivedMessageSize` tarafından kullanılan bir bağlama için değer <xref:System.ServiceModel.Description.MetadataExchangeClient> örneği. Bu kotalar senaryonuza göre belirlenen uygun değerlere ayarlayın.  
   
- WCF'de, hizmet meta verileri XML olarak işlenir. XML belgeleri işlerken uygulamalar kendilerini kötü amaçlı XML yapıları karşı korumanız gerekir. Kullanım `XmlDictionaryReader` ile XML işlenirken uygun kotaları ve ayrıca <xref:System.Xml.XmlTextReader.DtdProcessing%2A> özelliğini `Prohibit`.  
+ WCF'de, hizmet meta verileri XML olarak işlenir. XML belgeleri işlerken uygulamalar kendilerini kötü amaçlı XML yapıları karşı korumanız gerekir. Kullanım <xref:System.Xml.XmlDictionaryReader> ile XML işlenirken uygun kotaları ve ayrıca <xref:System.Xml.XmlTextReader.DtdProcessing%2A> özelliğini <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  Wcf'de meta veri sistemini Genişletilebilir olduğundan ve meta verileri uzantıları, uygulama yapılandırma dosyasında kayıtlı (bakın [meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Meta veri uzantıları rastgele kod çalıştırabilir, korumanız gerekir, uygulama yapılandırma dosyası ile ilgili erişim denetim listeleri (ACL'ler) ve yalnızca güvenilen meta veri uzantısı uygulamaları kaydetme.  
   

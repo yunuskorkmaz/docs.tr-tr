@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492679"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412038"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -144,9 +144,9 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  Paylaşılan boyutlandırma özelliği kullanır, örneğin Not <xref:System.Windows.Controls.Grid>. Son üç sütun bu kendileri aynı yerleştirerek yararlanmak <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Bu, bir özellik adından beklediğiniz gibi aynı boyutta paylaşmak sütunları sağlar. Bu nedenle uzun dize "Durchsuchen..." "Gözat..." yerelleştirileceği, tüm düğmeler küçük bir "Tamam" düğmesini ve orantısız büyük bir "Durchsuchen..." düğmesi yerine genişlik büyütün.  
   
- **Xml:lang**
+ **XML: lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  Bildirim [XML: lang işleme XAML içinde](../../xaml-services/xml-lang-handling-in-xaml.md) kök öğe yerleştirilen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Bu özellik, kültür, belirli bir öğeyi ve alt öğeleri açıklar. Bu değer çeşitli özellikler tarafından kullanılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve yerelleştirme sırasında uygun şekilde değiştirilmelidir. Bu değer, hangi dil sözlüğü heceleme ve yazım denetimi sözcükler kullanın değiştirir. Ayrıca, rakam ve yazı tipi geri dönüş sistemi kullanılacak yazı tipini nasıl seçtiği görüntülenmesini etkiler. Son olarak, şekilde sayılar görüntülenir özelliğini etkiler ve karmaşık betiklerde yazılmış şekilde metinleri şeklinde. "En-US" varsayılan değerdir.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593582"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408931"
 ---
 # <a name="serialization"></a>Serileştirme
 Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seri hale getirme özellikleri. İzleyen paragrafları serileştirme kod oluşturma sırasında tasarım zamanı ve çalışma zamanı serileştirme davranışını ekleme hakkında bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfları.  
@@ -50,7 +50,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../.
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- İçin `Order` aşağıdaki örnekte, yalnızca ters ilişkilendirme özelliğine karşılık gelen sınıf `Customer` sınıfı uzatmamak için gösterilir. Sahip olmadığı bir `DataMember` bir döngü önlemek için özniteliği.  
+ İçin `Order` aşağıdaki örnekte, yalnızca ters ilişkilendirme özelliğine karşılık gelen sınıf `Customer` sınıfı uzatmamak için gösterilir. Sahip olmadığı bir <xref:System.Runtime.Serialization.DataMemberAttribute> bir döngü önlemek için özniteliği.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +65,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../.
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>Kendi kendine yinelenen ilişkileri  
- Kendi kendine yinelenen ilişkileri aynı düzeni uygular. Yabancı anahtara karşılık gelen association özelliğine sahip değil bir `DataMember` üst özellik yok ise, öznitelik.  
+ Kendi kendine yinelenen ilişkileri aynı düzeni uygular. Yabancı anahtara karşılık gelen association özelliğine sahip değil bir <xref:System.Runtime.Serialization.DataMemberAttribute> üst özellik yok ise, öznitelik.  
   
  İki self-özyinelemeli ilişkilerine aşağıdaki sınıf göz önünde bulundurun: Employee.Manager/Reports ve Employee.Mentor/Mentees.  
   

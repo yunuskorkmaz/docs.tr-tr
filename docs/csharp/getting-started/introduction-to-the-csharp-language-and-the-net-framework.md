@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153949"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409230"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
@@ -58,7 +58,7 @@ C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluş
   
  C# programı yürütüldüğünde derleme bildirimdeki bilgilere göre çeşitli eylemlerde bulunabilecek olan CLR'ye içine yüklenir. Ardından, güvenlik gereksinimleri karşılanırsa, CLR IL kodunu yerel makine yönergelerine dönüştürmek için tam zamanında (JIT) derleme gerçekleştirir. CLR ayrıca diğer hizmetleri ilgili otomatik çöp toplama, özel durum işleme ve kaynak yönetimi sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" ", belirli bir sistemi hedefleyen yerel makine dilinde derlenmiş yönetilmeyen kodun" aksine adlandırılır. Aşağıdaki diyagram, C# kaynak kodu dosyaları, .NET Framework sınıf kitaplıkları, derlemeler ve CLR derleme zamanı ve çalışma zamanı ilişkilerini gösterir.  
   
- ![C&#35; kaynak makine yürütme için kodu](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![C&#35; kaynak kodu için makine yürütme](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  Diller arası çalışabilirlik özelliğidir anahtar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimi (CTS) uygun olduğundan, C# kaynağından oluşturulan IL kodu Visual Basic, Visual C++ ya da 20'den fazla diğer CTS-uyumlu dilin herhangi birini .NET sürümlerinden oluşturulan kod ile etkileşim kurabilir. Tek bir derleme farklı .NET dillerinde yazılmış birçok modülü içerebilir ve yalnızca bunlar aynı dilde yazılmışlar gibi türleri birbirlerine başvurabilir.  
   

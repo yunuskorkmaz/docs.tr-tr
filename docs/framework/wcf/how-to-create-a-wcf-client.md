@@ -1,72 +1,133 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma'
-ms.date: 09/14/2018
+title: 'Öğretici: Bir Windows Communication Foundation istemcisi oluşturma'
+ms.dat8: 03/19/2019
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 051275e56a8e63c6ab8136dbb9e24bdcf4c387df
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181676"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411863"
 ---
-# <a name="how-to-create-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma
+# <a name="tutorial-create-a-windows-communication-foundation-client"></a>Öğretici: Bir Windows Communication Foundation istemcisi oluşturma
 
-Dördüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev dördüncü açıklanmaktadır. Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-Bu konuda, bir WCF hizmetinden meta verileri alma ve hizmete erişmek bir WCF proxy oluşturulacağı açıklanmaktadır. Bu görevi kullanılarak tamamlanır **hizmet Başvurusu Ekle** Visual Studio tarafından sağlanan işlevsellik. Bu araç, hizmetin MEX uç noktasından meta verileri alır ve yönetilen kaynak kodu dosyası oluşturur bir istemci proxy dilde (C# varsayılan olarak) seçtiniz. İstemci proxy oluşturma, ek araç ayrıca oluşturur veya kendi uç birinde hizmetine bağlanmak istemci uygulamasını etkinleştiren istemci yapılandırma dosyasını güncelleştirir.
-
-> [!NOTE]
-> Ayrıca [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracını kullanmak yerine, yapılandırma ve proxy sınıfı oluşturmak için **hizmet Başvurusu Ekle** Visual Studio'da.
+WCF uygulaması oluşturmak için sonraki görev, bir WCF hizmetinden meta verileri alarak bir istemci oluşturmaktır. Meta verileri alır bu hizmetin MEX uç noktasından bir hizmet başvurusu eklemek için Visual Studio'yu kullanın. Visual Studio ardından seçtiğiniz dilde bir istemci proxy'si için bir yönetilen kaynak kodu dosyası oluşturur. Ayrıca bir istemci yapılandırma dosyası oluşturur (*App.config*). Bu dosya, istemci uygulamanın, bir uç nokta adresindeki hizmet bağlanmasını sağlar. 
 
 > [!NOTE]
-> Bir WCF hizmeti bir sınıf kitaplığı projesi Visual Studio'da çağrılırken kullanabileceğiniz **hizmet Başvurusu Ekle** otomatik olarak bir ara sunucu ve ilişkili yapılandırma dosyasını oluşturmak için özellik. Yapılandırma dosyasını sınıf kitaplığı projesi tarafından kullanılmıyor. Sınıf kitaplığı çağıran yürütülebilir dosyası için app.config dosyasına oluşturulan yapılandırma dosyasında ayarları eklemeniz gerekir.
+> Visual Studio'da bir sınıf kitaplığı projesi bir WCF Hizmeti çağırmanıza kullanırsanız **hizmet Başvurusu Ekle** otomatik olarak bir ara sunucu ve ilişkili yapılandırma dosyasını oluşturmak için özellik. Bu yapılandırma dosyasını sınıf kitaplığı projeleri kullanmayın çünkü Bununla birlikte, oluşturulan yapılandırma dosyasındaki ayarları eklemek ihtiyacınız *App.config* sınıf kitaplığı çağıran yürütülebilir dosyası için dosya.
 
-İstemci uygulama hizmeti ile iletişim kurmak için oluşturulan proxy sınıfını kullanır. Bu yordamda açıklanan [nasıl yapılır: istemci kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
+> [!NOTE]
+> Alternatif olarak, kullanın [ServiceModel meta veri yardımcı programracı](#servicemodel-metadata-utility-tool) proxy sınıfı ve yapılandırma dosyası oluşturmak için Visual Studio yerine.
 
-## <a name="to-create-a-windows-communication-foundation-client"></a>Bir Windows Communication Foundation istemcisi oluşturmak için
+İstemci uygulama hizmeti ile iletişim kurmak için oluşturulan proxy sınıfını kullanır. Bu yordamda açıklanan [Öğreticisi: Bir istemci kullanın](how-to-use-a-wcf-client.md).
 
-1. Visual Studio'da yeni bir konsol uygulama projesi oluşturun. Başlarken çözüme sağ **Çözüm Gezgini** seçip **Ekle** > **yeni proje**. İçinde **Yeni Proje Ekle** seçin sol taraftaki iletişim **Windows Masaüstü** kategorisi altında **Visual C#** veya **Visual Basic**. Seçin **konsol uygulaması (.NET Framework)** şablonu ve ardından ad proje **GettingStartedClient**.
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+> [!div class="checklist"]
+> - Oluşturun ve bir konsol uygulama projesi için WCF istemcisini yapılandırın.
+> - Bir proxy sınıfı ve yapılandırma dosyaları oluşturmak için WCF hizmetine hizmet başvurusu ekleyin.
 
-2. System.ServiceModel başvuru GettingStartedClient projeye ekleyin. Sağ **başvuruları** klasörü altında GettingStartedClient projede **Çözüm Gezgini**ve ardından **Başvuru Ekle**. İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki **derlemeleri**. Bulmak ve seçmek **System.ServiceModel**ve ardından **Tamam**. Çözüm seçerek Kaydet **dosya** > **Tümünü Kaydet**.
 
-3. Bir hesap makinesi hizmetine hizmet başvurusu ekleyin.
+## <a name="create-a-windows-communication-foundation-client"></a>Bir Windows Communication Foundation istemcisi oluşturma
 
-   1. İlk olarak, GettingStartedHost konsol uygulamasını başlatın.
+1. Visual Studio'da konsol uygulaması projesi oluşturun: 
 
-   2. Konak çalıştırıldıktan sonra sağ **başvuruları** klasörü altında GettingStartedClient projede **Çözüm Gezgini** seçip **Ekle**  >   **Hizmet başvurusu**.
+    1. Gelen **dosya** menüsünde **açık** > **proje/çözüm** ve **GettingStarted** çözüm, daha önce oluşturduğunuz (*GettingStarted.sln*). **Aç**'ı seçin.
 
-   3. Adres kutusuna aşağıdaki URL'yi girin **hizmet Başvurusu Ekle** iletişim: [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)
+    2. Gelen **görünümü** menüsünde **Çözüm Gezgini**.
 
-   4. Seçin **Git**.
+    3. İçinde **Çözüm Gezgini** penceresinde **GettingStarted** çözüm (üst düğümü) ve ardından **Ekle** > **YeniProje** kısayol menüsünden. 
+    
+    4. İçinde **Yeni Proje Ekle** penceresinde, sol tarafta, select **Windows Masaüstü** kategorisi altında **Visual C#**  veya **Visual Basic**. 
 
-   CalculatorService görüntülenen **Hizmetleri** liste kutusu. CalculatorService genişletmek ve hizmeti tarafından uygulanan hizmet sözleşmelerini görüntülemek için çift tıklayın. Varsayılan ad alanı olarak bırakın- ve **Tamam**.
+    5. Seçin **konsol uygulaması (.NET Framework)** şablon girin *GettingStartedClient* için **adı**. **Tamam**’ı seçin.
 
-    Visual Studio kullanarak bir hizmet için bir başvuru eklediğinizde, yeni bir öğe görünür **Çözüm Gezgini** altında **hizmet başvuruları** GettingStartedClient projesi altındaki klasör. Kullanırsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı, bir kaynak kodu dosyası ve app.config dosyası oluşturulur.
+2. Başvuru ekleme **GettingStartedClient** için proje <xref:System.ServiceModel> derleme: 
 
-    Komut satırı aracını da kullanabilirsiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci kodu oluşturmak için uygun anahtarlara sahip. Aşağıdaki örnek, bir kod dosyası ve hizmet için bir yapılandırma dosyası oluşturur. İlk örnek VB proxy oluşturma işlemini gösterir ve ikinci proxy C# içinde oluşturma adımları anlatılmaktadır:
+    1.  İçinde **Çözüm Gezgini** penceresinde **başvuruları** klasörü altında **GettingStartedClient** proje ve ardından **BaşvuruEkle** kısayol menüsünden. 
 
-    ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    2. İçinde **Başvuru Ekle** penceresinin altında **derlemeleri** penceresinin sol taraftan **Framework**.
+    
+    3. Bulmak ve seçmek **System.ServiceModel**ve ardından **Tamam**. 
 
-    ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    4. Çözüm seçerek Kaydet **dosya** > **Tümünü Kaydet**.
+
+3. Bir hesap makinesi hizmetine hizmet Başvurusu Ekle:
+
+   1. İçinde **Çözüm Gezgini** penceresinde **başvuruları** klasörü altında **GettingStartedClient** proje ve ardından **hizmet Başvurusu Ekle**  kısayol menüsünden.
+
+   2. İçinde **hizmet Başvurusu Ekle** penceresinde **bulma**.
+
+      CalculatorService hizmeti başlatır ve Visual Studio içinde görüntüler **Hizmetleri** kutusu.
+
+   3. Seçin **CalculatorService** genişletmek ve hizmeti tarafından uygulanan hizmet sözleşmelerini görüntülemek için. Varsayılan değeri bırakın **Namespace** ve **Tamam**.
+
+      Visual Studio altında yeni bir öğe ekler **bağlı hizmetler** klasöründe **GettingStartedClient** proje. 
+
+
+### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı programracı
+
+Aşağıdaki örnekler, isteğe bağlı olarak kullanmayı göstermektedir [ServiceModel meta veri yardımcı programracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) proxy sınıfı dosyası oluşturmak için. Bu araç proxy sınıfı dosyası oluşturur ve *App.config* dosya. Aşağıdaki örnekler proxy oluşturma C# ve Visual Basic, sırasıyla:
+
+```shell
+svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+```shell
+svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+### <a name="client-configuration-file"></a>İstemci yapılandırma dosyası
+
+İstemci oluşturduktan sonra Visual Studio oluşturur **App.config** yapılandırma dosyasında **GettingStartedClient** proje, aşağıdaki örneğe benzer olmalıdır:
+
+```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+        <startup>
+            <!-- specifies the version of WCF to use-->
+            <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+        </startup>
+        <system.serviceModel>
+            <bindings>
+                <!-- Uses wsHttpBinding-->
+                <wsHttpBinding>
+                    <binding name="WSHttpBinding_ICalculator" />
+                </wsHttpBinding>
+            </bindings>
+            <client>
+                <!-- specifies the endpoint to use when calling the service -->
+                <endpoint address="http://localhost:8000/GettingStarted/CalculatorService"
+                    binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICalculator"
+                    contract="ServiceReference1.ICalculator" name="WSHttpBinding_ICalculator">
+                    <identity>
+                        <dns value="localhost" />
+                    </identity>
+                </endpoint>
+            </client>
+        </system.serviceModel>
+    </configuration>
+```
+
+Altında [ \<system.serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, fark [ \<uç noktası >](../configure-apps/file-schema/wcf/endpoint-element.md) öğesi. **&lt;Uç nokta&gt;** öğe istemcinin gibi hizmete erişmek için kullandığı uç nokta tanımlar:
+- Adres: `http://localhost:8000/GettingStarted/CalculatorService`. Uç nokta adresi.
+- Hizmet sözleşmesi: `ServiceReference1.ICalculator`. Hizmet sözleşmesi WCF İstemcisi hizmeti arasındaki iletişimi gerçekleştirir. Visual Studio, bu sözleşme, kullanıldığında oluşturulan kendi **hizmet Başvurusu Ekle** işlevi. Bu temelde GettingStartedLib projede tanımlanan sözleşme bir kopyasıdır. 
+- Bağlama: <xref:System.ServiceModel.WSHttpBinding>. Bağlama HTTP taşıma, birlikte çalışabilen güvenlik ve diğer yapılandırma ayrıntılarını belirtir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-İstemci uygulaması hesaplayıcı hizmeti çağırmak için kullanacağı proxy oluşturmuş oldunuz. Serideki sonraki konuya geçin.
+Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+> [!div class="checklist"]
+> - Oluşturun ve bir konsol uygulama projesi için WCF istemcisini yapılandırın.
+> - Bir istemci uygulaması proxy sınıfı ve yapılandırma dosyaları oluşturmak için WCF hizmetine hizmet başvurusu ekleyin.
+
+Oluşturulan istemciyi kullanma hakkında bilgi edinmek için sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Nasıl yapılır: İstemci Yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+> [Öğretici: WCF istemci kullanma](how-to-use-a-wcf-client.md)
 
-## <a name="see-also"></a>Ayrıca bkz.
 
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
-- [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

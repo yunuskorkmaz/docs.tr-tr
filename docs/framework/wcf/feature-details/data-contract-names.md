@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196700"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408880"
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
 
@@ -64,7 +64,7 @@ Bu örnekte, türü `Drawing<Square,RegularRedBrush>` "5HWGAU6h", "urn: şekille
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Genel türler için özelleştirme veri sözleşmesi adları
 
-Bazı durumlarda, daha önce açıklandığı gibi genel türler için oluşturulan veri sözleşmesi adları kabul edilemez. Örneğin, önceden ad çakışması çalışmaz ve karma kaldırmak isteyebilirsiniz haberdar olabilirsiniz. Bu durumda, kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği `DataContractAttribute` adları oluşturmak için farklı bir yol belirtmek için özniteliği. Küme ayraçları içine numaralarını kullanabileceğiniz `Name` veri sözleşmesi adları genel parametre başvurmak için özellik. (0 ilk parametresine başvuruyor, 1 saniye ve benzeri için ifade eder.) Sayı (#) işareti küme ayraçlarının içindeki karma başvurmak için kullanabilirsiniz. Her bu başvuruları birden çok kez veya hiç kullanabilirsiniz.
+Bazı durumlarda, daha önce açıklandığı gibi genel türler için oluşturulan veri sözleşmesi adları kabul edilemez. Örneğin, önceden ad çakışması çalışmaz ve karma kaldırmak isteyebilirsiniz haberdar olabilirsiniz. Bu durumda, kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> özelliği adlarını oluşturmak için farklı bir yol belirtin. Küme ayraçları içine numaralarını kullanabileceğiniz `Name` veri sözleşmesi adları genel parametre başvurmak için özellik. (0 ilk parametresine başvuruyor, 1 saniye ve benzeri için ifade eder.) Sayı (#) işareti küme ayraçlarının içindeki karma başvurmak için kullanabilirsiniz. Her bu başvuruları birden çok kez veya hiç kullanabilirsiniz.
 
 Örneğin, genel önceki `Drawing` türü bildirilmiş aşağıdaki örnekte gösterildiği gibi.
 

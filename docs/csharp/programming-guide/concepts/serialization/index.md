@@ -8,9 +8,9 @@ Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya akta
 
 ## <a name="how-serialization-works"></a>Seri hale getirme nasıl çalışır?
 
-Bu örnekte, genel işlem serileştirme gösterilmiştir.
+Bu örnekte genel seri hale getirme işlemini gösterir:
 
-![Grafik seri hale getirme](./media/serialization.gif "seri hale getirme")
+![Grafik seri hale getirme](./media/index/serialization-process.gif)
 
 Yalnızca veri ancak nesnenin türü, sürüm, kültür ve derleme adı gibi bilgileri izleme bir akışa nesne seri hale getirilir. Bu akıştan, bir veritabanı, dosya veya bellek içinde saklanabilir.
 

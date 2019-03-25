@@ -4,12 +4,12 @@ description: . NET'te P/Invoke aracılığıyla yerel işlevleri çağırma hakk
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981263"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409243"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
@@ -241,6 +241,6 @@ Yönetilen türler verilen her iki durumda da, parametre ve önceki örneklerin 
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-*   [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ile ortak Win32 API'ları ve bunları çağırma hakkında bilgi.
+*   [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ile ortak Windows API'leri ve bunları çağırma hakkında bilgi.
 *   [P/Invoke MSDN'de](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [P/Invoke üzerinde Mono belgeleri](https://www.mono-project.com/docs/advanced/pinvoke/)

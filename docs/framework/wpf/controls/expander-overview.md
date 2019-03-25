@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369935"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409464"
 ---
 # <a name="expander-overview"></a>Genişleticiye Genel Bakış
 Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst bilgi içeren genişletilebilir bir alanda içerik sağlamak için bir yol sağlar.  
@@ -45,7 +45,7 @@ Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst b
   
  **ScrollViewer içinde Genişleticisi**  
   
- ![Kaydırma çubuğu ile genişletici](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Kaydırma çubuğu ile bir genişletici gösteren ekran görüntüsü.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Yerleştirdiğinizde bir <xref:System.Windows.Controls.Expander> denetimine bir <xref:System.Windows.Controls.ScrollViewer>ayarlayın <xref:System.Windows.Controls.ScrollViewer> boyut hangi yönde karşılık gelen özellik <xref:System.Windows.Controls.Expander> içeriği açılır boyutuna <xref:System.Windows.Controls.Expander> içerik alanı. Örneğin ayarlarsanız, <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.Expander> için <xref:System.Windows.Controls.ExpandDirection.Down> (içerik alanı açılır) ayarlama <xref:System.Windows.FrameworkElement.Height%2A> özelliği <xref:System.Windows.Controls.ScrollViewer> içerik alanı gerekli yüksekliğe denetimi. Yükseklik boyutu içeriğin kendisi, bunun yerine ayarlarsanız <xref:System.Windows.Controls.ScrollViewer> Bu ayar tanımıyor ve bu nedenle, kaydırılabilir içeriği sağlamaz.  
   

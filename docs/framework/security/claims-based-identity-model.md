@@ -3,12 +3,12 @@ title: Beyana dayalı kimlik modeli
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197948"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411740"
 ---
 # <a name="claims-based-identity-model"></a>Beyana dayalı kimlik modeli
 Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
@@ -73,10 +73,10 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
   
  Bu diyagram, kimlik doğrulama için WIF ve bu siteyi kullanmak isteyen bir istemci olarak web tarayıcısı kullanacak şekilde yapılandırılmış bir Web sitesini (bağlı taraf uygulaması, RP) göstermektedir.  
   
-1.  Kimliği doğrulanmamış bir kullanıcı bir sayfa istediğinde, tarayıcısı kimlik sağlayıcısı (IP) sayfalarına yönlendirilir.  
+1.  Kimliği doğrulanmamış bir kullanıcı bir sayfa istediğinde, kullanıcının tarayıcıyı kimlik sağlayıcıyı (IDP) sayfalarına yönlendirilir.  
   
-2.  IP, kullanıcının kullanıcı adı/parola, Kerberos gibi kimlik bilgilerini sağlamasını gerektirir.  
+2.  Idp'nin kullanıcı adı/parola veya Kerberos kimlik doğrulaması gibi kendi kimlik sunmak kullanıcı gerektirir.  
   
-3.  IP, tarayıcıya döndürülen bir belirteç verir.  
+3.  IDP tarayıcıya döndürülen bir belirteç verir.  
   
 4.  Tarayıcı, artık başlangıçta istenen sayfaya geri yönlendirilir. Burada WIF, belirtecin sayfaya erişim gereksinimlerini karşılayıp karşılamadığını belirler. Karşılıyorsa, kimlik doğrulamanın yalnızca bir kez gerçekleşmesini ve denetimin uygulamaya geçirilmesini sağlamak üzere bir oturum oluşturmak için bir tanımlama bilgisi verilir.

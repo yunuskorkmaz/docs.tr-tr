@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718915"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409399"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Microsoft Win32 API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği güvenlik ayarlarını etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları, Microsoft Windows API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
   
- Panoyla çalışma, pencere işleyin ve kısmi güven ortamında çalışan uygulamalardan Win32 API çağrısı hakkında aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde, panoyla çalışma, pencere işleyin ve kısmi güven ortamında çalışan uygulamalardan Windows API çağırmak nasıl açıklanmaktadır.  
   
 ## <a name="clipboard-access"></a>Pano erişim  
  <xref:System.Security.Permissions.UIPermission> Sınıfı Pano ve ilişkili erişimi denetleyen <xref:System.Security.Permissions.UIPermissionClipboard> sabit listesi değeri erişim düzeyini gösterir. Aşağıdaki tablo olası izin düzeylerini gösterir.  
@@ -69,8 +69,8 @@ ms.locfileid: "57718915"
   
  Bu riski sınırlamak için güvenebileceğiniz satıcılardan yalnızca üçüncü taraf denetimleri kullanın. Üçüncü taraf denetimleri doğrulanamayan bir kaynaktan yüklediğiniz kullanırsanız, olası davranışları için kaynak kodu gözden geçirmenizi öneririz. Kaynak kötü amaçlı olmayan olduğunu doğruladıktan sonra derleme derlemelisiniz kendinize kaynak derleme eşleştiğinden emin olun.  
   
-## <a name="win32-api-calls"></a>Win32 API çağrıları  
- Uygulama tasarımınızı Win32 API'bir işlev çağırmanın gerektiriyorsa, yönetilmeyen kod erişiyor. Bu durumda, Win32 API çağrıları veya değerleri ile çalışırken kodun eylemleri pencere veya işletim sistemi belirlenemiyor. <xref:System.Security.Permissions.SecurityPermission> Sınıfı ve <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> değerini <xref:System.Security.Permissions.SecurityPermissionFlag> numaralandırma yönetilmeyen kod erişimi denetleme. Yalnızca verildiğinde uygulamanın yönetilmeyen koda erişebilirsiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni. Varsayılan olarak, yerel olarak çalıştırıyorsanız, yalnızca uygulamaları yönetilmeyen kodu çağırabilir.  
+## <a name="windows-api-calls"></a>Windows API çağrıları  
+ Uygulama tasarımınızı Windows API'SİNDEN bir işlev çağırmanın gerektiriyorsa, yönetilmeyen kod erişiyor. Bu durumda, Windows API çağrıları veya değerleri ile çalışırken kodun eylemleri pencere veya işletim sistemi belirlenemiyor. <xref:System.Security.Permissions.SecurityPermission> Sınıfı ve <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> değerini <xref:System.Security.Permissions.SecurityPermissionFlag> numaralandırma yönetilmeyen kod erişimi denetleme. Yalnızca verildiğinde uygulamanın yönetilmeyen koda erişebilirsiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni. Varsayılan olarak, yerel olarak çalıştırıyorsanız, yalnızca uygulamaları yönetilmeyen kodu çağırabilir.  
   
  Windows Forms bazı gerektiren yönetilmeyen erişmeyi <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni. Aşağıdaki tabloda üyeleri listeler <xref:System.Windows.Forms> iznin gerekli ad alanı. .NET Framework sınıf kitaplığı belgelerindeki bir üye için gerekli olan izinler hakkında daha fazla bilgi için bkz.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "57718915"
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> Yöntemi|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> Yöntemi<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> Yöntemi|  
   
- Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanızın istemelisiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yolu düşünmeniz gerekir; çoğu durumda, Windows Forms Win32 API yönetilen bir alternatif sağlar. İşlevler. Mevcut olmadığı anlamına gelir ve uygulamanın yönetilmeyen kod erişmeniz gerekiyorsa uygulama izinlerini yükseltmesine gerekecektir.  
+ Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanızın istemelisiniz <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yolu düşünmeniz gerekir; çoğu durumda, Windows Forms Windows yönetilen bir alternatif sağlar. API işlevleri. Mevcut olmadığı anlamına gelir ve uygulamanın yönetilmeyen kod erişmeniz gerekiyorsa uygulama izinlerini yükseltmesine gerekecektir.  
   
  Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   

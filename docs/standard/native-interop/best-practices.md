@@ -4,12 +4,12 @@ description: . NET'te yerel bileşenleriyle arabirim için en iyi uygulamaları 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54858019"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412064"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirliği en iyi uygulamalar
 
@@ -160,7 +160,7 @@ Gerektiğini unutmayın `GCHandle` bellek sızıntılarını önlemek için aç�
 
 ## <a name="common-windows-data-types"></a>Ortak Windows veri türleri
 
-Sık kullanılan Win32 API'ları ve hangi veri türlerinin bir listesi aşağıdadır C# Win32 kodu çağıran kullanılacak türleri.
+İşte sık kullanılan Windows API'leri ve hangi veri türlerinin bir listesi C# Windows koda çağrılırken kullanılacak türleri.
 
 Aynı boyutta adlarını rağmen 32-bit ve 64-bit Windows üzerinde türleridir.
 

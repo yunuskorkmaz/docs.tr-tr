@@ -868,7 +868,7 @@ Bu davranış, hızlı bir şekilde kurtarılmasını genellikle geçici hatalar
 
 Yeni eklenen `PoolBlockingPeriod` anahtar sözcüğü, uygulamanız için en uygun engelleme süresi seçmenize olanak sağlar. Değerler şunlardır:
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 Bir Azure SQL veritabanı'na bağlanan bir uygulama boyunca engelleme bağlantı havuzu devre dışı bırakıldı ve diğer herhangi bir SQL Server örneğine bağlanan bir uygulama boyunca engelleme bağlantı havuzu etkindir. Varsayılan değer budur. Sunucu uç noktası adı aşağıdakilerden birini ile bitiyorsa, Azure SQL veritabanları kabul edilir:
 
@@ -880,11 +880,11 @@ Bir Azure SQL veritabanı'na bağlanan bir uygulama boyunca engelleme bağlantı
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 Bağlantı havuzu engelleme süresi her zaman etkindir.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 Bağlantı havuzu engelleme süresi her zaman devre dışı bırakıldı.
 

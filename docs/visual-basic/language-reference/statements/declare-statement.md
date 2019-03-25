@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973177"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411544"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 Bir dış dosya içinde uygulanmış yordama başvuru bildirir.  
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Gerekli. Tanıtır bir `Lib` bir dış yordam içeren dış dosyayı (DLL veya kod kaynağı) tanımlayan yan tümcesi.|  
 |`libname`|Gerekli. Bildirilen yordam içeren dosyanın adı.|  
 |`Alias`|İsteğe bağlı. Bildirilen yordamı kendi dosyası içinde belirtilen adla tanımlanamıyor gösterir `name`. Kendi Kimliği'nde belirttiğiniz `aliasname`.|  
-|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> -veya-<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
+|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> veya<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
 |`parameterlist`|Yordamın kullandığı parametreler gereklidir. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Gerekli if `Function` belirtilir ve `Option Strict` olduğu `On`. Yordamın döndürdüğü değerin veri türü.|  
   
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mekanizması.** Visual Basic .NET Framework kullanan *platform çağırma* gidermek ve dış yordamları erişmek için (PInvoke) mekanizması. `Declare` Deyimi ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı hem de bu mekanizma otomatik olarak kullanın ve bilgisine sahip PInvoke gerekmez. Daha fazla bilgi için [izlenecek yol: Windows API'larını çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Dış yordam ortak dil çalışma zamanı dışında (CLR) çalıştırıyorsa olduğu *yönetilmeyen kod*. Bu yordamı, örneğin bir Win32 API işlev veya bir COM yöntemi çağırdığınızda, uygulamanıza güvenlik risklerini doğurabilir. Daha fazla bilgi için [güvenli kodlama kılavuzları yönetilmeyen kod için](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Dış yordam ortak dil çalışma zamanı dışında (CLR) çalıştırıyorsa olduğu *yönetilmeyen kod*. Bu yordamı, örneğin, bir Windows API işlevi ya da bir COM yöntemi çağırdığınızda, uygulamanıza güvenlik risklerini doğurabilir. Daha fazla bilgi için [güvenli kodlama kılavuzları yönetilmeyen kod için](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir dış başvuru bildirir. bir `Function` geçerli kullanıcı adını döndüren yordam. Ardından bir dış yordam çağrıları `GetUserNameA` parçası olarak `getUser` yordamı.  

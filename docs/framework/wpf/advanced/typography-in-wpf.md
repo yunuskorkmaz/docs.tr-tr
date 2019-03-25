@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125635"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412142"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
@@ -121,7 +121,7 @@ ClearType y yönünde düzgünleştirme ile metin
  Daha fazla bilgi için [WPF'deki Belgeler](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Basit metin çizme  
- Doğrudan metin çizme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak nesneleri <xref:System.Windows.Media.DrawingContext.DrawText%2A> yöntemi <xref:System.Windows.Media.DrawingContext> nesne. Bu yöntemi kullanmak için oluşturduğunuz bir <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, ayrı ayrı metindeki her karakter biçimlendirilebilir, çok satırlı metin çizme sağlar. İşlevselliğini <xref:System.Windows.Media.FormattedText> nesne Win32 API DrawText bayrakları işlevselliğinin içerir. Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesi üç nokta görüntülendiği metin sınırlarının aştığında, üç nokta desteği gibi işlevsellik içerir. Aşağıdaki örnek, uygulanan ikinci ve üçüncü sözcükleri doğrusal gradyan dahil olmak üzere çeşitli biçimlerde olan metni gösterir.  
+ Doğrudan metin çizme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak nesneleri <xref:System.Windows.Media.DrawingContext.DrawText%2A> yöntemi <xref:System.Windows.Media.DrawingContext> nesne. Bu yöntemi kullanmak için oluşturduğunuz bir <xref:System.Windows.Media.FormattedText> nesne. Bu nesne, ayrı ayrı metindeki her karakter biçimlendirilebilir, çok satırlı metin çizme sağlar. İşlevselliğini <xref:System.Windows.Media.FormattedText> nesne DrawText bayrakları Windows API işlevlerini çoğunu içerir. Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesi üç nokta görüntülendiği metin sınırlarının aştığında, üç nokta desteği gibi işlevsellik içerir. Aşağıdaki örnek, uygulanan ikinci ve üçüncü sözcükleri doğrusal gradyan dahil olmak üzere çeşitli biçimlerde olan metni gösterir.  
   
  ![Metin BiçimlendirilmişMetin nesnesi kullanma](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

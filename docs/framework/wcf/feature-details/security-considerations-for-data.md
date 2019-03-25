@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363091"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411440"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
@@ -276,7 +276,7 @@ Bu durum, aşağıdaki noktaları farkına varmadan tarafından önlenebilir:
 
 - Eski türleri ile işaretlenen kullanarak ilgileniriz <xref:System.SerializableAttribute> özniteliği. Çoğu ile çalışmak üzere tasarlanmış [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uzaktan iletişim için güvenilir verilerle kullanın. Varolan türleri bu özniteliği ile işaretlenmiş ile durum güvenlik düşünülerek tasarlanmıştır değil.
 
-- Güvenmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği `DataMemberAttribute` durumu güvenliği açısından kadar veri sağlamak için özniteliği. Verileri her zaman olabilir `null`, `zero`, veya `invalid`.
+- Güvenmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> durumu güvenliği açısından kadar veri sağlamak için özniteliği. Verileri her zaman olabilir `null`, `zero`, veya `invalid`.
 
 - Hiçbir zaman ilk önce doğrulamadan bir güvenilmeyen bir veri kaynağından bir nesne grafiğinin seri durumdan güven. Her ayrı nesneyi tam olmayabilir tutarlı bir duruma, ancak nesne grafiğini olabilir. Ayrıca, Nesne grafiği koruma modu devre dışı bırakılmış olsa bile, seri durumdan çıkarılmış grafik aynı nesneye birden çok başvuruya sahip veya döngüsel başvurulara sahip. Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Kısmi güven ile çalışan kod için ilgili tehditleri ile ilgili aşağıdaki
 
 - Kısmen güvenilen kod erişime izin verirseniz, <xref:System.Runtime.Serialization.DataContractSerializer> örneği veya aksi halde denetim [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), serileştirme/seri durumdan çıkarma işlemi üzerinde denetim büyük ölçüde çalışma. Örneğin, bunu rastgele türler ekleme, bilginin açığa çıkmasına neden, elde edilen Nesne grafiği veya serileştirilmiş veriler ile değiştirmesine veya sonuç seri hale getirilmiş akış taşması. Eşdeğer <xref:System.Runtime.Serialization.NetDataContractSerializer> tehdit "Kullanarak NetDataContractSerializer güvenli bir şekilde" bölümünde açıklanmıştır.
 
-- Varsa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe uygulandı (veya türü olarak işaretlenmiş `[Serializable]` ancak `ISerializable`), seri durumdan çıkarıcı, genel olmayan ya da talepleri tarafından korunan tüm oluşturucular olsa bile, böyle bir türü örneği oluşturabilirsiniz.
+- Varsa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe uygulandı (veya türü olarak işaretlenmiş <xref:System.SerializableAttribute> ancak <xref:System.Runtime.Serialization.ISerializable>), seri durumdan çıkarıcı, genel olmayan ya da talepleri tarafından korunan tüm oluşturucular olsa bile, böyle bir türü örneği oluşturabilirsiniz.
 
 - Hiçbir zaman seri durumundan çıkarma sonucu verileri seri durumdan güvenilir değilse ve tüm bilinen türler güvendiğiniz türleri olan güvenin. Bilinen türler uygulama yapılandırma dosyasından yüklenen değildir (ancak bilgisayar yapılandırma dosyasından yüklenir) unutmayın kısmi güvende çalışan.
 
-- Geçirirseniz bir `DataContractSerializer` örneği ile bir vekil eklenen kısmen güvenilen kod için kod, tüm bu yedek değiştirilebilir ayarlarını değiştirebilirsiniz.
+- Geçirirseniz bir <xref:System.Runtime.Serialization.DataContractSerializer> örneği ile bir vekil eklenen kısmen güvenilen kod için kod, tüm bu yedek değiştirilebilir ayarlarını değiştirebilirsiniz.
 
 - Bir seri durumdan çıkarılmış nesne için XML okuyucusu (veya veri sıralamadaki) gelen kısmen güvenilen koddan elde edilen seri durumdan çıkarılmış nesne güvenilir olmayan verileri işle.
 
 - Olgu, <xref:System.Runtime.Serialization.ExtensionDataObject> türünde hiçbir Genel üyeler içerdiği verilerin güvenli olduğunu gelmez. Örneğin, bazı verilerin bulunduğu, kısmen güvenilen kod, nesne sonra elle bir nesneye bir ayrıcalıklı veri kaynağından seri durumdan, kısmen güvenilen kod verileri okuyabilir `ExtensionDataObject` nesneyi seri hale getirme tarafından. Ayarlamayı düşünün <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> için `true` ne zaman ayrıcalıklı bir veri kaynağından daha sonraki bir nesnede seri durumdan çıkarılırken izin ver geçirilen kısmen güvenilen kodu.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tam güvende seri hale getirilmesini özel, korumalı, dahili ve genel üyeleri destekler. Ancak, yalnızca Genel üyeler kısmi güvende serileştirilebilir. A `SecurityException` uygulamanın genel olmayan üye bir'seri hale getirme girişiminde bulunursa oluşturulur.
+- <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tam güvende seri hale getirilmesini özel, korumalı, dahili ve genel üyeleri destekler. Ancak, yalnızca Genel üyeler kısmi güvende serileştirilebilir. A <xref:System.Security.SecurityException> uygulamanın genel olmayan üye bir'seri hale getirme girişiminde bulunursa oluşturulur.
 
-    İç izin vermek veya kısmi güvende seri hale için iç korumalı üyeler `System.Runtime.CompilerServices.InternalsVisibleTo` derleme özniteliği. Bu öznitelik, iç üyelerini bazı diğer derlemeye görünür olduğunu bildirmek bir derleme sağlar. Bu durumda, iç üyelerini seri olmasını isteyen bir derleme iç üyelerini System.Runtime.Serialization.dll için görünür olduğunu bildirir.
+    İç izin vermek veya kısmi güvende seri hale için iç korumalı üyeler <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliği. Bu öznitelik, iç üyelerini bazı diğer derlemeye görünür olduğunu bildirmek bir derleme sağlar. Bu durumda, iç üyelerini seri olmasını isteyen bir derleme iç üyelerini System.Runtime.Serialization.dll için görünür olduğunu bildirir.
 
     Bu yaklaşımın avantajı, bir yükseltilmiş kod oluşturma yolu gerektirmez olmasıdır.
 
     Aynı anda iki ana dezavantajları vardır.
 
-    İlk dezavantajı, katılım özelliğidir `InternalsVisibleTo` derleme genelinde bir özniteliktir. Diğer bir deyişle, yalnızca belirli bir sınıfı serileştirilmiş iç üyeleri olduğunu belirtemezsiniz. Elbette, yine de belirli bir iç üyeyi basitçe değil ekleyerek serileştirilecek değil seçebileceğiniz bir `DataMember` özniteliği bu üye için. Benzer şekilde, bir geliştirici, özel veya korumalı, hafif görünürlük kaygıları yerine bir üye iç yapmak de seçebilirsiniz.
+    İlk dezavantajı, katılım özelliğidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme genelinde bir özniteliktir. Diğer bir deyişle, yalnızca belirli bir sınıfı serileştirilmiş iç üyeleri olduğunu belirtemezsiniz. Elbette, yine de belirli bir iç üyeyi basitçe değil ekleyerek serileştirilecek değil seçebileceğiniz bir <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği bu üye için. Benzer şekilde, bir geliştirici, özel veya korumalı, hafif görünürlük kaygıları yerine bir üye iç yapmak de seçebilirsiniz.
 
     İkinci dezavantajı, hala özel veya korumalı üyeler desteklemediğini ' dir.
 
-    Kullanımını göstermek için `InternalsVisibleTo` kısmi güvende öznitelik, aşağıdaki program göz önünde bulundurun:
+    Kullanımını göstermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> kısmi güvende öznitelik, aşağıdaki program göz önünde bulundurun:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    Yukarıdaki örnekte `PermissionsHelper.InternetZone` karşılık gelen `PermissionSet` kısmi güven için. Şimdi, olmadan `InternalsVisibleToAttribute`, uygulama oluşturma başarısız olur bir `SecurityException` gösteren genel olmayan üyelere kısmi güvende serileştirilemiyor.
+    Yukarıdaki örnekte `PermissionsHelper.InternetZone` karşılık gelen <xref:System.Security.PermissionSet> kısmi güven için. Şimdi, olmadan <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği, uygulama başarısız olur, özel durum atma bir <xref:System.Security.SecurityException> gösteren genel olmayan üyelere kısmi güvende serileştirilemiyor.
 
     Ancak, aşağıdaki satırı için kaynak dosyası eklerseniz program başarıyla çalışır.
 

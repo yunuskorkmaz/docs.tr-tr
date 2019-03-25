@@ -2,12 +2,12 @@
 title: Etkin Desenler
 description: Etkin desenler girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612848"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412090"
 ---
 # <a name="active-patterns"></a>Etkin Desenler
 
@@ -86,23 +86,23 @@ Bazen, giriş alanı yalnızca bir kısmını bölümlemek gerekir. Bu durumda, 
 Something else : Not matched.
 ```
 
-Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini dışlayan olabilir, ancak bunlar olmaması. Bazı sayılar kareler hem 64 gibi küpler olduğundan aşağıdaki örnekte, deseni kare ve küp deseni ayrık, değildir. Aşağıdaki program tüm tamsayıların en fazla kare hem de küp olan 1000000 yazdırır.
+Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini dışlayan olabilir, ancak bunlar olmaması. Bazı sayılar kareler hem 64 gibi küpler olduğundan aşağıdaki örnekte, deseni kare ve küp deseni ayrık, değildir. Aşağıdaki program, kare ve küp desenleri birleştirmek ve deseni kullanır. Yazdırabilirsiniz hem kareler ve küpleri, hem de hangi yalnızca küpleri olan 1000'e kadar tüm tamsayıları. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Parametreli Etkin desenler

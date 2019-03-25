@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221296"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409451"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen bellek geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Yerleşik kurallar bir çağrılan geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana döndürmesi ve performans iyileştirmelerini sağlayıp altında Sıralayıcı koşulda veri türü dönüşümleri olarak sıralama gibi etkinlikler denetler.  
@@ -33,7 +33,7 @@ Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen be
   
 ### <a name="unmanaged-signature"></a>Yönetilmeyen imzası  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Tür kitaplığı gösterimi  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Değer türleri için varsayılan sıralama  
  Tamsayı ve kayan nokta numaraları gibi birçok değer türleri [blittable](blittable-and-non-blittable-types.md) ve hazırlama gerektirmez. Diğer [kopyalanamaz](blittable-and-non-blittable-types.md) türleri yönetilen ve yönetilmeyen bellekte farklı temsilleri olabilir ve hazırlama gerektirir. Yine de diğer türler, açık birlikte çalışabilirlik sınırında biçimlendirme gerektirir.  
   
- Bu konu, biçimlendirilen değer türleri üzerinde izleme bilgileri sağlar:  
+ Bu bölüm, aşağıdaki biçimlendirilen değer türlerinde bilgileri sağlar:  
   
--   [Değer türleri platformunda kullanılan çağırma](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Değer türleri platformunda kullanılan çağırma](#value-types-used-in-platform-invoke)  
   
--   [COM birlikte çalışma kullanılan değer türleri](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [COM birlikte çalışma kullanılan değer türleri](#value-types-used-in-com-interop)  
   
- Biçimlendirilmiş türlerini açıklayan ek olarak, bu konu tanımlar [sistem değer türleri](#cpcondefaultmarshalingforvaluetypesanchor1) olağan dışı hazırlama davranışı vardır.  
+ Biçimlendirilmiş türlerini açıklayan ek olarak, bu konu tanımlar [sistem değer türleri](#system-value-types) olağan dışı hazırlama davranışı vardır.  
   
  Biçimlendirilmiş bir tür üyelerini bellekte düzenini açıkça denetleyen bilgilerini içeren karmaşık bir türdür. Üye düzeni bilgilerini kullanarak sağlanan <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği. Düzeni aşağıdakilerden biri olabilir <xref:System.Runtime.InteropServices.LayoutKind> sabit listesi değerleri:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Üyeleri göre düzenlenmiştir gösterir <xref:System.Runtime.InteropServices.FieldOffsetAttribute> her alanı ile sağlanan.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Değer türleri platformunda kullanılan çağırma  
  Aşağıdaki örnekte `Point` ve `Rect` türler, üye düzen bilgilerini sağlamak kullanarak **StructLayoutAttribute**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Bu biçimlendirilmiş türleri için yönetilmeyen kod sıralandığı zaman C stili yapıları olarak sıralanmış. Bu yapı bağımsız değişkenlere sahip bir yönetilmeyen API çağırmak için kolay bir yol sağlar. Örneğin, `POINT` ve `RECT` yapıları için Microsoft Win32 API geçirilebilir **PtInRect** gibi işlev:  
+ Bu biçimlendirilmiş türleri için yönetilmeyen kod sıralandığı zaman C stili yapıları olarak sıralanmış. Bu yapı bağımsız değişkenlere sahip bir yönetilmeyen API çağırmak için kolay bir yol sağlar. Örneğin, `POINT` ve `RECT` yapıları için Microsoft Windows API geçirilebilir **PtInRect** gibi işlev:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Yapıları geçirebilirsiniz platformu kullanarak çağırma tanımı:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  `Rect` Değer türü yönetilmeyen API için bir işaretçi bekliyor olduğundan başvuru ile geçirilmelidir bir `RECT` işleve geçirilecek. `Point` Yönetilmeyen API beklediği değer türü değere göre geçirilir `POINT` yığında geçirilecek. Bu fark çok önemlidir. Başvuruları yönetilmeyen koda işaretçileri geçirilir. Değerleri, yönetilmeyen koda yığına geçirilir.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Bir başvuru türü kopyalanamaz türlerin üyelerini varsa, dönüştürme iki kez gereklidir: ne zaman bir bağımsız değişken geçirilir yönetilmeyen yan ve ikinci ilk kez zaman çağrısından dönüşte. Aranan tarafından yapılan değişiklikleri görmek çağıranın istiyorsa, bu nedenle eklenen yükü, In/Out parametreleri açıkça bir bağımsız değişken uygulanması gerekir.  
   
- Aşağıdaki örnekte, `SystemTime` sınıf üyesi sıralı düzene sahip ve Win32 API için geçirilen **GetSystemTime** işlevi.  
+ Aşağıdaki örnekte, `SystemTime` sınıf üyesi sıralı düzene sahip ve Windows API'ye geçirilen **GetSystemTime** işlevi.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  **GetSystemTime** işlevi şu şekilde tanımlanır:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  Eşdeğer platform çağırma tanımı **GetSystemTime** aşağıdaki gibidir:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Dikkat `SystemTime` çünkü bağımsız değişkeni bir başvuru bağımsız değişkeni değil yazılan `SystemTime` sınıfı, bir değer türü değil. Değer türlerinin aksine, sınıflar her zaman başvuruyla geçirildi.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>COM birlikte çalışma kullanılan değer türleri  
  Biçimlendirilmiş türleri COM birlikte çalışma yöntem çağrıları için de geçirilebilir. Aslında, bir tür kitaplığına dışarı aktardığınızda, değer türleri otomatik olarak yapılarını dönüştürülür. Aşağıdaki örnekte gösterildiği gibi `Point` değer türü olur (typedef) adlı bir tür tanımı `Point`. Tüm başvuruları `Point` tür kitaplığı içindeki başka bir yerde değer türü ile değiştirilir `Point` typedef.  
   
  **Tür kitaplığı gösterimi**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Yapıları sahip <xref:System.Runtime.InteropServices.LayoutKind> sabit listesi değeri **açık** dışarı aktarılan tür kitaplığı açık bir düzen express olamaz COM birlikte kullanılamaz.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Sistem değer türleri  
  <xref:System> Ad alanı olan çalışma zamanı temel türleri paketlenmiş biçiminde temsil eden birden çok değer türleri. Örneğin, değer türü <xref:System.Int32?displayProperty=nameWithType> yapısı temsil eder, kutulanmış biçiminde **ELEMENT_TYPE_I4**. Biçimlendirilmiş diğer türler gibi bu tür yapıları olarak hazırlama yerine, bunları bunlar kutusunda ilkel türler olarak aynı şekilde hazırlama. **System.Int32** olarak bu nedenle sıralanmış **ELEMENT_TYPE_I4** yerine tek bir üye türü içeren bir yapıya olarak **uzun**. Aşağıdaki tabloda değer türlerinin bir listesini içeren **sistem** paketlenmiş temsillerini ilkel türleri olan ad alanı.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Tür kitaplığı gösterimi  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Tür kitaplığı gösterimi  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

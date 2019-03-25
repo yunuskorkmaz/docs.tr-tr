@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359737"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410270"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
@@ -50,7 +50,7 @@ Sürece ayarlanmış Aksi takdirde çıktı dizinine [ `dotnet publish` ](../too
 
 ### <a name="native-dependencies"></a>Yerel bağımlılıkları
 
-Uygulamanızı yerel bağımlılıkları varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Win32 API kullanıyorsa, macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlar ve her platform için bir yürütülebilir dosya derlemek gerekir.
+Uygulamanızı yerel bağımlılıkları varsa, farklı bir işletim sisteminde çalışmayabilir. Örneğin, uygulamanız yerel Windows API kullanıyorsa, macOS veya Linux üzerinde çalışmaz. Platforma özgü kod sağlar ve her platform için bir yürütülebilir dosya derlemek gerekir.
 
 Göz önünde bulundurun, başvurulan kitaplık yerel bağımlılığı varsa, ayrıca, uygulamanızı her platformda çalışabilir. Ancak, sizin için gerekli yerel bağımlılıkları işlemek için platforma özgü sürümlerinde, başvuran bir NuGet paketi eklenmiştir mümkündür.
 

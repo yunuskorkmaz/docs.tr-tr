@@ -2,12 +2,12 @@
 title: Bir iş akışından - WF akışlarını OData kullanma
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ac7a5aef6a699f85ac5a1ce7417d02d42f6c0281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275827"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409001"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData tüketen akışları
 
@@ -25,7 +25,7 @@ WCF Veri Hizmetleri, daha kolay bir OData akışına gelen kullanmasına olanak 
 
 Northwind istemci kitaplıkları oluşturmak için kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim kutusunda, Northwind OData hizmetine başvuru eklemek için Visual Studio 2012.
 
-![Hizmet Başvurusu Ekle](./media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
+![Hizmet Başvurusu Ekle iletişim kutusunu gösteren ekran görüntüsü.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Hizmet tarafından hem de hiçbir hizmet işlemleri olduğunu unutmayın **Hizmetleri** vardır liste öğelerini temsil eden Northwind verileri hizmeti tarafından kullanıma sunulan varlık. Hizmet başvurusunu eklediğinizde sınıfları bu varlıkları için oluşturulur ve istemci kodu kullanılabilir. Bu konudaki örnekleri bu sınıfları kullanın ve `NorthwindEntities` sorguları gerçekleştirmek için sınıf.
 
@@ -43,7 +43,7 @@ WCF Veri Hizmetleri zaman uyumsuz olarak erişen öneririz Web üzerinden kaynak
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> Sağlar sınıfını <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> ve <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> zaman uyumsuz olarak bir OData hizmeti sorgulamak için yöntemleri. Bu yöntemler, gelen çağrılabilir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> , geçersiz kılan bir <xref:System.Activities.AsyncCodeActivity> türetilmiş sınıf. Zaman <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılma döndürür, iş akışı boş Git (ancak kalıcı) ve ne zaman zaman uyumsuz işi tamamlandığında, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> çalışma zamanı tarafından çağrılır.
 
-Aşağıdaki örnekte, bir `OrdersByCustomer` etkinlik, iki bağımsız değişkenler girişi sahip tanımlanır. `CustomerId` Bağımsız değişkeni hangi siparişleri döndürmek için tanımlayan bir müşteri temsil eder ve `ServiceUri` bağımsız değişken Sorgulanacak OData hizmeti URI'sini temsil eder. Etkinlik öğesinden türetildiği için `AsyncCodeActivity<IEnumerable<Order>>` ayrıca bir <xref:System.Activities.Activity%601.Result%2A> çıkış sorgu sonuçlarını döndürmek için kullanılan bağımsız değişken. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Geçersiz kılma tüm siparişleri belirtilen müşterinin seçtiği bir LINQ sorgu oluşturur. Bu sorgu olarak belirtilen <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> geçirilen <xref:System.Activities.AsyncCodeActivityContext>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi çağrılır. Unutmayın geri çağırma ve sorgunun geçirilen durumu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> etkinliğin geçirilir olanlardır <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> yöntemi. Sorgu bittiğinde Etkinlik yürütme <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> yöntemi çağrılır. Sorgu alınır <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemi çağrılır. Bu yöntem döndürür bir <xref:System.Collections.Generic.IEnumerable%601> belirtilen varlık türü; bu durumda `Order`. Bu yana `IEnumerable<Order>` genel türü <xref:System.Activities.AsyncCodeActivity%601>bu `IEnumerable` olarak ayarlandığından <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> etkinlik.
+Aşağıdaki örnekte, bir `OrdersByCustomer` etkinlik, iki bağımsız değişkenler girişi sahip tanımlanır. `CustomerId` Bağımsız değişkeni hangi siparişleri döndürmek için tanımlayan bir müşteri temsil eder ve `ServiceUri` bağımsız değişken Sorgulanacak OData hizmeti URI'sini temsil eder. Etkinlik öğesinden türetildiği için `AsyncCodeActivity<IEnumerable<Order>>` ayrıca bir <xref:System.Activities.Activity%601.Result%2A> çıkış sorgu sonuçlarını döndürmek için kullanılan bağımsız değişken. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Geçersiz kılma tüm siparişleri belirtilen müşterinin seçtiği bir LINQ sorgu oluşturur. Bu sorgu olarak belirtilen <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> geçirilen <xref:System.Activities.AsyncCodeActivityContext>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi çağrılır. Unutmayın geri çağırma ve sorgunun geçirilen durumu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> etkinliğin geçirilir olanlardır <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> yöntemi. Sorgu bittiğinde Etkinlik yürütme <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> yöntemi çağrılır. Sorgu alınır <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemi çağrılır. Bu yöntem döndürür bir <xref:System.Collections.Generic.IEnumerable%601> belirtilen varlık türü; bu durumda `Order`. Bu yana `IEnumerable<Order>` genel türü <xref:System.Activities.AsyncCodeActivity%601>bu <xref:System.Collections.IEnumerable> olarak ayarlandığından <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> etkinlik.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 

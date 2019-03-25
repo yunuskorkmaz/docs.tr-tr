@@ -2,12 +2,12 @@
 title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509372"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411375"
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 Bu konu, özel kodlayıcılar oluşturulacağını açıklar.  
@@ -50,7 +50,7 @@ Bu konu, özel kodlayıcılar oluşturulacağını açıklar.
 ### <a name="pooling"></a>Biriktirme  
  Kodlayıcı uygulamaların her biri, mümkün olduğunca havuzu çalışır. Ayırmaları azaltma yönetilen kod performansını artırmak için önemli bir yoludur. Bu havuzu gerçekleştirmek için uygulamaları kullanın. `SynchronizedPool` sınıfı. C# Dosyası bu sınıf tarafından kullanılan ek iyileştirmeler açıklamasını içerir.  
   
- `XmlDictionaryReader` ve `XmlDictionaryWriter` örnekleri havuza ve yenilerini her ileti için ayırma önlemek için yeniden başlatıldı. Okuyucular için bir `OnClose` geri çağırma geri kazanır, okuyucu olduğunda `Close()` çağrılır. Kodlayıcı Ayrıca iletileri oluştururken kullanılan bazı ileti durumu nesneleri geri dönüştürür. Bu havuzları tarafından yapılandırılabilir boyutlarda `MaxReadPoolSize` ve `MaxWritePoolSize` her üç sınıfın özelliklerini türetilen <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> ve <xref:System.Xml.XmlDictionaryWriter> örnekleri havuza ve yenilerini her ileti için ayırma önlemek için yeniden başlatıldı. Okuyucular için bir `OnClose` geri çağırma geri kazanır, okuyucu olduğunda `Close()` çağrılır. Kodlayıcı Ayrıca iletileri oluştururken kullanılan bazı ileti durumu nesneleri geri dönüştürür. Bu havuzları tarafından yapılandırılabilir boyutlarda `MaxReadPoolSize` ve `MaxWritePoolSize` her üç sınıfın özelliklerini türetilen <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>İkili kodlama  
  Dinamik sözlük dizesinde ikili zaman kullandığı oturumları kodlama, ileti alıcısı için bildirilmesi gerekir. Bu, dinamik sözlük dizeleri içeren bir ileti ekleyerek gerçekleştirilir. Alıcı dizeleri kaldırır, bunları oturumuna ekler ve iletiyi işler. Doğru sözlük dizeleri taşıma arabelleğe alınıp gerektirir.  

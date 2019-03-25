@@ -1,63 +1,100 @@
 ---
-title: Başlarken Öğreticisi Sorun Giderme
-ms.date: 03/30/2017
+title: Sorun giderme Get ile Windows Communication Foundation Eğitmenleri
+ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 5b8cd04ef4d98e522e255e1b7529e848351b2e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695666"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410504"
 ---
-# <a name="troubleshooting-the-getting-started-tutorial"></a>Başlarken Öğreticisi Sorun Giderme
-Bu konuda bunların nasıl çözüleceğine ile çalışmaya başlama Öğreticisi ile çalışırken en sık karşılaşılan sorunlar listelenmiştir.  
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Sorun giderme Get ile Windows Communication Foundation Eğitmenleri
+
+Bu makalede, en yaygın sorunlar ve hatalar adımları izlediğinizde yüz için çözümler sağlar. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md). 
   
-**Sabit Sürücümün proje dosyalarını bulmak oluşturamıyorum.**
+## <a name="common-problems"></a>Yaygın sorunlar
 
- Visual Studio, proje dosyaları içinde c:\users kaydeder\\<user name>\Documents\\< Visual Studio sürümü\>\Projects.  
+**Proje dosyaları my sabit sürücüde bulamıyorum.**
+
+ Visual Studio proje dosyalarında kaydeder *C:\Users\\&lt;kullanıcı adı&gt;\source\repos*.  
+
+**Bulamıyorum *App.config* tarafından oluşturulan dosya *Svcutil.exe*.**
+
+ Visual Studio'da **varolan öğeyi Ekle** penceresi varsayılan olarak yalnızca şu uzantılara sahip dosyaları görüntüler: 
+- *.cs* 
+- *.resx* 
+- *.Settings*
+- *.xsd* 
+- *.wsdl*
+
+Tüm dosya türlerini görüntülemek için seçin **tüm dosyalar (\*.\*)**  sağ alt köşesindeki açılır listesinde **varolan öğeyi Ekle** penceresi.  
   
-**Hizmet uygulaması çalıştırma denemesi: HTTP URL kaydedemedi `http://+:8000/ServiceModelSamples/Service/`.** 
- **İşleminizi bu ad alanı için erişim haklarına sahip değil.** 
+## <a name="common-errors"></a>Sık karşılaşılan hatalar
 
- Bir WCF hizmetini barındıran işlemi yönetici ayrıcalıklarıyla çalıştırılmalıdır. Hizmet çalışıyorsa, gelen Visual Studio içinde Visual Studio'yu yönetici olarak çalıştırmanız gerekir. Bunu yapmak için **Başlat**, sağ **Visual Studio \< *sürüm* >**  seçip **yönetici olarak çalıştır**. Konsol penceresinde komut satırı isteminden hizmeti çalıştırıyorsanız, konsol penceresinde benzer şekilde bir yönetici olarak başlatmanız gerekir. Tıklayın **Başlat**, sağ **komut istemi** seçip **yönetici olarak çalıştır**.  
+### <a name="compile-the-service-application"></a>Hizmet uygulaması derleme 
+
+**Hata BC30420 'GettingStartedHost.Module1' içinde 'Sub Main' bulunamadı.**
+
+Visual Basic uygulama için yanlış giriş noktasıdır. Aşağıdaki değişikliği yapın:
+
+   1. İçinde **Çözüm Gezgini** penceresinde **GettingStartedHost** klasöre tıklayın ve ardından **özellikleri** kısayol menüsünden.
+    a. İçinde **GettingStartedHost** penceresinde için **Başlangıç nesnesi**seçin **Service.Program** (veya belirli uygulamanız için giriş noktası) listeden. 
+    b. Ana menüden **dosya** > **Tümünü Kaydet**.
+
+### <a name="run-the-service-application"></a>Hizmet uygulaması çalıştırma 
+
+**HTTP URL kaydedemedi ' http:\// +: 8000/GettingStarted/CalculatorService '. İşleminiz, bu ad alanı için erişim hakları yok.** 
+
+ Uygun erişim için yönetici ayrıcalıklarıyla Windows Communication Foundation (WCF) hizmetini barındıran işlemi başlatın:
+- Visual Studio için: Visual Studio programda seçin **Başlat** menüsüne ve ardından **daha fazla** > **yönetici olarak çalıştır** kısayol menüsünden.
+- Bir konsol penceresi için: Seçin **komut istemi** içinde **Başlat** menüsüne ve ardından **daha fazla** > **farklı çalıştır yönetici** kısayolu menüsü.
+- Windows Gezgini için: Yürütülebilir dosyayı seçin ve ardından **yönetici olarak çalıştır** kısayol menüsünden.
+
+### <a name="compile-the-client-application"></a>İstemci uygulaması derleme
+
+**'CalculatorClient' için bir tanım içermiyor '\<yöntem adı >' ve hiçbir uzantı metodu '\<yöntem adı >' kabul eden bir ilk bağımsız değişken türü 'CalculatorClient' bulunamadı (bir using eksik yönergesi veya bir bütünleştirilmiş kod Başvurusu?)**  
+
+WITH mark yöntemleri `ServiceOperationAttribute` özniteliği genel kullanıma sunulur. Atlarsanız `ServiceOperationAttribute` bir yöntemde özniteliğinden `ICalculator` arabirimi, derleme sırasında bu hata iletisini alırsınız.  
+
+**'CalculatorClient' bulunamadı tür veya ad alanı adı (bir using eksik yönergeniz veya derleme başvurunuz?)**
+
+ Eklemezseniz bu hata iletisini *generatedProxy.cs* (veya *generatedProxy.vb*) dosyası ile oluşturulmuş istemci projenize *Svcutil.exe* aracı .  
+
+### <a name="run-the-client-application"></a>İstemci uygulamasını çalıştırın
+
+**İşlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: Bağlanılamadı ' http:\//localhost:8000/GettingStarted/CalculatorService '. 10061 TCP hata kodu: Hedef makine etkin olarak reddettiğinden hiçbir bağlantı kurulamadı.**
+
+İstemci uygulama hizmeti başlatmadan çalıştırırsanız, bu hata oluşur. İlk olarak hizmeti başlatmak için ana bilgisayar uygulaması çalıştırın ve ardından istemci uygulamasını çalıştırın.
+
+### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe aracını kullanma
+   
+**'Svcutil' iç ya da dış komut, çalıştırılabilir program veya toplu iş dosyası tanınmıyor.**
+
+ *Svcutil.exe* sistem yolunda olmalıdır. Visual Studio Komut İstemi'ni kullanmak için en kolay çözümdür bakın. Gelen **Başlat** menüsünde **Visual Studio \<sürüm >** dizin ve select **VS için geliştirici komut istemi \<sürüm >**. Bu komut istemi, Visual Studio'nun bir parçası olarak gönderildiğini tüm araçları için doğru konuma sistem yolunu ayarlar.  
   
-**Svcutil.exe aracını çalışılıyor: 'svcutil' iç ya da dış komut, çalıştırılabilir program ya da toplu iş dosyası tanınmıyor.**
+### <a name="run-the-service-and-client-applications"></a>Hizmet ve istemci uygulamaları çalıştırın
 
- Svcutil.exe sistem yolunda olmalıdır. Kolay çözümü, komut istemini kullanmaktır. Tıklayın **Başlat**seçin **tüm programlar**, **Visual Studio \< *sürüm*>**,  **Visual Studio Araçları**, ve **Visual Studio için geliştirici komut istemi**. Bu komut istemi, Visual Studio'nun bir parçası olarak gönderildiğini tüm araçları için doğru konuma sistem yolunu ayarlar.  
+**System.ServiceModel.Security.SecurityNegotiationException: SOAP güvenlik anlaşması ' http:\//localhost:8000/GettingStarted/CalculatorService ' hedefi için ' http:\//localhost:8000/GettingStarted/CalculatorService ' başarısız oldu**  
 
-**Svcutil.exe'yi oluşturulan App.config dosyasını bulmak yüklenemiyor.**
+Ağ bağlantısı yok etki alanına katılmış bir bilgisayarda bu hata oluşur. Bilgisayarınız ağa bağlanmak veya güvenlik için hem hizmet hem de istemci kapatın. 
 
- **Varolan öğeyi Ekle** iletişim varsayılan olarak yalnızca şu uzantılara sahip dosyaları görüntüler: .cs, .resx, .settings, .xsd, .wsdl. Tüm dosya türlerini seçerek görmek istediğinizi belirtebilirsiniz **tüm dosyalar (\*.\*)**  alt sağ köşesinde aşağı açılan liste kutusunda **varolan öğeyi Ekle** iletişim kutusu.  
+Güvenliğin devre dışı bırakmak için:
 
-
-**İstemci uygulaması derleniyor: 'CalculatorClient' için bir tanım içermiyor '\<yöntem adı >' ve hiçbir uzantı metodu '\<yöntem adı >' kabul eden bir ilk bağımsız değişken türü 'CalculatorClient' bulunamadı (bir using eksik yönergesi veya bir bütünleştirilmiş kod Başvurusu?)**  
-
-İle işaretlenmiş yöntemler `ServiceOperationAttribute` dışında tüm dünyada kullanıma sunulur. Kaçırdıysanız `ServiceOperationAttribute` metotlarından birini özniteliğinden `ICalculator` arabirimi, bu hata iletisini özniteliği eksik işlemi çağrıda bir istemci uygulaması derlerken alın.  
-
-**İstemci uygulaması derleniyor: 'CalculatorClient' bulunamadı tür veya ad alanı adı (bir using eksik yönergeniz veya derleme başvurunuz?)**
-
- İstemci projenize Proxy.cs veya Proxy.vb dosya eklemezseniz bu hatayı alırsınız.  
-
-**İstemcisi çalıştıran: İşlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: Bağlanamadı `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. 10061 TCP hata kodu: Hedef makine etkin olarak reddettiğinden hiçbir bağlantı kurulamadı.**
-
-Hizmet çalıştırmadan istemci uygulaması, bu hata meydana gelir.  
+- Bir hizmeti oluşturan kodu değiştirin `WSHttpBinding` aşağıdaki kod ile:  
   
-**İşlenmeyen özel durum: System.ServiceModel.Security.SecurityNegotiationException: SOAP güvenlik anlaşması `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` hedefi için `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` başarısız oldu**  
+    ```csharp
+    // Step 3: Add a service endpoint.
+    selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
+    ```
 
-Ağ bağlantısı yok. etki alanına katılmış bir bilgisayarda bu hata oluşur. Bilgisayarınız ağa bağlanmak veya hem istemci hem de hizmet için güvenliği devre dışı. Hizmet için şu WSHttpBinding oluşturan kodu değiştirin.  
+- Yapılandırma dosyasında istemci güncelleştirme  **\<Güvenlik >** öğesi altında  **\<bağlama >** öğesi aşağıdaki gibi:  
   
-```csharp
-// Step 3 of the hosting procedure: Add a service endpoint  
-selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
-```
+    ```xml
+    <binding name="WSHttpBinding_ICalculator" security mode="None" />
+    ```  
 
-İstemci için değiştirme  **\<Güvenlik >** öğesi altında  **\<bağlama >** aşağıdaki öğe:  
-  
-```xml
-<security mode="Node" />  
-```  
-
-## <a name="see-also"></a>Ayrıca bkz.
-- [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [WCF Sorun Giderme Hızlı Başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)
-- [Kurulum Sorunlarını Giderme](../../../docs/framework/wcf/troubleshooting-setup-issues.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [WCF uygulamaları ile çalışmaya başlama](getting-started-tutorial.md)  
+ [WCF sorun giderme hızlı başlangıç](wcf-troubleshooting-quickstart.md)  
+ [Kurulum sorunlarını giderme](troubleshooting-setup-issues.md)

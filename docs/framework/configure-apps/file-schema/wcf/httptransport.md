@@ -2,12 +2,12 @@
 title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: c7f34933331d2ba5d04fb338f553ffd662e8cac9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f529cd5290c74999a010381fadfb94ea9a4d515e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275112"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408944"
 ---
 # <a name="httptransport"></a>\<httpTransport >
 İçin özel bir bağlama için SOAP iletilerini ileten bir HTTP aktarımı belirtir.  
@@ -45,18 +45,18 @@ ms.locfileid: "55275112"
 |allowCookies|İstemcinin tanımlama bilgilerini kabul eder ve bunları gelecekteki isteklerde yayar belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Tanımlama bilgileri kullanan ASMX Web Hizmetleri ile etkileşim kurduğunuzda bu özniteliği kullanabilirsiniz. Bu şekilde, sunucudan döndürülen tanımlama bilgilerini aydaki hizmet için tüm istemci isteklerini otomatik olarak kopyalanır emin olabilirsiniz.|  
 |AuthenticationScheme|HTTP dinleyicisi tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan protokolü belirtir. Geçerli değerler şunlardır:<br /><br /> -Özet: Özet kimlik doğrulaması belirtir.<br />-Anlaşma: Kimlik doğrulama düzeni belirlemek için istemci ile görüşür. İstemci ve sunucu Kerberos destekliyorsa, kullanılır; Aksi takdirde, NTLM kullanılır.<br />-   Ntlm: NTLM kimlik doğrulaması belirtir.<br />-Temel: Temel kimlik doğrulaması belirtir.<br />-Anonim: Anonim kimlik doğrulaması belirtir.<br /><br /> Anonim varsayılandır. Bu öznitelik türünde <xref:System.Net.AuthenticationSchemes>. Bu öznitelik yalnızca bir kez ayarlanabilir.|  
 |bypassProxyOnLocal|Yerel adresler için proxy sunucusunun atlanıp atlanmayacağını gösteren bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Yerel Adres yerel ağ veya intranet biridir.<br /><br /> Windows Communication Foundation (WCF) hizmeti adresi ile başlıyorsa proxy her zaman yoksayar `http://localhost`.<br /><br /> Hizmetler için aynı makinede konuşurken bir proxy üzerinden Git istemcilerin istiyorsanız localhost yerine ana bilgisayar adı kullanmanız gerekir.|  
-|hostnameComparisonMode|URI ayrıştırmak için kullanılan HTTP ana bilgisayar adını karşılaştırma modunu belirtir. Geçerli değerler,<br /><br /> -StrongWildcard: ("+") bağlamında belirtilen şema, bağlantı noktası ve göreli URI, tüm olası ana bilgisayar adları ile eşleşir.<br />-Tam: joker<br />-WeakWildcard: ("\*") bağlamında belirtilen şema, bağlantı noktası ve açıkça eşlenen olmayan göreli UIR ya da güçlü bir joker karakter mekanizması aracılığıyla olası tüm ana bilgisayar adı ile eşleşir.<br /><br /> StrongWildcard varsayılandır. Bu öznitelik türünde `System.ServiceModel.HostnameComparisonMode`.|  
+|hostnameComparisonMode|URI ayrıştırmak için kullanılan HTTP ana bilgisayar adını karşılaştırma modunu belirtir. Geçerli değerler,<br /><br /> -StrongWildcard: ("+") bağlamında belirtilen şema, bağlantı noktası ve göreli URI, tüm olası ana bilgisayar adları ile eşleşir.<br />-Tam: joker<br />-WeakWildcard: ("\*") bağlamında belirtilen şema, bağlantı noktası ve açıkça eşlenen olmayan göreli UIR ya da güçlü bir joker karakter mekanizması aracılığıyla olası tüm ana bilgisayar adı ile eşleşir.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.HostNameComparisonMode>. Varsayılan, <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> değeridir.|  
 |keepAliveEnabled|Internet kaynağıyla kalıcı bir bağlantı kurmak belirten bir Boole değeri.|  
 |maxBufferSize|Arabelleğin en büyük boyutunu belirten pozitif bir tamsayı. 524288 varsayılandır|  
 |proxyAddress|HTTP proxy adresini belirten bir URI. Varsa `useSystemWebProxy` olduğu `true`, bu ayar olmalıdır `null`. Varsayılan, `null` değeridir.|  
-|proxyAuthenticationScheme|HTTP proxy tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan protokolü belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması gerçekleştirilir.<br />-Özet: Özet kimlik doğrulaması belirtir.<br />-Anlaşma: Kimlik doğrulama düzeni belirlemek için istemci ile görüşür. İstemci ve sunucu Kerberos destekliyorsa, kullanılır; Aksi takdirde, NTLM kullanılır.<br />-   Ntlm: NTLM kimlik doğrulaması belirtir.<br />-Temel: Temel kimlik doğrulaması belirtir.<br />-Anonim: Anonim kimlik doğrulaması belirtir.<br /><br /> Anonim varsayılandır. Bu öznitelik türünde <xref:System.Net.AuthenticationSchemes>. Unutmayın `IntegratedWindowsAuthentication` desteklenmiyor.|  
+|proxyAuthenticationScheme|HTTP proxy tarafından işlenen istemci isteklerinin kimliğini doğrulamak için kullanılan protokolü belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması gerçekleştirilir.<br />-Özet: Özet kimlik doğrulaması belirtir.<br />-Anlaşma: Kimlik doğrulama düzeni belirlemek için istemci ile görüşür. İstemci ve sunucu Kerberos destekliyorsa, kullanılır; Aksi takdirde, NTLM kullanılır.<br />-   Ntlm: NTLM kimlik doğrulaması belirtir.<br />-Temel: Temel kimlik doğrulaması belirtir.<br />-Anonim: Anonim kimlik doğrulaması belirtir.<br /><br /> Anonim varsayılandır. Bu öznitelik türünde <xref:System.Net.AuthenticationSchemes>. Unutmayın <xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType> desteklenmiyor.|  
 |Bölge|Proxy/sunucuda kullanmak için ölge belirten bir dize. Varsayılan değer boş bir dizedir.<br /><br /> Sunucuları, korumalı kaynakların bölümlemek için bölgeleri kullanır. Her bölüm kendi kimlik doğrulama şeması ve/veya yetkilendirme veritabanına sahip olabilir. Bölge kullanımını etkinleştir, yalnızca temel için kullanılır ve Özet kimlik doğrulaması. Bir istemcinin kimliğini başarıyla doğrulayan, sonra kimlik doğrulama, belirli bir bölgedeki tüm kaynaklar için geçerlidir. RFC 2617 en bölgeleri ayrıntılı bir açıklaması için bkz. [IETF Web sitesi](https://www.ietf.org).|  
 |transferMode|İletileri ara belleğe veya akışa veya bir istek belirtir veya yanıt. Geçerli değerler şunlardır:<br /><br /> -Arabelleğe alındı: İstek ve yanıt iletileri arabelleğe alınır.<br />-Akış: İstek ve yanıt iletilerinin aktarılır.<br />-StreamedRequest: İstek iletisi sağlanacağına ve yanıt iletisi arabelleğe alındı.<br />-   StreamedResponse: İstek iletisi arabelleğe alınır ve yanıt iletisi akış.<br /><br /> Varsayılan arabelleğe alınır. Bu öznitelik türünde <xref:System.ServiceModel.TransferMode> .|  
 |unsafeConnectionNtlmAuthentication|Güvensiz bağlantı paylaşımının sunucu üzerinde etkin olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir. Etkinleştirilirse, NTLM kimlik doğrulaması her TCP bağlantısı için bir kez gerçekleştirilir.|  
 |useDefaultWebProxy|Makine genelindeki proxy ayarlarının kullanıcıya özel ayarlar yerine kullanılır olup olmadığını belirten bir Boole değeri. Varsayılan, `true` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

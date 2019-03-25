@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377272"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412168"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu, örneğine genel bakış sağlar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılan yazı tipleri [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılabilen özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -34,8 +34,7 @@ Bu konu, örneğine genel bakış sağlar. [!INCLUDE[TLA#tla_opentype](../../../
   
  Aşağıdaki çizimde örnek [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı aramak gibi.  
   
- ![Örnek yazı tipi paketi yazı tipi adları listesi](./media/samplefontpack01.gif "samplefontpack01")  
-OpenType yazı tipi paketi yazı tipleri  
+ ![Örnek yazı tipi paketi yazı tipi adları listesi](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
  Örnek yazı tiplerinin lisans Ascender Corporation'ın altında sağlanır. Ascender gelişmiş yazı tipi ürünlerinin bir sağlayıcıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerinin lisansı için bkz: [Ascender Corporation'ın Web sitesi](https://go.microsoft.com/fwlink/?LinkId=182627).  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352782"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409412"
 ---
 # <a name="optimizing-performance-text"></a>Performansı iyileştirme: Metin
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak zengin metin içeriği sunumunu desteği içeren [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak, üç katmanda metin işleme ayırabilirsiniz:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352782"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Köprüleri MouseEnter olay üzerinde yalnızca alt çizgiler gösteriliyor  
  A <xref:System.Windows.TextDecoration> nesne metni ekleyebileceğiniz görsel bir süsleme; ancak, örneklemek için yoğun performans olabilir. Kapsamlı kullanımını yaparsanız <xref:System.Windows.Documents.Hyperlink> öğeleri göz önünde bulundurun altçizgi gibi yalnızca bir olay tetiklendiğinde gösteren <xref:System.Windows.ContentElement.MouseEnter> olay. Daha fazla bilgi için [belirtin olmadığını köprünün altı çizilir](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![TextDecorations görüntüleyen köprüler](./media/textdecoration03.png "TextDecoration03")  
-MouseEnter üzerinde köprü  
+  Aşağıdaki görüntüde, nasıl köprünün altı çizili MouseEnter olayı tetikler gösterilmektedir:
+
+  ![Köprüler TextDecorations görüntüleme](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  Aşağıdaki biçimlendirme örnek gösterildiği bir <xref:System.Windows.Documents.Hyperlink> ve alt çizgi olmadan tanımlanan:  
   

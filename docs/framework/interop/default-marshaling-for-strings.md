@@ -1,5 +1,5 @@
 ---
-title: Dizeler için Varsayılan Sıralama
+title: Dizeler için Varsayılan Hazırlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221075"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409321"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 Hem <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıflar benzer hazırlama davranışı sahiptir.  
@@ -220,7 +220,7 @@ struct StringInfoT {
   
  Çözüm geçirmektir bir <xref:System.Text.StringBuilder> bağımsız değişkeni bir dize yerine arabellek. A `StringBuilder` başvurusu ve kapasitesini aşmadığından sağlanan Aranan tarafından değiştirilen `StringBuilder`. Sabit uzunluk için de yeniden başlatılabilir. Örneğin, başlatma, bir `StringBuilder` kapasitesi arabelleğe `N`, Sıralayıcı bir arabellek boyutunu sağlar (`N`+ 1) karakter. Yönetilmeyen dize bir null Sonlandırıcı çalışırken sahip olgu + 1 hesaplar `StringBuilder` desteklemez.  
   
- Örneğin, Microsoft Win32 API `GetWindowText` (Windows.h içinde tanımlanmıştır) yönetilebilmesini yönetilmeyen koda geçirilmelidir sabit uzunluklu karakteri arabellek işlevdir. `LpString` işaret boyutu arayana ayrılan arabelleğe `nMaxCount`. Çağıranın arabellek ayırmak ve ayarlamak için beklenen `nMaxCount` bağımsız değişkeni için ayrılan arabelleğin boyutu. Aşağıdaki kodda gösterildiği `GetWindowText` işlevi bildiriminde Windows.h içinde tanımlanan.  
+ Örneğin, Microsoft Windows API `GetWindowText` (Windows.h içinde tanımlanmıştır) yönetilebilmesini yönetilmeyen koda geçirilmelidir sabit uzunluklu karakteri arabellek işlevdir. `LpString` işaret boyutu arayana ayrılan arabelleğe `nMaxCount`. Çağıranın arabellek ayırmak ve ayarlamak için beklenen `nMaxCount` bağımsız değişkeni için ayrılan arabelleğin boyutu. Aşağıdaki kodda gösterildiği `GetWindowText` işlevi bildiriminde Windows.h içinde tanımlanan.  
   
 ```  
 int GetWindowText(  

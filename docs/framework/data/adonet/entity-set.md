@@ -2,12 +2,12 @@
 title: Varlık kümesi
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 3cd212c0bf5eefb73a87aa01c9403d6f2304d506
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557126"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412194"
 ---
 # <a name="entity-set"></a>Varlık kümesi
 Bir *varlık kümesi* için mantıksal bir kapsayıcıdır örneklerini bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve bu varlık türünden türetilmiş herhangi bir tür örneği. (Türetilen türleri hakkında daha fazla bilgi için bkz. [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Bir varlık türü ve bir varlık kümesi arasındaki ilişki, satır ve ilişkisel bir veritabanındaki bir tablo arasındaki ilişkiyi benzerdir: Bir satır gibi bir varlık türü, veri yapısını açıklar ve bir tablo gibi belirli bir yapının örneği bir varlık kümesini içerir. Bir varlık kümesindeki bir veri yapısı modelleme değil; verilerin yapısını açıklamaz. Bir veri deposuna eşlenebilir bunun yerine, bir varlık kümesindeki bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup varlık türü örneklerine sağlar.  
@@ -30,11 +30,11 @@ Bir *varlık kümesi* için mantıksal bir kapsayıcıdır örneklerini bir [var
 ## <a name="example"></a>Örnek  
  Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`.  
   
- ![Örnek Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Üç varlık türleri ile örnek modeli](./media/entity-set/example-model-three-entity-types.gif)  
   
  Aşağıdaki diyagramda iki varlık kümelerini gösterir (`Books` ve `Publishers`) ve ilişkilendirme ayarlayın (`PublishedBy`) yukarıda gösterilen kavramsal model göre. İçinde BI `Books` varlık kümesini temsil eden bir örneğini `Book` çalışma zamanında varlık türü. Benzer şekilde, Pj temsil eden bir `Publisher` örneğini `Publishers` varlık kümesi. BiPj örneğini temsil eder `PublishedBy` ilişkilendirmeyi `PublishedBy` ilişki kümesi.  
   
- ![Örnek ayarlar](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Kümeleri örnek gösteren ekran görüntüsü.](./media/entity-set/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL, yukarıda gösterilen kavramsal modeldeki her bir varlık türü için bir varlık ile varlık kapsayıcısı tanımlar. Her varlık kümesi için ad ve varlık türü Not, XML öznitelikleri kullanılarak tanımlanır.  
   

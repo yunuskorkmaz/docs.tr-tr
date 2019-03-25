@@ -2,12 +2,12 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 85a9112def77fc31c8e4b826454894fe7372b31b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 692c4cf6688bfc2f9b99f065f4b16711f7f08063
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257661"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412051"
 ---
 # <a name="nettcp"></a>\<NET.TCP >
 Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı birden çok işlem aynı TCP bağlantı noktasını paylaşmasına izin veren hizmeti.  
@@ -55,7 +55,7 @@ Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı b
 |`listenBacklog`|Paylaşılan bağlantıdan kabul edilir, ancak henüz Windows Communication Foundation (WCF) hizmetlerine gönderilen değil bekleyen en yüksek bağlantı belirten bir tamsayı. Varsayılan değer 10'dur.|  
 |`maxPendingAccepts`|Hizmetler için olan uç noktaları en fazla bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı. Varsayılan değer 2'dir.|  
 |`MaxPendingConnections`|Uygulama tarafından kabul edilmeyi bekliyor dinleyicinin sahip olabileceği bağlantıları sayısı. Bu kota değeri aşıldığında, yeni gelen bağlantılar kesilir yerine kabul edilmeyi bekliyor. Bağlantı özellikleri ileti güvenliği gibi birden fazla bağlantı açmak bir istemci neden olabilir. Hizmet yöneticileri, bu ek bağlantılar için bu kota değeri ayarlarken hesap. Varsayılan değer 10'dur.|  
-|`receiveTimeout`|A `TimeSpan` ve çerçeveleme verilerini okumak ve altı çizili bağlantılardan bağlantı dağıtımını gerçekleştirmek için zaman aşımını belirtir. Varsayılan değer "00: 00:10".|  
+|`receiveTimeout`|A <xref:System.TimeSpan> ve çerçeveleme verilerini okumak ve altı çizili bağlantılardan bağlantı dağıtımını gerçekleştirmek için zaman aşımını belirtir. Varsayılan değer "00: 00:10".|  
 |`teredoEnabled`|Hizmet bağlantı noktası WCF hizmetlerinin adına TCP bağlantı noktalarında dinlemek için Microsoft Teredo hizmetini kullanıp kullanmadığını gösteren bir Boole değeri. Varsayılan, `false` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

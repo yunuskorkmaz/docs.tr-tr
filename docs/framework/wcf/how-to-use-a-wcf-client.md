@@ -1,34 +1,38 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Communication Foundation istemcisi kullanma'
-ms.date: 09/14/2018
+title: 'Öğretici: Bir Windows Communication Foundation istemcisi kullanma'
+ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250929"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411726"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation istemcisi kullanma
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Öğretici: Bir Windows Communication Foundation istemcisi kullanma
 
-Son altı görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev son açıklanmaktadır. Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-Bir Windows Communication Foundation (WCF) proxy oluşturulup yapılandırıldıktan sonra bir istemci örneği oluşturulabilir ve istemci uygulaması derlenmiş ve WCF Hizmeti ile iletişim kurmak için kullanılan. Bu konuda, örnekleme ve bir WCF istemcisi kullanarak yordamlar açıklanmaktadır. Bu yordam, üç şeyi yapar:
+Oluşturduğunuz ve Windows Communication Foundation (WCF) proxy yapılandırılan sonra bir istemci örneği oluşturun ve istemci uygulamayı derleyin. Ardından, WCF Hizmeti ile iletişim kurmak için kullanabilirsiniz. 
 
-1.  Bir WCF istemcisi örneği oluşturur.
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+> [!div class="checklist"]
+> - WCF istemcisini kullanmak için kodu ekleyin.
+> - WCF istemcisini test edin.
 
-2.  Hizmet işlemleri üretilen Ara sunucuya çağırır.
+## <a name="add-code-to-use-the-wcf-client"></a>WCF istemcisini kullanmak için kodu ekleyin
 
-3.  İstemci işlem çağrısı tamamlandığında kapatır.
+İstemci kodu, aşağıdaki adımları gerçekleştirir:
+- WCF istemcisi örneği oluşturur.
+- Hizmet işlemleri üretilen Ara sunucuya çağırır.
+- İşlem çağrısı tamamlandıktan sonra istemci kapatır.
 
-## <a name="use-a-windows-communication-foundation-client"></a>Bir Windows Communication Foundation istemcisi kullanma
-
-GettingStartedClient projeden Program.cs veya Program.vb dosyasını açın ve varolan kodu aşağıdaki kodla değiştirin:
+Açık **Program.cs** veya **Module1.vb** dosya **GettingStartedClient** proje ve onun kodu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -71,7 +75,9 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
-            //Step 3: Closing the client gracefully closes the connection and cleans up resources.
+            // Step 3: Close the client to gracefully close the connection and clean up resources.
+            Console.WriteLine("\nPress <Enter> to terminate the client.");
+            Console.ReadLine();
             client.Close();
         }
     }
@@ -83,89 +89,108 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
-Imports GettingStartedClientVB2.ServiceReference1
+Imports GettingStartedClient.ServiceReference1
 
 Module Module1
 
     Sub Main()
-        ' Step 1: Create an instance of the WCF proxy
+        ' Step 1: Create an instance of the WCF proxy.
         Dim Client As New CalculatorClient()
 
-        'Step 2: Call the service operations.
-        'Call the Add service operation.
+        ' Step 2: Call the service operations.
+        ' Call the Add service operation.
         Dim value1 As Double = 100D
         Dim value2 As Double = 15.99D
         Dim result As Double = Client.Add(value1, value2)
         Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Subtract service operation.
+        ' Call the Subtract service operation.
         value1 = 145D
         value2 = 76.54D
         result = Client.Subtract(value1, value2)
         Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Multiply service operation.
+        ' Call the Multiply service operation.
         value1 = 9D
         value2 = 81.25D
         result = Client.Multiply(value1, value2)
         Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Divide service operation.
+        ' Call the Divide service operation.
         value1 = 22D
         value2 = 7D
         result = Client.Divide(value1, value2)
         Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
 
-        ' Step 3: Closing the client gracefully closes the connection and cleans up resources.
-        Client.Close()
-
+        ' Step 3: Close the client to gracefully close the connection and clean up resources.
         Console.WriteLine()
-        Console.WriteLine("Press <ENTER> to terminate client.")
+        Console.WriteLine("Press <Enter> to terminate the client.")
         Console.ReadLine()
+        Client.Close()
 
     End Sub
 
 End Module
 ```
 
-Bildirim `using` veya `Imports` Imports deyimi `GettingStartedClient.ServiceReference1`. Bu tarafından oluşturulan kodu alır **hizmet Başvurusu Ekle** Visual Studio'da. Kod WCF proxy başlatır ve ardından her biri hesap makinesi hizmet tarafından sunulan hizmet işlemleri çağırır, proxy kapatır ve sonlandırır.
+Bildirim `using` (görsel için C#) veya `Imports` (Visual Basic için) Imports deyimi `GettingStartedClient.ServiceReference1`. Visual Studio ile oluşturulan kodu bu açıklamayı **hizmet Başvurusu Ekle** işlevi. Kod, WCF proxy başlatır ve hesaplayıcı hizmetini gösteren service işlemlerden her biriyle çağırır. Ardından, proxy kapatır ve program sona erer.
 
-Öğreticiyi tamamladınız. Bir hizmet sözleşmesini tanımlanan, hizmet sözleşmesi uygulanan, WCF proxy oluşturulan, WCF istemci uygulaması yapılandırılmış ve sonra hizmet işlemlerini aramak için Ara sunucu kullanılır. Uygulamayı test etmek için önce GettingStartedHost hizmeti başlatın ve ardından GettingStartedClient çalıştırmak için Çalıştır.
+## <a name="test-the-wcf-client"></a>WCF istemcisini test etme
 
-GettingStartedHost çıktısı gibi görünmelidir:
+### <a name="test-the-application-from-visual-studio"></a>Uygulamayı Visual Studio'dan Test etme
 
-```text
-The service is ready.
-Press <ENTER> to terminate service.
+1. Kaydet ve Çözümü derleyin.
 
-Received Add(100,15.99)
-Return: 115.99
-Received Subtract(145,76.54)
-Return: 68.46
-Received Multiply(9,81.25)
-Return: 731.25
-Received Divide(22,7)
-Return: 3.14285714285714
-```
+2. Seçin **GettingStartedLib** klasöre tıklayın ve ardından **başlangıç projesi olarak ayarla** kısayol menüsünden.
 
-GettingStartedClient çıktısı gibi görünmelidir:
+3. Gelen **başlangıç projelerini**seçin **GettingStartedLib** aşağı açılan listeden seçip **çalıştırma** veya basın **F5**.
 
-```text
-Add(100,15.99) = 115.99
-Subtract(145,76.54) = 68.46
-Multiply(9,81.25) = 731.25
-Divide(22,7) = 3.14285714285714
+### <a name="test-the-application-from-a-command-prompt"></a>Bir komut isteminden uygulamayı test etme
 
-Press <ENTER> to terminate client.
-```
+1. Bir yönetici olarak bir komut istemi açın ve ardından, Visual Studio çözüm dizinine gidin. 
 
-## <a name="see-also"></a>Ayrıca bkz.
+2. Hizmeti başlatmak için: Girin *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
 
-- [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)
-- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
+3. İstemcisini başlatmak için: Başka bir komut istemi açın, Visual Studio çözüm dizinine gidin ve ardından girin *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
+
+   *GettingStartedHost.exe* aşağıdaki çıktıyı üretir:
+
+   ```text
+   The service is ready.
+   Press <Enter> to terminate the service.
+
+   Received Add(100,15.99)
+   Return: 115.99
+   Received Subtract(145,76.54)
+   Return: 68.46
+   Received Multiply(9,81.25)
+   Return: 731.25
+   Received Divide(22,7)
+   Return: 3.14285714285714
+   ```
+
+   *GettingStartedClient.exe* aşağıdaki çıktıyı üretir:
+
+   ```text
+   Add(100,15.99) = 115.99
+   Subtract(145,76.54) = 68.46
+   Multiply(9,81.25) = 731.25
+   Divide(22,7) = 3.14285714285714
+
+   Press <Enter> to terminate the client.
+   ```
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+WCF başlangıç Öğreticisi artık tüm görevleri tamamladınız. Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+> [!div class="checklist"]
+> - WCF istemcisini kullanmak için kodu ekleyin.
+> - WCF istemcisini test edin.
+
+Sorunlar veya hatalar adımların hiçbirini varsa, bunları gidermek için sorun giderme makalesindeki adımları izleyin.
+
+> [!div class="nextstepaction"]
+> [Sorun giderme Get ile WCF Eğitmenleri](troubleshooting-the-getting-started-tutorial.md)
+
