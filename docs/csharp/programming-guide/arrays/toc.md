@@ -1,8 +1,0 @@
-# [Diziler](index.md)
-## [Nesne Olarak Diziler](arrays-as-objects.md)
-## [Tek Boyutlu Diziler](single-dimensional-arrays.md)
-## [Çok Boyutlu Diziler](multidimensional-arrays.md)
-## [Düzensiz Diziler](jagged-arrays.md)
-## [Dizilerle foreach kullanma](using-foreach-with-arrays.md)
-## [Dizileri Bağımsız Değişkenler Olarak Geçirme](passing-arrays-as-arguments.md)
-## [Örtük Olarak Yazılan Diziler](implicitly-typed-arrays.md)
