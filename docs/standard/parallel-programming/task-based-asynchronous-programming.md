@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268034"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409932"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
@@ -236,7 +236,7 @@ Katılan iş parçacığına özel durumları erişerek işleyebilir <xref:Syste
 
 ## <a name="canceling-tasks"></a>Görevleri iptal etme
 
-`Task` Sınıfı, ortak iptali destekler ve tam olarak tümleşiktir <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> ve <xref:System.Threading.CancellationToken?displayProperty=nameWithType> .NET Framework 4'te tanıtılan sınıfları. Oluşturucuların birçoğu <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfındaki oluşturucuların bir <xref:System.Threading.CancellationToken> giriş parametresi olarak nesnesi. Çoğu <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> ve <xref:System.Threading.Tasks.Task.Run%2A> aşırı yüklemeleri de dahil bir <xref:System.Threading.CancellationToken> parametresi.
+<xref:System.Threading.Tasks.Task> Sınıfı, ortak iptali destekler ve tam olarak tümleşiktir <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> ve <xref:System.Threading.CancellationToken?displayProperty=nameWithType> .NET Framework 4'te tanıtılan sınıfları. Oluşturucuların birçoğu <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfındaki oluşturucuların bir <xref:System.Threading.CancellationToken> giriş parametresi olarak nesnesi. Çoğu <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> ve <xref:System.Threading.Tasks.Task.Run%2A> aşırı yüklemeleri de dahil bir <xref:System.Threading.CancellationToken> parametresi.
 
 Belirteci oluşturmak ve kullanarak bazı daha sonraki bir zamanda iptal isteğini sorun <xref:System.Threading.CancellationTokenSource> sınıfı. İçin belirtecin geçip <xref:System.Threading.Tasks.Task> olan bir bağımsız değişken ve kullanıcı temsilcinizde aynı belirtece başvuru da, bir iptal isteğine yanıt verme işini yapar.
 
