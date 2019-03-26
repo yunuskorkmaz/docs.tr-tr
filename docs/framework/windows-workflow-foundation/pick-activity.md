@@ -2,19 +2,19 @@
 title: Pick etkinliği
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 7626dda3689f89831d98ad484d7eab62c25def5b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717953"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409997"
 ---
 # <a name="pick-activity"></a>Pick etkinliği
 <xref:System.Activities.Statements.Pick> Modelleme olay tetikleyicilerini karşılık gelen işleyicilerini tarafından izlenen bir dizi etkinlik basitleştirir.  A <xref:System.Activities.Statements.Pick> etkinliği içeren bir koleksiyonu <xref:System.Activities.Statements.PickBranch> etkinlikleri, burada her <xref:System.Activities.Statements.PickBranch> arasında eşleştirme olduğu bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> etkinliği ve bir <xref:System.Activities.Statements.PickBranch.Action%2A> etkinlik.  Yürütme sırasında tüm dallar için Tetikleyiciler paralel olarak yürütülür.  Bir tetikleyici tamamlandığında, karşılık gelen eylemi yürütülür ve diğer tüm tetikleyiciler iptal edilir.  Davranışını [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> etkinlik benzer [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> etkinlik.  
   
  Aşağıdaki ekran görüntüsünden [çekme etkinliğini kullanarak](./samples/using-the-pick-activity.md) SDK'sı örneği bir Pick etkinliği iki dal ile gösterir.  Bir dal olarak adlandırılan bir tetikleyici sahip **okuma giriş**, komut satırından giriş okuyan özel bir etkinlik. İkinci dalında olan bir <xref:System.Activities.Statements.Delay> etkinlik tetikleyici. Varsa **okuma giriş** etkinlik önce veri aldığında <xref:System.Activities.Statements.Delay> etkinlik bittiğinde <xref:System.Activities.Statements.Delay> gecikme iptal edildi ve bir karşılama konsoluna yazılır.  Aksi takdirde **okuma giriş** etkinlik ayrılan sürede veri almaz sonra iptal edilecek ve bir zaman aşımı iletisi konsoluna yazılır.  Bu, bir zaman aşımı için herhangi bir eylem eklemek için kullanılan ortak bir desendir.  
   
- ![Pick etkinliği](./media/pickconceptual.JPG "PickConceptual")  
+ ![Pick etkinliği](./media/pick-activity/pick-activity-two-branches.jpg)  
   
 ## <a name="best-practices"></a>Önerilen uygulamalar  
  Seçim kullanırken, yürütülen dal tetikleyicisini ilk tamamlandıktan daldır.  Kavramsal olarak, tüm tetikleyiciler paralel olarak yürütmek ve başka bir tetikleyici tamamlanmasından tarafından iptal edilmeden önce bir tetikleyici mantığını çoğunu yürütülen.  Tetikleyici temsil eden tek bir olay olarak kabul ve mümkün olduğunca az mantıksal olarak içine yerleştirmek için bunu aklınızda Pick etkinliği kullanma değiştirirken izlemeniz gereken genel kılavuz sağlamaktır.  İdeal olarak, tetikleyici olaya almak için yeterli mantıksal içermelidir ve bu olayın tüm işleme dalın eylemlere tamamlamalıdır.  Bu yöntem Tetikleyiciler yürütülmesi arasında çakışma miktarını en aza indirir.  Örneğin, göz önünde bulundurun bir <xref:System.Activities.Statements.Pick> burada her tetikleyicisi içeren iki tetikleyicilerle bir <xref:System.ServiceModel.Activities.Receive> etkinliği izleyen tarafından ilave bir mantık.  İlave bir mantık boşta noktanız tanıtır sonra her ikisi de olasılığı yoktur <xref:System.ServiceModel.Activities.Receive> tamamlanmasıyla etkinlikler.  Bir tetikleyici olacak tam olarak tam, başka bir işlem sırasında kısmen tamamlandı.  Bazı senaryolarda, bir ileti kabul etmek ve kısmen işlenmesini Tamamlanıyor kabul edilebilir değil.  Bu nedenle, WF yerleşik Mesajlaşma etkinlikleri gibi kullanırken <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply>, ancak <xref:System.ServiceModel.Activities.Receive> tetikleyici, yaygın olarak kullanılan <xref:System.ServiceModel.Activities.SendReply> ve başka bir mantık eylemi mümkün olduğunca koymanız gerekir.  

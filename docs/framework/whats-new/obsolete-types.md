@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049731"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412350"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar, artık kullanılmayan türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenmiş. Eski türler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz. [eski üyeler](obsolete-members.md).
@@ -205,7 +205,7 @@ ms.locfileid: "58049731"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Bu arabirimi kullanım dışıdır. Ekleme bir <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> türünü işleyecek şekilde <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> yerine.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Kullanım <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> bunun yerine yeni ayarları modeli ile çalışmak üzere.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Bu öznitelik kullanım dışıdır. Bunun yerine <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> kullanın. Örneğin, bir kök Tasarımcı codeDom belirtmek için kullanın `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Bu öznitelik kullanım dışıdır. Bunun yerine <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> kullanın.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır. Performans sayaçlarını aracılığıyla <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> bunun yerine sınıf.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Bu sınıf kullanım dışıdır. Lütfen kullanın <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> yerine erişim ve global varsayılan ara sunucu ayarlayın. Kullanmak yerine 'null' <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|

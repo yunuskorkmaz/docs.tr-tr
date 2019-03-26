@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308068"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410075"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Öğretici: Bir film öneren ML.NET ile oluşturma
 
@@ -106,7 +106,7 @@ Film derecelendirme Derecelendirme sütunu, bu nedenle tahmin etmek istediğiniz
 | Özellikler      | Etiketle         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 Hangi karar vermek için size kalmıştır `Features` tahmin etmek için kullanılan `Label`. Gibi yöntemleri de kullanabilirsiniz [özellik permütasyon önem](../how-to-guides/determine-global-feature-importance-in-model.md) en iyi seçme ile yardımcı olmak için `Features`.
@@ -116,7 +116,7 @@ Bu durumda, ortadan `timestamp` sütun olarak bir `Feature` zaman damgası gerç
 | Özellikler      | Etiketle         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 Sonraki giriş sınıfı için data yapınız tanımlamanız gerekir.
 

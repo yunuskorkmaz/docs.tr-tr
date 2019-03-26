@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377410"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412324"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 denetimini barındırma
 Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
@@ -23,9 +23,9 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu konu, hem WPF ve Win32 programlama temel olarak bilindiğini varsayar. WPF programlama temel bir giriş için bkz: [Başlarken](../getting-started/index.md). Win32 programlamaya giriş için herhangi bir konu çok sayıda kitaplar özellikle başvurmalısınız *Windows programlama* Charles Petzold ile.  
+ Bu konu, hem WPF hem de Windows API programlama temel olarak bilindiğini varsayar. WPF programlama temel bir giriş için bkz: [Başlarken](../getting-started/index.md). Windows API programlamaya giriş için çok sayıda kitaplardan herhangi birine konuyla ilgili özellikle bkz *Windows programlama* Charles Petzold ile.  
   
- Bu konuda eşlik eden örnek uygulandığından C#, Win32 API erişmek için Platform çağırma Hizmetleri (PInvoke) kullanan kolaylaştırır. PInvoke bazı konusunda yararlı ancak temel değildir.  
+ Bu konuda eşlik eden örnek uygulandığından C#, kolaylaştırır Windows API'sine erişmeniz için Platform çağırma Hizmetleri (PInvoke) kullanın. PInvoke bazı konusunda yararlı ancak temel değildir.  
   
 > [!NOTE]
 >  Bu konuda, ilişkili örnekteki kod örnekleri içerir. Ancak, okunabilirlik için tam örnek kod içermez. Edinebilir veya gelen tam kod [bir WPF Örneği Win32 ListBox denetiminde barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control).  

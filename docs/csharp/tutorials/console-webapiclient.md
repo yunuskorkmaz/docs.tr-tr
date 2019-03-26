@@ -3,12 +3,12 @@ title: .NET Core kullanarak bir REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846174"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412311"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -213,9 +213,9 @@ Derleme ve uygulamayı çalıştırın. .NET Foundation'ın yer depolar adların
 
 ## <a name="controlling-serialization"></a>Serileştirme denetleme
 
-Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla standart C# kurallarına uygun hale getirebilirsiniz. Bu açıklama ekleyerek yaparsınız `repo` tür *öznitelikleri* JSON serileştirici nasıl çalıştığını denetleyen. Sizin durumunuzda, bu öznitelikler JSON anahtar adlarını ve C# sınıf ve üye adları arasında bir eşleme tanımlamak için kullanırsınız. Kullanılan iki öznitelikleri `DataContract` özniteliği ve `DataMember` özniteliği. Kural gereği, tüm öznitelik sınıfları soneki bitiş `Attribute`. Ancak, bir öznitelik uygulamak soneki kullanın gerekmez.
+Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla standart C# kurallarına uygun hale getirebilirsiniz. Bu açıklama ekleyerek yaparsınız `repo` tür *öznitelikleri* JSON serileştirici nasıl çalıştığını denetleyen. Sizin durumunuzda, bu öznitelikler JSON anahtar adlarını ve C# sınıf ve üye adları arasında bir eşleme tanımlamak için kullanırsınız. Kullanılan iki öznitelikleri <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri. Kural gereği, tüm öznitelik sınıfları soneki bitiş `Attribute`. Ancak, bir öznitelik uygulamak soneki kullanın gerekmez.
 
-`DataContract` Ve `DataMember` öznitelikleri olan farklı bir kitaplıkta, bu nedenle bu kitaplığı, bağımlılık olarak C# proje dosyası eklemek gerekir. Aşağıdaki satırı ekleyin `<ItemGroup>` proje dosyanızın bölümü:
+<xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri olan farklı bir kitaplıkta, bu nedenle bu kitaplığı, bağımlılık olarak C# proje dosyası eklemek gerekir. Aşağıdaki satırı ekleyin `<ItemGroup>` proje dosyanızın bölümü:
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla sta
 
 Dosyayı kaydettikten sonra çalıştırın `dotnet restore` ([bkz. Not](#dotnet-restore-note)) bu paketi alınamadı.
 
-Ardından, açık `repo.cs` dosya. Baş harfleri büyük kullanmanız ve tam adı yazım adı değiştirelim `Repository`. Biz yine de eklemeniz gerekecektir. Bu nedenle bu tür için JSON 'repo' düğümleri eşlemek istediğiniz `DataContract` sınıf bildirimine özniteliği. Siz ayarlarsınız `Name` bu türüyle JSON düğüm adı özniteliğinin özelliği:
+Ardından, açık `repo.cs` dosya. Baş harfleri büyük kullanmanız ve tam adı yazım adı değiştirelim `Repository`. Biz yine de eklemeniz gerekecektir. Bu nedenle bu tür için JSON 'repo' düğümleri eşlemek istediğiniz <xref:System.Runtime.Serialization.DataContractAttribute> sınıf bildirimine özniteliği. Siz ayarlarsınız `Name` bu türüyle JSON düğüm adı özniteliğinin özelliği:
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ Bu biçim standart .NET hiçbirini izlemez <xref:System.DateTime> biçimleri. Bu
 private string JsonDate { get; set; }
 ```
 
-`DataMember` Öznitelik bildirir seri hale getirici bu işlenmesi gerektiğini, bir ortak üye olmasa bile. Ardından, geçerli bir dize dönüştürür genel bir salt okunur özelliği yazmanız gereken <xref:System.DateTime> nesne ve döndüren <xref:System.DateTime>:
+<xref:System.Runtime.Serialization.DataMemberAttribute> Öznitelik bildirir seri hale getirici bu işlenmesi gerektiğini, bir ortak üye olmasa bile. Ardından, geçerli bir dize dönüştürür genel bir salt okunur özelliği yazmanız gereken <xref:System.DateTime> nesne ve döndüren <xref:System.DateTime>:
 
 ```csharp
 [IgnoreDataMember]

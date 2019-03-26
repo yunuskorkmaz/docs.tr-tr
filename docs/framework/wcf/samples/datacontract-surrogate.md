@@ -2,12 +2,12 @@
 title: DataContract Yedeği
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645424"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409841"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
 Bu örnek nasıl sınıf serileştirme ve seri durumundan çıkarma, şema dışarı aktarma ve şema içeri aktarma veri anlaşması kullanılarak özelleştirilebilir gibi işlemleri vekil gösterir. Bu örnek senaryoda verilerin serileştirilmiş ve Windows Communication Foundation (WCF) istemci ve hizmet arasında aktarılan bir istemci ve sunucu bir vekil kullanmayı gösterir.  
@@ -64,9 +64,9 @@ public class Person
 }  
 ```  
   
- Uygulayabileceğiniz `DataContract` özniteliğini `Person` sınıfı, ancak bu her zaman mümkün değildir. Örneğin, `Person` sınıfı üzerinde hiçbir denetimi sahip ayrı bir derleme içinde tanımlanabilir.  
+ Uygulayabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute> özniteliğini `Person` sınıfı, ancak bu her zaman mümkün değildir. Örneğin, `Person` sınıfı üzerinde hiçbir denetimi sahip ayrı bir derleme içinde tanımlanabilir.  
   
- Bu kısıtlama, serileştirilecek yollarından biri verilen `Person` sınıftır ile işaretlenmiş başka bir sınıf ile yerine `DataContractAttribute` kopyalayıp yeni bir sınıf için gerekli veriler üzerinde. Hedefi olmasını sağlamaktır `Person` sınıfı görünmesi için bir DataContract olarak <xref:System.Runtime.Serialization.DataContractSerializer>. Bu sınıfları olmayan veri sözleşme seri hale getirmek için bir yol olduğunu unutmayın.  
+ Bu kısıtlama, serileştirilecek yollarından biri verilen `Person` sınıftır ile işaretlenmiş başka bir sınıf ile yerine <xref:System.Runtime.Serialization.DataContractAttribute> kopyalayıp yeni bir sınıf için gerekli veriler üzerinde. Hedefi olmasını sağlamaktır `Person` sınıfı görünmesi için bir DataContract olarak <xref:System.Runtime.Serialization.DataContractSerializer>. Bu sınıfları olmayan veri sözleşme seri hale getirmek için bir yol olduğunu unutmayın.  
   
  Örnek mantıksal olarak değiştirir `Person` adlı farklı bir sınıf sınıfıyla `PersonSurrogated`.  
   

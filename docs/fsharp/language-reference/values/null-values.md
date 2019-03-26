@@ -1,13 +1,13 @@
 ---
 title: Boş Değerler
 description: Null değer nasıl kullanıldığını öğrenin F# programlama dilidir.
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611002"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409646"
 ---
 # <a name="null-values"></a>Boş Değerler
 
@@ -19,7 +19,7 @@ Null değeri içinde genellikle kullanılmaz F# değerler veya değişkenleri. A
 
 Tanımlanan bir tür için F# ve kesinlikle gelen kullanılan F#, tek yolu kullanarak bir null değer oluşturmak için F# kitaplığı doğrudan, kullanılacak [Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) veya [Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). Ancak, bir F# diğer .NET dillerinden kullanılan türü veya türü de yazılmaz bir API ile kullanıyorsanız, F#, .NET Framework gibi null değerleri ortaya çıkabilir.
 
-Kullanabileceğiniz `option` yazın F# zaman ile kullanıyor olabileceğiniz bir başvuru değişkenini başka bir .NET dil olası bir null değer. Null, yerine ile bir F# `option` türü, seçenek değerini kullanın `None` varsa nesnesi yok. Seçenek değeri kullandığınız `Some(obj)` bir nesneyle `obj` nesneyi olduğunda. Daha fazla bilgi için [seçenekleri](../options.md).
+Kullanabileceğiniz `option` yazın F# zaman ile kullanıyor olabileceğiniz bir başvuru değişkenini başka bir .NET dil olası bir null değer. Null, yerine ile bir F# `option` türü, seçenek değerini kullanın `None` varsa nesnesi yok. Seçenek değeri kullandığınız `Some(obj)` bir nesneyle `obj` nesneyi olduğunda. Daha fazla bilgi için [seçenekleri](../options.md). Yine de paketi Not bir `null` değerde bir seçenek ise için `Some x`, `x` özelleştirmede `null`. Bu nedenle, kullandığınız önemli `None` bir değer `null`.
 
 `null` Anahtar sözcüğü, geçerli bir anahtar sözcük F# dili ve .NET Framework API'ları veya başka bir .NET dilinde yazılır diğer API'ler ile çalışırken kullanmak zorunda. Bir null değer ihtiyaç duyabileceğiniz iki .NET API'si çağrısı ve null değeri bağımsız değişken geçirin ve dönüş değeri veya çıktı parametresi .NET yöntem çağrısından yorumladığınızda durumlardır.
 

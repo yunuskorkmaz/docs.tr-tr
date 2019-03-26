@@ -9,19 +9,19 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370663"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410114"
 ---
 # <a name="popup"></a>Açılan Pencere
 <xref:System.Windows.Controls.Primitives.Popup> Denetim içeriği geçerli bir uygulama penceresi üzerinde gezinen ayrı bir pencerede görüntüler.  
   
- Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.Primitives.Popup> ile konumlanan denetimi bir <xref:System.Windows.Controls.Button> diğer bir deyişle, üst.  
+ Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.Primitives.Popup> ile konumlanan denetimi bir <xref:System.Windows.Controls.Button> diğer bir deyişle, üst:  
   
- ![Açılan pencere çizim](./media/popuppicture.JPG "PopupPicture")  
+ ![Açılan pencere çizim](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Açılan Pencereye Genel Bakış](popup-overview.md)  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45810390ced8584ea7b37908a9e4af8d3da73f34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0146d3617f5a4aff2a76d2b2f4777b18a0e9c2ab
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549856"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410825"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan denetimleri dize sıralama ve platform çağırma DLL'de bulur işlev adlarını nasıl belirler. Bu konuda, hem davranışları açıklanmaktadır.  
   
- Bazı API'leri iki dize bağımsız değişkenler almayan işlevleri sürümü dışarı aktar: (ANSI) dar ve geniş (Unicode). Win32 API örneği için aşağıdaki giriş noktası adları içeren **MessageBox** işlevi:  
+ Bazı API'leri iki dize bağımsız değişkenler almayan işlevleri sürümü dışarı aktar: (ANSI) dar ve geniş (Unicode). Windows API, örneğin, aşağıdaki giriş noktası adları içerir **MessageBox** işlevi:  
   
 -   **MessageBoxA**  
   
@@ -33,9 +33,9 @@ ms.locfileid: "54549856"
      2-bayt karakter Unicode biçimlendirme, "W" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxW** her zaman Windows NT, Windows 2000 ve Windows XP platformlarında yaygın olduğu gibi Unicode biçiminde dizeleri sıralama.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Dize sıralama ve adı ile eşleşen  
- **CharSet** alan aşağıdaki değerleri kabul eder:  
+ `CharSet` Alan aşağıdaki değerleri kabul eder:  
   
- **CharSet.Ansi** (varsayılan değer)  
+ <xref:System.Runtime.InteropServices.CharSet.Ansi> (varsayılan değer)  
   
 -   Dize sıralama  
   
@@ -43,11 +43,11 @@ ms.locfileid: "54549856"
   
 -   Ad eşleştirme  
   
-     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır **true**, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
+     Zaman <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamadığında başarısız olur.  
   
-     Zaman **ExactSpelling** alandır **false**, C++'da varsayılan olarak ve C#, platform çağırma unmangled diğer arar ilk (**MessageBox**), sonra Karıştırılmış adı (**MessageBoxA**) unmangled diğer bulunamaması durumunda. ANSI adı eşleştirme davranışı Unicode adıyla eşleşen davranış farklı olduğuna dikkat edin.  
+     Zaman `ExactSpelling` alandır `false`, C++'da varsayılan olarak ve C#, platform çağırma unmangled diğer arar ilk (**MessageBox**), ardından karıştırılmış adı (**MessageBoxA**) unmangled diğer bulunamaması durumunda. ANSI adı eşleştirme davranışı Unicode adıyla eşleşen davranış farklı olduğuna dikkat edin.  
   
- **DllImport.charset'i**  
+ <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
 -   Dize sıralama  
   
@@ -55,11 +55,11 @@ ms.locfileid: "54549856"
   
 -   Ad eşleştirme  
   
-     Zaman **ExactSpelling** alandır **true**, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
+     Zaman `ExactSpelling` alandır `true`, varsayılan olarak olduğu gibi [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform çağırma yalnızca belirttiğiniz ad arar. Örneğin, belirtirseniz **MessageBox**, platform çağırma arar **MessageBox** ve tam yazım bulamazsanız başarısız olur.  
   
-     Zaman **ExactSpelling** alandır **false**, C++'da varsayılan olarak ve C#, platform çağırma karıştırılmış ad arar ilk (**MessageBoxW**), sonra unmangled diğer ad (**MessageBox**) karıştırılmış adı bulunmazsa. Unicode adı eşleştirme davranışı ANSI adıyla eşleşen davranış farklı olduğuna dikkat edin.  
+     Zaman `ExactSpelling` alandır `false`, C++'da varsayılan olarak ve C#, platform çağırma karıştırılmış ad arar ilk (**MessageBoxW**), ardından unmangled diğer ad (**MessageBox**) karıştırılmış adı bulunmazsa. Unicode adı eşleştirme davranışı ANSI adıyla eşleşen davranış farklı olduğuna dikkat edin.  
   
- **CharSet.Auto**  
+ <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
 -   Platform çağırma arasında ANSI ve Unicode biçimlerini hedef platformunu temel alan çalışma zamanında seçer.  
   
@@ -68,77 +68,85 @@ ms.locfileid: "54549856"
   
  İlk bildirim deyiminde olduğu gibi karakter kümesi anahtar sözcüğü atlarsanız <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> ANSI karakter kümesi için varsayılan alan. Örnek ikinci ve üçüncü ifadeler karakter kümesi anahtar sözcüğü ile açıkça belirtin.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-  
-Public Class Win32  
-   Declare Function MessageBoxA Lib "user32.dll"(ByVal hWnd As Integer, _  
-       ByVal txt As String, ByVal caption As String, _  
-       ByVal Typ As Integer) As Integer  
-  
-   Declare Unicode Function MessageBoxW Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String, _  
-        ByVal caption As String, ByVal Typ As Integer) As Integer  
-  
-   Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String, _  
-        ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Function MessageBoxA Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+
+    Friend Shared Declare Unicode Function MessageBoxW Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>İçinde bir karakter kümesi belirtme C# ve C++  
  <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan temel karakter ANSI veya Unicode olarak kümesini tanımlar. Karakter dizesi bağımsız değişkenleri bir yönteme nasıl sıralanması gerektiğini denetimleri ayarlayın. Karakter kümesi belirtmek için aşağıdaki biçimlerden birini kullanın:  
   
+```csharp
+[DllImport("DllName", CharSet = CharSet.Ansi)]
+[DllImport("DllName", CharSet = CharSet.Unicode)]
+[DllImport("DllName", CharSet = CharSet.Auto)]
+```
+  
+```cpp
+[DllImport("DllName", CharSet = CharSet::Ansi)]
+[DllImport("DllName", CharSet = CharSet::Unicode)]
+[DllImport("DllName", CharSet = CharSet::Auto)]
+```
+  
+ Aşağıdaki örnek, üç yönetilen tanımını gösterir **MessageBox** işleve atfedilen karakter kümesi belirtmek için. İlk tanımında, atlama tarafından `CharSet` ANSI karakter kümesi için varsayılan alan.  
+  
 ```csharp  
-[DllImport("dllname", CharSet=CharSet.Ansi)]  
-[DllImport("dllname", CharSet=CharSet.Unicode)]  
-[DllImport("dllname", CharSet=CharSet.Auto)]  
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBoxA(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    internal static extern int MessageBoxW(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
 ```  
   
-```cpp  
-[DllImport("dllname", CharSet=CharSet::Ansi)]  
-[DllImport("dllname", CharSet=CharSet::Unicode)]  
-[DllImport("dllname", CharSet=CharSet::Auto)]  
-```  
-  
- Aşağıdaki örnek, üç yönetilen tanımını gösterir **MessageBox** işleve atfedilen karakter kümesi belirtmek için. İlk tanımında, atlama tarafından **CharSet** ANSI karakter kümesi için varsayılan alan.  
-  
-```csharp  
-[DllImport("user32.dll")]  
-    public static extern int MessageBoxA(int hWnd, String text,   
-        String caption, uint type);  
-[DllImport("user32.dll", CharSet=CharSet.Unicode)]  
-    public static extern int MessageBoxW(int hWnd, String text,   
-        String caption, uint type);  
-[DllImport("user32.dll", CharSet=CharSet.Auto)]  
-    public static extern int MessageBox(int hWnd, String text,   
-        String caption, uint type);  
-```  
-  
-```cpp  
-typedef void* HWND;  
-  
-//Can use MessageBox or MessageBoxA.  
-[DllImport("user32")]  
-extern "C" int MessageBox(HWND hWnd,  
-                          String* pText,  
-                          String* pCaption,  
-                          unsigned int uType);  
-  
-//Can use MessageBox or MessageBoxW.  
-[DllImport("user32", CharSet=CharSet::Unicode)]  
-extern "C" int MessageBoxW(HWND hWnd,  
-                          String* pText,  
-                          String* pCaption,  
-                          unsigned int uType);  
-  
-//Must use MessageBox.  
-[DllImport("user32", CharSet=CharSet::Auto)]  
-extern "C" int MessageBox(HWND hWnd,  
-                          String* pText,  
-                          String* pCaption,  
-                          unsigned int uType);  
-```  
+```cpp
+typedef void* HWND;
+
+// Can use MessageBox or MessageBoxA.
+[DllImport("user32")]
+extern "C" int MessageBox(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+
+// Can use MessageBox or MessageBoxW.
+[DllImport("user32", CharSet = CharSet::Unicode)]
+extern "C" int MessageBoxW(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+
+// Must use MessageBox.
+[DllImport("user32", CharSet = CharSet::Auto)]
+extern "C" int MessageBox(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.InteropServices.DllImportAttribute>

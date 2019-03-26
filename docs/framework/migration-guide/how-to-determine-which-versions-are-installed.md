@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 74c68aec535515803b9048aeed8395b53a4aaa4b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262448"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411050"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -44,14 +44,14 @@ Bir bilgisayarda yüklü .NET Framework sürümlerinin bir listesini almak için
      - [.NET Framework sürümlerini bulmak için Kayıt Defteri Düzenleyicisi'ni kullanın](#net_b)  
      - [.NET Framework sürümleri için kayıt defterini sorgulayın için kodu kullanın](#net_d)  
      - [.NET Framework sürümleri için kayıt defterini sorgulayın için PowerShell kullanma](#ps_a)
- - Eski .NET Framework sürümlerini bulmak (1&#8211;4):
+- Eski .NET Framework sürümlerini bulmak (1&#8211;4):
      - [.NET Framework sürümlerini bulmak için Kayıt Defteri Düzenleyicisi'ni kullanın](#net_a)
      - [.NET Framework sürümleri için kayıt defterini sorgulayın için kodu kullanın](#net_c)   
 
 Bir bilgisayarda yüklü CLR sürümlerin listesini almak için bir aracı veya kod kullanın:  
   
- - [Clrver aracını kullanma](#clr_a)  
- - [Ortam sınıfını sorgulamak için kodu kullanın.](#clr_b)  
+- [Clrver aracını kullanma](#clr_a)  
+- [Ortam sınıfını sorgulamak için kodu kullanın.](#clr_b)  
 
 .NET Framework'ün her sürümü için yüklü güncelleştirmeleri algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](how-to-determine-which-net-framework-updates-are-installed.md). 
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580869"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411011"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic'de Gölgeleme
 Bunlardan biri, iki programlama öğeleri aynı adı paylaşan, gizleyebilirsiniz, veya *gölge*, diğerinde. Böyle bir durumda gölgeli öğe başvuru için kullanılabilir değildir; Bunun yerine, kodunuzu öğe adı kullandığında, Visual Basic Derleyicisi, gölgelendirme öğesine çözümler.  
@@ -41,8 +41,7 @@ Bunlardan biri, iki programlama öğeleri aynı adı paylaşan, gizleyebilirsini
   
  İki değişken aşağıdaki çizimde, hem adlandırılmış `temp`. Yerel değişken `temp` üye değişkeni gölgeleri `temp` kendi yordam içinde erişildiğinde `p`. Ancak, `MyClass` anahtar sözcüğü gölgeleme atlar ve üye değişkeni erişir.  
   
- ![Kapsam yoluyla gölgeleme grafik diyagramı](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Kapsam yoluyla gölgeleme  
+ ![Kapsam yoluyla gölgeleme gösteren grafik.](./media/shadowing/shadow-scope-diagram.gif)
   
  Kapsam yoluyla gölgeleme ilişkin bir örnek için bkz [nasıl yapılır: Değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Kapsam yoluyla gölgeleme
   
  Aşağıdaki çizimde bir temel sınıf `b` ve türetilmiş bir sınıf `d` öğesinden devralan `b`. Adlı bir yordam temel sınıf tanımlar `proc`, ve isteğe bağlı olarak türetilmiş bir sınıf ile aynı ada sahip başka bir yordam gölgeliyor. İlk `Call` deyimi erişen gölgeleme `proc` türetilen sınıfta. Ancak, `MyBase` anahtar sözcüğü gölgeleme atlar ve temel sınıfta gölgeli yordamı erişir.  
   
- ![Devralma üzerinden gölgeleme grafik diyagramı](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Devralma üzerinden gölgeleme  
+ ![Devralma üzerinden gölgeleme grafik diyagramı](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Devralma üzerinden gölgeleme ilişkin bir örnek için bkz [nasıl yapılır: Değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) ve [nasıl yapılır: Devralınmış değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

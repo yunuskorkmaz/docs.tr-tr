@@ -1,28 +1,33 @@
 ---
-title: 'Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Uygulama'
-ms.date: 09/14/2018
+title: 'Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini uygulama'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: fcf96af11bae701585acd92001c8000125858449
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037371"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410088"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Uygulama
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini uygulama
 
-Altı görevden temel bir Windows Communication Foundation (WCF) hizmeti oluşturup hizmeti çağırmak bir istemci için gerekli ikincisi budur. Altı tüm görevler genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev ikinci açıklanmaktadır. Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-WCF uygulaması oluşturma bir sonraki adımınız hizmet arabirimi uygulamaktır. Bu adında bir sınıf oluşturulmasını ilgilendirir `CalculatorService` uygulayan kullanıcı tanımlı `ICalculator` arabirimi...
+WCF uygulaması oluşturmak için sonraki adım, önceki adımda oluşturduğunuz WCF Hizmeti arabirim uygulamak için kod eklemektir. Bu adımda, adlı bir sınıf oluşturun `CalculatorService` uygulayan kullanıcı tanımlı `ICalculator` arabirimi. Aşağıdaki kod her bir yöntemin hesaplayıcı işlemi çağırır ve metin test etmek için konsola yazar. 
 
-## <a name="to-implement-a-wcf-service-contract"></a>Bir WCF hizmet sözleşmesini uygulama
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+> [!div class="checklist"]
+> - WCF hizmet sözleşmesini uygulama için kod ekleyin.
+> - Çözümü oluşturun.
 
-Service1.cs veya gt;service1.vb dosyasını açın ve aşağıdaki kodu ekleyin:
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>WCF hizmet sözleşmesini uygulama için kod ekleyin
+
+İçinde **GettingStartedLib**açın **Service1.cs** veya **Service1.vb** dosya ve kendi kodu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -111,154 +116,32 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-Her yöntem hesaplayıcı işlemi uygular ve bazı metin test işlemini kolaylaştıran için konsola yazar.
+## <a name="edit-appconfig"></a>App.config Düzenle
 
-## <a name="example"></a>Örnek
+Düzen **App.config** içinde **GettingStartedLib** koda yapılan değişiklikleri yansıtacak şekilde.
+   - Görsel için C# projeleri:
+       - 14. satır için değiştirin `<service name="GettingStartedLib.CalculatorService">`
+       - 17 satırına değiştirme `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+       - Satır 22 için değiştirin `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
-Aşağıdaki kod, sözleşme ve uygulama arabiriminin tanımlayan iki arabirim gösterir.
+   - Visual Basic projeleri için:
+       - 14. satır için değiştirin `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+       - 17 satırına değiştirme `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+       - Satır 22 için değiştirin `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-    public interface ICalculator
-    {
-        [OperationContract]
-        double Add(double n1, double n2);
-        [OperationContract]
-        double Subtract(double n1, double n2);
-        [OperationContract]
-        double Multiply(double n1, double n2);
-        [OperationContract]
-        double Divide(double n1, double n2);
-    }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
 
 ## <a name="compile-the-code"></a>Kod derleme
 
-Hiç derleme hatası olmadığından emin olmak için çözümü oluşturun. Visual Studio kullanıyorsanız **derleme** menüsünü seçin **Çözümü Derle** (veya basın **Ctrl**+**Shift** + **B**).
+Derleme hataları doğrulamak için çözümü oluşturun. Visual Studio kullanıyorsanız **derleme** menüsünü seçin **Çözümü Derle** (veya basın **Ctrl**+**Shift** + **B**).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık hizmet sözleşmesi uygulanan ve oluşturulur. Sonraki adımda, hizmet çalıştırın.
+Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+> [!div class="checklist"]
+> - WCF hizmet sözleşmesini uygulama için kod ekleyin.
+> - Çözümü oluşturun.
+
+WCF hizmeti çalıştırmaya hakkında bilgi edinmek için sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Nasıl yapılır: Temel Bir Hizmet Barındırma ve Çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
-
-Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
+> [Öğretici: Temel bir WCF Hizmeti barındırma ve çalıştırma](how-to-host-and-run-a-basic-wcf-service.md)

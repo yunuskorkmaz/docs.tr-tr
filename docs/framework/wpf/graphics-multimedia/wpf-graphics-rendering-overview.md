@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375538"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409659"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
@@ -49,8 +49,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  <xref:System.Windows.Media.Visual> alt sınıfların türetilmesi gerekir ortak soyut bir sınıf kullanıma sunulur. Aşağıda sunulan görsel nesneler hiyerarşisini gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Sınıf diyagramı Visual nesneden türetilen](./media/visualclass01.png "VisualClass01")  
-Görsel sınıf hiyerarşisi  
+ ![Görsel nesneden türetilen sınıf diyagramı](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual sınıfı  
  <xref:System.Windows.Media.DrawingVisual> Olan şekil, görüntü veya metin işlemek için kullanılan sınıf çizim basit. Bu sınıf, çalışma zamanı performansını artırır, düzen veya olay işleme sağlamadığı basit olarak değerlendirilir. Bu nedenle, çizimleri, arka plan ve küçük resim için idealdir. <xref:System.Windows.Media.DrawingVisual> Özel görsel bir nesne oluşturmak için kullanılabilir. Daha fazla bilgi için [DrawingVisual nesnelerini kullanma](using-drawingvisual-objects.md).  
@@ -110,8 +109,7 @@ DrawingGroup işlemlerin sırası
   
  Varsayılan kapsayan görsel nesneler listeleme olsaydı <xref:System.Windows.Controls.Button> denetimi, aşağıda gösterilen görsel nesneler hiyerarşi bulma:  
   
- ![Görsel ağacı hiyerarşi diyagramı](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-Görsel ağacı hiyerarşi diyagramı  
+ ![Görsel ağacı hiyerarşi diyagramı](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  <xref:System.Windows.Controls.Button> Denetimi içeren bir <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> sırayla içeren öğe bir <xref:System.Windows.Controls.ContentPresenter> öğesi. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Öğedir kenarlık ve arka plan bilgileri için çizmek için sorumlu <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.ContentPresenter> Öğedir içeriğini görüntülemek için sorumlu <xref:System.Windows.Controls.Button>. Bu durumda, beri görüntüleme metni <xref:System.Windows.Controls.ContentPresenter> öğesi içeren bir <xref:System.Windows.Controls.TextBlock> öğesi. Olgu, <xref:System.Windows.Controls.Button> denetimi kullanan bir <xref:System.Windows.Controls.ContentPresenter> içeriği gibi diğer öğeleri tarafından gösterilebilir anlamına gelir bir <xref:System.Windows.Controls.Image> veya geometri gibi bir <xref:System.Windows.Media.EllipseGeometry>.  
   
@@ -124,8 +122,7 @@ Görsel ağacı hiyerarşi diyagramı
   
  Görsel nesneler sıralaması ve vektör grafik yönerge oluşturan bir listesi için olsaydı <xref:System.Windows.Controls.Button> denetimi, aşağıda gösterilen nesne hiyerarşisini bulun:  
   
- ![Görsel ağacı ve verileri işleme diyagramı](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-Görsel ağacı ve verileri işleme diyagramı  
+ ![Görsel ağacı ve verileri işleme diyagramı](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  <xref:System.Windows.Controls.Button> Denetimi içeren bir <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> sırayla içeren öğe bir <xref:System.Windows.Controls.ContentPresenter> öğesi. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Öğedir kenarlık ve arka plan düğmesinin oluşturan tüm ayrık grafik öğelerini çizmek için sorumlu. <xref:System.Windows.Controls.ContentPresenter> Öğedir içeriğini görüntülemek için sorumlu <xref:System.Windows.Controls.Button>. Bu durumda, beri görüntüleyen bir görüntü <xref:System.Windows.Controls.ContentPresenter> öğesi içeren bir <xref:System.Windows.Controls.Image> öğesi.  
   
@@ -149,14 +146,12 @@ Görsel ağacı ve verileri işleme diyagramı
   
  Kapsayan görsel nesneler listeleme olsaydı <xref:System.Windows.Controls.StackPanel> öğesi işaretleme örnekte aşağıda gösterilen görsel nesneler hiyerarşi bulma:  
   
- ![Görsel ağacı hiyerarşi diyagramı](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-Görsel ağacı hiyerarşi diyagramı  
+ ![Görsel ağacı hiyerarşi diyagramı](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>Sipariş işleme  
  Görsel ağacı işleme sırasını belirleyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel ve çizim nesneleri. Görsel en üstteki düğümü görsel ağaç kök sırası geçişi başlar. Kök görselin alt ardından, sağdan sola geçirilir. Bir görsel alt öğeleri varsa, alt önce görselin eşdüzey geçirilir. Başka bir deyişle, görsel bir alt içeriğin önünde görselin kendi içerik işlenir.  
   
- ![Görsel ağaç işleme düzeni diyagramı](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-Görsel ağaç işleme düzeni diyagramı  
+ ![Görsel ağaç işleme düzeni diyagramı](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Kök Visual  
  **Kök visual** bir görsel ağacı hiyerarşideki en üst öğedir. Kök visual temel sınıfını çoğu uygulamada geçerli <xref:System.Windows.Window> veya <xref:System.Windows.Navigation.NavigationWindow>. Win32 uygulamasında görsel nesneler barındırma, ancak visual kök Win32 penceresinde barındırma en üstteki görsel olacaktır. Daha fazla bilgi için [Öğreticisi: Win32 uygulamasında görsel nesneler barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md).  
@@ -178,9 +173,8 @@ Mantıksal ağaç diyagramı
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Görsel ağacı XamlPad ile görüntüleme  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aracı XamlPad, görüntüleme ve karşılık gelen görsel ağacı şu anda tanımlı için keşfetmek için bir seçenek sağlar [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] içeriği. Tıklayın **görsel ağacını Göster** görsel ağacı görüntülemek için menü çubuğunda düğme. Aşağıdaki genişletilmiş hali gösterilmiştir [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] görsel ağaç düğümleri içine içerik **görsel ağacı Gezgini** XamlPad panelini:  
   
- ![Görsel ağacı Gezgini panelinde XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-Görsel ağacı Gezgini panelinde XamlPad  
-  
+ ![Görsel ağacı Gezgini panelinde XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  Bildirim nasıl <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, ve <xref:System.Windows.Controls.Button> denetimlerini her bir ayrı görsel nesne hiyerarşisinde görüntülemek **görsel ağacı Gezgini** XamlPad panelini. Bunun nedeni, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetiminiz bir <xref:System.Windows.Controls.ControlTemplate> , denetimin görsel ağacını içerir. Bir denetim açıkça başvuruda bulunduğunuzda visual hiyerarşi dolaylı başvuru.  
   
 ### <a name="profiling-visual-performance"></a>Görsel performans profili oluşturma  
@@ -196,14 +190,12 @@ Görsel Profiler görüntüsü çıkışı
 ### <a name="retained-mode-graphics"></a>Tutulan modu grafikleri  
  Görsel nesnenin rolünü anlamak için anahtarların biridir arasındaki farkı anlamak için **anlık mod** ve **modu korunur** grafik sistemleri. GDI veya GDI +'da temel, standart bir Win32 uygulaması, bir anlık mod grafik sistemi kullanır. Uygulamanın yeniden çizerken yeniden boyutlandırılmakta olan bir pencere gibi bir eylem nedeniyle geçersiz istemci alanını bölümü için sorumlu olduğu anlamına gelir veya nesnenin görsel görünümünü değiştirme.  
   
- ![Win32 işleme sıralı diyagramı](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Win32 işleme sıralı diyagramı  
+ ![Win32 işleme sıralı diyagramı](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  Buna karşılık, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saklama modu sistemi kullanır. Başka bir deyişle, görsel görünümüne sahip uygulama nesneleri seri hale getirilmiş çizim veri kümesi tanımlarsınız. Çizim veri ile tanımlandıktan sonra sistemin bundan sonra uygulama nesneleri işleme için tüm yeniden çizmeyi isteklerine yanıt için sorumludur. Bile çalışma zamanında, değiştirme veya uygulama nesneleri oluşturmak ve istekleri boyama yanıtlama sistem hala dayanır. Tutulan modu grafik sistemindeki bilgi çizim her zaman serileştirilmiş bir durumda uygulama, ancak sisteme sol işleme sorumluluk kalıcı olmasını güçtür. Aşağıdaki diyagramda uygulama dayanan nasıl gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] boyamak için istekleri yanıtlamak için.  
   
- ![WPF işleme sıralı diyagramı](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-WPF işleme sıralı diyagramı  
-  
+ ![WPF işleme sıralı diyagramı](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>Akıllı yeniden  
  Tutulan modu grafikleri kullanarak en büyük avantajlarından biri olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verimli bir şekilde uygulamada çizilmesini için gerekenler en iyi duruma getirebilirsiniz. Farklı düzeylerde opaklık ile karmaşık Sahne olsa bile, genellikle yeniden en iyi duruma getirmek için özel amaçlı kod yazma gerekmez. Bu, büyük ölçüde çaba güncelleştirme bölgede yeniden miktarını en aza indirerek, uygulamanızın en iyi duruma getirme, harcama Win32 programlama ile karşılaştırın. Bkz: [güncelleştirme bölgede yeniden](/windows/desktop/gdi/redrawing-in-the-update-region) karmaşıklık türünün bir örneği için söz konusu Win32 uygulamaları yeniden iyileştirme içinde.  
   
@@ -214,8 +206,7 @@ WPF işleme sıralı diyagramı
   
  Aşağıdaki çizim, %300 tarafından yeniden boyutlandırılmış bir kaynak görüntüyü gösterir. Kaynak görüntü bit eşlem grafik görüntüsüne esnetilmiş yerine, bir vektör grafik resmi olarak Ölçeklendirildi görüntülenen deformasyonları dikkat edin.  
   
- ![Izgara ve vektör grafik arasındaki farklar](./media/vectorgraphics01.png "VectorGraphics01")  
-Izgara ve vektör grafik arasındaki farklar  
+ ![Izgara ve vektör grafik arasındaki farklar](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  Aşağıdaki biçimlendirmede iki gösterir <xref:System.Windows.Shapes.Path> tanımlanan öğe. İkinci öğe kullanan bir <xref:System.Windows.Media.ScaleTransform> ilk öğenin çizim yönergeleri %300 yeniden boyutlandırabilirsiniz. Dikkat çizim yönergeleri <xref:System.Windows.Shapes.Path> öğeleri değişmeden kalır.  
   

@@ -2,12 +2,12 @@
 title: Lınq'ye giriş (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 8fdfbc0b397db0b3402334c03b6ac4720726d3cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd457ec59659743bc7cd153fb6b9cef8d99a4a0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502617"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410192"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Lınq'ye giriş (Visual Basic)
 Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bir birine bağlayan dünyanın nesnelerin ve verilerin dünyasında arasındaki boşluk sunulan ' dir.  
@@ -20,7 +20,7 @@ Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bir biri
   
  Tam tür denetlemesi ve IntelliSense desteği ile hem C# ve Visual Basic'te LINQ sorgusu yalnızca kısmen tamamlanmış bir SQL Server veritabanında Visual Studio'dan aşağıda gösterilmiştir.  
   
- ![LINQ query with Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")  
+ ![Bu shwos IntelliSense ile bir LINQ Sorgu Diyagram.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Başlarken bölümünde bazı temel kavramları hakkında bilgi sahibi olma LINQ hakkında daha fazla bilgi edinmek için başlangıç [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), ve ardından, olduğu LINQ teknolojisi belgelerini okuyun ister misiniz:  

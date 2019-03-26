@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828351"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409958"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda JIT şifrelenmemiş bir bağlantı dizeleri kullanarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Ayrıca, bağlantı dizesini hiç olmadığı kadar değişirse, uygulamanızı derlenmelidir. Bu nedenle, bir uygulama yapılandırma dosyasında bağlantı dizelerini depolamanızı öneririz.  
@@ -81,7 +81,7 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Bağlantı dizesi. Eşlendiği **connectionString** özniteliği.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Örnek: Tüm bağlantı dizelerini listeleme  
- Bu örnekte gezinir `ConnectionStringSettings` toplama ve görüntüler <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>, ve <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> konsol penceresinde özellikleri.  
+ Bu örnekte gezinir <xref:System.Configuration.ConnectionStringSettingsCollection> ve görüntüler <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, ve <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> konsol penceresinde özellikleri.  
   
 > [!NOTE]
 >  System.Configuration.dll dosyasına de tüm proje türlerine dahil değildir ve yapılandırma sınıflarını kullanmak için buna bir başvuru ayarlamanız gerekebilir. Belirli bir uygulama yapılandırma dosyasının konumunu ve adını, uygulama ve barındırma işlemi türüne göre değişir.  
@@ -139,7 +139,7 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Şifrelemek ve verilerin şifresini çözmek için RSA şifreleme algoritması kullanır. RSA algoritması, ortak anahtar şifreleme ve dijital imzalar için kullanılabilir. İki farklı anahtar kullanan olarak da bilinen "ortak anahtarı" ya da asimetrik şifreleme olmasıdır. Kullanabileceğiniz [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) Web.config dosyasında bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için. Dosya işlediğinde, ASP.NET yapılandırma dosyasının şifresini çözer. ASP.NET uygulamasını kimliği şifrelemek ve şifrelenmiş bölümlerindeki şifreyi çözmek için kullanılan şifreleme anahtarını okuma erişiminiz olması gerekir.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Yapılandırma bölümleri şifrelemek için Windows Data Protection API (DPAPI) kullanır. Windows yerleşik Şifreleme Hizmetleri kullanır ve makineye özgü ya da kullanıcı hesaplarına özgü koruması için yapılandırılabilir. Makineye özgü koruma, bilgi paylaşımı için gereken aynı sunucuda birden fazla uygulama için yararlıdır. Kullanıcı hesaplarına özgü koruma, paylaşılan bir barındırma ortamı gibi belirli bir kullanıcı kimliği ile çalışan hizmetler ile kullanılabilir. Her uygulama, dosyalar ve veritabanları gibi kaynaklara erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
   
- Her iki sağlayıcıları verileri güçlü şifreleme sağlar. Ancak, Web grubu gibi yalnızca birden çok sunucuda aynı şifrelenmiş yapılandırma dosyası kullanmayı planladığınıza varsa `RsaProtectedConfigurationProvider` verileri şifrelemek ve bunları başka bir sunucuya almak için kullanılan şifreleme anahtarlarını dışarı aktarmak sağlar. Daha fazla bilgi için [alma ve verme korumalı yapılandırma RSA anahtar kapsayıcılarının](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Her iki sağlayıcıları verileri güçlü şifreleme sağlar. Ancak, Web grubu gibi yalnızca birden çok sunucuda aynı şifrelenmiş yapılandırma dosyası kullanmayı planladığınıza varsa <xref:System.Configuration.RsaProtectedConfigurationProvider> verileri şifrelemek ve bunları başka bir sunucuya almak için kullanılan şifreleme anahtarlarını dışarı aktarmak sağlar. Daha fazla bilgi için [alma ve verme korumalı yapılandırma RSA anahtar kapsayıcılarının](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Yapılandırma sınıflarını kullanma  
  <xref:System.Configuration> Ad alanı yapılandırma ayarları ile çalışma için sınıflar sağlar programlı olarak. <xref:System.Configuration.ConfigurationManager> Sınıfı makine, uygulama ve kullanıcı yapılandırma dosyalarına erişim sağlar. Bir ASP.NET uygulaması oluşturuyorsanız, kullanabileceğiniz <xref:System.Web.Configuration.WebConfigurationManager> olsa da gibi ASP.NET uygulamalarının özgü ayarları erişmenize olanak tanıyan bulunan aynı işlevselliği sağlar sınıfını  **\< System.Web >**.  

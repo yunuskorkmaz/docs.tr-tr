@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738358"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409477"
 ---
 # <a name="best-practices-data-contract-versioning"></a>En iyi uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
   
     2.  Varsayılan değeri, `null` veya üye için sıfır kabul edilemez, bir geri çağırma yöntemi kullanarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> üye gelen akışta mevcut değilse, makul bir varsayılan değer sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüme dayanıklı serileştirme geri çağırmaları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  `Order` Özelliği `DataMemberAttribute` tüm yeni eklenen veri üyelerinin sonra var olan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. Bu önerilen yöntem aşağıdaki gibidir: İlk veri sözleşmesi sürümü veri üyeleri hiçbiri olmalıdır, `Order` özellik kümesi. Tüm veri anlaşması 2 sürümünde eklenen veri üyelerinin olması gerekir, `Order` özelliği 2 olarak ayarlayın. Tüm veri anlaşması 3. sürümüne eklenen veri üyelerinin olması gerekir, `Order` 3 olarak ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayı.  
+    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Özelliği, tüm yeni eklenen veri üyelerinin sonra var olan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. Bu önerilen yöntem aşağıdaki gibidir: İlk veri sözleşmesi sürümü veri üyeleri hiçbiri olmalıdır, `Order` özellik kümesi. Tüm veri anlaşması 2 sürümünde eklenen veri üyelerinin olması gerekir, `Order` özelliği 2 olarak ayarlayın. Tüm veri anlaşması 3. sürümüne eklenen veri üyelerinin olması gerekir, `Order` 3 olarak ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayı.  
   
 9. Veri üyeleri, sonraki sürümlerde kaldırmayın bile <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği, varsayılan özellik sol `false` önceki sürümlerinde.  
   

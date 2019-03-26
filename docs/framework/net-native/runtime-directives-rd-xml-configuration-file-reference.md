@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356110"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410465"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 
@@ -405,7 +405,7 @@ Uygulama `Serialize` bir alana ilke aşağıdaki ilke değişiklikleri içerir:
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer DataContractSerializer ve DataContractJsonSerializer ilkeleri etkisi
 
-Farklı `Serialize` yansıma tabanlı seri hale getiricileri genişletme için tasarlanmıştır, ilke, `XmlSerializer`, `DataContractSerializer`, ve `DataContractJsonSerializer` ilkeleri bir dizi bilinen seri hale getiricileri genişletme etkinleştirmek için kullanılır [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Bu seri hale getiricileri genişletme yansıma kullanarak uygulanmadı, ancak çalışma zamanında seri hale getirilebilir türler kümesi benzer bir şekilde reflectable türleri olarak belirlenir.
+Farklı `Serialize` yansıma tabanlı seri hale getiricileri genişletme için tasarlanmıştır, ilke, <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ilkeleri bir dizi bilinen seri hale getiricileri genişletme etkinleştirmek için kullanılır [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Bu seri hale getiricileri genişletme yansıma kullanarak uygulanmadı, ancak çalışma zamanında seri hale getirilebilir türler kümesi benzer bir şekilde reflectable türleri olarak belirlenir.
 
 Bu ilkelerden birini uygulayarak bir türe türü ile eşleşen serileştirici serileştirilecek sağlar. Ayrıca, serileştirme motoruna, statik olarak seri hale getirme gerektiği belirleyebilirsiniz herhangi bir türü ayrıca seri hale getirilebilir olur.
 

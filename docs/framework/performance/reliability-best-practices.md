@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353081"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409880"
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 
@@ -241,7 +241,7 @@ SQL Server için eşitleme veya iş parçacığı sunmak için kullanılan tüm 
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Yönetilmeyen kodda süresiz olarak Engellemesi değil
 
-Yönetilen kod yerine yönetilmeyen kodda engelleme, CLR iş parçacığı durdurmak mümkün olmadığı için bir hizmet reddi saldırısına neden olabilir.  Engellenen bir iş parçacığı kaldırılmasını CLR engeller <xref:System.AppDomain>, en az son derece güvenli olmayan bazı işlemler yapmaya gerek kalmadan.  Bir Win32 kullanarak engelleme eşitleme temel öğesi bir açık bir şey izin veremez örneğidir.  Bir çağrıda engelleme `ReadFile` bir yuvada mümkünse kaçınılmalıdır; ideal olarak, Win32 API şunun gibi bir işlem zaman aşımına için bir mekanizma sağlamalıdır.
+Yönetilen kod yerine yönetilmeyen kodda engelleme, CLR iş parçacığı durdurmak mümkün olmadığı için bir hizmet reddi saldırısına neden olabilir.  Engellenen bir iş parçacığı kaldırılmasını CLR engeller <xref:System.AppDomain>, en az son derece güvenli olmayan bazı işlemler yapmaya gerek kalmadan.  Bir Windows kullanarak engelleme eşitleme temel öğesi bir açık bir şey izin veremez örneğidir.  Bir çağrıda engelleme `ReadFile` bir yuvada mümkünse kaçınılmalıdır; ideal Windows API şunun gibi bir işlem zaman aşımına için bir mekanizma sağlamalıdır.
 
 Yerel çağıran herhangi bir yöntemi, ideal olarak makul, sınırlı zaman aşımı ile Win32 çağrı kullanmalısınız.  Kullanıcı zaman aşımını belirtmek için izin veriliyorsa, kullanıcı bazı belirli güvenlik izinleri olmadan sonsuz zaman aşımını belirtmek için izin verilmeyen.  Bir kılavuz olarak, bir yöntem ~ 10 saniyeden fazla için engeller, zaman aşımları destekleyen bir sürüm kullanması gerekir veya ek CLR desteği gerekir.
 

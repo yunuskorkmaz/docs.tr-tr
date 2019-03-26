@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843538"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412220"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
 
@@ -26,11 +26,9 @@ Bu konu nasıl genişleteceğinizi gösterir [!INCLUDE[TLA#tla_winvista](../../.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki görüntüde, adres çubuğuna, Internet Explorer'a 7 genişletilmiş cam çerçeveyi gösterir.
+Aşağıdaki görüntüde, adres çubuğuna, Internet Explorer'a 7 genişletilmiş cam çerçeveyi gösterilmektedir:
 
-**Internet Explorer Adres çubuğuna arkasındaki genişletilmiş cam çerçeveyi ile.**
-
-![Cam çerçeveyi adres çubuğuna genişletilmiş IE7. ](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Cam çerçeveyi IE7 adres çubuğuna genişletilmiş gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama erişimi yönetilmeyen [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] gereklidir. Aşağıdaki kod örneği iki bir Platform Çağırma (PInvoke) yapmaz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] istemci alanına çerçeveyi genişletmek için gerekli. Bunların her biri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] adlı bir sınıfta bildirilen **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ Aşağıdaki örnek, çerçevenin istemci alanını genişletilir basit bir penc
 </Window>
 ```
 
-Aşağıdaki görüntüde gösterilmiştir uygulamasına genişletilmiş cam çerçeveyi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama.
+Aşağıdaki görüntüde gösterilmiştir uygulamasına genişletilmiş cam çerçeveyi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama:
 
-**Uygulamada bir**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**uygulama.**
-
-![Cam çerçeveyi WPF uygulamasına genişletilmiş. ](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Cam çerçeveyi WPF uygulamasında genişletilmiş gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

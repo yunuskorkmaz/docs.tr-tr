@@ -2,12 +2,12 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674121"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411063"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıdır. XML veri yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemleri geliştiricilere ve mimarlara genellikle açısından gönderilen iletileri kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlama verimli ikili veri aktarımı için özel zorlukları doğurur.  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıd�
   
 |Kodlayıcı bağlama öğesi|Açıklama|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Metin iletisi Kodlayıcı, birlikte çalışabilirlik en önemli olduğu tüm HTTP tabanlı bağlantılar için varsayılan kodlayıcı ve tüm özel bağlamalar için uygun seçim işliyor. Bu Kodlayıcı okur ve standart SOAP 1.1/SOAP 1.2 kısa mesaj ile ikili veriler için hiçbir özel işlem yazar. Varsa <xref:System.ServiceModel.Channels.MessageVersion> bir ileti kümesine `None`, SOAP Zarfı sarmalayıcı çıktısı atlanır ve yalnızca ileti gövdesi içeriği seri hale.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Metin iletisi Kodlayıcı, birlikte çalışabilirlik en önemli olduğu tüm HTTP tabanlı bağlantılar için varsayılan kodlayıcı ve tüm özel bağlamalar için uygun seçim işliyor. Bu Kodlayıcı okur ve standart SOAP 1.1/SOAP 1.2 kısa mesaj ile ikili veriler için hiçbir özel işlem yazar. Varsa <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> ileti özelliği <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, SOAP Zarfı sarmalayıcı çıktısı atlanır ve yalnızca ileti gövdesi içeriği seri hale.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM ileti Kodlayıcı ikili veriler için özel işleme uygular ve kesinlikle bir olay iyileştirme yardımcı olduğundan varsayılan herhangi bir standart bağlamalar tarafından kullanılmadığından bir metin Kodlayıcı olur. İletinin nerede MTOM kodlama avantaj verir bir eşiği aştığında ikili veri içeriyorsa, verileri bir MIME bölümü aşağıdaki ileti zarfı içinde te dış. Bu bölümün sonraki kısımlarında etkinleştirme MTOM bakın.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|WCF iletişim kuran iki taraf dayalı ne zaman ikili ileti Kodlayıcısı Net * bağlamaları ve uygun seçeneği için varsayılan kodlayıcı açıktır. İkili ileti Kodlayıcısı .NET ikili XML biçimi, Microsoft'a özgü ikili temsili, genellikle bir daha küçük kaplama alanı eşdeğer XML 1.0 gösterimi daha verir ve ikili verileri bir bayt olarak kodlar XML bilgi kümesi (Infosets) kullanır. Akış.|  
   

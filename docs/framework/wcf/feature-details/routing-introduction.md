@@ -2,12 +2,12 @@
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563775"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409854"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelikli Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolara olanak tanır ve yönlendirme karmaşık mantık oluşturabilirsiniz. Yönlendirme hizmeti, hata, işleme sağlar ve birincil hedef uç noktasına gönderilirken bir hata oluşması durumunda iletilerin gönderildiği listelerini yedekleme uç nokta ayarlamak de sağlar.  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Desen|Oturum|İşlem|Bağlamı alma|Desteklenen yedekleme listesi|Notlar|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Tek Yönlü||||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bu ileti olup olmadığını çok noktaya yayın, yalnızca başarısız bir kanalda ileti, yedekleme hedefine taşınır.|  
-|Tek Yönlü||![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|Tek Yönlü|||![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. İleti sonra başarıyla alındı, tam tüm bağlamı alır. İleti tarafından herhangi bir uç noktası başarıyla alınmazsa alma bağlamı tamamlamayın.<br /><br /> Bu ileti yükleniyor, çok noktaya yayın alma bağlamı ileti en az bir uç noktası tarafından (birincil veya yedek) başarıyla alınırsa yalnızca tamamlandı. Uç noktaları çok noktaya yayın yollardan birinde hiçbiri başarılı bir şekilde iletisi alırsanız, alma bağlamı tamamlamayın.|  
-|Tek Yönlü||![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Önceki işlem durdurma, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaştı iletileri yedekleme hedefine aktarılır.<br /><br /> Bir işlem oluşturulduktan sonra tüm iletimler başarısız, alma bağlamı tamamlayın ve hareketi.|  
-|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bir çok noktaya yayın senaryosunda, yedekleme hedefi için yalnızca iletileri bir oturumda bir hatayla karşılaştı veya başarısız oturumunu kapatmak bir oturumda gönderilir.|  
-|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")||![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Tüm hata tamamlandı iletisi sonra oturumu başka iletilerin gösterir ve yönlendirme hizmeti başarıyla tüm giden oturumu kanallarınızı kapatır, tüm alma bağlamları tamamlanır ve gelen oturum kanalı kapatıldı.|  
-|Tek Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")|Evet|Geçerli işlem iptal edip yeni bir tane oluşturun. Tüm önceki iletileri oturumunda yeniden gönderin. Bir işlem, tüm ileti başarıyla gönderildi oluşturulduktan sonra daha fazla ileti, tüm giden oturum kanalları kapalı olduğundan, alma oturumu gösterir bağlamları tüm olan işlem tamamlanır, gelen oturum kanalı Kapalı, ve işlem taahhüt eder.<br /><br /> Çok noktaya yayın aynı hedefe önce herhangi bir hata vardı iletileri gönderilir ve hatayla iletileri oturumları ne zaman gönderildiğini yedekleme hedefi için gönderilir.|  
+|Tek Yönlü||✓||Hayır|Bir özel durum ve işlem geri alındı.|  
+|Tek Yönlü|||✓|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. İleti sonra başarıyla alındı, tam tüm bağlamı alır. İleti tarafından herhangi bir uç noktası başarıyla alınmazsa alma bağlamı tamamlamayın.<br /><br /> Bu ileti yükleniyor, çok noktaya yayın alma bağlamı ileti en az bir uç noktası tarafından (birincil veya yedek) başarıyla alınırsa yalnızca tamamlandı. Uç noktaları çok noktaya yayın yollardan birinde hiçbiri başarılı bir şekilde iletisi alırsanız, alma bağlamı tamamlamayın.|  
+|Tek Yönlü||✓|✓|Evet|Önceki işlem durdurma, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaştı iletileri yedekleme hedefine aktarılır.<br /><br /> Bir işlem oluşturulduktan sonra tüm iletimler başarısız, alma bağlamı tamamlayın ve hareketi.|  
+|Tek Yönlü|✓|||Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Bir çok noktaya yayın senaryosunda, yedekleme hedefi için yalnızca iletileri bir oturumda bir hatayla karşılaştı veya başarısız oturumunu kapatmak bir oturumda gönderilir.|  
+|Tek Yönlü|✓|✓||Hayır|Bir özel durum ve işlem geri alındı.|  
+|Tek Yönlü|✓||✓|Evet|Bir yedekleme uç noktasında iletiyi yeniden dener. Tüm hata tamamlandı iletisi sonra oturumu başka iletilerin gösterir ve yönlendirme hizmeti başarıyla tüm giden oturumu kanallarınızı kapatır, tüm alma bağlamları tamamlanır ve gelen oturum kanalı kapatıldı.|  
+|Tek Yönlü|✓|✓|✓|Evet|Geçerli işlem iptal edip yeni bir tane oluşturun. Tüm önceki iletileri oturumunda yeniden gönderin. Bir işlem, tüm ileti başarıyla gönderildi oluşturulduktan sonra daha fazla ileti, tüm giden oturum kanalları kapalı olduğundan, alma oturumu gösterir bağlamları tüm olan işlem tamamlanır, gelen oturum kanalı Kapalı, ve işlem taahhüt eder.<br /><br /> Çok noktaya yayın aynı hedefe önce herhangi bir hata vardı iletileri gönderilir ve hatayla iletileri oturumları ne zaman gönderildiğini yedekleme hedefi için gönderilir.|  
 |İki yönlü||||Evet|Yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
-|İki yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Tüm iletileri kanalda yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
-|İki yönlü||![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
-|İki yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|![Onay işareti](media/checkmark.gif "onay işareti")||Hayır|Bir özel durum ve işlem geri alındı.|  
+|İki yönlü|✓|||Evet|Tüm iletileri kanalda yedekleme hedefine gönderin.  Bir kanal bir yanıt iletisi döndürür. sonra özgün istemci yanıtı döndürür.|  
+|İki yönlü||✓||Hayır|Bir özel durum ve işlem geri alındı.|  
+|İki yönlü|✓|✓||Hayır|Bir özel durum ve işlem geri alındı.|  
 |Çift Yönlü||||Hayır|Çift yönlü iletişim olmayan oturumu şu anda desteklenmiyor.|  
-|Çift Yönlü|![Onay işareti](media/checkmark.gif "onay işareti")|||Evet|Yedekleme hedefine gönderin.|  
+|Çift Yönlü|✓|||Evet|Yedekleme hedefine gönderin.|  
   
 ## <a name="hosting"></a>Barındırma  
  Yönlendirme hizmeti bir WCF hizmeti olarak uygulandığından, bir uygulamadaki şirket içinde barındırılan veya barındırılan IIS ya da WAS tarafından. Yönlendirme hizmeti, IIS, WAS veya bir Windows hizmeti uygulaması otomatik olarak başlamasını avantajlarından yararlanın ve yaşam döngüsü yönetim özellikleri bu barındırma ortamları kullanılabilir barındırılan önerilir.  

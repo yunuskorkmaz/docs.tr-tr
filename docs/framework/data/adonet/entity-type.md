@@ -2,12 +2,12 @@
 title: varlık türü
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 3955de1873d80e85df713a557750e34e76efeb41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502890"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410894"
 ---
 # <a name="entity-type"></a>varlık türü
 *Varlık türü* varlık veri modeli (EDM) ile verilerin yapısını tanımlamak için temel yapı taşı. Kavramsal bir modeli içinde bir varlık türü müşteriler veya siparişler gibi üst düzey kavramlar yapısını temsil eder. Bir varlık türünün varlık türü örnekleri için bir şablondur. Her şablon, aşağıdaki bilgileri içerir:  
@@ -27,7 +27,7 @@ ms.locfileid: "54502890"
 ## <a name="example"></a>Örnek  
  Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`:  
   
- ![Örnek Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Üç varlık türleri ile örnek modeli](./media/entity-type/example-model-three-entity-types.gif)  
   
  Her varlık türünün varlık anahtarıyla olun özellikleri "(anahtar)" ile belirtilir unutmayın.  
   
