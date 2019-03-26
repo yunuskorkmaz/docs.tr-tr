@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 44047b5a35c2ca87f3136d082331d2f31a1abbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721157"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465626"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme
 Bir çizgi çizdiğinizde geçmesi gereken bir <xref:System.Drawing.Pen> nesnesini <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Parametrelerinden biri <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu bir <xref:System.Drawing.Color> nesne. Donuk bir çizgi çizmek için renk alfa bileşeni 255'e ayarlayın. Yarı saydam fırçalarla çizgi çizmek için 1 ila 254 herhangi bir değere alfa bileşenini ayarlayın.  
@@ -25,13 +25,13 @@ Bir çizgi çizdiğinizde geçmesi gereken bir <xref:System.Drawing.Pen> nesnesi
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir bit eşlem çizer ve sonra da bit eşlem arka plan olarak kullanan üç satır çizer. Donuk bir alfa bileşeni, 255, ilk satırı kullanır. Yarı saydam şekilde bir alfa bileşeni 128, ikinci ve üçüncü satır kullanın. arka plandaki resmin arkasını satırları görebilirsiniz. Ayarlar deyimi <xref:System.Drawing.Graphics.CompositingQuality%2A> özelliği neden gama düzeltmesi ile birlikte yapılması için üçüncü satırı karıştırma.  
   
- Aşağıdaki kodun çıktısı aşağıdaki çizimde gösterilmektedir.  
-  
- ![Donuk ve yarı saydam fırçalarla](./media/compqualline.png "compqualline")  
-  
  [!code-csharp[System.Drawing.AlphaBlending#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.AlphaBlending#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
+ Aşağıdaki kodu çıktı aşağıda gösterilmiştir:  
+  
+ ![Donuk ve yarı saydam fırçalarla çıkış gösteren şekil](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
+
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   

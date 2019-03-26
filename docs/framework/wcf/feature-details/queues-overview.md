@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333033"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466172"
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
 Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmış iletişim. Sonraki bölümlerde, sıraya alma burada açıklanan kavramlar, Windows Communication Foundation (WCF) nasıl bildirilen hakkında ayrıntılara gidin.  
@@ -74,7 +74,6 @@ Bu bölümde genel tanıtır ve ardındaki temel kavramları, kuyruğa alınmı�
  İsteğe bağlı olarak bir ileti hedef sıraya yaptıktan sonra hizmetin sürekli olarak iletiyi işlemek başarısız olabilir. Örneğin, bir uygulama veritabanı geçici olarak bağlı bir işlem altında kuyruğa bir ileti okuma ve bir veritabanını güncelleştirmek bulabilirsiniz. Bu durumda, işlem geri alınır, yeni bir işlem oluşturulur ve kuyruktan ileti yeniden okuyun. İkinci denemesi başarılı veya başarısız. Hatanın nedenini bağlı olarak bazı durumlarda, iletiyi sürekli teslim uygulamaya başarısız olabilir. Bu durumda, ileti "poison" kabul edilir Bu türden iletilere poison işleme uygulama tarafından okunabilir bir zehirli kuyruğa taşınır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Teslim Edilemeyen İletiler Sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# -Turu C# dil
 description: Yeni C#? Bu sınıflar, nesneleri ve devralma bakış okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846148"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466264"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -217,7 +217,7 @@ Yöntemi *aşırı yükleme* aynı sınıfta benzersiz imzaları sahip olduklar�
 
 Yürütülebilir kod içeren bir üye olarak bilinir topluca *işlev üyeleri* bir sınıf. Birincil işlev üyeleri türü olan yöntemler, önceki bölümde açıklanmaktadır. Bu bölümde bir işlev üyeleri tarafından desteklenen tür açıklanmaktadır C#: Oluşturucular, özellikleri, Dizinleyicileri, olayları, işleçler ve sonlandırıcılar.
 
-Aşağıdaki liste adlı bir genel sınıf gösterir<T>, growable nesnelerin listesini uygular. Sınıf işlev üyeleri en yaygın tür çeşitli örneklerini içerir.
+Aşağıdaki liste adlı bir genel sınıf gösterir\<T >, growable nesnelerin listesini uygular. Sınıf işlev üyeleri en yaygın tür çeşitli örneklerini içerir.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

@@ -1,15 +1,9 @@
 ---
 title: .NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler, modüler ve bağımsız bir şekilde dağıtılabilen hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve bir hizmeti ve bağımlılıklarını ardından yalıtılmış bir ortamda çalıştırılır tek bir birim halinde paketleme tarafından test basitleştirin.
+description: 'Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler, modüler ve bağımsız bir şekilde dağıtılabilen hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve bir hizmeti ve bağımlılıklarını ardından yalıtılmış bir ortamda çalıştırılır tek bir birim halinde paketleme tarafından test basitleştirin.'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479951"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi
 
@@ -58,7 +52,7 @@ Bu kılavuz, uygulama yaşam döngüsü üzerinde DevOps, CI/CD işlem hatları,
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap)  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzda kullanan
 

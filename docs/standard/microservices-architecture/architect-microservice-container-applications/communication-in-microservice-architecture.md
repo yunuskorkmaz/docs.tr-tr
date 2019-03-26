@@ -4,12 +4,12 @@ description: Zaman uyumlu ve zaman uyumsuz yöntemler etkilerini anlama, mikro h
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1e8f15e2a02c8f6e7456a2e3a2f6756277ec6314
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127179"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466198"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
@@ -90,10 +90,10 @@ HTTP REST Hizmetleri, arabirim tanımı dili olarak kullanılırken ek değer yo
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Martin Fowler. Uludağ olgunluk modelini** REST modeli açıklaması. \
-  [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 - **Swagger** resmi sitesi. \
-  [*https://swagger.io/*](https://swagger.io/)
+  [https://swagger.io/](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Anında iletme ve HTTP tabanlı gerçek zamanlı iletişim
 

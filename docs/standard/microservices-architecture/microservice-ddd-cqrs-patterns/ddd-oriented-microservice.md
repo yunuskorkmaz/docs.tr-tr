@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145614"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464911"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD odaklı bir mikro hizmet tasarlama
 
@@ -96,13 +96,13 @@ Bu katman tasarım için her bir mikro hizmetin bağımsız olmalıdır. Daha ö
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **DevIQ. Kalıcılık Ignorance İlkesi** \
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 - **Oren Eini. Altyapı Ignorance** \
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
-- **Melek Lopez. Etki alanı Odaklı Tasarım katmanlı mimaride** \
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+- **Angel Lopez. Etki alanı Odaklı Tasarım katmanlı mimaride** \
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
 >[Önceki](cqrs-microservice-reads.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569381"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464027"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma
 *Kimlik* Windows Communication Foundation (WCF) özelliği, beklenen hizmet kimliğini önceden belirtmek bir istemci sağlar. Bir sunucu kendisini istemciye doğruladığında kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -86,5 +86,4 @@ ms.locfileid: "54569381"
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [Hizmet Kimliği Örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)

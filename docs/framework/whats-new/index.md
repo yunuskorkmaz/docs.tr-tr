@@ -205,18 +205,18 @@ Bir dizi yeni API için .NET Framework 4.7.2 ekler <xref:System.Collections.Gene
 
 - `TryGetValue` Bu iki tür diğer koleksiyon türlerine kullanılan deneyin deseni genişletme yöntemleri. Yöntemler şunlardır:
 
-   - [Genel bool HashSet<T>. TryGetValue (T actualValue kullanıma T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [Genel bool SortedSet<T>. TryGetValue (T actualValue kullanıma T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [Genel bool HashSet\<T >. TryGetValue (T actualValue kullanıma T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [Genel bool SortedSet\<T >. TryGetValue (T actualValue kullanıma T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
 - `Enumerable.To*` bir koleksiyona Dönüştür genişletme yöntemleri, bir <xref:System.Collections.Generic.HashSet%601>:
 
-   - [Genel statik HashSet<TSource> ToHashSet<TSource>(Bu IEnumerable<TSource> kaynak)](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [Genel statik HashSet<TSource> ToHashSet<TSource>(Bu IEnumerable<TSource> kaynak IEqualityComparer<TSource> karşılaştırıcı)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [Genel statik HashSet\<Tkaynak > ToHashSet\<Tkaynak > (Bu IEnumerable\<Tkaynak > kaynak)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [Genel statik HashSet\<Tkaynak > ToHashSet\<Tkaynak > (Bu IEnumerable\<Tkaynak > kaynak IEqualityComparer\<Tkaynak > karşılaştırıcı)](xref:System.Linq.Enumerable.ToHashSet%2A)
 
 - Yeni <xref:System.Collections.Generic.HashSet%601> olanak tanıyan oluşturucular bir performans kazancı boyutunu bildiğinizde veren koleksiyonun kapasitesi ayarlama <xref:System.Collections.Generic.HashSet%601> önceden:
 
    - [Genel HashSet (int Kapasite)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [Genel HashSet (int kapasite IEqualityComparer<T> karşılaştırıcı)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
+   - [Genel HashSet (int kapasite IEqualityComparer\<T > karşılaştırıcı)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Sınıfı içeren yeni aşırı yüklemeleri <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> yöntemleri sözlükten bir değer almak veya değil bulunursa ve eklemek için sözlük veya zaten varsa güncelleştirmek için bir değer ekleyin.
 

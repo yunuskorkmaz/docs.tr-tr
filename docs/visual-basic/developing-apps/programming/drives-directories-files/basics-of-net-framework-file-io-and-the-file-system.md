@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 365c3b8f0aa107f7106e0c83d1fa60de6f4903f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674568"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462779"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 
@@ -29,7 +29,7 @@ Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile ç
 
 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Okuma ve dosyalara yazma desteklemek üzere akışları kullanır. Bir akışı, sahip olduğu bir başlangıç ve bitiş tarihi ve burada stream'de geçerli konum bir imleç gösterir bitişik veri tek boyutlu bir dizi olarak düşünebilirsiniz.
 
-![İmleç akışında geçerli konumunu gösterir. ](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FILESTREAM")
+![İmleç akışında geçerli konumunu gösterir.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
 ## <a name="stream-operations"></a>Stream işlemleri
 

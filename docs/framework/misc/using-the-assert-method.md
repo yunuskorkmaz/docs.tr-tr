@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516521"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463013"
 ---
 # <a name="using-the-assert-method"></a>Onay Yöntemini Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516521"
   
 -   Yöntemi bir bir derlemede yer alan, Yöntem B derleme B ve benzeri yer alır.  
   
- ![](../../../docs/framework/misc/media/assert.gif "Assert")  
-Assert kullanma  
+ ![Assert yöntemi derlemeleri gösteren diyagram.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  Bu senaryo, yöntemi bir çağrıları B, C B çağrıları, C çağrı E ve E çağrılar F. yöntemi C (izin P1) C sürücüsündeki dosyaları okuma izni ve (izni P1A) C sürücüsündeki .txt dosyaları okumak için yöntem E taleplerini izni onaylar. Talep f çalışma zamanında karşılaşıldığında, C, C'ın onaylama nerede bulunduğundan izinlerini incelemek için yığın ilerlemesi geçer şekilde yığın ilerlemesi f, tüm çağıranların izinlerini kontrol etmek için gerçekleştirilir E. E başlangıç P1A izin verildi. Talep edilen izni (P1A) olarak onaylanan izni (P1) bir alt kümesi olduğundan, otomatik olarak yığın ilerlemesi durur ve güvenlik denetimi başarılı. A ve B P1A izni verilmemiş bu derlemeler önemli değildir. P1 sunduğundan tarafından C yöntemi çağıranlar, bu kaynağa erişim izni verilmemiş bile çağıranlarını P1 tarafından korunan kaynak erişebilmesini sağlar.  
   

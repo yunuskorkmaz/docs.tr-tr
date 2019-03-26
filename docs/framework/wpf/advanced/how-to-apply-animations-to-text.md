@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356968"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463130"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Nasıl yapılır: Metne Animasyon Uygulama
 Animasyonları, görüntü ve metin uygulamanızın görünümünü değiştirebilirsiniz. Aşağıdaki örnekler animasyonları farklı türde metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetimi.  
@@ -26,9 +26,8 @@ Animasyonları, görüntü ve metin uygulamanızın görünümünü değiştireb
   
  Aşağıdaki diyagramda etkisini gösterir <xref:System.Windows.Controls.TextBlock> gelen saydamlığını değiştirme denetimi `1.00` için `0.00` tarafından tanımlanan 5 saniyelik aralığına sırasında <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Opaklık 1,00 0.00 değiştirme metni](./media/fadedtext01.png "FadedText01")  
-Metin opaklık 1,00 0.00 değiştirme  
-  
+ ![Opaklık 1,00 0.00 değiştirme metni.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  Aşağıdaki örnekte bir <xref:System.Windows.Media.Animation.ColorAnimation> metin bloğu ön plan rengini animasyon uygulamak için. Ön plan rengi değer rengi 5 saniye süre içinde ikinci bir renge değişir ve ardından renk değerleri tersine çevirir ve devam eder.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  

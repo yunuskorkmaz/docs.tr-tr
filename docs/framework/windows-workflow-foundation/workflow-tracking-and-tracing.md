@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 298791fc43d976e339c42c45a8fd30c25d73bdb9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d7bbaf8ac68e7078735a2b2a6f08db2e6f3a9216
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462792"
 ---
 # <a name="workflow-tracking-and-tracing"></a>İzleme ve izleme iş akışı
 Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  
@@ -31,9 +31,9 @@ Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/
 ## <a name="workflow-tracking-infrastructure"></a>İş akışı izleme altyapısı  
  İş akışı izleme altyapısı bir Yayımla ve abone ol paradigma izler. İş akışı örneğinin uzantıları iş akışına olarak kayıtlı aboneleri kayıtları izleme kayıtları izleme listesinin yayımcısıdır. Abone bu uzantılar <xref:System.Activities.Tracking.TrackingRecord> nesneleri izleme katılımcıları çağrılır. İzleme katılımcıları erişim genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.TrackingRecord> nesneleri ve bunları hangi şekilde Bunu yapmak için yazılır, işlem. Bir kayıt alt kümesi için abone olmak için bir katılımcı izin vermek için giden izleme kayıtları bir filtre uygulamayı izleme altyapısı sağlar. Bu filtreleme mekanizması aracılığıyla bir izleme gerçekleştirilir profili dosyası.  
   
- İzleme altyapısının yüksek düzeyde bir görünümü aşağıdaki çizimde gösterilmektedir.  
+ İzleme altyapısının yüksek düzeyde bir görünümü aşağıda gösterilmiştir:  
   
- ![İş akışı izleme altyapısı](./media/wv.gif "WV")  
+ ![İş akışı izleme altyapısı gösteren ekran görüntüsü. ](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İzleme Kayıtları](tracking-records.md)  

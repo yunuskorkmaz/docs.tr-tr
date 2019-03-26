@@ -4,12 +4,12 @@ description: Sistem durumu izleme uygulama yollarından keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4ad13fa4596cc852317a367852b76a9f769caf78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259364"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464014"
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -276,16 +276,16 @@ Tüm olay akışlarını depoladığınız, son olarak, Microsoft Power BI veya 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **HealthChecks ve ASP.NET Core HealthChecks kullanıcı Arabirimi**
-    [*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
 
 -   **Service Fabric sistem durumu izlemeye giriş**
-    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
+    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 -   **Azure Application Insights**
-    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite'e**
-    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 >[Önceki](implement-circuit-breaker-pattern.md)

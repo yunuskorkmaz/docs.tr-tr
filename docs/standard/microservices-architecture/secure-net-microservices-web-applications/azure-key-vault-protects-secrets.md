@@ -4,12 +4,12 @@ description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güven
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: fd2bff04e06bf0561ee0c95d87978f834f192172
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664048"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466133"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma
 
@@ -38,19 +38,19 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafın
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Uygulama parolalarını korumak için Azure anahtar Kasası'nı kullanma** \
-  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
 - **Geliştirme sırasında uygulama gizli anahtarlarının güvenli bir şekilde depolanması** \
-  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
+  [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
 - **Veri korumayı yapılandırma** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
+  [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
 - **Veri koruma anahtar yönetimi ve ASP.NET Core yaşam süresi** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings*](/aspnet/core/security/data-protection/configuration/default-settings)
+  [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu. \
-  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 >[Önceki](developer-app-secrets-storage.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373120"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466224"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar windows aracılığıyla etkileşim. Birincil amacı bir pencere, verileri görselleştiren ve verilerle etkileşimde bulunmak kullanıcıların sağlayan konak içerik sağlamaktır. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve yönetme windows tek başına uygulamalarda temellerini kapsayan önce.  
@@ -44,9 +44,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Pencere sınıfı  
- Aşağıdaki şekilde, pencerenin oluşturan parçaları gösterilmektedir.  
+ Aşağıdaki şekilde, pencerenin oluşturan parçaları gösterilmektedir:  
   
- ![Pencere öğeleri](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Pencere öğeleri gösteren ekran görüntüsü.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Bir pencere iki alana ayrılır: istemci alanını ve istemci dışı alan.  
   
@@ -146,7 +146,7 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  Pencere, son olarak çağırarak açılırsa <xref:System.Windows.Window.Show%2A> yöntemi; sonuç aşağıdaki şekilde gösterilir.  
   
- ![Bir pencere açılır Window.Show çağrısıyla](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Window.Show çağırarak bir pencere açılır](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Çağırarak açılan bir pencere <xref:System.Windows.Window.Show%2A> uygulama kullanıcıların diğer windows aynı uygulama etkinleştirmesine izin veren bir modunda çalıştığı anlamına gelir bir geçici pencere.  
   
@@ -282,13 +282,13 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Pencere ömür olayları  
- Aşağıdaki çizimde, pencerenin yaşam süresi asıl olay dizisini gösterir.  
+ Aşağıdaki çizimde, pencerenin yaşam süresi asıl olayların sırasını gösterir:  
   
- ![Yaşam süresi](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Bir pencerenin yaşam süresi olayları gösteren diyagram.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Aşağıdaki çizimde asıl olayların sırası etkinleştirme gösterilen bir pencere ömrü gösterir (<xref:System.Windows.Window.ShowActivated%2A> ayarlanır `false` pencere gösterilmeden önce).  
+ Aşağıdaki çizimde asıl olayların sırası etkinleştirme gösterilen bir pencere ömrü gösterir (<xref:System.Windows.Window.ShowActivated%2A> ayarlanır `false` pencere gösterilmeden önce):  
   
- ![Yaşam süresi &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Bir pencerenin etkin kalma süresi olmadan etkinleştirme olayları gösteren diyagram.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Pencere konumu  
@@ -351,21 +351,21 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
  **Yükseklik özellikleri için:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Genişlik özellikleri için:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Bu pencere stilleri etkisini aşağıdaki şekilde gösterilmektedir.  
+ Bu pencere stilleri etkisini aşağıdaki resimde gösterilmektedir:  
   
- ![Pencere stilleri](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Pencere sınır stillerini gösterimi.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Ayarlayabileceğiniz <xref:System.Windows.Window.WindowStyle%2A> kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme veya kod; bir pencere ömrü boyunca değişme olasılığı olduğu için büyük olasılıkla kullanarak yapılandıracağınız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
@@ -448,9 +448,9 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
 #### <a name="non-rectangular-window-style"></a>Dikdörtgen olmayan pencere stili  
  Burada kenarlık stilleri, durumlar da vardır <xref:System.Windows.Window.WindowStyle%2A> sağlayan sahip olmanız yeterli değildir. Örneğin, benzer olmayan bir kenarlığa sahip bir uygulama oluşturmak isteyebilirsiniz [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] kullanır.  
   
- Örneğin, aşağıdaki şekilde gösterilen konuşma Kabarcık penceresi göz önünde bulundurun.  
+ Örneğin, aşağıdaki şekilde gösterilen konuşma Kabarcık penceresi göz önünde bulundurun:  
   
- ![Dikdörtgen olmayan pencere](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Sürükleme Me. bildiren bir konuşma Kabarcık penceresi](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Bu tür bir pencerede ayarlayarak oluşturulabilir <xref:System.Windows.Window.WindowStyle%2A> özelliğini <xref:System.Windows.WindowStyle.None>ve özel'i kullanarak destekleyen <xref:System.Windows.Window> saydamlık için.  
   
@@ -460,9 +460,10 @@ Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar w
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Görev çubuğu durum  
- Varsayılan görünüm penceresinin aşağıdaki şekilde gösterilene benzer bir görev çubuğu düğmesinin içerir.  
-  
- ![Bir görev çubuğu düğmesinin penceresiyle](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+Varsayılan görünüm penceresinin aşağıdaki şekilde gösterilene benzer bir görev çubuğu düğme içerir:
+
+ ![Bir pencere ile görev çubuğunu gösteren ekran görüntüsü.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  İleti kutuları ve iletişim kutuları gibi bir görev çubuğu düğmesinin windows bazı türleri yok (bkz [iletişim kutularına genel bakış](dialog-boxes-overview.md)). Bir pencere için görev çubuğu düğmesinin ayarlayarak gösterilip gösterilmeyeceğini denetleyen <xref:System.Windows.Window.ShowInTaskbar%2A> özelliği (`true` varsayılan olarak).  
   

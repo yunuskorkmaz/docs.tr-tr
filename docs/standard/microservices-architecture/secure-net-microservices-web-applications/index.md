@@ -271,28 +271,28 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı yerel bir sertifika yetkil
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Tanımlama bilgilerini uygulamalar arasında paylaşma** \
-  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
+  [https://docs.microsoft.com/aspnet/core/security/cookie-sharing](/aspnet/core/security/cookie-sharing)
 
 - **Kimliğe giriş** \
-  [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
+  [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
 - **Rick Anderson. SMS ile iki öğeli kimlik doğrulama** \
-  [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](/aspnet/core/security/authentication/2fa)
+  [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Facebook, Google ve diğer dış sağlayıcıları kullanarak kimlik doğrulamayı etkinleştirme** \
-  [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](/aspnet/core/security/authentication/social/)
+  [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
 - **Michell Anicas. OAuth 2 giriş** \
-  [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
+  [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth sağlayıcıları için GitHub deposunu) \
-  [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+  [https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Azure AD'yi bir ASP.NET Core web uygulamasıyla tümleştirme** \
-  [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
+  [https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
 - **Identityserver4. Resmi belgeleri** \
-  *<https://identityserver4.readthedocs.io/en/latest/>*
+  <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
 >[Önceki](../implement-resilient-applications/monitor-app-health.md)

@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827558"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463715"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC test uygulamaları
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Genellikle, bir bellek içi kullanmak için uygulamayı yapılandırma gibi her bir testi çalıştırmadan önce bazı ek yapılandırmalar sitenizin gerçekleştirmek isteyebilirsiniz veri deposuna ve daha sonra uygulama test verileri ile dengeli dağıtım. Bunu yapmak için kendi alt WebApplicationFactory oluşturmalısınız<TEntry> ve kendi ConfigureWebHost yöntemi yok sayın. Aşağıdaki örnekte eShopOnWeb FunctionalTests projeden ve testleri ana web uygulamasında bir parçası olarak kullanılır.
+Genellikle, bir bellek içi kullanmak için uygulamayı yapılandırma gibi her bir testi çalıştırmadan önce bazı ek yapılandırmalar sitenizin gerçekleştirmek isteyebilirsiniz veri deposuna ve daha sonra uygulama test verileri ile dengeli dağıtım. Bunu yapmak için kendi alt WebApplicationFactory oluşturmalısınız\<TEntry > ve onun ConfigureWebHost yöntemi yok sayın. Aşağıdaki örnekte eShopOnWeb FunctionalTests projeden ve testleri ana web uygulamasında bir parçası olarak kullanılır.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

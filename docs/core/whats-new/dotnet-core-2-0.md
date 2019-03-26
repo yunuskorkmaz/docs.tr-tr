@@ -4,12 +4,12 @@ description: "' De .NET Core bulunan yeni özellikler hakkında bilgi edinin."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679899"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464079"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 yenilikleri
 
@@ -144,7 +144,7 @@ Daha fazla bilgi için [Visual Studio 2017 ile Live Unit Testing](/visualstudio/
 
 Birden çok hedef çerçeve için bir proje oluşturuyorsanız, hedef platformu artık üst düzey menüsünden seçebilirsiniz. Aşağıdaki resimde, bir proje adlı SCD1 hedefleri 64-bit macOS X 10.11 (`osx.10.11-x64`) ve 64-bit Windows 10/Windows Server 2016 (`win10-x64`). Hedef Çerçeve proje düğmesi, bu durumda hata ayıklama derlemesi çalıştırılacak seçmeden önce seçebilirsiniz.
 
-![Hedef Framework'ü bir proje derlenirken seçme](media/multitarget.png)
+![Hedef framework seçimi bir proje derlenirken gösteren ekran görüntüsü.](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK'ları için yan yana desteği
 

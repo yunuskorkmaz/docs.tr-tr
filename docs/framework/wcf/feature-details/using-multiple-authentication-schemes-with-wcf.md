@@ -2,12 +2,12 @@
 title: WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f2c9944b424ba527fb20562706d5ad7fc3f8359
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593816"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465501"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
 WCF artık tek bir uç noktada birden çok kimlik doğrulama düzenleri belirtmenizi sağlar. Ayrıca barındırılan web hizmetleri doğrudan IIS kimlik doğrulaması ayarlarını devralabilir. Şirket içinde barındırılan hizmetler, hangi kimlik doğrulama düzenleri kullanılabilir belirtebilirsiniz. IIS kimlik doğrulaması ayarlarını ayarlama hakkında daha fazla bilgi için bkz. [IIS kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -124,6 +124,5 @@ else
 - [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654665"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466159"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtlandırılır. Bu tür bir yalıtım uygulamak için kod deposu açıldığında çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı aynı işletim sistemini algılar, kullanıcı kimlik kavramını kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  
@@ -46,10 +46,9 @@ Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtland�
   
  Ya da bu ayırmayı gezici kullanıcı profili ile birleştirilebilir. Daha fazla bilgi için konudaki [yalıtılmış depolama ve dolaşım](#Roaming).  
   
- Aşağıdaki çizim, farklı kapsamlarda yalıtılmış depoları nasıl gösterir.  
+ Farklı kapsamlarda yalıtılmış depoları nasıl aşağıda gösterilmektedir:  
   
- ![Kullanıcı ve derlemeye göre yalıtım](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Yalıtılmış Depolama türleri  
+ ![Kullanıcı ve derlemeye göre yalıtım gösteren diyagram.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Belirli bir bilgisayarın yerel depolama tesislerinin kullandığından depoları Dolaşım dışında yalıtılmış depolama her zaman örtük olarak bilgisayar tarafından izole edilmiş olduğunu unutmayın.  
   

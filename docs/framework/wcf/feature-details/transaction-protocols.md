@@ -2,12 +2,12 @@
 title: İşlem Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 26dd82936e7131dd41dd1b2ab1cf830c6fe7d591
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066253"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463949"
 ---
 # <a name="transaction-protocols"></a>İşlem Protokolleri
 Windows Communication Foundation (WCF), WS-Atomic işlem ve WS-koordinasyon protokollerini kullanır.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF), WS-Atomic işlem ve WS-koordinasyon prot
   
  Bu konu, WS-Atomic işlem (WS-AT) belirtimi bileşimi ile güvenlik açıklar ve işlem yöneticileri arasındaki iletişim için kullanılan güvenli bir bağlama tanımlar. Bu belgede açıklanan yaklaşımı başarıyla WS-AT ve WS-koordinasyon diğer uygulamaları ile test edilmiştir IBM, IONA, Sun Microsystems ve diğerleri gibi.  
   
- Aşağıdaki şekil, hareket yöneticisi 1 ve hareket yöneticisi 2, iki işlem yöneticileri ve uygulama 1 ve 2 uygulama olmak üzere iki uygulama arasında birlikte çalışabilirliği gösterir.  
+ Aşağıdaki şekil, hareket yöneticisi 1 ve hareket yöneticisi 2, iki işlem yöneticileri ve uygulama 1 ve 2 uygulama olmak üzere iki uygulama arasında birlikte çalışabilirliği gösterir:  
   
- ![İşlem protokolleri](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Yöneticileri işlem arasındaki etkileşimi gösteren ekran görüntüsü.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Bir başlatıcı (ı) ve bir katılımcı (P) tipik bir WS-koordinasyon/WS-Atomic işlem senaryoyu ele alalım. Hem Başlatıcı hem de katılımcı sahip işlem yöneticileri (ITM ve PTM, sırasıyla). İki aşamalı tamamlama bu konudaki 2PC olarak adlandırılır.  
   

@@ -26,13 +26,13 @@ Yükleyerek [Docker Community Edition'ı (CE)](https://www.docker.com/community-
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Visual Studio**. Resmi sitesi. \
-  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 
 - **Visual Studio Code**. Resmi sitesi. \
-  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 - **Mac ve Windows için docker Community Edition (CE)** \
-  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET dil ve çerçeveyi kullanabilmek için Docker kapsayıcıları
 

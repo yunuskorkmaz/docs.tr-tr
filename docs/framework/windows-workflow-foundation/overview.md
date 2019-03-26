@@ -2,12 +2,12 @@
 title: Windows Workflow'a genel bakış
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718759"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464690"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow'a genel bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek hayattaki bir işleme açıklayan model olarak depolanır. İş akışları yürütme düzenini ve kısa veya uzun süren iş parçaları arasındaki bağımlı ilişkileri açıklamak için bir yol sağlar. Bu iş modeliyle baştan geçirir ve etkinlikleri sistem işlevlerini veya kişiler tarafından yürütülmesi gerekir.  
@@ -31,7 +31,7 @@ Ana bilgisayar işlemdeki iş akışı bileşenleri
 ## <a name="interaction-between-workflow-components"></a>İş akışı bileşenleri arasındaki etkileşimi  
  Aşağıdaki diyagramda, iş akışı bileşenlerinin birbirleriyle nasıl etkileşim kurduklarını gösterir.  
   
- ![İş akışı etkileşim](./media/workflowinteraction.gif "WorkflowInteraction")  
+ ![İş akışı bileşenlerinin nasıl etkileştiğini gösteren diyagram.](./media/overview/workflow-component-interatction.gif)  
   
  Yukarıdaki diyagramda <xref:System.Activities.WorkflowInvoker.Invoke%2A> yöntemi <xref:System.Activities.WorkflowInvoker> sınıfı, birden çok iş akışı örnekleri çağırmak için kullanılır. <xref:System.Activities.WorkflowInvoker> ana bilgisayardan yönetim gerektirmeyen basit iş akışları için kullanılır; ana bilgisayardan yönetim gereken iş akışları (gibi <xref:System.Activities.Bookmark> sürdürme) kullanarak yürütülmelidir <xref:System.Activities.WorkflowApplication.Run%2A> yerine. Bir iş akışı örneği başka çağırmadan önce tamamlanmasını beklemeniz gerekmez; çalışma zamanı altyapısı, birden çok iş akışı örneği eşzamanlı olarak çalıştırılmasını destekler.  Çağrılan iş akışı aşağıdaki gibidir:  
   

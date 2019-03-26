@@ -3,12 +3,12 @@ title: Hello World .NET Core uygulamanızı Visual Studio 2017 ile hata ayıklam
 description: C# veya Visual Basic, Visual Studio 2017 ile yazılmış bir Hello World uygulamasında hata ayıklama hakkında bilgi edinin.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170671"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463429"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Hata ayıklama, C# veya Visual Studio 2017'yi kullanarak Visual Basic .NET Core Merhaba Dünya uygulaması
 
@@ -39,7 +39,7 @@ Programınızın hata ayıklama modunda çalıştırabilir ve birkaç deneyin ha
 
 1. Kesme noktasına ulaştığında ve önce programın yürütülmesini durdurur `Console.WriteLine` yöntemini yürütür. **Otolar** penceresi, geçerli satırı kullanılan değişkenlerin değerlerini görüntüler. **Yereller** penceresi (tıklatarak görüntüleyebileceğiniz **Yereller** sekmesinde) o anda yürütülen yönteminde tanımlanan değişkenler değerlerini görüntüler.
 
-   ![Visual Studio uygulama penceresi](./media/debugging-with-visual-studio/break.png)
+   ![Visual Studio'da bir kesme noktasının ekran görüntüsü.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Değişkenleri, programınızın nasıl etkilediğini görmek için değerini değiştirebilirsiniz. Varsa **komut penceresi** görünmüyorsa, seçerek görüntüleyin **hata ayıklama** > **Windows** > **hemen**menü öğesi. **Komut penceresi** hata ayıklaması uygulama ile etkileşim sağlar.
 

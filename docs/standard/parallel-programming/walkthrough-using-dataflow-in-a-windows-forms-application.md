@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
+title: "İzlenecek yol: Bir Windows Forms uygulaması'nda veri akışı kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49935c471d10e438763e41b07944047b0924af09
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864676"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465808"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Bir Windows Forms uygulaması'nda veri akışı kullanma
 Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren veri akışı bloğu ağının nasıl oluşturulacağını gösterir.  
   
  Bu örnek belirtilen klasöründen görüntü dosyalarını yükler, bileşik bir görüntü oluşturur ve sonucu görüntüler. Örnek yol görüntülerine ağ üzerinden veri akışı modelini kullanır. Veri akışı modelinde, bir program bağımsız bileşenleri birbirleriyle iletiler göndererek iletişim. Bir bileşenin bir ileti aldığında, bir eylem gerçekleştirir ve ardından sonucu başka bir bileşene geçirir. Bu, denetim akışı modeli, bir uygulama denetim yapıları, örneğin kullanır, koşullu deyimler, döngüler ve benzeri işlemlerin bir programda sırasını denetlemek için ile karşılaştırın.  
@@ -95,13 +95,13 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
   
  Bir ağ oluşturmak için veri akışı bloklarının bağlanmak için bu örnekte <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> yöntemi. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Yöntemi alan aşırı yüklenmiş bir sürümünü içeren bir <xref:System.Predicate%601> nesnesini hedef blok kabul eder ya da bir ileti reddeder olup olmadığını belirler. Bu filtreleme mekanizması ileti blokları yalnızca belirli değerleri almasını sağlar. Bu örnekte, iki yoldan biriyle ağ dallara ayırabilirsiniz. Ana dal görüntüleri diskten yükler, bileşik görüntüsünü oluşturur ve o yansıma formda görüntülenir. Diğer dal, geçerli işlemi iptal eder. <xref:System.Predicate%601> Nesneleri belirli iletileri reddederek alternatif dala geçmek ana dal boyunca veri akışı blokları sağlar. Örneğin, kullanıcı işlemi, veri akışı bloğunu iptal ederse `createCompositeBitmap` üretir `null` (`Nothing` Visual Basic'te) çıktısını olarak. Veri akışı bloğu `displayCompositeBitmap` reddeder `null` giriş değerleri ve bu nedenle, ileti için sunulur `operationCancelled`. Veri akışı bloğu `operationCancelled` tüm iletileri kabul eder ve bu nedenle, işlemi iptal edildiğini belirten bir resim görüntüler.  
   
- Aşağıdaki çizim, görüntü işleme ağı gösterir.  
+ Görüntü işleme ağı aşağıda gösterilmiştir:  
   
- ![Görüntü işleme ağı](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
+ ![Çizimi görüntü işleme ağı gösterir.](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
  Çünkü `displayCompositeBitmap` ve `operationCancelled` veri akışı blokları hareket kullanıcı arabiriminde, önemlidir bu eylemler kullanıcı arabirimi iş parçacığı üzerinde oluşur. Oluşturma sırasında bunu gerçekleştirmek için bu nesnelerin her sağlayan bir <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> nesnesi <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> özelliğini <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> Yöntemi oluşturur bir <xref:System.Threading.Tasks.TaskScheduler> geçerli eşitleme kapsamının üzerinde işini gerçekleştiren nesne. Çünkü `CreateImageProcessingNetwork` yöntemi işleyicisinden çağrılır **Klasör Seç** çalıştığı üzerinde kullanıcı arabirimi iş parçacığı, Eylemler için düğme `displayCompositeBitmap` ve `operationCancelled` veri akışı blokları da çalıştırın kullanıcı arabirimi iş parçacığı.  
   
- Bu örnekte ayar yerine paylaşılan bir iptal belirteci <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> özelliği olduğundan <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> özelliği veri akışı bloğu yürütme kalıcı olarak iptal eder. Bu örnekte, kullanıcı bir veya daha fazla operations bile iptal ettiğinde aynı veri akışı ağ birden çok kez yeniden kullanmak bir iptal belirteci sağlar. Kullanan bir örnek için <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> yürütme veri akışı bloğunun kalıcı olarak iptal etmek için bkz: [nasıl yapılır: bir veri akışı bloğunu iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ Bu örnekte ayar yerine paylaşılan bir iptal belirteci <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> özelliği olduğundan <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> özelliği veri akışı bloğu yürütme kalıcı olarak iptal eder. Bu örnekte, kullanıcı bir veya daha fazla operations bile iptal ettiğinde aynı veri akışı ağ birden çok kez yeniden kullanmak bir iptal belirteci sağlar. Kullanan bir örnek için <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> yürütme veri akışı bloğunun kalıcı olarak iptal etmek için bkz: [nasıl yapılır: Bir veri akışı bloğunu iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>   
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağ kullanıcı arabirimine bağlanma  

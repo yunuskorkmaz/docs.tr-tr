@@ -3,17 +3,17 @@ title: WIF talep programlama modeli
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316512"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462818"
 ---
 # <a name="wif-claims-programming-model"></a>WIF talep programlama modeli
 ASP.NET ve Windows Communication Foundation (WCF) geliştiricileri, IIdentity ve IPrincipal arabirimleri genellikle kullanıcının kimlik bilgileri ile çalışmak için kullanın. Artık her zaman Aşağıdaki diyagramda gösterildiği gibi herhangi bir asıl için mevcut taleplerdir şekilde .NET 4.5 içinde Windows Identity Foundation (WIF) tümleştirilmiştir:
 
- ![WIF talep programlama modeli](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![WIF talep programlama modeli gösteren diyagram.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  .NET 4.5 içinde System.Security.Claims (bkz. Yukarıdaki diyagramda) yeni ClaimsPrincipal ve Claimsıdentity sınıfları içerir. . NET'te tüm ilkeleri artık ClaimsPrincipal türetilir. ASP.NET ve artık WindowsIdentity FormsIdentity gibi tüm yerleşik kimlik sınıflar Claimsıdentity türetilir. Benzer şekilde, GenericPrincipal ve WindowsPrincipal gibi tüm yerleşik asıl sınıflar ClaimsPrincipal türetilir.
 
@@ -59,7 +59,7 @@ WIF, çeşitli kimlik doğrulama mekanizmaları hazır birleşimleri destekler. 
 |SAML 2.0|"SAML 1.1" ile aynıdır.|"SAML 1.1 Windows eşlenmiş" ile aynıdır.|
 |X509|1.  Talep X500 ile ayırt edici adı, epostaadı dnsName, SimpleName, UpnName UrlName, parmak izini (Bu ayıklanan X509Certificate2.PublicKey.Key özelliğinden RSACryptoServiceProvider.ExportParameters yöntemi kullanarak), RsaKey DsaKey ( Bunu ayıklanan X509Certificate2.PublicKey.Key özelliğinden DSACryptoServiceProvider.ExportParameters yöntemi kullanarak), seri numarası X509 özelliklerinden sertifika.<br />2.  AuthenticationMethod talep değeriyle `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. Sertifika XmlSchema tarih saat biçiminde zaman doğrulandığı zaman değeri ile AuthenticationInstant talep.|1.  Windows hesabı tam etki alanı adını kullanan `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` talep değeri. biçimindeki telefon numarasıdır.<br />2.  Sertifika için Windows eşlenmedi X509 gelen talepleri ve Windows için sertifika eşleyerek elde edilen windows hesabı gelen talepler.|
 |UPN|1.  Talepler, talep Windows kimlik doğrulaması bölümünde benzerdir.<br />2.  AuthenticationMethod talep değeriyle `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. Parola XmlSchema tarih saat biçiminde zaman doğrulandığı zaman değeri ile AuthenticationInstant talep.||
-|Windows (Kerberos veya NTLM)|1.  Erişim belirtecinden gibi oluşturulan talepler: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GrupSID, DenyOnlySID ve adı<br />2.  AuthenticationMethod değerle `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. Windows belirteç eriştiğinizde zaman değeri ile AuthenticationInstant XMLSchema tarih saat biçiminde oluşturulur.||
+|Windows (Kerberos veya NTLM)|1.  Erişim belirteci gibi üretilen talepleri: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GrupSID, DenyOnlySID ve adı<br />2.  AuthenticationMethod değerle `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. Windows belirteç eriştiğinizde zaman değeri ile AuthenticationInstant XMLSchema tarih saat biçiminde oluşturulur.||
 |RSA anahtar çifti|1.  `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` RSAKeyValue değeriyle talep.<br />2.  AuthenticationMethod talep değeriyle `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. AuthenticationInstant talebi zaman RSA anahtarı kimlik doğrulaması zaman değeri (diğer bir deyişle, İmza doğrulandı) XMLSchema tarih saat biçiminde.||
 
 |Kimlik doğrulaması türü|"AuthenticationMethod" talebi yayılan URI'si|

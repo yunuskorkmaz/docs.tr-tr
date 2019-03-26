@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369857"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464573"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,7 +41,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
  Aşağıdaki çizim basit bir düzen gösterir.  
   
- ![Tipik bir kılavuz, sınırlama kutusu yerleştirilmemiş. ](./media/boundingbox1.png "boundingbox1")  
+ ![Tipik bir kılavuz, sınırlama kutusu yerleştirilmemiş gösteren ekran görüntüsü.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Bu düzen aşağıdaki kullanarak ulaşılabilecek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -49,7 +49,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
  Tek bir <xref:System.Windows.Controls.TextBlock> öğesi içinde barındırılan bir <xref:System.Windows.Controls.Grid>. Metnin sol üst köşesinin yalnızca ilk sütun, için ayrılan alanı doldururken <xref:System.Windows.Controls.TextBlock> gerçekten çok büyük. Herhangi bir sınırlama kutusu <xref:System.Windows.FrameworkElement> kullanılarak alınabilir <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi. Sınırlayıcı kutu için aşağıdaki çizimde <xref:System.Windows.Controls.TextBlock> öğesi.  
   
- ![TextBlock'ın sınırlama kutusu görünür. ](./media/boundingbox2.png "boundingbox2")  
+ ![TextBlock sınırlama kutusu görünür olduğunu gösteren ekran görüntüsü.](./media/layout/visible-textblock-bounding-box.png)  
   
  Sarı bir dikdörtgen, için ayrılan alanı tarafından gösterilen şekilde <xref:System.Windows.Controls.TextBlock> öğedir göründüğü gerçekten çok büyük. Ek öğeler eklendikçe <xref:System.Windows.Controls.Grid>, bu ayırma daraltabilir veya eklenen öğelerin boyutunu ve türünü bağlı olarak genişletin.  
   

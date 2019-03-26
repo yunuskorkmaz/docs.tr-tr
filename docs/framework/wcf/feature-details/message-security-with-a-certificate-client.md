@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530859"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465717"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
-Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet ileti güvenlik modunu kullanarak güvenli gösterilmektedir. Hem istemci hem de hizmet sertifikaları ile doğrulanır. Daha fazla bilgi için [dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet ileti güvenlik modunu kullanarak güvenli gösterilmektedir. Hem istemci hem de hizmet sertifikaları ile doğrulanır. Daha fazla bilgi için [dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+
+ ![Bir istemci sertifikası ile gösteren ekran görüntüsü.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  Örnek bir uygulama için bkz: [ileti güvenliği sertifikası](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
- ![İstemci sertifikası ile](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  

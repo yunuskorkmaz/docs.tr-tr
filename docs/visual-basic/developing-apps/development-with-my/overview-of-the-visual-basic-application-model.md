@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517389"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464105"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic Uygulama Modeline Genel Bakış
 Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için iyi tanımlanmış bir modeli sağlar: Visual Basic uygulama modeli. Bu model, uygulama başlatma ve kapatma yanı çalýþýrçalýþma yakalama işlenmeyen özel durum olaylarını işlemek için olaylarını içerir. Tek örnek uygulamalar geliştirmeye yönelik destek de sağlar. Uygulama modeli Genişletilebilir olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  
@@ -26,9 +26,9 @@ Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için i
   
 -   İlk örnek çalışırken, uygulamayı başlatmak için sonraki girişimleri çok farklı davranışa neden olur. Sonraki deneme ilk örnek komut satırı bağımsız değişkenleri bildirir ve hemen çıkar. İlk örnek tutamaçları `StartupNextInstance` ne sonraki örneğinin komut satırı bağımsız değişkenleri olan ve çalışmaya devam eder belirlemek için olay.  
   
-     Bu diyagramda, nasıl bir sonraki örneği ilk örneği sinyalleri gösterilmektedir.  
+     Bir sonraki örneği ilk örneğini nasıl sinyalleri Bu diyagramda gösterilmiştir:  
   
-     ![Tek örnek uygulama görüntüsü](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "Singleınstance")  
+     ![Tek Örnekli uygulama görüntüsü gösteren diyagram.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  İşleme göre `StartupNextInstance` olayı, tek örnek uygulamanızı nasıl davranacağını denetleyebilirsiniz. Örneğin, Microsoft Outlook, genellikle tek örnekli bir uygulama olarak çalışır; Outlook çalışıyorsa ve Outlook başlatmayı deneyebilirsiniz yeniden özgün örneğe kaydırır ancak başka bir örneği açık değil.  
   

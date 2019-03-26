@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691369"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463078"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform sınıfı ile XSLT dönüşümleri
 
@@ -24,8 +24,7 @@ Farklı biçimde veya yapısı (örneğin, bir Web sitesinde kullanılmak HTML'e
 
 ## <a name="overview"></a>Genel Bakış
 
-![XSLT dönüşümü mimarisi](media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
-Dönüştürme mimarisi
+![XSLT dönüşümü mimarisini gösteren diyagram.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
 XSLT öneri, XPath düğümleri belge ağacının gezinmek için kullanılan bir sorgu dili olduğu parçaları bir XML belgesi seçmek için XML Path Language (XPath) kullanır. Diyagramda gösterildiği gibi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] XPath uygulaması gibi birçok sınıf içinde depolanan XML bölümlerini seçmek amacıyla kullanılan bir <xref:System.Xml.XmlDocument>e <xref:System.Xml.XmlDataDocument>ve bir <xref:System.Xml.XPath.XPathDocument>. Bir <xref:System.Xml.XPath.XPathDocument> en iyi duruma getirilmiş bir XSLT veri deposu ve ile kullanıldığında <xref:System.Xml.Xsl.XslTransform>, XSLT dönüşümleri iyi performans sağlar.
 

@@ -3,12 +3,12 @@ title: System.Delegate ve `delegate` anahtar sözcüğü
 description: .NET Framework'teki temsilcileri ve bu 'temsilci' anahtar sözcüğü nasıl eşleştiği destekleyen sınıfları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126181"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465782"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate ve `delegate` anahtar sözcüğü
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 Yöntem adı, parantez olmadan kullanıldığına dikkat edin. Bağımsız değişken olarak yöntemi kullanarak, bir temsilci çağırma hedefi olarak kullanılabilir ve bu yöntem bir çağırma hedefi olarak ekleme başvuru yöntemi başvuru dönüştürmek için derleyiciye bildirir.
 
-Ayrıca türünün bir değişkeni bildirerek açık atanmış ' karşılaştırma<string>' ve atama:
+Ayrıca türünün bir değişkeni bildirerek açık atanmış `Comparison<string>` ve atama:
 
 ```csharp
 Comparison<string> comparer = CompareLength;

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262572"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463806"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Sıralı iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Sequence> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
@@ -147,9 +147,9 @@ ms.locfileid: "58262572"
     "Your guess is too high."  
     ```  
   
-     Aşağıdaki örnekte, tamamlanmış bir iş akışı gösterilmektedir.  
+     Aşağıdaki örnekte, tamamlanmış bir iş akışı gösterilmektedir:  
   
-     ![Sıralı iş akışı tamamlandı](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![Tamamlanan sıralı iş akışı gösteren ekran görüntüsü.](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
 ## <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
   

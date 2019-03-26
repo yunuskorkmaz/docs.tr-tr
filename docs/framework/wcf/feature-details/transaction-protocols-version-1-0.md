@@ -2,12 +2,12 @@
 title: İşlem Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258025"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463910"
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
 Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordinasyon protokolleri sürüm 1.0 uygular. Sürüm 1.1 hakkında daha fazla bilgi için bkz: [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) sürüm 1 WS-Atomic işlem ve WS-koordina
   
  Bu konu, WS-Atomic işlem (WS-AT) belirtimi bileşimi ile güvenlik açıklar ve işlem yöneticileri arasındaki iletişim için kullanılan güvenli bir bağlama tanımlar. Bu belgede açıklanan yaklaşımı başarıyla WS-AT ve WS-koordinasyon diğer uygulamaları ile test edilmiştir IBM, IONA, Sun Microsystems ve diğerleri gibi.  
   
- Aşağıdaki şekil, hareket yöneticisi 1 ve hareket yöneticisi 2, iki işlem yöneticileri ve uygulama 1 ve 2 uygulama olmak üzere iki uygulama arasında birlikte çalışabilirliği gösterir.  
+ Aşağıdaki şekil, hareket yöneticisi 1 ve hareket yöneticisi 2, iki işlem yöneticileri ve uygulama 1 ve 2 uygulama olmak üzere iki uygulama arasında birlikte çalışabilirliği gösterir:  
   
- ![İşlem protokolleri](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Yöneticileri işlem arasındaki etkileşimi gösteren ekran görüntüsü.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Bir başlatıcı (ı) ve bir katılımcı (P) tipik bir WS-koordinasyon/WS-Atomic işlem senaryoyu ele alalım. Hem Başlatıcı hem de katılımcı sahip işlem yöneticileri (ITM ve PTM, sırasıyla). İki aşamalı tamamlama bu konudaki 2PC olarak adlandırılır.  
   

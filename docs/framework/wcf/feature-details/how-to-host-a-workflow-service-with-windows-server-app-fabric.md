@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Windows Server App Fabric ile bir iş akışı hizmeti barındırma'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651194"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465132"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Nasıl yapılır: Windows Server App Fabric ile bir iş akışı hizmeti barındırma
 App Fabric içinde iş akışı hizmetlerini barındırma IIS altında barındırmak için benzer / WAS'da. Tek fark, App Fabric dağıtma, izleme ve yönetme iş akışı hizmetleri için sağladığı araçlara olmasıdır. Bu konuda oluşturulan iş akışı hizmeti kullanan [uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Bu konu bir iş akışı hizmeti oluşturma işleminde size yol gösterir. Bu konuda, App Fabric kullanarak iş akışı hizmeti barındırma nasıl açıklayacak. Windows Server App Fabric hakkında daha fazla bilgi için bkz: [Windows Server App Fabric belgeleri](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Aşağıdaki adımları tamamlamadan önce Windows Server App Fabric olduğundan emin olun.  Bu açık Internet bilgi hizmetlerini (inetmgr.exe) yapmak için sunucu adınıza tıklayın **bağlantıları** görüntülemek, siteler ve tıklayın **varsayılan Web sitesi**. Ekranın sağ tarafı adlandırılan bir bölüm görmeniz gerekir **App Fabric**. Bu bölümde (sağ bölmenin üst kısmındaki olacaktır) görmüyorsanız, App Fabric yüklü yoktur. Windows Server AppFabric yükleme hakkında daha fazla bilgi için bkz. [yükleme Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -56,13 +56,13 @@ App Fabric içinde iş akışı hizmetlerini barındırma IIS altında barındı
   
 8.  Seçin **otomatik başlatma** sekmesi. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi uygulama iş akışı hizmetleri için otomatik başlangıç ayarlarını belirtmenize olanak sağlar.  
   
-     ![App Fabric otomatik&#45;yapılandırma başlatma](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![App Fabric otomatik gösteren ekran görüntüsü&#45;yapılandırma başlatın.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      Otomatik başlatma yapılandırma hakkında daha fazla bilgi için bkz. [otomatik başlatma yapılandırma App Fabric ile](https://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Seçin **azaltma** sekmesi. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi iş akışı hizmeti için daraltma ayarları yapılandırmanıza olanak sağlar.  
   
-     ![App Fabric yapılandırma azaltma](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![Uygulama yapılandırması Fabric gösteren ekran görüntüsü.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      Azaltmasını yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma azaltma App Fabric ile](https://go.microsoft.com/fwlink/?LinkId=193149).  
   
@@ -82,11 +82,11 @@ App Fabric içinde iş akışı hizmetlerini barındırma IIS altında barındı
   
 4.  İstemci uygulama, hemen iş akışı hizmeti çağırmak ve bekleyin. İş akışı hizmeti, boşta geçilir ve kalıcı. Bu, Internet Information Services (inetmgr.exe) başlangıç OrderService bağlantılar bölmesinde gezinme ve seçerek doğrulayabilirsiniz. Ardından, sağ bölmede App Fabric Pano simgesine tıklayın. Kalıcı WF örnekleri altında aşağıdaki ekran görüntüsünde gösterildiği gibi bir kalıcı iş akışı hizmeti örnek görürsünüz.  
   
-     ![Uygulama doku Panosu](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![App Fabric panosunu gösteren ekran görüntüsü.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      **WF örneği geçmişi** hataları olan iş akışı örneği sayısını iş akışı hizmeti etkinleştirmelerin sayısı ve iş akışı hizmeti örneği tamamlamaları sayısı gibi iş akışı hizmeti hakkında bilgi listeler. Bir bağlantı görüntülenir etkin veya boş örnekleri altında bağlantıya tıkladığınızda aşağıdaki ekran görüntüsünde gösterildiği gibi boş iş akışı örnekleri hakkında daha fazla bilgi görüntüler.  
   
-     ![İş akışı örneği ayrıntıları kalıcı](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![Kalıcı iş akışı örneğinin ayrıntılarını gösteren ekran görüntüsü.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      Windows Server App Fabric hakkında daha fazla bilgi için özellikleri ve bunları nasıl kullanacağınızı görmek [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

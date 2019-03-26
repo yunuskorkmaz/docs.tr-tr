@@ -2,12 +2,12 @@
 title: DotNet Paketi komutu
 description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini oluşturur.
 ms.date: 12/04/2018
-ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58020925"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464482"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -77,7 +77,7 @@ MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu.
 
 * **`--no-build`**
 
-  Paketleme önce projenizi değil. Ayrıca örtülü ayarlar `--no-restore` bayrağı.
+  Paketleme önce projenizi değil. Ayrıca örtülü olarak ayarlar `--no-restore` bayrağı.
 
 * **`--no-dependencies`**
 

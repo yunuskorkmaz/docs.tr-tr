@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379646"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464963"
 ---
 # <a name="toolbar-overview"></a>ToolBar Genel Bakışı
 <xref:System.Windows.Controls.ToolBar> denetimler, genellikle kendi işlevleriyle ilgili komutlar veya denetimler grubu için kapsayıcılardır. A <xref:System.Windows.Controls.ToolBar> genellikle komutları çağırır düğmeler içerir.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379646"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Taşma Öğeleriyle Araç çubukları  
- Genellikle <xref:System.Windows.Controls.ToolBar> denetimler araç çubuğunun boyuta sığmazsa daha fazla öğe içeriyor. Bu durumda, <xref:System.Windows.Controls.ToolBar> taşma düğmesini görüntüler. Taşma öğeleri görmek için bir kullanıcı taşma düğmesini tıklar ve öğeler aşağıdaki açılır pencerede gösterilir <xref:System.Windows.Controls.ToolBar>. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> taşma öğeleriyle.  
+ Genellikle <xref:System.Windows.Controls.ToolBar> denetimler araç çubuğunun boyuta sığmazsa daha fazla öğe içeriyor. Bu durumda, <xref:System.Windows.Controls.ToolBar> taşma düğmesini görüntüler. Taşma öğeleri görmek için bir kullanıcı taşma düğmesini tıklar ve öğeler aşağıdaki açılır pencerede gösterilir <xref:System.Windows.Controls.ToolBar>. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> taşma öğeleriyle:  
   
- ![Araç çubuğu taşma ile](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Araç çubuğu taşma öğeleriyle  
+ ![Bir araç çubuğu taşma öğeleriyle gösteren ekran görüntüsü.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Bir öğe üzerinde bir araç çubuğu taşma panelinde ayarlayarak zaman yerleştirildiğini belirtebilirsiniz <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> özelliğine bağlı <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, veya <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. Aşağıdaki örnek, taşma panelinde araç çubuğundaki son dört düğme her zaman kullanılması gerektiğini belirtir.  
   

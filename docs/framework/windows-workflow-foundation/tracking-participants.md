@@ -2,12 +2,12 @@
 title: İzleme katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711973"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463000"
 ---
 # <a name="tracking-participants"></a>İzleme katılımcıları
 İzleme katılımcıları erişmek bir iş akışı Geliştirici tanıyan genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz.  
@@ -60,7 +60,7 @@ ms.locfileid: "57711973"
   
  İzleme verilerini ETW İzleme katılımcı aracılığıyla akışı aşağıda gösterilmiştir. İzleme verilerini ETW oturumu ulaştığında, çeşitli yollarla erişilebilir. Olay Görüntüleyicisi, günlükler ve izlemeler, uygulamaları ve hizmetleri görüntülemek için kullanılan genel bir Windows aracı üzerinden bu olayları erişmek için en faydalı yollarından biridir.  
   
- ![Akışı izleme ve ETW İzleme Sağlayıcısı](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![İzleme verilerini ETW İzleme Sağlayıcısı aracılığıyla akışı.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>İzleme katılımcı olay verileri  
  İzleme katılımcı, izleme kaydı başına bir olay biçiminde bir ETW oturumu izlenen olay verilerini serileştirir.  Bir olay 199-100 aralığında bir kimliği kullanılarak tanımlanır. İzleme olayı tanımları için bir izleme katılımcı tarafından yayılan kayıtları görüntüle [izleme olayları başvurusu](tracking-events-reference.md) konu.  

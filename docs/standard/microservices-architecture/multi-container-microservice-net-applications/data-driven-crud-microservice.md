@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5c16b38d7720fb739aa0711d4511afacd7b92c7a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677441"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465314"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
@@ -213,10 +213,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Verileri sorgulama** \
-  [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
 
 - **Verileri kaydetme** \
-  [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker kapsayıcıları tarafından kullanılan DB bağlantı dizesi ve ortam değişkenleri
 
@@ -297,13 +297,13 @@ Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlen
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Scott Hanselman. ASP.NET Core RESTful Web API'si sürümü oluşturma artık daha kolay** \
-  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 - **RESTful web API'si sürümü oluşturma** \
-  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 - **Roy Fielding. Sürüm oluşturma, iletilir ve REST** \
-  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Swagger tanım meta verileri, ASP.NET Core Web API'si oluşturma
 
@@ -423,13 +423,13 @@ Bu basit bir işlemdir. Ve daha fazla işlevsellik API'nize eklediğinizde otoma
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Swagger kullanan ASP.NET Web API Yardım sayfaları** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **Swashbuckle'ı ve ASP.NET Core ile çalışmaya başlama** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
 
 - **NSwag ve ASP.NET Core ile çalışmaya başlama** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
 > [!div class="step-by-step"]
 > [Önceki](microservice-application-design.md)

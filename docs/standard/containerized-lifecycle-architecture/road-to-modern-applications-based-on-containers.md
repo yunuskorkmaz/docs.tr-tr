@@ -4,12 +4,12 @@ description: Docker, kapsayıcılar ve mikro hizmet mimarisi BT'ye çözüm olma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674438"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462688"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Modern uygulamaları kapsayıcılara göre yol
 
@@ -24,10 +24,10 @@ Bu kitap birçok gereksinimlerini ve kapsayıcılara göre yeni modern uygulamal
 Ek Microsoft e-Docker kapsayıcıları aşağıda ilgili kitaplar bulabilirsiniz:
 
 - **.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
+  [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
 - **Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
+  [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[Önceki](docker-containers-images-and-registries.md)

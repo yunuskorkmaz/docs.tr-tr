@@ -4,12 +4,12 @@ description: Devre kesici düzeni için Http yeniden tamamlayıcı bir sistem ol
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362814"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464196"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 
@@ -147,7 +147,7 @@ Son olarak, başka bir olasılık için `CircuitBreakerPolicy` kullanmaktır `Is
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Devre kesici düzeni**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
+  [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Önceki](implement-http-call-retries-exponential-backoff-polly.md)

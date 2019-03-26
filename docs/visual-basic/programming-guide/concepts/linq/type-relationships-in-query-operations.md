@@ -11,18 +11,17 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979105"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465223"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 Kullanılan değişkenleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemleri kesin olarak belirlenmiştir ve birbiriyle uyumlu olması gerekir. Güçlü veri kaynağının, sorgu ve sorgu yürütme kullanılır. Aşağıdaki çizimde açıklamak için kullanılan terimler tanımlayan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu. Bir sorgunun bölümlerini hakkında daha fazla bilgi için bkz: [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
- ![Öğeleri vurgulanmış sözde kod sorgu. ](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-LINQ sorgusu bölümleri  
+ ![Sözde kod sorgu ile vurgulanmış öğelerin gösteren ekran görüntüsü.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  Sorgudaki Aralık değişkeninin türü, veri kaynağındaki öğelerin türü ile uyumlu olmalıdır. Sorgu değişkeninin türü tanımlanan dizisi öğe ile uyumlu olmalıdır `Select` yan tümcesi. Son olarak, dizisinin öğelerinin türü de kullanılan döngü denetim değişkeni türü ile uyumlu olmalıdır `For Each` Sorguyu yürüten deyimi. Bu güçlü yazım, Yazım hatalarının derleme zamanında kimliği kolaylaştırır.  
   

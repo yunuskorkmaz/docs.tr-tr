@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836649"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463819"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
@@ -61,7 +61,7 @@ Tüm temel sınıf üyelerinin türetilmiş sınıflar tarafından devralınır 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Türetilen sınıfların aynı zamanda *geçersiz kılma* alternatif bir uygulama sağlayarak devralınan üyeleri. Üyesi geçersiz kılmak aktarabilmek için temel sınıf üye ile işaretlenmelidir [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğü. Varsayılan olarak, temel sınıf üyeleri olarak işaretlenmemiş `virtual` ve geçersiz kılınamaz. Aşağıdaki örnekte olduğu gibi sanal olmayan bir üye geçersiz kılma girişiminde CS0506 derleyici hatası oluşturur: "<member> devralınmış üyesi geçersiz kılınamaz <member> sanal işaretlenmemiş çünkü, Özet veya geçersiz.
+Türetilen sınıfların aynı zamanda *geçersiz kılma* alternatif bir uygulama sağlayarak devralınan üyeleri. Üyesi geçersiz kılmak aktarabilmek için temel sınıf üye ile işaretlenmelidir [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğü. Varsayılan olarak, temel sınıf üyeleri olarak işaretlenmemiş `virtual` ve geçersiz kılınamaz. Aşağıdaki örnekte olduğu gibi sanal olmayan bir üye geçersiz kılma girişiminde CS0506 derleyici hatası oluşturur: "\<üye > devralınmış üyesi geçersiz kılınamaz \<üye > sanal işaretlenmemiş çünkü, Özet veya geçersiz.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ Bir temel sınıf ve türetilmiş sınıflarının tasarlama işlemi göz atalı
 
  `Publication` Sınıfı herhangi yok `abstract` yöntemleri ama sınıfın kendisi `abstract`.
 
-- Bir türetilmiş sınıf devralma hiyerarşisinde son sınıfı temsil eder ve kendisi için ek türetilmiş sınıflar temel sınıf olarak kullanılamaz. Varsayılan olarak, herhangi bir sınıfın temel sınıf olarak hizmet verebilir. Uygulayabileceğiniz [korumalı](../language-reference/keywords/sealed.md) anahtar sözcüğü bir sınıf ek sınıfları için temel sınıf olarak hizmet veremez belirtmek için. Bir korumalı sınıf oluşturulan derleyici hatası CS0509, türetilen çalışılırken "sealed türünden türetilemez <typeName>".
+- Bir türetilmiş sınıf devralma hiyerarşisinde son sınıfı temsil eder ve kendisi için ek türetilmiş sınıflar temel sınıf olarak kullanılamaz. Varsayılan olarak, herhangi bir sınıfın temel sınıf olarak hizmet verebilir. Uygulayabileceğiniz [korumalı](../language-reference/keywords/sealed.md) anahtar sözcüğü bir sınıf ek sınıfları için temel sınıf olarak hizmet veremez belirtmek için. Bir korumalı sınıf oluşturulan derleyici hatası CS0509, türetilen çalışılırken "sealed türünden türetilemez \<typeName >".
 
   Türetilmiş sınıfınızın olarak işaretlemek, örneğin `sealed`.
 

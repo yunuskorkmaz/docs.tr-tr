@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   Cts'deki her tür olarak tanımlanan bir *değer türü* veya *başvuru türüne*. Bu, .NET sınıf kitaplığı'nda tüm özel türleri ve ayrıca kendi kullanıcı tanımlı türler içerir. Kullanarak tanımladığınız türler [yapı](../../../csharp/language-reference/keywords/struct.md) anahtar değer türleri; tüm yerleşik sayısal türler `structs`. Kullanarak tanımladığınız türler [sınıfı](../../../csharp/language-reference/keywords/class.md) anahtar sözcüğü olan başvuru türleri. Başvuru türleri ve değer türleri farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışı sahiptir.  
   
- Aşağıdaki çizim CTS'deki değer türleri ve başvuru türleri arasındaki ilişkiyi gösterir.  
+ Aşağıdaki çizim CTS'deki değer türleri ve başvuru türleri arasındaki ilişkiyi gösterir.
+
+ Aşağıdaki görüntüde CTS'deki değer türleri ve başvuru türleri gösterilmektedir: 
   
- ![Değer türleri ve başvuru türleri](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-Değer türleri ve başvuru türleri cts'deki  
+  
+ ![Gösterir CTS değer türleri ve başvuru türleri ekran görüntüsü.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  Sık kullanılan türlerinin tümünün olduğunu gördüğünüz <xref:System> ad alanı. Ancak türü içeren ad alanı için bir değer olup ilgisi yoktur türü veya başvuru türü.  

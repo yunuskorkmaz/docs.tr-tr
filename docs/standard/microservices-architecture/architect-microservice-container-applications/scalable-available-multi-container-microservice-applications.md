@@ -4,12 +4,12 @@ description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6fa25c1d35e276473f4fcac344efbc5cafbc4b3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980236"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465444"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
@@ -148,13 +148,13 @@ Daha fazla bilgi için makaleyi kontrol [Azure geliştirme alanları ile takım 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
-  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
 - **Azure geliştirme alanları** \
-  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
 - **Kubernetes** resmi sitesi. \
-  [*https://kubernetes.io/*](https://kubernetes.io/)
+  [https://kubernetes.io/](https://kubernetes.io/)
 
 >[!div class="step-by-step"]
 >[Önceki](resilient-high-availability-microservices.md)

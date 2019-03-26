@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502558"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465873"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost Yan Yana Sürüm Oluşturma
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Yan yana sürüm oluşturma sunulan [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] birden çok sürümünü tek bir uç nokta bir iş akışı hizmeti barındırma olanağı sağlar. Yeni iş akışı hizmeti örnekleri çalışırken örneklerini kullanarak varolan tanımın tam yeni iş akışı tanımı kullanarak oluşturulmasını sağlayacak şekilde yapılandırılması bir iş akışı hizmeti sağlanan yan yana işlevselliği sağlar. Bu konuda, iş akışı hizmeti yan yana yürütme kullanarak genel bir bakış sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -46,7 +46,7 @@ ms.locfileid: "43502558"
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity yapılandırma  
  İş Akışı Tasarımcısı'nı kullanarak bir iş akışı hizmeti oluşturulduğunda <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> kullanılarak ayarlanan **özellikleri** penceresi. ' A tıklayın hizmetin Kök etkinlik iş akışı hizmeti seçin ve tasarımcıda dışında **Özellikler penceresi** gelen **görünümü** menüsü. Seçin **Workflowıdentity** yanında görüntülenen aşağı açılan listeden **DefinitionIdentity** özelliğini genişletin ve ardından istenen belirtin <xref:System.Activities.WorkflowIdentity> özellikleri. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> yapılandırılmış <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> isteğe bağlıdır ve bu örnekte `null`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
+ ![DefinitionIdentity özelliği gösteren ekran görüntüsü.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-property.bmp)  
   
  Bir iş akışı hizmeti, şirket içinde barındırılan olduğunda <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> iş akışı hizmeti oluşturulduğunda yapılandırılır. Aşağıdaki örnekte, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> önceki örnekle aynı değerleri ile yapılandırılmış <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Name%2A> , `1.0.0.0`.  
   
@@ -84,7 +84,7 @@ End With
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Bir Web barındırılan iş akışı hizmeti için yeni bir sürüm ekleme  
  Bir iş akışı hizmeti yeni bir sürümü web barındırılan bir hizmete yapılandırmada ilk adım, yeni bir klasöre oluşturmaktır `App_Code` hizmet dosyası aynı ada sahip bir klasör. Varsa bu hizmetin `xamlx` dosya adlı `MortgageWorkflow.xamlx`, klasörü adlandırılmalıdır `MortgageWorkflow`. Özgün hizmetin bir kopyasını yerleştirmek `xamlx` gibi yeni bir ad ile yeniden adlandırın ve bu klasöre dosya `MortgageWorkflowV1.xamlx`. İstediğiniz değişiklikleri birincil hizmetinize, güncelleştirme, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>ve ardından hizmeti dağıtmak. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ile güncelleştirilmiş bir <xref:System.Activities.WorkflowIdentity.Name%2A> , `MortageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `2.0.0.0`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv2.bmp "WorkflowServiceDefinitionIdentityv2")  
+ ![DefinitionIdentity, Workflowıdentity gösteren ekran görüntüsü.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   
  Hizmet yeniden başlatıldığında, önceki sürümü otomatik olarak eklenir <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> koleksiyon yer olduğu için belirlenen `App_Code` alt. İş akışı hizmetinin birincil sürümü gerçekleştiriyorsanız bir `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> önceki sürümleri eklenmeyecektir. Bir sürümü olabilir bir `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, ancak birden çok sürüm varsa birincil sürüm sahip olmamalıdır `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ya da aksi takdirde önceki sürümler için eklenmeyecek <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> koleksiyonu.  
   

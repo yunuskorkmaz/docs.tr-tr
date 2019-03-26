@@ -4,12 +4,12 @@ description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679053"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466406"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
 
@@ -115,13 +115,13 @@ Daha fazla bilgi için makaleye bakın [Azure geliştirme alanları ile takım g
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
-  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
 - **Azure geliştirme alanları** \
-  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
 - **Kubernetes.** Resmi sitesi. \
-  [*https://kubernetes.io/*](https://kubernetes.io/)
+  [https://kubernetes.io/](https://kubernetes.io/)
 
 ## <a name="using-azure-service-fabric"></a>Azure Service Fabric kullanma
 

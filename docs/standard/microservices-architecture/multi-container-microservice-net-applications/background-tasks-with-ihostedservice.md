@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 638c9b9bae97b90b94c0ca9b421bc20cd3eb41ee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7af65077eccfaddeaf25b5f403f1b9824ed4ea17
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967197"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465184"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfı ile mikro hizmetler içindeki arka plan görevlerini uygulama
 
@@ -240,13 +240,13 @@ Ancak için bile bir `WebHost` bir uygulama havuzuna dağıtılmış, yeniden ve
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **ASP.NET Core/Standard 2.0 zamanlanmış bir görev oluşturma** <br/>
-    [*https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+    [https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
 
 -   **ASP.NET Core 2.0 Ihostedservice uygulama** <br/>
-    [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
+    [https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
 -   **GenericHost ASP.NET Core 2.1 kullanma örneği** <br/>
-    [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
+    [https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]
 >[Önceki](test-aspnet-core-services-web-apps.md)

@@ -4,12 +4,12 @@ description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir o
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846110"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464547"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>API ağ geçitleri ile Ocelot uygular
 
@@ -564,19 +564,19 @@ Kubernetes için dağıtırken her Ocelot API ağ geçidi farklı "configuration
 Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway kullanırken, diğer önemli özellikleri vardır.
 
 - **Ocelot Consul veya Eureka tümleştirmek istemci tarafı hizmet bulmayı** \
-  [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 - **API ağ geçidi katmanında önbelleğe alma** \
-  [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 - **API ağ geçidi katmanında günlüğe kaydetme** \
-  [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 - **API ağ geçidi katmanında (yeniden denemeler ve devre Kesiciler) hizmet kalitesi** \
-  [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 - **Oran sınırlandırma** \
-  [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+  [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]
 > [Önceki](background-tasks-with-ihostedservice.md)

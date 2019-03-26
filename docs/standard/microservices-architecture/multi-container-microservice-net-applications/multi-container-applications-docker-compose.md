@@ -4,12 +4,12 @@ description: Docker-compose.yml ile çok kapsayıcılı bir uygulama için mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712363"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463533"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
 
@@ -422,11 +422,11 @@ Docker-compose bekliyor biçiminde bir .env dosyasında her satırı \<değişke
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Genel Bakış docker Compose** <br/>
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
+- **Genel Bakış docker Compose** \
+    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-- **Birden çok Compose dosyaları** <br/>
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+- **Birden çok Compose dosyaları** \
+    [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>ASP.NET Core Docker görüntüleri oluşturma en iyi duruma getirilmiş
 
@@ -464,11 +464,11 @@ Hızlı Başlangıç için çalışma zamanı görüntüleri aspnetcore da otoma
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core ile Docker görüntü oluşturma en iyi duruma getirilmiş** <br/>
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+- **ASP.NET Core ile Docker görüntü oluşturma en iyi duruma getirilmiş** \
+    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-- **.NET Core Uygulamaları için Docker Görüntülerinizi Derleme** <br/>
-    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+- **.NET Core uygulamaları için Docker görüntüleri oluşturma** \
+    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [Önceki](data-driven-crud-microservice.md)

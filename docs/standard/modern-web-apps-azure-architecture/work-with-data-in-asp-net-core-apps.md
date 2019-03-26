@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827181"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463741"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext DbContextOptions kabul eden bir oluşturucuya sahip olması ve bu bağımsız değişken temel DbContext oluşturucusuna geçirmeniz gerekir. Yalnızca bir DbContext uygulamanızda sahip olduğunuz, DbContextOptions örneğini geçirebilirsiniz, ancak varsa, birden fazla genel DbContextOptions kullanmalısınız unutmayın<T> öğesinde DbContext tür genel parametre olarak geçen türü.
+DbContext DbContextOptions kabul eden bir oluşturucuya sahip olması ve bu bağımsız değişken temel DbContext oluşturucusuna geçirmeniz gerekir. Yalnızca bir DbContext uygulamanızda sahip olduğunuz, DbContextOptions örneğini geçirebilirsiniz, ancak varsa, birden fazla genel DbContextOptions kullanmalısınız unutmayın\<T > öğesinde DbContext tür genel parametre olarak geçen türü.
 
 ### <a name="configuring-ef-core"></a>EF Core yapılandırma
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Hemen bir sorgu yürütmek için ToListAsync çağrısı eklemek için yukarıdaki örnekte önemlidir. Aksi takdirde, deyim Iqueryable atar<SelectListItem> brandItems için hangi yürütülmez numaralandırılana kadar. Artıları ve eksileri Iqueryable sonuçları döndüren yöntemler için vardır. Daha fazla değiştirilmesi, ancak operations EF Core çeviremez sorguya eklediyseniz yalnızca çalışma zamanında, oluşan hataları sonucunda ayrıca EF Core de oluşturmak sorgu sağlar. Herhangi bir filtre veri erişim gerçekleştirme yönteme geçirmek genellikle güvenlidir ve dönüş bir bellek içi koleksiyonu yeniden (örneğin, liste<T>) sonucu.
+Hemen bir sorgu yürütmek için ToListAsync çağrısı eklemek için yukarıdaki örnekte önemlidir. Aksi takdirde, deyim Iqueryable atar\<Selectlistıtem > brandItems için hangi yürütülmez numaralandırılana kadar. Artıları ve eksileri Iqueryable sonuçları döndüren yöntemler için vardır. Daha fazla değiştirilmesi, ancak operations EF Core çeviremez sorguya eklediyseniz yalnızca çalışma zamanında, oluşan hataları sonucunda ayrıca EF Core de oluşturmak sorgu sağlar. Herhangi bir filtre veri erişim gerçekleştirme yönteme geçirmek genellikle güvenlidir ve dönüş bir bellek içi koleksiyonu yeniden (örneğin, liste\<T >) sonucu.
 
 EF Core Kalıcılık getirir varlıklardaki değişiklikleri izler. İzlenen bir varlığa değişiklikleri kaydetmek için yalnızca varlık getirmek için kullanılan aynı DbContext örneği olduğundan emin DbContext üzerinde SaveChanges yöntemi çağırın gerekir. Doğrudan ekleme ve kaldırma varlıkları çağrısıyla veritabanı komutlarını çalıştırmak için yeniden SaveChanges uygun olan DB özellik üzerinde gerçekleştirilir. Aşağıdaki örnek, ekleme, güncelleştirme, Kalıcılık varlıkları kaldırma gösterir.
 

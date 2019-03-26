@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: 2441687cb36d0780b7fbc935c5cb0edc74bc6ba0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712181"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463195"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>Nasıl yapılır: Dikdörtgen çizmek için kalem kullanma
 Dikdörtgen çizmek için ihtiyacınız bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlar <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi ve <xref:System.Drawing.Pen> nesne satır, renk ve genişlik gibi özellikleri depolar.  
@@ -25,7 +25,7 @@ Dikdörtgen çizmek için ihtiyacınız bir <xref:System.Drawing.Graphics> nesne
   
  Aşağıdaki çizimde, sonuçta elde edilen dikdörtgen gösterir. Kalem genişliği bir piksel olsaydı burada dikdörtgen Çekildi noktalı satırları gösterir. Kalın siyah satırları bu noktalı satırlarda ortalanır dikdörtgenin sol üst köşesinin genişletilmiş görünümünü gösterir.  
   
- ![Kalemler](./media/pens1.gif "pens1")  
+ ![Siyah ve noktalı çizgiler ile çizilen dikdörtgen gösteren ekran görüntüsü.](./media/how-to-use-a-pen-to-draw-rectangles/drawn-rectangle-black-lines-dotted-lines.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  

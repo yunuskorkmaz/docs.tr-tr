@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 4d3f81039fc9d4447816901c55ad0af5e501dc2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668853"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463936"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Temel Kimlik Doğrulama ile Taşıma Güvenliği
 Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve istemci gösterir. Sunucusunda Güvenli Yuva Katmanı (SSL) için kullanılabilecek geçerli bir X.509 sertifikası olması gerekir ve istemcilerin sunucu sertifikasına güvenmelidir. Daha fazla Web hizmetinin kullanılabilmesi için bir SSL uygulaması zaten sahip. Daha fazla etkinleştirme temel kimlik doğrulaması hakkında Internet Information Services (IIS) hakkında bilgi için [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
   
- ![Aktarım güvenliği temel kimlik doğrulaması ile](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+ ![Temel kimlik doğrulama ile Aktarım güvenliği gösteren ekran görüntüsü.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  

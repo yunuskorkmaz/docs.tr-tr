@@ -4,16 +4,16 @@ description: Taahhüt vermek zorunda kalmadan bir gerçek veri türü için tür
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835297"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465431"
 ---
 # <a name="generic-types-overview"></a>Genel türler genel bakış
 
-Geliştiriciler genel türler, her zaman açık veya örtük olarak olup olmadığını,. NET'te kullanın. . NET'te LINQ kullandığınızda, hiç olmadığı kadar birlikte çalıştığınız fark ettiniz <xref:System.Collections.Generic.IEnumerable%601>? Veya, Entity Framework kullanan veritabanlarına konuşmak için hiç olmadığı kadar çevrimiçi bir örneği, bir "Genel deponun" gördüğünüz, pek çok yöntem Iqueryable dönüş gördünüz mü<T>? Hangi merak etmiş **T** Bu örnekler ve burada neden olduğu yer.
+Geliştiriciler genel türler, her zaman açık veya örtük olarak olup olmadığını,. NET'te kullanın. . NET'te LINQ kullandığınızda, hiç olmadığı kadar birlikte çalıştığınız fark ettiniz <xref:System.Collections.Generic.IEnumerable%601>? Veya, Entity Framework kullanan veritabanlarına konuşmak için hiç olmadığı kadar çevrimiçi bir örneği, bir "Genel deponun" gördüğünüz, pek çok yöntem Iqueryable dönüş gördünüz mü\<T >? Hangi merak etmiş **T** Bu örnekler ve burada neden olduğu yer.
 
 İlk .NET Framework 2.0 sürümünde sunulan **genel türler** aslında bir "code"şablonu"olan tanımlamak geliştiricilerinin sağlayan [tür kullanımı uyumlu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) olmadan yürüten bir gerçek veri türü için veri yapıları. Örneğin, <xref:System.Collections.Generic.List%601> olduğu bir [genel koleksiyon](xref:System.Collections.Generic) , bildirilebileceği ve herhangi bir türü ile gibi kullanılan `List<int>`, `List<string>`, veya `List<Person>`.
 

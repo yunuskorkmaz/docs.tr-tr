@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714131"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462870"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Nasıl yapılır: Alfa karışım kullanmayı denetlemek için birleştirme modunu kullanma
 Aşağıdaki özelliklere sahip çizerek bir bit eşlem oluşturmak istediğiniz zaman zamanlar olabilir:  
@@ -34,7 +34,7 @@ Aşağıdaki özelliklere sahip çizerek bir bit eşlem oluşturmak istediğiniz
   
  Kod örneği, çıktı aşağıda gösterilmiştir. Üç nokta arka plan ile karışık, ancak bunlar birbiriyle karışık değil unutmayın.  
   
- ![Kopyalama kaynağı](./media/sourcecopy.png "sourcecopy")  
+ ![Diyagram gösteren üç nokta arka plan ile değil birbiriyle karışık.](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
  Kod örneği, bu deyimi içerir:  
   
@@ -48,7 +48,7 @@ Aşağıdaki özelliklere sahip çizerek bir bit eşlem oluşturmak istediğiniz
   
  Düzeltilmiş kodun çıktısı aşağıdaki çizimde gösterilmektedir.  
   
- ![Kaynak üzerinde](./media/sourceover.png "sourceover")  
+ ![Üç nokta simgesini gösteren diyagram birbirine ve arka plan ile karışık.](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  

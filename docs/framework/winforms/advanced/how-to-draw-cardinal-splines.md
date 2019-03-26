@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 687143273a07acba4b4d60acb1be25eee165b91d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710491"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464703"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Nasıl yapılır: Eğriler çizme
 Kardinal eğri sorunsuz bir şekilde belirli bir nokta kümesi geçen bir eğri ' dir. Kardinal eğri çizmek için oluşturma bir <xref:System.Drawing.Graphics> nesnesi ve bir dizi noktası adresini geçirmek <xref:System.Drawing.Graphics.DrawCurve%2A> yöntemi.  
@@ -23,16 +23,16 @@ Kardinal eğri sorunsuz bir şekilde belirli bir nokta kümesi geçen bir eğri 
   
 -   Aşağıdaki örnek zil şeklinde ve beş belirlenen noktalara geçirmeden bir Kardinal eğrisi çizer. Eğriyi ve beş noktaları aşağıda gösterilmiştir.  
   
-     ![Kardinal eğri](./media/cardinalspline1.png "CardinalSpline1")  
+     ![Zil şeklinde bir Kardinal eğri gösteren diyagram.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Bir kapalı Kardinal eğri çizme  
   
--   Kullanım <xref:System.Drawing.Graphics.DrawClosedCurve%2A> yöntemi <xref:System.Drawing.Graphics> bir kapalı Kardinal eğri çizmek için sınıf. Kapalı Kardinal eğri, eğrinin dizideki son noktası ile devam eder ve dizideki ilk noktasıyla bağlanır. Aşağıdaki örnek, altı belirlenen noktalara geçen bir kapalı Kardinal eğri çizer. Kapalı eğri altı noktaları ile birlikte aşağıda gösterilmiştir.  
+-   Kullanım <xref:System.Drawing.Graphics.DrawClosedCurve%2A> yöntemi <xref:System.Drawing.Graphics> bir kapalı Kardinal eğri çizmek için sınıf. Kapalı Kardinal eğri, eğrinin dizideki son noktası ile devam eder ve dizideki ilk noktasıyla bağlanır. Aşağıdaki örnek, altı belirlenen noktalara geçen bir kapalı Kardinal eğri çizer. Kapalı eğri altı noktaları ile birlikte aşağıda gösterilmiştir:  
   
- ![Kardinal eğri](./media/cardinalspline1a.png "CardinalSpline1A")  
+ ![Bir kapalı Kardinal eğri gösteren diyagram.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
@@ -41,7 +41,7 @@ Kardinal eğri sorunsuz bir şekilde belirli bir nokta kümesi geçen bir eğri 
   
 -   Kardinal eğri bends gerilimi değişkenine geçirerek değiştirecek <xref:System.Drawing.Graphics.DrawCurve%2A> yöntemi. Aşağıdaki örnek, aynı dizi noktaları aracılığıyla geçen üç ana Eğriler çizer. Aşağıdaki çizim üç eğrileri gerilimi değerleriyle birlikte gösterir. Gerilimi 0 olduğunda noktaları düz satırlarla bağlı olduğunu unutmayın.  
   
- ![Kardinal eğri](./media/cardinalspline2.png "CardinalSpline2")  
+ ![Üç ana Eğriler gösteren diyagram.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  

@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603124"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466237"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
 WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmeti aşağıdaki çizimde gösterilmektedir. Güvenlik, verileri düşük önem derecesi olduğundan, ağ doğası gereği güvenli olması beklenir veya WCF altyapısı aşağıdaki katman tarafından sağlanan güvenlik gerekli değildir.  
   
- ![İntranet güvenli olmayan istemci ve hizmet senaryo](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![İntranet güvenli olmayan istemci ve hizmet senaryo.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|Hiçbiri|  
+|Güvenlik modu|Yok.|  
 |Taşıma|TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
-|Kimlik doğrulaması|Hiçbiri|  
-|Bütünlüğü|Hiçbiri|  
-|Gizliliği|Hiçbiri|  
+|Kimlik doğrulaması|Yok.|  
+|Bütünlüğü|Yok.|  
+|Gizliliği|Yok.|  
   
 ## <a name="service"></a>Hizmet  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  

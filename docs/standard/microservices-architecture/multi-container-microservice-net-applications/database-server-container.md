@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127725"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463351"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
@@ -47,11 +47,11 @@ Bir kapsayıcı çalışan SQL Server sahip olduğu SQL Server örneğine erişi
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Linux, Mac veya Windows üzerinde SQL Server Docker görüntüsünü çalıştırma** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Linux, Mac veya Windows üzerinde SQL Server Docker görüntüsünü çalıştırma** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Bağlanma ve Linux'ta SQL Server sqlcmd ile sorgulama** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **Bağlanma ve Linux'ta SQL Server sqlcmd ile sorgulama** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulama başlatma verileriyle test üretme
 

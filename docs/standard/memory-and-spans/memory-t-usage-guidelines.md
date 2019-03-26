@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c5f25d6dbffc26d30843dcd9ced36e9175e7c1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a72e90a6233d03fd641675bfbeee2145709e57fe
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273838"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463156"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Bellek\<T > ve aralık\<T > kullanım yönergeleri
 
@@ -241,7 +241,7 @@ Sahipliğini aktaran herhangi bir bileşeni <xref:System.Buffers.IMemoryOwner%60
 
 **Kural #9: Bir zaman uyumlu p/Invoke yöntemi sarmalama, API'nizi yayılma kabul etmelidir\<T > parametre olarak.**
 
-Kural 1 göre <xref:System.Span%601> genellikle zaman uyumlu API'leri için kullanılacak doğru türüdür. Sabitleyebilmeniz için <xref:System.Span%601> <T> aracılığıyla örnekler [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) aşağıdaki örnekteki gibi anahtar sözcüğü.
+Kural 1 göre <xref:System.Span%601> genellikle zaman uyumlu API'leri için kullanılacak doğru türüdür. Sabitleyebilmeniz için <xref:System.Span%601> \<T > aracılığıyla örnekler [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) aşağıdaki örnekteki gibi anahtar sözcüğü.
 
 ```csharp
 using System.Runtime.InteropServices;

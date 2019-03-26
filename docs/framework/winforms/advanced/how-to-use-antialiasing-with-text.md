@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718577"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464729"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Nasıl yapılır: Metinle düzgünleştirme kullanma
 *Düzgünleştirme* düzensiz çizilen grafik ve bunların görünümünü ve okunabilirliğini geliştirmek için metni kenarlarına düzgünleştirme ifade eder. İle yönetilen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sınıflar, daha düşük kaliteli metin yanı sıra, yüksek kaliteli antialiased metin işleyebilirsiniz. Genellikle, daha yüksek kalite işleme daha fazla işleme zaman daha düşük kaliteli işleme alır. Metin kalite düzeyini ayarlamak için ayarlayın <xref:System.Drawing.Graphics.TextRenderingHint%2A> özelliği bir <xref:System.Drawing.Graphics> öğelerinden birine <xref:System.Drawing.Text.TextRenderingHint> numaralandırması  
@@ -29,7 +29,7 @@ ms.locfileid: "57718577"
  
  Örnek kodun çıktısı aşağıdaki çizimde gösterilmektedir:  
   
- ![Yazı tipleri metin](./media/fontstext10.png "FontsText10")  
+ ![İki farklı ayarlarla metin gösteren ekran görüntüsü.](./media/how-to-use-antialiasing-with-text/antialiasing-text-quality-settings.png)  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki kod örneğinde, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  

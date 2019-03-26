@@ -4,12 +4,12 @@ description: Mikro hizmet API'leri oluşturmak ve gereksinimleriniz değiştiği
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152545"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466055"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Oluşturma, geliştirme ve sürüm oluşturma mikro hizmet API'leri ve anlaşmaları
 
@@ -28,13 +28,13 @@ Son olarak, bir REST mimarisi kullanıyorsanız [gösterimde](https://www.infoq.
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Scott Hanselman. ASP.NET Core RESTful Web API'si sürümü oluşturma artık daha kolay** \
-  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 - **RESTful web API'si sürümü oluşturma** \
-  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 - **Roy Fielding. Sürüm oluşturma, iletilir ve REST** \
-  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
 >[Önceki](asynchronous-message-based-communication.md)

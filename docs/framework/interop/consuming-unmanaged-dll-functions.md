@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 771d1e56d323ee4b450f25773569f7a0b7b038e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411167"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463091"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
 Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı kitaplıklarını (DLL'ler) uygulanan yönetilmeyen işlevleri çağırmak için kod yönetilen bir hizmettir. Dışarı aktarılan bir işlevi çağırır bulur ve bağımsız değişkenlerinden (tamsayı, dizeler, diziler, yapılar ve benzeri) gerektiği gibi birlikte çalışabilirlik sınırında sürekliliğe devreder.  
@@ -54,8 +54,7 @@ Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı k
 ## <a name="a-closer-look-at-platform-invoke"></a>Yakından platform çağırma  
  Platform çağırma dışarı aktarılan işlevleri bulun ve bunların bağımsız değişkenleri, çalışma zamanında hazırlamak için meta verileri kullanır. Aşağıdaki çizim bu süreci göstermektedir.  
   
- ![Platform Çağırma](../../../docs/framework/interop/media/pinvoke.gif "PInvoke")  
-Bir platform çağırma yönetilmeyen DLL işlev çağrısı  
+ ![Çağırma çağrısı bir platform gösteren diyagram.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  Yönetilmeyen bir işlev çağırır olduğunda platform çağırma aşağıdaki eylemler dizisini gerçekleştirir:  
   

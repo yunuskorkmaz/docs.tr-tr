@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573955"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465145"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişletilebilir beyana dayalı yetkilendirme modelini destekler. Talep belirteçleri ayıklanır ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve ardından yerleştirilip bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Yetkilendirme Yöneticisi Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
@@ -119,5 +119,4 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişleti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)

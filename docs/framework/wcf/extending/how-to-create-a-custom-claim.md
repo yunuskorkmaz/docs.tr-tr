@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: d2d170679b09eb33bea3569e1e6db8954bde3659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622292"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464313"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel talep oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak için bir dizi yerleşik talep türleri ve yardımcı işlevlerini haklarıyla sağlar <xref:System.IdentityModel.Claims.Claim> örnekleriyle bu türleri ve hakları. Bu yerleşik talepler, model bilgileri varsayılan olarak WCF destekleyen istemci kimlik bilgisi türlerinde bulunan şekilde tasarlanmıştır. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar, özel talepler gerektirebilir. Bir talep talep türünü, talep için geçerli olduğu için kaynak ve doğrudan diğer bir deyişle olarak onaylanan bu kaynak üzerinde oluşur. Bu konuda bir özel talep oluşturma işlemini açıklar.  
@@ -80,5 +80,4 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

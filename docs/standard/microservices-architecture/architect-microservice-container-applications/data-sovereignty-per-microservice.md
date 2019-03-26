@@ -4,12 +4,12 @@ description: Mikro hizmet başına veri hakimiyeti mikro kay noktası biridir. H
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144908"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464041"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
@@ -49,17 +49,17 @@ Mikro hizmetler, dağıtılmış mikro hizmetler biçiminde gerçek sınırları
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Uludağ. Desen: Hizmet başına veritabanı** \
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+- **Chris Richardson. Desen: Hizmet başına veritabanı** \
+  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler. BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 - **Martin Fowler. PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 - **Alberto Brandolini. Stratejik etki alanı Odaklı Tasarım bağlam eşleme ile** \
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 >[!div class="step-by-step"]
 >[Önceki](microservices-architecture.md)
