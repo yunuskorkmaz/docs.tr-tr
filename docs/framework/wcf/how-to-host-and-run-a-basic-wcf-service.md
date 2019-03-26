@@ -1,6 +1,6 @@
 ---
-title: Nasıl temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma
-ms.date: 09/14/2018
+title: 'Öğretici: Temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
@@ -8,406 +8,233 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 73633c2c6119204f2fb608b32ae794a2e07b27d0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747080"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410101"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="3a35a-102">Nasıl temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="3a35a-102">How to host and run a basic Windows Communication Foundation service</span></span>
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="207d9-102">Öğretici: Temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="207d9-102">Tutorial: Host and run a basic Windows Communication Foundation service</span></span>
 
-<span data-ttu-id="3a35a-103">Üçüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur.</span><span class="sxs-lookup"><span data-stu-id="3a35a-103">This is the third of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="3a35a-104">Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](getting-started-tutorial.md) konu.</span><span class="sxs-lookup"><span data-stu-id="3a35a-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="207d9-103">Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev üçüncü açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="207d9-103">This tutorial describes the third of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="207d9-104">Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="3a35a-105">Bu konu, bir Windows Communication Foundation (WCF) hizmeti bir konsol uygulamasında barındırma açıklar.</span><span class="sxs-lookup"><span data-stu-id="3a35a-105">This topic describes how to host a Windows Communication Foundation (WCF) service in a console application.</span></span> <span data-ttu-id="3a35a-106">Bu yordam, aşağıdaki adımlardan oluşur:</span><span class="sxs-lookup"><span data-stu-id="3a35a-106">This procedure consists of the following steps:</span></span>
+<span data-ttu-id="207d9-105">WCF uygulaması oluşturmak için sonraki görev, bir konsol uygulamasında bir WCF Hizmeti barındırma sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="207d9-105">The next task for creating a WCF application is to host a WCF service in a console application.</span></span> <span data-ttu-id="207d9-106">Bir WCF hizmeti bir veya daha fazla sunan *uç noktaları*, her biri bir veya daha fazla hizmet işlemleri sunar.</span><span class="sxs-lookup"><span data-stu-id="207d9-106">A WCF service exposes one or more *endpoints*, each of which exposes one or more service operations.</span></span> <span data-ttu-id="207d9-107">Hizmet uç noktası aşağıdaki bilgileri belirtir:</span><span class="sxs-lookup"><span data-stu-id="207d9-107">A service endpoint specifies the following information:</span></span> 
+- <span data-ttu-id="207d9-108">Adres hizmetini bulabileceğiniz yerdir.</span><span class="sxs-lookup"><span data-stu-id="207d9-108">An address where you can find the service.</span></span>
+- <span data-ttu-id="207d9-109">Bir istemci hizmeti ile nasıl iletişim kurması gereken açıklayan bilgileri içeren bir bağlama.</span><span class="sxs-lookup"><span data-stu-id="207d9-109">A binding that contains the information that describes how a client must communicate with the service.</span></span> 
+- <span data-ttu-id="207d9-110">İstemcilere hizmet sağlayan işlevselliği tanımlayan bir sözleşme.</span><span class="sxs-lookup"><span data-stu-id="207d9-110">A contract that defines the functionality that the service provides to its clients.</span></span>
 
-- <span data-ttu-id="3a35a-107">Hizmeti barındırmak için bir konsol uygulama projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3a35a-107">Create a console application project to host the service.</span></span>
+<span data-ttu-id="207d9-111">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="207d9-111">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="207d9-112">Oluşturun ve bir WCF Hizmeti barındırma için bir konsol uygulama projesi yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="207d9-112">Create and configure a console app project for hosting a WCF service.</span></span>
+> - <span data-ttu-id="207d9-113">WCF Hizmeti barındırma için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="207d9-113">Add code to host the WCF service.</span></span>
+> - <span data-ttu-id="207d9-114">Yapılandırma dosyasını güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="207d9-114">Update the configuration file.</span></span>
+> - <span data-ttu-id="207d9-115">WCF hizmeti başlatın ve doğrulamak çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="207d9-115">Start the WCF service and verify it's running.</span></span>
 
-- <span data-ttu-id="3a35a-108">Hizmet konak hizmeti oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3a35a-108">Create a service host for the service.</span></span>
 
-- <span data-ttu-id="3a35a-109">Meta veri değişimi etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-109">Enable metadata exchange.</span></span>
+## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a><span data-ttu-id="207d9-116">Oluşturma ve barındırma hizmeti bir konsol uygulama projesi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="207d9-116">Create and configure a console app project for hosting the service</span></span>
 
-- <span data-ttu-id="3a35a-110">Hizmet ana bilgisayarı açın.</span><span class="sxs-lookup"><span data-stu-id="3a35a-110">Open the service host.</span></span>
+1. <span data-ttu-id="207d9-117">Visual Studio'da konsol uygulaması projesi oluşturun:</span><span class="sxs-lookup"><span data-stu-id="207d9-117">Create a console app project in Visual Studio:</span></span> 
+ 
+    1. <span data-ttu-id="207d9-118">Gelen **dosya** menüsünde **açık** > **proje/çözüm** ve **GettingStarted** çözüm, daha önce oluşturduğunuz (*GettingStarted.sln*).</span><span class="sxs-lookup"><span data-stu-id="207d9-118">From the **File** menu, select **Open** > **Project/Solution** and browse to the **GettingStarted** solution you previously created (*GettingStarted.sln*).</span></span> <span data-ttu-id="207d9-119">**Aç**'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="207d9-119">Select **Open**.</span></span>
 
-<span data-ttu-id="3a35a-111">Bu görevde yazılan kodların tam listesi yordamdan örnekte sağlanır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-111">A complete listing of the code written in this task is provided in the example following the procedure.</span></span>
+    2. <span data-ttu-id="207d9-120">Gelen **görünümü** menüsünde **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="207d9-120">From the **View** menu, select **Solution Explorer**.</span></span>
+    
+    3. <span data-ttu-id="207d9-121">İçinde **Çözüm Gezgini** penceresinde **GettingStarted** çözüm (üst düğümü) ve ardından **Ekle** > **YeniProje** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="207d9-121">In the **Solution Explorer** window, select the **GettingStarted** solution (top node), and then select **Add** > **New Project** from the shortcut menu.</span></span> 
 
-## <a name="create-a-new-console-application-to-host-the-service"></a><span data-ttu-id="3a35a-112">Hizmeti barındırmak için yeni bir konsol uygulaması oluşturun</span><span class="sxs-lookup"><span data-stu-id="3a35a-112">Create a new console application to host the service</span></span>
+    4. <span data-ttu-id="207d9-122">İçinde **Yeni Proje Ekle** penceresinde, sol tarafta, select **Windows Masaüstü** kategorisi altında **Visual C#**  veya **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="207d9-122">In the **Add New Project** window, on the left side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> 
 
-1. <span data-ttu-id="3a35a-113">Başlarken çözüm üzerinde sağ tıklatıp seçerek Visual Studio'da yeni bir konsol uygulaması projesi oluşturma **Ekle** > **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-113">Create a new Console Application project in Visual Studio by right-clicking on the Getting Started solution and selecting **Add** > **New Project**.</span></span> <span data-ttu-id="3a35a-114">İçinde **Yeni Proje Ekle** seçin sol taraftaki iletişim **Windows Masaüstü** kategorisi altında **Visual C#** veya **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-114">In the **Add New Project** dialog, on the left-hand side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> <span data-ttu-id="3a35a-115">Seçin **konsol uygulaması (.NET Framework)** şablonu ve ardından ad proje **GettingStartedHost**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-115">Select the **Console App (.NET Framework)** template, and then name the project **GettingStartedHost**.</span></span>
+    5. <span data-ttu-id="207d9-123">Seçin **konsol uygulaması (.NET Framework)** şablon girin *GettingStartedHost* için **adı**.</span><span class="sxs-lookup"><span data-stu-id="207d9-123">Select the **Console App (.NET Framework)** template, and enter *GettingStartedHost* for the **Name**.</span></span> <span data-ttu-id="207d9-124">**Tamam**’ı seçin.</span><span class="sxs-lookup"><span data-stu-id="207d9-124">Select **OK**.</span></span>
 
-2. <span data-ttu-id="3a35a-116">GettingStartedHost projeye GettingStartedLib projeye bir başvuru ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-116">Add a reference to the GettingStartedLib project to the GettingStartedHost project.</span></span> <span data-ttu-id="3a35a-117">Sağ **başvuruları** klasörü altında GettingStartedHost projede **Çözüm Gezgini**ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-117">Right-click on the **References** folder under the GettingStartedHost project in **Solution Explorer**, and then select **Add Reference**.</span></span> <span data-ttu-id="3a35a-118">İçinde **Başvuru Ekle** iletişim kutusunda **çözüm** iletişim kutusunun sol taraftaki GettingStartedLib iletişim kutusunun orta kısmını seçin ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-118">In the **Add Reference** dialog, select **Solution** on the left-hand side of the dialog, select GettingStartedLib in the center section of the dialog, and then choose **Add**.</span></span> <span data-ttu-id="3a35a-119">Bu, GettingStartedLib GettingStartedHost projesi için tanımlanan türleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="3a35a-119">This makes the types defined in GettingStartedLib available to the GettingStartedHost project.</span></span>
+2. <span data-ttu-id="207d9-125">Başvuru ekleme **GettingStartedHost** için proje **GettingStartedLib** proje:</span><span class="sxs-lookup"><span data-stu-id="207d9-125">Add a reference in the **GettingStartedHost** project to the **GettingStartedLib** project:</span></span> 
 
-3. <span data-ttu-id="3a35a-120">System.ServiceModel başvuru GettingStartedHost projeye ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-120">Add a reference to System.ServiceModel to the GettingStartedHost project.</span></span> <span data-ttu-id="3a35a-121">Sağ **başvuruları** klasörü altında GettingStartedHost projede **Çözüm Gezgini** seçip **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-121">Right-click the **References** folder under the GettingStartedHost project in **Solution Explorer** and select **Add Reference**.</span></span> <span data-ttu-id="3a35a-122">İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki **derlemeleri**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-122">In the **Add Reference** dialog, select **Framework** on the left-hand side of the dialog under **Assemblies**.</span></span> <span data-ttu-id="3a35a-123">Bulmak ve seçmek **System.ServiceModel**ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-123">Find and select **System.ServiceModel**, and then choose **OK**.</span></span> <span data-ttu-id="3a35a-124">Çözüm seçerek Kaydet **dosya** > **Tümünü Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-124">Save the solution by selecting **File** > **Save All**.</span></span>
+    1. <span data-ttu-id="207d9-126">İçinde **Çözüm Gezgini** penceresinde **başvuruları** klasörü altında **GettingStartedHost** proje ve ardından **BaşvuruEkle** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="207d9-126">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedHost** project, and then select **Add Reference** from the shortcut menu.</span></span> 
 
-## <a name="host-the-service"></a><span data-ttu-id="3a35a-125">Hizmeti barındırma</span><span class="sxs-lookup"><span data-stu-id="3a35a-125">Host the service</span></span>
+    2. <span data-ttu-id="207d9-127">İçinde **Başvuru Ekle** iletişim altında **projeleri** penceresinin sol taraftan **çözüm**.</span><span class="sxs-lookup"><span data-stu-id="207d9-127">In the **Add Reference** dialog, under **Projects** on the left side of the window, select **Solution**.</span></span> 
+ 
+    3. <span data-ttu-id="207d9-128">Seçin **GettingStartedLib** penceresi tıklayın ve ardından Merkezi bölümünde **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="207d9-128">Select **GettingStartedLib** in the center section of the window, and then select **OK**.</span></span> 
 
-<span data-ttu-id="3a35a-126">Program.cs veya Module.vb dosyasını açın ve aşağıdaki kodu girin:</span><span class="sxs-lookup"><span data-stu-id="3a35a-126">Open the Program.cs or Module.vb file and enter the following code:</span></span>
+       <span data-ttu-id="207d9-129">Bu eylem içinde tanımlanmış türlere yapar **GettingStartedLib** proje için kullanılabilir **GettingStartedHost** proje.</span><span class="sxs-lookup"><span data-stu-id="207d9-129">This action makes the types defined in the **GettingStartedLib** project available to the **GettingStartedHost** project.</span></span>
 
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
+3. <span data-ttu-id="207d9-130">Başvuru ekleme **GettingStartedHost** için proje <xref:System.ServiceModel> derleme:</span><span class="sxs-lookup"><span data-stu-id="207d9-130">Add a reference in the **GettingStartedHost** project to the <xref:System.ServiceModel> assembly:</span></span> 
 
-namespace GettingStartedHost
-{
-    class Program
+    1. <span data-ttu-id="207d9-131">İçinde **Çözüm Gezgini** penceresinde **başvuruları** klasörü altında **GettingStartedHost** proje ve ardından **BaşvuruEkle** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="207d9-131">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedHost** project, and then select **Add Reference** from the shortcut menu.</span></span>
+    
+    2. <span data-ttu-id="207d9-132">İçinde **Başvuru Ekle** penceresinin altında **derlemeleri** penceresinin sol taraftan **Framework**.</span><span class="sxs-lookup"><span data-stu-id="207d9-132">In the **Add Reference** window, under **Assemblies** on the left side of the window, select **Framework**.</span></span> 
+
+    3. <span data-ttu-id="207d9-133">Seçin **System.ServiceModel**ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="207d9-133">Select **System.ServiceModel**, and then select **OK**.</span></span> 
+    
+    4. <span data-ttu-id="207d9-134">Çözüm seçerek Kaydet **dosya** > **Tümünü Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="207d9-134">Save the solution by selecting **File** > **Save All**.</span></span>
+
+## <a name="add-code-to-host-the-service"></a><span data-ttu-id="207d9-135">Hizmeti barındırmak için kod ekleyin</span><span class="sxs-lookup"><span data-stu-id="207d9-135">Add code to host the service</span></span>
+
+<span data-ttu-id="207d9-136">Hizmeti barındırmak için aşağıdaki adımları uygulamak için kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="207d9-136">To host the service, you add code to do the following steps:</span></span> 
+   1. <span data-ttu-id="207d9-137">Temel adres için URI oluşturma.</span><span class="sxs-lookup"><span data-stu-id="207d9-137">Create a URI for the base address.</span></span>
+   2. <span data-ttu-id="207d9-138">Barındırma hizmeti için bir sınıf örneği oluşturun.</span><span class="sxs-lookup"><span data-stu-id="207d9-138">Create a class instance for hosting the service.</span></span>
+   3. <span data-ttu-id="207d9-139">Hizmet uç noktası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="207d9-139">Create a service endpoint.</span></span>
+   4. <span data-ttu-id="207d9-140">Meta veri değişimi etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="207d9-140">Enable metadata exchange.</span></span>
+   5. <span data-ttu-id="207d9-141">Gelen iletileri dinlemek için hizmet ana bilgisayarı açın.</span><span class="sxs-lookup"><span data-stu-id="207d9-141">Open the service host to listen for incoming messages.</span></span>
+  
+<span data-ttu-id="207d9-142">Kodu aşağıdaki değişiklikleri yapın:</span><span class="sxs-lookup"><span data-stu-id="207d9-142">Make the following changes to the code:</span></span>
+
+1. <span data-ttu-id="207d9-143">Açık **Program.cs** veya **Module1.vb** dosyası **GettingStartedHost** proje ve onun kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="207d9-143">Open the **Program.cs** or **Module1.vb** file in the **GettingStartedHost** project and replace its code with the following code:</span></span>
+
+    ```csharp
+    using System;
+    using System.ServiceModel;
+    using System.ServiceModel.Description;
+    using GettingStartedLib;
+
+    namespace GettingStartedHost
     {
-        static void Main(string[] args)
+        class Program
         {
-            // Step 1 Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 Create a ServiceHost instance
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
+            static void Main(string[] args)
             {
-                // Step 3 Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+                // Step 1: Create a URI to serve as the base address.
+                Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
 
-                // Step 4 Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
+                // Step 2: Create a ServiceHost instance.
+                ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
 
-                // Step 5 Start the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
+                try
+                {
+                    // Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
 
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
+                    // Step 4: Enable metadata exchange.
+                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                    smb.HttpGetEnabled = true;
+                    selfHost.Description.Behaviors.Add(smb)    ;
+
+                    // Step 5: Start the service.
+                    selfHost.Open();
+                    Console.WriteLine("The service is ready.");
+
+                    // Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.");
+                    Console.WriteLine();
+                    Console.ReadLine();
+                    selfHost.Close();
+                }
+                catch (CommunicationException ce)
+                {
+                    Console.WriteLine("An exception occurred: {0}", ce.Message);
+                    selfHost.Abort();
+                }
             }
         }
     }
-}
-```
+    ```
 
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
+    ```vb
+    Imports System.ServiceModel
+    Imports System.ServiceModel.Description
+    Imports GettingStartedLib.GettingStartedLib
 
-Module Service
+    Module Service
 
-    Class Program
-        Shared Sub Main()
-            ' Step 1 Create a URI to serve as the base address
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted")
+        Class Program
+            Shared Sub Main()
+                ' Step 1: Create a URI to serve as the base address.
+                Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
 
-            ' Step 2 Create a ServiceHost instance
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-           Try
+                ' Step 2: Create a ServiceHost instance.
+                Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
+               Try
 
-                ' Step 3 Add a service endpoint
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
+                    ' Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint( _
+                        GetType(ICalculator), _
+                        New WSHttpBinding(), _
+                        "CalculatorService")
 
-                ' Step 4 Enable metadata exchange.
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
+                    ' Step 4: Enable metadata exchange.
+                    Dim smb As New ServiceMetadataBehavior()
+                    smb.HttpGetEnabled = True
+                    selfHost.Description.Behaviors.Add(smb)
 
-                ' Step 5 Start the service
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
+                    ' Step 5: Start the service.
+                    selfHost.Open()
+                    Console.WriteLine("The service is ready.")
 
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
+                    ' Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.")
+                    Console.WriteLine()
+                    Console.ReadLine()
+                    selfHost.Close()
 
-End Module
-```
+                Catch ce As CommunicationException
+                    Console.WriteLine("An exception occurred: {0}", ce.Message)
+                    selfHost.Abort()
+                End Try
+            End Sub
+        End Class
 
-<span data-ttu-id="3a35a-127">**1. adım** -hizmetin taban adresi için URI sınıf örneği oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3a35a-127">**Step 1** - Creates an instance of the Uri class to hold the base address of the service.</span></span> <span data-ttu-id="3a35a-128">Hizmetleri, bir taban adresi içeren bir URL ve isteğe bağlı bir URI tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-128">Services are identified by a URL which contains a base address and an optional URI.</span></span> <span data-ttu-id="3a35a-129">Temel adres gibi biçimlendirilir: [aktarım] :// [makine adı veya etki alanı] [: isteğe bağlı bağlantı noktası #] / [isteğe bağlı URI segmenti] HTTP aktarımı hesaplayıcı hizmeti temel adresi kullanır, segment "GettingStarted" localhost, 8000 numaralı bağlantı noktasını ve URI</span><span class="sxs-lookup"><span data-stu-id="3a35a-129">The base address is formatted as follows:[transport]://[machine-name or domain][:optional port #]/[optional URI segment]The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment "GettingStarted"</span></span>
+    End Module
+    ```
+    
+    <span data-ttu-id="207d9-144">Bu kodu nasıl çalıştığı hakkında daha fazla bilgi için bkz: [hizmet programı adımları barındırma](#service-hosting-program-steps).</span><span class="sxs-lookup"><span data-stu-id="207d9-144">For information about how this code works, see [Service hosting program steps](#service-hosting-program-steps).</span></span>
 
-<span data-ttu-id="3a35a-130">**2. adım** – bir örneğini oluşturur <xref:System.ServiceModel.ServiceHost> Hizmeti'ni barındıracak şekilde sınıfı.</span><span class="sxs-lookup"><span data-stu-id="3a35a-130">**Step 2** – Creates an instance of the <xref:System.ServiceModel.ServiceHost> class to host the service.</span></span> <span data-ttu-id="3a35a-131">Oluşturucu, iki parametre, hizmet sözleşmesi uygulayan sınıf türünü ve hizmetin taban adresi alır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-131">The constructor takes two parameters, the type of the class that implements the service contract, and the base address of the service.</span></span>
 
-<span data-ttu-id="3a35a-132">**3. adım** – oluşturur bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği.</span><span class="sxs-lookup"><span data-stu-id="3a35a-132">**Step 3** – Creates a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="3a35a-133">Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesi oluşur.</span><span class="sxs-lookup"><span data-stu-id="3a35a-133">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="3a35a-134"><xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bağlama ve bir adresi alır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-134">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor therefore takes the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="3a35a-135">Hizmet sözleşme `ICalculator`, tanımlanan ve hizmet türüne uygulayın.</span><span class="sxs-lookup"><span data-stu-id="3a35a-135">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="3a35a-136">Bu örnekte kullanılan bağlamanın <xref:System.ServiceModel.WSHttpBinding> WS - için uygun uç noktalarına bağlamak için kullanılan yerleşik bir bağlama olduğu \* belirtimleri.</span><span class="sxs-lookup"><span data-stu-id="3a35a-136">The binding used in this sample is <xref:System.ServiceModel.WSHttpBinding> which is a built-in binding that is used for connecting to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="3a35a-137">WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](bindings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3a35a-137">For more information about WCF bindings, see [WCF Bindings Overview](bindings-overview.md).</span></span> <span data-ttu-id="3a35a-138">Adres, uç noktayı tanımlamak için taban adresi olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="3a35a-138">The address is appended to the base address to identify the endpoint.</span></span> <span data-ttu-id="3a35a-139">Tam uç nokta adresi "CalculatorService" Bu kodu belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"`.</span><span class="sxs-lookup"><span data-stu-id="3a35a-139">The address specified in this code is "CalculatorService" so the fully qualified address for the endpoint is `"http://localhost:8000/GettingStarted/CalculatorService"`.</span></span>
+2. <span data-ttu-id="207d9-145">Proje özelliklerini güncelleştirin:</span><span class="sxs-lookup"><span data-stu-id="207d9-145">Update the project properties:</span></span>
+
+   1. <span data-ttu-id="207d9-146">İçinde **Çözüm Gezgini** penceresinde **GettingStartedHost** klasöre tıklayın ve ardından **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="207d9-146">In the **Solution Explorer** window, select the **GettingStartedHost** folder, and then select **Properties** from the shortcut menu.</span></span>
+
+   2. <span data-ttu-id="207d9-147">Üzerinde **GettingStartedHost** özellikleri sayfasında **uygulama** sekmesinde:</span><span class="sxs-lookup"><span data-stu-id="207d9-147">On the **GettingStartedHost** properties page, select the **Application** tab:</span></span>
+
+      - <span data-ttu-id="207d9-148">İçin C# projeleri, select **GettingStartedHost.Program** gelen **Başlangıç nesnesi** listesi.</span><span class="sxs-lookup"><span data-stu-id="207d9-148">For C# projects, select **GettingStartedHost.Program** from the **Startup object** list.</span></span>
+
+      - <span data-ttu-id="207d9-149">Visual Basic projeleri için seçin **Service.Program** gelen **Başlangıç nesnesi** listesi.</span><span class="sxs-lookup"><span data-stu-id="207d9-149">For Visual Basic projects, select **Service.Program** from the **Startup object** list.</span></span>
+
+   3. <span data-ttu-id="207d9-150">Gelen **dosya** menüsünde **Tümünü Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="207d9-150">From the **File** menu, select **Save All**.</span></span>
+
+
+## <a name="verify-the-service-is-working"></a><span data-ttu-id="207d9-151">Hizmetinin çalıştığını doğrulayın</span><span class="sxs-lookup"><span data-stu-id="207d9-151">Verify the service is working</span></span>
+
+1. <span data-ttu-id="207d9-152">Çözümü derleyin ve çalıştırın **GettingStartedHost** Konsolu Visual Studio içinde uygulama.</span><span class="sxs-lookup"><span data-stu-id="207d9-152">Build the solution, and then run the **GettingStartedHost** console application from inside Visual Studio.</span></span> 
+
+    <span data-ttu-id="207d9-153">Hizmet, yönetici ayrıcalıklarıyla çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="207d9-153">The service must be run with administrator privileges.</span></span> <span data-ttu-id="207d9-154">Programını çalıştırdığınızda, Visual Studio'nun yönetici ayrıcalıklarıyla açılan çünkü **GettingStartedHost** Visual Studio'da da yönetici ayrıcalıklarına sahip bir uygulama çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="207d9-154">Because you opened Visual Studio with administrator privileges, when you run **GettingStartedHost** in Visual Studio, the application is run with administrator privileges as well.</span></span> <span data-ttu-id="207d9-155">Alternatif olarak, yönetici olarak yeni bir komut istemi açın (seçin **daha fazla** > **yönetici olarak çalıştır** kısayol menüsünden) çalıştırıp **GettingStartedHost.exe**  içindeki.</span><span class="sxs-lookup"><span data-stu-id="207d9-155">As an alternative, you can open a new command prompt as an administrator (select **More** > **Run as administrator** from the shortcut menu) and run **GettingStartedHost.exe** within it.</span></span>
+
+2. <span data-ttu-id="207d9-156">Bir web tarayıcısı açın ve hizmetin sayfasına göz atın `http://localhost:8000/GettingStarted/CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="207d9-156">Open a web browser and browse to the service's page at `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>
+   
+   > [!NOTE]
+   > <span data-ttu-id="207d9-157">Bunun gibi hizmetleri uygun HTTP adresleri dinlemek makinede kaydetme izni gerektirir.</span><span class="sxs-lookup"><span data-stu-id="207d9-157">Services such as this one require the proper permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="207d9-158">Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir.</span><span class="sxs-lookup"><span data-stu-id="207d9-158">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="207d9-159">Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](feature-details/configuring-http-and-https.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-159">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md).</span></span> 
+
+
+## <a name="service-hosting-program-steps"></a><span data-ttu-id="207d9-160">Hizmet barındırma program adımları</span><span class="sxs-lookup"><span data-stu-id="207d9-160">Service hosting program steps</span></span>
+
+<span data-ttu-id="207d9-161">Hizmet aşağıdaki gibi açıklandığı gibi ana bilgisayar için eklenen kodu adımları:</span><span class="sxs-lookup"><span data-stu-id="207d9-161">The steps in the code you added to host the service are described as follows:</span></span>
+
+- <span data-ttu-id="207d9-162">**1. adım**: Bir örneğini oluşturmak `Uri` hizmetin taban adresi için sınıf.</span><span class="sxs-lookup"><span data-stu-id="207d9-162">**Step 1**: Create an instance of the `Uri` class to hold the base address of the service.</span></span> <span data-ttu-id="207d9-163">Temel adres içeren bir URL, bir hizmeti tanımlayan bir isteğe bağlı bir URI'ya sahip.</span><span class="sxs-lookup"><span data-stu-id="207d9-163">A URL that contains a base address has an optional URI that identifies a service.</span></span> <span data-ttu-id="207d9-164">Temel adres gibi biçimlendirilir: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`.</span><span class="sxs-lookup"><span data-stu-id="207d9-164">The base address is formatted as follows: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`.</span></span> <span data-ttu-id="207d9-165">HTTP taşıma, localhost, 8000 numaralı bağlantı noktasını ve GettingStarted URI segmenti hesaplayıcı hizmeti temel adresi kullanır.</span><span class="sxs-lookup"><span data-stu-id="207d9-165">The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment, GettingStarted.</span></span>
+
+- <span data-ttu-id="207d9-166">**2. adım**: Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> hizmeti barındırmak için kullanılan sınıf.</span><span class="sxs-lookup"><span data-stu-id="207d9-166">**Step 2**: Create an instance of the <xref:System.ServiceModel.ServiceHost> class, which you use to host the service.</span></span> <span data-ttu-id="207d9-167">Oluşturucu iki parametre alır: Hizmet sözleşmesi ve hizmetin taban adresi uygulayan sınıf türü.</span><span class="sxs-lookup"><span data-stu-id="207d9-167">The constructor takes two parameters: the type of the class that implements the service contract and the base address of the service.</span></span>
+
+- <span data-ttu-id="207d9-168">**3. adım**: Oluşturma bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği.</span><span class="sxs-lookup"><span data-stu-id="207d9-168">**Step 3**: Create a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="207d9-169">Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesi oluşur.</span><span class="sxs-lookup"><span data-stu-id="207d9-169">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="207d9-170"><xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu hizmet sözleşme arabirimi türü, bağlama ve bir adresi oluşur.</span><span class="sxs-lookup"><span data-stu-id="207d9-170">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor is composed of the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="207d9-171">Hizmet sözleşme `ICalculator`, tanımlanan ve hizmet türüne uygulayın.</span><span class="sxs-lookup"><span data-stu-id="207d9-171">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="207d9-172">Bu örnek için bağlama <xref:System.ServiceModel.WSHttpBinding>, yerleşik bir bağlamadır ve WS - için uygun uç noktalarına bağlayan \* belirtimleri.</span><span class="sxs-lookup"><span data-stu-id="207d9-172">The binding for this sample is <xref:System.ServiceModel.WSHttpBinding>, which is a built-in binding and connects to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="207d9-173">WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](bindings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-173">For more information about WCF bindings, see [WCF bindings overview](bindings-overview.md).</span></span> <span data-ttu-id="207d9-174">Uç noktayı tanımlamak için temel adres bir adres sonuna ekleyin.</span><span class="sxs-lookup"><span data-stu-id="207d9-174">You append the address to the base address to identify the endpoint.</span></span> <span data-ttu-id="207d9-175">Kod CalculatorService ve tam uç nokta adresi olarak adresini belirten `http://localhost:8000/GettingStarted/CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="207d9-175">The code specifies the address as CalculatorService and the fully qualified address for the endpoint as `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>
+
+    > [!IMPORTANT]
+    > <span data-ttu-id="207d9-176">.NET Framework sürüm 4 ve sonraki sürümlerinde, bir hizmet uç noktası eklemek isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="207d9-176">For .NET Framework Version 4 and later, adding a service endpoint is optional.</span></span> <span data-ttu-id="207d9-177">Kod veya yapılandırma, eklemezseniz bu sürümleri için WCF taban adresini ve sözleşme hizmeti tarafından uygulanan her bir birleşimi için bir varsayılan uç nokta ekler.</span><span class="sxs-lookup"><span data-stu-id="207d9-177">For these versions, if you don't add your code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service.</span></span> <span data-ttu-id="207d9-178">Varsayılan uç noktaları hakkında daha fazla bilgi için bkz. [bir uç nokta adresi belirtme](specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-178">For more information about default endpoints, see [Specifying an endpoint address](specifying-an-endpoint-address.md).</span></span> <span data-ttu-id="207d9-179">Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-179">For more information about default endpoints, bindings, and behaviors, see [Simplified configuration](simplified-configuration.md) and [Simplified configuration for WCF services](samples/simplified-configuration-for-wcf-services.md).</span></span>
+
+- <span data-ttu-id="207d9-180">**4. adım**: Meta veri değişimi etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="207d9-180">**Step 4**: Enable metadata exchange.</span></span> <span data-ttu-id="207d9-181">İstemcileri, hizmet işlemleri çağırmak için proxy oluşturmak için meta veri değişimi kullanın.</span><span class="sxs-lookup"><span data-stu-id="207d9-181">Clients use metadata exchange to generate proxies for calling the service operations.</span></span> <span data-ttu-id="207d9-182">Meta veri değişimi etkinleştirmek için oluşturun bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örnek olarak ayarlayın, <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> özelliğini `true`ve ekleme `ServiceMetadataBehavior` nesnesini <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.</span><span class="sxs-lookup"><span data-stu-id="207d9-182">To enable metadata exchange, create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set its <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> property to `true`, and add the `ServiceMetadataBehavior` object to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>
+
+- <span data-ttu-id="207d9-183">**5. adım**: Açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için.</span><span class="sxs-lookup"><span data-stu-id="207d9-183">**Step 5**: Open <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="207d9-184">Uygulama, basmanızı bekler **Enter**.</span><span class="sxs-lookup"><span data-stu-id="207d9-184">The application waits for you to press **Enter**.</span></span> <span data-ttu-id="207d9-185">Uygulama örneğini oluşturur sonra <xref:System.ServiceModel.ServiceHost>, try/catch bloğu yürütür.</span><span class="sxs-lookup"><span data-stu-id="207d9-185">After the application instantiates <xref:System.ServiceModel.ServiceHost>, it executes a try/catch block.</span></span> <span data-ttu-id="207d9-186">Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [kullanım Kapat ve iptal WCF istemci kaynaklar serbest bırakılacaksa](samples/use-close-abort-release-wcf-client-resources.md).</span><span class="sxs-lookup"><span data-stu-id="207d9-186">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Use Close and Abort to release WCF client resources](samples/use-close-abort-release-wcf-client-resources.md).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="3a35a-140">.NET Framework 4 kullanırken, isteğe bağlı veya üzeri bir hizmet uç noktası ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="3a35a-140">Adding a service endpoint is optional when using .NET Framework 4 or later.</span></span> <span data-ttu-id="3a35a-141">Kod veya yapılandırma, uç nokta eklenirse bu sürümlerde WCF taban adresini ve sözleşme hizmeti tarafından uygulanan her bir birleşimi için bir varsayılan uç nokta ekler.</span><span class="sxs-lookup"><span data-stu-id="3a35a-141">In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service.</span></span> <span data-ttu-id="3a35a-142">Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç nokta adresi belirtme](specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="3a35a-142">For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md).</span></span> <span data-ttu-id="3a35a-143">Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](./samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="3a35a-143">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).</span></span>
+> <span data-ttu-id="207d9-187">Bir WCF hizmet kitaplığı eklediğinizde, hizmet ana bilgisayarı yeniden başlatarak hatalarını ayıklıyorsanız Visual Studio bunu sizin için barındırır.</span><span class="sxs-lookup"><span data-stu-id="207d9-187">When you add a WCF service library, Visual Studio hosts it for you if you debug it by starting a service host.</span></span> <span data-ttu-id="207d9-188">Çakışmaları önlemek için Visual Studio WCF hizmet kitaplığı barındırma veritabanından engelleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="207d9-188">To avoid conflicts, you can prevent Visual Studio from hosting the WCF service library.</span></span> 
+> 1. <span data-ttu-id="207d9-189">Seçin **GettingStartedLib** projesi **Çözüm Gezgini** ve **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="207d9-189">Select the **GettingStartedLib** project in **Solution Explorer** and choose **Properties** from the shortcut menu.</span></span>
+> 2. <span data-ttu-id="207d9-190">Seçin **WCF seçenekleri** kaldırın **Başlat WCF hizmet aynı çözümdeki başka bir proje hata ayıklama konağı**.</span><span class="sxs-lookup"><span data-stu-id="207d9-190">Select **WCF Options** and uncheck **Start WCF Service Host when debugging another project in the same solution**.</span></span>
 
-<span data-ttu-id="3a35a-144">**4. adım** – meta veri değişimi etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-144">**Step 4** – Enable metadata exchange.</span></span> <span data-ttu-id="3a35a-145">İstemciler, meta veri değişimi, hizmet işlemlerini aramak için kullanılacak proxy üretmek için kullanır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-145">Clients will use metadata exchange to generate proxies that will be used to call the service operations.</span></span> <span data-ttu-id="3a35a-146">Etkinleştirmek için meta veri değişimi oluşturma bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın, örnek 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`ve davranışların eklenmesi <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.</span><span class="sxs-lookup"><span data-stu-id="3a35a-146">To enable metadata exchange create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set it’s <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property to `true`, and add the behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>
 
-<span data-ttu-id="3a35a-147">**5. adım** – açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için.</span><span class="sxs-lookup"><span data-stu-id="3a35a-147">**Step 5** – Open the <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="3a35a-148">Uyarı kodunu kullanıcının isabet bekler girin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-148">Notice the code waits for the user to hit enter.</span></span> <span data-ttu-id="3a35a-149">Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-149">If you do not do this, the app will close immediately and the service will shut down.Also notice a  try/catch block used.</span></span> <span data-ttu-id="3a35a-150">Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-150">After the <xref:System.ServiceModel.ServiceHost> has been instantiated, all other code is placed in a try/catch block.</span></span> <span data-ttu-id="3a35a-151">Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [kullanım Kapat ve iptal WCF istemci kaynakları serbest bırakmak için](samples/use-close-abort-release-wcf-client-resources.md)</span><span class="sxs-lookup"><span data-stu-id="3a35a-151">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Use Close and Abort to release WCF client resources](samples/use-close-abort-release-wcf-client-resources.md)</span></span>
+## <a name="next-steps"></a><span data-ttu-id="207d9-191">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="207d9-191">Next steps</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="3a35a-152">Bir WCF hizmet kitaplığı eklediğinizde, bir hizmet konağı başlatarak ayıkladığınızda Visual Studio bunu sizin için barındırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3a35a-152">When you add a WCF Service Library, Visual Studio can host it for you when you debug by starting a service host.</span></span> <span data-ttu-id="3a35a-153">Çakışmaları önlemek için bu devre dışı bırakabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3a35a-153">To avoid conflicts you can disable this.</span></span> 
-> 1. <span data-ttu-id="3a35a-154">GettingStartedLib için proje özelliklerini açın.</span><span class="sxs-lookup"><span data-stu-id="3a35a-154">Open Project Properties for GettingStartedLib.</span></span>
-> 2. <span data-ttu-id="3a35a-155">Git **WCF seçenekleri** kaldırın **Başlat WCF hizmet hata ayıklama konağı**.</span><span class="sxs-lookup"><span data-stu-id="3a35a-155">Go to **WCF Options** and uncheck **Start WCF Service Host when debugging**.</span></span>
+<span data-ttu-id="207d9-192">Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:</span><span class="sxs-lookup"><span data-stu-id="207d9-192">In this tutorial, you learned how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="207d9-193">Oluşturun ve bir WCF Hizmeti barındırma için bir konsol uygulama projesi yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="207d9-193">Create and configure a console app project for hosting a WCF service.</span></span>
+> - <span data-ttu-id="207d9-194">WCF Hizmeti barındırma için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="207d9-194">Add code to host the WCF service.</span></span>
+> - <span data-ttu-id="207d9-195">Yapılandırma dosyasını güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="207d9-195">Update the configuration file.</span></span>
+> - <span data-ttu-id="207d9-196">WCF hizmeti başlatın ve doğrulamak çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="207d9-196">Start the WCF service and verify it's running.</span></span>
 
-## <a name="verify-the-service-is-working"></a><span data-ttu-id="3a35a-156">Hizmetinin çalıştığını doğrulayın</span><span class="sxs-lookup"><span data-stu-id="3a35a-156">Verify the service is working</span></span>
-
-1. <span data-ttu-id="3a35a-157">GettingStartedHost konsolunu çalıştıran Visual Studio içinde uygulama.</span><span class="sxs-lookup"><span data-stu-id="3a35a-157">Run the GettingStartedHost console application from inside Visual Studio.</span></span>
-
-   <span data-ttu-id="3a35a-158">Hizmet, yönetici ayrıcalıklarıyla çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-158">The service must be run with administrator privileges.</span></span> <span data-ttu-id="3a35a-159">Visual Studio'yu yönetici ayrıcalıklarıyla açılmış olduğundan GettingStartedHost da yönetici ayrıcalıklarıyla çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="3a35a-159">Because Visual Studio was opened with administrator privileges, GettingStartedHost is also run with administrator privileges.</span></span> <span data-ttu-id="3a35a-160">Yeni bir komut istemi kullanarak da açabilirsiniz **yönetici olarak çalıştır** ve içerdiği service.exe çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="3a35a-160">You can also open a new command prompt using **Run as administrator** and run service.exe within it.</span></span>
-
-2. <span data-ttu-id="3a35a-161">Bir web tarayıcısı açın ve hizmet hata ayıklama sayfasına göz atın `http://localhost:8000/GettingStarted/`.</span><span class="sxs-lookup"><span data-stu-id="3a35a-161">Open a web browser and browse to the service's debug page at `http://localhost:8000/GettingStarted/`.</span></span> <span data-ttu-id="3a35a-162">**Unutmayın! Bitiş eğik çizgi önemlidir.**</span><span class="sxs-lookup"><span data-stu-id="3a35a-162">**Note! Ending slash is significant.**</span></span>
-
-## <a name="example"></a><span data-ttu-id="3a35a-163">Örnek</span><span class="sxs-lookup"><span data-stu-id="3a35a-163">Example</span></span>
-
-<span data-ttu-id="3a35a-164">Aşağıdaki örnek, hizmet sözleşmesini ve önceki adımdan öğreticide içerir ve hizmeti bir konsol uygulamasında barındırır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-164">The following example includes the service contract and implementation from previous steps in the tutorial and hosts the service in a console application.</span></span>
-
-<span data-ttu-id="3a35a-165">Bu komut satırı derleyicisi ile derlemek için Iservice1.cs ve Service1.cs başvuran bir sınıf kitaplığı derleme `System.ServiceModel.dll`.</span><span class="sxs-lookup"><span data-stu-id="3a35a-165">To compile this with a command-line compiler, compile IService1.cs and Service1.cs into a class library that references `System.ServiceModel.dll`.</span></span> <span data-ttu-id="3a35a-166">Program.cs bir konsol uygulaması olarak derleyin.</span><span class="sxs-lookup"><span data-stu-id="3a35a-166">Compile Program.cs as a console application.</span></span>
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-        [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-        public interface ICalculator
-        {
-            [OperationContract]
-            double Add(double n1, double n2);
-            [OperationContract]
-            double Subtract(double n1, double n2);
-            [OperationContract]
-            double Multiply(double n1, double n2);
-            [OperationContract]
-            double Divide(double n1, double n2);
-        }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
-
-namespace GettingStartedHost
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 of the hosting procedure: Create ServiceHost
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
-            {
-                // Step 3 of the hosting procedure: Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
-
-                // Step 4 of the hosting procedure: Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
-
-                // Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
-
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
-            }
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
-
-Module Service
-
-    Class Program
-        Shared Sub Main()
-            ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
-
-            ' Step 2 of the hosting procedure: Create ServiceHost
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-            Try
-
-                ' Step 3 of the hosting procedure: Add a service endpoint.
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
-
-                ' Step 4 of the hosting procedure: Enable metadata exchange.
-                ' Enable metadata exchange
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
-
-                ' Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
-
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
-
-End Module
-```
-
-> [!NOTE]
-> <span data-ttu-id="3a35a-167">Bu gibi hizmetlere HTTP adresleri dinlemek makinede kaydetme izni gerektirir.</span><span class="sxs-lookup"><span data-stu-id="3a35a-167">Services such as this one require permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="3a35a-168">Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir.</span><span class="sxs-lookup"><span data-stu-id="3a35a-168">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="3a35a-169">Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](feature-details/configuring-http-and-https.md).</span><span class="sxs-lookup"><span data-stu-id="3a35a-169">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="3a35a-170">Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3a35a-170">When running under Visual Studio, the service.exe must be run with administrator privileges.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="3a35a-171">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="3a35a-171">Next steps</span></span>
-
-<span data-ttu-id="3a35a-172">Artık hizmeti çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="3a35a-172">Now the service is running.</span></span> <span data-ttu-id="3a35a-173">Sonraki görevde bir WCF istemcisi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="3a35a-173">In the next task, you create a WCF client.</span></span>
+<span data-ttu-id="207d9-197">Bir WCF istemcisi oluşturma hakkında bilgi edinmek için sonraki öğreticiye ilerleyin.</span><span class="sxs-lookup"><span data-stu-id="207d9-197">Advance to the next tutorial to learn how to create a WCF client.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="3a35a-174">Nasıl yapılır: Bir WCF istemcisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="3a35a-174">How to: Create a WCF client</span></span>](how-to-create-a-wcf-client.md)
-
-<span data-ttu-id="3a35a-175">Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="3a35a-175">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](troubleshooting-the-getting-started-tutorial.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="3a35a-176">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3a35a-176">See also</span></span>
-
-- [<span data-ttu-id="3a35a-177">Başlarken</span><span class="sxs-lookup"><span data-stu-id="3a35a-177">Getting Started</span></span>](samples/getting-started-sample.md)
-- [<span data-ttu-id="3a35a-178">Kendini Barındırma</span><span class="sxs-lookup"><span data-stu-id="3a35a-178">Self-Host</span></span>](samples/self-host.md)
-- [<span data-ttu-id="3a35a-179">Barındırma Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="3a35a-179">Hosting Services</span></span>](hosting-services.md)
+> [<span data-ttu-id="207d9-198">Öğretici: Bir WCF istemcisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="207d9-198">Tutorial: Create a WCF client</span></span>](how-to-create-a-wcf-client.md)

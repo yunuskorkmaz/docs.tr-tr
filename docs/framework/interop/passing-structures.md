@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1617a082a6ad46023add2d2df7de2561e2815881
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494397"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409698"
 ---
-# <a name="passing-structures"></a><span data-ttu-id="f4732-102">Yapıları Geçirme</span><span class="sxs-lookup"><span data-stu-id="f4732-102">Passing Structures</span></span>
-<span data-ttu-id="f4732-103">Birçok yönetilmeyen işlev, işlev bir parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler.</span><span class="sxs-lookup"><span data-stu-id="f4732-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="f4732-104">Yapıları geçirme veya platformu kullanarak yönetilmeyen kod için sınıflar çağırdığınızda, hizalama ve özgün düzeni korumak için ek bilgiler sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="f4732-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="f4732-105">Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türleri tanımlamak için kullanılan öznitelik.</span><span class="sxs-lookup"><span data-stu-id="f4732-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="f4732-106">Yönetilen yapıları ve sınıfları için tarafından sağlanan bazı öngörülebilir Düzen davranışları aralarından seçim yapabileceğiniz **LayoutKind** sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="f4732-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
+# <a name="passing-structures"></a><span data-ttu-id="02af4-102">Yapıları Geçirme</span><span class="sxs-lookup"><span data-stu-id="02af4-102">Passing Structures</span></span>
+<span data-ttu-id="02af4-103">Birçok yönetilmeyen işlev, işlev bir parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler.</span><span class="sxs-lookup"><span data-stu-id="02af4-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="02af4-104">Yapıları geçirme veya platformu kullanarak yönetilmeyen kod için sınıflar çağırdığınızda, hizalama ve özgün düzeni korumak için ek bilgiler sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="02af4-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="02af4-105">Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türleri tanımlamak için kullanılan öznitelik.</span><span class="sxs-lookup"><span data-stu-id="02af4-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="02af4-106">Yönetilen yapıları ve sınıfları için tarafından sağlanan bazı öngörülebilir Düzen davranışları aralarından seçim yapabileceğiniz **LayoutKind** sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="02af4-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
   
- <span data-ttu-id="f4732-107">Bu konuda sunulan kavramlarına Orta, yapı ve sınıf türleri arasında önemli bir farktır.</span><span class="sxs-lookup"><span data-stu-id="f4732-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="f4732-108">Yapıları, değer türleri ve başvuru türleri sınıflardır — sınıflar her zaman en az bir (bir değere bir işaretçi) bellek yöneltme düzeyi sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4732-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="f4732-109">Yönetilmeyen işlevleri yöneltme, genellikle gerektirdiğinden bu fark aşağıdaki tablonun ilk sütunundaki imzaları gösterildiği önemlidir.</span><span class="sxs-lookup"><span data-stu-id="f4732-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="f4732-110">Sınıf bildirimlerinde ve kalan sütunların ve yönetilen yapısı yöneltme düzeyi, bildiriminde yapabilirsiniz derecesini gösterir. Bildirimleri, Visual Basic ve Visual için sağlanan C#.</span><span class="sxs-lookup"><span data-stu-id="f4732-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
+ <span data-ttu-id="02af4-107">Bu konuda sunulan kavramlarına Orta, yapı ve sınıf türleri arasında önemli bir farktır.</span><span class="sxs-lookup"><span data-stu-id="02af4-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="02af4-108">Yapıları, değer türleri ve başvuru türleri sınıflardır — sınıflar her zaman en az bir (bir değere bir işaretçi) bellek yöneltme düzeyi sağlar.</span><span class="sxs-lookup"><span data-stu-id="02af4-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="02af4-109">Yönetilmeyen işlevleri yöneltme, genellikle gerektirdiğinden bu fark aşağıdaki tablonun ilk sütunundaki imzaları gösterildiği önemlidir.</span><span class="sxs-lookup"><span data-stu-id="02af4-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="02af4-110">Sınıf bildirimlerinde ve kalan sütunların ve yönetilen yapısı yöneltme düzeyi, bildiriminde yapabilirsiniz derecesini gösterir. Bildirimleri, Visual Basic ve Visual için sağlanan C#.</span><span class="sxs-lookup"><span data-stu-id="02af4-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
   
-|<span data-ttu-id="f4732-111">Yönetilmeyen imzası</span><span class="sxs-lookup"><span data-stu-id="f4732-111">Unmanaged signature</span></span>|<span data-ttu-id="f4732-112">Yönetilen bildirimi:</span><span class="sxs-lookup"><span data-stu-id="f4732-112">Managed declaration:</span></span> <br /><span data-ttu-id="f4732-113">hiçbir yöneltme</span><span class="sxs-lookup"><span data-stu-id="f4732-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="f4732-114">Yönetilen bildirimi:</span><span class="sxs-lookup"><span data-stu-id="f4732-114">Managed declaration:</span></span> <br /><span data-ttu-id="f4732-115">bir yönlendirme düzeyi</span><span class="sxs-lookup"><span data-stu-id="f4732-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
+|<span data-ttu-id="02af4-111">Yönetilmeyen imzası</span><span class="sxs-lookup"><span data-stu-id="02af4-111">Unmanaged signature</span></span>|<span data-ttu-id="02af4-112">Yönetilen bildirimi:</span><span class="sxs-lookup"><span data-stu-id="02af4-112">Managed declaration:</span></span> <br /><span data-ttu-id="02af4-113">hiçbir yöneltme</span><span class="sxs-lookup"><span data-stu-id="02af4-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="02af4-114">Yönetilen bildirimi:</span><span class="sxs-lookup"><span data-stu-id="02af4-114">Managed declaration:</span></span> <br /><span data-ttu-id="02af4-115">bir yönlendirme düzeyi</span><span class="sxs-lookup"><span data-stu-id="02af4-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="f4732-116">Talepleri, yöneltme düzeyi sıfır.</span><span class="sxs-lookup"><span data-stu-id="f4732-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="f4732-117">Sıfır, yöneltme düzeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="f4732-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="f4732-118">Zaten bir yöneltme düzeyi olduğundan yapılamaz.</span><span class="sxs-lookup"><span data-stu-id="f4732-118">Not possible because there is already one level of indirection.</span></span>|  
-|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="f4732-119">Bir düzey yöneltme ihtiyaç duyar.</span><span class="sxs-lookup"><span data-stu-id="f4732-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="f4732-120">Yöneltme bir düzey ekler.</span><span class="sxs-lookup"><span data-stu-id="f4732-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="f4732-121">Sıfır, yöneltme düzeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="f4732-121">Adds zero levels of indirection.</span></span>|  
-|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="f4732-122">İki, yöneltme düzeyi ihtiyaç duyar.</span><span class="sxs-lookup"><span data-stu-id="f4732-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="f4732-123">Mümkün değildir çünkü **ByRef** **ByRef** veya `ref` `ref` kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="f4732-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="f4732-124">Yöneltme bir düzey ekler.</span><span class="sxs-lookup"><span data-stu-id="f4732-124">Adds one level of indirection.</span></span>|  
+|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="02af4-116">Talepleri, yöneltme düzeyi sıfır.</span><span class="sxs-lookup"><span data-stu-id="02af4-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="02af4-117">Sıfır, yöneltme düzeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="02af4-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="02af4-118">Zaten bir yöneltme düzeyi olduğundan yapılamaz.</span><span class="sxs-lookup"><span data-stu-id="02af4-118">Not possible because there is already one level of indirection.</span></span>|  
+|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="02af4-119">Bir düzey yöneltme ihtiyaç duyar.</span><span class="sxs-lookup"><span data-stu-id="02af4-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="02af4-120">Yöneltme bir düzey ekler.</span><span class="sxs-lookup"><span data-stu-id="02af4-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="02af4-121">Sıfır, yöneltme düzeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="02af4-121">Adds zero levels of indirection.</span></span>|  
+|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="02af4-122">İki, yöneltme düzeyi ihtiyaç duyar.</span><span class="sxs-lookup"><span data-stu-id="02af4-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="02af4-123">Mümkün değildir çünkü **ByRef** **ByRef** veya `ref` `ref` kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="02af4-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="02af4-124">Yöneltme bir düzey ekler.</span><span class="sxs-lookup"><span data-stu-id="02af4-124">Adds one level of indirection.</span></span>|  
   
- <span data-ttu-id="f4732-125">Platform çağırma için bildirimleri tabloda aşağıdaki yönergeleri açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="f4732-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
+ <span data-ttu-id="02af4-125">Platform çağırma için bildirimleri tabloda aşağıdaki yönergeleri açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="02af4-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
   
--   <span data-ttu-id="f4732-126">Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde, değer tarafından geçirilen yapının kullanın.</span><span class="sxs-lookup"><span data-stu-id="f4732-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
+-   <span data-ttu-id="02af4-126">Yönetilmeyen işlev hiçbir yöneltme talep ettiğinde, değer tarafından geçirilen yapının kullanın.</span><span class="sxs-lookup"><span data-stu-id="02af4-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
   
--   <span data-ttu-id="f4732-127">Başvuru tarafından geçirilen yapının ya da bir yöneltme düzeyi yönetilmeyen işlev talep ettiğinde, değer olarak geçilemez bir sınıfı kullanın.</span><span class="sxs-lookup"><span data-stu-id="f4732-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
+-   <span data-ttu-id="02af4-127">Başvuru tarafından geçirilen yapının ya da bir yöneltme düzeyi yönetilmeyen işlev talep ettiğinde, değer olarak geçilemez bir sınıfı kullanın.</span><span class="sxs-lookup"><span data-stu-id="02af4-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
   
--   <span data-ttu-id="f4732-128">Yönetilmeyen işlev iki, yöneltme düzeyi talep ettiğinde, başvuru tarafından geçirilmediğine bir sınıfı kullanın.</span><span class="sxs-lookup"><span data-stu-id="f4732-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
+-   <span data-ttu-id="02af4-128">Yönetilmeyen işlev iki, yöneltme düzeyi talep ettiğinde, başvuru tarafından geçirilmediğine bir sınıfı kullanın.</span><span class="sxs-lookup"><span data-stu-id="02af4-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
   
-## <a name="declaring-and-passing-structures"></a><span data-ttu-id="f4732-129">Bildirme ve yapıları geçirme</span><span class="sxs-lookup"><span data-stu-id="f4732-129">Declaring and Passing Structures</span></span>  
- <span data-ttu-id="f4732-130">Aşağıdaki örnek nasıl tanımlanacağını gösterir `Point` ve `Rect` yapıları, yönetilen kod ve geçiş türleri parametre olarak **PtInRect** User32.dll dosyasındaki işlevi.</span><span class="sxs-lookup"><span data-stu-id="f4732-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="f4732-131">**PtInRect** aşağıdaki yönetilmeyen imzası:</span><span class="sxs-lookup"><span data-stu-id="f4732-131">**PtInRect** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-structures"></a><span data-ttu-id="02af4-129">Bildirme ve yapıları geçirme</span><span class="sxs-lookup"><span data-stu-id="02af4-129">Declaring and Passing Structures</span></span>  
+ <span data-ttu-id="02af4-130">Aşağıdaki örnek nasıl tanımlanacağını gösterir `Point` ve `Rect` yapıları, yönetilen kod ve geçiş türleri parametre olarak **PtInRect** User32.dll dosyasındaki işlevi.</span><span class="sxs-lookup"><span data-stu-id="02af4-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="02af4-131">**PtInRect** aşağıdaki yönetilmeyen imzası:</span><span class="sxs-lookup"><span data-stu-id="02af4-131">**PtInRect** has the following unmanaged signature:</span></span>  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- <span data-ttu-id="f4732-132">Dikdörtgen türü için bir işaretçi işlevi bekliyor olduğundan başvuru ile Rect yapısı geçmesi gereken dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="f4732-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
+ <span data-ttu-id="02af4-132">Dikdörtgen türü için bir işaretçi işlevi bekliyor olduğundan başvuru ile Rect yapısı geçmesi gereken dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="02af4-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -59,9 +59,9 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Class Win32API      
-    Declare Auto Function PtInRect Lib "user32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
+Friend Class WindowsAPI      
+    Friend Shared Declare Auto Function PtInRect Lib "user32.dll" (
+        ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
   
@@ -82,20 +82,21 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-class Win32API {  
+internal static class WindowsAPI
+{  
     [DllImport("User32.dll")]  
-    public static extern bool PtInRect(ref Rect r, Point p);  
+    internal static extern bool PtInRect(ref Rect r, Point p);  
 }  
 ```  
   
-## <a name="declaring-and-passing-classes"></a><span data-ttu-id="f4732-133">Bildirme ve sınıfları geçirme</span><span class="sxs-lookup"><span data-stu-id="f4732-133">Declaring and Passing Classes</span></span>  
- <span data-ttu-id="f4732-134">Sabit üye Düzen sınıfı olduğu sürece, bir yönetilmeyen DLL işlevi için bir sınıf üyesi geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f4732-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="f4732-135">Aşağıdaki örnek, üyelerinin geçirilecek gösterilmiştir `MySystemTime` sıralı bir düzende için tanımlanmış olan sınıf **GetSystemTime** User32.dll dosyasında.</span><span class="sxs-lookup"><span data-stu-id="f4732-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="f4732-136">**GetSystemTime** aşağıdaki yönetilmeyen imzası:</span><span class="sxs-lookup"><span data-stu-id="f4732-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-classes"></a><span data-ttu-id="02af4-133">Bildirme ve sınıfları geçirme</span><span class="sxs-lookup"><span data-stu-id="02af4-133">Declaring and Passing Classes</span></span>  
+ <span data-ttu-id="02af4-134">Sabit üye Düzen sınıfı olduğu sürece, bir yönetilmeyen DLL işlevi için bir sınıf üyesi geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02af4-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="02af4-135">Aşağıdaki örnek, üyelerinin geçirilecek gösterilmiştir `MySystemTime` sıralı bir düzende için tanımlanmış olan sınıf **GetSystemTime** User32.dll dosyasında.</span><span class="sxs-lookup"><span data-stu-id="02af4-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="02af4-136">**GetSystemTime** aşağıdaki yönetilmeyen imzası:</span><span class="sxs-lookup"><span data-stu-id="02af4-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- <span data-ttu-id="f4732-137">Değer türlerinin aksine, sınıflar her zaman en az bir yöneltme düzeyi var.</span><span class="sxs-lookup"><span data-stu-id="f4732-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
+ <span data-ttu-id="02af4-137">Değer türlerinin aksine, sınıflar her zaman en az bir yöneltme düzeyi var.</span><span class="sxs-lookup"><span data-stu-id="02af4-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
   
 ```vb  
 Imports System  
@@ -113,17 +114,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Public Class Win32  
-    Declare Auto Sub GetSystemTime Lib "Kernel32.dll"(sysTime _  
-        As MySystemTime)  
-    Declare Auto Function MessageBox Lib "User32.dll"(hWnd As IntPtr, _  
-        txt As String, caption As String, Typ As Integer) As Integer  
+Friend Class WindowsAPI  
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        sysTime As MySystemTime)  
+    Friend Shared Declare Auto Function MessageBox Lib "User32.dll" (
+        hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        Win32.GetSystemTime(sysTime)  
+        WindowsAPI.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -131,7 +132,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -148,13 +149,14 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-class Win32API {  
+internal static class WindowsAPI
+{  
     [DllImport("Kernel32.dll")]  
-    public static extern void GetSystemTime(MySystemTime st);  
+    internal static extern void GetSystemTime(MySystemTime st);  
   
-    [DllImport("user32.dll", CharSet=CharSet.Auto)]  
-     public static extern int MessageBox(IntPtr hWnd,  
-         string text, string caption, int options);  
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]  
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);  
 }  
   
 public class TestPlatformInvoke  
@@ -162,7 +164,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        Win32API.GetSystemTime(sysTime);  
+        WindowsAPI.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -170,13 +172,13 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        Win32API.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f4732-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f4732-138">See also</span></span>
-- [<span data-ttu-id="f4732-139">DLL İşlevini Çağırma</span><span class="sxs-lookup"><span data-stu-id="f4732-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="02af4-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="02af4-138">See also</span></span>
+- [<span data-ttu-id="02af4-139">DLL İşlevini Çağırma</span><span class="sxs-lookup"><span data-stu-id="02af4-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
