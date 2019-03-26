@@ -1,6 +1,0 @@
-# [Olaylar](index.md)
-## [İzlenecek yol: Olay Bildirme ve Oluşturma](walkthrough-declaring-and-raising-events.md)
-## [İzlenecek yol: Olayları İşleme](walkthrough-handling-events.md)
-## [Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](how-to-declare-custom-events-to-avoid-blocking.md)
-## [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](how-to-declare-custom-events-to-conserve-memory.md)
-## [Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme](troubleshooting-inherited-event-handlers.md)

@@ -1,5 +1,0 @@
-# [Derleyici ve Dil Sağlayıcısı Ayarları Şeması](index.md)
-## [<system.codedom> Öğesi](system-codedom-element.md)
-### [<compilers> Öğesi](compilers-element.md)
-#### [<compiler> Öğesi](compiler-element.md)
-##### [<providerOption> Öğesi](provideroption-element.md)

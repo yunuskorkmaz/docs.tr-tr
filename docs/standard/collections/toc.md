@@ -1,8 +1,0 @@
-# [Koleksiyonlar ve Veri Yapıları](index.md)
-## [Koleksiyon Sınıfı Seçme](selecting-a-collection-class.md)
-## [Yaygın Olarak Kullanılan Koleksiyon Türleri](commonly-used-collection-types.md)
-## [Genel Koleksiyonlar Ne Zaman Kullanılır?](when-to-use-generic-collections.md)
-## [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](comparisons-and-sorts-within-collections.md)
-## [Sıralanmış Koleksiyon Türleri](sorted-collection-types.md)
-## [Hashtable ve Sözlük Koleksiyon Türleri](hashtable-and-dictionary-collection-types.md)
-## [İş Parçacığı Güvenli Koleksiyonları](thread-safe/)

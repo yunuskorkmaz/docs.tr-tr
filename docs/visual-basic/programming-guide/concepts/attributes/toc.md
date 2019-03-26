@@ -1,6 +1,0 @@
-# [Öznitelikler](index.md)
-## [Özel Öznitelikler Oluşturma](creating-custom-attributes.md)
-### [AttributeUsage](attributeusage.md)
-## [Yansıma Kullanarak Özniteliklere Erişme](accessing-attributes-by-using-reflection.md)
-## [Nasıl yapılır: Öznitelikleri Kullanarak C/C++ Birleşimi Oluşturma](how-to-create-a-c-cpp-union-by-using-attributes.md)
-## [Ortak Öznitelikler](common-attributes.md)

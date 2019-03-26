@@ -1,5 +1,0 @@
-# [Genel Türler](index.md)
-## [.NET’te Genel Koleksiyonlar](collections.md)
-## [Dizi ve Listeleri Düzenlemek için Genel Temsilciler](delegates-for-manipulating-arrays-and-lists.md)
-## [Genel Arabirimler](interfaces.md)
-## [Kovaryans ve Kontravaryans](covariance-and-contravariance.md)

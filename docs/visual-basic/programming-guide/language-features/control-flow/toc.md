@@ -1,7 +1,0 @@
-# [Denetim Akışı](index.md)
-## [Karar Yapıları](decision-structures.md)
-## [Döngü Yapıları](loop-structures.md)
-### [İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama](walkthrough-implementing-ienumerable-of-t.md)
-## [Diğer Denetim Yapıları](other-control-structures.md)
-### [Nasıl yapılır: Bir Sistem Kaynağını Atma](how-to-dispose-of-a-system-resource.md)
-## [İç İçe Geçmiş Denetim Yapıları](nested-control-structures.md)

@@ -1,6 +1,0 @@
-# [Masaüstü Uygulamalarındaki Kaynaklar](index.md)
-## [Kaynak Dosyaları Oluşturma](creating-resource-files-for-desktop-apps.md)
-### [Program Aracılığıyla .resx Dosyalarıyla Çalışma](working-with-resx-files-programmatically.md)
-## [Uydu Derlemeleri Oluşturma](creating-satellite-assemblies-for-desktop-apps.md)
-## [Kaynakları Paketleme ve Dağıtma](packaging-and-deploying-resources-in-desktop-apps.md)
-## [Kaynakları Alma](retrieving-resources-in-desktop-apps.md)

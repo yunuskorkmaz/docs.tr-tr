@@ -1,5 +1,0 @@
-# [Boş Değer Atanabilir Tipler](index.md)
-## [Boş Değer Atanabilir Tipleri Kullanma](using-nullable-types.md)
-## [Boş Değer Atanabilir Tipleri Kutulama](boxing-nullable-types.md)
-## [Nasıl yapılır: Boş Değer Atanabilir Tipi Tanımlama](how-to-identify-a-nullable-type.md)
-## [Nasıl yapılır: bool? Değerinden bool Değerine Güvenli bir Şekilde Tür Dönüştürme](how-to-safely-cast-from-bool-to-bool.md)

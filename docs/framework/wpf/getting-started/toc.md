@@ -1,6 +1,0 @@
-# [Başlarken](index.md)
-## [Visual Studio’da WPF’ye Giriş](introduction-to-wpf-in-vs.md)
-## [WPF Sürüm 4.5'teki Yenilikler](whats-new.md)
-## [İzlenecek Yol: İlk WPF masaüstü uygulamam](walkthrough-my-first-wpf-desktop-application.md)
-## [WPF için İzlenecek Yollar](wpf-walkthroughs.md)
-## [WPF Topluluğu Geri Bildirimi](community-feedback.md)

@@ -1,8 +1,0 @@
-# [Olaylar](index.md)
-## [Nasıl yapılır: Olaylar Oluşturma ve Kullanma](how-to-raise-and-consume-events.md)
-## [Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme](how-to-handle-multiple-events-using-event-properties.md)
-## [Nasıl yapılır: Bir Windows Forms Uygulamasında Olayları Kullanma](how-to-consume-events-in-a-web-forms-application.md)
-## [Gözlemci Tasarım Deseni](observer-design-pattern.md)
-### [Gözlemci Tasarım Deseni En İyi Yöntemleri](observer-design-pattern-best-practices.md)
-### [Nasıl yapılır: Sağlayıcıyı Uygulama](how-to-implement-a-provider.md)
-### [Nasıl yapılır: Gözlemci Uygulama](how-to-implement-an-observer.md)

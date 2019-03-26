@@ -1,5 +1,0 @@
-# [Uygulama Ayarlarına Erişme](accessing-application-settings.md)
-## [Nasıl Yapılır: Kullanıcı Ayarları için Özellik Kılavuzu Oluşturma](how-to-create-property-grids-for-user-settings.md)
-## [Nasıl Yapılır: Kullanıcı Ayarlarını Kalıcı Yapma](how-to-persist-user-settings.md)
-## [Nasıl Yapılır: Kullanıcı Ayarlarını Değiştirme](how-to-change-user-settings.md)
-## [Nasıl Yapılır: Uygulama Ayarlarını Okuma](how-to-read-application-settings.md)
