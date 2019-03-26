@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836311"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410530"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
-<a name="top"></a> Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi dener bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
+ Normal bir ifade, normal ifade motorunun giriş metninde eşleştirmeyi denediği bir desendir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz. [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
   
- Bu hızlı başvurudaki her bölüm normal ifadeleri tanımlamak üzere kullanabileceğiniz belirli bir karakter, işleç ve yapı kategorisini listeler:  
-  
- [Karakter Çıkışları](#character_escapes)  
- [Karakter Sınıfları](#character_classes)  
- [Bağlayıcılar](#anchors)  
- [Gruplandırma Yapıları](#grouping_constructs)  
- [Niceleyiciler](#quantifiers)  
- [Yeniden Başvuru Yapıları](#backreference_constructs)  
- [Değişim Yapıları](#alternation_constructs)  
- [Değişimler](#substitutions)  
- [Normal İfade Seçenekleri](#options)  
- [Çeşitli Yapılar](#miscellaneous_constructs)  
+ Bu hızlı başvurudaki her bölüm, belirli bir kategori karakter, işleç ve normal ifadeler tanımlamak için kullanabileceğiniz yapıları listeler.  
   
  Bu bilgileri indirip yazdırma iki biçim de kolayca başvurmak için sunulmuştur:  
   
  [Word (.docx) biçiminde indir](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [PDF (.pdf) biçiminde indir](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Karakter Çıkışları  
  Ters eğik çizgi karakteri (\\) normal bir ifadede ya da izleyen karakterin özel bir karakter (aşağıdaki tabloda gösterildiği gibi) gösterir veya genel anlamıyla yorumlanması. Daha fazla bilgi için [karakter çıkışları](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>Karakter Sınıfları  
  Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karakter sınıfları aşağıdaki tabloda listelenen dil öğelerini içerir: Daha fazla bilgi için bkz.[Karakter Sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Gruplandırma Yapıları  
  Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik olarak bir giriş dizesinin alt dizelerini yakalar. Yapıları gruplandırma aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [Gruplandırma Yapıları](grouping-constructs-in-regular-expressions.md).  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Miktar Niceleyiciler  
  Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar niceleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz [Miktar Belirleyiciler](quantifiers-in-regular-expressions.md).  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Yeniden Başvuru Yapıları  
  Yeniden başvuru, daha önceden eşleşen bir alt ifadenin, aynı normal ifadede daha sonra tanımlanabilmesine olanak sağlar. Aşağıdaki tablo, .NET içindeki düzenli ifadelerle desteklenen yeniden başvuru yapılarını listeler. Daha fazla bilgi için bkz. [Yeniden Başvuru Yapıları](backreference-constructs-in-regular-expressions.md).  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Değişim Yapıları  
  Değişim yapıları, ve/veya eşleştirmesini etkinleştirmek üzere bir normal ifadeyi değiştirir. Bu yapılar aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [Değişim Yapıları](alternation-constructs-in-regular-expressions.md).  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>Değişimler  
  Değişimler, değiştirme desenlerinde desteklenen normal ifade dil öğeleridir. Daha fazla bilgi için bkz. [Değişimler](substitutions-in-regular-expressions.md). Aşağıdaki tabloda listelenen meta karakterler atomik sıfır genişlik onaylarıdır.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>Normal İfade Seçenekleri  
  Normal ifade sisteminin, normal ifade desenlerini nasıl denetleyeceğiyle ilgili seçenekler belirtebilirsiniz. Bu seçeneklerin çoğu, satır içi olarak (normal ifade deseninde) ya da bir veya daha fazla <xref:System.Text.RegularExpressions.RegexOptions> sabiti olarak belirtilebilir. Bu hızlı başvuru yalnızca satır içi seçenekleri listeler. Satır içi ve <xref:System.Text.RegularExpressions.RegexOptions> seçenekleri hakkında daha fazla bilgi için [Normal İfade Seçenekleri](regular-expression-options.md) başlıklı makaleye bakın.  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836311"
   
  [Başa dön](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Çeşitli Yapılar  
  Çeşitli yapılar, bir normal ifade desenini değiştirir veya bununla ilgili bilgi sağlar. Aşağıdaki tablo, .NET tarafından desteklenen çeşitli yapıları listeler. Daha fazla bilgi için bkz. [Çeşitli Yapılar](miscellaneous-constructs-in-regular-expressions.md).  
   
@@ -219,7 +199,7 @@ ms.locfileid: "56836311"
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [Normal ifadeler](regular-expressions.md)
+- [Normal İfadeler](regular-expressions.md)
 - [Normal ifade sınıfları](the-regular-expression-object-model.md)
 - [Normal İfade Örnekleri](regular-expression-examples.md)
 - [Normal ifadeler - hızlı başvuru (indirme, Word biçiminde)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
