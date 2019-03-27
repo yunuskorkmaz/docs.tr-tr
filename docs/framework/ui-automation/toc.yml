@@ -1,0 +1,252 @@
+items:
+- name: Erişilebilirlik
+  href: index.md
+  items:
+  - name: En İyi Erişilebilirlik Uygulamaları
+    href: accessibility-best-practices.md
+  - name: UI Otomasyon Temelleri
+    href: ui-automation-fundamentals.md
+    items:
+    - name: UI Otomasyonuna Genel Bakış
+      href: ui-automation-overview.md
+    - name: UI Otomasyonu ve Microsoft Active Accessibility
+      href: ui-automation-and-microsoft-active-accessibility.md
+    - name: UI Otomasyon Ağacına Genel Bakış
+      href: ui-automation-tree-overview.md
+    - name: UI Otomasyon Denetim Düzenlerine Genel Bakış
+      href: ui-automation-control-patterns-overview.md
+    - name: UI Otomasyon Özelliklerine Genel Bakış
+      href: ui-automation-properties-overview.md
+    - name: UI Otomasyonu Olaylarına Genel Bakış
+      href: ui-automation-events-overview.md
+    - name: UI Otomasyon Güvenliğine Genel Bakış
+      href: ui-automation-security-overview.md
+    - name: Otomatik Test İçin UI Otomasyonunu Kullanma
+      href: using-ui-automation-for-automated-testing.md
+  - name: Yönetilen Kod İçin UI Otomasyon Sağlayıcılar
+    href: ui-automation-providers-for-managed-code.md
+    items:
+    - name: Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
+      href: server-side-ui-automation-provider-implementation.md
+    - name: UI Otomasyon Sağlayıcılara Genel Bakış
+      href: ui-automation-providers-overview.md
+    - name: İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
+      href: client-side-ui-automation-provider-implementation.md
+    - name: " Nasıl Yapılır Konuları"
+      href: ui-automation-providers-for-managed-code-how-to-topics.md
+      items:
+      - name: Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme
+        href: expose-a-server-side-ui-automation-provider.md
+      - name: UI Otomasyon Sağlayıcı Dönüş Özellikleri
+        href: return-properties-from-a-ui-automation-provider.md
+      - name: UI Otomasyon Sağlayıcıda Olay Tetikleme
+        href: raise-events-from-a-ui-automation-provider.md
+      - name: UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme
+        href: enable-navigation-in-a-ui-automation-fragment-provider.md
+      - name: UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği
+        href: support-control-patterns-in-a-ui-automation-provider.md
+      - name: İstemci Tarafı UI Otomasyon Sağlayıcı Oluşturma
+        href: create-a-client-side-ui-automation-provider.md
+      - name: UI Otomasyon Sağlayıcıları İstemci Programına Uygulama
+        href: implement-ui-automation-providers-in-a-client-application.md
+  - name: Yönetilen Kod İçin UI Otomasyon İstemcileri
+    href: ui-automation-clients-for-managed-code.md
+    items:
+    - name: UI Otomasyon ve Ekran Ölçeklendirme
+      href: ui-automation-and-screen-scaling.md
+    - name: Standart Denetimler İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-standard-controls.md
+    - name: İstemciler İçin UI Otomasyon Olayları
+      href: ui-automation-events-for-clients.md
+    - name: UI Otomasyonda Önbelleğe Alma
+      href: caching-in-ui-automation-clients.md
+    - name: İstemciler İçin UI Otomasyon Özellikleri
+      href: ui-automation-properties-for-clients.md
+    - name: UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
+      href: control-pattern-mapping-for-ui-automation-clients.md
+    - name: İstemciler İçin UI Otomasyon Denetim Düzenleri
+      href: ui-automation-control-patterns-for-clients.md
+    - name: UI Otomasyon Öğelerini Alma
+      href: obtaining-ui-automation-elements.md
+    - name: UI Otomasyon İş Parçacığı Oluşturma Sorunları
+      href: ui-automation-threading-issues.md
+    - name: " Nasıl Yapılır Konuları"
+      href: ui-automation-clients-for-managed-code-how-to-topics.md
+      items:
+      - name: Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma
+        href: find-a-ui-automation-element-based-on-a-property-condition.md
+      - name: TreeWalker ile UI Otomasyon Öğeleri Arasında Gezinme
+        href: navigate-among-ui-automation-elements-with-treewalker.md
+      - name: Liste Öğesi İçin UI Otomasyon Öğesi Bulma
+        href: find-a-ui-automation-element-for-a-list-item.md
+      - name: UI Otomasyon Öğesi Özelliklerini Alma
+        href: get-ui-automation-element-properties.md
+      - name: UI Otomasyonda Önbelleğe Almayı Kullanma
+        href: use-caching-in-ui-automation.md
+      - name: UI Otomasyon Olaylarına Abone Olma
+        href: subscribe-to-ui-automation-events.md
+      - name: İstemci Tarafı Sağlayıcı Derlemesini Kaydetme
+        href: register-a-client-side-provider-assembly.md
+      - name: AutomationID Özelliğini Kullanma
+        href: use-the-automationid-property.md
+  - name: UI Otomasyon Denetim Düzenleri
+    href: ui-automation-control-patterns.md
+    items:
+    - name: UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-dock-control-pattern.md
+    - name: UI Otomasyon ExpandCollapse Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+    - name: UI Otomasyon Kılavuz Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-grid-control-pattern.md
+    - name: UI Otomasyon GridItem Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-griditem-control-pattern.md
+    - name: UI Otomasyon Çağırma Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-invoke-control-pattern.md
+    - name: UI Otomasyon MultipleView Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-multipleview-control-pattern.md
+    - name: UI Otomasyon RangeValue Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-rangevalue-control-pattern.md
+    - name: UI Otomasyonu Kaydırma Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-scroll-control-pattern.md
+    - name: UI Otomasyon ScrollItem Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-scrollitem-control-pattern.md
+    - name: UI Otomasyon Seçim Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-selection-control-pattern.md
+    - name: UI Otomasyon SelectionItem Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-selectionitem-control-pattern.md
+    - name: UI Otomasyonu Tablo Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-table-control-pattern.md
+    - name: UI Otomasyon TableItem Denetim Düzeni Uygulama
+      href: implementing-the-ui-automation-tableitem-control-pattern.md
+    - name: UI Otomasyonu Değiştirme Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-toggle-control-pattern.md
+    - name: UI Otomasyonu Dönüştürme Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-transform-control-pattern.md
+    - name: UI Otomasyonu Değer Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-value-control-pattern.md
+    - name: UI Otomasyonu Pencere Denetim Düzenini Uygulama
+      href: implementing-the-ui-automation-window-control-pattern.md
+    - name: " Nasıl Yapılır Konuları"
+      href: ui-automation-control-patterns-how-to-topics.md
+      items:
+      - name: UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma
+        href: expose-the-content-of-a-table-using-ui-automation.md
+      - name: Desteklenen UI Otomasyon Denetim Düzenlerini Alma
+        href: get-supported-ui-automation-control-patterns.md
+      - name: UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma
+        href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+      - name: UI Otomasyonu Kullanarak Denetim Çağırma
+        href: invoke-a-control-using-ui-automation.md
+      - name: UI Otomasyon Öğesini Taşıma
+        href: move-a-ui-automation-element.md
+  - name: UI Otomasyon Metin Düzeni
+    href: ui-automation-text-pattern.md
+    items:
+    - name: UI Otomasyon TextPattern Öğesine Genel Bakış
+      href: ui-automation-textpattern-overview.md
+    - name: TextPattern ve Katıştırılmış Nesnelere Genel Bakış
+      href: textpattern-and-embedded-objects-overview.md
+    - name: " Nasıl Yapılır Konuları"
+      href: ui-automation-text-pattern-how-to-topics.md
+      items:
+      - name: UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme
+        href: add-content-to-a-text-box-using-ui-automation.md
+      - name: UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama
+        href: find-and-highlight-text-using-ui-automation.md
+      - name: UI Otomasyonu Kullanarak Metin Özniteliklerini Alma
+        href: obtain-text-attributes-using-ui-automation.md
+      - name: UI Otomasyonu Kullanarak Karışık Metin Özniteliği Ayrıntılarını Alma
+        href: obtain-mixed-text-attribute-details-using-ui-automation.md
+      - name: UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma
+        href: traverse-text-using-ui-automation.md
+      - name: UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme
+        href: access-embedded-objects-using-ui-automation.md
+  - name: UI Otomasyon Denetim Türleri
+    href: ui-automation-control-types.md
+    items:
+    - name: UI Otomasyon Denetim Türlerine Genel Bakış
+      href: ui-automation-control-types-overview.md
+    - name: Düğme Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-button-control-type.md
+    - name: Takvim Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-calendar-control-type.md
+    - name: CheckBox Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-checkbox-control-type.md
+    - name: ComboBox Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-combobox-control-type.md
+    - name: DataGrid Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-datagrid-control-type.md
+    - name: DataItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-dataitem-control-type.md
+    - name: Belge Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-document-control-type.md
+    - name: Düzenleme Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-edit-control-type.md
+    - name: Grup Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-group-control-type.md
+    - name: Başlık Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-header-control-type.md
+    - name: HeaderItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-headeritem-control-type.md
+    - name: Köprü Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-hyperlink-control-type.md
+    - name: Görüntü Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-image-control-type.md
+    - name: Liste Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-list-control-type.md
+    - name: ListItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-listitem-control-type.md
+    - name: Menü Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-menu-control-type.md
+    - name: MenuBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-menubar-control-type.md
+    - name: MenuItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-menuitem-control-type.md
+    - name: Bölme Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-pane-control-type.md
+    - name: ProgressBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-progressbar-control-type.md
+    - name: RadioButton Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-radiobutton-control-type.md
+    - name: ScrollBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-scrollbar-control-type.md
+    - name: Ayırıcı Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-separator-control-type.md
+    - name: Kaydırıcı Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-slider-control-type.md
+    - name: Değer Değiştirici Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-spinner-control-type.md
+    - name: SplitButton Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-splitbutton-control-type.md
+    - name: StatusBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-statusbar-control-type.md
+    - name: Sekme Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-tab-control-type.md
+    - name: TabItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-tabitem-control-type.md
+    - name: Tablo Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-table-control-type.md
+    - name: Metin Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-text-control-type.md
+    - name: Parmak Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-thumb-control-type.md
+    - name: TitleBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-titlebar-control-type.md
+    - name: ToolBar Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-toolbar-control-type.md
+    - name: ToolTip Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-tooltip-control-type.md
+    - name: Ağaç Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-tree-control-type.md
+    - name: TreeItem Denetim Türü için UI Otomasyon Desteği
+      href: ui-automation-support-for-the-treeitem-control-type.md
+    - name: Pencere Denetim Türü İçin UI Otomasyon Desteği
+      href: ui-automation-support-for-the-window-control-type.md
+  - name: UI Otomasyonu Belirtimi ve Topluluk Taahhüdü
+    href: ui-automation-specification-and-community-promise.md
+ms.openlocfilehash: b30bb47e5b2bfb91c64a07c055889e83310da789
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471726"

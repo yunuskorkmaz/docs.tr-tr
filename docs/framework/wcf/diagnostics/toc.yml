@@ -1,0 +1,38 @@
+items:
+- name: Yönetim ve Tanılama
+  href: index.md
+- name: İleti Günlüğe Kaydetme
+  href: message-logging.md
+  items:
+  - name: İleti Akışı Genel Bakış
+    href: message-flow-overview.md
+  - name: İleti Günlüğe Kaydetmeyi Yapılandırma
+    href: configuring-message-logging.md
+  - name: İleti Günlüklerini Görüntüleme
+    href: viewing-message-logs.md
+  - name: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
+    href: security-concerns-for-message-logging.md
+  - name: İzleme
+    href: tracing/
+  - name: ETW ile Çözümleme İzleme
+    href: etw/
+  - name: Performans Sayaçları
+    href: performance-counters/
+  - name: Etkinlikleri Günlüğe Kaydetme
+    href: event-logging/
+  - name: Tanılama için Windows Yönetim İzlemesini Kullanma
+    href: wmi/
+  - name: Özel Durum Başvurusu
+    href: exceptions-reference/
+- name: Uygulamanızı Yapılandırma
+  href: configuring-your-application.md
+- name: ServiceModel Kayıt Aracı
+  href: servicemodel-registration-tool.md
+- name: Dağıtma Hizmetleri
+  href: deploying-services.md
+ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472066"
