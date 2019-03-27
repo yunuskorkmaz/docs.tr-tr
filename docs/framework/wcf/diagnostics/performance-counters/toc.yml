@@ -1,0 +1,153 @@
+items:
+- name: Performans Sayaçları
+  href: index.md
+  items:
+  - name: İşlem Performansı Sayaçları
+    href: operation-performance-counters.md
+    items:
+    - name: Çağrılar
+      href: calls.md
+    - name: Çağrı/saniye
+      href: calls-per-second.md
+    - name: Bekleyen Çağrılar
+      href: calls-outstanding.md
+    - name: Başarısız Olan Çağrılar
+      href: calls-failed.md
+    - name: Saniyede Başarısız Olan Çağrı
+      href: calls-failed-per-second.md
+    - name: Hatalı Çağrılar
+      href: calls-faulted.md
+    - name: Saniyede Hatalı Çağrı
+      href: calls-faulted-per-second.md
+    - name: Çağrı Süresi
+      href: calls-duration.md
+    - name: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
+      href: security-validation-and-authentication-failures.md
+    - name: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye
+      href: security-validation-and-authentication-failures-per-second.md
+    - name: Güvenlik Çağrıları Yetkilendirilmedi
+      href: security-calls-not-authorized.md
+    - name: Yetkilendirilmeyen Güvenlik Çağrısı/Saniye
+      href: security-calls-not-authorized-per-second.md
+    - name: Akışı Yapılan İşlemler
+      href: transactions-flowed.md
+    - name: Saniyede Akışı Yapılan İşlem
+      href: transactions-flowed-per-second.md
+  - name: Hizmet Performansı Sayaçları
+    href: service-performance-counters.md
+    items:
+    - name: Çağrılar
+      href: service-calls.md
+    - name: Çağrı/saniye
+      href: service-calls-per-second.md
+    - name: Bekleyen Çağrılar
+      href: service-calls-outstanding.md
+    - name: Başarısız Olan Çağrılar
+      href: service-calls-failed.md
+    - name: Saniyede Başarısız Olan Çağrı
+      href: service-calls-failed-per-second.md
+    - name: Hatalı Çağrılar
+      href: service-calls-faulted.md
+    - name: Saniyede Hatalı Çağrı
+      href: service-calls-faulted-per-second.md
+    - name: Çağrı Süresi
+      href: service-calls-duration.md
+    - name: Örnekler
+      href: instances.md
+    - name: Saniye Başına Örnek
+      href: instances-per-second.md
+    - name: Maksimum Eşzamanlı Çağrı Yüzdesi
+      href: percent-of-max-concurrent-calls.md
+    - name: Maksimum Eşzamanlı Örnek Yüzdesi
+      href: percent-of-max-concurrent-instances.md
+    - name: Maksimum Eşzamanlı Oturum Yüzdesi
+      href: percent-of-max-concurrent-sessions.md
+    - name: Kuyruktan Bırakılan İletiler
+      href: queue-dropped-messages.md
+    - name: Saniyede Kuyruğa Alınan Bırakılmış İleti
+      href: queue-dropped-messages-per-second.md
+    - name: Sıraya Alınmış Zarar İletileri
+      href: queued-poison-messages.md
+    - name: Saniyede Kuyruğa Alınan Zehirli İleti
+      href: queued-poison-messages-per-second.md
+    - name: Kuyruğa Alınan Reddedilmiş İletiler
+      href: queued-rejected-messages.md
+    - name: Saniyede Kuyruğa Alınan Reddedilen İleti
+      href: queued-rejected-messages-per-second.md
+    - name: İptal Edilen Güvenilir Mesajlaşma İletileri
+      href: reliable-messaging-messages-dropped.md
+    - name: Saniyede Bırakılan Güvenli Mesajlaşma İletileri
+      href: reliable-messaging-messages-dropped-per-second.md
+    - name: Hata Verilen Güvenilir Mesajlaşma Oturumları
+      href: reliable-messaging-sessions-faulted.md
+    - name: Hata Verilen Güvenilir Mesajlaşma Oturumu/Saniye
+      href: reliable-messaging-sessions-faulted-per-second.md
+    - name: Güvenlik Çağrıları Yetkilendirilmedi
+      href: service-security-calls-not-authorized.md
+    - name: Yetkilendirilmeyen Güvenlik Çağrısı/Saniye
+      href: service-security-calls-not-authorized-per-second.md
+    - name: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
+      href: service-security-validation-and-authentication-failures.md
+    - name: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye
+      href: service-security-validation-and-authentication-failures-per-second.md
+    - name: Akışı Yapılan İşlemler
+      href: service-transactions-flowed.md
+    - name: Saniyede Akışı Yapılan İşlem
+      href: service-transactions-flowed-per-second.md
+    - name: İptal Edilen İşlem Yapılmış Operasyonlar
+      href: transacted-operations-aborted.md
+    - name: Uygulanıp Durdurulan İşlem/Saniye
+      href: transacted-operations-aborted-per-second.md
+    - name: Uygulaması Yapılan İşlemler
+      href: transacted-operations-committed.md
+    - name: Uygulaması Yapılan İşlem/Saniye
+      href: transacted-operations-committed-per-second.md
+    - name: Şüpheli Uygulanan İşlemler
+      href: transacted-operations-in-doubt.md
+    - name: Şüpheli Uygulanan İşlem/Saniye
+      href: transacted-operations-in-doubt-per-second.md
+  - name: Uç Noktası Performans Sayaçları
+    href: endpoint-performance-counters.md
+    items:
+    - name: Çağrılar
+      href: endpoint-calls.md
+    - name: Çağrı/saniye
+      href: endpoint-calls-per-second.md
+    - name: Bekleyen Çağrılar
+      href: endpoint-calls-outstanding.md
+    - name: Başarısız Olan Çağrılar
+      href: endpoint-calls-failed.md
+    - name: Saniyede Başarısız Olan Çağrı
+      href: endpoint-calls-failed-per-second.md
+    - name: Hatalı Çağrılar
+      href: endpoint-calls-faulted.md
+    - name: Saniyede Hatalı Çağrı
+      href: endpoint-calls-faulted-per-second.md
+    - name: Çağrı Süresi
+      href: endpoint-calls-duration.md
+    - name: İptal Edilen Güvenilir Mesajlaşma İletileri
+      href: endpoint-reliable-messaging-messages-dropped.md
+    - name: Saniyede Bırakılan Güvenli Mesajlaşma İletileri
+      href: endpoint-reliable-messaging-messages-dropped-per-second.md
+    - name: Hata Verilen Güvenilir Mesajlaşma Oturumları
+      href: endpoint-reliable-messaging-sessions-faulted.md
+    - name: Hata Verilen Güvenilir Mesajlaşma Oturumu/Saniye
+      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+    - name: Güvenlik Çağrıları Yetkilendirilmedi
+      href: endpoint-security-calls-not-authorized.md
+    - name: Yetkilendirilmeyen Güvenlik Çağrısı/Saniye
+      href: endpoint-security-calls-not-authorized-per-second.md
+    - name: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
+      href: endpoint-security-validation-and-authentication-failures.md
+    - name: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye
+      href: endpoint-security-validation-and-authentication-failures-per-second.md
+    - name: Akışı Yapılan İşlemler
+      href: endpoint-transactions-flowed.md
+    - name: Saniyede Akışı Yapılan İşlem
+      href: endpoint-transactions-flowed-per-second.md
+ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471638"
