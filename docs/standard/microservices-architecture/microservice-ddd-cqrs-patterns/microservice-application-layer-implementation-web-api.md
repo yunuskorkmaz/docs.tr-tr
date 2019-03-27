@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 39aa2b9b97e9f683521193ad8e647c73bb4dd140
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72ed265284db9d112a0b1e3b966d206dd7f3d1cc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353094"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464898"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API'si kullanarak mikro hizmet uygulama katmanı
 
@@ -112,10 +112,10 @@ DI'de .NET Core kullanırken, bir derlemeyi tarayın ve türlerinden kurala gör
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Matthew King. Hizmetleri ile Scrutor kaydediliyor** \
-  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
+  [https://www.mking.net/blog/registering-services-with-scrutor](https://www.mking.net/blog/registering-services-with-scrutor)
 
 - **Kristian Hellang. Scrutor.** GitHub deposu. \
-  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
+  [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
 
 #### <a name="use-autofac-as-an-ioc-container"></a>Bir IOC kapsayıcısı Autofac kullanın
 
@@ -167,13 +167,13 @@ Kavramlar ve kayıt işlemine çok benzer şekilde türleri ile yerleşik ASP.NE
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **ASP.NET core'da bağımlılık ekleme giriş** \
-  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** Resmi belgeleri. \
-  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+  [http://docs.autofac.org/en/latest/](http://docs.autofac.org/en/latest/)
 
 - **ASP.NET Core IOC kapsayıcı hizmeti ömürleri Autofac IOC kapsayıcı örneği kapsamlı - Cesar de la Torre karşılaştırma.** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>Komut ve komut işleyicisi desenlerini uygulama
 
@@ -397,19 +397,19 @@ Bir komut işleyici gerçekleştirmeniz ek adımlar şunlardır:
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **İşareti Seemann. Sınırlarında değil nesne yönelimli uygulamalar** \
-  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries, ApplicationsareNotObject odaklı /*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [https://blog.ploeh.dk/2011/05/31/AttheBoundaries, ApplicationsareNotObject odaklı /](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Komutlar ve olayları** \
-  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+  [http://cqrs.nu/Faq/commands-and-events](http://cqrs.nu/Faq/commands-and-events)
 
 - **Bir komut işleyici ne yapar?** \
-  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+  [http://cqrs.nu/Faq/command-handlers](http://cqrs.nu/Faq/command-handlers)
 
 - **Jimmy Bogard. Etki alanı komutu desenleri – işleyicileri** \
-  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+  [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
 
 - **Jimmy Bogard. Etki alanı komutu desenleri – doğrulama** \
-  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+  [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Komut işlemi işlem hattı: bir komut işleyici tetikleme
 
@@ -797,43 +797,43 @@ Benzer şekilde, ek unsurları veya bunları işlerken komutları uygulamak iste
 ##### <a name="the-mediator-pattern"></a>Dünyası deseni
 
 - **Dünyası deseni** \
-  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+  [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Dekoratör düzeni
 
 - **Dekoratör düzeni** \
-  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+  [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 - **MediatR.** GitHub deposu. \
-  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+  [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
 
 - **CQRS MediatR ve AutoMapper** \
-  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+  [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
 - **Denetleyicilerinizi Diyet uyguluyoruz yerleştirin: Gönderileri ve komutları.** \
-  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+  [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **Bir işlem hattıyla Dünyası kuruluşlarda geniş kapsamlı kritik konular** \
-  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+  [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
 - **CQRS ve REST: mükemmel** \
-  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+  [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
 - **MediatR ardışık örnekler** \
-  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+  [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
 - **Dikey dilim Test armatürleri MediatR ve ASP.NET Core** \
-  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
+  [https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
 - **MediatR uzantıları için yayımlanan Microsoft bağımlılık ekleme** \
-  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+  [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Fluent doğrulama
 
 - **Jeremy Skinner. FluentValidation.** GitHub deposu. \
-  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+  [https://github.com/JeremySkinner/FluentValidation](https://github.com/JeremySkinner/FluentValidation)
 
 > [!div class="step-by-step"]
 > [Önceki](microservice-application-layer-web-api-design.md)

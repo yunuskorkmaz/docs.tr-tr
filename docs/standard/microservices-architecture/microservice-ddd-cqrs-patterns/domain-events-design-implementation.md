@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675484"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464404"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -347,37 +347,37 @@ Belirtildiği gibi açıkça yan etkilerini, etki alanınızda değişiklikleri 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Greg Young. Bir etki alanı olayı nedir?** \
-  [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
 - **Jan Stenberg. Etki alanı olayları ve nihai tutarlılık** \
-  [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
 - **Jimmy Bogard. Daha iyi bir etki alanı olay deseni** \
-  [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 - **Vaughn Vernon. Etkili toplama tasarımı Bölüm II: Birlikte toplamalar iş yapma** \
-  [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+  [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Etki alanınızı güçlendirme: Etki alanı olayları** \
-  [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong. Etki alanı olayları desen örneği** \
-  [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
+  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
 
 - **UDI Dahan. Etki alanı modellerini oluşturma tam olarak kapsüllenmiş** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 - **UDI Dahan. Etki alanı etkinlikleri alın 2** \
-  [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
 - **UDI Dahan. Etki alanı etkinlikleri Salvation** \
-  [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
 - **Jan Kronquist. Yoksa, etki alanı olayları yayımlama, döndürülmeleri!** \
-  [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
 - **Cesar de la Torre. Etki alanı olayları vs. DDD ve mikro hizmet mimarileri tümleştirme olayları** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 >[!div class="step-by-step"]
 >[Önceki](client-side-validation.md)

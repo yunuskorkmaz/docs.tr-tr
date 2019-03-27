@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084725"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463260"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
@@ -59,7 +59,7 @@ A `switch` deyimi anahtar bölümlerinin sayısını içerir ve her bölüm aşa
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (<case label>) diğerine."
+Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (\<case etiketi >) diğerine."
 
 ```csharp
 switch (caseSwitch)
