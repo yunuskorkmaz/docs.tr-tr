@@ -1,29 +1,23 @@
 ---
-title: C#işleçleri
+title: 'C#işleçleri'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333414"
 ---
 # <a name="c-operators"></a>C#işleçleri
 
@@ -47,9 +41,9 @@ En yüksek öncelik işleçleri şunlardır.
 
 [bir&#91;x&#93; ](index-operator.md) – toplama nesnesi dizin oluşturma.
 
-[x ++](increment-operator.md) – sonek artırma. X değerini döndürür ve ardından depolama konumu büyük bir x değeri ile güncelleştirir (genellikle 1 tamsayı ekler).
+[x ++](arithmetic-operators.md#increment-operator-) – sonek artırma. X değerini döndürür ve ardından depolama konumu büyük bir x değeri ile güncelleştirir (genellikle 1 tamsayı ekler).
 
-[x--](decrement-operator.md) – son ek azaltma. X değerini döndürür ve ardından depolama konumu bir daha az x değeri ile güncelleştirir (genellikle 1 tamsayı çıkarır).
+[x--](arithmetic-operators.md#decrement-operator---) – son ek azaltma. X değerini döndürür ve ardından depolama konumu bir daha az x değeri ile güncelleştirir (genellikle 1 tamsayı çıkarır).
 
 [Yeni](../keywords/new-operator.md) – oluşturmada yazın.
 
@@ -79,9 +73,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [~ x](bitwise-complement-operator.md) – bit düzeyinde tamamlayıcı.
 
-[++ x](increment-operator.md) – önek artırma. Depolama konumu bir x değeriyle güncelleştirdikten sonra x değerini büyük döndürür (genellikle 1 tamsayı ekler).
+[++ x](arithmetic-operators.md#increment-operator-) – önek artırma. Depolama konumu bir x değeriyle güncelleştirdikten sonra x değerini büyük döndürür (genellikle 1 tamsayı ekler).
 
-[--x](decrement-operator.md) – önek azaltma. Depolama konumu daha az bir x değeriyle güncelleştirdikten sonra x değeri döndürür (genelde tam sayı 1 çıkarır).
+[--x](arithmetic-operators.md#decrement-operator---) – önek azaltma. Depolama konumu daha az bir x değeriyle güncelleştirdikten sonra x değeri döndürür (genelde tam sayı 1 çıkarır).
 
 [(T) x](invocation-operator.md) – atama yazın.
 
@@ -95,19 +89,19 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
-[x * y](multiplication-operator.md) – çarpma.
+[x * y](arithmetic-operators.md#multiplication-operator-) – çarpma.
 
-[x / y](division-operator.md) – bölme. İşlenenler tamsayılar, sonuç sıfıra yakınsayarak kesilmiş bir tamsayıdır (örneğin, `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-) – bölme. İşlenenler tamsayılar, sonuç sıfıra yakınsayarak kesilmiş bir tamsayıdır (örneğin, `-7 / 2 is -3`).
 
-[% y x](remainder-operator.md) – kalan. İşlenen tamsayılar olursa bu y bölme x geri kalanı döndürür.  Varsa `q = x / y` ve `r = x % y`, ardından `x = q * y + r`.
+[% y x](arithmetic-operators.md#remainder-operator-) – kalan. İşlenen tamsayılar olursa bu y bölme x geri kalanı döndürür.  Varsa `q = x / y` ve `r = x % y`, ardından `x = q * y + r`.
 
 ## <a name="additive-operators"></a>Toplama işleçleri
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
-[x + y](addition-operator.md) – ekleme.
+[x + y](arithmetic-operators.md#addition-operator-) – ekleme.
 
-[x-y](subtraction-operator.md) – çıkarma.
+[x-y](arithmetic-operators.md#subtraction-operator--) – çıkarma.
 
 ## <a name="shift-operators"></a>Kaydırma işleçleri
 
@@ -195,9 +189,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [x * y =](multiplication-assignment-operator.md) – çarpma atama. Çarp değeri `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer.
 
-[x / y =](division-assignment-operator.md) – bölme ataması. Değerini ayırmak `x` değeriyle `y`, sonuçta depolamak `x`ve yeni bir değer.
+[x / y =](arithmetic-operators.md#compound-assignment) – bölme ataması. Değerini ayırmak `x` değeriyle `y`, sonuçta depolamak `x`ve yeni bir değer.
 
-[%x y =](remainder-assignment-operator.md) – kalanını atama. Değerini ayırmak `x` değeriyle `y`, kalanı depolamak `x`ve yeni bir değer.
+[%x y =](arithmetic-operators.md#compound-assignment) – kalanını atama. Değerini ayırmak `x` değeriyle `y`, kalanı depolamak `x`ve yeni bir değer.
 
 [x & y =](and-assignment-operator.md) – ve atama. DEĞERİ `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
 
@@ -210,20 +204,6 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 [x >> y =](right-shift-assignment-operator.md) – sağa kaydırma ataması. Değerini kaydırma `x` sağa `y` yerde depolamak sonucunda `x`ve yeni bir değer.
 
 [=>](lambda-operator.md) – lambda bildirimi.
-
-## <a name="arithmetic-overflow"></a>Aritmetik Taşma
-
-Aritmetik işleçler ([+](addition-operator.md), [ - ](subtraction-operator.md), [ * ](multiplication-operator.md), [ / ](division-operator.md)) can sayısal tür için olası değerler aralığının dışında olan sonuçlar üretir. Ayrıntılar için ancak genel olarak belirli bir işlecin bölümüne bakabilir:
-
-- Tamsayı aritmetik taşma da bir <xref:System.OverflowException> ya da sonucun en önemli bitlerini atar. Sıfır ile tamsayı bölme her zaman oluşturur bir <xref:System.DivideByZeroException>.
-
-   Tamsayı taşması oluştuğunda olabilen yürütme bağlamında ne olacağı bağlıdır [işaretli veya işaretsiz](../keywords/checked-and-unchecked.md). Denetlenen bir bağlamda bir <xref:System.OverflowException> oluşturulur. İşaretlenmemiş bir bağlamda, sonucun en önemli bitleri atılır ve yürütme devam eder. Bu nedenle, C#, işleme veya taşmayı yoksayma seçmenizi sağlar. Varsayılan olarak, aritmetik işlemler oluşan bir *denetlenmeyen* bağlamı.
-
-   Aritmetik işlemler ek olarak, integral türünden integral türü atamaları taşmaya neden olabilir (olduğunda cast gibi'bir [uzun](../keywords/long.md) için bir [int](../keywords/int.md)) ve işaretli veya işaretsiz yürütme tabidir. Ancak, bit düzeyinde işleçler ve kaydırma işleçleri asla taşmaya neden olmaz.
-
-- Kayan nokta aritmetik taşma ya da sıfıra bölme hiçbir zaman bir özel durum oluşturur, kayan nokta türleri IEEE 754 ve bunu temel aldığından, sonsuzluk ve NaN (sayı değil) temsil eden hükümlerine vardır.
-
-- [Ondalık](../keywords/decimal.md) aritmetik taşma her zaman oluşturur bir <xref:System.OverflowException>. Sıfır ile ondalık bölme her zaman oluşturur bir <xref:System.DivideByZeroException>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

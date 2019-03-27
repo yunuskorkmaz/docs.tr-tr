@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 78f52f4aa6e3d27bc7076d3074cb654d5e7fc56d
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981588"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504528"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 
@@ -45,8 +45,8 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Üye erişimi<br /><br /> Koşullu üye erişimi|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Yöntem ve temsilci çağırma|  
 |bir[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Dizi ve dizinleyici erişimi<br /><br /> Koşullu dizi ve dizinleyici erişimi|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Artırım sonrası|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Azaltım sonrası|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Artırım sonrası|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Azaltım sonrası|  
 |[Yeni](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Nesne ve temsilci oluşturma|  
 |`new` T(...) {...}|Başlatıcı ile nesne oluşturma. Bkz: [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Anonim nesne başlatıcı. Bkz: [anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
@@ -65,17 +65,17 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Olumsuzlama|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Mantıksal olumsuzlama|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Bitwise olumsuzlama|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Artırım öncesi|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Azaltım öncesi|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Artırım öncesi|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Azaltım öncesi|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x'i açıkça T türüne dönüştürme|  
   
  **Çarpma işleçleri**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Çarpma|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Bölme|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Kalan|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Çarpma|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Bölme|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Kalan|  
   
  **Toplama işleçleri**  
   
@@ -126,7 +126,7 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |İfade|Açıklama|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Atama|  
-|x iş= y|Bileşen atama Bu işleçleri destekler: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [ /= ](../../../csharp/language-reference/operators/division-assignment-operator.md), [ %= ](../../../csharp/language-reference/operators/modulus-assignment-operator.md) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x iş= y|Bileşen atama Bu işleçleri destekler: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Anonim işlevi (lambda ifadesi)|  
   
 ## <a name="associativity"></a>İlişkilendirilebilirlik

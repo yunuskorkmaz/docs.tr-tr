@@ -3,7 +3,7 @@ title: 'C# zaman uyumsuz programlama'
 description: 'Genel bir bakış C# await, görev ve görev kullanarak zaman uyumsuz, zaman uyumsuz programlama için dil desteği<T>'
 ms.date: 03/18/2019
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Görev zaman uyumsuz programlama modeliC# #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>Görev zaman uyumsuz programlama modeli C\#
 
 Görev zaman uyumsuz programlama modeli (TAP) zaman uyumsuz kod bir Özet sağlar. Deyimler, olduğu gibi her zaman bir dizisi olarak kodunu yazın. Sonraki başlamadan önce her deyimi tamamlar ancak bu kodu okuyabilirsiniz. Bu deyimleri bazıları iş Başlat ve dönüş çünkü derleyici bir dizi dönüşümleri gerçekleştirir bir <xref:System.Threading.Tasks.Task> , devam eden çalışmayı temsil eder.
 

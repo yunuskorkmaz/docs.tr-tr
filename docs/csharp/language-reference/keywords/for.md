@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504489"
 ---
 # <a name="for-c-reference"></a>(için C# Başvurusu)
 
@@ -47,9 +47,9 @@ Aşağıdaki örnekte gösterildiği `for` deyimiyle tüm tanımlı bölümler:
 
   - bir yöntemi çağrıldı
 
-  - ön ek veya sonek [artışı](../operators/increment-operator.md) ifade gibi `++i` veya `i++`
+  - ön ek veya sonek [artışı](../operators/arithmetic-operators.md#increment-operator-) ifade gibi `++i` veya `i++`
 
-  - ön ek veya sonek [azaltma](../operators/decrement-operator.md) ifade gibi `--i` veya `i--`
+  - ön ek veya sonek [azaltma](../operators/arithmetic-operators.md#decrement-operator---) ifade gibi `--i` veya `i--`
 
   - kullanarak bir nesne oluşturulması [yeni](new-operator.md) anahtar sözcüğü
 
@@ -79,9 +79,9 @@ i < 5
 
 - bir yöntemi çağrıldı
 
-- ön ek veya sonek [artışı](../operators/increment-operator.md) ifade gibi `++i` veya `i++`
+- ön ek veya sonek [artışı](../operators/arithmetic-operators.md#increment-operator-) ifade gibi `++i` veya `i++`
 
-- ön ek veya sonek [azaltma](../operators/decrement-operator.md) ifade gibi `--i` veya `i--`
+- ön ek veya sonek [azaltma](../operators/arithmetic-operators.md#decrement-operator---) ifade gibi `--i` veya `i--`
 
 - kullanarak bir nesne oluşturulması [yeni](new-operator.md) anahtar sözcüğü
 
