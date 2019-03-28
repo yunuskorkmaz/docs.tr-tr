@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788316"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545370"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama
 
@@ -119,7 +119,8 @@ Ve İşte bu kadar!  Genişletmek `Program.cs` istediğiniz gibi.
 
 ## <a name="working-with-multiple-files"></a>Birden çok dosyaları ile çalışma
 
-Tek dosyalar için basit bir kerelik programlar bir sakınca yoktur ancak daha karmaşık bir uygulama oluşturuyorsanız, büyük olasılıkla birden çok kaynak dosyaları projenize şimdi yükleneceği derleme önceki Fibonacci örnek alanlarını bazı Fibonacci değerleri önbelleğe alarak olduğunuz ve bazı özyinelemeli Ekle Özellikler.
+Tek dosyalar için basit bir kerelik programlar bir sakınca yoktur ancak daha karmaşık bir uygulama oluşturuyorsanız, büyük olasılıkla projenizi birden çok kaynak dosyalarınız yedekleyeceksiniz.
+Şimdi bazı Fibonacci değerleri önbelleğe alarak dışına önceki Fibonacci örneği oluşturun ve bazı özyinelemeli özellikler ekleyin.
 
 1. İçinde yeni bir dosya ekleme *Hello* adlı dizin *FibonacciGenerator.cs* aşağıdaki kod ile:
 

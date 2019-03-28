@@ -8,12 +8,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: cb11a746d36cc22ab2341e28a7efba3c0b3510eb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 54c8300ad883e81cfb3d4886881984fd5a0ebdb3
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257011"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545383"
 ---
 # <a name="-operator-c-reference"></a>\<= İşleci (C# Başvurusu)
 
@@ -40,5 +40,5 @@ Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [< İşleci](less-than-operator.md)
-- [== İşleci](equality-comparison-operator.md)
+- [== İşleci](equality-operators.md#equality-operator-)
 - <xref:System.IComparable%601?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2e5bea524dbf636d6532f99ee6ac6abfea59a2b0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463832"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545734"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
 
@@ -25,7 +25,7 @@ Birçok geliştiricinin biçimsel bir çerçeve proje arasında paylaşmak Kopya
 
 ## <a name="the-custom-entity-base-class"></a>Özel varlık temel sınıfı
 
-Aşağıdaki kod, bir varlığı temel sınıf varlık kimliği gibi herhangi bir etki alanı varlığı ile aynı şekilde kullanılabilir kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](~/docs/csharp/language-reference/operators/equality-comparison-operator.md), varlık, vb. başına bir etki alanı olay listesi.
+Aşağıdaki kod, bir varlığı temel sınıf varlık kimliği gibi herhangi bir etki alanı varlığı ile aynı şekilde kullanılabilir kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](~/docs/csharp/language-reference/operators/equality-operators.md), varlık, vb. başına bir etki alanı olay listesi.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

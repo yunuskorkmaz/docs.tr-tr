@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203116"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545448"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  
@@ -37,7 +37,7 @@ Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliğ
   
 2.  Uygulama <xref:System.IEquatable%601?displayProperty=nameWithType> türe özgü sağlayarak arabirimi `Equals` yöntemi. Gerçek denklik karşılaştırması gerçekleştirildiği budur. Örneğin, yalnızca bir veya iki alanları türünüz karşılaştırarak eşitliği tanımlama karar verebilirsiniz. Özel durumlar oluşturmayın `Equals`. Yalnızca sınıflar için: Bu yöntem, sınıfta bildirilen alanları incelemeniz gerekir. Çağırmalıdır `base.Equals` temel sınıfta olan alanlar incelemek için. (Tür doğrudan öğesinden devralıyorsa bunu <xref:System.Object>, çünkü <xref:System.Object> uygulaması <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> başvuru eşitliği denetimi gerçekleştirir.)  
   
-3.  İsteğe bağlı ancak önerilir: Aşırı yükleme [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) işleçleri.  
+3.  İsteğe bağlı ancak önerilir: Aşırı yükleme [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) ve [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) işleçleri.  
   
 4.  Geçersiz kılma <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> böylece aynı üretmek değer eşitliğine sahip iki nesnenin karma kodu.  
   
@@ -61,7 +61,7 @@ Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliğ
   
  Yapılar, varsayılan uygulaması için <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (geçersiz kılınan sürümünde olduğu <xref:System.ValueType?displayProperty=nameWithType>) türündeki her alanın değeri karşılaştırmak için yansıma kullanarak bir değer eşitliği denetimi gerçekleştirir. Ne zaman bir uygulayan geçersiz kılan sanal `Equals` yöntemi bir yapı içinde amaçlı olduğundan değeri eşitlik kontrolüne gerçekleştirmenin daha verimli bir yöntem sağlar ve isteğe bağlı olarak bazı alt kümesinde yapının alan veya özellik karşılaştırma taban.  
   
- [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) Ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) işleçleri struct açıkça bunları aşırı sürece yapı üzerinde çalışamaz.  
+ [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) Ve [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) işleçleri struct açıkça bunları aşırı sürece yapı üzerinde çalışamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

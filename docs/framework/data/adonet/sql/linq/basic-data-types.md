@@ -2,12 +2,12 @@
 title: Temel veri türleri
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: d9c79ae70d860c5e86d4338038b3158ebfba184f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704975"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545708"
 ---
 # <a name="basic-data-types"></a>Temel veri türleri
 Transact-SQL önce için LINQ to SQL sorgularında Çevir çünkü bunlar Microsoft SQL Server üzerinde yürütülür. LINQ to SQL, temel veri türleri için SQL Server'ın yaptığı aynı yerleşik işlevselliğinin destekler.  
@@ -18,7 +18,7 @@ Transact-SQL önce için LINQ to SQL sorgularında Çevir çünkü bunlar Micros
 ## <a name="equality-operators"></a>Eşitlik İşleçleri  
  LINQ to SQL temel veri türleri içinde LINQ to SQL sorguları aşağıdaki eşitlik işleçleri destekler:  
   
--   Eşit ve eşitsizlik işleci: Eşitlik ve eşitsizlik işleçleri için sayısal desteklenir <xref:System.Boolean>, <xref:System.DateTime>, ve <xref:System.TimeSpan> türleri. Visual Basic işleçleri hakkında daha fazla bilgi için `=` ve `<>`, bkz: [Karşılaştırma işleçleri](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Hakkında daha fazla bilgi için C# Karşılaştırma işleçleri `==` ve `!=`, bkz: [== işleci](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) ve [! = işleci](~/docs/csharp/language-reference/operators/not-equal-operator.md)sırasıyla  
+-   Eşit ve eşitsizlik işleci: Eşitlik ve eşitsizlik işleçleri için sayısal, desteklenen <xref:System.Boolean>, <xref:System.DateTime>, ve <xref:System.TimeSpan> türleri. Visual Basic işleçleri hakkında daha fazla bilgi için `=` ve `<>`, bkz: [Karşılaştırma işleçleri](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Hakkında daha fazla bilgi için C# Karşılaştırma işleçleri `==` ve `!=`, bkz: [eşitlik işleçleri](~/docs/csharp/language-reference/operators/equality-operators.md).
   
 -   Is işleci: `IS` Devralma eşleme kullanıldığında desteklenen çeviri işleci vardır. Bu doğrudan ayrıştırıcı sütununu test yerine bir nesne belirli bir varlık türüdür ve ayrıştırıcı sütunu üzerinde bir denetimi çevrildiğinde olup olmadığını belirlemek için kullanılabilir. Visual Basic hakkında daha fazla bilgi ve C# bulunan işleç, bkz: [işleci olan](~/docs/visual-basic/language-reference/operators/is-operator.md) ve [olduğu](~/docs/csharp/language-reference/keywords/is.md).  
   

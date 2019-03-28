@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758644"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545825"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
@@ -24,7 +24,7 @@ C# derleyicisi karşılaştığında bir `#if` yönergesi, ardından sonuç ile 
 #endif
 ```
 
-İşleçleri [ == ](../operators/equality-comparison-operator.md) (eşitlik) ve [! =](../operators/not-equal-operator.md) (yalnızca test etmek için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). Doğru simge tanımlanmadıysa anlamına gelir. Deyim `#if DEBUG` olarak aynı anlamı `#if (DEBUG == true)`. İşleçleri [ && ](../operators/conditional-and-operator.md) (ve) [ &#124; &#124; ](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden fazla sembol tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.
+İşleçleri [ == ](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (yalnızca test etmek için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). Doğru simge tanımlanmadıysa anlamına gelir. Deyim `#if DEBUG` olarak aynı anlamı `#if (DEBUG == true)`. İşleçleri [ && ](../operators/conditional-and-operator.md) (ve) [ &#124; &#124; ](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden fazla sembol tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 

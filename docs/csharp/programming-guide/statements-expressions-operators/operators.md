@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 78f52f4aa6e3d27bc7076d3074cb654d5e7fc56d
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504528"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545474"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 
@@ -106,8 +106,8 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
-|x [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Eşittir|  
-|x [! =](../../../csharp/language-reference/operators/not-equal-operator.md) y|Eşit değildir|  
+|x [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Eşittir|  
+|x [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Eşit değildir|  
   
  **Mantıksal, koşullu ve Null işleçleri**  
   

@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 38a273210e769b8c764c8b67640063e44026f0f3
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: aaa6af8067707162a440ab69b46f08b612eae9b3
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504662"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545513"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
 Aşağıdaki işleçleri ile sayısal türleri aritmetik işlemleri gerçekleştirin:
 
-- Birli `++` (artırma) `--` (azaltma) `+` (artı), ve `-` (eksi) işleçleri.
-- İkili `*` (çarpma) `/` (bölme) `%` (kalanını) `+` (toplama) ve `-` (çıkarma) işleçleri.
+- Birli [ `++` (artırma)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators), ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçleri.
+- İkili [ `*` (çarpma)](#multiplication-operator-), [ `/` (bölme)](#division-operator-), [ `%` (kalanını)](#remainder-operator-), [ `+` () ek olarak)](#addition-operator-), ve [ `-` (çıkarma)](#subtraction-operator-) işleçleri.
 
 Tüm bu işleçleri destekler [integral](../keywords/integral-types-table.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
 

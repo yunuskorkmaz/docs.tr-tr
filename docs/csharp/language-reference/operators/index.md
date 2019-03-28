@@ -131,9 +131,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
-[x == y](equality-comparison-operator.md) – eşitlik. Varsayılan olarak, başvuru için türleri dışındaki `string`, bu başvuru eşitliği (kimlik test) döndürür. Ancak, türleri aşırı yüklenebilir `==`, amacınız kimliğini test etmek için ise kullanmak en iyisidir `ReferenceEquals` metodunda `object`.
+[x == y](equality-operators.md#equality-operator-) – eşitlik. Varsayılan olarak, başvuru için türleri dışındaki `string`, bu başvuru eşitliği (kimlik test) döndürür. Ancak, türleri aşırı yüklenebilir `==`, amacınız kimliğini test etmek için ise kullanmak en iyisidir `ReferenceEquals` metodunda `object`.
 
-[x! = y](not-equal-operator.md) – eşit değil. Açıklama için bkz. `==`. Bir tür aşırı `==`, aşırı gerekir sonra `!=`.
+[x! = y](equality-operators.md#inequality-operator-) – eşit değil. Açıklama için bkz. `==`. Bir tür aşırı `==`, aşırı gerekir sonra `!=`.
 
 ## <a name="logical-and-operator"></a>Mantıksal AND işleci
 

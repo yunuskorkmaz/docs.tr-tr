@@ -2,19 +2,19 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: faef8a0a0c1f38766482384f46959928e378a3fd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463520"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545565"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
 İçin birçok geliştirme vardır C# Önizleme 2 ile deneyebileceğiniz dili. Preview 2 sürümünde eklenen yeni özellikleri şunlardır:
 
 - [Desen eşleştirme geliştirmeleri](#more-patterns-in-more-places):
-  * [Anahtar ifadeler](#switch-expressions)
+  * [anahtar ifadeler](#switch-expressions)
   * [Özellik desenleri](#property-patterns)
   * [Kayıt düzenleri](#tuple-patterns)
   * [Konumsal desenleri](#positional-patterns)
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-Aşağıdaki yöntemi kullanan **konumsal deseni** değerlerini ayıklamak için `x` ve `y`. Ardından, kullanan bir `when` yan tümcesi noktasının quadrant belirlemek için:
+Ayrıca, bir Çeyreğin çeşitli konumlarını temsil eden aşağıdaki enum göz önünde bulundurun:
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+Aşağıdaki yöntemi kullanan **konumsal deseni** değerlerini ayıklamak için `x` ve `y`. Ardından, kullanan bir `when` belirlemek için yan tümcesi `Quadrant` noktasının:
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-Eşleşen atma deseni önceki anahtarda ya da `x` veya `y`, iki değil, 0'dır. Bir switch ifadesi bir değer üreten veya bir özel durum. Servis taleplerini hiçbiri eşleşen switch ifadesi bir özel durum oluşturur. Tüm olası durumların anahtar İfadenizde kapsamaz varsa derleyici bir uyarı oluşturur.
+Eşleşen atma deseni önceki anahtarda ya da `x` veya `y` 0, ancak ikisine birden değil. Bir switch ifadesi bir değer üreten veya bir özel durum. Servis taleplerini hiçbiri eşleşen switch ifadesi bir özel durum oluşturur. Tüm olası durumların anahtar İfadenizde kapsamaz varsa derleyici bir uyarı oluşturur.
 
 Bu teknikler desen keşfedebilirsiniz [desen eşleştirme Gelişmiş öğretici](../tutorials/pattern-matching.md).
 
