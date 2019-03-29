@@ -5,17 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972930"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545461"
 ---
-# <a name="equality-comparisons-c-programming-guide"></a>Eşitlik Karşılaştırmaları (C# Programlama Kılavuzu)
+# <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
+
 Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlarda, için test ettiğiniz *değer eşitliği*olarak da bilinen *denklik*, iki değişkenin içerdiği değerlerin eşit olduğu anlamına gelir. Diğer durumlarda iki değişkenin bellekte aynı alt nesneye başvurmadığını belirlemeniz gerekir. Bu yeni eşitlik türüne adlı *eşitlik*, veya *kimlik*. Bu konu, bu iki eşitlik türünü açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  
   
-## <a name="reference-equality"></a>Başvuru eşitliği  
+## <a name="reference-equality"></a>Başvuru eşitliği
+
  Başvuru eşitliği iki nesne başvurusunun aynı alt nesneye başvurması anlamına gelir. Aşağıdaki örnekte gösterildiği gibi bu basit atama yoluyla oluşabilir.  
   
  [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
@@ -23,9 +25,10 @@ Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlard
  Bu kodda, iki nesne oluşturulur ancak arama deyiminden sonra her iki başvuru aynı nesneye başvurun. Bu nedenle başvuru eşitliğine sahiplerdir. Kullanım <xref:System.Object.ReferenceEquals%2A> iki başvurunun aynı nesneye başvurup başvurmadığını belirlemek için yöntemi.  
   
  Başvuru eşitliği kavramı yalnızca başvuru türleri için geçerlidir. Bir değer türü örneği bir değişkene atandığında değerin kopyası yapıldığı için değer türünde nesneler başvuru eşitliğine sahip olamaz. Bu nedenle asla bellekte aynı konuma başvuran iki kutusuz olabilir. Ayrıca, kullanırsanız <xref:System.Object.ReferenceEquals%2A> iki veri türünü karşılaştırmak için sonuç her zaman olacaktır `false`, nesnelerin içindeki değerler aynı olsa bile. Her bir değişken, bir ayrı bir nesne örneğinde Kutulu olmasıdır. Daha fazla bilgi için [nasıl yapılır: (Kimlik) başvuru eşitliği testi](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
-  
-## <a name="value-equality"></a>Değer eşitliği  
- Değer eşitliği, iki nesnenin aynı değeri veya değerleri içerdiği anlamına gelir. İlkel değer türleri gibi [int](../../../csharp/language-reference/keywords/int.md) veya [bool](../../../csharp/language-reference/keywords/bool.md), için değer eşitliği testleri kolaydır. Kullanabileceğiniz [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) işleci, aşağıdaki örnekte gösterildiği gibi.  
+
+## <a name="value-equality"></a>Değer eşitliği
+
+ Değer eşitliği, iki nesnenin aynı değeri veya değerleri içerdiği anlamına gelir. İlkel değer türleri gibi [int](../../../csharp/language-reference/keywords/int.md) veya [bool](../../../csharp/language-reference/keywords/bool.md), için değer eşitliği testleri kolaydır. Kullanabileceğiniz [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) işleci, aşağıdaki örnekte gösterildiği gibi.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -42,10 +45,11 @@ if( b == a)
   
  Ancak, tüm alanları bir tür denklik dayanması gereksinimi yoktur. Bir alt kümesi üzerinde temel alabilir. Sahibi olmadığınız türleri karşılaştırırken özellikle denklik bu tür için nasıl tanımlandığını anlamak emin olmanız gerekir. Kendi sınıflar ve yapı birimlerinizde değer eşitliği tanımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Tür için değer eşitliği tanımlama](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
-### <a name="value-equality-for-floating-point-values"></a>Kayan nokta değerleri için değer eşitliği  
- Eşitlik karşılaştırmaları kayan nokta değerlerinin ([çift](../../../csharp/language-reference/keywords/double.md) ve [float](../../../csharp/language-reference/keywords/float.md)), ikili sistem bilgisayarlarındaki kayan nokta aritmetiği kesinlik eksikliği nedeniyle sorunludur. Daha fazla bilgi için başlığındaki açıklamalara bakın <xref:System.Double?displayProperty=nameWithType>.  
+### <a name="value-equality-for-floating-point-values"></a>Kayan nokta değerleri için değer eşitliği
+
+ Kayan nokta değerlerinin eşitlik karşılaştırmaları ([çift](../../../csharp/language-reference/keywords/double.md) ve [float](../../../csharp/language-reference/keywords/float.md)) ikili bilgisayarlarda kayan nokta aritmetiği kesinlik eksikliği nedeniyle sorunludur. Daha fazla bilgi için başlığındaki açıklamalara bakın <xref:System.Double?displayProperty=nameWithType>.  
   
-## <a name="related-topics"></a>İlgili Konular  
+## <a name="related-topics"></a>İlgili konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
