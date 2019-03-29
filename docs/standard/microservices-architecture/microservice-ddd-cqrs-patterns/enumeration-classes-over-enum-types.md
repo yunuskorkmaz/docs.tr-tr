@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4489e3a693c853375c57af8358f9814cda9fed97
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465704"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633627"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 
@@ -29,9 +29,6 @@ public abstract class Enumeration : IComparable
     public string Name { get; private set; }
 
     public int Id { get; private set; }
-
-    protected Enumeration()
-    { }
 
     protected Enumeration(int id, string name) 
     {
@@ -74,30 +71,13 @@ Bu sınıf aşağıdaki gibi bir varlık veya değer nesnesindeki bir tür olara
 ```csharp
 public abstract class CardType : Enumeration
 {
-    public static CardType Amex = new AmexCardType();
-    public static CardType Visa = new VisaCardType();
-    public static CardType MasterCard = new MasterCardType();
+    public static CardType Amex = new CardType(1, "Amex");
+    public static CardType Visa = new CardType(2, "Visa");
+    public static CardType MasterCard = new CardType(3, "MasterCard");
 
-    protected CardType(int id, string name)
+    public CardType(int id, string name)
         : base(id, name)
-    { }
-
-    private class AmexCardType : CardType
     {
-        public AmexCardType(): base(1, "Amex")
-        { }
-    }
-    
-    private class VisaCardType : CardType
-    {
-        public VisaCardType(): base(2, "Visa")
-        { }
-    }
-    
-    private class MasterCardType : CardType
-    {
-        public MasterCardType(): base(3, "MasterCard")
-        { }
     }
 }
 ```

@@ -2,12 +2,12 @@
 title: 'Açık alanlar: Val anahtar sözcüğü'
 description: Hakkında bilgi edinin F# türü başlatma olmadan bir sınıf veya yapı türünde bir değeri depolamak için bir konum bildirmek için kullanılan 'val' anahtar sözcüğü.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773633"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634017"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Açık alanlar: Val anahtar sözcüğü
 
@@ -40,7 +40,7 @@ Açık alanlar, statik veya statik olmayan olabilir. *Erişim değiştiricisi* o
 Değişebilir bir alan için bir .NET alan derlenmiş .NET gösterimidir.
 
 >[!WARNING]
-`Note` .NET Framework ad alanı `System.ComponentModel` aynı ada sahip bir öznitelik içeriyor. Bu özniteliği hakkında daha fazla bilgi için bkz: `System.ComponentModel.DefaultValueAttribute`.
+>.NET Framework ad alanı `System.ComponentModel` aynı ada sahip bir öznitelik içeriyor. Bu özniteliği hakkında daha fazla bilgi için bkz: `System.ComponentModel.DefaultValueAttribute`.
 
 Açık alanlar ve karşılaştırma, kullanımı aşağıdaki kodda gösterildiği bir `let` birincil Oluşturucusu olan bir sınıf içinde bağlama. Unutmayın `let`-ilişkili alan `myInt1` özeldir. Zaman `let`-ilişkili alan `myInt1` bir üye yöntemi, kendi kendine tanımlayıcısı başvurulan `this` gerekli değildir. Ancak, başvuruda açık alanlar `myInt2` ve `myString`, kendi kendine tanımlayıcısı gereklidir.
 

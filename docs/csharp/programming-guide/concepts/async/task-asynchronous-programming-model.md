@@ -2,12 +2,12 @@
 title: Görev zaman uyumsuz programlama modeli (TAP) ile async ve await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: a8497364e0ec9294d84fb669fcada6452df71392
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b89b36f7645d3cb40945b14a4cf88b4a83dea89c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472163"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634550"
 ---
 # <a name="task-asynchronous-programming-model"></a>Görev zaman uyumsuz programlama modeli
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -62,10 +62,10 @@ async Task<int> AccessTheWebAsync()
 
  Kapat dikkat `await` işleci. Bekletilen `AccessTheWebAsync`;
  
-    - `AccessTheWebAsync` kadar devam edemiyor `getStringTask` tamamlandı.  
-    - Bu arada, Denetim çağırana döner `AccessTheWebAsync`.  
-    - Denetim sürdürür burada olduğunda `getStringTask` tamamlandı.   
-    - `await` Ardından alır. işleci `string `sonucunda `getStringTask`.  
+- `AccessTheWebAsync` kadar devam edemiyor `getStringTask` tamamlandı.  
+- Bu arada, Denetim çağırana döner `AccessTheWebAsync`.  
+- Denetim sürdürür burada olduğunda `getStringTask` tamamlandı.   
+- `await` Ardından alır. işleci `string `sonucunda `getStringTask`.  
 
  Return deyimi bir tamsayı sonucu belirtir. Bekleyen herhangi bir yöntem `AccessTheWebAsync` uzunluk değeri alın.  
 

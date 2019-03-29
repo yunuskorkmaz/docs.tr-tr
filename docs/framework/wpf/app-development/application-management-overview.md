@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356513"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634225"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
@@ -323,7 +323,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 ### <a name="unhandled-exceptions"></a>İşlenmeyen özel durumları  
  Bazen bir uygulama gibi beklenmeyen özel durum oluştuğunda aşağı altında anormal koşullar kapatın. Bu durumda, uygulama algılama ve özel durumu işlemek için kod olmayabilir. Bu özel durum işlenmemiş bir özel durum türüdür; Uygulama kapatılmadan hemen önce aşağıdaki şekilde gösterilen benzer bir bildirim görüntülenir.  
   
- ![İşlenmeyen özel durum bildirimini](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![İşlenmeyen özel durum bildirimi gösteren ekran görüntüsü.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Kullanıcı deneyimi açısından daha iyi bir uygulamanın bazı veya tüm aşağıdakileri yaparak bu varsayılan davranışı önlemek:  
   

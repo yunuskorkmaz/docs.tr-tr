@@ -2,12 +2,12 @@
 title: Seçenekler
 description: Nasıl kullanacağınızı öğrenin F# gerçek bir değer için bir adlandırılmış değer veya değişken mevcut olmayabilir, seçenek türleri.
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613511"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634108"
 ---
 # <a name="options"></a>Seçenekler
 
@@ -40,6 +40,8 @@ Bir değer, bir değer oluşturmak çalıştığınızda bir özel durum, mümk�
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
 `openFile` Önceki örnekte işlev türüne sahip `string -> File option` döndürür, çünkü bir `File` dosya başarıyla açılır, nesne ve `None` bir özel durum oluşursa. Duruma bağlı olarak, bu yayılmasına izin vererek yerine bir özel durum yakalamak için bir uygun tasarımı seçim olmayabilir.
+
+Buna ek olarak, geçirmek yine de mümkündür `null` veya null bir değer `Some` seçeneği durumu. Bu genellikle kaçınılması için yapılır ve genellikle yordamında F# programlama, ancak başvuru türleri. NET'te niteliği nedeniyle mümkündür.
 
 ## <a name="option-properties-and-methods"></a>Seçenek özellikleri ve yöntemleri
 

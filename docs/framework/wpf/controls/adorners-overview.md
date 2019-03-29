@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357956"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634537"
 ---
 # <a name="adorners-overview"></a>Donatıcılara Genel Bakış
 Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ipuçları kullanıcıya sağlamak için kullanılır. Diğer kullanımının yanı sıra donatıcıları işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için kullanılabilir.  
@@ -55,7 +55,7 @@ Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ip
   
  Aşağıdaki görüntüde uygulanan SimpleCircleAdorner gösterir bir <xref:System.Windows.Controls.TextBox>.  
   
- ![Donatıcılar örneği: Donatılmış bir metin kutusu](./media/adornedtextbox.png "AdornedTextBox")  
+ ![Donatılmış metin kutusunu gösteren ekran görüntüsü.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Donatıcılar işleme davranışı  

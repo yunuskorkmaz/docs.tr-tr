@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708538"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634173"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
 A *boyut* içinde değişebilir bir dizinin öğelerin belirtimini yön olduğundan. Ayın her günü için toplam satış tutan bir dizi bir boyut (ayın gününü) sahiptir. Satış toplam departmana göre ayın her günü için tutan bir dizi iki boyutlu (bölüm numarası ve ayın günü) sahiptir. Sahip bir dizi boyut sayısını çağrılır, *derece*.  
@@ -27,14 +27,11 @@ A *boyut* içinde değişebilir bir dizinin öğelerin belirtimini yön olduğun
   
  Aşağıdaki çizimler farklı sıralamalara sahip dizilerle kavramsal yapısını göstermektedir. Çizimler her öğenin erişim dizin değerlerini gösterir. Örneğin, ilk öğesi iki boyutlu bir dizinin ikinci satırın dizinleri belirterek erişebileceğiniz `(1, 0)`.  
   
- ![Bir grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Tek boyutlu dizi  
+ ![Tek boyutlu dizi gösteren diyagram.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![İki grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-iki boyutlu dizi  
+ ![İki boyutlu bir dizi gösteren diyagram.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Üç grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-üç boyutlu dizi  
+ ![Üç boyutlu bir dizi gösteren diyagram.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Bir boyut  
  Birçok dizileri her yaşında kişilerin sayısını gibi yalnızca bir boyutu vardır. Bir öğe belirtmek için tek gereksinim, o öğe sayısı tutan yaş olmasıdır. Bu nedenle, böyle bir dizi yalnızca bir dizin kullanır. Aşağıdaki örnek, tutacak bir değişken bildirir. bir *tek boyutlu dizi* yaşlar 0 ila 120 için yaşını hesaplar.  

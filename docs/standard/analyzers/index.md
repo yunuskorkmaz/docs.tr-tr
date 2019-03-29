@@ -2,7 +2,7 @@
 title: Roslyn Çözümleyicileri - .NET tabanlı.
 description: Sorunları bulmak ve bu sorunlara yönelik düzeltmeler önerir tabanlı Roslyn Çözümleyicileri hakkında bilgi edinin.
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---

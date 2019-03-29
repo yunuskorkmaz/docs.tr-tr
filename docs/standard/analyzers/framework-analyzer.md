@@ -1,71 +1,71 @@
 ---
 title: .NET güvenlik Çözümleyicileri - .NET
-description: .NET güvenlik Çözümleyicileri bulmak ve güvenlik riskleri adres için .NET Framework çözümleyiciler paketinde kullanmayı öğrenin
+description: .NET güvenlik Çözümleyicileri bulmak ve güvenlik riskleri gidermek için .NET Framework Çözümleyicileri paketinde kullanmayı öğrenin
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 904218c177ea45f82a73b4532ce3230af954aa85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574627"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634472"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Çözümleyicisi
 
-.NET Framework tabanlı uygulama kodunuzda olası sorunları bulmak için .NET Framework Çözümleyicisi'ni kullanabilirsiniz. Bu çözümleyici olası sorunları ve bunları düzeltmelere önerir bulur.
+.NET Framework tabanlı uygulama kodunuzda olası sorunları bulmak için .NET Framework Çözümleyicisi'ni kullanabilirsiniz. Bu çözümleyici olası sorunlar ve bunları düzeltmeler önerir bulur.
 
-Çözümleyicisi Visual Studio'da kod yazarken veya CI derleme bir parçası olarak etkileşimli olarak çalıştırır. Çözümleyicisi projenize olabildiğince erken geliştirmede eklemeniz gerekir. Çabuk kodunuzda olası sorunları bulma, bunlar düzeltmek için daha kolaydır. Ancak, geliştirme döngüsü herhangi bir zamanda ekleyebilirsiniz. Herhangi bir sorun var olan kodu bulur ve geliştirme tutmak gibi yeni sorunlar hakkında sizi uyarır.
+Çözümleyicisi Visual Studio'da kodunuzu yazarken veya bir CI yapısı bir parçası olarak etkileşimli olarak çalıştırır. Çözümleyici projenize mümkün olduğunca erken geliştirmede eklemeniz gerekir. Kodunuzdaki olası sorunları çabuk bulun, bunlar düzeltmek için kolaydır. Ancak, Geliştirme döngüsünün her zaman ekleyebilirsiniz. Varolan kodu herhangi bir sorun bulur ve geliştirme tutmak gibi yeni sorunlar hakkında sizi uyarır.
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Yükleme ve .NET Framework Çözümleyicisi'ni yapılandırma
 
-.NET güvenlik Çözümleyicileri çalışmasını istediğiniz her proje bir NuGet paketi olarak yüklenmesi gerekir. Projeye eklemek yalnızca bir geliştirici gerekir. Çözümleyicisi paketi proje bağımlılığı ve güncelleştirilmiş çözüm olduğunda her geliştiricinin makinesinde çalışır.
+.NET güvenlik Çözümleyicileri çalışmasını istediğiniz her bir proje üzerinde bir NuGet paketi olarak yüklenmesi gerekir. Yalnızca bir geliştirici projeye eklemeniz gerekir. Çözümleyicisi paket proje bir bağımlılık ve sonra da güncelleştirilen çözümü her geliştiricinin makinede çalışacak.
 
-.NET Framework Analyzer içinde teslim [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet paketi. Bu paket, yalnızca belirli çözümleyiciler güvenlik Çözümleyicileri içeren .NET Framework için sağlar. Çoğu durumda, isteyeceksiniz [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketi. FxCopAnalyzers toplama paketi aşağıdaki çözümleyiciler yanı sıra Framework.Analyzers paket dahil tüm framework çözümleyiciler içerir:
-- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): Genel rehberlik ve standart .NET API'ları için yönergeler sağlar
-- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): çözümleyiciler belirli .NET Core API sağlar.
-- [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): yorumlar dahil olmak üzere kod dahil metin yönelik yönergeler sağlanmaktadır.
+.NET Framework Çözümleyicisi sunulan [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet paketi. Bu paket, güvenlik Çözümleyicileri içeren .NET Framework için yalnızca belirli çözümleyicileri sağlar. Çoğu durumda, bunu istersiniz [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketi. FxCopAnalyzers toplam paket Framework.Analyzers paket yanı sıra aşağıdaki Çözümleyicileri dahil tüm framework Çözümleyicileri içerir:
+- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): Genel rehberlik ve .NET standart API'ler için yönergeler sağlar
+- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): Özel çözümleyiciler için .NET Core API'leri sağlar.
+- [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): Metin açıklama ekleme kodu olarak dahil edilen kılavuzluk sağlar.
 
-Yüklemek için projeye sağ tıklayın ve "Bağımlılıkları Yönet" seçin.
-NuGet Gezgini'nden "NetFramework Çözümleyicisi" için arama veya tercih ederseniz, "Fx Kopyala Çözümleyicisi". Çözümünüzdeki tüm projelerdeki en son kararlı sürümü yükleyin.
+Yüklemek için projeye sağ tıklayın ve "Bağımlılıklar Yönet'i" seçin.
+NuGet Gezgini'nden "NetFramework Çözümleyicisi" için arama yapın veya tercih ederseniz, "Fx Cop Çözümleyicisi". Çözümünüzdeki tüm projelerde en son kararlı sürümünü yükleyin.
 
 ## <a name="using-the-net-framework-analyzer"></a>.NET Framework Çözümleyicisi'ni kullanma
 
-NuGet paketi yüklendikten sonra çözümünüzü oluşturun. Çözümleyicisi temelinizde bulunuyor bulmadığı sorunları rapor eder. Sorunları aşağıdaki görüntüde gösterildiği gibi Visual Studio hata listesi penceresini uyarı olarak bildirilir:
+NuGet paketi yüklendiğinde, çözümünüzü oluşturun. Kod tabanınızdaki bulan herhangi bir sorun Çözümleyicisi bildirir. Sorunları aşağıdaki görüntüde gösterildiği gibi Visual Studio Hata Listesi penceresinde, uyarı olarak bildirilir:
 
-![framework Çözümleyicisi tarafından bildirilen sorunlar](./media/framework-analyzers-2.png)
+![framework Çözümleyicisi tarafından bildirilen sorunları](./media/framework-analyzers-2.png)
 
-Kod yazarken, kodunuzda herhangi bir olası sorun altında dalgalı çizgiler görürsünüz.
-Herhangi bir sorun getirin ve aşağıdaki görüntüde gösterildiği gibi sorun ve herhangi bir olası düzeltme yönelik öneriler hakkında ayrıntılar bakın:
+Kod yazarken, kodunuzdaki olası sorunları altında dalgalı çizgiler görürsünüz.
+Herhangi bir sorun gelin ve aşağıdaki görüntüde gösterildiği gibi sorun ve herhangi bir olası düzeltme önerileri ayrıntılarını görebilirsiniz:
 
-![Etkileşimli raporun framework Çözümleyicisi tarafından bulunan sorunları](./media/framework-analyzers-1.png)
+![framework Çözümleyicisi tarafından bulunan sorunları etkileşimli rapor](./media/framework-analyzers-1.png)
 
-Çözümleyiciler çözümünüzdeki kod inceleyin ve herhangi bir bu sorunları için uyarılar bir listesini sağlayın:
+Çözümleyicileri, çözümünüzde kodu inceleyin ve uyarıların bir listesini bu sorunları birini sağlayın:
 
-### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belli temel türleri genişletmemelidir
+### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belirli temel türleri aşmamalıdır
 
-.NET Framework'teki yapmanız gereken gelen doğrudan türetilmemiş türleri az sayıda vardır. 
+Az sayıda .NET Framework'teki yapmanız gereken doğrudan türetilmemiş türleri vardır. 
 
-**Kategori:** tasarım
-
-**Önem derecesi:** Uyarı
-
-Ek bilgi: [CA:1058: türler belli temel türleri değil genişletmek](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
-
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: bozuk durumda özel durumlarını yakalama değil
-
-Çalýþýrçalýþma yakalama bozuk durumda özel durumları (örneğin, erişim ihlali), yürütme tutarsız bir durumda kaynaklanan veya bir sistem tehdit eden saldırganlara kolaylaştırma hata maske. Bunun yerine, yakalama ve tanıtıcı daha fazla belirli bir özel durum türleri ayarlayın veya özel durum yeniden oluşturun
-
-**Kategori:** güvenlik
+**Kategori:** Tasarlama
 
 **Önem derecesi:** Uyarı
 
-Ek bilgi: [## CA2153: bozuk durumda özel durumlarını yakalama değil](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Ek bilgiler: [CA:1058: Türler belirli temel türleri aşmamalıdır](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: Bozuk durum özel durumları yakalamayın
+
+Çalýþýrçalýþma yakalama bozuk durum özel durumları, yürütme tutarsız bir duruma veya bir sistem tehdit eden saldırganlara kolaylaştırmaya hataları (örneğin, erişim ihlali) gizleyebilirsiniz. Bunun yerine, catch ve tutamacı daha fazla belirli bir özel durum türleri ve ayarlamak veya bir özel durum yeniden oluşturun
+
+**Kategori:** Güvenlik
+
+**Önem derecesi:** Uyarı
+
+Ek bilgi: [## CA2153: Bozuk durum özel durumları yakalamayın](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
 ### <a name="ca2229-implement-serialization-constructors"></a>CA2229: Serileştirme oluşturucularını uygulayın
 
-Uygulayan bir tür oluşturduğunuzda, bu uyarıyı Çözümleyicisi oluşturur <xref:System.Runtime.Serialization.ISerializable> arabirim ancak gerekli serileştirme Oluşturucusu tanımlamıyor. Bu kural ihlalini düzeltmek için seri hale getirme yapıcısını uygular. Kapalı bir sınıf için kurucusunu özel yapın; aksi takdirde korunmuş yapın. Seri hale getirme oluşturucusu aşağıdaki imzası vardır:
+Uygulayan bir tür oluştururken Çözümleyicisi bu uyarıyı üretir <xref:System.Runtime.Serialization.ISerializable> arabirim ancak gerekli seri hale getirme oluşturucusunu tanımlamıyor. Bu kural ihlalini düzeltmek için seri hale getirme yapıcısını uygular. Kapalı bir sınıf için kurucusunu özel yapın; aksi takdirde korunmuş yapın. Seri hale getirme oluşturucusunu şu imzaya sahip:
 
 ```csharp
 public class MyItemType
@@ -78,61 +78,61 @@ public class MyItemType
 }
 ```
 
-**Kategori:** kullanımı
+**Kategori:** Kullanım
 
 **Önem derecesi:** Uyarı
 
-Ek bilgi: [CA2229: Serileştirme oluşturucularını uygulayın](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
+Ek bilgiler: [CA2229: Serileştirme oluşturucularını uygulayın](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
 ### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin
 
-Seri hale getirilemeyen bir örnek alan türü seri hale getirilebilir bir tür içinde bildirilir. Bu alanı açıkça işaretlemelisiniz <xref:System.NonSerializedAttribute> bu uyarıyı çözmek için.
+Seri hale getirilemeyen bir örnek alan türü seri hale getirilebilir bir tür içinde bildirilir. Bu alanı açıkça işaretlemelisiniz <xref:System.NonSerializedAttribute> bu uyarıyı düzeltmek için.
 
-**Kategori:** kullanımı
-
-**Önem derecesi:** Uyarı
-
-Ek bilgi: [CA2235: tüm serileştirilebilir olmayan alanları işaretleyin](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
-
-### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: ISerializable türleri ile seri hale getirilebilir
-
-Ortak dil çalışma zamanı tarafından seri hale getirilebilir olarak tanınması için türlerini kullanarak işaretlenmelidir <xref:System.SerializableAttribute> bile türü özel seri hale getirme yordamı uygulayarak kullandığında özniteliği <xref:System.Runtime.Serialization.ISerializable> arabirimi.
-
-**Kategori:** kullanımı
+**Kategori:** Kullanım
 
 **Önem derecesi:** Uyarı
 
-Ek bilgi: [CA2237: seri hale getirilebilir ile işareti ISerializable türleri](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Ek bilgiler: [CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
+
+### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Seri hale getirilebilir ile işareti ISerializable türler
+
+Ortak dil çalışma zamanı tarafından seri hale getirilebilir olarak tanınması için türleri kullanılarak işaretlenmelidir <xref:System.SerializableAttribute> bile türü bir özel seri hale getirme yordamı uygulayarak kullandığında özniteliği <xref:System.Runtime.Serialization.ISerializable> arabirimi.
+
+**Kategori:** Kullanım
+
+**Önem derecesi:** Uyarı
+
+Ek bilgiler: [CA2237: Seri hale getirilebilir ile işareti ISerializable türler](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
 ### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: XML işleme güvensiz DTD
 
-Güvenli olmayan kullanırsanız <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> örneği veya giriş ve saldırganlar için hassas bilgileri ifşa güvenilmeyen Dış varlık kaynakları, ayrıştırıcı kabul başvurusu.  
+Güvenli olmayan kullanırsanız <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> örnekleri veya giriş ve saldırganlar için hassas bilgileri ifşa güvenilmeyen Dış varlık kaynakları, ayrıştırıcının kabul başvurusu.  
 
-**Kategori:** güvenlik
-
-**Önem derecesi:** Uyarı
-
-Ek bilgi: [A3075: Güvenli olmayan XML işleme DTD](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
-
-
-### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: zayıf şifreleme algoritmalarına kullanmayın
-
-Saldırıları daha gelişmiş hale gibi şifreleme algoritmaları zamanla düşürebilir. Tür ve bu şifreleme algoritması uygulamasının bağlı olarak, şifreleme gücünü düşmesine enciphered iletileri okumak, enciphered iletilerle değiştirmesine, dijital imzalar taklit, karma içerikle değiştirmesine saldırganlar daha fazla izin verebilir veya Aksi takdirde bu algoritmadan yola çıkılarak cryptosystem tehlikeye. Şifreleme için AES algoritması kullanın (AES 256, AES-192 ve AES-128 kabul edilebilir) değerinden büyük veya eşit 128 bit anahtar uzunluğuna sahip. Karma için karma işlevi olarak SHA-2 512, SHA-2 384 ve SHA-2 256 gibi SHA-2 ailesini kullanın.
-
-**Kategori:** güvenlik
+**Kategori:** Güvenlik
 
 **Önem derecesi:** Uyarı
 
-Ek bilgi: [CA5350: zayıf şifreleme algoritmalarına kullanmayın](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+Ek bilgiler: [A3075: XML işleme güvensiz DTD](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: bozuk şifreleme algoritmaları kullanmayın
 
-Bu algoritma bölüneceği bilgisayarlarda mümkündür yapmadan saldırının bulunmaktadır. Bu, saldırganların sağlamak üzere tasarlanmış şifreleme garanti bölün sağlar. Türü ve bu şifreleme algoritması uygulamasının bağlı olarak, bu enciphered iletileri okumak, enciphered iletilerle değiştirmesine, dijital imzalar taklit, karma içerikle değiştirmesine veya aksi halde dayalı cryptosystem tehlikeye saldırganların izin Bu algoritma üzerinde. Şifreleme için AES algoritması kullanın (AES 256, AES-192 ve AES-128 kabul edilebilir) değerinden büyük veya eşit 128 bit anahtar uzunluğuna sahip. Karma için karma işlevi olarak SHA512, SHA384 veya SHA256 gibi SHA-2 ailesini kullanın. Dijital imzalar için büyük veya ona eşit 256 bit anahtar uzunluğu ile RSA anahtar uzunluğu 2048 bit eşit veya daha büyük ile ya da ECDSA kullanın.
+### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Zayıf şifreleme algoritmaları kullanmayın
 
-**Kategori:** güvenlik
+Şifreleme algoritmaları, saldırıları daha gelişmiş hale olarak zaman içinde düşürebilir. Tür ve bu şifreleme algoritmasının uygulama bağlı olarak, kendi şifreleme gücünü performansında enciphered iletileri okumak, enciphered iletilerle değiştirmesine, dijital imzalar forge, karma içerikle değiştirmesine saldırganlar daha fazla izin verebilir veya Aksi takdirde bu algoritmadan yola çıkılarak herhangi cryptosystem tehlikeye. Şifreleme için AES algoritması kullanın (AES-256'yı, AES-192 ve AES-128 kabul edilebilir) büyüktür veya eşittir 128 bit anahtar uzunluğu. Karma işlevi için bir karma işlevi olarak gibi SHA-2 512, SHA-2 384 ve SHA-2 256, SHA-2 ailesini kullanın.
+
+**Kategori:** Güvenlik
 
 **Önem derecesi:** Uyarı
 
-Ek bilgiler: [CA5351: bozuk şifreleme algoritmaları kullanmayın](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
+Ek bilgiler: [CA5350: Zayıf şifreleme algoritmaları kullanmayın](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351:: Bozuk şifreleme algoritmaları kullanmayın
+
+Bu algoritma ayırmak için bilgisayarlarda mümkündür yapmadan bir saldırı var. Bu, saldırganların sağlamak üzere tasarlanmış şifreleme garanti sonu sağlar. Tür ve bu şifreleme algoritmasının uygulama bağlı olarak, bu enciphered iletileri okumak, enciphered iletilerle değiştirmesine, dijital imzalar forge, karma içerikle değiştirmesine veya aksi halde göre herhangi bir cryptosystem tehlikeye saldırganların izin verebilir Bu algoritmayı. Şifreleme için AES algoritması kullanın (AES-256'yı, AES-192 ve AES-128 kabul edilebilir) büyüktür veya eşittir 128 bit anahtar uzunluğu. Karma için SHA-2 ailesindeki SHA512, SHA384 veya SHA256 karma bir işlevi kullanın. Dijital imzalar için anahtar uzunluğu en az 2048 bit RSA veya ECDSA büyüktür veya eşittir 256 bit anahtar uzunluğu ile kullanın.
+
+**Kategori:** Güvenlik
+
+**Önem derecesi:** Uyarı
+
+Ek bilgi: [CA5351:: Bozuk şifreleme algoritmaları kullanmayın](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
 
 

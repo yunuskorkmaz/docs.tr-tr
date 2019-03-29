@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186136"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634420"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Öğretici: Küme Iris çiçek kümeleme learner ML.NET ile kullanma
 
@@ -136,7 +136,7 @@ Genel veri yükleme `MLContext.Data.LoadFromTextFile` için sarmalayıcı [LoadF
 Bu öğreticide, öğrenme işlem hattınızı kümeleme görevin aşağıdaki iki adımdan oluşur:
 
 - yüklenen sütunu bir birleştirme **özellikleri** kümeleme Eğitmen tarafından; kullanılan sütun
-- kullanan bir <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> k kullanarak modeli eğitmek için Eğitmen-anlamına gelir ++ kümeleme algoritması.
+- kullanan bir <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> k kullanarak modeli eğitmek için Eğitmen-anlamına gelir ++ kümeleme algoritması.
 
 Aşağıdaki kodu ekleyin `Main` yöntemi:
 

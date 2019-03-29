@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 0b4bef8c80f26cea5552d4f59468811ae1f18a8d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462805"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633835"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>İstemci tarafı doğrulaması (sunum katmanlarında doğrulama)
 
@@ -23,7 +23,7 @@ Bile istemci tarafında doğrulama kullanırken her zaman komutlarınızı doğr
 
 Bu nedenle, istemci tarafı kod, genellikle Viewmodel'lar doğrulayın. Ayrıca istemci doğrulama hizmetlere göndermeden önce Dto'lar veya komutları çıktı.
 
-İstemci tarafı doğrulama uygulanması, oluşturduğunuz ne tür bir istemci uygulaması bağlıdır. Xamarin ve C# ile mobil uygulama kodlanmış veya kodu .NET, JavaScript veya TypeScript, kodlanmış bu doğrulama SPA web uygulamasıyla çoğunu bir MVC web uygulaması Web verilerle doğrulamakta olduğunuz, farklı olacaktır.
+İstemci tarafı doğrulama uygulanması, oluşturduğunuz ne tür bir istemci uygulaması bağlıdır. Xamarin ile mobil uygulama kodlanmış veya .NET, JavaScript veya TypeScript, kodlanmış bu doğrulama SPA web uygulamasıyla kodda çoğunu bir MVC web uygulaması Web verilerle doğrulamakta olduğunuz, farklı olacaktır ve C#.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

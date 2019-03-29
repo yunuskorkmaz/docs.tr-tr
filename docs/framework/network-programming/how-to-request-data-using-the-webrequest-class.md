@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme'
-ms.date: 03/30/2017
+ms.date: 03/21/2019
 dev_langs:
 - csharp
 - vb
@@ -11,32 +11,33 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: ac7f9fc4a3c7a376d96d7cf820d2051bf2103e51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b71327d007e66cc217f6d69e11122c481e5118f
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623072"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634043"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
-Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullanılan adımlarla, bir Web sayfası veya dosya açıklanmaktadır. Kaynak URI tarafından tanımlanması gerekir.  
+# <a name="how-to-request-data-by-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
+Aşağıdaki yordamda, bir Web sayfası veya bir dosya gibi bir kaynak sunucudan istemek için adımlar açıklanmaktadır. Kaynak URI tarafından tanımlanması gerekir.  
   
-### <a name="to-request-data-from-a-host-server"></a>Bir konak sunucusundan veri istemek için  
+## <a name="to-request-data-from-a-host-server"></a>Bir konak sunucusundan veri istemek için  
   
-1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A> kaynağın URI'sini ile.  
+1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> bir kaynağın URI'sini ile. Örneğin: 
   
     ```csharp  
-    WebRequest request = WebRequest.Create("http://www.contoso.com/");  
+    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");  
     ```  
   
     ```vb  
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
+    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")  
     ```  
   
     > [!NOTE]
-    >  .NET Framework türetilen protokole özgü sınıfların sağlar **WebRequest** ve **WebResponse** ile başlayan bir URI'leri için "http:", "https:''," ftp: ", ve" dosya: ". Diğer protokoller kullanarak kaynaklara erişmeye öğesinden türetilen protokole özgü sınıfların uygulamalıdır **WebRequest** ve **WebResponse**. Daha fazla bilgi için [takılabilir protokoller programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
+    > .NET Framework türetilen protokole özgü sınıfların sağlar <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları ile başlayan bir URI'leri *http:*, *https:*, *ftp:* , ve *dosya:*.
+    Kümesi ya da okuma protokole özgü özellikleri gerekirse dönüştürmelisiniz, <xref:System.Net.WebRequest> veya <xref:System.Net.WebResponse> protokole özgü nesne türü için nesne. Daha fazla bilgi için [takılabilir protokoller programlama](programming-pluggable-protocols.md). 
   
-2.  Size gereken tüm özellik değerlerini ayarlamak **WebRequest**. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış **kimlik bilgilerini** örneğine özellik <xref:System.Net.NetworkCredential> sınıfı.  
+2.  Size gereken tüm özellik değerlerini ayarlayın, `WebRequest` nesne. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> örneğine özellik <xref:System.Net.NetworkCredential> sınıfı:  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -46,17 +47,7 @@ Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullan
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     Çoğu durumda **WebRequest** sınıfı, veri almak yeterli. Ancak, protokole özgü özelliklerini ayarlamak gerekiyorsa dönüştürmelisiniz **WebRequest** protokole özgü türü. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebRequest>, noktaya yayın **WebRequest** için bir **HttpWebRequest** başvuru. Aşağıdaki kod örneği, HTTP özgü ayarlanacak gösterilmektedir <xref:System.Net.HttpWebRequest.UserAgent%2A> özelliği.  
-  
-    ```csharp  
-    ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
-    ```  
-  
-    ```vb  
-    Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
-    ```  
-  
-3.  Sunucuya istek göndermek için arama <xref:System.Net.HttpWebRequest.GetResponse%2A>. Gerçek türü döndürülen **WebResponse** nesne, istenen URI'nin şeması tarafından belirlenir.  
+3.  Çağırarak sunucuya istek göndermek <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Bu yöntem sunucu yanıtını içeren bir nesne döndürür. Döndürülen <xref:System.Net.WebResponse> nesnenin türü, isteğin URI düzeni tarafından belirlenir. Örneğin:
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -66,10 +57,9 @@ Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullan
     Dim response As WebResponse = request.GetResponse()  
     ```  
   
-    > [!NOTE]
-    >  İle tamamladıktan sonra bir <xref:System.Net.WebResponse> nesne kapatmalısınız bunu çağırarak <xref:System.Net.WebResponse.Close%2A> yöntemi. Yanıt nesneden yanıt akışına edindiğiniz, alternatif olarak, akış çağırarak kapatabilirsiniz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt ya da akış kapatmazsanız uygulamanız bağlantılar dışında sunucuya çalıştırın ve ek istekleri işleyemediğinden haline gelir.  
-  
-4.  Özelliklerini erişebileceğiniz **WebResponse** veya dönüştürme **WebResponse** protokole özgü özelliklerini okumak için bir protokole özgü örneğine. Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın **WebResponse** için bir **HttpWebResponse** başvuru. Aşağıdaki kod örneği, yanıtta gönderilen durum bilgilerini görüntülemek gösterilmektedir.  
+4.  Özelliklerini erişebilir, `WebResponse` nesne veya protokole özgü özelliklerini okumak için bir protokole özgü örneğe dönüştürün. 
+
+    Örneğin, erişim HTTP'ye özgü özellikleri için <xref:System.Net.HttpWebResponse>, noktaya yayın, `WebResponse` nesnesini bir `HttpWebResponse` başvuru. Aşağıdaki kod örneği, HTTP özgü görüntülenecek gösterilmektedir <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> Yanıtta gönderilen özelliği:
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -79,7 +69,7 @@ Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullan
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  Sunucu tarafından gönderilen yanıt verilerini içeren akış almak için kullanın <xref:System.Net.HttpWebResponse.GetResponseStream%2A> yöntemi **WebResponse**.  
+5.  Sunucu tarafından gönderilen yanıt verilerini içeren akış almak için arama <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi. Örneğin:  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream();  
@@ -89,7 +79,7 @@ Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullan
     Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-6.  Yanıttan verileri okuduktan sonra ya da yanıt akışı kullanılarak kapatmalısınız **Stream.Close** yöntemi veya yanıtı kullanma Kapat **WebResponse.Close** yöntemi. Bu çağrı gerekli değildir **Kapat** yanıt akışında yöntemi ve **WebResponse**, ancak bunu yaparsanız bu nedenle zararlı. **WebResponse.Close** çağrıları **Stream.Close** yanıt kapatırken.  
+6.  Yanıt nesnesinden verileri okuduktan sonra ya da ile kapatmak <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> yöntemi veya kapanış yanıt akışı ile <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Yanıt nesnesini ya da akış kapatmayın, uygulamanızın sunucu bağlantılarını dışında çalıştırabilir ve ek istekleri işleyemediğinden haline gelir. Çünkü `WebResponse.Close` yöntem çağrılarını `Stream.Close` yanıtı kapatır, çağrı gerekli değildir `Close` nesnelerde yanıt ve akış bunu yaparsanız bu nedenle zararlı olmasa da. Örneğin:
   
     ```csharp  
     response.Close();  
@@ -100,6 +90,8 @@ Aşağıdaki yordamda, bir kaynak, örneğin, bir sunucudan istemek için kullan
     ```  
   
 ## <a name="example"></a>Örnek  
+
+Aşağıdaki kod örneği, bir web sunucusu için bir istek oluşturun ve kendi yanıt verileri okumak gösterilmektedir:  
   
 ```csharp  
 using System;  
@@ -118,19 +110,23 @@ namespace Examples.System.Net
               "http://www.contoso.com/default.html");  
             // If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials;  
+
             // Get the response.  
             WebResponse response = request.GetResponse();  
             // Display the status.  
             Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
+
             // Get the stream containing content returned by the server.  
             Stream dataStream = response.GetResponseStream();  
-            // Open the stream using a StreamReader for easy access.  
+            // Open the stream by using a StreamReader for easy access.  
             StreamReader reader = new StreamReader(dataStream);  
+
             // Read the content.  
             string responseFromServer = reader.ReadToEnd();  
             // Display the content.  
             Console.WriteLine(responseFromServer);  
-            // Clean up the streams and the response.  
+
+            // Clean up the response.  
             reader.Close();  
             response.Close();  
         }  
@@ -143,38 +139,48 @@ Imports System
 Imports System.IO  
 Imports System.Net  
 Imports System.Text  
-Namespace Examples.System.Net  
+
+Namespace Examples.System.Net 
+
     Public Class WebRequestGetExample  
-  
+
         Public Shared Sub Main()  
+
             ' Create a request for the URL.   
             Dim request As WebRequest = _  
               WebRequest.Create("http://www.contoso.com/default.html")  
             ' If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials  
+
             ' Get the response.  
             Dim response As WebResponse = request.GetResponse()  
             ' Display the status.  
             Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
+
             ' Get the stream containing content returned by the server.  
             Dim dataStream As Stream = response.GetResponseStream()  
-            ' Open the stream using a StreamReader for easy access.  
+            ' Open the stream by using a StreamReader for easy access.  
             Dim reader As New StreamReader(dataStream)  
+
             ' Read the content.  
             Dim responseFromServer As String = reader.ReadToEnd()  
             ' Display the content.  
             Console.WriteLine(responseFromServer)  
-            ' Clean up the streams and the response.  
+
+            ' Clean up the response.  
             reader.Close()  
-            response.Close()  
+            response.Close() 
+
         End Sub   
-    End Class   
+
+    End Class  
+ 
 End Namespace  
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)
-- [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+- [İnternet istekleri oluşturma](creating-internet-requests.md)
+- [Ağda akışları kullanma](using-streams-on-the-network.md)
+- [İnternet'e bir proxy üzerinden erişme](accessing-the-internet-through-a-proxy.md)
+- [Veri isteme](requesting-data.md)
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme](how-to-send-data-using-the-webrequest-class.md)

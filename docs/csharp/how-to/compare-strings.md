@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563996"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634238"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C dizeleri karşılaştırma\#
 
@@ -55,7 +55,7 @@ Büyük küçük harf duyarsız sıralı bir karşılaştırma gerçekleştirirk
 ## <a name="linguistic-comparisons"></a>Dil karşılaştırmaları
 
 Ayrıca dizeleri dilsel kurallar için geçerli kültürü kullanarak sıralanabilir.
-Bu bazen "sözcük sıralama düzeninde." adlandırılır Bir dilsel karşılaştırma gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler dizisi ile eşdeğer olabilir <xref:System.Char> örnekleri. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca (U + 0073 U + 0073) bir dizede "ss" ve başka bir ' ß' (U + 00DF). Dilsel olarak (Windows içinde), "ss" için Almanca Essetz eşittir: "en-US" ve "de-DE" kültürler 'ß' karakter.
+Bu bazen "sözcük sıralama düzeninde." adlandırılır Bir dilsel karşılaştırma gerçekleştirdiğinizde, bazı alfasayısal olmayan Unicode karakterlerine atanan özel ağırlıkların olabilir. Örneğin, kısa çizgi "-" "İleri co-op" ve "coop" birbirinin yanına sıralama düzeninde görüntülenir kendisine atanmış çok küçük ağırlığa sahip olabilir. Ayrıca, bazı Unicode karakterler dizisi ile eşdeğer olabilir <xref:System.Char> örnekleri. Aşağıdaki örnek "Bunlar içinde Sokak dans." ifadesini kullanır. Almanca (U + 0073 U + 0073) bir dizede "ss" ve başka bir ' ß' (U + 00DF). Dilsel olarak (Windows içinde), "ss" için Almanca Esszet eşittir: "en-US" ve "de-DE" kültürler 'ß' karakter.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

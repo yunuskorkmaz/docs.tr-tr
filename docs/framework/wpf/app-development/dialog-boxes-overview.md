@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359139"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634459"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunma ana verileri görüntüler ana pencere sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubuklarını ve durum çubukları ister. Önemsiz olmayan bir uygulama, ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
@@ -40,7 +40,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ## <a name="message-boxes"></a>İleti kutuları  
  A *ileti kutusu* metinsel bilgilerini görüntülemek ve kullanıcıların düğmelerle kararlar izin vermek için kullanılan bir iletişim kutusudur. Aşağıdaki şekil, metin tabanlı bilgiler görüntüler, soru soran ve kullanıcının soruyu yanıtlamak için üç düğme sağlayan bir ileti kutusu gösterir.  
   
- ![Sözcük işlemci iletişim kutusu](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Belgeyi uygulama önce değişiklikleri kaydetmek isteyip istemediğinizi soran bir sözcük işlemcisi iletişim kutusu kapanır.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Bir ileti kutusu oluşturmak için kullandığınız <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox> ileti kutusu metni, başlık, simge ve düğmeler, aşağıdaki gibi bir kod kullanarak yapılandırmanıza olanak sağlar.  
   
@@ -73,7 +73,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ### <a name="open-file-dialog"></a>Dosya Aç iletişim kutusu  
  Aşağıdaki şekilde gösterilen Dosya Aç iletişim kutusu açmak için bir dosya adını almak için işlevselliği açma dosya tarafından kullanılır.  
   
- ![Aç iletişim kutusu](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Dosya alma konumu gösteren bir açık iletişim kutusu.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  Ortak bir dosya Aç iletişim kutusu olarak uygulanan <xref:Microsoft.Win32.OpenFileDialog> sınıfı ve bulunan <xref:Microsoft.Win32> ad alanı. Aşağıdaki kod oluşturma, yapılandırma ve bir Göster ve sonuçları işlemek nasıl gösterir.  
   
@@ -89,7 +89,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ### <a name="save-file-dialog-box"></a>Dosya Kaydet iletişim kutusu  
  Kaydetme dosya iletişim kutusunda, aşağıdaki şekilde gösterildiği işlevleri kaydetme dosyasıyla kaydetmek için bir dosya adını almak için kullanılır.  
   
- ![Farklı Kaydet iletişim kutusu](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Dosyanın kaydedileceği konumu gösteren Farklı Kaydet iletişim kutusu.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Dosya iletişim kutusu kaydetme yaygın olarak uygulanan <xref:Microsoft.Win32.SaveFileDialog> sınıfı ve bulunan <xref:Microsoft.Win32> ad alanı. Aşağıdaki kod oluşturma, yapılandırma ve bir Göster ve sonuçları işlemek nasıl gösterir.  
   
@@ -102,7 +102,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ### <a name="print-dialog-box"></a>Yazdır iletişim kutusu  
  Aşağıdaki şekilde gösterilen yazdırma iletişim kutusunda, seçmek ve kullanıcı verilerini yazdırmak istediğiniz yazıcı için yazdırma işlevselliği tarafından kullanılır.  
   
- ![Yazdırma iletişim kutusu](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Yazdır iletişim kutusunu gösteren ekran görüntüsü.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  Ortak bir yazdırma iletişim kutusu olarak uygulanan <xref:System.Windows.Controls.PrintDialog> sınıfı ve bulunan <xref:System.Windows.Controls> ad alanı. Aşağıdaki kod, oluşturma, yapılandırma ve bir Göster gösterilmektedir.  
   
@@ -119,7 +119,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ### <a name="creating-a-modal-custom-dialog-box"></a>Özel bir kalıcı iletişim kutusu oluşturma  
  Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Window> tipik kalıcı bir iletişim kutusu uygulamasını kullanarak `Margins` iletişim kutusu örnek olarak (bkz [iletişim kutusu örnek](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` İletişim kutusunda, aşağıdaki şekilde gösterilmiştir.  
   
- ![Kenar Boşlukları iletişim kutusu](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Sol kenar boşluğu, üst kenar boşluğu, sağ kenar boşluğu ve alt kenar boşluğu tanımlamak için kullanılan alanları içeren bir kenar boşlukları iletişim kutusu.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Kalıcı bir iletişim kutusu yapılandırma  
  Kullanıcı arabirimi için genel iletişim kutusunda, aşağıdakileri içerir:  
@@ -208,7 +208,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
   
  Doğrulama kuralı ilişkilendirildiğinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] veri ilişkili denetime girildiğinde otomatik olarak uygulanır. Bir denetim geçersiz verilerini içerdiğinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] geçersiz denetimin etrafında kırmızı bir kenarlık aşağıdaki şekilde gösterildiği gibi görüntülenir.  
   
- ![Geçersiz sol kenar boşluğu](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Geçersiz sol kenar boşluğu değeri etrafında kırmızı bir kenarlık bir kenar boşlukları iletişim kutusu.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Bunlar geçerli veri girene kadar bir kullanıcı için geçersiz denetim kısıtlamaz. Bir iletişim kutusu için iyi davranışı budur; bir kullanıcının veri geçerli olup olmadığını bir iletişim kutusu denetimleri serbestçe gidebilirsiniz olması gerekir. Ancak, bir kullanıcı, geçersiz veri ve ENTER tuşuna girebilirsiniz yani **Tamam** düğmesi. Bu nedenle, kodunuzu ayrıca bir iletişim kutusu içindeki tüm denetimler doğrulamak gereken kutusunu **Tamam** işleyerek düğmesine basıldığında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
@@ -277,7 +277,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Özel modsuz iletişim kutusu oluşturma  
  Modsuz iletişim kutusu, Bul iletişim kutusunu aşağıdaki şekilde gösterildiği gibi aynı temel görünüm kalıcı bir iletişim kutusu vardır.  
   
- ![Bul iletişim kutusu](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Bul iletişim kutusunu gösteren ekran görüntüsü.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  Ancak, aşağıdaki bölümlerde açıklandığı gibi biraz daha farklı, davranıştır.  
   
