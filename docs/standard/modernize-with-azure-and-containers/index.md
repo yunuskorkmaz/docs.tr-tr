@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
-![kapak resmi](./media/cover.png)
+![Görüntü Modernleştirin .NET uygulamaları Kılavuzu'nun kapsar.](./media/index/web-application-guide-cover-image.png)
 
 TARAFINDAN YAYIMLANAN  
 Microsoft Press ve Microsoft Devdiv'e  

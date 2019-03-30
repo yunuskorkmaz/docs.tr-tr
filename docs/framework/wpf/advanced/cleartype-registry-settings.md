@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369727"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675906"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -57,7 +57,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `ClearTypeLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde Kayıt Defteri Düzenleyicisi'ayarı için gösterir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzeyi.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType Kayıt Defteri Düzenleyicisi'nde ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları olan ve olmayan ya da iki moddan birini metin işleme [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Ne zaman metin işlenen olmadan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], onu gri tonlamalı işleme olarak adlandırılır.  
@@ -75,7 +75,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `GammaLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde gama düzeyi için Kayıt Defteri Düzenleyicisi'ni ayarı gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType gama düzeyi ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Piksel yapısı  
@@ -99,7 +99,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `PixelStructure` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde, Kayıt Defteri Düzenleyicisi'ni ayarı piksel yapısının gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType gama düzeyi ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Metin Karşıtlık düzeyi  
@@ -112,7 +112,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Bir kullanıcı için her bir görüntü cihazı adı için bir `TextContrastLevel` DWORD değerini tanımlanır. Aşağıdaki ekran görüntüsünde, metin Karşıtlık düzeyi için Kayıt Defteri Düzenleyicisi'ni ayarı gösterir.  
   
- ![ClearType ayarları kayıt defteri Düzenleyicisi'nde](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType Kayıt Defteri Düzenleyicisi'nde ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClearType Genel Bakışı](cleartype-overview.md)

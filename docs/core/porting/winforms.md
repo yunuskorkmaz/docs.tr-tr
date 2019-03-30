@@ -2,14 +2,15 @@
 title: Bağlantı noktası bir Windows Forms uygulaması .NET Core 3.0
 description: Windows için .NET Core 3.0 bir .NET Framework Windows Forms uygulamasına bağlantı noktasına öğretir.
 author: Thraka
+ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 89540ebbed834f41ce9d84c32e69e6f5e1ab0a21
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680422"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675867"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core için bir Windows Forms masaüstü uygulaması bağlantı noktası
 
@@ -223,7 +224,7 @@ Arasındaki farklılıkları dikkate `MyControlsCore.csproj` proje ve önceden o
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 -    <AssemblyName>MyCoreApp</AssemblyName>
 -    <RootNamespace>WindowsFormsApp1</RootNamespace>
-+    <AssemblyName>MyCoreControls</AssemblyName>
++    <AssemblyName>MyControlsCore</AssemblyName>
 +    <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
    </PropertyGroup>
 
@@ -265,14 +266,14 @@ Gördüğünüz gibi `<OutputType>` düğüm kaldırıldı, bunun yerine bir yü
 Sonra ana .NET core'da **MyFormsCore.csproj** projeye yeni .NET Core Windows Forms Denetim Kitaplığı için başvuru ekleyin. Visual Studio veya .NET Core CLI ile bir başvuru ekleyin **SolutionFolder** dizini:
 
 ```cli
-dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCoreProject.csproj
+dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
 Önceki komutta aşağıdaki ekler **MyFormsCore.csproj** proje:
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCoreProject.csproj" />
+    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCore.csproj" />
   </ItemGroup>
 ```
 

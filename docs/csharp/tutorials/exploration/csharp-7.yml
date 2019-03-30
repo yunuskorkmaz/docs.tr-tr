@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f488d6c05a8be1b2e6ad73d241533ac23b65b9ce
-  ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+  ms.openlocfilehash: 70f4e93460c69b54702f160d502163827ec73218
+  ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/29/2019
-  ms.locfileid: "58655539"
+  ms.lasthandoff: 03/30/2019
+  ms.locfileid: "58675529"
 items:
 - durationInMinutes: 1
   content: >
@@ -57,11 +57,6 @@ items:
 
 
     Yukarıdaki çünkü derlenemeyecektir `number` içinde atanmamış `else` dal. İçinde yalnızca atanan `true` dalı `if` deyimi.
-
-
-    > [!NOTE]
-
-    > Var olan bir [sorunu](https://github.com/dotnet/try/issues/175) burada alabilirsiniz yanlış çıkış önceki örnekte.
 
 
     `is` İfade türü deseni, türlerine karşı test etmek için az sayıda olduğunda yararlıdır. Genellikle, birden çok test gerekebilir. Desen eşleştirme gerektiren `switch` deyimi.
@@ -125,7 +120,108 @@ items:
     Adanmış makaledeki desen hakkında daha fazla bilgi [içinde desen C# ](../../pattern-matching.md).
 - title: Ref yerel değerleri ve dönüşleri kullanarak bellek depolama en iyi duruma getirme
   durationInMinutes: 2
-  content: "Bu özelliği kullanın ve başka bir yerde tanımlanan değişkenleri başvuruları dönüş algoritmalar sağlar. Büyük matrisler ve belirli özelliklere sahip tek bir konum bulma ile bir örnek verilebilir. Bir yöntemi iki indeks matriste tek bir konum döndürür:\n\n```csharp\npublic class Program\n{\n    private static (int i, int j) Find(int[,] matrix, Func<int, bool> predicate)\n    {\n        for (int i = 0; i < matrix.GetLength(0); i++)\n            for (int j = 0; j < matrix.GetLength(1); j++)\n                if (predicate(matrix[i, j]))\n                    return (i, j);\n        return (-1, -1); // Not found\n    }\n\n    public static void Main()\n    {\n        int[,] sourceMatrix = new int[10, 10];\n        for (int x = 0; x < 10; x++)\n            for (int y = 0; y < 10; y++)\n                sourceMatrix[x, y] = x * 10 + y;\n\n        var indices = Find(sourceMatrix, (val) => val == 42);\n        Console.WriteLine(indices);\n        sourceMatrix[indices.i, indices.j] = 24;        \n    }\n\n}\n```\n\n\nBu `Find` yöntemi Matristeki öğenin dizinleri döndürür. Bu başvuru matrisi ve bir öğeyi değiştirmek için bu dizinleri kullanan kod yazmak için çağıranlar yol açar. Döndüren bir yöntem yerine yazmak istediğiniz bir *başvuru* değiştirmek istediğiniz matris öğesine.\n\nŞimdi bir dizi değişikliği ref yerel özelliği göstermek ve dahili depolama başvuru döndüren bir yöntem oluşturma işlemini göstermek için yol. Bu doğrultuda, bunu kötüye yanlışlıkla koruma kuralları ref dönüş ve ref yerel özellik öğreneceksiniz.\n\nBaşlangıç değiştirerek `Find` BT'nin döndürecek şekilde yöntem bildiriminde bir `ref int` yerine bir tanımlama grubu.\n\n```csharp\nprivate static ref int Find(int[,] matrix, Func<int, bool> predicate)\n```\n\nDoğru dizinleri öğe döndürmek için dönüş deyimi değiştirin:\n\n```csharp\nreturn matrix[i,j];\n```\n\nBunun yerine bir özel durum için son dönüş değiştirin:\n\n```csharp\nthrow new InvalidOperationException(\"Not found\");\n```\n\nBu derlenemeyecektir unutmayın. Yöntem bildiriminde gösteren bir `ref` dönüş ancak dönüş deyimi bir dönüş değeri belirtir. Eklemelisiniz `ref` her iade bildirimde anahtar sözcüğü. Başvuru ile dönüş gösterir ve daha sonra kodu okuyan yardımcı geliştiriciler yöntemi başvuru ile döndürülen unutmayın:\n\n```csharp\nreturn ref matrix[i,j];\n```\n\nYöntem matriste tamsayı değerine bir başvuru döndürür, burada çağrılır değiştirmeniz gerekir. `var` Bildirimi anlamına `valItem` artık bir `int` yerine bir tanımlama grubu. Arama kodda değişiklik `Main` aşağıdaki yöntemi:\n\n```csharp\nvar valItem = Find(matrix, (val) => val == 42);\nConsole.WriteLine(valItem);\nvalItem = 24;\nConsole.WriteLine(matrix[4, 2]);\n```\n\nİkinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `42`değil `24`. Değişken `valItem` olduğu bir `int`değil bir `ref int`. `var` Anahtar sözcüğü türü belirtmek derleyiciyi etkinleştirir, ancak değil örtük olarak ekleyecek `ref` değiştiricisi. Bunun yerine, değeri adlandırılan tarafından `ref return` olduğu *kopyalanan* atamanın sol tarafı değişkenine. Değişken değil bir `ref` yerel.\n\nEklemenize gerek döndürülen başvuru değiştirmek için `ref` çağırmadan önce yerel değişken bildirimi için değiştiricisinin `Find` dönüş değeri bir başvuru değişkeni başvuru yapmak için. Değiştirme `Main` aşağıdaki ile eşleşecek şekilde tarayıcınızda yöntemi:\n\n```csharp\npublic static void Main()\n{\n    int[,] sourceMatrix = new int[10, 10];\n    for (int x = 0; x < 10; x++)\n        for (int y = 0; y < 10; y++)\n            sourceMatrix[x, y] = x * 10 + y;\n\n    ref var item = ref Find(sourceMatrix, (val) => val == 42);\n    Console.WriteLine(item);\n    item = 24;\n    Console.WriteLine(sourceMatrix[4, 2]);\n}\n```\n\nŞimdi, ikinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `24`, Matristeki depolama değiştirilmiş olduğunu gösteren. Yerel değişken ile bildirilen `ref` değiştiricisi ve alacağınız bir `ref` döndürür. Başlatması gerekir bir `ref` değişkeni bildirildiğinde; bildirim ve başlatma bölünemiyor.\n\nC# dili kötüye kullanmasının korumak üç kuralları sahip `ref` yerel değerleri ve Dönüşleri:\n\n* Standart bir yöntem dönüş değerine atanamaz bir `ref` yerel değişken.\n* Döndüremezsiniz bir `ref` ömürlerinin yönteminin yürütülmesi genişletmiyoruz bir değişkene.\n* `ref` yerel değerleri ve dönüşleri zaman uyumsuz yöntemlerle kullanılamaz.\n\nRef yerel ayarlar ve ref değerleri kopyalama veya birden çok kez başvurusunu kaldırma işlemlerini gerçekleştirme önleyerek daha verimlidir etkinleştir algoritmaları döndürür.\n\nDaha fazla bilgi için [ref anahtar sözcüğü](../../language-reference/keywords/ref.md) makalesi.\n"
+  content: >
+    Bu özelliği kullanın ve başka bir yerde tanımlanan değişkenleri başvuruları dönüş algoritmalar sağlar. Büyük matrisler ve belirli özelliklere sahip tek bir konum bulma ile bir örnek verilebilir. Bir yöntemi iki indeks matriste tek bir konum döndürür:
+
+
+    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#EverythingByValue "return indices by value")]
+
+
+    Bu yöntem aşağıdaki kodu kullanarak test edebilirsiniz:
+
+
+    [!code-csharp[TestByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return indices by value")]
+
+
+
+    Bu `Find` yöntemi Matristeki öğenin dizinleri döndürür. Bu başvuru matrisi ve bir öğeyi değiştirmek için bu dizinleri kullanan kod yazmak için çağıranlar yol açar. Döndüren bir yöntem yerine yazmak istediğiniz bir *başvuru* değiştirmek istediğiniz matris öğesine.
+
+
+    Şimdi bir dizi değişikliği ref yerel özelliği göstermek ve dahili depolama başvuru döndüren bir yöntem oluşturma işlemini göstermek için yol. Bu doğrultuda, bunu kötüye yanlışlıkla koruma kuralları ref dönüş ve ref yerel özellik öğreneceksiniz.
+
+
+    Başlangıç değiştirerek `Find` BT'nin döndürecek şekilde yöntem bildiriminde bir `ref int` yerine bir tanımlama grubu.
+
+
+    ```csharp
+
+    ref int Find(int[,] matrix, Func<int, bool> predicate)
+
+    ```
+
+
+    Doğru dizinleri öğe döndürmek için dönüş deyimi değiştirin:
+
+
+    ```csharp
+
+    return matrix[i,j];
+
+    ```
+
+
+    Bunun yerine bir özel durum için son dönüş değiştirin:
+
+
+    ```csharp
+
+    throw new InvalidOperationException("Not found");
+
+    ```
+
+
+    Bu derlenemeyecektir unutmayın. Yöntem bildiriminde gösteren bir `ref` dönüş ancak dönüş deyimi bir dönüş değeri belirtir. Eklemelisiniz `ref` her iade bildirimde anahtar sözcüğü. Başvuru ile dönüş gösterir ve daha sonra kodu okuyan yardımcı geliştiriciler yöntemi başvuru ile döndürülen unutmayın:
+
+
+    ```csharp
+
+    return ref matrix[i,j];
+
+    ```
+
+
+    Yöntem matriste tamsayı değerine bir başvuru döndürür, burada çağrılır değiştirmeniz gerekir. `var` Bildirimi anlamına `valItem` artık bir `int` yerine bir tanımlama grubu. Çağıran kod şu şekilde değiştirin:
+
+
+    ```csharp
+
+    var valItem = Find(matrix, (val) => val == 42);
+
+    Console.WriteLine(valItem);
+
+    valItem = 24;
+
+    Console.WriteLine(matrix[4, 2]);
+
+    ```
+
+
+    İkinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `42`değil `24`. Değişken `valItem` olduğu bir `int`değil bir `ref int`. `var` Anahtar sözcüğü türü belirtmek derleyiciyi etkinleştirir, ancak değil örtük olarak ekleyecek `ref` değiştiricisi. Bunun yerine, değeri adlandırılan tarafından `ref return` olduğu *kopyalanan* atamanın sol tarafı değişkenine. Değişken değil bir `ref` yerel.
+
+
+    Eklemenize gerek döndürülen başvuru değiştirmek için `ref` çağırmadan önce yerel değişken bildirimi için değiştiricisinin `Find` dönüş değeri bir başvuru değişkeni başvuru yapmak için. Test kodu tarayıcınızda aşağıdaki eşleşecek şekilde değiştirin:
+
+
+    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+
+
+    Şimdi, ikinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `24`, Matristeki depolama değiştirilmiş olduğunu gösteren. Yerel değişken ile bildirilen `ref` değiştiricisi ve alacağınız bir `ref` döndürür. Başlatması gerekir bir `ref` değişkeni bildirildiğinde; bildirim ve başlatma bölünemiyor.
+
+
+    C# dili kötüye kullanmasının korumak üç kuralları sahip `ref` yerel değerleri ve Dönüşleri:
+
+
+    * Standart bir yöntem dönüş değerine atanamaz bir `ref` yerel değişken.
+
+    * Döndüremezsiniz bir `ref` ömürlerinin yönteminin yürütülmesi genişletmiyoruz bir değişkene.
+
+    * `ref` yerel değerleri ve dönüşleri zaman uyumsuz yöntemlerle kullanılamaz.
+
+
+    Ref yerel ayarlar ve ref değerleri kopyalama veya birden çok kez başvurusunu kaldırma işlemlerini gerçekleştirme önleyerek daha verimlidir etkinleştir algoritmaları döndürür.
+
+
+    Daha fazla bilgi için [ref anahtar sözcüğü](../../language-reference/keywords/ref.md) makalesi.
 - title: Yerel işlevleri ile kod erişimi en aza indirin
   durationInMinutes: 2
   content: "Şimdi diğer işlevleri içe yerel işlevler bildirebilirsiniz. Bu, bu işlevler görünürlüğünü en aza indirmek sağlar. Yerel işlevler için üç belirgin kullanım örnekleri vardır:\n\n- Özyinelemeli işlevler.\n- Yineleyici yöntemleri.\n- Zaman uyumsuz yöntemler.\n\nÖzyinelemeli yöntemleriyle başlayalım. Tarayıcıda hesaplamak için aşağıdaki kodu deneyin `6!` (faktöriyelini):\n\n```csharp\nint LocalFunctionFactorial(int n)\n{\n    return nthFactorial(n);\n\n    int nthFactorial(int number) => (number < 2) ? \n        1 : number * nthFactorial(number - 1);\n}\n\nConsole.WriteLine(LocalFunctionFactorial(6));\n```\n\nYerel İşlevler, yinelemeli algoritmalar uygulamak için harika bir yoludur. Diğer sık kullanımlar genel yineleyici yöntemleri ve genel zaman uyumsuz yöntemler içindir. Her iki yöntem tür hataları programcılar beklenebilir daha sonra rapor kod oluşturur. Yineleyici metotları olması durumunda, yalnızca özel durumların gözlemlenen döndürülen dizi numaralandırır kod çağırırken. Söz konusu olduğunda zaman uyumsuz yöntemler, özel durumların yalnızca zaman uyulması gereken döndürülen `Task` beklenir.\n\nYineleyici yöntemleri tarayıcıda keşfedin, şimdi de bu araştırma kullanmak daha kolaydır. Tarayıcınızda bir yineleyici yöntemini çağıran aşağıdaki kodu deneyin:\n\n[!code-csharp[IteratorMethod](~/samples/snippets/csharp/new-in-7/Iterator.cs#SnippetIteratorMethod \"Iterator method\")]\n\nKodu çalıştırın. Kod ikinci sonuç kümesi yineleme başladığında, özel durumun dikkat edin. İlk sonuç kümesinde yinelenen kodu zaten çalıştırıldı. Bu örnek, her ikisi de olan küçük ve tüm veri yapılarını dso zararsız ve düzeltmek kolay bir değişiklik yapmaz. Ancak, büyük bir programın, burada iki yineleyici nesnesi oluşturulabilir farklı alt yöntemleri kök nedeni bulmak zor olabilir. İlk yineleyici yöntem veri durum değiştiyse, hatta veri bozulmasına neden olabilir. Herhangi bir çalışma yapılmadan önce hemen, özel durum oluştu tercih edebilir. Böylece tüm bağımsız değişkenler ve numaralandırma gerçekleştiren bir yerel işlev genel yöntem doğrulama kodu yeniden düzenleyebilirsiniz:\n\n[!code-csharp[IteratorMethodRefactored](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocalInteractive \"Iterator method refactored\")]\n\nÖnceki sürüm Temizle yerel yöntemi başvurulan yalnızca dış yöntem bağlamında kolaylaştırır. Yerel işlevleri için kurallar ayrıca bir geliştirici yanlışlıkla sınıfında başka bir konumdan yerel işlev çağrısı veya bağımsız değişken doğrulama atlama emin emin olun.\n\nAynı yöntem ile işe `async` zaman uyumsuz işler başlamadan önce bağımsız değişken doğrulama doğan özel durumlar emin olmak için yöntemleri.\n\n> [!NOTE]\n> Yerel işlevleri tarafından desteklenen tasarımları bazılarını da kullanarak sağlayabilirsiniz *lambda ifadeleri*. Bu ilgi olabilir [farklar hakkında daha fazla](../../local-functions-vs-lambdas.md).\n"

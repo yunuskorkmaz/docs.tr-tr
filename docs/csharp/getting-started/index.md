@@ -1,18 +1,12 @@
 ---
-title: Çalışmaya başlama - C# Kılavuzu
-description: Hızlı tanıtım C# kavramlarını öğrenin ve .NET Core uygulamaları yazmaya olanak tanıyan kısa ve basit eğitimler bulun.
+title: 'Çalışmaya başlama - C# Kılavuzu'
+description: 'Hızlı tanıtım C# kavramlarını öğrenin ve .NET Core uygulamaları yazmaya olanak tanıyan kısa ve basit eğitimler bulun.'
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: dc5e3c48ef5f8d1aa25cc43cae9e2d7be23503a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542918"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
@@ -40,11 +34,7 @@ Aşağıdaki konular da mevcuttur:
 
    Bu konu oluşturma ve Visual Studio Code ve .NET Core ile basit bir Hello World uygulaması çalıştırma gösterilmektedir.
 
-## <a name="related-sections"></a>İlgili Bölümler
-
-* [C# için Visual Studio Geliştirme Ortamını Kullanma](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Visual C# tümleşik geliştirme ortamının kullanımı için bir kılavuz sağlar.
+## <a name="related-sections"></a>İlgili bölümler
 
 * [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
 
@@ -54,14 +44,10 @@ Aşağıdaki konular da mevcuttur:
 
     C# anahtar sözcükleri, işleçler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
 
-* [Visual Studio Örnekleri](/visualstudio/ide/visual-studio-samples)
-
-    Çevrimiçi örneklere nasıl erişebileceğiniz hakkında bilgi sağlar.
-
 * [İzlenecek Yollar](../../csharp/walkthroughs.md)
 
     C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual C# ve Visual Basic kullanarak Visual Studio ile çalışmaya başlama](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [C#Visual Studio ile geliştirme](/visualstudio/get-started/csharp/)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094015"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675919"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
@@ -307,7 +307,7 @@ Type: DWORD
  Dil paketini .NET Framework çevrimdışı Yükleyici ile yüklemek için uygulamanızın kurulumuna zincirine bağlı olmalıdır. Örneğin, dağıtılacak [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] çevrimdışı yükleyiciyi Japonca dil paketi, aşağıdaki komutu kullanın:
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  Web yükleyicisini kullanmak istiyorsanız dil paketlerini bağlamanıza gerek yoktur; Kurulum kullanıcının MUI ayarlarıyla eşleşen dil paketini yükleyecektir. Farklı bir dil yüklemek isterseniz, kullanabileceğiniz `/LCID` dil paketi belirtmek için seçeneği.

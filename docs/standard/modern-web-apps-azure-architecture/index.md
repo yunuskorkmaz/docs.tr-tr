@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama
 
-![kapak resmi](./media/cover.png)
+![Görüntü mimari Modern Web uygulamaları Kılavuzu'nun kapsar.](./media/index/web-application-guide-cover-image.png)
 
 TARAFINDAN YAYIMLANAN
 
